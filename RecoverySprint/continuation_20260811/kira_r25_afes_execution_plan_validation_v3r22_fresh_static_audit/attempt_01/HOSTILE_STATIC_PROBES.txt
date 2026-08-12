@@ -1,0 +1,58 @@
+KIRA R25 AFES V3R22 DIFFERENT FRESH STATIC REVIEW
+REVIEWER TASK: /root/long_v10_author
+AUDITOR ID: codex_different_fresh_v3r22_static_reviewer
+RECORDED UTC: 2026-08-11T14:33:06.5285106Z
+
+SCOPE TRUTH
+Kira writes: 0
+Candidate invocations: 0
+Python/controller evaluations: 0
+_build_execution_plan calls: 0
+Bootstrap/broker/process/AFES/Blender/body/save/render/export calls: 0
+
+EXACT SEAL REHASH
+PASS: 237/237 unique exact and Windows paths, zero mismatch.
+PASS roles: current_artifacts=8 runtime_fixed_bindings=100 retained_manifest_rows=137 unique_union=237.
+Seal: 56404 d0cdd4220881a5dcc4ec8f15321c07d373971e106d3174c23e1bfb8e4e9f8f5a
+Author checkpoint: 4949 ca15b96dd45068da1d3d3c7c0ce798cbe9a84d4b5452d6fdf50dbf96dc913991
+
+INDEPENDENT BUILD AND ANALYSIS
+PASS strict x64: cl.exe /W4 /WX /O2 /MT /guard:cf /std:c17, link /guard:cf /WX bcrypt.lib.
+Rebuild OBJ: 184660 86fec7f3aa79e3263951e9f99bc6814fa4bd7e31f266c15029b415e1626c5ba8
+Rebuild EXE: 241152 cdb9ff2dc5c3e124ed8319e9fe2099ea0664786a4f840b4e1092c5b35d04ed3c
+PASS independent /analyze /c /W4 /WX /std:c17: zero diagnostics, no suppression.
+Analyzer OBJ: 129959 28066a8ebe1aa282886e53059505990daa878a5b784d95629afdcfd0d57faf87
+
+PE AND IMPORTS
+PASS sealed and rebuilt: x64 8664, PE32+ 20B, high-entropy VA, ASLR, NX, CFG, CF instrumented, FID table, Guard CF function count 34.
+Exact imported DLLs: bcrypt.dll, KERNEL32.dll.
+Process/shell imports: 0. Static Python DLL import: 0.
+
+PREDECESSOR NEGATIVE CONTROLS
+PASS independent V3r20 /analyze reproduction: exactly two C6385 durable-magic overreads.
+Line 851: 34 bytes requested from 32 readable bytes.
+Line 894: 31 bytes requested from 29 readable bytes.
+V3r22 uses sizeof(magic)-1 with compile-time fit assertions and has zero analyzer diagnostics.
+
+CLOSURES
+PASS V3r21 consumed closure: 19 rows, 3622 canonical bytes, e7fb0f85513a0cfd068a9cf79fd5ab9f1070842ac78fbef250b082684e82a898.
+PASS V3r9/V3r10/V3r11 retained history: 27 rows, 4593 canonical bytes, ac609d3149b18546431377a8ec846d4cd3af098663649c03f41e4d83a0a9ff82.
+PASS exact retained CRLF manifest: 139 lines, 137 sorted unique labels and case-insensitive unique paths, all rows independently rehashed.
+
+HOSTILE STATIC AND MOCKED PROBES
+PASS independent probes: 78/78.
+Probed removal/mutation of all-row manifest lock and terminal recheck; V3r21 and history closures; exact fixed-binding count; twin controller code/globals/defaults/kwdefaults/closures/annotations; 14 helper identities/code/defaults/kwdefaults/closures/globals; four module/spec/loader/origin fingerprints; native SHA 222+1 and marker counts; plan-call duplication; audit LF/NUL/field order/duplicates/extra-tab/value lengths/auditor/sidecar grammar; unload/finalize/FreeLibrary/old-base/path absence; CREATE_NEW output exclusivity; process/shell injection; and the terminal stop boundary.
+Manifest hostile cases refused: NUL, LF-only, bare CR, missing/extra line, duplicate label, duplicate path, unsorted label, traversal, zero bytes, uppercase digest.
+Audit hostile cases refused with matching recomputed sidecars where applicable: NUL, CRLF, missing final LF, extra line, extra tab, same-as-author auditor, malformed auditor, call count 2, changed stop boundary, field reorder, uppercase/missing/wrong sidecar.
+Authored PostSeal result independently rerun read-only: V3R22_HOSTILE_STATIC_TESTS_PASS.
+
+OUTPUT AND STOP BOUNDARY
+PASS RUN_EVIDENCE.jsonl absent.
+PASS EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin absent.
+PASS future audit path absent before transcription.
+No candidate, Python stage, controller, plan, bootstrap, broker, process, AFES, Blender, body, save, render, or export path was invoked.
+
+DECISION
+ACCEPTED_FOR_ONE_BOUNDED_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R22_ONLY.
+At most one exact no-argument invocation from C:/Users/robmc/Kira. Success or failure consumes authority. Stop before bootstrap, broker, process, AFES, Blender, body, save, render, and export.
+This proves no body, anatomy, physiology, activation, save, render, owner acceptance, or production feature.

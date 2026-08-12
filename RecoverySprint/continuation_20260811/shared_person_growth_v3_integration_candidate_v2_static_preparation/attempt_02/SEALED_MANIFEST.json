@@ -1,0 +1,100 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_v2_seal.v1",
+  "sealed_at_utc": "2026-08-11T07:59:17.028Z",
+  "status": "SEALED_DISCONNECTED_STATIC_SUCCESSOR_PENDING_DIFFERENT_FRESH_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v2.py",
+      "bytes": 50230,
+      "sha256": "1b29379c36e13295f2119e67cb88574958fb2115828c75ce2d5427a08e6bcc42"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v2.py",
+      "bytes": 33997,
+      "sha256": "17a211c67061427e2718ad579bd0f743578815f1d4426b9d568a1131b7c17caf"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v2_static_preparation/attempt_01/STATIC_CONTRACT.json",
+      "bytes": 2086,
+      "sha256": "3b7b40b1d12fff1a7137be121ac1dfe6525f06599b8669db50454e1cd0df9f36"
+    }
+  ],
+  "author_evidence": {
+    "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v2_static_preparation/attempt_02/AUTHOR_STATIC_TEST_RESULT.json",
+    "bytes": 3407,
+    "sha256": "9f53499124a5e8916042ffd207b3663c89b3d7502d9b2938d34def2469b633e8"
+  },
+  "protected_integration_v1_and_rejection": [
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_static_preparation/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 3406,
+      "sha256": "1103ed9c29be3c27a6089ea4682dde93c2db248b4bbf2fa7f5637db60f1d337f"
+    },
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v1.py",
+      "bytes": 66891,
+      "sha256": "91eef4a3c19edfbda59ca8d1c7e46df54d77648a8d0140eadbee5672353db63c"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v1.py",
+      "bytes": 32344,
+      "sha256": "fddf0658abc322d4ff5590441647ccf2ad18efc305f4f8a78fceb27467d5bd8a"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 783,
+      "sha256": "c71a8e64fab4c6ea271ebbdeff5649da74e02ab9a7529eeceebf82d9ca6de1c5"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 4134,
+      "sha256": "c4ee1dcf86e8703ddd16345a4e31abe9672468a3f0a8b8b6ac31bc44163ad24f"
+    }
+  ],
+  "protected_growth_v3": [
+    {
+      "path": "Core/shared_person_growth_capabilities_v3.py",
+      "bytes": 111964,
+      "sha256": "8250c657486981ba5ce41892da373adc7df49c462865dc8be75af80f542eb3a2"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_capabilities_v3.py",
+      "bytes": 40085,
+      "sha256": "37a8a27179083b9b3a90f98a69910edb75f4a9fda68e3d383953d22ae86180ca"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_capabilities_v3_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 5875,
+      "sha256": "50526169ef05aea0a8db078047a9581bcd74aaf5829b73a0c0ba559b152afd15"
+    }
+  ],
+  "protected_current_runtime": [
+    {
+      "path": "tools/kira_world_shell_server.py",
+      "bytes": 606696,
+      "sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4"
+    },
+    {
+      "path": "config/model_runtime.json",
+      "bytes": 5538,
+      "sha256": "4fa0449b6f91b7df6f207e86d324e893ee244bce9d8d065a3d14bdc8a197f2ae"
+    }
+  ],
+  "verification": {
+    "strict_compile": "2/2",
+    "focused_v2_hostile": "40 passed, 3 subtests passed",
+    "growth_regression": "70 passed, 13 subtests passed",
+    "current_route_compatibility": "20 passed, 173 subtests passed",
+    "combined": "130 passed, 189 subtests passed"
+  },
+  "seal_truth": {
+    "candidate_is_default_off": true,
+    "candidate_is_disconnected": true,
+    "candidate_is_not_promoted": true,
+    "different_fresh_audit_required": true,
+    "production_pointer_changed": false,
+    "person_or_creator_profile_changed": false,
+    "external_python_callback_is_not_claimed_as_os_authority": true,
+    "live_person_model_memory_body_media_voice_gpu_or_blender_executed": false
+  }
+}

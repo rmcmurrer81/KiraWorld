@@ -1,0 +1,86 @@
+{
+  "schema": "kira.blackwell.v14.native_exact_control_anchor.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T15:31:12.7553998Z",
+  "reviewer_task": "/root/resident_media_v15_author",
+  "decision": "REJECT",
+  "accepted_static_only": false,
+  "one_bounded_disconnected_static_control_validation_authorized": false,
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false,
+  "seal": {
+    "subjects_exact_before": 30,
+    "subjects_exact_after": 30,
+    "subjects_drifted": 0,
+    "unique_paths": 30,
+    "manifest_bytes": 6425,
+    "manifest_sha256": "f995cf68ba1b82de0f56acb11c1b1bf73667602beae0a1e685c8eebde13cc4e8"
+  },
+  "independent_native_build": {
+    "compiler": "MSVC_x64_19.50.35730",
+    "strict_compile_exit": 0,
+    "strict_compile_diagnostics": 0,
+    "analyze_exit": 0,
+    "analyze_diagnostics": 0,
+    "object_bytes": 109055,
+    "object_sha256": "43efd6abf8a5a865dbaebff79df6a8a37dc02c7ebc9acec023c0952d6bf32baf",
+    "executable_bytes": 179712,
+    "executable_sha256": "13b3e5c32914d73bcbd18c00f93f803c3c74110d655eb28d01535938f2b586cb",
+    "analyze_object_bytes": 66740,
+    "analyze_object_sha256": "e10df672ebd79e78b688476ec93627b85d774eb1e5a50db1234fd755dd38b07d"
+  },
+  "pe_static_inspection": {
+    "sealed_and_independent_machine": "x64_8664",
+    "sealed_and_independent_format": "PE32+_20B",
+    "high_entropy_va": true,
+    "dynamic_base": true,
+    "nx_compatible": true,
+    "control_flow_guard": true,
+    "guard_cf_instrumented": true,
+    "guard_fid_table_present": true,
+    "imports": ["bcrypt.dll", "KERNEL32.dll"],
+    "python_import_present": false,
+    "process_or_shell_import_present": false
+  },
+  "static_tests": {
+    "author_postseal_suite": "PASS",
+    "v13_negative_controls_reproduced": 4,
+    "v14_hostile_static_probes_passed": 10,
+    "v14_hostile_static_probes_failed": 0,
+    "v14_python_candidate_invoked": false,
+    "v14_native_executable_invoked": false
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V14_SNAPSHOT_STATE_MUTABLE_NOT_ORIGIN_BOUND",
+      "evidence": "Core/persistent_blackwell_voice_integration_v14.py:839-872 creates writable slots without __setattr__/__delattr__ protection; lines 883-921 revalidate shape only. tools/native/kira_blackwell_voice_control_anchor_v14_validator.py:301-345 never compares snapshot subjects or graph to the original native attestations/result. Two distinct forged 15-row tuples and graph counts 1 and 999999 satisfy the reproduced predicates."
+    },
+    {
+      "id": "BLOCK_V14_LOADER_GRAPH_STATE_NOT_EXACT_TYPED",
+      "evidence": "Core/persistent_blackwell_voice_integration_v14.py:890-906 and the validator at lines 326-341 use value equality/positive-count checks rather than an origin-bound exact typed state. A safe standalone equality-spoof object makes the loader inequality test false; graph label type is not exact-str checked."
+    },
+    {
+      "id": "BLOCK_V14_COMPLETE_GRAPH_OMITS_MUTABLE_INSTANCE_STATE",
+      "evidence": "Core/persistent_blackwell_voice_integration_v14.py:330-348 reduces unknown objects to type module/qualname, while validator lines 14-75 use type plus identity/cross-type. Mutable _StaticImportNamespace and _StaticPath instance fields are therefore outside the claimed complete graph seal."
+    },
+    {
+      "id": "BLOCK_V14_POSTCALL_V12_PARENT_ATTRIBUTE_NOT_RECHECKED",
+      "evidence": "tools/native/kira_blackwell_voice_control_anchor_v14_validator.py:205-219 checks the V12 module slot but only Core package attributes. It does not recheck Voice.sidecars.chatterbox_blackwell_persistent_candidate_v12.canonical_typed_memory_binding after the stored calls."
+    }
+  ],
+  "scope_truth": {
+    "kira_files_edited_by_reviewer": 0,
+    "model_calls": 0,
+    "gpu_or_voice_calls": 0,
+    "synthesis_or_audio_calls": 0,
+    "playback_calls": 0,
+    "latency_calls": 0,
+    "network_calls": 0,
+    "person_body_or_blender_calls": 0,
+    "production_route_changed": false
+  },
+  "required_next_step": "Preserve V14 byte-for-byte. Repair append-only with an origin-bound immutable snapshot, exact typed loader/graph state, recursive mutable-instance graph sealing, and complete post-call package-slot checks; then require another different fresh audit."
+}

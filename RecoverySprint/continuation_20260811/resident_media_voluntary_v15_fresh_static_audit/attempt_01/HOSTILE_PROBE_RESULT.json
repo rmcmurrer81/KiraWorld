@@ -1,0 +1,26 @@
+{
+  "closure_reachable_forbidden_instances": [],
+  "closure_rebinding": "PASS_REFUSED:ResidentMediaV15Error:V15 module execution seal changed",
+  "digest_mismatch": "PASS_REFUSED:ResidentMediaV15Error:V15 plan envelope byte/digest invariant changed",
+  "exact_tuple_envelope_and_digest": true,
+  "external_authority_state_unchanged": true,
+  "forbidden_heavy_or_live_source_tokens_absent": {
+    "bpy": true,
+    "cv2": true,
+    "requests": true,
+    "socket": true,
+    "subprocess": true,
+    "torch": true
+  },
+  "incomplete_evidence": "PASS_REFUSED:ResidentMediaV15Error:engineering completion differs from per-role coverage",
+  "live_or_production_authority": false,
+  "original_catalog_mutation_changes_emitted_envelope": false,
+  "record_surface": "PASS_REFUSED:ResidentMediaV15Error:V15 has no commit surface; use validate_static_evidence_plan only. A separately reviewed protected external/native broker is required.",
+  "reviewer": "/root",
+  "schema": "kira.resident_media_voluntary_gate_v15.independent_hostile_probe_result.v1",
+  "source_or_test_references_only": [
+    "Core/resident_media_voluntary_gate_v15.py",
+    "Testing/test_resident_media_voluntary_gate_v15.py"
+  ],
+  "verdict": "PASS_STATIC_NO_COMMIT_BOUNDARY"
+}

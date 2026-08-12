@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_cpu_park_candidate_v3",
+  "candidate_status": "inactive_static_candidate_pending_fresh_audit_and_bounded_ram_gpu_owner_hearing",
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "playback_authorized": false,
+  "v2_files_must_remain_byte_for_byte_unchanged": true,
+  "state_contract": [
+    "UNLOADED",
+    "PARKED_CPU",
+    "LOADED_CUDA"
+  ],
+  "required_components": [
+    "t3",
+    "s3gen",
+    "ve"
+  ],
+  "approved_profile": "Voice/profiles/temp_ai/kira_voice_profile.json",
+  "approved_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+  "approved_reference": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "qwen_model": "qwen3.5:9b",
+  "qwen_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "forbidden_text_models": [
+    "llama3.1:8b"
+  ],
+  "voice_identity": "kira_approved_chatterbox_reference_only",
+  "input_channel": "public_spoken_only",
+  "compute_device": "cuda",
+  "cpu_synthesis_allowed": false,
+  "generic_voice_allowed": false,
+  "sapi_allowed": false,
+  "substitute_reference_allowed": false,
+  "automatic_fallback_inside_candidate": null,
+  "production_fallback_retained_outside_candidate": "sealed_cpu_chatterbox_only",
+  "known_derived_cuda_caches": [
+    "chatterbox.models.s3gen.s3gen.get_resampler",
+    "chatterbox.models.s3gen.utils.mel.mel_basis",
+    "chatterbox.models.s3gen.utils.mel.hann_window"
+  ],
+  "resource_bounds": {
+    "minimum_available_physical_mib_before_cpu_park": 6144,
+    "maximum_system_commit_fraction_before_cpu_park": 0.82,
+    "minimum_cuda_free_mib_before_resume": 4608,
+    "maximum_voice_cuda_residual_above_baseline_bytes": 268435456
+  },
+  "qwen_load_only": {
+    "positive_residency_ttl_seconds": 90,
+    "maximum_residency_ttl_seconds": 120,
+    "real_reply_keep_alive": 0,
+    "empty_prompt_required": true,
+    "empty_messages_required": true,
+    "zero_or_absent_eval_count_required": true,
+    "one_owned_prewarm_only": true
+  },
+  "idle_cleanup_seconds": 120,
+  "sealed_v2_baseline": {
+    "Core/persistent_blackwell_voice_integration_v2.py": "c3d1bad34ccb327e1bef23ad166dd52c9d52abe60bc7be0a402e4e8a636cb675",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/persistent_worker.py": "b6f2dcc816537552db02d00c5a1932057f2d99b5d206a578344d4a92523b3cad",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_client.py": "9f33ef0d9fd969da05ce48eb148163efc77306bfd3bc215efcb482e68e7261a8",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_contract.py": "863c6ece050b12af157565c60df6fd82b207dae5476e693cc08e34b392c8f910",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_config.json": "805c1d2836c618970a81f5f44d31f81f67e204173bd919857452daa8dbedc8bb"
+  }
+}

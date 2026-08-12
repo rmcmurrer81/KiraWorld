@@ -1,0 +1,39 @@
+KIRA R25 AFES V3R24 DIFFERENT FRESH HOSTILE STATIC PROBES
+DATE: 2026-08-11 America/New_York
+RESULT: V3R24_INDEPENDENT_HOSTILE_STATIC_PROBES_PASS
+PASSING ASSERTIONS_AND_MUTATIONS: 227
+
+Exact checks covered:
+- V3r22 20-row consumed-failure closure and V3r23 15-row rejected closure canonical roots;
+- exact CPython 3.14 CO_FUTURE_ANNOTATIONS header and retained __future__.py stringization semantics;
+- V3r22/V3r23/V3r24 exact 0x1000000 compile-flag use;
+- no __annotations__ read and no __annotate__ call;
+- generated __annotate__ type, globals, code, defaults, keyword defaults, closure, and metadata fingerprints;
+- exact 47-checkpoint order;
+- exact 21 entered/returned operation pairs and ordering;
+- one plan expression, one plan attempt, one plan return, and exact terminal helper/count gates;
+- bounded sanitized exception type/message and no traceback/private-state capture;
+- owned-object decrement, copied-byte zero/free, finalize/unload/module-absence order, manifest-handle release, and retained/fixed post-attempt rechecks;
+- exact 28-field audit order and LF/NUL/CR/sidecar/auditor rules;
+- no native process/shell/delete/move/copy call route;
+- only two fixed CREATE_NEW evidence/receipt reservations;
+- isolated Python configuration and exact dynamic Python DLL route;
+- exact stop-before boundary and conditional Avatar Builder routing.
+
+Hostile mutations refused:
+- removal of each of the 47 checkpoint predicates;
+- removal of an entered or returned operation increment;
+- insertion of a second _build_execution_plan expression;
+- insertion of __annotations__ access or __annotate__ invocation;
+- insertion of CreateProcessW, ShellExecuteExW, WinExec, or system call routes.
+
+Review execution boundary:
+- sealed V3r24 executable not invoked;
+- rebuilt executable not invoked;
+- no Python/controller/plan/AFES/Blender/body/save/render/export path invoked;
+- no Kira file written.
+
+Probe script identity:
+- independent_hostile_static_probes.ps1
+- 19,208 bytes
+- SHA-256 d75d1d86df8726f46df528351e6eea96b15b4fa26ea5e3d446d5520ecc785298

@@ -1,0 +1,35 @@
+{
+  "schema": "kira.resident_media_voluntary_gate_v12.sealed_manifest.v1",
+  "status": "SEALED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT",
+  "sealed_utc_date": "2026-08-11",
+  "subjects": [
+    {
+      "path": "Core/resident_media_voluntary_gate_v12.py",
+      "bytes": 50849,
+      "sha256": "2cc9e588affde3c0dd1e127baef31fd2183cc2d188d61afdf2899df06bd6bf5c"
+    },
+    {
+      "path": "Testing/test_resident_media_voluntary_gate_v12.py",
+      "bytes": 32717,
+      "sha256": "9e9441564eaf6415b19c100b678430f425b0b29003a003b2954af093693291b8"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v12/attempt_01/STATIC_TEST_RESULTS.md",
+      "bytes": 2127,
+      "sha256": "e3d87c7e09384582145d69d955f3b9f5c525264b02344aca22b02fb4bfec5542"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v12/attempt_01/VOLUNTARY_MEDIA_CONTRACT_V12.json",
+      "bytes": 3600,
+      "sha256": "362a9a833d324ab53b8eebf90cc4a05308fde2ff3e70fbd989c6ec8ad14f81f8"
+    }
+  ],
+  "predecessor_rejection_preserved": {
+    "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v11_review/attempt_01/CHECKPOINT.md",
+    "bytes": 3165,
+    "sha256": "bfe12c090c45e09b83fed2ad51f1258c1da882f2941f910e0d3f8033b26a0e1e"
+  },
+  "live_authorization": "NONE",
+  "production_pointer_changed": false,
+  "different_fresh_audit_required": true
+}

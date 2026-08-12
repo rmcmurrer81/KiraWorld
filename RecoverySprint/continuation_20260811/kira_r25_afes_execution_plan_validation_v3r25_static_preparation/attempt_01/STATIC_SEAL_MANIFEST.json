@@ -1,0 +1,2389 @@
+{
+    "schema":  "kira.r25.afes.v3r25.static_seal.v1",
+    "status":  "SEALED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT",
+    "author":  "codex_r25_afes_v3r25_static_author",
+    "execution_authority":  "NONE",
+    "candidate_executed":  false,
+    "sealed_subject_count":  292,
+    "unique_paths":  true,
+    "semantic_counts":  {
+                            "current_artifacts":  8,
+                            "runtime_fixed_bindings":  155,
+                            "retained_manifest_rows":  137,
+                            "unique_union":  292
+                        },
+    "v3r24_consumed_failure_closure":  {
+                                           "rows":  19,
+                                           "author_artifacts":  10,
+                                           "audit_run_artifacts":  9,
+                                           "canonical_bytes":  3565,
+                                           "sha256":  "51058e1d9c21b615c7826b4db2b8740aea6dc774107abd666c476461e5724806",
+                                           "authority":  "CONSUMED_FAILURE_DO_NOT_RERUN"
+                                       },
+    "marshal_repair":  {
+                           "locked_runtime":  "CPYTHON_3_14_4",
+                           "marshal_version":  5,
+                           "fingerprint_format":  5,
+                           "validator_code_objects":  20,
+                           "format_4_failures":  4,
+                           "format_5_successes":  20,
+                           "checkpoint":  115
+                       },
+    "stop_before":  [
+                        "bootstrap",
+                        "broker",
+                        "process",
+                        "AFES",
+                        "Blender",
+                        "body",
+                        "save",
+                        "render",
+                        "export"
+                    ],
+    "sealed_subjects":  [
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r22.json",
+                                "bytes":  11293,
+                                "sha256":  "48f80736e181da754e1325d3faaa836ef215a7546cbff74e44e6bd53e0d49749",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r23.json",
+                                "bytes":  10781,
+                                "sha256":  "b06693879e3f654dedee52d9a683e3f788b6748d6806e09e99d0f0a55cf453ee",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r24.json",
+                                "bytes":  17141,
+                                "sha256":  "282b458123f1b48989e1315d90f11663443f84637671e2d0a18bb6af8f22aa3c",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r25.json",
+                                "bytes":  70551,
+                                "sha256":  "91c94cd4faf7d81b5c75a9a3603542a9c023ce1fdbaacadd3593f81ab9c4ec6e",
+                                "roles":  [
+                                              "current_artifact"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v1.json",
+                                "bytes":  4226,
+                                "sha256":  "2d814be92de63978ac1b7f2427ea67b8fbea6c21acbe5da1613641a18ed31b32",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v2.json",
+                                "bytes":  5719,
+                                "sha256":  "4bae4355ad48a3afc9339434efa1fb7212308674b51401eff513472830163571",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r1.json",
+                                "bytes":  25163,
+                                "sha256":  "b21a7a0901cae6eacbbf69f3aa6a50fd31ddc5674fc3e4bbdc13965a578274d7",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r2.json",
+                                "bytes":  31722,
+                                "sha256":  "548df35fb87201513585433230df04449d593dc8106351e0fcb4f146faa2cf37",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r3.json",
+                                "bytes":  37419,
+                                "sha256":  "421d284d49096be5860b7953e298429ebc43039840f0b1ed3ae98ac34288190e",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r4.json",
+                                "bytes":  40892,
+                                "sha256":  "ddc25acaa90036d85ec0982051666fcc887af1d9d0063fac8b37c71547119737",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r5.json",
+                                "bytes":  46305,
+                                "sha256":  "71d3e78ee120662952672c8e7e5d77f96e62ab2e254517702ae587f00786fa0b",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r6.json",
+                                "bytes":  51949,
+                                "sha256":  "0c35a76efdab514e67d8ce197cdfe40545a22052c9b3d937427f7428b8848fc9",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r7.json",
+                                "bytes":  122108,
+                                "sha256":  "0b9d0bc0b780f005b22b286132ee23a679036ad500e044bceea00b8b8da944dd",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r8.json",
+                                "bytes":  135809,
+                                "sha256":  "0442e56e0507b0daf46e1bc68eb3aa4b1f9cffe08be58f96fc832846e40deaf1",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r9.json",
+                                "bytes":  146969,
+                                "sha256":  "f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_preoutcome_diagnostic_v3r10.json",
+                                "bytes":  5100,
+                                "sha256":  "168e75cfcdc05232f5d6284541e1254ac678051fec1f7647ebd663bef61bc582",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_preoutcome_diagnostic_v3r11.json",
+                                "bytes":  4885,
+                                "sha256":  "08deae31ec1e753f33be4e98ac0d6bfa07a6e23eed0441c07ce822e82240ea66",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r18.json",
+                                "bytes":  4184,
+                                "sha256":  "0eb68b89e68257202dd244cb88f34899f1aef49ae99dbc750233ded03cb21ad5",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r19.json",
+                                "bytes":  4997,
+                                "sha256":  "409844486183a75c3ec801109602c5ad3ce52cd42eadb873f9f738135f758862",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r20.json",
+                                "bytes":  5875,
+                                "sha256":  "4f81b85565e62c6de41e9270e696b6a95c48aca4322b36dfd119cc17ac6fa809",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r21.json",
+                                "bytes":  8327,
+                                "sha256":  "008ec197cf8f05f1ea26eb42c240d9260e5d03d1a3259b9c27293badc8e7267b",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v1.json",
+                                "bytes":  6989,
+                                "sha256":  "3f1f57d95a28287f024cd6806af9180c623d134b68249a547cb81475f8fe5fdc",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v2.json",
+                                "bytes":  11046,
+                                "sha256":  "b4c992012f3f621d4bef5252c7cb7bf26d6d524b3859cc2685487ba10589f7dc",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v3.json",
+                                "bytes":  7125,
+                                "sha256":  "97648d764bf218c3c25e77be9979af0c277e012b690323afaade0d1db0bda23a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v4.json",
+                                "bytes":  8035,
+                                "sha256":  "e25149b133715d9a4ad3578bfdf081986394ebdf61b1fbe2e46a109d89bb5102",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v5.json",
+                                "bytes":  9972,
+                                "sha256":  "0f51a937117912ef2863655a30d4e10da299042d4cfc975310ad18e5fa2c98ab",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json",
+                                "bytes":  2471,
+                                "sha256":  "c91c11f649fca7dcdff4530df15a5ed4654d0fe4ca723740cca55660a4b969e0",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+                                "bytes":  789620,
+                                "sha256":  "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FEMALE_RELATIONSHIP_REVIEW_V2.json",
+                                "bytes":  37722,
+                                "sha256":  "b321f2d852b2242c462501a396ddb9aca648229187868a158da6571450a1cb88",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FOUNDATION_TOPOLOGY_AUDIT_V2.json",
+                                "bytes":  3738,
+                                "sha256":  "de2d1f0a82aa2a0015f7374707b7e12afae830ef5314f518bcb7956adf8180de",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe",
+                                "bytes":  108687824,
+                                "sha256":  "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "C:/Python314/include/cpython/code.h",
+                                "bytes":  14708,
+                                "sha256":  "65fe295bd90aab0a5380c4b3c400713917af7f904fbb0ac86e76ffff2de1ab18",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "C:/Python314/python314.dll",
+                                "bytes":  6767440,
+                                "sha256":  "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260803/kira_r23_cc0_afes_expanded_mask/preflight_attempt_04/PREFLIGHT.json",
+                                "bytes":  98383,
+                                "sha256":  "2fd7968db9e7d00882d031d519aa04472b343cdf2141f6dcc6c672a77c0a5935",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260803/kira_r23_cc0_afes_expanded_mask_preparation/KIRA_R23_CC0_AFES_EXPANDED_MASK_PREFLIGHT_CONFIG.json",
+                                "bytes":  14768,
+                                "sha256":  "e2b1d947f0171f14e8e5330f73fdb0ba0570bf62e5784ba147dc2d370b2be286",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/CHECKPOINT.md",
+                                "bytes":  8284,
+                                "sha256":  "df91b0a2b414c10b16bc6af86d02f20bda676b8e89d1f236e0573bd0fd18a670",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT.md",
+                                "bytes":  3969,
+                                "sha256":  "504be87d2ae20cdc30a4dd47d043cdde4c5de1e1568cf2e28676b9e84b93e952",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT_REJECTION_ADDENDUM.md",
+                                "bytes":  2275,
+                                "sha256":  "aa0d2487710d5f8ce7df5ff428a77d8a65f425238366bcbef1a5faa0caf38b4a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/CHECKPOINT.md",
+                                "bytes":  6427,
+                                "sha256":  "109ac676aa1206404cf3679433c6d800efb308fce9f040de20fc0d5c19bea02a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/INDEPENDENT_AUDIT.md",
+                                "bytes":  2542,
+                                "sha256":  "7680627e5943413b293a7152ae4592c93ef5692a03ae850b662e047a607be212",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_04/CHECKPOINT.md",
+                                "bytes":  5994,
+                                "sha256":  "517deca1772b5b1893238503c3014d1d22bbe0bbde5132a981f108dfba023274",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_04/INDEPENDENT_AUDIT.md",
+                                "bytes":  3674,
+                                "sha256":  "4feaa449b3dd5e17d880c6ab6d9c850539876e5b1964a1179946d31ff73895e9",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_05/CHECKPOINT.md",
+                                "bytes":  7889,
+                                "sha256":  "5083eec171718c65bcdb15a1f89ab841dd7db7c713b24a05713b11833da2fabd",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_05/INDEPENDENT_AUDIT.md",
+                                "bytes":  7208,
+                                "sha256":  "a739451fbde83ab1202a245640e39b41a11d2973ff91300356883c7c4b06f527",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/CHECKPOINT.md",
+                                "bytes":  4673,
+                                "sha256":  "5c96a9c5da3303733f431344223f64736a7148e2361d6d3e69d34cf31015b84a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md",
+                                "bytes":  3834,
+                                "sha256":  "aa096db67515a2a6330bd3809d1c30e71d9a8afec4fed7a9e745b87a973480b3",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_02/CHECKPOINT.md",
+                                "bytes":  5693,
+                                "sha256":  "11188258ab3e978a5646988f19bf22cc7fb85dd9a2fa82eaf1e06e2086698888",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/ATTEMPT_02_SUPERSESSION_NOTICE.md",
+                                "bytes":  1184,
+                                "sha256":  "6ca38c1417558c7e88460bbca5f16809ee6f6192ba0cdd0a1c91cd939ddc8fc5",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03/CHECKPOINT.md",
+                                "bytes":  8073,
+                                "sha256":  "72bc13a800dcc5a537e37594756d9f3a7afd84be35a4bdfca2beb7c3e188e908",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03/INDEPENDENT_AUDIT.md",
+                                "bytes":  10456,
+                                "sha256":  "db97ba7580484db17f55aaa402fc29e49db8e521b6c5ae14ea27e6801ec1c095",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03/INDEPENDENT_AUDIT_V3R1.md",
+                                "bytes":  10587,
+                                "sha256":  "8b46a3992e02ce5657ccb8ab79f80325740fa74e82d2934716496632612f55d0",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r2/CHECKPOINT.md",
+                                "bytes":  8116,
+                                "sha256":  "1963cec6191115f4d17846cca79afead02197651ee21f96033184d7757938881",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r2/INDEPENDENT_AUDIT.json",
+                                "bytes":  9474,
+                                "sha256":  "4adc80017080b7010fddd1eeeacb2a2dde4084b8c9550785a35ceb2c17f4c9a1",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r3/CHECKPOINT.md",
+                                "bytes":  7802,
+                                "sha256":  "e39c51a7be2006f3d6fe2269bedf4d2bee3eef5addc96de6ffa2e071d4ae8ed6",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r3/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+                                "bytes":  14099,
+                                "sha256":  "21d14bb2b40972f8a99d830b307466767b21e2814bcc1418e17dd360fdc37c36",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r4/CHECKPOINT.md",
+                                "bytes":  5020,
+                                "sha256":  "f5ce645cce83f5a4b58b6c597ba2a171c1d39dacc04b45c12471f394bedc5328",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r4/INDEPENDENT_AUDIT.md",
+                                "bytes":  12008,
+                                "sha256":  "97a34c059b2ef17477d9042a06ef929574ced2e0ba3df72b27f1c00418d226a7",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r4/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+                                "bytes":  15037,
+                                "sha256":  "0f2936fbd76c9a7eb75ff763991e47ff091fe413b91859ee873dda251ad2e10f",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r5/CHECKPOINT.md",
+                                "bytes":  6693,
+                                "sha256":  "0ee3f8f614c4c31523b1f3d81b138c487aa3f059641ddbc5d9b390488dc7a9da",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r5/INDEPENDENT_AUDIT.md",
+                                "bytes":  6306,
+                                "sha256":  "f1cf359b5338714cbd76237252d675903c1d1d3dcb97653c3b8642ccf4a7ca1b",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r5/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+                                "bytes":  16909,
+                                "sha256":  "1e519b226ad229e1f0520939f1599a827c049841a3343ce84fd952be173be2c2",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r6/CHECKPOINT.md",
+                                "bytes":  4974,
+                                "sha256":  "268af72903451cfa1940bf18a5ac3c5c46edf09a82ab4f41fc546ba925e88455",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r6/INDEPENDENT_AUDIT.json",
+                                "bytes":  922,
+                                "sha256":  "17c50e6ac857a5fb788fe1901b756deebb1531f54ccdf4b3bbc47af5a8ae2847",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r6/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+                                "bytes":  18780,
+                                "sha256":  "9a03124f50de2985dd575778398d6b94788f2428ade8b8d6485eec3bd3256966",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r7/CHECKPOINT.md",
+                                "bytes":  7465,
+                                "sha256":  "560eda281a7d8f5774eef914e2b142e783781edea5a4c0753a0f07bea19077cf",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r7/INDEPENDENT_AUDIT.json",
+                                "bytes":  922,
+                                "sha256":  "571c678f3db472c824a6ed1b4eb0508b93bb680b1da795dfb155e63513c14f10",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r7/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+                                "bytes":  20786,
+                                "sha256":  "e2769d147631f0c5cc4945299efa01601e8214c76f5095f4bb09ac87b6ce2bf3",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r8/CHECKPOINT.md",
+                                "bytes":  6489,
+                                "sha256":  "8541ebf17f4298abaa13df0908335224584e69027bd0328e6538553200c3f402",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r8/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+                                "bytes":  23113,
+                                "sha256":  "81f107e2dc6b3283f3e1c7979fd42f9d90957bdbd59832e564802ed4f16c5190",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/CHECKPOINT.md",
+                                "bytes":  6155,
+                                "sha256":  "0bab2d9615797cef7255fcbe54bff09f37f3b519e43bb2072f248f3c3c6863fe",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/CHECKPOINT.md",
+                                "bytes":  3235,
+                                "sha256":  "7ce537d69a8954f7ccbd023aa2840ccd5870db99f039243280d7741f9c463092",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md",
+                                "bytes":  8704,
+                                "sha256":  "eda4a07a27e89196a9e4cb083cdb10506500d4fc845d748017952e735eaab654",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/LOCKED_PAIR_ATTEMPT_03_REBASE_PLAN_PENDING_AFES_V4_AUDIT.md",
+                                "bytes":  6788,
+                                "sha256":  "097390c29dd791b9b838e47c0c3f3310ee140dd17c716b9e6ee25655e113a930",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r10_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  8351,
+                                "sha256":  "36d759569f6819423e6daef950c11939e72adbabfbd188af492a168aab1c2dbf",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r11_static_preparation/attempt_01/BLOCKER_CHECKPOINT.md",
+                                "bytes":  4364,
+                                "sha256":  "7043923f02889ae9994a56af7a4cabaa74968dcc9902e74c2556bfcebc0fa83f",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r11_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  1514,
+                                "sha256":  "769e917f424320d0c93d375848ef49338f67ca85646376f37a60674063be77a4",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_native_outcome_reservation_v3r14_static_preparation/attempt_01/NATIVE_DIAGNOSTIC_OUTCOME.receipt.bin",
+                                "bytes":  496,
+                                "sha256":  "d6734ad3faaae2ca0c60c969d380af9d1c834fed2b87b45034da8336fcc1a58e",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_native_outcome_reservation_v3r14_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                                "bytes":  987,
+                                "sha256":  "8132271b60034d3afbad5138390d8a2e49a5bee91aeb2e0c9d9b1c0a97b552b1",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r10_fresh_static_audit/attempt_01/build_cache/diagnostic.exe",
+                                "bytes":  187904,
+                                "sha256":  "49467b12fd47b794a2b2a1ac2b61d820efb20f719d1808bd0934401b7caaf87c",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r10_fresh_static_audit/attempt_01/build_cache/diagnostic.obj",
+                                "bytes":  102589,
+                                "sha256":  "186f65a0d0fbb86becf6ef0c516c0a097458824846b30654a8294f13e64b3971",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r10_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  13060,
+                                "sha256":  "211c571d0a82f4a94b3eb04c1213d95920da5738b52cae11c3277b879a36a511",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r10_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULTS.tsv",
+                                "bytes":  3435,
+                                "sha256":  "1264458336a640e11b20bd776bc5f6684aeedb16da1bbbdb8f015d8c23d36360",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r10_fresh_static_audit/attempt_01/STATIC_22_EQUIVALENT_AUDIT.ps1",
+                                "bytes":  18180,
+                                "sha256":  "184bd7d8a319fb0463926131135770e98eafb41169df1c779340fa8a3617fb12",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r14_consumed_success_postmortem/attempt_01/CHECKPOINT.md",
+                                "bytes":  2708,
+                                "sha256":  "1118d400506596a180fd44a20e6ef691aa82b6710efa22524829d055149db2c2",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r14_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  9260,
+                                "sha256":  "644a6502e8a3cbdfb06c505ee3c8c99d1d0b6836768d66fb5fce5ec0bb04372d",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r7_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  6885,
+                                "sha256":  "a2debe98c04c83d72eae38935d1bb22f1fca8fc5328e3ba137b09389d8a7daf1",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r7_post_run_command_template_rejection/attempt_01/CHECKPOINT.md",
+                                "bytes":  4273,
+                                "sha256":  "6604cebf9650033c76d1b893189bbb1fba76201a4ee47f7cace448fff1f9d1be",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r8_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  8380,
+                                "sha256":  "a667b03f4a3de443609379cd3c7c368cfe1a1fd9dc9ca62e3593d4238cde10fe",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r9_consumed_run_static_postmortem/attempt_01/CHECKPOINT.md",
+                                "bytes":  8451,
+                                "sha256":  "275fd7501a5d35ec6c5648a3935cafa56eb7854dfb80c173a2adc364738afed3",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r9_consumed_run_static_postmortem/attempt_01/CONSUMED_COMMAND.txt",
+                                "bytes":  883,
+                                "sha256":  "76e7de2dd99dd7c4a1aaba3f76f371f6fae8d3d1ffd91ef14d90786ffa0fbb10",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260810/kira_r25_afes_v3r9_consumed_run_static_postmortem/attempt_01/RAW_TOOL_RESULT_TRANSCRIPT.txt",
+                                "bytes":  249,
+                                "sha256":  "012f65b23b5f604b559b16533c11e7869758a77bc3e9348593c3c167027d56c6",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  2587,
+                                "sha256":  "7bdde7188f621fba6732c6a350500071220c0f9723865e7d8282c3862060233b",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/POST_RUN_CHECKPOINT.md",
+                                "bytes":  2315,
+                                "sha256":  "96d3fa631c0f7fc4bbac8e47d4019c4741267fbae72e7fce314da3cbe2d11f46",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/RUN_OUTCOME.json",
+                                "bytes":  1148,
+                                "sha256":  "da77906313f94d77a356d579349d12f80498745693f66bcd9135479067f54c51",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  5547,
+                                "sha256":  "de11ae34d0a2c5b8a349da86e652c68694816a61789fe20e98233fe426694df9",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/CONTRACT_LOCK_DIAGNOSTIC_OUTCOME.receipt.bin",
+                                "bytes":  992,
+                                "sha256":  "7a2d0b9f54b3b96a8621528b794afc07458a870b0cf37ea3b7318ad8bae7b385",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                                "bytes":  356,
+                                "sha256":  "e0e4968efa52efc924cc7e9e3841c04047bf25389dde87bbf379cc5ddda2aafa",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  9009,
+                                "sha256":  "17c13017c4de4af447e77abecca02d851e999cd1b098c78e32ea07b4768fbfc2",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_consumed_failure_postmortem/attempt_01/CHECKPOINT.md",
+                                "bytes":  2915,
+                                "sha256":  "2276f60864f6a5ce31e423081fff3b564fb63c838485397cbdf96d02615da584",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_consumed_failure_postmortem/attempt_01/READ_ONLY_RECHECK.json",
+                                "bytes":  2233,
+                                "sha256":  "c43e4766e51dd962c6e79f4ec87a724fe830029f7fb265f054a85a1a5784ea52",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                "bytes":  4528,
+                                "sha256":  "672d88ebeba374d3d92faac7b5904afc33fcf7171f695e799f79c3ce5cba4962",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  4437,
+                                "sha256":  "9a084d40c66dec597ebe5e59f66e2e170a29f7ba5d5adfd21bbf6672c46827cc",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                "bytes":  4030,
+                                "sha256":  "2f018f3171f194524794859805581e642e14076ba2fbe1a35e1a046750343a3d",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                "bytes":  65,
+                                "sha256":  "10c0602b6be576debd34080480568fb595b99771133488ca252d8ddea5637ccf",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                "bytes":  1265,
+                                "sha256":  "b29812ed25f40f83671b532ba46e1d09266844abe02a7dae3b07994f2cba9138",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/RUN_OUTCOME.json",
+                                "bytes":  3167,
+                                "sha256":  "83a85c40f630f342d66b3b3dfaa2a864b87b1751533e727e98d5c5d453e9910d",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  3934,
+                                "sha256":  "d05f620e202d4f71283ba45808e97c9149cc04e43da45615fcf56681277111ff",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  4949,
+                                "sha256":  "ca15b96dd45068da1d3d3c7c0ce798cbe9a84d4b5452d6fdf50dbf96dc913991",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+                                "bytes":  1016,
+                                "sha256":  "cf2409244de8a42981e62667e5607e8912bd1d94220bbb09dfd0a79f3a4540bd",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                                "bytes":  607,
+                                "sha256":  "4f9707fadf2092ecb28da4d9683e01690c5102cc1aac7236cc68ebd622d4b314",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  3632,
+                                "sha256":  "0979ee667d033c7048db32e9368d51cb637c3ac3c1610663e2faa9ceae312183",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  56404,
+                                "sha256":  "d0cdd4220881a5dcc4ec8f15321c07d373971e106d3174c23e1bfb8e4e9f8f5a",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                "bytes":  5990,
+                                "sha256":  "ab376b6ae6b251895dfb9199a1dd7a7f01b92c50cf1d6d71282a492f231753b6",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  4741,
+                                "sha256":  "05b4e1a297e39fd4b286563a8788395cf6829c20d3b1c3a069fe2f315b00c371",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                "bytes":  8130,
+                                "sha256":  "682820476c78fe3ef01e87601852408251c262a73ffe583b2a58031ac7fe1727",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                "bytes":  65,
+                                "sha256":  "0bf5987d62c741eaa8b6e2a0f815e517bf86c362c1533602eadfb9bcd5893fbb",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                "bytes":  1376,
+                                "sha256":  "8420cef3dd9015c6924fb84f5e361e7a6c6f639aa30737adbf2a42a8628919f1",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  5378,
+                                "sha256":  "1aed546df73152a1ec07bfab954336ba1b18f89528c44e31fb723e4ae29924e8",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  8829,
+                                "sha256":  "d1ee4a875d160899c3953d67f6157d5e7e059a76a40fbc880cbed55d66f0ce42",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  4080,
+                                "sha256":  "406c0cee59ecaebaacb3d9526f6af6d673d2b0f75f7c6e74b2d138a621cc99cd",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  137189,
+                                "sha256":  "44061c604c795b5715f17669fdc82df927d5900b1da835f335b7c262aae83aef",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                "bytes":  4630,
+                                "sha256":  "fddf2ccbe42cc86a84f7d95b822082c8d980989e81e0abe008c03602500d8dd1",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  5405,
+                                "sha256":  "beed5d9649a81584ab03baef813f1ac5e0494cbfdd75d4d2cc518f2181b341cb",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                "bytes":  2051,
+                                "sha256":  "b30562d0153017820f170a27921b231de89c6f0ae3cb55047fa0e07c8ed6a8a2",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                "bytes":  65,
+                                "sha256":  "b7711e2a111d38b687b83097bc14f632a1241f5d28fc85d79d62251f0b140b37",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                "bytes":  1795,
+                                "sha256":  "fc2d1a78d7d9f843349c4beb1ec7dc0af4d0cb4a7e7a8b481a7b1416c36da101",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/POST_RUN_CHECKPOINT.md",
+                                "bytes":  3498,
+                                "sha256":  "9d42807fdb96f49da9c043ef18a1eae61f2a47b80afe0b849d54cbcdfd89cd9f",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/RUN_OUTCOME.json",
+                                "bytes":  4426,
+                                "sha256":  "850769324423d08278303a2aaae7bcff0e655bfb103b8b66ee47fe13211ca656",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  6244,
+                                "sha256":  "0473c193b4093358efb04522d5c56dc4de312cc85066dfc55f9f80092d738a20",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  8679,
+                                "sha256":  "382b3c79b79a1356aa283310dd78f0e379288c31b95870d7c11dff81cd777288",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+                                "bytes":  1320,
+                                "sha256":  "2665dd31b2c561a728a3b14449b6d79e821494e9b5792682bc1399fd5edb5b34",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                                "bytes":  1450,
+                                "sha256":  "310c8d16fdf433de22ecee9dc326c34fd8f1efcbbdc86ada382e7088e42745a7",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  6780,
+                                "sha256":  "c954a4a3c77e5ed4307837842a964b560e3ad83d6635e2a3e8de46c5ef828658",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  144602,
+                                "sha256":  "fc63c0ada6db0737988724c78acc08907fa319f6badb9de81a930554f6a1e640",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r25_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  8065,
+                                "sha256":  "54da803c091dc0e6cdf3918ae09b819455dca7ceaadccc728b51abe9f555d595",
+                                "roles":  [
+                                              "current_artifact"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r25_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  9758,
+                                "sha256":  "7cb0d9613a3487701e5284ab150f685d11fa370a971f0388b58b7309805689c5",
+                                "roles":  [
+                                              "current_artifact",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  5769,
+                                "sha256":  "c8f95026d8549fbd12850c3c09011b9a0644050c56bdb624b6a226d876c52db9",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                "bytes":  3304,
+                                "sha256":  "d2b1433979367d94d7ae8cbc5174c93de91b51827c6843453921023e61a323d1",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                "bytes":  65,
+                                "sha256":  "cfa1c0a1ff465546c1bd3a2915d49d40ea7570d8ecb3e989127ada9f7d38c714",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                "bytes":  2184,
+                                "sha256":  "7780fa63a33c93096bbfdefd12cf8b8b6184e5b2fe7c1c7eb28c15e65aca8b38",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  2020,
+                                "sha256":  "9e60c22646f1b0050ee2f177ca52f37afdd0312fbc435e53743b4bd55f4c305b",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  4591,
+                                "sha256":  "7d4480ab921dea26fe76cdb982e62754eb9dad272068cefb1ed12717d5169825",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  2271,
+                                "sha256":  "c1285fca54afa53105318b4d956cacc81f44d9fcaa1c2e9c155472b9a683f931",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  10851,
+                                "sha256":  "25902b27005076878e577e594916748793ca7eea0614fbe76316a217dcd85ee4",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_consumed_failure_postmortem/attempt_01/CHECKPOINT.md",
+                                "bytes":  2561,
+                                "sha256":  "e97c6733ef8db99e540e893492b237c3c3938a3dd883f1bb1d6303ec346f40f2",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_consumed_failure_postmortem/attempt_01/READ_ONLY_RECHECK.json",
+                                "bytes":  2674,
+                                "sha256":  "edef1373f32149d8ed654bb47632cade404224dbca183c8dcd5501d8b6a8b7b9",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  2755,
+                                "sha256":  "4b67d18d0cb1b3a6160693c644ceabfcae4c697c2ee22619e06aeef95728f47e",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                "bytes":  65,
+                                "sha256":  "f084cf31909d1315700364d0183691d4d7ec560320ec7f5db82809c8e32b0ac2",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                "bytes":  3507,
+                                "sha256":  "927dc02ef49091dfff64909308fc244fa22e55a41f4844a17b8021ca5c1cbea7",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  2587,
+                                "sha256":  "59d0dcec3b75d12a524ee267759e5697b4fefc5a7ff0bfe3bc89dc625c649ef8",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  5018,
+                                "sha256":  "7bae08d6591d26563b0d597777016e271cd47596ed3c877aabd29f7e15f9aec1",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  2781,
+                                "sha256":  "70c65cb910965d986429e453f198ec041746d2f34d51d677967718899515a3dd",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r19_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  16808,
+                                "sha256":  "439f35f8a04282d8cea1a99a6f80fcec0d9c6653dff3edf10f241b7897b34ccd",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                "bytes":  3459,
+                                "sha256":  "1921c66435efc5ba400b4a4374beb20ea35629770fc1268816787fc2e4a0010a",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  2799,
+                                "sha256":  "16174d65ab9da57c1f9508de2ef71aae07aa5d95fd2c1bed7517a5ba35c40a4c",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                "bytes":  65,
+                                "sha256":  "711db9924daf28ff525f2d3e6c86dc91b115f645cf998813881aaeb2cb90124f",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                "bytes":  4841,
+                                "sha256":  "790b122d1eb135754b78673b57fa74e48babf0bec4b5e07498015b95bd7a1273",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_fresh_static_audit/attempt_01/MSVC_ANALYZE_RESULTS.txt",
+                                "bytes":  1878,
+                                "sha256":  "697a9987dbd224478ae4e759bf00ee28b3928b03494ddf8283cf103e78acaa8c",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  2548,
+                                "sha256":  "81f98c59a5f3d3a5f41a30614171e223c98540080649806e88b738e597502a1e",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  4923,
+                                "sha256":  "0fb6f383a85ef9df800a67e0be96e2cb8b3cc79a20279476c1400521f6452e71",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  2760,
+                                "sha256":  "bfea85067eefd5f1eed9f4aef96a8536b10ab625ba3db07c44c030402f10163c",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  36152,
+                                "sha256":  "3dacef076bc0046cd42c1fdbe34f331e391177776125efb146465801fcbf13c2",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                "bytes":  2263,
+                                "sha256":  "e02ad4252df2338b05fdbeec5bf2e7d719b45beb103f5a25d10a81d901380355",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                "bytes":  2954,
+                                "sha256":  "9b81bda48a01652cbe17ad83d4e3a1f9c59642d2d3755684071e6eedfcab9d95",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                "bytes":  2825,
+                                "sha256":  "95e1bfd37cf036ee552f046d3ad49ebd88b6369aad0d1614d69ea007f3c8de4f",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                "bytes":  65,
+                                "sha256":  "5b12a7534239ac1bba7174cc4f2c44cf3ad63a3a8ba555fffe0d260988d34773",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                "bytes":  6259,
+                                "sha256":  "235e13793ed4112c9dfaa7173125b31712cb84323d46224932f5fda135f69fd5",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/POST_RUN_CHECKPOINT.md",
+                                "bytes":  3530,
+                                "sha256":  "86dbeb13bdd284bda80cedb4e12200151451df90c99db97d4b4832e9218a237b",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/RUN_OUTCOME.json",
+                                "bytes":  2142,
+                                "sha256":  "ce26d16412c8e90d752af9f4182368db45241146dedd26b5cdee9ec55de68f6d",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                "bytes":  3144,
+                                "sha256":  "f6e498f23971ff19d2622ab5c0e43b0b1946032cefa746225e1a46740fbfc38a",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/CHECKPOINT.md",
+                                "bytes":  5445,
+                                "sha256":  "c888e083f5bc35c92e149281c774b78aa31761b18554421bcc35651c40d03bc8",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/PYTHON_CONTROLLER_VALIDATION_OUTCOME.receipt.bin",
+                                "bytes":  1016,
+                                "sha256":  "7c53fc7beef0a350a2c15f8e0dd6c82730c6dea48f56cf24324a78145ecad31a",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                                "bytes":  1312,
+                                "sha256":  "76ce1202eb11b0e5d7a9473800179b9f01665cfd235e89558bcfd55aa723d8e4",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                "bytes":  3328,
+                                "sha256":  "875b36cfe5a3d1a648a6b123800ec25711fe6f3e498e6de69817215d801f0486",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                "bytes":  43485,
+                                "sha256":  "6323c0c8708dd871c411b2f8a8c236d28634cc31c94b749f8a79f8295f719f20",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_afes_read_only_extraction_attempt02.py",
+                                "bytes":  13272,
+                                "sha256":  "ab1753305a0bc357e94fccf36160bc893197be23d69675f26651e42784efc970",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_afes_read_only_extraction_attempt03.py",
+                                "bytes":  11241,
+                                "sha256":  "07b5bdd76262fbf6bb7cff9d2bcdd45c85ab6c77603b3301b7b0b31c1f481c62",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_afes_read_only_extraction_attempt04.py",
+                                "bytes":  14077,
+                                "sha256":  "f9a644233a0618ce4f9f8f55c358d99f4b2aa235cf0dc42f0a07c51e6b6d74d7",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_afes_read_only_extraction_attempt05.py",
+                                "bytes":  19222,
+                                "sha256":  "062c5972e24232a862b80946a42414ecd2b7a24da118daf857c8dcd3310e6f38",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_afes_read_only_extraction_preparation.py",
+                                "bytes":  7352,
+                                "sha256":  "6132c8fc82f60f924f81a4124358369ee2af6e51924e5b59aaa8d0b5f6588eb5",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r22_static.ps1",
+                                "bytes":  22957,
+                                "sha256":  "bd0b781c8bd89dc726cafbfcbe33aec528c6c39a6c5460ef394ae7a272a0eac3",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r23_static.ps1",
+                                "bytes":  28059,
+                                "sha256":  "413c4e368d1af579bce68185ec20da1d7775d394e247cbc85415f9f43c1169e7",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r24_static.ps1",
+                                "bytes":  25519,
+                                "sha256":  "1010f4b122aab45bdaaabd4363d0e33fb93c620d44dc7f342c66e7045c858036",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r25_static.ps1",
+                                "bytes":  38329,
+                                "sha256":  "ed5f4e13a2a5744cea7d23373b4b05a835472a3f358a943d32b8c20da9a7e2e1",
+                                "roles":  [
+                                              "current_artifact",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution.py",
+                                "bytes":  5523,
+                                "sha256":  "f8de598e7bf4ec40d5535f73196576419f1498dde50ad4d65f7ac41e1221e145",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v2.py",
+                                "bytes":  14895,
+                                "sha256":  "dcccf95734812d5d9b5fbad2f0154d1e59bdb690ff7bd465f8a65b5fcb27e56d",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r1.py",
+                                "bytes":  21849,
+                                "sha256":  "ba79a1573d0e1bf60ce8ce9aac823011da10b5cae1c4f976925134ce0e143c8a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r2.py",
+                                "bytes":  36001,
+                                "sha256":  "5edcccc15d543f0900c705dbfc09d090a94bd193074a0ed2d2f5ee8f83cdd630",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r3.py",
+                                "bytes":  18393,
+                                "sha256":  "652cb6da861ae851f210e7e23a1b840f409293b7f7bf0149ffd36590b051a80d",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r4.py",
+                                "bytes":  48317,
+                                "sha256":  "5433525b191135c5b69376f3bec620f5ebf4ea598e17da24e43179717a598e13",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r5.py",
+                                "bytes":  40277,
+                                "sha256":  "f685531ba8a87943cbfd53972569db93667c97a9196857866e0576bfa5ad8f3d",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r6.py",
+                                "bytes":  46770,
+                                "sha256":  "3c5ce43c598b0256af88587a69e12b851145356254b1fa7c664e6de9eb65bde2",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r7.py",
+                                "bytes":  53905,
+                                "sha256":  "68b7a1ce25f9abb4000f0aba3df8573104d5ad75ef360f2a0b16ce49c91c54bd",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r8.py",
+                                "bytes":  59029,
+                                "sha256":  "4c2cf898b401a589152c93727d71020a05cca609d8cba4712fc30f2681cec163",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r9.py",
+                                "bytes":  67410,
+                                "sha256":  "ff6f1c75f773fa29e9c6815705e8ca8b9f4f1e80e8dea64c508489eb929eae6d",
+                                "roles":  [
+                                              "retained_manifest_row",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_locked_pair_preoutcome_diagnostic_v3r10.py",
+                                "bytes":  22501,
+                                "sha256":  "12befc785cc39a6a68e8aca96178ef16c6a3161c3c465ba0699204a28ce5c764",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_python_controller_validation_v3r18_static.ps1",
+                                "bytes":  8309,
+                                "sha256":  "cd0adcc5887392790712f2e4937ee668814a335b18d4c40fb060060f3baedfaa",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_python_controller_validation_v3r19_static.ps1",
+                                "bytes":  16610,
+                                "sha256":  "85b8a8e05237d425458c59cb3948dae61019744bf2b55520cf15da8cd2c21075",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_python_controller_validation_v3r20_static.ps1",
+                                "bytes":  19733,
+                                "sha256":  "8f892d750d9da3512599961a7ad20c3540c81a7d64467224c8bd944c148f9f2e",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "Testing/test_kira_r25_foundation_afes_python_controller_validation_v3r21_static.ps1",
+                                "bytes":  24053,
+                                "sha256":  "2be6643c7fc8a92a328c675cde7fca19d142a26ce17c4735d135d1a1c3e3e9c5",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings.py",
+                                "bytes":  18513,
+                                "sha256":  "706a1035354bb133a8cc2a2c0dbeff414f6f1172bbedaaf7dafbf70e14c57bc2",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v1.py",
+                                "bytes":  7666,
+                                "sha256":  "57c3894800477a35ed8631168b836541da7703c31b8c4009297213ed80b88131",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v2.py",
+                                "bytes":  8281,
+                                "sha256":  "01380a34c065cee1c67ba700d342d22c811aa985aa5722525718aa39d4f56f8e",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r1.py",
+                                "bytes":  16211,
+                                "sha256":  "4ba9f6b44eb2d644bcd8ca2d13ed8f0bf443341c87ba1e7eed687b35457b551c",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r2.py",
+                                "bytes":  16874,
+                                "sha256":  "a9860f53ae86bf70eb42bac0a358ca4edd70a50738140bac3a5d6ca920ea24cb",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r3.py",
+                                "bytes":  17377,
+                                "sha256":  "e9f4ab58a0f6734f6ab08c9905a0b620ef2b137079fe05d332201b40b7d529ec",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r4.py",
+                                "bytes":  18750,
+                                "sha256":  "21a7c4e6649f48c8a259270dc258cc7980d1dd3d6c339173b9e2d3ca4a68bae7",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r5.py",
+                                "bytes":  21285,
+                                "sha256":  "37d0df44fa366cdc47b4a289808df07c34fada553bf76a8b9846818b7999b634",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r6.py",
+                                "bytes":  21751,
+                                "sha256":  "4e87718b17425a798fd2313e4e363f54b44724d829a8826f63a51716be07ae05",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r7.py",
+                                "bytes":  22170,
+                                "sha256":  "44f5566a9ccf43a41fa8aebe055042690671f4ad0271b5fef8803254d4baa59a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r8.py",
+                                "bytes":  22170,
+                                "sha256":  "7f08628f65eba1aa484b959663a95f2672d40c6013d00efa667559a72538e8a8",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r9.py",
+                                "bytes":  25343,
+                                "sha256":  "a9c3da1146f2b8057338eb8ce679f96cc3f1d14582ecbb7212249c6a69e2383b",
+                                "roles":  [
+                                              "retained_manifest_row",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v2.py",
+                                "bytes":  20082,
+                                "sha256":  "508900309d7847e41997da72d2c85ee28317c9439e52c5f7311b82aac4553fc5",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v3.py",
+                                "bytes":  23790,
+                                "sha256":  "861344dce0bb203400ef50875124127fe1ed21ea79d036c6eee73b1c7c4ee366",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v4.py",
+                                "bytes":  22751,
+                                "sha256":  "088c811cc0745e7519516d94c0c449d2ee8bf296f8cb10cc8e8d7d343de6f079",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v5.py",
+                                "bytes":  23834,
+                                "sha256":  "333b17e064ae9cd681f309606076da17961eb738b1bbace462533bd30918959a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/kira_r25_afes_topology_core.py",
+                                "bytes":  10005,
+                                "sha256":  "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/kira_r25_afes_topology_core_v2.py",
+                                "bytes":  28732,
+                                "sha256":  "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/kira_r25_afes_topology_core_v3.py",
+                                "bytes":  8732,
+                                "sha256":  "c3c5f6f21a0b133fae6ef0439932193a9d0e922001a97026fd022ff0a682dc8e",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/kira_r25_afes_topology_core_v4.py",
+                                "bytes":  9529,
+                                "sha256":  "d70a3c15d5c929ea2a5f60c6d73445c7fa894481736691c9e5c1ace6c4bef1d4",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/kira_r25_afes_topology_core_v5.py",
+                                "bytes":  16970,
+                                "sha256":  "2cf8bfcb65efa1f1e557f5e9dc66208fad98023d5ad71b66c5fe513f86e7f48e",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/kira_r25_canonical_receipt.py",
+                                "bytes":  19262,
+                                "sha256":  "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r22.c",
+                                "bytes":  122166,
+                                "sha256":  "61ccb03501f8cb02575454b6202b72ff7369ce17ae534ead1623aa53195f1dbd",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r22.exe",
+                                "bytes":  241152,
+                                "sha256":  "d905444a6d4115603688f0c0bc39f1798dcb7f3d103ae2ed27712e52b88f72fc",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r22.obj",
+                                "bytes":  184652,
+                                "sha256":  "b2fb7d783f180f1ff1a2a3a90b5be8559b75372a18d01db7d6c72995ccbcd2ba",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r22_identity_anchor.h",
+                                "bytes":  16489,
+                                "sha256":  "deba43f0952645b63a3fe98e7b755290f48bc16a282c2f0800e8db5093d14bbb",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r23.c",
+                                "bytes":  138833,
+                                "sha256":  "6345fc66582ec65d00a5b175f35371dec6d76d3c5408ad29b08e86292d69b947",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r23.exe",
+                                "bytes":  253952,
+                                "sha256":  "bb492c20a21494a9f6e652f0acfda89a01117b837e79c6288cf81409556fe157",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r23.obj",
+                                "bytes":  216029,
+                                "sha256":  "6323ae8d7ff77d378ba0b96e9a3ba4c6c0b86ea18fa26621490a13868340b9b2",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r23_identity_anchor.h",
+                                "bytes":  4600,
+                                "sha256":  "240a90387f6167c98352ae7589a88ffa430a293f1ec84231e9a9ea6d2101f259",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r24.c",
+                                "bytes":  148570,
+                                "sha256":  "8bb0974a531bf40c28c9e9400f0b6dec22d87ea57296b2aae7de06322c408ad5",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r24.exe",
+                                "bytes":  264704,
+                                "sha256":  "281d427482657a73096fa6b44e2092e6e54b760e59c73c37f562e24ad6b03bb9",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r24.obj",
+                                "bytes":  234278,
+                                "sha256":  "cd66e41fce8ede60f34bf8590a88c9f8ddc08571d612e4417235f26d1aeae287",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r24_identity_anchor.h",
+                                "bytes":  7447,
+                                "sha256":  "625df0dc5ebd817cdcca767a018cdace631b966c8b57d9dae46ac3ba5af546e9",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r25.c",
+                                "bytes":  156256,
+                                "sha256":  "8426208c738975b1b5a520e78eb023990fb35500427650fd3c897e940d77254e",
+                                "roles":  [
+                                              "current_artifact",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r25.exe",
+                                "bytes":  273920,
+                                "sha256":  "1fc7d1d68e8cc3f4b340c5c091808647b35d581f40848b45bf061476014ffbc9",
+                                "roles":  [
+                                              "current_artifact"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r25.obj",
+                                "bytes":  252303,
+                                "sha256":  "70132cf3de9421732707527c8daeba8fcb6462bccb34c4865e621f5354e73fb6",
+                                "roles":  [
+                                              "current_artifact"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_execution_plan_validation_v3r25_identity_anchor.h",
+                                "bytes":  10373,
+                                "sha256":  "2da9f6d0a1aeb3754e7e90a13869f625e2599970abfa24bff37f4fe8e19931e6",
+                                "roles":  [
+                                              "current_artifact"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r3.c",
+                                "bytes":  131644,
+                                "sha256":  "be926d46208dec359fe8f66f8f15affff8b576dd75c3ff1c7a5dd247225f7245",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r3.exe",
+                                "bytes":  220672,
+                                "sha256":  "43997b035c56d29291ce4f1b370476c24fca607ef2fa3fbfa92474092a2f2fce",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r4.c",
+                                "bytes":  185845,
+                                "sha256":  "40c9fb92fe5ac63cedc549fc288a1ddf1aeaaa1f469cf19c3f74253dc8f57beb",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r4.exe",
+                                "bytes":  244224,
+                                "sha256":  "6c1b79045758a0c58e0cd1dbb5889aa2f73cd7e0f96c2d54cde8313e84b4b387",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r5.c",
+                                "bytes":  260397,
+                                "sha256":  "d6633cda2c03213420fef4e701f78b0c45d1a0f53c7da55e96bcf9b7fc07cb05",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r5.exe",
+                                "bytes":  275968,
+                                "sha256":  "273666a9ddabbdd7c17f0458038e8e8fbe10896f8569ce48465d1e352d0eda4f",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r6.c",
+                                "bytes":  260848,
+                                "sha256":  "ac249b981d7f75d4f8e0eb8ec29c4e563ac8c8989aed54a18d598ce142b1a716",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r6.exe",
+                                "bytes":  281088,
+                                "sha256":  "31b9a4917282d9b33f96708308640626fc0c03530821af5bf152b70e323c4e31",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r7.c",
+                                "bytes":  264295,
+                                "sha256":  "e9dc387b6c308cc50a87034f56f0fb2c3d9182ee936a88830ae47601fc7deb61",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r7.exe",
+                                "bytes":  281600,
+                                "sha256":  "bb2dd42c8572c4ef818cd2777f091519f966c865f8d2f44897ad4e8c6aaf95d6",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r8.c",
+                                "bytes":  263949,
+                                "sha256":  "0f3f8a32b9f04e812fa33c0ce32c2dff6af40e35924b3f57fec36b8afb5c9cd5",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r8.exe",
+                                "bytes":  282112,
+                                "sha256":  "daed8fafbca0e34850106f528bb9e8b94f8ac4dd3c7e1aeaa5acea5b9f58c253",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r9.c",
+                                "bytes":  263949,
+                                "sha256":  "703f9683c44f8506558b85dbf3480425f0da0a05c115c1da2ef5bdd092e7addd",
+                                "roles":  [
+                                              "retained_manifest_row",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_launcher_v3r9.exe",
+                                "bytes":  282112,
+                                "sha256":  "2aec90c36e3150c258f6089fd1ba3f9e5c336ca0b69d8d1a4d826bc6a8764760",
+                                "roles":  [
+                                              "retained_manifest_row",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r10.c",
+                                "bytes":  57269,
+                                "sha256":  "8380a0f819a117138070f73db64d2c111ec8984870f09b65c9d92bee7ec8b1c7",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r10.exe",
+                                "bytes":  187904,
+                                "sha256":  "0fbf0723795c63498392eb99863a2efa88a96f3ba1ac64e922407306129c8e74",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r10.obj",
+                                "bytes":  102545,
+                                "sha256":  "cfdf26ba7cdeeb7c196fd86d317b80c420975eceb1da96f11e6f2b6a23021e61",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r11.c",
+                                "bytes":  73276,
+                                "sha256":  "360c22dc0c34dad81683abb38cfe48e07d50a064de76417480a872f3d6298694",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r18.c",
+                                "bytes":  59811,
+                                "sha256":  "90a08c76f09200c1ed4296d9bc948b6e359478b7f9c4cdaf0493e2c354c68e7a",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r18.exe",
+                                "bytes":  181248,
+                                "sha256":  "184dbcad549d1edbbc802dce899952541558b8f47691bddeaba77089a7c24b1b",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r18.obj",
+                                "bytes":  89690,
+                                "sha256":  "cd1b800b554e10e2f77cb9e51b916f3bd9424b464618392d7cb7fa53b9ede15b",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r18_identity_anchor.h",
+                                "bytes":  3230,
+                                "sha256":  "c37ac03454384b442cb2328c228ffc2ed7138eecd8ec85611023242288309cbe",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r19.c",
+                                "bytes":  71456,
+                                "sha256":  "25b99a9b81aea3ea0f4af7459b1513b89e33b8714cc456393eed892107e15079",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r19.exe",
+                                "bytes":  189440,
+                                "sha256":  "625e5445826ee6b587096a143c27a5ed194a3c509baf9b7d3ca79fb601fd7487",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r19.obj",
+                                "bytes":  105920,
+                                "sha256":  "4b637e7f7a4c02cee92569a44050b9096cfe54a19a3dd74989e3adb402494eef",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r19_identity_anchor.h",
+                                "bytes":  5323,
+                                "sha256":  "bad197d4b9cc3a41972146dddf72b7f74d0c43cdcec983ea6e07dee8a60c63b1",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r20.c",
+                                "bytes":  77359,
+                                "sha256":  "d9050f8a407595da2e0c733d4d5946043aeb9ee058b9c25aa8f6c025fc368b69",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r20.exe",
+                                "bytes":  196608,
+                                "sha256":  "dc48be07c1f4505751d029df017acb48d91fe673a97e89d308cfcececf8b4213",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r20.obj",
+                                "bytes":  121813,
+                                "sha256":  "fbee2be25f57e9116eaf19e0b07449f6421fb85172684f102cd0e14af2ed5865",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r20_identity_anchor.h",
+                                "bytes":  7563,
+                                "sha256":  "3705f769367596fbf89cdfff4978662f667b3314c063322613520d802b0f71bb",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r21.c",
+                                "bytes":  84245,
+                                "sha256":  "7e78c480643fb7735b1d6738e565c06d169cbd50410e040c8f1f8c7416a0f6f6",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r21.exe",
+                                "bytes":  203776,
+                                "sha256":  "d61bc0db5fa8229dfd5922aa3ecc51116908378bb80bcb443739d8c7d96c83fc",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r21.obj",
+                                "bytes":  137184,
+                                "sha256":  "b1711756e91f52068abaf43f5d7b0e948f22115e76f333e97fecf2b3f968b4bf",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/kira_r25_afes_python_controller_validation_v3r21_identity_anchor.h",
+                                "bytes":  9825,
+                                "sha256":  "99c5a828cbe2970191a69d02c4f5492c4214b5a72404e9009a83181c85e521da",
+                                "roles":  [
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/native/runtime/python314_stdlib_v3r4.zip",
+                                "bytes":  28997479,
+                                "sha256":  "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair.py",
+                                "bytes":  18382,
+                                "sha256":  "4568bd9fb7b2cc0072d3e97d9fd5603dfa6943dd736c122bae218d2102119fd5",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r2.py",
+                                "bytes":  14266,
+                                "sha256":  "505293bbd48ba8dae7bce2af3b316d58b4c26510c96f5fcac5efcbe7ef770102",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r3.py",
+                                "bytes":  14800,
+                                "sha256":  "1453ee497ea88743434be611578bfedb904e0457c719ee345acabd61b6c514b8",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r4.py",
+                                "bytes":  14929,
+                                "sha256":  "14b8a5432a64fb8af60025d3f54bcb8608f3e90aaf79c1bb8bb2ebeb62400a14",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r5.py",
+                                "bytes":  9380,
+                                "sha256":  "c0abf8380068d9d0f104f6d5bd495f33ba4573ee49dd53bf2d4177083be656f2",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r6.py",
+                                "bytes":  9381,
+                                "sha256":  "c78ffebcba9b4dcd391d509c5f3027bbf33164a387c8a2e979677c997dceac7a",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r7.py",
+                                "bytes":  9381,
+                                "sha256":  "0987b8e78f67c712863b1acf8a0684ec7439c9117a4b237c5b289645e8f2c1e6",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r8.py",
+                                "bytes":  9381,
+                                "sha256":  "ec586005c41a2544d44579b9b3fba73a785a462ab6ce7494a15cd87bcdc7a59f",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r9.py",
+                                "bytes":  9381,
+                                "sha256":  "57ecda2ce2aecc75a259c3b6e9296eeec1512a296ebe7309f803e5ada3ea8378",
+                                "roles":  [
+                                              "retained_manifest_row",
+                                              "runtime_fixed_binding"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v2.py",
+                                "bytes":  31503,
+                                "sha256":  "4f1f0413526b6c9449033f070e1a0d46fef965cc6fea6af46f1c1b52461adb06",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r1.py",
+                                "bytes":  46633,
+                                "sha256":  "2375b5657be3df280a4f969b03cec7ecc644cd797f7ec6ea80709cda306e3496",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r2.py",
+                                "bytes":  57661,
+                                "sha256":  "eaaf26db2bf6473378ce208527d39fec43f2ccf2294c31a8c461bca8dc701c4d",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r3.py",
+                                "bytes":  31694,
+                                "sha256":  "e9e23072d73df77a6c10eabfb7e959e02a0160e458a5aa2b45731c32120658be",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r4.py",
+                                "bytes":  31627,
+                                "sha256":  "2066d832a6988ffb1cbc70abf3a41eb002158959f000d842d6ec179ae9e2f30b",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r5.py",
+                                "bytes":  43881,
+                                "sha256":  "89e770ab93abb103011501a3a6c0851f722915c7d6bcd43f39b40cbad9164044",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r6.py",
+                                "bytes":  45564,
+                                "sha256":  "fd6d623b7e324e69b88a054b5b4605e5757de1e82847d6e8277f18d038f17cca",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r7.py",
+                                "bytes":  47314,
+                                "sha256":  "9338adbcbb58f983c05329d6d90873a0a5119b40a1601cb41fe57a213a97c0d4",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r8.py",
+                                "bytes":  49199,
+                                "sha256":  "4c2329268e0cd3050f0cce61858aec0b398d652715cb776f8bd199a4df546d58",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            },
+                            {
+                                "path":  "tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py",
+                                "bytes":  50907,
+                                "sha256":  "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf",
+                                "roles":  [
+                                              "retained_manifest_row"
+                                          ]
+                            }
+                        ]
+}

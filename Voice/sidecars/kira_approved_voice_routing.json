@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "routing_id": "kira_approved_chatterbox_gpu_first_v1",
+  "approved_profile": "Voice/profiles/temp_ai/kira_voice_profile.json",
+  "approved_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+  "approved_reference": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "qwen_model": "qwen3.5:9b",
+  "qwen_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "policy": {
+    "preferred_route": "blackwell_gpu",
+    "automatic_fallback_routes": [
+      "sealed_cpu"
+    ],
+    "gpu_requires_qwen_absence": true,
+    "public_spoken_only": true,
+    "playback_inside_sidecar": false,
+    "generic_voice_fallback_allowed": false,
+    "sapi_fallback_allowed": false,
+    "unsealed_in_process_fallback_allowed": false,
+    "unload_arbitrary_models_allowed": false
+  },
+  "routes": [
+    {
+      "route_id": "blackwell_gpu",
+      "role": "preferred",
+      "compute_device": "cuda",
+      "config": "Voice/sidecars/chatterbox_blackwell_gpu/sidecar_config.json",
+      "config_sha256": "cb28e9f7fa498f4342f1e0606dc60a5c73c66065bf1528cad78f1ac77c8ae097",
+      "worker": "Voice/sidecars/chatterbox_blackwell_gpu/sidecar_worker.py",
+      "worker_sha256": "c7ac33170f5f5b85ef7df717a71bf468b2f37166bb5f70e6441bea8ed6d8da1e",
+      "python": "Voice/sidecars/chatterbox_blackwell_gpu/.venv/Scripts/python.exe",
+      "environment_profile": "restricted_blackwell_gpu",
+      "standalone_acceptance": "RecoverySprint/continuation_20260801/blackwell_chatterbox_acceptance/attempt_05/blackwell_acceptance.json",
+      "standalone_acceptance_sha256": "dd0d609dc5405a04dcb0c4e689bbc674c553058bcad9cd93bfaf67a595c841de",
+      "serialized_acceptance": "RecoverySprint/continuation_20260801/blackwell_qwen_serialized_acceptance/attempt_01/blackwell_qwen_serialized_acceptance.json",
+      "serialized_acceptance_sha256": "0398511192e529e273f1bccca493c68e6e7ebd11d16aba650337fe33d1716e12"
+    },
+    {
+      "route_id": "sealed_cpu",
+      "role": "automatic_fallback_only",
+      "compute_device": "cpu",
+      "config": "Voice/sidecars/chatterbox_py311/sidecar_config.json",
+      "config_sha256": "7e544ae9e8788a0c1be5b0848657b2d70c6ec9c25ad86f3f597d95d8e55594e7",
+      "worker": "Voice/sidecars/chatterbox_py311/sidecar_worker.py",
+      "worker_sha256": "856c195173f8932f1b9d731634290f9eb78bb543e90da37c1346160e45334f46",
+      "python": "Voice/sidecars/chatterbox_py311/.venv/Scripts/python.exe",
+      "environment_profile": "restricted_cpu_cuda_hidden",
+      "accepted_fallback_status": "validated_production_cpu_sidecar_unchanged"
+    }
+  ]
+}

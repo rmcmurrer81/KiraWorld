@@ -1,0 +1,93 @@
+{
+  "schema": "kira.blackwell.v18.native_diagnostic_telemetry_control_anchor.author_package.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_diagnostic_telemetry_control_anchor_candidate_v18",
+  "attempt_id": "attempt_01",
+  "author_task": "/root/voice_v17_postrun",
+  "recorded_utc": "2026-08-11T23:09:48.8604409Z",
+  "status": "AUTHOR_SEALED_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT",
+  "execution_authority": "NONE",
+  "v17_status": "CONSUMED_FAILURE_DO_NOT_RERUN",
+  "v17_rerun": false,
+  "v18_invocations": 0,
+  "python_invocations": 0,
+  "model_calls": 0,
+  "gpu_voice_calls": 0,
+  "synthesis_calls": 0,
+  "audio_calls": 0,
+  "playback_calls": 0,
+  "latency_measurements": 0,
+  "network_calls": 0,
+  "person_state_calls": 0,
+  "body_blender_calls": 0,
+  "sarah_calls": 0,
+  "repair_id": "V17_STAGE50_DIAGNOSTIC_TELEMETRY_DISAMBIGUATION",
+  "v17_consumed_closure": {
+    "run_evidence_sha256": "269d1eadda20ca6a8a3d6e1679f80d850e32b79146aa562e22765fb624bad32b",
+    "receipt_sha256": "83c7b11b7c458bdcd5aa75308fe24f5ceae9f700de672eb01affd1f900ffa21d",
+    "run_outcome_sha256": "2651db197caa103b33b7d16fb718707a81cb3a5f2c9906246b775d7a46357dea",
+    "post_run_checkpoint_sha256": "758c444a4c6b989de1ea9a2413f23b2b798668c22561150889ad9c5e52b60f8f",
+    "root_attempt_35_sha256": "65d212ae07d8f7eeea4a23cc328965be13f647a5cd3fe4fd038b7cba9793dbc4"
+  },
+  "diagnostic_telemetry": {
+    "failure_categories": 4,
+    "result_predicate_codes": 15,
+    "result_tuple_size_recorded": true,
+    "pre_call_stage_recorded": true,
+    "call_return_stage_recorded": true,
+    "result_validation_stage_recorded": true,
+    "post_validation_stage_recorded": true,
+    "exception_type_capacity": 64,
+    "exception_message_capacity": 192,
+    "bounded_sanitization": true
+  },
+  "retained_validator": {
+    "path": "tools/native/kira_blackwell_voice_control_anchor_v15_validator.py",
+    "bytes": 21931,
+    "sha256": "2bf232b07b0b7b93de8776f5210bd2d89068ad76cb4ee46555b861ad2818d16a",
+    "private_module": "_kira_blackwell_v15_private_native_validator",
+    "callable": "validate_static_control_graph_v15",
+    "result_schema": "kira.blackwell.v15.native_validator_result.v1"
+  },
+  "seal": {
+    "schema": "kira.blackwell.v18.native_diagnostic_telemetry_control_anchor.static_seal.v1",
+    "subjects": 86,
+    "unique_paths": 86,
+    "bytes": 18517,
+    "sha256": "9206d5b719f7edaf9be3036877814459ff02cb90a704b76452dabc13774f14a5",
+    "v17_author_artifacts": 17,
+    "v17_audit_artifacts": 8,
+    "v17_post_run_artifacts": 4
+  },
+  "strict_build": {
+    "warnings": 0,
+    "errors": 0,
+    "source_bytes": 98883,
+    "source_sha256": "3cd9147c9b74ef36608a7471e00900ef7defe1fa0191ec194a3233214e9942d0",
+    "executable_bytes": 171520,
+    "executable_sha256": "ab2fecce995655f0bdc190e2f23964b7d81ccebd2849866a050d7de686a6e1a3"
+  },
+  "static_analysis": {
+    "exit": 0,
+    "unsuppressed_warnings": 0,
+    "errors": 0
+  },
+  "compiled_hostile_mock": {
+    "checks": 62,
+    "failures": 0,
+    "candidate_entrypoint_reachable": false,
+    "python_invoked": false
+  },
+  "source_mutation_gate": {
+    "mutants_refused": 12,
+    "mutants_total": 12
+  },
+  "author_artifact_count": 16,
+  "different_fresh_static_audit_required": true,
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false,
+  "allowed_next_step": "root exact append-only transplant, rehash, installed PostSeal, then different fresh V18 audit",
+  "forbidden_next_step": "any V17 rerun or any V18, Python, model, GPU, synthesis, audio, playback, latency, network, camera, person, body, Blender, Sarah, or production operation"
+}

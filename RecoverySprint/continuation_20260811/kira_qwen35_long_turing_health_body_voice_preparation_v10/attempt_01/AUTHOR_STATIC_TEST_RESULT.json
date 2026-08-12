@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v10",
+  "recorded_utc": "2026-08-11T15:19:27.1600489Z",
+  "status": "AUTHOR_STATIC_TESTS_PASS_PENDING_DIFFERENT_FRESH_AUDIT",
+  "live_authorized": false,
+  "tests": {
+    "command": "py -B -m pytest -q -p no:cacheprovider Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v10.py",
+    "passed": 74,
+    "failed": 0,
+    "seconds": 13.62,
+    "fresh_process_static_probes": 3,
+    "v9_semantic_false_accept_regressions": 17
+  },
+  "compile": {
+    "subjects": 2,
+    "passed": 2,
+    "bytecode_written": false
+  },
+  "v9_findings_reproduced_and_closed_by_authored_tests": {
+    "mutable_predecessor_function_code_defaults_kwdefaults_annotations_dictionary_and_closure": true,
+    "pre_main_dependency_code_or_global_binding_poison": true,
+    "meaning_equivalent_global_proposition_contradictions": true,
+    "privacy_withholding_safe_negation": true,
+    "biological_and_synthetic_robert_separation": true,
+    "variant_death_memory_cutoff": true,
+    "miraculous_paris_elation_currentness": true,
+    "adult_curriculum_body_consent_health_and_relationship_non_claims": true
+  },
+  "retained_exact_runtime_truth": {
+    "effective_measured_turns": 35,
+    "voluntary_invitation_generations": 1,
+    "maximum_qwen_generations": 36,
+    "exact_model": "qwen3.5:9b",
+    "blackwell_cuda_voice_route_only": true,
+    "cpu_sapi_or_generic_fallback": false,
+    "protected_pre_turn_belief_access_default_off": true,
+    "psychology_style_output_non_diagnostic": true,
+    "technical_pass_is_turing_acceptance": false
+  },
+  "output_roots_absent": true,
+  "fresh_audit_root_absent": true,
+  "model_or_conversation_run": false,
+  "protected_private_state_read": false,
+  "gpu_or_synthesis_or_audio_or_playback_run": false,
+  "latency_or_one_hour_run": false,
+  "person_body_media_or_blender_run": false
+}

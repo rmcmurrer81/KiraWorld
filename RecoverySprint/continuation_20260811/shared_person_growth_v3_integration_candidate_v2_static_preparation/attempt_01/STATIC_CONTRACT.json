@@ -1,0 +1,48 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_v2_static_contract.v1",
+  "status": "DISCONNECTED_STATIC_EXTERNAL_AUTHORITY_PROTOCOL_ONLY",
+  "predecessor": {
+    "isolated_shared_growth_v3_status": "ACCEPT_STATIC_ONLY",
+    "integration_candidate_v1_status": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+    "predecessor_bytes_may_be_edited": false
+  },
+  "authority_boundary": {
+    "public_adapter_stores_authority": false,
+    "public_adapter_stores_controller": false,
+    "public_adapter_stores_secret": false,
+    "public_adapter_stores_identity_capability": false,
+    "external_callback_is_passed_per_operation": true,
+    "external_callback_is_retained": false,
+    "python_adapter_is_os_trust_root": false,
+    "production_external_authority_integration_exists": false,
+    "production_opener_fails_closed": true
+  },
+  "source_binding": {
+    "route_and_inventory_verified_at_construction": true,
+    "route_and_inventory_reverified_at_issue": true,
+    "route_and_inventory_reverified_at_stage": true,
+    "route_and_inventory_reverified_at_final_commit": true,
+    "route_and_inventory_reverified_at_final_readback": true,
+    "pre_and_post_callback_snapshots_required": true,
+    "stable_double_read_required": true,
+    "exact_snapshot_digest_required": true,
+    "attachment_route_and_source_cross_binding_required": true
+  },
+  "static_output_boundary": {
+    "output_location": "explicit caller-provided non-production staging root only",
+    "exclusive_create": true,
+    "exact_readback": true,
+    "one_use_external_envelope_ticket_and_receipt_protocol": true,
+    "detected_failure_removes_only_new_exact_output": true,
+    "production_pointer_changed": false,
+    "person_or_creator_profile_changed": false,
+    "live_capability_enabled": false,
+    "automatic_memory_emotion_initiative_or_action_created": false
+  },
+  "authorization": {
+    "different_fresh_exact_byte_hostile_audit_required": true,
+    "static_acceptance_would_equal_production_promotion": false,
+    "promotion_authorized": false,
+    "live_execution_authorized": false
+  }
+}

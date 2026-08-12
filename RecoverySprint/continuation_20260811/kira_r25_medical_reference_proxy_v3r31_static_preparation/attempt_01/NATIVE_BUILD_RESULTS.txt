@@ -1,0 +1,30 @@
+V3r31 trusted native build/analyzer evidence
+status=PASS_BUILD_AND_ANALYZE_ONLY_PRODUCTS_NEVER_EXECUTED
+candidate_or_template_product_invoked=false
+materializer_main_invoked=false
+blender_or_worker_invoked=false
+
+common_compile=/nologo /utf-8 /W4 /WX /O2 /MT /guard:cf /std:c17 /Brepro
+common_link=/guard:cf /DYNAMICBASE /HIGHENTROPYVA /NXCOMPAT /CETCOMPAT /Brepro
+analyze_compile=/nologo /utf-8 /W4 /WX /MT /guard:cf /std:c17 /analyze /c
+
+materialized_w4_wx=PASS
+materialized_exe=DO_NOT_RUN_MATERIALIZED_ANALYSIS_v3r31.exe	170496	2e59cffbca9b20827d80f3a8ac20e93d2270aa5a6af08822e504f6138f4e3bc6
+materialized_analyzer=materialized_analysis_translation_unit_v3r31.nativecodeanalysis.xml	59	ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5
+materialized_analyzer_defects=0
+materialized_pe=x64 HIGH_ENTROPY_VA DYNAMIC_BASE NX CFG CET
+materialized_imports=bcrypt.dll ADVAPI32.dll KERNEL32.dll
+materialized_expected_reachable_imports=SetSecurityInfo GetSecurityInfo ConvertStringSecurityDescriptorToSecurityDescriptorW ConvertSecurityDescriptorToStringSecurityDescriptorW CreateDirectoryW CreateFileW GetFileInformationByHandleEx CreateProcessW
+
+hard_disabled_w4_wx=PASS
+hard_disabled_exe=DO_NOT_RUN_UNMATERIALIZED_post_audit_native_anchor_template_v3r31.exe	138752	be2f475271db6a9466d437886ef0e5427994f575dc31c40a76e4561b8de390c4
+hard_disabled_analyzer=post_audit_native_anchor_template_v3r31_analyze.nativecodeanalysis.xml	59	ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5
+hard_disabled_analyzer_defects=0
+hard_disabled_imports=KERNEL32.dll_only_no_CreateProcessW_no_BCrypt_no_ADVAPI32
+
+repro_build_directory=C:\Users\robmc\Documents\Codex\2026-08-11\c\work\body_v3r31_repro_build
+materialized_second_brepro_sha256=2e59cffbca9b20827d80f3a8ac20e93d2270aa5a6af08822e504f6138f4e3bc6
+hard_disabled_second_brepro_sha256=be2f475271db6a9466d437886ef0e5427994f575dc31c40a76e4561b8de390c4
+brepro_byte_identity=2/2
+
+claim_boundary=trusted static build analyze PE import and reproducibility evidence only; no program product was executed and no body save reload render or Blender evidence exists

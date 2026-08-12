@@ -1,0 +1,123 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v5.independent_hostile_probe_result.v1",
+  "recorded_utc": "2026-08-11T18:39:51.0470996Z",
+  "reviewer_task": "/root/growth_v5_audit",
+  "author_task": "/root/growth_v4_audit",
+  "different_fresh_reviewer": true,
+  "static_only": true,
+  "commands": {
+    "focused_final_layout": "$env:PYTHONDONTWRITEBYTECODE='1'; $env:PYTHONPATH='C:\\Users\\robmc\\Kira'; py -B -m pytest -q -p no:cacheprovider --rootdir C:\\Users\\robmc\\Documents\\Codex\\2026-08-11\\c\\work\\growth_v5_independent_audit_attempt_01 C:\\Users\\robmc\\Kira\\Testing\\test_shared_person_growth_v3_integration_candidate_v5.py",
+    "combined_final_layout": "$env:PYTHONDONTWRITEBYTECODE='1'; $env:PYTHONPATH='C:\\Users\\robmc\\Kira'; py -B -m pytest -q -p no:cacheprovider --rootdir C:\\Users\\robmc\\Documents\\Codex\\2026-08-11\\c\\work\\growth_v5_independent_audit_attempt_01 C:\\Users\\robmc\\Kira\\Testing\\test_shared_person_growth_capabilities_v3.py C:\\Users\\robmc\\Kira\\Testing\\test_shared_person_growth_v3_integration_candidate_v1.py C:\\Users\\robmc\\Kira\\Testing\\test_shared_person_growth_v3_integration_candidate_v2.py C:\\Users\\robmc\\Kira\\Testing\\test_shared_person_growth_v3_integration_candidate_v3.py C:\\Users\\robmc\\Kira\\Testing\\test_shared_person_growth_v3_integration_candidate_v5.py",
+    "independent_hostile_probes": "$env:PYTHONDONTWRITEBYTECODE='1'; py -B C:\\Users\\robmc\\Documents\\Codex\\2026-08-11\\c\\work\\growth_v5_independent_audit_attempt_01\\INDEPENDENT_HOSTILE_PROBES.py"
+  },
+  "exit_codes": {
+    "focused_final_layout": 0,
+    "combined_final_layout": 0,
+    "independent_hostile_probes": 0
+  },
+  "test_results": {
+    "focused_final_layout": "27/27 PASS; 111 subtests PASS; 38.10 seconds",
+    "combined_final_layout": "130/130 PASS; 164 subtests PASS; 37.03 seconds",
+    "additional_broader_preserved_run": "157/157 PASS; 164 subtests PASS; 36.71 seconds",
+    "python_bytecode_or_pytest_cache_written_in_audit_root": false
+  },
+  "exact_closure": {
+    "installed_v5_artifacts": "6/6 exact and byte-identical to sealed author evidence",
+    "sealed_manifest": "23/23 exact; 23 unique root/path pairs",
+    "kira_bound_subjects_read_and_rehashed": "19/19 exact",
+    "final_rehash_after_all_probes": "6/6 installed, 23/23 seal, and 19/19 Kira-bound exact",
+    "installed_subjects": [
+      {
+        "path": "Core/shared_person_growth_v3_integration_candidate_v5.py",
+        "bytes": 43444,
+        "sha256": "1415175c6178baf16e690ee51acd41544b39cd0b6fab5d52a48e0a4f952e6e94"
+      },
+      {
+        "path": "Testing/test_shared_person_growth_v3_integration_candidate_v5.py",
+        "bytes": 34367,
+        "sha256": "63e1477e583fe01410f4ee8cff7658088391ff8001b6df394590e4cb852b2fb1"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/STATIC_CONTRACT.json",
+        "bytes": 6166,
+        "sha256": "8214f64c369789bfbc88917231696b522ea2acf29fc18a750205fe293e53b6f0"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+        "bytes": 5430,
+        "sha256": "c6f6b7ab32357417ac1597a24ac131bef1adc9a5ccac29672f9b41857e810844"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/SEALED_MANIFEST.json",
+        "bytes": 8287,
+        "sha256": "02620fba26231cbeb3f3f6db62e9f7a8512f52a59291c9d3d510f1c1dba1d6e8"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/CHECKPOINT.md",
+        "bytes": 7064,
+        "sha256": "9204d25e3594a7da47d2fcc4ae257cf1872af63c0f3c63b1a6a76088106f431e"
+      }
+    ]
+  },
+  "passing_boundaries": {
+    "relocation_repair": "PASS: installed __file__ layout uses the explicit exact Kira root and does not derive the V4 work root",
+    "all_applicable_existing_person_routes": "35/35 compiled; 24/24 inventory people represented",
+    "peter_parker_and_spider_gwen_repairs": "4/4 compiled",
+    "per_route_candidate_maturity_and_route_cross_bindings": "105/105 refused",
+    "existing_person_scope_and_caller_mutation": "immutable or refused",
+    "existing_person_unsafe_flags": "7/7 refused",
+    "creator_nominal_classes": "synthetic_person, expert, fictional variant, and deceased historical variant compile inertly",
+    "creator_false_and_fresh_requirement_mutations": "29/29 refused",
+    "creator_existing_person_and_robert_collisions": "27/27 refused",
+    "creator_maturity_authority_and_full_adult_mutations": "5/5 refused",
+    "variant_cutoff_death_trauma_mutations": "8/8 refused",
+    "creator_unknown_private_payload_aliases": "8/8 refused",
+    "cross_compiler_requests": "2/2 refused",
+    "canonical_envelope_proposal_and_rule_digests": "PASS",
+    "production_openers": "2/2 hard-refused",
+    "authority_write_commit_process_network_or_person_state_ast_surface": "NONE",
+    "current_production_consumer": "NONE; only source, test, author/evidence documents, and root checkpoint reference V5"
+  },
+  "blocking_findings": [
+    {
+      "finding_id": "BLOCK_CREATOR_FREE_TEXT_PRIVATE_PAYLOAD_AND_FALSE_TRUTH",
+      "status": "REPRODUCED_4_OF_4",
+      "accepted_fields": [
+        "display_name",
+        "variant_source_identity",
+        "branch_point_label",
+        "display_name_with_embedded_control_character"
+      ],
+      "observed": "Each exact-schema request compiled and emitted the supplied private-memory, private-emotion, or private-relationship sentinel text while proposal.truth.private_person_payload_included remained false.",
+      "why_blocking": "The current routing policy permits only generalized public rules and schemas and forbids copying another person's private life into a new-person template. Exact field names do not establish the public nature or semantic type of arbitrary free text. The compiled proposal therefore makes a false no-private-payload claim for accepted inputs.",
+      "required_append_only_repair": "Replace emitted caller free text with exact type-separated, length-bounded, control-free public catalog identifiers or independently bound public metadata; otherwise classify and label caller metadata as untrusted and remove every false no-private-payload claim. Add same-field smuggling tests, not only unknown-key tests."
+    },
+    {
+      "finding_id": "BLOCK_DECEASED_VARIANT_CUTOFF_SEMANTIC_CONTRADICTION",
+      "status": "REPRODUCED",
+      "observed": "A deceased historical-variant request with branch_point_label=after_fatal_event_and_terminal_trauma compiled while the normalized variant simultaneously claimed cutoff_relation=strictly_before_fatal_event.",
+      "why_blocking": "A caller-selected digest and relation string do not bind the branch point to a source record or establish temporal ordering. The exact current variant policy requires a pre-fatal inherited-memory cutoff and no death/terminal-trauma memory, not a contradictory unverified label beside a normalized assertion.",
+      "required_append_only_repair": "Use an exact public source/branch catalog or protected verifier binding source identity, record digest, branch event, temporal relation, deceased status, and pre-fatal cutoff. Until such a verifier exists, label the entire branch/cutoff record as an unauthenticated proposal and do not emit a normalized factual cutoff claim."
+    }
+  ],
+  "nonblocking_residuals": [
+    {
+      "finding": "Same-process Python can rebind private globals or functions and fabricate changed inert bytes.",
+      "disposition": "Not an additional blocker at this static/disconnected scope because V5 expressly disclaims same-process Python as a trust root, no consumer exists, and both production openers hard-refuse. Any later consumer still requires an origin-bound protected verifier."
+    },
+    {
+      "finding": "The candidate reports source_assertions_authenticated=false and has no writer, commit, or person creation path.",
+      "disposition": "Preserved truth; it limits damage but does not cure the contradictory private-payload and cutoff claims inside accepted proposal bytes."
+    }
+  ],
+  "decision": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+  "scope_truth": {
+    "kira_written_by_reviewer": false,
+    "person_or_temporary_creator_created_or_changed": false,
+    "profile_memory_private_state_or_production_pointer_changed": false,
+    "production_opener_succeeded": false,
+    "model_body_blender_media_voice_audio_network_device_or_sarah_operation": false,
+    "isolated_shared_growth_v3_core_status_changed": false,
+    "v4_staged_acceptance_or_kira_relocation_rejection_changed": false
+  }
+}

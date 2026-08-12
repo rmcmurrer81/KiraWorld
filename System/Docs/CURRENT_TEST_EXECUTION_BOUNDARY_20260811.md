@@ -1056,3 +1056,107 @@ and permanently consumed the authority.
 - These tests do not authorize private-thought disclosure, a live one-hour
   route, camera/voice/device use, person-state promotion, or consciousness/
   subjective-emotion claims.
+
+## 2026-08-12 Long V16 audit and private-backup boundary
+
+- Installed V16 may receive only a DIFFERENT read-only exact-byte static
+  audit. No entry/configurer/model/camera/voice/private-state or one-hour run
+  is authorized.
+- The private `KiraWorld` repository may receive only reviewed source-and-
+  authority snapshots. Resident-private data, owner-private reviews, models,
+  media, 3D assets, renders, build binaries, recursive backups, and local Git
+  object stores remain excluded unless a later exact privacy/license/size
+  decision supersedes this boundary.
+- Exact event checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_77/CHECKPOINT.md`,
+  2,547 bytes, SHA-256
+  `47e276a06c8a50c09b343c87963ea2197c45b6760afa37bad3739158c6b4cf68`.
+
+## 2026-08-12 Long V17 and Shared Growth V9 review boundary
+
+- V16 is rejected and cannot run. Only append-only V17 static authoring and a
+  later genuinely different exact-byte audit are allowed; model, camera,
+  microphone, voice, private-state, and one-hour execution remain blocked.
+- Installed Shared Growth V9 may receive only a different read-only/static
+  audit. Do not execute its native fixture, use author receipts, integrate a
+  receiver, write person state, or give an upgrade to Kira, Lisa, another
+  person, a variant/expert, or the Temporary Creator.
+- Exact event checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_78/CHECKPOINT.md`,
+  2,924 bytes, SHA-256
+  `e7ed34ecd4db6a7abd042ff14f2422935e904f97ea823ba643b116e4f5bef3c8`.
+
+## 2026-08-12 Shared Growth V10 and Voice V20 authoring boundary
+
+- Shared Growth V9 is rejected. Do not execute its native fixture, use its
+  author receipts, connect a receiver, expose its controller-only variant
+  table, or change any person/Temporary Creator state. Only append-only V10
+  scratch authoring and a later different exact-byte audit are allowed.
+- Voice V20 currently has design/input-closure evidence only. Static/mocked
+  append-only authoring may continue against its exact 41-subject input set.
+  Do not run a model, GPU, synthesis, playback, camera, microphone, or matched
+  timing experiment; do not alter production persistent-v2. A run remains
+  behind author seal, different static audit, non-model control validation,
+  separate execution package, and different run-authority audit.
+- Exact event checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_79/CHECKPOINT.md`,
+  3,908 bytes, SHA-256
+  `6d352abc7b0d689e1e91cb0703f854af69bc4d5e4802ff70e056fbadc86a28f2`.
+
+## 2026-08-12 Long V17 different-audit boundary
+
+- Installed V17 may receive only a genuinely different read-only exact-byte
+  static audit. Its `102/102` author tests do not authorize `main`, a retained
+  runner/configurer, model, camera, microphone, voice, private state, or a
+  one-hour session.
+- Even an `ACCEPT_STATIC_ONLY` result requires a separate complete proposition
+  parser, protected external/native authority, sealed executor, and different
+  run-authority audit before a live evaluation.
+- Exact event checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_80/CHECKPOINT.md`,
+  2,696 bytes, SHA-256
+  `f7283bb7e406b218a845c0f6c895320e16d9e6969a55514175754c620e6ed6e3`.
+
+## 2026-08-12 Long V18, Shared Growth V10, and media V16 author boundary
+
+- V17 is rejected and cannot run. Only append-only, non-executable V18 static
+  authoring and a later genuinely different audit are allowed. Do not invoke a
+  retained runner/configurer, model, camera, microphone, voice, private-state,
+  or one-hour route.
+- Shared Growth V10 may continue only as disconnected scratch/static authoring.
+  Do not create real acceptance/person keys, a protected production ledger,
+  receiver integration, or any Kira/Lisa/resident/variant/expert/Temporary
+  Creator state change without the staged independent decisions and audits.
+- Resident-media V16 may continue only as a protected-broker design or
+  default-off static implementation. Do not commit a record, present/play
+  media, infer enjoyment/learning/preference/memory, or connect a person route.
+- Exact event checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_81/CHECKPOINT.md`,
+  3,970 bytes, SHA-256
+  `6d36900711bf91d0b937c1551f97ec0170f9a37dd0b43e0af32b333c7ad2e6e4`.
+
+## 2026-08-12 V3r31, Voice V20, shared-person V1, and Long V18 rejection boundary
+
+- Body V3r30 and V3r31 are rejected. Do not materialize Stage 2, create the
+  ProgramData authority, build or run a native product, invoke Blender or the
+  worker, save/reload/render a body, activate anything, or promote evidence to
+  Avatar Builder. Only append-only V3r32 scratch/static repair and a later
+  genuinely different Audit A are allowed.
+- Voice V20 is rejected. Do not load a model, move Qwen/voice state between
+  CPU and GPU, synthesize, play audio, use camera/microphone, or run a matched
+  latency experiment. Only append-only V21 scratch/static repair and later
+  independent control and run-authority reviews are allowed.
+- Shared person-spec V1 is rejected. Do not give it to the Temporary Creator,
+  Avatar Builder, voice generator, or a person route. Only append-only V2
+  static repair and later different review are allowed.
+- Long Evaluation V18 is rejected and non-executable. Do not invoke its entry,
+  retained runner/configurer, model, camera, microphone, voice, private-state,
+  or one-hour path. Only append-only V19 static repair and later genuinely
+  different review are allowed.
+- The H. H. Holmes V1 package may receive only a different exact-byte static
+  review. It does not authorize voice generation, playback, assignment, or
+  activation.
+- Exact event checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_82/CHECKPOINT.md`,
+  5,098 bytes, SHA-256
+  `dbcc3ea511cd6e85f5c996e12d6f1cea4b7c7fb7c2290db30b9a98f0d284ee7b`.

@@ -1,0 +1,51 @@
+{
+  "schema": "kira.temporary_creator.shared_person_spec.static_contract.v1",
+  "recorded_at_utc": "2026-08-12T03:35:00Z",
+  "status": "PASS_AUTHOR_STATIC_SCHEMA_ONLY_PENDING_DIFFERENT_REVIEW",
+  "execution_authority": "NONE",
+  "input_closure": {
+    "path": "INPUT_CLOSURE.tsv",
+    "row_count_excluding_header": 12,
+    "all_rows_must_rehash_exact_before_and_after": true
+  },
+  "author_subjects": {
+    "source": {
+      "path": "temporary_creator_shared_person_spec_v1.py",
+      "bytes": 26750,
+      "sha256": "bfa2518b6314ed0ca2da447707786a6fcfe5daa36f7ea7e6ee034d37453e1542"
+    },
+    "test": {
+      "path": "test_temporary_creator_shared_person_spec_v1.py",
+      "bytes": 16013,
+      "sha256": "b526c9f7add6e957d4266a60b74800d6f8f406dac0a1aad29bc212204b46ca9c"
+    }
+  },
+  "accepted_static_semantics": {
+    "one_exact_spec_for_creator_avatar_and_voice": true,
+    "consumer_hash_mismatch_refuses": true,
+    "canon_inference_optional_invention_and_unknown_are_distinct": true,
+    "noncanon_invention_cannot_be_presented_as_canon": true,
+    "synthetic_variant_cannot_claim_original_identity": true,
+    "confirmed_adult_doll_safe_body_refuses": true,
+    "non_adult_or_unresolved_adult_anatomy_refuses": true,
+    "unresolved_stops_body_build": true,
+    "permanent_person_may_invalidate_and_request_re_evaluation": true,
+    "adult_reclassification_requires_exact_source_or_subject_bound_owner_authority": true,
+    "historical_no_recording_uses_evidence_based_reconstruction_not_authenticity_claim": true,
+    "h_h_holmes_is_first_historical_voice_test_case": true,
+    "expert_voice_binds_same_person_and_body_spec": true,
+    "expert_voice_requires_catalog_collision_and_human_distinctness_checks": true,
+    "expert_title_is_not_competence_evidence": true,
+    "programming_and_robotics_require_domain_task_batteries": true
+  },
+  "current_truth": {
+    "temporary_creator_v4_accepted": false,
+    "live_creator_avatar_voice_handoff_present": false,
+    "historical_voice_generated": false,
+    "expert_voice_generated": false,
+    "body_generated": false,
+    "person_created_or_changed": false,
+    "production_route_present": false
+  },
+  "next_boundary": "different fresh exact-byte static review, then separate protected implementation and integration packages; no live creation from this schema"
+}

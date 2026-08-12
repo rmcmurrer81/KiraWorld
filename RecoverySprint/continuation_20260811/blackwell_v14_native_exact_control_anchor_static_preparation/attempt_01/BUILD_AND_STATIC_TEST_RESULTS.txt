@@ -1,0 +1,82 @@
+KIRA BLACKWELL VOICE V14 NATIVE EXACT CONTROL ANCHOR
+AUTHOR BUILD AND STATIC TEST RESULTS
+DATE: 2026-08-11 America/New_York
+
+STATUS: PASS_AUTHOR_BUILD_PENDING_POSTBUILD_SEAL_POSTSEAL_AND_DIFFERENT_FRESH_AUDIT
+EXECUTION_AUTHORITY: NONE
+CANDIDATE_EXECUTED: false
+PYTHON_CANDIDATE_INVOKED: false
+MODEL_CALLS: 0
+GPU_VOICE_CALLS: 0
+SYNTHESIS_CALLS: 0
+PLAYBACK_CALLS: 0
+LATENCY_MEASUREMENTS: 0
+NETWORK_CALLS: 0
+PERSON_OR_BODY_OPERATIONS: 0
+
+PREBUILD STATIC/HOSTILE RESULT
+Command:
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_blackwell_persistent_voice_candidate_v14_native_anchor_static.ps1 -Phase PreBuild
+Exit code: 0
+Terminal marker: V14_NATIVE_EXACT_CONTROL_HOSTILE_STATIC_TESTS_PASS
+The phase performed strict in-memory compilation of the two Python sources and static/hostile source checks only. It did not import or invoke V14.
+
+INITIAL BUILD INPUT FAILURE
+The first strict compiler command omitted the required local Python include directory and stopped at C1083 before creating a candidate executable:
+  fatal error C1083: Cannot open include file: 'Python.h': No such file or directory
+This was an ordinary build-input error, not a candidate run. The corrected exact command below includes `C:\Python314\include`.
+
+CORRECTED STRICT X64 BUILD
+Environment initializer:
+  call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul
+Exact command:
+  cl.exe /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /Fo"tools\native\kira_blackwell_voice_control_anchor_v14.obj" /Fe"tools\native\kira_blackwell_voice_control_anchor_v14.exe" "tools\native\kira_blackwell_voice_control_anchor_v14.c" /link /guard:cf /WX bcrypt.lib
+Exit code: 0
+Compiler output: kira_blackwell_voice_control_anchor_v14.c
+Warnings: 0
+Errors: 0
+
+INDEPENDENT MSVC ANALYZE
+Exact command:
+  cl.exe /nologo /W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /Fo"root_v14_analyze.obj" "C:\Users\robmc\Kira\tools\native\kira_blackwell_voice_control_anchor_v14.c"
+Working directory:
+  C:\Users\robmc\Documents\Codex\2026-08-11\c\work\voice_v14_author
+Exit code: 0
+Analyzer output: kira_blackwell_voice_control_anchor_v14.c
+Unsuppressed diagnostics: 0
+Suppressions used: none
+Disposable analysis object: 66,728 bytes, SHA-256 7b52f25b70d568b4470214ec37e2533fb3c043e5bc10648301fff317a99e7d9f
+The disposable object is outside Kira and is not a seal or runtime subject.
+
+PE INSPECTION
+Tool: MSVC dumpbin.exe /headers, /loadconfig, /imports
+Exit code: 0
+Machine: 8664 (x64)
+Optional-header magic: 20B (PE32+)
+High Entropy Virtual Addresses: present
+Dynamic base / ASLR: present
+NX compatible: present
+Control Flow Guard: present
+Load configuration: CF instrumented; FID table present
+Exact imported DLL set: bcrypt.dll; KERNEL32.dll
+Static Python DLL import: absent
+Process/shell import route: absent
+
+FROZEN TEXT/SOURCE INPUTS
+Core/persistent_blackwell_voice_integration_v14.py	42108	1faeb894bc9ab9e0bd13c06d6af42497c548ee15310ba97c1cc56df902e26d5f
+RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_static_preparation/attempt_01/AUTHOR_PACKAGE.json	4583	fb46fe992fab3c5046cbd2549a23e1bac3f26c53410b83a3149f1612d3abf673
+RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md	1851	afbdaae03c5d1f13de20692f478596947c8e9a6c28572edb50ff93415ea2c597
+Testing/test_blackwell_persistent_voice_candidate_v14_native_anchor_static.ps1	13836	c235f0b1be76a81998c24a3ba033a42c295ca894b77e28413c90cf70badbf757
+tools/native/kira_blackwell_voice_control_anchor_v14.c	73308	a59f948077a0f841d641bd57a7119702d81e30d29d20b94f758b590e7e38ce73
+tools/native/kira_blackwell_voice_control_anchor_v14_identity_anchor.h	3459	b883d3a95b29416de7c311b6e8958e35605bde0fc8b0ec125b828aeac10bbb42
+tools/native/kira_blackwell_voice_control_anchor_v14_validator.py	16874	2190bdb88dbbc229a9fdebc7a15e83dab8a2f33ae7cc53df9074040a6091bd62
+Voice/sidecars/chatterbox_blackwell_persistent_candidate_v14/candidate_config.json	6184	c517afc9953ceae527f88afb0361b1022bcc45d19fc9c577d6e6e58f8ad96695
+Voice/sidecars/chatterbox_blackwell_persistent_candidate_v14/native_control_contract.json	4069	2726655eb808ed0ab24d08a408308d39adbcd3eb86cc7203168ea88850382710
+Voice/sidecars/chatterbox_blackwell_persistent_candidate_v14/README.md	1112	0473c1dda6eb1768c029305eb0834bcfab57041129e05aaee1671c85a522de8b
+
+BUILD OUTPUTS
+tools/native/kira_blackwell_voice_control_anchor_v14.obj	109043	958ba7c976961b8c27892e120bd1c19d699f91d712e41217e7ab04988a141e53
+tools/native/kira_blackwell_voice_control_anchor_v14.exe	179712	bcd8d94eaa6355df814d081294c8ec51b8219170312a75e4497b07bfebf04111
+
+BOUNDARY
+These facts establish an inert static build only. They do not authorize or prove production routing, live execution, synthesis, playback, audible speech, lower latency, a model/GPU session, or any synthetic person's experience. PostBuild, exact 30-row seal, PostSeal, and a different fresh independent audit remain mandatory. V14 has not been invoked.

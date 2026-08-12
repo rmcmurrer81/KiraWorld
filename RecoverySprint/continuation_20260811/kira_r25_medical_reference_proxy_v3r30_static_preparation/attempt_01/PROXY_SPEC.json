@@ -1,0 +1,46 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r30.proxy_spec.v1",
+  "status": "EXACT_NORMALIZED_CLINICAL_PROXY_SPEC_NOT_BODY",
+  "object_count_exact": 9,
+  "material_count_exact": 6,
+  "total_vertex_maximum": 12000,
+  "coordinate_tolerance": 1e-06,
+  "dimension_tolerance": 0.003,
+  "materials": {
+    "clinical_bone_envelope": {"rgba": [0.72, 0.70, 0.62, 0.28], "roughness": 0.55},
+    "clinical_urinary": {"rgba": [0.93, 0.69, 0.22, 0.82], "roughness": 0.55},
+    "clinical_reproductive": {"rgba": [0.68, 0.20, 0.32, 0.86], "roughness": 0.55},
+    "clinical_connections": {"rgba": [0.84, 0.34, 0.48, 0.90], "roughness": 0.55},
+    "clinical_digestive_reference": {"rgba": [0.43, 0.26, 0.16, 0.75], "roughness": 0.55},
+    "clinical_external_reference": {"rgba": [0.56, 0.32, 0.38, 0.32], "roughness": 0.55}
+  },
+  "objects": [
+    {"id": "pelvic_reference_envelope", "primitive": "TORUS", "sources": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"], "material": "clinical_bone_envelope", "location": [0.0, 0.0, 0.0], "dimensions_interval": [[0.86, 0.92], [0.86, 0.92], [0.045, 0.055]], "vertex_interval": [120, 180]},
+    {"id": "bladder_proxy", "primitive": "UV_SPHERE", "sources": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"], "material": "clinical_urinary", "location": [0.0, 0.23, -0.012], "dimensions_interval": [[0.217, 0.223], [0.187, 0.193], [0.097, 0.103]], "vertex_interval": [90, 140]},
+    {"id": "uterus_proxy", "primitive": "UV_SPHERE", "sources": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"], "material": "clinical_reproductive", "location": [0.0, 0.035, 0.022], "dimensions_interval": [[0.187, 0.193], [0.137, 0.143], [0.101, 0.107]], "vertex_interval": [90, 140]},
+    {"id": "uterine_tube_left_proxy", "primitive": "BEZIER_MESH", "sources": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"], "material": "clinical_connections", "location_interval": [[-0.24, -0.05], [0.02, 0.06], [0.04, 0.09]], "dimension_interval": [[0.15, 0.21], [0.015, 0.06], [0.02, 0.07]], "vertex_interval": [20, 800]},
+    {"id": "uterine_tube_right_proxy", "primitive": "BEZIER_MESH", "sources": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"], "material": "clinical_connections", "location_interval": [[0.05, 0.24], [0.02, 0.06], [0.04, 0.09]], "dimension_interval": [[0.15, 0.21], [0.015, 0.06], [0.02, 0.07]], "vertex_interval": [20, 800]},
+    {"id": "ovary_left_proxy", "primitive": "UV_SPHERE", "sources": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"], "material": "clinical_reproductive", "location": [-0.26, 0.025, 0.033], "dimensions_interval": [[0.087, 0.093], [0.057, 0.063], [0.037, 0.043]], "vertex_interval": [90, 140]},
+    {"id": "ovary_right_proxy", "primitive": "UV_SPHERE", "sources": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"], "material": "clinical_reproductive", "location": [0.26, 0.025, 0.033], "dimensions_interval": [[0.087, 0.093], [0.057, 0.063], [0.037, 0.043]], "vertex_interval": [90, 140]},
+    {"id": "rectum_reference_proxy", "primitive": "BEZIER_MESH", "sources": ["mri_pelvis_cc_by"], "material": "clinical_digestive_reference", "location_interval": [[-0.04, 0.04], [-0.34, -0.20], [-0.09, 0.10]], "dimension_interval": [[0.045, 0.08], [0.04, 0.16], [0.12, 0.22]], "vertex_interval": [20, 800]},
+    {"id": "vulvar_region_reference_proxy", "primitive": "UV_SPHERE", "sources": ["mri_pelvis_cc_by"], "material": "clinical_external_reference", "location": [0.0, 0.22, -0.075], "dimensions_interval": [[0.107, 0.113], [0.047, 0.053], [0.033, 0.039]], "vertex_interval": [90, 140]}
+  ],
+  "relations": [
+    "bladder_proxy.y > uterus_proxy.y",
+    "rectum_reference_proxy.y < uterus_proxy.y",
+    "ovary_left_proxy.x < uterus_proxy.x < ovary_right_proxy.x",
+    "abs(ovary_left_proxy.x + ovary_right_proxy.x) <= 0.000001",
+    "abs(ovary_left_proxy.y - ovary_right_proxy.y) <= 0.000001",
+    "abs(ovary_left_proxy.z - ovary_right_proxy.z) <= 0.000001",
+    "vulvar_region_reference_proxy.z < uterus_proxy.z",
+    "all_proxy_bounds_inside_normalized_outer_clearance"
+  ],
+  "forbidden_per_object": ["parent", "modifiers", "constraints", "animation_data", "library", "override_library", "vertex_groups", "shape_keys"],
+  "truth_tags": {
+    "kira_v3r30_role": "NORMALIZED_CLINICAL_REFERENCE_PROXY_NOT_LIVE_BODY",
+    "functional_organ": false,
+    "approved_for_activation": false,
+    "kira_fitted": false,
+    "source_topology_copied": false
+  }
+}

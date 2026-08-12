@@ -1,0 +1,99 @@
+{
+  "schema": "kira.shared_person_growth_v3_independent_hostile_probe_result.v1",
+  "completed_at_utc": "2026-08-11T05:38:12.091Z",
+  "auditor_task": "/root/blackwell_v9_fresh_audit",
+  "different_from_author_task": true,
+  "static_only": true,
+  "live_execution_performed": false,
+  "real_person_or_memory_writer_used": false,
+  "all_mutating_probe_roots_were_temporary": true,
+  "python_cache_disabled": true,
+  "audit_cache_artifacts": 0,
+  "probe_script": {
+    "path": "RecoverySprint/continuation_20260811/shared_person_growth_capabilities_v3_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+    "bytes": 38085,
+    "sha256": "66aeeb51a5203debf072a112985fd7838599ebfee3512e6834263ca11686424b"
+  },
+  "command": "py -B RecoverySprint\\continuation_20260811\\shared_person_growth_capabilities_v3_fresh_static_audit\\attempt_01\\INDEPENDENT_HOSTILE_PROBES.py",
+  "exit_code": 0,
+  "probe_count": 13,
+  "passed": 13,
+  "failed": 0,
+  "results": [
+    {
+      "name": "seal_closure",
+      "passed": true,
+      "details": {"checked": 28, "mismatches": 0}
+    },
+    {
+      "name": "controller_and_session_authority",
+      "passed": true,
+      "details": {
+        "forged_registered": false,
+        "cross_controller_registered": false,
+        "cross_lease_read": false,
+        "expected_refusals": ["GrowthAuthorityError", "GrowthAuthorityError", "GrowthLeaseError", "TypeError", "TypeError"]
+      }
+    },
+    {
+      "name": "secret_strength_and_nonexport",
+      "passed": true,
+      "details": {"invalid_secret_shapes_rejected": 6, "secret_export_found": false}
+    },
+    {
+      "name": "evidence_content_scope_and_replay",
+      "passed": true,
+      "details": {"content_bound": true, "event_bound": true, "single_use": true, "cross_session_refused": true}
+    },
+    {
+      "name": "maturity_authority_and_truth_separation",
+      "passed": true,
+      "details": {"phantom_refused": true, "classification_receipt_one_use": true, "adult_truths_separate": true}
+    },
+    {
+      "name": "exact_types_and_unknown_fields",
+      "passed": true,
+      "details": {"bool_int_mutations_rejected": 4, "unknown_field_mutations_rejected": 2}
+    },
+    {
+      "name": "creator_private_separation_and_propagation",
+      "passed": true,
+      "details": {"fresh_roots_disjoint": true, "private_payload_copied": false, "runtime_active": false, "cross_controller_refused": true}
+    },
+    {
+      "name": "creator_rollback",
+      "passed": true,
+      "details": {"new_output_removed_after_failure": true, "preexisting_output_preserved": true}
+    },
+    {
+      "name": "event_before_receipt_and_capacity",
+      "passed": true,
+      "details": {"durable_revision_before_receipt_consume": 1, "capacity_failure_consumed_receipt": false}
+    },
+    {
+      "name": "receipt_consume_uncertainty",
+      "passed": true,
+      "details": {"accepted_event_before_recovery": false, "debt_durable": true, "session_quarantined": true}
+    },
+    {
+      "name": "cas_candidate_and_postreplace_ambiguity",
+      "passed": true,
+      "details": {
+        "candidate_action": "candidate_not_committed",
+        "postreplace_action": "commit_recovered_after_explicit_readback",
+        "accepted_before_recovery": false
+      }
+    },
+    {
+      "name": "emotion_replay_and_session_namespace",
+      "passed": true,
+      "details": {"same_session_replay_refused": true, "cross_session_namespace_distinct": true}
+    },
+    {
+      "name": "initiative_and_memory_truth",
+      "passed": true,
+      "details": {"initiative_stage": "DESIGN_ONLY", "memory_writer_connected": false, "external_actions_connected": false}
+    }
+  ],
+  "harness_note": "One earlier draft probe expected GrowthReplayError while deliberately supplying an unowned fresh-root handle; V3 correctly failed earlier with GrowthAuthorityError. The auditor corrected only the independent probe to use an owned second root and directly exercise consumed maturity authority. The sealed candidate was never changed. The final command above then passed 13/13."
+}

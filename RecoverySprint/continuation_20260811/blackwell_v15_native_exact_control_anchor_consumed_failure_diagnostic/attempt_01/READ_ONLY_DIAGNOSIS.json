@@ -1,0 +1,59 @@
+{
+  "schema": "kira.blackwell.v15.native_exact_control_anchor.consumed_failure_read_only_diagnosis.v1",
+  "recorded_utc": "2026-08-11T17:34:17.2150043Z",
+  "diagnostic_task": "/root/voice_v15_quality_review",
+  "status": "CONSUMED_FAILURE_DO_NOT_RERUN_V15",
+  "authority_consumed": true,
+  "invocations_observed": 1,
+  "exit_code": 4,
+  "coarse_stage": 10,
+  "run_evidence_created": false,
+  "static_control_outcome_created": false,
+  "python_dll_loaded": false,
+  "python_candidate_invoked": false,
+  "model_calls": 0,
+  "gpu_voice_calls": 0,
+  "synthesis_calls": 0,
+  "playback_calls": 0,
+  "latency_measurements": 0,
+  "v15_rerun_during_diagnosis": false,
+  "exact_v15_native_source": {
+    "path": "tools/native/kira_blackwell_voice_control_anchor_v15.c",
+    "bytes": 70512,
+    "sha256": "5563fb180e3295f2258ea02c89c4a7c54e8a729da73ea0f0c76ab6d3e557c951"
+  },
+  "exact_v15_seal": {
+    "path": "RecoverySprint/continuation_20260811/blackwell_v15_native_exact_control_anchor_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+    "bytes": 4557,
+    "sha256": "f3d451041796c2bfbdf5dbe52f3a485b227f67b01af051e9e95c35b40549d932",
+    "subjects_exact_after_failure": 21,
+    "subjects_total": 21,
+    "unique_paths": 21
+  },
+  "exact_accepted_audit": {
+    "tsv_bytes": 920,
+    "tsv_sha256": "38f1ac1902d7547fe161204d7fd61d3aa493e971108133bbbd9a6b61844af128",
+    "sidecar_bytes": 65,
+    "sidecar_sha256": "effe3c23d7e2c5b7f65a07fd225ec84b87d01e668728a2f61678a6bc9382ad5f",
+    "decision_bytes": 6899,
+    "decision_sha256": "c525ab16cfad6c6c25f2cbbb8d48a02ec57bdef55832821dc761db731ac80ffe",
+    "checkpoint_bytes": 5280,
+    "checkpoint_sha256": "5e6a0799da297b962e9bb9dc9973bcc14d8cce252a0f4e9ccf438e13084f2822",
+    "review_probes_bytes": 9787,
+    "review_probes_sha256": "082e5fda87136eefd02e5913aca0b89d165eee8da138a1156cf6a49cef5393f8"
+  },
+  "exact_cause": {
+    "id": "V15_STAGE10_WHITESPACE_SENSITIVE_SEAL_ROW_FORMAT_MISMATCH",
+    "first_deterministic_refusal": "seal_contract_exact object_path/build_path sentinels",
+    "native_evidence": "V15 seal_contract_exact lines 1217-1218 require spaced path fragments; seal_exact_row lines 661-677 separately require spaced path/bytes/sha256 fragments and a 512-byte window.",
+    "seal_evidence": "Every one of the 21 subject objects is compact JSON: {\"path\":\"...\",\"bytes\":N,\"sha256\":\"...\"}.",
+    "object_path_spaced_fragment_count": 0,
+    "object_path_compact_fragment_count": 1,
+    "build_path_spaced_fragment_count": 0,
+    "build_path_compact_fragment_count": 1,
+    "rows_missing_old_spaced_path_fragment": 21,
+    "rows_matching_exact_compact_full_row": 21,
+    "conclusion": "seal_contract_exact necessarily returns false before stage 20 and before output reservation; even without the sentinel, every seal_exact_row call would return false."
+  },
+  "required_append_only_repair": "Preserve V15 and its consumed authority exactly. A V16 successor must bind one complete exact compact JSON subject row, reject missing/duplicate/split/whitespace-mutated/cross-row matches, bind the exact V15 consumed closure, and receive a different fresh audit before any one-shot static-control invocation."
+}

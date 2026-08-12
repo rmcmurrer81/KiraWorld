@@ -1,0 +1,160 @@
+{
+  "schema": "kira.r25.afes.v3r26.different_fresh_independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T22:08:31Z",
+  "auditor": "codex_r25_afes_v3r26_fresh_static_auditor",
+  "author": "codex_r25_afes_v3r26_static_author",
+  "author_separation": true,
+  "verdict": "ACCEPTED_FOR_ONE_BOUNDED_DIAGNOSTIC_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R26_ONLY",
+  "maximum_later_invocations": 1,
+  "required_arguments": [],
+  "candidate_invoked_by_auditor": false,
+  "python_or_controller_invoked_by_auditor": false,
+  "kira_writes_by_auditor": false,
+  "seal": {
+    "bytes": 168841,
+    "sha256": "49e439fc8c6c37c5d17d97492a884b8a910339909f95304a7bf0f25674a78178",
+    "subjects": 312,
+    "before_exact": 312,
+    "after_exact": 312,
+    "unique_paths": 312,
+    "canonical_union_bytes": 54449,
+    "canonical_union_sha256": "dd9d565cd159a77671ffc28ea77b7062e42e1e4412a2cffbda16b2d2a334c151",
+    "current_artifacts": 8,
+    "runtime_fixed_bindings": 175,
+    "retained_manifest_rows": 137
+  },
+  "author_artifacts": {
+    "expected": 10,
+    "before_exact": 10,
+    "after_exact": 10
+  },
+  "v3r25_consumed_truth": {
+    "status": "FAILED_CONSUMED_NO_RETRY",
+    "authority": "CONSUMED_DO_NOT_RERUN_V3R25",
+    "invocation_count": 1,
+    "exit_code": 1,
+    "terminal_checkpoint": 218,
+    "plan_attempts": 1,
+    "plan_returns": 1,
+    "operation_enters": 16,
+    "operation_returns": 15,
+    "marker_present": 0,
+    "native_sha_calls": 222,
+    "exception_type": "RuntimeError",
+    "exception_message": "controller_function_code_or_deferred_annotate_metadata:_build_execution_plan",
+    "cleanup_unload_absence_retained_and_15_contract_gates_passed": true
+  },
+  "v3r25_closure_correction": {
+    "artifacts_exact": 20,
+    "reproducible_root_bytes": 3781,
+    "reproducible_root_sha256": "d9cde96c013b40451d673dc96a64f60729c7dd52050fc854a26177dbf2906bd6",
+    "superseded_nonreproducible_bytes": 3821,
+    "superseded_nonreproducible_sha256": "727d4d66429bbbcf961b905685d35822c8f75f9ff213696c048b60e14e982c58",
+    "authoritative_material_found": false
+  },
+  "v3r26_static_facts": {
+    "marshal_runtime_version": 5,
+    "format5_sites": 3,
+    "format4_sites": 0,
+    "plan_call_expressions": 1,
+    "checkpoints": 48,
+    "operation_enter_return_pairs": 21,
+    "terminal_success_checkpoint": 230,
+    "post_call_executed_code_reserialized": false,
+    "controller_identity_and_metadata_gate": true,
+    "harness_identity_and_metadata_gate_at_220": true,
+    "frozen_pre_call_code_bytes_feed_final_root": true,
+    "audit_fields": 50,
+    "cleanup_unload_absence_checks_present": true,
+    "create_new_outputs_present": true
+  },
+  "verification": {
+    "author_postseal": "PASS",
+    "independent_strict_x64_rebuild": "PASS",
+    "independent_analyze_zero_unsuppressed": "PASS",
+    "pe_and_import_inspection": "PASS",
+    "independent_source_hostile_mutations_rejected": 8,
+    "independent_audit_grammar_mutations_rejected": 20,
+    "independent_hostile_total": 28,
+    "new_static_blocker_found": false
+  },
+  "scratch_build": {
+    "object_bytes": 273699,
+    "object_sha256": "fbb248e2ef513b62c1d41617e80e66da2cebf5f62ed962c21052bcc8e4966f4b",
+    "executable_bytes": 284672,
+    "executable_sha256": "631d672212e13b6220af8c5a88078921a055207c81d03e334f8582d38878bd2a",
+    "analyzer_xml_bytes": 59,
+    "analyzer_xml_sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5",
+    "pe_machine": "8664_X64",
+    "pe_format": "PE32_PLUS",
+    "cfg_fid_table": true,
+    "direct_import_dlls": [
+      "bcrypt.dll",
+      "KERNEL32.dll"
+    ],
+    "python_static_import": false,
+    "unexpected_network_shell_process_blender_or_afes_import": false
+  },
+  "audit_grammar": {
+    "tsv_bytes": 2803,
+    "tsv_sha256": "12f2568e0b6079a6d135de26c4b31c79e8e5a20b91086c16097cfcb996b4b5c2",
+    "sidecar_bytes": 65,
+    "sidecar_sha256": "1193e444ae30cfd6ae054909eb95a150da3c212b9ed385cdc82492cc90dc458c"
+  },
+  "independent_evidence": {
+    "static_results_bytes": 7393,
+    "static_results_sha256": "0a0b2902ed53340d9e89280fdee6d904ad1435355167403119885f2eebfe4223",
+    "hostile_results_bytes": 2681,
+    "hostile_results_sha256": "4aa45898caaa20570c97103991412d10b5ae8505b86b2aac202eebaeda2e010c",
+    "static_probe_bytes": 18562,
+    "static_probe_sha256": "8da7316b87dd1e9a11b7a7632cf41c0b61826f2806016e7abec3d66842d88c7b",
+    "audit_grammar_probe_bytes": 4697,
+    "audit_grammar_probe_sha256": "5c95acd703832bd0aa59d82807424f540505d14dd3e3dc50053b57dc77b4c24b"
+  },
+  "not_accepted_or_proven": [
+    "body",
+    "external_anatomy",
+    "internal_anatomy",
+    "skin_or_materials",
+    "regional_pigmentation",
+    "hair",
+    "Blender",
+    "save",
+    "render",
+    "export",
+    "activation",
+    "camera",
+    "voice",
+    "mind",
+    "Sarah"
+  ],
+  "stop_before": [
+    "bootstrap",
+    "broker",
+    "process",
+    "AFES",
+    "Blender",
+    "body",
+    "save",
+    "render",
+    "export"
+  ],
+  "single_use_consumed_by": [
+    "success",
+    "candidate_declared_failure",
+    "harness_failure",
+    "ambiguity",
+    "interruption",
+    "any_created_output"
+  ],
+  "root_may_transcribe_exact_staged_artifacts": true,
+  "transcription_conditions": [
+    "copy exact bytes only into the fixed append-only V3r26 independent-audit path",
+    "rehash 312 sealed subjects and 10 author artifacts before any candidate invocation",
+    "rehash every installed audit artifact before any candidate invocation",
+    "confirm fixed evidence and receipt paths remain absent",
+    "invoke only the exact sealed executable from the exact required working directory with no arguments",
+    "do not rerun V3r25 or any older consumed or rejected body diagnostic",
+    "treat every terminal or ambiguous outcome as consuming the one-run authority"
+  ]
+}

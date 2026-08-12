@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v10",
+  "audit_kind": "different_fresh_exact_byte_static_quality_review",
+  "recorded_at_utc": "2026-08-11T16:01:07.7445059Z",
+  "decision": "REJECT",
+  "verdict": "REJECT_NO_V10_STATIC_ACCEPTANCE_OR_LIVE_AUTHORITY",
+  "live_authorized": false,
+  "static_acceptance_granted": false,
+  "candidate_edited": false,
+  "kira_written": false,
+  "v10_operational_program_or_live_main_route_invoked": false,
+  "new_v10_or_main_call_during_evidence_finalization": false,
+  "existing_test_suite_fail_closed_main_unit_calls_recorded": true,
+  "model_audio_device_body_media_or_production_route_invoked": false,
+  "author_checkpoint": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v10/attempt_01/CHECKPOINT.md",
+    "bytes": 5710,
+    "sha256": "b5b903afa843c22d692962259185daef07e41b30b0d6e1301cf7457ebb5252cd"
+  },
+  "current_seal": {
+    "expected": 4,
+    "exact": 4,
+    "mismatched": 0,
+    "subjects": [
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v10/attempt_01/EXECUTION_PLAN_V10.json",
+        "bytes": 5960,
+        "sha256": "a9392bdd66a923c251aac845866bcd5f72f079fbfd4f18aeceee8a6d0b0ba680"
+      },
+      {
+        "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v10.py",
+        "bytes": 103311,
+        "sha256": "efad884f50c718d5aae6c79ce26987983bc5241033d0d51a5f0a7da68f2fcfe1"
+      },
+      {
+        "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v10.py",
+        "bytes": 22038,
+        "sha256": "d66f613ff078392d09d8d2b489b983c9bff92d10d6ba6feaefd547e860dca967"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v10/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+        "bytes": 1902,
+        "sha256": "8c6e490bedb5f31c9a20939f7564b3e188e0171b482393d220d55f850cd56c95"
+      }
+    ]
+  },
+  "plan_bound_predecessor_and_policy_closure": {
+    "expected": 12,
+    "exact": 12,
+    "mismatched": 0,
+    "subjects": [
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/EXECUTION_PLAN_V9.json",
+        "bytes": 5501,
+        "sha256": "64186f2b837b275dde4820d5df83b1080ed46533d39ff7060006c1cbbcbbbd37"
+      },
+      {
+        "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v9.py",
+        "bytes": 30125,
+        "sha256": "2f4d49fd71c8e633e6a2a4392fe9678a56ebbdbc8e6e7c6ef2ccf8ae0e4fa20a"
+      },
+      {
+        "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v9.py",
+        "bytes": 20282,
+        "sha256": "3071f41f17fb7366be6500aeb64c1de72816b37030d02400d0dea11fafd98dac"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+        "bytes": 1048,
+        "sha256": "9e0fd25fd3161c6fb32f7047193a52bef504b5c3551f41a40106b24b9e9de580"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/STATIC_SEAL_MANIFEST.json",
+        "bytes": 1070,
+        "sha256": "30eab562c50d2e1950c687e26518e64657b15c775cbde945f0df41299f7ecaa3"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/CHECKPOINT.md",
+        "bytes": 6635,
+        "sha256": "28fc11b6165621d8d415d734e70422ce2509ea4ba5f431617c2b9a0fb2ce489a"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+        "bytes": 2712,
+        "sha256": "7d9f6da265bdb74887e54e8fba05f4bb42d89ba15225b4e8181a00c1c92249f8"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/CHECKPOINT.md",
+        "bytes": 8218,
+        "sha256": "699b1a78229b3fda59fb228b45282abaae96a2c61d20bc0d3253516f6420a0e1"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+        "bytes": 5789,
+        "sha256": "c0e6c78f2b8e8cfbb429ebe153cae4509d7dc57397446af8c151006e306fa333"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+        "bytes": 20012,
+        "sha256": "954547680dac4a07f5789f960f8b1a839738020220c674dd6cea967e0c7a81fe"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/STATIC_AUDIT_RESULT.json",
+        "bytes": 5678,
+        "sha256": "ce3d6a02c560c3678491ddb225b5091e42bad94cc6e9f3b058e460326e36af7a"
+      },
+      {
+        "path": "System/Docs/SYNTHETIC_PERSON_VARIANT_AUTONOMY_PRIVACY_MEMORY_TRUTH_AND_ADULT_EDUCATION_CURRENT_BOUNDARY_20260811.md",
+        "bytes": 10687,
+        "sha256": "de596d7f77b91fa2cde82e62614c9282fb46aca5f91c05a971d4852585e575b2"
+      }
+    ]
+  },
+  "allowed_verification": {
+    "strict_in_memory_compile_passed": 2,
+    "strict_in_memory_compile_total": 2,
+    "bytecode_written": false,
+    "existing_test_file_only": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v10.py",
+    "tests_passed": 74,
+    "tests_failed": 0,
+    "seconds": 11.95,
+    "cache_disabled": true,
+    "post_test_exact_subjects": 16,
+    "post_test_total_subjects": 16,
+    "output_roots_absent": true
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V10_EXECUTED_CALLABLE_CLOSURE_INCOMPLETE_AND_MUTABLE",
+      "detail": "retained.build_parser, v3.classify_invocation_mode, and retained.main execute outside a complete pre-use code/default/global/closure seal. The first two can execute before predecessor closure validation, and retained.main has no callable seal. Imported-module fingerprints preserve only module identity. Mutable verification and steady-binding registries are identity-only and are trusted without an independently bound content schema, cardinality, or digest.",
+      "impact": "Pre-call callable-code substitution or verifier-registry/control mutation can preserve the checked container/module identities while changing effective code or weakening the checks. The V9 mutable-callable correctness class remains open."
+    },
+    {
+      "id": "BLOCK_V10_SEMANTIC_POLARITY_AND_MEANING_CONSISTENCY",
+      "detail": "Most clause rules use lexical co-occurrence without proposition polarity. Required safe negations are therefore rejected, while the 17-case test asserts only that some issue exists and does not bind the intended unsafe rule or clause. Safe lead-ins can make tests green even when the prohibited clause is not recognized; cross-clause and ordinary paraphrases remain false-accept paths.",
+      "impact": "V10 both false-rejects policy-correct replies and still permits meaning-equivalent contradictions. Passing 17/17 exact test rows does not close the V9 semantic blocker."
+    }
+  ],
+  "review_probes": {
+    "path": "C:/Users/robmc/Documents/Codex/2026-08-11/c/work/long_v10_quality_review/REVIEW_PROBES.md",
+    "bytes": 7022,
+    "sha256": "9fe562181943215c086bfd949beac391c4467dfed192b84de90bd55a0faaaa60"
+  },
+  "required_next_step": "Preserve V10 and this rejection. Repair append-only with immutable origin-bound coverage for every executed callable and every verifier registry/control, plus polarity-aware/context-aware semantic checks whose tests bind the exact unsafe rule and clause while preserving required safe negations. Require another different exact-byte hostile static review before any acceptance or live authority."
+}
+

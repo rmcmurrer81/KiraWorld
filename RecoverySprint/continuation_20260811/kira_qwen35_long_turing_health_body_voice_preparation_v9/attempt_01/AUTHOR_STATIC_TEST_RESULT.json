@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v9",
+  "recorded_utc": "2026-08-11T07:13:36.1953121Z",
+  "status": "AUTHOR_STATIC_TESTS_PASS_PENDING_DIFFERENT_FRESH_AUDIT",
+  "live_authorized": false,
+  "tests": {
+    "command": "py -B -m pytest -q -p no:cacheprovider Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v9.py Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v8.py Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v7.py",
+    "passed": 158,
+    "failed": 0,
+    "seconds": 2.24,
+    "v9_focused_passed": 72
+  },
+  "compile": {
+    "subjects": 2,
+    "passed": 2
+  },
+  "v8_findings_reproduced_and_closed": {
+    "duplicate_attempt_or_path_flags": true,
+    "attempt_02_parser_selection": true,
+    "preexisting_hostile_v1_loader": true,
+    "overlapping_loader_leakage": true
+  },
+  "output_roots_absent": true,
+  "model_or_voice_run": false,
+  "gpu_or_audio_or_playback_run": false,
+  "person_body_media_or_blender_run": false
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v5.author_static_test_result.v1",
+  "version": "v5",
+  "recorded_utc": "2026-08-11T18:09:26.4190005Z",
+  "author_task": "/root/growth_v4_audit",
+  "status": "AUTHOR_STATIC_TESTS_PASS_PENDING_DIFFERENT_FRESH_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 43444,
+      "sha256": "1415175c6178baf16e690ee51acd41544b39cd0b6fab5d52a48e0a4f952e6e94"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 34367,
+      "sha256": "63e1477e583fe01410f4ee8cff7658088391ff8001b6df394590e4cb852b2fb1"
+    },
+    {
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 6166,
+      "sha256": "8214f64c369789bfbc88917231696b522ea2acf29fc18a750205fe293e53b6f0"
+    }
+  ],
+  "verification": {
+    "strict_utf8_in_memory_compile_v5_v4_v3_v2_v1_and_isolated_core": "12/12 PASS",
+    "focused_v5_unittest": "27/27 PASS",
+    "combined_final_layout_style_pytest": "130 passed; 164 subtests passed",
+    "combined_suite_composition": "27 V5 tests plus preserved isolated-core/V1/V2/V3 integration coverage",
+    "exact_kira_root_closure": "19/19 PASS",
+    "staged_vs_virtual_intended_kira_layout": "existing-person and Creator bytes identical",
+    "all_applicable_existing_person_routes": "35/35 PASS; 24/24 people represented",
+    "v3_failed_peter_parker_spider_gwen_routes": "4/4 PASS_REPAIRED",
+    "per_route_candidate_maturity_and_route_cross_bindings": "105/105 PASS_REFUSED",
+    "existing_person_scope_mutation_and_aliases": "PASS_REFUSED_OR_IMMUTABLE",
+    "creator_synthetic_person_expert_fictional_variant_and_deceased_historical_variant": "PASS",
+    "creator_false_field_and_fresh_requirement_mutations": "29/29 PASS_REFUSED",
+    "creator_existing_person_and_robert_identity_collisions": "27/27 PASS_REFUSED",
+    "creator_maturity_authority_classification_and_full_adult_mutations": "5/5 PASS_REFUSED",
+    "variant_cutoff_death_trauma_and_later_fact_mutations": "8/8 PASS_REFUSED",
+    "creator_unknown_private_payload_aliases": "8/8 PASS_REFUSED",
+    "exact_type_schema_and_cross-compiler_route_mutations": "PASS_REFUSED",
+    "fixed_policy_inventory_and_route_drift": "PASS_REFUSED",
+    "canonical_envelope_proposal_and_rule_digests": "PASS",
+    "production_openers": "2/2 PASS_HARD_REFUSED",
+    "consumer_classification": "no production consumer; preserved audit/evidence references classified separately",
+    "no_authority_write_commit_process_network_or_person_state_ast_surface": "PASS",
+    "python_bytecode_or_pytest_cache_written": false
+  },
+  "relocation_truth": {
+    "v4_kira_relocation_status": "REJECT_UNPROMOTED",
+    "v4_bytes_edited_or_deleted": false,
+    "v5_evidence_paths_derived_from___file__": false,
+    "v5_exact_root": "C:/Users/robmc/Kira",
+    "v5_intended_installed_source": "C:/Users/robmc/Kira/Core/shared_person_growth_v3_integration_candidate_v5.py",
+    "virtual_installed_file_identity_tested": true,
+    "audit_reference_counts_as_production_consumer": false
+  },
+  "creator_template_truth": {
+    "separate_compiler": true,
+    "general_public_rules_and_schemas_only": true,
+    "fresh_identity_profile_provenance_private_roots_controller_and_memory_history_required": true,
+    "initial_maturity": "unresolved",
+    "private_memory_backstory_reflection_emotion_desire_preference_relationship_maturity_authority_consent_roots_anatomy_or_measurements_copied": false,
+    "preconsent_relationship_desire_emotion_or_memory_assigned": false,
+    "deceased_source_first_person_death_or_terminal_trauma_memory": false,
+    "writer_commit_person_creation_or_upgrade": false,
+    "temporary_creator_integration_accepted": false,
+    "different_fresh_audit_required": true
+  },
+  "discarded_harness_or_assertion_failures": [
+    {
+      "stage": "first focused V5 run",
+      "observed": "26/27 passed",
+      "cause": "The test searched raw envelope bytes for private_state, which correctly appears in the fixed truth key private_state_included=false.",
+      "candidate_failure": false,
+      "repair": "The test now decodes the envelope and compares the exact requested_scope projection structurally; the rerun passed 27/27."
+    },
+    {
+      "stage": "first combined pytest command",
+      "observed": "collection failed before tests",
+      "cause": "Absolute work and Kira test paths caused pytest to choose C:/Users/robmc as common root and encounter an unrelated access-denied directory.",
+      "candidate_failure": false,
+      "repair": "An explicit work rootdir was supplied."
+    },
+    {
+      "stage": "second combined pytest command",
+      "observed": "four collection import errors before tests",
+      "cause": "The explicit work rootdir omitted Kira from PYTHONPATH for preserved tests importing Core modules.",
+      "candidate_failure": false,
+      "repair": "PYTHONPATH was set to exact Kira; the final cache-free command passed 130 tests and 164 subtests."
+    }
+  ],
+  "scope_truth": {
+    "kira_write": false,
+    "v4_or_predecessor_edit": false,
+    "production_pointer_edit": false,
+    "person_profile_memory_private_state_or_route_change": false,
+    "temporary_creator_person_or_output_created": false,
+    "live_model_body_media_voice_network_device_or_sarah_operation": false,
+    "promotion_authorized": false,
+    "different_fresh_audit_required": true
+  }
+}

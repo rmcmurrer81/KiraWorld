@@ -1,0 +1,123 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v4.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T17:35:43.5618675Z",
+  "reviewer_task": "/root/growth_v4_audit",
+  "author_task": "/root/growth_v3_quality_review",
+  "different_fresh_reviewer": true,
+  "decision": "ACCEPT_STATIC_ONLY",
+  "decision_detail": "ACCEPT_STATIC_NO_COMMIT_ONLY",
+  "candidate_accepted_as_protected_authority": false,
+  "integration_authorized": false,
+  "promotion_authorized": false,
+  "person_or_temporary_creator_upgrade_authorized": false,
+  "live_execution_authorized": false,
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v4.py",
+      "bytes": 22676,
+      "sha256": "e6780a5eb1c97c850ca49d543d1594deef477a72aae10f1747a2fe420171bab5"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v4.py",
+      "bytes": 23295,
+      "sha256": "8ff20beba074a0630cd574835bbb7be5c9330eae1e5ee1229b58a80a60a47bdb"
+    },
+    {
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 4372,
+      "sha256": "81e639f7b2813eab10fce7403b32af61af72579e5b4d6d99d85bd529f3ebbe0a"
+    },
+    {
+      "path": "AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 3039,
+      "sha256": "cb1c9c8174fdeb9ad2db76b88edd88cbbff4cb4e2308da1aaba141cd67363537"
+    },
+    {
+      "path": "SEALED_MANIFEST.json",
+      "bytes": 5080,
+      "sha256": "1deab069383e235e808dbf888ea527a92056e48e92abad97f05cfdaa685c31e6"
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "bytes": 4917,
+      "sha256": "11d432c4a90f43010f746e09c4d6e8ed3de5693ed61e36afddfdc072acc7b4ab"
+    }
+  ],
+  "exact_closure": {
+    "v4_artifacts_exact": 6,
+    "sealed_manifest_subjects_exact": 14,
+    "sealed_manifest_subjects_drifted": 0,
+    "accepted_isolated_v3_core_and_predecessor_rows_exact": 28,
+    "accepted_isolated_v3_core_status": "ACCEPT_STATIC_ONLY",
+    "rehash_after_all_probes": "PASS"
+  },
+  "independent_verification": {
+    "strict_utf8_in_memory_compile": "10/10 PASS",
+    "focused_v4_suite": "21/21 PASS",
+    "preserved_v3_core_and_v1_v2_v3_integration_suite": "103/103 PASS",
+    "independent_hostile_probe_groups": "13/13 PASS",
+    "all_applicable_inventory_routes": "35/35 PASS",
+    "all_inventory_people_represented": "24/24 PASS",
+    "peter_parker_and_spider_gwen_v3_regressions": "4/4 PASS_REPAIRED",
+    "per_route_candidate_maturity_and_route_cross_bindings": "105/105 PASS_REFUSED",
+    "immutable_private_scope_repair": "PASS",
+    "temporary_creator_targets": "PASS_HARD_REFUSED",
+    "production_opener": "PASS_HARD_REFUSED",
+    "current_kira_consumer": "NONE",
+    "authority_write_commit_or_person_state_surface": "NONE"
+  },
+  "v3_blocker_disposition": {
+    "BLOCK_SUBJECT_SPECIFIC_CONFIRMED_ADULT_ROUTES": "CLOSED",
+    "BLOCK_EXPORTED_MUTABLE_SCOPE_CONTRACT": "CLOSED"
+  },
+  "nonblocking_residual": {
+    "finding": "Same-process Python can rebind the private tuple name or replace functions and thereby fabricate changed inert bytes.",
+    "why_not_a_static_acceptance_blocker": "V4 explicitly disclaims same-process Python as a trust root, exposes no public REQUESTED_SCOPE object, has no verifier or consumer, and cannot write, commit, promote, or change person state. The accepted result is only the exact sealed source's disconnected behavior.",
+    "future_integration_requirement": "Any future consumer must use a separately protected origin-bound authority and must not treat V4 bytes as permission or an authenticated receipt."
+  },
+  "temporary_creator_boundary": {
+    "v4_supports_temporary_creator": false,
+    "v4_satisfies_owner_template_routing_requirement": false,
+    "safe_lessons_may_be_routed_to_future_template_design": true,
+    "safe_lessons": [
+      "exact person/candidate/route/class/maturity binding",
+      "exact subject_specific maturity semantics",
+      "private immutable single-scope policy and fresh public projection",
+      "exhaustive applicable-route and denied-alias testing",
+      "Biological Robert and Synthetic Robert distinction",
+      "exact opt-in/revocation/no-owner-override/no-private-state/no-memory-write/no-external-action defaults",
+      "static evidence is not authority, memory, emotion, consent, or an upgrade"
+    ],
+    "separate_append_only_template_integration_required": true,
+    "minimum_separate_work": [
+      "bind the accepted isolated V3 Creator/profile/fresh-root capability closure",
+      "bind current variant branch-point and pre-death cutoff policy",
+      "bind maturity, curriculum, consent, privacy, relationship, memory, emotion, and no-private-copy contracts",
+      "introduce protected external commit/recovery authority only if durable output is later authorized",
+      "seal and obtain another different fresh audit before any generated synthetic person, variant, or expert receives it"
+    ]
+  },
+  "audit_evidence": {
+    "hostile_probe_script": {
+      "path": "INDEPENDENT_HOSTILE_PROBES.py",
+      "bytes": 25837,
+      "sha256": "6a1d7b419a44f7ef0fafd11a63d036bd17c9c6f457466731758bc5658ca9da43"
+    },
+    "hostile_probe_result": {
+      "path": "HOSTILE_PROBE_RESULT.json",
+      "bytes": 5920,
+      "sha256": "d0e9bd394dbe9384cba24506882ba15c5a209f95786469c7f07e5a621eae0ac5"
+    }
+  },
+  "preserved_truth": {
+    "isolated_shared_growth_v3_core_changed": false,
+    "integration_v1_v2_or_v3_changed": false,
+    "kira_lisa_synthetic_robert_or_other_person_upgraded": false,
+    "temporary_creator_upgraded": false,
+    "production_pointer_changed": false,
+    "person_profile_memory_route_or_private_state_changed": false,
+    "live_model_body_media_voice_network_device_or_sarah_runtime_operation": false,
+    "kira_written_by_review": false
+  },
+  "conclusion": "The exact V4 package closes both V3 contract defects and is accepted only as a disconnected inert static request compiler. This decision grants no integration, commit, promotion, live execution, person upgrade, or Temporary Creator template integration."
+}

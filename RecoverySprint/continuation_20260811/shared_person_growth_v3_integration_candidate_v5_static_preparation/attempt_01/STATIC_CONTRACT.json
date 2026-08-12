@@ -1,0 +1,138 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v5.static_contract.v1",
+  "version": "v5",
+  "status": "DISCONNECTED_RELOCATABLE_DUAL_INERT_COMPILERS_PENDING_DIFFERENT_FRESH_AUDIT",
+  "default_off": true,
+  "preserved_authority": {
+    "isolated_shared_growth_v3_core": "ACCEPT_STATIC_ONLY",
+    "integration_candidate_v1": "REJECT",
+    "integration_candidate_v2": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+    "integration_candidate_v3": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+    "integration_candidate_v4_staged_scope": "ACCEPT_STATIC_NO_COMMIT_ONLY",
+    "integration_candidate_v4_kira_relocation": "REJECT_UNPROMOTED",
+    "integration_candidate_v5_accepted": false,
+    "person_or_temporary_creator_upgraded": false
+  },
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 43444,
+      "sha256": "1415175c6178baf16e690ee51acd41544b39cd0b6fab5d52a48e0a4f952e6e94"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 34367,
+      "sha256": "63e1477e583fe01410f4ee8cff7658088391ff8001b6df394590e4cb852b2fb1"
+    }
+  ],
+  "exact_kira_root_closure": {
+    "subject_count": 19,
+    "root": "C:/Users/robmc/Kira",
+    "all_paths_relative_to_exact_kira_root": true,
+    "path_derived_from_author_or_installed___file__": false,
+    "stable_double_read_required": true,
+    "closure_rechecked_after_construction": true,
+    "includes": [
+      "exact V4 source and test",
+      "all four V4 author preparation artifacts",
+      "all four V4 different-audit artifacts",
+      "V4 Kira relocation failing test result and rejection checkpoint",
+      "current validated body/mind result routing policy",
+      "current synthetic-person/variant/autonomy/privacy/memory/truth/adult-education policy",
+      "accepted isolated Shared Growth V3 core seal, audit decision, and checkpoint",
+      "accepted 27/27 mind-policy checkpoint",
+      "current exact person/route inventory"
+    ]
+  },
+  "relocation_repair": {
+    "intended_source_path": "C:/Users/robmc/Kira/Core/shared_person_growth_v3_integration_candidate_v5.py",
+    "intended_test_path": "C:/Users/robmc/Kira/Testing/test_shared_person_growth_v3_integration_candidate_v5.py",
+    "staged_and_virtual_intended_kira_layout_outputs_identical": true,
+    "audit_and_evidence_references_classified_separately_from_production_consumers": true,
+    "v4_failed_path_derivation_present": false
+  },
+  "existing_person_compiler": {
+    "callable": "compile_existing_person_integration_request_v5",
+    "all_applicable_inventory_routes": "35/35 compile",
+    "all_inventory_people": "24/24 represented",
+    "v3_peter_parker_spider_gwen_repairs": "4/4 preserved",
+    "subject_specific_semantics": "exact inventory person's required confirmed_adult, non_adult, or unresolved status only",
+    "canonical_scope_storage": "private immutable one-element tuple",
+    "accepted_scope_input": "exact list[str] with one public-projection value",
+    "returned_scope": "fresh list",
+    "temporary_creator_target": "HARD_REFUSE"
+  },
+  "temporary_creator_template_compiler": {
+    "callable": "compile_temporary_creator_template_request_v5",
+    "separate_from_existing_person_compiler": true,
+    "supported_creation_classes": [
+      "synthetic_person",
+      "variant",
+      "expert"
+    ],
+    "content": "accepted generalized public mind/person-development rules and schemas only",
+    "fresh_requirements": [
+      "identity",
+      "profile",
+      "provenance",
+      "private roots",
+      "controller authority",
+      "post-creation memory history"
+    ],
+    "initial_maturity": "unresolved",
+    "maturity_authority_or_classification_receipt_inherited": false,
+    "full_adult_curriculum_enabled": false,
+    "source_identity_private_roots_memory_backstory_reflection_emotion_desire_preference_relationship_maturity_authority_consent_anatomy_or_measurements_copied": false,
+    "preconsent_relationship_desire_emotion_or_memory_assigned": false,
+    "variant_branch_point_required": true,
+    "deceased_source_cutoff": "strictly_before_fatal_event",
+    "first_person_death_or_terminal_trauma_memory_included": false,
+    "later_death_information": "voluntary historical knowledge only and never relabelled as memory",
+    "consent_privacy_truth_memory_adult_education_and_consciousness_distinctions_included": true,
+    "existing_person_target": "HARD_REFUSE"
+  },
+  "only_allowed_results": {
+    "type": "canonical_utf8_json_bytes",
+    "proposal_digest_derived_from_exact_canonical_proposal_bytes": true,
+    "creator_rules_digest_derived_from_exact_canonical_rule_bytes": true,
+    "authority": false,
+    "permission_or_authenticated_receipt": false,
+    "profile_person_memory_or_private_state": false,
+    "durable_record": false,
+    "person_creation_or_upgrade": false
+  },
+  "removed_surfaces": {
+    "verifier_or_key": false,
+    "callback_or_controller_object": false,
+    "authority_or_receipt_ledger": false,
+    "staging_root_or_output_path": false,
+    "write_or_commit": false,
+    "query_or_rollback": false,
+    "cleanup_or_unlink": false,
+    "profile_or_memory_writer": false,
+    "process_network_or_external_action": false,
+    "production_consumer": false
+  },
+  "production_boundary": {
+    "existing_person_production_opener": "HARD_REFUSE",
+    "temporary_creator_production_opener": "HARD_REFUSE",
+    "current_consumer_exists": false,
+    "production_pointer_changed": false,
+    "different_fresh_audit_required": true,
+    "static_author_pass_can_promote_or_upgrade": false
+  },
+  "author_staging_boundary": {
+    "candidate_root": "C:/Users/robmc/Documents/Codex/2026-08-11/c/work/growth_v5_author",
+    "kira_root_access": "read-only exact closure, inventory, and route digest checks",
+    "kira_write": false
+  },
+  "live_operations": {
+    "model_or_person_session": false,
+    "memory_profile_or_private_state_mutation": false,
+    "temporary_creator_person_creation": false,
+    "body_or_blender": false,
+    "media_or_voice": false,
+    "network_or_device": false,
+    "sarah_development_or_runtime": false
+  }
+}

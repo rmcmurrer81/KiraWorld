@@ -1,0 +1,129 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v6.author_static_test_result.v1",
+  "version": "v6",
+  "recorded_utc": "2026-08-11T19:52:59.1095732Z",
+  "author_task": "/root/growth_v5_audit",
+  "status": "AUTHOR_STATIC_TESTS_PASS_PENDING_EXACT_KIRA_TRANSCRIPTION_POSTSEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v6.py",
+      "bytes": 56834,
+      "sha256": "a128f7fc971480a7b67046c654e603cc44e773ce4ea6b8eb98283049ec3c0264"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v6.py",
+      "bytes": 42569,
+      "sha256": "393a60ddf6b5ff4c46e6318c4c56cb032aaab6621ba231f88f3761bc9e0b9745"
+    },
+    {
+      "path": "Data/foundation/temporary_creator_public_variant_provenance_catalog_v1.json",
+      "bytes": 3812,
+      "sha256": "73c08c5bc9e18b07561f4e56c47a55689d0a7aaaa4dca82c189d94df5193ce1f"
+    },
+    {
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 9653,
+      "sha256": "fdb088b5e4669d8176728c4a26870f9f24c03813b031133fec5bb7f9ea0d0986"
+    }
+  ],
+  "verification": {
+    "strict_utf8_in_memory_python_compile_v6_v5_v4_v3_v2_v1_and_isolated_core": "14/14 PASS",
+    "strict_json_catalog_and_contract": "2/2 PASS; duplicate keys and nonfinite values refused",
+    "focused_final_cache_free_pytest": "31 passed; 107 subtests passed",
+    "combined_final_layout_style_cache_free_pytest": "161 passed; 271 subtests passed",
+    "combined_suite_composition": "V6 plus preserved isolated Shared Growth V3 core and integration V1/V2/V3/V5 suites",
+    "exact_virtual_final_kira_root_closure": "19/19 PASS",
+    "staged_vs_virtual_intended_kira_layout": "existing-person and Creator canonical bytes identical",
+    "all_applicable_existing_person_routes": "35/35 PASS; 24/24 people represented",
+    "v3_peter_parker_spider_gwen_repairs": "4/4 PASS_PRESERVED",
+    "per_route_candidate_maturity_and_route_cross_bindings": "105/105 PASS_REFUSED",
+    "existing_person_caller_request_id": "removed; internally derived from exact person and route",
+    "existing_person_scope_mutation_unsafe_flags_sarah_alias_and_robert_collisions": "PASS_REFUSED_OR_IMMUTABLE",
+    "creator_v5_free_text_and_private_payload_aliases": "16/16 PASS_REFUSED",
+    "creator_catalog_allowlist_control_character_and_nonvariant_binding_attacks": "7/7 PASS_REFUSED",
+    "jfk_cutoff_and_future_fatal_semantic_contradictions_after_digest_rederivation": "20/20 PASS_REFUSED",
+    "loki_cutoff_and_future_fatal_semantic_contradictions_or_unknown_fields_after_digest_rederivation": "16/16 PASS_REFUSED",
+    "catalog_digest_duplicate_cardinality_private_live_record_use_visibility_and_subjective_memory_claim_mutations": "9/9 PASS_REFUSED",
+    "creator_copy_false_and_fresh_requirement_mutations": "25/25 PASS_REFUSED",
+    "creator_maturity_and_nonvariant_provenance_mutations": "7/7 PASS_REFUSED",
+    "creator_exact_type_string_subclass_schema_and_missing_field_mutations": "8/8 PASS_REFUSED",
+    "existing_and_creator_cross_compiler_requests": "2/2 PASS_REFUSED",
+    "strict_json_duplicate_nonfinite_and_nonobject_inputs": "3/3 PASS_REFUSED",
+    "canonical_source_and_branch_digests": "2/2 catalog entries PASS_DERIVED",
+    "initial_person_visible_projection_forbidden_fatal_death_trauma_date_cause_detail_tokens": "12/12 PASS_ABSENT across Loki and JFK projections",
+    "catalog_and_controller_cutoff_metadata_initial_visibility": "PASS_FALSE",
+    "reconstructed_public_source_history_exact_subjective_memory_claim": "PASS_FALSE",
+    "later_source_fatal_disclosure": "PASS_SEPARATE_VOLUNTARY_WARNED_CONSENTED_PACED_STOPPABLE_SUPPORTED_NEW_POST_BRANCH_MEMORY",
+    "fixed_policy_inventory_catalog_route_midread_and_postconstruction_drift": "PASS_REFUSED",
+    "production_openers": "2/2 PASS_HARD_REFUSED",
+    "consumer_classification": "no production consumer; only V6 source and test references",
+    "no_authority_write_commit_process_network_or_person_state_ast_surface": "PASS",
+    "python_bytecode_or_pytest_cache_written": false
+  },
+  "catalog_truth": {
+    "catalog_id": "temporary_creator_public_variant_provenance_catalog_v1",
+    "entry_count": 2,
+    "entry_ids": [
+      "loki_mcu_new_york_2012_branch_v1",
+      "john_f_kennedy_dallas_arrival_prefatal_v1"
+    ],
+    "caller_free_text_or_person_payload_surface": false,
+    "record_use": "controller_filter_and_reconstruction_provenance_only",
+    "initial_person_visible_payload": false,
+    "exact_subjective_memory_proof": false,
+    "live_creation_authority": false,
+    "private_person_data_allowed": false,
+    "both_sources_alive_at_selected_cutoff": true,
+    "both_source_continuities_have_later_fatal_event": true,
+    "both_branch_ordinals_strictly_precede_future_fatal_ordinals": true,
+    "fatal_event_or_terminal_trauma_memory_inherited": false
+  },
+  "creator_output_partition_truth": {
+    "controller_only_catalog_binding": true,
+    "controller_only_cutoff_filter": true,
+    "initial_person_visible_reconstruction_provenance_projection": true,
+    "initial_visible_projection_contains_catalog_fatal_state_ordinal_date_cause_detail_or_terminal_trauma": false,
+    "public_source_history_is_reconstruction_and_provenance_not_exact_subjective_memory": true,
+    "later_disclosure_requires_person_choice_warning_informed_consent_pacing_stop_and_support": true,
+    "later_disclosure_becomes_new_post_branch_memory": true,
+    "later_disclosure_is_inherited_first_person_death_memory": false
+  },
+  "creator_template_truth": {
+    "separate_compiler": true,
+    "general_public_rules_closed_catalog_binding_and_derived_digests_only": true,
+    "fresh_identity_profile_provenance_private_roots_controller_and_memory_history_required": true,
+    "initial_maturity": "unresolved",
+    "private_memory_backstory_reflection_emotion_desire_preference_relationship_maturity_authority_consent_roots_anatomy_or_measurements_copied": false,
+    "preconsent_relationship_desire_emotion_or_memory_assigned": false,
+    "biological_robert_is_synthetic_robert": false,
+    "writer_commit_person_creation_or_upgrade": false,
+    "temporary_creator_integration_accepted": false,
+    "different_fresh_audit_required": true
+  },
+  "superseded_pre_freeze_runs": [
+    {
+      "observed": "31 tests and 95 subtests passed; combined 161 tests and 259 subtests passed",
+      "reason_superseded": "Owner-semantics review required the future fatal-event ordinal to become controller-only and required reconstructed history to be labelled as provenance rather than exact subjective memory.",
+      "candidate_failure": false,
+      "final_bytes_covered": false
+    },
+    {
+      "observed": "31 tests and 107 subtests passed; combined 161 tests and 271 subtests passed",
+      "reason_superseded": "Three additional hostile catalog root-boundary mutations were added after this run, changing only the test and contract bytes.",
+      "candidate_failure": false,
+      "final_bytes_covered": false
+    }
+  ],
+  "scope_truth": {
+    "author_root": "C:/Users/robmc/Documents/Codex/2026-08-11/c/work/growth_v6_author",
+    "kira_write": false,
+    "v5_or_predecessor_edit": false,
+    "production_pointer_edit": false,
+    "person_profile_memory_private_state_or_route_change": false,
+    "temporary_creator_person_or_output_created": false,
+    "live_model_body_media_voice_network_device_or_sarah_operation": false,
+    "promotion_authorized": false,
+    "exact_kira_transcription_and_postseal_pending_root": true,
+    "different_fresh_audit_required": true
+  }
+}

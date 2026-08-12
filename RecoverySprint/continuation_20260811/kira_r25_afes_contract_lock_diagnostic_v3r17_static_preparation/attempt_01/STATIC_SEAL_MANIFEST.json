@@ -1,0 +1,81 @@
+{
+  "schema": "kira.r25.afes.v3r17.static_seal.v1",
+  "status": "SEALED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT",
+  "author": "codex_r25_afes_v3r17_static_author_agent",
+  "execution_authority": "NONE",
+  "repair_scope_exact": [
+    "one coherent V3r17 outer checkpoint and manifest closure with no post-seal edits",
+    "exact future fresh-audit path under continuation_20260811"
+  ],
+  "single_stage": "reserve fixed outputs; granular double-same-handle V3r15 contract observation; terminal receipt; stop before Python/controller/AFES/Blender/body",
+  "artifacts": [
+    {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_contract_lock_diagnostic_v3r17.json", "bytes": 6437, "sha256": "36bec41ecd003c821fd275af0a1c7dc6b2ee6d95584c28eabc7a1da4909d6403"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17.c", "bytes": 38490, "sha256": "a88eddeab401b0679ec6cebda9d27fbe7b0c14394f5920b13a8cc07f9d8cc2a3"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17_identity_anchor.h", "bytes": 1325, "sha256": "93b741594f244a17064ddb2630932f5ac1750509f2deba57bdac2e6ff56ad803"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17.obj", "bytes": 48816, "sha256": "b2ad82fdc5e7c27923adb25a5cc8a26ca2f95413d6a0665a10d3a7c4ce0326c6"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17.exe", "bytes": 164864, "sha256": "39820aec1e0835b241975b0ac291e798c4767361d97c51cd7d328da0858fcf9c"},
+    {"path": "Testing/test_kira_r25_foundation_afes_contract_lock_diagnostic_v3r17_static.ps1", "bytes": 23228, "sha256": "7d35c70b87cfbe55f42e2044efbf80f79d539c7e72631b4673ac567ae58e710a"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md", "bytes": 2714, "sha256": "e85e4367e09ce2616ec0fcc7d6006c6b25f250f8041a9ba9d026408ce2dee54c"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt", "bytes": 1921, "sha256": "a082745ae4b3c873374f25823fae30ac1b1c52f6aaff3d52696c9938dfa2853c"}
+  ],
+  "preserved_v3r16_current_and_rejection": [
+    {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_contract_lock_diagnostic_v3r16.json", "bytes": 5276, "sha256": "b28c8778a10ffae5c163ca9ee49429c532841ecb12e9230ea66564ad3ed704df"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r16.c", "bytes": 38439, "sha256": "0ab71d6f8e303bb81eb787b4d52e716103d8dc632e5f8cdec426501fbb5bf789"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r16_identity_anchor.h", "bytes": 1338, "sha256": "d3f220cfb1745d9979d24160b77df4e20bdc0d03507b60105963880f5ce4c51d"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r16.obj", "bytes": 48732, "sha256": "cc78f747ee08445be4b625f4a2affc8d10c179049e3f383d61c683da1fc2493c"},
+    {"path": "tools/native/kira_r25_afes_contract_lock_diagnostic_v3r16.exe", "bytes": 164864, "sha256": "98e71cdf1817ca6b693b43a1f8f68fbf8c5c41d8451900cd2a719bcac6ddfc7f"},
+    {"path": "Testing/test_kira_r25_foundation_afes_contract_lock_diagnostic_v3r16_static.ps1", "bytes": 17970, "sha256": "3227c11a38ab7b5e716b2386a014e40e0ca061bbed2fc7051ff1dce9963b9408"},
+    {"path": "RecoverySprint/continuation_20260810/kira_r25_afes_contract_lock_diagnostic_v3r16_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md", "bytes": 2345, "sha256": "44a174e107baa9f119e1b8a391833d2d3fb78cfd2c15d91b7bbff6c4683d1128"},
+    {"path": "RecoverySprint/continuation_20260810/kira_r25_afes_contract_lock_diagnostic_v3r16_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt", "bytes": 2250, "sha256": "1e6be290edb737a2467741ddecf7364427de8b767b8e19b6a8dd4e2b9d07dff3"},
+    {"path": "RecoverySprint/continuation_20260810/kira_r25_afes_contract_lock_diagnostic_v3r16_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json", "bytes": 5213, "sha256": "ae32d720ebdc3cf69f2895be47c26c5040afde9e248488c193c270645c08b4a8"},
+    {"path": "RecoverySprint/continuation_20260810/kira_r25_afes_contract_lock_diagnostic_v3r16_static_preparation/attempt_01/CHECKPOINT.md", "bytes": 6180, "sha256": "ce9dc906c0b41772c402c489fa0dadad43333de083795c98787015fc33f81a33"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/CHECKPOINT.md", "bytes": 3764, "sha256": "b03bcc253b52580518433b9c65d3c163def281651f343fdc3ee3cf4a38f3e7e8"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/HASH_VERIFICATION.md", "bytes": 2455, "sha256": "10c26a3b1cc10e80f95b7818a1b59026ebf89371bbf1dd2156ba80ce4d2980e9"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/TEST_RESULTS.md", "bytes": 1647, "sha256": "73831ecd1969977bff807f306c56f17430de8bf01bb8607e1a20ea29c2dec700"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/REVIEW_RESULT.json", "bytes": 1695, "sha256": "530572794af4bdbd3fc6ece2e1c452462ed56eb546d5cb2edf9f232e405e0cb4"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/COMPILE_AND_PE_RESULTS.md", "bytes": 1288, "sha256": "9bdc6b6e4c6aafecf43611958804a20603b202f9ef30a46a76fb7d25c3bcc22f"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_STATIC_TEST.ps1", "bytes": 10669, "sha256": "7bfec9d889e5ccd23d433e77934a7d406f6433abb15298d0f42b2431690caed3"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv", "bytes": 1196, "sha256": "1d3d8e1e7264b4f8954ac18063e2198eccb92686518c70a53fc0d7ec2b145060"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256", "bytes": 65, "sha256": "0a35041c1fc32240cd1fb40a4ffe43f5b97031a75f997dbba1bc668121404be3"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/compile_probe/rebuilt_v3r16.obj", "bytes": 48812, "sha256": "954b59ab5121d505e9c9a83bcd0289bab3de1ef40b16bb6f61526ce47aa85182"},
+    {"path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/compile_probe/rebuilt_v3r16.exe", "bytes": 164864, "sha256": "3d11c1d4b1dfb264d8c564fb5a4230a295c8f31e596c8ba3c6b2effa0ef926af"}
+  ],
+  "v3r16_outer_seal_drift_preserved_as_rejected_history": {
+    "outer_checkpoint_manifest_sha256": "434a2e11bb574e299136188556fafab8e5f709b05025d0a15cba1c25b3820234",
+    "current_manifest_sha256": "ae32d720ebdc3cf69f2895be47c26c5040afde9e248488c193c270645c08b4a8",
+    "mismatched_subject_count": 6,
+    "failed_byte_or_hash_checks": 8,
+    "decision": "REJECT"
+  },
+  "required_future_audit": {
+    "auditor": "different from codex_r25_afes_v3r17_static_author_agent",
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_CONTRACT_LOCK_DIAGNOSTIC_ONLY",
+    "directory": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01",
+    "audit_path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "audit_digest_path": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256"
+  },
+  "runtime_outputs_must_be_absent_at_seal": [
+    "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/CONTRACT_LOCK_DIAGNOSTIC_OUTCOME.receipt.bin"
+  ],
+  "verification": {
+    "strict_compile": "PASS_/W4_/WX_x64_CFG",
+    "static_hostile_suite": "PASS_179_OF_179",
+    "read_only_pe_inspection": "PASS_X64_PE32PLUS_CFG_HIGHENTROPYVA_DYNAMICBASE_NX_IMPORTS_BCRYPT_KERNEL32_ONLY",
+    "candidate_executed": false,
+    "runtime_outputs_absent": true,
+    "future_audit_absent": true,
+    "python_stage_present": false,
+    "controller_stage_present": false,
+    "process_creation_present": false
+  },
+  "forbidden": [
+    "self-audit or execution by the author",
+    "V3r16 or V3r15 retry",
+    "Python DLL load, initialization, finalization, or unload",
+    "controller or execution-contract access",
+    "plan builder, broker, child, shell, or process creation",
+    "AFES, Blender, Blend, body, mesh, anatomy, movement, save, render, or export",
+    "production promotion, registry edit, or handoff edit"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_venv_descendant_identity_candidate_v9",
+  "status": "static_only_pending_fresh_different_agent_audit",
+  "candidate_config_sha256": "a45f05bd46dc86d2dfb35d02709ae2264211f892f4830afd90aa177032b65915",
+  "live_execution_authorized": false,
+  "playback_authorized": false,
+  "files": {
+    "Core/blackwell_v9_process_boundary.py": {
+      "bytes": 31961,
+      "sha256": "0dfed07df16a5ded935ac904f73dcba03570681c7ec1a65797138eadf5d4510a"
+    },
+    "Core/persistent_blackwell_voice_integration_v9.py": {
+      "bytes": 7986,
+      "sha256": "cbb2e9cf04c2b21dafa03c96ca699bbbdac0a927269cd72ed10d9f9e74de3b09"
+    },
+    "Testing/blackwell_v9_grandchild_redirector.py": {
+      "bytes": 674,
+      "sha256": "1d7ba9a92033e7e2ad5040c8a0552dac9632f2c05aad6a914c32dcc2bf45a29d"
+    },
+    "Testing/test_blackwell_persistent_voice_candidate_v9_hostile_static.py": {
+      "bytes": 11885,
+      "sha256": "f1b4e506e8748ab98794eac21074b011517f17011985f7c31374caa9df16778b"
+    },
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/README.md": {
+      "bytes": 2068,
+      "sha256": "2cedaebe9b142d59c936c8e2821c78fc2b6790d6fee6a09a5f6d26d526538ed7"
+    },
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/candidate_config.json": {
+      "bytes": 8530,
+      "sha256": "a45f05bd46dc86d2dfb35d02709ae2264211f892f4830afd90aa177032b65915"
+    },
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/candidate_contract.py": {
+      "bytes": 13927,
+      "sha256": "8c6cb445b1ac3008c9aea4a1ec53be69a694276db17f532da6e3173b69e3f0b9"
+    }
+  }
+}

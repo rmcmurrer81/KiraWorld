@@ -1,0 +1,47 @@
+{
+  "schema": "kira.resident_media.voluntary_v14.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T13:44:02.6823182Z",
+  "reviewer_task": "/root/media_v14_quality_review",
+  "evidence_transcribed_by": "/root",
+  "decision": "REJECT",
+  "accepted_static_only": false,
+  "production_authorized": false,
+  "live_media_authorized": false,
+  "person_state_authorized": false,
+  "seal": {
+    "subjects_exact": 9,
+    "subjects_drifted": 0,
+    "manifest_bytes": 2894,
+    "manifest_sha256": "7699ff183c24bcbf2fb580b5d9fcb119c19dd36e71503c22bd5b3720ef723736"
+  },
+  "author_checks": {
+    "focused_v14_passed": 19,
+    "focused_v14_failed": 0,
+    "preserved_v3_through_v14_passed": 210,
+    "preserved_v3_through_v14_failed": 0
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V14_MUTABLE_CATALOG_STALE_DIGEST_PLAN",
+      "reproduction": "Ordinary Python method-closure introspection reached the WeakKeyDictionary-held V14 snapshot state and its mutable StimulusCatalog. Mutating state.catalog._manifests[0].source_relative_path left the cached catalog.sha256 and catalog_sha256 equal, so state.verify passed and validate_static_evidence_plan emitted VALIDATED_STATIC_PLAN_NOT_AUTHORITY_NOT_COMMITTED even though a fresh canonical digest of the current manifests differed from the reported plan digest."
+    }
+  ],
+  "positive_truth": {
+    "authority_protocol_called": false,
+    "receipt_consumed": false,
+    "ledger_or_adapter_created": false,
+    "durable_commit_surface_returned": false,
+    "durable_commit_attempted": false,
+    "production_integration_exists": false
+  },
+  "scope_truth": {
+    "media_opened_or_played": 0,
+    "model_or_device_calls": 0,
+    "audio_or_video_calls": 0,
+    "person_or_memory_changes": 0,
+    "body_or_blender_calls": 0,
+    "sarah_calls": 0,
+    "production_route_changed": false
+  },
+  "required_next_step": "Preserve V14. Repair append-only as V15 so every emitted plan is derived from immutable canonical catalog data or recomputes and verifies the exact current catalog digest at every boundary; eliminate ordinary closure/state reachability that permits stale-digest mutation; keep no-commit, disconnected, default-off behavior; require another different fresh static audit."
+}

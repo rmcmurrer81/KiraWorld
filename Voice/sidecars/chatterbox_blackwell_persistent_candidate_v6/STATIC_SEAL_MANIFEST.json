@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_cpu_park_candidate_v6",
+  "status": "static_only_pending_fresh_independent_audit",
+  "live_execution_authorized": false,
+  "playback_authorized": false,
+  "files": {
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v6/candidate_config.json": {"bytes": 8815, "sha256": "2dbdfd763328182300a5114f22a4eb6f60d073e7fd3caa721e53655bcb371460"},
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v6/README.md": {"bytes": 3297, "sha256": "a1fa206ecf029608e914dc8c118ff612ce264973c5f7c0c6465d89604f3e2322"},
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v6/persistent_worker.py": {"bytes": 63912, "sha256": "9e71a58e83355a22b18154a878330e9e64f308d9bdf03fa2a2b9b94e8b132a63"},
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v6/worker_entry.py": {"bytes": 7278, "sha256": "d753f9cce7ff17aa3eb7af8ce715bf9ed3aeef3479f4245c4462755240d4f69c"},
+    "Core/blackwell_v6_process_boundary.py": {"bytes": 26570, "sha256": "c38654c1b35d75fd53e6f73a42ce0c9800a0c04df3226c065b4dedb1abb34596"},
+    "Core/persistent_blackwell_voice_integration_v6.py": {"bytes": 11328, "sha256": "9a6d9ed2f8fe470a8fe47a2e386f7096da59e4faa0a412062d469829dc506740"},
+    "Testing/blackwell_v6_static_fixture_backend.py": {"bytes": 13033, "sha256": "ff12046cf69d641ff6f38ce72e4a2f1307a09067c74836c1c98c9abf6876e0ab"},
+    "Testing/test_blackwell_persistent_voice_candidate_v6_hostile_static.py": {"bytes": 30036, "sha256": "322c8600022cb7c5eb99d263eb16654b980de6fa466a8ae3932ab054ed47bb1f"}
+  }
+}

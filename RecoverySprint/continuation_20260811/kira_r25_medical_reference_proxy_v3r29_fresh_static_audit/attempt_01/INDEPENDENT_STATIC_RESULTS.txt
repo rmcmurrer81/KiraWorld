@@ -1,0 +1,72 @@
+KIRA V3R29 DIFFERENT INDEPENDENT AUDIT A STATIC RESULTS
+Recorded UTC: 2026-08-12T01:28:14Z
+Verdict: REJECT_AUDIT_A_NO_STAGE2_MATERIALIZATION_OR_BUILD_AUTHORITY
+
+BOUNDARY
+- Kira remained read-only for this auditor.
+- No materializer main, sealed native product, Blender, bpy, worker, body,
+  save, reload, render, model, camera, voice, live, production, or Sarah path
+  was invoked.
+- Exact Kira bytes were rehashed/read. Builds, analysis, PE inspection, and
+  mocked hostile probes used Documents/Codex scratch only.
+
+STAGE 1
+- Installed files: 26/26 exact.
+- Sealed subjects: 25/25 exact.
+- Subject canonical bytes: 2674.
+- Subject root:
+  ee704f4b125efd1ae378fb3789e9df952788afb165c9b1d12334da9399834b99.
+- Seal: 5395 bytes /
+  b4187e13fcb57204fd26ff6020044d0e5fd80ace5068514ba42da3f228e3f7ba.
+- All-files canonical bytes: 2770.
+- All-26 root:
+  80e9ab2fff1614c5024d95008868b78990086b4e117536c5fd14920ac1e62bc9.
+
+PREDECESSOR CLOSURE
+- Direct V3r28 author/rejection: 28/28 exact (19 author, 9 rejection).
+- Transitive V3r27: 17/17 exact (11 author, 6 rejection).
+- V3r28 sealed subjects: 18/18; root
+  5686bdb4997268b72f543dbc25cd51b37b7cfb6101d899dd1d0a59ab70d6c841.
+- V3r28 rejection manifest: 8/8 rows exact; manifest SHA-256
+  a43722af6236db7daa64213169cec65a6949db0c4e5e33076d0717655e3e22bd.
+- Combined 45 observed-row root:
+  20312cbf6e7f32a9138418beef6f2d87dbc9658d89011c66be5f07138d53588e.
+
+POSITIVE REPAIRS
+- Exact seal SHA and all-files root are external parser inputs; complete seal
+  keys and exact scalar/container types are checked.
+- Independent in-memory hostile probes refused 21/21 Audit-A type/anchor
+  cases and 3/3 seal mutation/type cases.
+- A correct Documents/Codex scratch-ledger probe created, flushed, read back,
+  survived generated-directory deletion/recreation, and refused its retry.
+- Two independent strict materialized-path /Brepro builds produced identical
+  168448-byte EXEs matching the sealed SHA-256
+  1a2adae502d1cf0ff547a4c93dbe58ebb5eecc21e832f8f00b6b6f393b0f6b2e.
+- Independent /analyze /W4 /WX returned the exact 59-byte zero-defect XML
+  ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5.
+- The materialized PE is x64, High Entropy VA, Dynamic Base, NX, CFG, CET and
+  imports BCRYPT/KERNEL32 including CreateProcessW. It was not executed.
+- Native retains all eight pre-reserved final handles through durable success
+  and terminal revalidation.
+
+BLOCKERS
+1. Installed PostSeal is location-dependent and fails
+   Refuse:materialization_ledger_root_scope. The same exact bytes pass only
+   from the author scratch location. The installed fixture points its writable
+   TemporaryDirectory below the sealed Kira directory, so a full rerun would
+   violate this auditor's read-only Kira boundary.
+2. The seven worker-staging file identities are not pre-reserved or held.
+   Native first opens them after the child exits. A same-user replacement or
+   hard-link race can substitute an internally self-consistent unsigned bundle
+   before final copy or redirect a Blender write outside staging. Final-path
+   reservation does not close this earlier source-object race.
+3. The materialization ledger validates directories by pathname, releases that
+   validation, and later opens the record by pathname. No retained directory
+   handle or final-path/identity check closes a same-user directory/junction
+   swap. The current user can also delete the ordinary JSON ledger, contrary
+   to the narrower administrator-deletion disclaimer.
+
+OUTCOME
+No Audit-A acceptance JSON, 18-PASS TSV, Stage-2 authority, materialization,
+native build authority, or Blender authority is issued. Preserve V3r29 and
+repair append-only as V3r30 before another different Audit A.

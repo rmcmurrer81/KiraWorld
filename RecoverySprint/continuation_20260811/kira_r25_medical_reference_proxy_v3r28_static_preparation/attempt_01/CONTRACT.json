@@ -1,0 +1,99 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r28.two_stage_contract.v1",
+  "version": "V3r28",
+  "author": "codex_r25_medical_reference_proxy_v3r28_two_stage_author",
+  "status": "STAGE1_STATIC_ONLY_PENDING_DIFFERENT_AUDIT_A_NO_EXECUTION_AUTHORITY",
+  "execution_authority": "NONE",
+  "candidate_invoked": false,
+  "purpose": "repair_v3r27_with_external_stage2_anchor_exact_proxy_truth_and_closed_terminal_evidence",
+  "upstream": {
+    "manifest": "UPSTREAM_CLOSURE.tsv",
+    "rows": 17,
+    "v3r27_author_rows": 11,
+    "v3r27_rejection_rows": 6,
+    "v3r27_status": "REJECTED_DO_NOT_RUN",
+    "v3r26_status": "CONSUMED_SUCCESS_DO_NOT_RERUN_PURE_PLAN_ONLY_NOT_BODY"
+  },
+  "two_stage_authority": {
+    "stage1": "sealed worker specification native anchor template and materializer; cannot launch Blender",
+    "audit_a_decision": "ACCEPT_STAGE1_FOR_STAGE2_MATERIALIZATION_ONLY_NO_BLENDER_AUTHORITY",
+    "stage2_materialization": "deterministically inject Audit A exact manifest digest exact auditor exact Stage1 subjects exact upstream subjects and exact Blender identity into native compile-time bindings",
+    "audit_b": "different fresh audit of exact materialized source header build PE worker and hostile results; externally records the exact final native executable hash",
+    "root_external_anchor": "root must compare the final executable to Audit B expected bytes and SHA immediately before its sole launch; Stage2 consumes no replaceable Audit B pair",
+    "maximum_future_stage2_invocations_after_both_audits": 1,
+    "stage1_or_audit_a_can_authorize_blender": false,
+    "modified_script_seal_audit_self_authorization": false
+  },
+  "blender_runtime": {
+    "exact_path": "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe",
+    "bytes": 108687824,
+    "sha256": "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5",
+    "bpy_version_string": "5.1.2",
+    "required_arguments_in_order": ["--background", "--factory-startup", "--disable-autoexec", "--python-exit-code", "91", "--python", "<exact_worker_path>", "--", "--capability", "<exact_capability_path>", "--capability-sha256", "<lower_hex64>"],
+    "input_blend": "NONE",
+    "network": false,
+    "source_asset_import": false,
+    "source_mesh_copy": false,
+    "export": false
+  },
+  "stage_a_truth": {
+    "name": "ISOLATED_NORMALIZED_PELVIC_CORE_CLINICAL_REFERENCE_PROXY_NOT_KIRA_BODY",
+    "spec": "PROXY_SPEC.json",
+    "frame": "NORMALIZED_REFERENCE_FRAME.json",
+    "proxy_objects_exact": 9,
+    "materials_exact": 6,
+    "maximum_total_vertices": 12000,
+    "source_attribution_ids": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"],
+    "kira_landmark_fit": false,
+    "functional_organs": false,
+    "physiology": false,
+    "rig_weights_animation": false,
+    "live_avatar_link": false,
+    "activation": false,
+    "avatar_builder_promotion": false
+  },
+  "saved_reload_truth": {
+    "validate_before_save": true,
+    "save_initial": true,
+    "reload_initial": true,
+    "validate_after_initial_reload": true,
+    "render_exact_views": ["front_clinical", "right_clinical", "iso_clinical", "iso_xray"],
+    "save_final_snapshot": true,
+    "reload_final_snapshot": true,
+    "validate_after_final_reload": true,
+    "decoded_png_dimensions": [640, 640],
+    "png_content_and_distinct_view_gates": true,
+    "final_output_manifest_owned_by_native_anchor": true
+  },
+  "one_shot_terminal": {
+    "authoritative_file": "V3R28_ATTEMPT_OUTCOME_RECEIPT.bin",
+    "creation": "CREATE_NEW_WRITE_THROUGH_FIXED_SIZE_SINGLE_LEDGER",
+    "states": ["PENDING_CONSUMED", "SUCCESS_CONSUMED", "FAILURE_CONSUMED"],
+    "torn_or_missing_valid_terminal_state": "AMBIGUITY_CONSUMED",
+    "single_file_in_place_state_transition": true,
+    "receipt_replacement_or_recreation": false,
+    "separate_contradictory_outcome": false,
+    "native_anchor_owns_child_job_timeout_cleanup_and_final_manifest": true,
+    "rerun_permitted": false
+  },
+  "license_and_skeleton": {
+    "cc_by_attribution_preserved": true,
+    "cc_by_nc_quarantine_preserved": true,
+    "unknown_license_quarantine_preserved": true,
+    "skeleton_source_ids": 136,
+    "mapped_bones": 0,
+    "stage_a_uses_skeleton": false
+  },
+  "claim_boundary": {
+    "future_stage2_success_may_claim": "exact isolated normalized nine-proxy clinical reference scene built validated saved reloaded and rendered under the sealed contract",
+    "may_not_claim": ["Kira complete body", "complete internal anatomy", "complete external anatomy", "functional organs", "physiology", "sensation", "rig", "weights", "deformation", "production skin or regional pigmentation", "hair", "activation", "Avatar Builder promotion"]
+  },
+  "downstream_owner_requirements_preserved_not_implemented_by_v3r28": {
+    "adult_body_goal": "medically realistic external and internal adult anatomy requires separate bounded evidence and independent acceptance; this proxy stage does not satisfy it",
+    "tissue_material_goal": "skin is not one flat color; lips nipples and other tissues require evidence-based regional material variation in a later independently audited body lane",
+    "runtime_variants": "the bald body is the first activation candidate; a separate hair version is retained inactive until the owner installs the planned RAM upgrade",
+    "avatar_builder_handoff": "only independently accepted Blender build save reload and render evidence may be supplied as an Avatar Builder template",
+    "current_v3r28_handoff": "NONE_PENDING_AUDIT_A_STAGE2_MATERIALIZATION_AUDIT_B_AND_ONE_BOUNDED_PROXY_RUN"
+  },
+  "sarah": "PRESERVE_CURRENT_FILES_DO_NOT_INSPECT_EDIT_TEST_OR_RESUME"
+}

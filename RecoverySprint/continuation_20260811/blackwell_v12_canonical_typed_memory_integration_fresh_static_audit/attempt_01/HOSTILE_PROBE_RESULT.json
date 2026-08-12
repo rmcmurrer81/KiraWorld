@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_canonical_typed_memory_integration_candidate_v12",
+  "attempt_id": "attempt_01",
+  "audit_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "probe_script": {
+    "path": "RecoverySprint/continuation_20260811/blackwell_v12_canonical_typed_memory_integration_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+    "bytes": 14453,
+    "sha256": "6a831f0695d9d6a911db379b07be0494ebc8e526892caba007678b3fcbd72627"
+  },
+  "cache_controls": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPYCACHEPREFIX": "NUL",
+    "python_B": true
+  },
+  "corrected_run": {
+    "tests_run": 15,
+    "tests_passed": 12,
+    "tests_failed": 3,
+    "errors": 0,
+    "exit_code": 1
+  },
+  "failed_probe_ids": [
+    "test_11_canonical_module_replacement_after_binding_must_fail_closed",
+    "test_12_integrated_prepare_must_reject_replaced_canonical_module",
+    "test_13_canonical_validator_global_replacement_must_not_bypass_poison"
+  ],
+  "blocking_finding": {
+    "id": "BLOCK_V12_CANONICAL_CONTROL_MODULE_NOT_BOUND",
+    "after_binding_replacement": "Replacing the canonical module in sys.modules and its package attribute after installation was not detected by binding.revalidate().",
+    "integrated_prepare_replacement": "Replacing the canonical module before prepare_future_harness_memory_binding let forged create/install/revalidate functions return an arbitrary object and affirmative evidence through all final preparation checks.",
+    "validator_global_replacement": "Replacing the canonical module global _ensure_import_slots_clean with a no-op let a poisoned V8 sys.modules entry survive binding.revalidate().",
+    "impact": "V12 seals the private V8/V10 module objects but not the ordinary-import V12 control module or the global validator functions that confer and revalidate the binding. The claimed canonical integration trust root remains substitutable."
+  },
+  "passing_probe_areas": [
+    "exact seal, checkpoint, seven subjects, and twenty-eight predecessor boundaries",
+    "default-off parent and worker live refusal",
+    "unchanged production route",
+    "forged adapter file and callable names",
+    "module subclasses and callable proxies",
+    "V8 and V10 sys.modules and package poisoning",
+    "changed code, defaults, referenced globals, and closure contents",
+    "exact typed helper binding and fake binding refusal",
+    "TOCTOU before and after install",
+    "TOCTOU after integrated preparation",
+    "future authorization and candidate output roots absent",
+    "no heavy, audio, body, media, or Blender module loaded"
+  ],
+  "scope_truth": {
+    "sealed_subjects_edited": false,
+    "predecessor_or_audit_bytes_edited": false,
+    "production_route_changed": false,
+    "live_or_model_run": false,
+    "ollama_qwen_torch_cuda_chatterbox_run": false,
+    "audio_or_playback": false,
+    "person_body_media_or_blender": false,
+    "audit_authorization_created": false
+  }
+}

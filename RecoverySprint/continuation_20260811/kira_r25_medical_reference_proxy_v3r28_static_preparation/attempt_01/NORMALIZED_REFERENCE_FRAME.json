@@ -1,0 +1,42 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r28.normalized_reference_frame.v1",
+  "status": "NORMALIZED_REFERENCE_ONLY_NOT_KIRA_MEASUREMENT_NOT_BODY",
+  "units": "normalized_reference_units",
+  "origin": [0.0, 0.0, 0.0],
+  "axis": {
+    "positive_x": "anatomical_right",
+    "positive_y": "anatomical_anterior",
+    "positive_z": "anatomical_superior"
+  },
+  "landmarks": {
+    "pelvis_left_lateral_anchor": [-0.5, 0.0, 0.0],
+    "pelvis_right_lateral_anchor": [0.5, 0.0, 0.0],
+    "pubic_anterior_anchor": [0.0, 0.5, 0.0],
+    "sacral_posterior_anchor": [0.0, -0.5, 0.0],
+    "pelvic_floor_anchor": [0.0, 0.0, -0.1],
+    "pelvic_inlet_superior_anchor": [0.0, 0.0, 0.1],
+    "outer_shell_anterior_clearance": [0.0, 0.62, 0.0],
+    "outer_shell_posterior_clearance": [0.0, -0.62, 0.0]
+  },
+  "gates": {
+    "exact_landmark_count": 8,
+    "all_coordinates_finite": true,
+    "left_x_less_than_right_x": true,
+    "pubic_y_greater_than_sacral_y": true,
+    "floor_z_less_than_inlet_z": true,
+    "anterior_clearance_y_greater_than_pubic_y": true,
+    "posterior_clearance_y_less_than_sacral_y": true,
+    "bilateral_midpoint_equals_origin_tolerance": 1e-09,
+    "minimum_pelvis_width": 0.99,
+    "minimum_pelvis_depth": 0.99,
+    "kira_height_required": false,
+    "kira_outer_shell_required": false
+  },
+  "cameras": {
+    "front_clinical": [0.0, 1.55, 0.1],
+    "right_clinical": [1.55, 0.0, 0.1],
+    "iso_clinical": [1.2, 1.35, 0.85],
+    "iso_xray": [-1.2, 1.35, 0.85]
+  },
+  "truth": "These are synthetic normalized placement anchors. They are not measured Kira landmarks and do not establish Kira dimensions or fit."
+}

@@ -1,0 +1,11 @@
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"entry","status":"entered"}
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"subject_manifest_audit_gate","status":"passed"}
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"outcome_reservation","status":"passed"}
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"isolated_python_runtime","status":"passed"}
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"restricted_twin_controller_code_globals_gate","status":"passed"}
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"pure_build_execution_plan_once_and_data_only_result_validation","status":"passed","manifest_rows":137,"plan_attempts":1,"plan_returns":1,"operation_enters":21,"operation_returns":21,"sha_helper_calls":222,"hex_helper_calls":231,"json_helper_calls":4,"forbidden_helper_calls":0}
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"python_finalize_dll_unload_retained_recheck","status":"passed"}
+{"schema":"kira.r25.afes.v3r26.plan_validator_telemetry.v1","stage":"bounded_sanitized_diagnostic","checkpoint":230,"plan_attempts":1,"plan_returns":1,"operation_enters":21,"operation_returns":21,"marker_present":1,"native_sha_calls":223,"python_error_captured":0,"exception_message_truncated":0,"retained_recheck_passed":1,"exception_type":"","exception_message":""}
+{"schema":"kira.r25.afes.v3r26.python_unload.v1","stage":"finalize_release_absence_terminal","finalize_called":1,"finalize_result":0,"free_library_called":1,"free_library_result":1,"snapshot_succeeded":1,"snapshot_error":0,"checked_module_count":8,"old_base_present":0,"exact_path_present":0,"old_module_base":140726081486848}
+{"schema":"kira.r25.afes.v3r26.contract_gate.v1","stage":"granular_same_handle_terminal","passed_mask":32767,"failure_gate":0,"win32_error":0,"snapshot_one_bytes":78942,"snapshot_two_bytes":78942,"final_bytes":78942}
+{"schema":"kira.r25.afes.v3r26.native_stage.v1","stage":"terminal","status":"complete","detail":"plan_destroyed_no_bootstrap_broker_process_afes_blender_body_save_render_export"}

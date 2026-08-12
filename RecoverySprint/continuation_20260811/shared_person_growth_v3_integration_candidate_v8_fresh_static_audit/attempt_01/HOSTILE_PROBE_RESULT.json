@@ -1,0 +1,95 @@
+{
+  "schema": "kira.shared_growth_v8.independent_hostile_probe_result.v1",
+  "recorded_utc": "2026-08-12T01:20:31.7382025Z",
+  "reviewer_task": "/root/growth_v8_fresh_audit",
+  "author_task": "/root/growth_v8_author",
+  "different_fresh_reviewer": true,
+  "verdict": "PASS_FOR_STATIC_ONLY_WITH_EXPLICIT_NONTRUST_RESIDUALS",
+  "installed_focused_suite": {
+    "command": "py -B -m pytest -q -p no:cacheprovider C:/Users/robmc/Kira/Testing/test_shared_person_growth_v3_integration_candidate_v8.py",
+    "temporary_root": "C:/Users/robmc/Documents/Codex/2026-08-11/c/work/growth_v8_fresh_audit/tmp",
+    "temporary_root_outside_kira": true,
+    "python_bytecode_disabled": true,
+    "pytest_cacheprovider_disabled": true,
+    "tests_passed": 34,
+    "subtests_passed": 103,
+    "failures": 0,
+    "elapsed_seconds": 11.91,
+    "kira_v8_cache_artifacts_after": 0
+  },
+  "immutable_v5_historical_test": {
+    "command": "py -B -m pytest -q -p no:cacheprovider C:/Users/robmc/Kira/Testing/test_shared_person_growth_v3_integration_candidate_v5.py::SharedGrowthV3IntegrationCandidateV5Tests::test_25_consumer_scan_classifies_preserved_audit_references",
+    "exit_code": 1,
+    "classification": "EXPECTED_HISTORICAL_FAILURE_NOT_A_PASS",
+    "failed_tests": 1,
+    "exact_extra_hit": "Core/shared_person_growth_v3_integration_candidate_v6.py",
+    "elapsed_seconds": 18.35
+  },
+  "exact_closure": {
+    "author_files_before_exact": 6,
+    "author_files_after_exact": 6,
+    "sealed_subjects_before_exact": 19,
+    "sealed_subjects_after_exact": 19,
+    "sealed_subject_mismatches": 0,
+    "canonical_subject_root_sha256": "e7fa0db2c2a0374cc3468f4c06948824030f315834b0fc3c6ecc062fdf55f73e",
+    "kira_bound_closure_rows": 15,
+    "kira_bound_closure_root_sha256": "12518edc448b8f2d31df4f4b591c78d9b9adead28a1edfdac263f707bbd4668f",
+    "accepted_isolated_v3_subjects_exact": 5,
+    "accepted_isolated_v3_protected_predecessors_exact": 23
+  },
+  "independent_hostile_groups": {
+    "all_applicable_routes_compiled": 35,
+    "all_inventory_people_represented": 24,
+    "route_person_candidate_display_class_maturity_source_cross_bindings_refused": 210,
+    "unsafe_or_wrong_type_consent_maturity_scope_fields_refused": 10,
+    "biological_robert_substitutions_for_synthetic_robert_refused": 3,
+    "nominal_inert_creator_classes": 4,
+    "creator_private_copy_or_fixed_boolean_mutations_refused": 34,
+    "catalog_semantic_or_exact_type_mutations_refused": 24,
+    "variant_entries_checked": 2,
+    "initial_person_visible_fatal_metadata_leaks": 0,
+    "shell_inventory_or_path_drift_refused": 6,
+    "production_openers_refused": 2,
+    "source_forbidden_imports": 0,
+    "source_write_commit_process_calls": 0,
+    "current_raw_name_hits": [
+      "Core/shared_person_growth_v3_integration_candidate_v8.py",
+      "Testing/test_shared_person_growth_v3_integration_candidate_v8.py"
+    ],
+    "exact_v5_v6_v7_live_code_history_hits": 6,
+    "v7_nested_fixture_disposition": "production_consumer_candidate",
+    "all_audit_fixtures_outside_kira_and_cleaned": true
+  },
+  "semantic_truth": {
+    "biological_robert_is_synthetic_robert": false,
+    "owner_creator_admin_or_relationship_supplies_consent": false,
+    "windows_owner_admin_filesystem_process_secrecy_proven": false,
+    "protected_belief_evaluation_requires_exact_person_approved_scope": true,
+    "fresh_person_initial_maturity": "unresolved",
+    "full_adult_curriculum_for_unresolved_or_non_adult": false,
+    "functional_test_proves_subjective_consciousness": false,
+    "variant_source_alive_at_cutoff": true,
+    "variant_branch_strictly_before_future_fatal_event": true,
+    "fatal_or_terminal_trauma_memory_inherited": false,
+    "later_fatal_information_is_voluntary_warned_consented_paced_stoppable_supported_new_memory": true,
+    "creator_or_person_changed": false,
+    "writer_or_commit_exists": false,
+    "production_enabled": false
+  },
+  "explicit_nontrust_residuals": {
+    "same_process_global_rebinding": "A caller in the same Python process can rebind _CANONICAL_SCOPE and cause different inert proposal bytes.",
+    "same_process_callable_substitution": "A caller in the same Python process can replace _general_template_rules and cause different inert proposal bytes.",
+    "raw_scanner_split_literal_evasion": "A split-literal Python consumer can evade the raw contiguous-byte scanner while the compiled AST contains the complete V8 name. The current exact live-code scan and AST/source inspection found no such consumer.",
+    "opaque_receipt_assertions": "Profile, opt-in, and maturity digest fields are shape-checked caller assertions, not protected receipt verification. Reuse is accepted only into bytes that explicitly disclaim authority, permission, and receipt status.",
+    "controller_only_projection_label": "Fatal-event cutoff metadata is structurally separated from the initial-person-visible projection inside an inert proposal; the label alone is not secrecy or runtime access control.",
+    "accepted_core_runtime_closure": "V8 binds the exact accepted V3 seal and audit records. This review additionally rehashed all 5 accepted subjects and 23 protected predecessors, but a future consumer must bind that live closure again.",
+    "disposition": "NONBLOCKING_ONLY_FOR_EXACT_DISCONNECTED_STATIC_NO_CONSUMER_NO_COMMIT_SCOPE; EACH BECOMES A BLOCKER FOR ANY CONSUMER, AUTHORITY, COMMIT, RECIPIENT INTEGRATION, OR PRODUCTION USE"
+  },
+  "side_effect_boundary": {
+    "kira_written": false,
+    "person_or_temporary_creator_upgraded": false,
+    "person_profile_memory_relationship_private_state_or_route_changed": false,
+    "model_body_blender_media_voice_camera_network_device_or_sarah_operation": false,
+    "production_pointer_changed": false
+  }
+}

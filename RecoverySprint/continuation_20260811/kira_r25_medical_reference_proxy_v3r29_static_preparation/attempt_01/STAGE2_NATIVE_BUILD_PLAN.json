@@ -1,0 +1,48 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r29.stage2_native_build_plan.v1",
+  "status": "AUDIT_A_MAY_AUTHORIZE_ONE_NATIVE_BUILD_ONLY_NO_BLENDER",
+  "compiler": {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe",
+    "bytes": 682576,
+    "sha256": "6641bee08a3cbafe204aa03b280ad634d7a88b1c03a06fbfec22aaf55d1e4ec2"
+  },
+  "linker": {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\link.exe",
+    "bytes": 3416136,
+    "sha256": "2c26c8b28ca5e47ef0c0e89a7264cf4fe6685d26ec0b0a3188e2383bc4b7e08f"
+  },
+  "source": "post_audit_native_anchor_template_v3r29.c",
+  "generated_header": "POST_AUDIT_BINDINGS_TEMPLATE_v3r29.h",
+  "output": "kira_v3r29_stage2_anchor.exe",
+  "author_materialized_analysis": {
+    "translation_unit": "materialized_analysis_translation_unit_v3r29.c",
+    "bindings_header": "POST_AUDIT_BINDINGS_MATERIALIZED_ANALYSIS_v3r29.h",
+    "materialized_macro_exact": 1,
+    "strict_compile_output": "DO_NOT_RUN_MATERIALIZED_ANALYSIS_v3r29.exe",
+    "analyzer_log": "materialized_analysis_translation_unit_v3r29.nativecodeanalysis.xml",
+    "strict_compile_status": "PASS_NOT_EXECUTED",
+    "analyzer_status": "ZERO_UNSUPPRESSED_DEFECTS_NOT_EXECUTED",
+    "authority": "NONE_DO_NOT_RUN"
+  },
+  "compile_flags": [
+    "/nologo",
+    "/W4",
+    "/WX",
+    "/O2",
+    "/MT",
+    "/guard:cf",
+    "/std:c17",
+    "/Brepro"
+  ],
+  "link_flags": [
+    "/guard:cf",
+    "/DYNAMICBASE",
+    "/HIGHENTROPYVA",
+    "/NXCOMPAT",
+    "/CETCOMPAT",
+    "/Brepro"
+  ],
+  "execution_boundary": "BUILD_ONLY_THEN_STOP_FOR_DIFFERENT_AUDIT_B_EXTERNAL_EXE_SHA256",
+  "blender_authority": "NONE",
+  "candidate_authority": "NONE"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v9",
+  "attempt_id": "attempt_01",
+  "completed_at_utc": "2026-08-11T08:22:00.4859661Z",
+  "decision": "REJECT",
+  "verdict": "REJECT_NO_V9_UNATTENDED_ATTEMPT_AUTHORIZED",
+  "live_authorized": false,
+  "unattended_attempt_authorized": false,
+  "authorization_created": false,
+  "candidate_edited": false,
+  "different_fresh_reaudit_required_after_append_only_repair": true,
+  "authored_tests_passed": 158,
+  "authored_tests_failed": 0,
+  "independent_tests_run": 15,
+  "independent_tests_passed": 15,
+  "independent_tests_failed": 0,
+  "blocking_finding_count": 2,
+  "blocking_finding_ids": [
+    "BLOCK_V9_NESTED_CALLABLE_CODE_IDENTITY_GAP",
+    "BLOCK_V9_SEMANTIC_CONTRADICTION_FALSE_ACCEPTS"
+  ],
+  "static_audit_result": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/STATIC_AUDIT_RESULT.json",
+    "bytes": 5678,
+    "sha256": "ce3d6a02c560c3678491ddb225b5091e42bad94cc6e9f3b058e460326e36af7a"
+  },
+  "hostile_probe_result": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+    "bytes": 5789,
+    "sha256": "c0e6c78f2b8e8cfbb429ebe153cae4509d7dc57397446af8c151006e306fa333"
+  },
+  "reason": "V9 closes the literal V8 duplicate-argument and direct V1-loader drift findings, but it does not bind immutable code identity for the nested canonical loader/configurer objects it executes. Two independent pre-call __code__ substitutions retained the checked object identities and were accepted, one replacing the effective turn plan and one replacing V8 configuration. Separately, seventeen meaning-equivalent contradictions of consent, exact-participant privacy, unfinished-body truth, currentness, health/source limits, memory, physiological-response separation, and adult/nonadult curriculum boundaries received passed=true semantic receipts with no issues. A live unattended run could therefore validate/configure substituted code or physically play materially prohibited claims before later review.",
+  "required_next_step": "Preserve V1-V9 and this rejection exactly. Repair append-only with immutable callable code/default/closure bindings and complete hostile semantic contradiction coverage, then require another different fresh exact-byte static audit. Do not run V9 or issue a V9 authorization.",
+  "scope_truth": {
+    "v9_or_predecessor_bytes_edited": false,
+    "output_roots_created": false,
+    "model_or_voice_run": false,
+    "gpu_audio_or_playback_run": false,
+    "person_state_memory_media_body_or_blender_run": false
+  }
+}

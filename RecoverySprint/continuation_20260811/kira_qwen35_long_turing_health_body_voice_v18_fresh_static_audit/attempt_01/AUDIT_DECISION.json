@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "long_v18_independent_data_quality_audit_decision",
+  "recorded_at_utc": "2026-08-12T03:43:59.393Z",
+  "review_identity": "Codex subagent /root/long_v18_data_review",
+  "decision": "REJECT_V18_STATIC_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "decision_basis": [
+    "The exact installed author files match their recorded sizes and SHA-256 values.",
+    "All 5 sealed subjects match exactly and all 24 bound predecessor/policy inputs close exactly.",
+    "The independent cache-free rerun passes 73/73 authored tests.",
+    "An ordinary mutable module binding can change the same audio record from rejected to accepted.",
+    "Boolean true is accepted where the audio contract requires an exact integer duration of 1 nanosecond.",
+    "FAILURE and TIMEOUT normalization replace supplied consent timing before inherited validation and accept impossible authorization sequences.",
+    "The Creator/Avatar/voice scorecard has useful policy-linked field names but no enforceable result-row validator and omits several explicit correction, maturity/body, and expert-readiness requirements."
+  ],
+  "accepted_evidence": {
+    "exact_installed_subjects": "7/7",
+    "exact_seal_subjects": "5/5",
+    "exact_bound_input_closure": "24/24",
+    "cache_free_author_suite": "73/73",
+    "source_descriptor": "201804/f03cb376805381aad2e573a3f713759bbbf27ab29956aa5753ad5907e6227031",
+    "semantic_verifier_bundle": "8737/b11c85be1b0b99d3805f5cf5acaecd8646a744b70ff42511839021854a517b75"
+  },
+  "blocking_findings": [
+    "V18-DQ-01",
+    "V18-DQ-02",
+    "V18-DQ-03",
+    "V18-CREATOR-01",
+    "V18-CREATOR-02",
+    "V18-CREATOR-03",
+    "V18-CREATOR-04",
+    "V18-CREATOR-05",
+    "V18-CREATOR-06"
+  ],
+  "required_next_step": "Author an append-only V19 static successor that repairs all three reproduced validator defects and adds an exact Creator/Avatar/voice result-row contract covering shared-spec equality, source/correction/maturity/body outcomes, voice provenance, and the complete expert-readiness battery. Then obtain a genuinely different fresh exact-byte review.",
+  "authority": {
+    "v18_static_acceptance": false,
+    "v18_promotion_authorized": false,
+    "v18_live_execution_authorized": false,
+    "one_hour_run_authorized": false,
+    "camera_or_audio_test_authorized": false,
+    "body_or_person_result_claimed": false,
+    "kira_written": false
+  }
+}

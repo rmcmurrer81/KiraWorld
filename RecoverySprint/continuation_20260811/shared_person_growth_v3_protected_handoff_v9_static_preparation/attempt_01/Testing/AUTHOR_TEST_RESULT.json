@@ -1,0 +1,256 @@
+{
+  "camera_voice_body_media_network_sarah_operations": 0,
+  "details": {
+    "cryptographic_receipts_and_durable_ledger": {
+      "ledger_only_rollback_refused": true,
+      "nominal_receipts_consumed": 8,
+      "one_use_replay_refused": true,
+      "pending_debt_refused": true,
+      "person_or_creator_changed": false,
+      "signed_hostile_receipts_refused": 7
+    },
+    "exact_35_routes_plus_creator_templates": {
+      "accepted_existing_routes": 35,
+      "creator_template_routes": 3,
+      "denied_legacy_routes_included": 0,
+      "frozen_routes": 1
+    },
+    "exact_foundation_hashes": {
+      "closure": {
+        "bytes": 2372,
+        "sha256": "5a9cd887158feb056e8199bc3d03849c6d7da1b6e53c2b75be0592746c5d119e"
+      },
+      "consumer": {
+        "bytes": 229,
+        "sha256": "8d8ace5367594b6543606422b8915758f750eaae8b8253f1bb90eb6aebbe600f"
+      },
+      "decision": {
+        "bytes": 229,
+        "sha256": "aebd863133c58f03e3e2813d25940a1cb5c4e60c7776e1e879264c29c619acd9"
+      },
+      "public_key": {
+        "bytes": 64,
+        "sha256": "a46978c9370265acb9c609fd0bfd693fb799ec899dde9fe75e9e198990e5905e"
+      },
+      "routes": {
+        "bytes": 8063,
+        "sha256": "5c7ecd805c262c95dfcac2d80c7b807988215cb2418b2169d49fe7e5db3cbc3c"
+      },
+      "template": {
+        "bytes": 4180,
+        "sha256": "6edad3d84a983743fa9875164e224eb52d1c3705b2670610a5abe21817dad367"
+      },
+      "variants": {
+        "bytes": 883,
+        "sha256": "97946f9097dea8715ed5186e28a184e14dc6ec4eadfcb6d7b3fd03f4faa48373"
+      }
+    },
+    "exact_signed_fixture_inventory": {
+      "fixture_index_sha256": "5296e17ba4d3218463bdde07115b792e9ff428253683db78723962c34367e1b3",
+      "receipt_count": 15
+    },
+    "semantic_ast_consumer_scan": {
+      "python_files_semantically_scanned": 32159,
+      "split_literal_fixture_detected": true,
+      "unexpected_consumers": 0
+    },
+    "strict_reproducible_native_build_and_pe": {
+      "bytes": 412672,
+      "imports": [
+        "bcrypt.dll",
+        "KERNEL32.dll"
+      ],
+      "sha256": "7bc1e70e762e2b57e2b9fafd48d4fbab6a579bba3536a7b3e9325ee097503ffc",
+      "strict_flags": [
+        "W4",
+        "WX",
+        "analyze",
+        "guard:cf",
+        "Qspectre",
+        "Brepro",
+        "DYNAMICBASE",
+        "NXCOMPAT",
+        "HIGHENTROPYVA",
+        "CETCOMPAT"
+      ]
+    },
+    "tamper_path_and_engine_identity_refusals": {
+      "exact_artifact_drifts_refused": 7,
+      "receipt_structure_or_signature_tampers_refused": 4,
+      "running_engine_self_hash_tamper_refused": true,
+      "wrong_root_refused": true
+    }
+  },
+  "different_independent_review_required": true,
+  "kira_files_written": 0,
+  "native_execution_cases": 32,
+  "person_state_written": 0,
+  "production_enabled": false,
+  "python_cache_files_created": 0,
+  "receiver_integration_review_required": true,
+  "runtime_test_state_removed_after_result": true,
+  "schema": "kira.shared_growth_v9.author_test_result.v1",
+  "shell_bytes_bound_by_v9": false,
+  "shell_drift_invalidates_v9_author_candidate": false,
+  "shell_snapshot_after": {
+    "bytes": 607951,
+    "sha256": "2ea2e54391877d06d540d59c59714de9e435c38f5dd45edccc1a0f349a859876"
+  },
+  "shell_snapshot_before": {
+    "bytes": 607951,
+    "sha256": "2ea2e54391877d06d540d59c59714de9e435c38f5dd45edccc1a0f349a859876"
+  },
+  "temporary_creator_written": 0,
+  "tests": [
+    {
+      "name": "exact_foundation_hashes",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_reproducible_native_build_and_pe",
+      "status": "PASS"
+    },
+    {
+      "name": "exact_35_routes_plus_creator_templates",
+      "status": "PASS"
+    },
+    {
+      "name": "public_consent_privacy_truth_maturity_variant_boundaries",
+      "status": "PASS"
+    },
+    {
+      "name": "semantic_ast_consumer_scan",
+      "status": "PASS"
+    },
+    {
+      "name": "cryptographic_receipts_and_durable_ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "tamper_path_and_engine_identity_refusals",
+      "status": "PASS"
+    },
+    {
+      "name": "exact_signed_fixture_inventory",
+      "status": "PASS"
+    }
+  ],
+  "tests_failed": 0,
+  "tests_passed": 8,
+  "v8_installed_closure_after": {
+    "Core/shared_person_growth_v3_integration_candidate_v8.py": {
+      "bytes": 57134,
+      "role": "v8_candidate_source",
+      "sha256": "cc33886aedd81f7d73fcc50b8992811976d54b4dfc566553646bc67b2f56000c"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/AUDIT_DECISION.json": {
+      "bytes": 5177,
+      "role": "v8_independent_decision",
+      "sha256": "f5d8da2e3397df88b76e6d965391933ce628f5f19c63595931c75c03f8ae6a18"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/CHECKPOINT.md": {
+      "bytes": 7061,
+      "role": "v8_independent_checkpoint",
+      "sha256": "599a996e3cfa845912547f3a07a3ee5a4cbc709843e8c7038e911baba86ab572"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json": {
+      "bytes": 5740,
+      "role": "v8_independent_probe_result",
+      "sha256": "e4b6d58aa468055269ff4b8ccfc0ed5870336d19d6aa58b5d5e174bcd6c8a5b4"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py": {
+      "bytes": 29952,
+      "role": "v8_independent_probe",
+      "sha256": "963133f0e5324c30912b605fe80615b7a3385f4b5c22dc935328ef868a9ed24a"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/SEALED_AUDIT_MANIFEST.json": {
+      "bytes": 1813,
+      "role": "v8_independent_seal",
+      "sha256": "9be959497b59eb63eee8e79e04ff5ee323e09089039401614c848ea6bebb8676"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json": {
+      "bytes": 5489,
+      "role": "v8_author_result",
+      "sha256": "48e59c471ab38631ae65fb1906459cf345f95e0a8966c3bb6ffcdafb77ed032b"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/CHECKPOINT.md": {
+      "bytes": 4181,
+      "role": "v8_author_checkpoint",
+      "sha256": "a0f6dc777a6bb5582fa829c43e631f0591b3a235feceb1841513cb4e6afcabb6"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/SEALED_MANIFEST.json": {
+      "bytes": 6767,
+      "role": "v8_author_seal",
+      "sha256": "07832f115b31a3441f1c56242bbcffdcbfffe4cac43263480f504b6970a8e985"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/STATIC_CONTRACT.json": {
+      "bytes": 6262,
+      "role": "v8_static_contract",
+      "sha256": "71aaef4c71098d70a4acbfabdcad289d608a0ee039d4e6b8161c4467b2a0c343"
+    },
+    "Testing/test_shared_person_growth_v3_integration_candidate_v8.py": {
+      "bytes": 51307,
+      "role": "v8_candidate_test",
+      "sha256": "f22e5722e65096172f5b514195c8e026e9cb64027426fa53b4ca35d8d974b1c8"
+    }
+  },
+  "v8_installed_closure_before": {
+    "Core/shared_person_growth_v3_integration_candidate_v8.py": {
+      "bytes": 57134,
+      "role": "v8_candidate_source",
+      "sha256": "cc33886aedd81f7d73fcc50b8992811976d54b4dfc566553646bc67b2f56000c"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/AUDIT_DECISION.json": {
+      "bytes": 5177,
+      "role": "v8_independent_decision",
+      "sha256": "f5d8da2e3397df88b76e6d965391933ce628f5f19c63595931c75c03f8ae6a18"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/CHECKPOINT.md": {
+      "bytes": 7061,
+      "role": "v8_independent_checkpoint",
+      "sha256": "599a996e3cfa845912547f3a07a3ee5a4cbc709843e8c7038e911baba86ab572"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json": {
+      "bytes": 5740,
+      "role": "v8_independent_probe_result",
+      "sha256": "e4b6d58aa468055269ff4b8ccfc0ed5870336d19d6aa58b5d5e174bcd6c8a5b4"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py": {
+      "bytes": 29952,
+      "role": "v8_independent_probe",
+      "sha256": "963133f0e5324c30912b605fe80615b7a3385f4b5c22dc935328ef868a9ed24a"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_fresh_static_audit/attempt_01/SEALED_AUDIT_MANIFEST.json": {
+      "bytes": 1813,
+      "role": "v8_independent_seal",
+      "sha256": "9be959497b59eb63eee8e79e04ff5ee323e09089039401614c848ea6bebb8676"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json": {
+      "bytes": 5489,
+      "role": "v8_author_result",
+      "sha256": "48e59c471ab38631ae65fb1906459cf345f95e0a8966c3bb6ffcdafb77ed032b"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/CHECKPOINT.md": {
+      "bytes": 4181,
+      "role": "v8_author_checkpoint",
+      "sha256": "a0f6dc777a6bb5582fa829c43e631f0591b3a235feceb1841513cb4e6afcabb6"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/SEALED_MANIFEST.json": {
+      "bytes": 6767,
+      "role": "v8_author_seal",
+      "sha256": "07832f115b31a3441f1c56242bbcffdcbfffe4cac43263480f504b6970a8e985"
+    },
+    "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/STATIC_CONTRACT.json": {
+      "bytes": 6262,
+      "role": "v8_static_contract",
+      "sha256": "71aaef4c71098d70a4acbfabdcad289d608a0ee039d4e6b8161c4467b2a0c343"
+    },
+    "Testing/test_shared_person_growth_v3_integration_candidate_v8.py": {
+      "bytes": 51307,
+      "role": "v8_candidate_test",
+      "sha256": "f22e5722e65096172f5b514195c8e026e9cb64027426fa53b4ca35d8d974b1c8"
+    }
+  },
+  "v8_installed_closure_unchanged": true,
+  "verdict": "PASS_AUTHOR_STATIC_ONLY"
+}

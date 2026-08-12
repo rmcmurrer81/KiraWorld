@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_typed_memory_integration_candidate_v11",
+  "attempt_id": "attempt_01",
+  "audit_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "auditor_task": "/root/kira_long_turing_v4_fresh_audit",
+  "auditor_relationship": "different_agent_from_v11_author",
+  "completed_at_utc": "2026-08-11T05:28:54.231Z",
+  "decision": "REJECT",
+  "verdict": "REJECT_V11_STATIC_INTEGRATION_CANDIDATE",
+  "static_only": true,
+  "live_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "promotion_authorized": false,
+  "audit_authorization_created": false,
+  "exact_byte_closure": {
+    "sealed_subject_count": 6,
+    "sealed_subject_mismatches": 0,
+    "preserved_dependency_count": 14,
+    "preserved_dependency_mismatches": 0,
+    "production_route_sha256": "a343572b25937926ea0181274976b53f57ca219ce1e4d3e1780343994aea7b81",
+    "seal_manifest": {
+      "path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v11/STATIC_SEAL_MANIFEST.json",
+      "bytes": 1410,
+      "sha256": "dfa12cb753721d5bb8553dd34509698f12b36ba846a049bc96cd182147b32b20"
+    },
+    "author_checkpoint": {
+      "path": "RecoverySprint/continuation_20260811/blackwell_v11_typed_memory_integration_static_preparation/attempt_01/CHECKPOINT.md",
+      "bytes": 4168,
+      "sha256": "52601c5f8ca0a3e608570326a6621cc1796d3d862437133ee29da9471f073788"
+    },
+    "author_result": {
+      "path": "RecoverySprint/continuation_20260811/blackwell_v11_typed_memory_integration_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 994,
+      "sha256": "ec2ccfd709be0c39ec56192627acea1496ac2a3bbb6bf6f8312381b91d83dc19"
+    }
+  },
+  "sealed_subjects": [
+    {"path":"Core/persistent_blackwell_voice_integration_v11.py","bytes":3120,"sha256":"e39eec379d8d08b74fd992d8ed545badd708cc2b72bffbe8b0894c648c97d499"},
+    {"path":"Testing/test_blackwell_persistent_voice_candidate_v11_hostile_static.py","bytes":10789,"sha256":"ca6a60e2a45b3b0a16df3a98d3f4d289250550c9a9d73ba2da2fc077e5dad659"},
+    {"path":"Voice/sidecars/chatterbox_blackwell_persistent_candidate_v11/README.md","bytes":1041,"sha256":"f8e5deb3d75a146493110a31e7d9c262e5095ae576020bec7d4ac35ceaeb3d00"},
+    {"path":"Voice/sidecars/chatterbox_blackwell_persistent_candidate_v11/candidate_config.json","bytes":5603,"sha256":"925ebd235fa0f6ee6fb0fb53cbdafef9b9c19f8f2122e90c26b56613efcbf411"},
+    {"path":"Voice/sidecars/chatterbox_blackwell_persistent_candidate_v11/candidate_contract.py","bytes":14664,"sha256":"447e1b158226a95cb90ee334307928579b136e6fa16c1390c6084bd15e67ae94"},
+    {"path":"Voice/sidecars/chatterbox_blackwell_persistent_candidate_v11/worker_entry.py","bytes":4151,"sha256":"b89cac60e5e5905c74f6dceb6e400ba260f98b7a3b830d6def84559dafe8c0f8"}
+  ],
+  "preserved_dependency_hashes": {
+    "Core/blackwell_v9_process_boundary.py": "0dfed07df16a5ded935ac904f73dcba03570681c7ec1a65797138eadf5d4510a",
+    "Core/persistent_blackwell_voice_integration_v9.py": "cbb2e9cf04c2b21dafa03c96ca699bbbdac0a927269cd72ed10d9f9e74de3b09",
+    "Core/blackwell_v10_windows_memory.py": "bf2460a33c528749ad075366e2847cdc8fc82b04754545db75db06bba95d587d",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/worker_entry.py": "f537a1362ed4f49eb1026824ee9419b1d01de6c74f626d0b84ecbd231bcf6421",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/live_adapter.py": "7565203c1d548f576d2264f7c0ee84b16a35dcf5e57ec9f56909ae1278b022eb",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/STATIC_SEAL_MANIFEST.json": "831e02d7a511ecdb86d450727a4d90b298af2da3372df628bd040a00d8cb5de8",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/candidate_config.json": "a45f05bd46dc86d2dfb35d02709ae2264211f892f4830afd90aa177032b65915",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/candidate_contract.py": "8c6cb445b1ac3008c9aea4a1ec53be69a694276db17f532da6e3173b69e3f0b9",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/STATIC_SEAL_MANIFEST.json": "ae8bee6c09fbf96fe57354b04111e86823744bb001ed8bb8ffcdf3e18d95a779",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v10/candidate_config.json": "60a1ed5f156d1b4cb9868a5779210130a77894ffe69f83db781d091dff3f9748",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v10/candidate_contract.py": "3279bec63634044aaadc9465b739d967075de7a11fde74f7c7a6b8f7b540347f",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v10/STATIC_SEAL_MANIFEST.json": "856cebc997a0d7f040e82165fbe69f7be48584a393dd3c0888a6a53241e9b3aa",
+    "RecoverySprint/continuation_20260810/blackwell_v10_windows_memory_fresh_static_audit/attempt_01/AUDIT_AUTHORIZATION.json": "7bbd3ea93fe5949f9f1c6bcaf55ac12205d6fbc9aa74d98e4a0cab406c90e535",
+    "Voice/sidecars/kira_approved_voice_routing.json": "a343572b25937926ea0181274976b53f57ca219ce1e4d3e1780343994aea7b81"
+  },
+  "authored_test_reproduction": [
+    {
+      "suite": "Testing.test_blackwell_persistent_voice_candidate_v11_hostile_static",
+      "cache_disabled": true,
+      "tests_run": 17,
+      "tests_passed": 17,
+      "exit_code": 0
+    },
+    {
+      "suite": "Testing.test_blackwell_persistent_voice_candidate_v10_hostile_static",
+      "cache_disabled": true,
+      "tests_run": 12,
+      "tests_passed": 12,
+      "exit_code": 0
+    }
+  ],
+  "independent_hostile_probe": {
+    "path": "RecoverySprint/continuation_20260811/blackwell_v11_typed_memory_integration_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+    "bytes": 14520,
+    "sha256": "638125fe75c688af939df8f7c815bf67eb8e62cb8d748d1e562bede01015111f",
+    "tests_run": 14,
+    "tests_passed": 12,
+    "tests_failed": 2,
+    "exit_code": 1
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V11_EXACT_ADAPTER_MODULE_OBJECT_NOT_BOUND",
+      "area": "typed_memory_adapter_import_identity_and_toctou",
+      "detail": "The installer validates the path and SHA-256 of the file named by module.__file__ and only the current callable's __name__. It does not prove that the supplied/imported Python object is the canonical module executed from those bytes. A forged object naming the genuine file is accepted. V11 prepare_live_memory_integration also accepted the forged object after package/sys.modules substitution and returned installed=true, while real preserved-byte and V10-audit checks ran.",
+      "why_blocking": "V11's central integration claim is exact installation into the sealed v8 adapter. The reproduced path can emit affirmative evidence while patching a different object, so exact object identity, TOCTOU closure, and evidence truth are not established.",
+      "required_repair": "Use an append-only successor that establishes and retains the canonical adapter module object in a clean child before any substitutable import state, verifies module name/spec/origin/loader plus exact source bytes and the original callable identity, revalidates immediately at patch time, and rejects any pre-existing or replaced module object. Prefer an exact sealed successor adapter over runtime monkeypatching. Add the two reproduced probes and require another different fresh static audit."
+    }
+  ],
+  "passing_findings": [
+    "Typed Win32 API prototypes use HANDLE and pointer-width structures before calls.",
+    "Real current-process memory telemetry was finite, nonnegative and internally ordered.",
+    "Native errors and invalid relations fail closed.",
+    "Parent and direct worker live routes refuse before process creation or preparation.",
+    "Static root/direct-child PIDs, retained handles, executable identities, parentage, Job membership, request identity and cleanup evidence were consistent.",
+    "Production routing remained byte exact."
+  ],
+  "nonblocking_observations": [
+    "The environment engineering opt-in is replayable by construction. V11 is truthful that it grants no live run, so this audit does not treat the string as live authority. Any successor harness must provide its own genuinely one-shot process/session-bound capability and must not promote this opt-in to that role.",
+    "The first independent probe invocation ran zero tests because the audit script lacked the project root on sys.path. The audit-only harness was repaired append-only; no candidate code or process was touched in that failed invocation."
+  ],
+  "scope_truth": {
+    "sealed_v11_or_predecessor_bytes_edited": false,
+    "production_pointer_edited": false,
+    "audit_authorization_written": false,
+    "live_process_or_model_run": false,
+    "ollama_qwen_torch_cuda_chatterbox": false,
+    "audio_synthesis_or_playback": false,
+    "person_body_media_or_blender": false,
+    "static_fixture_only": true,
+    "static_fixture_cleanup_verified": true
+  }
+}

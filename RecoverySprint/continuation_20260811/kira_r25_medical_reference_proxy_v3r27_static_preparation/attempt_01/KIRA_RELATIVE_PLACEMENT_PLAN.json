@@ -1,0 +1,118 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r27.relative_placement_plan.v1",
+  "status": "STATIC_PLACEMENT_PRIORS_ONLY_NOT_MEDICAL_ACCEPTANCE_NOT_BODY",
+  "coordinate_frame": {
+    "units": "normalized_Kira_body_units_resolved_to_meters_only_after_landmark_audit",
+    "origin": "midpoint_between_left_and_right_pelvic_landmark_anchors",
+    "positive_x": "Kira_anatomical_right",
+    "positive_y": "Kira_anatomical_anterior",
+    "positive_z": "Kira_anatomical_superior",
+    "scale_x": "half_distance_between_left_and_right_pelvic_landmark_anchors",
+    "scale_y": "audited_pelvis_anterior_posterior_depth",
+    "scale_z": "audited_Kira_standing_height",
+    "no_absolute_dimensions_claimed": true
+  },
+  "required_landmarks": [
+    "pelvis_left_lateral_anchor",
+    "pelvis_right_lateral_anchor",
+    "pubic_anterior_anchor",
+    "sacral_posterior_anchor",
+    "pelvic_floor_anchor",
+    "pelvic_inlet_superior_anchor",
+    "outer_shell_anterior_clearance",
+    "outer_shell_posterior_clearance"
+  ],
+  "fail_closed_if": [
+    "any_landmark_missing_or_nonfinite",
+    "left_right_anchor_order_invalid",
+    "pelvis_width_or_depth_nonpositive",
+    "Kira_height_not_audited",
+    "outer_shell_clearance_unknown",
+    "source_attribution_missing",
+    "audit_authority_missing_or_invalid",
+    "any_output_path_preexists"
+  ],
+  "stage_a_proxy_priors": [
+    {
+      "component_id": "pelvic_reference_envelope",
+      "center_normalized": [0.0, 0.0, 0.0],
+      "size_normalized": [1.0, 1.0, 0.12],
+      "meaning": "wire placement envelope only; not a pelvis mesh"
+    },
+    {
+      "component_id": "bladder_proxy",
+      "center_interval_normalized": {"x": [-0.08, 0.08], "y": [0.12, 0.42], "z": [-0.035, 0.025]},
+      "size_interval_normalized": {"x": [0.18, 0.34], "y": [0.16, 0.32], "z": [0.035, 0.075]},
+      "relation_gates": ["anterior_to_uterus_proxy", "inside_pelvic_reference_envelope"]
+    },
+    {
+      "component_id": "uterus_proxy",
+      "center_interval_normalized": {"x": [-0.06, 0.06], "y": [-0.06, 0.18], "z": [-0.005, 0.05]},
+      "size_interval_normalized": {"x": [0.14, 0.28], "y": [0.10, 0.24], "z": [0.035, 0.08]},
+      "relation_gates": ["posterior_to_bladder_proxy", "midline", "inside_pelvic_reference_envelope"]
+    },
+    {
+      "component_id": "ovary_left_proxy",
+      "center_interval_normalized": {"x": [-0.48, -0.18], "y": [-0.10, 0.16], "z": [0.0, 0.07]},
+      "size_interval_normalized": {"x": [0.06, 0.14], "y": [0.04, 0.12], "z": [0.015, 0.045]},
+      "relation_gates": ["left_of_uterus_proxy", "inside_pelvic_reference_envelope"]
+    },
+    {
+      "component_id": "ovary_right_proxy",
+      "center_interval_normalized": {"x": [0.18, 0.48], "y": [-0.10, 0.16], "z": [0.0, 0.07]},
+      "size_interval_normalized": {"x": [0.06, 0.14], "y": [0.04, 0.12], "z": [0.015, 0.045]},
+      "relation_gates": ["right_of_uterus_proxy", "inside_pelvic_reference_envelope"]
+    },
+    {
+      "component_id": "uterine_tube_left_proxy",
+      "endpoint_roles": ["uterus_left_superior", "ovary_left_medial"],
+      "relation_gates": ["continuous_curve", "left_side_only"]
+    },
+    {
+      "component_id": "uterine_tube_right_proxy",
+      "endpoint_roles": ["uterus_right_superior", "ovary_right_medial"],
+      "relation_gates": ["continuous_curve", "right_side_only"]
+    },
+    {
+      "component_id": "rectum_reference_proxy",
+      "center_interval_normalized": {"x": [-0.08, 0.08], "y": [-0.42, -0.16], "z": [-0.06, 0.07]},
+      "relation_gates": ["posterior_to_uterus_proxy", "no_bladder_overlap"]
+    },
+    {
+      "component_id": "vulvar_region_reference_proxy",
+      "center_interval_normalized": {"x": [-0.08, 0.08], "y": [0.12, 0.40], "z": [-0.095, -0.04]},
+      "relation_gates": ["at_or_below_pelvic_floor", "inside_outer_shell", "neutral_clinical_render_only"]
+    }
+  ],
+  "stage_a_execution_limits": {
+    "maximum_proxy_objects": 9,
+    "maximum_total_vertices": 12000,
+    "maximum_materials": 6,
+    "render_views": ["front_clinical", "right_clinical", "iso_clinical", "iso_xray"],
+    "save_blend": true,
+    "reload_saved_blend": true,
+    "export": false,
+    "live_avatar_link": false,
+    "rig_or_weight_change": false,
+    "source_mesh_import": false,
+    "source_topology_copy": false
+  },
+  "material_policy": {
+    "stage_a": "distinct neutral clinical proxy colors only",
+    "production_skin": "NOT_IN_STAGE_A",
+    "regional_pigmentation_required_later": [
+      "individual_skin_base",
+      "lips",
+      "areolae_and_nipples",
+      "other_anatomically_distinct_regions_as_individually_appropriate"
+    ],
+    "positive_claim_requires": ["Blender_material_evidence", "saved_blend_evidence", "independent_render_evidence"]
+  },
+  "ram_variant_policy": {
+    "Kira_current_activation_candidate": "LOWER_MEMORY_BALD_VARIANT_ONLY_AFTER_SEPARATE_ACCEPTANCE",
+    "Kira_hair_equipped_variant": "PRESERVE_SEPARATELY_INACTIVE_UNTIL_RAM_UPGRADE_AND_RETEST",
+    "Synthetic_Robert_current_activation_candidate": "LOWER_MEMORY_BALD_VARIANT_ONLY_AFTER_SEPARATE_ACCEPTANCE",
+    "other_synthetic_people": "HAIR_EQUIPPED_BUILDS_MAY_BE_AUTHORED_BUT_REMAIN_INACTIVE_AND_MINIMALLY_TESTED_UNTIL_RAM_UPGRADE"
+  },
+  "truth_boundary": "Stage A can prove only an isolated clinical reference-proxy scene if later executed and evidenced. It cannot prove a complete body, functional organs, lived physiology, sensation, activation, or Avatar Builder production readiness."
+}

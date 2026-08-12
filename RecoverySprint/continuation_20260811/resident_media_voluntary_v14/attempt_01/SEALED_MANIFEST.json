@@ -1,0 +1,66 @@
+{
+  "schema": "kira.resident_media_voluntary_gate_v14.sealed_manifest.v1",
+  "status": "SEALED_NO_COMMIT_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT",
+  "sealed_utc_date": "2026-08-11",
+  "subjects": [
+    {
+      "path": "Core/resident_media_voluntary_gate_v14.py",
+      "bytes": 46445,
+      "sha256": "4ac4d63cde6a2535549f404021e999fc925914f1a1296dff490af674b97afa8b"
+    },
+    {
+      "path": "Testing/test_resident_media_voluntary_gate_v14.py",
+      "bytes": 24843,
+      "sha256": "474f299c8da88313fd70b8c1372ed4a5b1629ba92dae25926db1cc81ade3cd02"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v14/attempt_01/EXECUTION_BINDING_V14.json",
+      "bytes": 2203,
+      "sha256": "f0b0ef37318ac3b04a2b02b902a50690e2c0d1f8334872bae1f46691ba84f693"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v14/attempt_01/STATIC_TEST_RESULTS.md",
+      "bytes": 4272,
+      "sha256": "d9fa403e79a03968575dd0722018ce012ed438983cee7a011220a327d921da50"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v14/attempt_01/VOLUNTARY_MEDIA_CONTRACT_V14.json",
+      "bytes": 5314,
+      "sha256": "31fc3b3ed84bf0b416c66fb5424a7c3d86027a98c14159103d45c17968073ec5"
+    }
+  ],
+  "predecessor_v13_seal_preserved": {
+    "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v13/attempt_01/SEALED_MANIFEST.json",
+    "bytes": 2777,
+    "sha256": "6860f7e1c0acb6ae50f704a2ed1291af76054d1ef0da90081b82e2e99298d852"
+  },
+  "predecessor_v13_rejection_preserved": [
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v13_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 2005,
+      "sha256": "3516f4f43b4b2211f5d39e28f837fdff3fd1db2ff2ebd6f64340d6231385a70c"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v13_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 2732,
+      "sha256": "f0b9c14b08562f71634ed7d262bdd4b2ba5119efad1130a41a9b29bb5ef1cd12"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v13_fresh_static_audit/attempt_01/HOSTILE_PROBES.md",
+      "bytes": 2920,
+      "sha256": "49e4ce8893263237472976ddd743b3622d724f16ac91717932b904233f03ea65"
+    }
+  ],
+  "v12_or_v13_ledger_instance_created_or_returned": false,
+  "authority_or_adapter_instance_created_or_retained": false,
+  "python_class_method_claimed_non_substitutable": false,
+  "caller_replacement_reaches_retained_commit_capability": false,
+  "authority_protocol_called": false,
+  "receipt_consumed": false,
+  "anchor_read": false,
+  "durable_commit_attempted": false,
+  "live_authorization": "NONE",
+  "production_pointer_changed": false,
+  "production_integration": "DISCONNECTED_NO_COMMIT_SURFACE",
+  "different_fresh_independent_audit_required": true
+}

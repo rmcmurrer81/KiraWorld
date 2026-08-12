@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v8",
+  "recorded_utc": "2026-08-11T06:20:20.3092387Z",
+  "status": "AUTHOR_STATIC_TESTS_PASS_PENDING_DIFFERENT_FRESH_AUDIT",
+  "live_authorized": false,
+  "tests": {
+    "command": "py -B -m pytest -q -p no:cacheprovider Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v8.py Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v7.py",
+    "passed": 86,
+    "failed": 0,
+    "seconds": 0.90
+  },
+  "compile": {
+    "subjects": 2,
+    "passed": 2
+  },
+  "exact_shell_successor": {
+    "bytes": 606696,
+    "sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4",
+    "legacy_binding_sha256": "69594a9917b55dbca4992c12c357f79d81c0ccb7028ca8f2cc46e4f18789ecdd",
+    "other_v1_bindings_required": 9
+  },
+  "output_roots_absent": true,
+  "model_or_voice_run": false
+}

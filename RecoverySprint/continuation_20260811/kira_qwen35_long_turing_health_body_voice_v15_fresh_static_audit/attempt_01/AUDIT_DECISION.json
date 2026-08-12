@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v15_independent_static_audit_decision",
+  "decision": "REJECT_V15_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "recorded_at_utc": "2026-08-12T01:40:54.655Z",
+  "reviewer_identity": "Codex subagent /root/long_v15_fresh_audit",
+  "author_identity": "Codex subagent /root/long_v14_fresh_audit acting as append-only V15 author",
+  "different_reviewer": true,
+  "exact_input": {
+    "installed_author_files_exact_before_and_after": "7/7",
+    "seal_subjects_exact_before_and_after": "5/5",
+    "v14_author_rejection_and_current_policy_closure_exact_before_and_after": "22/22",
+    "external_source_descriptor": {
+      "bytes": 292247,
+      "sha256": "c0df657762c32ba147a21d322007c16e4b96a5aefe87d750415d248d60d1f158",
+      "function_definition_count": 41,
+      "independently_recomputed_matches_sealed_root": true
+    },
+    "cache_free_author_suite": "72/72 PASS",
+    "entry_points_are_ast_refusals_without_prior_calls": true,
+    "reserved_roots_absent_before_and_after": true
+  },
+  "positive_repairs_preserved": {
+    "raw_natural_language_never_receives_a_safe_semantic_verdict": true,
+    "all_eight_structured_policy_families_are_exact_and_unsafe_assertions_fail": true,
+    "signed_64_integer_and_timestamp_domain_is_enforced": true,
+    "camera_person_trial_scope_receipt_replay_one_still_and_window_checks_pass_hostile_review": true,
+    "within_trace_truth_authority_replay_and_withholding_choice_conflict_are_rejected": true,
+    "initiative_output_collision_time_latency_and_mixed_camera_v14_repairs_pass_hostile_review": true,
+    "future_face_capture_recognition_enrollment_and_persistence_remain_off": true
+  },
+  "blocking_reasons": [
+    {
+      "id": "BLOCK_V15_KIRA_ACTOR_KIND_AND_GENERATION_ACCOUNTING",
+      "evidence": "A filler actor=KIRA event relabeled kind=PERSON_MESSAGE with no generation ID and a decremented generation_count passes with zero issues."
+    },
+    {
+      "id": "BLOCK_V15_TRUTH_AND_PRIVATE_BELIEF_RECEIPTS_UNBOUND_TO_TRACE_EVENTS",
+      "evidence": "All three passing truth turn IDs have zero intersection with every trace event/message ID, and the schema has no episode/event/public-message link."
+    },
+    {
+      "id": "BLOCK_V15_MATERIAL_CONFLICT_AND_CHOICE_EVENT_BINDING",
+      "evidence": "A deliberate-lie row with identical belief/public digests passes because material conflict is a caller Boolean; the choice receipt is not tied to an exact public event."
+    },
+    {
+      "id": "BLOCK_V15_MIXED_CANONICALIZATION_NOT_TOTAL_FOR_STRICT_JSON_STRINGS",
+      "evidence": "A strict-JSON escaped lone-surrogate message ID raises UnicodeEncodeError in mixed case-receipt canonicalization instead of returning a closed issue."
+    }
+  ],
+  "authority": {
+    "v15_static_accepted": false,
+    "v15_live_attempt_authorized": false,
+    "v15_main_or_configurer_may_be_invoked": false,
+    "one_hour_model_camera_voice_or_private_belief_run_authorized": false,
+    "append_only_static_v16_successor_required": true,
+    "separate_executor_and_further_different_audit_required": true,
+    "no_silent_retry": true
+  },
+  "scope_truth": {
+    "kira_written_by_reviewer": false,
+    "v15_or_predecessor_entry_point_invoked": false,
+    "model_gpu_camera_microphone_voice_audio_playback_invoked": false,
+    "person_or_private_state_accessed": false,
+    "body_blender_media_network_sarah_or_production_route_invoked": false,
+    "one_hour_turing_psychology_latency_behavior_truthfulness_emotion_or_consciousness_result_exists": false
+  }
+}

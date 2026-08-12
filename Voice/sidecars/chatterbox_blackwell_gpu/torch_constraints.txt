@@ -1,0 +1,6 @@
+# Keep the Blackwell experiment on the reviewed matched official CUDA 13.0 pair.
+# Chatterbox 0.1.7's older Torch metadata pins are intentionally installed
+# separately with --no-deps after its non-Torch runtime dependencies resolve.
+torch==2.11.0
+torchaudio==2.11.0
+numpy>=1.24,<2

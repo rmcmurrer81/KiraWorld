@@ -1,0 +1,61 @@
+{
+  "schema": "kira.blackwell.v17.static_control_run_outcome.v1",
+  "recorded_utc": "2026-08-11T21:55:42.4028189Z",
+  "authority_consumed": true,
+  "do_not_rerun_v17": true,
+  "process_exit_code": 4,
+  "terminal_state": "FAILED_CONSUMED_NO_RETRY",
+  "terminal_stage": 50,
+  "terminal_stage_boundary": "PYOBJECT_CALL_OR_RESULT_EXACT_COMBINED_GATE",
+  "exact_failure_cause": "UNRESOLVED_WITH_CURRENT_TELEMETRY",
+  "failure_cause_limits": [
+    "stage 50 is assigned immediately before PyObject_CallObject",
+    "the same failure branch covers a null Python call result and result_exact rejection",
+    "V17 clears any pending Python error without recording exception type or message",
+    "the durable receipt contains no substage separating call failure from tuple/schema/value mismatch",
+    "the retained V15 validator and V15 result-schema identifiers are internally consistent and their age alone is not proof of the failure cause"
+  ],
+  "durable_evidence": {
+    "run_evidence_path": "RecoverySprint/continuation_20260811/blackwell_v17_native_whole_document_manifest_control_anchor_static_preparation/attempt_01/RUN_EVIDENCE_V17.jsonl",
+    "run_evidence_bytes": 386,
+    "run_evidence_sha256": "269d1eadda20ca6a8a3d6e1679f80d850e32b79146aa562e22765fb624bad32b",
+    "receipt_path": "RecoverySprint/continuation_20260811/blackwell_v17_native_whole_document_manifest_control_anchor_static_preparation/attempt_01/STATIC_CONTROL_OUTCOME_V17.receipt.bin",
+    "receipt_bytes": 700,
+    "receipt_sha256": "83c7b11b7c458bdcd5aa75308fe24f5ceae9f700de672eb01affd1f900ffa21d"
+  },
+  "decoded_completion": {
+    "reservation_bytes": 336,
+    "completion_bytes": 364,
+    "state": 3,
+    "state_meaning": "RECORD_FAILURE",
+    "terminal_stage": 50,
+    "python_finalize_result": 0,
+    "free_library_succeeded": 1,
+    "old_module_absent": 1,
+    "exact_path_absent": 1,
+    "modules_enumerated": 8
+  },
+  "positive_boundaries": {
+    "entry_recorded": true,
+    "audit_seal_retained_handles_passed": true,
+    "outcome_reservation_passed": true,
+    "python_finalization_passed": true,
+    "dll_release_passed": true,
+    "old_module_absence_passed": true,
+    "exact_path_absence_passed": true
+  },
+  "not_executed_or_proven": [
+    "model",
+    "GPU",
+    "synthesis",
+    "audio",
+    "playback",
+    "speaker",
+    "camera",
+    "person state",
+    "body",
+    "Blender",
+    "latency improvement"
+  ],
+  "next_boundary": "PRESERVE_V17_AND_AUTHOR_APPEND_ONLY_V18_WITH_DURABLE_PRECALL_CALL_RETURN_RESULT_VALIDATION_SUBSTAGES_AND_BOUNDED_PYTHON_EXCEPTION_TELEMETRY_BEFORE_ANY_NEW_AUDIT"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "kira.temporary_creator.holmes_voice_reconstruction_author_static_result.v1",
+  "recorded_at_utc": "2026-08-12T03:27:41Z",
+  "verdict": "PASS_AUTHOR_STATIC_ONLY_PENDING_DIFFERENT_REVIEW",
+  "tests": {
+    "pytest_cache_free": "17_OF_17_PASS",
+    "strict_in_memory_compile": "2_OF_2_PASS",
+    "strict_json": "2_OF_2_PASS",
+    "input_closure": "9_OF_9_EXACT",
+    "seal_subjects": "5_OF_5_EXACT"
+  },
+  "provenance_boundary": {
+    "authenticated_holmes_recording_bound": false,
+    "generic_windows_voice_accepted": false,
+    "historical_reconstruction_is_authentic_voice_claim": false,
+    "official_written_or_dialect_source_is_personal_voice": false
+  },
+  "operations": {
+    "voice_generated": false,
+    "audio_played": false,
+    "model_loaded": false,
+    "person_activated": false,
+    "body_built": false,
+    "kira_written": false
+  }
+}

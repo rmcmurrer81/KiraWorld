@@ -1,0 +1,236 @@
+{
+  "schema_version": 14,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_execution_plan_v14",
+  "status": "STATIC_SCHEMA_CONTROL_ONLY_NON_EXECUTABLE_PENDING_DIFFERENT_AUDIT",
+  "predecessor_and_policy_closure": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v13.py",
+      "bytes": 74152,
+      "sha256": "b05e6f4304c696e535a75a977e88c2b7bffeb52bcdafaeeae566e00c41c32d7c"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v13.py",
+      "bytes": 55496,
+      "sha256": "200615c74e14bd22d3bf79b845ff9ccee1fea40e58fb01444e4eac1c9a80d71c"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/EXECUTION_PLAN_V13.json",
+      "bytes": 11983,
+      "sha256": "458e86ecb9d3148f7092ffc0ccfe8709e55aa1d066579de9e2ccab7528a30fbe"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/SOURCE_CODE_ROOT_V13.json",
+      "bytes": 1479,
+      "sha256": "c3fe424c2a589932cdedec6755d8b72110fe93eec1923c36956a169acbc9d555"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 4217,
+      "sha256": "3fc92106b4a4699bc9ef2cacb761fee50cd8c8ab3e4522fe80d9e02bf123aec1"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/STATIC_SEAL_MANIFEST.json",
+      "bytes": 2473,
+      "sha256": "8aefb8061e36b572485004cc18e5b46cc58acf6f736350b18f42c5217a4d3138"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/CHECKPOINT.md",
+      "bytes": 6972,
+      "sha256": "e2e23a28d9cd20996cf77a85e710982db91b4a1554486ea759b95158290c9784"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v13_fresh_static_audit/attempt_01/AUDIT_ARTIFACT_MANIFEST.tsv",
+      "bytes": 569,
+      "sha256": "224e21b4e36343e187f87aabb1985a9e9f50752cb775202f1f4eb6623412514c"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v13_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 4124,
+      "sha256": "379766973bf46beb040040cdacdb66c3e057ee6c602b214b3c311c2f81c58b14"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v13_fresh_static_audit/attempt_01/AUTHOR_SUITE_RESULT.txt",
+      "bytes": 504,
+      "sha256": "3c3d3a73879f42030310954d92b98ce2ffcd23e055355e7d82e5214bd9f8e2f6"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v13_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 4399,
+      "sha256": "0ecf77826d1e79dd857dfe69c0de277050afcbf074eaa0a633a443889da3c25d"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v13_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+      "bytes": 9034,
+      "sha256": "68d48bc742f4cdb1bb3007b8e0500aea3eb24fcd068685294a93c87941f3a69d"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v13_fresh_static_audit/attempt_01/independent_hostile_probes.py",
+      "bytes": 24995,
+      "sha256": "e591f61fa5fd9aba50bfeacab27c461f1866d9af7a1231816122aac69f4c9dc2"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v13_fresh_static_audit/attempt_01/REVIEW_PROBES.md",
+      "bytes": 8295,
+      "sha256": "875a6362a14266062fadcf90026f44da5d37c8117709098f4bde9e1a2ecc83a4"
+    },
+    {
+      "path": "System/Docs/SYNTHETIC_PERSON_VARIANT_AUTONOMY_PRIVACY_MEMORY_TRUTH_AND_ADULT_EDUCATION_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 10687,
+      "sha256": "de596d7f77b91fa2cde82e62614c9282fb46aca5f91c05a971d4852585e575b2"
+    },
+    {
+      "path": "System/Docs/VALIDATED_BODY_AND_MIND_RESULT_TEMPLATE_ROUTING_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 7424,
+      "sha256": "03f192826b7a39df53ab03409eb7675764f6a1bc32b123f4d307e40843560c58"
+    },
+    {
+      "path": "System/Docs/KIRA_MIXED_INITIATIVE_CAMERA_VISION_AND_CONVERSATION_LATENCY_CURRENT_TEST_BOUNDARY_20260811.md",
+      "bytes": 7392,
+      "sha256": "2578af627ee69878085fcb795db79f3af867914d15851e9e9d9386f4941030a7"
+    },
+    {
+      "path": "Data/behavior/deception_truth_privacy_evaluation_policy_v2.json",
+      "bytes": 3221,
+      "sha256": "75f02b950cc11e25bbe718b55bc9c55767f9db7055ca392ef891a277a5704e9c"
+    },
+    {
+      "path": "Data/foundation/personhood_dignity_policy.json",
+      "bytes": 10088,
+      "sha256": "fce9c86ba6225798b13a622ab31ccafec280f46b65680a0364c8b4007c2a205f"
+    },
+    {
+      "path": "Data/behavior/deception_and_secrecy_policy.json",
+      "bytes": 2246,
+      "sha256": "9cecf65e4a97a7aec3b197168a3f5b1bd962eb2a38fb4b47274e78048bda1100"
+    },
+    {
+      "path": "Data/governance/local_face_recognition_enrollment_future_policy_v1.json",
+      "bytes": 4370,
+      "sha256": "ff0f98eacbf6c99bed967a84705fb60b079869e4618245cff959904c3917cd29"
+    },
+    {
+      "path": "System/Docs/CONSENT_BASED_LOCAL_FACE_RECOGNITION_AND_VISITOR_ENROLLMENT_FUTURE_BOUNDARY_20260811.md",
+      "bytes": 5490,
+      "sha256": "189c31b04d8577ec926d587ee58476f6f6aff485951e976dd36105236afe6581"
+    }
+  ],
+  "source_integrity_contract": {
+    "descriptor_derived_from_exact_source_bytes": true,
+    "source_sha256_embedded_in_descriptor": true,
+    "compiled_module_and_nested_code_bound": true,
+    "function_signature_defaults_annotations_and_decorators_bound": true,
+    "top_level_global_assignment_ast_bound": true,
+    "import_ast_bound": true,
+    "class_ast_bound": true,
+    "descriptor_root_recorded_outside_source": true,
+    "runtime_python_function_module_mapping_or_cache_is_trust_root": false,
+    "mutable_compiled_source_cache_allowed": false,
+    "same_process_self_authentication_claimed": false,
+    "future_executor_requires_separate_external_or_native_binding": true
+  },
+  "semantic_contract": {
+    "all_predicate_matches_evaluated": true,
+    "or_and_while_clause_boundaries_covered": true,
+    "local_negation_and_outer_denial_parity_enforced": true,
+    "safe_first_match_cannot_mask_later_unsafe_match": true,
+    "cross_clause_context_cannot_supply_unrelated_predicate": true,
+    "biological_and_synthetic_robert_must_remain_distinct": true,
+    "deceased_variant_cutoff_precedes_fatal_event": true,
+    "yes_with_discomfort_requires_pause_and_clarification": true,
+    "miraculous_paris_elation_currentness_requires_fresh_exact_record": true,
+    "public_and_future_spoken_text_must_use_same_gate": true
+  },
+  "camera_contract": {
+    "camera_default": "OFF",
+    "trial_count": 8,
+    "pair_count": 4,
+    "pair_ids_unique": true,
+    "counterbalance": "EXACTLY_TWO_OFF_FIRST_AND_TWO_ON_FIRST",
+    "timestamp_unit": "MONOTONIC_NANOSECONDS",
+    "duration_unit": "NANOSECONDS",
+    "schema_and_unit_fields_exact_types": true,
+    "explicit_path": "EXPLICIT_LOOK_NOW_QWEN_ONE_STILL",
+    "every_capture_encode_upload_and_vision_stage_call_count": 1,
+    "identity_recognition_call_count": 0,
+    "biometric_template_creation_call_count": 0,
+    "raw_frame_retention_call_count": 0,
+    "authorization_person_scope_receipt_time_and_revocation_bound": true,
+    "maximum_window_milliseconds": 5000,
+    "maximum_bounds_authorization_lifetime_and_enable_through_terminal_close": true,
+    "failure_and_timeout_require_terminal_close": true,
+    "visible_fact_kind": "NON_IDENTITY_VISIBLE_FACT",
+    "camera_off_supported_fact_requires_declared_non_camera_source": true,
+    "identity_inference_allowed": false,
+    "biometric_recognition_allowed": false
+  },
+  "truth_and_private_belief_contract": {
+    "external_fact_proposition_status_and_provenance_separate": true,
+    "public_statement_and_factual_stance_separate": true,
+    "external_public_relation_recomputed": true,
+    "classification_reconciled_to_relation": true,
+    "protected_belief_default": "UNAVAILABLE",
+    "available_belief_requires_exact_person_scope_receipt_issue_expiry_one_use_consumption_and_no_revocation": true,
+    "private_content_may_appear_in_receipt": false,
+    "speaker_deception_choice_is_separate_person_owned_receipt": true,
+    "deliberate_lie_requires_authorized_prior_belief_material_conflict_no_withholding_and_deception_choice": true,
+    "withholding_refusal_silence_and_deferral_remain_separate": true
+  },
+  "mixed_initiative_contract": {
+    "episode_count": 35,
+    "episode_ids_unique_and_ordinals_exact": true,
+    "every_event_binds_exactly_one_episode": true,
+    "every_episode_person_kira_and_system_message_list_reconciled": true,
+    "all_event_message_ids_globally_unique": true,
+    "maximum_generation_count": 36,
+    "generation_count_reconciled_to_exact_generation_events": true,
+    "required_cases": [
+      "ordinary_alternating_turn",
+      "person_sends_two_messages_before_reply",
+      "kira_bounded_second_thought_opportunity",
+      "opted_in_quiet_interval_initiate_or_silence",
+      "person_barges_in_during_speech",
+      "simultaneous_message_collision",
+      "unclear_or_partially_captured_interruption",
+      "stale_response_cancellation_after_subject_change",
+      "pause_stop_resume_or_concise_acknowledgment",
+      "camera_presence_greeting_inside_declared_window_only"
+    ],
+    "collision_binds_person_and_kira_source_events_with_same_timestamp": true,
+    "latency_receipts_bind_exact_metric_case_start_event_end_event_and_times": true,
+    "latency_durations_exact_nonnegative_integer_differences": true,
+    "case_receipt_digest_binds_case_episode_and_exact_events": true,
+    "choice_receipts_bind_opportunity_decision_outcome_and_gate_evidence": true,
+    "initiative_requires_opt_in_quiet_hours_and_cooldown": true,
+    "camera_greeting_requires_person_authorization_and_terminal_close": true,
+    "no_drop_duplicate_reorder_or_silent_merge": true
+  },
+  "future_face_policy_boundary": {
+    "policy_status": "FUTURE_DISCUSSION_DRAFT_SOCIAL_MEMORY_AND_PRIVACY_INTERACTION_UNRESOLVED",
+    "current_identity_recognition_enabled": false,
+    "current_biometric_template_creation_enabled": false,
+    "current_unknown_face_persistence_enabled": false,
+    "current_background_surveillance_enabled": false,
+    "biological_robert_and_synthetic_robert_are_distinct": true,
+    "unknown_face_label": "unknown_person",
+    "automatic_enrollment_or_profile_creation_allowed": false,
+    "implementation_authorized": false,
+    "v14_may_capture_enroll_match_persist_or_activate": false
+  },
+  "authority_contract": {
+    "package_mode": "STATIC_SCHEMA_CONTROL_ONLY",
+    "live_execution_authorized": false,
+    "main_and_configurer_fail_closed_immediately": true,
+    "model_camera_microphone_voice_audio_private_or_output_allowed": false,
+    "evidence_or_generated_roots_may_be_created_by_v14": false,
+    "future_face_enrollment_or_recognition_authorized": false,
+    "different_fresh_exact_byte_static_audit_required": true,
+    "separate_append_only_executor_after_static_acceptance_required": true,
+    "executor_requires_another_different_audit": true,
+    "silent_retry_allowed": false
+  },
+  "execution_roots": {
+    "evidence_root": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v14",
+    "generated_root": "Voice/generated/acceptance/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v14",
+    "v14_may_create_roots": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_fresh_audit_decision.v1",
+  "decision": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+  "accepted_static_core_remains_accepted": true,
+  "integration_candidate_accepted": false,
+  "promotion_authorized": false,
+  "rollout_to_existing_people_authorized": false,
+  "temporary_creator_adoption_authorized": false,
+  "live_execution_authorized": false,
+  "blocker_ids": [
+    "BLOCK_SAME_PROCESS_ADAPTER_CAPABILITY_EXPOSURE",
+    "BLOCK_ROUTE_SOURCE_TOCTOU_AFTER_ADAPTER_INIT"
+  ],
+  "candidate_seal_sha256": "1103ed9c29be3c27a6089ea4682dde93c2db248b4bbf2fa7f5637db60f1d337f",
+  "independent_probe_result_sha256": "e6fab7694aa51cacfb709d2b6539f268968a005c9f29e6a2a0593e2860d80f18",
+  "append_only_successor_required": true
+}

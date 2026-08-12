@@ -1,0 +1,78 @@
+KIRA R25 AFES EXECUTION PLAN VALIDATION V3R23
+AUTHOR BUILD, ANALYZER, AND STATIC RESULTS
+DATE: 2026-08-11 America/New_York
+
+STATUS: PASS_AUTHOR_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT
+EXECUTION_AUTHORITY: NONE
+CANDIDATE_EXECUTED: false
+V3R22_RERUN: false
+PYTHON_STAGE_EXECUTED: false
+CONTROLLER_DEFINITION_EVALUATED: false
+BUILD_EXECUTION_PLAN_CALLED: false
+BOOTSTRAP_CALLED: false
+BROKER_CALLED: false
+PROCESS_CREATED: false
+AFES_CALLED: false
+BLENDER_CALLED: false
+BODY_ACCESSED_OR_MUTATED: false
+SAVE_RENDER_EXPORT_CALLED: false
+
+STRICT X64 SCRATCH BUILD
+Environment initializer:
+  call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul
+Exact compiler/link command shape:
+  cl.exe /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /I "C:\Users\robmc\Kira\tools\native" /Fo"<DOCUMENTS_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r23.obj" /Fe"<DOCUMENTS_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r23.exe" "<DOCUMENTS_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r23.c" /link /guard:cf /WX bcrypt.lib
+Exit code: 0
+Compiler output:
+  kira_r25_afes_execution_plan_validation_v3r23.c
+Warnings: 0
+Errors: 0
+Candidate launched: false
+
+INDEPENDENT MSVC ANALYZE PASS
+Exact compiler command shape:
+  cl.exe /nologo /analyze /c /W4 /WX /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /I "C:\Users\robmc\Kira\tools\native" /Fo"<DOCUMENTS_WORK>\build_cache\v3r23_analyze.obj" "<DOCUMENTS_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r23.c"
+Exit code: 0
+Analyzer output:
+  kira_r25_afes_execution_plan_validation_v3r23.c
+Unsuppressed diagnostics: 0
+Suppressions used: none
+Disposable analyzer object: 147649 bytes
+Disposable analyzer object SHA-256: 3f3f6ca639a805dc4ee111d61056e6090de95d302dba61047387b39aabc485c7
+The analyzer object is scratch-only and is not a transplant or seal subject.
+
+PE INSPECTION PASS
+Tool: MSVC dumpbin.exe /headers, /loadconfig, and /imports
+Machine: 8664 (x64)
+Optional-header magic: 20B (PE32+)
+High Entropy Virtual Addresses: present
+Dynamic base / ASLR: present
+NX compatible: present
+Control Flow Guard: present
+Load configuration: CF instrumented; FID table present; Guard CF function count 34
+Imported DLL set, exact: bcrypt.dll; KERNEL32.dll
+Static Python DLL import: absent
+Process or shell DLL/import route: absent
+Candidate launched: false
+
+HOSTILE STATIC PRESEAL PASS
+Command:
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing\test_kira_r25_foundation_afes_execution_plan_validation_v3r23_static.ps1 -Phase PreSeal -ProjectRoot <DOCUMENTS_WORK> -AuthorityRoot C:\Users\robmc\Kira
+Exit code: 0
+Output: V3R23_HOSTILE_STATIC_TESTS_PASS
+Checks include exact 20-file V3r22 consumed-failure closure; all 120 native fixed bindings; all 137 retained manifest rows; exact CRLF manifest grammar; audit NUL/order/line grammar source; absence of direct __annotations__ access; non-evaluating __annotate__ thunk binding; all 14 checkpoints; plan attempt/return counters; sanitized exception API and bounds; Python finalization/unload; retained post-failure rechecks; one direct plan call; output-root absence; and stop-before boundary.
+
+STATIC FAILURE DIAGNOSIS
+V3r22 durable evidence proves only stage-40 failure. Static source inspection shows that the retained controller uses Any, Mapping, Sequence, and BaseException in annotations without importing those names or enabling future annotations. V3r22 reads function.__annotations__ under locked CPython 3.14 deferred annotations, which can evaluate those unresolved names before the plan call. V3r23 removes every __annotations__ read and fingerprints __annotate__ without calling it. This is a likely-cause repair, not runtime proof.
+
+CURRENT AUTHOR ARTIFACT IDENTITIES
+Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r23.json	10781	b06693879e3f654dedee52d9a683e3f788b6748d6806e09e99d0f0a55cf453ee
+tools/native/kira_r25_afes_execution_plan_validation_v3r23.c	138833	6345fc66582ec65d00a5b175f35371dec6d76d3c5408ad29b08e86292d69b947
+tools/native/kira_r25_afes_execution_plan_validation_v3r23_identity_anchor.h	4600	240a90387f6167c98352ae7589a88ffa430a293f1ec84231e9a9ea6d2101f259
+tools/native/kira_r25_afes_execution_plan_validation_v3r23.obj	216029	6323ae8d7ff77d378ba0b96e9a3ba4c6c0b86ea18fa26621490a13868340b9b2
+tools/native/kira_r25_afes_execution_plan_validation_v3r23.exe	253952	bb492c20a21494a9f6e652f0acfda89a01117b837e79c6288cf81409556fe157
+Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r23_static.ps1	28059	413c4e368d1af579bce68185ec20da1d7775d394e247cbc85415f9f43c1169e7
+RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md	4080	406c0cee59ecaebaacb3d9526f6af6d673d2b0f75f7c6e74b2d138a621cc99cd
+
+BOUNDARY
+These results prove only that inert V3r23 bytes compile and pass static inspection in Documents/Codex scratch. They do not authorize or claim a candidate run, Python initialization, controller evaluation, a plan return, a body, anatomy, Blender work, a save, a render, or a live feature. V3r22 remains consumed and DO_NOT_RERUN. A different fresh independent reviewer must rebuild and audit exact bytes before any one-shot granular validation could be considered.

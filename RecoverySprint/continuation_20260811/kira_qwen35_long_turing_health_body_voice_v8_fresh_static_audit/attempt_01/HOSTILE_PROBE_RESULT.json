@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v8",
+  "audit_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "completed_at_utc": "2026-08-11T06:40:49.997Z",
+  "cache_disabled": true,
+  "command": "py -B RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v8_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+  "tests_run": 20,
+  "tests_passed": 16,
+  "tests_failed": 4,
+  "exit_code": 1,
+  "failed_tests": [
+    "test_16_parent_duplicate_attempt_label_must_not_select_attempt_02",
+    "test_17_child_duplicate_paths_must_not_select_attempt_02",
+    "test_18_preexisting_v1_loader_monkeypatch_must_be_rejected",
+    "test_19_concurrent_scoped_loaders_must_not_leak_a_reviewed_lambda"
+  ],
+  "observations": {
+    "duplicate_parent_argument": {
+      "v8_validation": "accepted",
+      "first_value": "attempt_01",
+      "retained_argparse_selected": "attempt_02"
+    },
+    "duplicate_child_arguments": {
+      "v8_validation": "accepted",
+      "first_evidence_and_generated_paths": "attempt_01",
+      "retained_argparse_selected_evidence_and_generated_paths": "attempt_02"
+    },
+    "preexisting_v1_loader": {
+      "v8_nested_chain_accepted": true,
+      "preexisting_hostile_loader_restored_after_validation": true,
+      "canonical_loader_identity_required": false
+    },
+    "overlapping_v8_validation": {
+      "both_scoped_calls_returned": true,
+      "reviewed_shell_lambda_leaked_into_v1_module": true,
+      "audit_cleanup_restored_canonical_loader": true
+    }
+  },
+  "passing_controls": {
+    "frozen_v8_identities_exact": true,
+    "v8_seal_subjects_exact": 4,
+    "v8_predecessor_subjects_exact": 8,
+    "v7_predecessor_subjects_exact": 13,
+    "v1_project_binding_count": 10,
+    "v1_unchanged_project_bindings_exact": 9,
+    "exact_reviewed_shell_substitution_count": 1,
+    "real_nested_v8_v7_v6_v5_v4_v3_v1_compatible_loader_passed": true,
+    "wrong_shell_and_fast_end_evidence_rejected": true,
+    "second_project_binding_substitution_rejected_for_all_nine_controls": true,
+    "shell_read_to_binding_check_toctou_rejected": true,
+    "preexisting_output_root_replay_rejected": true,
+    "duplicate_and_nonfinite_json_rejected": true,
+    "v7_semantic_false_accepts_rejected": 4,
+    "v7_terminal_exact_dict_finite_and_aggregate_repairs_passed": true,
+    "exact_qwen35_blackwell_turn_playback_and_truth_contract_passed": true
+  },
+  "scope_truth": {
+    "candidate_bytes_edited": false,
+    "candidate_monkeypatches_restored": true,
+    "output_roots_created": false,
+    "model_or_voice_run": false,
+    "gpu_or_playback_run": false,
+    "person_body_media_or_blender_run": false
+  }
+}

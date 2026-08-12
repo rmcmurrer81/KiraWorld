@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v8",
+  "audit_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "auditor_task": "/root/kira_long_turing_v4_fresh_audit",
+  "auditor_relationship": "different_agent_from_v8_author",
+  "completed_at_utc": "2026-08-11T06:40:49.997Z",
+  "decision": "REJECT",
+  "verdict": "REJECT_NO_V8_UNATTENDED_ATTEMPT_AUTHORIZED",
+  "live_authorized": false,
+  "unattended_attempt_authorized": false,
+  "authorization_created": false,
+  "candidate_edited": false,
+  "exact_v8_freeze": [
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v8/attempt_01/EXECUTION_PLAN_V8.json",
+      "bytes": 5291,
+      "sha256": "9e472f839a4ecae2d538db67244db23fb6d9cc4101b29d2d3b87f3e54d32d40e"
+    },
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v8.py",
+      "bytes": 21310,
+      "sha256": "9de8a194d325d922d81a57b8ad86d7bd83134493eeeabd6f3682d7ab041b5652"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v8.py",
+      "bytes": 5496,
+      "sha256": "0279216471a304966c3549bab42d005a767493e180c12c95c3ac06c995d01c00"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v8/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 910,
+      "sha256": "49e8d50e0a184c0f390e7ec596eb4abf3697a4ce73dd0a5645d44f0f7191fea3"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v8/attempt_01/STATIC_SEAL_MANIFEST.json",
+      "bytes": 1068,
+      "sha256": "6935090d0247d92833110084ab57775db34d60680b98ff0733a8fed5eb83daf2"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v8/attempt_01/CHECKPOINT.md",
+      "bytes": 3759,
+      "sha256": "b3fd758bc61aa15980a06e626d4977ec7bfb1e2c2f7501ee5b1bfe288049c179"
+    }
+  ],
+  "exact_byte_closure": {
+    "v8_seal_subjects_checked": 4,
+    "v8_seal_subject_mismatches": 0,
+    "v8_predecessor_v7_and_rejection_subjects_checked": 8,
+    "v8_predecessor_mismatches": 0,
+    "v7_predecessor_v6_and_rejection_subjects_checked": 13,
+    "v7_predecessor_mismatches": 0,
+    "reviewed_shell_and_fast_end_subjects_checked": 4,
+    "reviewed_shell_and_fast_end_mismatches": 0,
+    "frozen_v1_project_binding_count": 10,
+    "unchanged_v1_project_bindings_exact": 9,
+    "reviewed_shell_successor_mismatches_legacy_v1": 1,
+    "reviewed_shell_successor_bytes": 606696,
+    "reviewed_shell_successor_sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4",
+    "legacy_shell_binding_sha256": "69594a9917b55dbca4992c12c357f79d81c0ccb7028ca8f2cc46e4f18789ecdd"
+  },
+  "authored_test_reproduction": {
+    "command": "py -B -m pytest -q -p no:cacheprovider Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v8.py Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v7.py",
+    "cache_disabled": true,
+    "tests_run": 86,
+    "tests_passed": 86,
+    "tests_failed": 0,
+    "post_hostile_cleanup_rerun_passed": true
+  },
+  "independent_hostile_probe": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v8_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+    "bytes": 21512,
+    "sha256": "7935aebc5eb90a6e4d58c0603b414d8a6a707c5acb939e9c075d9e5228462b95",
+    "tests_run": 20,
+    "tests_passed": 16,
+    "tests_failed": 4,
+    "exit_code": 1
+  },
+  "hostile_probe_result": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v8_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+    "bytes": 2697,
+    "sha256": "0f2f5d16e4ecd30a6489b33b84fba47bd542ee7c745ee4a41bb292a46d8269a2"
+  },
+  "passing_findings": [
+    "The exact V8 plan, controller, test, author result, seal and checkpoint match the frozen identities supplied by the author lane.",
+    "The exact V7 package, V7 rejection, V6 package and V6 rejection closure all rehash without mismatch.",
+    "The frozen V1 plan is exact; its ten project bindings contain exactly the reviewed shell mismatch and nine unchanged exact files.",
+    "The exact current shell, fast-end test and fast-end checkpoint rehash correctly.",
+    "The real nested V8 to V7 to V6 to V5 to V4 to V3 to V1-compatible loader executes and restores the canonical V1 loader in the ordinary single-call control.",
+    "All four V7 semantic false-accept repairs, exact terminal aggregate fields, exact dictionaries, Boolean-number separation, finite-number checks and strict JSON controls pass.",
+    "The retained contract is exact Qwen 3.5 digest, 35 measured turns, one invitation, cap 36, Blackwell v2 CUDA, no CPU/SAPI/generic fallback, speaker playback requested, bounded cleanup, unattended log-only and no owner-hearing inference.",
+    "Wrong shell/evidence, each possible second V1 substitution, shell read/check TOCTOU, duplicate/non-finite JSON and preexisting output roots fail closed."
+  ],
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V8_DUPLICATE_ARGUMENT_ATTEMPT_BINDING_BYPASS",
+      "detail": "validate_attempt_binding scans for the first value of each critical option but does not reject duplicates. A parent invocation containing --attempt-label attempt_01 --attempt-label attempt_02 passes V8 validation; the retained argparse parser selects attempt_02. The same split interpretation accepts first exact child attempt/generated paths while the executed parser selects duplicate attempt_02 paths.",
+      "impact": "The exact-only attempt_01 and at-most-one append-only attempt boundary is not enforced by the executed argument contract. A V8 acceptance cannot safely authorize exactly one unattended attempt.",
+      "required_repair": "An append-only successor must parse once with a closed schema, reject every duplicate singleton/critical flag before any retained parser, and prove the exact canonicalized values consumed by the parent and child are the values validated."
+    },
+    {
+      "id": "BLOCK_V8_V1_LOADER_IDENTITY_AND_CONCURRENCY_LEAK",
+      "detail": "The scoped compatibility loader captures whatever mutable v1.load_and_validate_plan object is present, rather than a sealed canonical callable identity. It accepts the nested chain when a hostile loader is preinstalled and restores that hostile loader afterward. Two deliberately overlapped validations restore out of order and leave the first reviewed-shell lambda installed globally even though both calls return.",
+      "impact": "The claimed exact canonical loader restoration and no-monkeypatch-leak boundary is false under preexisting substitution or overlapping validation. Later validation in the process can inherit unapproved compatibility authority.",
+      "required_repair": "An append-only successor must bind and verify the exact original V1 loader identity, reject preexisting drift, avoid process-global mutation where possible, or serialize a non-reentrant installation with exact post-restore verification and hostile concurrency tests."
+    }
+  ],
+  "required_next_step": "Preserve V8 and this rejection unchanged. Create an append-only successor closing both blockers, rerun all V7/V8 controls, and require another different fresh exact-byte hostile static audit. Do not run V8 live or create an attempt authorization.",
+  "scope_truth": {
+    "v8_or_predecessor_bytes_edited": false,
+    "output_roots_exist": false,
+    "model_voice_gpu_playback_operations": 0,
+    "person_body_media_blender_operations": 0,
+    "owner_hearing_claimed": false
+  }
+}

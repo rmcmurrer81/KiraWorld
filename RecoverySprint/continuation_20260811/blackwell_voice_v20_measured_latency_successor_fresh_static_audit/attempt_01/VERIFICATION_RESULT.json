@@ -1,0 +1,61 @@
+{
+  "schema": "kira.blackwell.voice_v20.different_fresh_verification_result.v1",
+  "recorded_at_utc": "2026-08-12T03:14:54.7168508Z",
+  "installed_inventory": {
+    "file_count": 12,
+    "unexpected_file_or_directory_count": 0,
+    "before_after_exact_bytes_equal": true
+  },
+  "author_seal": {
+    "sealed_subject_count": 9,
+    "manifest_bytes": 2882,
+    "manifest_sha256": "70e7e36823d0e7985db66376cac4c194846292393bdb94bf6ee5ed523848a77b",
+    "all_subject_bytes_and_hashes_match": true,
+    "unique_paths": true
+  },
+  "input_closure": {
+    "rows": 41,
+    "unique_paths": 41,
+    "missing_or_drifted": 0
+  },
+  "cache_free_installed_pytest": {
+    "command": "py -B -m pytest -p no:cacheprovider -q",
+    "passed": 42,
+    "failed": 0,
+    "duration_seconds": 0.98
+  },
+  "python_in_memory_compile": {
+    "passed": 3,
+    "failed": 0,
+    "bytecode_written": false
+  },
+  "native_fresh_compile": {
+    "toolchain": "MSVC x64 19.50.35730",
+    "w4_wx_o2_guard_cf_std_c17": "PASS_NO_DIAGNOSTICS",
+    "analyze_w4_wx_o2_guard_cf_std_c17": "PASS_NO_DIAGNOSTICS",
+    "linked_executable_created": false,
+    "object_files_staged_outside_kira": true
+  },
+  "v19_exact_array_binding": {
+    "conditions": {"count": 4, "exact_equal": true},
+    "required_monotonic_timestamps": {"count": 51, "exact_equal": true},
+    "required_metadata": {"count": 42, "exact_equal": true},
+    "required_derived_durations": {"count": 30, "exact_equal": true},
+    "ordering_requirements": {"count": 15, "exact_equal": true}
+  },
+  "truth_boundaries_confirmed": {
+    "live_factory_refuses": true,
+    "native_wmain_refuses_with_125": true,
+    "production_route_changed": false,
+    "latency_measurements_present": false,
+    "latency_improvement_claimed": false,
+    "candidate_executed": false,
+    "model_calls": 0,
+    "gpu_calls": 0,
+    "audio_calls": 0,
+    "playback_calls": 0,
+    "camera_calls": 0,
+    "microphone_calls": 0,
+    "network_calls": 0
+  }
+}

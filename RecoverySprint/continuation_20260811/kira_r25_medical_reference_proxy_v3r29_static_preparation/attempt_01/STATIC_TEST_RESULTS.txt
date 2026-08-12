@@ -1,0 +1,29 @@
+V3r29 author static and trusted-build result
+phase=PreSeal
+upstream_exact=28/28_direct_17/17_transitive
+blender_exact=bytes_sha256_path
+mocked_hostile_worker_refusals=18/18
+mocked_hostile_audit_refusals=21/21
+mocked_hostile_materialization_consumption_refusals=1/1
+mocked_hostile_seal_refusals=0/3_preseal_not_applicable
+syntax_cache_free=2/2
+native_materialized_compile=/W4_/WX_PASS_NOT_EXECUTED
+native_materialized_analyzer=ZERO_UNSUPPRESSED_DEFECTS_NOT_EXECUTED
+native_hard_disabled_compile=/W4_/WX_PASS_NOT_EXECUTED
+native_hard_disabled_analyzer=ZERO_UNSUPPRESSED_DEFECTS_NOT_EXECUTED
+native_brepro=2/2_BYTE_IDENTICAL
+native_static_surface=PASS_PRE_RESERVED_FINAL_PATHS_HANDLES_THROUGH_SUCCESS
+materializer_main_invoked=false
+candidate_or_template_product_invoked=false
+blender_or_bpy_invoked=false
+worker_or_body_save_reload_render_invoked=false
+Kira_writes=false
+Sarah_inspected_or_changed=false
+result=PASS
+
+PostSeal is intentionally not asserted inside this sealed predecessor result.
+After STATIC_SEAL_MANIFEST.json is frozen, root or a different Audit A must run
+the exact cache-free PostSeal phase. That phase rehashes every sealed subject,
+computes the externally required exact seal SHA-256 and complete all-files
+inventory root, parses Stage 1 with all three roots, and runs three seal
+mutation/type hostiles. Passing PostSeal remains static evidence only.

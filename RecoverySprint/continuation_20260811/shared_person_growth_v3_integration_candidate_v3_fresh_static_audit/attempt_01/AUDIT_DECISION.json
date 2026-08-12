@@ -1,0 +1,111 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v3.independent_quality_review_decision.v1",
+  "recorded_utc": "2026-08-11T16:42:32.6015647Z",
+  "reviewer_task": "/root/growth_v3_quality_review",
+  "decision": "REJECT",
+  "decision_detail": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+  "accepted_static_no_commit_only": false,
+  "integration_authorized": false,
+  "promotion_authorized": false,
+  "person_or_temporary_creator_upgrade_authorized": false,
+  "review_mode": "different_independent_read_only_no_bytecode",
+  "author_boundary": {
+    "checkpoint": {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v3_static_preparation/attempt_01/CHECKPOINT.md",
+      "bytes": 3974,
+      "sha256": "75cab078fabafc04238b57a3b47d2c70f7282dba2fdaeee7b62e705b395d87de"
+    },
+    "sealed_manifest": {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v3_static_preparation/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 4092,
+      "sha256": "8c042caded327d3ad3d52f59a51b299bc27cfff51a70d9b7e4b56f97b766fa57"
+    }
+  },
+  "sealed_closure": {
+    "declared_subjects": 11,
+    "unique_subjects": 11,
+    "exact_byte_and_sha256_matches": 11,
+    "mismatches": 0
+  },
+  "verification": {
+    "strict_in_memory_compile": "8/8 PASS",
+    "focused_v3_integration": "20/20 PASS",
+    "combined_preserved_v3_core_plus_v1_v2_v3_integration": "103/103 PASS",
+    "applicable_route_matrix": "31/35 PASS; 4/35 UNEXPECTED REFUSAL",
+    "canonical_utf8_envelope_and_proposal_digest": "PASS for confirmed_adult, non_adult, and unresolved samples",
+    "fixed_input_midread_drift": "PASS_REFUSED",
+    "route_midread_drift": "PASS_REFUSED",
+    "post_construction_closure_drift": "PASS_REFUSED",
+    "post_construction_route_drift": "PASS_REFUSED",
+    "production_opener": "PASS_HARD_REFUSED",
+    "temporary_creator": "PASS_HARD_REFUSED",
+    "current_python_consumer": "NONE; exact call text appears only in candidate source and focused test",
+    "existing_python_files_byte_scanned": 58850,
+    "stale_missing_backup_targets_skipped": 189,
+    "tracked_kira_worktree_changes_after_review": 0
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_SUBJECT_SPECIFIC_CONFIRMED_ADULT_ROUTES",
+      "summary": "The maturity predicate rejects four routes that the fixed inventory marks applicable.",
+      "evidence": {
+        "applicable_routes": 35,
+        "compiled": 31,
+        "unexpectedly_refused": 4,
+        "people": [
+          "peter_parker_spider_man_no_way_home_final_suit",
+          "spider_gwen_spider_gwen_20260606_013325"
+        ],
+        "routes": [
+          "profile:peter_parker_spider_man_no_way_home_final_suit",
+          "state:peter_parker_spider_man_no_way_home_final_suit",
+          "profile:spider_gwen_spider_gwen_20260606_013325",
+          "state:spider_gwen_spider_gwen_20260606_013325"
+        ],
+        "inventory_binding": "required_maturity=confirmed_adult; maturity_source_id=character_continuity_owner_decision; permitted_status=subject_specific",
+        "observed_error": "SharedGrowthIntegrationV3Error: maturity source is cross-bound"
+      },
+      "cause": "Core/shared_person_growth_v3_integration_candidate_v3.py lines 397-400 special-case subject_specific only when maturity_status is non_adult. The sealed V1 inventory validator treats subject_specific as compatible with the exact person-bound status.",
+      "impact": "Exact current person/route/maturity coverage is incomplete and the named 20-test suite does not enumerate all applicable routes."
+    },
+    {
+      "id": "BLOCK_EXPORTED_MUTABLE_SCOPE_CONTRACT",
+      "summary": "The supposedly single fixed public scope is an exported mutable list and becomes compiler policy after ordinary mutation.",
+      "evidence": {
+        "declaration": "REQUESTED_SCOPE = [\"shared_growth_v3_public_projection_only\"]",
+        "exported": true,
+        "probe_mutation": "REQUESTED_SCOPE.append(\"private_state_scope\")",
+        "result": "compiler accepted and returned both scope elements while truth.private_state_included remained false"
+      },
+      "impact": "The exact one-scope contract and checkpoint claim that no mutable catalog is retained are not true of the public Python surface. The result is still inert and unconsumed, so this does not create authority or commit capability."
+    }
+  ],
+  "verified_inert_boundary": {
+    "verifier_or_key": false,
+    "callback_or_controller": false,
+    "authority_or_receipt_ledger": false,
+    "staging_or_output_path": false,
+    "write_or_commit": false,
+    "query_or_rollback": false,
+    "cleanup_or_unlink": false,
+    "person_profile_or_memory_writer": false,
+    "production_consumer": false,
+    "temporary_creator_support": false,
+    "transient_read_only_fixed_and_route_source_digest_checks": true,
+    "returned_value": "inert canonical UTF-8 JSON bytes with a SHA-256 digest of exact canonical proposal bytes",
+    "receipt_and_consent_digests": "shape-bound assertions only; not authenticated because this candidate intentionally has no verifier",
+    "same_process_python_is_a_trust_root": false
+  },
+  "preserved_truth": {
+    "isolated_shared_growth_v3_core_status": "ACCEPT_STATIC_ONLY",
+    "integration_v1_status": "REJECT",
+    "integration_v2_status": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+    "integration_v3_promoted": false,
+    "kira_lisa_synthetic_robert_or_other_person_upgraded": false,
+    "temporary_creator_upgraded": false,
+    "production_pointer_changed": false,
+    "person_profile_memory_or_route_changed_by_review": false,
+    "live_model_body_media_voice_network_device_or_sarah_operation": false
+  },
+  "required_next_step": "Preserve sealed V3 unchanged. Repair append-only: make subject_specific accept the exact inventory-bound confirmed_adult or non_adult status, add an exhaustive applicable-route matrix, and replace the exported mutable scope list with an immutable or function-local exact constant. Require another different fresh review before any static acceptance or integration consideration."
+}

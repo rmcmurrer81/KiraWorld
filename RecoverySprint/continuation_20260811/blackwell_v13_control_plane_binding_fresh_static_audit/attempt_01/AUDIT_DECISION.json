@@ -1,0 +1,53 @@
+{
+  "schema": "kira.blackwell.v13.independent_read_only_audit_decision.v1",
+  "recorded_utc": "2026-08-11T09:23:44.9725206Z",
+  "reviewer_task": "/root/body_v3r18_audit",
+  "evidence_transcribed_by": "/root",
+  "decision": "REJECT",
+  "accepted_static_only": false,
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false,
+  "seal": {
+    "subjects_exact": 11,
+    "subjects_drifted": 0,
+    "manifest_bytes": 3015,
+    "manifest_sha256": "c09cadde50a73593fcf7dc2978e11a9012dec0952ef923d415dd035af4312c55"
+  },
+  "author_checks": {
+    "focused_passed": 9,
+    "focused_failed": 0,
+    "in_memory_compile_passed": 2,
+    "default_off_entrypoints": "PASS"
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V13_PRECALL_SELF_MODULE_PACKAGE_IDENTITY_NOT_BOUND",
+      "reproduction": "Replacing both the ordinary sys.modules entry and Core package attribute before factory invocation was accepted; the binding captured the replacement module and returned prepared_static=true."
+    },
+    {
+      "id": "BLOCK_V13_SELF_CLASS_METHODS_NOT_BOUND_PRIVATE_V12_BYPASS",
+      "reproduction": "Replacing the V13 class verifier method after preparation allowed a private V12 validator mutation and a normal V12 module entry while public_state still reported the import state clean."
+    },
+    {
+      "id": "BLOCK_V13_CONTROL_STATE_NOT_REVALIDATED",
+      "reproduction": "Replacing the stored control digest with 64 zeros was accepted and returned."
+    },
+    {
+      "id": "BLOCK_V13_CONFIG_QUARANTINE_LOADER_STATE_NOT_EXACT",
+      "reproduction": "Mutable config authorization/rejection fields, integer quarantine state, and in-place private-loader metadata changes were accepted."
+    }
+  ],
+  "scope_truth": {
+    "model_calls": 0,
+    "gpu_or_voice_calls": 0,
+    "synthesis_or_audio_calls": 0,
+    "playback_calls": 0,
+    "network_calls": 0,
+    "body_or_blender_calls": 0,
+    "production_route_changed": false
+  },
+  "required_next_step": "Preserve V13; repair append-only with an external exact trust anchor, exact V13 function/class/member/code/default/global/closure seals, complete typed instance/config/loader/file revalidation, and another different review."
+}

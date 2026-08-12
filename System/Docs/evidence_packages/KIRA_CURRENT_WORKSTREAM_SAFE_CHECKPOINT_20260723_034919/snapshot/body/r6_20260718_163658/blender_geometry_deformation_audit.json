@@ -1,0 +1,107 @@
+{
+  "anatomical_completeness_proven": false,
+  "audit_mode": "read_only_blender_geometry_v1",
+  "blender_version": "5.1.2",
+  "candidate_sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+  "eyes": {
+    "all_eye_components_bound_to_head_or_eye_controls": false,
+    "bilateral_sclera_centers": {},
+    "bilateral_symmetry_sanity_passed": false,
+    "role_counts": {
+      "blink_control": 0,
+      "catchlight": 0,
+      "eyelid": 0,
+      "eyelid_control": 0,
+      "gaze_control": 0,
+      "iris": 0,
+      "pupil": 0,
+      "sclera": 0
+    },
+    "socket_fit_measurement_passed": false
+  },
+  "materials": {
+    "all_renderable_meshes_have_materials": false,
+    "all_sclera_iris_pupil_components_have_principled_materials": false,
+    "body_has_principled_material": true,
+    "body_material_count": 1,
+    "eye_material_visual_realism_proven": false,
+    "eye_role_component_counts": {
+      "iris": 0,
+      "pupil": 0,
+      "sclera": 0
+    },
+    "material_count": 1,
+    "materialless_mesh_count": 1,
+    "principled_material_count": 1,
+    "raw_material_names_or_parameters_disclosed": false
+  },
+  "neutral_axis_and_grounding": {
+    "body_bounds_high": [
+      0.19104,
+      0.082443,
+      1.182583
+    ],
+    "body_bounds_low": [
+      -0.19104,
+      -0.093027,
+      -0.00241
+    ],
+    "body_extent": [
+      0.382079,
+      0.17547,
+      1.184993
+    ],
+    "finite_coordinates": true,
+    "ground_contact_dynamically_proven": false,
+    "ground_reference": "candidate_local_z_zero",
+    "lowest_body_z": -0.00241
+  },
+  "nonbody_geometry": {
+    "mesh_count": 1,
+    "oversized_unclassified_mesh_count": 1,
+    "raw_names_disclosed": false,
+    "role_counts": {
+      "debug_or_helper": 1
+    },
+    "unclassified_mesh_count": 1
+  },
+  "owner_approved": false,
+  "primary_body": {
+    "boundary_edge_count": 172,
+    "boundary_loop_count": 3,
+    "collapsed_face_count_after_positional_weld": 0,
+    "degenerate_face_count": 0,
+    "maximum_positive_influences_per_vertex": 4,
+    "non_manifold_edge_count": 0,
+    "open_boundary_chain_count": 0,
+    "positional_weld_tolerance": 1.185e-06,
+    "positional_weld_vertex_count": 54125,
+    "present": true,
+    "raw_index_boundary_edge_count": 7312,
+    "raw_index_surface_island_count": 49,
+    "reviewed_intentional_boundary_loop_count": 0,
+    "surface_island_count": 1,
+    "triangle_count": 108080,
+    "unused_vertex_count": 0,
+    "unweighted_vertex_count": 0,
+    "vertex_count": 57745,
+    "vertices_over_four_influences": 0,
+    "weight_sum_out_of_tolerance_count": 0
+  },
+  "privacy": {
+    "input_modified": false,
+    "raw_object_material_or_bone_names_disclosed": false,
+    "render_created": false,
+    "source_path_disclosed": false
+  },
+  "runtime_activation_allowed": false,
+  "scene": {
+    "animation_count": 4,
+    "armature_count": 1,
+    "mesh_count": 2,
+    "skinned_mesh_count": 1
+  },
+  "schema_version": 1,
+  "stable_working_rig_proven": false,
+  "truth_note": "This read-only audit measures geometry, weights, role counts, and neutral bounds. It does not prove anatomy, stable motion, eye realism, or owner approval."
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "kira.r25.afes.execution_plan_validation.v3r24.independent_static_decision.v1",
+  "date": "2026-08-11",
+  "auditor": "codex_different_fresh_body_v3r24_quality_reviewer",
+  "author": "codex_r25_afes_v3r24_static_author",
+  "decision": "ACCEPTED_FOR_ONE_BOUNDED_DIAGNOSTIC_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R24_ONLY",
+  "candidate_executed_by_reviewer": false,
+  "kira_written_by_reviewer": false,
+  "execution_authority_staged_only": true,
+  "scope": {
+    "maximum_later_invocations": 1,
+    "arguments": 0,
+    "allowed_callable": "_build_execution_plan",
+    "maximum_plan_calls": 1,
+    "diagnostic_only": true,
+    "stop_before": [
+      "bootstrap",
+      "broker",
+      "process",
+      "AFES",
+      "Blender",
+      "body",
+      "save",
+      "render",
+      "export"
+    ],
+    "success_or_failure_consumes_authority": true
+  },
+  "independent_results": {
+    "sealed_subjects_exact": 273,
+    "sealed_subjects_total": 273,
+    "author_artifacts_exact": 10,
+    "author_artifacts_total": 10,
+    "authored_postseal": "V3R24_HOSTILE_STATIC_TESTS_PASS",
+    "independent_hostile_probes_passed": 227,
+    "strict_x64_build": "PASS_ZERO_DIAGNOSTICS",
+    "msvc_analyze": "PASS_EMPTY_DEFECTS",
+    "pe_machine": "8664_X64",
+    "pe_optional_header": "20B_PE32_PLUS",
+    "pe_mitigations": [
+      "HIGH_ENTROPY_VA",
+      "ASLR_DYNAMIC_BASE",
+      "NX_COMPATIBLE",
+      "CONTROL_FLOW_GUARD"
+    ],
+    "imported_dlls_exact": [
+      "bcrypt.dll",
+      "KERNEL32.dll"
+    ],
+    "static_python_import": false,
+    "process_or_shell_import": false,
+    "v3r22_cause": "UNKNOWN",
+    "unresolved_annotation_name_cause": "PROVEN_EXCLUDED",
+    "checkpoint_count": 47,
+    "operation_enter_return_pairs": 21,
+    "plan_attempt_return_pairs": 1,
+    "exception_type_max_bytes": 63,
+    "exception_message_max_bytes": 191,
+    "predecessor_v3r22_authority": "CONSUMED_FAILURE_DO_NOT_RERUN",
+    "predecessor_v3r23_authority": "REJECTED_NO_EXECUTION_AUTHORITY"
+  },
+  "frozen_subjects": {
+    "native_executable_sha256": "281d427482657a73096fa6b44e2092e6e54b760e59c73c37f562e24ad6b03bb9",
+    "identity_anchor_sha256": "625df0dc5ebd817cdcca767a018cdace631b966c8b57d9dae46ac3ba5af546e9",
+    "contract_sha256": "282b458123f1b48989e1315d90f11663443f84637671e2d0a18bb6af8f22aa3c",
+    "native_source_sha256": "8bb0974a531bf40c28c9e9400f0b6dec22d87ea57296b2aae7de06322c408ad5",
+    "static_test_sha256": "1010f4b122aab45bdaaabd4363d0e33fb93c620d44dc7f342c66e7045c858036",
+    "runtime_control_checkpoint_sha256": "c954a4a3c77e5ed4307837842a964b560e3ad83d6635e2a3e8de46c5ef828658",
+    "seal_sha256": "fc63c0ada6db0737988724c78acc08907fa319f6badb9de81a930554f6a1e640",
+    "author_checkpoint_sha256": "382b3c79b79a1356aa283310dd78f0e379288c31b95870d7c11dff81cd777288",
+    "retained_manifest_sha256": "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96",
+    "v3r22_consumed_failure_closure_root_sha256": "7057deb657f5e235892180e5d694f139450d44897f9353ac3bdb1f15d730aec0",
+    "v3r23_rejected_closure_root_sha256": "0b09c1f71154b4d56559f043f08076940bcc60e7919d6bcd8e9c3cde3b2a4ea0"
+  },
+  "staged_review_evidence": {
+    "audit_tsv": {
+      "bytes": 1795,
+      "sha256": "fc2d1a78d7d9f843349c4beb1ec7dc0af4d0cb4a7e7a8b481a7b1416c36da101"
+    },
+    "audit_sidecar": {
+      "bytes": 65,
+      "sha256": "b7711e2a111d38b687b83097bc14f632a1241f5d28fc85d79d62251f0b140b37"
+    },
+    "static_results": {
+      "bytes": 8051,
+      "sha256": "916a98476f01dc3a34803c42c2b86990637b01c384a4be3ce5ce287f0e4554eb"
+    },
+    "hostile_probe_script": {
+      "bytes": 19208,
+      "sha256": "d75d1d86df8726f46df528351e6eea96b15b4fa26ea5e3d446d5520ecc785298"
+    },
+    "rebuilt_executable": {
+      "bytes": 264704,
+      "sha256": "2a0ff6913e17fe75afa393636be151b35ca3e455fb89a3d7d887d0a54eef86a0",
+      "executed": false
+    },
+    "analyzer_xml": {
+      "bytes": 59,
+      "sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5"
+    }
+  },
+  "truth_boundary": {
+    "body_or_anatomy_proven": false,
+    "blender_save_or_render_evidence": false,
+    "avatar_builder_positive_promotion": false,
+    "rejected_result_route": "DO_NOT_REPEAT_TESTS_ONLY",
+    "current_positive_reusable_body_inventory": "NONE"
+  },
+  "required_before_any_later_invocation": [
+    "TRANSPLANT_STAGED_AUDIT_TSV_AND_SIDECAR_BYTE_EXACTLY_TO_FIXED_KIRA_PATH",
+    "REHASH_ALL_273_SEALED_SUBJECTS_EXACT",
+    "REHASH_ALL_10_AUTHOR_ARTIFACTS_EXACT",
+    "PROVE_FIXED_EVIDENCE_AND_RECEIPT_PATHS_ABSENT",
+    "PROVE_EXACT_WORKING_DIRECTORY_AND_EXECUTABLE_PATH",
+    "DO_NOT_RERUN_V3R22_OR_RUN_REJECTED_V3R23"
+  ]
+}

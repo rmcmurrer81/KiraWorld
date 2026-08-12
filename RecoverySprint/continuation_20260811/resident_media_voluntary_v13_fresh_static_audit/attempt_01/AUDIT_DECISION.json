@@ -1,0 +1,55 @@
+{
+  "schema": "kira.resident_media.voluntary_v13.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T10:13:47.3992896Z",
+  "reviewer_task": "/root/resident_media_v13_audit",
+  "evidence_transcribed_by": "/root",
+  "decision": "REJECT",
+  "accepted_static_only": false,
+  "production_authorized": false,
+  "live_media_authorized": false,
+  "person_state_authorized": false,
+  "seal": {
+    "subjects_exact": 10,
+    "subjects_drifted": 0,
+    "manifest_bytes": 2777,
+    "manifest_sha256": "6860f7e1c0acb6ae50f704a2ed1291af76054d1ef0da90081b82e2e99298d852"
+  },
+  "author_checks": {
+    "strict_compile_passed": 2,
+    "strict_compile_failed": 0,
+    "focused_passed": 15,
+    "focused_failed": 0,
+    "preserved_v3_through_v13_passed": 191,
+    "preserved_v3_through_v13_failed": 0,
+    "untouched_incomplete_role_and_false_completion_probes_refused": true
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V13_EXPOSED_REJECTED_INNER_LEDGER_BYPASS",
+      "reproduction": "The returned V13 ledger exposed ledger._inner. Direct invocation of the rejected V12 validate_and_record_static_evidence surface committed evidence with all caption segments removed and both completion flags false, advancing revision 0 to 1 without monkeypatching."
+    },
+    {
+      "id": "BLOCK_V13_RUNTIME_CODE_AND_PREFLIGHT_NOT_BOUND",
+      "reproduction": "Ordinary rebinding of v13._preflight_complete_evidence allowed the public V13 method to commit a one-millisecond-incomplete audio record with audio_complete false, advancing revision 0 to 1."
+    },
+    {
+      "id": "BLOCK_V13_EXACT_TYPE_WALKER_REBIND_BYPASS",
+      "reproduction": "Ordinary rebinding of v13._require_exact_string_types to a no-op allowed boolean output identifiers and a 64-digit JSON integer decoder digest to commit, reproducing the V12 scalar-alias failure across V13."
+    }
+  ],
+  "positive_truth": {
+    "production_opener_refuses_as_written": true,
+    "production_route_references_found": 0,
+    "production_integration_exists": false
+  },
+  "scope_truth": {
+    "media_opened_or_played": 0,
+    "model_or_device_calls": 0,
+    "audio_or_video_calls": 0,
+    "person_or_memory_changes": 0,
+    "body_or_blender_calls": 0,
+    "sarah_calls": 0,
+    "production_route_changed": false
+  },
+  "required_next_step": "Preserve V13. Repair append-only as V14 by eliminating or rejecting access to the V12 commit surface; place completeness and exact-type enforcement at the actual commit point; externally bind and pre/post revalidate exact V13/V12/V9/V4 module, function, class, code, defaults, globals and closure identities plus instance, authority and configuration state; remain disconnected/default-off; require another different fresh audit."
+}

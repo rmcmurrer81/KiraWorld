@@ -3,8 +3,8 @@
 ## READ FIRST — CURRENT TRUTH AND SUPERSESSION REGISTRY — 2026-08-10
 
 Read `System/Docs/CURRENT_TRUTH_SUPERSESSION_REGISTRY_20260810.md` first
-(55,099 bytes; SHA-256
-`264aa16f2b9f702ab9d975a5e6bb67150acf503883d66b26eaf6252836cff285`).
+(157,344 bytes; SHA-256
+`44761b97afa2d602ac7decbd6d55fb63fc900e6467bafc58b63ee6c3dc049fe9`).
 It identifies the current Qwen, voice/latency, R25 body, resident-media,
 reconstruction, historical-voice, and frozen-Video-Studio truth. Older blocks
 below remain append-only history and are not current authority where they

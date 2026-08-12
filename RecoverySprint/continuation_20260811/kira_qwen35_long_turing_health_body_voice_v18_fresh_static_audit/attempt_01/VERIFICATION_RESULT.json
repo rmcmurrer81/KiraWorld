@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "long_v18_independent_data_quality_verification_result",
+  "recorded_at_utc": "2026-08-12T03:43:59.393Z",
+  "status": "PASS_EXACT_PACKAGE_AND_AUTHOR_SUITE_WITH_SEPARATE_CORRECTNESS_BLOCKERS",
+  "scope": {
+    "installed_kira_read_only": true,
+    "static_and_in_memory_only": true,
+    "entry_points_invoked": false,
+    "model_camera_microphone_voice_audio_playback_private_state_person_body_media_network_or_one_hour_route_invoked": false,
+    "persistent_python_cache_disabled": true,
+    "pytest_cache_disabled": true
+  },
+  "installed_subjects": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py",
+      "bytes": 70741,
+      "sha256": "f47fbdd41ccbb867333ea3ced1d67868c1d905610b54ac2fead34723b8aa0c1b"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py",
+      "bytes": 21741,
+      "sha256": "7f413662cee824dd36d7422e078b8c0dad8c0e0fbd01a4b35dce0d46a653956d"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/EXECUTION_PLAN_V18.json",
+      "bytes": 15222,
+      "sha256": "a2e834c18f502dedd573f229f8654bbd9c819b132b94d046e07c84e1a2af2bf5"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/SOURCE_CODE_ROOT_V18.json",
+      "bytes": 2867,
+      "sha256": "3b32f32ee19e0a50d6bf494f6dcc102c7454d65928655d3dc8f682c652f1f3f1"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 6129,
+      "sha256": "75bbe960aba1dbd07514298b642d6666178adf2cb07cf12be042af0aed218ef7"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/STATIC_SEAL_MANIFEST.json",
+      "bytes": 3334,
+      "sha256": "32c02ac0ec1488c60bbaaa37176d381511fb10c7c94d5cf1e49a20192fc5b9ff"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/CHECKPOINT.md",
+      "bytes": 8456,
+      "sha256": "809563501593e08d04b5bdbb0eba348b2af20297e912bc293baef68a0a1b8592"
+    }
+  ],
+  "seal_verification": {
+    "declared_subject_count": 5,
+    "checked_subject_count": 5,
+    "exact_byte_and_sha256_matches": 5,
+    "issues": []
+  },
+  "bound_input_closure": {
+    "declared_subject_count": 24,
+    "checked_subject_count": 24,
+    "exact_byte_and_sha256_matches": 24,
+    "issues": [],
+    "shared_person_policy_json": "7576/520c994fc256afb60a62a568a04826d4579abe96d6ac0b4c495c9179224034c9",
+    "shared_person_boundary_document": "7051/4bbd0699c12f5d118f859ba8fc07a073b163c603d9d1541ff0ad353e9ecf173e"
+  },
+  "external_roots": {
+    "source_descriptor": {
+      "bytes": 201804,
+      "sha256": "f03cb376805381aad2e573a3f713759bbbf27ab29956aa5753ad5907e6227031",
+      "exact": true
+    },
+    "semantic_verifier_bundle": {
+      "bytes": 8737,
+      "sha256": "b11c85be1b0b99d3805f5cf5acaecd8646a744b70ff42511839021854a517b75",
+      "exact": true
+    }
+  },
+  "cache_free_author_suite": {
+    "command": "python -B -m pytest -q -p no:cacheprovider C:\\Users\\robmc\\Kira\\Testing\\test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py",
+    "result": "73 passed in 6.67s",
+    "return_code": 0
+  },
+  "interpretation": "Integrity and author-test success do not resolve the independently reproduced validator correctness defects."
+}

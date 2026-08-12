@@ -1,0 +1,76 @@
+{
+  "schema": "kira.blackwell.v18.local_quality_review.decision.v1",
+  "recorded_utc": "2026-08-11T23:42:52.5776722Z",
+  "review_task": "/root/voice_v18_audit",
+  "decision": "REJECT_STATIC_NO_EXECUTION_AUTHORITY",
+  "execution_authority": "NONE",
+  "kira_modified": false,
+  "v17_invoked": false,
+  "v18_candidate_invoked": false,
+  "python_invoked": false,
+  "model_calls": 0,
+  "gpu_calls": 0,
+  "synthesis_calls": 0,
+  "audio_calls": 0,
+  "playback_calls": 0,
+  "latency_measurements": 0,
+  "camera_device_calls": 0,
+  "person_calls": 0,
+  "body_blender_calls": 0,
+  "sarah_calls": 0,
+  "production_calls": 0,
+  "author_package_rehash": {
+    "rows": 16,
+    "before_mismatches": 0,
+    "after_mismatches": 0,
+    "evidence_bytes": 2870,
+    "evidence_sha256": "0bf9f11cdc45bc9c90dfbcb2b51fc6af8dd41835c32e088cee43cff3c43bd9f4"
+  },
+  "seal_rehash": {
+    "declared_rows": 86,
+    "actual_rows": 86,
+    "unique_canonical_paths": 86,
+    "unique_file_identities": 86,
+    "before_mismatches": 0,
+    "after_mismatches": 0,
+    "seal_bytes": 18517,
+    "seal_sha256": "9206d5b719f7edaf9be3036877814459ff02cb90a704b76452dabc13774f14a5",
+    "evidence_bytes": 16381,
+    "evidence_sha256": "c6a9195dea29c24cb56718f9513c8c51b38629c3c7d5e84c429d07fa8a900690"
+  },
+  "provided_checks": {
+    "postseal_exit": 0,
+    "mock_exit": 0,
+    "mock_checks": 62,
+    "mock_failures": 0,
+    "strict_build_exit": 0,
+    "static_analysis_exit": 0,
+    "analyzer_defects": 0,
+    "installed_imports": [
+      "bcrypt.dll",
+      "KERNEL32.dll"
+    ],
+    "v18_outputs_absent_before_and_after": true
+  },
+  "passing_findings": [
+    "four broad telemetry categories and durable stage boundaries are present",
+    "bounded sanitized exception text is implemented",
+    "retained V15 validator provenance is exact",
+    "V17 consumed status and stage-50 ambiguity are preserved",
+    "no Llama current-route claim appears in V18"
+  ],
+  "blocking_findings": [
+    {
+      "id": "RESULT_FIELD_TYPE_PREDICATES_NOT_ENFORCED",
+      "summary": "Generic truth and integer conversion are used without exact Boolean/integer type checks; the provided mock does not exercise wrong-but-convertible or non-Boolean truthy/falsey fields."
+    },
+    {
+      "id": "FUTURE_CAMERA_TIMING_SCHEMA_INCOMPLETE_AND_UNTESTED",
+      "summary": "The explicit-one-still list omits required matched conditions, pipeline timestamps, and resource/queue metadata, and PostSeal does not assert the timing schema."
+    }
+  ],
+  "quality_results_bytes": 5578,
+  "quality_results_sha256": "1d7c79465e7c6cf97b280ee62cefc222f7b059b87878c1feda914686dc85d58d",
+  "allowed_next_step": "append-only V19 static repair followed by another different local quality review",
+  "forbidden_next_step": "any V17 rerun or any V18/Python/model/GPU/synthesis/audio/playback/latency/camera/device/person/body/Blender/Sarah/production invocation"
+}

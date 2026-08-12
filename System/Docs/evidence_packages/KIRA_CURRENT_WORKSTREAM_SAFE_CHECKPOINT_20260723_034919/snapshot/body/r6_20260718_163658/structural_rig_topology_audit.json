@@ -1,0 +1,92 @@
+{
+  "adult_anatomy_attestation": {
+    "exact_sha256_bound": false,
+    "private_review_gate_passed": false
+  },
+  "anatomical_completeness_proven": false,
+  "artifact_id": "kira_provisional_body_r6_ccd3b7467452",
+  "audit_mode": "non_rendering_glb_structure_only",
+  "canonical_rig_evidence": {
+    "finger_chain_roles": [
+      "left_index",
+      "left_little",
+      "left_middle",
+      "left_ring",
+      "left_thumb",
+      "right_index",
+      "right_little",
+      "right_middle",
+      "right_ring",
+      "right_thumb"
+    ],
+    "missing_core_roles": [],
+    "raw_names_disclosed": false,
+    "recognized_roles": [
+      "head",
+      "left_foot",
+      "left_hand",
+      "left_lower_arm",
+      "left_lower_leg",
+      "left_upper_arm",
+      "left_upper_leg",
+      "neck",
+      "pelvis",
+      "right_foot",
+      "right_hand",
+      "right_lower_arm",
+      "right_lower_leg",
+      "right_upper_arm",
+      "right_upper_leg",
+      "spine"
+    ]
+  },
+  "declared_length_bytes": 5105808,
+  "glb_version": 2,
+  "humanoid_rig_structurally_ready": true,
+  "inspection_error": "",
+  "privacy": {
+    "preview_created": false,
+    "raw_node_or_material_names_disclosed": false,
+    "source_path_disclosed": false,
+    "textures_extracted": false
+  },
+  "rig_stability_attestation": {
+    "exact_sha256_bound": false,
+    "missing_or_failed_tests": [
+      "weight_deformation",
+      "shoulder_elbow_wrist",
+      "hand_and_finger",
+      "hip_knee_ankle",
+      "seated_pose",
+      "bed_pose",
+      "locomotion"
+    ]
+  },
+  "runtime_activation_allowed": false,
+  "schema_version": 1,
+  "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+  "size_bytes": 5105808,
+  "stable_working_rig_proven": false,
+  "topology_metrics": {
+    "animation_count": 4,
+    "indexed_or_sequential_triangle_count": 108080,
+    "invalid_accessor_reference_count": 0,
+    "invalid_attribute_layout_count": 0,
+    "invalid_joint_reference_count": 0,
+    "material_count": 1,
+    "maximum_joints_in_one_skin": 79,
+    "mesh_count": 1,
+    "morph_target_count": 1,
+    "node_count": 81,
+    "primitive_count": 1,
+    "referenced_position_vertex_count": 57745,
+    "skin_count": 1,
+    "triangle_element_remainder_count": 0,
+    "unique_joint_count": 79,
+    "unweighted_skinned_primitive_count": 0,
+    "weighted_primitive_count": 1,
+    "weighted_skinned_primitive_count": 1
+  },
+  "truth_note": "Static GLB structure can show meshes, weighted skinning, joints, and canonical rig roles. It cannot by itself prove likeness, deformation quality, anatomical completeness, stable motion, or permission to use the asset as a candidate body.",
+  "valid_glb": true
+}

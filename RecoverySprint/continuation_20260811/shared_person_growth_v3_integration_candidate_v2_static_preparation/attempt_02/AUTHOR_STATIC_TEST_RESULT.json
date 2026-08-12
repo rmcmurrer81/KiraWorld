@@ -1,0 +1,86 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_v2_author_static_result.v2",
+  "recorded_at_utc": "2026-08-11T07:59:17.028Z",
+  "status": "PASS_STATIC_SUCCESSOR_PENDING_DIFFERENT_FRESH_AUDIT",
+  "scope": {
+    "continuation_owner": "/root",
+    "candidate_version": "shared_growth_v3_integration_candidate_v2",
+    "attempt_01_evidence_preserved_as_incomplete_preseal_history": true,
+    "production_enabled": false,
+    "production_pointer_changed": false,
+    "registry_changed_during_authoring": false,
+    "person_or_creator_profile_changed": false,
+    "live_model_person_memory_body_media_voice_gpu_or_blender_ran": false
+  },
+  "repaired_rejection_blockers": {
+    "same_process_v1_authority_exposure": {
+      "status": "REPAIRED_AT_DISCONNECTED_STATIC_PROTOCOL_BOUNDARY",
+      "adapter_retains_authority_callback": false,
+      "adapter_retains_secret": false,
+      "adapter_retains_controller": false,
+      "adapter_retains_controller_identity": false,
+      "adapter_exposes_identity_capability": false,
+      "external_callback_supplied_separately_per_operation": true,
+      "external_callback_claimed_as_os_trust_root": false,
+      "production_opener_disconnected": true
+    },
+    "route_source_stale_digest_after_construction": {
+      "status": "REPAIRED_AT_DISCONNECTED_STATIC_PROTOCOL_BOUNDARY",
+      "stable_double_read_and_hash_at_issue_pre_and_post": true,
+      "stable_double_read_and_hash_at_stage_pre_and_post": true,
+      "stable_double_read_and_hash_at_final_commit_pre_and_post": true,
+      "stable_double_read_and_hash_at_final_readback_pre_and_post": true,
+      "inventory_reloaded_and_verified_at_every_gate": true,
+      "source_snapshot_exact_schema_and_digest_validated": true,
+      "attachment_source_binding_checked": true,
+      "output_removed_after_detected_postwrite_drift": true,
+      "external_rollback_required_after_commit_receipt": true
+    }
+  },
+  "verification": {
+    "in_memory_strict_compile": {
+      "files": 2,
+      "passed": 2,
+      "bytecode_cache_requested": false
+    },
+    "focused_v2_hostile_suite": {
+      "tests": 40,
+      "passed": 40,
+      "failed": 0,
+      "subtests_passed": 3
+    },
+    "shared_growth_v1_v2_v3_and_integration_v1_regression": {
+      "tests": 70,
+      "passed": 70,
+      "failed": 0,
+      "subtests_passed": 13
+    },
+    "current_qwen_owner_and_remaining_route_compatibility": {
+      "tests": 20,
+      "passed": 20,
+      "failed": 0,
+      "subtests_passed": 173
+    },
+    "combined_unique_pytest_result": {
+      "tests": 130,
+      "passed": 130,
+      "failed": 0,
+      "subtests_passed": 189
+    }
+  },
+  "predecessor_truth": {
+    "accepted_isolated_shared_growth_v3_preserved": true,
+    "rejected_integration_v1_preserved": true,
+    "different_fresh_rejection_audit_preserved": true,
+    "frozen_shell_sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4",
+    "model_runtime_sha256": "4fa0449b6f91b7df6f207e86d324e893ee244bce9d8d065a3d14bdc8a197f2ae"
+  },
+  "claim_limit": {
+    "isolated_v3_core_status_changed": false,
+    "integration_or_rollout_accepted": false,
+    "kira_lisa_other_people_or_creator_upgraded": false,
+    "python_callback_claimed_as_protected_external_authority": false,
+    "different_fresh_exact_byte_hostile_audit_required": true
+  },
+  "author_verdict": "SEALED_STATIC_SUCCESSOR_ONLY_PENDING_DIFFERENT_FRESH_AUDIT_NO_PROMOTION"
+}

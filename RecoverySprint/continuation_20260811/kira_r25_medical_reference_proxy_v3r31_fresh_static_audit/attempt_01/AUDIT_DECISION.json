@@ -1,0 +1,37 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r31.audit_a_rejection_decision.v1",
+  "recorded_at_utc": "2026-08-12T03:50:00Z",
+  "reviewer_id": "codex_root_v3r31_independent_reviewer",
+  "reviewer_relation": "DIFFERENT_FROM_V3R31_AUTHOR",
+  "verdict": "REJECT_AUDIT_A_NO_STAGE2_MATERIALIZATION_OR_BUILD_AUTHORITY",
+  "installed_package_exact": true,
+  "installed_subject_count": 26,
+  "installed_seal_sha256": "9ff67f49f5372e6dd5351b0dc1fa86aaced6eed5f995dc28848912493d4c0ea8",
+  "installed_subject_root_sha256": "48519db066fd4b679a74864c5c8e445875b52fd6258b26b61f2a020730a11fed",
+  "installed_all_files_root_sha256": "7119e0245298aaf0bb10b40f96a38b9f4d3d0920c9f9c3e0cc3aefb917edfff8",
+  "installed_postseal_pass": true,
+  "blocking_finding": {
+    "id": "V3R31-A01-TRANSIENT-EXTERNAL-HARDLINK-RACE",
+    "severity": "CRITICAL",
+    "source": "post_audit_native_anchor_template_v3r31.c",
+    "source_lines": [26, 27, 208, 228, 514, 515, 959, 960],
+    "claimed_property_source": "STAGE2_PROTOCOL.md",
+    "claimed_property_lines": [135, 141],
+    "finding": "The exact worker transaction DACL remains sufficient for the current owner to create a hard link to a staging file outside the protected staging directory. The outside alias can be deleted while the source remains open without delete sharing, returning the observed source link count to one between native checks.",
+    "observed": {
+      "inside_hardlink_created": true,
+      "outside_hardlink_created_while_source_open_without_delete_share": true,
+      "outside_hardlink_deleted_while_source_open_without_delete_share": true,
+      "outside_source_link_count_after_alias_delete": 1
+    },
+    "impact": "A same-user process can obtain an alias outside the protected directory, write through that alias, delete it, and restore the link count before the next check. The package therefore does not prove that Blender writes only through the intended protected staging paths/identities.",
+    "required_repair": "Append-only V3r32 must either introduce an exact design that prevents or cryptographically/transactionally detects transient external aliases under the stated same-user threat model, or narrow the threat model explicitly and receive owner approval. It may not rely only on no-delete-share handles and point-in-time link-count checks."
+  },
+  "stage2_materialization_authorized": false,
+  "native_build_authorized": false,
+  "programdata_authority_creation_authorized": false,
+  "blender_authorized": false,
+  "body_claim": false,
+  "execution_authority": "NONE",
+  "next_boundary": "APPEND_ONLY_V3R32_STATIC_REPAIR_AND_NEW_DIFFERENT_AUDIT_A"
+}

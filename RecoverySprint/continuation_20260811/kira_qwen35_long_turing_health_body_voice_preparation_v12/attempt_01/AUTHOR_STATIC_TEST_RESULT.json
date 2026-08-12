@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v12_author_static_test_result",
+  "status": "PASS_STATIC_SCHEMA_CONTROL_AUTHOR_ONLY_NO_RUN_AUTHORITY",
+  "recorded_at_utc": "2026-08-11T21:07:50.997Z",
+  "author_identity": "Codex subagent /root/long_v11_audit acting as V12 author after independent V11 rejection",
+  "scope": {
+    "workspace": "Documents/Codex/2026-08-11/c/work/long_v12_author/staging",
+    "kira_workspace_written": false,
+    "v11_or_v12_main_invoked": false,
+    "v12_configurer_invoked": false,
+    "retained_runner_invoked": false,
+    "model_gpu_camera_microphone_voice_audio_playback_invoked": false,
+    "person_or_protected_private_state_accessed": false,
+    "body_media_network_device_or_sarah_path_used": false
+  },
+  "subjects_before_author_result": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v12.py",
+      "bytes": 47129,
+      "sha256": "80a1aeb3b08dc14f92b59ade56d8f01189f1a3e920aba17135699e11d62af7b9"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v12.py",
+      "bytes": 31942,
+      "sha256": "86adaaeed92b2b6dc8d0ae55190593e7141904b4280a86873bf01b08b9f91743"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/EXECUTION_PLAN_V12.json",
+      "bytes": 11942,
+      "sha256": "206a9af9263ea2685cbb174dbe58f72b84f3d5b2a949d3fc8d85575ff20a0119"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/SOURCE_CODE_ROOT_V12.json",
+      "bytes": 1479,
+      "sha256": "febdcb20b82a13b43e99732ab0242751d61bc99ab126823876c0cae3c16a2c2c"
+    }
+  ],
+  "checks": {
+    "cache_free_pytest": "45 passed",
+    "source_and_test_compile_in_memory": "2/2",
+    "strict_plan_and_source_root_parse": "2/2",
+    "v11_author_rejection_closure_exact": "11/11",
+    "current_policy_closure_exact": "3/3",
+    "source_descriptor_bytes": 136649,
+    "source_descriptor_sha256": "1e10f44a551d3d6a788a019f8a1d72335ca663d5ca9339432a6f650143d26144",
+    "source_function_definition_count": 24,
+    "runtime_predecessor_import_count": 0,
+    "source_exports_callable_seal": false,
+    "source_exports_compiled_source_cache": false,
+    "same_metadata_hostile_code_substitution_rejected": true,
+    "mapping_replacement_rejected_by_independent_checker": true,
+    "fake_cache_injection_rejected_by_independent_checker": true,
+    "function_default_mutation_rejected_by_independent_checker": true,
+    "immutable_tuple_object_setattr_rejected": true,
+    "denial_of_denial_exact_rules": "5/5",
+    "miraculous_paris_elation_currentness_variants": "3/3",
+    "camera_closed_schema_positive_records": "OFF+ON PASS",
+    "camera_timing_fact_state_counterbalance_negatives": "PASS",
+    "mixed_event_case_kind_latency_integrity_choice_negatives": "PASS",
+    "v12_main_or_configurer_calls_in_author_tests": 0,
+    "reserved_evidence_root_absent": true,
+    "reserved_generated_root_absent": true,
+    "cache_artifact_count": 0
+  },
+  "authority": {
+    "different_fresh_exact_byte_audit_required": true,
+    "v12_static_schema_or_control_accepted": false,
+    "live_execution_authorized": false,
+    "separate_append_only_executor_successor_required_after_acceptance": true,
+    "one_hour_camera_mixed_initiative_model_voice_or_latency_result_exists": false,
+    "technical_pass_proves_consciousness_emotion_personhood_or_truthfulness": false,
+    "body_or_anatomy_claim": "NONE"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v8.author_static_test_result.v1",
+  "recorded_local": "2026-08-11T20:56:47-04:00",
+  "verdict": "PASS_STATIC_AUTHOR_PACKAGE_UNPROMOTED_PENDING_EXACT_KIRA_INSTALL_AND_DIFFERENT_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v8.py",
+      "bytes": 57134,
+      "sha256": "cc33886aedd81f7d73fcc50b8992811976d54b4dfc566553646bc67b2f56000c"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v8.py",
+      "bytes": 51307,
+      "sha256": "f22e5722e65096172f5b514195c8e026e9cb64027426fa53b4ca35d8d974b1c8"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v8_static_preparation/attempt_01/STATIC_CONTRACT.json",
+      "bytes": 6262,
+      "sha256": "71aaef4c71098d70a4acbfabdcad289d608a0ee039d4e6b8161c4467b2a0c343"
+    }
+  ],
+  "focused_suite": {
+    "command": "python -m pytest -q Testing/test_shared_person_growth_v3_integration_candidate_v8.py",
+    "exit_code": 0,
+    "tests_passed": 34,
+    "subtests_passed": 103,
+    "failures": 0,
+    "elapsed_seconds": 2.57,
+    "python_bytecode_disabled": true,
+    "pytest_cacheprovider_disabled": true,
+    "temporary_prefix_count_before": 0,
+    "temporary_prefix_count_after": 0
+  },
+  "real_layout_current_aggregate": {
+    "uses_real_kira_closure": true,
+    "virtual_kira_parent_is_outside_real_kira": true,
+    "closure_double_read_equal": true,
+    "closure_rows": 15,
+    "inventory_people": 24,
+    "applicable_routes": 35,
+    "catalog_entries": 2,
+    "legacy_live_code_hits": 6,
+    "legacy_live_code_expected_exact_files": 6,
+    "unexpected_core_testing_tools_or_temporaryai_hits": 0,
+    "unexpected_path_negative_control": "production_consumer_candidate",
+    "v7_nested_fixture_negative_control": "production_consumer_candidate",
+    "v7_negative_fixture_cleaned": true,
+    "v8_fixture_cleaned": true,
+    "candidate_three_subject_root_sha256": "ebc9bbac201eef5ce4245a12d171a9bc979e61168b3c8d635c10fc17c74ebdd0",
+    "bound_closure_root_sha256": "12518edc448b8f2d31df4f4b591c78d9b9adead28a1edfdac263f707bbd4668f"
+  },
+  "immutable_v5_historical_result": {
+    "command": "python -m pytest -q Testing/test_shared_person_growth_v3_integration_candidate_v5.py::SharedGrowthV3IntegrationCandidateV5Tests::test_25_consumer_scan_classifies_preserved_audit_references",
+    "exit_code": 1,
+    "result": "EXPECTED_HISTORICAL_FAILURE_NOT_A_PASS",
+    "failed_tests": 1,
+    "elapsed_seconds": 34.17,
+    "exact_unexpected_hit_under_obsolete_predicate": "Core/shared_person_growth_v3_integration_candidate_v6.py",
+    "immutable_test_modified": false,
+    "replacement_predicate_required": true
+  },
+  "scanner_and_ast_checks": {
+    "source_contiguous_v5_v6_v7_scanner_needles": 0,
+    "test_contiguous_v5_v6_v7_scanner_needles": 0,
+    "source_ast_parse": "PASS",
+    "test_ast_parse": "PASS",
+    "predecessor_compiler_imports": 0,
+    "predecessor_compiler_calls": 0,
+    "strict_compile_files": 2
+  },
+  "current_route_source_successor": {
+    "path": "tools/kira_world_shell_server.py",
+    "current_bytes": 607036,
+    "current_sha256": "68edc7c34a0d0edaf1033b7bf7fecdcabb39ae6c6d678fbe13de224a14992810",
+    "inventory_predecessor_sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4",
+    "permanent_routes_using_exact_successor": ["permanent:kira", "permanent:lisa"],
+    "current_and_inventory_digests_reported_separately": true,
+    "all_other_route_sources_still_require_inventory_digest_exactly": true
+  },
+  "semantic_results": {
+    "all_35_applicable_existing_person_routes_compile": true,
+    "all_24_people_represented": true,
+    "cross_binding_mutations_refused": 105,
+    "peter_parker_and_spider_gwen_repairs_present": 4,
+    "creator_caller_free_text_or_person_payload_allowed": false,
+    "private_payloads_copied": false,
+    "biological_robert_is_synthetic_robert": false,
+    "variant_source_alive_at_cutoff_required": true,
+    "branch_before_future_fatal_event_required": true,
+    "fatal_event_or_terminal_trauma_memory_inherited": false,
+    "later_fatal_information_voluntary_warned_consented_paced_stoppable_supported": true,
+    "writer_commit_callback_controller_or_person_mutation_surface": false,
+    "production_openers_hard_refuse": true
+  },
+  "author_iteration_record": {
+    "initial_v8_fixture_repair_pass": "34 passed and 102 subtests passed",
+    "concurrent_current_shell_update_observed": "camera chat-busy and exact voice-pipeline contention repairs advanced the exact shell route source twice during authoring",
+    "fail_closed_observation_before_successor_binding": "7 failed and 29 passed with 100 subtests passed because the inventory predecessor digest no longer matched the current shell bytes",
+    "repair": "bind one exact path and predecessor digest to the final frozen current shell successor while keeping all other route digests closed",
+    "final_result": "34 passed and 103 subtests passed"
+  },
+  "authority_boundary": {
+    "author_pass_is_acceptance": false,
+    "exact_kira_install_performed": false,
+    "different_fresh_audit_required": true,
+    "production_integration_authorized": false,
+    "person_or_temporary_creator_upgraded": false,
+    "person_profile_memory_relationship_or_private_state_changed": false,
+    "live_person_model_body_media_voice_camera_network_device_or_sarah_operation_performed": false
+  }
+}

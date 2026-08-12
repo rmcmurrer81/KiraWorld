@@ -1,0 +1,74 @@
+{
+  "schema": "kira.r25.afes.python_controller_validation.v3r20.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T10:27:11.8795146Z",
+  "reviewer_task": "/root/body_v3r20_audit",
+  "evidence_transcribed_by": "/root",
+  "decision": "REJECTED_NO_EXECUTION_AUTHORITY",
+  "accepted_static_only": false,
+  "bounded_run_authorized": false,
+  "candidate_invoked": false,
+  "audit_transcript": {
+    "path": "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r20_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "bytes": 4841,
+    "sha256": "790b122d1eb135754b78673b57fa74e48babf0bec4b5e07498015b95bd7a1273",
+    "sidecar_bytes": 65,
+    "sidecar_file_sha256": "711db9924daf28ff525f2d3e6c86dc91b115f645cf998813881aaeb2cb90124f",
+    "line_count": 55,
+    "lf_only": true,
+    "cr_or_nul_count": 0
+  },
+  "seal": {
+    "subjects_exact": 76,
+    "subjects_unique": 76,
+    "subjects_drifted": 0,
+    "manifest_bytes": 36152,
+    "manifest_sha256": "3dacef076bc0046cd42c1fdbe34f331e391177776125efb146465801fcbf13c2"
+  },
+  "positive_checks": {
+    "strict_independent_msvc_rebuild": "PASS",
+    "strict_flags": "/W4 /WX /O2 /MT /guard:cf /std:c17",
+    "sealed_and_rebuilt_pe": "x64_PE32+_HIGH_ENTROPY_ASLR_NX_CFG",
+    "imports": ["bcrypt.dll", "KERNEL32.dll"],
+    "v3r19_zero_identity_failure_reproduced_natively": true,
+    "v3r20_capture_and_bound_split": "PASS",
+    "zero_or_wrong_identity_refused": true,
+    "failed_hash_does_not_mutate_identity_output": true,
+    "audit_nul_cr_extra_tab_and_noncanonical_forms_refused": true
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V3R20_RESERVATION_MAGIC_LITERAL_OVERREAD",
+      "source_line": 851,
+      "diagnostic": "C6385",
+      "reproduction": "memcpy requests 34 bytes from a 31-character reservation literal whose readable object is 32 bytes including NUL, reading two bytes beyond the object into durable receipt magic."
+    },
+    {
+      "id": "BLOCK_V3R20_TERMINAL_MAGIC_LITERAL_OVERREAD",
+      "source_line": 894,
+      "diagnostic": "C6385",
+      "reproduction": "memcpy requests 31 bytes from a 28-character terminal literal whose readable object is 29 bytes including NUL, reading two bytes beyond the object into durable receipt magic."
+    }
+  ],
+  "sealed_layout_confirmation": {
+    "reservation_literal_file_offset": 138696,
+    "reservation_character_bytes": 31,
+    "reservation_following_bytes_hex": "00 4b 49 52",
+    "terminal_literal_file_offset": 138728,
+    "terminal_character_bytes": 28,
+    "terminal_following_bytes_hex": "00 00 00"
+  },
+  "additional_analyze_guidance": {
+    "C6262": "heap-allocate the two 32768-wide-character buffers",
+    "C6054": "make exact_final_path termination explicit even though the current bounded copy includes NUL",
+    "C6387": "use one valid_handle helper requiring non-NULL and non-INVALID_HANDLE_VALUE",
+    "v3r21_requirement": "MSVC /analyze with zero unsuppressed warnings"
+  },
+  "scope_truth": {
+    "python_or_controller_calls": 0,
+    "plan_or_process_calls": 0,
+    "afes_or_blender_calls": 0,
+    "body_save_render_or_export_calls": 0,
+    "body_or_anatomy_result": false
+  },
+  "required_next_step": "Preserve V3r20 and this rejection. Repair append-only as V3r21 with sizeof(literal)-1 safe magic copies, static size assertions, clean heap/handle/path analysis, mandatory zero-warning /analyze, a new exact seal, and another different fresh audit before any run."
+}

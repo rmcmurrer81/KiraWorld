@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v18_external_source_code_root",
+  "status": "STATIC_EXTERNAL_ROOT_NO_RUNTIME_OR_LIVE_AUTHORITY",
+  "python": {
+    "implementation": "cpython",
+    "version": "3.14.4",
+    "cache_tag": "cpython-314",
+    "optimize": 0
+  },
+  "source": {
+    "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py",
+    "bytes": 70741,
+    "sha256": "f47fbdd41ccbb867333ea3ced1d67868c1d905610b54ac2fead34723b8aa0c1b"
+  },
+  "test": {
+    "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py",
+    "bytes": 21741,
+    "sha256": "7f413662cee824dd36d7422e078b8c0dad8c0e0fbd01a4b35dce0d46a653956d"
+  },
+  "plan": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/EXECUTION_PLAN_V18.json",
+    "bytes": 15222,
+    "sha256": "a2e834c18f502dedd573f229f8654bbd9c819b132b94d046e07c84e1a2af2bf5"
+  },
+  "descriptor": {
+    "schema": "v18_exact_source_code_defaults_closures_globals_imports_classes",
+    "function_definition_count": 45,
+    "class_definition_count": 1,
+    "global_assignment_count": 22,
+    "import_ast_count": 10,
+    "bytes": 201804,
+    "sha256": "f03cb376805381aad2e573a3f713759bbbf27ab29956aa5753ad5907e6227031"
+  },
+  "semantic_verifier_bundle": {
+    "schema": "v18_immutable_semantic_family_inventory_and_callable_code_bundle",
+    "bytes": 8737,
+    "sha256": "b11c85be1b0b99d3805f5cf5acaecd8646a744b70ff42511839021854a517b75"
+  },
+  "installed_v17_source_binding": {
+    "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v17.py",
+    "bytes": 140217,
+    "sha256": "ac9f74b3e50f9a7fec0c65eeb6c219d46194c28e5b242be72374338ceeb293ec",
+    "descriptor_bytes": 365656,
+    "descriptor_sha256": "fbe377325f60193763d5bfa086830e03b9d1248ce0a47ffdb4640b65af671b55"
+  },
+  "trust_boundary": {
+    "descriptor_recomputed_from_exact_source_without_persistent_cache": true,
+    "compiled_module_and_nested_code_bound": true,
+    "function_signatures_defaults_annotations_decorators_bound": true,
+    "top_level_global_assignment_import_and_class_ast_bound": true,
+    "semantic_family_inventory_and_critical_callable_code_externally_bound": true,
+    "runtime_mutable_module_dictionary_or_cached_predecessor_module_is_not_a_trust_root": true,
+    "event_provenance_expected_root_must_come_from_a_separate_external_native_append_only_ledger": true,
+    "durable_choice_consumption_requires_a_separate_external_native_one_use_store": true,
+    "different_audit_must_recompute_descriptor_and_semantic_bundle_independently": true,
+    "same_process_self_authentication_against_arbitrary_rewrite_claimed": false,
+    "future_executor_requires_separate_external_or_native_binding": true,
+    "live_execution_authorized": false
+  }
+}

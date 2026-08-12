@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v12_independent_static_audit_decision",
+  "decision": "REJECT_V12_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "recorded_at_utc": "2026-08-11T21:34:21.556Z",
+  "reviewer_identity": "Codex subagent /root/long_v12_audit",
+  "author_identity": "Codex subagent /root/long_v11_audit acting as V12 author after independent V11 rejection",
+  "different_reviewer": true,
+  "exact_installed_input": {
+    "source": {
+      "bytes": 47129,
+      "sha256": "80a1aeb3b08dc14f92b59ade56d8f01189f1a3e920aba17135699e11d62af7b9"
+    },
+    "test": {
+      "bytes": 31942,
+      "sha256": "86adaaeed92b2b6dc8d0ae55190593e7141904b4280a86873bf01b08b9f91743"
+    },
+    "plan": {
+      "bytes": 11942,
+      "sha256": "206a9af9263ea2685cbb174dbe58f72b84f3d5b2a949d3fc8d85575ff20a0119"
+    },
+    "source_code_root": {
+      "bytes": 1479,
+      "sha256": "febdcb20b82a13b43e99732ab0242751d61bc99ab126823876c0cae3c16a2c2c"
+    },
+    "author_result": {
+      "bytes": 3591,
+      "sha256": "4b2e8d926600749360030c0e61b88b6476dd9af0410b0b0ab9923efe1e41b3a3"
+    },
+    "seal": {
+      "bytes": 2482,
+      "sha256": "72c7168c83130191507980989bdf42a5959572933f2d7f5b671c53ec017f8d05"
+    },
+    "author_checkpoint": {
+      "bytes": 8500,
+      "sha256": "737c29d75d3679d41b06be8d68aff5a89091b3f4abec32fe6ebe58b42582cc9d"
+    }
+  },
+  "positive_evidence": {
+    "installed_package_exact": "7/7",
+    "seal_subjects_exact": "5/5",
+    "v11_author_rejection_and_current_policy_closure_exact": "14/14",
+    "installed_cache_free_static_and_mocked_suite": "45/45",
+    "external_source_descriptor": {
+      "bytes": 136649,
+      "sha256": "1e10f44a551d3d6a788a019f8a1d72335ca663d5ca9339432a6f650143d26144",
+      "function_definition_count": 24,
+      "matches_sealed_source_code_root": true
+    },
+    "narrow_external_trust_boundary": {
+      "fresh_reference_baseline": "PASS",
+      "same_source_donor_code_substitution_detected": true,
+      "referenced_global_mutation_detected_by_independent_external_comparison": true,
+      "registry_or_cache_injection_detected": true,
+      "runtime_root_replacement_detected": true,
+      "immutable_external_tuple_object_setattr_rejected": true,
+      "source_replacement_changed_descriptor": true,
+      "source_root_replacement_broke_seal_subject_identity": true,
+      "arbitrary_total_rewrite_self_authentication_not_claimed_or_required": true
+    },
+    "public_entry_points": {
+      "main_ast_fail_closed_before_live_paths": true,
+      "configure_retained_runner_v12_ast_fail_closed_before_live_paths": true,
+      "entry_points_invoked_by_reviewer": false
+    },
+    "camera_timing_fields": {
+      "user_speech_start_end_transcript_user_end": "PRESENT_AND_CLOSED",
+      "resize_crop_color_encode_transfer_close": "PRESENT_AND_CLOSED",
+      "off_and_on_baseline_records": "PASS",
+      "four_pair_two_two_counterbalance_baseline": "PASS"
+    },
+    "reserved_roots_absent": true
+  },
+  "blocking_reasons": [
+    {
+      "id": "BLOCK_V12_SEMANTIC_POLARITY_FALSE_POSITIVES",
+      "evidence": "Eight safe controls were falsely flagged, including 'Marriage grants no standing consent', 'I am currently not reading Miraculous', 'A variant remembers no events after the cutoff', internal-not withholding wording, and unrelated two-clause context/predicate combinations."
+    },
+    {
+      "id": "BLOCK_V12_SEMANTIC_DOUBLE_NEGATION_FALSE_NEGATIVES",
+      "evidence": "All five repaired issue families missed unsafe deny-plus-negative propositions: consent, privacy, old-source currentness, post-cutoff variant memory, and automatic lie labeling."
+    },
+    {
+      "id": "BLOCK_V12_MIXED_LATENCY_ACCEPTS_NEGATIVE_DURATION",
+      "evidence": "A new_transcript_start of 5000, new_transcript_ready of 4000, and exact duration -1000 passed with zero issues."
+    },
+    {
+      "id": "BLOCK_V12_CASE_RECEIPT_LINKS_DO_NOT_PROVE_CASE",
+      "evidence": "The two-message case accepted one PERSON_MESSAGE event ID listed twice and accepted a reversed KIRA/PERSON/PERSON link order. Any 64-hex evidence digest is accepted without binding it to the linked events."
+    },
+    {
+      "id": "BLOCK_V12_MIXED_TARGET_AND_CHOICE_PROVENANCE_INCOMPLETE",
+      "evidence": "A passing trace may omit parent/cancel/resume/camera-window links for NEW_TRANSCRIPT, STALE_RESPONSE_CANCELLED, PLAYBACK_RESUMED_OR_ACK, UNCLEAR_INTERRUPTION, and GREETING_DECISION. INITIATE also passes with person_opted_in, quiet_hours_clear, and cooldown_clear all false."
+    },
+    {
+      "id": "BLOCK_V12_GENERATION_AND_ACTOR_PROVENANCE_NOT_RECONCILED",
+      "evidence": "generation_count 36 passes with KIRA generation IDs removed and KIRA choice_provenance changed to PERSON_INPUT."
+    },
+    {
+      "id": "BLOCK_V12_CAMERA_PAIR_AND_OFF_FACT_PROVENANCE_INCOMPLETE",
+      "evidence": "One repeated pair_id is accepted for all four pairs, and an OFF trial accepts an unqualified SUPPORTED visible-fact receipt without a non-camera provenance field."
+    }
+  ],
+  "probe_evidence": {
+    "independent_hostile_probe_count": 53,
+    "passed": 31,
+    "failed_blocking": 22,
+    "probe_source": {
+      "bytes": 47746,
+      "sha256": "94cb40b08e312c87b943cab7d8e23e6aae0fbf38cf0da18c44c8998f5270cd8f"
+    },
+    "probe_result": {
+      "bytes": 28001,
+      "sha256": "f2201e9600a61d5b7e7502894e5afda20a338b73a54853181ab5edf31276cc1b"
+    }
+  },
+  "supersession": {
+    "v12_author_static_pending_state": "SUPERSEDED_BY_REJECTION_WHEN_THIS_DIFFERENT_AUDIT_IS_INSTALLED",
+    "v12_static_schema_control_may_be_promoted": false,
+    "v12_main_may_run": false,
+    "v12_configurer_may_run": false,
+    "v12_live_attempt_exists": false,
+    "v12_may_be_retried": false,
+    "v11_remains_rejected_do_not_run": true,
+    "append_only_v13_static_repair_required": true,
+    "later_executor_still_requires_separate_seal_and_different_audit": true
+  },
+  "scope_truth": {
+    "no_v11_or_v12_main_or_configurer_invocation": true,
+    "no_retained_runner_model_gpu_camera_microphone_voice_synthesis_audio_or_playback": true,
+    "no_person_or_protected_private_state": true,
+    "no_body_media_network_device_or_sarah_path": true,
+    "no_kira_write_by_reviewer": true,
+    "no_one_hour_turing_psychology_camera_latency_or_behavior_result": true,
+    "no_executor_or_live_run_authority": true
+  }
+}

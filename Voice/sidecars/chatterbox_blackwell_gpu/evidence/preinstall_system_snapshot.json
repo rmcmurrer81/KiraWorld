@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-08-01T07:50:53.551511+00:00",
+  "purpose": "pre-install baseline for additive official Blackwell Chatterbox sidecar",
+  "global_python": {
+    "executable": "C:\\Python314\\python.exe",
+    "version": "3.14.4",
+    "unchanged_required": true
+  },
+  "new_environment_python": {
+    "source_executable": "C:\\Users\\robmc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "required_version": "3.11.9"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5060 Ti",
+    "memory_total_mib": 16311,
+    "memory_free_mib": 14284,
+    "memory_used_mib": 1767,
+    "driver_version": "610.47",
+    "compute_capability": "12.0",
+    "driver_supported_cuda": "13.3",
+    "nvidia_smi_sha256": "4acf677c5ceca01b26f81147b60f1b103b55037883e4077d117e28fa402604fe"
+  },
+  "system_memory": {
+    "total_physical_mib": 32163.4,
+    "free_physical_mib": 20553.8,
+    "memory_load_percent": 36
+  },
+  "ollama_models_before_install": [],
+  "cpu_sidecar": {
+    "path": "Voice/sidecars/chatterbox_py311",
+    "non_venv_file_count": 10,
+    "non_venv_files": [
+      {
+        "path": "Voice/sidecars/chatterbox_py311/.gitignore",
+        "bytes": 36,
+        "sha256": "6a35fae688655f33dd9022bcf8a0a48059aa7a3f8806e0f0bb985e424a01ae4b"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/evidence/chatterbox_install_report.raw.json",
+        "bytes": 1297363,
+        "sha256": "626b1d616a8f7d3470a8c299990a81576f9c9d055d48628eb3f86b9db2b4937c"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/evidence/dependency_manifest.json",
+        "bytes": 71460,
+        "sha256": "bc0610b0295f290f5918db833a9897d8932643074a867678f5e119a8ab641120"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/evidence/dependency_manifest.sha256",
+        "bytes": 92,
+        "sha256": "97327b01cae5049ff32e7952ff23a3c82e6e708454f8cb0a903e6deebe26ac6e"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/evidence/resource_install_report.raw.json",
+        "bytes": 26343,
+        "sha256": "e8599a540595e34c5962b69bc9b8c03a468e9d54e81e2ba6c23c2b5eaf3287f2"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/evidence/torch_install_report.raw.json",
+        "bytes": 95817,
+        "sha256": "bc850991946889efd3dd0b7c1a9645382ff0ce1164a6b983d598e4c485f746ea"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/README.md",
+        "bytes": 1588,
+        "sha256": "3ac86c38e34e2ddc4729ecf619f94e6a422c56b5f3dd7fb23b77d9720c5c52d2"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/requirements.lock.txt",
+        "bytes": 2179,
+        "sha256": "9328c4ae58b6848a5a2dcd8c6a718d48d29c701552e74f4d518779df12545f94"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/sidecar_config.json",
+        "bytes": 1247,
+        "sha256": "b84ca1fb80b01d697115d2f0ce83a3f7f0b99e8251d5ad1db4bc4db3244eeebf"
+      },
+      {
+        "path": "Voice/sidecars/chatterbox_py311/sidecar_worker.py",
+        "bytes": 17072,
+        "sha256": "856c195173f8932f1b9d731634290f9eb78bb543e90da37c1346160e45334f46"
+      }
+    ],
+    "non_venv_manifest_sha256": "0ec2782164604dab0ac1fdec241b7dc18b72a4ba927f08a06f32a440834d310b",
+    "pip_freeze_sha256": "7e65adb6821fdad9135726a0abfd2a9aff290bc370310be05f84b4b33c30db19",
+    "pip_freeze_line_count": 113,
+    "versions": {
+      "python": "3.11.9",
+      "base_executable": "C:\\Users\\robmc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "torch": "2.6.0+cu124",
+      "torchaudio": "2.6.0+cu124",
+      "chatterbox": "0.1.7"
+    },
+    "self_check": {
+      "chatterbox_version": "0.1.7",
+      "model_loaded": false,
+      "playback": false,
+      "process_seconds": 0.012,
+      "python_version": "3.11.9",
+      "ready": true,
+      "reason": "sealed_sidecar_ready",
+      "reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+      "resources": {
+        "baseline_gpu_vram_used_mib": 1768.0,
+        "gpu_probe_errors": [],
+        "peak_gpu_vram_used_mib": 1768.0,
+        "peak_process_rss_mib": 24.9,
+        "peak_sidecar_gpu_delta_mib": 0.0,
+        "peak_system_ram_used_mib": 11647.7,
+        "sample_count": 2
+      },
+      "sidecar_id": "kira_chatterbox_py311_0_1_7"
+    }
+  },
+  "approved_voice": {
+    "profile": "Voice/profiles/temp_ai/kira_voice_profile.json",
+    "profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+    "reference": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+    "reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c"
+  },
+  "constraints": {
+    "cpu_sidecar_must_remain_runnable": true,
+    "global_python_must_remain_unchanged": true,
+    "official_stable_packages_only": true,
+    "nightly_allowed_in_this_environment": false,
+    "qwen_or_blender_or_studio_concurrent": false
+  }
+}

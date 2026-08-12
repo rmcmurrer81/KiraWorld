@@ -1,0 +1,115 @@
+{
+  "environment_id": "qwen3_tts_voice_forge_isolated_windows_blackwell_v2",
+  "status": "SPECIFIED_NOT_CREATED_OR_ACCEPTED",
+  "network_boundary": "OFFLINE_FLAGS_ONLY_NO_PROCESS_LEVEL_NETWORK_DENIAL",
+  "python": {
+    "version": null,
+    "executable_path": "Voice/sidecars/qwen3_tts_voice_forge_v2/.venv/Scripts/python.exe",
+    "executable_sha256": null
+  },
+  "site_packages_inventory": {
+    "status": "PENDING_COMPLETE_EXACT_TRANSITIVE_AND_LOOSE_FILE_INVENTORY",
+    "root": "Voice/sidecars/qwen3_tts_voice_forge_v2/.venv/Lib/site-packages",
+    "manifest_path": null,
+    "manifest_sha256": null,
+    "complete_file_inventory": false,
+    "all_distributions_and_loose_files_declared": false
+  },
+  "distributions": {
+    "qwen-tts": {
+      "version": "0.1.1",
+      "record_path": null,
+      "record_sha256": null
+    },
+    "transformers": {
+      "version": "4.57.3",
+      "record_path": null,
+      "record_sha256": null
+    },
+    "accelerate": {
+      "version": "1.12.0",
+      "record_path": null,
+      "record_sha256": null
+    },
+    "torch": {
+      "version": null,
+      "record_path": null,
+      "record_sha256": null,
+      "wheel_filename": null,
+      "wheel_sha256": null,
+      "wheel_evidence_path": null
+    },
+    "torchaudio": {
+      "version": null,
+      "record_path": null,
+      "record_sha256": null,
+      "wheel_filename": null,
+      "wheel_sha256": null,
+      "wheel_evidence_path": null
+    },
+    "faster-whisper": {
+      "version": null,
+      "record_path": null,
+      "record_sha256": null
+    },
+    "speechbrain": {
+      "version": null,
+      "record_path": null,
+      "record_sha256": null
+    }
+  },
+  "cuda": {
+    "torch_cuda_build": null,
+    "device_name": "NVIDIA GeForce RTX 5060 Ti",
+    "compute_capability": [12, 0],
+    "required_arch": "sm_120",
+    "ordinary_eager_matrix_expected": [[19.0, 22.0], [43.0, 50.0]],
+    "unsupported_architecture_warning_allowed": false
+  },
+  "runtime": {
+    "ordinary_eager_cuda": true,
+    "attention_implementation": "sdpa",
+    "torch_compile": false,
+    "triton_required": false,
+    "flash_attention_required": false,
+    "local_model_snapshots_only": true
+  },
+  "speech_evaluators": {
+    "status": "PENDING_EXACT_LOCAL_ASR_SPEECH_AND_SPEAKER_EMBEDDING_ACCEPTANCE",
+    "asr_engine": null,
+    "asr_version": null,
+    "asr_model_path": null,
+    "asr_model_manifest_path": null,
+    "asr_model_manifest_sha256": null,
+    "speaker_embedding_engine": null,
+    "speaker_embedding_version": null,
+    "speaker_model_path": null,
+    "speaker_model_manifest_path": null,
+    "speaker_model_manifest_sha256": null,
+    "speaker_input_sample_rate_hz": 16000,
+    "speaker_resampling_method": "TORCHAUDIO_FUNCTIONAL_RESAMPLE_FLOAT32_V1",
+    "speech_classifier_engine": null,
+    "speech_classifier_version": null,
+    "speech_classifier_adapter_path": null,
+    "speech_classifier_adapter_sha256": null,
+    "speech_classifier_model_path": null,
+    "speech_classifier_model_manifest_path": null,
+    "speech_classifier_model_manifest_sha256": null
+  },
+  "identity_analyzer": {
+    "status": "PENDING_EXACT_LOCAL_NER_AND_IMITATION_ANALYZER_ACCEPTANCE",
+    "engine": null,
+    "version": null,
+    "adapter_path": null,
+    "adapter_sha256": null,
+    "model_path": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null
+  },
+  "must_not_reuse_or_modify": [
+    "Voice/sidecars/chatterbox_blackwell_gpu/.venv",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate/.venv",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/.venv",
+    "Voice/sidecars/chatterbox_py311/.venv"
+  ]
+}

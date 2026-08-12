@@ -1,0 +1,162 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r27.contract.v1",
+  "version": "V3r27",
+  "author": "codex_r25_medical_reference_proxy_v3r27_static_author",
+  "status": "STATIC_AUTHOR_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "execution_authority": "NONE",
+  "candidate_invoked": false,
+  "purpose": "smallest_separable_isolated_pelvic_core_reference_proxy_build_save_reload_render_evidence_step",
+  "upstream": {
+    "closure_manifest": "UPSTREAM_CLOSURE.tsv",
+    "rows": 24,
+    "v3r26_author_rows": 10,
+    "v3r26_audit_rows": 6,
+    "v3r26_run_rows": 4,
+    "anatomy_triage_rows": 3,
+    "anatomy_triage_root_rows": 1,
+    "v3r26_authority": "CONSUMED_SUCCESS_DO_NOT_RERUN_V3R26",
+    "v3r26_truth": "PURE_PLAN_CONTROL_LAYER_ACCEPTED_BY_CONSUMED_RUN_NOT_A_BODY"
+  },
+  "licensed_reference_boundary": {
+    "allowed_stage_a_references": [
+      "mri_pelvis_cc_by",
+      "female_repro_urinary_cc_by"
+    ],
+    "separate_mapping_reference": "skeleton_rig_cc_by",
+    "proportion_cross_check_reference": "female_skeleton_cc_by",
+    "noncommercial_quarantine": ["female_body_cc_by_nc"],
+    "unknown_license_quarantine": ["bones_muscle_unknown", "female_anatomy_unknown"],
+    "source_mesh_import_permitted": false,
+    "source_topology_copy_permitted": false,
+    "source_binary_redistribution_permitted": false,
+    "attribution_required": true
+  },
+  "stage_a": {
+    "name": "ISOLATED_NORMALIZED_KIRA_RELATIVE_PELVIC_CORE_REFERENCE_PROXY",
+    "proxy_component_ids": [
+      "pelvic_reference_envelope",
+      "bladder_proxy",
+      "uterus_proxy",
+      "uterine_tube_left_proxy",
+      "uterine_tube_right_proxy",
+      "ovary_left_proxy",
+      "ovary_right_proxy",
+      "rectum_reference_proxy",
+      "vulvar_region_reference_proxy"
+    ],
+    "proxy_object_count_exact": 9,
+    "total_vertex_maximum": 12000,
+    "material_maximum": 6,
+    "coordinate_truth": "NORMALIZED_PRIOR_FRAME_NOT_YET_FITTED_TO_KIRA_OUTER_BODY",
+    "build_new_primitives_only": true,
+    "save_blend": true,
+    "reload_saved_blend": true,
+    "render_views": [
+      "front_clinical",
+      "right_clinical",
+      "iso_clinical",
+      "iso_xray"
+    ],
+    "render_resolution": [640, 640],
+    "external_file_dependencies_in_saved_blend": 0,
+    "stop_after": "saved_blend_reloaded_four_clinical_renders_and_durable_outcome",
+    "explicitly_forbidden": [
+      "AFES",
+      "bootstrap",
+      "broker",
+      "child_process",
+      "source_asset_import",
+      "source_mesh_copy",
+      "live_Kira_body_edit",
+      "live_avatar_link",
+      "rig_edit",
+      "weight_edit",
+      "animation",
+      "export",
+      "activation",
+      "production_Avatar_Builder_promotion",
+      "voice",
+      "camera_capture",
+      "network",
+      "Sarah"
+    ]
+  },
+  "skeleton_boundary": {
+    "source_bones": 136,
+    "mapped_bones": 0,
+    "plan": "SKELETON_136_MAPPING_PLAN.tsv",
+    "required_separate_evidence": [
+      "parent_hierarchy",
+      "head_tail_positions",
+      "bilateral_symmetry",
+      "mesh_weight_groups",
+      "rest_pose",
+      "proportion_cross_check",
+      "deformation_test"
+    ],
+    "stage_a_use": "NONE"
+  },
+  "output_boundary": {
+    "fixed_root": "RecoverySprint/continuation_20260811/kira_r25_medical_reference_proxy_v3r27_static_preparation/attempt_01",
+    "attempt_receipt": "V3R27_ATTEMPT_CONSUMED.receipt.json",
+    "evidence": "RUN_EVIDENCE.jsonl",
+    "outcome": "RUN_OUTCOME.json",
+    "blend": "outputs/kira_v3r27_pelvic_core_reference_proxy.blend",
+    "renders": [
+      "outputs/front_clinical.png",
+      "outputs/right_clinical.png",
+      "outputs/iso_clinical.png",
+      "outputs/iso_xray.png"
+    ],
+    "all_must_be_absent_before_reservation": true,
+    "reservation_creation": "EXCLUSIVE_CREATE_AND_FSYNC",
+    "success_failure_or_ambiguity_consumes_authority": true,
+    "rerun_permitted": false
+  },
+  "different_audit_boundary": {
+    "required_fixed_directory": "RecoverySprint/continuation_20260811/kira_r25_medical_reference_proxy_v3r27_fresh_static_audit/attempt_01",
+    "required_files": ["INDEPENDENT_AUDIT.tsv", "INDEPENDENT_AUDIT.sha256", "CHECKPOINT.md"],
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_STAGE_A_REFERENCE_PROXY_BUILD_SAVE_RELOAD_RENDER_V3R27_ONLY",
+    "maximum_invocations": 1,
+    "auditor_must_differ_from_author": true,
+    "audit_must_bind_exact_package_seal": true,
+    "this_author_package_grants_execution": false
+  },
+  "appearance_and_ram_policy": {
+    "regional_materials_required_later": [
+      "individual_skin_base",
+      "lips",
+      "areolae_and_nipples",
+      "other_anatomically_distinct_regions_as_individually_appropriate"
+    ],
+    "Kira_lower_memory_bald_variant": "PRESERVE_AS_ONLY_POSSIBLE_CURRENT_ACTIVATION_CANDIDATE_AFTER_SEPARATE_ACCEPTANCE",
+    "Kira_hair_variant": "PRESERVE_SEPARATELY_INACTIVE_UNTIL_RAM_UPGRADE_AND_RETEST",
+    "Synthetic_Robert_lower_memory_bald_variant": "SAME_POLICY",
+    "other_synthetic_people_hair_variants": "BUILDABLE_BUT_INACTIVE_AND_MINIMALLY_TESTED_UNTIL_RAM_UPGRADE"
+  },
+  "claim_boundary": {
+    "stage_a_future_success_may_claim": "isolated_normalized_clinical_reference_proxy_scene_built_saved_reloaded_and_rendered",
+    "stage_a_future_success_may_not_claim": [
+      "Kira_has_a_complete_body",
+      "internal_anatomy_complete",
+      "external_anatomy_complete",
+      "functional_organs",
+      "physiology",
+      "sensation",
+      "rig_or_deformation_acceptance",
+      "production_material_or_pigmentation_acceptance",
+      "hair_acceptance",
+      "activation",
+      "Avatar_Builder_promotion"
+    ],
+    "full_body_claim_requires": [
+      "complete_geometry_evidence",
+      "rig_weight_and_deformation_evidence",
+      "production_material_and_regional_pigmentation_evidence",
+      "saved_blend_reload_evidence",
+      "independent_render_evidence",
+      "separate_activation_acceptance"
+    ]
+  },
+  "sarah": "PRESERVE_CURRENT_FILES_DO_NOT_INSPECT_EDIT_TEST_OR_RESUME"
+}

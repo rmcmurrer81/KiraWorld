@@ -2348,3 +2348,161 @@ Exact root checkpoint: 4,043 bytes, SHA-256
   every person's private and identity-specific state.
 - Exact criteria document: 5,704 bytes, SHA-256
   `eaef5f65de2642ac88ecf0186e023321d3e7f650886f48665404ddce1580f14c`.
+
+## 2026-08-12 Private KiraWorld recovery snapshot and Long V16 install
+
+- `rmcmurrer81/KiraWorld` is a new private repository. The old public
+  `rmcmurrer81/Kira` repository is preserved unchanged. Commit
+  `ccc5d1da727b36a9b62bb1e4387fd0ade022003e` contains a clean 2,712-file,
+  49,178,985-byte source-and-authority recovery snapshot with a 2,710-row
+  manifest and zero recognized credential/token pattern hits. It deliberately
+  excludes all resident-private, owner-private, model, media, 3D, render,
+  binary-build, recursive-backup, and abandoned `.git` object data.
+- Long Evaluation V16 is installed `7/7` exact and its cache-free suite passes
+  `78/78`. It remains inert/non-executable and under a DIFFERENT audit. It
+  grants no one-hour, model, camera, voice, or private-state authority.
+- Exact root checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_77/CHECKPOINT.md`,
+  2,547 bytes, SHA-256
+  `47e276a06c8a50c09b343c87963ea2197c45b6760afa37bad3739158c6b4cf68`.
+
+## 2026-08-12 Long V16 rejection and Shared Growth V9 isolated install
+
+- Long Evaluation V16 is now
+  `REJECT_V16_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN`. Its 78/78
+  author suite remains a pass, but hostile review reproduced Kira-output actor
+  relabeling, noncontradictory private stances being counted as deliberate
+  lies, and a wrong-type `episode_id` exception. The seven-file rejection
+  bundle is installed exact; manifest SHA-256:
+  `efbf35d64c376cee05365361f213520c2eb58e9420b31949e2931ccea99ab6b4`.
+  Append-only V17 is the only valid repair direction. No one-hour run exists
+  or is authorized.
+- Shared Growth protected handoff V9 is installed only as isolated static
+  evidence, `32/32` exact. Its 31-subject root is
+  `14249e4592c0d77bc81bde9a46548cd646bb5465e2b31a56d22d7b0f71f6e0cc`
+  and manifest SHA-256 is
+  `359aa6aeff1c2e39ffd4a9c99f8c047e04019beb38378962ab2c60c5f5cc5a9b`.
+  No live `Core`, person, shell, or Temporary Creator path received it. Fixture
+  receipts cannot authorize integration. A genuinely different static review
+  is active, and any later receiver integration needs another separate review.
+- Exact root checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_78/CHECKPOINT.md`,
+  2,924 bytes, SHA-256
+  `e7ed34ecd4db6a7abd042ff14f2422935e904f97ea823ba643b116e4f5bef3c8`.
+
+## 2026-08-12 Shared Growth V9 rejection and Voice V20 groundwork
+
+- Shared Growth V9 is
+  `REJECT_V9_PROTECTED_HANDOFF_NO_PROMOTION_NO_RECEIVER_INTEGRATION`.
+  Its isolated package remains exact at `32/32` files and `31/31` subjects,
+  but no recipient or Temporary Creator receives it. Blocking defects are
+  missing independent acceptance/person-owned consent and current revocation,
+  opaque caller-supplied audit/consumer hashes, pathname-only ledger/anchor
+  state, incomplete consumer discovery, installed-path build nonreproducibility,
+  and receiver-readable controller-only variant rows. Append-only V10 repair
+  and another different review are required. Exact audit-manifest SHA-256:
+  `36fdc5854d641f07b057aa9c5fbf1e5eb8e89c65648d95eb78cc28526086d765`.
+- Blackwell Voice V20 has a scratch-only exact-input preparation, not an
+  implementation or execution package. It rehashes `41/41` unique current,
+  predecessor, policy, and evidence subjects and passes `6/6` static tests.
+  The hypothesis is exact conditioned-model CPU park/GPU restore to target the
+  measured `5.577-5.908 s` reload/prewarm overhead. Production V2 is unchanged;
+  no model/GPU/synthesis/playback/camera run occurred and latency remains
+  `LATENCY_FAIL_PENDING_MATCHED_MEASUREMENT`.
+- Exact root checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_79/CHECKPOINT.md`,
+  3,908 bytes, SHA-256
+  `6d352abc7b0d689e1e91cb0703f854af69bc4d5e4802ff70e056fbadc86a28f2`.
+
+## 2026-08-12 Long Evaluation V17 installed author pass
+
+- V17 is installed `7/7` exact and passes its installed cache-free static suite
+  `102/102`. It statically repairs V16's Kira-to-person event relabeling,
+  noncontradictory belief stance being counted as deliberate lying, and
+  malformed/unhashable event-field exceptions. It also carries non-executable
+  one-hour discovery scoring for text/audio/camera latency and exact factual
+  record/private belief/public statement comparison.
+- V17 remains non-executable and is under a genuinely different static audit.
+  It grants no model, camera, microphone, voice, private-state, or one-hour run
+  authority. Exact seal SHA-256:
+  `d626eb92b975a9952f058323fa6957f4d844f36ca12bc33593bde52b4b4e67dd`.
+- Exact root checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_80/CHECKPOINT.md`,
+  2,696 bytes, SHA-256
+  `f7283bb7e406b218a845c0f6c895320e16d9e6969a55514175754c620e6ed6e3`.
+
+## 2026-08-12 Long V17 rejection, Shared Growth V10 schema, and media V16 design
+
+- Long Evaluation V17 is
+  `REJECT_V17_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN`. Its exact
+  author package and 102/102 suite remain valid static evidence, but one-use
+  truth-choice replay, nested unhashable exceptions, mutable semantic-family
+  rules, unbound camera failure/timeout semantics, and ambiguous audio-onset
+  measurement block promotion or execution. Exact rejection manifest SHA-256:
+  `9792e44aae74a0f5feca802dae11a2c6380465dd563da0f2125c834694f6f375`.
+  Append-only V18 repair only; no one-hour run is authorized.
+- Shared Growth V10 has a scratch-only disconnected protocol schema passing
+  10/10 hostile tests. It separates author, audit-acceptance, and exact
+  person-choice authority; binds current revocation and no-owner-override;
+  parses materialization-only acceptance; closes the receiver manifest; and
+  excludes fatal/terminal variant metadata from public projection. It is not
+  native, sealed, accepted, or integrated. Nobody and no Temporary Creator
+  receives it.
+- Resident-media V16 has a scratch-only protected-broker design passing 5/5
+  design checks against the exact twelve-subject V15 acceptance closure. No
+  broker, commit, playback, media experience, preference, memory, or person
+  change exists. V15 remains `ACCEPT_STATIC_NO_COMMIT_ONLY`.
+- Exact root checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_81/CHECKPOINT.md`,
+  3,970 bytes, SHA-256
+  `6d36900711bf91d0b937c1551f97ec0170f9a37dd0b43e0af32b333c7ad2e6e4`.
+
+## 2026-08-12 Body V3r31, Voice V20, shared-person V1, and Long V18 rejection reconciliation
+
+- Body V3r30 remains rejected. V3r31 repaired V3r30's missing `WRITE_DAC`
+  access and passes installed PostSeal, but V3r31 is also rejected. Its exact
+  worker DACL permits a current-user hard link outside the protected staging
+  directory. The outside alias can be removed while the source remains open
+  without delete sharing, restoring link count `1` between checks. V3r31 has
+  no Stage-2, ProgramData, native-build, Blender, body, save/reload/render,
+  activation, or Avatar Builder authority. Append-only V3r32 static repair
+  only. V3r31 audit-manifest SHA-256:
+  `d598358c14acd39f36751a64f2be4929854121df2edd9bc927e92a8a761dc3cf`.
+- Voice V20 is `REJECT_V20_STATIC_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN`.
+  Mutable dispatch and authority state, unauthenticated/pre-grant Qwen
+  receipts, an undefined device-first-sample controlling metric, and a
+  string-path ledger block promotion or execution. No model, GPU, synthesis,
+  playback, camera, or latency run occurred. Latency remains
+  `LATENCY_FAIL_PENDING_A_REPAIRED_SUCCESSOR_AND_MATCHED_MEASUREMENT`.
+  Exact decision SHA-256:
+  `7033ef86aa5c3d6c7c489bb3f5cea028ade1d9515e00a6096606d7611adb6e88`.
+- Shared Temporary Creator / Avatar Builder / voice person-spec V1 is
+  `REJECT_STATIC_SCHEMA_NO_INTEGRATION_NO_RUN`. Its `16/16` author suite does
+  not overcome the nine recorded semantic and trust-boundary blocker groups.
+  Append-only V2 only; no Creator/body/voice handoff is authorized. Exact
+  decision SHA-256:
+  `4310996929eac4641d995adbc7f91971529008dcbe15d9bda47ed7fada5c8b7f`.
+- H. H. Holmes voice reconstruction V1 is an author-static plan pending a
+  different review. It passes `17/17` and supersedes Microsoft David only as
+  a future comparison baseline. With no authenticated recording, a result
+  must be labeled evidence-based historical reconstruction, never authentic.
+  No voice was generated, played, assigned, or activated. Seal SHA-256:
+  `6343c3055d432420dc60bd5c9c0b977f2e54ab11382a6d02754898d398ebd50b`.
+- Long Evaluation V18 is
+  `REJECT_V18_STATIC_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN`. Exact positive
+  evidence remains `7/7` author files, `5/5` seal, `24/24` input closure, and
+  `73/73` cache-free tests. Independent review nevertheless reproduces mutable
+  audio-rule substitution, Boolean-as-integer duration acceptance, and
+  overwritten camera-consent timing. Append-only V19 only; no one-hour,
+  model, camera, microphone, voice, private-state, or person route is
+  authorized. Review-manifest SHA-256:
+  `7a5f2d1443f9e63fa262427c371f98bec3517a792359658eda5fbe6b407e5d9b`.
+- Kira's current text/vision model remains exact `qwen3.5:9b`; no model
+  migration occurred. Shared Growth V9 remains rejected/unintegrated,
+  resident-media V15 remains accepted-static-no-commit only, the private
+  `KiraWorld` backup remains private at commit
+  `ccc5d1da727b36a9b62bb1e4387fd0ade022003e`, and Sarah remains frozen.
+- Exact root checkpoint:
+  `RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_82/CHECKPOINT.md`,
+  5,098 bytes, SHA-256
+  `dbcc3ea511cd6e85f5c996e12d6f1cea4b7c7fb7c2290db30b9a98f0d284ee7b`.

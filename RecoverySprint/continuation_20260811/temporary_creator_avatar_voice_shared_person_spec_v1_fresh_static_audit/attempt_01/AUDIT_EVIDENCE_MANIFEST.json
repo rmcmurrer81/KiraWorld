@@ -1,0 +1,35 @@
+{
+  "schema": "kira.audit.evidence_manifest.v1",
+  "status": "SEALED_REJECTION_EVIDENCE_WORKSPACE_ONLY",
+  "canonical_grammar": "UTF8 path<TAB>bytes<TAB>sha256<LF> sorted by ordinal path",
+  "canonical_bytes": 489,
+  "evidence_root_sha256": "762ca162c66ee1e5b7b9e80fbe3ffcad87fda33a4f151bb7f8eb3201eba79199",
+  "subjects": [
+    {
+      "path": "AUDIT_DECISION.md",
+      "bytes": 10221,
+      "sha256": "4310996929eac4641d995adbc7f91971529008dcbe15d9bda47ed7fada5c8b7f"
+    },
+    {
+      "path": "FRESH_AUDIT_RESULT.json",
+      "bytes": 2813,
+      "sha256": "2c016bb7d647ae6a0c2f44056a2b92bb45e3979d3e409100766e798b2403662c"
+    },
+    {
+      "path": "PACKAGE_REHASH_AFTER.json",
+      "bytes": 1821,
+      "sha256": "74a588ba223dcbccb253dbffa40fcdb6ffed8d042bdedc6148a11c61fdad88a8"
+    },
+    {
+      "path": "PACKAGE_REHASH_BEFORE.json",
+      "bytes": 1766,
+      "sha256": "bfa41009e949a87d66769f9be7d3d9433b274f53ca67d5fecafdfbef4867e95c"
+    },
+    {
+      "path": "fresh_audit_test_shared_person_spec_v1.py",
+      "bytes": 17747,
+      "sha256": "1de403a020eca807046e6a4caac55cf44888d4aafd01e63a38474e0324b3e074"
+    }
+  ],
+  "execution_authority": "NONE"
+}

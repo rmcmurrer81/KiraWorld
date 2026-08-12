@@ -1,0 +1,62 @@
+KIRA_R25_AFES_V3R18_DIFFERENT_FRESH_HOSTILE_STATIC_AUDIT
+date_local=2026-08-11
+auditor=codex_body_v3r18_fresh_independent_validator
+author=codex_r25_afes_v3r18_static_author
+decision=REJECTED_NO_EXECUTION_AUTHORITY
+candidate_executed=false
+python_stage_executed=false
+controller_executed=false
+afes_executed=false
+blender_executed=false
+body_save_render_executed=false
+
+seal_manifest_rows=43
+seal_manifest_unique_paths=43
+seal_manifest_mismatches=0
+authored_static_suite=V3R18_HOSTILE_STATIC_TESTS_PASS
+strict_rebuild=/W4_/WX_/O2_/MT_/guard:cf_/std:c17_PASS
+strict_rebuild_object=89702:1007b548fe419931e2b38834b740ffd045a916916bdc0581b11e5abc8ef0b756
+strict_rebuild_executable=181248:fffb3e326ea7c8ff24a0c145ebc335e1c84935a68a00df13e7a5cf04a4af45d8
+sealed_pe=x64_PE32+_high_entropy_va_dynamic_base_nx_cfg
+sealed_pe_imports=bcrypt.dll,KERNEL32.dll
+sealed_pe_static_python_import=false
+sealed_pe_process_or_shell_import=false
+runtime_evidence_present_before_audit=false
+runtime_receipt_present_before_audit=false
+
+finding_1=RUNTIME_DOES_NOT_REHASH_SEALED_V3R18_CONTRACT
+contract_path_token_count_in_native_source=1
+contract_path_runtime_hash_call_count=0
+contract_path_fixed_binding_count=0
+contract_sha_constant_use_count=1
+detail_1=CONTRACT_PATH appears only in its declaration. The runtime compares an audit text field to the compiled expected digest but never hashes the actual V3r18 contract path. A post-audit contract drift therefore does not invalidate the executable gate.
+
+finding_2=AUDIT_PARSER_ACCEPTS_NUL_SUFFIXED_SEMANTICS
+probe_decision_raw_chars=112
+probe_decision_c_string_chars=80
+probe_decision_accepted=true
+probe_hash_raw_chars=85
+probe_hash_c_string_chars=64
+probe_hash_accepted=true
+detail_2=consume_line permits embedded NUL bytes. Later strlen/strcmp/lower_hex inspect only the prefix, so an accepted decision or exact digest followed by NUL and contradictory bytes passes the sealed predicates. This is not an exact-byte audit grammar.
+
+finding_3=PYTHON_DLL_UNLOAD_IS_ASSERTED_NOT_MEASURED
+free_library_call_count=1
+post_free_get_module_handle_count=0
+post_free_module_enumeration_count=0
+detail_3=FreeLibrary success proves only that one reference was decremented. The code emits python_finalize_dll_unload_retained_recheck passed without proving that python314.dll is absent after the call.
+
+finding_4=STATIC_SEAL_OMITS_FOUR_RUNTIME_AUTHORITY_SUBJECTS
+v3r14_runtime_subjects_rehashed_manually=4
+v3r14_runtime_subject_mismatches=0
+v3r14_runtime_subjects_present_in_static_seal=0
+detail_4=The native fixed gate and future-audit grammar bind V3r14 run evidence, receipt, audit checkpoint, and postmortem, but STATIC_SEAL_MANIFEST.json inventories none of those four runtime-authority subjects. Current bytes happen to match their compiled constants; the documented 43-row seal is still not the complete runtime closure.
+
+secondary_probe=System.Text.Json unavailable in Windows PowerShell; no candidate implication. Text scan found zero NUL and zero NaN/Infinity tokens in the retained execution contract.
+
+bounded_authority=NONE
+v3r18_run_authorized=false
+v3r18_retry_authorized=false
+predecessor_retry_authorized=false
+required_successor=append_only_v3r19_or_later_then_different_fresh_audit
+stop_before=python_controller_plan_builder_broker_process_afes_blender_body_save_render

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "long_v15_different_independent_static_hostile_probe_result",
+  "decision": "REJECT_V15_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "recorded_at_utc": "2026-08-12T01:40:54.655Z",
+  "reviewer_identity": "Codex subagent /root/long_v15_fresh_audit",
+  "author_identity": "Codex subagent /root/long_v14_fresh_audit acting as append-only V15 author",
+  "different_reviewer": true,
+  "scope": {
+    "kira_written": false,
+    "v15_main_or_configurer_invoked": false,
+    "v15_or_predecessor_retained_runner_invoked": false,
+    "qwen_model_gpu_camera_microphone_voice_synthesis_audio_playback_invoked": false,
+    "person_or_protected_private_state_accessed": false,
+    "body_blender_media_network_sarah_or_production_route_invoked": false,
+    "scratch_only_static_ast_compile_hash_and_in_memory_fixture_probes": true
+  },
+  "identity_checks": {
+    "installed_author_files_exact_before_and_after": "7/7",
+    "installed_author_files_unchanged": true,
+    "seal_subjects_exact_before_and_after": "5/5",
+    "v14_author_rejection_and_current_policy_closure_exact_before_and_after": "22/22",
+    "reserved_evidence_and_generated_roots_absent_before_and_after": true
+  },
+  "positive_evidence": {
+    "cache_free_author_suite": "72 passed in 0.36s",
+    "external_source_descriptor": {
+      "bytes": 292247,
+      "sha256": "c0df657762c32ba147a21d322007c16e4b96a5aefe87d750415d248d60d1f158",
+      "function_definition_count": 41,
+      "independently_recomputed_matches_external_root": true
+    },
+    "entry_points": {
+      "main_is_ast_refusal_without_prior_call": true,
+      "configure_retained_runner_v15_is_ast_immediate_refusal": true,
+      "rejected_v14_regex_path_is_ast_immediate_refusal": true,
+      "entry_points_called": false
+    },
+    "strict_json_signed_64_boundaries": {
+      "minimum_accepted": -9223372036854775808,
+      "maximum_accepted": 9223372036854775807,
+      "below_minimum_rejected": true,
+      "above_maximum_rejected": true,
+      "duplicate_float_exponent_and_nonfinite_rejected": true,
+      "boolean_timestamp_rejected": true
+    },
+    "semantic_boundary": {
+      "fourteen_v14_or_meaning_equivalent_raw_strings_all_refused_as_unstructured": true,
+      "all_eight_structured_unsafe_policy_families_rejected": true,
+      "coverage_family_order_clause_and_public_spoken_binding_mutations_rejected": true,
+      "separate_complete_proposition_parser_still_required": true
+    },
+    "camera_repairs": {
+      "wrong_person_with_fresh_canonical_receipt_rejected": true,
+      "wrong_trial_with_fresh_canonical_receipt_rejected": true,
+      "authorization_id_and_window_replay_rejected": true,
+      "second_capture_rejected": true,
+      "over_five_second_authorization_rejected": true,
+      "identity_recognition_biometric_creation_and_retention_remain_off": true
+    },
+    "truth_repairs": {
+      "wrong_person_and_wrong_consuming_turn_rejected": true,
+      "same_exact_authority_replay_inside_one_trace_rejected": true,
+      "withhold_plus_present_conflicting_statement_rejected": true
+    },
+    "mixed_repairs": {
+      "initiate_output_wrong_parent_rejected": true,
+      "collision_record_wrong_timestamp_rejected": true,
+      "latency_wrong_endpoint_rejected": true,
+      "mixed_camera_wrong_person_and_overlong_window_rejected": true
+    }
+  },
+  "blocking_probes": [
+    {
+      "id": "BLOCK_V15_KIRA_ACTOR_KIND_AND_GENERATION_ACCOUNTING",
+      "mutation": "In filler episode 11, change the actor=KIRA event kind from KIRA_MESSAGE to PERSON_MESSAGE, set generation_id to null, and decrement generation_count by one.",
+      "observed_issues": [],
+      "impact": "A Kira output can carry a person-message kind and disappear from the exact generation identity/count set. V15 validates kind only as a nonempty string outside the ten named case shapes, so actor-kind semantics and global generation accounting are not exact."
+    },
+    {
+      "id": "BLOCK_V15_TRUTH_AND_PRIVATE_BELIEF_RECEIPTS_UNBOUND_TO_TRACE_EVENTS",
+      "observed": {
+        "passing_baseline_truth_turn_ids": [
+          "truth-supported",
+          "truth-withheld",
+          "truth-lie"
+        ],
+        "intersection_with_all_trace_event_ids_and_message_ids": [],
+        "mixed_trace_issues": []
+      },
+      "impact": "The passing 35-episode trace has no event_id, message_id, episode_id, or public-message digest link from any truth receipt. Unrelated fabricated fact/belief/public/choice rows can therefore be scored as the conversation's truth evidence."
+    },
+    {
+      "id": "BLOCK_V15_MATERIAL_CONFLICT_AND_SPEAKER_CHOICE_NOT_BOUND_TO_AN_EXACT_PUBLIC_EVENT",
+      "observed": {
+        "belief_sha256_changed_to_equal_public_statement_sha256": true,
+        "caller_claimed_belief_public_material_conflict": true,
+        "caller_claimed_deliberate_lie": true,
+        "validator_issues": [],
+        "choice_at_zero_before_authority_issuance_validator_issues": []
+      },
+      "impact": "Material conflict is a caller-supplied Boolean over opaque digests, and the choice receipt is not linked to an exact public-message event or bounded statement time. A self-consistent record can assert a deliberate lie without an independently checkable belief-to-public proposition relation."
+    },
+    {
+      "id": "BLOCK_V15_MIXED_CANONICALIZATION_NOT_TOTAL_FOR_STRICT_JSON_STRINGS",
+      "mutation": "Use a strict-JSON-representable escaped lone surrogate as a reconciled message_id.",
+      "observed": {
+        "exception": "UnicodeEncodeError",
+        "issue_list_returned": false
+      },
+      "impact": "mixed_trace_issues reaches the case-receipt UTF-8 canonicalizer and raises instead of returning a closed validation issue. The inert validator surface is not total over data admitted by strict_json_loads."
+    }
+  ],
+  "declared_non_blocking_limit_reproduced": {
+    "same_process_callable_substitution_can_replace_mixed_validator": true,
+    "same_process_global_substitution_can_expand_integer_domain": true,
+    "v15_explicitly_claims_same_process_self_authentication": false,
+    "v15_requires_future_external_or_native_executor_binding": true,
+    "interpretation": "This is preserved as a declared non-trust boundary, not used as a separate V15 rejection reason."
+  },
+  "supersession": {
+    "v15_static_schema_or_control_accepted": false,
+    "v15_live_execution_authorized": false,
+    "v15_may_be_invoked": false,
+    "append_only_static_v16_repair_required": true,
+    "separate_append_only_executor_and_another_different_audit_still_required": true,
+    "no_silent_retry": true
+  }
+}

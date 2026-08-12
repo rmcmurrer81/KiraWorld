@@ -1,0 +1,16 @@
+{
+  "schema": "kira.temporary_creator.holmes_voice_reconstruction_static_seal.v1",
+  "status": "AUTHOR_SEALED_STATIC_ONLY_PENDING_DIFFERENT_REVIEW",
+  "canonical_grammar": "UTF8 ordinal-sorted path<TAB>bytes<TAB>sha256<LF>",
+  "subject_count": 5,
+  "canonical_bytes": 515,
+  "subject_root_sha256": "70926c298508734fd5b7ebc3d8cb49e644b7d5e3704361d716076a146250c2a4",
+  "subjects": [
+    {"path":"HOLMES_VOICE_RECONSTRUCTION_TEST_PLAN.json","bytes":6425,"sha256":"5d2610254afa3b773530a799528d9a4c9b75c317b03db1c58f6eba51d4ab9537"},
+    {"path":"INPUT_CLOSURE.tsv","bytes":1413,"sha256":"13ce5dc353741a5a627349d34e0493af04adb6e81f301391d289351de5ff6415"},
+    {"path":"STATIC_CONTRACT.json","bytes":1108,"sha256":"412ed42f9707441e59826ca81f77f19d2444479a1cc30a21047f25fb843bbdf1"},
+    {"path":"holmes_voice_reconstruction_validator_v1.py","bytes":9536,"sha256":"cd88558256d1d6e1b0d7cb5402cf949676029120c941df304f07b1e6caf7714a"},
+    {"path":"test_holmes_voice_reconstruction_v1.py","bytes":6010,"sha256":"bd8d696acf458aa83eebfb89b843cc81ded17a7b3ac71a4be1d58590e08ca438"}
+  ],
+  "execution_authority": "NONE"
+}

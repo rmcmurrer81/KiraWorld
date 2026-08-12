@@ -1,0 +1,24 @@
+{
+  "schema": "kira.resident_media.voluntary_v15.execution_binding.v1",
+  "candidate_id": "resident_media_voluntary_v15",
+  "status": "SEALED_NO_COMMIT_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT",
+  "modules": [
+    {
+      "label": "v15",
+      "module_name": "Core.resident_media_voluntary_gate_v15",
+      "package_attribute": "resident_media_voluntary_gate_v15",
+      "relative_path": "Core/resident_media_voluntary_gate_v15.py",
+      "bytes": 29602,
+      "sha256": "c14cb0e76a17de76f6fe072a0e3e1662c005dc24eb9faac1b3fcba8ab099e944"
+    }
+  ],
+  "v12_v13_and_v14_rejected": true,
+  "immutable_byte_state_only": true,
+  "v14_bootstrap_chain_required": true,
+  "authority_protocol_calls_authorized": false,
+  "durable_commit_authorized": false,
+  "production_routing_authorized": false,
+  "live_media_authorized": false,
+  "person_state_authorized": false,
+  "different_fresh_static_audit_required": true
+}

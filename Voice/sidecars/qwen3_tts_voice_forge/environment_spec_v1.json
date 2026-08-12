@@ -1,0 +1,39 @@
+{
+  "environment_id": "qwen3_tts_voice_forge_isolated_windows_blackwell_v1",
+  "status": "SPECIFIED_NOT_CREATED_OR_INSTALLED",
+  "python": {
+    "implementation": "CPython",
+    "requested_series": "3.12.x",
+    "venv_path": "Voice/sidecars/qwen3_tts_voice_forge/.venv"
+  },
+  "pinned_core_packages": {
+    "qwen-tts": "0.1.1",
+    "transformers": "4.57.3",
+    "accelerate": "1.12.0"
+  },
+  "torch_installation": {
+    "status": "PENDING_SEPARATE_OFFICIAL_BLACKWELL_WINDOWS_WHEEL_SELECTION_AND_ACCEPTANCE",
+    "torch": null,
+    "torchaudio": null,
+    "reason": "Do not guess or borrow Torch/Torchaudio from Kira's sealed Chatterbox environments. Select and pin a compatible official Windows Blackwell wheel pair in a separately authorized install step."
+  },
+  "runtime": {
+    "attention_implementation": "sdpa",
+    "ordinary_eager_cuda": true,
+    "torch_compile": false,
+    "triton_required": false,
+    "flash_attention_required": false,
+    "network_during_acceptance": false,
+    "local_model_directories_only": true
+  },
+  "isolation": {
+    "must_not_reuse_or_modify": [
+      "Voice/sidecars/chatterbox_blackwell_gpu/.venv",
+      "Voice/sidecars/chatterbox_blackwell_persistent_candidate/.venv",
+      "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/.venv",
+      "Voice/sidecars/chatterbox_py311/.venv"
+    ],
+    "current_kira_voice_profiles_or_routes_must_not_change": true,
+    "models_are_not_installed_by_this_spec": true
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_persistent_eager_cuda_candidate_v1",
+  "candidate_status": "inactive_private_candidate_not_production",
+  "production_routing_authorized": false,
+  "promotion_requires_new_bounded_gpu_and_owner_heard_acceptance": true,
+  "production_routing_manifest_changed_by_candidate": false,
+  "python": "Voice/sidecars/chatterbox_blackwell_gpu/.venv/Scripts/python.exe",
+  "python_version": "3.11.9",
+  "worker": "Voice/sidecars/chatterbox_blackwell_persistent_candidate/persistent_worker.py",
+  "client": "Voice/sidecars/chatterbox_blackwell_persistent_candidate/candidate_client.py",
+  "contract": "Voice/sidecars/chatterbox_blackwell_persistent_candidate/candidate_contract.py",
+  "chatterbox_version": "0.1.7",
+  "torch_version": "2.11.0+cu130",
+  "torchaudio_version": "2.11.0+cu130",
+  "cuda_runtime": "13.0",
+  "compute_device": "cuda",
+  "required_device_name": "NVIDIA GeForce RTX 5060 Ti",
+  "required_device_capability": [
+    12,
+    0
+  ],
+  "required_compiled_architecture": "sm_120",
+  "approved_profile": "Voice/profiles/temp_ai/kira_voice_profile.json",
+  "approved_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+  "approved_reference": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "qwen_model": "qwen3.5:9b",
+  "qwen_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "qwen_ps_endpoint": "http://127.0.0.1:11434/api/ps",
+  "qwen_absence_required_before_model_load": true,
+  "qwen_absence_required_before_every_generation_attempt": true,
+  "official_chatterbox_host_return_contract": {
+    "package": "chatterbox-tts",
+    "package_version": "0.1.7",
+    "installed_source_path": "Voice/sidecars/chatterbox_blackwell_gpu/.venv/Lib/site-packages/chatterbox/tts.py",
+    "installed_source_sha256": "7896787bc17e20eafcd1dce7b8a4a6ea3a6478baab771c60d63e9e81f5564195",
+    "public_generate_return_device": "cpu",
+    "host_return_expected": true,
+    "host_return_is_not_cuda_execution_proof": true,
+    "accepted_output_tensors_cuda": false
+  },
+  "diagnostics": {
+    "enabled_for_bounded_acceptance_only": true,
+    "phase_progress_event_schema_version": 1,
+    "phase_start_and_finish_events_required": true,
+    "phase_event_journal_filename": "WORKER_PHASE_EVENTS.jsonl",
+    "stderr_faulthandler_filename": "WORKER_STDERR_FAULTHANDLER.log",
+    "faulthandler_dump_interval_seconds": 120,
+    "faulthandler_repeat": true,
+    "diagnostic_files_append_only": true
+  },
+  "runtime_cache_root": "RecoverySprint/runtime_cache/blackwell_chatterbox_persistent_candidate",
+  "allowed_output_roots": [
+    "RecoverySprint/continuation_20260802/persistent_blackwell_voice_candidate_acceptance"
+  ],
+  "input_channel": "public_spoken_only",
+  "playback": false,
+  "generic_voice_fallback_allowed": false,
+  "sapi_fallback_allowed": false,
+  "unsealed_fallback_allowed": false,
+  "automatic_fallback_inside_candidate": null,
+  "production_fallback_retained_outside_candidate": "sealed_cpu_chatterbox_only",
+  "offline_cache_only": true,
+  "explicit_unload_required": true,
+  "generation": {
+    "repetition_penalty": 1.2,
+    "min_p": 0.05,
+    "top_p": 1.0,
+    "exaggeration": 0.5,
+    "cfg_weight": 0.5,
+    "temperature": 0.8
+  },
+  "bounds": {
+    "max_line_bytes": 65536,
+    "max_response_bytes": 1048576,
+    "max_text_characters": 4000,
+    "max_chunk_characters": 180,
+    "max_chunks_per_request": 32,
+    "max_generation_attempts_per_chunk": 3,
+    "max_requests_per_process": 64,
+    "idle_unload_seconds": 600,
+    "hard_process_lifetime_seconds": 3600
+  },
+  "sealed_artifacts": [
+    {
+      "label": "candidate_contract",
+      "path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate/candidate_contract.py",
+      "sha256": "e74ce6ad83b181d5f8ca786764d5e61e2cc5e053aaebf29065063151aed38cbc"
+    },
+    {
+      "label": "candidate_client",
+      "path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate/candidate_client.py",
+      "sha256": "b57e1a57625f8d3c55881795611b440aaf91aeb7466ee2f1231ee7bedbc3e9f1"
+    },
+    {
+      "label": "candidate_worker",
+      "path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate/persistent_worker.py",
+      "sha256": "bbf33447e7b742a3f2c79da6f7a3527b37a069e32bb888ed3d1e833345388085"
+    },
+    {
+      "label": "blackwell_python",
+      "path": "Voice/sidecars/chatterbox_blackwell_gpu/.venv/Scripts/python.exe",
+      "sha256": "21bb438c0d4a6f1f164b9a646f6ee000340185e5871180aec06db8d3f07c0082"
+    },
+    {
+      "label": "dependency_manifest",
+      "path": "Voice/sidecars/chatterbox_blackwell_gpu/evidence/dependency_manifest.json",
+      "sha256": "7266ab156aa2764e9145d3122a5bad3ae18c6392867c44d0dd2e19dfad4c5665"
+    },
+    {
+      "label": "gpu_readiness",
+      "path": "Voice/sidecars/chatterbox_blackwell_gpu/evidence/torch_gpu_readiness_postdeps.json",
+      "sha256": "5d74d70ae2c486d432e7a56a2710ef377c0c6c15ca8bb605e6c2d6b0688b0117"
+    },
+    {
+      "label": "sealed_cpu_worker",
+      "path": "Voice/sidecars/chatterbox_py311/sidecar_worker.py",
+      "sha256": "856c195173f8932f1b9d731634290f9eb78bb543e90da37c1346160e45334f46"
+    },
+    {
+      "label": "dialogue_audio_signal",
+      "path": "Core/dialogue_audio_signal.py",
+      "sha256": "893970380087558d7992888d00aaade97e34416ef71e395bab1f20d6635c9aa3"
+    },
+    {
+      "label": "dialogue_tts",
+      "path": "Core/dialogue_tts.py",
+      "sha256": "3de4d2e1d30bde6fc96061a7990544ca9712ee7d39a90bfaa66fcd1494c4b22c"
+    },
+    {
+      "label": "installed_chatterbox_tts_source",
+      "path": "Voice/sidecars/chatterbox_blackwell_gpu/.venv/Lib/site-packages/chatterbox/tts.py",
+      "sha256": "7896787bc17e20eafcd1dce7b8a4a6ea3a6478baab771c60d63e9e81f5564195"
+    },
+    {
+      "label": "approved_profile",
+      "path": "Voice/profiles/temp_ai/kira_voice_profile.json",
+      "sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116"
+    },
+    {
+      "label": "approved_reference",
+      "path": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+      "sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c"
+    },
+    {
+      "label": "production_routing_manifest",
+      "path": "Voice/sidecars/kira_approved_voice_routing.json",
+      "sha256": "a343572b25937926ea0181274976b53f57ca219ce1e4d3e1780343994aea7b81"
+    }
+  ]
+}

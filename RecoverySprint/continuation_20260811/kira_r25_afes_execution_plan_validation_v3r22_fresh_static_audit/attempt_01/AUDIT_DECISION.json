@@ -1,0 +1,117 @@
+{
+  "schema": "kira.r25.afes.v3r22.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T14:33:06.5285106Z",
+  "decision": "ACCEPTED_FOR_ONE_BOUNDED_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R22_ONLY",
+  "reviewer_task": "/root/long_v10_author",
+  "auditor_id": "codex_different_fresh_v3r22_static_reviewer",
+  "evidence_transcription_required_from": "/root",
+  "reviewer_authored_v3r22_sealed_bytes": false,
+  "reviewer_wrote_kira": false,
+  "candidate_invoked_during_audit": false,
+  "execution_authority": {
+    "authorized": true,
+    "maximum_invocations": 1,
+    "arguments": [],
+    "working_directory": "C:/Users/robmc/Kira",
+    "failure_or_success_consumes_authority": true,
+    "scope": "exact sealed V3r22 native pure retained _build_execution_plan validation only",
+    "permitted_plan_callable": "_build_execution_plan",
+    "permitted_plan_call_count": 1,
+    "stop_before": [
+      "bootstrap",
+      "broker",
+      "process",
+      "AFES",
+      "Blender",
+      "body",
+      "save",
+      "render",
+      "export"
+    ]
+  },
+  "sealed_candidate": {
+    "seal_bytes": 56404,
+    "seal_sha256": "d0cdd4220881a5dcc4ec8f15321c07d373971e106d3174c23e1bfb8e4e9f8f5a",
+    "checkpoint_bytes": 4949,
+    "checkpoint_sha256": "ca15b96dd45068da1d3d3c7c0ce798cbe9a84d4b5452d6fdf50dbf96dc913991",
+    "sealed_subjects": 237,
+    "unique_exact_paths": 237,
+    "unique_windows_paths": 237,
+    "rehash_mismatches": 0,
+    "semantic_counts": {
+      "current_artifacts": 8,
+      "runtime_fixed_bindings": 100,
+      "retained_manifest_rows": 137,
+      "unique_union": 237
+    }
+  },
+  "audit_transcript": {
+    "bytes": 1265,
+    "sha256": "b29812ed25f40f83671b532ba46e1d09266844abe02a7dae3b07994f2cba9138",
+    "lines": 18,
+    "lf_only": true,
+    "cr_count": 0,
+    "nul_count": 0,
+    "sidecar_bytes": 65,
+    "sidecar_file_sha256": "10c0602b6be576debd34080480568fb595b99771133488ca252d8ddea5637ccf"
+  },
+  "independent_results": {
+    "strict_x64_rebuild": "PASS_/W4_/WX_/O2_/MT_/guard:cf_/std:c17",
+    "rebuild_object": {
+      "bytes": 184660,
+      "sha256": "86fec7f3aa79e3263951e9f99bc6814fa4bd7e31f266c15029b415e1626c5ba8"
+    },
+    "rebuild_executable": {
+      "bytes": 241152,
+      "sha256": "cdb9ff2dc5c3e124ed8319e9fe2099ea0664786a4f840b4e1092c5b35d04ed3c"
+    },
+    "msvc_analyze_zero_unsuppressed_diagnostics": true,
+    "analyzer_object": {
+      "bytes": 129959,
+      "sha256": "28066a8ebe1aa282886e53059505990daa878a5b784d95629afdcfd0d57faf87"
+    },
+    "sealed_and_rebuilt_pe": "PASS_X64_PE32_PLUS_HIGH_ENTROPY_ASLR_NX_CFG_FID_34",
+    "imported_dlls": ["bcrypt.dll", "KERNEL32.dll"],
+    "process_or_shell_imports": 0,
+    "static_python_dll_imports": 0,
+    "authored_postseal_suite": "V3R22_HOSTILE_STATIC_TESTS_PASS",
+    "different_hostile_static_mock_probes": "PASS_78_OF_78",
+    "v3r20_c6385_negative_controls": "PASS_2_OF_2_REPRODUCED",
+    "v3r21_consumed_closure": {
+      "rows": 19,
+      "bytes": 3622,
+      "sha256": "e7fb0f85513a0cfd068a9cf79fd5ab9f1070842ac78fbef250b082684e82a898"
+    },
+    "v3r9_v3r10_v3r11_history_closure": {
+      "rows": 27,
+      "bytes": 4593,
+      "sha256": "ac609d3149b18546431377a8ec846d4cd3af098663649c03f41e4d83a0a9ff82"
+    },
+    "candidate_output_evidence_absent": true,
+    "candidate_output_receipt_absent": true
+  },
+  "reviewed_controls": {
+    "all_137_manifest_rows_parsed_locked_read_and_rechecked": true,
+    "controller_twin_function_code_globals_defaults_kwdefaults_closures_annotations_pre_post": true,
+    "four_locked_runtime_module_identity_loader_spec_origin_pre_post": true,
+    "fourteen_harness_helper_identity_code_defaults_kwdefaults_closure_globals_pre_post": true,
+    "native_sha_exact_success_call_count_223": true,
+    "controller_counts_sha_hex_json_forbidden_plan": [222, 231, 4, 0, 1],
+    "audit_lf_nul_length_order_duplicate_tab_sidecar_grammar_hostile_refusal": true,
+    "python_finalize_free_library_old_base_and_exact_path_absence_required": true,
+    "evidence_and_receipt_create_new_write_through_exact_path": true,
+    "runtime_fixed_and_retained_closures_rechecked_after_plan": true,
+    "stop_boundary_has_no_process_creation_route": true
+  },
+  "truth_boundary": {
+    "body_proven": false,
+    "anatomy_proven": false,
+    "candidate_or_python_stage_run_during_audit": false,
+    "afes_or_blender_run": false,
+    "body_access_or_mutation": false,
+    "save_render_or_export": false,
+    "activation_or_owner_acceptance": false,
+    "production_authority": false
+  },
+  "blockers": []
+}

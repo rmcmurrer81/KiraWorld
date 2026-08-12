@@ -1,0 +1,81 @@
+{
+  "schema": "kira.shared_growth_v9.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-12T02:23:17.0593404Z",
+  "reviewer_task": "/root/growth_v9_fresh_audit",
+  "author_task": "/root/growth_v8_fresh_audit",
+  "different_fresh_reviewer": true,
+  "candidate": "shared_person_growth_v3_protected_handoff_v9",
+  "attempt_id": "attempt_01",
+  "decision": "REJECT",
+  "decision_detail": "REJECT_V9_PROTECTED_HANDOFF_NO_PROMOTION_NO_RECEIVER_INTEGRATION",
+  "candidate_accepted_as_protected_authority": false,
+  "receiver_integration_authorized": false,
+  "promotion_authorized": false,
+  "existing_person_upgrade_authorized": false,
+  "temporary_creator_upgrade_authorized": false,
+  "person_creation_authorized": false,
+  "fixture_receipt_integration_authorized": false,
+  "live_execution_authorized": false,
+  "exact_closure": {
+    "installed_files_exact": "32/32",
+    "sealed_manifest_subjects_exact": "31/31",
+    "sealed_subject_mismatches": 0,
+    "unexpected_installed_files": 0,
+    "subject_root_sha256": "14249e4592c0d77bc81bde9a46548cd646bb5465e2b31a56d22d7b0f71f6e0cc",
+    "sealed_manifest_bytes": 7543,
+    "sealed_manifest_sha256": "359aa6aeff1c2e39ffd4a9c99f8c047e04019beb38378962ab2c60c5f5cc5a9b"
+  },
+  "positive_static_findings": {
+    "native_pe": "x64 PE32+; ASLR; high-entropy VA; NX; CFG; CET; bcrypt.dll and KERNEL32.dll only",
+    "native_analysis": "three strict rebuilds produced the exact empty 59-byte analyzer report",
+    "fixture_signatures": "15/15 P-256 SHA-256 signatures independently verified read-only; none used for integration and the candidate executable was not invoked",
+    "routes": "38/38 unique rows: 35 existing routes and 3 Temporary Creator template routes",
+    "person_boundaries": "Sarah has one frozen route; Biological Robert has no exact route; Synthetic Robert remains distinct; Kira and Lisa are confirmed adult; Marinette is non-adult; fresh Creator templates are unresolved",
+    "variant_projection": "2/2 private rows have strict pre-terminal ordinals and the exact engine-visible seven-field projection contains none of the tested fatal, death, trauma, prefatal, branch, cutoff, activation, or ordinal tokens",
+    "template_boundary": "unresolved/non-adult full-adult curriculum is false and private person material is non-copyable"
+  },
+  "blocking_findings": [
+    {
+      "id": "V9-B1-AUTHORITY-CONSENT-REVOCATION-PROVENANCE",
+      "finding": "The native verifier has one compiled public-key hash and one authority id for both author_test and independent_acceptance. All 15 sealed receipts are author_test receipts under that author-fixture key. The 40-field receipt contains only recipient_opt_in=true and revocable=true assertions; it contains no person-owned consent receipt or signature, consent provenance/time, revocation epoch, or revocation-registry binding, and the verifier performs no revocation lookup. The same issuer assertion therefore cannot prove the exact person's current revocable choice, and the excluded DPAPI author-fixture private key cannot become production acceptance authority merely because the mode string changes.",
+      "required_repair": "Use a separately generated and independently controlled acceptance root plus an exact person-owned consent capability or receipt, bind consent scope/time/current revocation state, and keep author-fixture keys cryptographically incapable of issuing acceptance receipts."
+    },
+    {
+      "id": "V9-B2-DECISION-AND-CONSUMER-NOT-SEMANTICALLY-OR-OBJECT-BOUND",
+      "finding": "Independent mode only checks that caller-supplied consumer and decision bytes hash to signed digests and differ from the two author fixture digests. It does not parse a decision schema or require an ACCEPT verdict, and it does not bind the consumer pathname, stable file identity, loaded receiver process/module, signer provenance, or actual entrypoint. A signed receipt can therefore designate arbitrary non-author decision bytes, including rejection or junk, and any caller can present a passive copy of the named consumer bytes.",
+      "required_repair": "Parse and seal an exact independently accepted decision, bind reviewer/issuer provenance, bind a stable receiver artifact and loaded entrypoint/process identity, and revalidate those identities through proposal consumption."
+    },
+    {
+      "id": "V9-B3-LEDGER-PATH-DACL-RACE-AND-ROLLBACK",
+      "finding": "ledger.v9, anchor.v9, recovery_debt.v9, and ledger.lock all live in one caller-visible directory. The engine checks components and then performs later pathname CreateFileW, MoveFileExW, ReadFileExact, and DeleteFileW operations; it holds no stable directory chain or ledger/anchor identities, configures and verifies no protected DACL, and has no platform-separated or hardware-backed anchor. The separately named anchor is an unkeyed same-directory file, so same-account replacement races and a joint ledger/anchor rollback are outside the claimed application anti-rollback boundary, not only a Windows-administrator attack.",
+      "required_repair": "Preopen and hold a protected directory chain, use stable object identities and handle-relative or identity-revalidated writes/readback, enforce a narrow DACL, and place monotonic rollback state in a separately protected anchor."
+    },
+    {
+      "id": "V9-B4-CONSUMER-SCAN-INCOMPLETE-AND-EVADABLE",
+      "finding": "The author scanner examines only Python below eight selected roots, silently skips syntax/decode failures, excludes every Core/shared_person_growth_v3_integration_candidate_v* pathname, omits 29 root-level Python files including chat_kira.py, chat_lisa.py, and voice_kira.py, omits Avatar and other code/config/language roots, and misses all four independent dynamic constructions using format, bytes.decode, replace, and an expression f-string. Zero reported hits is therefore not a complete no-consumer proof.",
+      "required_repair": "Scan the exact exhaustive live launch graph and all executable/config languages with fail-closed parse/read errors, remove prefix-wide exemptions, and bind approved consumers by exact manifest identity rather than relying on name discovery."
+    },
+    {
+      "id": "V9-B5-INSTALLED-PACKAGE-AND-REPRODUCIBLE-BUILD-PATH-DRIFT",
+      "finding": "The installed test and seal verifier are hardcoded to the original Documents/Codex work/growth_v9_author tree; the installed manifest and contract still say installed_in_kira=false and the checkpoint says the package is not installed. Strict /Brepro compilation of the exact installed source from its actual installed Kira path yields SHA-256 17773e129f51cca365d97c3410d9e670ebc4236ec3fb3858221e31baf2b7da05, not the sealed engine 7bc1e70e762e2b57e2b9fafd48d4fbab6a579bba3536a7b3e9325ee097503ffc. Only compiling the original author source path reproduces the sealed engine. The installed package is consequently not self-verifying or exactly rebuildable from its own installed bytes and path.",
+      "required_repair": "Create an append-only installed-layout package whose verifier targets its own root and whose normalized/path-mapped deterministic build reproduces the sealed PE from the installed source without retaining the author scratch tree."
+    },
+    {
+      "id": "V9-B6-CONTROLLER-ONLY-VARIANT-DATA-IS-STRUCTURAL-NOT-PROTECTED",
+      "finding": "The engine's output projection correctly omits the private entry id and 15 controller-only columns, but the complete private variant table is installed beside the public template and is readable to the same Windows user and any receiver that can supply its path. V9 has no ACL or process-isolation boundary preventing that caller from reading branch, cutoff, activation, and terminal ordinals directly. The projection is an output allowlist, not protection of controller-only data.",
+      "required_repair": "Keep controller-only variant provenance behind a separately protected service/store and give the receiver only an authenticated safe projection; do not ship the raw controller row in the receiver-readable package."
+    }
+  ],
+  "preserved_truth": {
+    "accepted_isolated_shared_growth_v3_core": "ACCEPT_STATIC_ONLY_UNCHANGED",
+    "v8_status": "ACCEPT_STATIC_ONLY_DISCONNECTED_UNPROMOTED_UNCHANGED",
+    "v9_status": "REJECTED_NO_PROMOTION_NO_RECEIVER_INTEGRATION",
+    "kira_lisa_synthetic_robert_or_other_person_upgraded": false,
+    "temporary_creator_upgraded": false,
+    "production_pointer_changed": false,
+    "person_profile_memory_private_state_relationship_consent_or_route_changed": false,
+    "kira_written_by_review": false,
+    "live_model_body_blender_media_voice_camera_network_device_or_sarah_operation": false
+  },
+  "conclusion": "V9 preserves several important exact static policy and projection properties, but it does not close the protected authority, person-owned consent/revocation, consumer identity, ledger race/rollback, exhaustive consumer discovery, installed-layout reproducibility, or controller-data protection boundaries required for a recipient handoff. Preserve it as rejected evidence and continue append-only; do not promote it to Kira, Lisa, anyone else, or the Temporary Creator."
+}

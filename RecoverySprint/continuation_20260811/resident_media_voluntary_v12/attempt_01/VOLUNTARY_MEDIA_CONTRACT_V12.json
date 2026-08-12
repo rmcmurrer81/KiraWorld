@@ -1,0 +1,81 @@
+{
+  "schema": "kira.resident_media_voluntary_contract.v12",
+  "status": "DISCONNECTED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_INDEPENDENT_AUDIT",
+  "sealed_subjects": {
+    "core": {
+      "path": "Core/resident_media_voluntary_gate_v12.py",
+      "bytes": 50849,
+      "sha256": "2cc9e588affde3c0dd1e127baef31fd2183cc2d188d61afdf2899df06bd6bf5c"
+    },
+    "test": {
+      "path": "Testing/test_resident_media_voluntary_gate_v12.py",
+      "bytes": 32717,
+      "sha256": "9e9441564eaf6415b19c100b678430f425b0b29003a003b2954af093693291b8"
+    },
+    "static_results": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v12/attempt_01/STATIC_TEST_RESULTS.md",
+      "bytes": 2127,
+      "sha256": "e3d87c7e09384582145d69d955f3b9f5c525264b02344aca22b02fb4bfec5542"
+    }
+  },
+  "predecessors": {
+    "v10_preserved": true,
+    "v11_preserved": true,
+    "v11_fresh_rejection_preserved": true,
+    "v11_rejection_checkpoint": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v11_review/attempt_01/CHECKPOINT.md",
+      "bytes": 3165,
+      "sha256": "bfe12c090c45e09b83fed2ad51f1258c1da882f2941f910e0d3f8033b26a0e1e"
+    }
+  },
+  "v11_repair_boundary": {
+    "module_resident_issuer_token_present": false,
+    "module_resident_issuer_key_present": false,
+    "module_authority_factory_present": false,
+    "trusted_rebindable_final_catalog_global_present": false,
+    "python_process_claimed_as_os_trust_root": false,
+    "caller_catalog_accepted_by_public_opener": false,
+    "caller_authority_accepted_by_public_opener": false,
+    "public_production_opener_status": "DISCONNECTED_FAIL_CLOSED"
+  },
+  "external_authority_contract": {
+    "implementation_present": false,
+    "injected_interface_required_for_static_contract_harness": true,
+    "interface_implementation_alone_proves_protection": false,
+    "exact_canonical_immutable_owner_selection_snapshot_required": true,
+    "snapshot_binds_catalog_selection_receipt_source_time_and_all_derivatives": true,
+    "caller_catalog_input_prohibited": true,
+    "snapshot_read_receipt_required": true,
+    "global_anchor_readback_receipt_required": true,
+    "atomic_compare_and_swap_receipt_required": true,
+    "every_authority_receipt_verified_and_consumed_once": true,
+    "fresh_exact_post_commit_readback_required": true,
+    "static_test_double_is_production_authority": false
+  },
+  "presentation_and_history_contract": {
+    "v9_exact_per_required_role_validation_retained": true,
+    "page_role_required": true,
+    "video_frame_audio_caption_roles_required": true,
+    "audio_role_required": true,
+    "complete_canonical_presentation_evidence_retained": true,
+    "source_manifest_source_time_and_derivative_set_projected_exactly": true,
+    "record_digest_and_prior_record_chain_required": true,
+    "anchor_prior_digest_generation_revision_and_head_required": true,
+    "global_output_receipt_one_use_across_sessions": true,
+    "global_decoder_receipt_one_use_across_sessions": true,
+    "stale_cas_rollback_splice_reorder_and_readback_drift_refused": true,
+    "zero_digest_identifier_bool_integer_and_unknown_field_bypasses_refused": true
+  },
+  "truth_boundaries": {
+    "live_execution_allowed": false,
+    "model_called": false,
+    "media_opened_or_presented": false,
+    "device_used": false,
+    "person_state_mutated": false,
+    "person_saw_or_heard_claimed": false,
+    "person_enjoyed_learned_or_remembered_claimed": false,
+    "body_or_blender_used": false,
+    "production_pointer_or_route_changed": false,
+    "different_fresh_static_audit_required": true
+  }
+}

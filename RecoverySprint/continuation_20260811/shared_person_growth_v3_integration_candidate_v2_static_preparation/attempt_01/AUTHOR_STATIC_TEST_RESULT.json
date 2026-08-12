@@ -1,0 +1,83 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_v2_author_static_result.v1",
+  "recorded_at_utc": "2026-08-11T07:39:48.343Z",
+  "status": "PASS_STATIC_SUCCESSOR_PENDING_DIFFERENT_FRESH_AUDIT",
+  "scope": {
+    "author_task": "/root/blackwell_v9_fresh_audit",
+    "candidate_version": "shared_growth_v3_integration_candidate_v2",
+    "production_enabled": false,
+    "production_pointer_changed": false,
+    "registry_changed": false,
+    "person_or_creator_profile_changed": false,
+    "live_model_person_memory_body_media_voice_gpu_or_blender_ran": false
+  },
+  "repaired_rejection_blockers": {
+    "same_process_v1_authority_exposure": {
+      "status": "REPAIRED_AT_STATIC_PROTOCOL_BOUNDARY",
+      "adapter_retains_authority_callback": false,
+      "adapter_retains_secret": false,
+      "adapter_retains_controller": false,
+      "adapter_retains_controller_identity": false,
+      "adapter_exposes_identity_capability": false,
+      "external_callback_supplied_separately_per_operation": true,
+      "external_callback_claimed_as_os_trust_root": false,
+      "production_opener_disconnected": true
+    },
+    "route_source_stale_digest_after_construction": {
+      "status": "REPAIRED_AT_STATIC_PROTOCOL_BOUNDARY",
+      "stable_double_read_and_hash_at_issue_pre_and_post": true,
+      "stable_double_read_and_hash_at_stage_pre_and_post": true,
+      "stable_double_read_and_hash_at_final_commit_pre_and_post": true,
+      "stable_double_read_and_hash_at_final_readback_pre_and_post": true,
+      "inventory_reloaded_and_verified_at_every_gate": true,
+      "source_snapshot_exact_schema_and_digest_validated": true,
+      "attachment_source_binding_checked": true,
+      "output_removed_after_detected_postwrite_drift": true,
+      "external_rollback_required_after_commit_receipt": true
+    }
+  },
+  "verification": {
+    "in_memory_strict_compile": {
+      "files": 2,
+      "passed": 2,
+      "bytecode_cache_requested": false
+    },
+    "focused_v2_hostile_tests": {
+      "tests": 13,
+      "passed": 13,
+      "failed": 0
+    },
+    "shared_growth_v1_v2_v3_and_integration_regression": {
+      "tests": 108,
+      "passed": 108,
+      "failed": 0
+    },
+    "current_qwen_owner_and_remaining_route_compatibility": {
+      "tests": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "hostile_cases": [
+      "original V1 public identity/name-mangled authority object pattern absent",
+      "missing external callback refused",
+      "production opener refused with or without callback",
+      "post-construction source drift refused before issue callback",
+      "post-issue source drift refused before stage callback",
+      "source mutation during issue callback refused",
+      "source mutation during stage callback refused before write",
+      "source mutation during final commit callback removed output and rolled back",
+      "source mutation during final readback callback removed output and rolled back",
+      "one-use external envelope replay refused",
+      "existing Kira static attachment remained public-only/default-off",
+      "Temporary Creator static projection remained unresolved/doll-safe/default-off"
+    ]
+  },
+  "predecessor_truth": {
+    "accepted_isolated_shared_growth_v3_preserved": true,
+    "rejected_integration_v1_preserved": true,
+    "different_fresh_rejection_audit_preserved": true,
+    "frozen_shell_sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4",
+    "model_runtime_sha256": "4fa0449b6f91b7df6f207e86d324e893ee244bce9d8d065a3d14bdc8a197f2ae"
+  },
+  "author_verdict": "SEALED_STATIC_SUCCESSOR_ONLY_PENDING_DIFFERENT_FRESH_AUDIT_NO_PROMOTION"
+}

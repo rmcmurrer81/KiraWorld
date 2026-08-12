@@ -1,0 +1,47 @@
+{
+  "schema": "kira.r25.afes.contract_lock_diagnostic.v3r16.fresh_static_audit.v1",
+  "date": "2026-08-11",
+  "decision": "REJECT",
+  "execution_authority": "NONE",
+  "candidate_executed": false,
+  "sealed_subjects_modified_by_auditor": false,
+  "author_static_suite": {
+    "run": 114,
+    "failed": 0,
+    "sufficient_for_acceptance": false
+  },
+  "independent_static_suite": {
+    "run": 112,
+    "failed": 9
+  },
+  "blocking_findings": [
+    {
+      "id": "OUTER_CHECKPOINT_SEAL_DRIFT",
+      "mismatched_subject_count": 6,
+      "failed_byte_or_hash_checks": 8,
+      "subjects": [
+        "native_source",
+        "identity_anchor",
+        "native_object",
+        "native_executable",
+        "build_and_static_test_results",
+        "static_seal_manifest"
+      ]
+    },
+    {
+      "id": "AUDIT_PATH_BINDING_MISMATCH",
+      "candidate_expected": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r16_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+      "audit_required": "RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r16_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv"
+    }
+  ],
+  "static_contract_checks": {
+    "create_new_one_shot_reservation": "PASS_CURRENT_SOURCE_ONLY",
+    "double_same_handle_granular_diagnostic": "PASS_CURRENT_SOURCE_ONLY",
+    "durable_terminal_receipt": "PASS_CURRENT_SOURCE_ONLY",
+    "replay_path_reparse_share_error_partial_write_readback_fail_closed": "PASS_CURRENT_SOURCE_ONLY",
+    "stop_before_python_controller_afes_blender_body": "PASS_CURRENT_SOURCE_AND_PE_ONLY"
+  },
+  "runtime_outputs_absent": true,
+  "candidate_expected_acceptance_audit_absent": true,
+  "bounded_acceptance_granted": false
+}

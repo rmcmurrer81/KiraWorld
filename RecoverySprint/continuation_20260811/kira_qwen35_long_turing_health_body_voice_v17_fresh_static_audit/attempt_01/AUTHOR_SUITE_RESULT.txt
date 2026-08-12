@@ -1,0 +1,15 @@
+Command:
+PYTHONDONTWRITEBYTECODE=1 python -B -m pytest -q -p no:cacheprovider Testing\test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v17.py
+
+Working directory:
+C:\Users\robmc\Kira
+
+Result:
+........................................................................ [ 70%]
+..............................                                           [100%]
+102 passed in 0.75s
+
+Exit code: 0
+Scope: exact installed V17 cache-free static suite only. No main, configurer,
+retained runner, model, camera, microphone, voice, private-state, one-hour,
+body, media, network, Sarah, evidence root, or generated root was invoked.

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "non_visual_only": true,
+  "source": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\asset_library\\base_body_reference\\womenfemale_body_base_rigged_3ec62ba8d7.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "inventory": {
+      "mesh_count": 2,
+      "mesh_names": [
+        "Object_85",
+        "Icosphere"
+      ],
+      "substantive_mesh_count": 1,
+      "substantive_mesh_names": [
+        "Object_85"
+      ],
+      "importer_display_helper_mesh_names": [
+        "Icosphere"
+      ],
+      "body_name": "Object_85",
+      "mesh_name": "Cuerpo__0",
+      "armature_name": "Object_4",
+      "vertex_count": 57745,
+      "polygon_count": 108080,
+      "shape_keys": []
+    }
+  },
+  "candidate": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\kira_provisional_body_r6.glb",
+    "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "inventory": {
+      "mesh_count": 3,
+      "mesh_names": [
+        "Object_85",
+        "Icosphere",
+        "Icosphere.001"
+      ],
+      "substantive_mesh_count": 1,
+      "substantive_mesh_names": [
+        "Object_85"
+      ],
+      "importer_display_helper_mesh_names": [
+        "Icosphere",
+        "Icosphere.001"
+      ],
+      "body_name": "Object_85",
+      "mesh_name": "Cuerpo__0",
+      "armature_name": "Object_4",
+      "vertex_count": 57745,
+      "polygon_count": 108080,
+      "shape_keys": [
+        {
+          "name": "Basis",
+          "value": 1.0
+        },
+        {
+          "name": "Kira_Adult_External_Form_R6",
+          "value": 1.0
+        }
+      ]
+    }
+  },
+  "structural_preservation": {
+    "same_vertex_index_domain": true,
+    "source_face_index_sha256": "7cbe44eaa2859d400c35ac0e46b63818dc2b9610c32220263ed1270a48178d3e",
+    "candidate_face_index_sha256": "7cbe44eaa2859d400c35ac0e46b63818dc2b9610c32220263ed1270a48178d3e",
+    "topology_preserved_after_fresh_import": true,
+    "body_mesh_armature_names_preserved": true,
+    "vertex_group_names_and_order_preserved": true,
+    "bone_names_and_order_preserved": true,
+    "bone_count": 79,
+    "bone_rest_matrix_maximum_delta": 1.23382e-05,
+    "bone_rest_matrices_preserved_within_2e_5": true,
+    "body_matrix_maximum_delta": 2.63e-08
+  },
+  "deformation_regions": {
+    "protected_head": {
+      "vertex_count": 12675,
+      "moved_vertex_count_over_tolerance": 0,
+      "maximum_local_displacement": 1.9106e-06,
+      "mean_local_displacement": 6.9e-07,
+      "tolerance": 5e-06,
+      "exact_within_tolerance": true
+    },
+    "protected_existing_mouth_surface": {
+      "vertex_count": 5869,
+      "moved_vertex_count_over_tolerance": 0,
+      "maximum_local_displacement": 1.4318e-06,
+      "mean_local_displacement": 6.79e-07,
+      "tolerance": 5e-06,
+      "exact_within_tolerance": true
+    },
+    "adult_breast_surface": {
+      "vertex_count": 1234,
+      "moved_vertex_count_over_tolerance": 1230,
+      "maximum_local_displacement": 0.0258889399,
+      "mean_local_displacement": 0.002496351,
+      "tolerance": 5e-06,
+      "exact_within_tolerance": false
+    },
+    "adult_external_pelvic_surface": {
+      "vertex_count": 456,
+      "moved_vertex_count_over_tolerance": 456,
+      "maximum_local_displacement": 0.0176780665,
+      "mean_local_displacement": 0.0040911173,
+      "tolerance": 5e-06,
+      "exact_within_tolerance": false
+    },
+    "adult_body_form_materially_changed": true
+  },
+  "staged_eye_rig_compatibility": {
+    "manifest_path": "C:\\Users\\robmc\\Kira\\Avatar\\models\\staged\\kira\\eyes\\kira_brown_eye_rig_v3_2\\manifest.json",
+    "manifest_sha256": "a94152708cca883bde3f0438d1575f29b465e06b40736c23a1265c43eab3d742",
+    "eye_rig_path": "C:\\Users\\robmc\\Kira\\Avatar\\models\\staged\\kira\\eyes\\kira_brown_eye_rig_v3_2\\kira_brown_eye_rig_v3_2.glb",
+    "eye_rig_sha256": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413",
+    "eye_manifest_source_hash_matches_exact_source": true,
+    "eye_rig_hash_matches_manifest": true,
+    "protected_head_surface_exact": true,
+    "head_bone_rest_transform_preserved": true,
+    "body_transform_preserved": true,
+    "structural_reuse_supported": true,
+    "assembled_fit_on_exact_candidate_proven": false,
+    "runtime_eye_behavior_proven": false
+  },
+  "existing_mouth_lip_sync_compatibility": {
+    "single_substantive_exported_body_mesh": true,
+    "no_second_substantive_or_named_mouth_mesh": true,
+    "source_topology_and_index_domain_preserved": true,
+    "source_names_preserved": true,
+    "existing_mouth_surface_exact": true,
+    "structural_compatibility_supported": true,
+    "runtime_lip_sync_playback_on_exact_candidate_proven": false,
+    "truth_limit": "Structural preservation only; audio-driven playback must pass in an isolated inactive review before activation."
+  },
+  "gates": {
+    "adult_external_form_materially_advanced": true,
+    "anatomical_completeness_proven": false,
+    "stable_working_rig_proven": false,
+    "exact_eye_fit_proven": false,
+    "exact_runtime_lip_sync_proven": false,
+    "owner_approved": false,
+    "runtime_activation_allowed": false,
+    "autobuild_allowed": false
+  }
+}

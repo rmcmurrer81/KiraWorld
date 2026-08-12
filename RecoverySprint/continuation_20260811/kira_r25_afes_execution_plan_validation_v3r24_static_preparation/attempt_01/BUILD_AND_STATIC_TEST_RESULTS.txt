@@ -1,0 +1,78 @@
+KIRA R25 AFES EXECUTION PLAN VALIDATION V3R24
+AUTHOR BUILD, ANALYZER, PE, AND STATIC RESULTS
+DATE: 2026-08-11 America/New_York
+
+STATUS: PASS_AUTHOR_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT
+EXECUTION_AUTHORITY: NONE
+CANDIDATE_EXECUTED: false
+PYTHON_RUNTIME_INITIALIZED: false
+CONTROLLER_COMPILED_OR_EVALUATED: false
+BUILD_EXECUTION_PLAN_CALLED: false
+V3R23_EXECUTED: false
+V3R22_RERUN: false
+BOOTSTRAP_BROKER_PROCESS_AFES_BLENDER_BODY_SAVE_RENDER_EXPORT: false
+
+STRICT X64 SCRATCH BUILD
+Environment initializer:
+  call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul
+Compiler/link command shape:
+  cl.exe /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /I "C:\Users\robmc\Kira\tools\native" /Fo"<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r24.obj" /Fe"<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r24.exe" "<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r24.c" /link /guard:cf /WX bcrypt.lib
+Exit code: 0
+Compiler output: kira_r25_afes_execution_plan_validation_v3r24.c
+Warnings: 0
+Errors: 0
+Candidate launched: false
+
+MSVC SOURCE ANALYSIS
+Compiler command shape:
+  cl.exe /nologo /analyze /analyze:log "<AUTHOR_WORK>\build_cache\v3r24_analyze.xml" /c /W4 /WX /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /I "C:\Users\robmc\Kira\tools\native" /Fo"<AUTHOR_WORK>\build_cache\v3r24_analyze.obj" "<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r24.c"
+Exit code: 0
+Unsuppressed diagnostics: 0
+Suppressions used: none
+Analyzer XML: <?xml version="1.0" encoding="UTF-8"?><DEFECTS></DEFECTS>
+Analyzer object: 159946 bytes, SHA-256 5194794cf1be264057d04721267846e037db91d12ccee54afd87c7ee303d7777
+Analyzer XML: 59 bytes, SHA-256 ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5
+Analyzer outputs are disposable scratch and are not seal subjects.
+
+PE INSPECTION
+Tool: MSVC dumpbin.exe 14.50.35730.0
+Machine: 8664 (x64)
+Optional-header magic: 20B (PE32+)
+High Entropy Virtual Addresses: present
+Dynamic base / ASLR: present
+NX compatible: present
+Control Flow Guard: present
+Load configuration: CF instrumented; FID table present; Guard CF function count field 34
+Imported DLL set, exact: bcrypt.dll; KERNEL32.dll
+Static Python DLL import: absent
+Process/shell import route: absent
+Candidate launched: false
+
+HOSTILE STATIC PRESEAL
+Command:
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing\test_kira_r25_foundation_afes_execution_plan_validation_v3r24_static.ps1 -Phase PreSeal -ProjectRoot <AUTHOR_WORK> -AuthorityRoot C:\Users\robmc\Kira
+Exit code: 0
+Output: V3R24_HOSTILE_STATIC_TESTS_PASS
+Coverage: exact 15-row rejected V3r23 closure; exact 20-row consumed V3r22 closure; all 136 runtime fixed subjects; all 137 retained CRLF manifest rows; exact CPython code.h; retained __future__.py stringization semantics; compile and function CO_FUTURE_ANNOTATIONS flag predicates; no __annotations__ read or __annotate__ call; exact 28-field different-audit grammar; exact one plan-call expression; all 47 checkpoints; exactly 21 entered and 21 returned operation increments; bounded sanitized exception capture; finalization/unload/recheck; forbidden APIs; absent future evidence/audit roots; and stop-before boundary.
+
+FAILURE-CAUSE TRUTH
+The V3r22 durable record localizes failure only to its former stage 40. Its actual cause remains UNKNOWN. Unresolved annotation names are proven excluded: the exact CPython header defines 0x1000000 as CO_FUTURE_ANNOTATIONS, retained __future__.py defines the flag as annotations-become-strings semantics, and both predecessor sources compile with that exact flag. V3r24 statically asserts the flag, requires it on the module and every retained controller function code object, fingerprints generated __annotate__ stringizers without calling them, never reads __annotations__, and adds bounded internal localization telemetry. This is not a runtime result.
+
+CURRENT AUTHOR ARTIFACT IDENTITIES BEFORE BUILD-RESULT/SEAL CREATION
+Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r24.json	17141	282b458123f1b48989e1315d90f11663443f84637671e2d0a18bb6af8f22aa3c
+tools/native/kira_r25_afes_execution_plan_validation_v3r24.c	148570	8bb0974a531bf40c28c9e9400f0b6dec22d87ea57296b2aae7de06322c408ad5
+tools/native/kira_r25_afes_execution_plan_validation_v3r24_identity_anchor.h	7447	625df0dc5ebd817cdcca767a018cdace631b966c8b57d9dae46ac3ba5af546e9
+tools/native/kira_r25_afes_execution_plan_validation_v3r24.obj	234278	cd66e41fce8ede60f34bf8590a88c9f8ddc08571d612e4417235f26d1aeae287
+tools/native/kira_r25_afes_execution_plan_validation_v3r24.exe	264704	281d427482657a73096fa6b44e2092e6e54b760e59c73c37f562e24ad6b03bb9
+Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r24_static.ps1	25519	1010f4b122aab45bdaaabd4363d0e33fb93c620d44dc7f342c66e7045c858036
+RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md	6780	c954a4a3c77e5ed4307837842a964b560e3ad83d6635e2a3e8de46c5ef828658
+
+PREDECESSOR ROOTS
+V3r23 rejected closure: 15 rows, 2728 canonical bytes, SHA-256 0b09c1f71154b4d56559f043f08076940bcc60e7919d6bcd8e9c3cde3b2a4ea0, REJECTED_NO_EXECUTION_AUTHORITY.
+V3r22 consumed failure closure: 20 rows, 3779 canonical bytes, SHA-256 7057deb657f5e235892180e5d694f139450d44897f9353ac3bdb1f15d730aec0, CONSUMED_FAILURE_DO_NOT_RERUN.
+
+DOWNSTREAM OWNER ROUTING
+Only a later independently accepted body-engineering result with Blender, save, and render evidence may feed the Avatar Builder reusable method/template layer. Rejected results route only to DO_NOT_REPEAT tests. V3r24 has no integration or body-claim authority.
+
+BOUNDARY
+These results prove only that inert V3r24 bytes compile and pass author-side static inspection in Documents/Codex scratch. They do not authorize or claim a candidate run, Python initialization, controller evaluation, a plan return, a body, anatomy, Blender work, save, render, export, integration, or production use. A different fresh independent reviewer must rebuild and audit the exact sealed bytes. Execution authority remains NONE.

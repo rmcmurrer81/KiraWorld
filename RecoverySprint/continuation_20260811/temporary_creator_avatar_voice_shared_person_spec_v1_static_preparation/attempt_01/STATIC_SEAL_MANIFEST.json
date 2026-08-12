@@ -1,0 +1,31 @@
+{
+  "schema": "kira.temporary_creator.shared_person_spec.static_seal.v1",
+  "status": "AUTHOR_SEALED_STATIC_ONLY_PENDING_DIFFERENT_REVIEW",
+  "subject_count": 4,
+  "canonical_grammar": "UTF8 path<TAB>bytes<TAB>sha256<LF> sorted by ordinal path",
+  "canonical_bytes": 412,
+  "package_root_sha256": "4c7812c464666066739a78176d0ce77c18517ede9657999833142db42b396e61",
+  "subjects": [
+    {
+      "path": "INPUT_CLOSURE.tsv",
+      "bytes": 2209,
+      "sha256": "42c9d85571d8572d30a5bb83167ad6829eeafee948f763406dabd08acbf730af"
+    },
+    {
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 2326,
+      "sha256": "d7ba7f424bab305af510700ea69620edbf2767f1d0191793d64fcfd79515a8cf"
+    },
+    {
+      "path": "temporary_creator_shared_person_spec_v1.py",
+      "bytes": 26750,
+      "sha256": "bfa2518b6314ed0ca2da447707786a6fcfe5daa36f7ea7e6ee034d37453e1542"
+    },
+    {
+      "path": "test_temporary_creator_shared_person_spec_v1.py",
+      "bytes": 16013,
+      "sha256": "b526c9f7add6e957d4266a60b74800d6f8f406dac0a1aad29bc212204b46ca9c"
+    }
+  ],
+  "execution_authority": "NONE"
+}

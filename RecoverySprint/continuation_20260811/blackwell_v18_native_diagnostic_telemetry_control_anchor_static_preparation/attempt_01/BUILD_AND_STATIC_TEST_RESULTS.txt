@@ -1,0 +1,131 @@
+BLACKWELL VOICE V18 DIAGNOSTIC TELEMETRY CONTROL ANCHOR
+AUTHOR BUILD AND STATIC TEST RESULTS
+
+Recorded UTC: 2026-08-11T23:09:48.8604409Z
+Author task: /root/voice_v17_postrun
+Workspace: Documents/Codex scratch followed by exact-byte staging
+
+STRICT BOUNDARY
+v17_rerun=false
+v18_candidate_invoked=false
+python_invoked=false
+model_calls=0
+gpu_voice_calls=0
+synthesis_calls=0
+audio_calls=0
+playback_calls=0
+latency_measurements=0
+network_calls=0
+camera_microphone_speaker_calls=0
+person_state_calls=0
+body_blender_calls=0
+sarah_calls=0
+production_routing_calls=0
+execution_authority=NONE
+
+PRESERVED V17 TERMINAL CLOSURE
+V17 status=CONSUMED_FAILURE_DO_NOT_RERUN
+RUN_EVIDENCE_V17 sha256=269d1eadda20ca6a8a3d6e1679f80d850e32b79146aa562e22765fb624bad32b
+STATIC_CONTROL_OUTCOME_V17 sha256=83c7b11b7c458bdcd5aa75308fe24f5ceae9f700de672eb01affd1f900ffa21d
+RUN_OUTCOME_V17 sha256=2651db197caa103b33b7d16fb718707a81cb3a5f2c9906246b775d7a46357dea
+POST_RUN_CHECKPOINT sha256=758c444a4c6b989de1ea9a2413f23b2b798668c22561150889ad9c5e52b60f8f
+root attempt_35 sha256=65d212ae07d8f7eeea4a23cc328965be13f647a5cd3fe4fd038b7cba9793dbc4
+
+V18 REPAIR
+repair_id=V17_STAGE50_DIAGNOSTIC_TELEMETRY_DISAMBIGUATION
+call_null_with_exception_distinct=true
+call_null_without_exception_distinct=true
+non_null_result_mismatch_distinct=true
+post_validation_recheck_failure_distinct=true
+pre_call_stage_durable=true
+call_return_stage_durable=true
+result_validation_stage_durable=true
+post_validation_stage_durable=true
+tuple_size_predicate_distinct=true
+schema_type_and_value_predicates_distinct=true
+count_type_and_value_predicates_distinct=true
+each_of_six_boolean_predicates_distinct=true
+pending_python_error_predicate_distinct=true
+exception_type_capacity=64
+exception_message_capacity=192
+newlines_tabs_folded=true
+non_ascii_replaced=true
+unbounded_exception_text=false
+
+EXACT RETAINED VALIDATOR PROVENANCE
+path=tools/native/kira_blackwell_voice_control_anchor_v15_validator.py
+bytes=21931
+sha256=2bf232b07b0b7b93de8776f5210bd2d89068ad76cb4ee46555b861ad2818d16a
+private_module=_kira_blackwell_v15_private_native_validator
+callable=validate_static_control_graph_v15
+result_schema=kira.blackwell.v15.native_validator_result.v1
+
+COMPILED HOSTILE MOCK HARNESS
+candidate_wmain_renamed_and_unreachable=true
+candidate_executable_invoked=false
+python_dll_loaded=false
+checks=62
+failures=0
+positive_exact_result=true
+all_15_result_failure_codes_refused=true
+all_15_failure_stages_exact=true
+bounded_sanitizer_cases_passed=true
+receipt_and_diagnosis_layout_checks_passed=true
+
+SOURCE MUTATION GATE
+call_null_exception_category_removal_refused=true
+result_mismatch_category_removal_refused=true
+pre_call_stage_removal_refused=true
+call_return_stage_removal_refused=true
+result_refusal_stage_removal_refused=true
+sanitizer_removal_refused=true
+exception_capture_removal_refused=true
+tuple_failure_code_removal_refused=true
+pending_error_code_removal_refused=true
+receipt_failure_kind_removal_refused=true
+receipt_exception_length_removal_refused=true
+repair_provenance_removal_refused=true
+mutants_refused=12/12
+
+STRICT NATIVE BUILD
+toolchain=Microsoft Visual C/C++ x64 19.50.35730
+flags=/W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17
+compile_exit=0
+warnings=0
+errors=0
+source=98883 bytes; 3cd9147c9b74ef36608a7471e00900ef7defe1fa0191ec194a3233214e9942d0
+identity_header=10501 bytes; 0449bfc2553752f053cb871527c0db923e16618271003282228ff5267258e476
+object=160102 bytes; adfab30a7bd9a3fed42d2584cf633c0e6f5336490f06aad1485b0b1d3524d16f
+executable=171520 bytes; ab2fecce995655f0bdc190e2f23964b7d81ccebd2849866a050d7de686a6e1a3
+
+STRICT STATIC ANALYSIS
+flags=/W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17
+exit=0
+unsuppressed_warnings=0
+errors=0
+analyzer_object=92761 bytes; fd8620cfaeafa9e830e0c4c2e0d424867a5bf0ee6dde6ed750b1f7a6732179f5
+
+PE STATIC INSPECTION
+machine=x64_8664
+format=PE32+_20B
+high_entropy_va=true
+dynamic_base=true
+nx_compatible=true
+control_flow_guard=true
+cf_instrumented=true
+fid_table_present=true
+guard_cf_function_count_hex=0x32
+imports=bcrypt.dll,KERNEL32.dll
+python_static_import=false
+process_shell_static_import=false
+model_audio_network_static_import=false
+
+STATIC SUITE
+PreSeal=V18_DIAGNOSTIC_TELEMETRY_HOSTILE_STATIC_TESTS_PASS
+PostSeal=V18_DIAGNOSTIC_TELEMETRY_HOSTILE_STATIC_TESTS_PASS
+seal_subjects=86
+seal_unique_paths=86
+seal=18517 bytes; 9206d5b719f7edaf9be3036877814459ff02cb90a704b76452dabc13774f14a5
+
+DIFFERENT_FRESH_AUDIT_REQUIRED=true
+ALLOWED_NEXT_AUTHORITY=NONE_UNTIL_DIFFERENT_FRESH_V18_AUDIT

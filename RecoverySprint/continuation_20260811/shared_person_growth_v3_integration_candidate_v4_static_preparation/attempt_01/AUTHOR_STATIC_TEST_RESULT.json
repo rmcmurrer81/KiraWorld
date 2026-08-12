@@ -1,0 +1,67 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v4.author_static_test_result.v1",
+  "version": "v4",
+  "recorded_utc": "2026-08-11T17:07:18.7003539Z",
+  "status": "AUTHOR_STATIC_TESTS_PASS_PENDING_DIFFERENT_FRESH_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v4.py",
+      "bytes": 22676,
+      "sha256": "e6780a5eb1c97c850ca49d543d1594deef477a72aae10f1747a2fe420171bab5"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v4.py",
+      "bytes": 23295,
+      "sha256": "8ff20beba074a0630cd574835bbb7be5c9330eae1e5ee1229b58a80a60a47bdb"
+    },
+    {
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 4372,
+      "sha256": "81e639f7b2813eab10fce7403b32af61af72579e5b4d6d99d85bd529f3ebbe0a"
+    }
+  ],
+  "verification": {
+    "strict_in_memory_compile_v4": "2/2 PASS",
+    "strict_in_memory_compile_preserved_v3_core_and_v1_v2_v3_integrations": "8/8 PASS",
+    "focused_v4_integration_tests": "21/21 PASS",
+    "all_applicable_inventory_routes": "35/35 PASS",
+    "v3_failed_subject_specific_routes": "4/4 PASS_REPAIRED",
+    "combined_preserved_shared_growth_core_and_integration_tests": "103/103 PASS",
+    "exact_v3_predecessor_and_rejection_closure": "9/9 PASS",
+    "exact_current_inventory": "1/1 PASS",
+    "private_immutable_scope_and_fresh_output_lists": "PASS",
+    "scope_tuple_list_subclass_and_extra_value_mutations": "PASS_REFUSED",
+    "production_opener_refusal": "PASS",
+    "temporary_creator_refusal": "PASS",
+    "current_python_consumer_search": "V4 source and focused test only",
+    "route_source_drift_probes": "PASS_REFUSED",
+    "fixed_closure_drift_probes": "PASS_REFUSED",
+    "post_construction_inventory_drift_probe": "PASS_REFUSED",
+    "exact_type_schema_consent_maturity_person_route_and_robert_probes": "PASS_REFUSED",
+    "no_authority_commit_or_write_ast_surface": "PASS"
+  },
+  "repair_truth": {
+    "public_requested_scope_object_exported": false,
+    "private_scope_storage_is_tuple": true,
+    "accepted_and_returned_scope_is_exact_single_public_projection": true,
+    "subject_specific_uses_exact_inventory_person_required_status": true,
+    "peter_parker_profile_and_state_routes_compile": true,
+    "spider_gwen_profile_and_state_routes_compile": true
+  },
+  "preserved_truth": {
+    "isolated_shared_growth_v3_core_remains_accept_static_only": true,
+    "integration_v1_remains_rejected": true,
+    "integration_v2_remains_rejected": true,
+    "integration_v3_remains_rejected": true,
+    "candidate_v4_returns_inert_canonical_bytes_only": true,
+    "candidate_v4_is_protected_authority": false,
+    "candidate_v4_can_commit": false,
+    "candidate_v4_can_upgrade_any_person": false,
+    "candidate_v4_can_use_temporary_creator": false,
+    "production_enabled": false,
+    "person_or_profile_changed": false,
+    "memory_or_private_state_changed": false,
+    "live_model_body_media_voice_network_device_or_sarah_operation": false,
+    "different_fresh_audit_required": true
+  }
+}

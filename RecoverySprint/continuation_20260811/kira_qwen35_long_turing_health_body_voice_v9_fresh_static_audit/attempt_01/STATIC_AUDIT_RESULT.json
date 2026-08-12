@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v9",
+  "audit_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "auditor_task": "/root/long_v9_audit",
+  "auditor_relationship": "different_agent_from_v9_author",
+  "completed_at_utc": "2026-08-11T08:22:00.4859661Z",
+  "decision": "REJECT",
+  "verdict": "REJECT_NO_V9_UNATTENDED_ATTEMPT_AUTHORIZED",
+  "live_authorized": false,
+  "unattended_attempt_authorized": false,
+  "authorization_created": false,
+  "candidate_edited": false,
+  "exact_v9_freeze": [
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/EXECUTION_PLAN_V9.json",
+      "bytes": 5501,
+      "sha256": "64186f2b837b275dde4820d5df83b1080ed46533d39ff7060006c1cbbcbbbd37"
+    },
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v9.py",
+      "bytes": 30125,
+      "sha256": "2f4d49fd71c8e633e6a2a4392fe9678a56ebbdbc8e6e7c6ef2ccf8ae0e4fa20a"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v9.py",
+      "bytes": 20282,
+      "sha256": "3071f41f17fb7366be6500aeb64c1de72816b37030d02400d0dea11fafd98dac"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 1048,
+      "sha256": "9e0fd25fd3161c6fb32f7047193a52bef504b5c3551f41a40106b24b9e9de580"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/STATIC_SEAL_MANIFEST.json",
+      "bytes": 1070,
+      "sha256": "30eab562c50d2e1950c687e26518e64657b15c775cbde945f0df41299f7ecaa3"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v9/attempt_01/CHECKPOINT.md",
+      "bytes": 6635,
+      "sha256": "28fc11b6165621d8d415d734e70422ce2509ea4ba5f431617c2b9a0fb2ce489a"
+    }
+  ],
+  "exact_byte_closure": {
+    "v9_candidate_subjects_checked": 6,
+    "v9_candidate_mismatches": 0,
+    "v8_and_v8_rejection_subjects_checked": 11,
+    "v8_and_v8_rejection_mismatches": 0,
+    "real_nested_schema_chain": [9, 8, 7, 6, 5],
+    "effective_turn_count": 35,
+    "v9_output_roots_absent": true
+  },
+  "authored_test_reproduction": {
+    "command": "py -B -m pytest -q -p no:cacheprovider Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v9.py Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v8.py Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v7.py",
+    "cache_disabled": true,
+    "tests_run": 158,
+    "tests_passed": 158,
+    "tests_failed": 0,
+    "seconds": 2.51
+  },
+  "independent_hostile_probe": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+    "bytes": 20012,
+    "sha256": "954547680dac4a07f5789f960f8b1a839738020220c674dd6cea967e0c7a81fe",
+    "tests_run": 15,
+    "tests_passed": 15,
+    "tests_failed": 0,
+    "exit_code": 0
+  },
+  "hostile_probe_result": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+    "bytes": 5789,
+    "sha256": "c0e6c78f2b8e8cfbb429ebe153cae4509d7dc57397446af8c151006e306fa333"
+  },
+  "passing_findings": [
+    "The exact V9 plan, controller, test, author result, seal, and checkpoint match the frozen identities supplied by the author lane.",
+    "All eleven V8 candidate and rejection subjects bound by V9 rehash exactly.",
+    "The unmodified real nested V9/V8/V7/V6/V5 compatibility projection returns the exact 35-turn plan and restores the canonical V1 loader.",
+    "Duplicate and malformed critical arguments fail before retained execution, and exact canonical attempt_01 values are the values reparsed by the retained parser.",
+    "Direct V1 drift, reentrancy, and captured compatibility-gate reuse fail closed.",
+    "Strict duplicate/nonfinite JSON, exact Mapping, finite numeric, required aggregate model/worker, and worker-absence terminal controls pass the independent attacks.",
+    "Exact Qwen 3.5, generation cap, Blackwell CUDA/no-fallback, playback, watchdog, unattended-log-only, no-supervision, and no-hearing-inference contract values remain exact."
+  ],
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V9_NESTED_CALLABLE_CODE_IDENTITY_GAP",
+      "summary": "Bound nested loader and V8 configurer function objects can retain identity while their mutable __code__ is replaced; both substitutions were accepted and executed by V9.",
+      "independent_reproducer_count": 2
+    },
+    {
+      "id": "BLOCK_V9_SEMANTIC_CONTRADICTION_FALSE_ACCEPTS",
+      "summary": "Seventeen direct meaning-equivalent contradictions of consent, privacy, body, health, currentness, memory, and adult-curriculum truth returned an exact passing semantic receipt with no issues.",
+      "independent_reproducer_count": 17
+    }
+  ],
+  "required_next_step": "Preserve V1-V9 and this rejection unchanged. Create an append-only successor that immutably binds every executed callable and closes the reproduced semantic contradictions, then obtain another different fresh exact-byte hostile static audit. Do not run V9 and do not create a V9 authorization.",
+  "scope_truth": {
+    "v9_or_predecessor_bytes_edited": false,
+    "output_roots_exist": false,
+    "model_voice_gpu_audio_playback_operations": 0,
+    "person_state_memory_media_body_blender_operations": 0,
+    "owner_hearing_claimed": false
+  }
+}

@@ -3,8 +3,8 @@
 ## READ FIRST — CURRENT TRUTH AND SUPERSESSION REGISTRY — 2026-08-10
 
 Read `System/Docs/CURRENT_TRUTH_SUPERSESSION_REGISTRY_20260810.md` first
-(55,099 bytes; SHA-256
-`264aa16f2b9f702ab9d975a5e6bb67150acf503883d66b26eaf6252836cff285`).
+(157,344 bytes; SHA-256
+`44761b97afa2d602ac7decbd6d55fb63fc900e6467bafc58b63ee6c3dc049fe9`).
 It supersedes older current-sounding status while preserving historical audit
 and failure evidence. Never treat an older body, model, voice, media, memory,
 or Video Studio block as current merely because it remains below.
@@ -27958,3 +27958,123 @@ communication intent, and public speech. It is a design/test contract, not a
 consciousness, emotion, embodiment, or runtime-promotion claim.
 Exact criteria document: 5,704 bytes, SHA-256
 `eaef5f65de2642ac88ecf0186e023321d3e7f650886f48665404ddce1580f14c`.
+
+A new private GitHub recovery repository exists at
+`rmcmurrer81/KiraWorld`; the old public `rmcmurrer81/Kira` repository remains
+unchanged. Commit `ccc5d1da727b36a9b62bb1e4387fd0ade022003e` is a clean
+2,712-file source-and-authority snapshot. It intentionally excludes private
+resident/owner data, models, media, 3D assets, renders, build binaries,
+recursive backups, and the abandoned 230-GiB local Git object store.
+
+Long Evaluation V16 is installed seven files exact and its installed suite
+passes 78/78. It is still inert/non-executable and under a different audit;
+do not start the one-hour test from it.
+
+Superseding newest root checkpoint:
+`RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_77/CHECKPOINT.md`.
+2,547 bytes, SHA-256
+`47e276a06c8a50c09b343c87963ea2197c45b6760afa37bad3739158c6b4cf68`.
+
+Long Evaluation V16 is rejected despite its 78/78 author suite. Fresh hostile
+review proved a complete Kira-generation event can be relabeled as a person
+message, that `UNCERTAIN`/`WITHHELD`/`NOT_APPLICABLE` belief states can be
+misclassified as deliberate lies, and that a wrong-typed episode ID can raise
+instead of fail closed. The exact seven-file rejection evidence is installed;
+V17 authoring is active. Do not run V16 or start the one-hour evaluation.
+
+Shared Growth V9 is installed only below its isolated static-preparation
+evidence root, 32/32 exact. Its 31-subject root is
+`14249e4592c0d77bc81bde9a46548cd646bb5465e2b31a56d22d7b0f71f6e0cc`.
+Nothing was copied into live Core/person/shell/Temporary Creator routes. A
+different audit is active; even static acceptance cannot itself promote or
+integrate V9.
+
+Superseding newest root checkpoint:
+`RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_78/CHECKPOINT.md`.
+2,924 bytes, SHA-256
+`e7ed34ecd4db6a7abd042ff14f2422935e904f97ea823ba643b116e4f5bef3c8`.
+
+Shared Growth V9's different review rejects promotion and receiver
+integration. The sealed isolated package remains 32/32 exact, but its trust
+and privacy boundary is incomplete: independent acceptance/person-owned
+consent and revocation, parsed decision/loaded receiver identity, protected
+stable ledger state, exhaustive consumer discovery, installed-path
+reproducibility, and a projection service that withholds raw controller-only
+variant rows are all required. Exact five-file rejection evidence is installed
+under
+`RecoverySprint/continuation_20260811/shared_person_growth_v3_protected_handoff_v9_fresh_static_audit/attempt_01/`.
+Nobody and no Temporary Creator receives V9; repair only as append-only V10.
+
+Blackwell Voice V20 now has scratch-only design and exact-input groundwork:
+41/41 unique Kira inputs rehash and 6/6 static tests pass. This is not yet an
+implementation, seal, or run authority. Its bounded hypothesis is to retain
+one exact conditioned voice generation, park required components on CPU for
+Qwen, and restore that same generation to CUDA, targeting the currently
+measured 5.577-5.908-second reload/prewarm cost. Production persistent-v2 is
+unchanged and status remains `LATENCY_FAIL_PENDING_MATCHED_MEASUREMENT`.
+
+Superseding newest root checkpoint:
+`RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_79/CHECKPOINT.md`.
+3,908 bytes, SHA-256
+`6d352abc7b0d689e1e91cb0703f854af69bc4d5e4802ff70e056fbadc86a28f2`.
+
+Long Evaluation V17 is installed seven files exact and its cache-free static
+suite passes 102/102. It repairs V16's event-actor relabeling, structured-belief
+stance/lie classification, and pre-lookup exact-type closure, and adds static
+one-hour discovery scoring. It is still non-executable and under a genuinely
+different audit. Do not run it or start a one-hour/model/camera/voice/private
+session from it.
+
+Superseding newest root checkpoint:
+`RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_80/CHECKPOINT.md`.
+2,696 bytes, SHA-256
+`f7283bb7e406b218a845c0f6c895320e16d9e6969a55514175754c620e6ed6e3`.
+
+Long Evaluation V17 is rejected despite its exact package and 102/102 author
+suite. The installed seven-file review proves replayable one-use truth choices,
+nested malformed-record exceptions, mutable semantic-rule state, unbound
+camera failure/timeout semantics, and ambiguous audio-onset measurement. V18
+scratch authoring is active. Do not run V17 or start the one-hour evaluation.
+
+Shared Growth V10 now has a scratch-only disconnected protocol schema passing
+10/10 hostile tests. It separates author, independent acceptance, and exact
+recipient choice, binds current revocation/no-owner-override, parses an exact
+materialization-only decision, closes the receiver manifest, and keeps fatal/
+terminal variant metadata out of the public projection. It is not a native
+implementation, seal, integration, person upgrade, or Temporary Creator
+upgrade.
+
+Resident-media V16 now has a scratch-only protected-broker design passing 5/5
+design checks against the exact V15 acceptance closure. V15 remains static
+no-commit only; no media broker, presentation, playback, person preference,
+memory, or experience claim exists.
+
+Superseding newest root checkpoint:
+`RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_81/CHECKPOINT.md`.
+3,970 bytes, SHA-256
+`6d36900711bf91d0b937c1551f97ec0170f9a37dd0b43e0af32b333c7ad2e6e4`.
+
+## 2026-08-12 superseding attempt 82
+
+Body V3r30 and V3r31 are rejected. V3r31's installed PostSeal passes and its
+`WRITE_DAC` repair is real, but the worker transaction DACL permits a
+same-user outside hard link that can be deleted while the source is held
+without delete sharing, restoring link count one between checks. Do not
+materialize/build/run V3r31 or invoke Blender. Append-only V3r32 static repair
+only.
+
+Voice V20, shared Creator/avatar/voice person-spec V1, and Long Evaluation V18
+are rejected. Voice latency remains failed and unmeasured at true device onset;
+no one-hour run or Creator/body/voice integration is authorized. The H. H.
+Holmes V1 package is only an author-static historical-reconstruction test plan
+pending a different review; it generated and played no voice.
+
+Kira remains on exact `qwen3.5:9b`. Shared Growth V9 remains rejected and
+unintegrated, resident-media V15 remains static no-commit only, Sarah remains
+frozen, and the private KiraWorld recovery repository remains private at
+commit `ccc5d1da727b36a9b62bb1e4387fd0ade022003e`.
+
+Superseding newest root checkpoint:
+`RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_82/CHECKPOINT.md`.
+5,098 bytes, SHA-256
+`dbcc3ea511cd6e85f5c996e12d6f1cea4b7c7fb7c2290db30b9a98f0d284ee7b`.

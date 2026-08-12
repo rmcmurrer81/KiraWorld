@@ -1,0 +1,123 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v7.sealed_manifest.v1",
+  "version": "v7",
+  "status": "SEALED_DISCONNECTED_PENDING_EXACT_KIRA_INSTALL_AND_DIFFERENT_FRESH_AUDIT",
+  "execution_authority": "NONE",
+  "subject_count": 18,
+  "canonical_grammar": "UTF8_LF_ORDINAL_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+  "canonical_bytes": 3205,
+  "package_root_sha256": "d582d7540143a8245c0901bb26b3d9612b08fedae71df2c43625b97e3d99dd41",
+  "subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v6.py",
+      "bytes": 56834,
+      "sha256": "a128f7fc971480a7b67046c654e603cc44e773ce4ea6b8eb98283049ec3c0264",
+      "role": "rejected_predecessor_source"
+    },
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v7.py",
+      "bytes": 55985,
+      "sha256": "05a1c8362e72d96286eaa54c72dfdc57bef22340eefe8a594e8c5d8fd4d2c7f2",
+      "role": "candidate_source"
+    },
+    {
+      "path": "Data/foundation/shared_person_growth_v3_integration_candidate_v1.json",
+      "bytes": 28107,
+      "sha256": "5b4397d33318dac34fa9f876ed42ec9720ebefb1acdddb235842982479885254",
+      "role": "current_inventory"
+    },
+    {
+      "path": "Data/foundation/temporary_creator_public_variant_provenance_catalog_v1.json",
+      "bytes": 3812,
+      "sha256": "73c08c5bc9e18b07561f4e56c47a55689d0a7aaaa4dca82c189d94df5193ce1f",
+      "role": "sealed_public_variant_provenance_catalog"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260810/shared_person_growth_capabilities_v3_static_repair/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 6333,
+      "sha256": "d570e804c8653a5b1e419dba84a09e831adf13704ad0a363d0213b39e2482f96",
+      "role": "accepted_isolated_v3_core_seal"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_capabilities_v3_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 974,
+      "sha256": "54e28d4b91906d3ba67475db5696df2ca3bfc794b660e2cc2073f01abc8ea894",
+      "role": "accepted_isolated_v3_core_decision"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_capabilities_v3_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 5875,
+      "sha256": "50526169ef05aea0a8db078047a9581bcd74aaf5829b73a0c0ba559b152afd15",
+      "role": "accepted_isolated_v3_core_checkpoint"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v6_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 7551,
+      "sha256": "8d148d36ed3948628b6c3c74115a32c8b5e238bb6f6b26278ce2f9a4028c18dd",
+      "role": "rejected_predecessor_author_result"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v6_static_preparation/attempt_01/CHECKPOINT.md",
+      "bytes": 9263,
+      "sha256": "e38ba4dadb11a844d997dbf937df81074478d3023eaaaa8bd08ccd065867ee48",
+      "role": "rejected_predecessor_author_checkpoint"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v6_static_preparation/attempt_01/ROOT_FINAL_LAYOUT_CHECKPOINT.md",
+      "bytes": 1825,
+      "sha256": "75bfef7bca9c74c61f9003487d356030e0466d2f8af30266b12333e909e68b0c",
+      "role": "rejected_predecessor_final_layout_checkpoint"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v6_static_preparation/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 9484,
+      "sha256": "9232c999cbea18bdceebee89f383d45742cebbf2e180e6d62b52bf9b27438585",
+      "role": "rejected_predecessor_seal"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v6_static_preparation/attempt_01/STATIC_CONTRACT.json",
+      "bytes": 9653,
+      "sha256": "fdb088b5e4669d8176728c4a26870f9f24c03813b031133fec5bb7f9ea0d0986",
+      "role": "rejected_predecessor_contract"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v7_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 2678,
+      "sha256": "7fadc89793682ea1ecb0acb2ca6b76a33af92cd0871d2aca109ee3646324f156",
+      "role": "candidate_author_result"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v7_static_preparation/attempt_01/STATIC_CONTRACT.json",
+      "bytes": 4593,
+      "sha256": "06fa8010daebd13c5cdbb84a7f37cae022a535ae6074fa6d7f91b8a542b80b13",
+      "role": "candidate_contract"
+    },
+    {
+      "path": "System/Docs/SYNTHETIC_PERSON_VARIANT_AUTONOMY_PRIVACY_MEMORY_TRUTH_AND_ADULT_EDUCATION_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 10687,
+      "sha256": "de596d7f77b91fa2cde82e62614c9282fb46aca5f91c05a971d4852585e575b2",
+      "role": "current_synthetic_person_variant_policy"
+    },
+    {
+      "path": "System/Docs/VALIDATED_BODY_AND_MIND_RESULT_TEMPLATE_ROUTING_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 7424,
+      "sha256": "03f192826b7a39df53ab03409eb7675764f6a1bc32b123f4d307e40843560c58",
+      "role": "current_validated_result_routing_policy"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v6.py",
+      "bytes": 42569,
+      "sha256": "393a60ddf6b5ff4c46e6318c4c56cb032aaab6621ba231f88f3761bc9e0b9745",
+      "role": "rejected_predecessor_test"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v7.py",
+      "bytes": 45264,
+      "sha256": "621a5d6bcf37c9151af4cf44a4d313f6dd10cf8f5a247fca9639a8c20573cc2d",
+      "role": "candidate_test"
+    }
+  ],
+  "v5_test_25_expected_historical_failure_preserved": true,
+  "replacement_aggregate_predicate_requires_different_audit": true,
+  "production_or_person_change_authorized": false
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "kira.blackwell.v15.native_exact_control_anchor.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T16:59:34.2596946Z",
+  "reviewer_task": "/root/voice_v15_quality_review",
+  "auditor_id": "codex_different_fresh_voice_v15_quality_reviewer",
+  "different_from_author_task": "/root/resident_media_v15_author",
+  "decision": "ACCEPT_STATIC_ONLY",
+  "accepted_static_only": true,
+  "reviewer_wrote_kira": false,
+  "candidate_invoked_during_review": false,
+  "python_candidate_invoked_during_review": false,
+  "bounded_static_control_authorization": {
+    "authorized": true,
+    "maximum_invocations": 1,
+    "arguments": [],
+    "working_directory": "C:/Users/robmc/Kira",
+    "failure_or_success_consumes_authority": true,
+    "activates_only_after_root_exactly_transcribes_and_rehashes_the_staged_audit_tsv_and_sidecar": true,
+    "scope": "exact sealed V15 disconnected immutable origin-bound static-control validation only",
+    "stop_before": [
+      "model",
+      "GPU",
+      "Torch",
+      "CUDA",
+      "Chatterbox",
+      "synthesis",
+      "audio",
+      "playback",
+      "latency measurement",
+      "network",
+      "subprocess",
+      "person state",
+      "production route",
+      "body",
+      "Blender"
+    ]
+  },
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false,
+  "seal": {
+    "subjects_exact_before": 21,
+    "subjects_exact_after": 21,
+    "subjects_drifted": 0,
+    "unique_paths": 21,
+    "manifest_bytes": 4557,
+    "manifest_sha256": "f3d451041796c2bfbdf5dbe52f3a485b227f67b01af051e9e95c35b40549d932"
+  },
+  "independent_native_build": {
+    "compiler": "MSVC_x64_19.50.35730",
+    "strict_compile_exit": 0,
+    "strict_compile_diagnostics": 0,
+    "analyze_exit": 0,
+    "analyze_diagnostics": 0,
+    "object_bytes": 98765,
+    "object_sha256": "244e762256aa0133e5f6af7bd74a3916f3f4e0be24613f99c78806f7a39a2df5",
+    "executable_bytes": 175104,
+    "executable_sha256": "cc17b2aba316619fb7e4ac40e1c77bdf22d706979c25feb7e764afc52f4ea932",
+    "analyze_object_bytes": 61240,
+    "analyze_object_sha256": "172804a841219ac8e6183db2afc8911aa3dc4b56966a2951ff861f72ed87600c",
+    "analyze_xml_bytes": 59,
+    "analyze_xml_sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5",
+    "analyze_xml_defects": 0
+  },
+  "pe_static_inspection": {
+    "sealed_and_independent_machine": "x64_8664",
+    "sealed_and_independent_format": "PE32+_20B",
+    "high_entropy_va": true,
+    "dynamic_base": true,
+    "nx_compatible": true,
+    "control_flow_guard": true,
+    "guard_cf_instrumented": true,
+    "guard_fid_table_present": true,
+    "guard_cf_function_count_hex": "0x33",
+    "guard_flags_hex": "0x10017500",
+    "imports": [
+      "bcrypt.dll",
+      "KERNEL32.dll"
+    ],
+    "python_static_import_present": false,
+    "process_or_shell_import_present": false
+  },
+  "static_tests": {
+    "existing_postseal_suite_only": "PASS_V15_IMMUTABLE_ORIGIN_BOUND_HOSTILE_STATIC_TESTS_PASS",
+    "v15_python_candidate_imported_or_invoked": false,
+    "v15_native_executable_invoked": false,
+    "opening_rehash": "PASS_21_OF_21",
+    "closing_rehash": "PASS_21_OF_21"
+  },
+  "v14_blocker_closure": {
+    "BLOCK_V14_SNAPSHOT_STATE_MUTABLE_NOT_ORIGIN_BOUND": {
+      "closed": true,
+      "evidence": "V15 returns no snapshot instance: source lines 939-976 build and recursively exact-type a built-in tuple; validator lines 423-442 require exact tuple shape, recursive immutability, and identity plus value equality to both native attestations and the native creation-time V14 graph."
+    },
+    "BLOCK_V14_LOADER_GRAPH_STATE_NOT_EXACT_TYPED": {
+      "closed": true,
+      "evidence": "Validator lines 435-442 require an exact tuple loader, exact string tag, exact five-value tuple, exact false authority Booleans, and a recursive exact built-in walk that excludes equality-spoof objects."
+    },
+    "BLOCK_V14_COMPLETE_GRAPH_OMITS_MUTABLE_INSTANCE_STATE": {
+      "closed": true,
+      "evidence": "Source lines 399-413 and validator lines 80-93 serialize the exact _StaticPath._text slot and all four _StaticImportNamespace slots recursively; unsupported opaque instances fail closed, and same-graph signatures additionally bind identity."
+    },
+    "BLOCK_V14_POSTCALL_V12_PARENT_ATTRIBUTE_NOT_RECHECKED": {
+      "closed": true,
+      "evidence": "Validator lines 243-265 check all V15/V14/V13/private-V14/private-V12/normal-V12 module slots, all three Core package attributes, and the V12 parent attribute; calls at lines 330, 354, 356, 376, 397, 399, 412, 447, and 460 surround every relevant boundary."
+    }
+  },
+  "config_and_entry_boundary": {
+    "config_bytes": 3725,
+    "config_sha256": "e282667bcddf46c83d74b2e1ff56b4eed81c88b12a10177b50fca030a1f5faac",
+    "duplicate_rejecting": true,
+    "sorted_key_minimal_utf8_json_plus_one_lf": true,
+    "six_predecessor_rows_exact": true,
+    "authority_booleans_exact_false": true,
+    "different_fresh_audit_required_exact_true": true,
+    "python_module_level_factory_or_live_route_call_present": false,
+    "python_live_route_functions_fail_closed": true,
+    "kira_audit_tsv_present_during_review": false,
+    "kira_audit_sidecar_present_during_review": false,
+    "kira_run_evidence_present_during_review": false,
+    "kira_static_control_outcome_present_during_review": false
+  },
+  "staged_audit_transcript": {
+    "path": "C:/Users/robmc/Documents/Codex/2026-08-11/c/work/voice_v15_quality_review/INDEPENDENT_AUDIT.tsv",
+    "bytes": 920,
+    "sha256": "38f1ac1902d7547fe161204d7fd61d3aa493e971108133bbbd9a6b61844af128",
+    "lines": 22,
+    "lf_only": true,
+    "cr_count": 0,
+    "nul_count": 0,
+    "sidecar_bytes": 65,
+    "sidecar_file_sha256": "effe3c23d7e2c5b7f65a07fd225ec84b87d01e668728a2f61678a6bc9382ad5f"
+  },
+  "review_probes": {
+    "path": "C:/Users/robmc/Documents/Codex/2026-08-11/c/work/voice_v15_quality_review/REVIEW_PROBES.md",
+    "bytes": 9787,
+    "sha256": "082e5fda87136eefd02e5913aca0b89d165eee8da138a1156cf6a49cef5393f8"
+  },
+  "scope_truth": {
+    "kira_files_edited_by_reviewer": 0,
+    "model_calls": 0,
+    "gpu_or_voice_calls": 0,
+    "synthesis_or_audio_calls": 0,
+    "playback_calls": 0,
+    "latency_calls": 0,
+    "network_calls": 0,
+    "person_body_or_blender_calls": 0,
+    "production_route_changed": false
+  },
+  "blocking_findings": [],
+  "required_next_step": "Root may either preserve this static-only acceptance without execution or exactly transcribe and rehash the staged 22-line audit TSV and 65-byte sidecar, after which at most one no-argument disconnected static-control validation is authorized. Success or failure consumes it. No voice, model, GPU, synthesis, playback, latency, retry, production, or other live authority is granted."
+}

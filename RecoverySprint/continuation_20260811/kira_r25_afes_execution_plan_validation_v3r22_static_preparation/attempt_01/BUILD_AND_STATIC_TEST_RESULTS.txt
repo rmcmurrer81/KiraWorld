@@ -1,0 +1,67 @@
+KIRA R25 AFES EXECUTION PLAN VALIDATION V3R22
+AUTHOR BUILD AND STATIC RESULTS
+DATE: 2026-08-11 America/New_York
+
+STATUS: PASS_AUTHOR_BUILD_PENDING_AUTHORED_PRESEAL_AND_POSTSEAL_TESTS_AND_DIFFERENT_FRESH_AUDIT
+EXECUTION_AUTHORITY: NONE
+CANDIDATE_EXECUTED: false
+PYTHON_STAGE_EXECUTED: false
+CONTROLLER_DEFINITION_EVALUATED: false
+BUILD_EXECUTION_PLAN_CALLED: false
+BOOTSTRAP_CALLED: false
+BROKER_CALLED: false
+PROCESS_CREATED: false
+AFES_CALLED: false
+BLENDER_CALLED: false
+BODY_ACCESSED_OR_MUTATED: false
+SAVE_RENDER_EXPORT_CALLED: false
+
+STRICT X64 BUILD
+Environment initializer:
+  call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul
+Exact compiler/link command:
+  cl.exe /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /Fo"tools\native\kira_r25_afes_execution_plan_validation_v3r22.obj" /Fe"tools\native\kira_r25_afes_execution_plan_validation_v3r22.exe" "tools\native\kira_r25_afes_execution_plan_validation_v3r22.c" /link /guard:cf /WX bcrypt.lib
+Exit code: 0
+Compiler output:
+  kira_r25_afes_execution_plan_validation_v3r22.c
+Warnings: 0
+Errors: 0
+
+INDEPENDENT MSVC ANALYZE PASS
+Exact compiler command:
+  cl.exe /nologo /analyze /c /W4 /WX /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /Fo"v3r22_analyze.obj" "C:\Users\robmc\Kira\tools\native\kira_r25_afes_execution_plan_validation_v3r22.c"
+Working directory:
+  C:\Users\robmc\Documents\Codex\2026-08-11\c\work\v3r22_authoring
+Exit code: 0
+Analyzer output:
+  kira_r25_afes_execution_plan_validation_v3r22.c
+Unsuppressed diagnostics: 0
+Suppressions used: none
+Disposable analysis object before removal: 129951 bytes; SHA-256 4a8a6093823b03574a9f34f6d24b7a2dd919f31b009d9441da3d707d80e07267
+The disposable analysis object is not a Kira author or seal subject and is removed only after this result is recorded.
+
+PE INSPECTION PASS
+Tool: MSVC dumpbin.exe /headers, /loadconfig, and /imports
+Machine: 8664 (x64)
+Optional-header magic: 20B (PE32+)
+High Entropy Virtual Addresses: present
+Dynamic base / ASLR: present
+NX compatible: present
+Control Flow Guard: present
+Load configuration: CF instrumented; FID table present; Guard CF function count 34
+Imported DLL set, exact: bcrypt.dll; KERNEL32.dll
+Static Python DLL import: absent
+Process or shell DLL/import route: absent
+dumpbin exit code: 0
+
+CURRENT AUTHOR ARTIFACT IDENTITIES
+Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r22.json	11293	48f80736e181da754e1325d3faaa836ef215a7546cbff74e44e6bd53e0d49749
+tools/native/kira_r25_afes_execution_plan_validation_v3r22.c	122166	61ccb03501f8cb02575454b6202b72ff7369ce17ae534ead1623aa53195f1dbd
+tools/native/kira_r25_afes_execution_plan_validation_v3r22_identity_anchor.h	16489	deba43f0952645b63a3fe98e7b755290f48bc16a282c2f0800e8db5093d14bbb
+tools/native/kira_r25_afes_execution_plan_validation_v3r22.obj	184652	b2fb7d783f180f1ff1a2a3a90b5be8559b75372a18d01db7d6c72995ccbcd2ba
+tools/native/kira_r25_afes_execution_plan_validation_v3r22.exe	241152	d905444a6d4115603688f0c0bc39f1798dcb7f3d103ae2ed27712e52b88f72fc
+Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r22_static.ps1	22957	bd0b781c8bd89dc726cafbfcbe33aec528c6c39a6c5460ef394ae7a272a0eac3
+RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md	3632	0979ee667d033c7048db32e9368d51cb637c3ac3c1610663e2faa9ceae312183
+
+BOUNDARY
+These results prove only that the inert V3r22 native candidate built cleanly and that its PE properties match the declared static boundary. They do not authorize or claim a candidate run, Python initialization, controller evaluation, a body, anatomy, Blender work, a save, a render, or a live feature. Authored PreSeal and PostSeal tests and a different fresh independent audit remain mandatory before any one-shot granular invocation could be considered.

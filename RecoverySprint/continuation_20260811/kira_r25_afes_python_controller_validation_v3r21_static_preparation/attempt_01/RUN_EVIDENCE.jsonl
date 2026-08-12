@@ -1,0 +1,9 @@
+{"schema":"kira.r25.afes.v3r21.native_stage.v1","stage":"entry","status":"entered"}
+{"schema":"kira.r25.afes.v3r21.native_stage.v1","stage":"subject_manifest_audit_gate","status":"passed"}
+{"schema":"kira.r25.afes.v3r21.native_stage.v1","stage":"outcome_reservation","status":"passed"}
+{"schema":"kira.r25.afes.v3r21.native_stage.v1","stage":"isolated_python_runtime","status":"passed"}
+{"schema":"kira.r25.afes.v3r21.native_stage.v1","stage":"controller_exports_and_contract_projection","status":"passed"}
+{"schema":"kira.r25.afes.v3r21.native_stage.v1","stage":"python_finalize_dll_unload_retained_recheck","status":"passed"}
+{"schema":"kira.r25.afes.v3r21.python_unload.v1","stage":"finalize_release_absence_terminal","finalize_called":1,"finalize_result":0,"free_library_called":1,"free_library_result":1,"snapshot_succeeded":1,"snapshot_error":0,"checked_module_count":8,"old_base_present":0,"exact_path_present":0,"old_module_base":140726081486848}
+{"schema":"kira.r25.afes.v3r21.contract_gate.v1","stage":"granular_same_handle_terminal","passed_mask":32767,"failure_gate":0,"win32_error":0,"snapshot_one_bytes":6174,"snapshot_two_bytes":6174,"final_bytes":6174}
+{"schema":"kira.r25.afes.v3r21.native_stage.v1","stage":"terminal","status":"complete","detail":"no_bootstrap_plan_builder_afes_blender_body"}

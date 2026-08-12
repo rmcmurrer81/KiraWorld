@@ -1,0 +1,39 @@
+{
+  "schema": "kira.blackwell.voice_v20.native_supervisor_source_build_result.v1",
+  "candidate_id": "kira_blackwell_voice_v20_cpu_park_measured_latency_successor",
+  "status": "PASS_SOURCE_COMPILE_AND_STATIC_ANALYSIS_ONLY",
+  "recorded_at": "2026-08-11",
+  "source": {
+    "path": "voice_v20_native_supervisor.c",
+    "bytes": 22872,
+    "sha256": "65529f48fbb5d7a79975dfb326aed35fa04be812909f7bff58ed0175df9ca781"
+  },
+  "toolchain": {
+    "architecture": "x64",
+    "compiler": "Microsoft C/C++ Optimizing Compiler",
+    "compiler_version": "19.50.35730",
+    "vcvars_path": "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Auxiliary/Build/vcvars64.bat"
+  },
+  "w4_wx_compile": "cl.exe /nologo /c /W4 /WX /O2 /guard:cf /std:c17 voice_v20_native_supervisor.c",
+  "w4_wx_compile_exit_code": 0,
+  "w4_wx_compile_diagnostics": [],
+  "analyze_w4_wx": "cl.exe /nologo /analyze /c /W4 /WX /O2 /guard:cf /std:c17 voice_v20_native_supervisor.c",
+  "analyze_w4_wx_exit_code": 0,
+  "analyze_w4_wx_diagnostics": [],
+  "linked_executable_created": false,
+  "object_files_are_incidental_unsealed_build_scratch": true,
+  "execution_performed": false,
+  "process_spawned_by_candidate": false,
+  "ledger_opened_by_candidate": false,
+  "model_calls": 0,
+  "gpu_calls": 0,
+  "synthesis_calls": 0,
+  "playback_calls": 0,
+  "camera_calls": 0,
+  "microphone_calls": 0,
+  "network_calls": 0,
+  "production_route_calls": 0,
+  "latency_measurements": 0,
+  "latency_improvement_claimed": false,
+  "boundary": "SOURCE_COMPILE_ONLY_NOT_A_CONTROLLER_OR_EXECUTION_PACKAGE"
+}

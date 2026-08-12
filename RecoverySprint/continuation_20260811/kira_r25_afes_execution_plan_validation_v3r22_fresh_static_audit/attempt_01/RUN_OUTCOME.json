@@ -1,0 +1,69 @@
+{
+  "schema": "kira.r25.afes.v3r22.consumed_run_outcome.v1",
+  "recorded_utc": "2026-08-11T14:46:42.6580354Z",
+  "decision_used": "ACCEPTED_FOR_ONE_BOUNDED_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R22_ONLY",
+  "invocation_count": 1,
+  "maximum_invocation_count": 1,
+  "authority_consumed": true,
+  "do_not_rerun": true,
+  "precheck": {
+    "sealed_subjects_exact": 237,
+    "sealed_subjects_drifted": 0,
+    "independent_audit_files_exact": 5,
+    "output_paths_absent": true,
+    "executable_bytes": 241152,
+    "executable_sha256": "d905444a6d4115603688f0c0bc39f1798dcb7f3d103ae2ed27712e52b88f72fc"
+  },
+  "invocation": {
+    "arguments": [],
+    "exit_code": 1,
+    "terminal_state": "CONSUMED_FAILURE_NO_RETRY",
+    "terminal_stage": 40
+  },
+  "evidence": {
+    "path": "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "bytes": 607,
+    "sha256": "4f9707fadf2092ecb28da4d9683e01690c5102cc1aac7236cc68ebd622d4b314",
+    "ordered_records": 5,
+    "last_record": "terminal_failed_consumed_no_retry"
+  },
+  "receipt": {
+    "path": "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+    "bytes": 1016,
+    "sha256": "cf2409244de8a42981e62667e5607e8912bd1d94220bbb09dfd0a79f3a4540bd",
+    "reservation_bytes": 424,
+    "completion_bytes": 592,
+    "completion_state": 3,
+    "terminal_stage": 40,
+    "reservation_sha256": "ff2c1c5c867cd4dc6efef2431018eede55bb2cd387446943940a32c3d78ea038",
+    "reservation_digest_matches_completion": true,
+    "executable_audit_manifest_controller_execution_contract_and_authority_cross_bindings_match": true
+  },
+  "contract_gate": {
+    "passed_mask": 32767,
+    "failure_gate": 0,
+    "win32_error": 0,
+    "all_15_gates_passed": true
+  },
+  "python_cleanup": {
+    "finalize_called": true,
+    "finalize_result": 0,
+    "free_library_called": true,
+    "free_library_result": true,
+    "module_snapshot_succeeded": true,
+    "snapshot_error": 0,
+    "checked_module_count": 8,
+    "old_base_present": false,
+    "exact_python_path_present": false
+  },
+  "exact_interpretation": {
+    "isolated_python_initialized": true,
+    "embedded_validator_execution_boundary_reached": true,
+    "successful_plan_validation_proven": false,
+    "exact_build_execution_plan_call_count_proven": false,
+    "reason_call_count_is_unproven": "Stage 40 is assigned immediately before the embedded validator is executed. That validator contains the pure _build_execution_plan call followed by additional checks, but the durable failure record does not identify which statement failed.",
+    "bootstrap_broker_process_afes_blender_body_save_render_or_export_reached": false,
+    "finished_body_proven": false
+  },
+  "required_next_step": "Never rerun V3r22. Preserve all bytes. Perform read-only postmortem analysis and author an append-only V3r23 diagnostic/repair that durably captures the exact Python exception and statement/checkpoint without calling any body path; seal it and require a different fresh audit before one new bounded attempt."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_typed_memory_integration_candidate_v11",
+  "status": "SEALED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_INDEPENDENT_AUDIT",
+  "v11_focused_tests": {"passed": 17, "failed": 0},
+  "v10_preserved_tests": {"passed": 12, "failed": 0},
+  "v9_preserved_tests": {
+    "passed": 11,
+    "failed": 1,
+    "failure_is_historical_absence_assertion": true,
+    "detail": "sealed v9 test expects its later accepted audit to be absent"
+  },
+  "py_compile_passed": true,
+  "static_fixture_process_used": true,
+  "static_fixture_live_adapter_imported_in_child": false,
+  "live_model_run": false,
+  "gpu_or_cuda_run": false,
+  "voice_load_or_synthesis": false,
+  "audio_or_playback": false,
+  "person_or_body_run": false,
+  "blender_run": false,
+  "production_route_changed": false,
+  "live_authorized": false,
+  "future_harness_authorized": false,
+  "seal_manifest_sha256": "dfa12cb753721d5bb8553dd34509698f12b36ba846a049bc96cd182147b32b20"
+}

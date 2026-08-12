@@ -1,0 +1,38 @@
+{
+  "schema": "kira.resident_media_voluntary_gate_v15.independent_audit_decision.v1",
+  "version": "v15",
+  "reviewed_utc_date": "2026-08-11",
+  "author_task": "/root/resident_media_v15_author",
+  "reviewer_task": "/root",
+  "decision": "ACCEPT_STATIC_NO_COMMIT_ONLY",
+  "blocking_findings": [],
+  "verification": {
+    "sealed_closure": "9/9 exact before and after review",
+    "strict_in_memory_compile": "2/2 PASS",
+    "focused_installed_suite": "20/20 tests and 10/10 subtests PASS",
+    "combined_preserved_v3_through_v15_suite": "230/230 tests and 150/150 subtests PASS",
+    "independent_hostile_probe": "PASS_STATIC_NO_COMMIT_BOUNDARY",
+    "original_mutable_catalog_can_change_retained_v15_snapshot": false,
+    "emitted_envelope": "exact built-in tuple of canonical bytes and their derived SHA-256",
+    "closure_reachable_catalog_weak_registry_authority_adapter_or_ledger_instance": false,
+    "record_or_commit_surface": false,
+    "external_authority_state_changed": false,
+    "production_consumer_found": false
+  },
+  "accepted_scope": {
+    "disconnected_static_validation_plan_only": true,
+    "caller_snapshot_authenticated_as_protected_truth": false,
+    "python_process_is_trust_root": false,
+    "durable_record_or_commit_authorized": false,
+    "protected_external_native_broker_present": false,
+    "production_routing_authorized": false,
+    "live_media_or_person_operation_authorized": false
+  },
+  "truth_boundary": {
+    "person_saw_or_heard_proven": false,
+    "person_enjoyed_learned_preferred_or_remembered_proven": false,
+    "person_emotion_or_consciousness_proven": false,
+    "media_playback_or_device_operation_occurred": false
+  },
+  "required_next_boundary": "A separately sealed and independently reviewed protected external/native broker must enforce the same exact completeness and type predicates at its actual commit boundary, with exact post-commit readback, before any durable or live integration can be considered."
+}

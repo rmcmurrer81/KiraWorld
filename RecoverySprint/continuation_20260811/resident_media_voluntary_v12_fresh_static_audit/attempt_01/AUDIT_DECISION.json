@@ -1,0 +1,86 @@
+{
+  "schema": "kira.resident_media_voluntary_v12_fresh_static_audit.v1",
+  "recorded_utc": "2026-08-11T07:38:16.3160182Z",
+  "verdict": "REJECT",
+  "live_authority": "NONE",
+  "production_integration_authority": "NONE",
+  "sealed_v12_subjects_match": true,
+  "sealed_v12_bytes_edited": false,
+  "v10_v11_and_rejection_bytes_preserved": true,
+  "authored_v12_suite": {
+    "passed": 14,
+    "failed": 0
+  },
+  "preserved_v3_v12_suite": {
+    "passed": 176,
+    "failed": 0
+  },
+  "different_fresh_hostile_suite": {
+    "passed": 20,
+    "failed": 0,
+    "note": "Blocker probes pass by reproducing deterministic unexpected acceptance."
+  },
+  "positive_findings": {
+    "public_production_opener_unconditionally_disconnected": true,
+    "caller_catalog_or_authority_cannot_open_production": true,
+    "invented_module_globals_do_not_open_production": true,
+    "strict_canonical_external_bytes_enforced": true,
+    "snapshot_selection_source_time_and_derivatives_bound": true,
+    "authority_receipt_and_verification_response_binding_enforced": true,
+    "local_and_cross_adapter_authority_receipt_replay_refused": true,
+    "stale_cas_rollback_readback_and_ambiguous_failure_fail_closed": true,
+    "normal_identity_substitution_refused": true,
+    "normal_output_and_decoder_replay_across_sessions_and_reopen_refused": true,
+    "complete_page_video_audio_caption_positive_controls_pass": true,
+    "production_and_experience_truth_remain_false": true
+  },
+  "blocking_findings": [
+    {
+      "id": "INCOMPLETE_REQUIRED_ROLE_EVIDENCE_COMMITTED",
+      "result": "UNEXPECTED_ACCEPT",
+      "summary": "V12 commits and increments its global anchor for a video with no caption-role segment and for an audio interval with a source-time gap when the caller sets engineering_output_completed and presentation_complete_for_manifest to false.",
+      "impact": "The sealed result and checkpoint claim incomplete-role refusal and required page/video/audio/caption completeness, but the ledger records incomplete required-role evidence as an accepted presentation record.",
+      "probes": [
+        "test_14_blocker_honestly_declared_incomplete_video_is_recorded",
+        "test_15_blocker_honestly_declared_incomplete_audio_is_recorded"
+      ]
+    },
+    {
+      "id": "IDENTIFIER_SCALAR_TYPE_COERCION",
+      "result": "UNEXPECTED_ACCEPT",
+      "summary": "_nonzero_identifier delegates to an inherited helper that stringifies values. Boolean/integer snapshot and selection-receipt IDs, person_id=True, session_id=True paired with the string True, output_receipt_id=True, and output_surface_id=True cross the V12 boundary.",
+      "impact": "Closed schemas and exact snapshot/person/session/output identity binding are not type exact; bool and integer values can alias canonical string identities, while output_surface_id remains a boolean in accepted evidence.",
+      "probes": [
+        "test_16_blocker_bool_and_integer_snapshot_identifiers_are_accepted",
+        "test_17_blocker_bool_person_session_output_and_surface_are_accepted"
+      ]
+    },
+    {
+      "id": "SHA256_SCALAR_TYPE_COERCION",
+      "result": "UNEXPECTED_ACCEPT",
+      "summary": "A 64-digit JSON integer is accepted as a renderer/decoder SHA-256 identity because inherited digest validation stringifies it.",
+      "impact": "The accepted canonical presentation segment retains the digest as an integer while the derived receipt list stores its string form, contradicting exact canonical digest typing and creating two representations of one receipt identity.",
+      "probes": [
+        "test_18_blocker_numeric_64_digit_decoder_digest_is_accepted"
+      ]
+    }
+  ],
+  "required_successor_boundary": {
+    "append_only_v13_required": true,
+    "v12_and_this_rejection_must_remain_exact": true,
+    "all_identifier_and_sha_fields_must_require_exact_string_type_before_validation": true,
+    "bool_and_integer_coercion_must_be_rejected_at_every_nested_level": true,
+    "required_role_completion_must_be_true_before_receipt_consumption_and_anchor_commit": true,
+    "honestly_declared_incomplete_video_audio_and_caption_probes_must_fail_without_revision_change": true,
+    "different_fresh_static_audit_required": true
+  },
+  "truth_boundary": {
+    "media_opened_decoded_rendered_or_played": false,
+    "model_called": false,
+    "network_or_device_used": false,
+    "person_or_memory_state_mutated": false,
+    "person_saw_heard_enjoyed_learned_or_remembered_claimed": false,
+    "body_gpu_or_blender_used": false,
+    "production_pointer_or_route_changed": false
+  }
+}

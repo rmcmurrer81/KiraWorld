@@ -1,0 +1,103 @@
+BLACKWELL VOICE V17 WHOLE-DOCUMENT MANIFEST CONTROL ANCHOR
+AUTHOR BUILD AND STATIC TEST RESULTS
+
+Recorded UTC: 2026-08-11T20:46:12.7228794Z
+Author task: /root/voice_v17_author
+Workspace: Documents/Codex work only; no Kira write
+
+BOUNDARY
+v15_invoked=false
+v16_invoked=false
+v17_candidate_invoked=false
+python_invoked=false
+model_calls=0
+gpu_voice_calls=0
+synthesis_calls=0
+audio_calls=0
+playback_calls=0
+latency_measurements=0
+network_calls=0
+camera_microphone_speaker_calls=0
+person_body_blender_sarah_calls=0
+execution_authority=NONE
+
+PRESERVED V16 REJECTION
+V16 author seal: 9065 bytes;
+b02ecdace1727a5ab9e8dba9a580932fe886e9ae05561f5241b1fbbffc21acd4
+V16 author rows copied by exact path/bytes/digest: 41/41
+V16 rejection closure artifacts bound: 8/8
+V16 invocation count: 0
+
+V17 WHOLE-DOCUMENT GRAMMAR
+canonical_compact_json_only=true
+top_level_exact_order_and_types=true
+row_exact_order_and_types=true
+actual_subject_objects=55
+unique_paths=55
+ordered_binding_bijection=true
+exact_eof=true
+all_dot_and_dot_dot_segments_refused=true
+positive_checked_canonical_u64=true
+lowercase_sha256_digits=64
+sole_absolute_binding=C:/Python314/python314.dll
+
+COMPILED HOSTILE PARSER HARNESS
+candidate wmain renamed and unreachable=true
+candidate executable invoked=false
+fixture source=exact sealed 55-row document
+checks=83
+failures=0
+V16 trailing-byte bypass refused=true
+V16 whitespace logical-duplicate/extra-subject bypass refused=true
+V16 terminal-dot and terminal-dot-dot bypasses refused=true
+all required malformed top-level/row/path/bytes/digest cases refused=true
+
+SOURCE MUTATION GATE
+final EOF predicate removal refused=true
+actual-object-counter predicate removal refused=true
+parsed-path-uniqueness predicate removal refused=true
+expected-set-equality predicate removal refused=true
+segment-dot predicate removal refused=true
+V17-provenance predicate removal refused=true
+mutants_refused=6/6
+
+STRICT NATIVE BUILD
+toolchain=Microsoft Visual C/C++ x64 19.50.35730
+flags=/W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17
+compile_exit=0
+warnings=0
+errors=0
+source=83635 bytes; 850cc18c8084c1cf4a0a8c8353289067bcbe8e7a27cc87fa77287f81b26cd1bc
+identity_header=6591 bytes; 8fb7df074a1eb658cdefc7c84aa5d441e8397a6863b79fbeee7901b096b67e94
+object=127137 bytes; 17b7dbf117ecba86a6c4e013b8a45fff7722c37a6139fd3cfb7605fda515ad42
+executable=157696 bytes; 52a4376025bdb08902396c033b66d1626c126e56fcb8134bddb79979cb068a4a
+
+STRICT STATIC ANALYSIS
+flags=/W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17
+exit=0
+unsuppressed_warnings=0
+errors=0
+analyzer_object=76720 bytes; 9c2684650302b4db7fac4f2f0bb06dd30d92c8c14a8f5d4581c5e5885c47701d
+
+PE STATIC INSPECTION
+machine=x64_8664
+format=PE32+_20B
+high_entropy_va=true
+dynamic_base=true
+nx_compatible=true
+control_flow_guard=true
+cf_instrumented=true
+fid_table_present=true
+guard_cf_function_count_hex=0x32
+imports=bcrypt.dll,KERNEL32.dll
+python_static_import=false
+process_shell_static_import=false
+
+STATIC SUITE
+PreBuild=V17_WHOLE_DOCUMENT_MANIFEST_HOSTILE_STATIC_TESTS_PASS
+PostBuild=V17_WHOLE_DOCUMENT_MANIFEST_HOSTILE_STATIC_TESTS_PASS
+PostSeal=V17_WHOLE_DOCUMENT_MANIFEST_HOSTILE_STATIC_TESTS_PASS
+seal=11748 bytes; 64fad216711534d8e1e3c014ae616fc651b36f70847c6efc18d55566dc5ab75a
+
+DIFFERENT_FRESH_AUDIT_REQUIRED=true
+ALLOWED_NEXT_AUTHORITY=NONE_UNTIL_DIFFERENT_FRESH_V17_AUDIT

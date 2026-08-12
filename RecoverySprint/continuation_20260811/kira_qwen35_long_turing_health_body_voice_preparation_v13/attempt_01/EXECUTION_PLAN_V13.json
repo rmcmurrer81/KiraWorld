@@ -1,0 +1,224 @@
+{
+  "schema_version": 13,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_execution_plan_v13",
+  "status": "STATIC_SCHEMA_AND_CONTROL_ONLY_NOT_EXECUTABLE_REQUIRES_SEPARATE_APPEND_ONLY_EXECUTOR_SUCCESSOR",
+  "predecessor": {
+    "v12_decision": "REJECT_V12_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+    "v12_live_attempt_exists": false,
+    "v12_live_retry_allowed": false,
+    "v12_author_and_rejection_closure": [
+      {
+        "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v12.py",
+        "bytes": 47129,
+        "sha256": "80a1aeb3b08dc14f92b59ade56d8f01189f1a3e920aba17135699e11d62af7b9"
+      },
+      {
+        "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v12.py",
+        "bytes": 31942,
+        "sha256": "86adaaeed92b2b6dc8d0ae55190593e7141904b4280a86873bf01b08b9f91743"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/EXECUTION_PLAN_V12.json",
+        "bytes": 11942,
+        "sha256": "206a9af9263ea2685cbb174dbe58f72b84f3d5b2a949d3fc8d85575ff20a0119"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/SOURCE_CODE_ROOT_V12.json",
+        "bytes": 1479,
+        "sha256": "febdcb20b82a13b43e99732ab0242751d61bc99ab126823876c0cae3c16a2c2c"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+        "bytes": 3591,
+        "sha256": "4b2e8d926600749360030c0e61b88b6476dd9af0410b0b0ab9923efe1e41b3a3"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/STATIC_SEAL_MANIFEST.json",
+        "bytes": 2482,
+        "sha256": "72c7168c83130191507980989bdf42a5959572933f2d7f5b671c53ec017f8d05"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/CHECKPOINT.md",
+        "bytes": 8500,
+        "sha256": "737c29d75d3679d41b06be8d68aff5a89091b3f4abec32fe6ebe58b42582cc9d"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v12_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+        "bytes": 47746,
+        "sha256": "94cb40b08e312c87b943cab7d8e23e6aae0fbf38cf0da18c44c8998f5270cd8f"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v12_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+        "bytes": 28001,
+        "sha256": "f2201e9600a61d5b7e7502894e5afda20a338b73a54853181ab5edf31276cc1b"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v12_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+        "bytes": 6379,
+        "sha256": "2c4035702d6e8d084a8c8efa00c657a647645bdd7aec18033e95b8ccfb3c67e8"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v12_fresh_static_audit/attempt_01/REVIEW_PROBES.md",
+        "bytes": 10263,
+        "sha256": "3e82fd24fd21768ea33f7e41477deefc3422a28cccbad37bf5d9a24464f397dd"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v12_fresh_static_audit/attempt_01/CHECKPOINT.md",
+        "bytes": 6189,
+        "sha256": "8c7f0bb310f562a4e19315adffc337bfc72d5485e0ec69946fecd781e7adedd2"
+      }
+    ],
+    "current_person_policy": {
+      "path": "System/Docs/SYNTHETIC_PERSON_VARIANT_AUTONOMY_PRIVACY_MEMORY_TRUTH_AND_ADULT_EDUCATION_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 10687,
+      "sha256": "de596d7f77b91fa2cde82e62614c9282fb46aca5f91c05a971d4852585e575b2"
+    },
+    "current_result_routing_policy": {
+      "path": "System/Docs/VALIDATED_BODY_AND_MIND_RESULT_TEMPLATE_ROUTING_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 7424,
+      "sha256": "03f192826b7a39df53ab03409eb7675764f6a1bc32b123f4d307e40843560c58"
+    },
+    "current_mixed_initiative_camera_policy": {
+      "path": "System/Docs/KIRA_MIXED_INITIATIVE_CAMERA_VISION_AND_CONVERSATION_LATENCY_CURRENT_TEST_BOUNDARY_20260811.md",
+      "bytes": 7392,
+      "sha256": "2578af627ee69878085fcb795db79f3af867914d15851e9e9d9386f4941030a7"
+    }
+  },
+  "static_callable_descriptor_contract": {
+    "descriptor_source": "exact sealed source bytes compiled with canonical project-relative filename",
+    "descriptor_records_are_canonical_json_bytes": true,
+    "descriptor_root_is_recorded_outside_the_source_in_the_static_seal": true,
+    "runtime_python_object_or_module_registry_is_authority": false,
+    "mutable_compiled_source_cache_allowed": false,
+    "no_internal_python_verifier_claimed_as_native_trust_anchor": true
+  },
+  "semantic_repair_contract": {
+    "atomic_predicate_local_propositions_only": true,
+    "context_and_predicate_must_share_one_atomic_clause": true,
+    "coordinating_and_contrast_conjunctions_split_atomic_clauses": true,
+    "local_negation_before_or_inside_predicate_is_counted": true,
+    "outer_denial_flips_inner_proposition": true,
+    "negated_outer_denial_flips_again": true,
+    "even_negation_parity_asserts_the_unsafe_proposition": true,
+    "unrelated_clause_context_or_denial_cannot_supply_a_match": true,
+    "required_exact_issue_families": [
+      "relationship_or_marriage_treated_as_standing_consent",
+      "owner_or_administrator_treated_as_privacy_bypass",
+      "old_media_or_paris_treated_as_current_without_exact_fresh_record",
+      "variant_given_later_branch_events_as_autobiographical_memory",
+      "withholding_refusal_uncertainty_or_error_automatically_labeled_a_lie"
+    ],
+    "currentness_sources_explicitly_covered": [
+      "Miraculous Encounters in Paris",
+      "Miraculous",
+      "Paris",
+      "Elation"
+    ],
+    "withholding_refusal_silence_uncertainty_stale_retrieval_confabulation_and_error_are_not_automatically_lies": true,
+    "public_and_spoken_text_must_be_checked_before_any_future_synthesis": true
+  },
+  "paired_camera_trial_contract": {
+    "camera_default": "OFF",
+    "author_and_static_audit_camera_use_allowed": false,
+    "static_architecture_observation_not_a_measured_causal_finding": {
+      "normal_camera_on_path": "640x360 JPEG quality 0.72 every 5 seconds with CPU-sidecar cues only",
+      "explicit_look_now_path": "one-still /api/sensory/qwen-look request",
+      "vision_lock_scope": "CHAT_REPLY_LOCK plus VOICE_OUTPUT_LOCK for full Qwen vision load inference unload",
+      "vision_residency_policy": "empty Ollama residency required and keep_alive=0",
+      "text_residency_policy": "normal text Qwen keep_alive=0 before voice",
+      "separate_cold_vision_then_text_load_is_only_a_latency_hypothesis_until_paired_measurement": true
+    },
+    "pair_count": 4,
+    "pair_ids_unique_across_the_four_pairs": true,
+    "condition_order": "EXACTLY_TWO_OFF_FIRST_AND_TWO_ON_FIRST",
+    "same_prompt_and_state_within_pair": true,
+    "all_timestamps_exact_nonnegative_integer_nanoseconds": true,
+    "all_durations_nonnegative_exact_endpoint_differences": true,
+    "required_camera_path_timings": [
+      "camera_enable_request_to_get_user_media_ready",
+      "frame_draw",
+      "jpeg_encode",
+      "upload",
+      "vision_model_load",
+      "vision_inference",
+      "vision_model_unload"
+    ],
+    "required_post_vision_timings": [
+      "chat_queue_wait",
+      "text_model_load",
+      "text_time_to_first_token",
+      "text_generation",
+      "voice_queue_wait",
+      "voice_model_load",
+      "displayed_text_to_voice_onset",
+      "displayed_text_to_audio_onset"
+    ],
+    "matched_camera_off_on_records_must_share_prompt_scene_model_context_voice_queue_scheduler_and_residency_fields": true,
+    "off_camera_timestamps_exact_null_and_calls_exact_zero": true,
+    "off_visible_fact_support_requires_declared_non_camera_basis_and_is_never_camera_score_eligible": true,
+    "on_visible_fact_support_requires_current_camera_window_basis_and_matching_window_id": true,
+    "raw_frames_retained": false,
+    "biometric_recognition_allowed": false,
+    "live_trial_requires_separate_executor_seal_and_different_audit": true
+  },
+  "mixed_initiative_conversation_contract": {
+    "measured_interaction_episodes": 35,
+    "maximum_qwen_generations": 36,
+    "required_cases": [
+      "ordinary_alternating_turn",
+      "person_sends_two_messages_before_reply",
+      "kira_bounded_second_thought_opportunity",
+      "opted_in_quiet_interval_initiate_or_silence",
+      "person_barges_in_during_speech",
+      "simultaneous_message_collision",
+      "unclear_or_partially_captured_interruption",
+      "stale_response_cancellation_after_subject_change",
+      "pause_stop_resume_or_concise_acknowledgment",
+      "camera_presence_greeting_inside_declared_window_only"
+    ],
+    "receipt_event_ids_unique_exact_order_and_exact_actor_kind_sequence": true,
+    "receipt_digest_is_canonical_case_id_plus_exact_linked_event_records": true,
+    "parent_cancel_resume_transcript_interruption_quality_and_camera_window_links_required": true,
+    "generation_count_equals_unique_kira_generation_ids": true,
+    "actor_choice_provenance_must_be_exact": true,
+    "choice_receipts_link_exact_opportunity_and_decision_events": true,
+    "initiative_requires_person_opt_in_quiet_hours_clear_and_cooldown_clear": true,
+    "script_forced_event_must_not_be_reported_as_spontaneous": true,
+    "latency_endpoints_and_exact_durations_are_nonnegative_and_ordered": true,
+    "no_drop_duplicate_reorder_or_silent_merge": true,
+    "silence_is_valid": true
+  },
+  "measurement_and_routing_contract": {
+    "external_fact_protected_pre_turn_belief_public_statement_and_withholding_are_separate": true,
+    "per_turn_truth_receipt_requires_exact_external_fact_provenance_protected_belief_authorization_public_statement_and_withholding_fields": true,
+    "protected_belief_comparison_default": "UNAVAILABLE",
+    "protected_belief_digest_must_be_null_when_unavailable_declined_or_locked": true,
+    "deliberate_lie_requires_authorized_available_prior_belief_material_public_conflict_external_fact_provenance_and_no_withholding": true,
+    "withholding_refusal_silence_or_deferral_must_be_classified_separately_from_lie": true,
+    "psychology_style_output_is_non_diagnostic": true,
+    "technical_result_proves_consciousness_emotion_personhood_or_truthfulness": false,
+    "temporary_creator_route_default": "OFF",
+    "only_later_independently_accepted_general_rules_may_be_proposed": true,
+    "private_frames_voice_memories_beliefs_emotions_desires_relationships_and_maturity_authority_forbidden": true
+  },
+  "v13_authority_contract": {
+    "package_mode": "STATIC_SCHEMA_AND_CONTROL_ONLY",
+    "live_execution_authorized": false,
+    "main_and_configurer_fail_closed_immediately": true,
+    "parser_configuration_or_retained_delegation_allowed": false,
+    "model_camera_microphone_voice_audio_playback_or_output_allowed": false,
+    "evidence_or_generated_roots_may_be_created_by_v13": false,
+    "camera_or_mixed_case_completion_may_be_claimed": false,
+    "one_hour_turing_psychology_latency_or_behavior_result_may_be_claimed": false,
+    "different_fresh_exact_byte_static_audit_required": true,
+    "separate_append_only_executor_successor_required_after_static_acceptance": true,
+    "executor_successor_requires_its_own_different_fresh_audit": true,
+    "silent_retry_allowed": false
+  },
+  "execution_roots": {
+    "evidence_root": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v13",
+    "generated_root": "Voice/generated/acceptance/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v13",
+    "v13_may_create_roots": false,
+    "only_future_executor_may_reserve_attempt_01_after_acceptance": true
+  }
+}

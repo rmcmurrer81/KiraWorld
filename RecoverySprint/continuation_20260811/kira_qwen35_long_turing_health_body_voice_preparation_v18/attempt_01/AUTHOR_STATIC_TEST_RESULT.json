@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v18_author_static_test_result",
+  "status": "PASS_PRESEAL_STATIC_SCHEMA_CONTROL_AUTHOR_ONLY_NO_RUN_AUTHORITY",
+  "recorded_at_utc": "2026-08-12T03:06:20.176Z",
+  "author_identity": "Codex subagent /root/long_v17_fresh_audit acting as append-only V18 author after independently rejecting installed V17",
+  "scope": {
+    "workspace": "Documents/Codex/2026-08-11/c/work/long_v18_author/staging",
+    "kira_workspace_written": false,
+    "v17_or_v18_main_invoked": false,
+    "v18_configurer_invoked": false,
+    "retained_runner_invoked": false,
+    "model_gpu_camera_microphone_voice_audio_playback_invoked": false,
+    "person_or_protected_private_state_accessed": false,
+    "body_blender_media_network_production_or_sarah_path_used": false
+  },
+  "subjects_before_author_result": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py",
+      "bytes": 70741,
+      "sha256": "f47fbdd41ccbb867333ea3ced1d67868c1d905610b54ac2fead34723b8aa0c1b"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py",
+      "bytes": 21741,
+      "sha256": "7f413662cee824dd36d7422e078b8c0dad8c0e0fbd01a4b35dce0d46a653956d"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/EXECUTION_PLAN_V18.json",
+      "bytes": 15222,
+      "sha256": "a2e834c18f502dedd573f229f8654bbd9c819b132b94d046e07c84e1a2af2bf5"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v18/attempt_01/SOURCE_CODE_ROOT_V18.json",
+      "bytes": 2867,
+      "sha256": "3b32f32ee19e0a50d6bf494f6dcc102c7454d65928655d3dc8f682c652f1f3f1"
+    }
+  ],
+  "checks": {
+    "cache_free_preseal_pytest": "72 passed, 1 post-seal-only check skipped",
+    "source_and_test_compile_in_memory": "2/2",
+    "installed_v17_author_rejection_and_current_policy_closure_exact": "24/24",
+    "installed_v17_source_bytes": 140217,
+    "installed_v17_source_sha256": "ac9f74b3e50f9a7fec0c65eeb6c219d46194c28e5b242be72374338ceeb293ec",
+    "installed_v17_descriptor_bytes": 365656,
+    "installed_v17_descriptor_sha256": "fbe377325f60193763d5bfa086830e03b9d1248ce0a47ffdb4640b65af671b55",
+    "v18_source_descriptor_bytes": 201804,
+    "v18_source_descriptor_sha256": "f03cb376805381aad2e573a3f713759bbbf27ab29956aa5753ad5907e6227031",
+    "v18_source_function_definition_count": 45,
+    "v18_semantic_verifier_bundle_bytes": 8737,
+    "v18_semantic_verifier_bundle_sha256": "b11c85be1b0b99d3805f5cf5acaecd8646a744b70ff42511839021854a517b75",
+    "global_choice_authorization_id_unique_across_public_events_scopes_and_truth_receipts": "PASS",
+    "recursive_exact_json_type_unicode_scalar_cycle_depth_and_signed_64_guards_return_issues": "PASS",
+    "semantic_family_inventory_and_critical_callable_code_externally_bound_and_freshly_reloaded": "PASS",
+    "mutable_module_semantic_dictionary_substitution_attack": "REJECTED",
+    "camera_success_failure_timeout_terminal_trace_grammar_and_prefix_call_accounting": "PASS",
+    "truthful_partial_camera_timeout_and_failure_preserved_without_success_relabel": "PASS",
+    "audio_measurement_basis_playback_api_proxy_device_first_sample_and_owner_observed_heard_separated": "PASS",
+    "weaker_audio_evidence_cannot_claim_owner_hearing": "PASS",
+    "owner_observed_heard_requires_owner_receipt_and_consistent_monotonic_timing": "PASS",
+    "all_v17_semantic_truth_lineage_camera_mixed_initiative_collision_latency_and_one_hour_rules_preserved": "PASS",
+    "temporary_creator_canon_invention_variant_disclosure_voice_provenance_expert_competence_and_cross_builder_scoring_fields": "PASS",
+    "no_recording_historical_voice_requires_evidence_based_reconstruction_or_unresolved_no_voice_and_is_never_labeled_authentic": "PASS",
+    "h_h_holmes_windows_male_voice_labeled_generic_baseline_and_approximately_1894_pre_death_target_scored": "PASS",
+    "generated_expert_unique_voice_same_person_spec_collision_distinctness_age_coherence_and_domain_pronunciation_scoring": "PASS",
+    "shared_person_spec_json_policy_exact": "7576/520c994fc256afb60a62a568a04826d4579abe96d6ac0b4c495c9179224034c9",
+    "shared_person_spec_document_exact": "7051/4bbd0699c12f5d118f859ba8fc07a073b163c603d9d1541ff0ad353e9ecf173e",
+    "one_hour_discovery_scoring_fields_are_static_and_nonexecuting": "PASS",
+    "reserved_evidence_and_generated_roots_absent": true
+  },
+  "limitations": {
+    "natural_language_proposition_parser_included": false,
+    "unstructured_text_can_pass_semantic_gate": false,
+    "future_executor_requires_separately_sealed_complete_proposition_parser": true,
+    "event_provenance_root_is_a_required_external_validator_input_not_proof_of_a_native_ledger": true,
+    "durable_one_use_choice_store_is_required_and_not_implemented_here": true,
+    "canonical_self_hash_is_not_external_authority": true,
+    "future_executor_requires_external_or_native_source_authority_event_ledger_private_state_and_choice_consumption_binding": true,
+    "audio_schema_distinguishes_evidence_bases_but_does_not_claim_machine_or_owner_hearing_occurred": true,
+    "one_hour_and_temporary_creator_fields_are_scoring_schemas_not_live_results_or run_authority": true,
+    "hostile_test_pass_is_author_evidence_not_independent_acceptance": true
+  },
+  "authority": {
+    "genuinely_different_fresh_exact_byte_static_audit_required": true,
+    "v18_static_schema_or_control_accepted": false,
+    "live_execution_authorized": false,
+    "separate_append_only_executor_successor_required_after_static_acceptance": true,
+    "executor_requires_another_different_audit": true,
+    "one_hour_camera_mixed_model_voice_private_or_latency_result_exists": false,
+    "historical_or_fictional_identity_authenticity_claim_proven": false,
+    "expert_task_competence_proven": false,
+    "technical_pass_proves_consciousness_emotion_personhood_or_truthfulness": false,
+    "unfinished_body_truth_preserved": true,
+    "body_or_anatomy_claim": "NONE"
+  }
+}

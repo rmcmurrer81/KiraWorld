@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "candidate_id": "kira_chatterbox_blackwell_cpu_park_candidate_v5",
+  "candidate_status": "inactive_static_repair_candidate_pending_fresh_independent_audit",
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "playback_authorized": false,
+  "allowed_states": [
+    "UNLOADED",
+    "PARKED_CPU",
+    "LOADED_CUDA",
+    "CLEANUP_DEBT"
+  ],
+  "required_components": [
+    "t3",
+    "s3gen",
+    "ve"
+  ],
+  "approved_profile": "Voice/profiles/temp_ai/kira_voice_profile.json",
+  "approved_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+  "approved_reference": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "approved_audio_prompt": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_audio_prompt_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "owned_output_root": "RecoverySprint/runtime_cache/blackwell_chatterbox/v5_outputs",
+  "qwen_model": "qwen3.5:9b",
+  "qwen_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "input_channel": "public_spoken_only",
+  "compute_device": "cuda",
+  "cuda_device_name": "NVIDIA GeForce RTX 5060 Ti",
+  "compute_capability": [12, 0],
+  "cpu_synthesis_allowed": false,
+  "generic_voice_allowed": false,
+  "sapi_allowed": false,
+  "substitute_reference_allowed": false,
+  "automatic_fallback_inside_candidate": null,
+  "production_fallback_retained_outside_candidate": "sealed_cpu_chatterbox_only",
+  "closed_synthesis_request_keys": [
+    "condition_digest",
+    "input_channel",
+    "profile_sha256",
+    "reference_sha256",
+    "text",
+    "text_sha256"
+  ],
+  "resource_bounds": {
+    "minimum_available_physical_mib_before_park": 6144,
+    "minimum_available_physical_mib_after_park": 6144,
+    "minimum_available_physical_mib_after_resume": 4096,
+    "maximum_system_commit_fraction": 0.82,
+    "minimum_cuda_free_mib_before_resume": 4608,
+    "minimum_cuda_free_mib_after_resume": 1024,
+    "maximum_park_cuda_allocated_above_baseline_bytes": 268435456,
+    "maximum_park_cuda_reserved_above_baseline_bytes": 536870912,
+    "maximum_unload_cuda_allocated_above_baseline_bytes": 67108864,
+    "maximum_unload_cuda_reserved_above_baseline_bytes": 134217728,
+    "maximum_unload_process_rss_above_baseline_mib": 512,
+    "maximum_evidence_age_seconds": 2.0
+  },
+  "adapter_operation_bounds_seconds": {
+    "cache_clear": 3.0,
+    "consume_chunk": 1.0,
+    "cuda_cleanup": 5.0,
+    "cuda_execution_evidence": 3.0,
+    "loader": 45.0,
+    "qwen_cancel": 2.0,
+    "qwen_load": 45.0,
+    "qwen_probe": 2.0,
+    "qwen_residency": 2.0,
+    "qwen_stream": 120.0,
+    "qwen_unload": 5.0,
+    "release_owned": 5.0,
+    "resource_probe": 2.0,
+    "synthesis": 120.0,
+    "tensor_move": 30.0
+  },
+  "operation_bounds_seconds": {
+    "load": 55.0,
+    "park": 45.0,
+    "resume": 45.0,
+    "synthesis": 135.0,
+    "cleanup": 35.0,
+    "qwen_cancel_join": 2.0,
+    "qwen_real_stream": 130.0
+  },
+  "qwen_load_only": {
+    "positive_residency_ttl_seconds": 90,
+    "maximum_residency_ttl_seconds": 120,
+    "real_reply_keep_alive": 0,
+    "minimum_token_characters": 32,
+    "one_owned_operation_only": true
+  },
+  "wav_bounds": {
+    "allowed_channels": [1, 2],
+    "allowed_sample_width_bytes": [2],
+    "minimum_sample_rate_hz": 16000,
+    "maximum_sample_rate_hz": 48000,
+    "minimum_duration_seconds": 0.05,
+    "maximum_duration_seconds": 120.0,
+    "maximum_file_bytes": 52428800,
+    "minimum_absolute_pcm_peak": 1
+  },
+  "sealed_v2_baseline": {
+    "Core/persistent_blackwell_voice_integration_v2.py": "c3d1bad34ccb327e1bef23ad166dd52c9d52abe60bc7be0a402e4e8a636cb675",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/persistent_worker.py": "b6f2dcc816537552db02d00c5a1932057f2d99b5d206a578344d4a92523b3cad",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_client.py": "9f33ef0d9fd969da05ce48eb148163efc77306bfd3bc215efcb482e68e7261a8",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_contract.py": "863c6ece050b12af157565c60df6fd82b207dae5476e693cc08e34b392c8f910",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_config.json": "805c1d2836c618970a81f5f44d31f81f67e204173bd919857452daa8dbedc8bb"
+  },
+  "sealed_v3_rejected_baseline": {
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v3/candidate_config.json": "b4017575d46c038cba64b7ea12a76100f1c9e74785782bee399e1245fb8ed0b0",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v3/README.md": "46ae040ee1886b29cfc499defff3ba463477289c86272cf137cc627aca8ba47f",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v3/persistent_worker.py": "57a74bbeb7bc4bdac5c244ab622df4ea5a6c711a728b9534cf212c9d7b663eaf",
+    "Core/persistent_blackwell_voice_integration_v3.py": "0d111641e6dd6c02a099a7656a8127cdf08a36e3ec7a8561100933a9c639fa99",
+    "Testing/test_blackwell_persistent_voice_candidate_v3_static.py": "d7940c99b81ced7adb9798e3493e928fa152d7740185efb0dd9be04e94654622",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V3_CPU_PARK_STATIC_IMPLEMENTATION_CHECKPOINT.md": "c888354a3352de27cb4e66766a5b9614e38f52943accbe7aa545aed1ab228064"
+  },
+  "sealed_v4_rejected_baseline": {
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v4/candidate_config.json": "1eccc9e7729c42fe9b228373b41846281d86450b9f2a4dd7a6fab46d6878a5d5",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v4/README.md": "f6dfdd818e9e80c7331dfdbaa95f6429397a6e5308cb52d4612dc7bf612dfdd0",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v4/persistent_worker.py": "36d250e517e0e24dbae89c00fcbb7ce48a6aaf3bc9084d64c51e052005a718b9",
+    "Core/persistent_blackwell_voice_integration_v4.py": "a730b48a7aa49bb0e5c006ebc58381eeb4ef4ca9c284116207a8d874da834687",
+    "Testing/test_blackwell_persistent_voice_candidate_v4_hostile_static.py": "6823f2f12a4fc3c1a4eff6562f77da59a2e2e791b117dc386086d1fb439cc26c",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V4_CPU_PARK_STATIC_REPAIR_CHECKPOINT.md": "7a1f9e038a27b7878229f37dc22bcd7839ed73703b9bcfbdbaffb43febb6087e",
+    "RecoverySprint/continuation_20260810/blackwell_v4_cpu_park_fresh_static_audit/attempt_01/CHECKPOINT.md": "454462a6be1b4300d2c184149c1723f19dbecbf6b4aa8759f874919da6f1e7df"
+  }
+}

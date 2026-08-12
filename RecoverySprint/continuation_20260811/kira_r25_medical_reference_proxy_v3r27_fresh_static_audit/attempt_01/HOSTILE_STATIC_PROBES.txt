@@ -1,0 +1,73 @@
+KIRA V3R27 DIFFERENT FRESH INDEPENDENT HOSTILE PROBES
+Recorded UTC: 2026-08-11T23:32:35Z
+Verdict: REJECTED_NO_EXECUTION_AUTHORITY
+
+BOUNDARY
+- Kira was read-only.
+- Blender, bpy, the V3r27 candidate, V3r26, AFES, body/save/render, model,
+  camera, voice, network, and Sarah were not invoked.
+- Cache-free Python source compilation and read-only static/mocked probes only.
+
+EXACT POSITIVE RESULTS
+- Installed author artifacts: 11/11 exact before and after.
+- Seal subjects: 8/8 exact; canonical bytes 799; package root
+  180db0c53f1c6144249a73c5304fd44c976945cb8b427d2370e9b15bb8ed4976.
+- Upstream closure: 24/24 exact (10 author, 6 audit, 4 run, 3 triage,
+  1 root triage checkpoint).
+- Author PostSeal: V3R27_HOSTILE_STATIC_TESTS_PASS.
+- Cache-free syntax: 2/2.
+- License rows: 7/7; all seven source hashes occur in exact triage evidence.
+- CC BY-NC and unknown-license quarantines remain exact.
+- Components: 24; Stage A planned rows: 9.
+- Skeleton rows: 136 unique; mapped: 0; all evidence fields MISSING.
+- No source import/export, subprocess, network, live avatar, rig/weight,
+  activation, or Sarah operator surface was found.
+
+HOSTILE AUTHORITY PROBES
+1. PASS-PROOF-OF-BLOCKER: arbitrary auditor codex_forged_local_writer plus a
+   freshly matching TSV sidecar passes the exact candidate parser.
+2. PASS-PROOF-OF-BLOCKER: sidecar leading/trailing whitespace is accepted
+   because the parser strips it instead of enforcing exact 65 bytes.
+3. PASS-PROOF-OF-BLOCKER: CHECKPOINT.md is tested only with is_file(); its
+   content and digest are not read or bound.
+4. PASS-PROOF-OF-BLOCKER: in memory only, append a harmless script comment,
+   regenerate its seal row/package root/seal hash, regenerate the 14-row audit
+   and sidecar, and the candidate-equivalent audit+seal checks accept it.
+5. CLASSIFICATION: a trusted root's predeclared rehash can procedurally block a
+   pre-existing mutation, but V3r27 does not bind that observation or retain
+   stable handles; replacement between root rehash and candidate read remains.
+
+HOSTILE PROXY/EVIDENCE PROBES
+6. PASS-PROOF-OF-BLOCKER: the exact validate_proxy_scene predicate accepts
+   nine correctly tagged MESH objects having one vertex each, all at origin,
+   zero materials, and wrong attribution strings.
+7. PASS-PROOF-OF-BLOCKER: no per-object locations, dimensions, transforms,
+   vertex floors, topology, material assignment/value, attribution value,
+   relation gate, modifier, constraint, parent, library, or full scene/data
+   inventory is checked after build or reload.
+8. PASS-PROOF-OF-BLOCKER: all eight required landmark names in the placement
+   plan are absent from the builder. Missing landmarks, unaudited Kira height,
+   and unknown outer-shell clearance therefore do not fail closed.
+9. PASS-PROOF-OF-BLOCKER: the plan defines positive Y as anterior, while
+   front_clinical uses camera location (0.0, -1.55, 0.10), a posterior view.
+10. PASS-PROOF-OF-BLOCKER: background and cwd are checked, but factory startup,
+    loaded input identity, Blender executable/version, autoexec state, external
+    libraries, and external saved-file dependencies are not.
+11. PASS-PROOF-OF-BLOCKER: render evidence accepts only is_file and bytes >=
+    1024. PNG signature, decoded 640x640 dimensions, visible proxy content,
+    distinct views, and final all-output hashes are not acceptance gates.
+
+HOSTILE ONE-SHOT/PARTIAL-OUTPUT PROBES
+12. PASS-PROOF-OF-BLOCKER: output absence is checked by path before reserve;
+    the output directory and later files have no stable handle/reparse checks.
+13. PASS-PROOF-OF-BLOCKER: blend and render files are not CREATE_NEW-reserved;
+    save/render use overwrite behavior.
+14. PASS-PROOF-OF-BLOCKER: receipt is created before evidence and output root,
+    but reserved becomes true only after reserve returns. An intermediate
+    failure leaves a consumed pending receipt without terminal update.
+15. PASS-PROOF-OF-BLOCKER: failure writes no RUN_OUTCOME.
+16. PASS-PROOF-OF-BLOCKER: success RUN_OUTCOME precedes terminal evidence and
+    nonexclusive receipt rewrite, so a later error can leave contradictory
+    success/failure evidence.
+
+No 14-row acceptance TSV was created. V3r27 must not run.

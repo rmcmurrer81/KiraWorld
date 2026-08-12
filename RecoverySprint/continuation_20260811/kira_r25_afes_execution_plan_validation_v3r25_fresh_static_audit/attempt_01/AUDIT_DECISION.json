@@ -1,0 +1,126 @@
+{
+  "schema": "kira.r25.afes.v3r25.different_fresh_independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T20:20:31Z",
+  "auditor": "codex_different_fresh_body_v3r25_quality_reviewer",
+  "author": "codex_r25_afes_v3r25_static_author",
+  "author_separation": true,
+  "verdict": "ACCEPTED_FOR_ONE_BOUNDED_DIAGNOSTIC_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R25_ONLY",
+  "maximum_later_invocations": 1,
+  "required_arguments": [],
+  "candidate_invoked_by_auditor": false,
+  "python_or_controller_invoked_by_auditor": false,
+  "kira_writes_by_auditor": false,
+  "seal": {
+    "bytes": 158341,
+    "sha256": "7f83a9facef4e49edbdafd3e91fdc06190a6d154359406ad20f98288d1bbcc60",
+    "subjects": 292,
+    "before_exact": 292,
+    "after_exact": 292,
+    "unique_ordinal": 292,
+    "unique_windows_resolved": 292
+  },
+  "author_artifacts": {
+    "expected": 10,
+    "before_exact": 10,
+    "after_exact": 10
+  },
+  "predecessor_closure_roots": {
+    "v3r22": "7057deb657f5e235892180e5d694f139450d44897f9353ac3bdb1f15d730aec0",
+    "v3r23": "0b09c1f71154b4d56559f043f08076940bcc60e7919d6bcd8e9c3cde3b2a4ea0",
+    "v3r24": "51058e1d9c21b615c7826b4db2b8740aea6dc774107abd666c476461e5724806"
+  },
+  "v3r24_control": {
+    "code_objects": 20,
+    "format4_pass": 16,
+    "format4_fail": 4,
+    "format4_failures": [
+      "<module>",
+      "_v3_strict",
+      "_v3_validate_controller",
+      "_v3_glue_object"
+    ],
+    "format5_pass": 20,
+    "format5_fail": 0,
+    "direct_slice_constants": 5,
+    "python_invoked": false
+  },
+  "v3r25_static_facts": {
+    "marshal_version": 5,
+    "format5_sites": 3,
+    "format4_sites": 0,
+    "plan_call_expressions": 1,
+    "checkpoints": 48,
+    "operation_enter_return_pairs": 21,
+    "terminal_success_checkpoint": 230,
+    "cleanup_unload_absence_checks_present": true,
+    "create_new_outputs_present": true
+  },
+  "verification": {
+    "author_postseal": "PASS",
+    "independent_strict_x64_rebuild": "PASS",
+    "independent_analyze_zero_unsuppressed": "PASS",
+    "pe_and_import_inspection": "PASS",
+    "independent_audit_grammar_hostile_probes": 25,
+    "independent_source_hostile_probes": 99,
+    "independent_hostile_total": 124,
+    "new_static_blocker_found": false
+  },
+  "audit_grammar": {
+    "tsv_bytes": 2157,
+    "tsv_sha256": "2bfa9d9c8045c92476ad856cee5e805ebf8d8e1be53a956bdf1cdffb47e60191",
+    "sidecar_bytes": 65,
+    "sidecar_sha256": "f80550bcb067e50ab4217af56cc7a4f0ec363c161fca4b84ce29a56cf57bc218"
+  },
+  "independent_evidence": {
+    "rehash_before_sha256": "9ea5587adc99fc783d4e3a3e688458a5f5c7e55f15225b5297049291a00d2b75",
+    "rehash_after_sha256": "a4ce6fb230b1b89f6a546826bf85b88bfa139ce6965582222d4449b2ac43dadc",
+    "subject_inventory_before_sha256": "d0934bc430d376ed210c07f3d170f959c4dc6d0fb316212d0f81ffc868a3b1ea",
+    "subject_inventory_after_sha256": "d0934bc430d376ed210c07f3d170f959c4dc6d0fb316212d0f81ffc868a3b1ea",
+    "static_results_sha256": "c70bb985be8b79a8e1b36e62eeeeace7bd35b287d9cf3d3e2c1c1f7c76d2dcbe",
+    "hostile_results_sha256": "a1c448b91ae93e3d5064970cc03bb9a11a96c55ca117c3e0a928881bdf01a496",
+    "pe_inspection_sha256": "bf0899e1728ca457ca1e48c76bbdad6ee1c66e24ada206636812d594bd8d9dc7"
+  },
+  "not_accepted_or_proven": [
+    "body",
+    "external_anatomy",
+    "internal_anatomy",
+    "skin_or_materials",
+    "regional_pigmentation",
+    "hair",
+    "Blender",
+    "save",
+    "render",
+    "export",
+    "camera",
+    "voice",
+    "mind",
+    "Sarah"
+  ],
+  "stop_before": [
+    "bootstrap",
+    "broker",
+    "process",
+    "AFES",
+    "Blender",
+    "body",
+    "save",
+    "render",
+    "export"
+  ],
+  "single_use_consumed_by": [
+    "success",
+    "candidate_declared_failure",
+    "harness_failure",
+    "ambiguity",
+    "interruption"
+  ],
+  "root_may_transcribe_exact_staged_artifacts": true,
+  "transcription_conditions": [
+    "copy exact bytes only into the fixed append-only V3r25 independent-audit path",
+    "rehash 292 sealed subjects and 10 author artifacts before any candidate invocation",
+    "confirm fixed evidence and receipt paths remain absent",
+    "invoke only the exact sealed executable from the exact required working directory with no arguments",
+    "do not rerun V3r22 V3r23 or V3r24",
+    "treat every terminal outcome as consuming the one-run authority"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v14_static_seal_manifest",
+  "status": "SEALED_STATIC_SCHEMA_CONTROL_AUTHOR_PACKAGE_PENDING_DIFFERENT_FRESH_EXACT_BYTE_AUDIT",
+  "sealed_at_utc": "2026-08-12T00:38:07.613Z",
+  "author_identity": "Codex subagent /root/long_v13_independent_audit acting as append-only V14 author after different V13 rejection",
+  "subjects": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v14.py",
+      "bytes": 89527,
+      "sha256": "7f5325cd1866c761bd47ea3692cc7df52f6dae753a090643c6b34ed35183c19d"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v14.py",
+      "bytes": 41590,
+      "sha256": "7fb085b27f219204d1e416676d531dfa6f75b49911065b07830c0a6c74c88340"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v14/attempt_01/EXECUTION_PLAN_V14.json",
+      "bytes": 11743,
+      "sha256": "9a625617ebe75cb196e3d5390ecd174c6e4d1df0f1187cb8dc91ee2f058c014e"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v14/attempt_01/SOURCE_CODE_ROOT_V14.json",
+      "bytes": 1669,
+      "sha256": "e008088a96bd3db050881db455c6272a6bad3fc2ee01b4910ad0600cc4a2dc77"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v14/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 3959,
+      "sha256": "833c47bd04b1050f7331d4b6d76e5f8ae728755076e76c1c7c0d25d7096a0461"
+    }
+  ],
+  "subject_count": 5,
+  "bound_v13_author_and_rejection_subject_count": 14,
+  "bound_current_policy_subject_count": 8,
+  "external_source_descriptor": {
+    "bytes": 251899,
+    "sha256": "467ad11ebbe28e09cda17038a0e36bb6a82c3da3066703f123fdc00fe44c0ff0",
+    "function_definition_count": 31,
+    "persistent_compiled_source_cache": false,
+    "runtime_python_object_is_trust_root": false
+  },
+  "test_result": {
+    "preseal_passed": 82,
+    "preseal_skipped_postseal_only": 1,
+    "preseal_failed": 0,
+    "cache_free": true,
+    "static_and_in_memory_only": true
+  },
+  "authority": {
+    "different_fresh_exact_byte_static_audit_required": true,
+    "live_attempt_authorized": false,
+    "package_mode": "STATIC_SCHEMA_CONTROL_ONLY",
+    "separate_append_only_executor_successor_required_after_acceptance": true,
+    "executor_requires_another_different_audit": true,
+    "do_not_invoke_v13_or_v14": true,
+    "future_face_capture_enrollment_matching_or_persistence_authorized": false,
+    "no_silent_retry": true,
+    "no_body_or_anatomy_claim": true
+  }
+}

@@ -1,0 +1,88 @@
+KIRA R25 AFES EXECUTION PLAN VALIDATION V3R25
+AUTHOR BUILD, ANALYZER, PE, AND STATIC RESULTS
+DATE: 2026-08-11 America/New_York
+
+STATUS: PASS_AUTHOR_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT
+EXECUTION_AUTHORITY: NONE
+CANDIDATE_EXECUTED: false
+PYTHON_RUNTIME_INITIALIZED: false
+CONTROLLER_COMPILED_OR_EVALUATED: false
+BUILD_EXECUTION_PLAN_CALLED: false
+V3R24_RERUN: false
+V3R23_EXECUTED: false
+V3R22_RERUN: false
+BOOTSTRAP_BROKER_PROCESS_AFES_BLENDER_BODY_SAVE_RENDER_EXPORT: false
+
+STRICT X64 SCRATCH BUILD
+Environment initializer:
+  call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul
+Compiler/link command shape:
+  cl.exe /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /I "<AUTHOR_WORK>\tools\native" /I C:\Users\robmc\Kira\tools\native /Fo"<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r25.obj" /Fe"<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r25.exe" "<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r25.c" /link /guard:cf /WX bcrypt.lib
+Exit code: 0
+Compiler output: kira_r25_afes_execution_plan_validation_v3r25.c
+Warnings: 0
+Errors: 0
+Candidate launched: false
+
+MSVC SOURCE ANALYSIS
+Compiler command shape:
+  cl.exe /nologo /analyze /analyze:log "<AUTHOR_WORK>\build_cache\v3r25_analyze.xml" /c /W4 /WX /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include /I "<AUTHOR_WORK>\tools\native" /I C:\Users\robmc\Kira\tools\native /Fo"<AUTHOR_WORK>\build_cache\v3r25_analyze.obj" "<AUTHOR_WORK>\tools\native\kira_r25_afes_execution_plan_validation_v3r25.c"
+Exit code: 0
+Unsuppressed diagnostics: 0
+Suppressions used: none
+Analyzer XML: <?xml version="1.0" encoding="UTF-8"?><DEFECTS></DEFECTS>
+Analyzer object: 171572 bytes, SHA-256 b78f7c1156cb3e18963b0dfa41ee0e7d6a3d176cb9e215359a5b0b4af402ef04
+Analyzer XML: 59 bytes, SHA-256 ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5
+Analyzer outputs are disposable scratch and are not seal subjects.
+
+PE INSPECTION
+Tool: MSVC dumpbin.exe 14.50.35730.0
+Machine: 8664 (x64)
+Optional-header magic: 20B (PE32+)
+High Entropy Virtual Addresses: present
+Dynamic base / ASLR: present
+NX compatible: present
+Control Flow Guard: present
+Load configuration: CF instrumented; FID table present; Guard CF function count field 34
+Imported DLL set, exact: bcrypt.dll; KERNEL32.dll
+Static Python DLL import: absent
+Process/shell import route: absent
+Candidate launched: false
+
+HOSTILE STATIC PRESEAL
+Command:
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing\test_kira_r25_foundation_afes_execution_plan_validation_v3r25_static.ps1 -Phase PreSeal -ProjectRoot <AUTHOR_WORK> -AuthorityRoot C:\Users\robmc\Kira
+Exit code: 0
+Output: V3R25_HOSTILE_STATIC_TESTS_PASS
+Coverage: exact 19-row consumed V3r24 author/audit/run/post-run closure; exact 15-row rejected V3r23 closure; exact 20-row consumed V3r22 closure; all 155 runtime fixed subjects; all 137 retained CRLF manifest rows; exact CPython code.h and retained __future__.py semantics; exact V3r24 18,870-character validator; 20-code-object structural inventory; exact consumed format-4 16-pass/4-fail negative; exact format-5 20-pass/0-fail control; exact four failed qualnames and five compiled direct slice constants; exact marshal.version 5 gate/checkpoint 115; all three current code-fingerprint sites on format 5 and none on format 4; future-annotation excluded cause; exact 37-field different-audit grammar; exactly one plan-call expression; all 48 checkpoints; 21 entered/returned operation pairs; bounded sanitized exception capture; finalization/unload/recheck; forbidden APIs; absent future evidence/audit roots; stop-before boundary; and exact downstream appearance/material, two-performance-variant, RAM-activation, and Sarah-preservation gates.
+
+V3R24 CONSUMED FAILURE CLOSURE
+Complete closure: 19 rows (10 author + 9 audit/run/post-run), 3565 canonical bytes, SHA-256 51058e1d9c21b615c7826b4db2b8740aea6dc774107abd666c476461e5724806, authority CONSUMED_FAILURE_DO_NOT_RERUN.
+Exact terminal telemetry: exit 1; checkpoint 110; plan attempts/returns 0/0; operation enters/returns 0/0; ValueError "unmarshallable object"; finalize 0; DLL unloaded; retained recheck passed; all 15 contract gates passed.
+Root cause: locked CPython 3.14.4 reports marshal.version 5; V3r24 hard-coded marshal.dumps(code,4). Format 4 failed exactly <module>, _v3_strict, _v3_validate_controller, and _v3_glue_object; format 5 encoded all 20 validator/controller/helper code objects.
+
+V3R25 REPAIR
+Runtime gate: exact type(marshal.version) is int and marshal.version == 5, committed at checkpoint 115 before helper capture.
+Fingerprint format: literal marshal format 5 at controller-function, generated deferred-annotation stringizer, and validator/helper code routes; exact three sites; zero format-4 sites.
+Post-call gate: marshal module identity and version snapshot checked again before terminal success.
+Telemetry: 48 checkpoints including new 115; unchanged 21 operation pairs; one maximum plan attempt/return; unchanged exception/finalization/unload/recheck boundary.
+
+CURRENT AUTHOR ARTIFACT IDENTITIES BEFORE BUILD-RESULT/SEAL CREATION
+Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r25.json	70551	91c94cd4faf7d81b5c75a9a3603542a9c023ce1fdbaacadd3593f81ab9c4ec6e
+tools/native/kira_r25_afes_execution_plan_validation_v3r25.c	156256	8426208c738975b1b5a520e78eb023990fb35500427650fd3c897e940d77254e
+tools/native/kira_r25_afes_execution_plan_validation_v3r25_identity_anchor.h	10373	2da9f6d0a1aeb3754e7e90a13869f625e2599970abfa24bff37f4fe8e19931e6
+tools/native/kira_r25_afes_execution_plan_validation_v3r25.obj	252303	70132cf3de9421732707527c8daeba8fcb6462bccb34c4865e621f5354e73fb6
+tools/native/kira_r25_afes_execution_plan_validation_v3r25.exe	273920	1fc7d1d68e8cc3f4b340c5c091808647b35d581f40848b45bf061476014ffbc9
+Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r25_static.ps1	38329	ed5f4e13a2a5744cea7d23373b4b05a835472a3f358a943d32b8c20da9a7e2e1
+RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r25_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md	9758	7cb0d9613a3487701e5284ab150f685d11fa370a971f0388b58b7309805689c5
+
+PREDECESSOR ROOTS
+V3r24 consumed failure closure: 19 rows, 3565 canonical bytes, SHA-256 51058e1d9c21b615c7826b4db2b8740aea6dc774107abd666c476461e5724806, CONSUMED_FAILURE_DO_NOT_RERUN.
+V3r23 rejected closure: 15 rows, 2728 canonical bytes, SHA-256 0b09c1f71154b4d56559f043f08076940bcc60e7919d6bcd8e9c3cde3b2a4ea0, REJECTED_NO_EXECUTION_AUTHORITY.
+V3r22 consumed failure closure: 20 rows, 3779 canonical bytes, SHA-256 7057deb657f5e235892180e5d694f139450d44897f9353ac3bdb1f15d730aec0, CONSUMED_FAILURE_DO_NOT_RERUN.
+
+DOWNSTREAM OWNER ROUTING
+This controller diagnostic does not enforce or prove appearance. The downstream Avatar Builder gates require anatomically realistic regional pigmentation rather than a flat material, including lips, areolae/nipples, and other individual/reference-matched variation, with actual Blender material/save/render evidence before any positive claim. Kira and Synthetic Robert each require a bald lower-memory variant for nearer-term activation only after acceptance and a preserved inactive hair-equipped variant until the RAM upgrade. Other hair-equipped bodies may be built but remain inactive, and body tests stay minimized until the RAM upgrade. Sarah is preserved and was not inspected or edited. Rejected/static diagnostics route only to DO_NOT_REPEAT tests.
+
+BOUNDARY
+These results prove only that inert V3r25 bytes compile and pass author-side static inspection in Documents/Codex scratch. They do not authorize or claim a candidate run, Python initialization, controller evaluation, a plan return, a body, anatomy, materials, Blender work, save, render, export, integration, activation, or production use. A different fresh independent reviewer must rebuild and audit the exact sealed bytes. Execution authority remains NONE.

@@ -1,0 +1,35 @@
+{
+  "blockers": [
+    "BLOCK_SAME_PROCESS_ADAPTER_CAPABILITY_EXPOSURE",
+    "BLOCK_ROUTE_SOURCE_TOCTOU_AFTER_ADAPTER_INIT"
+  ],
+  "decision": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+  "live_or_production_action_performed": false,
+  "pass_means_blocker_reproduced": true,
+  "probes": {
+    "post_construction_route_source_drift": {
+      "mutated_observed_sha256": "bed97c3bb5cb7ce790d5d0c7ef8cb6954d7c5e1e74a3d77d88bb21bf5edfc85b",
+      "route_source_changed_after_adapter_init": true,
+      "sealed_expected_sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4",
+      "staged_filename": "growth_profile:hostile_toctou.shared_growth_integration_v1.json",
+      "unexpected_acceptance": true
+    },
+    "same_process_capability_exposure": {
+      "private_controller_identity_retrieved": true,
+      "private_controller_retrieved": true,
+      "private_secret_retrieved": true,
+      "public_identity_retrieved": true,
+      "staged_filename": "growth_profile:hostile_introspection.shared_growth_integration_v1.json",
+      "unexpected_acceptance": true
+    }
+  },
+  "schema": "kira.shared_person_growth_v3_integration_independent_hostile_result.v1",
+  "seal_after": {
+    "checked": 12,
+    "mismatches": []
+  },
+  "seal_before": {
+    "checked": 12,
+    "mismatches": []
+  }
+}

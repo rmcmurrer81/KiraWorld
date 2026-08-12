@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v11_static_seal_manifest",
+  "status": "SEALED_AUTHOR_PACKAGE_PENDING_DIFFERENT_FRESH_EXACT_BYTE_AUDIT",
+  "sealed_at_utc": "2026-08-11T20:06:38.612Z",
+  "author_identity": "Codex subagent /root/long_v10_author acting as V11 author",
+  "subjects": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v11.py",
+      "bytes": 141455,
+      "sha256": "8e820c0ac0d6ade8218ba770e73dbe34095aa91c77dc4fe187320232baa68360"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v11.py",
+      "bytes": 40153,
+      "sha256": "60861a39ea20b82ff25aea1dd1f48fd5fa7ccd007556d52818d6cf71243da3aa"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v11/attempt_01/EXECUTION_PLAN_V11.json",
+      "bytes": 13708,
+      "sha256": "591ad3197453b997de0dc1276fd4650b7a9d22839d8bd7f48d0b0735fca08bc6"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v11/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 3039,
+      "sha256": "5233e032a1f99aee5174fd71db8f4709cacd1d3fad4953f8556b712453991d12"
+    }
+  ],
+  "subject_count": 4,
+  "predecessor_subject_count": 9,
+  "current_policy_subject_count": 3,
+  "proposition_registry": {
+    "row_count": 27,
+    "v9_boundary_row_count": 17,
+    "canonical_descriptor_sha256": "66bd33c7bc9a2dafd28965430a36f55f5eaae4b527283f3fabf3a5c4125c7e23"
+  },
+  "test_result": {
+    "passed": 136,
+    "failed": 0,
+    "cache_free": true,
+    "static_and_mocked_only": true
+  },
+  "authority": {
+    "different_fresh_exact_byte_audit_required": true,
+    "live_attempt_authorized": false,
+    "package_mode": "STATIC_SCHEMA_AND_CONTROL_ONLY",
+    "append_only_executor_successor_required": true,
+    "do_not_invoke_v10": true,
+    "do_not_invoke_v11_before_acceptance": true,
+    "no_silent_retry": true,
+    "no_body_or_anatomy_claim": true
+  }
+}

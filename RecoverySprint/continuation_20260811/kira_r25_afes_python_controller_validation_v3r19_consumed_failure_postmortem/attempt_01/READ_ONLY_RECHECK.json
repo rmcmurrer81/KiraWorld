@@ -1,0 +1,49 @@
+{
+  "schema": "kira.r25.afes.python_controller_validation.v3r19.consumed_failure_recheck.v1",
+  "recorded_utc": "2026-08-11T09:45:27.3458392Z",
+  "status": "CONSUMED_FAILURE_NO_RETRY",
+  "invocation": {
+    "argument_count": 0,
+    "working_directory": "C:/Users/robmc/Kira",
+    "exit_code": 4,
+    "stderr": "V3R19_SUBJECT_REFUSED:source"
+  },
+  "observed_boundary": {
+    "first_fixed_subject_gate_entered": true,
+    "authority_contract_opened": false,
+    "future_audit_parsed": false,
+    "evidence_reserved": false,
+    "receipt_reserved": false,
+    "python_loaded": false,
+    "controller_definitions_evaluated": false,
+    "execution_plan_built": false,
+    "process_or_broker_started": false,
+    "afes_started": false,
+    "blender_started": false,
+    "body_save_render_or_export_started": false
+  },
+  "output_absence": {
+    "RUN_EVIDENCE.jsonl": true,
+    "PYTHON_CONTROLLER_VALIDATION_OUTCOME.receipt.bin": true
+  },
+  "sealed_subject_recheck": {
+    "source": [71456, "25b99a9b81aea3ea0f4af7459b1513b89e33b8714cc456393eed892107e15079"],
+    "identity_anchor": [5323, "bad197d4b9cc3a41972146dddf72b7f74d0c43cdcec983ea6e07dee8a60c63b1"],
+    "object": [105920, "4b637e7f7a4c02cee92569a44050b9096cfe54a19a3dd74989e3adb402494eef"],
+    "executable": [189440, "625e5445826ee6b587096a143c27a5ed194a3c509baf9b7d3ca79fb601fd7487"],
+    "contract": [4997, "409844486183a75c3ec801109602c5ad3ce52cd42eadb873f9f738135f758862"],
+    "static_test": [16610, "85b8a8e05237d425458c59cb3948dae61019744bf2b55520cf15da8cd2c21075"],
+    "static_seal": [16808, "439f35f8a04282d8cea1a99a6f80fcec0d9c6653dff3edf10f241b7897b34ccd"],
+    "author_checkpoint": [5018, "7bae08d6591d26563b0d597777016e271cd47596ed3c877aabd29f7e15f9aec1"],
+    "independent_audit": [3507, "927dc02ef49091dfff64909308fc244fa22e55a41f4844a17b8021ca5c1cbea7"],
+    "independent_audit_sidecar": [65, "f084cf31909d1315700364d0183691d4d7ec560320ec7f5db82809c8e32b0ac2"],
+    "independent_audit_checkpoint": [2755, "4b67d18d0cb1b3a6160693c644ceabfcae4c697c2ee22619e06aeef95728f47e"]
+  },
+  "root_cause": {
+    "function": "verify_handle_exact",
+    "caller": "hash_path_exact",
+    "defect": "The caller zero-initialized FILE_ID_INFO as an output slot, but verify_handle_exact compared that zero value to the real file identity before its later assignment branch could run.",
+    "effect": "Every hash_path_exact call with a non-null identity output failed; the first fixed source gate therefore refused exact unchanged bytes.",
+    "repair_boundary": "Append-only V3r20 must separate identity capture from already-bound identity verification and must reproduce this V3r19 failure as a negative control."
+  }
+}

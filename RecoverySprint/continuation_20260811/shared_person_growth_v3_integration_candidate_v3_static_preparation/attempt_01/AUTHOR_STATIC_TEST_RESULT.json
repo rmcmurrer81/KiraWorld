@@ -1,0 +1,50 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v3.author_static_test_result.v1",
+  "version": "v3",
+  "status": "AUTHOR_STATIC_TESTS_PASS_PENDING_DIFFERENT_FRESH_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v3.py",
+      "bytes": 20715,
+      "sha256": "dcbde9ca1a6fedc43dc70625e3ac747839e8d60875a421fde09b44b2f8ff52c6"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v3.py",
+      "bytes": 19755,
+      "sha256": "f2cc4b23947ff00f717d7619b42265fbe6b54fbfb972d88d7d9f324f1471083b"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v3_static_preparation/attempt_01/STATIC_CONTRACT.json",
+      "bytes": 3247,
+      "sha256": "48c6fd29994894a2551ae01fcef4b43055a4781b6139d1161f27305cf7db65dd"
+    }
+  ],
+  "verification": {
+    "strict_in_memory_compile": "8/8 PASS",
+    "focused_v3_integration_tests": "20/20 PASS",
+    "combined_shared_growth_core_and_integration_tests": "103/103 PASS",
+    "fixed_predecessor_and_acceptance_closure": "7/7 PASS",
+    "production_opener_refusal": "PASS",
+    "current_python_consumer_search": "source and focused test only",
+    "route_source_drift_probes": "PASS_REFUSED",
+    "fixed_closure_drift_probes": "PASS_REFUSED",
+    "post_construction_drift_probe": "PASS_REFUSED",
+    "exact_type_schema_consent_maturity_and_robert_probes": "PASS_REFUSED",
+    "no_authority_commit_or_write_ast_surface": "PASS"
+  },
+  "preserved_truth": {
+    "isolated_shared_growth_v3_core_remains_accept_static_only": true,
+    "integration_v1_remains_rejected": true,
+    "integration_v2_remains_rejected": true,
+    "candidate_returns_inert_canonical_bytes_only": true,
+    "candidate_is_protected_authority": false,
+    "candidate_can_commit": false,
+    "candidate_can_upgrade_any_person": false,
+    "candidate_can_use_temporary_creator": false,
+    "production_enabled": false,
+    "person_or_profile_changed": false,
+    "memory_or_private_state_changed": false,
+    "live_model_body_media_voice_network_device_or_sarah_operation": false,
+    "different_fresh_audit_required": true
+  }
+}

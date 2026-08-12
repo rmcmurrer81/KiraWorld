@@ -1,0 +1,18 @@
+Kira body lane V3r25 independent hostile static probes
+Recorded UTC: 2026-08-11
+
+AUTHOR POSTSEAL SUITE
+PASS: V3R25_HOSTILE_STATIC_TESTS_PASS
+
+INDEPENDENT AUDIT GRAMMAR
+PASS: 25/25
+Baseline exact grammar and sidecar accepted. Mutations rejected included trailing byte, extra LF, missing final LF, CRLF substitution, NUL insertion, row reorder, duplicate row, extra field, altered count/version/marshal/checkpoint/operation limits, same or invalid auditor, uppercase digest, altered stop-before set, mismatched digest, and short sidecar.
+
+INDEPENDENT SOURCE / CONTRACT
+PASS: 99/99
+Required literals and exact counts were bound for all 48 checkpoints, the marshal-version pre/post gate, receipt/audit/cleanup/provenance controls, the single plan-call expression, all 21 enter/return operation pairs, and the fixed/retained closure. Count-changing and forbidden-route mutations were rejected.
+
+TOTAL ADDITIONAL INDEPENDENT HOSTILE PROBES
+PASS: 124/124
+
+These are static probes only. No candidate, Python, controller, plan callable, AFES, Blender, body, save, render, export, model, camera, voice, or Sarah action was invoked.

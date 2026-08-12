@@ -1,0 +1,71 @@
+{
+  "version": "1",
+  "pip_version": "24.0",
+  "install": [
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/54/37/11a7f06983bfd5ebba71eb2caa6660941b17b31f3c49d4a5fe9e1e804d31/chatterbox_tts-0.1.7-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=83782500e3ad4e7c919132e9d7eb8755f29f57c5bde5ec48c655ca23a4eb113c",
+          "hashes": {
+            "sha256": "83782500e3ad4e7c919132e9d7eb8755f29f57c5bde5ec48c655ca23a4eb113c"
+          }
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "chatterbox-tts",
+        "version": "0.1.7",
+        "dynamic": [
+          "license-file"
+        ],
+        "summary": "Chatterbox: Open Source TTS and Voice Conversion by Resemble AI",
+        "description": "![Chatterbox Turbo Image](./Chatterbox-Turbo.jpg)\n\n\n# Chatterbox TTS\n\n[![Alt Text](https://img.shields.io/badge/listen-demo_samples-blue)](https://resemble-ai.github.io/chatterbox_turbo_demopage/)\n[![Alt Text](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/ResembleAI/chatterbox-turbo-demo)\n[![Alt Text](https://static-public.podonos.com/badges/insight-on-pdns-sm-dark.svg)](https://podonos.com/resembleai/chatterbox)\n[![Discord](https://img.shields.io/discord/1377773249798344776?label=join%20discord&logo=discord&style=flat)](https://discord.gg/rJq9cRJBJ6)\n\n*Made with ♥️ by* <a href=\"https://resemble.ai\" target=\"_blank\"><img width=\"100\" alt=\"resemble-logo-horizontal\" src=\"https://github.com/user-attachments/assets/35cf756b-3506-4943-9c72-c05ddfa4e525\" /></a>\n\n**Chatterbox** is a family of three state-of-the-art, open-source text-to-speech models by Resemble AI.\n\nWe are excited to introduce **Chatterbox-Turbo**, our most efficient model yet. Built on a streamlined 350M parameter architecture, **Turbo** delivers high-quality speech with less compute and VRAM than our previous models. We have also distilled the speech-token-to-mel decoder, previously a bottleneck, reducing generation from 10 steps to just **one**, while retaining high-fidelity audio output.\n\n**Paralinguistic tags** are now native to the Turbo model, allowing you to use `[cough]`, `[laugh]`, `[chuckle]`, and more to add distinct realism. While Turbo was built primarily for low-latency voice agents, it excels at narration and creative workflows.\n\nIf you like the model but need to scale or tune it for higher accuracy, check out our competitively priced TTS service (<a href=\"https://resemble.ai\">link</a>). It delivers reliable performance with ultra-low latency of sub 200ms—ideal for production use in agents, applications, or interactive media.\n\n<img width=\"1200\" height=\"600\" alt=\"Podonos Turbo Eval\" src=\"https://storage.googleapis.com/chatterbox-demo-samples/turbo/podonos_turbo.png\" />\n\n### ⚡ Model Zoo\n\nChoose the right model for your application.\n\n| Model                                                                                                           | Size | Languages | Key Features                                            | Best For                                     | 🤗                                                                  | Examples |\n|:----------------------------------------------------------------------------------------------------------------| :--- | :--- |:--------------------------------------------------------|:---------------------------------------------|:--------------------------------------------------------------------------| :--- |\n| **Chatterbox-Turbo**                                                                                            | **350M** | **English** | Paralinguistic Tags (`[laugh]`), Lower Compute and VRAM | Zero-shot voice agents,  Production          | [Demo](https://huggingface.co/spaces/ResembleAI/chatterbox-turbo-demo)        | [Listen](https://resemble-ai.github.io/chatterbox_turbo_demopage/) |\n| Chatterbox-Multilingual [(Language list)](#supported-languages)                                                 | 500M | 23+ | Zero-shot cloning, Multiple Languages                   | Global applications, Localization            | [Demo](https://huggingface.co/spaces/ResembleAI/Chatterbox-Multilingual-TTS) | [Listen](https://resemble-ai.github.io/chatterbox_demopage/) |\n| Chatterbox [(Tips and Tricks)](#original-chatterbox-tips)                                                       | 500M | English | CFG & Exaggeration tuning                               | General zero-shot TTS with creative controls | [Demo](https://huggingface.co/spaces/ResembleAI/Chatterbox)              | [Listen](https://resemble-ai.github.io/chatterbox_demopage/) |\n\n## Installation\n```shell\npip install chatterbox-tts\n```\n\nAlternatively, you can install from source:\n```shell\n# conda create -yn chatterbox python=3.11\n# conda activate chatterbox\n\ngit clone https://github.com/resemble-ai/chatterbox.git\ncd chatterbox\npip install -e .\n```\nWe developed and tested Chatterbox on Python 3.11 on Debian 11 OS; the versions of the dependencies are pinned in `pyproject.toml` to ensure consistency. You can modify the code or dependencies in this installation mode.\n\n## Usage\n\n##### Chatterbox-Turbo\n\n```python\nimport torchaudio as ta\nimport torch\nfrom chatterbox.tts_turbo import ChatterboxTurboTTS\n\n# Load the Turbo model\nmodel = ChatterboxTurboTTS.from_pretrained(device=\"cuda\")\n\n# Generate with Paralinguistic Tags\ntext = \"Hi there, Sarah here from MochaFone calling you back [chuckle], have you got one minute to chat about the billing issue?\"\n\n# Generate audio (requires a reference clip for voice cloning)\nwav = model.generate(text, audio_prompt_path=\"your_10s_ref_clip.wav\")\n\nta.save(\"test-turbo.wav\", wav, model.sr)\n```\n\n##### Chatterbox and Chatterbox-Multilingual\n\n```python\n\nimport torchaudio as ta\nfrom chatterbox.tts import ChatterboxTTS\nfrom chatterbox.mtl_tts import ChatterboxMultilingualTTS\n\n# English example\nmodel = ChatterboxTTS.from_pretrained(device=\"cuda\")\n\ntext = \"Ezreal and Jinx teamed up with Ahri, Yasuo, and Teemo to take down the enemy's Nexus in an epic late-game pentakill.\"\nwav = model.generate(text)\nta.save(\"test-english.wav\", wav, model.sr)\n\n# Multilingual examples\nmultilingual_model = ChatterboxMultilingualTTS.from_pretrained(device=device)\n\nfrench_text = \"Bonjour, comment ça va? Ceci est le modèle de synthèse vocale multilingue Chatterbox, il prend en charge 23 langues.\"\nwav_french = multilingual_model.generate(french_text, language_id=\"fr\")\nta.save(\"test-french.wav\", wav_french, model.sr)\n\nchinese_text = \"你好，今天天气真不错，希望你有一个愉快的周末。\"\nwav_chinese = multilingual_model.generate(chinese_text, language_id=\"zh\")\nta.save(\"test-chinese.wav\", wav_chinese, model.sr)\n\n# If you want to synthesize with a different voice, specify the audio prompt\nAUDIO_PROMPT_PATH = \"YOUR_FILE.wav\"\nwav = model.generate(text, audio_prompt_path=AUDIO_PROMPT_PATH)\nta.save(\"test-2.wav\", wav, model.sr)\n```\nSee `example_tts.py` and `example_vc.py` for more examples.\n\n## Supported Languages\nArabic (ar) • Danish (da) • German (de) • Greek (el) • English (en) • Spanish (es) • Finnish (fi) • French (fr) • Hebrew (he) • Hindi (hi) • Italian (it) • Japanese (ja) • Korean (ko) • Malay (ms) • Dutch (nl) • Norwegian (no) • Polish (pl) • Portuguese (pt) • Russian (ru) • Swedish (sv) • Swahili (sw) • Turkish (tr) • Chinese (zh)\n\n## Original Chatterbox Tips\n- **General Use (TTS and Voice Agents):**\n  - Ensure that the reference clip matches the specified language tag. Otherwise, language transfer outputs may inherit the accent of the reference clip’s language. To mitigate this, set `cfg_weight` to `0`.\n  - The default settings (`exaggeration=0.5`, `cfg_weight=0.5`) work well for most prompts across all languages.\n  - If the reference speaker has a fast speaking style, lowering `cfg_weight` to around `0.3` can improve pacing.\n\n- **Expressive or Dramatic Speech:**\n  - Try lower `cfg_weight` values (e.g. `~0.3`) and increase `exaggeration` to around `0.7` or higher.\n  - Higher `exaggeration` tends to speed up speech; reducing `cfg_weight` helps compensate with slower, more deliberate pacing.\n\n\n## Built-in PerTh Watermarking for Responsible AI\n\nEvery audio file generated by Chatterbox includes [Resemble AI's Perth (Perceptual Threshold) Watermarker](https://github.com/resemble-ai/perth) - imperceptible neural watermarks that survive MP3 compression, audio editing, and common manipulations while maintaining nearly 100% detection accuracy.\n\n\n## Watermark extraction\n\nYou can look for the watermark using the following script.\n\n```python\nimport perth\nimport librosa\n\nAUDIO_PATH = \"YOUR_FILE.wav\"\n\n# Load the watermarked audio\nwatermarked_audio, sr = librosa.load(AUDIO_PATH, sr=None)\n\n# Initialize watermarker (same as used for embedding)\nwatermarker = perth.PerthImplicitWatermarker()\n\n# Extract watermark\nwatermark = watermarker.get_watermark(watermarked_audio, sample_rate=sr)\nprint(f\"Extracted watermark: {watermark}\")\n# Output: 0.0 (no watermark) or 1.0 (watermarked)\n```\n\n\n## Official Discord\n\n👋 Join us on [Discord](https://discord.gg/rJq9cRJBJ6) and let's build something awesome together!\n\n## Evaluation\nChatterbox Turbo was evaluated using Podonos, a platform for reproducible subjective speech evaluation.\n\nWe compared Chatterbox Turbo to competitive TTS systems using Podonos' standardized evaluation suite, focusing on overall preference, naturalness, and expressiveness.\n\nEvaluation reports:\n- [Chatterbox Turbo vs ElevenLabs Turbo v2.5](https://podonos.com/resembleai/chatterbox-turbo-vs-elevenlabs-turbo)\n- [Chatterbox Turbo vs Cartesia Sonic 3](https://podonos.com/resembleai/chatterbox-turbo-vs-cartesia-sonic3)\n- [Chatterbox Turbo vs VibeVoice 7B](https://podonos.com/resembleai/chatterbox-turbo-vs-vibevoice7b)\n\nThese evaluations were conducted under identical conditions and are publicly accessible via Podonos.\n\n## Acknowledgements\n- [Podonos](https://podonos.com) — for supporting reproducible subjective speech evaluation\n- [Cosyvoice](https://github.com/FunAudioLLM/CosyVoice)\n- [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)\n- [HiFT-GAN](https://github.com/yl4579/HiFTNet)\n- [Llama 3](https://github.com/meta-llama/llama3)\n- [S3Tokenizer](https://github.com/xingchensong/S3Tokenizer)\n\n## Citation\nIf you find this model useful, please consider citing.\n```\n@misc{chatterboxtts2025,\n  author       = {{Resemble AI}},\n  title        = {{Chatterbox-TTS}},\n  year         = {2025},\n  howpublished = {\\url{https://github.com/resemble-ai/chatterbox}},\n  note         = {GitHub repository}\n}\n```\n## Disclaimer\nDon't use this model to do bad things. Prompts are sourced from freely available data on the internet.\n",
+        "description_content_type": "text/markdown",
+        "author_email": "resemble-ai <engineering@resemble.ai>",
+        "license": "MIT License\n\nCopyright (c) 2025 Resemble AI\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+        "requires_dist": [
+          "numpy<2.0.0,>=1.24.0; python_version < \"3.13\"",
+          "numpy>=2.0.0; python_version >= \"3.13\"",
+          "librosa==0.11.0",
+          "s3tokenizer",
+          "torch==2.6.0; python_version < \"3.14\"",
+          "torch>=2.9.0; python_version >= \"3.14\"",
+          "torchaudio==2.6.0; python_version < \"3.14\"",
+          "torchaudio>=2.9.0; python_version >= \"3.14\"",
+          "transformers==5.2.0",
+          "diffusers==0.29.0",
+          "resemble-perth>=1.0.0",
+          "conformer==0.3.2",
+          "safetensors==0.5.3",
+          "spacy-pkuseg",
+          "pykakasi==2.3.0",
+          "gradio==6.8.0",
+          "pyloudnorm",
+          "omegaconf"
+        ],
+        "requires_python": ">=3.10",
+        "project_url": [
+          "Homepage, https://github.com/resemble-ai/chatterbox",
+          "Repository, https://github.com/resemble-ai/chatterbox"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.11.9",
+    "os_name": "nt",
+    "platform_machine": "AMD64",
+    "platform_release": "10",
+    "platform_system": "Windows",
+    "platform_version": "10.0.26200",
+    "python_full_version": "3.11.9",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.11",
+    "sys_platform": "win32"
+  }
+}

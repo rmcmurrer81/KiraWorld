@@ -1,0 +1,109 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r27.different_fresh_independent_audit_decision.v1",
+  "recorded_utc": "2026-08-11T23:32:35Z",
+  "auditor": "codex_r25_medical_reference_proxy_v3r27_independent_auditor",
+  "author": "codex_r25_medical_reference_proxy_v3r27_static_author",
+  "author_separation": true,
+  "verdict": "REJECTED_NO_EXECUTION_AUTHORITY",
+  "maximum_invocations": 0,
+  "candidate_invoked_by_auditor": false,
+  "blender_or_bpy_invoked_by_auditor": false,
+  "kira_writes_by_auditor": false,
+  "seal": {
+    "bytes": 2092,
+    "sha256": "60d8153688a9b5163adcd5a0ab2983bf2ca96518d011bdeda309076aca2c5ef6",
+    "subjects": 8,
+    "subjects_exact": 8,
+    "canonical_bytes": 799,
+    "package_root_sha256": "180db0c53f1c6144249a73c5304fd44c976945cb8b427d2370e9b15bb8ed4976"
+  },
+  "installed_author_artifacts": {
+    "expected": 11,
+    "exact_before": 11,
+    "exact_after": 11
+  },
+  "upstream_closure": {
+    "rows": 24,
+    "exact": 24,
+    "scope_counts": {
+      "v3r26_author": 10,
+      "v3r26_audit": 6,
+      "v3r26_run": 4,
+      "anatomy_triage": 3,
+      "anatomy_triage_root": 1
+    }
+  },
+  "positive_static_facts": {
+    "author_postseal": "PASS",
+    "cache_free_syntax": "PASS_2_OF_2",
+    "license_rows": 7,
+    "license_source_hashes_cross_checked_to_triage": 7,
+    "noncommercial_and_unknown_license_quarantines_exact": true,
+    "component_rows": 24,
+    "stage_a_rows": 9,
+    "skeleton_rows": 136,
+    "skeleton_mapped_rows": 0,
+    "source_import_operator_present": false,
+    "source_export_operator_present": false,
+    "network_shell_process_live_avatar_rig_weight_activation_or_sarah_surface_present": false,
+    "absolute_kira_fit_claimed": false
+  },
+  "blocking_findings": [
+    {
+      "id": "V3R27-B01-AUTHORITY-CLOSURE",
+      "severity": "BLOCKING",
+      "finding": "The audit TSV and sidecar are only mutually self-consistent. The candidate embeds neither an expected audit digest nor an exact auditor identity, accepts any different codex_-prefixed auditor, and checks CHECKPOINT.md for presence without reading or hashing it.",
+      "hostile_result": "An in-memory arbitrary codex_forged_local_writer audit and matching sidecar pass the exact parser; noncanonical sidecar whitespace also passes. A harmless modified script plus regenerated seal plus regenerated audit pair passes the candidate-equivalent closure.",
+      "threat_model_classification": "A trusted root rehash of predeclared bytes mitigates pre-existing replacement procedurally, but the candidate does not bind that observation and holds no stable file handles. It does not mitigate replacement between the root check and candidate reads. Under the current exact one-shot path/object threat model this is blocking."
+    },
+    {
+      "id": "V3R27-B02-PROXY-TRUTH",
+      "severity": "BLOCKING",
+      "finding": "validate_proxy_scene verifies only the nine tagged IDs, MESH type, aggregate vertex range, material ceiling, absence of three datablock families, and two false booleans.",
+      "hostile_result": "A nine-object scene with one vertex per object, every object at the same location, zero materials, and wrong attribution values satisfies the exact validation predicate.",
+      "missing_evidence": [
+        "per-object topology and vertex floors",
+        "locations dimensions transforms and bilateral relations",
+        "declared placement and non-overlap gates",
+        "material assignment identity node values and render visibility",
+        "exact attribution reference values",
+        "modifiers constraints parents libraries and complete datablock closure"
+      ]
+    },
+    {
+      "id": "V3R27-B03-PLACEMENT-AND-VIEW",
+      "severity": "BLOCKING",
+      "finding": "The placement plan declares eight required Kira landmarks and fail-closed conditions for missing landmarks, unaudited height, and unknown outer-shell clearance, but the builder reads none of them and uses only hard-coded priors. The plan declares positive Y as anatomical anterior while front_clinical places the camera at negative Y, so the front render is labeled from the posterior side.",
+      "claim_boundary": "The package correctly avoids an absolute Kira-fit claim, but its execution and evidence do not implement its own declared fail-closed placement contract."
+    },
+    {
+      "id": "V3R27-B04-BLENDER-INPUT-BOUNDARY",
+      "severity": "BLOCKING",
+      "finding": "The script requires background mode and the Kira working directory but binds no Blender executable/version, factory-empty startup, input blend identity, disabled auto-execution state, or external library/dependency absence.",
+      "impact": "It deletes objects from whatever background file is loaded and leaves unvalidated datablock families able to survive into the saved evidence file."
+    },
+    {
+      "id": "V3R27-B05-OUTPUT-AND-RACE",
+      "severity": "BLOCKING",
+      "finding": "Preflight and output checks are path-based with no stable directory/file identity or reparse-point defense. Blend and render paths are not exclusively reserved and use overwrite behavior. Renders are accepted by existence and a 1024-byte minimum only, with no PNG signature, 640x640 decode, pixel/content, distinct-view, or final all-output rehash gate.",
+      "impact": "Path replacement or late output mutation can separate the durable success claim from the files later reviewed."
+    },
+    {
+      "id": "V3R27-B06-PARTIAL-TERMINAL-STATE",
+      "severity": "BLOCKING",
+      "finding": "reserved becomes true only after reserve returns even though reserve creates the consumed receipt first. Failure after receipt creation but before evidence/output-root completion receives no terminal-failure update. Ordinary failures write no RUN_OUTCOME. Success writes RUN_OUTCOME before terminal-success evidence and rewrites the receipt non-exclusively; a later error can leave contradictory success and failure artifacts.",
+      "impact": "The attempt can be correctly considered consumed, but its promised durable terminal evidence is not closed against partial writes or contradictory states."
+    }
+  ],
+  "repair_requirements": [
+    "Create an append-only V3r28; preserve V3r27 unchanged and do not invoke it.",
+    "Bind a trusted exact audit identity outside the replaceable audit pair, bind every audit artifact including the checkpoint, and preserve stable path/object identities from verification through reservation.",
+    "Use a sealed exact Blender command and executable/version with factory-empty startup and disabled auto-execution, then reject every unexpected object, collection, library, external dependency, and datablock.",
+    "After build and after reload, validate each component's exact allowed primitive class, per-object vertex range, location, dimensions, transforms, attribution, material, relation gates, visibility, modifiers, constraints, parents, and scene inventory.",
+    "Either implement the declared normalized-landmark fail-closed contract or remove the contradictory Kira-relative requirements; correct the front-view axis.",
+    "Use stable non-reparse output handles, exclusive reservations, decoded render verification, a final immutable output manifest, and consistent append-only pending/success/failure terminal records."
+  ],
+  "claim_boundary": "V3r27 remains a rejected static candidate. It is not a body, anatomy acceptance, Blender/save/render result, activation, Avatar Builder promotion, or evidence that any synthetic person has anatomy or physiology.",
+  "do_not_run_v3r27": true,
+  "acceptance_tsv_created": false
+}

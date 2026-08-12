@@ -1,0 +1,87 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_seal.v1",
+  "sealed_at_utc": "2026-08-11T06:30:15.248Z",
+  "status": "SEALED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Data/foundation/shared_person_growth_v3_integration_candidate_v1.json",
+      "bytes": 28107,
+      "sha256": "5b4397d33318dac34fa9f876ed42ec9720ebefb1acdddb235842982479885254"
+    },
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v1.py",
+      "bytes": 66891,
+      "sha256": "91eef4a3c19edfbda59ca8d1c7e46df54d77648a8d0140eadbee5672353db63c"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v1.py",
+      "bytes": 32344,
+      "sha256": "fddf0658abc322d4ff5590441647ccf2ad18efc305f4f8a78fceb27467d5bd8a"
+    }
+  ],
+  "author_evidence": {
+    "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+    "bytes": 3790,
+    "sha256": "e88871feab7672079ba7545fd5fb825ff6f36ec91782fad4df678ef5e9b03fbc"
+  },
+  "protected_growth_v3": [
+    {
+      "path": "Data/foundation/shared_person_growth_capabilities_v3.json",
+      "sha256": "1a74c9dc778cd38aec3eb2d5533439de5cd5884e2ed73cbe591f50a3403e3756"
+    },
+    {
+      "path": "Core/shared_person_growth_capabilities_v3.py",
+      "sha256": "8250c657486981ba5ce41892da373adc7df49c462865dc8be75af80f542eb3a2"
+    },
+    {
+      "path": "tools/create_temporary_ai_growth_profile_v3.py",
+      "sha256": "f7d3cbaf2b06be938377480e6c7906c296f3236ce115da5afbfa3edd89f0d53e"
+    },
+    {
+      "path": "TemporaryAI/config/shared_person_growth_capability_template_v3.json",
+      "sha256": "09d273ef0af98ac138da568d2d4192e1521a5999e24f7c4302e7fe78a939be2d"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_capabilities_v3.py",
+      "sha256": "37a8a27179083b9b3a90f98a69910edb75f4a9fda68e3d383953d22ae86180ca"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_capabilities_v3_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "sha256": "50526169ef05aea0a8db078047a9581bcd74aaf5829b73a0c0ba559b152afd15"
+    }
+  ],
+  "protected_current_runtime": [
+    {
+      "path": "tools/kira_world_shell_server.py",
+      "bytes": 606696,
+      "sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4"
+    },
+    {
+      "path": "config/model_runtime.json",
+      "bytes": 5538,
+      "sha256": "4fa0449b6f91b7df6f207e86d324e893ee244bce9d8d065a3d14bdc8a197f2ae"
+    }
+  ],
+  "coverage_closure": {
+    "inventory_sha256": "5b4397d33318dac34fa9f876ed42ec9720ebefb1acdddb235842982479885254",
+    "person_count": 24,
+    "route_count": 36,
+    "applicable_route_count": 35,
+    "denied_alias_route_count": 1,
+    "temporary_profile_source_count": 23,
+    "temporary_state_source_count": 11,
+    "permanent_source_count": 2,
+    "inventory_loader_rehashes_every_bound_route_source": true,
+    "omitted_or_cross_bound_routes_allowed": false
+  },
+  "seal_truth": {
+    "candidate_is_default_off": true,
+    "candidate_is_not_promoted": true,
+    "different_fresh_audit_required": true,
+    "production_pointer_changed": false,
+    "production_shell_changed": false,
+    "temporary_creator_production_path_changed": false,
+    "live_person_or_model_executed": false,
+    "body_media_voice_gpu_or_blender_executed": false
+  }
+}

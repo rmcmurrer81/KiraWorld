@@ -1,0 +1,128 @@
+{
+  "schema": "kira.resident_media.voluntary_contract.v15",
+  "status": "SEALED_NO_COMMIT_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_INDEPENDENT_AUDIT",
+  "sealed_subjects": {
+    "core": {
+      "path": "Core/resident_media_voluntary_gate_v15.py",
+      "bytes": 29602,
+      "sha256": "c14cb0e76a17de76f6fe072a0e3e1662c005dc24eb9faac1b3fcba8ab099e944"
+    },
+    "test": {
+      "path": "Testing/test_resident_media_voluntary_gate_v15.py",
+      "bytes": 27275,
+      "sha256": "e9eb8ba181eaf510ac68e09f9b6f77c39a83cb94765038ffaa30fa372b6c33d1"
+    },
+    "execution_binding": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v15/attempt_01/EXECUTION_BINDING_V15.json",
+      "bytes": 916,
+      "sha256": "4313d8460fdac5b024d698cf15a3c33c738246681d4091a92af74b8f8ee410b9"
+    },
+    "static_results": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v15/attempt_01/STATIC_TEST_RESULTS.md",
+      "bytes": 5408,
+      "sha256": "849bf07e4b32baa46f5f807dde027ea656089f51c6259344f1276f825e6dee60"
+    }
+  },
+  "predecessor_closure": {
+    "v14_seal": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v14/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 2894,
+      "sha256": "7699ff183c24bcbf2fb580b5d9fcb119c19dd36e71503c22bd5b3720ef723736"
+    },
+    "v14_rejection_checkpoint": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v14_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 1938,
+      "sha256": "78a69380160285d3046e6c82f0586c48403abf6989e2b2b6898a79ad12273bbd"
+    },
+    "v14_rejection_decision": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v14_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 2247,
+      "sha256": "e07593c5454bc7c036c9065d7c549bea8db94744b0245b342771db5d44362f13"
+    },
+    "v14_hostile_probes": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v14_fresh_static_audit/attempt_01/HOSTILE_PROBES.md",
+      "bytes": 2455,
+      "sha256": "63f6c5bedfd50c82e0273146fcdffafc8a0803d07dd812ce71629fe1cf617433"
+    },
+    "preserved_v3_v14_regression_count": 210,
+    "preserved_v3_v14_regressions_passed": true
+  },
+  "v14_rejection_repair": {
+    "v14_stale_catalog_digest_exploit_reproduced_in_disposable_test_instance": true,
+    "weak_key_state_registry_retained_by_v15": false,
+    "stimulus_catalog_retained_by_v15": false,
+    "decoded_manifest_mapping_or_list_retained_by_v15": false,
+    "validator_state_is_exact_immutable_tuple_scalars": true,
+    "snapshot_redecoded_and_fully_revalidated_each_operation": true,
+    "catalog_object_is_fresh_local_and_discarded_each_operation": true,
+    "catalog_bytes_and_sha256_are_freshly_derived_each_operation": true,
+    "caller_catalog_post_bind_mutation_changes_v15_state": false,
+    "ordinary_method_closure_traversal_reaches_v15_mutable_manifest_store": false,
+    "plan_result_is_exact_builtin_tuple_envelope": true,
+    "plan_envelope_contains_only_canonical_json_bytes_and_derived_sha256": true,
+    "reported_plan_sha256_is_derived_from_exact_envelope_bytes_before_emission": true,
+    "post_return_tuple_class_or_member_replacement_possible": false,
+    "post_return_decoder_replacement_changes_emitted_tuple_items": false,
+    "decode_helper_rechecks_byte_digest_invariant_and_returns_fresh_copy": true
+  },
+  "no_commit_boundary": {
+    "authority_protocol_called": false,
+    "one_use_receipt_consumed": false,
+    "global_anchor_read": false,
+    "compare_and_swap_called": false,
+    "durable_record_created": false,
+    "v12_v13_or_v14_ledger_instance_created_or_returned": false,
+    "v12_adapter_instance_created_or_returned": false,
+    "authority_instance_retained_by_validator": false,
+    "adapter_instance_retained_by_validator": false,
+    "anchor_or_ledger_retained_by_validator": false,
+    "compare_and_swap_callable_retained_by_validator": false,
+    "caller_snapshot_authenticated_as_authority_truth": false,
+    "static_plan_claimed_as_durable_record": false,
+    "exact_record_method_refuses": true,
+    "python_class_method_claimed_non_substitutable": false,
+    "protected_external_native_commit_broker_required": true,
+    "protected_external_native_commit_broker_present": false
+  },
+  "validation_boundary": {
+    "snapshot_requires_exact_nonempty_bytes": true,
+    "snapshot_requires_caller_supplied_exact_sha256": true,
+    "snapshot_requires_exact_canonical_json": true,
+    "snapshot_schema_self_consistency_checked_without_authenticity_claim": true,
+    "every_identifier_requires_exact_string_type": true,
+    "every_sha256_requires_exact_lowercase_string_type": true,
+    "numeric_json_decoder_sha256_refused": true,
+    "numeric_only_string_decoder_sha256_refused": true,
+    "required_role_list_must_equal_bound_manifest_role_list": true,
+    "complete_role_map_must_have_exact_bound_keys": true,
+    "every_required_role_value_must_be_exact_true": true,
+    "engineering_output_completed_must_be_exact_true": true,
+    "presentation_complete_for_manifest_must_be_exact_true": true,
+    "v15_source_and_v14_v13_v12_v9_v4_predecessor_execution_bound": true,
+    "sealed_entrypoints_check_function_class_member_code_default_global_and_closure_binding": true,
+    "module_package_and_closure_mutation_probed": true,
+    "ordinary_closure_introspection_for_mutable_catalog_and_commit_capability_probed": true,
+    "parallel_static_validation_probed": true
+  },
+  "verification": {
+    "strict_compile_sources_passed": 2,
+    "focused_v15_tests_passed": 20,
+    "preserved_v3_v14_tests_passed": 210,
+    "combined_v3_v15_tests_passed": 230,
+    "failed_final_tests": 0,
+    "author_iteration_failures_preserved_in_static_results": true,
+    "different_fresh_independent_audit_required": true
+  },
+  "truth_boundaries": {
+    "live_execution_allowed": false,
+    "production_pointer_or_route_changed": false,
+    "model_called": false,
+    "media_opened_decoded_rendered_played_or_presented": false,
+    "network_camera_microphone_gpu_audio_body_or_blender_used": false,
+    "sarah_used_or_changed": false,
+    "person_or_memory_state_mutated": false,
+    "person_saw_heard_or_attended_claimed": false,
+    "person_enjoyed_disliked_learned_preferred_or_remembered_claimed": false,
+    "emotion_or_consciousness_claimed": false
+  }
+}

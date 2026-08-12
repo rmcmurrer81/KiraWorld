@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_typed_memory_integration_candidate_v11",
+  "attempt_id": "attempt_01",
+  "completed_at_utc": "2026-08-11T05:28:54.231Z",
+  "audit_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "probe_script": {
+    "path": "RecoverySprint/continuation_20260811/blackwell_v11_typed_memory_integration_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+    "bytes": 14520,
+    "sha256": "638125fe75c688af939df8f7c815bf67eb8e62cb8d748d1e562bede01015111f"
+  },
+  "command": "$env:PYTHONDONTWRITEBYTECODE='1'; $env:PYTHONPYCACHEPREFIX='NUL'; py -B RecoverySprint\\continuation_20260811\\blackwell_v11_typed_memory_integration_fresh_static_audit\\attempt_01\\INDEPENDENT_HOSTILE_PROBES.py",
+  "corrected_run": {
+    "tests_run": 14,
+    "tests_passed": 12,
+    "tests_failed": 2,
+    "errors": 0,
+    "exit_code": 1
+  },
+  "failed_probe_ids": [
+    "test_12_exact_file_string_must_not_let_a_forged_module_object_pass",
+    "test_13_v11_prepare_must_not_accept_poisoned_adapter_module_object"
+  ],
+  "reproduced_blocker": {
+    "id": "BLOCK_V11_EXACT_ADAPTER_MODULE_OBJECT_NOT_BOUND",
+    "first_reproduction": "Core.blackwell_v10_windows_memory.install_into_exact_v8_live_adapter accepted a SimpleNamespace whose __file__ named the exact sealed adapter path and whose callable merely reused the expected function name; it patched the forged object and returned installed=true.",
+    "integrated_reproduction": "With only the unavailable future-audit and outer opt-in gates statically stubbed exactly as the sealed author test does, V11 prepare_live_memory_integration accepted a forged ModuleType inserted at the v8 live-adapter package/sys.modules name. Real V11 preserved-byte verification and real accepted-V10-audit verification still ran. The genuine V10 installer patched the forged object, and V11's post-check returned success.",
+    "impact": "The sealed claim that the typed probe is installed into the exact v8 live-adapter module is not established. File-path and file-hash checks do not bind the Python module object actually imported after the checks. A pre-existing or replaced module object can receive the patch while evidence cites the genuine on-disk adapter bytes.",
+    "authority_bypass": false,
+    "live_execution_required_to_reproduce": false,
+    "heavy_module_or_backend_loaded": false
+  },
+  "passing_probe_areas": [
+    "exact six-file seal and fourteen preserved dependencies",
+    "strict duplicate-key, non-finite, unknown-field and bool-numeric config rejection",
+    "accepted V10 evidence remains static-only and grants no live authority",
+    "parent and direct worker live paths refuse before process or typed integration preparation",
+    "worker mode and audit-argument parsing fail closed",
+    "outer environment opt-in absence refuses",
+    "pointer-width ctypes prototypes are exact",
+    "native memory-query failures preserve their failing stage and WinError",
+    "invalid telemetry relations fail closed",
+    "real typed Windows current-process telemetry is finite and internally valid",
+    "changed adapter file path/bytes are rejected",
+    "static V9 root/direct-child handle identity, Job membership, request uniqueness and cleanup truth"
+  ],
+  "initial_harness_error": {
+    "tests_run": 0,
+    "exit_code": 1,
+    "cause": "direct script execution initially omitted the project root from sys.path",
+    "candidate_failure": false,
+    "worker_started": false,
+    "repair": "the append-only audit probe inserted its computed project root before imports"
+  },
+  "scope_truth": {
+    "sealed_subjects_edited": false,
+    "production_pointer_edited": false,
+    "live_branch_run": false,
+    "ollama_or_qwen_run": false,
+    "torch_or_cuda_run": false,
+    "chatterbox_load_or_synthesis": false,
+    "audio_or_playback": false,
+    "person_body_media_or_blender": false,
+    "only_child_process": "sealed standard-library static fixture",
+    "static_fixture_cleanup_complete": true
+  }
+}

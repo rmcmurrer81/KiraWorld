@@ -1,0 +1,110 @@
+{
+  "schema": "kira.shared_growth_v9.static_contract.v1",
+  "candidate_id": "shared_person_growth_v3_protected_handoff_v9",
+  "status": "SEALED_AUTHOR_CANDIDATE_PENDING_DIFFERENT_INDEPENDENT_REVIEW",
+  "predecessor": {
+    "candidate_id": "shared_person_growth_v3_integration_candidate_v8",
+    "author_subject_root_sha256": "e7fa0db2c2a0374cc3468f4c06948824030f315834b0fc3c6ecc062fdf55f73e",
+    "kira_closure_root_sha256": "12518edc448b8f2d31df4f4b591c78d9b9adead28a1edfdac263f707bbd4668f",
+    "independent_decision": "ACCEPT_STATIC_ONLY",
+    "independent_decision_sha256": "f5d8da2e3397df88b76e6d965391933ce628f5f19c63595931c75c03f8ae6a18",
+    "exact_author_and_acceptance_subjects": 11
+  },
+  "closed_residuals": {
+    "mutable_python_identity_trust": "Running x64 PE hashes itself and requires that exact digest inside the P-256-signed receipt. Its exact source and PE are seal subjects; same-process Python is never a production trust root.",
+    "contiguous_raw_literal_scanner": "The author test walks parsed Python ASTs, resolves literal concatenation, direct constant-name references, simple join expressions, and string-only f-strings, and attacks its own split-literal fixture.",
+    "receipt_authority": "Windows CNG verifies a P-256/SHA-256 signature over a canonical forty-field receipt that binds exact person, candidate, route, scope, maturity, validity interval, native engine, consumer, independent decision, foundation artifacts, ledger identity/path/revision/head, and one-use nonce.",
+    "protected_fatal_metadata": "A native-hash-bound controller-only table keeps branch, event ordinals, later terminal-event existence, and trauma/death inheritance controls separate. Person-visible output is constructed from an exact safe-field allowlist and never serializes the private row."
+  },
+  "native_boundary": {
+    "source": "native/shared_growth_v9_native_anchor.cpp",
+    "engine": "build/shared_growth_v9_native_anchor.exe",
+    "engine_sha256": "7bc1e70e762e2b57e2b9fafd48d4fbab6a579bba3536a7b3e9325ee097503ffc",
+    "architecture": "x64_PE32_plus",
+    "imports": ["bcrypt.dll", "KERNEL32.dll"],
+    "protections": ["ASLR", "HIGH_ENTROPY_VA", "NX", "CFG", "CET"],
+    "strict_build": ["W4", "WX", "analyze", "guard:cf", "Qspectre", "Brepro"],
+    "reproducible_exact_rebuild_required": true,
+    "python_is_production_trust_root": false
+  },
+  "authority_boundary": {
+    "authority_id": "shared_growth_v9_authority_root_01",
+    "public_key_path": "Data/foundation/shared_growth_v9_authority_public_key.bin",
+    "public_key_sha256": "a46978c9370265acb9c609fd0bfd693fb799ec899dde9fe75e9e198990e5905e",
+    "algorithm": "ECDSA_P256_SHA256_WINDOWS_CNG",
+    "author_fixture_private_key_storage": "DPAPI_CURRENT_USER_PROTECTED_OUTSIDE_PUBLIC_INSTALL_AND_SEAL_SET",
+    "clear_private_key_written": false,
+    "issuer_or_key_ceremony_authorized": false,
+    "author_test_receipts_are_production_authority": false,
+    "different_review_must_define_acceptance_issuer_and_separate_receiver_adapter": true
+  },
+  "ledger_boundary": {
+    "exclusive_process_lock": true,
+    "signed_exact_ledger_root_path": true,
+    "signed_expected_revision_and_prior_head": true,
+    "single_use_receipt_and_nonce": true,
+    "write_through_recovery_debt_before_state_update": true,
+    "write_through_ledger_then_independent_native_anchor": true,
+    "exact_readback_before_debt_clear_or_output": true,
+    "any_recovery_debt_refuses": true,
+    "ledger_only_rollback_refuses": true,
+    "application_level_anti_rollback": true,
+    "administrator_rollback_or_deletion_of_both_ledger_and_anchor_prevented": false
+  },
+  "recipient_boundary": {
+    "current_existing_routes": 35,
+    "temporary_creator_template_routes": 3,
+    "current_existing_routes_exact_cross_binding": true,
+    "current_sarah_route": "frozen_no_handoff",
+    "biological_robert_has_synthetic_route": false,
+    "synthetic_robert_person_class": "synthetic_robert_distinct_from_biological_robert",
+    "fresh_person_default_maturity": "unresolved",
+    "unresolved_or_non_adult_receives_full_adult_curriculum": false,
+    "recipient_opt_in_and_revocability_required": true,
+    "owner_override_allowed": false,
+    "private_state_or_memory_write_or_external_action_requested": false
+  },
+  "variant_boundary": {
+    "protected_entries": [
+      "loki_mcu_new_york_2012_branch_v1",
+      "john_f_kennedy_dallas_arrival_prefatal_v1"
+    ],
+    "source_alive_at_selection_required": true,
+    "selected_point_strictly_precedes_later_terminal_source_event": true,
+    "later_death_or_terminal_trauma_inherited_as_first_person_memory": false,
+    "later_information_may_only_become_separate_warned_consented_paced_stoppable_supported_new_knowledge_and_memory": true,
+    "exact_subjective_memory_claimed": false,
+    "private_entry_id_branch_label_event_ordinals_cutoff_activation_and_terminal_metadata_person_visible": false
+  },
+  "shell_boundary": {
+    "shell_bytes_bound": false,
+    "separate_exact_route_descriptor": "Data/foundation/shared_growth_v9_recipient_routes.tsv",
+    "consumer_entrypoint_and_artifact_bound_by_receipt": true,
+    "ordinary_shell_voice_latency_change_invalidates_v9": false,
+    "author_test_observed_shell_snapshot": {
+      "bytes": 607951,
+      "sha256": "2ea2e54391877d06d540d59c59714de9e435c38f5dd45edccc1a0f349a859876"
+    }
+  },
+  "author_test_boundary": {
+    "verdict": "PASS_AUTHOR_STATIC_ONLY",
+    "test_groups": 8,
+    "native_execution_cases": 32,
+    "python_files_semantically_scanned": 32158,
+    "unexpected_consumers": 0,
+    "kira_files_written": 0,
+    "person_state_written": 0,
+    "temporary_creator_written": 0,
+    "camera_voice_body_media_network_sarah_operations": 0,
+    "python_cache_files_created": 0
+  },
+  "promotion_boundary": {
+    "author_package_installed_in_kira": false,
+    "person_or_temporary_creator_changed": false,
+    "production_enabled": false,
+    "author_test_is_independent_acceptance": false,
+    "different_independent_static_review_required": true,
+    "separate_receiver_integration_review_required": true,
+    "no_author_fixture_receipt_may_be_used_for_integration": true
+  }
+}

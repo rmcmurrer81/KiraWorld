@@ -1,0 +1,66 @@
+{
+  "schema": "kira.r25.afes.v3r21.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T11:23:53.6104220Z",
+  "decision": "ACCEPTED_FOR_ONE_BOUNDED_GRANULAR_CONTRACT_AND_PYTHON_CONTROLLER_VALIDATION_V3R21_ONLY",
+  "reviewer": "/root/body_v3r21_contract_test",
+  "auditor_id": "body_v3r21_fresh_auditor",
+  "evidence_transcribed_by": "/root",
+  "reviewer_authored_v3r21_sealed_bytes": false,
+  "candidate_invoked_during_audit": false,
+  "execution_authority": {
+    "authorized": true,
+    "maximum_invocations": 1,
+    "arguments": [],
+    "failure_consumes_authority": true,
+    "scope": "granular_v3r15_contract_and_isolated_python_controller_definitions_only",
+    "stop_before": [
+      "_build_execution_plan",
+      "bootstrap",
+      "broker",
+      "process",
+      "AFES",
+      "Blender",
+      "body",
+      "save",
+      "render",
+      "export"
+    ]
+  },
+  "sealed_candidate": {
+    "seal_bytes": 43485,
+    "seal_sha256": "6323c0c8708dd871c411b2f8a8c236d28634cc31c94b749f8a79f8295f719f20",
+    "checkpoint_bytes": 5445,
+    "checkpoint_sha256": "c888e083f5bc35c92e149281c774b78aa31761b18554421bcc35651c40d03bc8",
+    "sealed_subjects": 91,
+    "unique_subjects": 91,
+    "rehash_mismatches": 0
+  },
+  "audit_transcript": {
+    "bytes": 6259,
+    "sha256": "235e13793ed4112c9dfaa7173125b31712cb84323d46224932f5fda135f69fd5",
+    "lines": 70,
+    "lf_only": true,
+    "cr_count": 0,
+    "nul_count": 0,
+    "sidecar_bytes": 65,
+    "sidecar_file_sha256": "5b12a7534239ac1bba7174cc4f2c44cf3ad63a3a8ba555fffe0d260988d34773"
+  },
+  "independent_results": {
+    "strict_x64_rebuild": "PASS",
+    "msvc_analyze_zero_unsuppressed_warnings": "PASS",
+    "pe_x64_pe32_plus_high_entropy_aslr_nx_cfg_fid": "PASS",
+    "imported_dlls": ["bcrypt.dll", "KERNEL32.dll"],
+    "v3r20_c6385_negative_controls": "PASS_2_OF_2_REPRODUCED",
+    "safe_copy_analyzer_authority_unload_boundary_probes": "PASS_37_OF_37",
+    "audit_grammar_hostile_mutations": "PASS_11_OF_11_REFUSED",
+    "post_seal_author_suite": "PASS"
+  },
+  "truth_boundary": {
+    "body_proven": false,
+    "anatomy_proven": false,
+    "afes_or_blender_run": false,
+    "save_or_render_proven": false,
+    "activation_or_owner_acceptance": false,
+    "production_authority": false
+  }
+}

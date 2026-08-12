@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "STATIC_SUCCESSOR_SEALED_PENDING_DIFFERENT_FRESH_AUDIT",
+  "subjects": [
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v10/attempt_01/EXECUTION_PLAN_V10.json",
+      "bytes": 5960,
+      "sha256": "a9392bdd66a923c251aac845866bcd5f72f079fbfd4f18aeceee8a6d0b0ba680"
+    },
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v10.py",
+      "bytes": 103311,
+      "sha256": "efad884f50c718d5aae6c79ce26987983bc5241033d0d51a5f0a7da68f2fcfe1"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v10.py",
+      "bytes": 22038,
+      "sha256": "d66f613ff078392d09d8d2b489b983c9bff92d10d6ba6feaefd547e860dca967"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v10/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 1902,
+      "sha256": "8c6e490bedb5f31c9a20939f7564b3e188e0171b482393d220d55f850cd56c95"
+    }
+  ],
+  "current_subject_count": 4,
+  "predecessor_subject_count_bound_by_plan": 11,
+  "current_policy_subject_count_bound_by_plan": 1,
+  "unique_paths": true,
+  "execution_authority": "NONE",
+  "candidate_executed": false,
+  "model_or_conversation_run": false,
+  "protected_private_state_read": false,
+  "synthesis_or_playback_or_latency_run": false,
+  "different_fresh_exact_byte_audit_required": true
+}

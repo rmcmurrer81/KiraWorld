@@ -1,0 +1,9 @@
+# Core pins for a future separately created Qwen3-TTS voice-forge environment.
+# This file is a specification only. It was not installed by the static task.
+qwen-tts==0.1.1
+transformers==4.57.3
+accelerate==1.12.0
+
+# torch and torchaudio intentionally remain absent. Their exact official
+# Windows Blackwell-compatible wheel pair must be selected and accepted in a
+# separate install step. Never reuse or modify a sealed Chatterbox environment.

@@ -1,0 +1,84 @@
+{
+  "schema": "kira.blackwell.voice_v20.different_exact_byte_fresh_static_audit_decision.v1",
+  "candidate_id": "kira_blackwell_voice_v20_cpu_park_measured_latency_successor",
+  "recorded_at_utc": "2026-08-12T03:14:54.7168508Z",
+  "reviewer_relation": "DIFFERENT_FROM_V20_AUTHOR",
+  "verdict": "REJECT",
+  "status": "REJECT_V20_STATIC_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "installed_bytes_unchanged": true,
+  "positive_results": [
+    "ALL_12_INSTALLED_FILES_MATCH_BEFORE_AND_AFTER",
+    "ALL_9_SEALED_SUBJECTS_MATCH_EXACT_BYTES_AND_SHA256",
+    "INPUT_CLOSURE_41_OF_41_EXACT_UNIQUE_NO_DRIFT",
+    "INSTALLED_CACHE_FREE_SUITE_PASS_42_OF_42",
+    "PYTHON_IN_MEMORY_COMPILE_PASS_3_OF_3",
+    "FRESH_MSVC_X64_W4_WX_COMPILE_PASS",
+    "FRESH_MSVC_X64_ANALYZE_W4_WX_PASS",
+    "V19_FIVE_ARRAYS_EXACT_EQUAL_AT_4_51_42_30_15",
+    "NO_LATENCY_MEASUREMENT_OR_SPEED_IMPROVEMENT_CLAIM",
+    "LIVE_FACTORY_AND_NATIVE_MAIN_REMAIN_DEFAULT_OFF"
+  ],
+  "blockers": [
+    {
+      "id": "V20-B1-BACKEND-DISPATCH-MAP-SUBSTITUTION",
+      "severity": "CRITICAL",
+      "subject": "voice_v20_worker.py",
+      "lines": [658, 672, 1116, 1120],
+      "finding": "ControlBinding.verify checks the backend object's current bound methods against backend_callables, but never checks the mutable backend_bound_objects dispatch map that _backend_call actually invokes.",
+      "reproduction": "Replace worker._binding.backend_bound_objects['sample_resources'] with a different Python callable, then call load_once. The substitute runs for load_before and load_after, load_once succeeds, and status invokes graph verification successfully.",
+      "observed": {
+        "substituted_call_count": 2,
+        "operation_state": "LOADED_CUDA",
+        "verification_rejected_substitution": false
+      },
+      "impact": "The claimed V11/V12 callable/control substitution closure is false. An unsealed callable can execute inside the trusted path while every current verification check passes.",
+      "required_repair": "Remove mutable unchecked dispatch state; bind the exact invoked callable identity in an immutable structure and verify the invoked object immediately before and after each call. Add this exact hostile negative test. A future live backend must itself be exact-source sealed and independently authorized."
+    },
+    {
+      "id": "V20-B2-MUTABLE-AUTHORITY-AFTER-VALIDATION",
+      "severity": "CRITICAL",
+      "subject": "voice_v20_worker.py",
+      "lines": [878, 1010, 1045, 1052],
+      "finding": "The validated authority is retained as a mutable dict. _verify_graph rechecks only execution_authorized == false, not the originally validated session, owner, ledger receipt, maximum turns, or expiry.",
+      "reproduction": "After construction, change maximum_turns from 1 to 4, replace expires_monotonic_ns with 10**30, and replace owner_hash. status still passes graph verification and reports the widened turn count.",
+      "impact": "Turn ceilings, time bounds, owner binding, session binding, and ledger binding can drift after validation. Exact authority is not immutable or revalidated.",
+      "required_repair": "Canonicalize and hash/freeze the full authority at construction, retain an immutable value, revalidate all fields and digest during every preflight/postflight, and add hostile mutation tests for every field and container replacement."
+    },
+    {
+      "id": "V20-B3-QWEN-RECEIPT-NOT-AUTHENTICATED-OR-CAUSAL",
+      "severity": "CRITICAL",
+      "subject": "voice_v20_worker.py",
+      "lines": [824, 874, 1482, 1560],
+      "finding": "The Qwen completion receipt has only a caller-computable self-hash. It has no signer/channel binding and its timestamps are not required to occur after the granted window or before the completion deadline.",
+      "reproduction": "The independent probe supplied a receipt with ordered timestamps 1..7 after a Qwen window granted at monotonic 1,010,000,000 ns. The worker accepted it and returned to PARKED_CPU, enabling the restore transition.",
+      "impact": "Qwen completion, keep-alive-zero unload, and no-overlap are assertions rather than proven causal evidence. The CPU-to-CUDA restore gate can accept a fabricated or stale receipt.",
+      "required_repair": "Bind a one-use challenge to the grant, authenticate the receipt to an exact sealed supervisor/channel, require grant <= load_started < ... < unload_completed <= receipt-validation entry/deadline, consume the challenge globally, and add stale/forged/replayed/cross-session hostile cases."
+    },
+    {
+      "id": "V20-B4-DEVICE-LATENCY-SUCCESS-METRIC-UNDEFINED",
+      "severity": "HIGH",
+      "subject": "MATCHED_EXPERIMENT_SCHEMA.json",
+      "finding": "audio_device_first_sample is listed, but none of the 30 derived durations uses it, success_rule names no controlling metric, the measurement method has no closed evidence enum, and owner-heard onset is metadata rather than a defined monotonic timestamp.",
+      "impact": "Lower median and worst case can be calculated against an unspecified proxy, so the schema cannot independently decide true audible-device latency improvement.",
+      "required_repair": "Add exact device-first-sample derived metrics, select the controlling metric(s), define closed measurement methods and evidence hashes, add ordering/failure/timeout semantics, type optional owner-heard onset as a separate monotonic observation, and implement an exact record validator."
+    },
+    {
+      "id": "V20-B5-LEDGER-CREATION-NOT-HANDLE-RELATIVE",
+      "severity": "HIGH",
+      "subject": "voice_v20_native_supervisor.c",
+      "lines": [369, 390, 397, 408],
+      "finding": "The ledger is created from ledger_path with CreateFileW and then checked by final-path string prefix. It is not created relative to the already-bound parent handle, and the new ledger's file identity, link count, reparse state, owner, and DACL are not rebound.",
+      "impact": "A parent path rename/replacement or reparse race can separate string containment from the trusted parent directory identity. CREATE_NEW/no-sharing/write-through does not close that parent-path TOCTOU.",
+      "required_repair": "Create the ledger handle-relative to the bound directory identity, retain both handles, requery and bind the created file's identity/link/reparse/security state, and add an actual native hostile race/replacement test in the separately sealed controller package."
+    }
+  ],
+  "future_input_not_used_as_rejection": "FUTURE_V21_VOICE_INPUT.md",
+  "promotion_authorized": false,
+  "copy_or_integration_authorized": false,
+  "controller_package_authoring_from_v20_authorized": false,
+  "execution_authority": "NONE",
+  "run_authorized": false,
+  "production_v2_changed": false,
+  "latency_status": "LATENCY_FAIL_PENDING_A_REPAIRED_STATIC_SUCCESSOR_AND_LATER_MATCHED_MEASUREMENT",
+  "boundary": "DO_NOT_RUN_COPY_PROMOTE_OR_INTEGRATE_V20"
+}

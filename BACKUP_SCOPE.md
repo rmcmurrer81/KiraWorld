@@ -2,6 +2,10 @@
 
 Snapshot date: 2026-08-12
 
+Latest reviewed refresh: root continuation attempt 82. The refresh adds the
+new append-only rejection evidence and current documentation while preserving
+the same privacy, license, model, media, 3D-asset, and binary exclusions.
+
 Repository: `rmcmurrer81/KiraWorld`
 
 Visibility required: private.

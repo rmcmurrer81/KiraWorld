@@ -1,0 +1,83 @@
+BLACKWELL VOICE V16 DIFFERENT FRESH STATIC AUDIT
+EXACT COMPILED PARSER PROBE RESULTS
+
+Recorded UTC: 2026-08-11T18:24:01.7062503Z
+Auditor task: /root/voice_v16_audit
+Kira edit: false
+V15 invoked: false
+V16 candidate executable invoked: false
+Python invoked: false
+model/GPU/synthesis/audio/playback/latency invoked: false
+
+METHOD
+- The harness renames the exact V16 candidate wmain at preprocessing time,
+  includes the sealed 76,837-byte V16 C source unchanged, and calls only its
+  static in-memory canonical_relative_path, seal_exact_row, and
+  seal_contract_exact functions.
+- The candidate entrypoint is unreachable from the harness and was not called.
+- Harness source: 34afd7f31184e68b8ba51c52492830633ecce4724787ac8ce1cef5cc8c2e780c.
+- Harness executable: 181,760 bytes,
+  4c63d64619cd28a5e144ea91d2c574b2526d817787f798afa0e5951c4c1e6e92.
+
+EXACT OUTPUT
+PASS	exact complete compact row accepted
+PASS	missing row refused
+PASS	duplicate exact row refused
+PASS	whitespace-mutated only row refused
+PASS	case-mutated only row refused
+PASS	wrong byte count refused
+PASS	wrong digest refused
+PASS	uppercase digest refused
+PASS	noncanonical byte decimal refused
+PASS	path-only bytes-only digest-only decoys refused
+PASS	cross-row fields refused
+PASS	case-sensitive identity remains exact
+PASS	noncanonical bound paths refused
+FAIL	terminal dot-segment paths refused
+PASS	current exact 41-row seal contract accepted
+PASS	current source row accepted exactly once
+PASS	NUL-bearing seal refused
+FAIL	canonical seal rejects trailing non-JSON bytes
+FAIL	logical duplicate whitespace row and 42nd subject refused
+FAIL	logical duplicate whitespace row invalidates exact source binding
+SUMMARY	failures=4
+
+INTERPRETATION OF EXPECTED-REFUSAL FAILURES
+1. canonical_relative_path accepts terminal dot segments such as tools/. and
+   tools/.. even though the contract says no dot segment.
+2. seal_contract_exact accepts the exact seal with a non-NUL trailing byte,
+   because it performs substring counts rather than a whole-document parse.
+3. A valid JSON mutation with a 42nd subject that duplicates the exact V16 C
+   source row but uses {"path": "..."} remains accepted by
+   seal_contract_exact. It retains 41 compact {"path":" prefixes, one exact
+   compact source row, a sealed_subject_count field of 41, and two logical
+   source-path occurrences. ConvertFrom-Json independently parsed that
+   mutation successfully as 42 subjects / 41 unique paths.
+4. seal_exact_row still accepts the original compact source binding once in
+   that mutated seal. Therefore the combined V16 gate does not detect the
+   logical duplicate, whitespace mutation, or wrong actual subject total.
+
+V15 NEGATIVE CONTROL
+subjects=21
+old_spaced_path_matches=0
+compact_path_matches=21
+exact_compact_complete_rows=21
+object_spaced=0
+object_compact=1
+build_spaced=0
+build_compact=1
+
+STATIC SOURCE ORIGIN NOTES
+- ReservationRecord and CompletionRecord still use
+  KIRA_BLACKWELL_V15_RESERVATION / KIRA_BLACKWELL_V15_TERMINAL magic while
+  the output paths and JSONL schemas are V16.
+- verify_audit_handles retains V15 relative_path labels for the V16 fresh
+  audit and sidecar. Those labels are not currently consulted by
+  verify_handle_bound, which uses the correct absolute V16 paths, but the
+  stale provenance is preserved as repair evidence.
+- The V16 seal LockedFile label says complete V15 static seal although the
+  bound path is the V16 seal. The label is not consulted by the verifier.
+
+DECISION EFFECT
+The parser's expected-refusal assertions fail, so V16 cannot receive static
+acceptance or one-shot execution authority. DO_NOT_RUN_V16.

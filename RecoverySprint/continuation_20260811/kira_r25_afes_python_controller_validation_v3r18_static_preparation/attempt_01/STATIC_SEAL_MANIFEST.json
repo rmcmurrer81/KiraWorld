@@ -1,0 +1,79 @@
+{
+  "schema": "kira.r25.afes.v3r18.static_seal.v1",
+  "status": "SEALED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT",
+  "author": "codex_r25_afes_v3r18_static_author",
+  "execution_authority": "NONE",
+  "candidate_executed": false,
+  "artifacts": [
+    {"path":"Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r18.json","bytes":4184,"sha256":"0eb68b89e68257202dd244cb88f34899f1aef49ae99dbc750233ded03cb21ad5"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r18.c","bytes":59811,"sha256":"90a08c76f09200c1ed4296d9bc948b6e359478b7f9c4cdaf0493e2c354c68e7a"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r18_identity_anchor.h","bytes":3230,"sha256":"c37ac03454384b442cb2328c228ffc2ed7138eecd8ec85611023242288309cbe"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r18.obj","bytes":89690,"sha256":"cd1b800b554e10e2f77cb9e51b916f3bd9424b464618392d7cb7fa53b9ede15b"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r18.exe","bytes":181248,"sha256":"184dbcad549d1edbbc802dce899952541558b8f47691bddeaba77089a7c24b1b"},
+    {"path":"Testing/test_kira_r25_foundation_afes_python_controller_validation_v3r18_static.ps1","bytes":8309,"sha256":"cd0adcc5887392790712f2e4937ee668814a335b18d4c40fb060060f3baedfaa"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md","bytes":2271,"sha256":"c1285fca54afa53105318b4d956cacc81f44d9fcaa1c2e9c155472b9a683f931"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt","bytes":2020,"sha256":"9e60c22646f1b0050ee2f177ca52f37afdd0312fbc435e53743b4bd55f4c305b"}
+  ],
+  "exact_v3r15_python_stage_predecessor": [
+    {"path":"Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r15.json","bytes":6174,"sha256":"ad33386d767b516425dcbed073e22dfc9747a963a64dc5d205483d210acac79d"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r15.c","bytes":48873,"sha256":"1977d6c2fd273899a4f003ad88e52b44e493bfb8b132b579076e764f68f94c2d"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r15_identity_anchor.h","bytes":2038,"sha256":"564324e6778f32ba3a5ee6c4496986786623bde6cd445465efdec73bd5f72d54"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r15.obj","bytes":74381,"sha256":"b93904586e7fd5ac0fdd0cec0708685bc5abf2137f23b93c4be34b8c0302c0c6"},
+    {"path":"tools/native/kira_r25_afes_python_controller_validation_v3r15.exe","bytes":175616,"sha256":"0fa6a3e261d0b7e480f456c236db47608f36d7698b63d890f191f59bd19fb6cd"},
+    {"path":"Testing/test_kira_r25_foundation_afes_python_controller_validation_v3r15_static.ps1","bytes":13667,"sha256":"d4a9f86b827b27ba597600465d7a6d23bb828e56e4f2150d4b85107db6e6153a"},
+    {"path":"RecoverySprint/continuation_20260810/kira_r25_afes_python_controller_validation_v3r15_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md","bytes":2461,"sha256":"ce0ac22e1fb0cc06506ce3e40d83a43bfc5a8dd715d435d0416948d2bde42404"},
+    {"path":"RecoverySprint/continuation_20260810/kira_r25_afes_python_controller_validation_v3r15_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt","bytes":2304,"sha256":"ee42772e84d88e44a07c1b46dcb11c24a2ccdd74980b7d42587b95fa8a66ff22"},
+    {"path":"RecoverySprint/continuation_20260810/kira_r25_afes_python_controller_validation_v3r15_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json","bytes":5513,"sha256":"6d3f2ef86ae5c8d36b901160649066f3774988d1ce570a0dd385c5c805ab024c"},
+    {"path":"RecoverySprint/continuation_20260810/kira_r25_afes_python_controller_validation_v3r15_static_preparation/attempt_01/CHECKPOINT.md","bytes":7432,"sha256":"d6d99e099d82a3714dd84e137b776952f23ced6c240e656704912e0308a62fe2"},
+    {"path":"RecoverySprint/continuation_20260810/kira_r25_afes_v3r15_fresh_static_audit/attempt_01/CHECKPOINT.md","bytes":12203,"sha256":"61b28a4f4e62f2713a74991c0f669f709f45782e131377210d266be484c07dfd"},
+    {"path":"RecoverySprint/continuation_20260810/kira_r25_afes_v3r15_consumed_failure_postmortem/attempt_01/CHECKPOINT.md","bytes":4499,"sha256":"a10be9a0430aa42d1ef6411257c70057411014d07109ae9160541e7739e4b414"},
+    {"path":"RecoverySprint/continuation_20260810/kira_r25_afes_v3r15_consumed_failure_postmortem/attempt_01/READ_ONLY_CONTRACT_RECHECK.json","bytes":4894,"sha256":"904c4c28451008cc1e49f5a90353ea80b828d3177df388d3912a4b16cb97cbbd"}
+  ],
+  "exact_v3r17_consumed_success_closure": [
+    {"path":"Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_contract_lock_diagnostic_v3r17.json","bytes":6437,"sha256":"36bec41ecd003c821fd275af0a1c7dc6b2ee6d95584c28eabc7a1da4909d6403"},
+    {"path":"tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17.c","bytes":38490,"sha256":"a88eddeab401b0679ec6cebda9d27fbe7b0c14394f5920b13a8cc07f9d8cc2a3"},
+    {"path":"tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17_identity_anchor.h","bytes":1325,"sha256":"93b741594f244a17064ddb2630932f5ac1750509f2deba57bdac2e6ff56ad803"},
+    {"path":"tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17.obj","bytes":48816,"sha256":"b2ad82fdc5e7c27923adb25a5cc8a26ca2f95413d6a0665a10d3a7c4ce0326c6"},
+    {"path":"tools/native/kira_r25_afes_contract_lock_diagnostic_v3r17.exe","bytes":164864,"sha256":"39820aec1e0835b241975b0ac291e798c4767361d97c51cd7d328da0858fcf9c"},
+    {"path":"Testing/test_kira_r25_foundation_afes_contract_lock_diagnostic_v3r17_static.ps1","bytes":23228,"sha256":"7d35c70b87cfbe55f42e2044efbf80f79d539c7e72631b4673ac567ae58e710a"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md","bytes":2714,"sha256":"e85e4367e09ce2616ec0fcc7d6006c6b25f250f8041a9ba9d026408ce2dee54c"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt","bytes":1921,"sha256":"a082745ae4b3c873374f25823fae30ac1b1c52f6aaff3d52696c9938dfa2853c"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json","bytes":9009,"sha256":"17c13017c4de4af447e77abecca02d851e999cd1b098c78e32ea07b4768fbfc2"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/CHECKPOINT.md","bytes":5547,"sha256":"de11ae34d0a2c5b8a349da86e652c68694816a61789fe20e98233fe426694df9"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv","bytes":1119,"sha256":"076f5be60a618c97b1981bbcf4bd0653c9cdc153929aacce97d8e7b66fa99ec5"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256","bytes":65,"sha256":"99f33b739b57c716021c632bb6e95004d823cce17b9fb881c9267ce5734de531"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/CHECKPOINT.md","bytes":2587,"sha256":"7bdde7188f621fba6732c6a350500071220c0f9723865e7d8282c3862060233b"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/RUN_EVIDENCE.jsonl","bytes":356,"sha256":"e0e4968efa52efc924cc7e9e3841c04047bf25389dde87bbf379cc5ddda2aafa"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_static_preparation/attempt_01/CONTRACT_LOCK_DIAGNOSTIC_OUTCOME.receipt.bin","bytes":992,"sha256":"7a2d0b9f54b3b96a8621528b794afc07458a870b0cf37ea3b7318ad8bae7b385"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/RUN_OUTCOME.json","bytes":1148,"sha256":"da77906313f94d77a356d579349d12f80498745693f66bcd9135479067f54c51"},
+    {"path":"RecoverySprint/continuation_20260811/kira_r25_afes_contract_lock_diagnostic_v3r17_fresh_static_audit/attempt_01/POST_RUN_CHECKPOINT.md","bytes":2315,"sha256":"96d3fa631c0f7fc4bbac8e47d4019c4741267fbae72e7fce314da3cbe2d11f46"}
+  ],
+  "retained_runtime_locks": [
+    {"path":"RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv","bytes":24975,"sha256":"6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96"},
+    {"path":"C:/Python314/python314.dll","bytes":6767440,"sha256":"a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"},
+    {"path":"tools/native/runtime/python314_stdlib_v3r4.zip","bytes":28997479,"sha256":"7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"},
+    {"path":"tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py","bytes":50907,"sha256":"60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf"},
+    {"path":"Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r9.json","bytes":146969,"sha256":"f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5"}
+  ],
+  "required_future_audit": {
+    "auditor": "different from codex_r25_afes_v3r18_static_author",
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_GRANULAR_CONTRACT_AND_PYTHON_CONTROLLER_VALIDATION_ONLY",
+    "directory": "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_fresh_static_audit/attempt_01",
+    "audit_path": "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "audit_digest_path": "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256"
+  },
+  "runtime_outputs_must_be_absent_at_seal": [
+    "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r18_static_preparation/attempt_01/PYTHON_CONTROLLER_VALIDATION_OUTCOME.receipt.bin"
+  ],
+  "verification": {
+    "strict_compile":"PASS_/W4_/WX_x64_CFG",
+    "static_hostile_suite":"V3R18_HOSTILE_STATIC_TESTS_PASS",
+    "pe":"PASS_X64_CFG_DYNAMICBASE_NX_IMPORTS_BCRYPT_KERNEL32_ONLY",
+    "runtime_outputs_absent":true,
+    "future_audit_absent":true,
+    "candidate_executed":false
+  },
+  "stop_before":["_build_execution_plan","bootstrap","broker","process","AFES","Blender","body","save","render","export"],
+  "no_main_registry_or_handoff_edits": true
+}

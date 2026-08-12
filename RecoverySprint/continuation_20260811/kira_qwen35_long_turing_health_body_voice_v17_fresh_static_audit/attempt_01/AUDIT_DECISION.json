@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v17_different_fresh_exact_byte_adversarial_static_review_decision",
+  "recorded_at_utc": "2026-08-12T02:41:00.845Z",
+  "auditor_identity": "Codex subagent /root/long_v17_fresh_audit",
+  "independence_qualification": {
+    "v17_author_identity": "Codex subagent /root/long_v15_fresh_audit",
+    "reviewer_is_different_task_identity": true,
+    "qualifies_as_required_different_auditor": true
+  },
+  "verdict": "REJECT_V17_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "identity_and_positive_results": {
+    "installed_author_package_exact": "7/7",
+    "installed_author_package_unchanged_before_after": true,
+    "static_seal_subjects_exact": "5/5",
+    "v16_author_rejection_and_current_policy_closure_exact": "22/22",
+    "independent_source_descriptor": {
+      "bytes": 365656,
+      "sha256": "fbe377325f60193763d5bfa086830e03b9d1248ce0a47ffdb4640b65af671b55",
+      "function_definition_count": 54
+    },
+    "installed_cache_free_suite": "102 passed in 0.75s",
+    "v16_full_generation_relabel_rejected_against_original_external_root": true,
+    "v16_uncertain_withheld_not_applicable_lie_misclassification_repaired": true,
+    "v16_all_exact_event_field_wrong_types_returned_issues": "20/20",
+    "reserved_v17_output_roots_absent": true
+  },
+  "blocking_findings": [
+    {
+      "id": "V17-B01-CHOICE_AUTHORIZATION_ID_REPLAY",
+      "severity": "ACCEPTANCE_BLOCKING",
+      "result": "SAME_ONE_USE_CHOICE_AUTHORIZATION_ID_REUSED_ACROSS_TWO_PUBLIC_EVENTS_WITH_RECOMPUTED_SCOPES_AND_RECEIPTS_ZERO_ISSUES",
+      "required_repair": "Track choice_authorization_id, scope, receipt, event, and consumption one-to-one across the whole trace; recomputation must not permit reuse."
+    },
+    {
+      "id": "V17-B02-NESTED_UNHASHABLE_VALIDATOR_EXCEPTIONS",
+      "severity": "ACCEPTANCE_BLOCKING",
+      "result": "SIX_EXACT_KEY_SEMANTIC_CAMERA_TRUTH_AND_ONE_HOUR_RECORDS_ESCAPED_TYPEERROR",
+      "required_repair": "Recursively exact-type gate every nested record before membership/lookup and return deterministic field-specific closed issues from every public validator."
+    },
+    {
+      "id": "V17-B03-MUTABLE_SEMANTIC_VERIFIER_GLOBAL_FALSE_PASS",
+      "severity": "ACCEPTANCE_BLOCKING",
+      "result": "REMOVING_ONE_ENTRY_FROM_SEMANTIC_FAMILY_ISSUES_CHANGED_AN_IDENTICAL_UNSAFE_ROBERT_CONFLATION_RECORD_FROM_REJECT_TO_ZERO_ISSUES_WITH_UNCHANGED_SOURCE_HASH",
+      "required_repair": "Use an immutable externally bound verifier representation and prove exact runtime code/constants before validation in any successor executor."
+    },
+    {
+      "id": "V17-B04-CAMERA_TERMINAL_OUTCOME_UNBOUND",
+      "severity": "ACCEPTANCE_BLOCKING",
+      "result": "COMPLETE_SUCCESS_TRACE_CAN_BE_LABELLED_FAILURE_OR_TIMEOUT_AND_PASS_WHILE_A_TRUTHFUL_PREFIX_TIMEOUT_WITH_TERMINAL_CLOSE_IS_REJECTED",
+      "required_repair": "Bind outcome to exact failed stage, cause/deadline, completed prefix, prefix call counts, and terminal close; require all success stages only for SUCCESS."
+    },
+    {
+      "id": "V17-B05-AUDIO_MEASUREMENT_BASIS_AMBIGUOUS",
+      "severity": "ACCEPTANCE_BLOCKING",
+      "result": "SCORING_SCHEMA_CANNOT_DISTINGUISH_PLAYBACK_API_PROXY_DEVICE_FIRST_SAMPLE_AND_OWNER_OBSERVED_AUDIBLE_TIME",
+      "required_repair": "Add exact measurement-basis and separate playback-API, device-first-sample, and owner-observed timestamps; bind every derived latency metric to its source."
+    }
+  ],
+  "unclosed_explicit_prerequisite": {
+    "id": "V17-P01-EXTERNAL_EVENT_LEDGER_NOT_IMPLEMENTED_OR_PROVEN",
+    "result": "FORGED_RELABEL_PASSES_IF_CALLER_ALSO_SUPPLIES_FORGED_RECOMPUTED_ROOT",
+    "interpretation": "V17 already declares the external/native ledger absent. A later executor must implement, protect, seal, and independently audit it; the current caller argument is not authority."
+  },
+  "authority": {
+    "v17_static_schema_control_accepted": false,
+    "promotion_authorized": false,
+    "executor_authoring_authorized_by_this_decision": false,
+    "one_hour_or_live_run_authorized": false,
+    "model_camera_microphone_voice_audio_private_state_person_body_media_network_sarah_or_production_authorized": false,
+    "silent_retry_authorized": false,
+    "append_only_successor_required": true,
+    "different_independent_audit_of_successor_required": true
+  }
+}

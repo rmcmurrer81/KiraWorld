@@ -1,0 +1,68 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r30.audit_a_rejection_decision.v1",
+  "recorded_utc": "2026-08-12T03:16:13Z",
+  "auditor_id": "independent_body_v3r30_audit_a_codex_review",
+  "author_id": "codex_r25_medical_reference_proxy_v3r30_two_stage_author",
+  "author_separation": true,
+  "verdict": "REJECT_AUDIT_A_NO_STAGE2_MATERIALIZATION_OR_BUILD_AUTHORITY",
+  "execution_authority": "NONE",
+  "maximum_materializations": 0,
+  "maximum_native_builds": 0,
+  "maximum_blender_invocations": 0,
+  "candidate_executed_by_auditor": false,
+  "native_product_executed_by_auditor": false,
+  "materializer_main_executed_by_auditor": false,
+  "blender_or_bpy_executed_by_auditor": false,
+  "worker_executed_by_auditor": false,
+  "kira_writes_by_auditor": false,
+  "programdata_writes_by_auditor": false,
+  "stage1": {
+    "installed_files_exact": 26,
+    "sealed_subjects_exact": 25,
+    "canonical_bytes": 2675,
+    "package_root_sha256": "7da17e6d91098da0d5dca1229984217861f75bdad4579743a9177688d49369a8",
+    "seal_bytes": 7821,
+    "seal_sha256": "1aad04c907a89248bacf222f7e3989c0a69480f51c561c1c17a6123c69664e29",
+    "all_files_canonical_bytes": 2771,
+    "all_26_inventory_root_sha256": "4ff08a82f0d8262d925cfc091cad8da9cd92d753cfefa53cb00a14c6203d4cca"
+  },
+  "predecessor_closure": {
+    "v3r29_direct_rows_exact": 33,
+    "v3r28_nested_rows_exact": 28,
+    "v3r27_deep_rows_exact": 17,
+    "unique_transitive_rows_exact": 78,
+    "observed_canonical_bytes": 16147,
+    "observed_root_sha256": "e713d1082d2564a98814fce4e977b4172f250f7d3ef7e7e945f4428cff61a7fc",
+    "v3r29_rejection_decision_sha256": "f2de5822e705213abcf8a46c0b6fef8c3cd7dbac25d9cc8b886f6615394185d0"
+  },
+  "positive_static_facts": {
+    "installed_postseal": "PASS_READ_ONLY_BYTE_IDENTICAL_33_28_17_18_4_21_5_4_3",
+    "relocated_postseal": "PASS_26_FILES_NO_PYC",
+    "materialized_strict_rebuilds": "TWO_EXES_IDENTICAL_TO_SEALED_8b5e4402f23e34b45cef8ce2cd5e61d719f53121cf38b6c4e7a39f59730e15bc",
+    "materialized_analyzer": "ZERO_UNSUPPRESSED_DEFECTS",
+    "materialized_pe": "X64_HIGH_ENTROPY_VA_DYNAMIC_BASE_NX_CFG_CET",
+    "audit_and_install_authority_grammar": "TWO_POSITIVE_PARSES_AND_12_OF_12_INDEPENDENT_HOSTILES_REFUSED",
+    "handle_relative_materialization": "STATIC_MOCKED_REPAIR_PASS_NO_PROGRAMDATA_WRITE",
+    "worker_staging_identity_structure": "SEVEN_PRE_RESERVED_SINGLE_LINK_NONREPARSE_NO_DELETE_SHARE_HANDLES_RETAINED",
+    "proxy_frame_truth_license": "PASS_WITH_PROXY_ONLY_AND_QUARANTINE_BOUNDARIES"
+  },
+  "blocking_findings": [
+    {
+      "id": "V3R30-A01-STAGING-DACL-HANDLE-ACCESS",
+      "severity": "BLOCKING",
+      "finding": "The native staging file handles are opened with GENERIC_READ only and the staging directory handle is opened without WRITE_DAC, but apply_worker_transaction_dacl uses SetSecurityInfo to set a protected DACL on those handles. Setting a DACL requires WRITE_DAC. Independent scratch-file and scratch-directory probes using the exact access masks both returned Win32 status 5, ERROR_ACCESS_DENIED.",
+      "impact": "reserve_worker_outputs fails on the first staging file and wmain cleans up before launch_worker. Even if that call were skipped, the staging-directory DACL call fails for the same reason. The promised protected staging transaction and any later proxy invocation are unreachable; V3r29 staging blocker A02 is structurally improved but not operationally closed."
+    }
+  ],
+  "required_append_only_repair": [
+    "Preserve V3r30 and this rejection unchanged; do not materialize or build Stage 2 from V3r30 and do not create its ProgramData authority ledger.",
+    "Create append-only V3r31 whose seven staging-file handles and staging-directory handle possess WRITE_DAC before SetSecurityInfo, or supply the exact final protected DACL atomically during handle-relative object creation.",
+    "Independently read back and compare the canonical protected DACL on all seven staging files and the staging directory before Blender while retaining the worker's required read/write access, no delete sharing, exact identities, and single-link gates.",
+    "Run a test-owned exact Win32 access-mask transition probe, preserve strict materialized compile/analyzer/PE evidence, and require another different Audit A. Any later acceptance may authorize only Stage-2 materialization/build and never Blender."
+  ],
+  "claim_boundary": "V3r30 remains a rejected static Stage-1 preparation. It is not Kira's body, complete internal or external anatomy, functional anatomy, physiology, sensation, Blender/save/reload/render evidence, activation, or an Avatar Builder template.",
+  "do_not_materialize_v3r30": true,
+  "do_not_build_v3r30_stage2": true,
+  "do_not_run_v3r30": true,
+  "acceptance_artifacts_created": false
+}

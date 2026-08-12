@@ -1,0 +1,159 @@
+BLACKWELL VOICE V19 EXACT-TYPE AND CAMERA-SCHEMA CONTROL ANCHOR
+AUTHOR BUILD AND STATIC TEST RESULTS
+
+Recorded UTC: 2026-08-12T00:06:41.7330550Z
+Author task: /root/voice_v18_audit
+Workspace: Documents/Codex scratch only
+
+STRICT BOUNDARY
+v17_rerun=false
+v18_run=false
+v19_candidate_invoked=false
+python_invoked=false
+model_calls=0
+gpu_voice_calls=0
+synthesis_calls=0
+audio_calls=0
+playback_calls=0
+latency_measurements=0
+camera_device_calls=0
+network_calls=0
+person_state_calls=0
+body_blender_calls=0
+sarah_calls=0
+production_routing_calls=0
+execution_authority=NONE
+speed_improvement_claimed=false
+
+PRESERVED PREDECESSORS
+V17_status=CONSUMED_FAILURE_DO_NOT_RERUN
+V18_status=REJECT_STATIC_NO_EXECUTION_AUTHORITY
+V18_AUDIT_DECISION=2883 bytes; 2d2ac8919ab05b8b142198552bdacd6963d193102a844e5266f48c10f19919a4
+V18_AUDIT_CHECKPOINT=2021 bytes; ce186a6ad5bca49a28135c35933ca6b9022f8f2b80b3b0d255c0c827d961dce6
+V18_QUALITY_RESULTS=5578 bytes; 1d7c79465e7c6cf97b280ee62cefc222f7b059b87878c1feda914686dc85d58d
+root_attempt_51=1569 bytes; 8b83ea7c8443b2ac842912e3ea00865028bb9192244248b457da432dc2e47e6d
+
+V19 EXACT RESULT REPAIR
+repair_id=V18_EXACT_RESULT_TYPES_AND_COMPLETE_CAMERA_TIMING_SCHEMA_REPAIR
+tuple_exact_type=true
+tuple_size_exact_10=true
+schema_exact_unicode_type=true
+schema_exact_value=true
+success_exact_boolean_type=true
+success_exact_true_singleton=true
+predecessor_exact_integer_type=true
+predecessor_int64_range=true
+predecessor_exact_value_6=true
+graph_exact_integer_type=true
+graph_int64_range=true
+graph_positive=true
+six_false_fields_exact_boolean_type=true
+six_false_fields_exact_false_singleton=true
+pending_error_absent=true
+failure_codes=10..34
+failure_code_count=25
+wrong_type_conversion_forbidden=true
+exception_type_capacity=64
+exception_message_capacity=192
+bounded_sanitization=true
+
+EXACT RETAINED VALIDATOR PROVENANCE
+path=tools/native/kira_blackwell_voice_control_anchor_v15_validator.py
+bytes=21931
+sha256=2bf232b07b0b7b93de8776f5210bd2d89068ad76cb4ee46555b861ad2818d16a
+private_module=_kira_blackwell_v15_private_native_validator
+callable=validate_static_control_graph_v15
+result_schema=kira.blackwell.v15.native_validator_result.v1
+
+NON-EXECUTABLE FUTURE CAMERA TIMING SCHEMA
+conditions=4
+required_monotonic_timestamps=51
+required_metadata=42
+required_derived_durations=30
+ordering_requirements=15
+explicit_one_still_full_sequence_bound=true
+matched_prompt_state_history_limits_voice_route=true
+queue_and_residency_metadata=true
+gpu_vram_cpu_metadata=true
+in_flight_metadata=true
+camera_close_required=true
+camera_off_no_frame=true
+raw_frames_retained=false
+exact_text_model=qwen3.5:9b
+exact_text_model_digest=6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7
+qwen_keep_alive_before_voice=0
+live_measurements_present=false
+
+COMPILED HOSTILE MOCK HARNESS
+candidate_wmain_renamed_and_unreachable=true
+candidate_executable_invoked=false
+python_dll_loaded=false
+checks=100
+failures=0
+positive_exact_result=true
+all_25_result_failure_codes_refused=true
+all_25_failure_stages_exact=true
+truthy_falsey_wrong_types_refused=7
+integer_wrong_types_not_converted=2
+integer_overflow_refused=2
+bounded_sanitizer_cases_passed=true
+receipt_and_diagnosis_layout_checks_passed=true
+
+SOURCE MUTATION GATE
+exact_type_symbols_and_calls_bound=true
+exact_boolean_singletons_bound=true
+exact_integer_conversion_order_bound=true
+camera_schema_audit_fields_bound=true
+mutants_refused=18/18
+
+STRICT NATIVE BUILD
+toolchain=Microsoft Visual C/C++ x64 19.50.35730
+flags=/W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17
+candidate_compile_exit=0
+hostile_compile_exit=0
+warnings=0
+errors=0
+source=106649 bytes; f0e06bc9242f3585d79788e666c6481c6055b7a974d683c430377940201c1104
+identity_header=13662 bytes; 6f5a8e10bc4b0c51f9c6458934faf06f34d50a51a515c91877abbfaa0682f903
+object=181247 bytes; 8092f0be64f6aaefce6365aabb83f3be9fb4987885bd98911ab4c82205418c48
+executable=177152 bytes; b6b7d2c6ee838ec8cb168f9c93301f9f0f1f0861a1d2d145a7ffc021c2243f19
+hostile_source=13912 bytes; ce209890eff3c647797a1061806d14d9bbc1504962c0f303df53b8083edc3ed2
+hostile_object=211268 bytes; d8c6080d256c09e153d05b28f60675d7fbe1cb8482d023d2532792cf5b18d30d
+hostile_executable=188416 bytes; 9f39efc2d156fc61fc0f778199edb72a9868d420faee4dc7e9facdf1fc8711ee
+
+STRICT STATIC ANALYSIS
+flags=/W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17
+candidate_exit=0
+hostile_exit=0
+unsuppressed_warnings=0
+errors=0
+candidate_analyzer_object=103950 bytes; 7b886b8e150e45bf4915c8e6ad035bbaa87569d87908fe2276b1a465c01128b8
+hostile_analyzer_object=123434 bytes; dc3384c0a7bbbb190a7f72e9154a6f32b4c13a3dbf916d0c6c983b699e5b57e0
+
+PE STATIC INSPECTION
+machine=x64_8664
+format=PE32+_20B
+high_entropy_va=true
+dynamic_base=true
+nx_compatible=true
+control_flow_guard=true
+cf_instrumented=true
+fid_table_present=true
+guard_cf_function_count_hex=0x32
+imports=bcrypt.dll,KERNEL32.dll
+python_static_import=false
+process_shell_static_import=false
+model_audio_network_static_import=false
+
+STATIC SUITE
+PreSeal=V19_EXACT_TYPE_CAMERA_SCHEMA_HOSTILE_STATIC_TESTS_PASS
+PostSeal=V19_EXACT_TYPE_CAMERA_SCHEMA_HOSTILE_STATIC_TESTS_PASS
+compiled_checks=100
+source_mutants=18
+camera_schema=4/51/42/30/15
+seal_subjects=110
+seal_unique_paths=110
+seal=23616 bytes; 1247fce7561f9d47ab0f013b6b98ef0a12ff33eb627bd874c28caa9c94d66713
+
+DIFFERENT_FRESH_AUDIT_REQUIRED=true
+ALLOWED_NEXT_AUTHORITY=NONE_UNTIL_DIFFERENT_FRESH_V19_STATIC_REVIEW

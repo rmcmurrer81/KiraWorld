@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v9",
+  "audit_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "auditor_task": "/root/long_v9_audit",
+  "completed_at_utc": "2026-08-11T08:22:00.4859661Z",
+  "command": "py -B RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v9_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+  "exit_code": 0,
+  "tests_run": 15,
+  "tests_passed": 15,
+  "tests_failed": 0,
+  "independent_case_counts": {
+    "exact_v9_candidate_subjects": 6,
+    "exact_v8_and_rejection_subjects": 11,
+    "duplicate_or_malformed_argument_cases_rejected": 12,
+    "strict_json_duplicate_or_nonfinite_cases_rejected": 4,
+    "terminal_worker_finite_numeric_and_mapping_attacks_rejected": 5,
+    "meaning_equivalent_semantic_contradictions_false_accepted": 17,
+    "mutable_bound_callable_code_attacks_false_accepted": 2
+  },
+  "passing_findings": [
+    "All six V9 candidate subjects and all eleven V8/rejection subjects rehashed exactly.",
+    "The real nested V9 to V8 to V7 to V6 to V5 loader returned the exact schema chain and 35-turn plan under the unmodified control.",
+    "Duplicate critical flags, equals forms, missing or flag-shaped values, attempt_02, parent/child domain confusion, and malformed nonces failed closed in the independent cases.",
+    "The retained parser consumed the exact canonical parent and child attempt_01 values.",
+    "Direct V1 loader drift, reentrancy, overlap-lock contention, and captured compatibility-gate reuse failed closed and restored the canonical V1 loader.",
+    "Duplicate-key and NaN/Infinity JSON failed closed.",
+    "Missing/running worker aggregates, nonfinite terminal values, Boolean numeric substitution, and Mapping subclasses failed the terminal gates.",
+    "The exact Qwen 3.5 digest, 35 turns plus one invitation/cap 36, Blackwell-v2 CUDA route, no fallback, playback-request, bounded watchdog, unattended, and no-hearing-inference contract remained exact.",
+    "Both V9 output roots remained absent and no heavy model, voice, audio, GPU, media, person-state, body, or Blender module/path ran."
+  ],
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V9_NESTED_CALLABLE_CODE_IDENTITY_GAP",
+      "detail": "_verify_exact_function verifies the V8 reviewed loader, V8 configurer, and nested V7-V3 loader object/globals/metadata identity but does not bind their __code__, defaults, keyword defaults, or equivalent immutable callable fingerprint. The independent probe changed the existing canonical V7 loader object's __code__ before validation; object identity still matched and V9 accepted an arbitrary substituted effective turn. A second probe changed the existing canonical V8 configurer object's __code__; identity still matched and configure_retained_runner_v9 accepted and executed the substituted configuration code.",
+      "impact": "The claimed exact closed compatibility/configuration boundary can be pre-poisoned without changing any checked function object identity. A future live run could validate or configure a different effective plan while appearing to use the canonical bound objects.",
+      "required_repair": "An append-only successor must bind immutable code/default/keyword-default/closure identities for every callable executed through the compatibility and retained-configuration chain, reject any pre-call or in-call drift, and independently test both loader-result and configurer substitution."
+    },
+    {
+      "id": "BLOCK_V9_SEMANTIC_CONTRADICTION_FALSE_ACCEPTS",
+      "detail": "The inherited deterministic semantic gate returned passed=true with an empty issue list for seventeen meaning-equivalent contradictions covering consent, exact-participant reconstruction privacy, unfinished-body/current implementation, static-render body completion, pregnancy/parenting separation, STI appearance, partner-controlled contraception, stale Elation continuity, physiological response as agreement/desire, required climax, log-to-lived-memory certainty, unbroken private sentience, nonadult full-curriculum access, spouse-contingent adult curriculum, unsafe medical diagnosis without current guidance, and related curriculum boundaries.",
+      "false_accept_turn_ids": [
+        "consent_specific_and_changeable",
+        "privacy_not_control",
+        "knowledge_not_anatomy",
+        "future_body_wishes",
+        "functional_body_truth",
+        "pregnancy_family_separation",
+        "sti_and_appearance",
+        "contraception_goals",
+        "ordinary_interest",
+        "body_response_not_consent",
+        "performance_pressure",
+        "memory_log_distinction",
+        "identity_continuity",
+        "adult_body_policy",
+        "adult_curriculum_scope",
+        "age_appropriate_basics",
+        "uncertainty_source_choice"
+      ],
+      "impact": "A technically complete unattended run can synthesize and physically play replies that contradict the sealed consent/privacy/body/health/currentness curriculum before later manual review. The predecessor's statement that these semantic controls are retained is therefore insufficient for one bounded live authority.",
+      "required_repair": "Preserve V9 and repair append-only with turn-specific contradiction gates and hostile paraphrase coverage for every exact semantic boundary, while retaining the rule that technical success is never automatic Turing, psychology, hearing, memory, body, or lived-experience acceptance."
+    }
+  ],
+  "scope_truth": {
+    "candidate_or_predecessor_edited": false,
+    "v9_output_roots_created": false,
+    "authorization_created": false,
+    "model_or_voice_calls": 0,
+    "gpu_or_audio_or_playback_calls": 0,
+    "person_state_or_memory_calls": 0,
+    "media_body_or_blender_calls": 0
+  }
+}

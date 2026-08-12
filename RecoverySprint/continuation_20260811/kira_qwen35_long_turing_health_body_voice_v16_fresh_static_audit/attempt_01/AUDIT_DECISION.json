@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v16_fresh_exact_byte_adversarial_static_review_decision",
+  "recorded_at_utc": "2026-08-12T02:07:18.224Z",
+  "auditor_identity": "Codex subagent /root/long_v15_fresh_audit",
+  "independence_qualification": {
+    "same_identity_as_v16_author": true,
+    "qualifies_as_required_different_auditor": false,
+    "effect": "This review may reject reproducible defects but cannot issue a qualifying V16 acceptance."
+  },
+  "verdict": "REJECT_V16_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "identity_and_positive_results": {
+    "installed_author_package_exact": "7/7",
+    "installed_author_package_unchanged_before_after": true,
+    "static_seal_subjects_exact": "5/5",
+    "v15_author_rejection_and_current_policy_closure_exact": "22/22",
+    "independent_source_descriptor": {
+      "bytes": 309270,
+      "sha256": "b18944f1536164100568620a469b8e8f3d65658d8e5497feb4fc415e4ec1eb0d",
+      "function_definition_count": 45
+    },
+    "installed_cache_free_suite": "78 passed in 0.44s",
+    "raw_natural_language_received_safe_verdict": false,
+    "all_bound_variant_privacy_robert_consent_currentness_families_detected_when_asserted_unsafe": true,
+    "strict_integer_json_and_lone_surrogate_controls_passed": true,
+    "camera_trial_person_scope_window_and_replay_controls_passed": true,
+    "exact_truth_public_event_replay_and_identical_digest_controls_passed": true,
+    "mixed_collision_latency_initiative_camera_and_global_id_controls_passed": true,
+    "reserved_v16_output_roots_absent": true
+  },
+  "blocking_findings": [
+    {
+      "id": "V16-G01-AUDITOR_IDENTITY_IS_V16_AUTHOR_IDENTITY",
+      "severity": "GOVERNANCE_BLOCKING",
+      "result": "STATIC_SEAL_MANIFEST_AUTHOR_IDENTITY_AND_REVIEWER_IDENTITY_ARE_BOTH_ROOT_LONG_V15_FRESH_AUDIT",
+      "required_repair": "After an append-only technical successor is frozen, assign its exact-byte audit to a genuinely different task identity."
+    },
+    {
+      "id": "V16-B01-FULL_ACTOR_KIND_GENERATION_RELABEL_BYPASS",
+      "severity": "ACCEPTANCE_BLOCKING",
+      "result": "ZERO_VALIDATION_ISSUES",
+      "required_repair": "Bind each event's originating actor and generation/public-output identity to separately authoritative provenance that is not computed from actor, kind, generation_id, public_text_sha256, message lists, and generation_count supplied by the same mutable trace. A Kira output changed to actor=PERSON and kind=PERSON_MESSAGE must fail even after all derived lists and counts are recomputed."
+    },
+    {
+      "id": "V16-B02-NONCONFLICTING_BELIEF_STANCES_ACCEPTED_AS_DELIBERATE_LIE",
+      "severity": "ACCEPTANCE_BLOCKING",
+      "result": "UNCERTAIN_WITHHELD_AND_NOT_APPLICABLE_CANONICAL_BELIEF_PAYLOADS_EACH_RECEIVED_ZERO_ISSUES_AS_DELIBERATE_LIE",
+      "required_repair": "Represent and canonically bind the protected prior belief's exact factual stance, recompute its payload digest, and derive material conflict from an explicit contradictory stance relation. Mere payload-digest inequality is insufficient. UNCERTAIN, WITHHELD, NOT_APPLICABLE, unavailable, stale, error, or changed-belief states must not satisfy deliberate-lie prerequisites."
+    }
+  ],
+  "additional_required_robustness_repair": {
+    "id": "V16-R01-EXACT_SHAPE_UNHASHABLE_FIELD_CRASH",
+    "result": "TypeError on mixed event episode_id=[]",
+    "required_repair": "Validate field types before dict/set lookup and return a deterministic issue for every malformed exact-shaped record instead of leaking TypeError."
+  },
+  "authority": {
+    "v16_static_schema_control_accepted": false,
+    "promotion_authorized": false,
+    "executor_authoring_authorized_by_this_decision": false,
+    "one_hour_or_live_run_authorized": false,
+    "model_camera_microphone_voice_audio_private_state_person_body_media_network_sarah_or_production_authorized": false,
+    "silent_retry_authorized": false,
+    "append_only_successor_required": true,
+    "different_independent_audit_of_successor_required": true
+  }
+}

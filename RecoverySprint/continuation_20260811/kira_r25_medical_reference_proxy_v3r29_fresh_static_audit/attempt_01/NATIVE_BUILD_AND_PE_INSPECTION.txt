@@ -1,0 +1,50 @@
+KIRA V3R29 AUDIT A NATIVE BUILD AND PE INSPECTION
+Recorded UTC: 2026-08-12T01:28:14Z
+
+BOUNDARY
+- Exact installed source/header input; all compiler outputs were written only
+  under Documents/Codex scratch.
+- Neither independent EXE nor either sealed EXE was executed.
+
+TOOLCHAIN
+- cl.exe: 682576 bytes /
+  6641bee08a3cbafe204aa03b280ad634d7a88b1c03a06fbfec22aaf55d1e4ec2.
+- link.exe: 3416136 bytes /
+  2c26c8b28ca5e47ef0c0e89a7264cf4fe6685d26ec0b0a3188e2383bc4b7e08f.
+- Strict flags: /nologo /utf-8 /W4 /WX /O2 /MT /guard:cf /std:c17
+  /Brepro; link /guard:cf /DYNAMICBASE /HIGHENTROPYVA /NXCOMPAT
+  /CETCOMPAT /Brepro.
+- Analyzer flags: /nologo /utf-8 /W4 /WX /MT /guard:cf /std:c17
+  /analyze /c.
+
+MATERIALIZED-PATH EXACT REBUILDS
+- Input translation unit: 450 bytes /
+  f0b57f7d5f9a878b86e86f09af9108edad2ec116915835b7a81f028be03c40e5.
+- Exact native source: 41434 bytes /
+  28af2a24de6b335d3ddcd66c9ff9147a7dd8d90eee119953d438bac254c7cbf7.
+- Exact materialized bindings: 2337 bytes /
+  a7801b3593eec403752dfaa3259c22c2e863f92a08245970d5bb588f39681564.
+- Independent build 1 EXE: 168448 bytes /
+  1a2adae502d1cf0ff547a4c93dbe58ebb5eecc21e832f8f00b6b6f393b0f6b2e.
+- Independent build 2 EXE: 168448 bytes / same SHA-256.
+- Sealed materialized-analysis EXE: 168448 bytes / same SHA-256.
+- /Brepro executable identity: 2/2 and exact to sealed product.
+- Object bytes differ with output-object naming, but executable bytes are
+  reproducible; no object-identity claim is made.
+
+ANALYZER
+- Microsoft /analyze /W4 /WX exit: 0.
+- XML: 59 bytes /
+  ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5.
+- Content: XML DEFECTS element with no DEFECT rows.
+- Positive conclusion: V3r28 blocker A01 is closed.
+
+PE INSPECTION
+- Machine: x64.
+- Mitigations: High Entropy VA, Dynamic Base, NX compatible, Control Flow
+  Guard, CET compatible.
+- Imports include bcrypt.dll and KERNEL32.dll, with
+  BCryptOpenAlgorithmProvider, CreateFileW, CreateProcessW, and
+  AssignProcessToJobObject on the reachable materialized surface.
+- This is build/analyzer/import evidence only. It is not execution authority
+  and does not prove a body, save, reload, or render.

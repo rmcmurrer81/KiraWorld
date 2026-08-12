@@ -1,0 +1,8 @@
+{"schema":"kira.r25.afes.v3r24.native_stage.v1","stage":"entry","status":"entered"}
+{"schema":"kira.r25.afes.v3r24.native_stage.v1","stage":"subject_manifest_audit_gate","status":"passed"}
+{"schema":"kira.r25.afes.v3r24.native_stage.v1","stage":"outcome_reservation","status":"passed"}
+{"schema":"kira.r25.afes.v3r24.native_stage.v1","stage":"python_finalize_dll_unload_retained_recheck","status":"passed"}
+{"schema":"kira.r25.afes.v3r24.plan_validator_telemetry.v1","stage":"bounded_sanitized_diagnostic","checkpoint":110,"plan_attempts":0,"plan_returns":0,"operation_enters":0,"operation_returns":0,"marker_present":0,"native_sha_calls":0,"python_error_captured":1,"exception_message_truncated":0,"retained_recheck_passed":1,"exception_type":"ValueError","exception_message":"unmarshallable object"}
+{"schema":"kira.r25.afes.v3r24.python_unload.v1","stage":"finalize_release_absence_terminal","finalize_called":1,"finalize_result":0,"free_library_called":1,"free_library_result":1,"snapshot_succeeded":1,"snapshot_error":0,"checked_module_count":8,"old_base_present":0,"exact_path_present":0,"old_module_base":140725955592192}
+{"schema":"kira.r25.afes.v3r24.contract_gate.v1","stage":"granular_same_handle_terminal","passed_mask":32767,"failure_gate":0,"win32_error":0,"snapshot_one_bytes":17141,"snapshot_two_bytes":17141,"final_bytes":17141}
+{"schema":"kira.r25.afes.v3r24.native_stage.v1","stage":"terminal","status":"failed_consumed_no_retry"}

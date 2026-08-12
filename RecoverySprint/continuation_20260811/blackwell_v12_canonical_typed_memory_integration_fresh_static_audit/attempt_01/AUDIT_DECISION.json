@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_canonical_typed_memory_integration_candidate_v12",
+  "attempt_id": "attempt_01",
+  "decision": "REJECT",
+  "static_only": true,
+  "live_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "promotion_authorized": false,
+  "playback_authorized": false,
+  "audit_authorization_created": false,
+  "sealed_subjects_exact_byte_match": 7,
+  "preserved_dependencies_exact_byte_match": 28,
+  "authored_v12_v11_v10_tests_passed": 56,
+  "independent_hostile_tests_run": 15,
+  "independent_hostile_tests_passed": 12,
+  "independent_hostile_tests_failed": 3,
+  "blocking_finding_ids": [
+    "BLOCK_V12_CANONICAL_CONTROL_MODULE_NOT_BOUND"
+  ],
+  "reason": "V12 strongly binds the private V8 and V10 modules and rejects the V11 forged-adapter reproductions, but its ordinary-import canonical control module and mutable validator globals are not bound. Static replacement can return forged affirmative preparation evidence or bypass later import poisoning.",
+  "required_next_step": "Preserve V12 and this rejection. Repair only in an append-only successor whose control module object, helper callables, code/globals, and pre/post preparation identity are exact and non-substitutable, then require another different fresh static audit.",
+  "scope_truth": {
+    "candidate_edited": false,
+    "main_docs_edited": false,
+    "production_route_changed": false,
+    "live_or_promotion_authority_issued": false
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "candidate_id": "kira_chatterbox_blackwell_cpu_park_candidate_v6",
+  "candidate_status": "inactive_static_child_owned_ipc_candidate_pending_fresh_audit",
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "playback_authorized": false,
+  "live_adapter_available": false,
+  "worker_ownership": "persistent_child_only",
+  "ipc_protocol": "kira_blackwell_v6_jsonl_1",
+  "required_start_method": "spawn",
+  "required_windows_termination": "job_object_kill_on_close",
+  "allowed_states": [
+    "UNLOADED",
+    "LOADED_CUDA",
+    "PARKED_CPU",
+    "QWEN_OWNED",
+    "CLEANUP_DEBT"
+  ],
+  "required_components": [
+    "t3",
+    "s3gen",
+    "ve"
+  ],
+  "approved_profile": "Voice/profiles/temp_ai/kira_voice_profile.json",
+  "approved_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+  "approved_reference": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "approved_audio_prompt": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_audio_prompt_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "owned_output_root": "RecoverySprint/runtime_cache/blackwell_chatterbox/v6_outputs",
+  "qwen_model": "qwen3.5:9b",
+  "qwen_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "input_channel": "public_spoken_only",
+  "compute_device": "cuda",
+  "cuda_device_name": "NVIDIA GeForce RTX 5060 Ti",
+  "compute_capability": [12, 0],
+  "cpu_synthesis_allowed": false,
+  "generic_voice_allowed": false,
+  "sapi_allowed": false,
+  "llama_allowed": false,
+  "substitute_reference_allowed": false,
+  "automatic_fallback_inside_candidate": null,
+  "production_fallback_retained_outside_candidate": "sealed_cpu_chatterbox_only",
+  "resource_bounds": {
+    "minimum_available_physical_mib_before_park": 6144,
+    "minimum_available_physical_mib_after_park": 6144,
+    "minimum_available_physical_mib_after_resume": 4096,
+    "maximum_system_commit_fraction": 0.82,
+    "maximum_park_process_rss_mib": 10240,
+    "maximum_park_process_rss_above_baseline_mib": 8192,
+    "maximum_worker_job_memory_mib": 16384,
+    "minimum_cuda_free_mib_before_resume": 4608,
+    "minimum_cuda_free_mib_after_resume": 1024,
+    "maximum_park_cuda_allocated_above_baseline_bytes": 268435456,
+    "maximum_park_cuda_reserved_above_baseline_bytes": 536870912,
+    "maximum_unload_cuda_allocated_above_baseline_bytes": 67108864,
+    "maximum_unload_cuda_reserved_above_baseline_bytes": 134217728,
+    "maximum_unload_process_rss_above_baseline_mib": 512,
+    "maximum_evidence_age_seconds": 2.0
+  },
+  "operation_bounds_seconds": {
+    "worker_start": 5.0,
+    "ipc_lock_acquire": 1.0,
+    "load": 55.0,
+    "park": 45.0,
+    "resume": 45.0,
+    "synthesis": 135.0,
+    "qwen_load": 55.0,
+    "qwen_real_stream": 85.0,
+    "cleanup": 35.0,
+    "shutdown": 35.0,
+    "terminate_tree": 3.0,
+    "artifact_status": 2.0
+  },
+  "qwen_policy": {
+    "positive_residency_ttl_seconds": 90,
+    "maximum_residency_ttl_seconds": 120,
+    "maximum_stream_chunks": 512,
+    "maximum_stream_utf8_bytes": 65536,
+    "real_reply_keep_alive": 0,
+    "minimum_token_characters": 32,
+    "one_owned_operation_only": true
+  },
+  "ipc_bounds": {
+    "maximum_request_bytes": 262144,
+    "maximum_response_bytes": 1048576,
+    "maximum_stderr_bytes": 65536,
+    "maximum_pending_responses": 8
+  },
+  "wav_bounds": {
+    "allowed_channels": [1, 2],
+    "allowed_sample_width_bytes": [2],
+    "minimum_sample_rate_hz": 16000,
+    "maximum_sample_rate_hz": 48000,
+    "minimum_duration_seconds": 0.05,
+    "maximum_duration_seconds": 120.0,
+    "maximum_file_bytes": 52428800,
+    "minimum_absolute_pcm_peak": 1,
+    "maximum_retained_artifacts": 1,
+    "retained_artifact_ttl_seconds": 180
+  },
+  "sealed_prior_evidence": {
+    "RecoverySprint/continuation_20260810/BLACKWELL_V3_CPU_PARK_QWEN_PLAYBACK_PREWARM_STATIC_FEASIBILITY_CHECKPOINT.md": "b34bc6921d27a1d017e134331ce7bf7d440c8cb81e83417607f909617d9062c7",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V3_CPU_PARK_STATIC_IMPLEMENTATION_CHECKPOINT.md": "c888354a3352de27cb4e66766a5b9614e38f52943accbe7aa545aed1ab228064",
+    "RecoverySprint/continuation_20260810/blackwell_v3_cpu_park_fresh_static_audit/attempt_01/CHECKPOINT.md": "a7d0aa53aae4cf03d5c424b6bba169acec5373fe8dd63756bf07f211bc38c3b0",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V4_CPU_PARK_STATIC_REPAIR_CHECKPOINT.md": "7a1f9e038a27b7878229f37dc22bcd7839ed73703b9bcfbdbaffb43febb6087e",
+    "RecoverySprint/continuation_20260810/blackwell_v4_cpu_park_fresh_static_audit/attempt_01/CHECKPOINT.md": "454462a6be1b4300d2c184149c1723f19dbecbf6b4aa8759f874919da6f1e7df",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V5_CPU_PARK_STATIC_REPAIR_CHECKPOINT.md": "f47cd622cbbe34fc88317caccf3697d325175b44847672ca6d8a167ce14cef72",
+    "RecoverySprint/continuation_20260810/blackwell_v5_cpu_park_fresh_static_audit/attempt_01/CHECKPOINT.md": "51332bb0bf4796f2ed1cdf3bc047d09a00c0ff78df47c1021fae0427cc776fd0"
+  },
+  "sealed_v5_baseline": {
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v5/candidate_config.json": "c668472f132c9200d7e4056246f9341889e317b007f8f0c75cb84602b473c091",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v5/README.md": "8a065010d96af4ee53eb121679179e7391d0968bf5efda80c9b35726724cb215",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v5/persistent_worker.py": "ff3a3e7fe6f70903697e71bf8b311869b50ce0ca72228e00bb0931067a13443a",
+    "Core/persistent_blackwell_voice_integration_v5.py": "3ed4b7befc4756ed4f0510eebd6d372f0a1d382019c35ff9e1cf626240f956f8",
+    "Testing/test_blackwell_persistent_voice_candidate_v5_hostile_static.py": "f9a519c14192c58795f18135f5d0c25a2da545ee6dcbf9397d2e4976225a19e2"
+  },
+  "sealed_v2_baseline": {
+    "Core/persistent_blackwell_voice_integration_v2.py": "c3d1bad34ccb327e1bef23ad166dd52c9d52abe60bc7be0a402e4e8a636cb675",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/persistent_worker.py": "b6f2dcc816537552db02d00c5a1932057f2d99b5d206a578344d4a92523b3cad",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_client.py": "9f33ef0d9fd969da05ce48eb148163efc77306bfd3bc215efcb482e68e7261a8",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_contract.py": "863c6ece050b12af157565c60df6fd82b207dae5476e693cc08e34b392c8f910",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2/candidate_config.json": "805c1d2836c618970a81f5f44d31f81f67e204173bd919857452daa8dbedc8bb"
+  },
+  "sealed_v3_rejected_baseline": {
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v3/candidate_config.json": "b4017575d46c038cba64b7ea12a76100f1c9e74785782bee399e1245fb8ed0b0",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v3/README.md": "46ae040ee1886b29cfc499defff3ba463477289c86272cf137cc627aca8ba47f",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v3/persistent_worker.py": "57a74bbeb7bc4bdac5c244ab622df4ea5a6c711a728b9534cf212c9d7b663eaf",
+    "Core/persistent_blackwell_voice_integration_v3.py": "0d111641e6dd6c02a099a7656a8127cdf08a36e3ec7a8561100933a9c639fa99",
+    "Testing/test_blackwell_persistent_voice_candidate_v3_static.py": "d7940c99b81ced7adb9798e3493e928fa152d7740185efb0dd9be04e94654622",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V3_CPU_PARK_STATIC_IMPLEMENTATION_CHECKPOINT.md": "c888354a3352de27cb4e66766a5b9614e38f52943accbe7aa545aed1ab228064"
+  },
+  "sealed_v4_rejected_baseline": {
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v4/candidate_config.json": "1eccc9e7729c42fe9b228373b41846281d86450b9f2a4dd7a6fab46d6878a5d5",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v4/README.md": "f6dfdd818e9e80c7331dfdbaa95f6429397a6e5308cb52d4612dc7bf612dfdd0",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v4/persistent_worker.py": "36d250e517e0e24dbae89c00fcbb7ce48a6aaf3bc9084d64c51e052005a718b9",
+    "Core/persistent_blackwell_voice_integration_v4.py": "a730b48a7aa49bb0e5c006ebc58381eeb4ef4ca9c284116207a8d874da834687",
+    "Testing/test_blackwell_persistent_voice_candidate_v4_hostile_static.py": "6823f2f12a4fc3c1a4eff6562f77da59a2e2e791b117dc386086d1fb439cc26c",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V4_CPU_PARK_STATIC_REPAIR_CHECKPOINT.md": "7a1f9e038a27b7878229f37dc22bcd7839ed73703b9bcfbdbaffb43febb6087e",
+    "RecoverySprint/continuation_20260810/blackwell_v4_cpu_park_fresh_static_audit/attempt_01/CHECKPOINT.md": "454462a6be1b4300d2c184149c1723f19dbecbf6b4aa8759f874919da6f1e7df"
+  }
+}

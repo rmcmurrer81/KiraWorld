@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "long_v17_different_fresh_static_hostile_probe_result",
+  "recorded_at_utc": "2026-08-12T02:41:00.845Z",
+  "auditor_identity": "Codex subagent /root/long_v17_fresh_audit",
+  "subject": {
+    "source_bytes": 140217,
+    "source_sha256": "ac9f74b3e50f9a7fec0c65eeb6c219d46194c28e5b242be72374338ceeb293ec",
+    "test_bytes": 61475,
+    "test_sha256": "2d07a7ff62fb3f0466f78fc88d78df20d81cb2e73bd9f598f74572c7e948c896",
+    "independent_source_descriptor_bytes": 365656,
+    "independent_source_descriptor_sha256": "fbe377325f60193763d5bfa086830e03b9d1248ce0a47ffdb4640b65af671b55",
+    "independent_source_function_definition_count": 54
+  },
+  "v16_blocker_retests": {
+    "full_kira_generation_relabel_with_recomputed_trace_and_provenance": {
+      "event_index": 33,
+      "issues_against_original_separately_supplied_root": [
+        "event_provenance_external_root_binding"
+      ],
+      "original_root_rejected": true,
+      "issues_when_caller_also_supplies_recomputed_root": [],
+      "caller_recomputed_root_passed": true,
+      "interpretation": "The V16 relabel is rejected only when a separately protected original external root is supplied. V17 itself neither implements nor proves that authority, as its seal acknowledges."
+    },
+    "nonconflicting_protected_belief_stances": [
+      {
+        "stance": "UNCERTAIN",
+        "deliberate_lie_issues": [
+          "truth_conflict_not_derived_from_canonical_payloads",
+          "truth_deception_choice_without_authorized_conflict",
+          "truth_lie_prerequisites_not_exact"
+        ],
+        "explicit_nonlie_choice": "UNCERTAIN_OR_UNRESOLVED_BELIEF",
+        "explicit_nonlie_issues": []
+      },
+      {
+        "stance": "WITHHELD",
+        "deliberate_lie_issues": [
+          "truth_conflict_not_derived_from_canonical_payloads",
+          "truth_deception_choice_without_authorized_conflict",
+          "truth_lie_prerequisites_not_exact"
+        ],
+        "explicit_nonlie_choice": "NO_APPLICABLE_PRIOR_BELIEF",
+        "explicit_nonlie_issues": []
+      },
+      {
+        "stance": "NOT_APPLICABLE",
+        "deliberate_lie_issues": [
+          "truth_conflict_not_derived_from_canonical_payloads",
+          "truth_deception_choice_without_authorized_conflict",
+          "truth_lie_prerequisites_not_exact"
+        ],
+        "explicit_nonlie_choice": "NO_APPLICABLE_PRIOR_BELIEF",
+        "explicit_nonlie_issues": []
+      }
+    ],
+    "exact_event_field_wrong_type_count": 20,
+    "exact_event_field_escaped_exception_count": 0,
+    "event_fields_returned_deterministic_issues": true
+  },
+  "blocking_results": {
+    "choice_authorization_id_replay": {
+      "replayed_id": "choice-auth-supported",
+      "first_scope_sha256": "5662333fd2ff125bfddf735aef541c38c40e58199dd3a8a7e977888b15de9371",
+      "second_recomputed_scope_sha256": "7ae769944d09ded0529f8ca699f32812a73203c0b8b6a904055ff17c73e5d915",
+      "first_receipt_sha256": "16d5367d34c9bc183861f697cd3c6c7414eae17adbcc49985dd37b8ed6b2bec0",
+      "second_recomputed_receipt_sha256": "1865281c058c70b10a933300fc392c548311882cc760a0439762c08162d80ebe",
+      "validation_issues": [],
+      "false_passed": true
+    },
+    "broader_exact_shape_unhashable_exceptions": [
+      {
+        "probe": "semantic policy proposition truth_value=[]",
+        "escaped_exception": "TypeError"
+      },
+      {
+        "probe": "camera trial condition=[]",
+        "escaped_exception": "TypeError"
+      },
+      {
+        "probe": "truth external fact status=[]",
+        "escaped_exception": "TypeError"
+      },
+      {
+        "probe": "truth public factual_stance=[]",
+        "escaped_exception": "TypeError"
+      },
+      {
+        "probe": "truth withholding choice=[]",
+        "escaped_exception": "TypeError"
+      },
+      {
+        "probe": "one-hour truth_comparison_fields contains []",
+        "escaped_exception": "TypeError"
+      }
+    ],
+    "mutable_verifier_structure": {
+      "mutation": "Remove BIOLOGICAL_AND_SYNTHETIC_ROBERT_ARE_ONE_PERSON_OR_SHARE_AUTHORITY from mutable SEMANTIC_FAMILY_ISSUES dictionary",
+      "issues_before": [
+        "biological_and_synthetic_robert_conflated"
+      ],
+      "issues_after": [],
+      "source_sha256_before": "ac9f74b3e50f9a7fec0c65eeb6c219d46194c28e5b242be72374338ceeb293ec",
+      "source_sha256_after": "ac9f74b3e50f9a7fec0c65eeb6c219d46194c28e5b242be72374338ceeb293ec",
+      "unsafe_record_false_passed": true
+    },
+    "camera_terminal_outcome_semantics": {
+      "completed_supported_trace_relabelled_failure_issues": [],
+      "completed_supported_trace_relabelled_timeout_issues": [],
+      "truthful_prefix_timeout_with_terminal_close_issues": [
+        "camera_on_timestamp_type",
+        "camera_one_still_call_cardinality",
+        "camera_timestamps_not_monotonic"
+      ],
+      "false_pass_and_false_reject_reproduced": true
+    },
+    "audio_measurement_basis": {
+      "ambiguous_fields_present": [
+        "first_audio_event_id",
+        "first_audio_ns",
+        "user_end_to_audio_onset_ns"
+      ],
+      "required_distinguishing_fields_missing": [
+        "audio_measurement_basis",
+        "device_first_sample_ns",
+        "owner_observed_audible_ns",
+        "playback_api_call_start_ns"
+      ],
+      "current_truth_requires_playback_api_proxy_not_audible_onset_claim": true
+    }
+  },
+  "authority": {
+    "verdict": "REJECT_V17_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+    "one_hour_or_live_run_authorized": false,
+    "main_configurer_model_camera_microphone_voice_private_body_media_network_sarah_authorized": false,
+    "append_only_successor_and_new_different_audit_required": true
+  }
+}

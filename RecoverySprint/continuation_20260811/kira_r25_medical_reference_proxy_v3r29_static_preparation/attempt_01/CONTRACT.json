@@ -1,0 +1,127 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r29.two_stage_contract.v1",
+  "version": "V3r29",
+  "author": "codex_r25_medical_reference_proxy_v3r29_two_stage_author",
+  "status": "STAGE1_STATIC_ONLY_PENDING_DIFFERENT_AUDIT_A_NO_EXECUTION_AUTHORITY",
+  "execution_authority": "NONE",
+  "candidate_invoked": false,
+  "purpose": "append_only_repair_of_all_six_v3r28_audit_a_blockers_without_materializing_building_or_running_v3r28",
+  "upstream": {
+    "manifest": "UPSTREAM_CLOSURE.tsv",
+    "direct_rows": 28,
+    "v3r28_author_rows": 19,
+    "v3r28_rejection_rows": 9,
+    "transitive_v3r27_rows": 17,
+    "v3r28_status": "REJECTED_DO_NOT_MATERIALIZE_BUILD_OR_RUN",
+    "v3r26_status": "CONSUMED_SUCCESS_DO_NOT_RERUN_PURE_PLAN_ONLY_NOT_BODY"
+  },
+  "v3r28_blocker_repairs": {
+    "materialized_native_path": "the exact C source is separately compiled with V3R29_MATERIALIZED=1 under /W4 /WX and /analyze; both products are DO_NOT_RUN trusted-build evidence and the analyzer has zero unsuppressed defects",
+    "seal_external_anchor": "Audit A and the caller must externally bind the exact seal SHA-256 and the complete all-files inventory root in addition to the subject root; the parser validates every seal field",
+    "audit_json_exact_types": "every decision field has an exact JSON type predicate; Boolean and integer aliases and all coercions are refused",
+    "handles_through_success": "all seven final outputs and the native final manifest are pre-reserved and retained through durable SUCCESS_CONSUMED and terminal identity/size/hash revalidation",
+    "output_creation_identity": "native pre-reserves every final path with CREATE_NEW and no write/delete sharing before the child; the child writes only to a held staging directory and native copies validated locked staging objects into the pre-reserved final handles",
+    "durable_materialization_consumption": "a fixed external Documents/Codex authority ledger is exclusively and durably created before any generated-package write; deleting or recreating the generated output cannot restore the same authority"
+  },
+  "two_stage_authority": {
+    "stage1": "sealed worker specification native anchor template materialized-path analyzer evidence and materializer; cannot launch Blender",
+    "audit_a_decision": "ACCEPT_STAGE1_FOR_STAGE2_MATERIALIZATION_ONLY_NO_BLENDER_AUTHORITY",
+    "audit_a_external_anchors": [
+      "stage1_subject_root_sha256",
+      "stage1_seal_sha256",
+      "stage1_all_files_root_sha256",
+      "audit_a_manifest_sha256",
+      "audit_a_auditor_id"
+    ],
+    "stage2_materialization": "deterministically inject all five external anchors exact Stage1 files exact direct and transitive upstream files durable consumption ledger exact Audit-A files and exact Blender identity into compile-time bindings",
+    "audit_b": "different fresh audit of exact materialized source header build PE worker and hostile results; externally records the exact final native executable hash",
+    "root_external_anchor": "root must compare the final executable to Audit B expected bytes and SHA using the held same file object immediately before its sole future launch",
+    "maximum_materializations": 1,
+    "maximum_future_stage2_invocations_after_both_audits": 1,
+    "stage1_or_audit_a_can_authorize_blender": false,
+    "modified_script_seal_audit_self_authorization": false
+  },
+  "blender_runtime": {
+    "exact_path": "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe",
+    "bytes": 108687824,
+    "sha256": "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5",
+    "bpy_version_string": "5.1.2",
+    "required_arguments_in_order": ["--background", "--factory-startup", "--disable-autoexec", "--python-exit-code", "91", "--python", "<exact_worker_path>", "--", "--capability", "<exact_capability_path>", "--capability-sha256", "<lower_hex64>"],
+    "input_blend": "NONE",
+    "network": false,
+    "source_asset_import": false,
+    "source_mesh_copy": false,
+    "export": false
+  },
+  "stage_a_truth": {
+    "name": "ISOLATED_NORMALIZED_PELVIC_CORE_CLINICAL_REFERENCE_PROXY_NOT_KIRA_BODY",
+    "spec": "PROXY_SPEC.json",
+    "frame": "NORMALIZED_REFERENCE_FRAME.json",
+    "proxy_objects_exact": 9,
+    "materials_exact": 6,
+    "maximum_total_vertices": 12000,
+    "source_attribution_ids": ["mri_pelvis_cc_by", "female_repro_urinary_cc_by"],
+    "kira_landmark_fit": false,
+    "functional_organs": false,
+    "physiology": false,
+    "rig_weights_animation": false,
+    "live_avatar_link": false,
+    "activation": false,
+    "avatar_builder_promotion": false
+  },
+  "saved_reload_truth": {
+    "validate_before_save": true,
+    "save_initial": true,
+    "reload_initial": true,
+    "validate_after_initial_reload": true,
+    "render_exact_views": ["front_clinical", "right_clinical", "iso_clinical", "iso_xray"],
+    "save_final_snapshot": true,
+    "reload_final_snapshot": true,
+    "validate_after_final_reload": true,
+    "decoded_png_dimensions": [640, 640],
+    "png_content_and_distinct_view_gates": true,
+    "worker_output_root": "outputs/worker_staging",
+    "final_output_root": "outputs",
+    "final_paths_pre_reserved_by_native": true,
+    "final_output_manifest_owned_by_native": true
+  },
+  "one_shot_materialization": {
+    "authoritative_directory": "C:/Users/robmc/Documents/Codex/kira_authority_ledgers/body_v3r29",
+    "file_name": "V3R29_MATERIALIZATION_CONSUMED_<deterministic_authority_key>.json",
+    "creation": "EXCLUSIVE_CREATE_FLUSH_READBACK_BEFORE_ANY_STAGE2_OUTPUT_WRITE",
+    "outside_removable_generated_package": true,
+    "retry_after_generated_directory_delete_or_recreate": false,
+    "administrator_deletion_or_disk_rollback_outside_software_boundary": true
+  },
+  "one_shot_runtime_terminal": {
+    "authoritative_file": "V3R29_ATTEMPT_OUTCOME_RECEIPT.bin",
+    "creation": "CREATE_NEW_WRITE_THROUGH_FIXED_SIZE_SINGLE_LEDGER",
+    "states": ["PENDING_CONSUMED", "SUCCESS_CONSUMED", "FAILURE_CONSUMED"],
+    "torn_or_missing_valid_terminal_state": "AMBIGUITY_CONSUMED",
+    "single_file_in_place_state_transition": true,
+    "receipt_replacement_or_recreation": false,
+    "native_anchor_owns_child_job_timeout_cleanup_and_final_manifest": true,
+    "all_final_handles_retained_through_terminal_success_and_revalidation": true,
+    "rerun_permitted": false
+  },
+  "license_and_skeleton": {
+    "cc_by_attribution_preserved": true,
+    "cc_by_nc_quarantine_preserved": true,
+    "unknown_license_quarantine_preserved": true,
+    "skeleton_source_ids": 136,
+    "mapped_bones": 0,
+    "stage_a_uses_skeleton": false
+  },
+  "claim_boundary": {
+    "future_stage2_success_may_claim": "exact isolated normalized nine-proxy clinical reference scene built validated saved reloaded and rendered under the sealed contract",
+    "may_not_claim": ["Kira complete body", "complete internal anatomy", "complete external anatomy", "functional organs", "physiology", "sensation", "rig", "weights", "deformation", "production skin or regional pigmentation", "hair", "activation", "Avatar Builder promotion"]
+  },
+  "downstream_owner_requirements_preserved_not_implemented_by_v3r29": {
+    "adult_body_goal": "medically realistic external and internal adult anatomy requires separate bounded evidence and independent acceptance; this proxy stage does not satisfy it",
+    "tissue_material_goal": "skin is not one flat color; lips nipples and other tissues require evidence-based regional material variation in a later independently audited body lane",
+    "runtime_variants": "the bald body is the first activation candidate; a separate hair version is retained inactive until the owner installs the planned RAM upgrade",
+    "avatar_builder_handoff": "only independently accepted Blender build save reload and render evidence may be supplied as an Avatar Builder template",
+    "current_v3r29_handoff": "NONE_PENDING_DIFFERENT_AUDIT_A_STAGE2_MATERIALIZATION_DIFFERENT_AUDIT_B_AND_ONE_BOUNDED_PROXY_RUN"
+  },
+  "sarah": "PRESERVE_CURRENT_FILES_DO_NOT_INSPECT_EDIT_TEST_OR_RESUME"
+}

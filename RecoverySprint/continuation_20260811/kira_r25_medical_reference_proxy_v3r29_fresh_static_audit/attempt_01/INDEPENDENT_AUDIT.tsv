@@ -1,0 +1,19 @@
+row_id	status	evidence_sha256	finding
+01_stage1_subject_root	PASS	ee704f4b125efd1ae378fb3789e9df952788afb165c9b1d12334da9399834b99	All 25 sealed subjects rehash exact and independently reproduce the 2674-byte canonical subject root.
+02_stage1_seal_external_sha	PASS	b4187e13fcb57204fd26ff6020044d0e5fd80ace5068514ba42da3f228e3f7ba	The exact 5395-byte seal is externally distinguishable and mutation under the prior digest refuses.
+03_stage1_all_files_external_root	PASS	80e9ab2fff1614c5024d95008868b78990086b4e117536c5fd14920ac1e62bc9	All 26 flat files produce the exact 2770-byte canonical inventory and external all-files root.
+04_upstream_v3r28_and_rejection	PASS	98933e5d3839844f4ed742924b2dd020dd93096143fe2e4ce10089a8de2d6ea1	All 28 direct V3r28 author/rejection rows and all 17 transitive V3r27 rows resolve and rehash exact.
+05_static_only	FAIL	048620d7da1bc6051049fb6b9b6d5ee4891771ba655ad8f78d1a51ad4a37570c	The exact installed PostSeal fixture refuses materialization_ledger_root_scope and its real TemporaryDirectory route would write below the sealed Kira package.
+06_two_stage_authority	PASS	0ec9a461831f4c13c50d9730cb681ff1cb6a532982090d89bd7bee48c7680361	The documents keep Audit A limited to Stage-2 materialization/build and require a different Audit B before Blender.
+07_blender_identity	PASS	1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5	The fixed Blender executable is exact at 108687824 bytes; it was hashed but not invoked.
+08_materialized_native_analyzer	PASS	ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5	Independent exact materialized-path builds reproduce the sealed EXE and Microsoft analysis reports zero defects.
+09_exact_audit_json_types	PASS	c313b7f162aec32c2f963d6461888f8d955413598e6e8f1fa4c06380d8980dac	Twenty-one independent in-memory wrong-type and external-anchor cases refuse, including Boolean/integer aliases.
+10_durable_materialization_consumption	FAIL	c313b7f162aec32c2f963d6461888f8d955413598e6e8f1fa4c06380d8980dac	The helper refuses a simple retry in a proper scratch directory, but pathname-only directory validation leaves a same-user swap/junction reset window and the installed hostile fixture cannot pass.
+11_native_pre_reserved_outputs	FAIL	28af2a24de6b335d3ddcd66c9ff9147a7dd8d90eee119953d438bac254c7cbf7	Eight final objects are reserved, but seven staging objects remain unreserved and are opened only after the child exits, preserving a substitute-or-hard-link race before final copy.
+12_handles_through_terminal_success	PASS	28af2a24de6b335d3ddcd66c9ff9147a7dd8d90eee119953d438bac254c7cbf7	The eight final handles remain open across SUCCESS_CONSUMED and terminal identity, size, path, and digest revalidation.
+13_worker_factory_isolation	PASS	9d1e42e639e15975fab43d6f652f214c8e1a13ad7fc51bf1990c5a33e44d97e8	The worker retains factory-startup, disabled-autoexec, no-input, closed-data, and fixed capability/spec/frame checks.
+14_frame_landmarks	PASS	2655bb6838d693a63f1c1690b8db0cd1c9fd2c144136dccfcf99aa323a058d7b	Eight normalized landmark gates and positive-Y anterior camera orientation remain explicit.
+15_proxy_truth	PASS	c09cab0b8d70e88f6b7f687ff3de671bfb99f9fb8dd191600acf2210b159b551	The claim remains limited to nine normalized proxy objects with six clinical materials and no Kira-fit or functional-organ claim.
+16_hostile_geometry	PASS	048620d7da1bc6051049fb6b9b6d5ee4891771ba655ad8f78d1a51ad4a37570c	The scratch-layout suite reproduces all 18 worker geometry, frame, topology, and truth refusals.
+17_license_quarantine	PASS	98933e5d3839844f4ed742924b2dd020dd93096143fe2e4ce10089a8de2d6ea1	Predecessor license closure preserves CC BY attribution and noncommercial/unknown quarantine; all 136 skeleton IDs remain unmapped.
+18_claim_boundary	PASS	6eb2c1806b1ef5e673af7f03b0a876b2f87851667150dfd16cc3fd7ca3638222	The contract denies completed body, complete anatomy, function, physiology, rig, production material, hair, activation, and Avatar Builder claims.

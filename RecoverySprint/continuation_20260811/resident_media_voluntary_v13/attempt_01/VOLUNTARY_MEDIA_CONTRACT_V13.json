@@ -1,0 +1,84 @@
+{
+  "schema": "kira.resident_media_voluntary_contract.v13",
+  "status": "DISCONNECTED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_INDEPENDENT_AUDIT",
+  "sealed_subjects": {
+    "core": {
+      "path": "Core/resident_media_voluntary_gate_v13.py",
+      "bytes": 18064,
+      "sha256": "202588befbce062d8e50626902c8efb0513aceb73426caba8cd320872db8c492"
+    },
+    "test": {
+      "path": "Testing/test_resident_media_voluntary_gate_v13.py",
+      "bytes": 25643,
+      "sha256": "614e78231c0bf63b9a5e8abe276202856375bb1c80773391b69355281b97748e"
+    },
+    "static_results": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v13/attempt_01/STATIC_TEST_RESULTS.md",
+      "bytes": 2929,
+      "sha256": "adb980222f2909d657d4d89041cd6b9a38c3927265f5ba7fad9f9f365020ad7c"
+    }
+  },
+  "predecessor_closure": {
+    "v12_source_test_results_contract_and_seal_preserved": true,
+    "v12_seal": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v12/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 1411,
+      "sha256": "7c6d2da7319e163dc0e2a1be0be1af06bbbfe89173f5a8b5f21e93e2a94e2a66"
+    },
+    "v12_fresh_rejection_preserved": true,
+    "v12_rejection_checkpoint": {
+      "path": "RecoverySprint/continuation_20260811/resident_media_voluntary_v12_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 6289,
+      "sha256": "cdafe2169a6580b2586366bc2c6e0774f5f802f30ee76be0573d4dd89b54eb30"
+    },
+    "preserved_v3_v12_regression_count": 176,
+    "preserved_v3_v12_regressions_passed": true
+  },
+  "v12_repair_boundary": {
+    "every_identifier_requires_type_exact_string_before_validation": true,
+    "every_sha256_requires_type_exact_lowercase_string_before_validation": true,
+    "bool_integer_and_coerced_identifier_aliases_refused": true,
+    "numeric_json_decoder_sha256_refused": true,
+    "numeric_only_string_decoder_sha256_refused": true,
+    "descriptor_snapshot_catalog_receipt_verification_anchor_record_evidence_and_segment_fields_covered": true,
+    "engineering_output_completed_must_be_exact_true": true,
+    "presentation_complete_for_manifest_must_be_exact_true": true,
+    "required_role_list_must_equal_exact_authoritative_role_list": true,
+    "complete_by_required_role_must_have_exact_authoritative_keys": true,
+    "every_required_role_value_must_be_exact_true": true,
+    "incomplete_evidence_refused_before_output_or_decoder_receipt_consumption": true,
+    "incomplete_evidence_refused_before_anchor_compare_and_swap": true,
+    "incomplete_evidence_leaves_external_revision_receipt_and_record_histories_unchanged": true
+  },
+  "retained_boundaries": {
+    "caller_catalog_input_prohibited": true,
+    "public_production_opener_unconditionally_disconnected": true,
+    "external_authority_exact_canonical_byte_contract_retained": true,
+    "owner_selected_catalog_and_selection_receipt_binding_retained": true,
+    "source_time_and_derivative_binding_retained": true,
+    "authority_receipt_consumption_and_verification_retained": true,
+    "global_output_and_decoder_receipt_one_use_retained": true,
+    "stale_cas_rollback_and_exact_readback_gates_retained": true,
+    "consent_privacy_maturity_co_viewing_and_current_choice_predecessor_gates_retained": true,
+    "static_test_double_is_production_authority": false,
+    "python_process_claimed_as_os_trust_root": false
+  },
+  "verification": {
+    "strict_compile_sources_passed": 2,
+    "focused_v13_tests_passed": 15,
+    "combined_v3_v13_tests_passed": 191,
+    "failed_tests": 0,
+    "bytecode_or_cache_writes_requested": false,
+    "different_fresh_independent_audit_required": true
+  },
+  "truth_boundaries": {
+    "live_execution_allowed": false,
+    "production_pointer_or_route_changed": false,
+    "model_called": false,
+    "media_opened_decoded_rendered_played_or_presented": false,
+    "network_camera_microphone_gpu_audio_body_or_blender_used": false,
+    "person_or_memory_state_mutated": false,
+    "person_saw_heard_or_attended_claimed": false,
+    "person_enjoyed_disliked_learned_or_remembered_claimed": false
+  }
+}

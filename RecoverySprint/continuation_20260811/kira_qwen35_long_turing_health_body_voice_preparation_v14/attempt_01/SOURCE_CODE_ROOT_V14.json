@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v14_external_source_code_root",
+  "status": "STATIC_EXTERNAL_ROOT_NO_RUNTIME_OR_LIVE_AUTHORITY",
+  "python": {
+    "implementation": "cpython",
+    "version": "3.14.4",
+    "cache_tag": "cpython-314",
+    "optimize": 0
+  },
+  "source": {
+    "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v14.py",
+    "bytes": 89527,
+    "sha256": "7f5325cd1866c761bd47ea3692cc7df52f6dae753a090643c6b34ed35183c19d"
+  },
+  "plan": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v14/attempt_01/EXECUTION_PLAN_V14.json",
+    "bytes": 11743,
+    "sha256": "9a625617ebe75cb196e3d5390ecd174c6e4d1df0f1187cb8dc91ee2f058c014e"
+  },
+  "descriptor": {
+    "schema": "v14_exact_source_code_defaults_closures_globals_imports_classes",
+    "function_definition_count": 31,
+    "bytes": 251899,
+    "sha256": "467ad11ebbe28e09cda17038a0e36bb6a82c3da3066703f123fdc00fe44c0ff0"
+  },
+  "trust_boundary": {
+    "descriptor_recomputed_from_exact_source_without_persistent_cache": true,
+    "compiled_module_and_nested_code_bound": true,
+    "function_signatures_defaults_annotations_decorators_bound": true,
+    "top_level_global_assignment_import_and_class_ast_bound": true,
+    "runtime_function_module_mapping_or_cache_objects_are_not_trust_roots": true,
+    "different_audit_must_recompute_descriptor_independently": true,
+    "same_process_self_authentication_against_arbitrary_rewrite_claimed": false,
+    "future_executor_requires_separate_external_or_native_binding": true,
+    "live_execution_authorized": false
+  }
+}

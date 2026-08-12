@@ -1,0 +1,51 @@
+KIRA V3R28 AUDIT A NATIVE BUILD AND PE INSPECTION
+Recorded UTC: 2026-08-12T00:43:39Z
+
+BOUNDARY
+- Scratch build and read-only inspection only.
+- Neither the sealed hard-disabled EXE nor the materialized-path probe EXE was
+  executed.
+
+TOOLCHAIN
+- cl.exe: 682576 bytes /
+  6641bee08a3cbafe204aa03b280ad634d7a88b1c03a06fbfec22aaf55d1e4ec2.
+- link.exe: 3416136 bytes /
+  2c26c8b28ca5e47ef0c0e89a7264cf4fe6685d26ec0b0a3188e2383bc4b7e08f.
+- Compile flags: /nologo /W4 /WX /O2 /MT /guard:cf /std:c17 /Brepro.
+- Link flags: /guard:cf /DYNAMICBASE /HIGHENTROPYVA /NXCOMPAT /CETCOMPAT /Brepro.
+
+HARD-DISABLED EXACT REBUILD
+- Build 1 EXE: 137728 bytes /
+  4a4a6f3b6f28cd4e36545999c62248030f11171151ba40ecb9ea70c94cdb8c2d.
+- Build 2 EXE: 137728 bytes /
+  4a4a6f3b6f28cd4e36545999c62248030f11171151ba40ecb9ea70c94cdb8c2d.
+- Sealed EXE: 137728 bytes / same SHA-256.
+- Independent /analyze /W4 /WX: zero defects; XML is the exact 59-byte empty
+  defect report with SHA-256
+  ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5.
+- PE: x64 Windows CUI, High Entropy VA, Dynamic Base, NX, Control Flow Guard,
+  CET compatible.
+- Imports: KERNEL32.dll only. No CreateProcessW, BCrypt, Blender path, or
+  materialized command string remains in the sealed hard-disabled image.
+- UTF-16 V3R28_UNMATERIALIZED_STATIC_TEMPLATE occurs exactly once.
+
+MATERIALIZED-PATH SCRATCH PROBE
+- Exact C source SHA-256:
+  6e39392edff37503f70c5609201ef66f730a7a848a296e62b595b095ff5b3e4f.
+- A synthetic generated header changed only the compile-time binding constants
+  needed to make V3R28_MATERIALIZED=1 reachable. It is not an Audit-A package,
+  not a final Stage-2 binary, and was not executed.
+- Strict optimized compile/link succeeded; probe EXE is 163840 bytes /
+  0e1f61195bfa51708da3f8df5cc90a18872015b9a3942bb33998fa78b7b6f25a.
+- PE: x64 Windows CUI, High Entropy VA, Dynamic Base, NX, CFG, CET.
+- Imports include BCRYPT.dll and the intended KERNEL32 CreateProcessW,
+  CreateFileW, CreateJobObjectW, AssignProcessToJobObject,
+  TerminateJobObject, and UpdateProcThreadAttribute surfaces.
+- Microsoft /analyze /W4 /WX failed with C6387 at exact source line 718.
+  The 14184-byte XML is bound separately in this audit package.
+
+CONCLUSION
+The hard-disabled Stage-1 PE is genuinely inert and reproducible, but its
+zero-defect analyzer result does not cover the materialized Stage-2 control
+flow. The full path fails the exact strict analyzer gate, so no Stage-2 build
+authority is granted.

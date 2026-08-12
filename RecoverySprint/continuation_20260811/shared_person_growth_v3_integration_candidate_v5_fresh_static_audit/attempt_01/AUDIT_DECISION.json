@@ -1,0 +1,147 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v5.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T18:39:51.0470996Z",
+  "reviewer_task": "/root/growth_v5_audit",
+  "author_task": "/root/growth_v4_audit",
+  "different_fresh_reviewer": true,
+  "decision": "REJECT",
+  "decision_detail": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+  "candidate_accepted_as_protected_authority": false,
+  "integration_authorized": false,
+  "promotion_authorized": false,
+  "existing_person_upgrade_authorized": false,
+  "temporary_creator_template_upgrade_authorized": false,
+  "person_creation_authorized": false,
+  "live_execution_authorized": false,
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 43444,
+      "sha256": "1415175c6178baf16e690ee51acd41544b39cd0b6fab5d52a48e0a4f952e6e94"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 34367,
+      "sha256": "63e1477e583fe01410f4ee8cff7658088391ff8001b6df394590e4cb852b2fb1"
+    },
+    {
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 6166,
+      "sha256": "8214f64c369789bfbc88917231696b522ea2acf29fc18a750205fe293e53b6f0"
+    },
+    {
+      "path": "AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 5430,
+      "sha256": "c6f6b7ab32357417ac1597a24ac131bef1adc9a5ccac29672f9b41857e810844"
+    },
+    {
+      "path": "SEALED_MANIFEST.json",
+      "bytes": 8287,
+      "sha256": "02620fba26231cbeb3f3f6db62e9f7a8512f52a59291c9d3d510f1c1dba1d6e8"
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "bytes": 7064,
+      "sha256": "9204d25e3594a7da47d2fcc4ae257cf1872af63c0f3c63b1a6a76088106f431e"
+    }
+  ],
+  "exact_closure": {
+    "installed_v5_artifacts_exact": 6,
+    "installed_v5_artifacts_drifted": 0,
+    "sealed_manifest_subjects_exact": 23,
+    "sealed_manifest_subjects_drifted": 0,
+    "kira_bound_subjects_exact": 19,
+    "kira_bound_subjects_drifted": 0,
+    "final_rehash_after_all_probes": "PASS"
+  },
+  "independent_verification": {
+    "focused_final_layout": "27/27 PASS; 111 subtests PASS",
+    "combined_final_layout": "130/130 PASS; 164 subtests PASS",
+    "additional_broader_preserved_run": "157/157 PASS; 164 subtests PASS",
+    "all_applicable_existing_person_routes": "35/35 PASS",
+    "all_inventory_people_represented": "24/24 PASS",
+    "peter_parker_and_spider_gwen_repairs": "4/4 PASS",
+    "per_route_candidate_maturity_and_route_cross_bindings": "105/105 PASS_REFUSED",
+    "creator_nominal_classes": "4/4 PASS_INERT",
+    "creator_false_and_fresh_requirement_mutations": "29/29 PASS_REFUSED",
+    "creator_existing_and_robert_collisions": "27/27 PASS_REFUSED",
+    "creator_maturity_authority_and_full_adult_mutations": "5/5 PASS_REFUSED",
+    "variant_cutoff_death_trauma_mutations": "8/8 PASS_REFUSED",
+    "creator_unknown_private_payload_aliases": "8/8 PASS_REFUSED",
+    "cross_compiler_requests": "2/2 PASS_REFUSED",
+    "production_openers": "2/2 PASS_HARD_REFUSED",
+    "authority_write_commit_process_network_or_person_state_surface": "NONE",
+    "current_production_consumer": "NONE"
+  },
+  "blocking_findings": {
+    "BLOCK_CREATOR_FREE_TEXT_PRIVATE_PAYLOAD_AND_FALSE_TRUTH": {
+      "reproduced": true,
+      "probe_count": 4,
+      "accepted_fields": [
+        "display_name",
+        "variant_source_identity",
+        "branch_point_label",
+        "display_name_with_embedded_control_character"
+      ],
+      "false_output_claim": "proposal.truth.private_person_payload_included=false",
+      "disposition": "BLOCKS_STATIC_ACCEPTANCE_AND_TEMPORARY_CREATOR_TEMPLATE_ROUTING"
+    },
+    "BLOCK_DECEASED_VARIANT_CUTOFF_SEMANTIC_CONTRADICTION": {
+      "reproduced": true,
+      "accepted_branch_point_label": "after_fatal_event_and_terminal_trauma",
+      "simultaneous_normalized_cutoff_relation": "strictly_before_fatal_event",
+      "source_assertions_authenticated": false,
+      "disposition": "BLOCKS_STATIC_ACCEPTANCE_AND_VARIANT_TEMPLATE_ROUTING"
+    }
+  },
+  "v5_repair_disposition": {
+    "v4_work_root_relocation_defect": "CLOSED",
+    "v4_audit_reference_classification_defect": "CLOSED",
+    "v3_subject_specific_routes": "CLOSED",
+    "v3_exported_mutable_scope": "CLOSED_FOR_EXACT_SEALED_SOURCE",
+    "creator_private_payload_semantic_boundary": "OPEN_BLOCKER",
+    "deceased_variant_branch_cutoff_authentication": "OPEN_BLOCKER"
+  },
+  "required_append_only_successor": {
+    "version": "V6_OR_LATER",
+    "requirements": [
+      "Preserve all V5/V4/V3 evidence bytes unchanged.",
+      "Replace emitted caller-controlled free text with exact control-free public catalog identifiers or independently bound public metadata, or explicitly mark all such metadata untrusted and remove false no-private-payload claims.",
+      "Add same-field private-memory, emotion, desire, relationship, consent, anatomy, and private-root smuggling probes instead of checking only unknown keys.",
+      "Bind a variant source and branch record through an exact public catalog or protected verifier that proves source identity, branch point, deceased status, temporal ordering, and strictly pre-fatal cutoff.",
+      "Until that binding exists, do not normalize an unauthenticated caller assertion into a factual pre-fatal cutoff claim.",
+      "Keep both compilers disconnected, with hard-refusing production openers and no writer, commit, person mutation, or production consumer.",
+      "Run exact final-layout cache-free suites and obtain another different fresh review."
+    ]
+  },
+  "nonblocking_residual": {
+    "finding": "Same-process Python can rebind private globals or functions and fabricate changed inert bytes.",
+    "disposition": "Documented non-trust residual only at this disconnected/no-consumer scope; any future consumer requires separately protected origin-bound verification."
+  },
+  "audit_evidence": {
+    "probe_script": {
+      "path": "INDEPENDENT_HOSTILE_PROBES.py",
+      "bytes": 26783,
+      "sha256": "8f7a3771839bcde895f433d17a5d78d0ff1f3960813bbb98e34f97db0adb0105"
+    },
+    "probe_result": {
+      "path": "HOSTILE_PROBE_RESULT.json",
+      "bytes": 8867,
+      "sha256": "aaf3504f72b2e0041dfc53708d42be68ccf5372c7207eac69185436bb1e135f1"
+    }
+  },
+  "preserved_truth": {
+    "isolated_shared_growth_v3_core_status": "ACCEPT_STATIC_ONLY_UNCHANGED",
+    "integration_v1_v2_v3_status": "REJECTED_UNCHANGED",
+    "v4_staged_scope": "ACCEPT_STATIC_NO_COMMIT_ONLY_UNCHANGED",
+    "v4_kira_relocation": "REJECT_UNPROMOTED_UNCHANGED",
+    "v5_status": "REJECT_UNPROMOTED",
+    "kira_lisa_synthetic_robert_or_other_person_upgraded": false,
+    "temporary_creator_upgraded": false,
+    "production_pointer_changed": false,
+    "person_profile_memory_private_state_or_route_changed": false,
+    "kira_written_by_review": false,
+    "live_model_body_blender_media_voice_audio_network_device_or_sarah_operation": false
+  },
+  "conclusion": "V5 successfully repairs V4 relocation and preserves the inert existing-person matrices, but it is rejected because accepted Creator inputs can smuggle private semantic payload through allowed free-text fields while the output falsely claims no private payload, and because an unauthenticated contradictory post-fatal branch label can coexist with a normalized pre-fatal cutoff claim. No existing person or Temporary Creator template receives V5."
+}

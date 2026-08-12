@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "long_v18_independent_data_quality_defect_reproduction_result",
+  "recorded_at_utc": "2026-08-12T03:43:59.393Z",
+  "status": "THREE_CORRECTNESS_DEFECTS_REPRODUCED",
+  "scope": "INERT_STATIC_RECORD_VALIDATION_ONLY",
+  "defects": [
+    {
+      "id": "V18-DQ-01",
+      "title": "Ordinary mutable module value changes rule behavior",
+      "source_locations": [
+        "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py:127",
+        "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py:1226"
+      ],
+      "reproduction": {
+        "module_binding": "AUDIO_MEASUREMENT_KEYS",
+        "record_extension": "unreviewed_extension",
+        "issues_before_reassignment": [
+          "audio_measurement_schema_not_exact"
+        ],
+        "issues_after_reassignment": []
+      },
+      "finding": "Reassigning the ordinary module binding to include one extra field changes the same record from rejected to accepted. The static source descriptor records the original assignment, but the public validator does not require that external root at call time.",
+      "confirmed": true
+    },
+    {
+      "id": "V18-DQ-02",
+      "title": "Boolean true is accepted as an exact integer audio duration",
+      "source_locations": [
+        "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py:1244",
+        "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py:1249"
+      ],
+      "reproduction": {
+        "displayed_text_ns": 100,
+        "playback_api_call_start_ns": 101,
+        "mathematical_expected_duration": 1,
+        "supplied_displayed_text_to_playback_api_proxy_ns": true,
+        "supplied_python_type": "bool",
+        "issues": []
+      },
+      "finding": "The two timestamps receive exact-integer checks, but the derived duration is compared by equality only. In Python, true equals integer 1, so a Boolean passes where the contract requires an exact integer duration.",
+      "confirmed": true
+    },
+    {
+      "id": "V18-DQ-03",
+      "title": "Partial camera normalization replaces consent timing before inherited validation",
+      "source_locations": [
+        "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py:1063",
+        "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py:1067",
+        "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v18.py:1200"
+      ],
+      "reproduction": {
+        "terminal_event_ns": 1291,
+        "outcomes": {
+          "FAILURE": {
+            "authorized_after_terminal_2291_expires_2292_issues": [],
+            "authorized_1_expired_2_before_enable_issues": [],
+            "authorized_1000_expires_999_issues": []
+          },
+          "TIMEOUT": {
+            "authorized_after_terminal_2291_expires_2292_issues": [],
+            "authorized_1_expired_2_before_enable_issues": [],
+            "authorized_1000_expires_999_issues": []
+          }
+        }
+      },
+      "finding": "For FAILURE and TIMEOUT, _camera_projection_for_v17 overwrites authorized_at_ns, expires_at_ns, and the authorization receipt before it delegates to V17. Impossible supplied authorization timing is therefore replaced with a valid-looking projection and accepted.",
+      "confirmed": true
+    }
+  ],
+  "required_repairs": [
+    "Construct acceptance-critical schemas from immutable local literals or require a separately supplied exact verifier root at every public acceptance call; ordinary module reassignment must not change a verdict.",
+    "Require type(value) is int, signed-range validity, and nonnegative duration semantics for every present derived audio duration before equality comparison.",
+    "Validate the original consent record and its original receipt and timing before any projection; never rewrite supplied consent fields to make a partial record delegable.",
+    "Add regression cases for both FAILURE and TIMEOUT covering authorization after terminal time, expiry before enable, and expiry before authorization."
+  ],
+  "authority": {
+    "live_execution_authorized": false,
+    "promotion_authorized": false,
+    "kira_written": false
+  }
+}

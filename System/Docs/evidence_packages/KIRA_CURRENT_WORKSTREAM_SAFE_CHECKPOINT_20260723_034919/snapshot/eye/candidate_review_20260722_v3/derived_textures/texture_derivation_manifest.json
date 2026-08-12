@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_source_derived_eye_textures_no_live_write",
+  "source": {
+    "path": "C:\\Users\\robmc\\Desktop\\91\\sci-fi-girl-v02-walkcycle-test.zip",
+    "authorization_context": "Robert explicitly supplied Desktop Folder 91 to improve the avatar, world, and movement builders. Archive has no bundled license metadata. Local inactive review use only; no redistribution claim is made.",
+    "members": {
+      "diffuse": "textures/eyes_diff03.jpg",
+      "normal_full": "textures/eyes_norm_01.jpeg",
+      "normal_sclera": "textures/eyes_norm_02.jpeg"
+    },
+    "hashes": {
+      "archive": "ed9d90f09cc5a17881e14738bc102a704ee331add9442bad1e4d970fc9d4bfb1",
+      "diffuse": "846de9cb189a86a29bcf3145b2df68b0087632d2c64f0560cd10604d02485ddd",
+      "normal_full": "47c817d805e09635dd9420126d82f19d6271cac6df68f0a2e77f34de571af4d1",
+      "normal_sclera": "9f2b735dc008eb29cbab746f6a2e07d07563403a0e21a12ec72685fc5b7d6984"
+    }
+  },
+  "generated": {
+    "brown_iris_base_color": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_r7_socket_eye_fit\\review_20260722_v2\\derived_textures\\kira_r7_v2_brown_iris_base_color.png",
+      "bytes": 449091,
+      "sha256": "7d34650b902515ada8bc59b8dd8959d733fe86a26e49ba03038d36344c4124c1",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "sclera_base_color": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_r7_socket_eye_fit\\review_20260722_v2\\derived_textures\\kira_r7_v2_sclera_base_color.png",
+      "bytes": 390558,
+      "sha256": "e6e79a1d0b0ac64fe911071a02a050cfd8e7e59ddd3b7360d6eee5a40e8da0dc",
+      "size": [
+        1024,
+        512
+      ]
+    },
+    "iris_normal": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_r7_socket_eye_fit\\review_20260722_v2\\derived_textures\\kira_r7_v2_iris_normal.png",
+      "bytes": 533127,
+      "sha256": "bcde7cbbf341dd0dc00104a541cdbc48708aa5bd263617af5ad4449af528a24d",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "sclera_normal": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_r7_socket_eye_fit\\review_20260722_v2\\derived_textures\\kira_r7_v2_sclera_normal.png",
+      "bytes": 254935,
+      "sha256": "29476dd51d99b77088fd1ae2678854fd16d97f22efe30150d0f81074271971c9",
+      "size": [
+        1024,
+        512
+      ]
+    }
+  },
+  "limits": [
+    "This output is only an inactive R7 v2 review input.",
+    "It does not bind, promote, activate, or modify Kira or Home World.",
+    "The brown iris is a deterministic color derivation of the supplied photographic eye texture."
+  ]
+}

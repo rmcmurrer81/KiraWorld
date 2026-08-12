@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_typed_memory_integration_candidate_v11",
+  "attempt_id": "attempt_01",
+  "completed_at_utc": "2026-08-11T05:28:54.231Z",
+  "decision": "REJECT",
+  "verdict": "REJECT_V11_STATIC_INTEGRATION_CANDIDATE",
+  "static_only": true,
+  "live_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "promotion_authorized": false,
+  "audit_authorization_created": false,
+  "different_fresh_reaudit_required_after_append_only_repair": true,
+  "sealed_subjects_exact_byte_match": 6,
+  "preserved_dependencies_exact_byte_match": 14,
+  "authored_v11_tests_passed": 17,
+  "authored_v10_tests_passed": 12,
+  "independent_hostile_tests_run": 14,
+  "independent_hostile_tests_passed": 12,
+  "independent_hostile_tests_failed": 2,
+  "blocking_finding_count": 1,
+  "blocking_finding_ids": [
+    "BLOCK_V11_EXACT_ADAPTER_MODULE_OBJECT_NOT_BOUND"
+  ],
+  "audit_result": {
+    "path": "RecoverySprint/continuation_20260811/blackwell_v11_typed_memory_integration_fresh_static_audit/attempt_01/STATIC_AUDIT_RESULT.json",
+    "bytes": 8770,
+    "sha256": "9e5c8372b814193bdb1b87c6ababe65ee017601d80aeaf8ad3a029ba3b2d565e"
+  },
+  "hostile_probe_result": {
+    "path": "RecoverySprint/continuation_20260811/blackwell_v11_typed_memory_integration_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+    "bytes": 4014,
+    "sha256": "af1688e8fd821a5e44b5927ada83d7c4ac906173184a2a01fea3d7b51f22568c"
+  },
+  "reason": "Exact bytes, cache-free author tests, typed native telemetry, fail-closed live refusal, and static Job cleanup all passed, but V11 can affirm typed-probe installation after patching a forged adapter module object that merely names the genuine sealed file. The central exact-adapter integration and TOCTOU evidence claim is therefore false.",
+  "required_next_step": "Create an append-only successor that binds the canonical executed adapter module object and original probe identity in a clean child, revalidates at patch time, incorporates both independent reproductions, and receives another different fresh static audit. Do not alter or promote V11.",
+  "scope_truth": {
+    "sealed_subjects_edited": false,
+    "production_route_changed": false,
+    "live_or_model_run": false,
+    "gpu_audio_person_body_media_blender_run": false,
+    "authorization_file_written": false
+  }
+}

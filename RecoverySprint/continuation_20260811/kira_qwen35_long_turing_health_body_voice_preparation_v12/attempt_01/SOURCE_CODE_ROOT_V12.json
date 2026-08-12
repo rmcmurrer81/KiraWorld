@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v12_external_source_code_root",
+  "status": "STATIC_EXTERNAL_ROOT_NO_RUNTIME_OR_LIVE_AUTHORITY",
+  "python": {
+    "implementation": "cpython",
+    "version": "3.14.4",
+    "cache_tag": "cpython-314",
+    "optimize": 0
+  },
+  "source": {
+    "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v12.py",
+    "bytes": 47129,
+    "sha256": "80a1aeb3b08dc14f92b59ade56d8f01189f1a3e920aba17135699e11d62af7b9"
+  },
+  "plan": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v12/attempt_01/EXECUTION_PLAN_V12.json",
+    "bytes": 11942,
+    "sha256": "206a9af9263ea2685cbb174dbe58f72b84f3d5b2a949d3fc8d85575ff20a0119"
+  },
+  "descriptor": {
+    "schema": "exact_source_callable_code_default_global_closure_descriptor_v12",
+    "function_definition_count": 24,
+    "bytes": 136649,
+    "sha256": "1e10f44a551d3d6a788a019f8a1d72335ca663d5ca9339432a6f650143d26144"
+  },
+  "trust_boundary": {
+    "descriptor_recomputed_from_exact_source_without_persistent_cache": true,
+    "runtime_function_module_or_mapping_objects_are_not_expected_roots": true,
+    "different_audit_must_recompute_descriptor_independently": true,
+    "different_audit_must_bind_this_root_by_exact_bytes": true,
+    "pure_python_self_authentication_against_arbitrary_same_process_rewrite_claimed": false,
+    "live_execution_authorized": false
+  }
+}

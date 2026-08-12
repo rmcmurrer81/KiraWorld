@@ -1,0 +1,12 @@
+Long Evaluation V16 different independent installed-suite result
+Recorded UTC: 2026-08-12T02:07:18.224Z
+
+Command:
+PYTHONDONTWRITEBYTECODE=1 python -B -m pytest -p no:cacheprovider C:\Users\robmc\Kira\Testing\test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v16.py -q
+
+Result:
+........................................................................ [ 92%]
+......                                                                   [100%]
+78 passed in 0.44s
+
+The installed suite passed, but independent hostile probes found acceptance-blocking bypasses not represented by those 78 tests. No V16 main/configurer or live route was invoked.

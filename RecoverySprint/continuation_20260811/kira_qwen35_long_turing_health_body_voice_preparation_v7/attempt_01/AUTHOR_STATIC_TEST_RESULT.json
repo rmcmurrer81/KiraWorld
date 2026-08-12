@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-08-11T06:00:14.8830687Z",
+  "status": "STATIC_SUCCESSOR_PREPARED_PENDING_DIFFERENT_FRESH_AUDIT",
+  "live_authority": "NONE",
+  "python_compile": "PASS",
+  "focused_v7": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 py -B -m pytest -q -p no:cacheprovider Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v7.py",
+    "passed": 67,
+    "failed": 0,
+    "seconds": 0.64
+  },
+  "preserved_v6_controls_plus_v7": {
+    "passed": 111,
+    "failed": 0,
+    "deselected": 1,
+    "seconds": 0.70,
+    "deselection_reason": "the V6 full contract-load test reaches an older V1 project binding that currently fails closed on tools/kira_world_shell_server.py"
+  },
+  "unfiltered_v5_v6_v7": {
+    "passed": 151,
+    "failed": 4,
+    "seconds": 1.64,
+    "failure_cause": "all four failures reach the same older V1 exact project binding drift for tools/kira_world_shell_server.py; no V7 blocker regression failed"
+  },
+  "v6_and_rejection_subjects_exact": 13,
+  "v7_evidence_root_absent": true,
+  "v7_generated_root_absent": true,
+  "live_operations": 0
+}

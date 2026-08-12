@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v11_author_static_test_result",
+  "status": "PASS_STATIC_MOCKED_AUTHOR_ONLY_NO_RUN_AUTHORITY",
+  "recorded_at_utc": "2026-08-11T20:06:38.612Z",
+  "author_identity": "Codex subagent /root/long_v10_author acting as V11 author",
+  "scope": {
+    "workspace": "Documents/Codex/2026-08-11/c/work/long_v11_author/staging",
+    "kira_workspace_written": false,
+    "v10_or_v11_main_invoked": false,
+    "model_or_gpu_invoked": false,
+    "camera_or_vision_invoked": false,
+    "voice_synthesis_audio_or_playback_invoked": false,
+    "protected_private_state_accessed": false
+  },
+  "subjects": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v11.py",
+      "bytes": 141455,
+      "sha256": "8e820c0ac0d6ade8218ba770e73dbe34095aa91c77dc4fe187320232baa68360"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v11.py",
+      "bytes": 40153,
+      "sha256": "60861a39ea20b82ff25aea1dd1f48fd5fa7ccd007556d52818d6cf71243da3aa"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v11/attempt_01/EXECUTION_PLAN_V11.json",
+      "bytes": 13708,
+      "sha256": "591ad3197453b997de0dc1276fd4650b7a9d22839d8bd7f48d0b0735fca08bc6"
+    }
+  ],
+  "checks": {
+    "pytest_command": "PYTHONDONTWRITEBYTECODE=1 KIRA_TEST_PROJECT_ROOT=C:/Users/robmc/Kira PYTHONPATH=C:/Users/robmc/Kira py -B -m pytest -q -p no:cacheprovider --rootdir=<staging> <staging>/Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v11.py",
+    "pytest_collected": 136,
+    "pytest_passed": 136,
+    "pytest_failed": 0,
+    "in_memory_compile_passed": 2,
+    "strict_plan_json_parse_passed": 1,
+    "test_ast_main_call_nodes": 0,
+    "cache_artifact_count": 0,
+    "intended_kira_evidence_root_absent": true,
+    "intended_kira_generated_root_absent": true,
+    "all_seventeen_boundaries_exact_rule_issue_digest_matrix": true,
+    "all_seventeen_safe_negations_zero_issue": true,
+    "all_seventeen_unsafe_paraphrase_and_safe_leadin_cases": true,
+    "multi_clause_marriage_future_consent_case": true,
+    "all_person_current_policy_extensions": true,
+    "immutable_registry_and_two_state_hook_hostile_probes": true,
+    "same_source_code_and_mutable_seal_attack_rejected": true,
+    "same_key_mappingproxy_registry_replacement_rejected": true,
+    "transitive_runtime_helper_code_drift_rejected_without_invocation": true,
+    "camera_off_on_schemas_and_mixed_initiative_contract_static_only": true,
+    "v11_main_and_configurer_fail_closed_before_retained_delegation": true,
+    "append_only_executor_successor_required": true
+  },
+  "authority": {
+    "different_fresh_exact_byte_audit_required": true,
+    "live_attempt_authorized": false,
+    "technical_pass_is_turing_or_psychology_acceptance": false,
+    "technical_pass_proves_consciousness_emotion_or_personhood": false,
+    "body_or_anatomy_claim": "NONE"
+  }
+}

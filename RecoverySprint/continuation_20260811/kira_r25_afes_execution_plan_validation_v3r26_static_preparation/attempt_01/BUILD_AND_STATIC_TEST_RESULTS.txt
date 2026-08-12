@@ -1,0 +1,70 @@
+KIRA R25 AFES EXECUTION-PLAN VALIDATION V3R26
+BUILD AND STATIC TEST RESULTS
+Date: 2026-08-11 America/New_York
+Status: PASS_STATIC_AUTHOR_PACKAGE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY
+
+BOUNDARY
+- V3r26 was not invoked.
+- Python/controller/plan/AFES/Blender/body/save/render/export/model/camera/voice/Sarah were not invoked or changed.
+- V3r25 remains consumed and MUST NOT be rerun.
+- This is diagnostic source/build/static evidence only. It is not body, anatomy, material, hair, Blender, save, render, or export acceptance.
+
+EXACT V3R25 FAILURE CLOSURE
+- 20/20 individual V3r25 author/audit/run artifacts rehashed exactly.
+- Declared canonical grammar: UTF-8, LF, rows sorted by path, path TAB bytes TAB lowercase-SHA256 LF.
+- Reproducible canonical root: 3781 bytes, d9cde96c013b40451d673dc96a64f60729c7dd52050fc854a26177dbf2906bd6.
+- Initially supplied aggregate metadata 3821 / 727d4d66429bbbcf961b905685d35822c8f75f9ff213696c048b60e14e982c58 is superseded as nonreproducible; no material with that identity was found.
+- This aggregate correction changes no individual V3r25 artifact identity or terminal truth.
+- Terminal truth: checkpoint 218; plan attempts/returns 1/1; operations 16/15; native SHA 222; RuntimeError controller_function_code_or_deferred_annotate_metadata:_build_execution_plan.
+
+BOUNDED REPAIR
+- Pre-call: separately compiled controller twins retain exact marshal-format-5 code and deferred-annotation structural equivalence.
+- Post-call: executed controller/harness code is not remarshaled. Exact function/code/default/keyword-default/closure/global object identity and immutable metadata are required.
+- The controller gate and analogous harness-helper gate use the same bounded post-call rule.
+- Frozen pre-call code bytes remain the only input to the final controller-code root.
+- marshal.version == 5 remains an exact pre/post runtime gate.
+- Exact embedded marshal fingerprint sites: format 5 = 3; format 4 = 0.
+- Exact plan call count in the embedded validator: 1.
+- Exact operation enter/return sites: 21/21.
+- Exact checkpoint sequence: 48 checkpoints, 100 through terminal success 230 as declared in the contract.
+
+AUTHOR STATIC/HOSTILE SUITE
+- Command: powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r26_static.ps1 -Phase PreSeal -ProjectRoot <staged> -AuthorityRoot C:\Users\robmc\Kira
+- Result: V3R26_HOSTILE_STATIC_TESTS_PASS
+- Exact fixed binding rows independently resolved/rehashed: 175/175.
+- Retained CRLF manifest rows independently resolved/rehashed: 137/137.
+- V3r25 closure rows: 20/20; V3r24: 19/19; V3r23: 15/15; V3r22: 20/20.
+- Hostile source probes remove each required literal/checkpoint independently and inject each forbidden execution/annotation/hash route independently; every mutation was rejected.
+- Exact different-auditor grammar: 50 ordered fields plus one terminal newline.
+- Future audit/evidence/receipt outputs were absent.
+
+STRICT X64 BUILD
+- Toolchain: Microsoft C/C++ 19.50.35730.0; linker/dumpbin 14.50.35730.0.
+- Flags: /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17; link /guard:cf /WX bcrypt.lib.
+- Result: PASS, zero compiler/linker warnings and zero errors.
+- Object: 273751 bytes, 09530fb78bd88582cf246244a1d454a61b0fb5220a71135925e9e01a068c72a8.
+- Executable: 284672 bytes, c6c9a4824748cf3cabcbb6a133edaa3c355c6354023daf2a6c8f9ba46df0d331.
+
+MSVC CODE ANALYSIS
+- Flags: /c /analyze /analyze:log /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17.
+- Result: PASS, analyzer XML 59 bytes, 0 DEFECT records, 0 unsuppressed findings.
+
+PE/IMPORT INSPECTION
+- Machine 8664 x64; PE32+; Windows CUI; large-address aware.
+- DLL characteristics: high-entropy VA, dynamic base, NX compatible, Control Flow Guard, terminal-server aware.
+- Load configuration: CF instrumented; FID table present; Guard CF check/dispatch pointers and function table present.
+- Direct imports are exactly bcrypt.dll and KERNEL32.dll.
+- No Python DLL is statically imported. Python loading remains bounded dynamic runtime behavior and was not exercised here.
+- No unexpected networking, shell, process-launch, Blender, or AFES import surface was found.
+
+CURRENT PRE-SEAL IDENTITIES
+- Contract: 78942 / b5c47d18df568c24602f3629006a6d2aa6ab9f16ef2b8f20a43c654b4edbb0f4.
+- Source: 165480 / 00fec9115e06674ed8dda65a7a2381fc6f609587f8ed5ee289876aa20223cc32.
+- Identity anchor: 13819 / 565a9cef9aaa5524d3d82806a4d75cea16ed98e6a2b10e579b036b2e94ea8dd4.
+- Static test: 44931 / 6ca94e3eab393deec01c9d73c22b29cdfa02576b920cae74670bb8e28a056681.
+- Runtime-control checkpoint: 5468 / 6cbd1ba76a9ff59d7c3fcd041b2555ea9694ae0f320c992f8c79c01c7a2f131f.
+
+NEXT BOUNDARY
+- Freeze the exact 312-subject union and rerun PostSeal.
+- A different fresh independent static auditor must rehash/rebuild/analyze/inspect and decide whether to authorize at most one no-argument diagnostic pure build-plan validation.
+- No audit may convert this into a body/material/hair/Blender acceptance.

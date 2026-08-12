@@ -1,0 +1,121 @@
+{
+  "captured_warnings": [
+    "Failed to initialize NumPy: No module named 'numpy' (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\torch\\csrc\\utils\\tensor_numpy.cpp:84.)"
+  ],
+  "checks": {
+    "allocation_measurable": true,
+    "capability_exact": true,
+    "cuda_available": true,
+    "cuda_result_exact": true,
+    "cuda_runtime_exact": true,
+    "device_exact": true,
+    "python_311": true,
+    "release_measurable": true,
+    "sm_120_compiled": true,
+    "torch_exact": true,
+    "torchaudio_exact": true
+  },
+  "cuda": {
+    "available": true,
+    "compiled_architectures": [
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ],
+    "device_capability": [
+      12,
+      0
+    ],
+    "device_name": "NVIDIA GeForce RTX 5060 Ti",
+    "sm_120_compiled": true
+  },
+  "cuda_operation": {
+    "allocated_after_release_bytes": 8519680,
+    "allocated_before_bytes": 0,
+    "allocated_during_bytes": 77725696,
+    "allocation_measurable": true,
+    "expected_result": true,
+    "expected_value": 8192.0,
+    "free_after_release_bytes": 15850274816,
+    "free_before_bytes": 15908995072,
+    "free_during_bytes": 15778971648,
+    "kind": "float32_cuda_matmul",
+    "left_shape": [
+      4096,
+      4096
+    ],
+    "peak_allocated_bytes": 77726208,
+    "peak_reserved_bytes": 92274688,
+    "release_measurable": true,
+    "reserved_after_release_bytes": 20971520,
+    "reserved_before_bytes": 0,
+    "reserved_during_bytes": 92274688,
+    "result_shape": [
+      4096,
+      64
+    ],
+    "right_shape": [
+      4096,
+      64
+    ],
+    "sample": [
+      [
+        8192.0,
+        8192.0
+      ],
+      [
+        8192.0,
+        8192.0
+      ]
+    ],
+    "total_after_bytes": 17102864384,
+    "total_before_bytes": 17102864384,
+    "total_during_bytes": 17102864384
+  },
+  "elapsed_seconds": 1.339,
+  "errors": [],
+  "finished_at": "2026-08-01T08:01:05.905324Z",
+  "issues": [],
+  "nvidia_after": {
+    "returncode": 0,
+    "rows": [
+      {
+        "driver_version": "610.47",
+        "free_mib": 14182,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mib": 16311,
+        "used_mib": 1869
+      }
+    ],
+    "stderr": ""
+  },
+  "nvidia_before": {
+    "returncode": 0,
+    "rows": [
+      {
+        "driver_version": "610.47",
+        "free_mib": 14356,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mib": 16311,
+        "used_mib": 1695
+      }
+    ],
+    "stderr": ""
+  },
+  "python": {
+    "executable": "C:\\Users\\robmc\\Kira\\Voice\\sidecars\\chatterbox_blackwell_gpu\\.venv\\Scripts\\python.exe",
+    "version": "3.11.9"
+  },
+  "rejected_warning_matches": [],
+  "schema_version": 1,
+  "started_at": "2026-08-01T08:01:04.564259Z",
+  "status": "PASS",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "torch_cuda_runtime": "13.0",
+    "torchaudio": "2.11.0+cu130"
+  }
+}

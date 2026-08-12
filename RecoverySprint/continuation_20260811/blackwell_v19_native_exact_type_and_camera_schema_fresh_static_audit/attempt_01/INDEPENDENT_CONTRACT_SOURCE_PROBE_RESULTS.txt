@@ -1,0 +1,45 @@
+VOICE V19 INDEPENDENT CONTRACT/SOURCE HOSTILE PROBES
+
+baseline_timing_schema=true
+baseline_source_gate=true
+result_predicates_count=25
+result_predicates_sha256=ed5f1c4cc6491dee07def1eefc0b7d22562e6dc21167221a98114d0fac14902e
+conditions_sha256=21e4ee72284e09b5c5d3f087db8ffdebc5e6e397294336d51c8436f3645db21d
+timestamps_sha256=4949adcee0379ad1a1b9a7b0e86b1115cccff21ef94b83c50a593a084736781d
+metadata_sha256=9cc49ae4da566ee9d2b42dad46e9f7375b85e571345a057be80588f2c244d8f9
+durations_sha256=435b48a7e724e34eec2ed6410ad8c74bdad9d3ca608b3b1ad6971970eaec46b0
+ordering_sha256=322b7b8d1cfb70bbbcf2f1d69157fca74c6c68f956b3a36d688b38ae3d25d55a
+config_counts=4/51/42/30/15
+contract_mutant=remove condition;refused=true
+contract_mutant=duplicate condition;refused=true
+contract_mutant=remove timestamp;refused=true
+contract_mutant=reorder timestamps;refused=true
+contract_mutant=remove metadata;refused=true
+contract_mutant=duplicate metadata;refused=true
+contract_mutant=remove duration;refused=true
+contract_mutant=remove ordering rule;refused=true
+contract_mutant=stale text model;refused=true
+contract_mutant=retain Qwen before voice;refused=true
+contract_mutant=schema executable;refused=true
+contract_mutant=claim live values;refused=true
+contract_mutant=retain raw frame;refused=true
+contract_mutant=include private state;refused=true
+contract_mutant=authorize camera;refused=true
+source_mutant=RESOLVE_API(api, object_type, "PyObject_Type");;refused=true
+source_mutant=RESOLVE_API(api, tuple_type, "PyTuple_Type");;refused=true
+source_mutant=RESOLVE_API(api, unicode_type, "PyUnicode_Type");;refused=true
+source_mutant=RESOLVE_API(api, bool_type, "PyBool_Type");;refused=true
+source_mutant=RESOLVE_API(api, long_type, "PyLong_Type");;refused=true
+source_mutant=RESOLVE_API(api, true_singleton, "_Py_TrueStruct");;refused=true
+source_mutant=RESOLVE_API(api, false_singleton, "_Py_FalseStruct");;refused=true
+source_mutant=if (!python_type_exact(api, result, api->tuple_type));refused=true
+source_mutant=if (!python_type_exact(api, item, api->unicode_type));refused=true
+source_mutant=if (!python_type_exact(api, item, api->bool_type));refused=true
+source_mutant=if (!python_type_exact(api, item, api->long_type));refused=true
+source_mutant=if (item != api->true_singleton);refused=true
+source_mutant=if (item != api->false_singleton);refused=true
+source_mutant=predecessor_count = api->long_as_ll(item);;refused=true
+source_mutant=graph_count = api->long_as_ll(item);;refused=true
+source_mutant=add_generic_truth_conversion;refused=true
+
+SUMMARY contract_mutants_refused=15/15 source_mutants_refused=16/16 baseline_pass=true

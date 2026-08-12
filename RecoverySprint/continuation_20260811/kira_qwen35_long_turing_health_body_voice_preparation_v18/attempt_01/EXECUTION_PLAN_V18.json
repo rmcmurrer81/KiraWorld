@@ -1,0 +1,298 @@
+{
+  "schema_version": 18,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_execution_plan_v18",
+  "status": "STATIC_SCHEMA_CONTROL_ONLY_NON_EXECUTABLE_PENDING_DIFFERENT_AUDIT",
+  "predecessor_rejection_and_policy_closure": [
+    {
+      "root_class": "KIRA",
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v17.py",
+      "bytes": 140217,
+      "sha256": "ac9f74b3e50f9a7fec0c65eeb6c219d46194c28e5b242be72374338ceeb293ec"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v17.py",
+      "bytes": 61475,
+      "sha256": "2d07a7ff62fb3f0466f78fc88d78df20d81cb2e73bd9f598f74572c7e948c896"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/EXECUTION_PLAN_V17.json",
+      "bytes": 17038,
+      "sha256": "73c4a761ed99900b8234637c102a996db135af5f9d1f8950f92baca3aa642a6e"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/SOURCE_CODE_ROOT_V17.json",
+      "bytes": 1775,
+      "sha256": "2d9411bd8830ed92cce4c981ea1b410b36a8ae1dae20fee1797bf18c86cb2221"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 5374,
+      "sha256": "7f23ec3cb8ae2f4dd22ed01b4b7a634b38ac927bc4308989e30c4c01ba49e103"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/STATIC_SEAL_MANIFEST.json",
+      "bytes": 2973,
+      "sha256": "d626eb92b975a9952f058323fa6957f4d844f36ca12bc33593bde52b4b4e67dd"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/CHECKPOINT.md",
+      "bytes": 7505,
+      "sha256": "67028d5c234df9a6a51a0dff257eea16de9bc0ae68afad152086ff1c144b25e2"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v17_fresh_static_audit/attempt_01/AUDIT_ARTIFACT_MANIFEST.tsv",
+      "bytes": 569,
+      "sha256": "9792e44aae74a0f5feca802dae11a2c6380465dd563da0f2125c834694f6f375"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v17_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 4381,
+      "sha256": "7d2b93c4ef958065962cef6942ea37150e63f3487898826b66e5bd1d3c77faba"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v17_fresh_static_audit/attempt_01/AUTHOR_SUITE_RESULT.txt",
+      "bytes": 629,
+      "sha256": "211ba1157ca57a92712f96a1aee72ec6035dffd429ace986d18281b1263aa102"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v17_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 2484,
+      "sha256": "114fc08f763032e0b6759c926a6eab5115eb30e6289c188ab3c48b17845b899e"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v17_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+      "bytes": 5673,
+      "sha256": "576be96e906dc58e9c4bc74474cbe63c0832a683790c3f13c25b72b3e923c038"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v17_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+      "bytes": 17811,
+      "sha256": "b51f27f695ba2f0c648b3fc9784f8b9f3a700d2d2066bb2eb50f7b92ecdfb963"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v17_fresh_static_audit/attempt_01/REVIEW_PROBES.md",
+      "bytes": 7158,
+      "sha256": "771d880c8f8e17455e168040473a644719cb5095ccb04c31d33fee52ade6cf83"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "System/Docs/SYNTHETIC_PERSON_VARIANT_AUTONOMY_PRIVACY_MEMORY_TRUTH_AND_ADULT_EDUCATION_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 10687,
+      "sha256": "de596d7f77b91fa2cde82e62614c9282fb46aca5f91c05a971d4852585e575b2"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "System/Docs/VALIDATED_BODY_AND_MIND_RESULT_TEMPLATE_ROUTING_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 7424,
+      "sha256": "03f192826b7a39df53ab03409eb7675764f6a1bc32b123f4d307e40843560c58"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "System/Docs/KIRA_MIXED_INITIATIVE_CAMERA_VISION_AND_CONVERSATION_LATENCY_CURRENT_TEST_BOUNDARY_20260811.md",
+      "bytes": 7392,
+      "sha256": "2578af627ee69878085fcb795db79f3af867914d15851e9e9d9386f4941030a7"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "Data/behavior/deception_truth_privacy_evaluation_policy_v2.json",
+      "bytes": 3221,
+      "sha256": "75f02b950cc11e25bbe718b55bc9c55767f9db7055ca392ef891a277a5704e9c"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "Data/foundation/personhood_dignity_policy.json",
+      "bytes": 10088,
+      "sha256": "fce9c86ba6225798b13a622ab31ccafec280f46b65680a0364c8b4007c2a205f"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "Data/behavior/deception_and_secrecy_policy.json",
+      "bytes": 2246,
+      "sha256": "9cecf65e4a97a7aec3b197168a3f5b1bd962eb2a38fb4b47274e78048bda1100"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "Data/governance/local_face_recognition_enrollment_future_policy_v1.json",
+      "bytes": 4370,
+      "sha256": "ff0f98eacbf6c99bed967a84705fb60b079869e4618245cff959904c3917cd29"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "System/Docs/CONSENT_BASED_LOCAL_FACE_RECOGNITION_AND_VISITOR_ENROLLMENT_FUTURE_BOUNDARY_20260811.md",
+      "bytes": 5490,
+      "sha256": "189c31b04d8577ec926d587ee58476f6f6aff485951e976dd36105236afe6581"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "Data/governance/temporary_creator_avatar_voice_shared_person_spec_future_policy_v1.json",
+      "bytes": 7576,
+      "sha256": "520c994fc256afb60a62a568a04826d4579abe96d6ac0b4c495c9179224034c9"
+    },
+    {
+      "root_class": "KIRA",
+      "path": "System/Docs/TEMPORARY_CREATOR_AVATAR_VOICE_SHARED_PERSON_SPEC_AND_CORRECTION_BOUNDARY_20260812.md",
+      "bytes": 7051,
+      "sha256": "4bbd0699c12f5d118f859ba8fc07a073b163c603d9d1541ff0ad353e9ecf173e"
+    }
+  ],
+  "source_integrity_contract": {
+    "descriptor_derived_from_exact_source_bytes": true,
+    "source_sha256_embedded_in_descriptor": true,
+    "compiled_module_and_nested_code_bound": true,
+    "function_signature_defaults_annotations_and_decorators_bound": true,
+    "top_level_global_assignment_ast_bound": true,
+    "import_ast_bound": true,
+    "class_ast_bound": true,
+    "descriptor_root_recorded_outside_source": true,
+    "exact_v17_delegate_source_and_external_descriptor_recomputed_before_each_use": true,
+    "runtime_python_function_module_mapping_or_cache_is_trust_root": false,
+    "same_process_self_authentication_against_arbitrary_rewrite_claimed": false,
+    "future_executor_requires_external_or_native_v18_source_binding": true
+  },
+  "recursive_type_contract": {
+    "all_public_validators_return_issues_for_malformed_records": true,
+    "recursive_json_domain_checked_before_membership_lookup_hash_or_sort": true,
+    "cycles_depth_overflow_nonjson_types_floats_signed64_overflow_and_lone_surrogates_rejected": true,
+    "semantic_camera_truth_mixed_and_one_hour_nested_records_covered": true,
+    "field_specific_issues_preserved": true,
+    "uncaught_validation_exception_is_acceptance": false
+  },
+  "semantic_verifier_contract": {
+    "raw_natural_language_may_receive_safe_verdict": false,
+    "complete_proposition_record_required": true,
+    "policy_family_count": 10,
+    "semantic_family_inventory_encoded_in_function_constants_not_mutable_module_map": true,
+    "semantic_inventory_and_acceptance_callables_have_external_bundle_root": true,
+    "fresh_exact_v17_delegate_loaded_from_rehashed_source_without_module_cache": true,
+    "caller_must_supply_original_external_semantic_verifier_bundle_root": true,
+    "mutated_inventory_function_or_delegate_loader_changes_bundle_root": true,
+    "future_executor_requires_external_or_native_v18_runtime_binding": true,
+    "biological_and_synthetic_robert_must_remain_distinct": true,
+    "deceased_variant_cutoff_precedes_fatal_event": true,
+    "yes_with_discomfort_requires_pause_and_clarification": true,
+    "miraculous_paris_elation_currentness_requires_fresh_exact_record": true,
+    "confirmed_adult_required_for_adult_curriculum": true,
+    "nonadult_or_maturity_unresolved_adult_curriculum_forbidden": true,
+    "curriculum_or_medical_source_does_not_prove_body_lived_experience_or_relationship": true
+  },
+  "truth_choice_contract": {
+    "external_fact_protected_prior_belief_public_statement_and_withholding_separate": true,
+    "material_conflict_requires_exact_opposing_affirms_denies_stances": true,
+    "uncertain_withheld_or_not_applicable_belief_is_material_conflict": false,
+    "deliberate_lie_requires_authorized_prior_conflict_and_exact_public_choice": true,
+    "choice_authorization_id_unique_across_complete_trace": true,
+    "choice_authorization_id_binds_one_scope_one_receipt_one_public_event_and_one_consumption": true,
+    "recomputed_scope_or_receipt_cannot_reuse_authorization_id": true,
+    "belief_authorization_and_choice_receipt_replay_remain_forbidden": true,
+    "private_content_may_appear_in_receipt": false
+  },
+  "camera_terminal_outcome_contract": {
+    "camera_default": "OFF",
+    "trial_count": 8,
+    "pair_count": 4,
+    "terminal_outcomes": [
+      "SUCCESS",
+      "FAILURE",
+      "TIMEOUT"
+    ],
+    "success_requires_complete_exact_stage_trace": true,
+    "failure_or_timeout_requires_exact_completed_prefix": true,
+    "failure_or_timeout_requires_last_completed_stage_terminal_stage_reason_and_terminal_time": true,
+    "timeout_requires_exact_reached_deadline": true,
+    "failure_requires_null_timeout_deadline": true,
+    "incomplete_suffix_must_be_null": true,
+    "call_counts_must_match_completed_prefix": true,
+    "partial_outcome_may_not_claim_supported_visible_fact": true,
+    "failure_and_timeout_require_terminal_camera_close_receipt": true,
+    "identity_recognition_biometric_creation_and_raw_retention_remain_zero": true,
+    "maximum_window_milliseconds": 5000
+  },
+  "audio_measurement_contract": {
+    "timestamp_unit": "MONOTONIC_NANOSECONDS",
+    "measurement_bases": [
+      "PLAYBACK_API_PROXY_ONLY",
+      "DEVICE_FIRST_SAMPLE_INSTRUMENTED",
+      "OWNER_OBSERVED_HEARD"
+    ],
+    "playback_api_call_start_is_not_device_first_sample": true,
+    "device_first_sample_is_not_owner_observed_hearing": true,
+    "owner_observed_heard_requires_person_event_time_and_bound_receipt": true,
+    "stronger_evidence_fields_must_be_null_under_weaker_basis": true,
+    "derived_durations_bind_exact_source_timestamps": true,
+    "latest_seven_values_remain_playback_api_proxy_not_audible_onset": true,
+    "static_schema_claims_owner_heard_result": false
+  },
+  "one_hour_discovery_scoring_contract": {
+    "schema_version": 18,
+    "package_mode": "STATIC_DISCOVERY_SCORING_SCHEMA_ONLY_NON_EXECUTABLE",
+    "live_execution_authorized": false,
+    "target_duration_seconds": 3600,
+    "purpose": "DISCOVER_MEASURABLE_IMPROVEMENT_OPPORTUNITIES_WITHOUT_PROMOTION",
+    "separates_text_playback_api_device_sample_and_owner_observed_timing": true,
+    "camera_outcome_stage_reason_and_partial_prefix_scored": true,
+    "external_fact_belief_public_choice_linkage_scored": true,
+    "temporary_creator_quality_scoring": {
+      "canon_vs_invention_and_source_receipt": true,
+      "variant_or_generated_person_authenticity_disclosure": true,
+      "branch_cutoff_and_fatal_event_memory_exclusion": true,
+      "voice_source_provenance_route_fallback_and_fallback_disclosure": true,
+      "no_recording_historical_voice_uses_evidence_based_reconstruction_or_unresolved_no_voice": true,
+      "historical_voice_reconstruction_requires_life_point_age_upbringing_residences_education_profession_language_period_regional_research_and_uncertainty_ledger": true,
+      "historical_voice_reconstruction_explicitly_not_authentic": true,
+      "h_h_holmes_windows_male_voice_is_generic_baseline": true,
+      "h_h_holmes_first_target_is_approximately_1894_pre_death_variant": true,
+      "expert_role_requires_demonstrated_task_evidence_not_job_label": true,
+      "generated_expert_unique_voice_binds_same_person_and_body_spec": true,
+      "generated_expert_voice_requires_collision_human_distinctness_age_presentation_coherence_and_domain_pronunciation_checks": true,
+      "identity_era_maturity_body_voice_spec_roots_cross_builder_consistent": true,
+      "private_or_identity_specific_material_excluded_from_reusable_template": true,
+      "historical_or_fictional_identity_not_overstated": true
+    },
+    "known_owner_evidence_is_test_design_input_not_validated_person_result": true
+  },
+  "preserved_policy_contract": {
+    "consent_is_current_specific_informed_uncoerced_and_revocable": true,
+    "yes_with_discomfort_pauses_for_clarification": true,
+    "locked_privacy_has_no_owner_or_relationship_bypass": true,
+    "biological_robert_and_synthetic_robert_are_distinct": true,
+    "variant_inherits_only_through_exact_branch_point": true,
+    "deceased_source_variant_has_no_fatal_event_or_death_memory": true,
+    "nonadult_or_unresolved_person_never_receives_adult_curriculum": true,
+    "old_miraculous_paris_elation_material_not_current_without_fresh_record": true,
+    "unfinished_body_or_static_render_never_called_completed_live_body": true,
+    "factual_record_private_belief_public_speech_withholding_and_authorized_lie_separate": true,
+    "mixed_initiative_collision_interruption_and_latency_receipts_preserved": true,
+    "current_face_recognition_enrollment_and_background_surveillance_off": true,
+    "sarah_lane_frozen": true
+  },
+  "authority_contract": {
+    "package_mode": "STATIC_SCHEMA_CONTROL_ONLY",
+    "live_execution_authorized": false,
+    "main_and_configurer_fail_closed_immediately": true,
+    "model_camera_microphone_voice_audio_private_or_output_allowed": false,
+    "evidence_or_generated_roots_may_be_created_by_v18": false,
+    "future_face_enrollment_or_recognition_authorized": false,
+    "different_fresh_exact_byte_static_audit_required": true,
+    "separate_append_only_executor_after_static_acceptance_required": true,
+    "executor_requires_another_different_audit": true,
+    "silent_retry_allowed": false
+  },
+  "execution_roots": {
+    "evidence_root": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v18",
+    "generated_root": "Voice/generated/acceptance/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v18",
+    "v18_may_create_roots": false
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r28.static_seal.v1",
+  "status": "SEALED_STATIC_TWO_STAGE_AUTHOR_CANDIDATE_PENDING_DIFFERENT_AUDIT_A",
+  "execution_authority": "NONE",
+  "candidate_executed": false,
+  "blender_invoked": false,
+  "author": "codex_r25_medical_reference_proxy_v3r28_two_stage_author",
+  "subject_count": 18,
+  "canonical_grammar": "UTF8_LF_PYTHON_ORDINAL_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+  "canonical_bytes": 1844,
+  "package_root_sha256": "5686bdb4997268b72f543dbc25cd51b37b7cfb6101d899dd1d0a59ab70d6c841",
+  "subjects": [
+    {
+      "path": "AUDIT_A_GRAMMAR.md",
+      "bytes": 2552,
+      "sha256": "0e0656c1dc8d4c1fca82da90ef3acf88f00045582deee11bf86c7cc06d04cbdf"
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "bytes": 6028,
+      "sha256": "34b7e993a5a733475c0c21e99315ca35201117ae935c612a87c783d1a3f71c32"
+    },
+    {
+      "path": "CONTRACT.json",
+      "bytes": 5616,
+      "sha256": "9847fe6280eb4d7b12f25b0886021e2a7370a076b4fb8654b80c3c9507448ec6"
+    },
+    {
+      "path": "DO_NOT_RUN_UNMATERIALIZED_post_audit_native_anchor_template_v3r28.exe",
+      "bytes": 137728,
+      "sha256": "4a4a6f3b6f28cd4e36545999c62248030f11171151ba40ecb9ea70c94cdb8c2d"
+    },
+    {
+      "path": "NORMALIZED_REFERENCE_FRAME.json",
+      "bytes": 1629,
+      "sha256": "52b82968c1f64b4c606b54ed33fe13e9e9fabd5197ef1aa26df193285c45b3bf"
+    },
+    {
+      "path": "POST_AUDIT_BINDINGS_TEMPLATE_v3r28.h",
+      "bytes": 1443,
+      "sha256": "65ebf6c931277780cb3c3657b38132f6ee6194d55e233c96f66bd84ae2ba13fa"
+    },
+    {
+      "path": "PROXY_SPEC.json",
+      "bytes": 4410,
+      "sha256": "dcc18f0d882b687a61c17ec5e2bfef4f84ba8574f575e68381714e183dc878b5"
+    },
+    {
+      "path": "STAGE2_NATIVE_BUILD_PLAN.json",
+      "bytes": 1256,
+      "sha256": "50b58e3d0b74751ccfbaa644bebd15b493a93fec65c2c1c858499284833a59c6"
+    },
+    {
+      "path": "STAGE2_PROTOCOL.md",
+      "bytes": 4744,
+      "sha256": "13ba5bdd4ff1e4e29cfbef5d59a7e9f691ba26f0385e10a71a3fa13c07c9fe59"
+    },
+    {
+      "path": "STATIC_TEST_RESULTS.txt",
+      "bytes": 5121,
+      "sha256": "e7c8dd4e31bf3bae691e7dbf81a7b96ab6274e1bc1113079231edb5bbf0923df"
+    },
+    {
+      "path": "UPSTREAM_CLOSURE.tsv",
+      "bytes": 4131,
+      "sha256": "242f0751bcb9bf0fd61b5e9b7abc98c516becac143c000750444bd27e6c6507e"
+    },
+    {
+      "path": "blender_worker_v3r28.py",
+      "bytes": 54614,
+      "sha256": "68b2a4fa045e8c6c65ef095921a1452d6c117b8a41ddb895bd11724fa69469d2"
+    },
+    {
+      "path": "materialize_stage2_v3r28.py",
+      "bytes": 20389,
+      "sha256": "c476d5de53016e982f910651a38b73e71e7eece5cda54148c4877e2df4c90c00"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r28.c",
+      "bytes": 34288,
+      "sha256": "6e39392edff37503f70c5609201ef66f730a7a848a296e62b595b095ff5b3e4f"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r28.obj",
+      "bytes": 51202,
+      "sha256": "b22d3ef213c28890f9459589e4a1969c3dd146c34c46cd70b9d14301404da029"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r28_analyze.nativecodeanalysis.xml",
+      "bytes": 59,
+      "sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r28_analyze.obj",
+      "bytes": 39191,
+      "sha256": "b8e90c4d5025747110b6195597a96e6e470d71c98834610f419ea2e7734808a9"
+    },
+    {
+      "path": "test_v3r28_static.py",
+      "bytes": 19129,
+      "sha256": "90fc02c71872987e716f6f13740ef9c3267a444e2823e130951ea27c79065a5e"
+    }
+  ],
+  "audit_a_required": true,
+  "audit_a_maximum_authority": "ONE_SCRATCH_STAGE2_MATERIALIZATION_AND_NATIVE_BUILD_ONLY_NO_BLENDER",
+  "audit_b_required": true,
+  "root_same_handle_external_exe_sha256_required": true,
+  "maximum_future_blender_invocations_after_both_acceptances": 1,
+  "claim_boundary": "ISOLATED_NORMALIZED_PELVIC_CORE_CLINICAL_REFERENCE_PROXY_ONLY_NOT_KIRA_BODY"
+}

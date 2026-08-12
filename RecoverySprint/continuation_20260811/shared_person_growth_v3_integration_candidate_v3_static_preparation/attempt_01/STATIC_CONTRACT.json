@@ -1,0 +1,88 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v3.static_contract.v1",
+  "version": "v3",
+  "status": "DISCONNECTED_INERT_REQUEST_COMPILER_PENDING_DIFFERENT_FRESH_AUDIT",
+  "preserved_authority": {
+    "isolated_shared_growth_v3_core": "ACCEPT_STATIC_ONLY",
+    "integration_candidate_v1": "REJECT",
+    "integration_candidate_v2": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+    "person_or_temporary_creator_upgraded": false
+  },
+  "candidate_subjects": [
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v3.py",
+      "bytes": 20715,
+      "sha256": "dcbde9ca1a6fedc43dc70625e3ac747839e8d60875a421fde09b44b2f8ff52c6"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v3.py",
+      "bytes": 19755,
+      "sha256": "f2cc4b23947ff00f717d7619b42265fbe6b54fbfb972d88d7d9f324f1471083b"
+    }
+  ],
+  "exact_fixed_input_closure": {
+    "subject_count": 7,
+    "includes": [
+      "accepted isolated Shared Growth V3 seal",
+      "accepted isolated Shared Growth V3 different-review checkpoint",
+      "current integration inventory",
+      "rejected integration V2 seal",
+      "rejected integration V2 decision",
+      "rejected integration V2 findings",
+      "rejected integration V2 checkpoint"
+    ],
+    "selected_route_source_stable_double_read_required": true,
+    "fixed_closure_rechecked_after_construction": true,
+    "selected_route_rechecked_after_construction": true
+  },
+  "only_allowed_result": {
+    "type": "canonical_utf8_json_bytes",
+    "meaning": "non-authoritative broker proposal",
+    "proposal_digest_derived_from_exact_canonical_proposal_bytes": true,
+    "durable_record": false,
+    "permission_or_receipt": false,
+    "profile_or_person_state": false
+  },
+  "removed_surfaces": {
+    "verifier_or_key": false,
+    "callback_or_controller": false,
+    "authority_or_receipt_ledger": false,
+    "staging_root_or_output_path": false,
+    "write_or_commit": false,
+    "query_or_rollback": false,
+    "cleanup_or_unlink": false,
+    "profile_or_memory_writer": false,
+    "production_consumer": false,
+    "temporary_creator_support": false
+  },
+  "person_boundaries": {
+    "exact_inventory_person_and_route_required": true,
+    "person_opt_in_required": true,
+    "revocable_required": true,
+    "owner_override_allowed": false,
+    "private_state_included": false,
+    "memory_write_included": false,
+    "external_action_included": false,
+    "biological_robert_is_synthetic_robert": false,
+    "generic_robert_identifier_allowed": false,
+    "maturity_status_inferred": false,
+    "confirmed_adult_implies_curriculum_completion": false,
+    "confirmed_adult_implies_anatomy_or_sensation": false,
+    "confirmed_adult_implies_desire_or_consent": false
+  },
+  "production_boundary": {
+    "production_opener": "HARD_REFUSE",
+    "current_consumer_exists": false,
+    "production_pointer_changed": false,
+    "different_fresh_audit_required": true,
+    "static_acceptance_can_promote_or_upgrade": false
+  },
+  "live_operations": {
+    "model_or_person_session": false,
+    "memory_or_profile_mutation": false,
+    "body_or_blender": false,
+    "media_or_voice": false,
+    "network_or_device": false,
+    "sarah_development": false
+  }
+}

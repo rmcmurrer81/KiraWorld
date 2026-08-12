@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "audit": "blackwell_v12_canonical_typed_memory_integration_different_fresh_static",
+  "decision": "REJECT",
+  "verdict": "REJECT",
+  "exact_byte_results": {
+    "seal_manifest": {"bytes": 1744, "sha256": "50cef220de1ccb30c3f86adc05d9b1561c87f137c69c0be21aaa7074d0c2db15", "match": true},
+    "author_checkpoint": {"bytes": 7013, "sha256": "c9725313ac1730e3e6346211dd94b09c5ea0dbf46f7ec8bf3f530b4b93033d54", "match": true},
+    "author_result": {"bytes": 2007, "sha256": "bae410c7b37618ce9b8ca662509e75a47b721f618354bb68a001e13a57fad107", "match": true},
+    "sealed_subjects": {"matched": 7, "mismatched": 0},
+    "predecessor_closure": {"matched": 28, "mismatched": 0}
+  },
+  "test_results": {
+    "authored_cache_free": {"passed": 56, "failed": 0},
+    "independent_cache_free": {"passed": 12, "failed": 3}
+  },
+  "blocking_finding": "BLOCK_V12_CANONICAL_CONTROL_MODULE_NOT_BOUND",
+  "positive_static_findings": {
+    "v11_forged_adapter_repaired": true,
+    "private_v8_v10_module_binding_exact": true,
+    "typed_memory_helper_binding_exact": true,
+    "private_callable_integrity_checks_exact": true,
+    "private_module_poisoning_rejected": true,
+    "install_and_prepare_toctou_checks_present": true,
+    "default_off_live_refusal": true,
+    "production_route_unchanged": true,
+    "future_authorization_absent": true,
+    "candidate_live_output_roots_absent": true
+  },
+  "negative_static_findings": {
+    "canonical_module_replacement_after_binding_rejected": false,
+    "canonical_module_replacement_before_prepare_rejected": false,
+    "canonical_validator_global_replacement_rejected": false
+  },
+  "authority": {
+    "live": false,
+    "promotion": false,
+    "future_harness_authoring": false,
+    "playback": false
+  },
+  "operations_not_run": [
+    "Ollama", "Qwen", "Torch", "CUDA", "Chatterbox", "synthesis",
+    "audio", "playback", "person", "body", "media", "Blender"
+  ]
+}

@@ -1,0 +1,106 @@
+BLACKWELL VOICE V17 DIFFERENT FRESH STATIC AUDIT
+EXACT COMPILED PARSER AND NATIVE REVIEW RESULTS
+
+Recorded UTC: 2026-08-11T21:18:05.8836144Z
+Reviewer task: /root/voice_v17_audit
+Kira writes by reviewer: 0
+V15/V16/V17 candidate invocations: 0/0/0
+Python/model/GPU/synthesis/audio/playback/latency/network/camera calls: 0
+Person/body/Blender/Sarah calls: 0
+
+EXACT INSTALLED POSTSEAL
+exit=0
+summary=V17_WHOLE_DOCUMENT_MANIFEST_HOSTILE_STATIC_TESTS_PASS phase=PostSeal compiled_checks=83 source_mutants=6 sealed_subjects=55
+
+INDEPENDENT REBUILD OF THE EXACT INSTALLED AUTHOR HARNESS
+compile=/W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17
+compile_exit=0
+diagnostics=0
+object_bytes=180851
+object_sha256=911795b76c9887c7ce2de92ace7615aef239d8de1e7803989f8dc143c292df70
+executable_bytes=184320
+executable_sha256=5ebff26daf9cecc3b716fe4b15c30ec9133f2cfe1f5e1077ffd8dd6a6319805d
+run_exit=0
+summary=SUMMARY checks=83 failures=0
+candidate_wmain_renamed_and_unreachable=true
+
+INDEPENDENT ADDITIONAL EXACT-PARSER HARNESS
+source_bytes=29626
+source_sha256=a73c62124972de32d2895bc8c38328c76400f06b08ed467e1e1599bde7dd9bd5
+object_bytes=209244
+object_sha256=665447e44a90d3985b121f78af345c0e6dfdec48242050c41e58aa6c33d3a7f4
+executable_bytes=193024
+executable_sha256=49b8510f8972b6ddfbc249930d25e21000d0b98c8b65994bcf97868ecbcfaaa4
+compile_exit=0
+diagnostics=0
+run_exit=0
+summary=SUMMARY checks=153 failures=0
+candidate_wmain_renamed_and_unreachable=true
+
+INDEPENDENT REFUSALS PASSED
+- whole-document exact EOF: non-JSON, space, tab, LF, CR, NUL, non-ASCII,
+  and a second JSON value after the closing brace;
+- exact top-level field presence, order, types, spelling, V17 schema, V17
+  candidate id, declared count, no unknowns, no duplicates, and no whitespace;
+- exactly 55 actual subject objects, 55 unique paths, exact ordinal binding
+  equality, missing/extra/unknown/duplicate/reordered rows, and expected-array
+  count/duplicate/reorder attacks;
+- exact row field presence, order, types, no duplicates or unknowns, and
+  path/bytes/digest cross-row splicing;
+- bare, first, interior, and terminal dot or dot-dot segments; empty paths and
+  segments; slash edges; backslashes; colons; controls; DEL; NUL; non-ASCII;
+  generic drive paths; case aliases; and Python-path dot/backslash aliases;
+- only C:/Python314/python314.dll as the locked absolute-path exception;
+- positive canonical checked uint64, including maximum uint64 acceptance and
+  zero, leading zero, sign, fraction, exponent, string, Boolean, null, and
+  overflow refusals;
+- exactly 64 lowercase hexadecimal digest digits, with short, long, uppercase,
+  nonhex, missing-quote/type, suffix, and NUL attacks refused;
+- the exact V16 trailing-byte, whitespace logical-duplicate/extra-subject,
+  terminal-dot, wrong-total, and cross-row bypasses as mandatory negative
+  controls.
+
+STRUCTURAL AND PROVENANCE RESULTS
+canonical_seal_bytes=11748
+canonical_seal_whitespace_bytes=0
+canonical_seal_non_ascii_bytes=0
+canonical_seal_nul_bytes=0
+top_level_order_exact=true
+row_order_exact=true
+static_binding_paths=53
+static_binding_byte_macros=53
+static_binding_digest_macros=53
+static_binding_alignment_failures=0
+sealed_rows_before=55/55
+sealed_rows_after=55/55
+author_artifacts_before=17/17
+author_artifacts_after=17/17
+duplicate_byte_digest_pairs=0
+V17_audit_magic_exact=true
+V17_decision_exact=true
+V17_reservation_magic_exact=true
+V17_terminal_magic_exact=true
+V17_audit_and_sidecar_paths_exact=true
+V17_seal_path_exact=true
+V17_evidence_path_exact=true
+V17_outcome_path_exact=true
+stale_V15_or_V16_binary_receipt_magic_present=false
+stale_unsuffixed_evidence_or_outcome_name_present=false
+retained_V15_V14_static_control_graph_labels_present=true
+retained_labels_are_deliberate_and_sealed_not_new_V17_provenance=true
+
+NATIVE MEMORY LENGTH AND ALIAS REVIEW
+No input-reachable memory, integer-length, path-alias, parser, or row-binding
+bypass was found. Parser buffers are bounded; uint64 accumulation is checked;
+all 55 bindings are ordinal and unique; current rows contain no duplicate
+byte/digest pair that could support a cross-path file-identity alias; input
+files are regular non-reparse exact-final-path retained handles and are
+identity/hash rechecked before and after the retained static graph.
+
+DECISION EFFECT
+ACCEPT_STATIC_ONLY. This may authorize at most one no-argument disconnected
+V17 static-control validation only after exact audit transcript installation,
+17/17 author and 55/55 seal preflight, absent outputs, and root's fresh final
+decision. It authorizes no V15/V16 run, retry, model, voice, synthesis, audio,
+playback, latency, camera, network, person, body, Blender, Sarah, or production
+operation and proves no latency improvement.

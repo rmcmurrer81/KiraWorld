@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_venv_descendant_identity_candidate_v9",
+  "candidate_status": "inactive_static_repair_pending_fresh_different_agent_audit",
+  "production_routing_authorized": false,
+  "live_execution_authorized_by_this_candidate": false,
+  "playback_authorized_by_this_candidate": false,
+  "current_production_route_changed": false,
+  "feature_flag": "KIRA_ENABLE_BLACKWELL_VENV_DESCENDANT_IDENTITY_CANDIDATE_V9",
+  "engineering_run_opt_in": "KIRA_AUTHORIZE_BLACKWELL_V9_BOUNDED_ENGINEERING_RUN",
+  "engineering_run_opt_in_value": "exact_v9_venv_direct_child_after_fresh_different_agent_audit_attempt02_only",
+  "live_attempt_number_allowed_after_fresh_audit": 2,
+  "worker_protocol": "kira_blackwell_v7_jsonl_1",
+  "worker_module": "Voice.sidecars.chatterbox_blackwell_persistent_candidate_v8.worker_entry",
+  "worker_module_path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/worker_entry.py",
+  "worker_module_sha256": "f537a1362ed4f49eb1026824ee9419b1d01de6c74f626d0b84ecbd231bcf6421",
+  "process_boundary": "Core/blackwell_v9_process_boundary.py",
+  "process_topology": {
+    "platform": "windows",
+    "root_role": "exact_project_venvlauncher_retained_job_root",
+    "worker_role": "exact_base_python_direct_child_protocol_owner",
+    "direct_child_only": true,
+    "arbitrary_descendant_allowed": false,
+    "same_retained_job_required": true,
+    "root_and_child_os_creation_tokens_required": true,
+    "root_and_child_handles_retained_until_cleanup": true,
+    "launcher": {
+      "executable_path": "C:/Users/robmc/Kira/Voice/sidecars/chatterbox_blackwell_gpu/.venv/Scripts/python.exe",
+      "executable_sha256": "21bb438c0d4a6f1f164b9a646f6ee000340185e5871180aec06db8d3f07c0082",
+      "executable_size": 274712,
+      "executable_volume_serial": 2385477751,
+      "executable_file_index": 1407374884528005
+    },
+    "worker": {
+      "executable_path": "C:/Users/robmc/AppData/Local/Programs/Python/Python311/python.exe",
+      "executable_sha256": "5f7b89a612c9b8af1d6456cdfcd1dbe5ca630849e79aebced9bee9a6694952ec",
+      "executable_size": 103192,
+      "executable_volume_serial": 2385477751,
+      "executable_file_index": 1970324837912590
+    }
+  },
+  "fresh_audit_contract": {
+    "required_before_any_live_attempt_02": true,
+    "required_relative_path": "RecoverySprint/continuation_20260810/blackwell_v9_venv_descendant_fresh_static_audit/attempt_01/AUDIT_AUTHORIZATION.json",
+    "required_seal_manifest_path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/STATIC_SEAL_MANIFEST.json",
+    "required_verdict": "ACCEPT_V9_STATIC_REPAIR_FOR_ONE_BOUNDED_LIVE_ATTEMPT_02",
+    "required_auditor_relationship": "different_agent_from_v9_author",
+    "author_may_not_create_audit_authorization": true
+  },
+  "v8_worker_audit_binding": {
+    "path": "RecoverySprint/continuation_20260810/blackwell_v8_cpu_park_fresh_static_audit/attempt_01/AUDIT_AUTHORIZATION.json",
+    "sha256": "d822b4f07eb3ad7873f5e48129494c08b85f0e06845ae01d57841476bd4ef16f"
+  },
+  "preserved_v8_boundary": {
+    "Core/blackwell_v7_process_boundary.py": "edd8033bf5539255c1007241877722bd0a15754852dd6b24c571bc679bc78d41",
+    "Core/persistent_blackwell_voice_integration_v8.py": "7ac85d0e7c4375c5c96e31d9414794275dcceba632392605c99caed38281860f",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/candidate_config.json": "9b221b9eb4c6ada505c8e912ba5554b8831ee7484a69ac7289cbeb430f338587",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/candidate_contract.py": "62a82ee23854ffcc5de6fd75b006f3334e4a9874edc3fbe3411315a6d53c16c8",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/worker_entry.py": "f537a1362ed4f49eb1026824ee9419b1d01de6c74f626d0b84ecbd231bcf6421",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/STATIC_SEAL_MANIFEST.json": "831e02d7a511ecdb86d450727a4d90b298af2da3372df628bd040a00d8cb5de8"
+  },
+  "preserved_attempt_and_audit_bytes": {
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance/attempt_01/events/001_authorization.json": "800cfb4eb419344440b3a738b3ed5330223f88cbcd3b1e416185b1cdc7c02eb5",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance/attempt_01/events/002_pre_live.json": "89697b216f250a4d05901d6730ba878a2b795a1578e3556292b3c7b89d1804d3",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance/attempt_01/events/003_worker_start.json": "a6f7618f2e53e88d23f3f0734b34c4cd25efb1c2965087a48c9c3cba108b4ba1",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance/attempt_01/events/004_finally_cleanup.json": "09a2b693c6eefb6a1485093d5718e1e5994e36d679e4595736652d66ebb2b6d7",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance/attempt_01/FINAL_REPORT.json": "7820dcf4b9c46bc2fbd5338613b67c51399bc557db41c3b12f901f8720859a82",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance/attempt_01/RUN_AUTHORIZATION.json": "a2fc6f8445a5ec80e1998859da7e001672f8b1a5b2370dee1095a444abc64d5f",
+    "RecoverySprint/continuation_20260810/blackwell_v8_cpu_park_fresh_static_audit/attempt_01/AUDIT_AUTHORIZATION.json": "d822b4f07eb3ad7873f5e48129494c08b85f0e06845ae01d57841476bd4ef16f",
+    "RecoverySprint/continuation_20260810/blackwell_v8_cpu_park_fresh_static_audit/attempt_01/CHECKPOINT.md": "934091af02deda78ec607e696c088d01848db7451f2f25036b14ab64b87f4458",
+    "RecoverySprint/continuation_20260810/blackwell_v8_cpu_park_fresh_static_audit/attempt_01/PROBE_ATTEMPT_01_FAILURE.md": "e4963fd664477e399a60125a938061072dab76d9a350eb7247d7d0e97a05d2b5",
+    "RecoverySprint/continuation_20260810/blackwell_v8_cpu_park_fresh_static_audit/attempt_01/STATIC_AUDIT_PROBES.py": "6540c1d45ae9a5e3ecd8f00e3b801dd4829d943acdea2839705e94cad3377c60",
+    "RecoverySprint/continuation_20260810/blackwell_v8_cpu_park_fresh_static_audit/attempt_01/STATIC_AUDIT_RESULT.json": "2997b8b950f7e594ce4092104b3df98cc04d265deb55dd5fbd2a606a8c26ad1f",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_fresh_static_audit/attempt_01/AUDIT_AUTHORIZATION.json": "5c0f19db8586375607b65b9a347ae69827ed8232b39c4cca81f37cb8ff8c6387",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_fresh_static_audit/attempt_01/CHECKPOINT.md": "dd76dda45f9c73855d6cc500649b7423f940449f87f6fbbd05c9836cb227a962",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_fresh_static_audit/attempt_01/INDEPENDENT_STATIC_PROBES.py": "345104218e28020dffdb4cec4a697864d3255cc3cb15a80a352737d5223fd6ff",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_fresh_static_audit/attempt_01/PROBE_ATTEMPT_01_FAILURE.md": "bee372f98965a8bcf7b10ed15207d0f44d54fe46e9ddca7d63893c0b9069fb3c",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_fresh_static_audit/attempt_01/PROBE_ATTEMPT_02_FAILURE.md": "79f66a57c769ac17040569bb6e6afe8c6a6c7e087658d2a4d68a016be45231f9",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_fresh_static_audit/attempt_01/STATIC_AUDIT_RESULT.json": "29d7f8a43957db06ebf99ef01f4db1768e7f01c63885093c74f1d322b5d078f3",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V8_BOUNDED_LIVE_ACCEPTANCE_HARNESS_CHECKPOINT.md": "ed7e18faac837695c3984381ba5b88f7b4a176c04ca70daf23359803fd136981",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_outer_boundary/attempt_01/CHECKPOINT.md": "ef88b5d11b5f7d82535138ac34b2a4c97415c7794294227a9db849732ab8204f",
+    "RecoverySprint/continuation_20260810/blackwell_v8_bounded_live_acceptance_attempt01_postmortem/attempt_01/CHECKPOINT.md": "8da5c5505d62ba0891dd02ced556d77a2c7674ab3febcd9158e5de1a041a75be",
+    "RecoverySprint/continuation_20260810/BLACKWELL_V8_CPU_PARK_STATIC_IMPLEMENTATION_CHECKPOINT.md": "094a79d7e99a4059471ad7e87a6faf8c98bb2776b976885b769ab5a1e94affa8"
+  },
+  "static_test_contract": {
+    "uses_exact_venvlauncher_and_base_python_topology": true,
+    "imports_torch": false,
+    "imports_cuda": false,
+    "imports_chatterbox": false,
+    "starts_ollama_or_qwen": false,
+    "synthesizes_audio": false,
+    "plays_audio": false,
+    "starts_person_or_blender": false,
+    "hostile_direct_parent_rejection_required": true,
+    "hostile_launcher_identity_rejection_required": true,
+    "hostile_worker_identity_rejection_required": true,
+    "root_and_child_cleanup_truth_required": true
+  }
+}

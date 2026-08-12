@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_canonical_typed_memory_integration_candidate_v12",
+  "attempt_id": "attempt_01",
+  "completed_at_utc": "2026-08-11T06:15:02.390Z",
+  "status": "SEALED_STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_INDEPENDENT_AUDIT",
+  "author_claim_not_independent_audit": true,
+  "v12_focused_tests": {
+    "passed": 27,
+    "failed": 0,
+    "cache_disabled": true
+  },
+  "v11_preserved_tests": {
+    "passed": 17,
+    "failed": 0,
+    "cache_disabled": true
+  },
+  "v10_preserved_tests": {
+    "passed": 12,
+    "failed": 0,
+    "cache_disabled": true
+  },
+  "total_tests": {
+    "passed": 56,
+    "failed": 0
+  },
+  "source_parse_passed": true,
+  "v11_blocker_reproductions_rejected": 2,
+  "post_install_and_post_prepare_toctou_tests_passed": true,
+  "strict_finite_current_process_memory_telemetry_passed": true,
+  "static_fixture_process_used": true,
+  "static_fixture_cleanup_passed": true,
+  "inert_exact_byte_adapter_definitions_executed": true,
+  "normal_import_state_used_for_v8_adapter_or_v10_memory_helper": false,
+  "live_model_run": false,
+  "gpu_or_cuda_run": false,
+  "voice_load_or_synthesis": false,
+  "audio_or_playback": false,
+  "person_or_body_run": false,
+  "media_run": false,
+  "blender_run": false,
+  "production_route_changed": false,
+  "live_authorized": false,
+  "future_harness_authorized": false,
+  "fresh_v12_audit_authorization_created": false,
+  "sealed_subject_count": 7,
+  "preserved_boundary_count": 28,
+  "seal_manifest": {
+    "path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v12/STATIC_SEAL_MANIFEST.json",
+    "bytes": 1744,
+    "sha256": "50cef220de1ccb30c3f86adc05d9b1561c87f137c69c0be21aaa7074d0c2db15"
+  },
+  "production_route_sha256": "a343572b25937926ea0181274976b53f57ca219ce1e4d3e1780343994aea7b81",
+  "required_next_step": "A different fresh agent must perform an exact-byte hostile static audit. V12 may not self-authorize, author a live harness, run live, or change production routing."
+}

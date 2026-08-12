@@ -1,0 +1,95 @@
+{
+  "schema": "kira.blackwell.v14.native_exact_control_anchor.author_package.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_exact_control_anchor_candidate_v14",
+  "status": "AUTHOR_SOURCE_ONLY_PENDING_TRANSPLANT_BUILD_SEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "predecessor": {
+    "version": "v13",
+    "decision": "REJECT",
+    "decision_sha256": "bfba016c56d8525a1641168ddecaa757b63de840d7582159519db9d2d89591b8",
+    "checkpoint_sha256": "d0d953d92b987acad488471c34b57979abfdb0364138150db25d442d0210431a",
+    "preserved_subject_count": 15
+  },
+  "four_blockers_closed_by_design": {
+    "precall_self_module_package_identity": "native retained handles plus no ordinary V14/V13 module or Core attribute",
+    "self_class_method_private_v12_bypass": "two private exact-source graphs plus full function/class/member/code/default/global/closure/builtin comparison around stored calls",
+    "control_state_revalidation": "no stored digest authority; immutable exact-type snapshot and native digest/file-identity rechecks",
+    "config_quarantine_loader_state": "strict duplicate-free JSON and exact bool/int/digest types; private dictionaries with loader/spec/cache absent"
+  },
+  "transplant_order": [
+    "Core/persistent_blackwell_voice_integration_v14.py",
+    "tools/native/kira_blackwell_voice_control_anchor_v14_validator.py",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v14/candidate_config.json",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v14/native_control_contract.json",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v14/README.md",
+    "tools/native/kira_blackwell_voice_control_anchor_v14.c",
+    "Testing/test_blackwell_persistent_voice_candidate_v14_native_anchor_static.ps1",
+    "RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+    "RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_static_preparation/attempt_01/AUTHOR_PACKAGE.json",
+    "tools/native/kira_blackwell_voice_control_anchor_v14_identity_anchor.h"
+  ],
+  "build_order_after_transplant": [
+    "run the PowerShell author suite with -Phase PreBuild",
+    "compile x64 with cl.exe /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 and bcrypt.lib",
+    "run cl.exe /nologo /W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17 with zero unsuppressed diagnostics",
+    "record exact object/executable identities and verify PE32+ x64 CFG plus imports limited to bcrypt.dll and KERNEL32.dll",
+    "write BUILD_AND_STATIC_TEST_RESULTS.txt append-only",
+    "run the author suite with -Phase PostBuild",
+    "construct exactly one 30-row STATIC_SEAL_MANIFEST.json with unique paths",
+    "run the author suite with -Phase PostSeal",
+    "freeze all author bytes and obtain a different fresh exact-byte review"
+  ],
+  "future_audit_grammar": {
+    "line_1": "KIRA_BLACKWELL_VOICE_V14_NATIVE_EXACT_CONTROL_AUDIT\\t1",
+    "ordered_keys": [
+      "auditor",
+      "decision",
+      "seal_bytes",
+      "seal_sha256",
+      "self_bytes",
+      "self_sha256",
+      "header_bytes",
+      "header_sha256",
+      "sealed_subject_count",
+      "all_subjects_exact",
+      "four_v13_blockers_closed",
+      "self_module_replacement_refused",
+      "class_method_bypass_refused",
+      "control_state_revalidated",
+      "config_quarantine_loader_exact",
+      "production_routing_authorized",
+      "live_execution_authorized",
+      "synthesis_authorized",
+      "playback_authorized",
+      "latency_run_authorized",
+      "audit_nonce"
+    ],
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_DISCONNECTED_STATIC_CONTROL_VALIDATION_V14_ONLY",
+    "auditor_pattern": "[a-z0-9_]{1,96}",
+    "sealed_subject_count": 30,
+    "positive_truth_fields": [
+      "all_subjects_exact",
+      "four_v13_blockers_closed",
+      "self_module_replacement_refused",
+      "class_method_bypass_refused",
+      "control_state_revalidated",
+      "config_quarantine_loader_exact"
+    ],
+    "authority_fields_exact_false": [
+      "production_routing_authorized",
+      "live_execution_authorized",
+      "synthesis_authorized",
+      "playback_authorized",
+      "latency_run_authorized"
+    ],
+    "digest_sidecar": "64 lowercase hexadecimal SHA-256 of exact TSV bytes plus LF"
+  },
+  "execution_authority": "NONE",
+  "candidate_invoked": false,
+  "python_candidate_invoked": false,
+  "model_calls": 0,
+  "gpu_voice_calls": 0,
+  "synthesis_calls": 0,
+  "playback_calls": 0,
+  "latency_measurements": 0,
+  "different_fresh_static_audit_required": true
+}

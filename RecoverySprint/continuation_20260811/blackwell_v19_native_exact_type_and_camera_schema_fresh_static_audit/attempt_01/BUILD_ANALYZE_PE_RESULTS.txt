@@ -1,0 +1,103 @@
+VOICE V19 DIFFERENT FRESH STATIC REVIEW - BUILD / ANALYZE / PE RESULTS
+
+Recorded UTC: 2026-08-12T00:27:55.1151742Z
+Review task: /root/voice_v19_independent_audit
+Kira modified: false
+
+BOUNDARY
+V17 candidate invoked: false
+V18 candidate invoked: false
+V19 candidate invoked: false
+Python initialized or invoked: false
+model calls: 0
+GPU voice calls: 0
+synthesis calls: 0
+audio calls: 0
+playback calls: 0
+live latency measurements: 0
+camera/device calls: 0
+person/private-state calls: 0
+body/Blender calls: 0
+Sarah calls: 0
+production calls: 0
+
+The independently rebuilt candidate image is named
+candidate_rebuild_DO_NOT_RUN.exe and was never invoked. Only the provided
+non-candidate hostile mock and two independent non-candidate hostile harnesses
+were invoked.
+
+INSTALLED POSTSEAL
+command launcher: powershell.exe -NoProfile -ExecutionPolicy Bypass
+exit: 0
+result: V19_EXACT_TYPE_CAMERA_SCHEMA_HOSTILE_STATIC_TESTS_PASS
+compiled hostile checks: 100/100
+source mutants: 18/18
+sealed subjects: 110/110
+camera schema: 4/51/42/30/15
+
+The first direct script invocation was stopped by the machine PowerShell
+execution policy before the script body ran. Re-launching the same installed
+script with process-scoped ExecutionPolicy Bypass succeeded. This is a harness
+launch restriction, not a V19 product-test failure.
+
+STRICT ISOLATED X64 BUILDS
+toolchain: Microsoft Visual C/C++ x64 19.50.35730
+flags: /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17
+candidate compile/link exit: 0
+candidate warnings/errors: 0/0
+candidate object: 181243 bytes; ca950f6465fffc5d374f978718d4bb1345fb185051e74b8ee102b187f247e94b
+candidate DO_NOT_RUN image: 177152 bytes; 922d40e0f95f3afc221d7cab7080b0ea015e8ef1bc7b619644093f3910f4ec5e
+provided hostile compile/link exit: 0
+provided hostile warnings/errors: 0/0
+provided hostile object: 211236 bytes; dc57031bff34e343b99381261614b1564d4f21f562e689670ea16ad8b13fea31
+provided hostile image: 188416 bytes; e4105e852e4a2e81842f0febbaab8f57ecd10c49db7ecddcbeb2e7faf2659e28
+independent result-gate hostile compile/link exit: 0
+independent result-gate hostile warnings/errors: 0/0
+independent result-gate object: 200153 bytes; b70a4349d54e33ddf1d46edea7cfb0075776b01dfc8b739b3aab53b548f24158
+independent result-gate hostile image: 179200 bytes; b61e408bbcc31473bfe0f3da7a3c7ce7f291653e3662855701621e8857f40996
+independent seal-parser hostile compile/link exit: 0
+independent seal-parser hostile warnings/errors: 0/0
+independent seal-parser object: 199355 bytes; 4d57b8cda88f93949114ec919f1957a469a35f83b650e14e94f04c43046c84c8
+independent seal-parser hostile image: 192000 bytes; d0042185644dab94cc002dfb1e12b5937ce78023c027d7e55a90897be3acf542
+
+STRICT STATIC ANALYSIS
+flags: /W4 /WX /analyze /analyze:quiet /c /DUNICODE /D_UNICODE /std:c17
+candidate exit: 0; analyzer object 103930 bytes;
+b7e804361f57e92f96028484acac062384f89c008200480abc1912c16b2a3549
+provided hostile exit: 0; analyzer object 123402 bytes;
+9ed2cd83c620d9fbc5890d47b5127faff76a8820fabf0ffc1e0f423f2ffacf9f
+independent result-gate hostile exit: 0; analyzer object 113800 bytes;
+52f423d57adf3ec21ec8aee791ba70bc89d6f9888bbe91e0b93cdbcf59ab861b
+independent parser hostile exit: 0; analyzer object 115695 bytes;
+b291db5d1558b5e7d9d536ae10bd584f301b9e5715014f55831525709ae6b8e8
+Each analyzer XML is the same empty 59-byte DEFECTS document, SHA-256
+ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5.
+
+NON-CANDIDATE HOSTILE EXECUTION
+provided hostile exit: 0
+provided hostile result: 100/100; failures 0; candidate entrypoint 0; Python 0
+provided wrong truth/false types refused: 7
+provided wrong integer types not converted: 2
+independent result gate exit: 0
+independent result gate result: 31/31; failures 0; candidate entrypoint 0; Python 0
+independent seal parser exit: 0
+independent seal parser result: 20/20; failures 0; candidate entrypoint 0; Python 0
+
+PE / IMPORT INSPECTION
+Installed and independently rebuilt V19 images are x64 machine 8664, PE32+
+magic 20B, high-entropy-VA, dynamic-base, NX-compatible, and Control Flow
+Guard images. Both report CF instrumentation, a FID table, and Guard CF
+function count 0x32. Their only static import DLLs are bcrypt.dll and
+KERNEL32.dll. No static Python, process-shell, model, GPU, audio, camera, or
+network import exists.
+
+PYTHON DLL EXPORT INSPECTION (READ-ONLY)
+The sealed C:\Python314\python314.dll exports PyObject_Type, PyTuple_Type,
+PyUnicode_Type, PyBool_Type, PyLong_Type, PyLong_AsLongLong,
+PyUnicode_AsUTF8AndSize, PyErr_Occurred, _Py_TrueStruct, and _Py_FalseStruct.
+No Python code was initialized or invoked to inspect these exports.
+
+VERDICT EFFECT
+These results support static quality acceptance only. They are not a voice,
+camera, model, audio, latency, or speed result and grant execution authority
+NONE.

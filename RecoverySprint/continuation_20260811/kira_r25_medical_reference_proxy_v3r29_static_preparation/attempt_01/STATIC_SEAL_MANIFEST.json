@@ -1,0 +1,148 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r29.static_seal.v1",
+  "status": "SEALED_STATIC_TWO_STAGE_AUTHOR_CANDIDATE_PENDING_DIFFERENT_AUDIT_A",
+  "execution_authority": "NONE",
+  "candidate_executed": false,
+  "blender_invoked": false,
+  "author": "codex_r25_medical_reference_proxy_v3r29_two_stage_author",
+  "subject_count": 25,
+  "canonical_grammar": "UTF8_LF_PYTHON_ORDINAL_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+  "canonical_bytes": 2674,
+  "package_root_sha256": "ee704f4b125efd1ae378fb3789e9df952788afb165c9b1d12334da9399834b99",
+  "subjects": [
+    {
+      "path": "AUDIT_A_GRAMMAR.md",
+      "bytes": 3869,
+      "sha256": "4d41c909528b5122a7bb98a1f4ef3557760f065766c1e2c8524c3c0852b5c9b2"
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "bytes": 5781,
+      "sha256": "db9be8e2024a4e156c9af4819c6012bfb95ab9cae6827fcd841144cd3fe90b02"
+    },
+    {
+      "path": "CONTRACT.json",
+      "bytes": 8018,
+      "sha256": "6eb2c1806b1ef5e673af7f03b0a876b2f87851667150dfd16cc3fd7ca3638222"
+    },
+    {
+      "path": "DO_NOT_RUN_MATERIALIZED_ANALYSIS_v3r29.exe",
+      "bytes": 168448,
+      "sha256": "1a2adae502d1cf0ff547a4c93dbe58ebb5eecc21e832f8f00b6b6f393b0f6b2e"
+    },
+    {
+      "path": "DO_NOT_RUN_UNMATERIALIZED_post_audit_native_anchor_template_v3r29.exe",
+      "bytes": 138752,
+      "sha256": "98df101c441ebe4fdf3540dca92860e21d49a0e596c2918a48d5239dd01afbd1"
+    },
+    {
+      "path": "NATIVE_BUILD_RESULTS.txt",
+      "bytes": 3530,
+      "sha256": "cbcfb6912ea4a180555841427780543cebe22e1633bc1efcf6ec0c2bd4beebed"
+    },
+    {
+      "path": "NORMALIZED_REFERENCE_FRAME.json",
+      "bytes": 1629,
+      "sha256": "2655bb6838d693a63f1c1690b8db0cd1c9fd2c144136dccfcf99aa323a058d7b"
+    },
+    {
+      "path": "POST_AUDIT_BINDINGS_MATERIALIZED_ANALYSIS_v3r29.h",
+      "bytes": 2337,
+      "sha256": "a7801b3593eec403752dfaa3259c22c2e863f92a08245970d5bb588f39681564"
+    },
+    {
+      "path": "POST_AUDIT_BINDINGS_TEMPLATE_v3r29.h",
+      "bytes": 1759,
+      "sha256": "46dd0f8c915a91ed0f1a06d93ecac25ff8e18b4450bddc6a13d276b1bbad770d"
+    },
+    {
+      "path": "PROXY_SPEC.json",
+      "bytes": 4410,
+      "sha256": "c09cab0b8d70e88f6b7f687ff3de671bfb99f9fb8dd191600acf2210b159b551"
+    },
+    {
+      "path": "STAGE2_NATIVE_BUILD_PLAN.json",
+      "bytes": 1798,
+      "sha256": "ac5683704d84a444005af8a8fece91c85a41eaef080165ea566a78cd29c799d9"
+    },
+    {
+      "path": "STAGE2_PROTOCOL.md",
+      "bytes": 5984,
+      "sha256": "0ec9a461831f4c13c50d9730cb681ff1cb6a532982090d89bd7bee48c7680361"
+    },
+    {
+      "path": "STATIC_TEST_RESULTS.txt",
+      "bytes": 1371,
+      "sha256": "233c3904aa04b579cca352765302a928ecf967867f5330fecc8a36403585f2d1"
+    },
+    {
+      "path": "UPSTREAM_CLOSURE.tsv",
+      "bytes": 7227,
+      "sha256": "98933e5d3839844f4ed742924b2dd020dd93096143fe2e4ce10089a8de2d6ea1"
+    },
+    {
+      "path": "blender_worker_v3r29.py",
+      "bytes": 54633,
+      "sha256": "9d1e42e639e15975fab43d6f652f214c8e1a13ad7fc51bf1990c5a33e44d97e8"
+    },
+    {
+      "path": "materialize_stage2_v3r29.py",
+      "bytes": 32423,
+      "sha256": "c313b7f162aec32c2f963d6461888f8d955413598e6e8f1fa4c06380d8980dac"
+    },
+    {
+      "path": "materialized_analysis_translation_unit_v3r29.c",
+      "bytes": 450,
+      "sha256": "f0b57f7d5f9a878b86e86f09af9108edad2ec116915835b7a81f028be03c40e5"
+    },
+    {
+      "path": "materialized_analysis_translation_unit_v3r29.nativecodeanalysis.xml",
+      "bytes": 59,
+      "sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5"
+    },
+    {
+      "path": "materialized_analysis_translation_unit_v3r29.obj",
+      "bytes": 71226,
+      "sha256": "efc08da45d0355c1d0feecf109375b785379ec2909f39e1c8cefea709432be55"
+    },
+    {
+      "path": "materialized_analysis_translation_unit_v3r29_analyze.obj",
+      "bytes": 45535,
+      "sha256": "7849a78685cd9ac48ae97312e33961435e9ccf0443b1f9e4834bb5d52e8f13a7"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r29.c",
+      "bytes": 41434,
+      "sha256": "28af2a24de6b335d3ddcd66c9ff9147a7dd8d90eee119953d438bac254c7cbf7"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r29.obj",
+      "bytes": 60545,
+      "sha256": "cc94f29dd6a5fb98a19aeb6422e8f0eb088a96418bcc91177520691cd44d0fa9"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r29_analyze.nativecodeanalysis.xml",
+      "bytes": 59,
+      "sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5"
+    },
+    {
+      "path": "post_audit_native_anchor_template_v3r29_analyze.obj",
+      "bytes": 45044,
+      "sha256": "e0d45453c8fbaa54b981f7c1daef66921c0c159a64f05e7ec249599456b556ff"
+    },
+    {
+      "path": "test_v3r29_static.py",
+      "bytes": 29312,
+      "sha256": "048620d7da1bc6051049fb6b9b6d5ee4891771ba655ad8f78d1a51ad4a37570c"
+    }
+  ],
+  "audit_a_required": true,
+  "audit_a_maximum_authority": "ONE_SCRATCH_STAGE2_MATERIALIZATION_AND_NATIVE_BUILD_ONLY_NO_BLENDER",
+  "audit_b_required": true,
+  "root_same_handle_external_exe_sha256_required": true,
+  "maximum_future_blender_invocations_after_both_acceptances": 1,
+  "stage1_external_seal_sha256_required": true,
+  "stage1_external_all_files_inventory_root_required": true,
+  "durable_materialization_consumed_ledger_required": true,
+  "claim_boundary": "ISOLATED_NORMALIZED_PELVIC_CORE_CLINICAL_REFERENCE_PROXY_ONLY_NOT_KIRA_BODY"
+}

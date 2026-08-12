@@ -1,0 +1,87 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_author_result.v1",
+  "completed_at_utc": "2026-08-11T06:30:15.248Z",
+  "status": "STATIC_INTEGRATION_CANDIDATE_TESTED_PENDING_DIFFERENT_FRESH_AUDIT",
+  "candidate_subjects": [
+    {
+      "path": "Data/foundation/shared_person_growth_v3_integration_candidate_v1.json",
+      "bytes": 28107,
+      "sha256": "5b4397d33318dac34fa9f876ed42ec9720ebefb1acdddb235842982479885254"
+    },
+    {
+      "path": "Core/shared_person_growth_v3_integration_candidate_v1.py",
+      "bytes": 66891,
+      "sha256": "91eef4a3c19edfbda59ca8d1c7e46df54d77648a8d0140eadbee5672353db63c"
+    },
+    {
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v1.py",
+      "bytes": 32344,
+      "sha256": "fddf0658abc322d4ff5590441647ccf2ad18efc305f4f8a78fceb27467d5bd8a"
+    }
+  ],
+  "coverage": {
+    "person_count": 24,
+    "route_count": 36,
+    "applicable_route_count": 35,
+    "denied_alias_route_count": 1,
+    "temporary_profile_route_count": 23,
+    "temporary_state_route_count": 11,
+    "permanent_route_count": 2,
+    "omitted_person_ids": [],
+    "omitted_route_paths": [],
+    "cross_bound_route_ids": [],
+    "biological_robert_profile_created": false
+  },
+  "commands": [
+    {
+      "command": "py -m py_compile Core\\shared_person_growth_v3_integration_candidate_v1.py Testing\\test_shared_person_growth_v3_integration_candidate_v1.py",
+      "exit_code": 0,
+      "result": "2/2 compiled"
+    },
+    {
+      "command": "py -m unittest -v Testing.test_shared_person_growth_v3_integration_candidate_v1",
+      "exit_code": 0,
+      "result": "25/25 passed"
+    },
+    {
+      "command": "py -m unittest -v Testing.test_shared_person_growth_capabilities_v1 Testing.test_shared_person_growth_capabilities_v2 Testing.test_shared_person_growth_capabilities_v3 Testing.test_shared_person_growth_v3_integration_candidate_v1",
+      "exit_code": 0,
+      "result": "70/70 passed"
+    },
+    {
+      "command": "py -m unittest -v Testing.test_qwen35_owner_runnable_routes_static Testing.test_qwen35_remaining_current_routes_static",
+      "exit_code": 0,
+      "result": "20/20 passed"
+    }
+  ],
+  "tested_boundaries": [
+    "complete permanent TemporaryAI profile and mutable-state route inventory",
+    "exact person candidate profile controller and maturity binding",
+    "misspelled Sarah state alias covered but denied person authority",
+    "Synthetic Robert distinct from Biological Robert",
+    "closed public-only projection without profile private roots records or payload",
+    "confirmed-adult eligibility separate from curriculum delivery anatomy and consent",
+    "non-adult and unresolved doll-safe body defaults",
+    "bounded initiative remains DESIGN_ONLY and no capability is live-enabled",
+    "Temporary Creator unresolved and protected-classified round trips",
+    "existing-person and denied-alias Creator collision refusal",
+    "unforgeable adapter identity strong nonserialized secret and HMAC receipt",
+    "authenticated append-only ledger exact readback replay refusal and corrupt-tail fail-closed",
+    "precommit and explicit postcommit rollback without overwriting earlier revision",
+    "unknown fields bool-int substitutions private fields and invented capabilities refused",
+    "V1 V2 V3 predecessor and current Qwen route compatibility"
+  ],
+  "scope_truth": {
+    "production_pointer_changed": false,
+    "production_shell_edited": false,
+    "temporary_ai_candidate_written": false,
+    "person_profile_promoted": false,
+    "person_activated": false,
+    "lived_memory_created": false,
+    "emotion_created": false,
+    "external_action_created": false,
+    "model_or_device_run": false,
+    "body_media_voice_gpu_or_blender_run": false,
+    "self_audit_or_acceptance_issued": false
+  }
+}

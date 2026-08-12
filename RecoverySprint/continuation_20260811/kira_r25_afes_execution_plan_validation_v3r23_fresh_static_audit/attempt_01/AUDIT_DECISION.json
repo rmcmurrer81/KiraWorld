@@ -1,0 +1,129 @@
+{
+  "schema": "kira.r25.afes.execution_plan_validation.v3r23.independent_software_quality_decision.v1",
+  "recorded_utc": "2026-08-11T16:44:09.8847084Z",
+  "reviewer_task": "/root/body_v3r23_quality_review",
+  "auditor": "codex_r25_afes_v3r23_quality_reviewer",
+  "author": "codex_r25_afes_v3r23_static_author",
+  "decision": "REJECTED_NO_EXECUTION_AUTHORITY",
+  "accepted_for_one_bounded_diagnostic": false,
+  "candidate_invoked": false,
+  "v3r22_rerun": false,
+  "python_initialized": false,
+  "controller_evaluated": false,
+  "plan_called": false,
+  "blender_afes_body_save_render_export_called": false,
+  "audit_transcript": {
+    "path": "INDEPENDENT_AUDIT.tsv",
+    "bytes": 1376,
+    "sha256": "8420cef3dd9015c6924fb84f5e361e7a6c6f639aa30737adbf2a42a8628919f1",
+    "line_count": 22,
+    "lf_only": true,
+    "cr_count": 0,
+    "nul_count": 0,
+    "sidecar_path": "INDEPENDENT_AUDIT.sha256",
+    "sidecar_bytes": 65,
+    "sidecar_file_sha256": "0bf5987d62c741eaa8b6e2a0f815e517bf86c362c1533602eadfb9bcd5893fbb"
+  },
+  "seal_rehash": {
+    "manifest_bytes": 137189,
+    "manifest_sha256": "44061c604c795b5715f17669fdc82df927d5900b1da835f335b7c262aae83aef",
+    "subjects_declared": 257,
+    "subjects_rehashed": 257,
+    "unique_paths": 257,
+    "missing": 0,
+    "byte_or_digest_mismatches": 0,
+    "current_artifact_roles": 8,
+    "runtime_fixed_binding_roles": 120,
+    "retained_manifest_row_roles": 137
+  },
+  "postseal_test": {
+    "mode": "PostSeal",
+    "exit_code": 0,
+    "output": "V3R23_HOSTILE_STATIC_TESTS_PASS"
+  },
+  "predecessor_closure": {
+    "status": "CONSUMED_FAILURE_DO_NOT_RERUN",
+    "rows": 20,
+    "unique_paths": 20,
+    "canonical_bytes": 3779,
+    "canonical_sha256": "7057deb657f5e235892180e5d694f139450d44897f9353ac3bdb1f15d730aec0",
+    "terminal_state": 3,
+    "terminal_stage": 40,
+    "exact_plan_call_count_known": false
+  },
+  "independent_build": {
+    "source_bytes": 138833,
+    "source_sha256": "6345fc66582ec65d00a5b175f35371dec6d76d3c5408ad29b08e86292d69b947",
+    "strict_flags": "/W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17",
+    "strict_exit_code": 0,
+    "warnings": 0,
+    "errors": 0,
+    "object_path": "strict_build/v3r23_review.obj",
+    "object_bytes": 216005,
+    "object_sha256": "314c7a4417026a343e91095570dd6b42568666ad637cd8e042589bd3d1d0fe35",
+    "executable_path": "strict_build/v3r23_review.exe",
+    "executable_bytes": 253952,
+    "executable_sha256": "10e769e6d1048231170ecd2a5b2b22f02bd4f5fc4621c6745c12b824e0371e38",
+    "scratch_executable_invoked": false
+  },
+  "msvc_analyze": {
+    "flags": "/analyze /c /W4 /WX /DUNICODE /D_UNICODE /std:c17",
+    "exit_code": 0,
+    "unsuppressed_diagnostics": 0,
+    "suppressions": 0,
+    "object_path": "analyze/v3r23_review_analyze.obj",
+    "object_bytes": 147657,
+    "object_sha256": "9f4fbf5f870a17d76bb49c70d1923b3a88557cadc7fb84d1ba73a40bb74dc0e6",
+    "diagnostic_xml_path": "analyze/v3r23_review_analyze.nativecodeanalysis.xml",
+    "diagnostic_xml_bytes": 59,
+    "diagnostic_xml_sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5",
+    "diagnostic_xml_defect_count": 0
+  },
+  "rebuilt_pe": {
+    "machine": "8664_x64",
+    "format": "PE32+",
+    "high_entropy_va": true,
+    "aslr_dynamic_base": true,
+    "nx_compatible": true,
+    "control_flow_guard": true,
+    "cf_instrumented": true,
+    "fid_table_present": true,
+    "direct_dll_imports": ["bcrypt.dll", "KERNEL32.dll"],
+    "static_python_import": false,
+    "process_or_shell_import": false
+  },
+  "positive_source_checks": {
+    "annotations_reads": 0,
+    "annotate_object_reads": 1,
+    "annotate_thunk_calls": 0,
+    "direct_plan_call_expressions": 1,
+    "checkpoints_exact_once": [100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230],
+    "exception_type_payload_max_bytes": 63,
+    "exception_message_payload_max_bytes": 191,
+    "forbidden_process_shell_source_calls": 0,
+    "post_python_retained_rechecks_present": true,
+    "stop_before": ["bootstrap", "broker", "process", "AFES", "Blender", "body", "save", "render", "export"]
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_V3R23_FALSE_DEFERRED_ANNOTATION_CAUSE",
+      "severity": "blocking_truth_and_one_shot_quality",
+      "v3r22_source_line": 1323,
+      "v3r23_source_line": 1487,
+      "fact": "Both validators compile the retained controller with flags=0x1000000 and dont_inherit=True.",
+      "locked_runtime_definition": "CPython 3.14 defines 0x1000000 as CO_FUTURE_ANNOTATIONS, whose runtime annotations are strings.",
+      "effect": "Any, Mapping, Sequence, and BaseException remain stringized; V3r22 __annotations__ reads do not resolve those names and cannot raise the diagnosed NameError.",
+      "test_gap": "The authored PostSeal test checks only for a future import in controller text and ignores the explicit compile flag.",
+      "decision_reason": "The non-calling V3r23 __annotate__ fingerprint and bounded telemetry are safe, but the sealed repair rationale is materially contradicted and does not justify consuming a new one-shot authority."
+    }
+  ],
+  "supporting_locked_runtime_evidence": {
+    "retained_stdlib_zip_bytes": 28997479,
+    "retained_stdlib_zip_sha256": "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846",
+    "stdlib_future_entry_bytes": 5365,
+    "cpython_code_header_sha256": "65fe295bd90aab0a5380c4b3c400713917af7f904fbb0ac86e76ffff2de1ab18",
+    "cpython_future_module_sha256": "bf11d13b6c9b2b8706be425addf399965738622bb4cc553217be16399c51d51a",
+    "cpython_annotation_test_sha256": "46d65cc982ee3692760c357d995f1571a971afcce01e77b21b3ef2ec7d625f25"
+  },
+  "required_next_step": "Preserve V3r23 and do not invoke it. Correct the CO_FUTURE_ANNOTATIONS truth and append-only author a successor that either identifies the actual V3r22 stage-40 cause or honestly treats it as unknown while retaining bounded telemetry, cleanup, closure, and stop-before controls; then seal and obtain another different fresh audit."
+}

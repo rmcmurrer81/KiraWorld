@@ -1,0 +1,137 @@
+KIRA R25 AFES EXECUTION PLAN VALIDATION V3R23
+DIFFERENT INDEPENDENT SOFTWARE-QUALITY PROBES
+RECORDED UTC: 2026-08-11T16:44:09.8847084Z
+
+DECISION: REJECTED_NO_EXECUTION_AUTHORITY
+AUDITOR: codex_r25_afes_v3r23_quality_reviewer
+AUTHOR: codex_r25_afes_v3r23_static_author
+CANDIDATE_INVOKED: false
+V3R22_RERUN: false
+PYTHON_INITIALIZED: false
+CONTROLLER_EVALUATED: false
+PLAN_CALLED: false
+BLENDER_AFES_BODY_SAVE_RENDER_EXPORT_CALLED: false
+
+CONTROLLING TRUTH READ
+- RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/CHECKPOINT.md
+- RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md
+- HANDOFF_FOR_NEXT_CODEX_SESSION.md
+- System/Docs/CURRENT_TRUTH_SUPERSESSION_REGISTRY_20260810.md
+- System/Docs/CURRENT_TEST_EXECUTION_BOUNDARY_20260811.md
+- Exact boundary preserved: V3r22 is consumed and DO_NOT_RERUN; V3r23 had no execution authority during this review.
+
+SEALED-SUBJECT REHASH: PASS
+- Static seal bytes: 137189
+- Static seal SHA-256: 44061c604c795b5715f17669fdc82df927d5900b1da835f335b7c262aae83aef
+- Declared rows: 257
+- Parsed rows: 257
+- Exact unique paths: 257
+- Current-artifact roles: 8
+- Runtime-fixed-binding roles: 120
+- Retained-manifest-row roles: 137
+- Missing subjects: 0
+- Byte mismatches: 0
+- SHA-256 mismatches: 0
+- Independent actual-row canonical bytes under the authored PowerShell sorting convention: 44267
+- Independent actual-row canonical SHA-256: 53674c86017ebbec9b17314844e3a8d8410b214849ed150f2d622103003bb090
+
+PREDECESSOR CONSUMED-FAILURE CLOSURE: PASS
+- Rows: 20
+- Unique paths: 20
+- Every row rehashed exact as part of the 257-subject walk and PostSeal test.
+- Canonical bytes: 3779
+- Canonical SHA-256: 7057deb657f5e235892180e5d694f139450d44897f9353ac3bdb1f15d730aec0
+- Preserved outcome: one invocation, exit 1, completion state 3, terminal stage 40.
+- Preserved cleanup: Py_FinalizeEx result 0, FreeLibrary success, module snapshot success, old base absent, exact Python path absent.
+- No exact V3r22 plan-call count is claimed.
+
+SUPPLIED STATIC SUITE: PASS
+- Invocation mode: PostSeal only
+- Exit code: 0
+- Exact output: V3R23_HOSTILE_STATIC_TESTS_PASS
+- PreSeal mode was not run by this reviewer.
+
+INDEPENDENT STRICT BUILD: PASS
+- Exact source: C:/Users/robmc/Kira/tools/native/kira_r25_afes_execution_plan_validation_v3r23.c
+- Source bytes: 138833
+- Source SHA-256: 6345fc66582ec65d00a5b175f35371dec6d76d3c5408ad29b08e86292d69b947
+- Flags: /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17
+- Include roots: C:/Python314/include and C:/Users/robmc/Kira/tools/native
+- Link: /guard:cf /WX bcrypt.lib
+- Exit code: 0
+- Warnings: 0
+- Errors: 0
+- Scratch object: strict_build/v3r23_review.obj
+- Scratch object bytes: 216005
+- Scratch object SHA-256: 314c7a4417026a343e91095570dd6b42568666ad637cd8e042589bd3d1d0fe35
+- Scratch executable: strict_build/v3r23_review.exe
+- Scratch executable bytes: 253952
+- Scratch executable SHA-256: 10e769e6d1048231170ecd2a5b2b22f02bd4f5fc4621c6745c12b824e0371e38
+- Scratch executable was not invoked.
+
+INDEPENDENT MSVC ANALYZE: PASS
+- Flags: /analyze /c /W4 /WX /DUNICODE /D_UNICODE /std:c17
+- Exit code: 0
+- Unsuppressed diagnostics: 0
+- Suppressions: none
+- Analyzer object: analyze/v3r23_review_analyze.obj
+- Analyzer object bytes: 147657
+- Analyzer object SHA-256: 9f4fbf5f870a17d76bb49c70d1923b3a88557cadc7fb84d1ba73a40bb74dc0e6
+- Analyzer XML: analyze/v3r23_review_analyze.nativecodeanalysis.xml
+- Analyzer XML bytes: 59
+- Analyzer XML SHA-256: ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5
+- Analyzer XML body: <DEFECTS></DEFECTS>
+
+REBUILT PE INSPECTION: PASS
+- dumpbin version: 14.50.35730.0
+- Machine: 8664, x64
+- Optional-header magic: 20B, PE32+
+- High Entropy Virtual Addresses: present
+- Dynamic base / ASLR: present
+- NX compatible: present
+- Control Flow Guard: present
+- Load configuration: CF instrumented; FID table present
+- Guard CF function-count field: 0x34; 52 table entries listed
+- Exact direct DLL set: bcrypt.dll; KERNEL32.dll
+- Static Python DLL import: absent
+- CreateProcess/ShellExecute/WinExec/system/popen import: absent
+
+SOURCE BOUNDARY AND TELEMETRY PROBES: PASS
+- __annotations__ token count in V3r23 C source: 0
+- __annotate__ token count: 1
+- The only __annotate__ access is getattr(fn,'__annotate__',None); the thunk is fingerprinted and never called.
+- Direct _v3_left['_build_execution_plan'] call-expression count: 1
+- Fixed binding rows: 120
+- V3r22 consumed fixed rows: 20
+- Checkpoint assignments 100,110,120,130,140,150,160,170,180,190,200,210,220,230: exactly one each
+- Plan-attempt increment occurs immediately before the sole call expression at checkpoint 160.
+- Plan-return increment occurs immediately after return at checkpoint 170.
+- Native SHA success bound is checked at 223; marker tuple checks 137,1,222,231,4,0 plus a lower-hex code root.
+- Exception API is PyErr_GetRaisedException.
+- Type capacity is 64 including NUL, so payload is at most 63 bytes.
+- Message capacity is 192 including NUL, so payload is at most 191 bytes.
+- Sanitizer excludes JSON quote, backslash, controls, and non-ASCII bytes; output is NUL terminated.
+- Python-success/failure cleanup decrefs owned Python objects, zeroes/free buffers, attempts finalize after successful initialization, releases the DLL, and proves old-base/exact-path absence.
+- After a Python attempt, all 137 retained handles, manifest/audit/authority handles, and all 120 fixed subjects are rechecked before terminal outcome commitment.
+- Forbidden source call counts: CreateProcess=0; ShellExecute=0; WinExec=0; system/popen=0.
+- Stop-before literal is exact: bootstrap,broker,process,AFES,Blender,body,save,render,export.
+- V3r23 evidence path absent after review: true
+- V3r23 receipt path absent after review: true
+- Kira V3r23 fresh-audit root absent after review: true
+
+BLOCKING FINDING: AUTHORED LIKELY-CAUSE DIAGNOSIS IS CONTRADICTED
+- V3r22 C line 1323 compiles the retained controller with flags=0x1000000 and dont_inherit=True.
+- V3r23 C line 1487 preserves the same flags=0x1000000 and dont_inherit=True.
+- C:/Python314/include/cpython/code.h line 143 defines CO_FUTURE_ANNOTATIONS as 0x1000000.
+- The exact retained stdlib ZIP is 28997479 bytes at SHA-256 7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846.
+- Its __future__.py entry is 5365 bytes and states CO_FUTURE_ANNOTATIONS = 0x1000000 and that annotations become strings at runtime.
+- Installed locked-version CPython test C:/Python314/Lib/test/test_type_annotations.py lines 488-499 constructs a future-annotations function and requires both f.__annotate__(Format.VALUE) and f.__annotations__ to equal {'x':'int','return':'int'}.
+- Therefore V3r22's exact compile mode stringizes Any, Mapping, Sequence, and BaseException. Its direct __annotations__ reads do invoke annotation machinery, but they do not evaluate those unresolved names as globals and should not raise the claimed NameError.
+- The authored PostSeal test line 238 checks only that the controller text lacks a future import. It does not account for the explicit CO_FUTURE_ANNOTATIONS compile flag and therefore passes a false diagnostic premise.
+- V3r23's non-calling __annotate__ fingerprint remains a sound non-evaluating metadata technique, and the new checkpoint/counter/exception telemetry is bounded. Those positives do not cure the sealed contract/checkpoint's materially incorrect explanation of the consumed stage-40 failure.
+- Because this is a one-shot, success-or-failure-consumed candidate, accepting an unsubstantiated repair target risks consuming V3r23 without addressing the actual V3r22 failure.
+
+VERDICT
+- REJECTED_NO_EXECUTION_AUTHORITY
+- The rejection transcript intentionally cannot satisfy the candidate's exact acceptance decision grammar.
+- Required successor: preserve V3r23; correct the CO_FUTURE_ANNOTATIONS truth; identify or explicitly leave unknown the actual stage-40 cause; retain the bounded telemetry and stop-before controls; seal a new append-only version; require another different fresh audit.

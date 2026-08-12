@@ -1,0 +1,72 @@
+{
+  "schema": "kira.r25.afes.v3r25.diagnostic_run_outcome.v1",
+  "recorded_utc": "2026-08-11T20:38:49.7945087Z",
+  "status": "FAILED_CONSUMED_NO_RETRY",
+  "authority": "CONSUMED_DO_NOT_RERUN_V3R25",
+  "exit_code": 1,
+  "invocation_count": 1,
+  "invocation": {
+    "executable": "tools/native/kira_r25_afes_execution_plan_validation_v3r25.exe",
+    "arguments": [],
+    "working_directory": "C:/Users/robmc/Kira"
+  },
+  "preflight": {
+    "sealed_subjects": "292/292 exact",
+    "unique_subject_paths": 292,
+    "author_artifacts": "10/10 exact",
+    "audit_artifacts": "6/6 exact",
+    "evidence_absent_before_run": true,
+    "receipt_absent_before_run": true
+  },
+  "independent_authorization": {
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_DIAGNOSTIC_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R25_ONLY",
+    "audit_tsv_sha256": "2bfa9d9c8045c92476ad856cee5e805ebf8d8e1be53a956bdf1cdffb47e60191",
+    "audit_sidecar_file_sha256": "f80550bcb067e50ab4217af56cc7a4f0ec363c161fca4b84ce29a56cf57bc218",
+    "audit_decision_sha256": "03eba7ddd931fea01792b91f4dd2e58f4d6242af6ede7323b2867945047aa92b",
+    "audit_checkpoint_sha256": "9c66fa332ddbb6246128765f40952ada8895134554d3e9974d1dbde3ee346018"
+  },
+  "terminal_evidence": {
+    "run_evidence_bytes": 1511,
+    "run_evidence_sha256": "a1dff2c1dbc2c7ddf8f8cc5d25ee7ed000ab24d1787cc0c6aca73cf0ce3dca66",
+    "receipt_bytes": 1320,
+    "receipt_sha256": "8dbfbb97a1d2413eedf56beafce4ef330a2e9e1b286afc07a4d41c30fd609540",
+    "terminal_status": "failed_consumed_no_retry"
+  },
+  "telemetry": {
+    "checkpoint": 218,
+    "plan_attempts": 1,
+    "plan_returns": 1,
+    "operation_enters": 16,
+    "operation_returns": 15,
+    "marker_present": 0,
+    "native_sha_calls": 222,
+    "python_error_captured": 1,
+    "exception_message_truncated": 0,
+    "retained_recheck_passed": 1,
+    "exception_type": "RuntimeError",
+    "exception_message": "controller_function_code_or_deferred_annotate_metadata:_build_execution_plan"
+  },
+  "cleanup": {
+    "python_finalize_called": true,
+    "python_finalize_result": 0,
+    "free_library_called": true,
+    "free_library_result": true,
+    "module_snapshot_succeeded": true,
+    "old_module_base_present": false,
+    "exact_python_path_present": false,
+    "retained_recheck_passed": true,
+    "contract_gate_mask": 32767,
+    "contract_failure_gate": 0
+  },
+  "scope_truth": {
+    "plan_returned_before_failure": true,
+    "failure_location": "post_plan_controller_revalidation_at_checkpoint_218",
+    "afes_invoked": false,
+    "blender_invoked": false,
+    "body_or_anatomy_changed": false,
+    "save_render_or_export_occurred": false,
+    "material_pigmentation_or_hair_result": false,
+    "body_accepted": false
+  },
+  "next_boundary": "APPEND_ONLY_V3R26_STATIC_DIAGNOSIS_REPAIR_SEAL_AND_DIFFERENT_AUDIT_ONLY"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v17_static_seal_manifest",
+  "status": "SEALED_STATIC_SCHEMA_CONTROL_AUTHOR_PACKAGE_PENDING_GENUINELY_DIFFERENT_FRESH_EXACT_BYTE_AUDIT",
+  "sealed_at_utc": "2026-08-12T02:28:45.480Z",
+  "author_identity": "Codex subagent /root/long_v15_fresh_audit acting as append-only V17 author after installed V16 rejection",
+  "subjects": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v17.py",
+      "bytes": 140217,
+      "sha256": "ac9f74b3e50f9a7fec0c65eeb6c219d46194c28e5b242be72374338ceeb293ec"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v17.py",
+      "bytes": 61475,
+      "sha256": "2d07a7ff62fb3f0466f78fc88d78df20d81cb2e73bd9f598f74572c7e948c896"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/EXECUTION_PLAN_V17.json",
+      "bytes": 17038,
+      "sha256": "73c4a761ed99900b8234637c102a996db135af5f9d1f8950f92baca3aa642a6e"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/SOURCE_CODE_ROOT_V17.json",
+      "bytes": 1775,
+      "sha256": "2d9411bd8830ed92cce4c981ea1b410b36a8ae1dae20fee1797bf18c86cb2221"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v17/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 5374,
+      "sha256": "7f23ec3cb8ae2f4dd22ed01b4b7a634b38ac927bc4308989e30c4c01ba49e103"
+    }
+  ],
+  "subject_count": 5,
+  "bound_v16_author_and_rejection_subject_count": 14,
+  "bound_current_policy_subject_count": 8,
+  "external_source_descriptor": {
+    "bytes": 365656,
+    "sha256": "fbe377325f60193763d5bfa086830e03b9d1248ce0a47ffdb4640b65af671b55",
+    "function_definition_count": 54,
+    "persistent_compiled_source_cache": false,
+    "runtime_python_object_is_trust_root": false
+  },
+  "test_result": {
+    "preseal_passed": 101,
+    "preseal_skipped_postseal_only": 1,
+    "preseal_failed": 0,
+    "cache_free": true,
+    "static_and_in_memory_only": true
+  },
+  "authority": {
+    "genuinely_different_fresh_exact_byte_static_audit_required": true,
+    "live_attempt_authorized": false,
+    "package_mode": "STATIC_SCHEMA_CONTROL_ONLY",
+    "separate_append_only_executor_successor_required_after_acceptance": true,
+    "executor_requires_another_different_audit": true,
+    "do_not_invoke_v16_or_v17": true,
+    "unstructured_text_semantic_acceptance_authorized": false,
+    "external_event_ledger_implemented_or_proven": false,
+    "future_face_capture_enrollment_matching_or_persistence_authorized": false,
+    "canonical_self_hash_claims_external_authority": false,
+    "one_hour_scoring_fields_are_live_result_or_run_authority": false,
+    "no_silent_retry": true,
+    "no_body_or_anatomy_claim": true
+  }
+}

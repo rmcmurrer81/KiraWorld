@@ -1,0 +1,96 @@
+KIRA R25 MEDICAL REFERENCE PROXY V3R27
+DIFFERENT FRESH INDEPENDENT STATIC RESULTS
+Recorded UTC: 2026-08-11T23:32:35Z
+Status: REJECTED_NO_EXECUTION_AUTHORITY
+
+READ-FIRST AUTHORITY
+- CURRENT_TRUTH_SUPERSESSION_REGISTRY_20260810.md read at current tail.
+- HANDOFF_FOR_NEXT_CODEX_SESSION.md read at current append-only tail.
+- CURRENT_TEST_EXECUTION_BOUNDARY_20260811.md read.
+- Newest root checkpoint read:
+  root_multilane_continuation/attempt_43/CHECKPOINT.md,
+  1,616 bytes,
+  d0b6f0ba4946d0b033d695e957797971e6e56c22acfd87120a81dd07af14d4f8.
+
+STRICT BOUNDARY
+- Kira stayed read-only.
+- No Blender, bpy, candidate, V3r26, Python import of candidate, AFES, body,
+  save, reload, render, model, camera, microphone, voice, network, or Sarah
+  path ran.
+- Python was used with -B/PYTHONDONTWRITEBYTECODE for cache-free static tests.
+
+INSTALLED IDENTITIES (11/11 EXACT)
+- ATTRIBUTION_LICENSE_MANIFEST.tsv: 2,759 bytes /
+  da345fba3e69ce2ed2ab1d77af626a22232ddc95f62360d2dfdb48be0a04c2d9
+- blender_build_kira_pelvic_reference_proxy_v3r27.py: 20,736 bytes /
+  fb480836b0c58f6f2c562f12043e6329b18688310b2f2c8b87f250469723952c
+- CHECKPOINT.md: 4,953 bytes /
+  92d22f857f85113ec40692aaef410fbbe3aa83b9533e372e7cfedeef40256ef2
+- CONTRACT.json: 5,958 bytes /
+  624693a20c1d80c1d3e945396fbebba8ae1a28a7df7b479bf8786cae357248fb
+- KIRA_RELATIVE_PLACEMENT_PLAN.json: 5,434 bytes /
+  0e92f715360633b56644ad55fd453f5c74c117ad76338cd7d396fac67457e617
+- MEDICAL_COMPONENT_INVENTORY.tsv: 5,734 bytes /
+  c08405cb5025addb9cd8cefcbf94726272c83e322fe644278c94066171360c47
+- SKELETON_136_MAPPING_PLAN.tsv: 11,134 bytes /
+  c3bb0f938a0330b0d4fbf8804257001c5bb2605d13cb0e7f92d2210ccd2492b6
+- STATIC_SEAL_MANIFEST.json: 2,092 bytes /
+  60d8153688a9b5163adcd5a0ab2983bf2ca96518d011bdeda309076aca2c5ef6
+- STATIC_TEST_RESULTS.txt: 4,859 bytes /
+  e62be99232db96dec5b065adf7a16d7c5f3feea6c8adb6825a85d6364f140d0b
+- test_v3r27_static.py: 15,283 bytes /
+  2ffc0be82351691aeedff9f7eda55ee51976f9cff6fed8ee2f794c8562fb56d4
+- UPSTREAM_CLOSURE.tsv: 4,560 bytes /
+  bb848fc52f2fcc17903a68c76e5a3e49b6b3209b6894e09e4c5787e783f57811
+
+SEAL AND UPSTREAM
+- Seal 8/8 exact; canonical 799 bytes; package root
+  180db0c53f1c6144249a73c5304fd44c976945cb8b427d2370e9b15bb8ed4976.
+- All 24 upstream rows were independently resolved and rehashed exact.
+- Scope counts: V3r26 author 10; V3r26 audit 6; V3r26 run 4;
+  anatomy triage 3; anatomy-triage root 1.
+- V3r26 remains consumed success / DO_NOT_RERUN / pure-plan only, not body.
+
+AUTHOR AND INDEPENDENT STATIC TESTS
+- Installed cache-free PostSeal:
+  V3R27_HOSTILE_STATIC_TESTS_PASS phase=PostSeal upstream=24 licenses=7
+  components=24 stage_a=9 bones=136 mutants=9.
+- Cache-free compile() syntax: builder PASS; author test PASS.
+- Independent hostile probe script: PASS and returned
+  REJECT_NO_EXECUTION_AUTHORITY.
+
+POSITIVE MEDICAL/LICENSE BOUNDARY
+- Seven license records are exact and all source hashes cross-check to the
+  sealed triage TSV.
+- CC BY Stage-A references remain reference-only; CC BY-NC remains
+  noncommercial quarantine; both unknown-license rows remain quarantine.
+- No source mesh path/import/copy/export operator exists in the candidate.
+- Component inventory is 24 unique rows, with nine planned Stage-A proxies.
+- Skeleton plan is 136 unique source IDs, all UNMAPPED with all required
+  mapping evidence MISSING and SEPARATE_AUDIT_REQUIRED.
+
+BLOCKING RESULT
+The exact author bytes are coherent but the executable evidence contract is
+not fail-closed. Six blocking families were reproduced:
+
+1. Replaceable self-consistent audit authority, unbound checkpoint, and no
+   in-candidate external package/audit anchor or stable handles.
+2. Reload validation false-accepts anatomically meaningless geometry,
+   placements, materials, and attribution.
+3. Eight declared landmark fail-closed rules are unimplemented and the front
+   camera contradicts the declared anterior axis.
+4. Background Blender is not bound to a factory-empty input, exact version,
+   disabled autoexec, or absence of external libraries/dependencies.
+5. Path/output replacement and overwrite windows plus minimum-byte-only
+   render acceptance and no final immutable output snapshot.
+6. Partial reservation and terminal ordering can omit failure outcome or leave
+   contradictory success/failure artifacts.
+
+The audit-pair weakness is classified against the exact current threat model:
+root's procedural rehash can mitigate already-present mutation, but V3r27 does
+not bind that observed digest and cannot exclude replacement after the root
+check. Independent proxy/evidence false accepts remain blockers even in a
+fully cooperative no-adversary run.
+
+No exact 14-row INDEPENDENT_AUDIT.tsv or sidecar was created. V3r27 receives
+zero execution authority. Preserve it and repair append-only as V3r28.

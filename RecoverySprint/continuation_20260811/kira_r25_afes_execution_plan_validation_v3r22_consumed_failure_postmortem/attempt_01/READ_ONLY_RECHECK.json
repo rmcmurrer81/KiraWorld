@@ -1,0 +1,39 @@
+{
+  "schema": "kira.r25.afes.v3r22.consumed_failure_read_only_recheck.v1",
+  "recorded_utc": "2026-08-11T14:46:42.6580354Z",
+  "candidate_reinvoked": false,
+  "authority_status": "CONSUMED_DO_NOT_RERUN_V3R22",
+  "exit_code": 1,
+  "evidence_bytes": 607,
+  "evidence_sha256": "4f9707fadf2092ecb28da4d9683e01690c5102cc1aac7236cc68ebd622d4b314",
+  "receipt_bytes": 1016,
+  "receipt_sha256": "cf2409244de8a42981e62667e5607e8912bd1d94220bbb09dfd0a79f3a4540bd",
+  "terminal_stage": 40,
+  "contract_passed_mask": 32767,
+  "contract_failure_gate": 0,
+  "contract_win32_error": 0,
+  "reservation_sha256": "ff2c1c5c867cd4dc6efef2431018eede55bb2cd387446943940a32c3d78ea038",
+  "cross_bindings": {
+    "executable_sha256": "d905444a6d4115603688f0c0bc39f1798dcb7f3d103ae2ed27712e52b88f72fc",
+    "audit_sha256": "b29812ed25f40f83671b532ba46e1d09266844abe02a7dae3b07994f2cba9138",
+    "manifest_sha256": "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96",
+    "controller_sha256": "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf",
+    "execution_contract_sha256": "f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5",
+    "authority_contract_sha256": "48f80736e181da754e1325d3faaa836ef215a7546cbff74e44e6bd53e0d49749",
+    "reservation_and_completion_match": true
+  },
+  "unload": {
+    "finalize_called": 1,
+    "finalize_result": 0,
+    "free_library_called": 1,
+    "free_library_result": 1,
+    "snapshot_succeeded": 1,
+    "snapshot_error": 0,
+    "checked_module_count": 8,
+    "old_base_present": 0,
+    "exact_path_present": 0
+  },
+  "failure_localization": "The isolated runtime reached terminal stage 40, assigned immediately before executing PLAN_VALIDATOR. No durable Python exception text or internal validator checkpoint was recorded, so read-only evidence cannot distinguish a failure before, during, or after the embedded pure _build_execution_plan call.",
+  "no_body_truth": "The native source contains no call from this boundary to bootstrap, broker, process creation, AFES, Blender, body mutation, save, render, or export; none was reached or evidenced.",
+  "next": "Append-only V3r23 must capture bounded sanitized exception/checkpoint telemetry and receive a different audit."
+}

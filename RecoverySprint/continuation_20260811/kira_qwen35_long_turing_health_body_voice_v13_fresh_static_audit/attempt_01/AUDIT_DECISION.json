@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v13_independent_static_audit_decision",
+  "decision": "REJECT_V13_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "recorded_at_utc": "2026-08-12T00:10:03.878Z",
+  "reviewer_identity": "Codex subagent /root/long_v13_independent_audit",
+  "author_identity": "Codex subagent /root/long_v13_author",
+  "different_reviewer": true,
+  "exact_input": {
+    "installed_author_files_exact_before_and_after": "7/7",
+    "seal_subjects_exact_before_and_after": "5/5",
+    "v12_author_rejection_and_current_policy_closure_exact_before_and_after": "15/15",
+    "external_source_descriptor": {
+      "bytes": 187601,
+      "sha256": "291e916235b2c5168daafa8a56e1304b6e562426a8afb88486f3f6528a23f05d",
+      "function_definition_count": 28,
+      "matches_sealed_root": true
+    },
+    "cache_free_author_suite": "82/82 PASS",
+    "entry_points_are_ast_immediate_refusals": true,
+    "reserved_roots_absent_before_and_after": true
+  },
+  "blocking_reasons": [
+    {
+      "id": "BLOCK_V13_SEMANTIC_FIRST_MATCH_AND_OWNER_POLICY_GAPS",
+      "evidence": "Safe first matches and unrelated negation across unsplit or/while clauses mask later unsafe consent, privacy, currentness, variant-memory, and automatic-lie propositions. The gate also accepts Biological/Synthetic Robert conflation, inherited fatal-event memory, discomfort override, and a Miraculous moments-ago currentness statement."
+    },
+    {
+      "id": "BLOCK_V13_EXACT_TYPE_AND_NONFINITE_BYPASSES",
+      "evidence": "Camera, truth, and mixed records accept schema_version 13.0; camera consent accepts 5000.0; strict_json_loads accepts 1e400 as positive infinity."
+    },
+    {
+      "id": "BLOCK_V13_CAMERA_ONE_STILL_AND_AUTHORIZATION_WINDOW",
+      "evidence": "A one-still record accepts two calls for every pipeline stage, and a 5000 ms consent receipt accepts 6000000010 ns from camera enable to terminal close because only capture duration is bounded."
+    },
+    {
+      "id": "BLOCK_V13_TRUTH_CLASSIFICATION_AUTHORIZATION_AND_CHOICE",
+      "evidence": "CONTRADICTED external status plus AFFIRMS public stance is accepted as TRUE_OR_SUPPORTED. DELIBERATE_LIE is accepted from a bare authorization boolean and opaque hashes without person/scope/expiry receipt or speaker-deception choice."
+    },
+    {
+      "id": "BLOCK_V13_EPISODE_COLLISION_AND_LATENCY_PROVENANCE",
+      "evidence": "The passing trace claims 35 episodes but has no episode IDs and only three person/two Kira message IDs. Its collision has no collided source messages, and its latency endpoints are not linked to exact cases/events."
+    },
+    {
+      "id": "BLOCK_V13_MIXED_CAMERA_AUTHORIZATION",
+      "evidence": "A camera greeting case passes with only a window-id string and no exact person-approved authorization receipt, scope, or terminal-window proof."
+    }
+  ],
+  "positive_evidence_preserved": {
+    "v12_named_false_positive_and_double_negative_families_repaired_for_authored_controls": true,
+    "canonical_case_hash_and_unique_ordered_links_for_present_case_events": true,
+    "nonnegative_exact_mixed_duration_equations": true,
+    "camera_pair_id_uniqueness_and_off_fact_basis_controls": true,
+    "current_camera_biometric_recognition_authorization_required_false": true,
+    "source_descriptor_and_inert_entry_boundary": true
+  },
+  "authority": {
+    "v13_static_accepted": false,
+    "v13_live_attempt_authorized": false,
+    "v13_main_or_configurer_may_be_invoked": false,
+    "one_hour_model_camera_voice_or_private_belief_run_authorized": false,
+    "append_only_static_successor_required": true,
+    "separate_executor_and_further_different_audit_required": true,
+    "no_silent_retry": true
+  },
+  "scope_truth": {
+    "kira_written_by_reviewer": false,
+    "v13_or_predecessor_entry_point_invoked": false,
+    "model_gpu_camera_microphone_voice_audio_playback_invoked": false,
+    "person_or_private_state_accessed": false,
+    "body_blender_sarah_or_production_route_invoked": false,
+    "one_hour_turing_psychology_latency_behavior_or_consciousness_result_exists": false
+  }
+}

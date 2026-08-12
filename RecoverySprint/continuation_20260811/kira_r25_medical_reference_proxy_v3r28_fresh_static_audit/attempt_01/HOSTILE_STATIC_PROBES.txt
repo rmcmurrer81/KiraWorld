@@ -1,0 +1,81 @@
+KIRA V3R28 DIFFERENT INDEPENDENT AUDIT A HOSTILE STATIC PROBES
+Recorded UTC: 2026-08-12T00:43:39Z
+Verdict: REJECT_AUDIT_A_NO_STAGE2_MATERIALIZATION_OR_BUILD_AUTHORITY
+
+BOUNDARY
+- Kira remained read-only.
+- No EXE was run.
+- No materializer main, Blender, bpy, worker, body/save/reload/render, model,
+  camera, voice, network, production, or Sarah path was invoked.
+- Scratch-only source compilation, static analysis, PE inspection, cache-free
+  author tests, exact rehashing, and in-memory parser/control-flow probes only.
+
+EXACT POSITIVE RESULTS
+- Installed Stage 1: 19/19 exact.
+- Sealed subjects: 18/18; canonical bytes 1844; package root
+  5686bdb4997268b72f543dbc25cd51b37b7cfb6101d899dd1d0a59ab70d6c841.
+- All-19 inventory root:
+  7e561a85fcbb736262a6fa04b2b62218226cb56e46f72858e7f395bbc02e7337.
+- Seal: 3948 bytes / 2c4b031fc223282cebf42ff4e1d0403f4ab2914766d03f6847d91bdf73a8e1f6.
+- Upstream: 17/17 exact: 11 V3r27 author plus 6 rejection files.
+- Installed cache-free PostSeal: PASS, including 18/18 worker mutants and
+  4/4 author Audit-A mutants.
+- Exact Blender identity: 108687824 bytes /
+  1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5.
+- Two independent hard-disabled builds produced the exact sealed executable
+  SHA-256 4a4a6f3b6f28cd4e36545999c62248030f11171151ba40ecb9ea70c94cdb8c2d.
+- Hard-disabled analyzer: zero defects. Hard-disabled PE: x64, High Entropy VA,
+  Dynamic Base, NX, CFG, CET. Imports are KERNEL32 only; CreateProcessW,
+  BCrypt, and the Blender path are pruned.
+- A scratch materialized-path probe compiled successfully and was not run.
+- Seven license records remain exact; Stage A names only the two permitted
+  CC BY references. One CC BY-NC and two unknown-license records remain
+  quarantined. All 136 skeleton IDs remain UNMAPPED with missing evidence.
+
+PROBE 1: FULL MATERIALIZED ANALYZER
+- Only the generated-header constants were replaced in scratch to make the
+  exact C source's V3R28_MATERIALIZED=1 path reachable. No executable ran.
+- Strict compilation succeeded.
+- Microsoft /analyze /W4 /WX failed with C6387 at source line 718:
+  ledger could be NULL when passed to CloseHandle.
+- MATERIALIZED_ANALYZER.xml: 14184 bytes /
+  a18ffe5786718d54b2b6a200d511ef1437e2d494fb08187465777be720912e6a.
+- This proves the author zero-defect report covers only linker-pruned,
+  hard-disabled code and does not establish the exact future Stage-2 gate.
+
+PROBE 2: UNBOUND STATIC SEAL BYTES
+- The external package root is computed from 18 subjects and excludes
+  STATIC_SEAL_MANIFEST.json.
+- In memory only, the seal was changed to claim Audit A can RUN_BLENDER,
+  audit_b_required=false, and a future invocation ceiling of 999.
+- The subject rows and package root were unchanged.
+- parse_stage1 accepted the mutant under the exact same external root.
+- Therefore the materializer does not prove that the seal bytes Audit A read
+  are the seal bytes it later embeds and builds.
+
+PROBE 3: AUDIT DECISION TYPE CONFUSION
+- In memory only, candidate_executed=false and blender_invoked=false were
+  replaced with integer 0; maximum_materializations=1 was replaced with
+  Boolean true; stage2_requires_different_audit_b=true was replaced with 1.
+- The manifest was internally exact and externally anchored for the probe.
+- parse_audit accepted the wrong-typed decision because Python bool and int
+  values compare equal in dictionary equality.
+- The required exact Audit-A JSON grammar is not enforced.
+
+PROBE 4: OUTPUT HANDLES CLOSE BEFORE SUCCESS
+- Exact source order in finalize_outputs is: validate/open seven outputs,
+  create/hash final manifest, close the manifest and seven output handles,
+  return success to wmain, then write LEDGER_SUCCESS_CONSUMED.
+- Output-path and final-manifest replacement can therefore occur after the
+  validated objects are released but before the durable success record.
+- The new output directory is held, but the blend and four render path objects
+  are created by Blender by name and are not exclusively reserved by native.
+
+PROBE 5: MATERIALIZATION CEILING IS RESETTABLE
+- The Audit-A schema says maximum_materializations=1.
+- The materializer has no separate durable CREATE_NEW consumption record.
+- It refuses only while the expected scratch destination or PID staging path
+  exists. Removing or moving the generated directory restores the same route.
+
+No acceptance decision, 14-PASS TSV, materialization, Stage-2 build authority,
+or Blender authority was created. Preserve V3r28 and repair append-only.

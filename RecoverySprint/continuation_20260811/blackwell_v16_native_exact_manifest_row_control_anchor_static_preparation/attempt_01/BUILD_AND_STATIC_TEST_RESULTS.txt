@@ -1,0 +1,83 @@
+BLACKWELL VOICE V16 EXACT-MANIFEST-ROW CONTROL ANCHOR
+AUTHOR BUILD AND STATIC TEST RESULTS
+
+Recorded UTC: 2026-08-11T17:48:28.9512438Z
+Author task: /root/voice_v15_quality_review
+Workspace: Documents/Codex staging only; no Kira write
+
+BOUNDARY
+v15_authority_consumed=true
+v15_rerun=false
+v16_candidate_executed=false
+python_candidate_invoked=false
+model_calls=0
+gpu_voice_calls=0
+synthesis_calls=0
+playback_calls=0
+latency_measurements=0
+network_calls=0
+person_body_blender_calls=0
+execution_authority=NONE
+
+READ-ONLY V15 DIAGNOSIS
+observed invocation count: 1
+observed exit code: 4
+coarse stage: 10
+run evidence created: false
+outcome receipt created: false
+exact cause: V15_STAGE10_WHITESPACE_SENSITIVE_SEAL_ROW_FORMAT_MISMATCH
+old object spaced token count: 0; compact token count: 1
+old build spaced token count: 0; compact token count: 1
+old spaced subject path matches: 0/21
+exact compact complete subject rows: 21/21
+conclusion: seal_contract_exact refused before stage 20 and output; all later old seal_exact_row calls would also refuse
+
+PREBUILD STATIC SUITE
+command: powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_blackwell_persistent_voice_candidate_v16_native_anchor_static.ps1 -Phase PreBuild
+result: PASS
+marker: V16_EXACT_MANIFEST_ROW_HOSTILE_STATIC_TESTS_PASS
+scope: canonical-config parser, exact source/contract text, read-only V15 root-cause reproduction, compact full-row reference matcher, and in-memory hostile mutations; V15/V16 not invoked
+
+STRICT NATIVE BUILD
+toolchain: Microsoft C/C++ Optimizing Compiler 19.50.35730 x64
+command: cl /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include kira_blackwell_voice_control_anchor_v16.c /Fo:kira_blackwell_voice_control_anchor_v16.obj /Fe:kira_blackwell_voice_control_anchor_v16.exe /link /guard:cf /WX bcrypt.lib
+exit: 0
+warnings: 0
+errors: 0
+object: 115406 bytes; 33203388375639e2fd93af99a69e05e97b25ef5ccb6cecbf6f8e272ce5e486d4
+executable: 182784 bytes; dc688ea754a9003654f1981f670f20cc3109166326a33233a88a1712a34f80f0
+
+STRICT STATIC ANALYSIS
+command: cl /nologo /W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include kira_blackwell_voice_control_anchor_v16.c
+exit: 0
+warnings: 0
+errors: 0
+analyzer object: 69946 bytes; f0f2a0d9f9efd26efc936d54d2f9ffda4d5186a2f0c1fb5d3668fc2c3d2d1f41
+analyzer XML: 59 bytes; ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5; zero defects
+
+PE STATIC INSPECTION
+machine: x64 (8664)
+format: PE32+ (20B)
+high_entropy_va=true
+dynamic_base=true
+nx_compatible=true
+control_flow_guard=true
+cf_instrumented=true
+fid_table_present=true
+guard_cf_function_count=0x33
+imports=bcrypt.dll,KERNEL32.dll
+python_static_import=false
+process_shell_static_import=false
+
+POSTBUILD STATIC SUITE
+command: powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_blackwell_persistent_voice_candidate_v16_native_anchor_static.ps1 -Phase PostBuild
+result: PASS
+marker: V16_EXACT_MANIFEST_ROW_HOSTILE_STATIC_TESTS_PASS
+
+POSTSEAL STATIC SUITE
+command: powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_blackwell_persistent_voice_candidate_v16_native_anchor_static.ps1 -Phase PostSeal
+result: PASS
+marker: V16_EXACT_MANIFEST_ROW_HOSTILE_STATIC_TESTS_PASS
+
+DIFFERENT_FRESH_AUDIT_REQUIRED=true
+ALLOWED_NEXT_AUTHORITY=NONE_UNTIL_DIFFERENT_FRESH_V16_AUDIT

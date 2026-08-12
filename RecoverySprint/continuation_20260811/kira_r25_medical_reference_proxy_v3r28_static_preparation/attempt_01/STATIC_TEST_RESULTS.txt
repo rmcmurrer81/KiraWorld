@@ -1,0 +1,109 @@
+V3r28 Stage-1 cache-free static results
+date=2026-08-11 America/New_York
+scope=SCRATCH_ONLY_STATIC_SYNTAX_NATIVE_BUILD_ANALYSIS_MOCKED_HOSTILE
+candidate_invoked=false
+blender_invoked=false
+bpy_invoked=false
+body_save_render_invoked=false
+
+PreSeal Python static suite:
+phase=PreSeal
+upstream_exact=17/17 (11 V3r27 author artifacts plus 6 installed rejection artifacts)
+blender_executable_exact=108687824 bytes / 1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5
+cache_free_AST_syntax=worker/materializer/test PASS
+mocked_hostile_worker_refusals=18/18
+mocked_hostile_audit_refusals=4/4
+license_quarantines=preserved
+skeleton_mapping=136/136 UNMAPPED
+result=PASS
+
+Freeze-repair provisional PostSeal (all code and contract subjects already at
+their definitive bytes; only this result record and the seal are re-sealed
+after recording the pass):
+upstream_exact=17/17
+blender_exact=bytes_sha256_path
+mocked_hostile_worker_refusals=18/18
+mocked_hostile_audit_refusals=4/4
+materializer_stage1_inventory_parse=18_subjects_19_files
+syntax_cache_free=2/2
+native_static_surface=PASS
+candidate_or_blender_invoked=false
+result=PASS
+
+Mocked hostile worker cases refused:
+wrong material; wrong source attribution; wrong primitive; missing proxy; reversed
+dimension interval; functional-organ truth overclaim; missing landmark; reversed
+left/right; nonfinite coordinate; wrong anterior axis; front camera on posterior
+side; weakened landmark gate; co-located bilateral objects; co-located
+anterior objects; outer-clearance violation; one-vertex mesh; zero-area face;
+disconnected mesh.
+
+Mocked hostile authority cases refused:
+bound CHECKPOINT replacement; unbound audit artifact; wrong externally supplied
+Audit-A manifest digest; self-consistent decision attempting Blender authority.
+
+Native template build (the executable was never run):
+compiler=C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\cl.exe
+compiler_bytes=682576
+compiler_sha256=6641bee08a3cbafe204aa03b280ad634d7a88b1c03a06fbfec22aaf55d1e4ec2
+linker=C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64\link.exe
+linker_bytes=3416136
+linker_sha256=2c26c8b28ca5e47ef0c0e89a7264cf4fe6685d26ec0b0a3188e2383bc4b7e08f
+compile=/nologo /W4 /WX /O2 /MT /guard:cf /std:c17 /Brepro
+link=/guard:cf /DYNAMICBASE /HIGHENTROPYVA /NXCOMPAT /CETCOMPAT /Brepro
+compile_result=PASS_ZERO_WARNINGS
+static_analyzer=/analyze /W4 /WX
+static_analyzer_result=PASS_ZERO_DEFECTS
+static_analyzer_xml_sha256=ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5
+
+Hard-disabled template PE:
+path=DO_NOT_RUN_UNMATERIALIZED_post_audit_native_anchor_template_v3r28.exe
+bytes=137728
+sha256=4a4a6f3b6f28cd4e36545999c62248030f11171151ba40ecb9ea70c94cdb8c2d
+machine=x64
+dll_characteristics=HighEntropyVA,DynamicBase,NX,ControlFlowGuard,TerminalServerAware
+extended_characteristics=CET_COMPATIBLE
+repro_build_2_sha256=4a4a6f3b6f28cd4e36545999c62248030f11171151ba40ecb9ea70c94cdb8c2d
+reproducible_equal=true
+materialized=0
+execution_authority=NONE
+
+The hard-disabled PE is compile evidence only. Link-time dead-code elimination is
+expected to prune materialized-only imports from this template; it is not
+evidence of a final Stage-2 executable. Audit B must compile and independently
+inspect the materialized PE, its exact imports/mitigations/strings, and its
+externally pinned bytes/SHA-256.
+
+Static closure checked in source:
+- fixed exact Blender path/bytes/hash/version and exact background/factory/
+  disable-autoexec/no-input command;
+- isolated Unicode environment and explicit inherited-handle list;
+- stable non-reparse handles denying write/delete sharing for every binding;
+- CREATE_NEW fixed-size one-shot ledger with pending/success/failure consumed;
+- suspended Job-contained child, timeout, termination, and descendant cleanup;
+- exact nine-proxy/source/material/truth contract and eight landmark gates;
+- initial save/reload with exact reopened filepath, four decoded 640x640
+  distinct renders, final save/reload with exact reopened filepath;
+- zero-user curve datablocks removed immediately after curve-to-mesh conversion
+  and complete curve/datablock closure required;
+- exact canonical worker receipt reconstructed by native from final hashes;
+- no import/export/source mesh/rig/live/activation/promotion or Sarah surface.
+
+claim_boundary=STATIC_AUTHOR_PACKAGE_ONLY_PENDING_DIFFERENT_AUDIT_A
+stage_a_truth=ISOLATED_NORMALIZED_PELVIC_CORE_CLINICAL_REFERENCE_PROXY_NOT_KIRA_BODY
+full_body_claim=false
+avatar_builder_handoff=false
+
+Freeze-repair PreSeal verification after the final two worker hardening edits:
+reason=author_added_exact_reload_path_and_orphan_curve_cleanup_after_provisional_report
+prior_reported_seal=INVALIDATED_NOT_INSTALLED
+worker_bytes=54614
+worker_sha256=68b2a4fa045e8c6c65ef095921a1452d6c117b8a41ddb895bd11724fa69469d2
+upstream_exact=17/17
+blender_exact=bytes_sha256_path
+mocked_hostile_worker_refusals=18/18
+mocked_hostile_audit_refusals=4/4
+syntax_cache_free=2/2
+native_static_surface=PASS
+candidate_or_blender_invoked=false
+result=PASS

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v13_static_seal_manifest",
+  "status": "SEALED_STATIC_SCHEMA_CONTROL_AUTHOR_PACKAGE_PENDING_DIFFERENT_FRESH_EXACT_BYTE_AUDIT",
+  "sealed_at_utc": "2026-08-11T23:25:20.088Z",
+  "author_identity": "Codex subagent /root/long_v13_author after independent V12 rejection",
+  "subjects": [
+    {
+      "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v13.py",
+      "bytes": 74152,
+      "sha256": "b05e6f4304c696e535a75a977e88c2b7bffeb52bcdafaeeae566e00c41c32d7c"
+    },
+    {
+      "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v13.py",
+      "bytes": 55496,
+      "sha256": "200615c74e14bd22d3bf79b845ff9ccee1fea40e58fb01444e4eac1c9a80d71c"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/EXECUTION_PLAN_V13.json",
+      "bytes": 11983,
+      "sha256": "458e86ecb9d3148f7092ffc0ccfe8709e55aa1d066579de9e2ccab7528a30fbe"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/SOURCE_CODE_ROOT_V13.json",
+      "bytes": 1479,
+      "sha256": "c3fe424c2a589932cdedec6755d8b72110fe93eec1923c36956a169acbc9d555"
+    },
+    {
+      "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v13/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 4217,
+      "sha256": "3fc92106b4a4699bc9ef2cacb761fee50cd8c8ab3e4522fe80d9e02bf123aec1"
+    }
+  ],
+  "subject_count": 5,
+  "bound_v12_author_and_rejection_subject_count": 12,
+  "bound_current_policy_subject_count": 3,
+  "external_source_descriptor": {
+    "bytes": 187601,
+    "sha256": "291e916235b2c5168daafa8a56e1304b6e562426a8afb88486f3f6528a23f05d",
+    "function_definition_count": 28,
+    "persistent_compiled_source_cache": false,
+    "runtime_python_object_is_trust_root": false
+  },
+  "test_result": {
+    "passed": 82,
+    "failed": 0,
+    "cache_free": true,
+    "static_and_mocked_only": true
+  },
+  "authority": {
+    "different_fresh_exact_byte_static_audit_required": true,
+    "live_attempt_authorized": false,
+    "package_mode": "STATIC_SCHEMA_AND_CONTROL_ONLY",
+    "separate_append_only_executor_successor_required_after_acceptance": true,
+    "do_not_invoke_v12_or_v13": true,
+    "no_silent_retry": true,
+    "no_body_or_anatomy_claim": true
+  }
+}

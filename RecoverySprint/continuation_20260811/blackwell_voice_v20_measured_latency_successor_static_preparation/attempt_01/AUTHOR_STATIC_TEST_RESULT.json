@@ -1,0 +1,98 @@
+{
+  "schema": "kira.blackwell.voice_v20.measured_latency_successor.author_static_test_result.v2",
+  "candidate_id": "kira_blackwell_voice_v20_cpu_park_measured_latency_successor",
+  "status": "PASS_AUTHOR_STATIC_AND_MOCK_CONTROL_ONLY_PENDING_DIFFERENT_FRESH_AUDIT",
+  "recorded_at": "2026-08-11",
+  "input_closure": "PASS_41_OF_41_EXACT_BYTES_AND_SHA256",
+  "python_strict_compile": "PASS",
+  "cache_free_pytest": {
+    "status": "PASS",
+    "passed": 42,
+    "failed": 0,
+    "duration_seconds_last_run": 0.94,
+    "bytecode_disabled": true,
+    "pytest_cache_disabled": true,
+    "suites": [
+      "test_voice_v20_contract.py",
+      "test_voice_v20_worker_hostile.py"
+    ]
+  },
+  "native_source_verification": {
+    "architecture": "x64",
+    "compiler_version": "19.50.35730",
+    "w4_wx_compile": "PASS",
+    "analyze_w4_wx": "PASS",
+    "linked_executable_created": false,
+    "candidate_executed": false
+  },
+  "mock_control_proven": [
+    "one_exact_conditioned_generation_load_and_condition",
+    "complete_parameter_buffer_and_condition_byte_identity",
+    "model_and_t3_s3gen_ve_component_object_identity",
+    "full_cuda_to_cpu_park",
+    "external_qwen_window_without_worker_qwen_call",
+    "exact_qwen35_digest_keep_alive_zero_unload_receipt",
+    "same_generation_cpu_to_cuda_restore",
+    "mock_only_synthesis_result_creates_no_audio_and_performs_no_playback",
+    "automatic_cuda_to_cpu_park_after_mock_synthesis",
+    "transition_and_owned_transfer_ledgers",
+    "typed_win32_memory_schema_and_bounds",
+    "canonical_module_source_class_method_backend_callable_default_closure_global_and_recursive_container_binding",
+    "fail_closed_release_or_cleanup_debt"
+  ],
+  "hostile_rejections_proven_in_mock_or_static_suite": [
+    "live_candidate_factory",
+    "widened_expired_or_malformed_fixture_authority",
+    "condition_or_component_content_drift",
+    "component_object_replacement",
+    "backend_callable_substitution",
+    "backend_module_object_substitution",
+    "control_helper_substitution",
+    "worker_control_method_descriptor_substitution",
+    "resource_wrong_type_range_staleness_identity_commit_rss_or_headroom",
+    "qwen_wrong_model_digest_type_keep_alive_overlap_hash_or_timestamp_order",
+    "expired_deadline_or_cancellation",
+    "forbidden_live_dependency_imports",
+    "missing_native_suspended_job_stable_handle_or_one_use_ledger_boundaries",
+    "V19_schema_cardinality_or_array_drift",
+    "false_authentic_voice_provenance_for_auditioned_or_generic_voice"
+  ],
+  "exact_v19_schema_binding": {
+    "conditions": 4,
+    "monotonic_timestamps": 51,
+    "metadata": 42,
+    "derived_durations": 30,
+    "ordering_rules": 15
+  },
+  "seal": {
+    "path": "STATIC_SEAL_MANIFEST.json",
+    "bytes": 2882,
+    "sha256": "70e7e36823d0e7985db66376cac4c194846292393bdb94bf6ee5ed523848a77b",
+    "sealed_subject_count": 9
+  },
+  "execution_truth": {
+    "author_mock_fixture_executed": true,
+    "model_calls": 0,
+    "gpu_calls": 0,
+    "live_synthesis_calls": 0,
+    "audio_files_created": 0,
+    "playback_calls": 0,
+    "camera_calls": 0,
+    "microphone_calls": 0,
+    "network_calls": 0,
+    "production_route_calls": 0,
+    "latency_measurements": 0,
+    "latency_improvement_claimed": false,
+    "production_route_changed": false
+  },
+  "remaining": [
+    "different_exact_byte_fresh_static_audit_of_this_seal",
+    "separate_non_model_native_controller_hostile_validation_package",
+    "different_audit_of_that_controller_package",
+    "separate_one_use_execution_package",
+    "different_run_authority_audit",
+    "one_matched_owner_scoped_experiment",
+    "accept_or_reject_from_exact_text_audio_device_memory_and_camera_evidence"
+  ],
+  "boundary": "DO_NOT_RUN_COPY_OR_INTEGRATE_V20_PRODUCTION_V2_UNCHANGED"
+}

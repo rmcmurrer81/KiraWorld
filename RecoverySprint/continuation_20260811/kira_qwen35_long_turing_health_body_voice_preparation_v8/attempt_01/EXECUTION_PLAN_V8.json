@@ -1,0 +1,114 @@
+{
+  "schema_version": 8,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_execution_plan_v8",
+  "status": "STATIC_SUCCESSOR_NOT_EXECUTED_PENDING_DIFFERENT_FRESH_AUDIT",
+  "predecessor": {
+    "v7_rejected_no_live_attempt": true,
+    "v7_live_retry_allowed": false,
+    "subjects": [
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v7/attempt_01/EXECUTION_PLAN_V7.json",
+        "bytes": 5149,
+        "sha256": "6ed530e256eb0341839901aa00999dc5cbfde244f426f1ca90a8a64792a44f74"
+      },
+      {
+        "path": "tools/run_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v7.py",
+        "bytes": 20433,
+        "sha256": "90b27e7337a213f8413664bebd9be5d6bd96f3e441487ca702cd5b4e6ab8396c"
+      },
+      {
+        "path": "Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v7.py",
+        "bytes": 10083,
+        "sha256": "48af3c279d71e49f46262a64f1610134684715eee8646dcae8de611fe8f87810"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v7/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+        "bytes": 1109,
+        "sha256": "f6879742f2d395db90e8b8b1f8d3fb0559f4b2759689dcf57de93adecdd265cf"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v7/attempt_01/STATIC_SEAL_MANIFEST.json",
+        "bytes": 1070,
+        "sha256": "f4dd2ec42565b604b5089e9f3ea6e4b492a0fdee2fa21e483324fca5cd166adf"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_preparation_v7/attempt_01/CHECKPOINT.md",
+        "bytes": 4167,
+        "sha256": "30ce70c660783db1d393d879ae9545d0f5a8019875cc6d4ad94d28233ed97bbe"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v7_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+        "bytes": 661,
+        "sha256": "c03f33c2170f559f7e93ac36e195d42c3bdfa1ab42f118e80991e6e61e7d6345"
+      },
+      {
+        "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v7_fresh_static_audit/attempt_01/CHECKPOINT.md",
+        "bytes": 3203,
+        "sha256": "846158f938cb2a27a9b547a13bd2701a00cbbf3472352990e53eb18d7d583585"
+      }
+    ]
+  },
+  "retained_runtime_contract": {
+    "effective_measured_turns": 35,
+    "voluntary_invitation_generations": 1,
+    "maximum_qwen_generations": 36,
+    "exact_model": "qwen3.5:9b",
+    "exact_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "llama_allowed": false,
+    "voice_route": "blackwell_gpu_persistent_candidate_v2",
+    "voice_device": "cuda",
+    "cpu_fallback_allowed": false,
+    "sapi_allowed": false,
+    "generic_voice_allowed": false,
+    "speaker_playback_requested": true,
+    "child_watchdog_seconds": 5100,
+    "parent_timeout_seconds": 5250,
+    "sealed_maximum_seconds": 5400,
+    "physical_supervision_claimed": false,
+    "owner_hearing_may_be_inferred": false
+  },
+  "reviewed_shell_successor": {
+    "legacy_plan": {
+      "path": "RecoverySprint/continuation_20260810/kira_qwen35_long_turing_health_body_voice_preparation/attempt_01/EVALUATION_PLAN.json",
+      "bytes": 15633,
+      "sha256": "88ab1e53f3924302256abc6ab9c4909167057e6863d31743bf3602b101fc42ea"
+    },
+    "legacy_shell_binding_sha256": "69594a9917b55dbca4992c12c357f79d81c0ccb7028ca8f2cc46e4f18789ecdd",
+    "current_shell": {
+      "path": "tools/kira_world_shell_server.py",
+      "bytes": 606696,
+      "sha256": "72e4fc403e00a2c4e7ac84e7a87a3c925fc9ce475a8afc90e17ac9e0b6b19fb4"
+    },
+    "fast_end_test": {
+      "path": "Testing/test_kira_text_voice_fast_end_static.py",
+      "bytes": 1108,
+      "sha256": "b74e2dd3144f825095fbe71570afca7a7e6e2872062cbf70c7e0d456a50797c9"
+    },
+    "fast_end_checkpoint": {
+      "path": "RecoverySprint/continuation_20260811/kira_text_voice_fast_end_static_repair/attempt_01/CHECKPOINT.md",
+      "bytes": 2468,
+      "sha256": "c920b1c7747817fe3c9e81da219348fce0030e07a03b8c1fbe66d48b0118058e"
+    },
+    "original_other_project_binding_count": 9,
+    "exact_one_substitution_only": true,
+    "historical_v1_files_unchanged": true
+  },
+  "v8_repair_contract": {
+    "v7_semantic_and_terminal_repairs_retained": true,
+    "legacy_v1_plan_must_remain_exact": true,
+    "legacy_shell_binding_must_match_recorded_predecessor": true,
+    "current_shell_and_fast_end_evidence_must_match_exact": true,
+    "all_nine_other_v1_project_bindings_must_match_exact": true,
+    "no_second_project_binding_substitution_allowed": true,
+    "full_nested_contract_loader_must_pass_before_live_authority": true,
+    "technical_pass_is_turing_acceptance": false,
+    "owner_or_independent_semantic_review_still_required": true
+  },
+  "execution_roots": {
+    "evidence_root": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v8",
+    "generated_root": "Voice/generated/acceptance/kira_qwen35_long_turing_health_body_voice_owner_evaluation_v8",
+    "only_permitted_attempt_label": "attempt_01",
+    "append_only_reservation_required": true,
+    "future_different_fresh_exact_byte_audit_required": true
+  }
+}

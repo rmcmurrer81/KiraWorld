@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "review_kind": "different_fresh_exact_byte_hostile_static_audit",
+  "decision": "REJECT",
+  "requested_acceptance_not_issued": "ACCEPT_EXACTLY_ONE_OWNER_AUTHORIZED_UNATTENDED_ATTEMPT_01",
+  "live_authority": "NONE",
+  "sealed_closure_exact": true,
+  "bound_v5_closure_exact": true,
+  "author_v6_tests": {"passed": 45, "failed": 0},
+  "author_combined_v5_v6_tests": {"passed": 88, "failed": 0},
+  "independent_tests": {"passed": 24, "failed": 15},
+  "blocking_findings": [
+    "four prohibited meaning-equivalent claims were accepted",
+    "terminal aggregate cleanup fields can be omitted",
+    "non-finite numeric status and cleanup values are accepted",
+    "JSON NaN, Infinity, and -Infinity constants are accepted",
+    "MappingProxyType terminal objects pass the exact-object gate"
+  ],
+  "retained_static_gate_checks": {
+    "exact_model": "qwen3.5:9b",
+    "exact_model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "measured_turns": 35,
+    "voluntary_invitation_turns": 1,
+    "generation_cap": 36,
+    "llama_route_absent": true,
+    "blackwell_v2_cuda_only": true,
+    "fallbacks_forbidden": true,
+    "wav_playback_cleanup_gates_present": true,
+    "unattended_authorization_claim_truthful": true
+  },
+  "v6_evidence_root_absent": true,
+  "v6_generated_root_absent": true,
+  "live_operations": 0
+}

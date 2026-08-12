@@ -1,0 +1,1192 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-01T06:42:52.529767Z",
+  "scope": "isolated_kira_chatterbox_0_1_7_sidecar",
+  "global_python_314_modified": false,
+  "python": {
+    "version": "3.11.9",
+    "venv_executable_relative": "Voice/sidecars/chatterbox_py311/.venv/Scripts/python.exe",
+    "venv_executable_sha256": "21bb438c0d4a6f1f164b9a646f6ee000340185e5871180aec06db8d3f07c0082",
+    "base_executable": "C:\\Users\\robmc\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "base_executable_sha256": "5f7b89a612c9b8af1d6456cdfcd1dbe5ca630849e79aebced9bee9a6694952ec"
+  },
+  "requirements_lock": {
+    "path": "Voice/sidecars/chatterbox_py311/requirements.lock.txt",
+    "bytes": 2179,
+    "sha256": "9328c4ae58b6848a5a2dcd8c6a718d48d29c701552e74f4d518779df12545f94",
+    "line_count": 113
+  },
+  "install_reports": [
+    {
+      "path": "Voice/sidecars/chatterbox_py311/evidence/torch_install_report.raw.json",
+      "bytes": 95817,
+      "sha256": "bc850991946889efd3dd0b7c1a9645382ff0ce1164a6b983d598e4c485f746ea",
+      "pip_version": "24.0",
+      "python_full_version": "3.11.9",
+      "install_record_count": 10
+    },
+    {
+      "path": "Voice/sidecars/chatterbox_py311/evidence/chatterbox_install_report.raw.json",
+      "bytes": 1297363,
+      "sha256": "626b1d616a8f7d3470a8c299990a81576f9c9d055d48628eb3f86b9db2b4937c",
+      "pip_version": "24.0",
+      "python_full_version": "3.11.9",
+      "install_record_count": 100
+    },
+    {
+      "path": "Voice/sidecars/chatterbox_py311/evidence/resource_install_report.raw.json",
+      "bytes": 26343,
+      "sha256": "e8599a540595e34c5962b69bc9b8c03a468e9d54e81e2ba6c23c2b5eaf3287f2",
+      "pip_version": "24.0",
+      "python_full_version": "3.11.9",
+      "install_record_count": 1
+    }
+  ],
+  "installed_distributions": [
+    {
+      "name": "aiofiles",
+      "version": "24.1.0",
+      "dist_info": "aiofiles-24.1.0.dist-info",
+      "metadata_sha256": "0af509c76d57725808d4ba7906dff803225eb11620d31092c787b12595666920",
+      "record_sha256": "4b5c74242e79ad7aa69751d190a4cae24e92a6607b7cf01f5905ada89fcd6efc",
+      "archive_sha256": "b4ec55f4195e3eb5d7abd1bf7e061763e864dd4954231fb8539a0ef8bb8260e5",
+      "archive_url": "https://files.pythonhosted.org/packages/a5/45/30bb92d442636f570cb5651bc661f52b610e2eec3f891a5dc3a4c3667db0/aiofiles-24.1.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "dist_info": "annotated_doc-0.0.5.dist-info",
+      "metadata_sha256": "8c24d70c5d9153d22123353a906042fd7603df2d15c2196290b0f8a962558c46",
+      "record_sha256": "211b5417e98907d372553a4424e9193e0af4fdb53962d902735f907c9895289a",
+      "archive_sha256": "117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101",
+      "archive_url": "https://files.pythonhosted.org/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "dist_info": "annotated_types-0.8.0.dist-info",
+      "metadata_sha256": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298",
+      "record_sha256": "7019741c16d7c811aa59c4305c47e85bfb62c1a9925e83f16fb69f4a66b63fff",
+      "archive_sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+      "archive_url": "https://files.pythonhosted.org/packages/99/91/8acff4f5e50511b911bbccb72b8628a49c68ce14148cd9f6431094859a90/annotated_types-0.8.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "antlr4-python3-runtime",
+      "version": "4.9.3",
+      "dist_info": "antlr4_python3_runtime-4.9.3.dist-info",
+      "metadata_sha256": "d1de5c7416841a56a3d73795e7f30587c2b8f3ba01fbbff68c094e308c629e7d",
+      "record_sha256": "1496220a96aabd11e0eaa7ccd6926f2a8232f2dba53a3abd12fb4977b16476c4",
+      "archive_sha256": "f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b",
+      "archive_url": "https://files.pythonhosted.org/packages/3e/38/7859ff46355f76f8d19459005ca000b6e7012f2f1ca597746cbcd1fbfe5e/antlr4-python3-runtime-4.9.3.tar.gz",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.2",
+      "dist_info": "anyio-4.14.2.dist-info",
+      "metadata_sha256": "c5e6fc4dfd833319913b287be7a30d9935e9208c7ef917630621855aaac4d419",
+      "record_sha256": "2a6afa22bfa89212d58335b5dc5696cf9fe3a89a83528e01a924ae734e506a7c",
+      "archive_sha256": "9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494",
+      "archive_url": "https://files.pythonhosted.org/packages/da/35/f2287558c17e29fafc8ef3daf819bb9834061cfa43bff8014f7df7f63bdc/anyio-4.14.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "audioread",
+      "version": "3.1.0",
+      "dist_info": "audioread-3.1.0.dist-info",
+      "metadata_sha256": "fb8bd8b902ba9ba56d0f9b11caf031819b12fd5d1c59815e3776598d291f6846",
+      "record_sha256": "ae281797e3ce57ccab1b0db7e5b0e8ccb96acd8358f6567b13967fe9bc9f84f1",
+      "archive_sha256": "b30d1df6c5d3de5dcef0fb0e256f6ea17bdcf5f979408df0297d8a408e2971b4",
+      "archive_url": "https://files.pythonhosted.org/packages/7e/16/fbe8e1e185a45042f7cd3a282def5bb8d95bb69ab9e9ef6a5368aa17e426/audioread-3.1.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "brotli",
+      "version": "1.2.0",
+      "dist_info": "brotli-1.2.0.dist-info",
+      "metadata_sha256": "74bcce6f21c042efe5b1ddfb1cf73670307f21d785680d5f7838c792226f91d1",
+      "record_sha256": "242bd97c5177ffbb0b0eb9e6958f1e660f96361d52535b344147f6a9ecc0c239",
+      "archive_sha256": "022426c9e99fd65d9475dce5c195526f04bb8be8907607e27e747893f6ee3e24",
+      "archive_url": "https://files.pythonhosted.org/packages/02/8b/ecb5761b989629a4758c394b9301607a5880de61ee2ee5fe104b87149ebc/brotli-1.2.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "catalogue",
+      "version": "2.0.10",
+      "dist_info": "catalogue-2.0.10.dist-info",
+      "metadata_sha256": "570324cbd96a88587fd07f0cc7c29e0bc3c92b6d097d32e09775f8fcdd6576d2",
+      "record_sha256": "73e3ae7790df8a4be2a5a924bfd4899799f4ba94f2f5bbc2842502aa2c21e145",
+      "archive_sha256": "58c2de0020aa90f4a2da7dfad161bf7b3b054c86a5f09fcedc0b2b740c109a9f",
+      "archive_url": "https://files.pythonhosted.org/packages/9e/96/d32b941a501ab566a16358d68b6eb4e4acc373fab3c3c4d7d9e649f7b4bb/catalogue-2.0.10-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "dist_info": "certifi-2026.7.22.dist-info",
+      "metadata_sha256": "ef5af1638fbb23676ac3c5777dfcfc2cd9c348fe4172ed5ba3d277655b248090",
+      "record_sha256": "f2d513bb7e6ba764c2a8ffdbbb04ce7c81c3b1829b94243fbc97151268c0dc68",
+      "archive_sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "archive_url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.0",
+      "dist_info": "cffi-2.1.0.dist-info",
+      "metadata_sha256": "b91c3c381eab9e6d307680ef5ea22e91fa2e33ed9790aece5922e1621a087523",
+      "record_sha256": "c682b751b5b4c491b822418bb49b3ae1daa3b863cdc6c6994a46257c0fde172f",
+      "archive_sha256": "4f26194e3d95e06501b942642855aed4f953d55e95d7d01b7c4483db3ecff458",
+      "archive_url": "https://files.pythonhosted.org/packages/f9/c8/6c2de1d55cf35ef8b92885d5ef280790f0fb9634d87ea1cc315176aecd61/cffi-2.1.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "cfgv",
+      "version": "3.5.0",
+      "dist_info": "cfgv-3.5.0.dist-info",
+      "metadata_sha256": "ae126b80e15f39d0feff7368cefea2ea6478fdcedcde52918d0f58b668e19137",
+      "record_sha256": "1ec4a008bf27a0b58f69601e05413c8d965caf847c4587d85237b21d8e8d43ac",
+      "archive_sha256": "a8dc6b26ad22ff227d2634a65cb388215ce6cc96bbcc5cfde7641ae87e8dacc0",
+      "archive_url": "https://files.pythonhosted.org/packages/db/3c/33bac158f8ab7f89b2e59426d5fe2e4f63f7ed25df84c036890172b412b5/cfgv-3.5.0-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.9",
+      "dist_info": "charset_normalizer-3.4.9.dist-info",
+      "metadata_sha256": "83a2993c753cc6098985f8a75286025a01e96453403284ce25e3fef7665472e1",
+      "record_sha256": "26d149e781e973b3268f6f20dbd94435f084d7c84d1e145a119f63e1b25f4ff8",
+      "archive_sha256": "6366a16e1a25018694d6a5d784d09b046edc9eac40ea2b54065c3052672516a1",
+      "archive_url": "https://files.pythonhosted.org/packages/ed/a1/e29995109e455dc8eff8d0fac6ae509be39561318a7cfeac5d33ad029213/charset_normalizer-3.4.9-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "chatterbox-tts",
+      "version": "0.1.7",
+      "dist_info": "chatterbox_tts-0.1.7.dist-info",
+      "metadata_sha256": "53288542c1bb8a92150aa948ce1df0952671cb01b44e791d42c943fbd1fdf9a9",
+      "record_sha256": "01b84bfbe73122ca7bb6aefd6a4449941a05c7d383bcfa3e5dc119c4507740b8",
+      "archive_sha256": "83782500e3ad4e7c919132e9d7eb8755f29f57c5bde5ec48c655ca23a4eb113c",
+      "archive_url": "https://files.pythonhosted.org/packages/54/37/11a7f06983bfd5ebba71eb2caa6660941b17b31f3c49d4a5fe9e1e804d31/chatterbox_tts-0.1.7-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "click",
+      "version": "8.4.2",
+      "dist_info": "click-8.4.2.dist-info",
+      "metadata_sha256": "194c9dd81d567f9081f026c7e401060fbafa7bc147c8e0a58b3668b40a64c031",
+      "record_sha256": "e30b77efb8bfb0ee64b55fabdd6933e5133cae6abc0117a864c4f1e0d766e3f3",
+      "archive_sha256": "e6f9f66136c816745b9d65817da91d61d957fb16e02e4dcd0552553c5a197b76",
+      "archive_url": "https://files.pythonhosted.org/packages/fb/e2/79c688af8b210d232694e31e59da9f6ec747bae31c3f5946e4e9b98860d5/click-8.4.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "dist_info": "colorama-0.4.6.dist-info",
+      "metadata_sha256": "7baed29eb50c3b29bdb33ff84e3177bf1bc05784f7685ecdcaa4471c7dd810cc",
+      "record_sha256": "9233950164e1deb499bf8470c6546c30f52dfed6c54c04f2ac36bfaf6e5e8298",
+      "archive_sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+      "archive_url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "conformer",
+      "version": "0.3.2",
+      "dist_info": "conformer-0.3.2.dist-info",
+      "metadata_sha256": "24f9dcfc0c5184fb484cb794acaa4ddcb3adc712d0c68b5d2d29c6247721697f",
+      "record_sha256": "8899583d60e68238e385d66d13753abdd1f57f32cfe7c7e5f16c391a1fb0f790",
+      "archive_sha256": "b957faa683e9e75061257f77407318428f2ad0fb5262bfc2e9b55fc2fffdfa03",
+      "archive_url": "https://files.pythonhosted.org/packages/3f/7d/714601ab8d790d77d4158af743895fb999216cb02fc6283ab8e54911a887/conformer-0.3.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "decorator",
+      "version": "5.3.1",
+      "dist_info": "decorator-5.3.1.dist-info",
+      "metadata_sha256": "2133792485403bbd739e1db5960228bedbcde6d00c0acc052b27f39dbae5b5c4",
+      "record_sha256": "03cc78835dbf8bab25516aac274c71eb582c44dac77163f0a3c9e74e576a5f91",
+      "archive_sha256": "f47fe6fdbd2edd623ecfe36875d37aba411624e2670dd395dddae1358689bb3c",
+      "archive_url": "https://files.pythonhosted.org/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "Deprecated",
+      "version": "1.3.1",
+      "dist_info": "deprecated-1.3.1.dist-info",
+      "metadata_sha256": "409767ac23878c1c694888ce4acc43dab6b37efa2b40499567fb5c7d9dce5852",
+      "record_sha256": "d2568f91afd67844ce401f392b6d6b2f3de2f96a7c1cee7f140022732355d2bf",
+      "archive_sha256": "597bfef186b6f60181535a29fbe44865ce137a5079f295b479886c82729d5f3f",
+      "archive_url": "https://files.pythonhosted.org/packages/84/d0/205d54408c08b13550c733c4b85429e7ead111c7f0014309637425520a9a/deprecated-1.3.1-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "diffusers",
+      "version": "0.29.0",
+      "dist_info": "diffusers-0.29.0.dist-info",
+      "metadata_sha256": "6f86526b4cb2810da3765cc518fe27a35a30634f07cec6729f3650e574564d62",
+      "record_sha256": "401de6dee5c0e30aabbf5343ac3c0415365d61e7d2a9b7f1d0c5d9b24b573bb9",
+      "archive_sha256": "4c194d2379644a0f7ef9b4ff12c8cf5de4c6324e811265754f08e2f839b8cedb",
+      "archive_url": "https://files.pythonhosted.org/packages/d5/68/a84d929518c9fbd65febcedd7810203bcac393f9cddd0603ec58df7f93f7/diffusers-0.29.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "distlib",
+      "version": "0.4.3",
+      "dist_info": "distlib-0.4.3.dist-info",
+      "metadata_sha256": "6c988f8c23faa0ef8734f6863b32976d65f5851333161e8a8df3d80fc57e080d",
+      "record_sha256": "787ddab0ef49064606f20b4e037d1066b9ab2a2d53f2974095fce98b63d0abd1",
+      "archive_sha256": "4b0ce306c966eb73bc3a7b6abad017c556dadd92c44701562cd528ac7fde4d5b",
+      "archive_url": "https://files.pythonhosted.org/packages/02/08/9c41fb51ab5b43eb21674aff13df270e8ba6c4b29c8624e328dc7a9482af/distlib-0.4.3-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "einops",
+      "version": "0.8.2",
+      "dist_info": "einops-0.8.2.dist-info",
+      "metadata_sha256": "0bd65db043688a44f4a29608c1cba521c932f7ff76f238bbd869441e15012653",
+      "record_sha256": "d3d870dd2908b5f28c07810d2f9e63a165ed3c1af4b653f1b5fbe2be1e9a3a80",
+      "archive_sha256": "54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193",
+      "archive_url": "https://files.pythonhosted.org/packages/2a/09/f8d8f8f31e4483c10a906437b4ce31bdf3d6d417b73fe33f1a8b59e34228/einops-0.8.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "dist_info": "fastapi-0.141.1.dist-info",
+      "metadata_sha256": "1010c29547b4026bdb3cd1c406e0570b9d79bb448b5a61fa4d5bb5a5eb0b752c",
+      "record_sha256": "8f4aa95a2875a0a4ccfb073d1b93f12cefb1e48e9166331d2f87d07a7e8f22db",
+      "archive_sha256": "bfb91aa2d334c61cb35ba9a116fc123b3d3df31640b801cf57a7a78ec3f603b3",
+      "archive_url": "https://files.pythonhosted.org/packages/cb/03/10388a42375ee7e4ac9b94eb2c5c569c8b5795e377e701c9ac3ad63de890/fastapi-0.141.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "ffmpy",
+      "version": "1.0.0",
+      "dist_info": "ffmpy-1.0.0.dist-info",
+      "metadata_sha256": "b76baeef5742e6dfdd6f4eccc99cf01b13f776f8a2dc21f65010b665b5e6f6c6",
+      "record_sha256": "e28deeb09ff2f6ee6fb93c40692fc90754effadf3d5248c583a2160594e4080d",
+      "archive_sha256": "5640e5f0fd03fb6236d0e119b16ccf6522db1c826fdf35dcb87087b60fd7504f",
+      "archive_url": "https://files.pythonhosted.org/packages/55/56/dd3669eccebb6d8ac81e624542ebd53fe6f08e1b8f2f8d50aeb7e3b83f99/ffmpy-1.0.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "filelock",
+      "version": "3.29.0",
+      "dist_info": "filelock-3.29.0.dist-info",
+      "metadata_sha256": "21335d1940ca00830e17594e81e9ed7b393211b1e03eda3c411a3507bf59f4b7",
+      "record_sha256": "a448fa6e17e81aa2e4b9254836518a70e25213f23965dc6b2204ba72c7291170",
+      "archive_sha256": "96f5f6344709aa1572bbf631c640e4ebeeb519e08da902c39a001882f30ac258",
+      "archive_url": "https://files.pythonhosted.org/packages/81/47/dd9a212ef6e343a6857485ffe25bba537304f1913bdbed446a23f7f592e1/filelock-3.29.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.4.0",
+      "dist_info": "fsspec-2026.4.0.dist-info",
+      "metadata_sha256": "8f49c4404b507182ac953dfd4551641df0bf36ccf67e08ac8a68cce323bf1d4c",
+      "record_sha256": "8476cf8eca699fa9543afdee1721201cd48cb029b1cbfa9f640b229d96957137",
+      "archive_sha256": "11ef7bb35dab8a394fde6e608221d5cf3e8499401c249bebaeaad760a1a8dec2",
+      "archive_url": "https://files.pythonhosted.org/packages/d5/0c/043d5e551459da400957a1395e0febbf771446ff34291afcbe3d8be2a279/fsspec-2026.4.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "gradio",
+      "version": "6.8.0",
+      "dist_info": "gradio-6.8.0.dist-info",
+      "metadata_sha256": "05e865b4f82e3649b7142ce9316b7230e7468d1cc53016e3bafef0963ac2c7cd",
+      "record_sha256": "905e9a8495df484356a09f52a36062c1a3ab860a82aee55568e705ed534f6a64",
+      "archive_sha256": "1ece9f3d075bec3da5a6e69c77fa03ddcf3b14af56a9ca843a499406c2b3afd6",
+      "archive_url": "https://files.pythonhosted.org/packages/38/3c/1568ee82f0e4308612aaf964168e93b7f2adb64c3e77b7877fd397e773bf/gradio-6.8.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "gradio_client",
+      "version": "2.2.0",
+      "dist_info": "gradio_client-2.2.0.dist-info",
+      "metadata_sha256": "7a9b7b0625c8e56493eee8b6ebefce1868389ce61fbc5bb9fcd7011eaeb3f0e8",
+      "record_sha256": "6c6aab8790efabf308939f520cc334bf0df9be96cc3a234cf616a9db017bb40f",
+      "archive_sha256": "090f72106b41ba17dcf1b437db54a7bba4c406244f8b01210d5bf24b2af6a85d",
+      "archive_url": "https://files.pythonhosted.org/packages/c2/49/86b919727b5d6574528d5d9e67c6455bb707a3654abc87d61d7f1d742395/gradio_client-2.2.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "groovy",
+      "version": "0.1.2",
+      "dist_info": "groovy-0.1.2.dist-info",
+      "metadata_sha256": "4e9483c0c0f3c969f94e12c4484521260387742132520c23d7c8d19e20a99534",
+      "record_sha256": "c6ade512d8b8ff7db7b356f5345d39bf47dadd28daab1d3b5470080c2eb5e6dc",
+      "archive_sha256": "7f7975bab18c729a257a8b1ae9dcd70b7cafb1720481beae47719af57c35fa64",
+      "archive_url": "https://files.pythonhosted.org/packages/28/27/3d6dcadc8a3214d8522c1e7f6a19554e33659be44546d44a2f7572ac7d2a/groovy-0.1.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "dist_info": "h11-0.16.0.dist-info",
+      "metadata_sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64",
+      "record_sha256": "8e391456f4e0da0be0a48c231c89bcdf4f4ac33237f03a9b247b3fc2458f1983",
+      "archive_sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "archive_url": "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.5.2",
+      "dist_info": "hf_xet-1.5.2.dist-info",
+      "metadata_sha256": "66aff7f65c7eb5858e3361091e4d339a833161813330f1c7cfc30a75528eb926",
+      "record_sha256": "5f49e0fce7ff8227f46599c0480a1ff8f8b2104d852b9de7a7de70176f6e0358",
+      "archive_sha256": "ecf63d1cb69a9a7319910f8f83fcf9b46e7a32dfcf4b8f8eeddb55f647306e65",
+      "archive_url": "https://files.pythonhosted.org/packages/e9/f8/68b01c5c2edb56ac9a67b3d076ffddcb90867abaee923923eb34e7a14e76/hf_xet-1.5.2-cp38-abi3-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "dist_info": "httpcore-1.0.9.dist-info",
+      "metadata_sha256": "fe2d4fda6199128978779e0cf27f3c045c531863fcdd987eacc74f3a18d41c21",
+      "record_sha256": "36bec67b7063830936845ab96e5ea8340673e25414860e865929e465f7d00175",
+      "archive_sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+      "archive_url": "https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "dist_info": "httpx-0.28.1.dist-info",
+      "metadata_sha256": "febb9b0f8f3e80d57c8199c304f35c4336e8581d1d18d7983c92766b82793b25",
+      "record_sha256": "6ff8bee3e661e2300773e41fa392d9b2e5183d380f8cfc6d620220aeef61fa28",
+      "archive_sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+      "archive_url": "https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.26.0",
+      "dist_info": "huggingface_hub-1.26.0.dist-info",
+      "metadata_sha256": "29cc0efaae6ac00e446e1fc52029ef1c33fc53a98f6bcadd9678a1eeb9ecb187",
+      "record_sha256": "7eba1909f2fc34eb5b03e11469d4f1169d02d8d1921079d8a57c07939a197e3d",
+      "archive_sha256": "e8cca670caa5d8dfa7e45bf45e86b466698198cd8150c021bcdb4a86b9252364",
+      "archive_url": "https://files.pythonhosted.org/packages/97/bb/63a644c75b545f3ff394b822e9bd1c4a9586489c618b77a4d8a44a33a23b/huggingface_hub-1.26.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "identify",
+      "version": "2.6.19",
+      "dist_info": "identify-2.6.19.dist-info",
+      "metadata_sha256": "6bd3f4b6084b3aa9bbfdd4631b2edffdc2908b396dfc2971891d0356bccb4965",
+      "record_sha256": "f210ff8060bf7cf66f470dfce019fc259ba6db40a1ea33b91bfffed0a56a7f79",
+      "archive_sha256": "20e6a87f786f768c092a721ad107fc9df0eb89347be9396cadf3f4abbd1fb78a",
+      "archive_url": "https://files.pythonhosted.org/packages/94/84/d9273cd09688070a6523c4aee4663a8538721b2b755c4962aafae0011e72/identify-2.6.19-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "idna",
+      "version": "3.18",
+      "dist_info": "idna-3.18.dist-info",
+      "metadata_sha256": "46dfe6e5ac462d0f680ecd9abcf66e829b6a2334824b4d9e3979b31135caf281",
+      "record_sha256": "2a9322a46bf8e081dca8be44a8e5799e3e5519667dc5b11954f39986dbac160d",
+      "archive_sha256": "7f952cbe720b688055e3f87de14f5c3e5fdaa8bc3928985c4077ca689de849a2",
+      "archive_url": "https://files.pythonhosted.org/packages/1e/5e/d4e9f1a599fb8e573b7b87160658329fbf28d19eac2718f51fc3def3aa5a/idna-3.18-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "importlib_metadata",
+      "version": "9.0.0",
+      "dist_info": "importlib_metadata-9.0.0.dist-info",
+      "metadata_sha256": "c49bc38e8c100c0ea3d0a865947a802c8bace444bc0d0f386141aa69d0429c7f",
+      "record_sha256": "8c9fbfc2a1cc343eb5c93ca3f150c202d5f1b3b9bd3f0d8381965f9a05a28d1e",
+      "archive_sha256": "2d21d1cc5a017bd0559e36150c21c830ab1dc304dedd1b7ea85d20f45ef3edd7",
+      "archive_url": "https://files.pythonhosted.org/packages/38/3d/2d244233ac4f76e38533cfcb2991c9eb4c7bf688ae0a036d30725b8faafe/importlib_metadata-9.0.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "jaconv",
+      "version": "0.5.0",
+      "dist_info": "jaconv-0.5.0.dist-info",
+      "metadata_sha256": "244ada3017da08e08483d1543211c76e404b7dd578795844d5ef6d35f9b49993",
+      "record_sha256": "8cae68543c2298a3f897bbe4f1f347a3b1e3d14a6b957116085717aeaadf246d",
+      "archive_sha256": "2914114fe761ca49fc7089e25e6ad4a400c26f262ffce84e13b176916b71610a",
+      "archive_url": "https://files.pythonhosted.org/packages/3b/da/9657d637bcacdbaf6a914ce504000da5639f9d945f8d3552a940f021d6c0/jaconv-0.5.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "dist_info": "jinja2-3.1.6.dist-info",
+      "metadata_sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8",
+      "record_sha256": "1cdb905163b71bcd3528f9d0f46aafd59670242cdbd0ed1a34de3e96dab0cf3b",
+      "archive_sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "archive_url": "https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.3",
+      "dist_info": "joblib-1.5.3.dist-info",
+      "metadata_sha256": "cee9c60896ae4e7a965a840fbde50d111d2f8018f61201d1ed2e9fc3dd4883e6",
+      "record_sha256": "89f725b2913e87563be4c1c30958d241cdca36d4917cbdee7cc9223ff6efaf47",
+      "archive_sha256": "5fc3c5039fc5ca8c0276333a188bbd59d6b7ab37fe6632daa76bc7f9ec18e713",
+      "archive_url": "https://files.pythonhosted.org/packages/7b/91/984aca2ec129e2757d1e4e3c81c3fcda9d0f85b74670a094cc443d9ee949/joblib-1.5.3-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "lazy-loader",
+      "version": "0.5",
+      "dist_info": "lazy_loader-0.5.dist-info",
+      "metadata_sha256": "ab65c86264937d8ac080d5fc895db927ff2f964a07cb92f91768db155fc0c37c",
+      "record_sha256": "18899a3a76356ff9d2b15f57c89d8ac8755a03ef452cfd1f15a212da4b88bca9",
+      "archive_sha256": "ab0ea149e9c554d4ffeeb21105ac60bed7f3b4fd69b1d2360a4add51b170b005",
+      "archive_url": "https://files.pythonhosted.org/packages/8a/a1/8d812e53a5da1687abb10445275d41a8b13adb781bbf7196ddbcf8d88505/lazy_loader-0.5-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "librosa",
+      "version": "0.11.0",
+      "dist_info": "librosa-0.11.0.dist-info",
+      "metadata_sha256": "5aaba06be0f28ca1ca776f8884fc0945f752a38d7ddca249403644d6f685c6d3",
+      "record_sha256": "12e58105372583b414a3d2b9755a56ea59bcee209200fd7462e3fa07c7261997",
+      "archive_sha256": "0b6415c4fd68bff4c29288abe67c6d80b587e0e1e2cfb0aad23e4559504a7fa1",
+      "archive_url": "https://files.pythonhosted.org/packages/b5/ba/c63c5786dfee4c3417094c4b00966e61e4a63efecee22cb7b4c0387dda83/librosa-0.11.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.48.0",
+      "dist_info": "llvmlite-0.48.0.dist-info",
+      "metadata_sha256": "caed92550a8514ce90a349843a922a6cdf7b347b5df84728d2e63d6dc215290a",
+      "record_sha256": "814c099bca74894f24b966ad66f7e8841da344b6b88b47b54954ec489a5e8017",
+      "archive_sha256": "efaee0276e5e17c2b99b92e0c974bd484ef5977cf5dbc9168e82b71578edb47f",
+      "archive_url": "https://files.pythonhosted.org/packages/aa/f7/b3222b13f2d424dae3c9e63fde476af25ebccf1f3faf0b52d1b79fc15c70/llvmlite-0.48.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "dist_info": "markdown_it_py-4.2.0.dist-info",
+      "metadata_sha256": "72c36ff516755443b1ecb61e17b2567a990230b49a504b0eb0c42d5f82448a9c",
+      "record_sha256": "000e78ebce6e6877c80da4bfcb53f1bd27604ce5f7ca4817581a2b4b8a3e79ad",
+      "archive_sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a",
+      "archive_url": "https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "dist_info": "markupsafe-3.0.3.dist-info",
+      "metadata_sha256": "f0ae5dbb09d50fb5f7632c3d53f0220995ef76019e5892e0a545740136a4e3cb",
+      "record_sha256": "eb598202c7791f6f9f1778b16223ebf50d15472be64260d47c93e9cbb5590740",
+      "archive_sha256": "de8a88e63464af587c950061a5e6a67d3632e36df62b986892331d4620a35c01",
+      "archive_url": "https://download.pytorch.org/whl/markupsafe-3.0.3-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "dist_info": "mdurl-0.1.2.dist-info",
+      "metadata_sha256": "b53b29d48f499367053fda3c81e7ce27d2558380ebbf83e66023b02eb7ddd25d",
+      "record_sha256": "2652eae77e98c35e6b681d60e4f2a8f401530363156d426928a797f3b985916e",
+      "archive_sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+      "archive_url": "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "ml_dtypes",
+      "version": "0.5.4",
+      "dist_info": "ml_dtypes-0.5.4.dist-info",
+      "metadata_sha256": "9ab61bf467463ee4d73ef173fc6c56a7f9ff598293ec3a589521aba0bd0e48b5",
+      "record_sha256": "e45ebf401494f84147785792be672a2479fcdd4a528e5d9f241b576d9d341b87",
+      "archive_sha256": "7c23c54a00ae43edf48d44066a7ec31e05fdc2eee0be2b8b50dd1903a1db94bb",
+      "archive_url": "https://files.pythonhosted.org/packages/b4/24/70bd59276883fdd91600ca20040b41efd4902a923283c4d6edcb1de128d2/ml_dtypes-0.5.4-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "dist_info": "mpmath-1.3.0.dist-info",
+      "metadata_sha256": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406",
+      "record_sha256": "4d067ead8a648e6c16b46974f315c0e08132b51d1612b6a98ba36dcb4c334e53",
+      "archive_sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c",
+      "archive_url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "msgpack",
+      "version": "1.2.1",
+      "dist_info": "msgpack-1.2.1.dist-info",
+      "metadata_sha256": "ac4d3343249d7c04a67b87f84c21f9ffb6b7d1e89cf569b762e2d964c4377169",
+      "record_sha256": "80c8a66a52a0ff89adcf57f2ff679370a72bab3fcbc070d92709c88ea890e923",
+      "archive_sha256": "2eda0b7ebb1283a98d3e4492ac933c8af6aff59fd3df1c3ed024f536af4b1dc8",
+      "archive_url": "https://files.pythonhosted.org/packages/3f/07/ca212739d179f9083bff2c7c08c24101c3555a334fadc2b876b18768a3ae/msgpack-1.2.1-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "narwhals",
+      "version": "2.24.0",
+      "dist_info": "narwhals-2.24.0.dist-info",
+      "metadata_sha256": "c8aa441e88f6ee9e37ac5232c33552426f87a6a200c6c66038d37c17b3c1ca56",
+      "record_sha256": "e713c755b09c5f005e132b0d2d6378c70fb916229f2d402ac86f68600d8e7f6a",
+      "archive_sha256": "42fdedf44e5b2ca7505630d45b4ac3058f38d8485cba9fe1652ca23152df7489",
+      "archive_url": "https://files.pythonhosted.org/packages/7e/85/a5bfaebfd305ac18b57b0854d74e37e586809061a91fda62f0bd50c8518e/narwhals-2.24.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "dist_info": "networkx-3.6.1.dist-info",
+      "metadata_sha256": "aca5d94a97d1f70f301d033addb635f6e66be8973a00aba4127637eed2ef316a",
+      "record_sha256": "062a288dc1a4210734ee0c8b5f8d79794cfc46389311f2aa045bf53466d77f05",
+      "archive_sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762",
+      "archive_url": "https://files.pythonhosted.org/packages/9e/c9/b2622292ea83fbb4ec318f5b9ab867d0a28ab43c5717bb85b0a5f6b3b0a4/networkx-3.6.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "nodeenv",
+      "version": "1.10.0",
+      "dist_info": "nodeenv-1.10.0.dist-info",
+      "metadata_sha256": "a8424896a12fd1be10526834176fc754cd296c900f40da655fb2e03c1b7eb921",
+      "record_sha256": "dd739bec51f57f65bb42e512ffd6d1968e77ea428b7a8133b5064a1093b6940a",
+      "archive_sha256": "5bb13e3eed2923615535339b3c620e76779af4cb4c6a90deccc9e36b274d3827",
+      "archive_url": "https://files.pythonhosted.org/packages/88/b2/d0896bdcdc8d28a7fc5717c305f1a861c26e18c05047949fb371034d98bd/nodeenv-1.10.0-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "numba",
+      "version": "0.66.0",
+      "dist_info": "numba-0.66.0.dist-info",
+      "metadata_sha256": "e3bbe9052ce13f891e572aecf7d1898c806ac3bc7c1bd16c96123914314f9a6d",
+      "record_sha256": "4287d3208fece9b07024bb25644cc95fd86a4ceddf48baacc10ba1f6809cf5db",
+      "archive_sha256": "fb601841d9e02e6237bb6522e36d0741614be3cfe2b482a6f00a41b5ba209443",
+      "archive_url": "https://files.pythonhosted.org/packages/5e/c9/9476940bc6d5caf5c0cf2e4c5feecbf01244bbe6f914614082dd7a3e520e/numba-0.66.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4",
+      "dist_info": "numpy-1.26.4.dist-info",
+      "metadata_sha256": "5a27a0e272b1f6e597acbbf58e8da39ae350b2318db8df4cf49d72518e62eebc",
+      "record_sha256": "394eff0a26b73df0635ac3010f944887e47cc2591deb867d2998e464ff7e5a24",
+      "archive_sha256": "cd25bcecc4974d09257ffcd1f098ee778f7834c3ad767fe5db785be9a4aa9cb2",
+      "archive_url": "https://files.pythonhosted.org/packages/3f/6b/5610004206cf7f8e7ad91c5a85a8c71b2f2f8051a0c0c4d5916b76d6cbb2/numpy-1.26.4-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "omegaconf",
+      "version": "2.3.1",
+      "dist_info": "omegaconf-2.3.1.dist-info",
+      "metadata_sha256": "24dc07ea1b801810c63c386cc47376727a774cce4493bfddf6454fe8335eb84e",
+      "record_sha256": "fe26dd1227c853112bb51fcfe2afaadf3f02cfb4a0b5f71e5d9f7101cfc8c7f4",
+      "archive_sha256": "3d701d14e9a8828f1edd28bb70b725908b34277cdd72cf7d6a83f94dadc6b6a0",
+      "archive_url": "https://files.pythonhosted.org/packages/a4/0e/152509871bf30df6fc38569f52a2db9b55dd41aae957adae50a053ac7778/omegaconf-2.3.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "onnx",
+      "version": "1.22.0",
+      "dist_info": "onnx-1.22.0.dist-info",
+      "metadata_sha256": "05e268109e1131e7e33ceeb1525934de515d1e32ed327dcc70b21793e0a2e760",
+      "record_sha256": "243106adfc8527dcaa56734a6a2246215d454b48d7982db004d35ad71287842e",
+      "archive_sha256": "8561a2c00041c07e08db0c228593b5b4694100398685f348532af7dbb84189da",
+      "archive_url": "https://files.pythonhosted.org/packages/54/57/cc0a9f2cf4522e42829d089927b4b75924d32f50dca237482e7b741df003/onnx-1.22.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "orjson",
+      "version": "3.11.9",
+      "dist_info": "orjson-3.11.9.dist-info",
+      "metadata_sha256": "53e38db257f6b17af9193bb1130f99d9d108420dc83dc134720563104c46bab0",
+      "record_sha256": "eca7e08d49fc37f241ea567cf9ce27be56a8d6a5251a22cb494467e26f71cfa7",
+      "archive_sha256": "57ea77fb70a448ce87d18fca050193202a3da5e54598f6501ca5476fb66cfe02",
+      "archive_url": "https://files.pythonhosted.org/packages/3f/17/1a1a228183d62d1b77e2c30d210f47dd4768b310ebe1607c63e3c0e3a71e/orjson-3.11.9-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "packaging",
+      "version": "26.2",
+      "dist_info": "packaging-26.2.dist-info",
+      "metadata_sha256": "4f9cbcd7933415a4793f7767c98a2b6a512c823fc81c87337815705f230ecabf",
+      "record_sha256": "60fc3a9468e229b9c144c7f8a513bacc59406a3bd573370b3a228699bf8bd579",
+      "archive_sha256": "5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e",
+      "archive_url": "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.5",
+      "dist_info": "pandas-3.0.5.dist-info",
+      "metadata_sha256": "d0b10219e9d6ede31e61b4e08566428e760edf133c7e0ff73b85280be986ce8d",
+      "record_sha256": "ee7e3bdadae51570a1b0b7339739edbdff9afa28a1375e325e42a09eb0e6d87c",
+      "archive_sha256": "b1261758dfb6cf12c3cff8300e21cefad30e7ec709abb4c24ac7318e6a52462a",
+      "archive_url": "https://files.pythonhosted.org/packages/fa/9a/31f4983f191af51ab2a8f2d0c7b33dff3a84da26533f982fff02c2f9e28b/pandas-3.0.5-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "dist_info": "pillow-12.3.0.dist-info",
+      "metadata_sha256": "2c4378001803cfac65809a50722d46e0da4ce8061e717f103e5d52734bab30f5",
+      "record_sha256": "978411d06f037f36a4fa57c239f59a7a787147614f04935564431bf4805d414b",
+      "archive_sha256": "8e95e1385e4998ae9694eeaa4730ba5457ff61185b3a55e2e7bea0880aef452a",
+      "archive_url": "https://files.pythonhosted.org/packages/63/c6/4bad1b18d132a50b27e1365e1ab163616f7a5bb56d330f66f9d1d9d4f9d4/pillow-12.3.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pip",
+      "version": "24.0",
+      "dist_info": "pip-24.0.dist-info",
+      "metadata_sha256": "90d11f277fd5868da679ee257c97656dde511c8aac7d025231407e6ce90839e2",
+      "record_sha256": "d57fbcdd9702c16e30ab25fc774e315539cea4d91766e2d5b51941ce88cdf885",
+      "archive_sha256": null,
+      "archive_url": null,
+      "archive_status": "venv_bootstrap"
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.11.0",
+      "dist_info": "platformdirs-4.11.0.dist-info",
+      "metadata_sha256": "5607d730c0017ca0afb8a2264079d3734eb48e74f33f1a2762c32a66138d0244",
+      "record_sha256": "20d4bc9564262cbe9a456cdbe285fc6cd216aa25589c106a2c23b3d9def7448f",
+      "archive_sha256": "360ccded2b7fce0af0ff80cc8f5942a1c5d99b0e856033acb030bfc634709e74",
+      "archive_url": "https://files.pythonhosted.org/packages/7d/68/d8d58938dfb1370b266a1a729e6d77a985be23689a0496498ee17b2cbf90/platformdirs-4.11.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pooch",
+      "version": "1.9.0",
+      "dist_info": "pooch-1.9.0.dist-info",
+      "metadata_sha256": "7a67b1fba8575748276b1abee0db0d0c7d673d1f4f8f404699e949f1359da962",
+      "record_sha256": "2cd9cda7bd4138e51bff41f684b633ce1f739390dcf46b0d3dd5c3c85a7ee3cc",
+      "archive_sha256": "f265597baa9f760d25ceb29d0beb8186c243d6607b0f60b83ecf14078dbc703b",
+      "archive_url": "https://files.pythonhosted.org/packages/2a/2d/d4bf65e47cea8ff2c794a600c4fd1273a7902f268757c531e0ee9f18aa58/pooch-1.9.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pre_commit",
+      "version": "4.6.1",
+      "dist_info": "pre_commit-4.6.1.dist-info",
+      "metadata_sha256": "c9d02ccfdb3f98d8fab24fc0ec1015590be62360c72a065277eef1f69d2d6515",
+      "record_sha256": "c0ee159346896d386d6faf28250e005f0862b5e836bea91b03f3e50b5ff448fd",
+      "archive_sha256": "0e3b2942510d1fb34eec167a3ec57331bf8442122f1153a9fb8b58f5c49b2717",
+      "archive_url": "https://files.pythonhosted.org/packages/fb/49/bc925106abcdac498074f2cbe6137e94e09f418dd2b7775df5b577dc0313/pre_commit-4.6.1-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.35.1",
+      "dist_info": "protobuf-7.35.1.dist-info",
+      "metadata_sha256": "1c58cfd7acd805c087ceb1f14c27cdba3c52d074e1d7b05dacf31fdf413c0a8c",
+      "record_sha256": "193fa76fa43af3f1ca924997b42c5b4706543bed4259ca5dda7a2327e25ef40a",
+      "archive_sha256": "230a75ddfc2de4806e56696ce9640c1cdfdb6543b7cfce98d42a4c0a0e7bdb87",
+      "archive_url": "https://files.pythonhosted.org/packages/0a/19/8d0cb6f20a1ef7b18f1c8986ad5783f22f84cce39c6ce9a6e645ea55192e/protobuf-7.35.1-cp310-abi3-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "psutil",
+      "version": "7.1.3",
+      "dist_info": "psutil-7.1.3.dist-info",
+      "metadata_sha256": "89db7acafbe66cd8b6a060ae993afda9c8f50aa4342c34c92a284be2c8c8534f",
+      "record_sha256": "c6354a8441f11d6451f55aeda5169a8d2540dd79243864841d05508cb009cbe6",
+      "archive_sha256": "f39c2c19fe824b47484b96f9692932248a54c43799a84282cfe58d05a6449efd",
+      "archive_url": "https://files.pythonhosted.org/packages/55/4c/c3ed1a622b6ae2fd3c945a366e64eb35247a31e4db16cf5095e269e8eb3c/psutil-7.1.3-cp37-abi3-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "dist_info": "pycparser-3.0.dist-info",
+      "metadata_sha256": "f547a60b0ab54cc2f242213d1f87960ad80df7dd5dfeb98d17a444d48bfb6b93",
+      "record_sha256": "422460c1a116078dd249b6fde592def7d049f04d33149ac8dbaf5425a185268f",
+      "archive_sha256": "b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992",
+      "archive_url": "https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.4",
+      "dist_info": "pydantic-2.13.4.dist-info",
+      "metadata_sha256": "d1e56c3412492512fb6b59a9dfc25ab7af2a8204585cd7bca000513023133394",
+      "record_sha256": "e0acd515187e747b327f54e4813abdbfaa2307170b523213a12afee72106d5af",
+      "archive_sha256": "45a282cde31d808236fd7ea9d919b128653c8b38b393d1c4ab335c62924d9aba",
+      "archive_url": "https://files.pythonhosted.org/packages/fd/7b/122376b1fd3c62c1ed9dc80c931ace4844b3c55407b6fb2d199377c9736f/pydantic-2.13.4-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.4",
+      "dist_info": "pydantic_core-2.46.4.dist-info",
+      "metadata_sha256": "e2d0298dfb8712190ad250722e11a46a4391e71d687d5c7667c09e935cadc63b",
+      "record_sha256": "f867a5f77eafb178011c762d80cb6e97755338370a045d4480f1ece26a65b5e9",
+      "archive_sha256": "6f2eeda33a839975441c86a4119e1383c50b47faf0cbb5176985565c6bb02c33",
+      "archive_url": "https://files.pythonhosted.org/packages/aa/e6/c505f83dfeda9a2e5c995cfd872949e4d05e12f7feb3dca72f633daefa94/pydantic_core-2.46.4-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pydub",
+      "version": "0.25.1",
+      "dist_info": "pydub-0.25.1.dist-info",
+      "metadata_sha256": "7f433cfd956d6e2628508f5e8d721e274dc9a3d03935b8bed15d5b56ab398989",
+      "record_sha256": "46a44aeecbb01c9481ef38796a86cdb63917f54c629f34fea7bf57248f78500d",
+      "archive_sha256": "65617e33033874b59d87db603aa1ed450633288aefead953b30bded59cb599a6",
+      "archive_url": "https://files.pythonhosted.org/packages/a6/53/d78dc063216e62fc55f6b2eebb447f6a4b0a59f55c8406376f76bf959b08/pydub-0.25.1-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.20.0",
+      "dist_info": "pygments-2.20.0.dist-info",
+      "metadata_sha256": "e0528f51b30427fae94723662ba622f8d8db2a4d8d3f1365698d67a52450a845",
+      "record_sha256": "96a444f04d64a0c72f275cc4213b932abdb55fc7d46641456c5b0420d52ed38d",
+      "archive_sha256": "81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176",
+      "archive_url": "https://files.pythonhosted.org/packages/f4/7e/a72dd26f3b0f4f2bf1dd8923c85f7ceb43172af56d63c7383eb62b332364/pygments-2.20.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pykakasi",
+      "version": "2.3.0",
+      "dist_info": "pykakasi-2.3.0.dist-info",
+      "metadata_sha256": "368dde2a701a1482371c02eb07560c39f09b55a3700911c006b2480823eaccce",
+      "record_sha256": "bcf1f52aff6e3495d13276710dd8b89d78c879a704f0cb9e19e1fb2978c5a5c2",
+      "archive_sha256": "26d21b090048ff45c6a4d8e962426b7951767216008ec30358e8a9d74af77f29",
+      "archive_url": "https://files.pythonhosted.org/packages/0f/e8/11644fe823e05c583b330e9fb81e3e8fc5d079036512a8300fc157be349d/pykakasi-2.3.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pyloudnorm",
+      "version": "0.2.0",
+      "dist_info": "pyloudnorm-0.2.0.dist-info",
+      "metadata_sha256": "403211cc9961454871bf8fa2650db26678e69bbffe765fb332b8ae79a80c006b",
+      "record_sha256": "c36029af73ee503ca759e6fcaf7f810088f70c8bc696474782c893b6ebafb051",
+      "archive_sha256": "9bb69afb904f59d007a7f9ba3d75d16fb8aeef35c44d6df822a9f192d69cf13f",
+      "archive_url": "https://files.pythonhosted.org/packages/aa/b6/65a49a05614b2548edbba3aab118f2ebe7441dfd778accdcdce9f6567f20/pyloudnorm-0.2.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "dist_info": "python_dateutil-2.9.0.post0.dist-info",
+      "metadata_sha256": "a9d436da322be808332f98d88325998e87cb693a678a9969feb4cfad729a6e93",
+      "record_sha256": "2d07914d24c0e9ff27be7ab8be3924c0b036ccf24d7df1a50db22e10a8263e22",
+      "archive_sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+      "archive_url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "python-discovery",
+      "version": "1.5.1",
+      "dist_info": "python_discovery-1.5.1.dist-info",
+      "metadata_sha256": "0d68adbbfd17361550bac2934f86885e2a00948993a60f971f8629e598476d17",
+      "record_sha256": "b6756223d488952431b979cce33d5ab2664295325c9de497d7e2734babf9b2ee",
+      "archive_sha256": "ac07f44cade589d954e9d6a1e1468539fdddd2cf676beb51da73e0f156b7c932",
+      "archive_url": "https://files.pythonhosted.org/packages/6a/07/a89b539750a159d5101c4eb9fc84e2961f65cefbd5e0b7440b284471c0b0/python_discovery-1.5.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "dist_info": "python_multipart-0.0.32.dist-info",
+      "metadata_sha256": "e9d399d7dea5eddf0e4d24b5c24687a82e7e50bf2c2b30f8f8a06a64d887dd86",
+      "record_sha256": "fc74879502d9db86d9ddd83d4d561f74d05f11a744b439f758006e9b51dbfb4b",
+      "archive_sha256": "ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23",
+      "archive_url": "https://files.pythonhosted.org/packages/e1/04/e8135ebd1ad02c56ec633277529b2602ff99ff634be76cdba5744cf554fd/python_multipart-0.0.32-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "pytz",
+      "version": "2026.3.post1",
+      "dist_info": "pytz-2026.3.post1.dist-info",
+      "metadata_sha256": "25ef8a562377a28d8c6bd8c5c9e80d761d0e22ac4a7bed24e512f589644ed33d",
+      "record_sha256": "f14e8d7813924b13becdefe29bd48a2c2727e8cf234fc823d10819f013f58d7d",
+      "archive_sha256": "dd95840dd199baea12d9cc096a1d452caa6596a1c1e4b5f3dbd1541855d5e815",
+      "archive_url": "https://files.pythonhosted.org/packages/0f/7b/39c34ca613b0b198cb866466651b26b045e2009864c5183c979a3b83f383/pytz-2026.3.post1-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "dist_info": "pyyaml-6.0.3.dist-info",
+      "metadata_sha256": "847a701020334386852b6e07bad1053cb0ce3da9ee1846e7e9d02b24e8bb3f8d",
+      "record_sha256": "5502bf031eeaa2a389656b0c0a6175c8a01a766a9328f53600e59229a662c0a4",
+      "archive_sha256": "9f3bfb4965eb874431221a3ff3fdcddc7e74e3b07799e0e84ca4a0f867d449bf",
+      "archive_url": "https://files.pythonhosted.org/packages/da/e3/ea007450a105ae919a72393cb06f122f288ef60bba2dc64b26e2646fa315/pyyaml-6.0.3-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "regex",
+      "version": "2026.7.19",
+      "dist_info": "regex-2026.7.19.dist-info",
+      "metadata_sha256": "1223d297d68f69c7ab0b515667a5b2e715ffed61626685bc1dcc280f93ce80f5",
+      "record_sha256": "3a958debe682683df47cd08c614b7796c00368851e853c3665fa1bc82a509eba",
+      "archive_sha256": "8d3469c91dd92ee41b7c95280edbd975ef1ba9195086686623a1c6e8935ce965",
+      "archive_url": "https://files.pythonhosted.org/packages/83/2b/cf1bc631db154eb95520d9d5dbc2371ff77a0f014bbf7d748fed8496aa63/regex-2026.7.19-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "dist_info": "requests-2.34.2.dist-info",
+      "metadata_sha256": "8c384ba3e979480faae2859d3c5e6c1276dd2c3616e322e124d52c8cfc556f27",
+      "record_sha256": "95f5b02ec24d1187982de368c0f5cafc8006fb2c409d624fc7140a184c6040a8",
+      "archive_sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "archive_url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "resemble-perth",
+      "version": "1.0.1",
+      "dist_info": "resemble_perth-1.0.1.dist-info",
+      "metadata_sha256": "d18ea80ef17bea39504d5d345816bd0c2a0a46d0c32355efc01da6c3428b4ad5",
+      "record_sha256": "f64d4916b06e0c924c5562b77d5a5c8b508a4e13a9caf807eabcf9ec908c00dc",
+      "archive_sha256": "65e9c37531b1a128a4a56226b75dece4521683cf3611b0b2a5ffe234f00c9342",
+      "archive_url": "https://files.pythonhosted.org/packages/77/cc/73226dd776f8e9c2975f64f4efc22988fb37e5b185ba5cccd6f2e7196954/resemble_perth-1.0.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "dist_info": "rich-15.0.0.dist-info",
+      "metadata_sha256": "fad34fc603fac4481bf81f8dd629492fc302c0ec31909c86644751512afb2e3b",
+      "record_sha256": "ee2f6812c4c91c97024a6fc8ed5ae670867569b610cf5c853127fd36bb85d9df",
+      "archive_sha256": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb",
+      "archive_url": "https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "s3tokenizer",
+      "version": "0.3.0",
+      "dist_info": "s3tokenizer-0.3.0.dist-info",
+      "metadata_sha256": "f1bb72548adcd333813634d51200bb3435dd08c2760626439691044bb6386233",
+      "record_sha256": "9d72954385e3947353249de86025aabf474cb4f7618ffd140d3521c9646b4bb2",
+      "archive_sha256": "c9e93b1892a124a2c4d958ab53610a1b4433fcb4172056e2f2bd3c09cfe249a6",
+      "archive_url": "https://files.pythonhosted.org/packages/6b/8f/ceddf749baf17405e755643e4d33c7c85bbb609a0c8cf43fc12aaea1c7ab/s3tokenizer-0.3.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "safehttpx",
+      "version": "0.1.7",
+      "dist_info": "safehttpx-0.1.7.dist-info",
+      "metadata_sha256": "5be3880c8660a8d390e6ed5c22360612f338d05cb25020e2f6ca1218a7e4f449",
+      "record_sha256": "fe662f99c0398343cb3adbbfcaca77307a9b458855c288933452db9f8ce3ba08",
+      "archive_sha256": "c4f4a162db6993464d7ca3d7cc4af0ffc6515a606dfd220b9f82c6945d869cde",
+      "archive_url": "https://files.pythonhosted.org/packages/2e/a3/0f0b7d78e2f1eb9e8e1afbff1d2bff8d60144aee17aca51c065b516743dd/safehttpx-0.1.7-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.5.3",
+      "dist_info": "safetensors-0.5.3.dist-info",
+      "metadata_sha256": "7f1ab4ef80b13057294d9176fe642edaf90306f1985a94133e57ce74528a7f22",
+      "record_sha256": "11f6e8b71cde802c47157b76be787390a70ab9873b144644d64360e1e5613d39",
+      "archive_sha256": "836cbbc320b47e80acd40e44c8682db0e8ad7123209f69b093def21ec7cafd11",
+      "archive_url": "https://files.pythonhosted.org/packages/69/e2/b011c38e5394c4c18fb5500778a55ec43ad6106126e74723ffaee246f56e/safetensors-0.5.3-cp38-abi3-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.0",
+      "dist_info": "scikit_learn-1.9.0.dist-info",
+      "metadata_sha256": "ee61a579f42d3edabe3e483db483475e33fffec04d7f3e69c539527bd93eaca6",
+      "record_sha256": "e684dcccfc74ebb73bedf267087f7846052389b55bff8d7957b295d994ddf9a0",
+      "archive_sha256": "5dc1818c77575d149e25fce9ef82dd7b7263ae372f03494158668ad632a69759",
+      "archive_url": "https://files.pythonhosted.org/packages/3b/67/be3d369f40d8178ba3bd86635d132e08cb5329b023e4669d9426d84bc007/scikit_learn-1.9.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.1",
+      "dist_info": "scipy-1.17.1.dist-info",
+      "metadata_sha256": "3a61ac02d145c9ca53f53d3f6f58d09017727a317731d0af02909730d4403e32",
+      "record_sha256": "043bd537f257737ca477503ec5e250542b3ea499884789429ba696b178deca14",
+      "archive_sha256": "d30e57c72013c2a4fe441c2fcb8e77b14e152ad48b5464858e07e2ad9fbfceff",
+      "archive_url": "https://files.pythonhosted.org/packages/95/da/0d1df507cf574b3f224ccc3d45244c9a1d732c81dcb26b1e8a766ae271a8/scipy-1.17.1-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "semantic-version",
+      "version": "2.10.0",
+      "dist_info": "semantic_version-2.10.0.dist-info",
+      "metadata_sha256": "7414d469a569046b6a246bfb1f105aab1b7abfdc32a95253f15432ea30159aa6",
+      "record_sha256": "f45aa235142dcd6ae52548f2fc556fe686fe6a78900481f97c819ad2197c4f7f",
+      "archive_sha256": "de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177",
+      "archive_url": "https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "setuptools",
+      "version": "65.5.0",
+      "dist_info": "setuptools-65.5.0.dist-info",
+      "metadata_sha256": "80c7a3b78ea0dff1f57855ee795e7d33842a0827aa1ef4ee17ec97172a80c892",
+      "record_sha256": "bfb77a968e06417bd37023bf1a2d7f1aae9d8e74231665d6699d5bb82bdbd7b0",
+      "archive_sha256": null,
+      "archive_url": null,
+      "archive_status": "venv_bootstrap"
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "dist_info": "shellingham-1.5.4.dist-info",
+      "metadata_sha256": "183d80220a37493262795739dd357cc5bb3f49bd390cc9198d5180e5451a07fa",
+      "record_sha256": "86e2e3022824d0909aaf0aeeb5fda27355b5576c3cd689243198cc93c0dbce7f",
+      "archive_sha256": "7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686",
+      "archive_url": "https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "dist_info": "six-1.17.0.dist-info",
+      "metadata_sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468",
+      "record_sha256": "6eca8f3767a4e15a8317acec57d36e1248342e307b4a20bebbbfa713befaa539",
+      "archive_sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "archive_url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.14.0",
+      "dist_info": "soundfile-0.14.0.dist-info",
+      "metadata_sha256": "266fbe4cb310c5222edd5216564149585c55395db7b29630f2e4b0ff8ac9cd47",
+      "record_sha256": "1ad95f96c6fcae8f5eaf55c11762399cac46a397de414b33f811994f6c499b64",
+      "archive_sha256": "299491d3499460fb1b74bb4bd78b57ffc2d243a5fafa7b6ec1b264875c78453e",
+      "archive_url": "https://files.pythonhosted.org/packages/ed/97/b39c18ac1df45e755ca22b8b00e872929da5d107998a207a5e4ac831bfda/soundfile-0.14.0-py2.py3-none-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "soxr",
+      "version": "1.1.0",
+      "dist_info": "soxr-1.1.0.dist-info",
+      "metadata_sha256": "4e2130ae330b85d863346ac935888e66d6816d8e934b6f4416614e8d22a4dc2e",
+      "record_sha256": "f0e8191a2a516f33a42d67acae74c045b0f36268bf5a22fda7811f70e72928bc",
+      "archive_sha256": "ae30c48ac795378cf23ba3c7c640b8ff794af714ac388b9fd6b31a40b39e6e86",
+      "archive_url": "https://files.pythonhosted.org/packages/8f/29/371467eb86c7ba6810df0bfe9409bcd9c52ec5615b111190fafe23e4d2e1/soxr-1.1.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "spacy_pkuseg",
+      "version": "1.0.1",
+      "dist_info": "spacy_pkuseg-1.0.1.dist-info",
+      "metadata_sha256": "ea64e04a05a75113ea4adbed478e4437057666b1f6a904b12e65c5c253bdb4dd",
+      "record_sha256": "3049ebe3a1efa835b269bc075d224080a057270e96653617e5c9f99f68f75ca2",
+      "archive_sha256": "13961649edbae2beb60abaaf293ad7021ea044a01c482bd3d990538aefea41db",
+      "archive_url": "https://files.pythonhosted.org/packages/a5/c1/3a5814cdf6600243328ecff4a5a5f3e96086f478dfff88b0f6932023afd7/spacy_pkuseg-1.0.1-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "srsly",
+      "version": "2.5.3",
+      "dist_info": "srsly-2.5.3.dist-info",
+      "metadata_sha256": "1fe25c226ae4c81f87224d0ef38153909a7b0dd86a5233eb8a0a9452bd320543",
+      "record_sha256": "b41aa1ae9859bfb83382e6787fbf141bf3d4a9b4515ae0da6ccf9db0661e37ba",
+      "archive_sha256": "f09b551f6c3e334652831ac68c770ee4284741ce0a3895bf1ccf2a1178d66cdd",
+      "archive_url": "https://files.pythonhosted.org/packages/d4/a5/6193aa4c08e488821538fcbce2282449e228fd2183ed67d118bb5ccd8b54/srsly-2.5.3-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "starlette",
+      "version": "0.52.1",
+      "dist_info": "starlette-0.52.1.dist-info",
+      "metadata_sha256": "c0ddc5837cca966a170fdeefb924a0dbd08f1cb1f310da1046a39faaeed0c535",
+      "record_sha256": "3d9acbaf23b0e0793e701b4695d5a059c090e620a5493d57f81caa174774650f",
+      "archive_sha256": "0029d43eb3d273bc4f83a08720b4912ea4b071087a3b48db01b7c839f7954d74",
+      "archive_url": "https://files.pythonhosted.org/packages/81/0d/13d1d239a25cbfb19e740db83143e95c772a1fe10202dda4b76792b114dd/starlette-0.52.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "sympy",
+      "version": "1.13.1",
+      "dist_info": "sympy-1.13.1.dist-info",
+      "metadata_sha256": "d1dbbf156ee3ac2102086ee84196d252330153dc5ba5b290d49918c6ae5b8b1c",
+      "record_sha256": "3c1911a202330378d47005f7f701e74663a1f21cfaf7770d3996158379363647",
+      "archive_sha256": "db36cdc64bf61b9b24578b6f7bab1ecdd2452cf008f34faa33776680c26d66f8",
+      "archive_url": "https://files.pythonhosted.org/packages/b2/fe/81695a1aa331a842b582453b605175f419fe8540355886031328089d840a/sympy-1.13.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.6.0",
+      "dist_info": "threadpoolctl-3.6.0.dist-info",
+      "metadata_sha256": "a45df8d07ea1883d772183a501d7d526076aa70dfcfddb276a2cbdc04def5341",
+      "record_sha256": "831c558199ec0552671891bfd2248e62825c281e719c05e28f44658214a369d7",
+      "archive_sha256": "43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb",
+      "archive_url": "https://files.pythonhosted.org/packages/32/d5/f9a850d79b0851d1d4ef6456097579a9005b31fea68726a4ae5f2d82ddd9/threadpoolctl-3.6.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.2",
+      "dist_info": "tokenizers-0.22.2.dist-info",
+      "metadata_sha256": "5ad9bccf21ae53d45f812703c80c7c03ecea300823655a2968f9e6778779bdb3",
+      "record_sha256": "4659f8f3f0ee0c1e135d327fb9e051f85c0f0ab7538759523b5a1bdf541510f4",
+      "archive_sha256": "c9ea31edff2968b44a88f97d784c2f16dc0729b8b143ed004699ebca91f05c48",
+      "archive_url": "https://files.pythonhosted.org/packages/65/71/0670843133a43d43070abeb1949abfdef12a86d490bea9cd9e18e37c5ff7/tokenizers-0.22.2-cp39-abi3-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "tomlkit",
+      "version": "0.13.3",
+      "dist_info": "tomlkit-0.13.3.dist-info",
+      "metadata_sha256": "72fd2d084576e1e827120719fcbe28a4dc6c48a807e843ea8d0e9e455e610779",
+      "record_sha256": "afba6eff025f59975ae7cf6292584461aa742d494e7e9dfa4324d1d1c1bed508",
+      "archive_sha256": "c89c649d79ee40629a9fda55f8ace8c6a1b42deb912b2a8fd8d942ddadb606b0",
+      "archive_url": "https://files.pythonhosted.org/packages/bd/75/8539d011f6be8e29f339c42e633aae3cb73bffa95dd0f9adec09b9c58e85/tomlkit-0.13.3-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "torch",
+      "version": "2.6.0+cu124",
+      "dist_info": "torch-2.6.0+cu124.dist-info",
+      "metadata_sha256": "d28ac83095d1df286693d57b81219b8a23c2487a8f945964a8fe175b0e28a78d",
+      "record_sha256": "6c12815c91342d0629baaf28872c2b6608e72f9ae2235348705c4869cdb40df2",
+      "archive_sha256": "6a1fb2714e9323f11edb6e8abf7aad5f79e45ad25c081cde87681a18d99c29eb",
+      "archive_url": "https://download-r2.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "torchaudio",
+      "version": "2.6.0+cu124",
+      "dist_info": "torchaudio-2.6.0+cu124.dist-info",
+      "metadata_sha256": "f65214e6fb4490f59e3412f41edb89c46221f4dea278946a93fef59e9604ea94",
+      "record_sha256": "dd9b3c27533adee9942773b9293e5e6d035df05ffb60cb3835d3b1267b8cb0ca",
+      "archive_sha256": "a25e146ce66ea9a6aed39008cc2001891bdf75253af479a4c32096678b2073b3",
+      "archive_url": "https://download-r2.pytorch.org/whl/cu124/torchaudio-2.6.0%2Bcu124-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.0",
+      "dist_info": "tqdm-4.70.0.dist-info",
+      "metadata_sha256": "0d95b85b90428f8776afc4a92b17c5094f78ee98d150b3255acbcdf4e9d57941",
+      "record_sha256": "9c1eb2aeb43dc5a73d34d760aed78fef2d23ab866942c1403b1a97105c5dc259",
+      "archive_sha256": "7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953",
+      "archive_url": "https://files.pythonhosted.org/packages/f9/1c/01bfd571a64e7f270e6bab5e33777debe0edc56759233ce84f27dec92d14/tqdm-4.70.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "transformers",
+      "version": "5.2.0",
+      "dist_info": "transformers-5.2.0.dist-info",
+      "metadata_sha256": "4340d0f550bf77d6595e4efafe066cd88306307577701df8e558ad620551c65f",
+      "record_sha256": "e029c50480df13ea1533da3169f0fc61b5e2afa26430719fb2a52a9e21f37821",
+      "archive_sha256": "9ecaf243dc45bee11a7d93f8caf03746accc0cb069181bbf4ad8566c53e854b4",
+      "archive_url": "https://files.pythonhosted.org/packages/4e/93/79754b0ca486e556c2b95d4f5afc66aaf4b260694f3d6e1b51da2d036691/transformers-5.2.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "typer",
+      "version": "0.27.0",
+      "dist_info": "typer-0.27.0.dist-info",
+      "metadata_sha256": "2a14ebc37e8aef52d20c8bf4f7d5caa3874e7e8dc0d476f9f6ef5bc6c2f47efd",
+      "record_sha256": "a94fd678d714141223a2ddf532b33764423b57deb8c70ace99542e48e8acb712",
+      "archive_sha256": "6f4b27631e47f077871b7dc30e933ec0131c1390fbe0e387ea5574b5bac9ccf1",
+      "archive_url": "https://files.pythonhosted.org/packages/40/03/26a383c9e58c213199d1aad1c3d353cfc22d4444ec6d2c0bf8ad02523843/typer-0.27.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "typer-slim",
+      "version": "0.24.0",
+      "dist_info": "typer_slim-0.24.0.dist-info",
+      "metadata_sha256": "d81899ba7b49ef949ddbb85ef6c3b0807d40853d869a2c87d7ab43c26a9f1f9b",
+      "record_sha256": "5cb96a953251b7114491b382bfa362e1a28c5c31c6668f3a92cc870484dfdba1",
+      "archive_sha256": "d5d7ee1ee2834d5020c7c616ed5e0d0f29b9a4b1dd283bdebae198ec09778d0e",
+      "archive_url": "https://files.pythonhosted.org/packages/a7/24/5480c20380dfd18cf33d14784096dca45a24eae6102e91d49a718d3b6855/typer_slim-0.24.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "dist_info": "typing_inspection-0.4.2.dist-info",
+      "metadata_sha256": "61096cd0bfe3c7040b6f98c22b02d190fe01936d0ff7616c5134fed02891953a",
+      "record_sha256": "614f0cd1ed0c5e6c48d397579f0fb689538c7e66da93542a8da1661c55f33481",
+      "archive_sha256": "4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7",
+      "archive_url": "https://files.pythonhosted.org/packages/dc/9b/47798a6c91d8bdb567fe2698fe81e0c6b7cb7ef4d13da4114b41d239f65d/typing_inspection-0.4.2-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.15.0",
+      "dist_info": "typing_extensions-4.15.0.dist-info",
+      "metadata_sha256": "c138378fe8f18934ac99de060535c53ec6c13aeed65e94c32641da7ee3192a72",
+      "record_sha256": "d09d67683e60ad06d78f768f653658c1e2834fcaf6f2ac69f294d7da9a358c28",
+      "archive_sha256": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548",
+      "archive_url": "https://download.pytorch.org/whl/typing_extensions-4.15.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.3",
+      "dist_info": "tzdata-2026.3.dist-info",
+      "metadata_sha256": "511c019df477939fe7f4c38e32ad74a570c4ebb05b13fd2fffd0f0f2dbe6f7b1",
+      "record_sha256": "bf7145abc571ef499d924629727b54f13bce83b49254b9613f2d1037bfbafd08",
+      "archive_sha256": "dc096730c87af6cab1b171c9d532be840741ff5d459015e7f6947bd7d7e54931",
+      "archive_url": "https://files.pythonhosted.org/packages/e5/6d/b53b99a9f2766d095985947a5782f1702cabb129a34f7a802d7197af832f/tzdata-2026.3-py2.py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "dist_info": "urllib3-2.7.0.dist-info",
+      "metadata_sha256": "66147856d30bbb6bed01c6ce3326d0f48d84ed5f286ac177633a1486b82eace5",
+      "record_sha256": "d92c5987f028a48aeca052e467c437707187f4289d98c9b891805e945aa6216e",
+      "archive_sha256": "9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897",
+      "archive_url": "https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.0",
+      "dist_info": "uvicorn-0.52.0.dist-info",
+      "metadata_sha256": "e0eae199e219055f5e70136cf97d7fbe494c910ac2cdeae21d6f2e1a9f12cfa5",
+      "record_sha256": "9b95a69565c2bcdda53c5e5fcbe6d125aee8e449eddf759598d81fd299debf56",
+      "archive_sha256": "3d887809810b89ed33501bcf0a9aba469b06ecd608158efce04bd6b48d8c9b08",
+      "archive_url": "https://files.pythonhosted.org/packages/39/e6/b5c0630ace9757232aec07112be8146b812787db52141ff9d50674aa7634/uvicorn-0.52.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "virtualenv",
+      "version": "21.7.1",
+      "dist_info": "virtualenv-21.7.1.dist-info",
+      "metadata_sha256": "77d1a36e734678a76b2f4ac142fa0eccde42db7ce32525b22087843926c76db1",
+      "record_sha256": "7a46a415f946ed3c0204429b0286e1c0305591d7ada445e0763e2b848fbe4b49",
+      "archive_sha256": "6394973f990536e34c05157179146c020284c42fe01da1dfeb0ba16c345280d9",
+      "archive_url": "https://files.pythonhosted.org/packages/4b/a7/ded126c19495158a05c7202b3389139839d4cf78d622d453867778e0f7a8/virtualenv-21.7.1-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "wrapt",
+      "version": "2.3.0",
+      "dist_info": "wrapt-2.3.0.dist-info",
+      "metadata_sha256": "b284be12998490478268627ecd2e8c665b3ef379a5589e75dbebf1a42d6159d6",
+      "record_sha256": "dbde97d0c852230d3f9e9e1c7333ebe75c8e92fcdb508ae677d53b36d520337f",
+      "archive_sha256": "195b1842b4122fb54e3cd3dd5b2b4aa49302a5a61da901df0481f5c97aedde84",
+      "archive_url": "https://files.pythonhosted.org/packages/4a/62/ecc969b13b141fef89b888c9760821cb01a86ac8fc953911592c8e1e1522/wrapt-2.3.0-cp311-cp311-win_amd64.whl",
+      "archive_status": "installer_report_bound"
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.0",
+      "dist_info": "zipp-4.1.0.dist-info",
+      "metadata_sha256": "a08698d0dd509325853fea0c5f7bbeff5046f16cf1666fcf0e03d0a6094c89d7",
+      "record_sha256": "763006f39ed3b7409b3d3cfdbc9cdfe0d309e671837af8c2707cc5622990f294",
+      "archive_sha256": "25ad4e16390cd314347dd8f1de67a2ac538ae658ed4ab9db16029c07c188e97f",
+      "archive_url": "https://files.pythonhosted.org/packages/3a/13/547360d81e6d88d58492968ffda9f9542854f11310ee556fef14260cc886/zipp-4.1.0-py3-none-any.whl",
+      "archive_status": "installer_report_bound"
+    }
+  ],
+  "installed_distribution_count": 113,
+  "pip_check": "No broken requirements found.",
+  "approved_kira_voice": {
+    "profile_path": "Voice/profiles/temp_ai/kira_voice_profile.json",
+    "profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+    "reference_path": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+    "reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c"
+  },
+  "runtime_policy": {
+    "input_channel": "public_spoken_only",
+    "playback": false,
+    "network": "offline_cache_only",
+    "generic_voice_fallback_allowed": false,
+    "process_model_cache": "one_shot_exit_and_release"
+  }
+}

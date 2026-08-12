@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "kira_qwen35_long_turing_health_body_voice_v11_independent_static_audit_decision",
+  "decision": "REJECT_V11_STATIC_SCHEMA_CONTROL_PACKAGE_NO_PROMOTION_NO_RUN",
+  "recorded_at_utc": "2026-08-11T20:28:03.806Z",
+  "reviewer_identity": "Codex subagent /root/long_v11_audit",
+  "author_identity": "Codex subagent /root/long_v10_author acting as V11 author",
+  "different_reviewer": true,
+  "exact_installed_input": {
+    "source_sha256": "8e820c0ac0d6ade8218ba770e73dbe34095aa91c77dc4fe187320232baa68360",
+    "test_sha256": "60861a39ea20b82ff25aea1dd1f48fd5fa7ccd007556d52818d6cf71243da3aa",
+    "plan_sha256": "591ad3197453b997de0dc1276fd4650b7a9d22839d8bd7f48d0b0735fca08bc6",
+    "author_result_sha256": "5233e032a1f99aee5174fd71db8f4709cacd1d3fad4953f8556b712453991d12",
+    "seal_sha256": "4a23ed5e4edc63ff8399cabc65d2fd889d5f24d978337bc2c68e7cfe81cc8cb4",
+    "author_checkpoint_sha256": "0f1abbba0475716f1a8cf933d2f10da3e3e701c4c36f9fe9416baa1fbd5b9e4a"
+  },
+  "positive_evidence": {
+    "seal_subjects_exact": "4/4",
+    "predecessor_subjects_exact": "9/9",
+    "current_policy_subjects_exact": "3/3",
+    "cache_free_static_and_mocked_tests": "136/136",
+    "baseline_runtime_closure_verification": "PASS",
+    "entry_point_source_boundary": "Both exact entry bodies verify and then raise without parser, retained delegation, or output calls",
+    "execution_roots_absent": true
+  },
+  "blocking_reasons": [
+    "Mutable _CallableSeal contents plus mutable _SOURCE_CODE_MAP_CACHE allow hostile non-source code to pass the full V11 closure verifier.",
+    "Double-negation and denial-of-denial wording produces five reproduced unsafe semantic false accepts.",
+    "The camera timing schema omits policy-required speech/transcript and preprocessing/transfer/close evidence fields.",
+    "The mixed-initiative schema omits policy-required new-transcript/replacement-response timing and several integrity/provenance requirements."
+  ],
+  "supersession": {
+    "v11_author_static_pending_state": "SUPERSEDED_BY_REJECTION",
+    "v11_main_invoked": false,
+    "v11_configurer_invoked": false,
+    "v11_live_attempt_exists": false,
+    "v11_may_be_retried": false,
+    "v10_remains_rejected_do_not_run": true,
+    "append_only_repair_required": true,
+    "repair_requires_different_fresh_audit": true,
+    "executor_or_live_attempt_authorized": false
+  },
+  "scope_truth": {
+    "no_model_gpu_camera_microphone_voice_audio_or_playback": true,
+    "no_person_or_protected_private_state": true,
+    "no_body_media_network_device_or_sarah_path": true,
+    "no_kira_write_by_reviewer": true,
+    "no_one_hour_turing_psychology_latency_or_behavior_result": true
+  }
+}

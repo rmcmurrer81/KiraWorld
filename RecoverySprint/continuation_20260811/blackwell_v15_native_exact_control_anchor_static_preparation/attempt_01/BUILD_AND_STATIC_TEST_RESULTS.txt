@@ -1,0 +1,67 @@
+BLACKWELL VOICE V15 IMMUTABLE ORIGIN-BOUND CONTROL ANCHOR
+AUTHOR BUILD AND STATIC TEST RESULTS
+
+Recorded UTC: 2026-08-11T16:30:51.1552573Z
+Author task: /root/resident_media_v15_author
+Workspace: Documents/Codex staging only; no Kira write
+
+BOUNDARY
+candidate_executed=false
+python_candidate_invoked=false
+model_calls=0
+gpu_voice_calls=0
+synthesis_calls=0
+playback_calls=0
+latency_measurements=0
+network_calls=0
+person_body_blender_calls=0
+execution_authority=NONE
+
+PREBUILD STATIC SUITE
+command: powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_blackwell_persistent_voice_candidate_v15_native_anchor_static.ps1 -Phase PreBuild
+result: PASS
+marker: V15_IMMUTABLE_ORIGIN_BOUND_HOSTILE_STATIC_TESTS_PASS
+scope: compile-only Python, canonical-config parser, source/validator/native text and in-memory hostile mutations; V15 not imported or executed
+
+STRICT NATIVE BUILD
+toolchain: Microsoft C/C++ Optimizing Compiler 19.50.35730 x64
+command: cl /nologo /W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include kira_blackwell_voice_control_anchor_v15.c /Fo:kira_blackwell_voice_control_anchor_v15.obj /Fe:kira_blackwell_voice_control_anchor_v15.exe /link /guard:cf /WX bcrypt.lib
+exit: 0
+warnings: 0
+errors: 0
+object: 98765 bytes; df8e9b21a70aa9cc659c9f4019f5752d06133f803e67d68ab52d4ae507692351
+executable: 175104 bytes; 7d8b807b54df5c980ecca2758e1d4359b3d385e3382839b8fd3101c16ede0a4f
+
+STRICT STATIC ANALYSIS
+command: cl /nologo /W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17 /I C:\Python314\include kira_blackwell_voice_control_anchor_v15.c
+exit: 0
+warnings: 0
+errors: 0
+analyzer object: 61224 bytes; 44f57aa2deed40ab89074e46af6f3b38c2f78427eeb8963c488239c806b272dd
+
+PE STATIC INSPECTION
+machine: x64 (8664)
+format: PE32+ (20B)
+high_entropy_va=true
+dynamic_base=true
+nx_compatible=true
+control_flow_guard=true
+cf_instrumented=true
+fid_table_present=true
+guard_cf_function_count=0x33
+imports=bcrypt.dll,KERNEL32.dll
+python_static_import=false
+process_shell_static_import=false
+
+POSTBUILD STATIC SUITE
+command: powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_blackwell_persistent_voice_candidate_v15_native_anchor_static.ps1 -Phase PostBuild
+result: PASS
+marker: V15_IMMUTABLE_ORIGIN_BOUND_HOSTILE_STATIC_TESTS_PASS
+
+POSTSEAL STATIC SUITE
+command: powershell.exe -NoProfile -ExecutionPolicy Bypass -File Testing/test_blackwell_persistent_voice_candidate_v15_native_anchor_static.ps1 -Phase PostSeal
+result: PASS
+marker: V15_IMMUTABLE_ORIGIN_BOUND_HOSTILE_STATIC_TESTS_PASS
+
+DIFFERENT_FRESH_AUDIT_REQUIRED=true
+ALLOWED_NEXT_AUTHORITY=NONE_UNTIL_DIFFERENT_FRESH_AUDIT

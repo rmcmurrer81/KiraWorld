@@ -1,0 +1,87 @@
+{
+  "schema": "kira.blackwell.voice_v20.measured_latency_successor.author_static_seal.v1",
+  "candidate_id": "kira_blackwell_voice_v20_cpu_park_measured_latency_successor",
+  "status": "AUTHOR_SEALED_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT",
+  "execution_authority": "NONE",
+  "candidate_executed": false,
+  "worker_mock_fixture_executed": true,
+  "native_source_compiled_only": true,
+  "native_candidate_linked": false,
+  "native_candidate_executed": false,
+  "production_route_changed": false,
+  "model_calls": 0,
+  "gpu_calls": 0,
+  "synthesis_calls": 0,
+  "playback_calls": 0,
+  "camera_calls": 0,
+  "microphone_calls": 0,
+  "network_calls": 0,
+  "production_route_calls": 0,
+  "latency_measurements": 0,
+  "latency_improvement_claimed": false,
+  "input_closure_rows": 41,
+  "cache_free_pytest_pass_count": 42,
+  "strict_python_compile_passed": true,
+  "msvc_x64_w4_wx_compile_passed": true,
+  "msvc_x64_analyze_w4_wx_passed": true,
+  "sealed_subject_count": 9,
+  "unique_paths": true,
+  "subjects": [
+    {
+      "path": "INPUT_CLOSURE.tsv",
+      "bytes": 8587,
+      "sha256": "91a268b31d818271c9bc96f3fcb35b3e0aa8ebc80e22b6a4b3959e1a50a9b4ed"
+    },
+    {
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 9697,
+      "sha256": "e6c69a7b25ab76303e384b7fb7e268ca0c4f05b652c9d875ebaf307ec1e6cb31"
+    },
+    {
+      "path": "voice_v20_worker.py",
+      "bytes": 79030,
+      "sha256": "1be570f8bd98fd561dce68c5b11f1b4c53dc43a7562f75e162f549b9559189b1"
+    },
+    {
+      "path": "voice_v20_native_supervisor.c",
+      "bytes": 22872,
+      "sha256": "65529f48fbb5d7a79975dfb326aed35fa04be812909f7bff58ed0175df9ca781"
+    },
+    {
+      "path": "MATCHED_EXPERIMENT_SCHEMA.json",
+      "bytes": 9080,
+      "sha256": "4431b1ccd3beab2bdba05c258d2957a1af9415daf0503516c1518ac20adfd184"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4847,
+      "sha256": "6589e4700c96545516ed9d9b084866ec6a3c368742a71be8d68e87ca073b19b7"
+    },
+    {
+      "path": "NATIVE_BUILD_STATIC_RESULT.json",
+      "bytes": 1564,
+      "sha256": "54213d112cd96b2c1d1821f19e88eea8a57cbca58c552e5138427d3658d04fa2"
+    },
+    {
+      "path": "test_voice_v20_contract.py",
+      "bytes": 12448,
+      "sha256": "fe65d9da29ccf5b63c24040eda2bf0bcd06902920ec8bca0a2be130cdd3f30b1"
+    },
+    {
+      "path": "test_voice_v20_worker_hostile.py",
+      "bytes": 19243,
+      "sha256": "242f2731f00b60ccbcdfffe63bcdf4c305879a91df0ff293a5849d6926313e69"
+    }
+  ],
+  "excluded_incidental_scratch": [
+    "__pycache__/",
+    ".pytest_cache/",
+    "voice_v20_native_supervisor.obj",
+    "voice_v20_native_supervisor_analyze.obj",
+    "voice_v20_native_supervisor_analyze.nativecodeanalysis.xml"
+  ],
+  "different_exact_byte_fresh_static_audit_required": true,
+  "copy_or_integration_authorized": false,
+  "run_authorized": false,
+  "boundary": "DO_NOT_RUN_COPY_OR_INTEGRATE_V20_PRODUCTION_V2_UNCHANGED"
+}

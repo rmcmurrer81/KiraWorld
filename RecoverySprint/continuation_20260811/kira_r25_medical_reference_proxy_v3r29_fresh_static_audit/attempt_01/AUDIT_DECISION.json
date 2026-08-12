@@ -1,0 +1,85 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r29.audit_a_rejection_decision.v1",
+  "recorded_utc": "2026-08-12T01:28:14Z",
+  "auditor_id": "independent_body_v3r29_audit_a_codex_review",
+  "author_id": "codex_r25_medical_reference_proxy_v3r29_two_stage_author",
+  "author_separation": true,
+  "verdict": "REJECT_AUDIT_A_NO_STAGE2_MATERIALIZATION_OR_BUILD_AUTHORITY",
+  "execution_authority": "NONE",
+  "maximum_materializations": 0,
+  "maximum_native_builds": 0,
+  "maximum_blender_invocations": 0,
+  "candidate_executed_by_auditor": false,
+  "native_product_executed_by_auditor": false,
+  "materializer_main_executed_by_auditor": false,
+  "blender_or_bpy_executed_by_auditor": false,
+  "worker_executed_by_auditor": false,
+  "kira_writes_by_auditor": false,
+  "stage1": {
+    "installed_files_exact": 26,
+    "sealed_subjects_exact": 25,
+    "canonical_bytes": 2674,
+    "package_root_sha256": "ee704f4b125efd1ae378fb3789e9df952788afb165c9b1d12334da9399834b99",
+    "seal_bytes": 5395,
+    "seal_sha256": "b4187e13fcb57204fd26ff6020044d0e5fd80ace5068514ba42da3f228e3f7ba",
+    "all_files_canonical_bytes": 2770,
+    "all_26_inventory_root_sha256": "80e9ab2fff1614c5024d95008868b78990086b4e117536c5fd14920ac1e62bc9"
+  },
+  "predecessor_closure": {
+    "v3r28_direct_rows_exact": 28,
+    "v3r28_author_rows": 19,
+    "v3r28_rejection_rows": 9,
+    "v3r27_transitive_rows_exact": 17,
+    "v3r27_author_rows": 11,
+    "v3r27_rejection_rows": 6,
+    "combined_45_observed_root_sha256": "20312cbf6e7f32a9138418beef6f2d87dbc9658d89011c66be5f07138d53588e",
+    "v3r28_subject_root_sha256": "5686bdb4997268b72f543dbc25cd51b37b7cfb6101d899dd1d0a59ab70d6c841",
+    "v3r28_seal_sha256": "2c4b031fc223282cebf42ff4e1d0403f4ab2914766d03f6847d91bdf73a8e1f6",
+    "v3r28_rejection_manifest_sha256": "a43722af6236db7daa64213169cec65a6949db0c4e5e33076d0717655e3e22bd"
+  },
+  "positive_static_facts": {
+    "scratch_layout_postseal": "PASS_28_DIRECT_17_TRANSITIVE_18_WORKER_21_AUDIT_1_CONSUMPTION_3_SEAL",
+    "installed_layout_postseal": "FAIL_MATERIALIZATION_LEDGER_ROOT_SCOPE",
+    "blender_identity": "108687824_BYTES_1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5",
+    "materialized_strict_rebuilds": "TWO_EXES_IDENTICAL_TO_SEALED_1a2adae502d1cf0ff547a4c93dbe58ebb5eecc21e832f8f00b6b6f393b0f6b2e",
+    "materialized_analyzer": "ZERO_UNSUPPRESSED_DEFECTS",
+    "materialized_pe": "X64_HIGH_ENTROPY_VA_DYNAMIC_BASE_NX_CFG_CET",
+    "materialized_imports": "BCRYPT_AND_KERNEL32_WITH_CREATEPROCESSW",
+    "seal_external_anchors": "SUBJECT_ROOT_SEAL_SHA256_AND_ALL_FILES_ROOT_STRICTLY_PARSED",
+    "audit_exact_types": "21_OF_21_WRONG_TYPE_AND_ANCHOR_CASES_REFUSED",
+    "final_reserved_handles": "EIGHT_FINAL_HANDLES_RETAINED_THROUGH_SUCCESS_AND_TERMINAL_REVALIDATION",
+    "proper_scratch_ledger_helper": "FIRST_CREATE_READBACK_PASS_AND_RETRY_REFUSED"
+  },
+  "blocking_findings": [
+    {
+      "id": "V3R29-A01-INSTALLED-POSTSEAL-RELOCATION",
+      "severity": "BLOCKING",
+      "finding": "The sealed materialization-consumption hostile test creates its temporary authority root below test ROOT. That is permitted in the author Documents/Codex layout but forbidden after exact installation under Kira, where consume_materialization_authority raises Refuse:materialization_ledger_root_scope before PostSeal can pass.",
+      "impact": "The required installed PostSeal result is not reproducible. Running the exact command also attempts a temporary write inside the installed sealed package, so it is incompatible with this Audit-A read-only boundary. Scratch success cannot be relabeled as installed success."
+    },
+    {
+      "id": "V3R29-A02-WORKER-STAGING-OBJECT-RACE",
+      "severity": "BLOCKING",
+      "finding": "Native pre-reserves the eight final paths, but it does not pre-reserve or hold the seven worker-staging file objects. Blender and the worker create them by path, and native first opens them only after the child has exited.",
+      "impact": "A same-user path, replacement, or hard-link race remains before native locks the staging objects. The native validator accepts an internally self-consistent unsigned staging bundle: the blend has only a size gate, PNGs have only header/size/distinct-hash gates, WORKER_RESULT uses substring/hash presence, and the receipt is computable from public capability data. The race can therefore substitute false body evidence before it is copied into the protected final handles, and a planted hard link can still redirect a Blender write outside staging. V3r28 blocker A05 is moved rather than closed."
+    },
+    {
+      "id": "V3R29-A03-MATERIALIZATION-LEDGER-PATH-RACE",
+      "severity": "BLOCKING",
+      "finding": "ensure_ledger_root validates each directory by pathname and returns; exclusive_write then creates the consumed record by pathname without a retained directory handle, file identity reservation, or post-create final-path check.",
+      "impact": "A same-user directory or junction swap between validation and exclusive creation can redirect the supposedly external consumed record to a removable location. The ordinary JSON record is also current-user deletable despite the contract describing only administrator deletion as outside the boundary. The one-materialization ceiling is not a stable external object boundary."
+    }
+  ],
+  "required_append_only_repair": [
+    "Preserve V3r29 unchanged and do not materialize or build Stage 2 from it.",
+    "Create append-only V3r30 with an installed-layout read-only PostSeal fixture whose writable temporary root is explicitly under Documents/Codex and whose package snapshot is unchanged before and after.",
+    "Reserve and hold every staging output identity before the child or use a native-created non-replaceable transfer channel; reject hard links and bind the exact worker-produced object identities before accepting content.",
+    "Create the materialization-consumption record relative to a retained non-reparse directory handle with stable identity and deny deletion/replacement through the complete materialization transaction; independently prove retry refusal after generated-output reset and hostile path swaps.",
+    "Keep the positive exact seal/type/compiler/analyzer/final-handle repairs and require a new different Audit A. Even a later acceptance may authorize only Stage-2 materialization/build and never Blender."
+  ],
+  "claim_boundary": "V3r29 remains a rejected static Stage-1 preparation. It is not Kira's body, complete internal or external anatomy, functional anatomy, physiology, Blender/save/reload/render evidence, activation, or an Avatar Builder template.",
+  "do_not_materialize_v3r29": true,
+  "do_not_build_v3r29_stage2": true,
+  "do_not_run_v3r29": true,
+  "acceptance_artifacts_created": false
+}

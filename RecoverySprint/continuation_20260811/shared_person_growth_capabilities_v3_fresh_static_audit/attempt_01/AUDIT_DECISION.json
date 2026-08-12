@@ -1,0 +1,20 @@
+{
+  "schema": "kira.shared_person_growth_v3_audit_decision.v1",
+  "completed_at_utc": "2026-08-11T05:38:12.091Z",
+  "auditor_task": "/root/blackwell_v9_fresh_audit",
+  "author_task": "/root/kira_long_turing_v4_fresh_audit",
+  "different_fresh_auditor": true,
+  "candidate": "shared_person_growth_capabilities_v3",
+  "attempt_id": "attempt_01",
+  "decision": "ACCEPT_STATIC_ONLY",
+  "sealed_subject_mismatches": 0,
+  "focused_tests": "18/18 PASS",
+  "regression_tests": "45/45 PASS",
+  "independent_hostile_probes": "13/13 PASS",
+  "v1_blockers_remaining": 0,
+  "v2_blockers_remaining": 0,
+  "integration_authorized": false,
+  "production_promotion_authorized": false,
+  "live_execution_authorized": false,
+  "reason": "Exact-byte closure, cache-disabled regression tests, source inspection, and fresh hostile variants found no remaining blocker inside the static capability/profile/Creator/CAS boundary. Acceptance is deliberately limited to the sealed static candidate."
+}

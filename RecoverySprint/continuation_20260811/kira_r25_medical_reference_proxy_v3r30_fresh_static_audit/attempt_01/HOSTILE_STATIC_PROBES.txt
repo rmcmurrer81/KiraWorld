@@ -1,0 +1,102 @@
+KIRA V3R30 DIFFERENT AUDIT A HOSTILE STATIC PROBES
+Recorded UTC: 2026-08-12T03:16:13Z
+
+PROBE 1: INSTALLED-LAYOUT READ-ONLY POSTSEAL
+- Ran the exact installed test with `py -B` and PYTHONDONTWRITEBYTECODE=1.
+- Result PASS: direct/nested/deep closure 33/28/17, worker 18/18,
+  staging 4/4, Audit-A 21/21, install-authority 5/5, consumption
+  4/4, and seal 3/3 hostile refusals.
+- The external flat-file snapshot was identical before and after:
+  4a61cb184b207b0d44d151ea859a4db9c3eae60025503dc432680fc5da37a331.
+- No Kira write or pycache occurred.
+
+PROBE 2: RELOCATED POSTSEAL
+- Copied all exact 26 installed files to a differently named deep directory
+  under Documents/Codex and ran the same PostSeal command cache-free.
+- Result PASS with the same counts and no pycache.
+- This closes V3r29-A01 at the static-test layer.
+
+PROBE 3: SEALED ROOTS AND TRANSITIVE CLOSURE
+- Rehashed 26/26 installed files and 25/25 sealed subjects.
+- Subject root: 7da17e6d91098da0d5dca1229984217861f75bdad4579743a9177688d49369a8.
+- Seal SHA-256: 1aad04c907a89248bacf222f7e3989c0a69480f51c561c1c17a6123c69664e29.
+- Python-ordinal all-26 root:
+  4ff08a82f0d8262d925cfc091cad8da9cd92d753cfefa53cb00a14c6203d4cca.
+- Rehashed 33/33 direct V3r29, 28/28 nested V3r28, and 17/17 deep
+  V3r27 bindings; all 78 paths were unique and exact.
+
+PROBE 4: AUDIT-A AND INSTALL-AUTHORITY GRAMMARS
+- Built valid positive Audit-A and separate install-authority snapshots in
+  memory only and passed both exact parsers.
+- Twelve independent wrong-type, changed-anchor, unbound-file, and auditor-
+  separation mutations all refused. Boolean/integer aliases refused.
+- Audit A still grants no ProgramData write or Blender authority. A future
+  install-authority reviewer must be distinct from author and this Audit A.
+
+PROBE 5: PROGRAMDATA READ-ONLY PRECONDITIONS
+- Exact target C:\ProgramData\KiraV3r30AuthorityLedger is absent.
+- A held non-reparse C:\ProgramData handle resolved to that exact path.
+- Canonical DACL readback exactly matched the sealed expected SDDL.
+- A FILE_DELETE_CHILD open attempt returned access denied.
+- No ProgramData object was created or changed.
+
+PROBE 6: HANDLE-RELATIVE CONSUMPTION REPAIR
+- Exact cache-free PostSeal exercised NtCreateFile with held RootDirectory
+  handles, atomic final DACL supply, canonical DACL readback, single-link and
+  non-reparse identities, flush/readback, held-path rename/replacement refusal,
+  hard-link detection, and retry refusal under test-owned Documents/Codex
+  roots only.
+- Source inspection independently confirms the production fixed root has no
+  test/ACL override, validates the held ProgramData anchor, creates/opens the
+  exact directory relative to that handle, and creates/opens the deterministic
+  ledger file relative to the held directory.
+- V3r29-A03 is closed at this static/mocked layer. This result creates no
+  production authority and is not permission to write ProgramData.
+
+PROBE 7: PRE-RESERVED STAGING IDENTITIES
+- Native source creates seven unique empty regular single-link non-reparse
+  staging files before the child and retains their no-delete-share handles
+  through terminal revalidation. Worker and native both compare identity,
+  link count, type, path, size, and hash. Eight final handles are also retained.
+- This is a positive structural repair to the V3r29 staging path race, but its
+  promised DACL transaction is not reachable because of Probe 8.
+
+PROBE 8: BLOCKING WORKER-TRANSACTION DACL ACCESS MASK
+- `apply_worker_transaction_dacl` calls SetSecurityInfo with
+  DACL_SECURITY_INFORMATION | PROTECTED_DACL_SECURITY_INFORMATION.
+- `reserve_worker_outputs` opens every staging file with GENERIC_READ only,
+  omitting WRITE_DAC, then immediately calls that DACL function.
+- `create_exact_directory` opens the staging directory with FILE_ADD_FILE,
+  FILE_ADD_SUBDIRECTORY, FILE_READ_ATTRIBUTES, and SYNCHRONIZE, also omitting
+  WRITE_DAC, then wmain calls the same DACL function on it.
+- Microsoft documents that setting a DACL requires WRITE_DAC access. See:
+  https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/security-information
+- Two independent test-owned Win32 probes opened a scratch file and directory
+  with those exact native-like access masks and invoked the exact SDDL/DACL
+  SetSecurityInfo operation. Both returned status 5, ERROR_ACCESS_DENIED.
+- Therefore the first staging-file DACL call makes reserve_worker_outputs
+  return false, and wmain enters cleanup at stage 20 before launch_worker.
+  Even if that call were skipped, the staging-directory DACL call would fail
+  for the same reason. The claimed protected transaction and any later proxy
+  run are unreachable.
+- This is blocking, not a test-only inconvenience. Static author tests checked
+  token presence and separate DACL semantics but did not execute the exact
+  native access-mask transition.
+
+PROBE 9: PROXY, FRAME, TRUTH, AND LICENSE BOUNDARIES
+- Static/mocked validation binds exactly nine low-poly normalized reference
+  objects, six materials, eight finite normalized landmarks, four distinct
+  evidence views, bounded dimensions/vertices, and the required anatomical
+  ordering relations.
+- Truth remains an isolated normalized clinical reference proxy, not Kira's
+  body, complete anatomy, functional organs, physiology, sensation, rig,
+  activation, or Avatar Builder template.
+- CC BY attribution/reference-only rows remain bound; CC BY-NC and unknown
+  sources remain quarantined; 136 skeleton entries remain unmapped and unused.
+- Shared identity/era/maturity/person-spec text is downstream policy only and
+  grants no current body, creator, or voice authority.
+
+VERDICT
+- REJECT_AUDIT_A_NO_STAGE2_MATERIALIZATION_OR_BUILD_AUTHORITY.
+- V3r30 may not be materialized or built. No install-authority audit or
+  ProgramData write should proceed from this rejection.

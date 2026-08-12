@@ -1,0 +1,139 @@
+{
+  "candidate": "shared_person_growth_v3_protected_handoff_v9",
+  "install_metadata_checks": {
+    "actual_installed_path_exists": true,
+    "checkpoint_says_not_installed": true,
+    "contract_author_package_installed_in_kira": false,
+    "manifest_installed_in_kira": false
+  },
+  "installed_exact_inventory": {
+    "actual_files": 32,
+    "declared_subject_root_sha256": "14249e4592c0d77bc81bde9a46548cd646bb5465e2b31a56d22d7b0f71f6e0cc",
+    "extras": [],
+    "manifest_bytes": 7543,
+    "manifest_sha256": "359aa6aeff1c2e39ffd4a9c99f8c047e04019beb38378962ab2c60c5f5cc5a9b",
+    "mismatches": [],
+    "subject_count": 31,
+    "subject_root_sha256": "14249e4592c0d77bc81bde9a46548cd646bb5465e2b31a56d22d7b0f71f6e0cc"
+  },
+  "kira_files_written": 0,
+  "live_routes_invoked": 0,
+  "native_static_checks": {
+    "check_then_pathname_operations_present": true,
+    "consumer_binding_is_only_supplied_bytes_hash_and_entrypoint_string": true,
+    "consumer_path_or_loaded_process_identity_bound": false,
+    "independent_acceptance_uses_distinct_public_key": false,
+    "installed_seal_verifier_hardcoded_author_root": true,
+    "installed_test_hardcoded_author_root": true,
+    "ledger_anchor_debt_same_directory": true,
+    "missing_person_consent_and_revocation_provenance_fields": [
+      "recipient_consent_receipt_sha256",
+      "recipient_consent_signature",
+      "recipient_consent_key_sha256",
+      "revocation_registry_sha256",
+      "revocation_epoch",
+      "consent_observed_unix_ms"
+    ],
+    "pe_aslr": true,
+    "pe_cfg": true,
+    "pe_high_entropy_va": true,
+    "pe_imports": [
+      "bcrypt.dll",
+      "kernel32.dll"
+    ],
+    "pe_machine": "0x8664",
+    "pe_magic": "0x20b",
+    "pe_nx": true,
+    "platform_separated_or_hardware_anchor_present": false,
+    "receipt_field_count": 40,
+    "same_signature_verifier_feeds_policy_containing_both_modes": true,
+    "secure_dacl_api_markers_present": [],
+    "single_compiled_public_key_hash": true,
+    "stable_file_identity_markers_present": []
+  },
+  "person_or_temporary_creator_changed": false,
+  "rebuild_checks": {
+    "actual_installed_source_path_rebuild_exact": false,
+    "actual_installed_source_path_rebuild_sha256": "17773e129f51cca365d97c3410d9e670ebc4236ec3fb3858221e31baf2b7da05",
+    "conclusion": "exact Brepro output depends on compiling the exact source bytes from the original author source path",
+    "copied_installed_source_rebuild_exact": false,
+    "copied_installed_source_rebuild_sha256": "bf83c7e42cf0116b4b611072c21fcfd5a13c3c5be339985cc9e185d89d2fc699",
+    "installed_exe_sha256": "7bc1e70e762e2b57e2b9fafd48d4fbab6a579bba3536a7b3e9325ee097503ffc",
+    "original_author_source_path_rebuild_exact": true,
+    "original_author_source_path_rebuild_sha256": "7bc1e70e762e2b57e2b9fafd48d4fbab6a579bba3536a7b3e9325ee097503ffc",
+    "strict_analysis_empty_for_all_three": true
+  },
+  "receipt_signature_checks": {
+    "authority_ids": [
+      "shared_growth_v9_authority_root_01"
+    ],
+    "authorization_modes": [
+      "author_test"
+    ],
+    "candidate_executable_invoked": false,
+    "fixture_receipts_signature_verified_read_only": 15,
+    "public_key_sha256": "a46978c9370265acb9c609fd0bfd693fb799ec899dde9fe75e9e198990e5905e",
+    "used_for_integration": false
+  },
+  "review_scope": "read_only_static_no_fixture_integration_no_candidate_execution",
+  "route_variant_template_checks": {
+    "biological_robert_exact_route_or_person_present": false,
+    "controller_table_installed_inside_candidate": true,
+    "controller_table_readable_to_same_user": true,
+    "creator_routes": 3,
+    "existing_routes": 35,
+    "kira_maturity": "confirmed_adult",
+    "lisa_maturity": "confirmed_adult",
+    "marinette_maturity": "non_adult",
+    "person_visible_projection_forbidden_tokens": [],
+    "private_entry_id_and_controller_only_columns_excluded_from_projection": 16,
+    "route_rows": 38,
+    "sarah_frozen_routes": 1,
+    "synthetic_robert_exact_class": "synthetic_robert_distinct_from_biological_robert",
+    "template_fresh_maturity": "unresolved",
+    "template_full_adult_for_unresolved_or_non_adult": false,
+    "template_private_copy_allowed": false,
+    "unique_route_ids": 38,
+    "variant_columns_each": [
+      23,
+      23
+    ],
+    "variant_ordinals_strict": [
+      true,
+      true
+    ],
+    "variant_rows": 2
+  },
+  "scanner_checks": {
+    "author_positive_fixture_hits": [
+      "shared_growth_v9_native_anchor",
+      "shared_person_growth_v3_integration_candidate_v8"
+    ],
+    "candidate_prefix_exemption_example": "Core/shared_person_growth_v3_integration_candidate_v8_receiver.py",
+    "candidate_prefix_exemption_would_skip_consumer": true,
+    "evasion_count_with_zero_hits": 4,
+    "evasion_hits": {
+      "bytes_decode": [],
+      "dynamic_fstring": [],
+      "format_call": [],
+      "replace_call": []
+    },
+    "omitted_python_directory_counts": {
+      "Avatar": 892,
+      "Data": 18,
+      "System": 16,
+      "Testing": 528,
+      "VideoStudioDevelopment": 122,
+      "legacy_reference": 3148
+    },
+    "only_python_source_scanned": true,
+    "root_level_entrypoint_examples": [
+      "chat_kira.py",
+      "chat_lisa.py",
+      "voice_kira.py"
+    ],
+    "root_level_python_files_excluded": 29,
+    "syntax_and_unicode_errors_are_silently_skipped_by_author_scanner": true
+  },
+  "schema": "kira.shared_growth_v9.independent_hostile_probe_result.v1"
+}

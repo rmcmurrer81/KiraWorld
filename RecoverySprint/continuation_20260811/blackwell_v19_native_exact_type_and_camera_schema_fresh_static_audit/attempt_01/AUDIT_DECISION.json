@@ -1,0 +1,139 @@
+{
+  "schema": "kira.blackwell.v19.local_quality_review.decision.v1",
+  "recorded_utc": "2026-08-12T00:27:55.1151742Z",
+  "review_task": "/root/voice_v19_independent_audit",
+  "decision": "ACCEPT_STATIC_ONLY_NO_EXECUTION_AUTHORITY",
+  "execution_authority": "NONE",
+  "kira_modified": false,
+  "candidate_consumable_audit_created": false,
+  "v17_invoked": false,
+  "v18_invoked": false,
+  "v19_candidate_invoked": false,
+  "python_invoked": false,
+  "model_calls": 0,
+  "gpu_voice_calls": 0,
+  "synthesis_calls": 0,
+  "audio_calls": 0,
+  "playback_calls": 0,
+  "latency_measurements": 0,
+  "camera_device_calls": 0,
+  "person_private_state_calls": 0,
+  "body_blender_calls": 0,
+  "sarah_calls": 0,
+  "network_calls": 0,
+  "production_calls": 0,
+  "v18_rejection": {
+    "decision": "REJECT_STATIC_NO_EXECUTION_AUTHORITY",
+    "decision_sha256": "2d2ac8919ab05b8b142198552bdacd6963d193102a844e5266f48c10f19919a4",
+    "checkpoint_sha256": "ce186a6ad5bca49a28135c35933ca6b9022f8f2b80b3b0d255c0c827d961dce6",
+    "quality_results_sha256": "1d7c79465e7c6cf97b280ee62cefc222f7b059b87878c1feda914686dc85d58d"
+  },
+  "author_package_rehash": {
+    "rows": 16,
+    "before_mismatches": 0,
+    "after_mismatches": 0,
+    "before_after_identity_drift": 0,
+    "before_evidence_bytes": 4737,
+    "before_evidence_sha256": "68e819f7383f0a09489d656500ab622e26375cb41e6f878b54389f500fc47aa3",
+    "after_evidence_bytes": 4721,
+    "after_evidence_sha256": "3a75f17636c95fa4232de0d24ffd5f43a59e2147cf92a55a13091e34e78a3d2e"
+  },
+  "seal_rehash": {
+    "seal_bytes": 23616,
+    "seal_sha256": "1247fce7561f9d47ab0f013b6b98ef0a12ff33eb627bd874c28caa9c94d66713",
+    "declared_rows": 110,
+    "actual_rows": 110,
+    "unique_canonical_paths": 110,
+    "unique_file_identities": 110,
+    "reparse_subjects": 0,
+    "before_mismatches": 0,
+    "after_mismatches": 0,
+    "before_after_identity_drift": 0,
+    "before_evidence_bytes": 33610,
+    "before_evidence_sha256": "4d4ece369398eaac21862b45d420b4ea14aeb92f123a2e7f614aee67a81403d0",
+    "after_evidence_bytes": 33500,
+    "after_evidence_sha256": "f0eba9acb990c25cf9b15b2509d6daaf38cb4d803b2d32c07613ac457d76f439"
+  },
+  "provided_checks": {
+    "installed_postseal_exit": 0,
+    "compiled_hostile_checks": 100,
+    "compiled_hostile_failures": 0,
+    "source_mutants_refused": 18,
+    "source_mutants_total": 18,
+    "camera_schema_counts": "4/51/42/30/15",
+    "strict_candidate_build_exit": 0,
+    "strict_hostile_build_exit": 0,
+    "candidate_analyze_exit": 0,
+    "hostile_analyze_exit": 0,
+    "analyzer_defects": 0
+  },
+  "independent_checks": {
+    "result_gate_hostile_checks": 31,
+    "result_gate_hostile_failures": 0,
+    "seal_parser_checks": 20,
+    "seal_parser_failures": 0,
+    "contract_mutants_refused": 15,
+    "contract_mutants_total": 15,
+    "source_mutants_refused": 16,
+    "source_mutants_total": 16,
+    "independent_analyzer_defects": 0,
+    "installed_and_rebuilt_pe_x64_pe32_plus_cfg": true,
+    "installed_and_rebuilt_imports": [
+      "bcrypt.dll",
+      "KERNEL32.dll"
+    ]
+  },
+  "v18_blockers_closed": [
+    {
+      "id": "RESULT_FIELD_TYPE_PREDICATES_NOT_ENFORCED",
+      "status": "CLOSED_STATIC_BOUNDARY",
+      "evidence": "Exact tuple, Unicode, Boolean, Boolean-singleton, and integer predicates execute before conversion; wrong-but-convertible and truthy/falsey impostors are refused by provided and independent native harnesses."
+    },
+    {
+      "id": "FUTURE_CAMERA_TIMING_SCHEMA_INCOMPLETE_AND_UNTESTED",
+      "status": "CLOSED_STATIC_BOUNDARY",
+      "evidence": "Four matched conditions plus exact 51/42/30/15 ordered timestamp/metadata/duration/ordering lists are parsed and asserted; 15 independent schema mutations were refused."
+    }
+  ],
+  "camera_schema": {
+    "non_executable": true,
+    "live_values_present": false,
+    "conditions": 4,
+    "monotonic_timestamps": 51,
+    "metadata_fields": 42,
+    "derived_durations": 30,
+    "ordering_requirements": 15,
+    "exact_text_model_id": "qwen3.5:9b",
+    "exact_text_model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "qwen_keep_alive_before_voice": 0,
+    "raw_frames_retained": false,
+    "person_or_private_state_in_schema": false,
+    "face_identity_recognition_enabled": false,
+    "live_speed_claim": false
+  },
+  "passing_findings": [
+    "all 16 author artifacts and all 110 closure subjects remained exact before and after review",
+    "exact built-in Python result types and Boolean singleton identities precede value conversion",
+    "wrong-but-convertible integer and non-Boolean truthy/falsey cases are refused",
+    "matched camera timing requirements are complete for the current static boundary and exactly tested",
+    "whole-document manifest provenance, order, uniqueness, canonical paths, exact EOF, stable identities, and closure hold",
+    "strict build, zero-defect analysis, PE mitigations, and import boundary pass"
+  ],
+  "blocking_findings": [],
+  "limitations": [
+    "V19 remains a disconnected static control package and was not invoked",
+    "the timing schema is a requirements catalog, not a runtime recorder or measurement",
+    "static acceptance proves no voice quality, audible output, reply speed, camera performance, latency reduction, or production readiness",
+    "current face recognition and identity inference remain off; the later owner-discussion hold is separate and unchanged"
+  ],
+  "review_probes_bytes": 7472,
+  "review_probes_sha256": "e34eede6c9a91c0e16fd9089a9118b4995214dcae82527c33b75be1a4dc3c302",
+  "contract_source_probe_results_bytes": 2666,
+  "contract_source_probe_results_sha256": "7947fe4ecc2eaa0cae7cac889f4959e684b0933e097793a0e796e57f4b1f0633",
+  "build_analyze_pe_results_bytes": 4778,
+  "build_analyze_pe_results_sha256": "6f2c6cfa0cbcf6f08bc017947944796a77643d0a42a51d0abccef320a2754dff",
+  "static_acceptance_authorizes_live_run": false,
+  "production_routing_authorized": false,
+  "allowed_next_step": "append the exact static review evidence, preserve DO_NOT_RUN_V19, and require a separate append-only execution-authority successor plus another different audit before any bounded live operation",
+  "forbidden_next_step": "any V17 rerun, V18 run, or V19/Python/model/GPU/synthesis/audio/playback/live-latency/camera/device/person/private-state/body/Blender/Sarah/network/production invocation based on this review"
+}

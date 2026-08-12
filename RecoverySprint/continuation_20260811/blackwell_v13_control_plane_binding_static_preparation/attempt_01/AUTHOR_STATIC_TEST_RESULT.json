@@ -1,0 +1,27 @@
+{
+  "schema": "kira.blackwell.v13.author_static_test_result.v1",
+  "recorded_utc": "2026-08-11T08:32:03.8100508Z",
+  "candidate_id": "kira_chatterbox_blackwell_control_plane_binding_candidate_v13",
+  "decision": "SEALED_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT",
+  "focused_tests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "combined_v12_v13_tests": {
+    "passed": 36,
+    "failed": 0,
+    "elapsed_seconds": 1.353
+  },
+  "strict_in_memory_compile": {
+    "passed": 2,
+    "failed": 0
+  },
+  "static_lifecycle_smoke": "PASS",
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "playback_authorized": false,
+  "latency_improvement_claimed": false,
+  "model_or_voice_used": false,
+  "different_fresh_static_audit_required": true
+}

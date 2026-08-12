@@ -1,0 +1,59 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_v2.independent_static_audit_decision.v1",
+  "recorded_utc": "2026-08-11T13:53:22.2180209Z",
+  "reviewer_task": "/root/resident_media_v13",
+  "evidence_transcribed_by": "/root",
+  "decision": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+  "accepted_static_only": false,
+  "integration_authorized": false,
+  "promotion_authorized": false,
+  "person_or_temporary_creator_upgrade_authorized": false,
+  "seal": {
+    "subjects_exact": 14,
+    "subjects_drifted": 0,
+    "manifest_bytes": 4146,
+    "manifest_sha256": "0ec609dc63b6d440f35c9ec3969b15972c5032bd71c7b89e0595f57b54df6820"
+  },
+  "independent_checks": {
+    "source_and_test_in_memory_compile_passed": 2,
+    "source_and_test_in_memory_compile_failed": 0,
+    "author_suites_invoked_by_reviewer": false,
+    "reason_author_suites_not_invoked": "The read-only review did not authorize their temporary-root, cloned-source, or staging-file writes. Their sealed author results were preserved but not treated as independent evidence."
+  },
+  "blocking_findings": [
+    {
+      "id": "BLOCK_MUTABLE_VERIFIER_SUBSTITUTION",
+      "reproduction": "The slot-only adapter still permits ordinary assignment to _authority_public_key and _authority_verification_key_sha256. Same-process code can install a rogue verifier and matching digest, then supply a matching callback whose complete protocol flow is accepted."
+    },
+    {
+      "id": "BLOCK_UNENFORCED_NON_PRODUCTION_STAGING_ROOT",
+      "reproduction": "The constructor resolves and may create any caller-provided nonsymlink Path. It has no allowlist, protected-root exclusion, project/person/profile/Creator separation, or authority binding, so non-production is a label rather than an enforced boundary."
+    },
+    {
+      "id": "BLOCK_POST_COMMIT_VALIDATION_RECOVERY_GAP",
+      "reproduction": "A durable external COMMIT_STATIC_STAGE may succeed, after which a signed outer response can fail authority cross-binding or ticket/receipt validation before commit_receipt is assigned. The outer failure removes local output but attempts external rollback only when commit_receipt is non-null, leaving an unrecovered remote commit."
+    },
+    {
+      "id": "BLOCK_PATH_IDENTITY_CLEANUP",
+      "reproduction": "The exclusive output descriptor is closed before callbacks. Failure cleanup later trusts only the pathname and symlink status, so a concurrent rename/replacement or hardlink can cause cleanup to delete a replacement object while the candidate output survives elsewhere."
+    }
+  ],
+  "preserved_truth": {
+    "isolated_shared_growth_v3_status": "ACCEPT_STATIC_ONLY",
+    "isolated_shared_growth_v3_changed": false,
+    "integration_v2_promoted": false,
+    "kira_upgraded": false,
+    "lisa_upgraded": false,
+    "synthetic_robert_upgraded": false,
+    "other_person_variant_or_expert_upgraded": false,
+    "temporary_creator_upgraded": false
+  },
+  "scope_truth": {
+    "live_person_or_model_calls": 0,
+    "profile_or_memory_changes": 0,
+    "body_media_voice_gpu_or_blender_calls": 0,
+    "sarah_calls": 0,
+    "production_route_changed": false
+  },
+  "required_next_step": "Preserve V2. Repair append-only as integration candidate V3 with an immutable externally anchored verifier, an actually enforced non-production staging boundary, recovery after every possibly durable commit response including signed-but-invalid responses, and stable file-handle/file-identity cleanup. Keep disconnected/default-off and require another different fresh static audit before any promotion."
+}

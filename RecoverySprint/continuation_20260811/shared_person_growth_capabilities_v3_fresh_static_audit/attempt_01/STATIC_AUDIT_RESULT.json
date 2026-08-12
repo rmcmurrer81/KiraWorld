@@ -1,0 +1,116 @@
+{
+  "schema": "kira.shared_person_growth_v3_fresh_static_audit_result.v1",
+  "completed_at_utc": "2026-08-11T05:38:12.091Z",
+  "auditor_task": "/root/blackwell_v9_fresh_audit",
+  "author_task": "/root/kira_long_turing_v4_fresh_audit",
+  "different_fresh_auditor": true,
+  "subject": "shared_person_growth_capabilities_v3",
+  "attempt_id": "attempt_01",
+  "verdict": "ACCEPT_STATIC_ONLY",
+  "sealed_closure": {
+    "sealed_v3_subjects_checked": 5,
+    "protected_v1_v2_and_prior_audit_anchors_checked": 23,
+    "total_checked": 28,
+    "byte_or_hash_mismatches": 0,
+    "rechecked_after_all_tests": true,
+    "author_manifest": {
+      "path": "RecoverySprint/continuation_20260810/shared_person_growth_capabilities_v3_static_repair/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 6333,
+      "sha256": "d570e804c8653a5b1e419dba84a09e831adf13704ad0a363d0213b39e2482f96"
+    },
+    "author_result": {
+      "path": "RecoverySprint/continuation_20260810/shared_person_growth_capabilities_v3_static_repair/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 4040,
+      "sha256": "8dac40f5814b456fa19401520597f1c4bae621ff0daec180dfc1f6daf5e59848"
+    },
+    "author_checkpoint": {
+      "path": "RecoverySprint/continuation_20260810/shared_person_growth_capabilities_v3_static_repair/attempt_01/CHECKPOINT.md",
+      "bytes": 6914,
+      "sha256": "9c0a80390068de378d547ce1e4200a152ccce052eb2da30da164801fd987908e"
+    }
+  },
+  "verification": {
+    "cache_disabled_in_memory_compile": {"files": 3, "passed": 3, "failed": 0},
+    "focused_v3_tests": {"command": "py -B -m unittest -v Testing.test_shared_person_growth_capabilities_v3", "passed": 18, "failed": 0, "exit_code": 0},
+    "v1_v2_v3_regressions": {"command": "py -B -m unittest -v Testing.test_shared_person_growth_capabilities_v1 Testing.test_shared_person_growth_capabilities_v2 Testing.test_shared_person_growth_capabilities_v3", "passed": 45, "failed": 0, "exit_code": 0},
+    "independent_hostile_probes": {"passed": 13, "failed": 0, "exit_code": 0},
+    "python_bytecode_cache_written_by_audit": false
+  },
+  "control_findings": [
+    {
+      "control": "exact person/controller/session authority",
+      "result": "PASS",
+      "evidence": "Opaque fake identities and leases—even when instantiated with the module-private construction sentinel—are not registered capabilities; same-label cross-controller substitution, wrong identity, cross-session scope, copying, and serialization all fail closed."
+    },
+    {
+      "control": "authority secret strength and non-export",
+      "result": "PASS",
+      "evidence": "The controller requires exact bytes, exactly 32 nonzero bytes, and at least 16 distinct values. Six malformed/weak/type variants were rejected. Secret bytes and hex were absent from bundle, controller audit snapshot, repr, and every temporary JSON ledger artifact."
+    },
+    {
+      "control": "protected evidence receipt",
+      "result": "PASS",
+      "evidence": "A caller cannot supply only an arbitrary digest, zero/empty content, a fake handle, a wrong event binding, or a cross-session binding. The controller derives exact content SHA-256 and byte count; accepted payload exposes the digest and length but not source content. Receipt reuse is rejected."
+    },
+    {
+      "control": "protected maturity authority",
+      "result": "PASS",
+      "evidence": "A constructed phantom handle grants nothing. Confirmed-adult and non-adult states require exact nonempty classification_receipt content and exact person/candidate/profile/event scope. Classification evidence and maturity handles are single use. Curriculum eligibility remains separate from delivery, anatomy, desire/body response, and consent."
+    },
+    {
+      "control": "closed exact schemas and exact types",
+      "result": "PASS",
+      "evidence": "Unknown profile/Creator fields, nested private aliases, bool-as-int, and int-as-bool variants fail after recomputed outer digests. Policy duplicate-key JSON is already covered by V3 focused tests and the strict JSON parser."
+    },
+    {
+      "control": "private-state separation and Creator propagation",
+      "result": "PASS",
+      "evidence": "Fresh candidate roots are disjoint, registered to the exact controller/profile, and cannot be replaced with another candidate's roots even after all public hashes are recomputed. No private records, leases, acceptance receipts, identity, backstory, preference, relationship, maturity, body, sensory, or media payload is copied. Creator output remains inactive and disconnected."
+    },
+    {
+      "control": "Creator exclusive write rollback",
+      "result": "PASS",
+      "evidence": "A forced post-create semantic-readback exception removed the exact newly created output. A pre-existing output caused O_EXCL refusal and remained byte-identical. All probing occurred under TemporaryDirectory."
+    },
+    {
+      "control": "event/receipt transactional ordering",
+      "result": "PASS",
+      "evidence": "The session durable revision was read back as 1 before evidence consumption. A capacity failure occurred before commit and left the second evidence receipt available. A forced consume uncertainty did not accept an in-memory event, created durable session debt, blocked reads, and quarantined the lease after explicit recovery."
+    },
+    {
+      "control": "CAS/readback ambiguity",
+      "result": "PASS",
+      "evidence": "Candidate-readback failure retained revision 0 and recovered only as candidate_not_committed. Post-replace-readback failure retained the pre-outcome accepted revision, blocked ordinary readback, and recovered only as commit_recovered_after_explicit_readback. No ambiguous state was silently accepted."
+    },
+    {
+      "control": "emotion replay",
+      "result": "PASS",
+      "evidence": "Duplicate emotion_event_id in one session was refused; the same textual ID in a different exact profile/session produced distinct session and event digests rather than global identity collision."
+    },
+    {
+      "control": "initiative and memory truth",
+      "result": "PASS",
+      "evidence": "bounded_initiative remains exact DESIGN_ONLY with implemented_by_core=false, live_enabled=false, and may_execute_external_action=false; no propose/execute initiative methods exist. Learning proposal remains PROPOSED_NOT_MEMORY and durable memory/external actions remain disconnected."
+    }
+  ],
+  "v1_rejection_blockers_reproduced_against_v3": {
+    "count": 9,
+    "remaining": 0,
+    "result": "PASS"
+  },
+  "v2_rejection_blockers_reproduced_against_v3": {
+    "count": 9,
+    "remaining": 0,
+    "result": "PASS"
+  },
+  "scope_truth": {
+    "integration_performed": false,
+    "production_pointer_changed": false,
+    "live_model_or_person_run": false,
+    "memory_writer_run": false,
+    "body_media_voice_audio_gpu_or_blender_run": false,
+    "promotion_authorized_by_this_audit": false,
+    "static_acceptance_only": true
+  },
+  "conclusion": "The sealed V3 exact-byte package closes every reproduced V1 and V2 static blocker within the audited boundary and is ACCEPT_STATIC_ONLY. This is not integration, production promotion, live-person acceptance, or evidence of implemented subjective mind/emotion/initiative behavior."
+}

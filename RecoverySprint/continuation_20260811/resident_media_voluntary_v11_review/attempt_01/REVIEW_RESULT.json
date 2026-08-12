@@ -1,0 +1,46 @@
+{
+  "schema": "kira.resident_media_voluntary_v11_fresh_static_review.v1",
+  "date": "2026-08-11",
+  "verdict": "STATIC_REJECT",
+  "live_authorization": "NONE",
+  "sealed_subject_hashes_match": true,
+  "sealed_package_files_edited": false,
+  "authored_suite": {
+    "passed": 17,
+    "subtests_passed": 11,
+    "failed": 0
+  },
+  "fresh_review_suite": {
+    "passed": 7,
+    "subtests_passed": 16,
+    "failed": 2
+  },
+  "requested_static_coverage": {
+    "refusal_text": "PASS",
+    "required_video_audio_caption_coverage": "PASS",
+    "duplicate_receipt_ids": "PASS",
+    "empty_fields": "PASS",
+    "changed_catalog_fields_with_seal_intact": "PASS",
+    "journal_restore_consistency": "PASS"
+  },
+  "blocking_findings": [
+    {
+      "id": "CALLER_CONSTRUCTS_RESERVED_CAPABILITY",
+      "result": "UNEXPECTED_ACCEPT",
+      "summary": "A caller can pass the module-resident reserved issuer token to the public capability class and the exact V11 backend accepts the resulting caller-constructed capability."
+    },
+    {
+      "id": "RUNTIME_FINAL_CATALOG_REBIND",
+      "result": "UNEXPECTED_ACCEPT",
+      "summary": "Python Final annotations do not prevent a caller from rebinding the catalog digest and selection-receipt globals; after rebinding them consistently, V11 issues authority for a catalog with caller-changed derivative path, byte count, and digest."
+    }
+  ],
+  "truth_boundary": {
+    "local_static_tests_only": true,
+    "media_opened_or_played": false,
+    "model_run": false,
+    "device_or_person_used": false,
+    "blender_or_production_code_run": false,
+    "live_use_enabled": false
+  }
+}

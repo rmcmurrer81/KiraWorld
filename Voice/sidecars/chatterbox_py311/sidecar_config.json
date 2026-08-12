@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "sidecar_id": "kira_chatterbox_py311_0_1_7",
+  "python_version": "3.11.9",
+  "chatterbox_version": "0.1.7",
+  "worker_sha256": "856c195173f8932f1b9d731634290f9eb78bb543e90da37c1346160e45334f46",
+  "dependency_manifest": "Voice/sidecars/chatterbox_py311/evidence/dependency_manifest.json",
+  "dependency_manifest_sha256": "bc0610b0295f290f5918db833a9897d8932643074a867678f5e119a8ab641120",
+  "approved_profile": "Voice/profiles/temp_ai/kira_voice_profile.json",
+  "approved_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+  "approved_reference": "Voice/reference_packs/kira/kira_online_source_20260706_221447/model_input/approved_reference.wav",
+  "approved_reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "allowed_output_roots": [
+    "Voice/generated",
+    "RecoverySprint"
+  ],
+  "input_channel": "public_spoken_only",
+  "max_text_characters": 4000,
+  "compute_device": "cpu",
+  "compute_reason": "Pinned Torch 2.6.0 supports through sm_90; this RTX 5060 Ti reports sm_120, so the exact supported Chatterbox environment runs fail-safe on CPU.",
+  "production_role": "automatic_approved_kira_fallback_only",
+  "production_fallback_for": "blackwell_gpu_self_check_process_contract_or_qwen_residency_failure",
+  "fallback_is_identity_preserving": true,
+  "playback": false,
+  "offline_cache_only": true,
+  "generic_voice_fallback_allowed": false
+}

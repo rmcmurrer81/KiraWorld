@@ -1,0 +1,145 @@
+{
+  "schema": "kira.blackwell.v16.native_exact_manifest_row_control_anchor.fresh_static_audit.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_exact_manifest_row_control_anchor_candidate_v16",
+  "audit_id": "blackwell_v16_native_exact_manifest_row_control_anchor_fresh_static_audit_attempt_01",
+  "recorded_utc": "2026-08-11T18:24:01.7062503Z",
+  "author_task": "/root/voice_v15_quality_review",
+  "reviewer_task": "/root/voice_v16_audit",
+  "different_fresh_reviewer": true,
+  "decision": "REJECT_STATIC_NO_EXECUTION_AUTHORITY",
+  "status": "REJECTED_UNINVOKED_APPEND_ONLY_REPAIR_REQUIRED",
+  "execution_authority": "NONE",
+  "do_not_run_v16": true,
+  "do_not_rerun_v15": true,
+  "sealed_candidate": {
+    "manifest_bytes": 9065,
+    "manifest_sha256": "b02ecdace1727a5ab9e8dba9a580932fe886e9ae05561f5241b1fbbffc21acd4",
+    "subjects": 41,
+    "unique_paths": 41,
+    "exact_complete_rows": 41,
+    "before_rehash_exact": 41,
+    "after_rehash_exact": 41,
+    "mismatches_before": 0,
+    "mismatches_after": 0,
+    "closure_table_sha256": "25e17ef12188944d23615cdf6fd4118d9433cb88270052cef0eca13c23ad9b7a",
+    "rehash_evidence_bytes": 10360,
+    "rehash_evidence_sha256": "d6af2190a12efb57a9c794582ada027d9a9dc0fb6116a996c0a4cc07189ddf5f"
+  },
+  "v15_failure_reproduction": {
+    "subjects": 21,
+    "old_spaced_path_matches": 0,
+    "compact_path_matches": 21,
+    "exact_compact_complete_rows": 21,
+    "object_spaced_matches": 0,
+    "object_compact_matches": 1,
+    "build_spaced_matches": 0,
+    "build_compact_matches": 1,
+    "diagnosis_confirmed": "V15_STAGE10_WHITESPACE_SENSITIVE_SEAL_ROW_FORMAT_MISMATCH"
+  },
+  "independent_build": {
+    "toolchain": "Microsoft Visual C/C++ x64 19.50.35730",
+    "compile_flags": "/W4 /WX /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /I C:/Python314/include",
+    "compile_exit": 0,
+    "compile_diagnostics": 0,
+    "object_bytes": 115366,
+    "object_sha256": "d786f6d22c79da23546b5f82aefa7ba45c77bb4728b9927534a68f2a092f1017",
+    "executable_bytes": 182784,
+    "executable_sha256": "6391cb758590ca6188534c9d14be22a8de79c42cca438e85af3e6488ef391a9e",
+    "analyze_flags": "/W4 /WX /analyze /c /DUNICODE /D_UNICODE /std:c17 /I C:/Python314/include",
+    "analyze_exit": 0,
+    "analyzer_diagnostics": 0,
+    "analyzer_object_bytes": 69918,
+    "analyzer_object_sha256": "4aba77f2488c456cab3d9a1c1dec50188216bead9ffa561386b8482568c07904",
+    "analyzer_xml_bytes": 59,
+    "analyzer_xml_sha256": "ba052e3b011b8f8a3e59a7b5c3120d3c9496a6c3e2fd73c55013bde5e2642bc5"
+  },
+  "pe_inspection": {
+    "sealed_executable_bytes": 182784,
+    "sealed_executable_sha256": "dc688ea754a9003654f1981f670f20cc3109166326a33233a88a1712a34f80f0",
+    "machine": "x64_8664",
+    "format": "PE32+_20B",
+    "high_entropy_va": true,
+    "dynamic_base": true,
+    "nx_compatible": true,
+    "control_flow_guard": true,
+    "cf_instrumented": true,
+    "fid_table_present": true,
+    "guard_cf_function_count_hex": "0x33",
+    "imports": ["bcrypt.dll", "KERNEL32.dll"],
+    "python_static_import": false,
+    "process_shell_static_import": false
+  },
+  "hostile_exact_parser": {
+    "probe_evidence_bytes": 3613,
+    "probe_evidence_sha256": "1a8a57469e770d5bb16f78619a09777741deec7069cfd31d124f525836113d72",
+    "expected_refusals_passed": [
+      "missing exact row",
+      "duplicate exact compact row",
+      "whitespace-mutated required row only",
+      "case-mutated required row only",
+      "wrong byte count",
+      "wrong digest",
+      "uppercase digest",
+      "noncanonical byte decimal",
+      "path-only bytes-only digest-only decoys",
+      "cross-row field splice",
+      "backslash empty segment and interior dot segments",
+      "NUL-bearing seal"
+    ],
+    "expected_refusals_failed": [
+      "terminal dot-segment paths tools/. and tools/..",
+      "trailing non-JSON bytes after the complete seal",
+      "valid JSON 42nd whitespace-formatted logical duplicate subject",
+      "logical duplicate does not invalidate the original exact source binding"
+    ]
+  },
+  "blocking_findings": [
+    {
+      "id": "V16_NOT_STRUCTURAL_OR_CANONICAL",
+      "detail": "seal_contract_exact uses raw substring counts and accepts the exact seal plus a trailing non-NUL byte; it does not prove a complete JSON document."
+    },
+    {
+      "id": "V16_LOGICAL_DUPLICATE_AND_TOTAL_COUNT_BYPASS",
+      "detail": "A valid JSON seal with 42 subjects, 41 unique paths, and two logical V16-source rows is accepted when the added duplicate uses whitespace after the path colon. The compact-prefix count remains 41, the declared count remains 41, and the original exact row remains present once."
+    },
+    {
+      "id": "V16_TERMINAL_DOT_SEGMENT_BYPASS",
+      "detail": "canonical_relative_path rejects interior /./ and /../ but accepts terminal /. and /.. segments contrary to the no-dot-segment contract."
+    },
+    {
+      "id": "V16_STALE_OUTCOME_AND_AUDIT_PROVENANCE",
+      "detail": "The V16 source retains V15 binary receipt magic and stale V15 relative-path/label strings for V16 audit/seal bindings. The relative labels are currently unused, but the outcome provenance must be made version-exact before any run."
+    }
+  ],
+  "required_append_only_repair": [
+    "Preserve V16 unchanged as rejection evidence and author V17 only.",
+    "Use a bounded whole-document parser or an equivalently exact canonical manifest grammar; reject trailing bytes, malformed structure, extra fields/rows, all whitespace variants, and every duplicate logical path.",
+    "Count actual subject objects and require exactly 41 expected unique rows, not 41 occurrences of one compact prefix.",
+    "Split every path into segments and reject bare, interior, or terminal dot and dot-dot segments.",
+    "Give V17 audit paths, seal labels, ReservationRecord magic, and CompletionRecord magic exact V17 provenance.",
+    "Make the hostile suite execute the exact compiled parser functions and include the accepted V16 bypasses as mandatory negative controls.",
+    "Create a new seal and obtain another different fresh audit before considering at most one disconnected static-control validation."
+  ],
+  "boundary": {
+    "kira_edited_by_reviewer": false,
+    "v15_invocations": 0,
+    "v16_candidate_invocations": 0,
+    "python_invocations": 0,
+    "model_calls": 0,
+    "gpu_voice_calls": 0,
+    "synthesis_calls": 0,
+    "audio_calls": 0,
+    "playback_calls": 0,
+    "latency_measurements": 0,
+    "network_calls": 0,
+    "person_state_calls": 0,
+    "body_blender_calls": 0,
+    "production_routing_authorized": false,
+    "live_execution_authorized": false,
+    "future_harness_authoring_authorized": false,
+    "synthesis_authorized": false,
+    "playback_authorized": false,
+    "latency_run_authorized": false
+  },
+  "conclusion": "The exact current closure is intact and the native build is clean, but the promised structural/canonical duplicate-rejecting boundary is false under exact compiled probes. V16 is rejected without invocation and grants no execution or voice authority."
+}

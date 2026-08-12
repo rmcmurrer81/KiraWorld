@@ -1,0 +1,101 @@
+{
+  "schema": "kira.r25.medical_reference_proxy.v3r28.audit_a_rejection_decision.v1",
+  "recorded_utc": "2026-08-12T00:43:39Z",
+  "auditor_id": "independent_body_v3r28_audit_a_avicenna",
+  "author_id": "codex_r25_medical_reference_proxy_v3r28_two_stage_author",
+  "author_separation": true,
+  "verdict": "REJECT_AUDIT_A_NO_STAGE2_MATERIALIZATION_OR_BUILD_AUTHORITY",
+  "execution_authority": "NONE",
+  "maximum_materializations": 0,
+  "maximum_native_builds": 0,
+  "maximum_blender_invocations": 0,
+  "candidate_executed_by_auditor": false,
+  "materializer_main_executed_by_auditor": false,
+  "blender_or_bpy_executed_by_auditor": false,
+  "kira_writes_by_auditor": false,
+  "stage1": {
+    "installed_files_exact": 19,
+    "sealed_subjects_exact": 18,
+    "canonical_bytes": 1844,
+    "package_root_sha256": "5686bdb4997268b72f543dbc25cd51b37b7cfb6101d899dd1d0a59ab70d6c841",
+    "all_19_inventory_root_sha256": "7e561a85fcbb736262a6fa04b2b62218226cb56e46f72858e7f395bbc02e7337",
+    "seal_bytes": 3948,
+    "seal_sha256": "2c4b031fc223282cebf42ff4e1d0403f4ab2914766d03f6847d91bdf73a8e1f6",
+    "upstream_exact": 17,
+    "upstream_author_rows": 11,
+    "upstream_rejection_rows": 6
+  },
+  "positive_static_facts": {
+    "installed_postseal": "PASS_17_UPSTREAM_18_WORKER_HOSTILES_4_AUDIT_HOSTILES",
+    "blender_identity": "108687824_BYTES_1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5",
+    "hard_disabled_rebuilds": "TWO_EXES_IDENTICAL_TO_SEALED_4a4a6f3b6f28cd4e36545999c62248030f11171151ba40ecb9ea70c94cdb8c2d",
+    "hard_disabled_analyzer": "ZERO_DEFECTS",
+    "hard_disabled_pe": "X64_HIGH_ENTROPY_VA_DYNAMIC_BASE_NX_CFG_CET",
+    "hard_disabled_imports": "KERNEL32_ONLY_NO_CREATEPROCESS_NO_BCRYPT_NO_BLENDER_PATH",
+    "materialized_probe_strict_compile": "PASS_NOT_EXECUTED",
+    "worker_factory_and_proxy_static_surface": "SUBSTANTIALLY_HARDENED_FROM_V3R27",
+    "license_rows": 7,
+    "cc_by_stage_a_reference_ids": 2,
+    "noncommercial_quarantines": 1,
+    "unknown_license_quarantines": 2,
+    "skeleton_source_ids": 136,
+    "skeleton_mapped_ids": 0,
+    "stage2_output_paths_absent": true
+  },
+  "blocking_findings": [
+    {
+      "id": "V3R28-A01-MATERIALIZED-ANALYZER",
+      "severity": "BLOCKING",
+      "finding": "The claimed zero-defect native analysis covers only the hard-disabled V3R28_MATERIALIZED=0 binary, whose linker prunes the Stage-2 path. A scratch-only V3R28_MATERIALIZED=1 build of the exact C source compiled, but Microsoft /analyze /W4 /WX failed with C6387 at source line 718 because ledger may be NULL when passed to CloseHandle.",
+      "evidence": "MATERIALIZED_ANALYZER.xml is 14184 bytes with SHA-256 a18ffe5786718d54b2b6a200d511ef1437e2d494fb08187465777be720912e6a. The probe executable was built only and never run.",
+      "impact": "Stage 1 has not established that the materialized native source satisfies its promised strict analyzer gate; Audit A cannot truthfully authorize the exact Stage-2 build plan."
+    },
+    {
+      "id": "V3R28-A02-SEAL-EXTERNAL-ANCHOR",
+      "severity": "BLOCKING",
+      "finding": "The externally supplied Stage-1 package root covers the 18 subjects but not STATIC_SEAL_MANIFEST.json. parse_stage1 checks only a subset of seal fields and does not accept an external seal SHA-256 or all-19 root.",
+      "hostile_result": "An in-memory seal mutant changed audit_a_maximum_authority to RUN_BLENDER, changed audit_b_required to false, and changed the future invocation ceiling to 999. parse_stage1 accepted the mutant under the unchanged external 18-subject root.",
+      "impact": "The exact seal bytes reviewed by Audit A are not the exact seal bytes necessarily materialized and compiled into Stage 2. Binding the later-observed seal into the generated header does not prove it is the seal Audit A accepted."
+    },
+    {
+      "id": "V3R28-A03-AUDIT-DECISION-EXACT-TYPES",
+      "severity": "BLOCKING",
+      "finding": "parse_audit compares the whole decoded decision with Python dictionary equality without exact type predicates.",
+      "hostile_result": "A decision using integer 0 for both false fields, Boolean true for maximum_materializations, and integer 1 for stage2_requires_different_audit_b passed the exact parser because Python bool and int compare equal.",
+      "impact": "The materializer does not enforce the Audit-A grammar's exact JSON types and repeats the exact-type defect class already rejected in other current lanes."
+    },
+    {
+      "id": "V3R28-A04-OUTPUT-HANDLE-TO-SUCCESS-GAP",
+      "severity": "BLOCKING",
+      "finding": "finalize_outputs closes all seven validated output handles and the final-manifest handle before returning to wmain; wmain writes LEDGER_SUCCESS_CONSUMED only afterward.",
+      "hostile_result": "The exact control-flow order is close output/manifest handles, return from finalize_outputs, then ledger_update success.",
+      "impact": "A same-user path replacement or mutation can separate the durable success ledger from the exact files and manifest that were validated, preserving the core late-output race rejected in V3r27."
+    },
+    {
+      "id": "V3R28-A05-OUTPUT-CREATION-IDENTITY",
+      "severity": "BLOCKING",
+      "finding": "The native anchor creates and holds the output directory but does not exclusively reserve the blend or four render path objects. Blender writes those five paths by name, and native opens their stable non-reparse handles only after the child exits.",
+      "impact": "The later rehash detects many substitutions, but it does not prevent a same-user race or pre-created hard-link target from being overwritten during the child run. This does not meet the stated stable path/object output boundary."
+    },
+    {
+      "id": "V3R28-A06-MATERIALIZATION-ONE-SHOT",
+      "severity": "BLOCKING",
+      "finding": "The Audit-A decision says maximum_materializations is one, but the materializer records no durable consumed authority outside its deletable destination. Its only repeat gate is destination/staging path absence.",
+      "impact": "Deleting or moving the scratch output restores the same materializer authority. A one-use decision is not mechanically consumed."
+    }
+  ],
+  "required_append_only_repair": [
+    "Preserve V3r28 unchanged and do not materialize or build Stage 2 from it.",
+    "Create an append-only V3r29 that binds the exact seal SHA-256 or exact all-file inventory root outside Stage 1 and checks the complete strict seal object.",
+    "Enforce exact JSON types for every Audit-A decision field, including Boolean singleton identities and an exact integer ceiling.",
+    "Make the full materialized native path pass the declared strict compiler and analyzer gates before an Audit-A acceptance.",
+    "Retain every final output and manifest handle through the durable success-ledger transition and close the output-creation path/object race.",
+    "Mechanically consume the single Audit-A materialization authority in a durable location that cannot be reset by removing the generated package.",
+    "Require a new different Audit A for V3r29; even acceptance may authorize only materialization/build and never Blender."
+  ],
+  "claim_boundary": "V3r28 remains a rejected static Stage-1 preparation. It is not Kira's body, complete internal or external anatomy, functional anatomy, physiology, Blender/save/reload/render evidence, activation, or an Avatar Builder template.",
+  "do_not_materialize_v3r28": true,
+  "do_not_build_v3r28_stage2": true,
+  "do_not_run_v3r28": true,
+  "acceptance_artifacts_created": false
+}

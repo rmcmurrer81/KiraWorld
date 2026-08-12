@@ -1,0 +1,100 @@
+{
+  "schema": "kira.r25.afes.v3r24.consumed_run_outcome.v1",
+  "recorded_utc": "2026-08-11T18:35:24.1077055Z",
+  "decision_used": "ACCEPTED_FOR_ONE_BOUNDED_DIAGNOSTIC_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R24_ONLY",
+  "invocation_count": 1,
+  "maximum_invocation_count": 1,
+  "authority_consumed": true,
+  "do_not_rerun": true,
+  "precheck": {
+    "sealed_subjects_exact": 273,
+    "sealed_subjects_drifted": 0,
+    "author_artifacts_exact": 10,
+    "author_artifacts_drifted": 0,
+    "audit_tsv_bytes": 1795,
+    "audit_tsv_sha256": "fc2d1a78d7d9f843349c4beb1ec7dc0af4d0cb4a7e7a8b481a7b1416c36da101",
+    "audit_sidecar_bytes": 65,
+    "audit_sidecar_file_sha256": "b7711e2a111d38b687b83097bc14f632a1241f5d28fc85d79d62251f0b140b37",
+    "output_paths_absent": true,
+    "working_directory": "C:/Users/robmc/Kira",
+    "executable_path": "C:/Users/robmc/Kira/tools/native/kira_r25_afes_execution_plan_validation_v3r24.exe",
+    "executable_bytes": 264704,
+    "executable_sha256": "281d427482657a73096fa6b44e2092e6e54b760e59c73c37f562e24ad6b03bb9"
+  },
+  "invocation": {
+    "arguments": [],
+    "exit_code": 1,
+    "terminal_state": "FAILED_CONSUMED_NO_RETRY",
+    "checkpoint": 110,
+    "plan_attempts": 0,
+    "plan_returns": 0,
+    "operation_enters": 0,
+    "operation_returns": 0,
+    "native_sha_calls": 0,
+    "python_error_captured": true,
+    "exception_type": "ValueError",
+    "exception_message": "unmarshallable object",
+    "exception_message_truncated": false
+  },
+  "evidence": {
+    "path": "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "bytes": 1450,
+    "sha256": "310c8d16fdf433de22ecee9dc326c34fd8f1efcbbdc86ada382e7088e42745a7",
+    "ordered_records": 8,
+    "last_record": "terminal_failed_consumed_no_retry"
+  },
+  "receipt": {
+    "path": "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+    "bytes": 1320,
+    "sha256": "2665dd31b2c561a728a3b14449b6d79e821494e9b5792682bc1399fd5edb5b34",
+    "terminal_state_from_evidence": "FAILED_CONSUMED_NO_RETRY",
+    "checkpoint_from_evidence": 110
+  },
+  "contract_gate": {
+    "passed_mask": 32767,
+    "failure_gate": 0,
+    "win32_error": 0,
+    "all_15_gates_passed": true,
+    "snapshot_one_bytes": 17141,
+    "snapshot_two_bytes": 17141,
+    "final_bytes": 17141
+  },
+  "python_cleanup": {
+    "finalize_called": true,
+    "finalize_result": 0,
+    "free_library_called": true,
+    "free_library_result": true,
+    "module_snapshot_succeeded": true,
+    "snapshot_error": 0,
+    "checked_module_count": 8,
+    "old_base_present": false,
+    "exact_python_path_present": false,
+    "retained_recheck_passed": true
+  },
+  "exact_static_reproduction": {
+    "python_version": "3.14.4",
+    "marshal_version": 5,
+    "validator_code_objects_checked": 20,
+    "marshal_version_4_failures": 4,
+    "marshal_version_5_failures": 0,
+    "version_4_failed_qualnames": [
+      "<module>",
+      "_v3_strict",
+      "_v3_validate_controller",
+      "_v3_glue_object"
+    ],
+    "direct_cause": "V3r24 hard-codes marshal.dumps(code, 4), while Python 3.14 compiler output for the validator contains slice constants; marshal format 4 cannot encode those code objects and raises ValueError: unmarshallable object. The locked runtime reports marshal.version 5, and format 5 encodes all 20 validator code objects.",
+    "controller_created": false,
+    "build_execution_plan_called": false
+  },
+  "exact_interpretation": {
+    "isolated_python_initialized": true,
+    "module_origin_snapshot_completed": true,
+    "helper_capture_started": true,
+    "successful_plan_validation_proven": false,
+    "bootstrap_broker_process_afes_blender_body_save_render_or_export_reached": false,
+    "finished_body_proven": false,
+    "avatar_builder_positive_method_created": false
+  },
+  "required_next_step": "Never rerun V3r24. Preserve all bytes. Author append-only V3r25 binding the exact consumed V3r24 closure, require marshal.version == 5 and marshal format 5 for Python 3.14 code-object fingerprints (or an equally exact no-marshal structural fingerprint), reproduce the V3r24 format-4 negative control and format-5 success across every validator/controller/helper code object, reseal, and require a different fresh audit before one new bounded diagnostic attempt."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "kira.temporary_creator.shared_person_spec.fresh_static_audit_result.v1",
+  "status": "REJECT_STATIC_SCHEMA_NO_INTEGRATION_NO_RUN",
+  "audit_independence": "DIFFERENT_FRESH_REVIEW",
+  "package_root": "C:/Users/robmc/Kira/RecoverySprint/continuation_20260811/temporary_creator_avatar_voice_shared_person_spec_v1_static_preparation/attempt_01",
+  "package_files_before": 7,
+  "package_files_after": 7,
+  "package_rehash_mismatches_before": 0,
+  "package_rehash_mismatches_after": 0,
+  "sealed_subjects_before": 4,
+  "sealed_subjects_after": 4,
+  "sealed_subject_mismatches_before": 0,
+  "sealed_subject_mismatches_after": 0,
+  "sealed_subject_root_sha256": "4c7812c464666066739a78176d0ce77c18517ede9657999833142db42b396e61",
+  "input_closure_subjects_before": 12,
+  "input_closure_subjects_after": 12,
+  "input_closure_mismatches_before": 0,
+  "input_closure_mismatches_after": 0,
+  "installed_author_suite": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 KIRA_TEST_PROJECT_ROOT=C:/Users/robmc/Kira py -B -m unittest -v test_temporary_creator_shared_person_spec_v1.py",
+    "tests_run": 16,
+    "tests_passed": 16,
+    "tests_failed": 0
+  },
+  "fresh_adversarial_suite": {
+    "path": "fresh_audit_test_shared_person_spec_v1.py",
+    "bytes": 17747,
+    "sha256": "1de403a020eca807046e6a4caac55cf44888d4aafd01e63a38474e0324b3e074",
+    "command": "PYTHONDONTWRITEBYTECODE=1 KIRA_SHARED_SPEC_PACKAGE=<installed-package> KIRA_PROJECT_ROOT=C:/Users/robmc/Kira py -B -m unittest -v fresh_audit_test_shared_person_spec_v1.py",
+    "tests_run": 18,
+    "tests_passed": 18,
+    "tests_failed": 0,
+    "meaning": "Each passing adversarial test reproduces a rejection blocker or missing invariant."
+  },
+  "rejection_blocker_ids": [
+    "R1_CORRECTION_REPORTER_REGISTRY_AND_SOURCE_EVIDENCE_SELF_ASSERTED",
+    "R2_VARIANT_ORIGINAL_IDENTITY_CLAIM_NOT_BLOCKED",
+    "R3_ONE_CLAIM_DIGEST_MAY_HAVE_CONFLICTING_CANON_AND_INVENTION_CLASSES",
+    "R4_PETER_NONADULT_AND_HOLMES_GENERIC_FALLBACK_CAN_PASS_HANDOFF",
+    "R5_HISTORICAL_PLAN_CLASS_TIER_DISCLOSURE_AND_EVIDENCE_NOT_EXACTLY_BOUND",
+    "R6_READY_EXPERT_AND_DOMAIN_TASK_BATTERY_BYPASSES",
+    "R7_EXPERT_VOICE_BODY_DISTINCTNESS_IS_SELF_ASSERTED",
+    "R8_RUNTIME_MUTABLE_SEMANTIC_RULES_CHANGE_ACCEPTANCE_WITHOUT_SEAL_CHANGE",
+    "R9_DUPLICATE_JSON_KEYS_AND_UNICODE_SPOOF_CONTROLS_NOT_REJECTED"
+  ],
+  "positive_controls": {
+    "filesystem_capability_present": false,
+    "process_capability_present": false,
+    "network_capability_present": false,
+    "model_or_media_capability_present": false,
+    "open_live_creation_refuses": true
+  },
+  "kira_writes_performed": false,
+  "person_body_voice_model_media_or_live_route_changed": false,
+  "execution_authority": "NONE",
+  "next_boundary": "new repaired sealed static successor and different fresh review"
+}

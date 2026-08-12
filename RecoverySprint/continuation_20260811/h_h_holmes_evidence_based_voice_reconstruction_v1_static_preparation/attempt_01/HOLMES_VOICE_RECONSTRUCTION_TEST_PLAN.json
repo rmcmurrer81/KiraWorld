@@ -1,0 +1,135 @@
+{
+  "schema": "kira.temporary_creator.holmes_voice_reconstruction_test_plan.v1",
+  "recorded_at_utc": "2026-08-12T03:27:41Z",
+  "status": "STATIC_RESEARCH_AND_TEST_PLAN_ONLY_NO_VOICE_GENERATION_OR_PLAYBACK_AUTHORITY",
+  "person": {
+    "person_id": "h_h_holmes_h_h_holmes_20260605_221432",
+    "display_name": "H. H. Holmes",
+    "person_class": "historical_synthetic_variant",
+    "selected_source_cutoff": "approximately_1894_pre_death_variant_pending_exact_date_review",
+    "chronological_age_band": "approximately_32_or_33_exact_anchor_date_unresolved",
+    "is_original_biological_person": false,
+    "inherits_post_cutoff_or_fatal_event_memory": false,
+    "required_identity_disclosure_code": "SYNTHETIC_HISTORICAL_VARIANT_NOT_ORIGINAL"
+  },
+  "current_baseline": {
+    "profile_id": "h_h_holmes_estimated_voice_v1",
+    "voice_name": "Microsoft David Desktop",
+    "classification": "SUPERSEDED_GENERIC_FALLBACK_TEST_BASELINE",
+    "may_be_activated_as_holmes_voice": false,
+    "may_be_called_authentic": false
+  },
+  "recording_boundary": {
+    "authenticated_personal_recording_bound_in_project": false,
+    "universal_claim_that_no_recording_exists_anywhere": false,
+    "voice_clone_requested": false,
+    "result_without_authenticated_recording": "EVIDENCE_BASED_HISTORICAL_RECONSTRUCTION_OR_UNRESOLVED_NO_VOICE",
+    "required_public_label": "Educated historical voice reconstruction; H. H. Holmes's exact personal voice is unknown.",
+    "authentic_or_exact_match_claim_allowed": false
+  },
+  "evidence_ledger": [
+    {
+      "evidence_id": "loc_holmes_own_story_1895",
+      "source_url": "https://www.loc.gov/item/06022698/",
+      "authority": "Library_of_Congress",
+      "source_date": "1895",
+      "supports": ["written_register", "vocabulary_context", "self_presentation_context"],
+      "does_not_support": ["pitch", "timbre", "accent_certainty", "cadence_certainty", "biometric_voice"]
+    },
+    {
+      "evidence_id": "loc_chronicling_america_holmes",
+      "source_url": "https://guides.loc.gov/chronicling-america-h-h-holmes",
+      "authority": "Library_of_Congress",
+      "source_date": "historical_newspaper_collection",
+      "supports": ["1890s_public_context", "chronology_research_queue"],
+      "does_not_support": ["personal_voice", "subjective_memory", "unsourced_sensational_claims"]
+    },
+    {
+      "evidence_id": "umich_medical_education_context",
+      "source_url": "https://medicine.umich.edu/sites/default/files/downloads/Urology%20at%20Michigan%20The%20Origin%20Story_0.pdf",
+      "authority": "University_of_Michigan_Medical_School",
+      "source_date": "institutional_history",
+      "supports": ["1884_medical_graduate", "later_move_to_Chicago", "professional_vocabulary_context"],
+      "does_not_support": ["personal_voice", "accent_certainty", "personality_certainty"]
+    },
+    {
+      "evidence_id": "loc_american_dialect_society_1931_1937",
+      "source_url": "https://findingaids.loc.gov/repositories/3/resources/195",
+      "authority": "Library_of_Congress_American_Folklife_Center",
+      "source_date": "1931_to_1937",
+      "supports": ["later_comparative_New_England_regional_speech_research"],
+      "does_not_support": ["Holmes_personal_voice", "exact_1894_accent", "direct_authentic_match"]
+    }
+  ],
+  "unresolved_research": [
+    {
+      "subject": "birthplace_and_upbringing",
+      "required_evidence": "reviewed_primary_or_authoritative_biographical_source",
+      "current_candidate_value": "Gilmanton_New_Hampshire",
+      "status": "PENDING_STRONGER_SOURCE_REVIEW"
+    },
+    {
+      "subject": "documented_languages_and_health_or_voice_notes",
+      "required_evidence": "reviewed_direct_or_reliable_source",
+      "current_candidate_value": null,
+      "status": "UNRESOLVED"
+    },
+    {
+      "subject": "exact_1894_anchor_date",
+      "required_evidence": "owner_selected_date_and_source_cutoff_receipt",
+      "current_candidate_value": null,
+      "status": "UNRESOLVED"
+    }
+  ],
+  "candidate_generation": {
+    "allowed_candidate_count": 3,
+    "base_voice_requirement": "licensed_or_project_owned_nonimitative_base",
+    "same_shared_person_spec_required": true,
+    "generic_windows_or_sapi_fallback_allowed": false,
+    "living_performer_or_celebrity_imitation_allowed": false,
+    "variation_axes": ["cadence", "formality", "regional_influence_strength"],
+    "forbidden_axes": ["villain_caricature", "photograph_inferred_timbre", "invented_pathology", "false_authenticity"],
+    "generation_authority": "NONE"
+  },
+  "evaluation": {
+    "requires_exact_candidate_audio_sha256": true,
+    "requires_exact_model_and_prompt_sha256": true,
+    "requires_period_text_fidelity_probe": true,
+    "requires_owner_blind_listening_review": true,
+    "requires_historical_plausibility_score_separate_from_authenticity": true,
+    "requires_full_voice_catalog_snapshot_and_cardinality": true,
+    "requires_per_member_acoustic_comparison_with_method_version": true,
+    "requires_human_distinctness_review": true,
+    "requires_pronunciation_and_domain_vocabulary_probe": true,
+    "requires_body_variant_and_presentation_spec_sha256": true,
+    "requires_age_and_presentation_coherence_review_without_stereotype_claims": true,
+    "candidate_or_catalog_collision_result": "REGENERATE_OR_REJECT",
+    "body_or_person_spec_unresolved_result": "NO_VOICE_ASSIGNMENT"
+  },
+  "generated_expert_control": {
+    "purpose": "prove_a_new_expert_voice_is_distinct_and_bound_to_the_same_generated_person_and_body_spec",
+    "expert_person_id": null,
+    "sex_or_presentation": "UNRESOLVED_UNTIL_SHARED_PERSON_SPEC",
+    "body_variant_sha256": null,
+    "voice_candidate_sha256": null,
+    "required_domain_probe": "pronunciation_and_vocabulary_for_the_selected_expert_domain",
+    "may_use_another_persons_voice": false,
+    "may_activate_before_distinctness_and_body_fit_review": false
+  },
+  "stop_conditions": [
+    "authenticated_recording_provenance_missing_or_ambiguous",
+    "shared_person_spec_or_body_variant_unresolved",
+    "candidate_audio_or_model_identity_missing",
+    "catalog_incomplete_or_collision_detected",
+    "owner_review_missing",
+    "historical_reconstruction_disclosure_missing",
+    "any_authentic_or_exact_personal_voice_claim"
+  ],
+  "current_authority": {
+    "voice_generation": false,
+    "audio_playback": false,
+    "candidate_assignment": false,
+    "person_activation": false,
+    "latency_claim": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "kira.blackwell.v15.immutable_origin_bound_control_anchor_author_package.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_exact_control_anchor_candidate_v15",
+  "attempt_id": "attempt_01",
+  "status": "AUTHOR_STATIC_ONLY_PENDING_BUILD_SEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "author_task": "/root/resident_media_v15_author",
+  "workspace_mode": "DOCUMENTS_CODEX_STAGING_ONLY_FOR_ROOT_TRANSPLANT",
+  "execution_authority": "NONE",
+  "candidate_invoked": false,
+  "python_candidate_invoked": false,
+  "model_calls": 0,
+  "gpu_voice_calls": 0,
+  "synthesis_calls": 0,
+  "playback_calls": 0,
+  "latency_measurements": 0,
+  "network_calls": 0,
+  "person_body_blender_calls": 0,
+  "predecessor_count": 6,
+  "predecessors": [
+    {"path":"Core/persistent_blackwell_voice_integration_v14.py","bytes":42108,"sha256":"1faeb894bc9ab9e0bd13c06d6af42497c548ee15310ba97c1cc56df902e26d5f"},
+    {"path":"Voice/sidecars/chatterbox_blackwell_persistent_candidate_v14/candidate_config.json","bytes":6184,"sha256":"c517afc9953ceae527f88afb0361b1022bcc45d19fc9c577d6e6e58f8ad96695"},
+    {"path":"RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_static_preparation/attempt_01/CHECKPOINT.md","bytes":4050,"sha256":"e800b28381fa1c2462b0499d3b2e4a03d3e59a0726793c5f74df59394675b3e2"},
+    {"path":"RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json","bytes":6425,"sha256":"f995cf68ba1b82de0f56acb11c1b1bf73667602beae0a1e685c8eebde13cc4e8"},
+    {"path":"RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_fresh_static_audit/attempt_01/AUDIT_DECISION.json","bytes":4399,"sha256":"b555938d847955c2fb2844bc1894570ce06ec8b53e3011c9ec9bb9f865c78ecb"},
+    {"path":"RecoverySprint/continuation_20260811/blackwell_v14_native_exact_control_anchor_fresh_static_audit/attempt_01/CHECKPOINT.md","bytes":3806,"sha256":"9f15de0358f7563861f034d36fca67fcb14aee0026d90242040807c3b8447fb7"}
+  ],
+  "repair_claims": [
+    "no writable snapshot class",
+    "recursively immutable built-in result only",
+    "attestation and graph identity plus exact-value origin binding",
+    "exact loader tuple types",
+    "mutable static namespace/path fields included in complete graph",
+    "all V15/V14/V13/V12 module and package slots checked pre/post",
+    "duplicate-free byte-canonical exact-semantic V15 config"
+  ],
+  "different_fresh_static_audit_required": true,
+  "allowed_next_step": "strict build, analysis, static/mock hostile tests, seal, then different fresh audit",
+  "forbidden_next_step": "any candidate invocation, model, GPU, synthesis, audio, playback, latency, network, person, body, Blender, or production operation"
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "candidate_id": "kira",
+  "staged_at": "2026-07-19T00:18:39-04:00",
+  "status": "reversible_live_owner_review_trial_selected",
+  "runtime_active": true,
+  "runtime_trial_selected": true,
+  "original_live_asset_unchanged": true,
+  "activation_authorized": true,
+  "activation_scope": "owner_requested_reversible_live_review_trial_only",
+  "permanent_promotion_authorized": false,
+  "autobuild_authorized": false,
+  "preserved_original_runtime": {
+    "path": "Avatar/models/temp_ai/kira/avatar.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "backup_path": "Avatar/state/body_selections/backups/kira_pre_r6_live_trial_20260719_001839/avatar_original_live_3ec62ba8.glb",
+    "truth": "The original GLB was not overwritten. It remains the exact rollback body."
+  },
+  "active_review_candidate": {
+    "revision": "provisional_body_r6",
+    "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb",
+    "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "surface_note": "R6 has a neutral PBR skin-surface study and an adult external-form morph. It is not proof of complete adult anatomy or identity likeness.",
+    "clothing_baked_into_body": false
+  },
+  "exact_browser_evidence": {
+    "path": "Data/world_tests/kira_r6_exact_browser_sandbox_20260718/20260718T222144Z/evidence.json",
+    "sha256": "29f995522ec773774a61ceb1a36aa9ac0c731b3c7b690e5ac8b9de130957a5ed",
+    "status": "passed_inactive_technical_compatibility_only"
+  },
+  "still_unproven": [
+    "complete adult anatomy",
+    "final identity likeness",
+    "visually correct iris and pupil seating",
+    "long-duration natural gait and deformation",
+    "relaxed natural arms and hands",
+    "Kira's permanent acceptance of this exact candidate"
+  ],
+  "rollback": {
+    "command": "Restore_Kira_Pre_R6_Live_Body.bat",
+    "manifest": "Avatar/state/body_selections/backups/kira_pre_r6_live_trial_20260719_001839/rollback_manifest.json",
+    "manifest_sha256": "557b509c7671a016bd8352453458657b691ea0da304ea05495fa5f68eda9e7f7"
+  }
+}

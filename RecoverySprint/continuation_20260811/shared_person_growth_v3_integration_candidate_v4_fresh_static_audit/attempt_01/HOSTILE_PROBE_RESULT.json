@@ -1,0 +1,118 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v4.independent_hostile_probe_result.v1",
+  "recorded_utc": "2026-08-11T17:35:43.5618675Z",
+  "reviewer_task": "/root/growth_v4_audit",
+  "different_from_author_task": true,
+  "static_only": true,
+  "command": "py -B C:\\Users\\robmc\\Documents\\Codex\\2026-08-11\\c\\work\\growth_v4_independent_audit_attempt_01\\INDEPENDENT_HOSTILE_PROBES.py",
+  "probe_script": {
+    "path": "INDEPENDENT_HOSTILE_PROBES.py",
+    "bytes": 25837,
+    "sha256": "6a1d7b419a44f7ef0fafd11a63d036bd17c9c6f457466731758bc5658ca9da43"
+  },
+  "exit_code": 0,
+  "probe_count": 13,
+  "passed": 13,
+  "failed": 0,
+  "python_bytecode_cache_written": false,
+  "verification": {
+    "v4_six_artifacts_exact": "6/6 PASS",
+    "sealed_manifest_closure": "14/14 PASS; 14 unique root/path pairs",
+    "accepted_isolated_v3_core_closure": "28/28 PASS; ACCEPT_STATIC_ONLY remains exact",
+    "strict_utf8_in_memory_compile": "10/10 PASS",
+    "focused_v4_suite": "21/21 PASS",
+    "preserved_v3_core_and_v1_v2_v3_integration_suite": "103/103 PASS",
+    "all_applicable_routes": "35/35 PASS",
+    "all_inventory_people_represented": "24/24 PASS",
+    "v3_failed_peter_parker_and_spider_gwen_routes": "4/4 PASS_REPAIRED",
+    "per_route_candidate_maturity_and_route_cross_bindings": "105/105 PASS_REFUSED",
+    "subject_specific_exact_status_routes": "6/6 PASS (four confirmed-adult Peter/Gwen plus two non-adult Marinette)",
+    "scope_shape_and_alias_variants": "5/5 PASS_REFUSED",
+    "temporary_creator_creator_and_new_person_targets": "3/3 PASS_REFUSED",
+    "denied_sarah_alias": "PASS_REFUSED_WITH_READ_ONLY_METADATA_ONLY",
+    "generic_and_biological_robert_substitution": "3/3 PASS_REFUSED",
+    "unsafe_consent_privacy_memory_action_flags": "7/7 PASS_REFUSED",
+    "production_opener": "PASS_HARD_REFUSED",
+    "executable_text_consumer_scan": "59,486 files; 0 Kira hits; only V4 source, focused test, and this audit probe",
+    "final_exact_rehash": "6/6 V4 artifacts and 14/14 sealed subjects PASS"
+  },
+  "route_matrix": {
+    "applicable_routes": 35,
+    "unique_people": 24,
+    "maturity_route_counts": {
+      "confirmed_adult": 15,
+      "non_adult": 2,
+      "unresolved": 18
+    },
+    "person_class_route_counts": {
+      "generated_expert": 7,
+      "non_adult_temporary_person": 2,
+      "permanent_person": 4,
+      "synthetic_robert_distinct_from_biological_robert": 2,
+      "temporary_person": 20
+    }
+  },
+  "scope_repair": {
+    "canonical_scope_object_type": "exact tuple",
+    "canonical_scope_value": [
+      "shared_growth_v3_public_projection_only"
+    ],
+    "exported_in___all__": false,
+    "public_REQUESTED_SCOPE_present": false,
+    "append_or_item_assignment_possible": false,
+    "accepted_input_type": "exact list[str] with exactly one canonical value",
+    "each_normalized_projection_receives_fresh_list": true,
+    "caller_or_decoded_list_mutation_changes_existing_or_later_bytes": false
+  },
+  "nonblocking_same_process_substitution_truth": {
+    "private_module_name_can_be_rebound_by_same_process_python": true,
+    "rebind_can_fabricate_changed_inert_bytes": true,
+    "candidate_claims_same_process_python_as_trust_root": false,
+    "fabricated_bytes_are_authority_permission_receipt_profile_memory_or_commit": false,
+    "current_consumer_exists": false,
+    "reason_not_blocking_static_acceptance": "The source and checkpoint explicitly disclaim same-process Python as a protected trust root; the repaired contract is the private immutable tuple object and non-exported/fresh projection behavior, not origin-protected module globals. No verifier, consumer, writer, or commit path exists."
+  },
+  "no_authority_or_state_surface": {
+    "verifier_or_key": false,
+    "callback_or_controller": false,
+    "authority_or_receipt_ledger": false,
+    "staging_or_output_path": false,
+    "write_or_commit": false,
+    "query_or_rollback": false,
+    "cleanup_or_unlink": false,
+    "person_profile_or_memory_writer": false,
+    "production_consumer": false,
+    "temporary_creator_support": false,
+    "returned_value": "canonical inert UTF-8 JSON bytes with exact canonical proposal SHA-256"
+  },
+  "temporary_creator_routing_assessment": {
+    "v4_can_upgrade_or_supply_temporary_creator": false,
+    "v4_temporary_creator_target_result": "HARD_REFUSE",
+    "safe_reusable_lessons_only": [
+      "exact person/candidate/route/class/maturity binding",
+      "subject_specific means the exact inventory person's required status, never a generic adult promotion",
+      "private immutable scope policy with fresh public-projection lists",
+      "exhaustive inventory route coverage and denied-alias regression",
+      "Biological Robert and Synthetic Robert remain distinct",
+      "opt-in, revocability, no owner override, no private-state request, no memory write, and no external action remain exact",
+      "static bytes are neither authority nor a person upgrade"
+    ],
+    "requires_separate_append_only_template_integration": [
+      "an exact sealed Temporary Creator template successor",
+      "exact bindings to the accepted isolated V3 Creator/profile/root capability boundary",
+      "variant branch-point and pre-death cutoff policy",
+      "maturity, curriculum, consent, privacy, relationship, memory, emotion, and no-private-copy contracts",
+      "a protected external integration/commit authority with recovery if any durable write is introduced",
+      "different fresh audit before any generated synthetic person, variant, or expert receives the result"
+    ]
+  },
+  "scope_truth": {
+    "kira_written": false,
+    "live_person_or_model_invoked": false,
+    "profile_memory_or_person_state_changed": false,
+    "body_media_voice_network_device_or_sarah_runtime_invoked": false,
+    "sarah_files_modified": false,
+    "promotion_or_production_pointer_changed": false
+  },
+  "result": "PASS_NO_BLOCKER_FOR_ACCEPT_STATIC_ONLY"
+}

@@ -1,0 +1,14 @@
+Long Evaluation V15 different-review cache-free author-suite replay
+Recorded UTC: 2026-08-12T01:40:54.655Z
+
+Command boundary:
+  PYTHONDONTWRITEBYTECODE=1
+  py -B -m pytest -q -p no:cacheprovider Testing/test_qwen35_kira_long_turing_health_body_voice_owner_evaluation_v15.py
+
+Result:
+  ........................................................................ [100%]
+  72 passed in 0.36s
+
+No V15 entry point, retained runner, model, camera, microphone, voice,
+playback, protected private state, person state, output root, GPU, network,
+body, Blender, media, production, or Sarah path was invoked.

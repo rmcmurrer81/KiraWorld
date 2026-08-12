@@ -1,0 +1,349 @@
+{
+  "schema_version": 3,
+  "candidate_id": "kira_r7_socket_eye_v3",
+  "created_at": "2026-07-22T22:44:37.323328+00:00",
+  "kind": "offline_blender_inactive_eye_only_v3_fixed_cornea_bounded_iris_gaze_no_activation_no_binding_no_runtime_write",
+  "status": "inactive_fixed_view_review_pending",
+  "promotion_allowed": false,
+  "authorization_context": "Robert explicitly supplied Desktop Folder 91 to improve the avatar/world/movement builders. Only the archive's eye diffuse/normals are used in this local inactive candidate; no redistribution or license claim is made.",
+  "sources": {
+    "r6_body": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb",
+      "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77"
+    },
+    "staged_eye": {
+      "path": "Avatar/models/staged/kira/eyes/kira_brown_eye_rig_v3_2/kira_brown_eye_rig_v3_2.glb",
+      "sha256": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413"
+    },
+    "public_eye": {
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/kira/kira_brown_eye_rig_v3_2.glb",
+      "sha256": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413"
+    },
+    "main_js": {
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/src/main.js",
+      "sha256": "56a763b0c235f63359b76c0aacdcbc74b222ad71043c8bb12bc7e4f055175b04"
+    },
+    "source_archive": {
+      "path": "C:\\Users\\robmc\\Desktop\\91\\sci-fi-girl-v02-walkcycle-test.zip",
+      "sha256": "ed9d90f09cc5a17881e14738bc102a704ee331add9442bad1e4d970fc9d4bfb1"
+    }
+  },
+  "texture_derivation_manifest": {
+    "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/derived_textures/texture_derivation_manifest.json",
+    "bytes": 2770,
+    "sha256": "a233bad2220ef1bfebb5ae7c008442dd3ba4f6b66cbaeac7c99c29ffd7032014"
+  },
+  "derived_textures": {
+    "brown_iris_base_color": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v2/derived_textures/kira_r7_v2_brown_iris_base_color.png",
+      "bytes": 449091,
+      "sha256": "7d34650b902515ada8bc59b8dd8959d733fe86a26e49ba03038d36344c4124c1"
+    },
+    "sclera_base_color": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v2/derived_textures/kira_r7_v2_sclera_base_color.png",
+      "bytes": 390558,
+      "sha256": "e6e79a1d0b0ac64fe911071a02a050cfd8e7e59ddd3b7360d6eee5a40e8da0dc"
+    },
+    "iris_normal": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v2/derived_textures/kira_r7_v2_iris_normal.png",
+      "bytes": 533127,
+      "sha256": "bcde7cbbf341dd0dc00104a541cdbc48708aa5bd263617af5ad4449af528a24d"
+    },
+    "sclera_normal": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v2/derived_textures/kira_r7_v2_sclera_normal.png",
+      "bytes": 254935,
+      "sha256": "29476dd51d99b77088fd1ae2678854fd16d97f22efe30150d0f81074271971c9"
+    }
+  },
+  "candidate": {
+    "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/kira_r7_socket_eye_v3.glb",
+    "bytes": 1994524,
+    "sha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5"
+  },
+  "offline_review_blend": {
+    "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/kira_r7_socket_eye_v3_offline_review.blend",
+    "bytes": 7824174,
+    "sha256": "4502c3b9b63478db1f8361c44702b40b526caa23b09d7b6337e39c85c6fe8ad1"
+  },
+  "parameters": {
+    "measured_socket_centers_blender_native": {
+      "left": [
+        -0.022298403084278107,
+        -0.04320000112056732,
+        1.106764316558838
+      ],
+      "right": [
+        0.022298403084278107,
+        -0.04320000112056732,
+        1.106764316558838
+      ]
+    },
+    "sclera_half_width_mm": 9.05,
+    "sclera_half_height_mm": 3.12,
+    "sclera_front_y": -0.04905,
+    "sclera_rim_y": -0.04815,
+    "iris_radius_mm": 2.9,
+    "iris_front_y": -0.04938,
+    "cornea_radius_mm": 3.14,
+    "cornea_depth_mm": 0.55,
+    "gaze_yaw_degrees": 13.0
+  },
+  "hashes_before": {
+    "r6_body": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "staged_eye": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413",
+    "public_eye": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413",
+    "main_js": "56a763b0c235f63359b76c0aacdcbc74b222ad71043c8bb12bc7e4f055175b04",
+    "source_archive": "ed9d90f09cc5a17881e14738bc102a704ee331add9442bad1e4d970fc9d4bfb1"
+  },
+  "hashes_after": {
+    "r6_body": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "staged_eye": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413",
+    "public_eye": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413",
+    "main_js": "56a763b0c235f63359b76c0aacdcbc74b222ad71043c8bb12bc7e4f055175b04",
+    "source_archive": "ed9d90f09cc5a17881e14738bc102a704ee331add9442bad1e4d970fc9d4bfb1"
+  },
+  "structural_checks": {
+    "all_required_nodes_present": true,
+    "exactly_two_sclera_nodes": true,
+    "exactly_two_iris_nodes": true,
+    "exactly_two_cornea_nodes": true,
+    "no_fake_insert_lid_nodes": true,
+    "blink_explicitly_unsupported": true,
+    "source_derived_texture_hashes_match": true,
+    "source_and_live_files_unchanged": true,
+    "candidate_is_separate_eye_only_glb": true,
+    "r6_body_context_not_exported": true
+  },
+  "fixed_renders": {
+    "neutral_front": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/neutral_front.png",
+      "bytes": 937805,
+      "sha256": "2cc48b811aa31f20b97dfb2cd28b547b36f82375e6134fb4becfb30d196e7677",
+      "camera_location": [
+        0.0,
+        -0.34,
+        1.108
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "neutral_left_30deg": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/neutral_left_30deg.png",
+      "bytes": 992054,
+      "sha256": "0b3987acec1a512872fb3c898d743932b47f73019f4e66290bcab24ab69fef00",
+      "camera_location": [
+        -0.17,
+        -0.295,
+        1.11
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "neutral_right_30deg": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/neutral_right_30deg.png",
+      "bytes": 983572,
+      "sha256": "daaecc21540b372ab9471fc5a70c9d75b269fade30bc94153637bf0988bb21d4",
+      "camera_location": [
+        0.17,
+        -0.295,
+        1.11
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "neutral_left_profile": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/neutral_left_profile.png",
+      "bytes": 988610,
+      "sha256": "0088fb9a90e717fe08c5f3511d99117b08a671eee72d4e79d04b90a9a62cc619",
+      "camera_location": [
+        -0.34,
+        -0.01,
+        1.11
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "neutral_right_profile": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/neutral_right_profile.png",
+      "bytes": 998704,
+      "sha256": "42cd75365f5e623d726e3bec0f0f729cebb92b9d5a45e3f3e7aead2237b39121",
+      "camera_location": [
+        0.34,
+        -0.01,
+        1.11
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "gaze_left_front": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/gaze_left_front.png",
+      "bytes": 937896,
+      "sha256": "e2fafe40281c8df17ba20a1cdc1e0e7cc49d804fbe58796247cb8aaaa241c29f",
+      "camera_location": [
+        0.0,
+        -0.34,
+        1.108
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": -13.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "gaze_right_front": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/gaze_right_front.png",
+      "bytes": 937896,
+      "sha256": "bdc3d9116de5280574668700e60da3db71f1be04ca957dc3ef1a8264bd814ca1",
+      "camera_location": [
+        0.0,
+        -0.34,
+        1.108
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 13.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "gaze_up_front": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/gaze_up_front.png",
+      "bytes": 937836,
+      "sha256": "e911cb3664ebc277ed6704624a2733f60eb3e9847f8e7f3f8744b437836562d7",
+      "camera_location": [
+        0.0,
+        -0.34,
+        1.108
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 7.0
+    },
+    "gaze_down_front": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/gaze_down_front.png",
+      "bytes": 937508,
+      "sha256": "128ba59d222b4a414a9f7b623ceb09b98019407bb601cf25318b2685e2ea1466",
+      "camera_location": [
+        0.0,
+        -0.34,
+        1.108
+      ],
+      "camera_target": [
+        0.0,
+        -0.04100000113248825,
+        1.1069999933242798
+      ],
+      "camera_lens_mm": 72.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": -7.0
+    },
+    "macro_left_iris_cornea": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/macro_left_iris_cornea.png",
+      "bytes": 1014197,
+      "sha256": "b18a5bc4f5811dfabb2fccfcd7435cf344c6daedfa84b373acc2dfddbf1ec24f",
+      "camera_location": [
+        -0.0223,
+        -0.092,
+        1.1068
+      ],
+      "camera_target": [
+        -0.022298403084278107,
+        -0.04320000112056732,
+        1.106764316558838
+      ],
+      "camera_lens_mm": 82.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 0.0
+    },
+    "macro_right_iris_cornea": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_r7_socket_eye_fit/review_20260722_v3/fixed_renders/macro_right_iris_cornea.png",
+      "bytes": 1011003,
+      "sha256": "0538109ee438687503fc36d9c34567fe47bbcc481b090b64127499271c61786c",
+      "camera_location": [
+        0.0223,
+        -0.092,
+        1.1068
+      ],
+      "camera_target": [
+        0.022298403084278107,
+        -0.04320000112056732,
+        1.106764316558838
+      ],
+      "camera_lens_mm": 82.0,
+      "gaze_yaw_degrees": 0.0,
+      "gaze_pitch_degrees": 0.0
+    }
+  },
+  "visual_acceptance": {
+    "socket_alignment_front_and_three_quarter": null,
+    "no_profile_protrusion": null,
+    "four_gaze_views_plausible": null,
+    "brown_iris_reads_as_living_texture_not_flat_disc": null,
+    "sclera_reads_as_living_tissue": null,
+    "cornea_reads_as_natural_wet_lens": null,
+    "macro_views_show_eye_detail": null,
+    "overall_visual_fit_passed": null,
+    "blink_supported": false,
+    "promotion_allowed": false,
+    "owner_review_required_before_any_promotion": true,
+    "note": "Original-resolution R7 v3 fixed renders require visual inspection."
+  },
+  "limits": [
+    "The candidate is not referenced by Avatar Builder or Home World.",
+    "The review does not activate Kira or any other person.",
+    "Blink is unsupported; this candidate deliberately has no fake insert lids.",
+    "Texture and structural checks do not prove visual realism.",
+    "Owner approval and a separate reversible promotion task remain mandatory after any visual pass.",
+    "V3 deliberately does not claim eyelid/blink proof; it only repairs socket seating and gaze."
+  ],
+  "created_at_v3_patch": "2026-07-22T22:44:37.411838+00:00",
+  "v3_changes": {
+    "preserved": "R7 v2 neutral/front eye envelope and source-derived materials",
+    "fixed_cornea_in_socket": true,
+    "gaze_motion": "iris-only bounded shallow-surface translation",
+    "horizontal_translation_limit_mm": 1.25,
+    "vertical_translation_limit_mm": 0.72,
+    "macro_camera_near_clip_m": 0.002,
+    "reason": "V2 looked good head-on but rotating the whole iris/cornea assembly created side/gaze separation artifacts and clipped macro evidence."
+  }
+}

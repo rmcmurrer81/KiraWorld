@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "candidate": "kira_qwen35_long_turing_health_body_voice_v8",
+  "attempt_id": "attempt_01",
+  "completed_at_utc": "2026-08-11T06:45:15.390Z",
+  "decision": "REJECT",
+  "verdict": "REJECT_NO_V8_UNATTENDED_ATTEMPT_AUTHORIZED",
+  "live_authorized": false,
+  "unattended_attempt_authorized": false,
+  "authorization_created": false,
+  "candidate_edited": false,
+  "different_fresh_reaudit_required_after_append_only_repair": true,
+  "authored_tests_passed": 86,
+  "authored_tests_failed": 0,
+  "independent_tests_run": 20,
+  "independent_tests_passed": 16,
+  "independent_tests_failed": 4,
+  "blocking_finding_count": 2,
+  "blocking_finding_ids": [
+    "BLOCK_V8_DUPLICATE_ARGUMENT_ATTEMPT_BINDING_BYPASS",
+    "BLOCK_V8_V1_LOADER_IDENTITY_AND_CONCURRENCY_LEAK"
+  ],
+  "static_audit_result": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v8_fresh_static_audit/attempt_01/STATIC_AUDIT_RESULT.json",
+    "bytes": 7713,
+    "sha256": "2323341c8166b9f62af758d311b5d62fbdc3c05cba5be506e460d34bd285e1f9"
+  },
+  "hostile_probe_result": {
+    "path": "RecoverySprint/continuation_20260811/kira_qwen35_long_turing_health_body_voice_v8_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+    "bytes": 2697,
+    "sha256": "0f2f5d16e4ecd30a6489b33b84fba47bd542ee7c745ee4a41bb292a46d8269a2"
+  },
+  "reason": "The exact-byte closure, real nested loader, V7 repairs, Qwen 3.5/Blackwell/playback/cleanup contract and output-replay controls pass, but duplicate singleton path arguments split V8 validation from the retained parser and can select attempt_02. The process-global V1 loader substitution also accepts preexisting hostile identity and leaks a reviewed-shell lambda under overlapping validations. Exactly one unattended append-only attempt is therefore not safely enforceable.",
+  "required_next_step": "Preserve V8 and this audit unchanged. Repair duplicate-argument canonicalization and V1 loader identity/concurrency in an append-only successor, then obtain another different fresh static audit. Do not run V8 or issue a V8 authorization.",
+  "scope_truth": {
+    "v8_or_predecessor_bytes_edited": false,
+    "output_roots_created": false,
+    "model_or_voice_run": false,
+    "gpu_or_playback_run": false,
+    "person_body_media_or_blender_run": false
+  }
+}

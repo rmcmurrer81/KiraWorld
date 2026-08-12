@@ -1,0 +1,66 @@
+V3r30 cache-free static test evidence
+phase=PreSeal
+upstream_exact=33/33_direct_28/28_nested_17/17_deep_78/78_total
+blender_exact=bytes_sha256_path
+mocked_hostile_worker_refusals=18/18
+mocked_hostile_worker_staging_refusals=4/4
+mocked_hostile_audit_refusals=21/21
+mocked_hostile_install_authority_refusals=5/5
+mocked_hostile_materialization_consumption_refusals=4/4
+syntax_cache_free=2/2
+native_materialized_compile=/W4_/WX_PASS_NOT_EXECUTED
+native_materialized_analyzer=ZERO_UNSUPPRESSED_DEFECTS_NOT_EXECUTED
+native_static_surface=PASS_PRE_RESERVED_SEVEN_WORKER_AND_EIGHT_FINAL_HANDLES_THROUGH_SUCCESS
+materialization_atomic_owner_rights_dacl_and_held_identity_probe=PASS_TEST_OWNED_DOCUMENTS_CODEX_PATH
+materialization_nt_rootdirectory_relative=PASS_DIRECTORY_AND_LEDGER_TEST_OWNED_PATH
+postseal_package_write_attempts=0_BY_CONSTRUCTION_AND_RECHECKED_IN_POSTSEAL
+candidate_or_native_product_invoked=false
+materializer_main_invoked=false
+blender_or_bpy_or_worker_invoked=false
+body_save_reload_render_evidence=false
+result=PASS_PRESEAL
+
+The worker-staging hostiles prove exact pre-existence of seven unique empty
+regular single-link non-reparse identities, refusal of pathname substitution,
+refusal of a hard-linked identity, refusal of a nonempty initial object, and
+durable same-identity write/readback. Native static order proves all seven
+handles are reserved and protected by the exact Owner-Rights transaction DACL
+before Blender and retained beside all eight final
+handles through durable success and terminal revalidation.
+
+The production preflight proved the current caller cannot obtain
+`FILE_DELETE_CHILD` on `C:\ProgramData`, can open and retain the anchor for child
+creation, and observes the exact sealed DACL SDDL; no production ledger
+directory or file was created. Static source checks and the live test-owned
+fixture prove that both directory create/open and ledger create/open use
+`NtCreateFile` relative to the already-held parent handle, with no pathname
+root or ledger creation. The production path supplies the final append-only
+directory and read-only file Owner-Rights DACLs during atomic object creation
+and requires the exact
+canonical DACL readback before proceeding. The
+materialization hostiles create their temporary ledger only below
+Documents/Codex, never below the package root or ProgramData. While the lease is held,
+directory rename and ledger replacement refuse, an added hard link is detected,
+the exact record survives deletion/recreation of generated output, and a second
+consumption refuses. The package snapshot is identical before and after. A
+self-cleaning test-owned probe supplied the exact final file and directory
+DACLs during handle-relative `NtCreateFile`, observed both exact canonical
+readbacks, proved the directory creation handle could create its child, proved
+the returned file-creation handle remained writable for the ledger transaction,
+refused a later hard-link alias, and proved both later read-only/read-traverse
+reopen paths. Two earlier intentionally ACL-sealed test directories
+also validated held file identity/readback and held-directory rename refusal,
+but could not be removed at ordinary
+user integrity and remain outside this package and seal:
+`C:\Users\robmc\Documents\Codex\v3r30_postclose_1dcju7wu` and
+`C:\Users\robmc\Documents\Codex\v3r30_sealed_reopen_v4xr1myi`. They are not
+authority ledgers. Recovery is explicitly outside this author package: only a
+separately authorized administrator may restore their ACLs and remove them.
+This author requested no broader privilege and performed no destructive cleanup;
+no Kira or ProgramData path was written.
+
+PostSeal must be run only after the final manifest is frozen. It rehashes every
+sealed subject, recomputes both package roots, parses the strict Stage-1 seal,
+regenerates the materialized header in memory, repeats all hostile tests from
+an installed or scratch layout without writing beside the package, and proves
+the strict seal mutation/type refusals. Passing remains static evidence only.

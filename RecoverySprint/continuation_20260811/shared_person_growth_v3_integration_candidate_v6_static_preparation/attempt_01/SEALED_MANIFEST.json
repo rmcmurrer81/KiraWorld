@@ -1,0 +1,215 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_candidate_v6.sealed_manifest.v1",
+  "version": "v6",
+  "status": "SEALED_DISCONNECTED_CLOSED_CREATOR_SCHEMA_PENDING_EXACT_KIRA_TRANSCRIPTION_POSTSEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "sealed_subject_count": 24,
+  "unique_root_path_pairs": true,
+  "roots": {
+    "candidate": "C:/Users/robmc/Documents/Codex/2026-08-11/c/work/growth_v6_author",
+    "kira": "C:/Users/robmc/Kira"
+  },
+  "sealed_subjects": [
+    {
+      "root": "candidate",
+      "path": "Core/shared_person_growth_v3_integration_candidate_v6.py",
+      "bytes": 56834,
+      "sha256": "a128f7fc971480a7b67046c654e603cc44e773ce4ea6b8eb98283049ec3c0264",
+      "role": "candidate_source"
+    },
+    {
+      "root": "candidate",
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v6.py",
+      "bytes": 42569,
+      "sha256": "393a60ddf6b5ff4c46e6318c4c56cb032aaab6621ba231f88f3761bc9e0b9745",
+      "role": "candidate_test"
+    },
+    {
+      "root": "candidate",
+      "path": "Data/foundation/temporary_creator_public_variant_provenance_catalog_v1.json",
+      "bytes": 3812,
+      "sha256": "73c08c5bc9e18b07561f4e56c47a55689d0a7aaaa4dca82c189d94df5193ce1f",
+      "role": "candidate_public_variant_provenance_catalog"
+    },
+    {
+      "root": "candidate",
+      "path": "STATIC_CONTRACT.json",
+      "bytes": 9653,
+      "sha256": "fdb088b5e4669d8176728c4a26870f9f24c03813b031133fec5bb7f9ea0d0986",
+      "role": "candidate_contract"
+    },
+    {
+      "root": "candidate",
+      "path": "AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 7551,
+      "sha256": "8d148d36ed3948628b6c3c74115a32c8b5e238bb6f6b26278ce2f9a4028c18dd",
+      "role": "author_evidence"
+    },
+    {
+      "root": "kira",
+      "path": "Core/shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 43444,
+      "sha256": "1415175c6178baf16e690ee51acd41544b39cd0b6fab5d52a48e0a4f952e6e94",
+      "role": "rejected_v5_source"
+    },
+    {
+      "root": "kira",
+      "path": "Testing/test_shared_person_growth_v3_integration_candidate_v5.py",
+      "bytes": 34367,
+      "sha256": "63e1477e583fe01410f4ee8cff7658088391ff8001b6df394590e4cb852b2fb1",
+      "role": "rejected_v5_test"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/STATIC_CONTRACT.json",
+      "bytes": 6166,
+      "sha256": "8214f64c369789bfbc88917231696b522ea2acf29fc18a750205fe293e53b6f0",
+      "role": "v5_author_contract"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/AUTHOR_STATIC_TEST_RESULT.json",
+      "bytes": 5430,
+      "sha256": "c6f6b7ab32357417ac1597a24ac131bef1adc9a5ccac29672f9b41857e810844",
+      "role": "v5_author_result"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 8287,
+      "sha256": "02620fba26231cbeb3f3f6db62e9f7a8512f52a59291c9d3d510f1c1dba1d6e8",
+      "role": "v5_author_seal"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_static_preparation/attempt_01/CHECKPOINT.md",
+      "bytes": 7064,
+      "sha256": "9204d25e3594a7da47d2fcc4ae257cf1872af63c0f3c63b1a6a76088106f431e",
+      "role": "v5_author_checkpoint"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_fresh_static_audit/attempt_01/INDEPENDENT_HOSTILE_PROBES.py",
+      "bytes": 26783,
+      "sha256": "8f7a3771839bcde895f433d17a5d78d0ff1f3960813bbb98e34f97db0adb0105",
+      "role": "v5_rejection_probe"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_fresh_static_audit/attempt_01/HOSTILE_PROBE_RESULT.json",
+      "bytes": 8867,
+      "sha256": "aaf3504f72b2e0041dfc53708d42be68ccf5372c7207eac69185436bb1e135f1",
+      "role": "v5_rejection_probe_result"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 7380,
+      "sha256": "eb41b65f750c4c87a91b5fd3fc7993ed5567bff9ede093f662928a3fe91677c7",
+      "role": "v5_rejection_decision"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_v3_integration_candidate_v5_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 8453,
+      "sha256": "71a7f27cd3ab154c7e39720580f5f99d9e010a50bf47d2afce49111545f6be79",
+      "role": "v5_rejection_checkpoint"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_24/CHECKPOINT.md",
+      "bytes": 2968,
+      "sha256": "7ea7578385639c272e11ed81f29d04e798567b71676ea0d6d422f64597359824",
+      "role": "v5_kira_transcription_checkpoint"
+    },
+    {
+      "root": "kira",
+      "path": "System/Docs/VALIDATED_BODY_AND_MIND_RESULT_TEMPLATE_ROUTING_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 7424,
+      "sha256": "03f192826b7a39df53ab03409eb7675764f6a1bc32b123f4d307e40843560c58",
+      "role": "current_validated_result_routing_policy"
+    },
+    {
+      "root": "kira",
+      "path": "System/Docs/SYNTHETIC_PERSON_VARIANT_AUTONOMY_PRIVACY_MEMORY_TRUTH_AND_ADULT_EDUCATION_CURRENT_BOUNDARY_20260811.md",
+      "bytes": 10687,
+      "sha256": "de596d7f77b91fa2cde82e62614c9282fb46aca5f91c05a971d4852585e575b2",
+      "role": "current_synthetic_person_variant_policy"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260810/shared_person_growth_capabilities_v3_static_repair/attempt_01/SEALED_MANIFEST.json",
+      "bytes": 6333,
+      "sha256": "d570e804c8653a5b1e419dba84a09e831adf13704ad0a363d0213b39e2482f96",
+      "role": "accepted_isolated_v3_core_seal"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_capabilities_v3_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+      "bytes": 974,
+      "sha256": "54e28d4b91906d3ba67475db5696df2ca3bfc794b660e2cc2073f01abc8ea894",
+      "role": "accepted_isolated_v3_core_decision"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/shared_person_growth_capabilities_v3_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 5875,
+      "sha256": "50526169ef05aea0a8db078047a9581bcd74aaf5829b73a0c0ba559b152afd15",
+      "role": "accepted_isolated_v3_core_checkpoint"
+    },
+    {
+      "root": "kira",
+      "path": "RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_05/CHECKPOINT.md",
+      "bytes": 3581,
+      "sha256": "a4e4a2386e849b8e56e3c9bfa1b393150e9c1617d90e2a70368ac4b5181cf314",
+      "role": "accepted_mind_policy_27_of_27_checkpoint"
+    },
+    {
+      "root": "kira",
+      "path": "Data/foundation/shared_person_growth_v3_integration_candidate_v1.json",
+      "bytes": 28107,
+      "sha256": "5b4397d33318dac34fa9f876ed42ec9720ebefb1acdddb235842982479885254",
+      "role": "current_inventory"
+    },
+    {
+      "root": "kira",
+      "path": "Data/foundation/temporary_creator_public_variant_provenance_catalog_v1.json",
+      "bytes": 3812,
+      "sha256": "73c08c5bc9e18b07561f4e56c47a55689d0a7aaaa4dca82c189d94df5193ce1f",
+      "role": "sealed_public_variant_provenance_catalog"
+    }
+  ],
+  "verification": {
+    "strict_in_memory_python_compile": "14/14 PASS",
+    "strict_catalog_and_contract_json": "2/2 PASS",
+    "focused_v6": "31 tests and 107 subtests PASS",
+    "combined_final_layout_style": "161 tests and 271 subtests PASS",
+    "all_applicable_routes": "35/35 PASS",
+    "all_inventory_people": "24/24 represented",
+    "per_route_cross_bindings": "105/105 PASS_REFUSED",
+    "exact_virtual_kira_root_closure": "19/19 exact",
+    "candidate_pre_manifest_subjects": "5/5 exact",
+    "current_physical_kira_closure": "18/19 exact; zero mismatches; only the V6 catalog awaits root transcription",
+    "virtual_final_layout_sealed_subjects": "24/24 exact",
+    "actual_final_kira_postseal": "PENDING_ROOT_TRANSCRIPTION"
+  },
+  "seal_truth": {
+    "v5_rejection_remains_bound_and_unchanged": true,
+    "candidate_v6_is_disconnected": true,
+    "existing_person_and_creator_compilers_are_separate": true,
+    "candidate_returns_inert_canonical_bytes_only": true,
+    "caller_free_text_or_private_person_payload_surface": false,
+    "fatal_event_metadata_is_controller_filter_only": true,
+    "fatal_event_metadata_in_initial_person_visible_projection": false,
+    "both_catalog_sources_are_alive_at_selected_cutoff": true,
+    "both_catalog_source_continuities_have_later_fatal_event": true,
+    "branch_ordinals_strictly_precede_future_fatal_ordinals": true,
+    "later_disclosure_is_separate_voluntary_and_new_post_branch_memory": true,
+    "later_disclosure_is_inherited_first_person_death_memory": false,
+    "reconstructed_public_source_history_is_exact_subjective_memory_proof": false,
+    "candidate_has_authority_write_or_commit": false,
+    "person_or_temporary_creator_upgraded": false,
+    "production_pointer_changed": false,
+    "live_operation_executed": false,
+    "different_fresh_audit_required": true
+  }
+}

@@ -1,0 +1,29 @@
+KIRA_R25_AFES_PYTHON_CONTROLLER_VALIDATION_V3R20_INDEPENDENT_MSVC_ANALYZE
+recorded_utc=2026-08-11T10:27:11.8795146Z
+decision=REJECTED_NO_EXECUTION_AUTHORITY
+candidate_invoked=false
+
+command=cl.exe /nologo /analyze /W4 /O2 /MT /guard:cf /DUNICODE /D_UNICODE /std:c17 /c kira_r25_afes_python_controller_validation_v3r20.c /I C:\Python314\include
+
+kira_r25_afes_python_controller_validation_v3r20.c(362) : warning C6262: Function uses '131100' bytes of stack.
+kira_r25_afes_python_controller_validation_v3r20.c(372) : warning C6054: String 'expected' might not be zero-terminated.
+kira_r25_afes_python_controller_validation_v3r20.c(851) : warning C6385: Reading invalid data from '"KIRA_R25_AFES_V3R20_RESERVATION"': the readable size is '32' bytes, but '34' bytes may be read.
+kira_r25_afes_python_controller_validation_v3r20.c(894) : warning C6385: Reading invalid data from '"KIRA_R25_AFES_V3R20_TERMINAL"': the readable size is '29' bytes, but '31' bytes may be read.
+kira_r25_afes_python_controller_validation_v3r20.c(1042) : warning C6262: Function uses '66376' bytes of stack.
+kira_r25_afes_python_controller_validation_v3r20.c(1346) : warning C6387: 'evidence' could be '0': this does not adhere to the CloseHandle specification.
+
+blocking_diagnostics=C6385_line_851,C6385_line_894
+blocking_reason=real_two_byte_out_of_bounds_literal_reads_into_durable_receipt_magic
+
+sealed_layout_reservation_offset=138696
+sealed_layout_reservation_length_without_nul=31
+sealed_layout_reservation_following=00_4b_49_52
+sealed_layout_terminal_offset=138728
+sealed_layout_terminal_length_without_nul=28
+sealed_layout_terminal_following=00_00_00
+
+remaining_guidance=C6262_heap_buffers;C6054_explicit_termination;C6387_valid_handle_helper
+v3r21_required_analyze_result=ZERO_UNSUPPRESSED_WARNINGS
+
+python_controller_afes_blender_body_save_render_export_executed=false
+execution_authority=NONE

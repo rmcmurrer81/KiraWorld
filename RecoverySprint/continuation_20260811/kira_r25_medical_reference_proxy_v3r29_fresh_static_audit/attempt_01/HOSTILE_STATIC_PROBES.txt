@@ -1,0 +1,66 @@
+KIRA V3R29 DIFFERENT AUDIT A HOSTILE STATIC PROBES
+Recorded UTC: 2026-08-12T01:28:14Z
+
+PROBE 1: INSTALLED-ROOT CONSUMPTION FIXTURE, NO KIRA WRITE
+- The exact installed test module was compiled in memory with -B semantics.
+- Its TemporaryDirectory context was replaced only for this no-write probe by
+  a context that returns the exact would-be path below installed test ROOT and
+  creates nothing.
+- Calling the exact materialization_consumption_hostile function produced:
+  exception=Refuse:materialization_ledger_root_scope
+- Target existence was false before and after.
+- Static control flow confirms the unmodified full PostSeal command creates
+  TemporaryDirectory(..., dir=ROOT) before reaching the same refusal. This
+  auditor did not rerun that write-attempting command inside Kira.
+
+PROBE 2: AUTHOR-SCRATCH RELOCATION CONTRAST
+- The exact frozen package under Documents/Codex author scratch ran PostSeal.
+- Result: PASS with 28/28 direct, 17/17 transitive, 18/18 worker refusals,
+  21/21 Audit-A refusals, 1/1 consumption retry refusal, and 3/3 seal
+  refusals.
+- This establishes a location-dependent fixture: identical logic passes below
+  Documents/Codex and refuses after installation below Kira.
+
+PROBE 3: EXACT SEAL AND AUDIT TYPES, READ-ONLY
+- Exact installed seal verification and materializer parser functions were
+  invoked in memory without main.
+- Audit wrong-type/external-anchor refusals: 21/21.
+- Seal mutation/exact-type refusals: 3/3.
+- Positive conclusion: V3r28 blockers A02 and A03 are closed at this layer.
+
+PROBE 4: PROPER SCRATCH LEDGER RETRY
+- A temporary ledger root below Documents/Codex was used.
+- First exclusive create, fsync, and readback succeeded.
+- A separate removable generated directory was deleted and recreated.
+- Second create under the same key refused
+  materialization_authority_already_consumed.
+- The record remained byte exact until the test-owned temporary root was
+  removed.
+- Positive conclusion is limited to a non-racing ordinary path.
+
+PROBE 5: LEDGER DIRECTORY-SWAP SURFACE
+- Exact source order is ensure_ledger_root(root), return, then
+  exclusive_write(root / deterministic_name, raw).
+- ensure_ledger_root retains no native directory handle and exclusive_write
+  performs no handle-derived final-path or file-identity verification.
+- A same-user rename/junction swap can therefore redirect the CREATE_NEW
+  record after validation. No destructive probe was performed.
+
+PROBE 6: WORKER-STAGING SOURCE-OBJECT GAP
+- reserve_final_outputs creates only the eight paths in FINAL_OUTPUT_LEAVES.
+- The seven outputs/worker_staging paths have no pre-child CreateFile handle.
+- wmain calls launch_worker, waits for child exit, and only then calls
+  finalize_outputs; finalize_outputs first opens the seven staging paths.
+- Native does not check link count or precommitted staging object identity.
+- WORKER_RESULT is checked by substring/hash presence, PNGs by size/header and
+  distinct hashes, the blend by size/hash, and the receipt by values derivable
+  from public capability data. These mutually self-consistent files have no
+  signature or pre-child identity anchor.
+- No live race, worker, native product, or Blender process was run.
+
+PROBE 7: TERMINAL FINAL-HANDLE ORDER
+- Exact source order is finalize/copy into eight pre-reserved final handles,
+  ledger_update SUCCESS_CONSUMED, revalidate_reserved_outputs, then cleanup
+  close.
+- Positive conclusion: V3r28 blocker A04 is closed for final published object
+  handles. It does not cure Probe 6's earlier staging-source race.

@@ -1,0 +1,48 @@
+{
+  "schema": "kira.shared_person_growth_v3_integration_fresh_static_audit_result.v1",
+  "decision": "REJECT_STATIC_INTEGRATION_CANDIDATE_NO_PROMOTION",
+  "candidate_seal_sha256": "1103ed9c29be3c27a6089ea4682dde93c2db248b4bbf2fa7f5637db60f1d337f",
+  "sealed_subjects_exact": true,
+  "sealed_and_protected_rows_checked_before_and_after": 12,
+  "sealed_and_protected_row_mismatches": 0,
+  "author_and_regression_tests": {
+    "passed": 70,
+    "subtests_passed": 13,
+    "failed": 0
+  },
+  "independent_hostile_probes": {
+    "executed": 2,
+    "blockers_reproduced": 2,
+    "probe_exit_code": 0,
+    "pass_means_blocker_reproduced": true,
+    "probe_source_sha256": "74ac91571bb0f0c6055f1f4172b69b18e3a5174c4daa8de1c15d06ca1ad4bb38",
+    "probe_result_sha256": "e6fab7694aa51cacfb709d2b6539f268968a005c9f29e6a2a0593e2860d80f18"
+  },
+  "blockers": [
+    {
+      "id": "BLOCK_SAME_PROCESS_ADAPTER_CAPABILITY_EXPOSURE",
+      "finding": "The public adapter identity and Python name-mangled secret/controller fields are recoverable from the same-process adapter object. An independent caller used only the adapter object plus an already-valid Kira profile to issue and stage a migration receipt.",
+      "impact": "The claimed adapter-owned authorization boundary is not a security boundary inside the shared Python process. Promotion would let unrelated in-process code invoke a person-profile migration without a distinct protected authority service."
+    },
+    {
+      "id": "BLOCK_ROUTE_SOURCE_TOCTOU_AFTER_ADAPTER_INIT",
+      "finding": "The adapter verifies route-source bytes only during construction. After the verified Kira shell source was changed in an isolated clone, the existing adapter still issued and staged a Kira migration under the stale sealed source digest.",
+      "impact": "A route can change after initialization while receipts and staged attachments continue to claim the old verified route bytes."
+    }
+  ],
+  "retained_truth": {
+    "shared_growth_v3_core_fresh_static_audit_verdict": "ACCEPT_STATIC_ONLY",
+    "core_bytes_changed_by_this_audit": false,
+    "candidate_bytes_changed_by_this_audit": false,
+    "production_pointer_changed": false,
+    "person_profile_changed": false,
+    "temporary_creator_changed": false,
+    "live_model_person_memory_emotion_body_media_voice_gpu_or_blender_run": false
+  },
+  "required_successor": [
+    "Move issuance authority outside the inspectable shared Python object boundary or keep production integration disconnected.",
+    "Bind each issue and stage operation to a freshly rehashed exact route-source snapshot and reject any post-construction drift.",
+    "Add hostile regressions for same-process attribute introspection and route-source mutation after adapter construction.",
+    "Require another different fresh static audit before any promotion or rollout."
+  ]
+}

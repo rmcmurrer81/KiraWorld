@@ -1,0 +1,42 @@
+{
+  "schema": "kira.blackwell.v16.exact_manifest_row_control_anchor_author_package.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_exact_manifest_row_control_anchor_candidate_v16",
+  "attempt_id": "attempt_01",
+  "status": "AUTHOR_STATIC_ONLY_PENDING_BUILD_SEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "author_task": "/root/voice_v15_quality_review",
+  "workspace_mode": "DOCUMENTS_CODEX_STAGING_ONLY_FOR_ROOT_TRANSPLANT",
+  "execution_authority": "NONE",
+  "candidate_invoked": false,
+  "python_candidate_invoked": false,
+  "model_calls": 0,
+  "gpu_voice_calls": 0,
+  "synthesis_calls": 0,
+  "playback_calls": 0,
+  "latency_measurements": 0,
+  "network_calls": 0,
+  "person_body_blender_calls": 0,
+  "v15_authority_consumed": true,
+  "v15_rerun": false,
+  "diagnosed_failure": {
+    "id": "V15_STAGE10_WHITESPACE_SENSITIVE_SEAL_ROW_FORMAT_MISMATCH",
+    "exit_code": 4,
+    "coarse_stage": 10,
+    "output_created": false,
+    "spaced_object_and_build_sentinel_matches": 0,
+    "spaced_subject_path_matches": 0,
+    "exact_compact_subject_rows": 21
+  },
+  "repair_claims": [
+    "one complete exact compact JSON row per binding",
+    "exactly one row occurrence",
+    "no whitespace-sensitive field fragments",
+    "no bounded cross-field window",
+    "missing duplicate split cross-row decoy wrong-size wrong-digest and NUL mutations fail closed",
+    "exact accepted-then-consumed V15 closure retained",
+    "exact accepted V15 private Python control plane retained unchanged",
+    "41 unique sealed subjects"
+  ],
+  "different_fresh_static_audit_required": true,
+  "allowed_next_step": "strict build, analysis, static hostile tests, 41-row seal, then different fresh V16 audit",
+  "forbidden_next_step": "any V15 rerun or any V16 candidate invocation, model, GPU, synthesis, audio, playback, latency, network, person, body, Blender, or production operation"
+}
