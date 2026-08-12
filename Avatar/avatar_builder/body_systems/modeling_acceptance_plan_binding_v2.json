@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "binding_id": "avatar_builder_body_system_modeling_acceptance_plan_binding_v2",
+  "status": "PLAN_BOUND_NOT_EXECUTED_NOT_RUNTIME_AUTHORITY",
+  "supersedes_binding": {
+    "path": "Avatar/avatar_builder/body_systems/modeling_acceptance_plan_binding_v1.json",
+    "bytes": 4238,
+    "sha256": "4c29900aa77655b338b1bff637f6ffbea663339324ae3029630483fc012703fc"
+  },
+  "preserved_no_go_review": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_avatar_builder_binding_independent_review/attempt_01/MANIFEST.json",
+    "bytes": 2933,
+    "sha256": "825f6f855a88896c512462217e6770e19b5a3dd9f518eef2960529b62723bf5f"
+  },
+  "scope": {
+    "confirmed_adult_only": true,
+    "private_inactive_candidates_only": true,
+    "non_adult_or_unresolved_body_representation": "doll_safe_non_anatomical",
+    "candidate_self_approval": false,
+    "runtime_activation": false,
+    "body_function_claimed": false,
+    "subjective_experience_claimed": false
+  },
+  "bound_plan": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/BODY_SYSTEM_MODELING_AND_ACCEPTANCE_PLAN.md",
+    "bytes": 26028,
+    "sha256": "31e162c869665bb25e56f327c3fa8661a02106ccd74c565c403fcf9d3cc73f4a"
+  },
+  "bound_acceptance_matrix": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/ACCEPTANCE_MATRIX.json",
+    "bytes": 8717,
+    "sha256": "f76aab978eeb8f2da4b780cffd4fb113e39ef0cd12ca9a4cb2bb48a8d4232708",
+    "required_status": "PLAN_ONLY_ALL_TESTS_NOT_RUN"
+  },
+  "bound_base_source_inventory": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/SOURCE_BINDINGS.json",
+    "bytes": 10516,
+    "sha256": "3872ab99d091b95ac148916da66b12f876bfbd1cf25d1e9d6c3035b24d39d721",
+    "historical_record_count": 41
+  },
+  "source_verification_overlay": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_avatar_builder_binding_correction/SOURCE_BINDINGS_VERIFICATION_OVERLAY_V2.json",
+    "bytes": 1711,
+    "sha256": "bce50aec4d96fbb1bd67e9b94af7161fb4aac7ad5072e2f88b6e3dd9ecfb1226",
+    "required_verified_source_count": 40,
+    "required_excluded_mutable_verifier_count": 1,
+    "required_mismatch_count": 0
+  },
+  "current_testable_domains": [
+    "external_adult_surface",
+    "rig_weights_and_attachments",
+    "deformation_and_contact",
+    "bathroom_pose_readiness",
+    "garment_mechanics",
+    "exact_wav_lip_sync",
+    "whole_body_movement"
+  ],
+  "future_unimplemented_domains": [
+    "internal_urinary_and_bowel_physiology",
+    "internal_sexual_and_reproductive_anatomy_and_physiology",
+    "pregnancy_delivery_postpartum_and_hospital_systems",
+    "person_owned_private_sensation_and_experience"
+  ],
+  "stage_order": [
+    "stage_0_immutable_intake_and_maturity_gate",
+    "stage_1_external_surface_and_material_candidate",
+    "stage_2_rig_weights_and_neutral_restoration",
+    "stage_3_deformation_and_collision_battery",
+    "stage_4_removable_garment_mechanics",
+    "stage_5_oral_response_and_exact_wav_lip_sync",
+    "stage_6_full_movement_activity_candidates",
+    "stage_7_avatar_builder_reusable_method_qualification",
+    "stage_8_future_body_system_integration"
+  ],
+  "transfer_targets": [
+    "Avatar/avatar_builder/tooling/bounded_body_authoring_quality_contract_v2.json",
+    "Avatar/avatar_builder/body_systems/semantic_anatomy_route_registry_v1.json",
+    "Avatar/avatar_builder/tooling/human_pose_clearance_contact_v1.json",
+    "Core/avatar_human_pose_clearance_v1.py",
+    "Avatar/movement_library/avatar_builder_biological_movement_requirements_20260803.json",
+    "Avatar/avatar_builder/tooling/natural_nail_delivery_v3.json",
+    "Core/wearable_component_contract.py",
+    "Core/avatar_biological_body_systems.py"
+  ],
+  "future_proposed_targets_not_created": [
+    "Avatar/avatar_builder/tooling/soft_tissue_garment_response_v1.json",
+    "Avatar/avatar_builder/tooling/exact_wav_oral_motion_acceptance_v1.json"
+  ],
+  "mandatory_truth_separation": [
+    "external_mesh_and_appearance",
+    "internal_geometry_and_routes",
+    "physiology",
+    "private_subjective_experience",
+    "consent_and_external_action",
+    "health_and_diagnosis",
+    "privacy_and_access_control",
+    "memory_and_learning"
+  ],
+  "promotion_rules": {
+    "person_specific_geometry_or_identity_may_transfer": false,
+    "reusable_algorithms_schemas_units_gates_and_failure_codes_may_transfer_after_qualification": true,
+    "every_new_body_requires_fresh_retarget_and_acceptance": true,
+    "technical_pass_is_owner_approval": false,
+    "owner_review_is_runtime_activation": false,
+    "external_visual_pass_is_internal_function": false,
+    "body_response_or_arousal_is_consent_or_desire": false,
+    "state_schema_is_lived_experience": false
+  },
+  "implementation_state": {
+    "all_matrix_tests_run": false,
+    "accepted_complete_external_candidate_exists": false,
+    "internal_routes_implemented": false,
+    "physiology_implemented": false,
+    "private_sensation_storage_implemented": false,
+    "privacy_integration_implemented": false,
+    "memory_integration_implemented": false,
+    "runtime_connected": false
+  }
+}

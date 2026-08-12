@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-12T21:00:00Z",
+  "candidate_id": "spider_gwen_spider_gwen_20260606_013325",
+  "status": "source_links_for_robert_review_not_downloaded",
+  "rule": "Use Gwen Stacy / Spider-Gwen images from the animated Spider-Verse movies only for likeness. Do not use Hailee Steinfeld, voice actress photos, cosplay, toys, sponsored product shots, fan art, or comic covers for head/body likeness.",
+  "allowed_source_types": [
+    "official movie stills from Spider-Man: Into the Spider-Verse",
+    "official movie stills from Spider-Man: Across the Spider-Verse",
+    "frames from official trailers, clips, or featurette videos",
+    "clearly labeled Spider-Verse movie screenshots after Robert review"
+  ],
+  "reject_terms": [
+    "Hailee Steinfeld",
+    "voice actress",
+    "actress",
+    "cosplay",
+    "cosplayer",
+    "fan art",
+    "comic cover",
+    "toy",
+    "action figure",
+    "Marvel Legends",
+    "sponsored product",
+    "unrelated real person"
+  ],
+  "preferred_view_slots": [
+    "front neutral face",
+    "three-quarter face",
+    "left profile",
+    "right profile",
+    "hair side/back silhouette",
+    "mouth open or emotional expression for lip-shape study",
+    "full body in Spider-Verse suit for silhouette and wardrobe only"
+  ],
+  "official_source_seeds": [
+    {
+      "title": "Sony Pictures - Spider-Man: Across the Spider-Verse",
+      "url": "https://www.sonypictures.com/movies/spidermanacrossthespiderverse",
+      "use": "film identity/source confirmation and official media links"
+    },
+    {
+      "title": "Sony Pictures Imageworks - Spider-Man: Across The Spider-Verse",
+      "url": "https://www.imageworks.com/our-craft/feature-animation/movies/spider-man-across-spider-verse",
+      "use": "official still-image seed page; review stills for Gwen movie-frame references"
+    },
+    {
+      "title": "Imageworks official still candidate with unmasked Gwen",
+      "url": "https://www.imageworks.com/sites/default/files/2023-03/Screen%20Shot%202023-01-06%20at%209.24.50%20AM_0.png",
+      "use": "candidate Gwen face/hair movie-frame reference after Robert review"
+    },
+    {
+      "title": "Imageworks official still candidate with Spider-Gwen in suit",
+      "url": "https://www.imageworks.com/sites/default/files/2023-03/SV2_trsb0225.1051_retouch_sb_v1_0.png",
+      "use": "candidate Spider-Verse suit silhouette and wardrobe reference only"
+    }
+  ],
+  "next_step": "Build a new reviewed Gwen movie-still pack from these source links or Robert-approved screenshots, then rerun photo-head reconstruction with only accepted movie-frame records."
+}

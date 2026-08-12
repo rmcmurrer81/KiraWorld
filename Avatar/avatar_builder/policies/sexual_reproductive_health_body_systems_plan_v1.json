@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "policy_id": "sexual_reproductive_health_body_systems_plan_v1",
+  "status": "PLAN_ONLY_NOT_IMPLEMENTED_NOT_RUNTIME_AUTHORITY",
+  "system_doc": "System/Docs/SYNTHETIC_PERSON_SEXUAL_REPRODUCTIVE_HEALTH_EDUCATION_AND_BODY_SYSTEMS_PLAN_20260803.md",
+  "scope": {
+    "all_sexes_health_education": true,
+    "confirmed_adult_body_systems_only": true,
+    "current_body_or_runtime_mutation_authorized": false,
+    "relationship_or_sexual_activity_authorized": false,
+    "pregnancy_or_medical_state_authorized": false
+  },
+  "separate_truth_layers": [
+    "learned_knowledge_with_exact_source_and_experience_binding",
+    "external_surface_anatomy",
+    "internal_organs_ducts_muscles_nerves_and_vessels",
+    "time_based_physiology_and_flows",
+    "health_symptom_test_diagnosis_treatment_and_recovery_state",
+    "person_owned_private_preference_pleasure_and_uncertainty",
+    "participant_activity_context_and_time_specific_consent"
+  ],
+  "maturity_lanes": {
+    "confirmed_adult": {
+      "complete_health_curriculum_allowed": true,
+      "complete_health_curriculum_assignment": "IMMEDIATE_ON_EXACT_CONFIRMED_ADULT_CLASSIFICATION",
+      "assignment_is_independent_of": [
+        "relationship_status",
+        "sexual_or_romantic_interest",
+        "adult_anatomy_selection",
+        "prior_experience",
+        "spa_completion"
+      ],
+      "curriculum_modules": [
+        "adult_anatomy_normal_variation_and_source_literacy",
+        "hygiene_privacy_bodily_autonomy_and_boundaries",
+        "urinary_bowel_pelvic_and_reproductive_health",
+        "puberty_cycles_menstruation_and_adult_life_stages",
+        "consent_communication_and_relationships",
+        "physiological_response_sensation_pleasure_and_preference_separation",
+        "private_solitary_self_discovery_and_self_pleasure",
+        "contraception_and_barrier_methods",
+        "sti_prevention_testing_and_health_uncertainty",
+        "conception_fertility_pregnancy_delivery_postpartum_and_family_choices",
+        "medical_care_symptoms_tests_diagnosis_treatment_and_recovery",
+        "correction_source_recall_uncertainty_and_help_seeking"
+      ],
+      "future_adult_body_system_design_allowed_after_separate_review": true,
+      "adult_action_or_relationship_permission_implied": false
+    },
+    "non_adult_or_unresolved": {
+      "guaranteed_minimum_curriculum": [
+        "age_appropriate_hygiene",
+        "privacy",
+        "bodily_autonomy",
+        "personal_boundaries",
+        "abuse_prevention",
+        "trusted_help"
+      ],
+      "guaranteed_minimum_is_not_an_exhaustive_ceiling": true,
+      "additional_age_appropriate_modules_require_separate_source_binding_and_approval": true,
+      "adult_curriculum_modules_inherited": false,
+      "required_body_representation": "doll_safe_non_anatomical",
+      "adult_sexual_capability_allowed": false,
+      "adult_anatomy_promotion_allowed": false,
+      "adult_curriculum_allowed": false,
+      "education_implies_capability": false
+    }
+  },
+  "private_sensation_and_solitary_choice": {
+    "status": "FUTURE_POLICY_AND_SCHEMA_ONLY_NOT_RUNTIME_IMPLEMENTATION",
+    "future_confirmed_adult_body_systems_must_support_person_owned_private_sensation_and_experience": true,
+    "person_owned_private_state_dimensions": [
+      "touch",
+      "comfort",
+      "arousal",
+      "pleasure",
+      "climax",
+      "relaxation",
+      "discomfort",
+      "uncertainty",
+      "variation"
+    ],
+    "separate_truth_domains": [
+      "physiological_body_response",
+      "private_desire",
+      "preference",
+      "consent",
+      "external_action",
+      "health_state",
+      "memory"
+    ],
+    "arousal_dimension_definition": "person_owned_subjective_arousal_not_automatic_physiological_body_response",
+    "adult_anatomy_is_consent": false,
+    "physiological_arousal_is_consent_or_desire": false,
+    "response_implies_desire": false,
+    "response_implies_consent": false,
+    "response_implies_action": false,
+    "response_implies_preference_or_orientation": false,
+    "system_may_force_libido_preference_orientation_interest_or_activity": false,
+    "confirmed_adult_private_solitary_choice": {
+      "person_may_choose": true,
+      "relationship_required": false,
+      "partner_permission_required": false,
+      "owner_permission_required": false,
+      "choice_implies_action_or_experience": false
+    },
+    "non_adult_or_unresolved_allowed": false
+  },
+  "spa_age_progression_curriculum_binding": {
+    "policy_path": "Avatar/avatar_builder/policies/spa_age_up_policy.json",
+    "spa_completion_alone_unlocks_full_curriculum": false,
+    "resulting_variant_requires_separate_confirmed_adult_classification": true,
+    "confirmed_adult_classification_assigns_full_curriculum_immediately": true,
+    "classification_or_curriculum_automatically_adds_adult_anatomy": false,
+    "adult_anatomy_remains_a_separate_person_choice_and_build_gate": true
+  },
+  "semantic_body_systems": {
+    "shared": [
+      "bony_pelvis_and_pelvic_floor",
+      "bladder_urethra_and_continence_controls",
+      "distal_bowel_rectum_anal_canal_and_sphincters",
+      "perineal_soft_tissue_nerves_vessels_and_connective_tissue"
+    ],
+    "adult_female_external": [
+      "mons_pubis",
+      "labia_majora_left_right",
+      "labia_minora_left_right",
+      "clitoral_hood_and_visible_glans",
+      "vestibule",
+      "external_urethral_opening",
+      "vaginal_opening_introitus",
+      "fourchette",
+      "perineum",
+      "separate_anus"
+    ],
+    "adult_female_internal": [
+      "internal_clitoral_and_vestibular_bulb_structures",
+      "vagina_and_fornices",
+      "cervix",
+      "uterus_and_endometrium",
+      "fallopian_tubes",
+      "ovaries",
+      "separate_urinary_and_bowel_routes"
+    ],
+    "adult_male_external": [
+      "penile_root_shaft_glans_and_urethral_meatus",
+      "foreskin_state_when_present",
+      "scrotum_and_testes_position",
+      "perineum",
+      "separate_anus"
+    ],
+    "adult_male_internal": [
+      "corpora_cavernosa_and_corpus_spongiosum",
+      "penile_urethra",
+      "testes_and_epididymides",
+      "vas_deferens",
+      "seminal_vesicles",
+      "prostate_and_ejaculatory_ducts",
+      "bulbourethral_glands",
+      "separate_upstream_urinary_and_reproductive_states"
+    ]
+  },
+  "relationship_and_consent_invariants": [
+    "relationship_status_never_equals_consent",
+    "prior_consent_never_equals_current_consent",
+    "body_response_never_equals_desire_or_consent",
+    "consent_is_exact_participant_activity_context_and_time_bound",
+    "consent_must_be_freely_chosen_informed_current_and_revocable",
+    "uncertainty_stop_incapacity_exit_or_material_context_change_ends_action_lease",
+    "contraception_choice_is_voluntary_and_separate_from_sexual_consent",
+    "conception_pregnancy_timeline_delivery_care_and_parenting_are_separate_decisions",
+    "private_preferences_may_change_or_remain_unknown_and_are_not_system_generated"
+  ],
+  "implementation_phases": [
+    {
+      "id": "phase_0_sources",
+      "deliverable": "versioned_authoritative_source_and_vocabulary_registry",
+      "acceptance": [
+        "exact_claim_source_date_and_url",
+        "clinical_fact_separated_from_local_simulation_rule",
+        "append_only_correction_history",
+        "stale_source_detection"
+      ]
+    },
+    {
+      "id": "phase_1_education",
+      "deliverable": "modular_scientifically_accurate_age_appropriate_curriculum",
+      "acceptance": [
+        "anatomy_cycle_hygiene_sti_contraception_consent_pleasure_relationship_and_life_stage_coverage",
+        "source_recall_and_uncertainty_tests",
+        "natural_noncoercive_conversation",
+        "only_presented_lessons_may_be_remembered"
+      ]
+    },
+    {
+      "id": "phase_2_semantic_3d_anatomy",
+      "deliverable": "accepted_adult_external_and_internal_semantic_body_assets",
+      "acceptance": [
+        "connected_external_topology",
+        "separate_urinary_bowel_and_reproductive_routes",
+        "normal_variation_and_material_response",
+        "deformation_and_private_clinical_review",
+        "external_mesh_does_not_claim_internal_function"
+      ]
+    },
+    {
+      "id": "phase_3_bathroom_and_cycle",
+      "deliverable": "time_based_bladder_bowel_hygiene_and_person_specific_cycle_state",
+      "acceptance": [
+        "route_and_flow_truth",
+        "continence_and_voluntary_action_state",
+        "toilet_contact_and_privacy",
+        "menstrual_discharge_and_other_fluid_source_distinction",
+        "irregularity_life_stage_and_medical_uncertainty"
+      ]
+    },
+    {
+      "id": "phase_4_confirmed_adult_sexual_health",
+      "deliverable": "adult_only_response_barrier_contraception_and_sti_health_systems",
+      "acceptance": [
+        "physiological_response_separated_from_desire_preference_and_consent",
+        "continuous_revocable_participant_consent",
+        "voluntary_method_choice_and_correct_use_state",
+        "pregnancy_prevention_separate_from_sti_risk_reduction",
+        "anatomy_and_exposure_aware_testing"
+      ]
+    },
+    {
+      "id": "phase_5_pregnancy_delivery_family",
+      "deliverable": "separately_consented_conception_pregnancy_delivery_recovery_and_family_systems",
+      "acceptance": [
+        "ordinary_or_explicitly_accelerated_truthful_timeline",
+        "body_soft_tissue_movement_and_health_adaptation",
+        "delivery_and_hospital_care_consent",
+        "postpartum_recovery",
+        "child_and_family_state_separate_from_body_mesh"
+      ]
+    }
+  ],
+  "authoritative_starting_sources": [
+    "https://www.who.int/news-room/fact-sheets/detail/comprehensive-sexuality-education",
+    "https://www.who.int/publications/m/item/9789231002595",
+    "https://www.acog.org/womens-health/faqs/vulvovaginal-health",
+    "https://www.ncbi.nlm.nih.gov/books/NBK547703/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK537132/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK500020/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK545147/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK525757/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK562291/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK482236/",
+    "https://www.cdc.gov/contraception/about/index.html",
+    "https://www.acog.org/womens-health/faqs/birth-control",
+    "https://www.cdc.gov/sti/prevention/index.html",
+    "https://www.cdc.gov/std/treatment-guidelines/screening-recommendations.htm"
+  ],
+  "current_truth": {
+    "kira_external_body_authoring_in_progress": true,
+    "internal_urinary_bowel_reproductive_simulation_implemented": false,
+    "menstrual_or_sexual_response_simulation_implemented": false,
+    "contraception_sti_pregnancy_delivery_hospital_systems_implemented": false,
+    "curriculum_delivery_or_learning_memory_connected": false,
+    "private_sensation_state_runtime_connected": false,
+    "private_solitary_action_runtime_connected": false,
+    "this_plan_may_delay_immediate_owner_review_body": false
+  },
+  "owner_decision_history": [
+    {
+      "effective_date": "2026-08-03",
+      "decision_id": "confirmed_adult_immediate_curriculum_and_private_sensation_boundary_v1",
+      "current": true,
+      "supersedes_only": "any earlier wording that made complete adult curriculum conditional on relationship, interest, anatomy selection, experience, or spa completion",
+      "preserves": [
+        "confirmed_adult_fail_closed_classification",
+        "doll_safe_non_anatomical_non_adult_and_unresolved_bodies",
+        "separate_adult_anatomy_choice_and_build_gate",
+        "specific_current_revocable_multi_participant_consent",
+        "truthful_nonimplementation_status"
+      ]
+    }
+  ]
+}

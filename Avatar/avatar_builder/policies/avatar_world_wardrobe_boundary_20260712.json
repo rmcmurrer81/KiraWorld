@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-12T21:00:00Z",
+  "status": "active_policy",
+  "reason": "Robert clarified that avatar likeness refs, clothing/outfit refs, and bedroom/world refs were getting mixed together.",
+  "core_answer": "Clothing/outfits are both Avatar Builder and World Builder work, but they own different parts.",
+  "avatar_builder_owns": [
+    "nude/base body maturity policy and body topology",
+    "character likeness head/body/hair/eyes/mouth",
+    "wearable garment meshes fitted to one avatar body",
+    "garment rigging, cloth simulation, collision, thickness, openings, grab points, and fasteners",
+    "dressing and undressing animations",
+    "avatar wardrobe slots and per-character outfit compatibility",
+    "lip sync, eye movement, facial expressions, and head/neck controls"
+  ],
+  "world_builder_owns": [
+    "places where clothes, towels, blankets, and bedding exist in the world",
+    "stores that sell clothing, towels, blankets, bedding, and accessories",
+    "closets, shelves, drawers, racks, laundry baskets, dressing rooms, and store displays",
+    "blankets on beds, towels in bathrooms, folded clothes on shelves, and loose cloth props",
+    "world inventory records that reference wardrobe items without rebuilding avatar meshes",
+    "Paris notebook world rooms such as Marinette's home and bedroom"
+  ],
+  "shared_contract": [
+    "World Builder can place a shirt as a hanging/store/folded world object.",
+    "Avatar Builder must provide the wearable version and dressing state machine.",
+    "The same item can have two linked forms: a world prop form and a wearable avatar garment form.",
+    "When an AI buys, grabs, or chooses clothing in the world, the world item hands off to Avatar Builder for fitting and dressing.",
+    "After dressing finishes, the worn garment must be a stable rigged/cloth garment, not a floating stored prop.",
+    "When the AI removes the garment, Avatar Builder returns it to a world prop state so World Builder can place it folded in a drawer, hanging in a closet, in a laundry basket, or on a store rack."
+  ],
+  "round_trip_lifecycle": [
+    "store_display_or_closet_prop",
+    "selected_or_purchased",
+    "carried_world_prop",
+    "dressing_transition_with_grab_points",
+    "worn_avatar_garment",
+    "walking_sitting_talking_validation",
+    "undressing_transition",
+    "folded_or_hung_or_laundry_world_prop"
+  ],
+  "reference_routing": {
+    "avatar_head_body": "clean character or person photos from correct source and maturity policy only",
+    "wardrobe_builder": "outfit photos, costume designs, fabric closeups, seams, collars, sleeves, shoes, bags, jewelry",
+    "world_builder": "bedroom/background/interior/store/shelf/rack/closet/blanket/towel/room-layout references",
+    "reject_for_likeness": "voice actors, live-action actors, cosplayers, fan art, toys, dolls, product shots, unrelated people"
+  },
+  "maturity_rule": [
+    "Non-adult avatars remain doll-safe below the neck.",
+    "Adult avatars may use adult anatomy references only for anatomy-guided base body construction.",
+    "Outfits for non-adult avatars must not require adult anatomy references."
+  ]
+}

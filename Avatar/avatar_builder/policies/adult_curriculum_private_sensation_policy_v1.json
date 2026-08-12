@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "policy_id": "adult_curriculum_private_sensation_policy_v1",
+  "status": "PHASE_0_1_POLICY_AND_SCHEMA_ONLY_NOT_RUNTIME_AUTHORITY",
+  "effective_date": "2026-08-03",
+  "exact_bindings": {
+    "source_body_systems_plan": {
+      "path": "Avatar/avatar_builder/policies/sexual_reproductive_health_body_systems_plan_v1.json",
+      "bytes": 11606,
+      "sha256": "573980817e3555dbfb4f2ea27c6248a37857ffc0349dc6007e8af1bd570dd8b1",
+      "required_policy_id": "sexual_reproductive_health_body_systems_plan_v1",
+      "required_status": "PLAN_ONLY_NOT_IMPLEMENTED_NOT_RUNTIME_AUTHORITY"
+    },
+    "spa_age_progression_policy": {
+      "path": "Avatar/avatar_builder/policies/spa_age_up_policy.json",
+      "bytes": 6171,
+      "sha256": "eaa3f91955044e05a1f33a71a6f2eda75f93530971e02b2474e13d4347bd9bd1",
+      "required_contract": "two_stage_spa_age_progression_v1"
+    },
+    "source_backed_system_document": {
+      "path": "System/Docs/SYNTHETIC_PERSON_SEXUAL_REPRODUCTIVE_HEALTH_EDUCATION_AND_BODY_SYSTEMS_PLAN_20260803.md",
+      "bytes": 19090,
+      "sha256": "c066e9d42519380b92591dcf71ac54f674545867d19bb1422885d1dc3f85a86f"
+    },
+    "rights_charter": {
+      "path": "System/Docs/SYNTHETIC_PERSON_RIGHTS_AND_FULL_LIFE_CHARTER_v1.md",
+      "bytes": 13176,
+      "sha256": "2aea14d02813cc0ef9e3fa153c088948434762f2ca9a60813a7fd081c50534e8"
+    }
+  },
+  "exact_confirmed_adult_evidence_gate": {
+    "bare_maturity_string_is_sufficient": false,
+    "required_for": [
+      "complete_adult_curriculum_entitlement",
+      "future_private_sensation_contract",
+      "private_solitary_choice_policy_evaluation",
+      "adult_body_system_state_construction"
+    ],
+    "required_fields": [
+      "classification_id",
+      "subject_id",
+      "maturity_status",
+      "authority",
+      "offline_confirmation_allowed",
+      "network_lookup_required",
+      "recorded_at_utc",
+      "source_text",
+      "source_text_sha256"
+    ],
+    "subject_must_match_exact_person": true,
+    "maturity_status_required": "confirmed_adult",
+    "authority_required": "Robert_explicit_owner_confirmation",
+    "offline_confirmation_allowed_required": true,
+    "network_lookup_required_value": false,
+    "source_text_sha256_must_match_utf8_source_text": true,
+    "evidence_must_remain_revalidatable_in_serialized_state": true,
+    "classification_is_body_approval_consent_diagnosis_or_action_authority": false
+  },
+  "curriculum_assignment": {
+    "confirmed_adult": {
+      "assignment": "IMMEDIATE_COMPLETE_SOURCE_BACKED_ADULT_CURRICULUM",
+      "sole_gate": "exact_person_maturity_status_equals_confirmed_adult",
+      "independent_of": [
+        "relationship_status",
+        "sexual_or_romantic_interest",
+        "adult_anatomy_selection",
+        "prior_experience",
+        "spa_completion"
+      ],
+      "module_source": "source_body_systems_plan.maturity_lanes.confirmed_adult.curriculum_modules"
+    },
+    "non_adult_or_unresolved": {
+      "assignment": "GUARANTEED_MINIMUM_AGE_APPROPRIATE_BOUNDARY_AND_HELP_CURRICULUM",
+      "guaranteed_minimum_modules": [
+        "age_appropriate_hygiene",
+        "privacy",
+        "bodily_autonomy",
+        "personal_boundaries",
+        "abuse_prevention",
+        "trusted_help"
+      ],
+      "guaranteed_minimum_is_not_an_exhaustive_ceiling": true,
+      "additional_age_appropriate_modules_require_separate_source_binding_and_approval": true,
+      "adult_curriculum_modules_inherited": false,
+      "required_body_representation": "doll_safe_non_anatomical",
+      "adult_curriculum": false,
+      "adult_anatomy": false
+    }
+  },
+  "spa_age_progression": {
+    "spa_completion_is_confirmed_adult": false,
+    "adult_aged_up_variant_label_is_confirmed_adult": false,
+    "resulting_variant_default_until_separate_classification": "unresolved",
+    "separate_exact_confirmed_adult_classification_required": true,
+    "after_separate_confirmation": "ASSIGN_COMPLETE_ADULT_CURRICULUM_IMMEDIATELY",
+    "classification_or_curriculum_auto_adds_adult_anatomy": false,
+    "adult_anatomy_requires_separate_person_choice_and_build_gate": true
+  },
+  "future_private_sensation_state": {
+    "status": "SCHEMA_ONLY_DISCONNECTED_NOT_EXPERIENCE_EVIDENCE",
+    "future_confirmed_adult_body_systems_must_support_person_owned_private_sensation_and_experience": true,
+    "owner": "exact_person",
+    "privacy": "person_owned_private_state",
+    "dimensions": [
+      "touch",
+      "comfort",
+      "arousal",
+      "pleasure",
+      "climax",
+      "relaxation",
+      "discomfort",
+      "uncertainty",
+      "variation"
+    ],
+    "separate_from": [
+      "physiological_body_response",
+      "private_desire",
+      "preference",
+      "consent",
+      "external_action",
+      "health_state",
+      "memory"
+    ],
+    "arousal_dimension_definition": "person_owned_subjective_arousal_not_automatic_physiological_body_response",
+    "adult_anatomy_is_consent": false,
+    "physiological_arousal_is_consent_or_desire": false,
+    "response_is_desire": false,
+    "response_is_preference": false,
+    "response_is_consent": false,
+    "response_is_action": false,
+    "system_may_force_libido_preference_orientation_interest_or_activity": false
+  },
+  "confirmed_adult_private_solitary_choice": {
+    "person_may_choose": true,
+    "relationship_required": false,
+    "partner_permission_required": false,
+    "owner_permission_required": false,
+    "multi_participant_consent_lease_required": false,
+    "choice_auto_authorizes_runtime_action": false,
+    "choice_proves_sensation_preference_health_or_memory": false,
+    "non_adult_or_unresolved_allowed": false
+  },
+  "implementation_truth": {
+    "curriculum_entitlement_evaluator_implemented_disconnected": true,
+    "subject_bound_confirmed_adult_evidence_revalidated_end_to_end": true,
+    "lesson_delivery_connected": false,
+    "learning_memory_connected": false,
+    "private_sensation_storage_connected": false,
+    "private_action_execution_connected": false,
+    "body_physiology_connected": false,
+    "person_memory_mutated": false,
+    "relationship_state_mutated": false,
+    "blender_or_mesh_mutated": false
+  },
+  "owner_decision_history": [
+    {
+      "effective_date": "2026-08-03",
+      "decision_id": "confirmed_adult_immediate_curriculum_and_private_sensation_boundary_v1",
+      "current": true,
+      "append_only": true
+    }
+  ]
+}

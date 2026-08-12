@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "contract_id": "bounded_body_authoring_quality_contract_v1",
+  "status": "MANDATORY_GENERIC_AUTHORING_QA_NOT_A_SELECTABLE_GEOMETRY_METHOD",
+  "scope": "append_only_private_inactive_body_candidate_authoring_and_review",
+  "promotion_boundary": {
+    "selectable_reusable_method": false,
+    "geometry_method_promoted": false,
+    "reusable_method_promotion_gate_still_required": true,
+    "private_trial_success_may_promote_geometry": false
+  },
+  "privacy_boundary": {
+    "private_person_geometry_allowed": false,
+    "private_identity_geometry_allowed": false,
+    "private_textures_or_materials_allowed": false,
+    "private_or_protected_images_allowed": false,
+    "person_specific_vertex_or_face_indices_allowed": false,
+    "person_specific_coordinates_deltas_or_morph_values_allowed": false,
+    "person_specific_measurements_allowed": false,
+    "generic_method_may_reference_only_candidate_supplied_hash_bound_masks": true
+  },
+  "immutable_input_and_state_guards": {
+    "required_project_relative_sha256_bindings": [
+      "source_asset",
+      "source_package_inventory",
+      "authoring_worker",
+      "authoring_plan",
+      "quality_contract",
+      "protected_live_state_baseline"
+    ],
+    "absolute_path_traversal_or_symlink_allowed": false,
+    "source_asset_may_be_opened_for_overwrite": false,
+    "source_package_must_rehash_exactly_before_and_after": true,
+    "protected_live_state_must_rehash_exactly_before_and_after": true,
+    "candidate_topology_weights_attributes_material_indices_rig_actions_and_frozen_components_must_be_digested": true
+  },
+  "blender_5_1_digest_compatibility": {
+    "mesh_attribute_scalar_types": [
+      "boolean",
+      "integer",
+      "float",
+      "string"
+    ],
+    "mesh_attribute_array_values_canonicalized_recursively": true,
+    "unknown_attribute_value_or_data_item_policy": "FAIL_CLOSED",
+    "action_storage_modes": [
+      "legacy_action_fcurves",
+      "layered_action_layers_strips_channelbags_fcurves"
+    ],
+    "action_digest_includes_paths_indices_key_coordinates_handles_interpolation_and_easing": true,
+    "removing_action_checks_when_an_api_changes_allowed": false,
+    "generic_helper_promotion_required_before_reusable_implementation_selection": true,
+    "armature_rest_signature": {
+      "edit_mode_entry_allowed_for_read_only_digest": false,
+      "bone_roll_member_required": false,
+      "required_supported_fields": [
+        "bone.name",
+        "bone.parent.name_or_empty",
+        "bone.head_local_xyz",
+        "bone.tail_local_xyz",
+        "bone.matrix_local_all_rows",
+        "bone.use_deform"
+      ],
+      "syntax_compile_and_normalized_worker_diff_required_before_blender": true
+    }
+  },
+  "append_only_failure_discipline": {
+    "output_must_be_a_new_authorized_child": true,
+    "overwrite_or_append_to_preexisting_output_allowed": false,
+    "failure_evidence_may_be_written_only_when_output_did_not_exist_at_process_start": true,
+    "prior_attempts_logs_tracebacks_and_hashes_must_remain_unchanged": true,
+    "mechanical_pre_authoring_failure_counts_as_visual_attempt": false,
+    "mechanical_failure_requires_no_mesh_mutation_no_render_and_no_candidate_save": true
+  },
+  "exact_mask_stage_attribution": {
+    "candidate_manifest_supplies_masks": true,
+    "required_mask_bindings": [
+      "semantic_stage_id",
+      "vertex_count",
+      "index_set_sha256",
+      "pinned_boundary_count",
+      "pinned_boundary_index_set_sha256"
+    ],
+    "required_stage_evidence": [
+      "method_or_config_sha256",
+      "before_position_sha256",
+      "after_position_sha256",
+      "changed_index_count",
+      "changed_index_set_sha256",
+      "escaped_index_count",
+      "frozen_component_digests_before_and_after",
+      "intersection_pairs_before_and_after"
+    ],
+    "changed_vertices_outside_authorized_mask_union_allowed": false,
+    "stage_pair_delta_formula": "new_pairs = after_pairs - permitted_before_pairs",
+    "new_pair_count_required_after_every_stage": 0,
+    "final_rest_nonadjacent_pair_count_required_for_complete_candidate": 0
+  },
+  "collision_aware_local_backoff": {
+    "allowed_only_inside_responsible_authorized_mask": true,
+    "retain_original_safe_coordinates": true,
+    "retain_proposed_coordinates_for_unaffected_vertices": true,
+    "protected_core_derived_from_newly_intersecting_faces": true,
+    "bounded_edge_ring_falloff_required": true,
+    "pinned_boundary_must_remain_exact": true,
+    "intersection_pairs_must_be_recomputed_after_each_pass": true,
+    "zero_new_pairs_required": true,
+    "failure_after_bounded_passes_discards_staged_result": true,
+    "lowering_global_strength_alone_is_not_collision_proof": true,
+    "technical_zero_intersection_is_not_visual_approval": true
+  },
+  "degree_labeled_pose_and_contact_audits": {
+    "required_knee_states": [
+      "left_knee_bend_30deg",
+      "left_knee_bend_55deg",
+      "left_knee_bend_80deg",
+      "right_knee_bend_30deg",
+      "right_knee_bend_55deg",
+      "right_knee_bend_80deg",
+      "bilateral_knee_bend_30deg",
+      "bilateral_knee_bend_55deg",
+      "bilateral_knee_bend_80deg"
+    ],
+    "required_contact_states": [
+      "neutral_standing",
+      "seated_front_three_quarter",
+      "seated_side_contact",
+      "lying_side_contact",
+      "lying_top_contact",
+      "activity_ready_seated_contact"
+    ],
+    "required_per_state_evidence": [
+      "requested_angle_degrees",
+      "measured_angle_degrees",
+      "joint_direction_and_coordinate_frame",
+      "exact_nonadjacent_intersection_pair_delta",
+      "support_contact_residual",
+      "foot_support_status",
+      "hash_bound_render",
+      "neutral_restoration_digest"
+    ],
+    "generic_pose_name_is_sufficient": false,
+    "neutral_capsule_clearance_is_visual_skinned_mesh_proof": false,
+    "lying_or_seated_static_pose_is_accepted_natural_motion": false,
+    "visible_contact_veto": {
+      "numeric_contact_may_override_visible_floating_or_stiffness": false,
+      "seated_required_visual_checks": [
+        "pelvis_support_silhouette",
+        "left_foot_full_contact",
+        "right_foot_full_contact",
+        "knee_and_hip_naturalness",
+        "front_three_quarter",
+        "side",
+        "feet_close"
+      ],
+      "supine_required_visual_checks": [
+        "spine_support_silhouette",
+        "head_and_neck_support",
+        "shoulder_contact",
+        "arm_and_hand_placement",
+        "torso_soft_tissue_response",
+        "side",
+        "top"
+      ]
+    },
+    "activity_truth": {
+      "reach_pose_may_be_labeled_eating_or_drinking_without_mouth_or_object_contact": false,
+      "activity_label_must_match_measured_evidence": true,
+      "exact_body_self_intersection_pair_count_required_per_action": true,
+      "zero_body_to_nail_crossings_proves_nail_visual_quality": false
+    }
+  },
+  "material_visual_acceptance": {
+    "shader_graph_presence_is_visual_color_proof": false,
+    "fixed_camera_light_and_color_management_comparison_required": true,
+    "iris_hue_must_be_reviewed_through_final_cornea": true,
+    "albedo_roughness_and_specular_are_separate_gates": true,
+    "source_texture_and_uv_retention_required_for_bounded_correction": true,
+    "rendered_result_may_veto_a_graph_or_parameter_pass": true
+  },
+  "bounded_visual_attempt_stop": {
+    "maximum_visual_repairs_for_same_defect": 2,
+    "repair_only_responsible_component_or_mask": true,
+    "restart_whole_body_or_general_framework_after_second_attempt_allowed": false,
+    "best_structurally_safe_complete_candidate_must_be_preserved_for_owner_review": true,
+    "remaining_defects_must_be_hash_bound_and_disclosed": true,
+    "owner_approval_may_be_inferred": false
+  },
+  "visual_reject_or_owner_decision_conditions": [
+    "plate_like_or_layered_surface",
+    "dark_or_pinched_knee_at_55_or_80_degrees",
+    "rounded_knee_collapse",
+    "new_posed_self_intersection",
+    "floating_or_unsupported_feet",
+    "rigid_or_overlapping_contact_limbs",
+    "generic_or_mannequin_like_face_or_eyes",
+    "simplified_or_flat_nail_plates",
+    "review_camera_does_not_show_claimed_component"
+  ],
+  "output_policy": {
+    "private": true,
+    "inactive": true,
+    "unassigned": true,
+    "runtime_exported": false,
+    "published": false,
+    "uploaded": false,
+    "owner_visual_approval_required": true,
+    "technical_pass_may_override_visual_rejection": false
+  }
+}

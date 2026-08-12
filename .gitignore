@@ -1,0 +1,45 @@
+# Local/runtime state
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.log
+*.pid
+*.tmp
+tmp*/
+_tmp*
+
+# Builds and large assets
+*.exe
+*.obj
+*.dll
+*.lib
+*.pdb
+*.blend
+*.blend1
+*.glb
+*.gltf
+*.usdz
+*.fbx
+*.stl
+*.wav
+*.mp3
+*.mp4
+*.mkv
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.pdf
+*.docx
+*.zip
+*.7z
+
+# Resident/private and model stores are intentionally outside this snapshot.
+Data/
+Memory/
+TemporaryAI/
+Models/
+private_owner_reviews/
+private_owner_review/
+private_review/
+node_modules/

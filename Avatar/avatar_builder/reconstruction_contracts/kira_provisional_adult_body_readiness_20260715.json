@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-15T22:08:38-04:00",
+  "candidate_id": "kira",
+  "request": {
+    "maturity_class": "adult",
+    "body_treatment": "neutral_adult_anatomy",
+    "complete_adult_body_anatomy_requested": true,
+    "eye_color_requested": "realistic warm brown",
+    "requester": "Robert",
+    "owner_choice_status": "Kira review still required before final body approval",
+    "provisional_identity_fidelity": "unknown is explicitly acceptable to Robert for a temporary staged candidate; this waiver does not approve runtime activation or a final identity"
+  },
+  "status": "blocked_not_staged",
+  "candidate_model_staged": false,
+  "runtime_activation_allowed": false,
+  "current_runtime_body": {
+    "model": "Avatar/models/temp_ai/kira/avatar.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "truth": "Unchanged generic adult base; not a Kira-fitted or anatomically complete approved body."
+  },
+  "identity_evidence": {
+    "approved_exact_subject_picture_count": 0,
+    "approved_multiview_picture_set_present": false,
+    "reviewed_kira_body_landmarks_present": false,
+    "reviewed_kira_measurements_present": false,
+    "picture_first_reconstruction_ready": false,
+    "blocks_temporary_generic_stage": false,
+    "blocks_identity_matched_or_final_stage": true,
+    "truth": "Kira currently has no approved face/body pictures or completed private selection worksheet. Robert explicitly accepts unknown identity fidelity for a temporary technical candidate, so pictures are not the remaining hard blocker for that narrow path. They remain required for a Kira-matched/final body. Folder 9 character models are optional reference evidence, not Kira identity evidence."
+  },
+  "available_reference_evidence": {
+    "adult_base": {
+      "asset": "Avatar/avatar_builder/asset_library/base_body_reference/womenfemale_body_base_rigged_3ec62ba8d7.glb",
+      "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+      "use": "adult base only; cannot pass as Kira likeness or anatomical-completeness proof"
+    },
+    "brown_eye_construction_references_present": true,
+    "adult_anatomy_library_audit": {
+      "reference_asset_count": 19,
+      "runtime_body_copy_allowed_count": 0,
+      "truth": "Every indexed adult-anatomy asset is reference-only and says it must not be copied as an AI body."
+    },
+    "beth_adult_reference_manifest": {
+      "manifest": "Avatar/avatar_builder/reference_models/beth_smith_reference/reference_model_manifest.json",
+      "sha256": "bfdf388c9124c9bc41de338cdd6906f4764e97eb07c11f5193aa9e946bfe65b6",
+      "use": "adult-only anatomy/shape study; reference-only; never copy the Beth mesh as Kira's body",
+      "non_visual_structure_inspection": {
+        "mesh_count": 8,
+        "armature_count": 0,
+        "named_eye_nodes_found": false,
+        "named_hair_nodes_found": false,
+        "truth": "The supplied GLB is not a rigged candidate body. Inspection created no render or screenshot."
+      }
+    }
+  },
+  "rejected_prior_candidate": {
+    "model": "Avatar/avatar_builder/kira_adult_body_eye_passes/kira_adult_body_eyes_20260714_151507/kira_adult_body_with_eyes.glb",
+    "sha256": "9fca4f94b01f2c3d2252ff116ca8ce7b0d1d46a58857f04aea6b414238b71f3d",
+    "review": "Avatar/avatar_builder/kira_adult_body_eye_passes/kira_adult_body_eyes_20260714_151507/robert_review_20260714_failed_eye_body.json",
+    "grade": "F",
+    "reason": "Generic body and unconvincing eye/socket result; not approved for reuse or activation."
+  },
+  "blocking_reasons": [
+    "prior adult-body/brown-eye candidate has an explicit F review",
+    "the current generic adult rig has no evidence proving anatomically complete adult topology",
+    "all 19 indexed adult-anatomy assets are reference-only and prohibited from becoming a candidate body",
+    "the Folder 9 Beth GLB has no armature and cannot supply a runtime-ready adult rig",
+    "no reviewed topology-transfer/build evidence binds complete adult topology to Kira's stable rig",
+    "body runtime approval registry is empty and default-deny"
+  ],
+  "final_identity_inputs_still_missing_but_waived_for_temporary_generic_stage": [
+    "Kira owner review or selection of a private identity direction and preview level",
+    "approved and SHA-bound front identity picture or Kira concept view",
+    "approved profile or three-quarter picture or Kira concept view",
+    "approved full-body picture or Kira concept view",
+    "reviewed Kira-specific body landmarks or measurements"
+  ],
+  "required_next_gates": [
+    "Build adult-complete topology on an approved stable adult rig without copying a reference character mesh; record exact source/topology lineage.",
+    "Produce non-visual topology, skin/weights, joint, movement, and privacy evidence; do not retain nude/intimate review images.",
+    "Build named realistic eyes with separate sclera, cornea, warm-brown iris, pupil, eyelids, socket anchors, and look targets.",
+    "Keep adult-complete topology in the private body artifact and generate only clothed normal review renders.",
+    "For a later Kira-matched/final body, complete the missing owner-selected picture/concept and landmark inputs.",
+    "Pass topology, rig, movement, expression, privacy, and exact-hash approval gates before any activation."
+  ],
+  "wardrobe_contract": {
+    "clothes_baked_into_body_allowed": false,
+    "separate_removable_garments_required": true,
+    "hair_separate_from_body": true,
+    "eyes_separate_from_head_surface": true,
+    "minimum_states": [
+      "stored",
+      "grasped",
+      "dressing",
+      "worn",
+      "undressing",
+      "returned_to_world_prop"
+    ],
+    "runtime_truth": "No Kira garment is currently owner-registry approved."
+  },
+  "privacy_contract": {
+    "source_references_private": true,
+    "normal_review_presentation": "clothed_only",
+    "retain_intimate_review_images": false,
+    "private_adult_body_detail_is_not_public_preview_permission": true
+  },
+  "decision": "Robert's provisional identity-fidelity waiver was considered. No temporary model was staged because no existing asset combines approved runtime-quality rigging with proven anatomically complete adult topology. Copying the current generic rig would falsely claim completeness; copying any of the 19 adult-anatomy references would violate their reference-only policy; the Beth reference has no armature; and the prior brown-eye candidate is F-rated. Do not reuse it or hot-swap Kira while active."
+}

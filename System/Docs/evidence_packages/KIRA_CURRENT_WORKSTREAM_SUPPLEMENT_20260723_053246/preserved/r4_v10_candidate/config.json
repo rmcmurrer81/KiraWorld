@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "run_id": "kira_r7_adult_surface_reconstructed_neck_r4_v10_20260722",
+  "mode": "inactive_topological_neck_reconstruction_r4_v10",
+  "project_root": "C:\\Users\\robmc\\Kira",
+  "output_dir": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\reconstructed_neck_surface_r4_v10",
+  "review_blend": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\reconstructed_neck_surface_r4_v10\\inactive_reconstructed_neck_surface_r4_v10.blend",
+  "parent_artifacts": {
+    "r3_blend": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\inactive_measured_neck_bridge_r3.blend",
+    "r3_evidence": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\evidence.json",
+    "r3_manifest": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\manifest.json"
+  },
+  "parent_hashes": {
+    "r3_blend": "327e072e128179dbe379673ca58e61d2e9db065a12ec36b4ae6844130dce4145",
+    "r3_evidence": "7e690445d4af96b7fd8d30ddfa0b36cb6b641432e36575bf032ef5bc050c5d7d",
+    "r3_manifest": "30dada3566c7325a21215c28412477efce645a4175ab920148125b928e3b31e1"
+  },
+  "intermediate_ring_count": 16,
+  "body_erosion_depth": 2,
+  "head_erosion_depth": 2,
+  "circumferential_relax_iterations": 6,
+  "circumferential_relax_strength": 0.16,
+  "neck_closeup_ortho_scale_m": 0.42,
+  "candidate_glb_export_requested": false,
+  "live_binding_change_requested": false
+}

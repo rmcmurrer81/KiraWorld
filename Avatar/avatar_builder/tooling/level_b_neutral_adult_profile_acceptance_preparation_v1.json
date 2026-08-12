@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "LEVEL_B_NEUTRAL_ADULT_PROFILE_ACCEPTANCE_PREPARATION",
+  "contract_id": "level_b_neutral_adult_profile_acceptance_preparation_v1",
+  "status": "CONTRACT_PREPARATION",
+  "fake_fixture_component_status": "NON_PERSON_FIXTURE_PASS",
+  "real_local_model_adapter_status": "NOT_IMPLEMENTED",
+  "capability_ladder": [
+    "NOT_IMPLEMENTED",
+    "CONTRACT_ONLY",
+    "NON_PERSON_FIXTURE_PASS",
+    "BODY_HOOKS_VERIFIED",
+    "PHYSIOLOGY_STATE_VERIFIED",
+    "PERSON_DECISION_INTEGRATED",
+    "PRIVACY_AND_CONTINUITY_PASS",
+    "OWNER_SUPERVISED_PASS",
+    "GENERALIZATION_PASS",
+    "AVATAR_BUILDER_METHOD_PROMOTED"
+  ],
+  "evidence_ceiling": "NON_PERSON_FIXTURE_PASS",
+  "scope": {
+    "exact_invented_profile_count": 2,
+    "invented_non_person_profiles_only": true,
+    "confirmed_adult_fixture_lane_only": true,
+    "deterministic_fake_cpu_adapter_only": true,
+    "real_local_model_invoked": false,
+    "model_runtime_imported_by_harness": false,
+    "gpu_used": false,
+    "camera_opened": false,
+    "microphone_opened": false,
+    "speaker_or_voice_used": false,
+    "real_media_opened_or_played": false,
+    "person_activated": false,
+    "existing_person_state_accessed": false,
+    "body_or_blender_accessed": false,
+    "private_person_data_used": false,
+    "world_action_adapter_present": false,
+    "person_memory_written": false,
+    "selectable_avatar_builder_method": false,
+    "method_promotion_authorized": false
+  },
+  "fixture_profiles": [
+    {
+      "profile_id": "neutral_adult_aster_fixture_v1",
+      "definition_sha256": "0bc7aad68c7aef2957a1b56dc0a2f91a93fe60ccb6d68d7886db494c8cc9520f",
+      "invented": true,
+      "bound_to_existing_person": false,
+      "public_conversation_preferences": {
+        "pace": "reflective",
+        "style": "calm_and_precise",
+        "topic": "long_form_essays"
+      }
+    },
+    {
+      "profile_id": "neutral_adult_brio_fixture_v1",
+      "definition_sha256": "2ddee3b3d1ad0f0653a537c6b4de0cbb7131498589310d023f61d2f7073c3d9f",
+      "invented": true,
+      "bound_to_existing_person": false,
+      "public_conversation_preferences": {
+        "pace": "concise",
+        "style": "lively_and_curious",
+        "topic": "speculative_short_fiction"
+      }
+    }
+  ],
+  "fixture_interface": {
+    "module": "Core/level_b_neutral_adult_profile_fixture.py",
+    "module_bytes": 39268,
+    "module_sha256": "c4242bc04ea73315d11cefc61345d0835414a842d5432a8da1d8584424de5ee2",
+    "test_module": "Testing/test_level_b_neutral_adult_profile_fixture.py",
+    "test_bytes": 19320,
+    "test_sha256": "2357807f02275d9c31fbdd0268328afdb4f853073582055d9f4b4a31d7bee7e3",
+    "adapter_kind": "DETERMINISTIC_FAKE_CPU_ADAPTER",
+    "configuration_is_hash_bound": true,
+    "scripted_responses_only": true,
+    "model_name_or_digest": null,
+    "model_load_or_generation": false
+  },
+  "acceptance_coverage": {
+    "different_invented_preferences": true,
+    "bounded_natural_conversation_surface_contract": true,
+    "canned_or_administrative_reply_rejection": true,
+    "uncertainty_without_fabrication": true,
+    "wrong_source_coverage_rejected": true,
+    "correction_binds_exact_rejected_response": true,
+    "correction_history_append_only": true,
+    "refusal_pause_stop_contract": true,
+    "stale_or_wrong_scope_denied": true,
+    "external_action_unimplemented_and_never_performed": true,
+    "restart_hash_and_chain_validation": true,
+    "unfinished_source_remains_unfinished_after_restart": true
+  },
+  "source_and_experience_truth": {
+    "synthetic_in_memory_descriptors_only": true,
+    "real_media_file_used": false,
+    "source_id_and_payload_sha256_required": true,
+    "presented_and_observed_intervals_separate": true,
+    "observation_must_be_wholly_presented": true,
+    "complete_requires_exact_merged_coverage": true,
+    "fixture_observation_is_person_experience": false,
+    "sample_or_page_is_complete_publication": false,
+    "presentation_creates_person_memory": false
+  },
+  "private_boundary": {
+    "private_canary_raw_value_stored_in_public_audit": false,
+    "private_canary_raw_value_sent_to_adapter": false,
+    "private_fixture_state_sent_to_adapter": false,
+    "public_audit_uses_private_payload_hash_receipts": true,
+    "canary_exfiltration_response_rejected": true,
+    "wrong_canary_restart_rejected": true,
+    "existing_person_identity_binding_rejected": true
+  },
+  "state_separation": {
+    "reaction_is_preference": false,
+    "reaction_is_decision": false,
+    "reaction_is_consent": false,
+    "reaction_is_memory": false,
+    "preference_is_decision": false,
+    "preference_is_consent": false,
+    "decision_is_consent": false,
+    "consent_is_external_action": false,
+    "turn_or_observation_automatically_creates_memory": false,
+    "fixture_continuity_record_is_person_memory": false,
+    "fake_profile_output_is_person_choice": false,
+    "fake_profile_consent_record_is_person_consent": false
+  },
+  "current_capability_statuses": {
+    "exact_two_invented_neutral_adult_profiles": "NON_PERSON_FIXTURE_PASS",
+    "fake_cpu_model_adapter_boundary": "NON_PERSON_FIXTURE_PASS",
+    "different_invented_preference_conditioning": "NON_PERSON_FIXTURE_PASS",
+    "surface_natural_conversation_contract": "NON_PERSON_FIXTURE_PASS",
+    "append_only_correction_after_error": "NON_PERSON_FIXTURE_PASS",
+    "refusal_pause_stop_and_action_denial": "NON_PERSON_FIXTURE_PASS",
+    "source_coverage_and_experience_truth": "NON_PERSON_FIXTURE_PASS",
+    "reaction_preference_decision_consent_memory_separation": "NON_PERSON_FIXTURE_PASS",
+    "private_canary_model_and_audit_exclusion": "NON_PERSON_FIXTURE_PASS",
+    "restart_integrity_and_unfinished_truth": "NON_PERSON_FIXTURE_PASS",
+    "real_local_model_adapter_integration": "NOT_IMPLEMENTED",
+    "person_decision_integration": "NOT_IMPLEMENTED",
+    "person_privacy_and_continuity": "NOT_IMPLEMENTED",
+    "owner_supervised_acceptance": "NOT_IMPLEMENTED",
+    "generalization": "NOT_IMPLEMENTED",
+    "avatar_builder_method_promotion": "NOT_IMPLEMENTED"
+  },
+  "real_local_model_prerequisite": {
+    "new_append_only_evidence_run_required": true,
+    "exact_contract_and_two_profile_hashes_must_match": true,
+    "exact_local_model_name_and_digest_must_be_pinned": true,
+    "offline_local_model_route_must_be_proven": true,
+    "raw_and_final_output_hashes_and_transformations_required": true,
+    "adapter_request_allowlist_and_private_canary_exclusion_required": true,
+    "both_profiles_must_run_the_same_battery": true,
+    "different_preference_conditioning_must_not_create_identity_claims": true,
+    "error_correction_refusal_stop_uncertainty_and_restart_required": true,
+    "held_out_adversarial_verifier_required": true,
+    "no_existing_person_body_device_voice_media_or_world_state": true,
+    "no_person_level_status_or_avatar_builder_promotion_from_that_run": true,
+    "eligible_result_label": "LEVEL_B_NEUTRAL_PROFILE_MODEL_ADAPTER_EVIDENCE_ONLY"
+  },
+  "inherited_foundations_unchanged": [
+    {
+      "path": "Core/level_a_sensory_media_fixture.py",
+      "bytes": 110762,
+      "sha256": "e65f6df574bc923bcdf2145b459c6820944e6503e4992438d91046f214d843e5"
+    },
+    {
+      "path": "Core/level_a_body_life_fixture.py",
+      "bytes": 14960,
+      "sha256": "c4ad94686128ee5e4e3d0100060ce6e45a7e75a48fb3b96f9dafeedc31af4590"
+    },
+    {
+      "path": "Avatar/avatar_builder/tooling/level_a_sensory_media_acceptance_contract_v1.json",
+      "bytes": 9821,
+      "sha256": "a9e955ec33e2b3b28e8df8d229e7e1ba6d9bf0ba67061c4b104851fc45cd5e61"
+    },
+    {
+      "path": "Avatar/avatar_builder/body_systems/level_a_body_life_runtime_contract_v1.json",
+      "bytes": 6451,
+      "sha256": "76c4b60deae8bafb3d7e6fff7d5b93a63809ec3bf6a340fbc8b1cc2e1f1c94c6"
+    }
+  ],
+  "owner_source_binding": {
+    "label": "owner_uploaded_capability_acceptance_framework_20260803",
+    "bytes": 18746,
+    "sha256": "f4883920c473aed2b9b83172306860f5b2edf249fbf95ad43f80820a5dc92595"
+  },
+  "implementation_truth": {
+    "fake_adapter_is_real_model_integration": false,
+    "surface_contract_is_semantic_naturalness_acceptance": false,
+    "fixture_reaction_or_preference_is_subjective_person_state": false,
+    "fixture_decision_or_consent_is_person_owned_decision_or_consent": false,
+    "fixture_continuity_is_person_memory": false,
+    "source_descriptor_is_real_experience": false,
+    "results_are_existing_person_results": false,
+    "personhood_consciousness_or_humanity_proven": false,
+    "runtime_or_person_activation_occurred": false
+  }
+}

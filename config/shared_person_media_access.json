@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "owner_decision_at": "2026-08-01",
+  "purpose": "Exact offline maturity authority for access to adult-scoped folders in the shared local media library. This is a media-access decision only; it does not approve a body, anatomy, activation, relationship, memory, or publication.",
+  "default_adult_folder_access": "deny",
+  "explicit_adult_only_path_prefixes": [
+    "Data/library/private_adult_text/",
+    "Data/library/private_adult_videos/",
+    "Data/library/health_and_sex_education/adult_reference/",
+    "Data/library/health_and_sex_education/adult_relationships_and_sexuality/",
+    "Data/library/health_and_sex_education/magazines/future_sex/future_sex_magazine/",
+    "Data/library/novels/romance/adult_romance/",
+    "Data/library/novels/romance/mature_and_erotic_romance/",
+    "Data/library/reference/games_and_roleplaying/adult_themes/"
+  ],
+  "explicit_adult_only_exact_paths": [],
+  "mature_mainstream_path_prefixes": [],
+  "mature_mainstream_exact_paths": [],
+  "mature_mainstream_metadata_ratings": [
+    "R",
+    "TV-MA"
+  ],
+  "explicit_non_adult_candidate_ids": [
+    "ladybug_marinette_expanded_smoke"
+  ],
+  "explicit_adult_candidate_ids": [
+    "kira",
+    "lisa",
+    "beth_smith_ordinary_temp_20260716",
+    "blue_played_by_julia_stiles_blue_20260605_220748",
+    "cameron_terminator_cameron_terminator_20260605_225316",
+    "charlie_bradbury_charlie_bradbury_20260605_223959",
+    "edgar_cayce_edgar_cayce_20260608_200254",
+    "elsa_frozen_frozen_fever_frozen_ii_20260716",
+    "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+    "h_h_holmes_h_h_holmes_20260605_221432",
+    "hannah_baxter_belle_hannah_baxter_20260605_214834",
+    "jessica_hale_robotics_engineer_20260611_041314",
+    "kara_zor_el_my_adventures_with_superman_kara_zor_el_20260606_181026",
+    "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+    "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+    "mary_campbell_mary_campbell_20260605_224544",
+    "peter_parker_spider_man_no_way_home_final_suit",
+    "robert_mcmurrer_presence_ai",
+    "ruby_supernatural_ruby_supernatural_20260605_223416",
+    "ryan_hale_quantum_mechanics_expert_20260608_200749",
+    "sarah_bennett_enterainment_pr_agent_expert_20260606_171637",
+    "sarah_bennett_entertainment_pr_agent_expert_20260606_171637",
+    "skynet_skynet_20260605_224820",
+    "spider_gwen_spider_gwen_20260606_013325"
+  ],
+  "rules": [
+    "An exact explicit non-adult entry always denies every adult-scoped path and category.",
+    "An unknown or unresolved identity is denied adult-scoped paths by default.",
+    "An exact explicit adult entry may open adult-scoped library media, subject to the same owner-selection, session-binding, privacy, and no-publication controls as every other file.",
+    "Maturity is never inferred from a name, actor, body, anatomy, occupation, or media choice.",
+    "Explicit adult-folder media is identified by the curated prefixes and exact paths above, not by broad title keywords that would misclassify educational or cultural material.",
+    "Outside the separate explicit-adult-folder boundary, existing index rating/category metadata is evaluated before Robert's durable exact mature-mainstream classification; verified local title metadata is the next permitted source when such a catalog exists.",
+    "Mainstream mature media remains discoverable to a non-adult but requires a fresh adult co-viewing decision for playback; a co-viewing decision never becomes a permanent unlock.",
+    "A library branch named for Robert or another person is resident library media and is not private merely because of that name.",
+    "A direct path request is evaluated by the same gate as a search result and cannot bypass it."
+  ]
+}

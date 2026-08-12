@@ -1,0 +1,410 @@
+{
+  "authored_only": true,
+  "byte_count": 6289013,
+  "excluded": [
+    "**/__pycache__/**",
+    "*.pyc"
+  ],
+  "file_count": 66,
+  "files": [
+    {
+      "bytes": 2357,
+      "modified_utc": "2026-07-23T14:04:47.584046+00:00",
+      "relative_path": "app.py",
+      "sha256": "5c053cd51f181999e3da50316e8aba4357eb86e89ad3a975af9f94fdb20c223e"
+    },
+    {
+      "bytes": 3484088,
+      "modified_utc": "2026-07-22T21:07:32.399597+00:00",
+      "relative_path": "assets/branding/kira_world_logo.png",
+      "sha256": "4aa8c88e66c820234da597d126bca4e2e338044c5cde90b1cb041131bae67583"
+    },
+    {
+      "bytes": 67959,
+      "modified_utc": "2026-07-22T09:52:51.131821+00:00",
+      "relative_path": "assets/branding/logo_official.jpg",
+      "sha256": "e9f8a69bec3e0f05e2a6f7feecbe59918b66079f671bc96d537629a615b4e28a"
+    },
+    {
+      "bytes": 1397,
+      "modified_utc": "2026-07-26T03:27:34.371133+00:00",
+      "relative_path": "CHECK_SETUP.bat",
+      "sha256": "d7a67ce85708f37c486c6536c0b9dff41b5e43601f0d73fa043a0af788457b08"
+    },
+    {
+      "bytes": 530,
+      "modified_utc": "2026-07-23T13:27:02.490101+00:00",
+      "relative_path": "kira_video_studio/__init__.py",
+      "sha256": "ab7cfea14384bcc659de25e07506c21608bde136fa96b8aa574b2043926bc474"
+    },
+    {
+      "bytes": 11563,
+      "modified_utc": "2026-07-25T20:05:33.175901+00:00",
+      "relative_path": "kira_video_studio/animation_plan.py",
+      "sha256": "f84521505c7d791932242d13ca53d991ae67957e346559de5919cc457493e4be"
+    },
+    {
+      "bytes": 11812,
+      "modified_utc": "2026-07-23T14:15:17.084172+00:00",
+      "relative_path": "kira_video_studio/audio_engine.py",
+      "sha256": "34642fdb293f14f3ddc8a82db75e15de0fa21b419890bc62b577db99b02af3d3"
+    },
+    {
+      "bytes": 13275,
+      "modified_utc": "2026-07-26T02:36:39.844462+00:00",
+      "relative_path": "kira_video_studio/concept_renderer.py",
+      "sha256": "dd612a9e6883615b5a065437940887a65dfb823bf9294e660c8b1e73ffbdabe8"
+    },
+    {
+      "bytes": 3791,
+      "modified_utc": "2026-07-23T13:06:54.326857+00:00",
+      "relative_path": "kira_video_studio/credentials.py",
+      "sha256": "13a72f08811b2548ace61fd2e400841b28aefb7e841638e0509d52dfeaa9d363"
+    },
+    {
+      "bytes": 11947,
+      "modified_utc": "2026-07-23T13:15:42.427993+00:00",
+      "relative_path": "kira_video_studio/facts.py",
+      "sha256": "355194e5bcb69f421f437861a150e5cd0d1bfacef1ff7f4a00fa7c33b7ba4a47"
+    },
+    {
+      "bytes": 9475,
+      "modified_utc": "2026-07-25T20:22:17.602169+00:00",
+      "relative_path": "kira_video_studio/future_contract.py",
+      "sha256": "2ee9c4cdf0d4a2c96546d1ce9bc80f1affcdc85f6a8cd5be6be93952d1e11d24"
+    },
+    {
+      "bytes": 13850,
+      "modified_utc": "2026-07-25T20:19:09.700720+00:00",
+      "relative_path": "kira_video_studio/interview.py",
+      "sha256": "aeb1ecfe6e7d56cfefab381082b6bf49f648a2b0a27a5d55adfdfe8dee67c62f"
+    },
+    {
+      "bytes": 11783,
+      "modified_utc": "2026-07-23T13:10:12.316780+00:00",
+      "relative_path": "kira_video_studio/legacy_import.py",
+      "sha256": "2c7e16e3f94a030390ff5e15b306f5b2de476b6d8ab57087435c6cb1c84dacf8"
+    },
+    {
+      "bytes": 17302,
+      "modified_utc": "2026-07-25T21:58:44.802902+00:00",
+      "relative_path": "kira_video_studio/media_builder.py",
+      "sha256": "390eb3c7c17890af17e5eced7444ecf5d5de8723f0fd0712651f47e199ae6ace"
+    },
+    {
+      "bytes": 11149,
+      "modified_utc": "2026-07-26T02:43:22.438025+00:00",
+      "relative_path": "kira_video_studio/motion_preview.py",
+      "sha256": "781f423177040974a9f548ebe96787e72ef51b8958becde5fc103f7c6d3558a8"
+    },
+    {
+      "bytes": 17563,
+      "modified_utc": "2026-07-23T13:56:46.757739+00:00",
+      "relative_path": "kira_video_studio/online_research.py",
+      "sha256": "3ab891a6f3c8a44718aae8b6e1e8b7ac3e1800f279d4d1e7113d2abd7383ebde"
+    },
+    {
+      "bytes": 19531,
+      "modified_utc": "2026-07-23T13:10:12.316780+00:00",
+      "relative_path": "kira_video_studio/presets.py",
+      "sha256": "6e1d8f266018e7858ab2279791307c9c81a9dafb6b269f9dc65d32f374926850"
+    },
+    {
+      "bytes": 70432,
+      "modified_utc": "2026-07-26T02:19:12.185997+00:00",
+      "relative_path": "kira_video_studio/project_service.py",
+      "sha256": "2844f704e702623e24295a8c9a86d729f246c0e2a1530eaa51716ea8da291823"
+    },
+    {
+      "bytes": 3902,
+      "modified_utc": "2026-07-23T13:06:54.321058+00:00",
+      "relative_path": "kira_video_studio/project_store.py",
+      "sha256": "dda6b9ed213cce9d2a5a604ecc9a15723fab7e03002839deaeed3c53669cf113"
+    },
+    {
+      "bytes": 472,
+      "modified_utc": "2026-07-23T13:06:54.326857+00:00",
+      "relative_path": "kira_video_studio/publication.py",
+      "sha256": "7f26b98863703b98c444ad76c05d2389c7daea0b93640d961f27676db1ee8afd"
+    },
+    {
+      "bytes": 9551,
+      "modified_utc": "2026-07-23T13:09:53.342149+00:00",
+      "relative_path": "kira_video_studio/render.py",
+      "sha256": "41d94cd1593fd159e6ee492ec93fc662fc15ef399ff147ce48161b91442d29a9"
+    },
+    {
+      "bytes": 16688,
+      "modified_utc": "2026-07-23T13:06:35.134120+00:00",
+      "relative_path": "kira_video_studio/research.py",
+      "sha256": "f4702a3138f120e91857a6987b71f051e8f1bb20476e787d88070b68622f300e"
+    },
+    {
+      "bytes": 6747,
+      "modified_utc": "2026-07-23T13:06:35.144241+00:00",
+      "relative_path": "kira_video_studio/rights.py",
+      "sha256": "55b66abb8f06e52b604a4d521351556a2db38afc51a49159919ddeb518b8e8a2"
+    },
+    {
+      "bytes": 21231,
+      "modified_utc": "2026-07-25T22:12:44.054036+00:00",
+      "relative_path": "kira_video_studio/schema.py",
+      "sha256": "3f9cefdf2c835b0456d2218ccbd236af414c88b31b2cc5977762c9b9d1dbd1c8"
+    },
+    {
+      "bytes": 11200,
+      "modified_utc": "2026-07-23T14:10:08.414177+00:00",
+      "relative_path": "kira_video_studio/script_engine.py",
+      "sha256": "893cbe9020019803249e143372f47a609a8d7a76492a6e8971ba236c12530d3f"
+    },
+    {
+      "bytes": 4374,
+      "modified_utc": "2026-07-23T13:06:54.321058+00:00",
+      "relative_path": "kira_video_studio/settings.py",
+      "sha256": "1cb61e78edf4671aedece2e4d3704a48fe53b8ff7bcd14f3c6e92699db4569ce"
+    },
+    {
+      "bytes": 15679,
+      "modified_utc": "2026-07-23T14:13:01.551263+00:00",
+      "relative_path": "kira_video_studio/slide_renderer.py",
+      "sha256": "ff0b849ec81ea71cf6c90e6f62360319b44ed2551f9b9f2f28517cf2ed5b5d16"
+    },
+    {
+      "bytes": 41581,
+      "modified_utc": "2026-07-26T02:45:02.901402+00:00",
+      "relative_path": "kira_video_studio/ui.py",
+      "sha256": "f2222e414b9ff2f42c60e5f3387158b5f2796c9ffa055d8ea088cd367314c7a6"
+    },
+    {
+      "bytes": 13128,
+      "modified_utc": "2026-07-23T13:27:00.605360+00:00",
+      "relative_path": "kira_video_studio/update_mode.py",
+      "sha256": "2ccd77862f70fe36a86c7d91f7336f00bfc899b9acf2588fa7a148dcf1a8b613"
+    },
+    {
+      "bytes": 32353,
+      "modified_utc": "2026-07-23T14:01:45.004076+00:00",
+      "relative_path": "kira_video_studio/visual_acquisition.py",
+      "sha256": "87d92a20ddb9cb951d786c3dbb14dc544661051dacbf323012983dacfc88ce02"
+    },
+    {
+      "bytes": 10301,
+      "modified_utc": "2026-07-26T02:12:53.876374+00:00",
+      "relative_path": "kira_video_studio/visual_truth.py",
+      "sha256": "b3c949ebbf329e85f8e6d96ed7841545f763ccd9efcb7517be106e200b2ab8f0"
+    },
+    {
+      "bytes": 20083,
+      "modified_utc": "2026-07-23T13:12:24.022743+00:00",
+      "relative_path": "kira_video_studio/visuals.py",
+      "sha256": "daf33ceb2cadc0c5630b7f8b540580bd0de7cbb039b531c7dd4f26891e85e5fc"
+    },
+    {
+      "bytes": 10989,
+      "modified_utc": "2026-07-23T13:17:09.277161+00:00",
+      "relative_path": "kira_video_studio/voice.py",
+      "sha256": "296025c347e1469c55d5f45a1584560135127d6105f3c81b13b50e70db92fff7"
+    },
+    {
+      "bytes": 15765,
+      "modified_utc": "2026-07-23T13:06:46.662927+00:00",
+      "relative_path": "kira_video_studio/workflow.py",
+      "sha256": "62df41a3ba9823de4560b9b45108b612dae71ad9e9c40ebc32df27a008dc020c"
+    },
+    {
+      "bytes": 1160,
+      "modified_utc": "2026-07-23T16:36:40.017372+00:00",
+      "relative_path": "launcher_failure.log",
+      "sha256": "c07bc1f1faabaec138514134d730addbe9152ba482cb3f33b8dbc7afee76b26a"
+    },
+    {
+      "bytes": 1755,
+      "modified_utc": "2026-07-23T13:14:25.330827+00:00",
+      "relative_path": "legacy/v1_9_read_only/PRESERVATION_MANIFEST.json",
+      "sha256": "462d6551dc79c3f4357424709328e6700295f6f0f460e9e073e68356f2575544"
+    },
+    {
+      "bytes": 3769,
+      "modified_utc": "2026-07-26T00:30:07.476135+00:00",
+      "relative_path": "README_FIRST.md",
+      "sha256": "65fe1890bc00fc2f6bed25056aad915c03eaa14309094a9e0fb93504b1eebfbe"
+    },
+    {
+      "bytes": 274,
+      "modified_utc": "2026-07-23T14:04:47.586050+00:00",
+      "relative_path": "requirements.txt",
+      "sha256": "950fd99b2e3b6535b784922c10ef98fb87c3de01ae7bbe1ce116dfba676f6f38"
+    },
+    {
+      "bytes": 1455,
+      "modified_utc": "2026-07-26T03:27:34.371133+00:00",
+      "relative_path": "RUN_SELF_TEST.bat",
+      "sha256": "ab53f5f275d1f6c6bb4ed493d77f2dd8bed792f7d869761d8130372e9d249fb1"
+    },
+    {
+      "bytes": 4290,
+      "modified_utc": "2026-07-26T03:29:05.883768+00:00",
+      "relative_path": "START_KIRA_LABS_VIDEO_STUDIO.bat",
+      "sha256": "367b857ac1da49198ad33537306d7af4d396c5fb3d2ba6242891252aaac714aa"
+    },
+    {
+      "bytes": 2217,
+      "modified_utc": "2026-07-26T03:27:34.371133+00:00",
+      "relative_path": "START_KIRA_LABS_VIDEO_STUDIO.pyw",
+      "sha256": "0ce8fa25c1d3f73ae800776bfba8cf8511a63b28dcb053dee0036fdc3d36ea48"
+    },
+    {
+      "bytes": 2913,
+      "modified_utc": "2026-07-23T13:09:48.179303+00:00",
+      "relative_path": "tests/fixtures/research_fixture.json",
+      "sha256": "72ec6ea3a6d570e5690e98b6edba39d90463c76735d9fa08b1aba3a502a5b190"
+    },
+    {
+      "bytes": 21486,
+      "modified_utc": "2026-07-26T02:57:18.542063+00:00",
+      "relative_path": "tests/test_concept_animation_planning.py",
+      "sha256": "ebe7af4c023cc74f9d4a565608bbc17368a2ff1b1e8d8cd6d0de978f791fb9d1"
+    },
+    {
+      "bytes": 18534,
+      "modified_utc": "2026-07-26T02:48:47.341266+00:00",
+      "relative_path": "tests/test_concept_motion_rendering.py",
+      "sha256": "6c5d5fb111b35e8b54eed515e809475ee8b3e2a042e83a7d3593a02490cfe07f"
+    },
+    {
+      "bytes": 4891,
+      "modified_utc": "2026-07-23T13:27:02.493102+00:00",
+      "relative_path": "tests/test_foundation_safety.py",
+      "sha256": "235159a22a74919ec170382f65d3fb9e9694946b0dfc79eea91730c23e0d0954"
+    },
+    {
+      "bytes": 10568,
+      "modified_utc": "2026-07-26T03:31:19.373972+00:00",
+      "relative_path": "tests/test_launcher_hardening.py",
+      "sha256": "1af8e1122fbb389183a30a4e5877aa11984578043a5a2fecd96cc3dd30b6d1c0"
+    },
+    {
+      "bytes": 15547,
+      "modified_utc": "2026-07-25T20:17:20.003808+00:00",
+      "relative_path": "tests/test_media_pipeline.py",
+      "sha256": "451c622066121e4912be52af39dfb88d8d3b46fedae90070548f50d7b099eee6"
+    },
+    {
+      "bytes": 20323,
+      "modified_utc": "2026-07-23T14:04:58.083123+00:00",
+      "relative_path": "tests/test_online_acquisition.py",
+      "sha256": "652fa8bd8c11667ac6534b2a297a4025dc2eec70d3beec6db1ed27723a3afc00"
+    },
+    {
+      "bytes": 22348,
+      "modified_utc": "2026-07-25T20:52:01.342614+00:00",
+      "relative_path": "tests/test_private_proof_verifier.py",
+      "sha256": "1f6c9a3744b4493e0d8510797dbc8a833ea8977acc54ccb1b7f7c960d94647ea"
+    },
+    {
+      "bytes": 10694,
+      "modified_utc": "2026-07-25T20:25:26.321667+00:00",
+      "relative_path": "tests/test_project_service.py",
+      "sha256": "150d07e8093b395ad6ff133e9bf2579088c8cffe45d7ede01d247d6189d1f26e"
+    },
+    {
+      "bytes": 18286,
+      "modified_utc": "2026-07-23T13:15:42.427993+00:00",
+      "relative_path": "tests/test_research_facts_visuals.py",
+      "sha256": "d53447e8ccffdba328bee5aa05993710c717376461d90d998cfcad09d7c4243a"
+    },
+    {
+      "bytes": 11913,
+      "modified_utc": "2026-07-23T13:10:12.316780+00:00",
+      "relative_path": "tests/test_stage1_schema_presets.py",
+      "sha256": "0b706cc00251126b003ce8ed1d61654dc47f2621bcc519e43f219daf994d1d9c"
+    },
+    {
+      "bytes": 8218,
+      "modified_utc": "2026-07-26T03:00:44.166672+00:00",
+      "relative_path": "tests/test_ui_launcher.py",
+      "sha256": "17dd070911f29744c70d3e340825b02f48a8662b48239ad36da024103b363ca6"
+    },
+    {
+      "bytes": 18991,
+      "modified_utc": "2026-07-23T13:36:13.811455+00:00",
+      "relative_path": "tests/test_workflow_render_voice_modes.py",
+      "sha256": "ec9fc48d8d4c8723c4e67f819abb8b9d0870dc6bfd523ee84b327fc06c1dd5e8"
+    },
+    {
+      "bytes": 7792,
+      "modified_utc": "2026-07-25T23:16:01.094795+00:00",
+      "relative_path": "tools/build_concept_motion_private_proof.py",
+      "sha256": "d453224ccd802195de7c62ec970d3185b4c5f75ed18893c7f34b85dcba80329e"
+    },
+    {
+      "bytes": 28740,
+      "modified_utc": "2026-07-23T15:02:09.519318+00:00",
+      "relative_path": "tools/build_kira_world_update_private_proof.py",
+      "sha256": "e696636e7e66904b9af1d841641b3de9435256d2cb13b81f03dfb23e4b035f12"
+    },
+    {
+      "bytes": 6884,
+      "modified_utc": "2026-07-23T15:51:09.755380+00:00",
+      "relative_path": "tools/prove_narration_reuse.py",
+      "sha256": "615ebbf36b519a3f8b0d4954c40f0748f861033e1118c02f39a15b7af260af55"
+    },
+    {
+      "bytes": 6218,
+      "modified_utc": "2026-07-25T20:31:07.952059+00:00",
+      "relative_path": "tools/prove_project_service_rebuild.py",
+      "sha256": "ecf3d0f5e7f46be56227163d69c25a8a7c48618b0f519ec4de6b7e1663b0178f"
+    },
+    {
+      "bytes": 40801,
+      "modified_utc": "2026-07-25T20:46:24.387627+00:00",
+      "relative_path": "tools/verify_kira_world_update_private_proof.py",
+      "sha256": "9add184487d65798602cafeafe1da6d2ffe1e366653fc0800e1388f0dca1214e"
+    },
+    {
+      "bytes": 724,
+      "modified_utc": "2026-07-23T13:14:25.329865+00:00",
+      "relative_path": "user_settings.json",
+      "sha256": "0c0f3234f6e13335786dec1253fd6dea0108cebc561772c6b90d60e6a428d6bd"
+    },
+    {
+      "bytes": 169,
+      "modified_utc": "2026-07-23T14:04:47.586050+00:00",
+      "relative_path": "VERSION.txt",
+      "sha256": "f904fe2c59db35e62558da3779d5f91ae07c5d79055147d13b5d5e9e65b3a1a9"
+    },
+    {
+      "bytes": 1755404,
+      "modified_utc": "2026-07-22T21:07:32.345570+00:00",
+      "relative_path": "voice/approved_reference.wav",
+      "sha256": "761458a0fe9c5da1c2671faa738c1e329336630cd47138a4e738f7de2030542b"
+    },
+    {
+      "bytes": 3213,
+      "modified_utc": "2026-07-22T21:07:32.328237+00:00",
+      "relative_path": "voice/robert_mcmurrer_voice_profile.json",
+      "sha256": "6d94577cdb916dbbe9ad1223caad1d63a30fcd2b57222a5d5739c73cc07bd8e1"
+    },
+    {
+      "bytes": 222764,
+      "modified_utc": "2026-07-22T21:07:32.326232+00:00",
+      "relative_path": "voice/robert_private_voice_check.wav",
+      "sha256": "83a7f517c42bbed9bb5d4d517a93e9127c778646cdfd355ac927e02646cbbe51"
+    },
+    {
+      "bytes": 2025,
+      "modified_utc": "2026-07-22T21:07:32.347576+00:00",
+      "relative_path": "voice/robert_self_voice_runtime_approval_20260717.json",
+      "sha256": "7e76036cf4453c94c042178b23124ed1dad0b2269a140eabee1116e647527b7c"
+    },
+    {
+      "bytes": 799,
+      "modified_utc": "2026-07-22T21:07:32.328237+00:00",
+      "relative_path": "voice/voice_model_request.json",
+      "sha256": "ab9131ab615bfd9594722e0f720203fc374de7f77337b601462cd1eac63981d4"
+    }
+  ],
+  "root": "C:\\KiraVideos\\Backups\\KiraLabsVideoStudio_v2_alpha1_post_hardening_20260726_005514",
+  "tree_sha256": "5b1362ff528a273495dd7f5428f94c6431009de3798bf616affbea2e3d566599",
+  "windows_tree_sha256": "bb3368f18d9e4a9b1f3ba0f70bbefd01cf074d7c071ad1475900085c6040e53f"
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_python_controller_validation.v3r20",
+  "attempt_id": "attempt_01",
+  "status": "STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "predecessor": {
+    "version": "v3r19",
+    "status": "CONSUMED_FAILURE_NO_RETRY",
+    "static_checkpoint_sha256": "7bae08d6591d26563b0d597777016e271cd47596ed3c877aabd29f7e15f9aec1",
+    "static_seal_sha256": "439f35f8a04282d8cea1a99a6f80fcec0d9c6653dff3edf10f241b7897b34ccd",
+    "accept_audit_sha256": "927dc02ef49091dfff64909308fc244fa22e55a41f4844a17b8021ca5c1cbea7",
+    "accept_audit_sidecar_sha256": "f084cf31909d1315700364d0183691d4d7ec560320ec7f5db82809c8e32b0ac2",
+    "accept_checkpoint_sha256": "4b67d18d0cb1b3a6160693c644ceabfcae4c697c2ee22619e06aeef95728f47e",
+    "failure_recheck_sha256": "edef1373f32149d8ed654bb47632cade404224dbca183c8dcd5501d8b6a8b7b9",
+    "failure_checkpoint_sha256": "e97c6733ef8db99e540e893492b237c3c3938a3dd883f1bb1d6303ec346f40f2",
+    "exit_code": 4,
+    "stderr": "V3R19_SUBJECT_REFUSED:source",
+    "run_evidence_present": false,
+    "outcome_receipt_present": false
+  },
+  "single_stage": {
+    "name": "reservation_first_granular_contract_and_isolated_python_controller_validation",
+    "ordered_steps": [
+      "verify exact native image, complete static/predecessor closure, and future different-reviewer audit",
+      "use an exact-subject identity-capture function only for a newly observed handle and a separate bound-identity recheck function for every retained handle",
+      "open and retain the exact v3r20 authority contract before accepting the audit, and bind its digest and file identity into both durable records",
+      "CREATE_NEW fixed evidence and receipt and durably read back the reservation",
+      "open the exact v3r15 contract once and prove attributes, size, final path, file identity, and two SHA-256 snapshots granularly on that same retained handle",
+      "open and retain exact manifest, Python DLL, stdlib zip, controller, and execution contract",
+      "prove exactly one retained-manifest row for every retained runtime subject",
+      "delayed-load only the exact retained Python DLL",
+      "initialize an isolated interpreter and evaluate only inert controller definitions",
+      "verify exactly five callable exports and strict execution-contract projection",
+      "finalize Python, release its DLL, prove the old module base and exact Python DLL path are absent from a fail-closed process-module inventory, and recheck every retained identity and digest",
+      "recheck the retained v3r20 authority contract on its original handle before terminal completion",
+      "recheck and close the original contract handle and durably store granular terminal telemetry",
+      "stop"
+    ]
+  },
+  "file_identity_repair": {
+    "v3r19_negative_control": "zero_initialized_identity_was_compared_before_capture_and_refused_the_first_exact_source_subject",
+    "capture_operation": "verify exact regular file, bytes, final path and SHA-256, then return observed FILE_ID_INFO",
+    "bound_operation": "run the capture operation into a fresh local value, then compare it to the previously retained FILE_ID_INFO",
+    "ambiguous_zero_sentinel_removed": true,
+    "weakened_recheck": false
+  },
+  "granular_contract_gate": {
+    "target": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r15.json",
+    "bytes": 6174,
+    "sha256": "ad33386d767b516425dcbed073e22dfc9747a963a64dc5d205483d210acac79d",
+    "same_handle": true,
+    "reservation_first": true,
+    "gates": ["open", "attributes", "size_first", "final_path_first", "file_id_first", "snapshot_one", "size_second", "final_path_second", "file_id_second", "snapshot_two", "size_final", "final_path_final", "file_id_final", "snapshot_final", "snapshot_equality_and_close"]
+  },
+  "retained_runtime_subjects": {
+    "manifest": ["RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv", 24975, "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96"],
+    "python_runtime_dll": ["C:/Python314/python314.dll", 6767440, "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"],
+    "retained_stdlib_zip": ["tools/native/runtime/python314_stdlib_v3r4.zip", 28997479, "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"],
+    "parent_controller": ["tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py", 50907, "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf"],
+    "execution_contract": ["Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r9.json", 146969, "f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5"]
+  },
+  "controller_boundary": {
+    "exact_callable_exports": ["_build_execution_plan", "_validate_child_payload", "_compare_pair", "_success_payload", "_failure_payload"],
+    "definitions_only": true,
+    "strict_execution_contract_projection": true,
+    "build_execution_plan_called": false
+  },
+  "terminal_receipt": {
+    "creation": "CREATE_NEW_WRITE_THROUGH",
+    "same_handle_readback": true,
+    "granular_contract_telemetry_embedded": true,
+    "authority_contract_digest_and_file_identity_embedded": true,
+    "python_finalize_release_and_absence_telemetry_embedded": true,
+    "failure_is_consumed_no_retry": true
+  },
+  "stop_before": ["_build_execution_plan", "bootstrap", "broker", "process", "AFES", "Blender", "body", "save", "render", "export"],
+  "fresh_audit_grammar": {
+    "raw_length_comparisons": true,
+    "embedded_nul_rejected": true,
+    "auditor_pattern": "[a-z0-9_]{1,96}",
+    "lowercase_sha256_exactly_64_bytes": true
+  },
+  "truth_boundary": ["STATIC_PREPARATION_IS_NOT_EXECUTION", "NO_BODY_OR_ANATOMY_RESULT", "NO_OWNER_ACCEPTANCE", "NO_PRODUCTION_AUTHORITY"]
+}

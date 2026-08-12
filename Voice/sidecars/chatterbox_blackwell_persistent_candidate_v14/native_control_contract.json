@@ -1,0 +1,65 @@
+{
+  "schema": "kira.blackwell.v14.native_exact_control_anchor_contract.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_exact_control_anchor_candidate_v14",
+  "attempt_id": "attempt_01",
+  "status": "AUTHOR_STATIC_ONLY_PENDING_BUILD_SEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "trust_root": "exact_x64_native_retained_handles_and_private_python_globals",
+  "required_compiler": {
+    "toolchain": "MSVC_x64",
+    "compile_flags": ["/W4", "/WX", "/O2", "/MT", "/guard:cf", "/DUNICODE", "/D_UNICODE", "/std:c17"],
+    "analyze_flags": ["/W4", "/WX", "/analyze", "/c", "/DUNICODE", "/D_UNICODE", "/std:c17"],
+    "warning_suppression_allowed": false,
+    "required_unsuppressed_analyzer_warnings": 0,
+    "permitted_pe_imports": ["bcrypt.dll", "KERNEL32.dll"]
+  },
+  "retained_runtime": {
+    "python_dll": {
+      "path": "C:/Python314/python314.dll",
+      "bytes": 6767440,
+      "sha256": "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"
+    },
+    "stdlib_zip": {
+      "path": "tools/native/runtime/python314_stdlib_v3r4.zip",
+      "bytes": 28997479,
+      "sha256": "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"
+    }
+  },
+  "single_stage": {
+    "name": "disconnected_private_exact_control_graph_validation",
+    "ordered_steps": [
+      "accept no arguments",
+      "read and retain the different-review audit and digest sidecar",
+      "lock the exact running image, identity header, complete seal, V14 source/config/contract/validator, all 15 preserved V13 closure subjects, Python DLL, and stdlib zip",
+      "prove each retained handle is a regular non-reparse file with exact final path, size, SHA-256, and FILE_ID_INFO",
+      "prove the complete 30-row seal contains every runtime-bound subject",
+      "CREATE_NEW write-through evidence and terminal receipt, then durably read back the reservation",
+      "delayed-load only the exact retained Python DLL and initialize isolated mode with only the exact stdlib zip",
+      "compile the exact V14 source twice into private dictionaries not installed in sys.modules or Core",
+      "compare every V14 function, class member, code, default, keyword default, annotation, closure, referenced global, referenced builtin, and module schema",
+      "compile the exact retained V13 source twice into private dictionaries and compare its complete graph without calling any V13 control function",
+      "invoke one stored V14 factory reference, then one stored snapshot revalidation reference, with complete graph rechecks before and after each call",
+      "prove exact typed immutable state and all production/live/synthesis/playback/latency flags false",
+      "destroy private dictionaries and Python objects, finalize Python, FreeLibrary, prove old base and exact path absent, and recheck every retained handle",
+      "write one terminal success or consumed-failure record and stop"
+    ]
+  },
+  "v13_blocker_closure": {
+    "normal_module_package_substitution": "ordinary V14/V13 slots and Core attributes are forbidden before, between, and after private calls",
+    "self_class_method_private_v12_bypass": "complete cross-compile and same-identity graph seals surround stored calls; no V13 method is called",
+    "stored_control_digest_mutation": "native SHA-256 values remain outside Python and the Python snapshot contains no mutable digest authority",
+    "config_quarantine_loader_mutation": "strict duplicate-free JSON, exact types, immutable tuple state, and loader/spec/cache absence are revalidated"
+  },
+  "stop_before": [
+    "model", "Qwen", "GPU", "Torch", "CUDA", "Chatterbox", "synthesis",
+    "audio", "playback", "latency measurement", "network", "subprocess",
+    "person state", "production route", "body", "Blender"
+  ],
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false,
+  "different_fresh_static_audit_required": true,
+  "one_decision_consumed_by_any_invocation": true
+}

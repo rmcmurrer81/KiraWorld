@@ -1,0 +1,131 @@
+{
+  "runtime_id": "kira_local_model_runtime_v1",
+  "status": "active_exact_qwen35_text_voice",
+  "default_backend": "ollama",
+  "desktop_backend": "ollama",
+  "ollama": {
+    "endpoint": "http://localhost:11434/api/chat",
+    "default_model": "qwen3.5:9b",
+    "default_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "first_talk_timeout_seconds": 60
+  },
+  "gpu_bridge_12gb": {
+    "legacy_profile_key_retained_for_compatibility": true,
+    "intended_gpu": "NVIDIA GeForce RTX 5060 Ti 16GB verified 2026-06-04",
+    "system_ram": "32 GB verified 2026-07-31",
+    "recommended_model_policy": "one heavy GPU model or media workload at a time; unload it before World, voice, or Studio switches workload",
+    "default_model": "qwen3.5:9b",
+    "default_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "temperature": 0.7,
+    "max_tokens": 640,
+    "num_ctx": 4096,
+    "timeout_seconds": 240,
+    "recommended_first_checks": [
+      "py tools\\gpu_readiness_check.py --probe",
+      "py tools\\hardware_capability_check.py --actual-ram-gb 16 --gpu-vram-gb 16 --show",
+      "Start_Kira_Chat_Control_Center.bat"
+    ],
+    "avoid_until_64gb_or_24gb_gpu": [
+      "multiple persistent AIs",
+      "large 24GB-VRAM models",
+      "long unsupervised 24-hour life tests",
+      "full 3D world runtime",
+      "parallel Kira/Lisa/TemporaryAI sessions"
+    ]
+  },
+  "desktop_model_evaluation": {
+    "status": "QWEN3.5_9B_CURRENT_OWNER_RUNTIME_MODEL",
+    "production_model": "qwen3.5:9b",
+    "production_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "production_scope": [
+      "normal Kira Text + Voice Chat",
+      "normal Kira World Shell text and voice",
+      "current Kira direct chats, classes, school, life, journal, intake, and evaluation routes",
+      "current Lisa chat, class, life, and shared-dialogue routes",
+      "current TemporaryAI chat, life, control-center, candidate-probe, and expert routes",
+      "current Robert synthetic-person dialogue and evaluation routes"
+    ],
+    "excluded_production_scope": [
+      "owner-frozen Video Studio implementations",
+      "append-only RecoverySprint evidence, backups, snapshots, and historical records",
+      "negative and mismatched-model test fixtures",
+      "dormant installed rollback inventory record"
+    ],
+    "visual_input_policy": {
+      "image_understanding_enabled": false,
+      "webcam_understanding_enabled": false,
+      "video_understanding_enabled": false
+    },
+    "current_model": "qwen3.5:9b",
+    "current_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "current_quantization": "Q4_K_M",
+    "current_size_bytes": 6594474711,
+    "current_context_policy": "4096 default; benchmark changes before use",
+    "current_operational_profile": {
+      "ollama_top_level_think": false,
+      "fixed_num_predict": 128,
+      "reasoning_profile_is_opt_in": true
+    },
+    "latest_screening": {
+      "completed_at_utc": "2026-08-01T01:34:53Z",
+      "fixture_suite": "kira_local_model_contracts_v1",
+      "passed": 4,
+      "failed": 0,
+      "tokens_per_second_range": [60.644, 71.008],
+      "first_load_seconds": 6.42,
+      "subsequent_load_seconds_range": [3.69, 4.27],
+      "free_vram_after_mib": 14858,
+      "adoption_decision": "promoted_after_full_text_voice_acceptance_and_owner_authorization"
+    },
+    "dormant_installed_rollback": {
+      "model": "llama3.1:8b",
+      "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "status": "installed_preserved_not_selected_not_tested_not_automatic_fallback",
+      "activation_requires_explicit_future_owner_decision": true
+    },
+    "remaining_gates": [],
+    "automatic_default_change": true,
+    "automatic_memory_or_canon_write": false,
+    "owner_review_required": false,
+    "promotion_authorized_by_owner": true,
+    "normal_use_authorized_by_owner": true,
+    "benchmark_registry": "config/model_upgrade_candidate_registry.json",
+    "benchmark_tool": "tools/benchmark_model_upgrade_candidates.py"
+  },
+  "laptop_mode": {
+    "recommended_backend": "stub",
+    "reason": "Laptop has 8 GB RAM and limited free disk space; use no-download mode for structure testing."
+  },
+  "desktop_first_talk": {
+    "start_with_text_only": true,
+    "voice_enabled": false,
+    "avatar_enabled": false,
+    "world_enabled": false,
+    "internet_enabled": false,
+    "webcam_enabled": false,
+    "required_files": [
+      "chat_kira.py",
+      "Core/conversation_loop.py",
+      "System/Prompts/kira_launch_context_v1.md",
+      "System/Prompts/lisa_launch_context_v1.md",
+      "Data/launch/kira_first_talk_context.json",
+      "Data/launch/lisa_first_talk_context.json",
+      "Data/memories_kira.json",
+      "Data/memories_lisa.json",
+      "config/system_flags.json"
+    ]
+  },
+  "first_model_test_prompts": [
+    "Hi Kira. This is the first real local test on the new computer. What do you know about yourself right now?",
+    "Can you tell me what you are allowed to remember, and what you should not pretend to remember?",
+    "How do you feel about finally being moved toward the desktop version?",
+    "What future systems are prepared, and which ones are not active yet?",
+    "What should you do if you are unsure whether something is a real memory?"
+  ],
+  "day_one_required_tests": [
+    "Testing.test_day_one_conversation_readiness",
+    "Testing.test_conversation_grounding"
+  ]
+}

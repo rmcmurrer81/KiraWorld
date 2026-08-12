@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "config_id": "avatar_shading_normal_repair_v2",
+  "method_id": "avatar_shading_normal_repair_v2",
+  "status": "UNPROMOTED_INACTIVE_SECOND_BOUNDED_SCALP_NORMAL_REPAIR",
+  "supersedes_visual_rejected_method": "avatar_shading_normal_repair_v1",
+  "diagnosis": {
+    "rear_scalp": "nonlocal vertex-normal oscillation across dense horizontal head-neck rings",
+    "bilateral_knees": "separate flexed-geometry and self-shadow defect; not repaired or concealed here"
+  },
+  "rear_scalp_mask": {
+    "normalized_body_height_fade_in": [0.865, 0.885],
+    "normalized_body_height_fade_out": [0.925, 0.945],
+    "normalized_head_rearwardness_fade_in": [0.62, 0.78],
+    "normalized_head_lateral_fade_out": [0.8, 1.05],
+    "required_existing_membership_groups": ["head", "neck01", "neck02", "neck03"],
+    "minimum_existing_membership_sum": 0.12
+  },
+  "normal_smoothing": {
+    "representation": "localized_custom_split_vertex_normals",
+    "laplacian_iterations": 12,
+    "per_iteration_strength": 0.72,
+    "maximum_normal_change_degrees": 32.0,
+    "minimum_masked_edge_mean_angle_reduction_fraction": 0.08,
+    "outside_mask_normal_change_degrees": 0.0
+  },
+  "hard_gates": {
+    "primary_and_evaluated_positions_unchanged": true,
+    "topology_unchanged": true,
+    "all_existing_vertex_groups_and_weights_unchanged": true,
+    "materials_and_regional_skin_unchanged": true,
+    "front_face_normals_unchanged": true,
+    "only_rear_scalp_custom_normals_changed": true,
+    "clean_bald_scalp_material_unchanged": true,
+    "scalp_hair_dependencies_added": 0
+  },
+  "forbidden": {
+    "mesh_coordinate_or_topology_edit": true,
+    "vertex_group_or_rig_weight_edit": true,
+    "face_or_anatomy_edit": true,
+    "knee_geometry_or_normal_edit": true,
+    "material_texture_or_color_edit": true,
+    "scalp_cap_or_hair": true,
+    "candidate_save_or_export": true,
+    "runtime_activation": true,
+    "publication_or_upload": true
+  },
+  "owner_visual_review_required": true
+}

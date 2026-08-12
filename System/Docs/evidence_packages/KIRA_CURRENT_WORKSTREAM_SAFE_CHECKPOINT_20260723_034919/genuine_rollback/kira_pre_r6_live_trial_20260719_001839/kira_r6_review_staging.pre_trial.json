@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira",
+  "staged_at": "2026-07-18T23:40:00-04:00",
+  "status": "exact_technical_browser_tests_passed_inactive",
+  "runtime_active": false,
+  "current_runtime_unchanged": true,
+  "activation_authorized": false,
+  "autobuild_authorized": false,
+  "current_runtime": {
+    "path": "Avatar/models/temp_ai/kira/avatar.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "selection_path": "Avatar/state/body_selections/kira_runtime_body_selection.json",
+    "truth": "The current live Kira body remains selected. This staging record does not change or activate it."
+  },
+  "inactive_review_candidate": {
+    "revision": "provisional_body_r6",
+    "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb",
+    "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "manifest_path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6_manifest.json",
+    "manifest_sha256": "56c4de5cedaee926448b506b2d2117934ba7c6ead200a6d70bee90d3b17f9657",
+    "surface_note": "The candidate has a neutral PBR skin-surface study. Surface appearance is not proof of identity likeness or anatomical completeness."
+  },
+  "inactive_exact_browser_evidence": {
+    "report_path": "Data/world_tests/kira_r6_exact_browser_sandbox_20260718/20260718T222144Z/report.md",
+    "report_sha256": "5d26def3d50598c628c326dc44069e6680c2f7800f3e3d4e7149be7477dccf5a",
+    "evidence_path": "Data/world_tests/kira_r6_exact_browser_sandbox_20260718/20260718T222144Z/evidence.json",
+    "evidence_sha256": "29f995522ec773774a61ceb1a36aa9ac0c731b3c7b690e5ac8b9de130957a5ed",
+    "technical_checks_passed": [
+      "exact candidate hash loaded",
+      "finite bounds",
+      "walk displacement and ground-contact checks",
+      "sit deformation",
+      "gradual turning",
+      "front-door reach without failure",
+      "staged eye structure and head binding",
+      "existing original mouth deformed at playback boundary and restored",
+      "no second mouth created",
+      "no runtime errors",
+      "live body and live selection unchanged"
+    ]
+  },
+  "still_unproven_or_required": [
+    "Robert's visual approval of natural appearance",
+    "Kira's exact informed choice before any live body replacement",
+    "independent proof of complete adult anatomy",
+    "identity likeness",
+    "stable natural motion across the full daily-life movement set",
+    "assembled and visually approved eyes, hair, and clothes",
+    "owner-reviewed lip motion at normal viewing distance on the exact live candidate"
+  ],
+  "decision": "Keep R6 inactive. Do not silently replace Kira's current live body."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "evidence_id": "generated_experts_adult_owner_directive_20260716",
+  "recorded_at": "2026-07-16",
+  "authority": "robert_owner_explicit_project_directive",
+  "directive": "All generated expert TemporaryAI profiles are adults.",
+  "candidate_ids": [
+    "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+    "jessica_hale_robotics_engineer_20260611_041314",
+    "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+    "ryan_hale_quantum_mechanics_expert_20260608_200749",
+    "sarah_bennett_entertainment_pr_agent_expert_20260606_171637"
+  ],
+  "maturity_lane": "adult",
+  "topology_lane": "confirmed_adult_topology",
+  "scope": "avatar_identity_and_topology_routing_only",
+  "creates_body": false,
+  "creates_mind": false,
+  "changes_personality_or_memory": false,
+  "runtime_activation_allowed": false,
+  "public_export_allowed": false,
+  "notes": [
+    "This explicit owner decision supplies the maturity authority that was previously missing; adulthood is not inferred from occupation, name, or gender.",
+    "Each likeness, body, rig, clothing set, voice, and activation decision still requires its own evidence and review."
+  ]
+}

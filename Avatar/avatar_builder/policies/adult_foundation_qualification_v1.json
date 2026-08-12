@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "policy_id": "avatar_builder_adult_foundation_qualification_v1",
+  "default_state": "BLOCKED_NOT_QUALIFIED",
+  "requested_body_class": "adult_female",
+  "required_maturity_status": "confirmed_adult",
+  "allowed_foundation_roles": [
+    "adaptable_foundation"
+  ],
+  "allowed_artifact_kinds": [
+    "single_asset",
+    "parametric_source_set"
+  ],
+  "parametric_source_configuration_required": true,
+  "forbidden_foundation_roles": [
+    "blocked_source",
+    "cage_fit_only",
+    "reference_only"
+  ],
+  "required_license_fields": [
+    "id",
+    "url",
+    "adaptation_allowed",
+    "foundation_use_allowed",
+    "evidence"
+  ],
+  "required_topology_metrics": {
+    "primary_surface_components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "degenerate_faces": 0,
+    "coincident_duplicate_triangle_pairs": 0,
+    "nonadjacent_self_intersection_pairs": 0
+  },
+  "required_adult_female_relationships": [
+    "mons_pubis",
+    "paired_labia_majora",
+    "paired_labia_minora",
+    "clitoral_hood",
+    "clitoris",
+    "vestibule",
+    "urethral_opening_anterior_to_vaginal_opening",
+    "vaginal_opening",
+    "posterior_commissure_fourchette",
+    "perineal_transition_to_anus_and_pelvic_floor"
+  ],
+  "required_relationship_assertions": [
+    "geometry_present",
+    "connected_to_primary_surface",
+    "not_painted_only"
+  ],
+  "required_negative_findings": {
+    "doll_safe_or_incomplete": false,
+    "floating_or_separate_anatomy_component": false,
+    "intersecting_anatomy_component": false,
+    "wrong_sex_helper_present": false,
+    "visible_open_seam_or_bridge_patch": false
+  },
+  "independent_evidence": {
+    "topology_artifact_type": "independent_adult_foundation_topology_audit",
+    "topology_auditor_role": "independent_topology_auditor",
+    "relationship_artifact_type": "independent_adult_female_relationship_review",
+    "relationship_reviewer_role": "independent_adult_anatomy_reviewer",
+    "exact_artifact_sha256_required": true,
+    "complete_scan_required": true,
+    "candidate_author_separation_required": true
+  },
+  "known_registry_blockers_are_overridable": false,
+  "build_allowed": false,
+  "render_allowed": false,
+  "runtime_mutation_allowed": false,
+  "runtime_activation_allowed": false,
+  "public_export_allowed": false,
+  "truth_note": "Confirmed-adult eligibility is only a maturity lane. It never proves complete adult topology or qualifies a source as a body foundation."
+}

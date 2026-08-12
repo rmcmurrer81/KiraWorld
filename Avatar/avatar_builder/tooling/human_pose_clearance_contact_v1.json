@@ -1,0 +1,93 @@
+{
+  "method_id": "avatar_human_pose_clearance_contact_v1",
+  "status": "INACTIVE_REUSABLE_AUTHORING_METHOD_READY_FOR_BLENDER_INTEGRATION",
+  "created_at": "2026-08-01",
+  "purpose": "Provide measured neutral, chair-seated, supine-lying, and eating-ready pose foundations without changing body identity or claiming finished animation capability.",
+  "r16_failure_diagnosis": {
+    "evidence_candidate": "Avatar/private_owner_review/kira_profiled_adult_candidate_r16_bald_delivery_20260801_134650",
+    "observed_failure": "The seated evidence is an airborne crossed-leg crouch with visible bilateral leg interpenetration, not a supported chair sit.",
+    "implementation_causes": [
+      "The R16 seated helper rotates upperleg01 on a hard-coded XYZ X angle even though upperleg01 is only a short hip-link segment and the verified functional thigh chain continues through upperleg02.",
+      "The R16 helper assumes a local Euler axis instead of aiming the measured rig chain toward explicit joint targets.",
+      "The R16 helper assigns root.location Z even though a pose bone location is evaluated in the rig/bone transform context; it does not measure the deformed buttock surface or solve world-space seat contact.",
+      "The R16 helper explicitly records contact_or_stability_claim false and performs no bilateral capsule-clearance gate."
+    ],
+    "frozen_r16_modified": false
+  },
+  "implementation": {
+    "pure_contract": "Core/avatar_human_pose_clearance_v1.py",
+    "blender_adapter": "tools/blender_avatar_human_pose_clearance_v1.py",
+    "pure_tests": "tools/test_avatar_human_pose_clearance_v1.py",
+    "supported_foundations": [
+      "neutral",
+      "seated",
+      "lying_supine",
+      "eating_ready"
+    ],
+    "coordinate_frame": {
+      "left": "+X",
+      "forward": "-Y",
+      "up": "+Z"
+    },
+    "required_methods": [
+      "Explicit bilateral hip, knee, ankle, and toe targets keep each leg on its anatomical side.",
+      "Current bone directions are measured and rotated toward targets; no guessed Euler flexion axis is allowed.",
+      "Distal thigh and calf centerlines are checked as conservative capsules before acceptance.",
+      "A weighted anatomical support patch is sampled from the evaluated body.",
+      "The root pose matrix is translated along world vertical until the sampled support patch reaches the measured seat or floor plane with one millimetre clearance.",
+      "A post-correction residual larger than two millimetres fails closed."
+    ]
+  },
+  "r16_read_only_in_memory_probe": {
+    "blender_version": "5.1.2",
+    "source_blend_sha256_before_and_after": "2d1f967564fc8218c42751330706816bdbdb459e9f7d97e5f964e2491f4ec3",
+    "source_blend_matches_frozen_build_evidence": true,
+    "candidate_or_blend_saved": false,
+    "body_height_m": 1.6510000228881836,
+    "seat_top_world_z_m": 0.4738370180130005,
+    "seated": {
+      "support_contact_residual_m": 7.653236389071338e-08,
+      "world_vertical_translation_m": -0.25346587800979614,
+      "minimum_conservative_leg_capsule_clearance_m": 0.1344913079738618,
+      "numerical_gates_passed": true
+    },
+    "eating_ready": {
+      "support_contact_residual_m": 7.653236389071338e-08,
+      "minimum_conservative_leg_capsule_clearance_m": 0.1344913079738618,
+      "numerical_gates_passed": true
+    },
+    "lying_supine": {
+      "support_contact_residual_m": -1.2874603271505192e-08,
+      "world_vertical_translation_m": -0.828996645450592,
+      "minimum_conservative_leg_capsule_clearance_m": 0.11428521418571486,
+      "weighted_back_support_vertex_count": 709,
+      "numerical_gates_passed": true
+    },
+    "temporary_seated_side_render_inspection": "The airborne crossed-leg crouch was replaced in memory by a recognizable chair sit with buttock-to-seat contact, forward separated thighs, bent knees, and uncrossed lower legs. The temporary render was not retained as a candidate artifact.",
+    "remaining_proof": "Run the adapter inside the next versioned candidate builder, then perform full evaluated-mesh self-intersection, seat-penetration, foot-support, deformation, multi-angle, and attachment-follow audits."
+  },
+  "integration_contract": {
+    "do_not_copy_r16_seated_helper": true,
+    "required_body_input": "The already-built primary body mesh with normalized official-rig weights.",
+    "required_armature_input": "The already-built official rig containing the two-part upper-leg and lower-leg chains.",
+    "seat_requirement": "Pass the measured world-space top Z of the actual private review seat prop; never estimate contact from target height alone.",
+    "lying_requirement": "Pass the measured world-space support plane and audit back contact after the root is rotated supine.",
+    "eating_ready_boundary": "This positions the torso and arms near a shared hand focus only. It creates no food, prop interaction, hand-to-mouth animation, swallowing, or runtime behavior.",
+    "after_each_pose": [
+      "Run evaluated-mesh self-intersection and seat-penetration checks.",
+      "Render front, side, and contact close-up evidence.",
+      "Verify all bone-parented eyes, nails, facial components, and future detachable hair follow without lag or detachment.",
+      "Restore neutral before saving the inactive body master."
+    ]
+  },
+  "truth_boundaries": {
+    "candidate_built_or_saved": false,
+    "runtime_activation_allowed": false,
+    "export_or_publication_allowed": false,
+    "finished_animation_capability_claimed": false,
+    "relationship_or_intimacy_behavior_implemented": false,
+    "pregnancy_or_reproductive_behavior_implemented": false,
+    "private_visual_review_still_required": true
+  },
+  "reuse_rule": "Pose repair changes pose transforms and support placement only. It must never regenerate the face, body, anatomy, skin, rig, weights, nails, eyes, or detachable hair assets."
+}

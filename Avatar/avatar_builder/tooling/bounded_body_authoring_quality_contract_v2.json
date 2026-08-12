@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "contract_id": "bounded_body_authoring_quality_contract_v2",
+  "status": "MANDATORY_APPEND_ONLY_GEOMETRY_CONTINUITY_ADDENDUM_NOT_A_SELECTABLE_GEOMETRY_METHOD",
+  "scope": "pre_blender_generated_surface_parameterization_and_future_safe_body_hooks",
+  "inherits": {
+    "contract_id": "bounded_body_authoring_quality_contract_v1",
+    "project_relative_path": "Avatar/avatar_builder/tooling/bounded_body_authoring_quality_contract_v1.json",
+    "sha256": "b032d1ddc5ed51156d32cdeb5b9459df073c3a81f7101471b8e6455ba96a7935",
+    "all_parent_requirements_remain_mandatory": true
+  },
+  "promotion_boundary": {
+    "selectable_reusable_geometry_method": false,
+    "rejected_candidate_coordinates_or_topology_may_be_promoted": false,
+    "private_person_payload_allowed": false,
+    "contract_records_generic_failure_prevention_only": true
+  },
+  "ordered_topology_and_orientation": {
+    "ordered_face_connectivity_sha256_required": true,
+    "undirected_edge_incidence_required": true,
+    "directed_shared_edge_orientation_required": true,
+    "each_manifold_shared_edge_must_appear_once_in_each_direction": true,
+    "same_direction_shared_edge_count_required": 0,
+    "nonmanifold_edge_count_required": 0,
+    "connected_component_and_expected_boundary_counts_required": true,
+    "stable_diagnostic_triangulation_diagonal_required": true,
+    "face_reordering_requires_a_new_versioned_hash": true,
+    "reordering_may_not_change_vertex_identity_seam_or_undirected_adjacency": true
+  },
+  "candidate_independent_normal_authority": {
+    "allowed_sources": [
+      "accepted_source_body_surface",
+      "accepted_source_seam_normals",
+      "accepted_exterior_rings",
+      "hash_bound_coherent_interpolation_of_those_sources"
+    ],
+    "candidate_derived_normals_may_judge_the_same_candidate": false,
+    "normal_authority_must_be_frozen_before_relief": true,
+    "normal_authority_sha256_required": true,
+    "orientation_sign_must_be_bound_to_the_accepted_source_body": true
+  },
+  "base_first_parameterization": {
+    "candidate_independent_pre_relief_base_required": true,
+    "pre_relief_base_sha256_required": true,
+    "semantic_station_identity_and_physical_spacing_are_separate": true,
+    "semantic_scalar_payload_sha256_required": true,
+    "semantic_scalar_applied_exactly_once": true,
+    "required_final_relation": "final_position = pre_relief_base_position + semantic_scalar * frozen_feature_normal",
+    "post_relief_free_vertex_optimizer_allowed": false,
+    "seam_positions_order_uvs_and_weights_remain_exact": true,
+    "candidate_specific_identity_or_anatomy_values_may_enter_generic_contract": false
+  },
+  "precision_and_reconstruction": {
+    "double_precision_preflight_required": true,
+    "blender_float32_local_roundtrip_required": true,
+    "object_to_world_transform_roundtrip_required": true,
+    "every_gate_must_pass_in_double_and_after_exact_roundtrip": true,
+    "payload_reconstruction_residual_required": true,
+    "semantic_scalar_reconstruction_residual_required": true
+  },
+  "separate_intra_and_inter_quad_gates": {
+    "intra_quad": {
+      "maximum_quad_edge_ratio": 3.0,
+      "minimum_mutual_triangle_normal_cosine": 0.5,
+      "maximum_normalized_quad_warp": 0.25,
+      "positive_face_area_required": true,
+      "exact_duplicate_or_near_collapse_count_required": 0,
+      "minimum_signed_area_is_candidate_scale_bound": true
+    },
+    "inter_quad": {
+      "minimum_adjacent_area_weighted_quad_normal_cosine": 0.5,
+      "minimum_normalized_triangle_to_authority_normal_dot": 0.5,
+      "minimum_seam_patch_to_source_normal_dot": 0.5,
+      "all_shared_edges_must_pass": true
+    },
+    "passing_intra_quad_gates_may_substitute_for_inter_quad_gates": false,
+    "passing_inter_quad_gates_may_substitute_for_intra_quad_gates": false,
+    "all_gates_must_pass_simultaneously_before_blender": true
+  },
+  "intersection_and_order_authority": {
+    "direct_3d_nonadjacent_triangle_intersection_test_required": true,
+    "projected_2d_crossings_are_diagnostic_warnings_only": true,
+    "projected_crossing_alone_may_prove_a_3d_intersection": false,
+    "boundary_and_rim_crossing_tests_required": true,
+    "semantic_longitudinal_and_lateral_order_required": true,
+    "rim_orientation_containment_area_perimeter_and_no_collapse_required": true,
+    "cap_spread_depth_and_local_pair_distance_required_when_applicable": true
+  },
+  "pre_blender_fail_closed_boundary": {
+    "blender_may_open_before_all_static_gates_pass": false,
+    "failed_coordinates_may_be_written_as_reusable_payload": false,
+    "diagnostic_metrics_and_traceback_may_be_preserved_append_only": true,
+    "failed_attempt_may_mutate_source_or_live_body": false,
+    "two_bounded_repairs_for_same_remaining_defect": 2,
+    "after_two_failures_preserve_best_safe_complete_candidate_and_stop_for_owner": true,
+    "new_body_or_general_framework_after_stop_allowed": false
+  },
+  "future_upgrade_compatibility": {
+    "current_external_mesh_may_claim_internal_physiology": false,
+    "stable_versioned_semantic_landmarks_and_attachment_references_required": true,
+    "accepted_identity_face_skin_rig_weights_and_unrelated_anatomy_must_survive_component_upgrade": true,
+    "future_systems_must_remain_separate": [
+      "confirmed_adult_relationship_state",
+      "current_consent_state",
+      "intimacy_state",
+      "conception_choice",
+      "pregnancy_timeline_choice",
+      "gestational_state",
+      "delivery_and_birth",
+      "postpartum_recovery",
+      "parent_child_family_state",
+      "bladder_bowel_and_pelvic_floor_simulation",
+      "illness_injury_treatment_and_recovery",
+      "hospital_and_medical_care"
+    ],
+    "ordinary_approximately_nine_month_timeline_supported_as_future_option": true,
+    "explicitly_chosen_day_scale_or_one_day_timeline_supported_as_future_simulation_option": true,
+    "accelerated_timeline_may_claim_ordinary_biological_elapsed_time": false,
+    "relationship_status_may_supply_standing_consent": false,
+    "intimacy_conception_timeline_and_medical_care_consent_are_distinct": true,
+    "current_authorization_to_activate_or_run_these_future_systems": false
+  },
+  "owner_review_truth": {
+    "numerical_pass_is_owner_visual_approval": false,
+    "saved_candidate_requires_complete_linked_angle_pose_contact_and_component_review": true,
+    "unresolved_defects_must_be_disclosed": true,
+    "no_safe_candidate_image_may_be_invented_when_blender_never_ran": true
+  }
+}

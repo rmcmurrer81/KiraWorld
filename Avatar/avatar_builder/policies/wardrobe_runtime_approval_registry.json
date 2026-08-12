@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "registry_type": "owner_controlled_wardrobe_runtime_approval_registry",
+  "owner": "Robert",
+  "status": "active_fail_closed",
+  "entries": [],
+  "policy": {
+    "default": "deny",
+    "sidecar_claims_are_proof": false,
+    "caller_supplied_hashes_are_trust_anchors": false,
+    "exact_approval_hash_must_be_listed": true,
+    "registry_file_integrity_must_match_pinned_code_hash": true,
+    "current_runtime_wearables_approved": 0
+  }
+}

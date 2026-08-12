@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "contract_id": "biological_robert_confirmed_adult_male_internal_external_anatomy_body_function_contract_v1",
+  "status": "SOURCE_BACKED_DESIGN_AND_ACCEPTANCE_CONTRACT_ONLY_NOT_IMPLEMENTED_NOT_RUNTIME_AUTHORITY",
+  "system_document": "System/Docs/BIOLOGICAL_ROBERT_CONFIRMED_ADULT_MALE_INTERNAL_EXTERNAL_ANATOMY_AND_BODY_FUNCTION_CONTRACT_20260809.md",
+  "priority_and_scope": {
+    "subject_id": "robert_user_avatar",
+    "confirmed_adult_required": true,
+    "kira_body_priority_preserved": true,
+    "robert_authoring_state": "PENDING_KIRA_OWNER_REVIEW",
+    "accepted_robert_carrier_exists": false,
+    "body_or_mesh_authoring_authorized": false,
+    "blender_execution_authorized": false,
+    "private_photos_opened_or_copied_by_this_contract": false,
+    "runtime_activation_authorized": false,
+    "explicit_behavior_scene_authorized": false,
+    "physiology_or_sensation_implemented": false
+  },
+  "subject_reference_separation": {
+    "protected_hash_only_manifests": [
+      "Avatar/requests/private/robert_owner_reference_manifest_20260715.json",
+      "Avatar/private_owner_review/dual_robert_20260729/protected_reference_intake_20260729/PROTECTED_REFERENCE_MANIFEST.json"
+    ],
+    "raw_source_paths_recorded": false,
+    "raw_source_filenames_recorded": false,
+    "raw_pixels_or_derivatives_emitted": false,
+    "contact_sheet_or_thumbnail_emitted": false,
+    "owner_references_may_control": [
+      "robert_specific_identity",
+      "likeness",
+      "reference_supported_proportions",
+      "placement",
+      "surface_variation",
+      "coloring"
+    ],
+    "medical_sources_may_control": [
+      "general_adult_male_structure",
+      "route_relationships",
+      "topology_guidance",
+      "validation_boundaries"
+    ],
+    "medical_sources_may_supply_robert_specific_dimensions": false,
+    "robert_private_values_reusable_for_other_subjects": false,
+    "generic_builder_training_allowed": false,
+    "circumcision_or_variant_inference_from_generic_atlas_allowed": false
+  },
+  "source_registry": [
+    {
+      "id": "ncbi_penis_anatomy",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482236/",
+      "claims": ["penis_root_body_glans", "corpora_cavernosa_corpus_spongiosum", "spongy_urethra_and_distal_meatus"]
+    },
+    {
+      "id": "ncbi_external_male_genitalia",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK299/",
+      "claims": ["penis_meatus_scrotum", "testis_epididymis_separation", "spermatic_cord_and_vas_course"]
+    },
+    {
+      "id": "ncbi_male_genitourinary_tract",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK562291/",
+      "claims": ["paired_reproductive_routes", "ejaculatory_ducts_enter_prostatic_urethra", "prostate_and_bulbourethral_relationships"]
+    },
+    {
+      "id": "ncbi_male_urethra",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542238/",
+      "claims": ["four_male_urethral_segments", "shared_downstream_urine_and_reproductive_conduit"]
+    },
+    {
+      "id": "ncbi_superficial_perineal_space",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542289/",
+      "claims": ["urogenital_and_anal_triangles", "crura_cavernosa_spongiosum_bulb", "perineal_support_relationships"]
+    },
+    {
+      "id": "ncbi_deep_perineal_space",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK538272/",
+      "claims": ["membranous_urethra_and_external_sphincter", "bulbourethral_glands", "perineal_membrane_and_modern_open_space_model"]
+    },
+    {
+      "id": "ncbi_perineal_body",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537345/",
+      "claims": ["male_perineal_body_location", "urinary_genital_anorectal_support_without_lumen_merge"]
+    },
+    {
+      "id": "ncbi_pelvic_floor",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482200/",
+      "claims": ["levator_ani_coccygeus_endopelvic_support", "urinary_genital_anorectal_compartments", "anorectal_angle_support"]
+    },
+    {
+      "id": "ncbi_anal_triangle",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557585/",
+      "claims": ["anal_canal_and_verge", "anal_sphincter_and_levator_relationships", "distinct_posterior_outlet"]
+    },
+    {
+      "id": "niddk_urinary_tract",
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/urinary-tract-how-it-works",
+      "claims": ["kidneys_ureters_bladder_urethra", "normal_urination_requires_coordinated_function"]
+    },
+    {
+      "id": "niddk_lower_gi",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/anatomic-problems-lower-gi-tract/about-lower-gi-tract",
+      "claims": ["rectum_to_anus_route", "anal_sphincter_is_bowel_control_structure"]
+    }
+  ],
+  "maturity_and_privacy": {
+    "maturity_status_required": "confirmed_adult",
+    "non_adult_or_unresolved_body_representation": "doll_safe_non_anatomical",
+    "default_internal_module_visible": false,
+    "private_review_lease_required": true,
+    "allowed_unclothed_reviewers": ["robert_exact_subject_and_biological_owner"],
+    "synthetic_person_or_general_gallery_access_allowed": false,
+    "review_lease_is_consent_or_activity_authority": false,
+    "public_export_or_upload_allowed": false,
+    "runtime_instantiation_allowed": false,
+    "raw_reference_in_review_package_allowed": false
+  },
+  "external_surface_requirements": {
+    "one_structurally_complete_connected_adult_body_required": true,
+    "required_semantic_regions": [
+      "penile_root_attachment",
+      "penile_body_shaft",
+      "glans",
+      "corona",
+      "neck",
+      "ventral_penile_raphe",
+      "external_urethral_meatus",
+      "scrotal_sac",
+      "scrotal_compartment_left",
+      "scrotal_compartment_right",
+      "scrotal_raphe_septal_landmark",
+      "perineal_raphe_and_body",
+      "perianal_surface",
+      "anal_opening"
+    ],
+    "conditional_subject_variant_regions": ["foreskin", "frenulum"],
+    "conditional_regions_require_subject_evidence_or_durable_owner_choice": true,
+    "testicular_collision_envelopes_required": ["left", "right"],
+    "forbidden_visual_or_geometry_failures": [
+      "doll_safe_pelvic_surface",
+      "painted_or_plate_substitute",
+      "rectangular_shield_or_root",
+      "detached_helper_or_floating_root",
+      "open_cavity_or_hole",
+      "hard_collar_transition",
+      "single_spherical_scrotum",
+      "fused_shaft_scrotum_block",
+      "collapsed_or_inverted_scrotal_surface",
+      "body_thigh_or_perineal_intersection",
+      "discontinuous_material_boundary"
+    ],
+    "normal_variation_must_not_be_standardized_from_one_reference": true
+  },
+  "required_internal_module_meshes": {
+    "urinary": [
+      "kidney_proxy_left",
+      "kidney_proxy_right",
+      "ureter_left",
+      "ureter_right",
+      "bladder_shell",
+      "bladder_neck_trigone_marker",
+      "preprostatic_urethra",
+      "prostatic_urethra",
+      "membranous_urethra",
+      "spongy_urethra",
+      "fossa_navicularis_marker",
+      "internal_urethral_sphincter_proxy",
+      "external_urethral_sphincter_proxy"
+    ],
+    "reproductive": [
+      "testis_left",
+      "testis_right",
+      "epididymis_left",
+      "epididymis_right",
+      "spermatic_cord_proxy_left",
+      "spermatic_cord_proxy_right",
+      "vas_deferens_left",
+      "vas_deferens_right",
+      "seminal_vesicle_left",
+      "seminal_vesicle_right",
+      "seminal_vesicle_duct_left",
+      "seminal_vesicle_duct_right",
+      "ejaculatory_duct_left",
+      "ejaculatory_duct_right",
+      "prostate",
+      "bulbourethral_gland_left",
+      "bulbourethral_gland_right",
+      "bulbourethral_duct_left",
+      "bulbourethral_duct_right"
+    ],
+    "penile_support": [
+      "corpus_cavernosum_left",
+      "corpus_cavernosum_right",
+      "crus_left",
+      "crus_right",
+      "corpus_spongiosum_and_bulb",
+      "tunica_fascial_support_proxy",
+      "suspensory_root_anchor",
+      "bulbospongiosus_proxy",
+      "ischiocavernosus_proxy_left",
+      "ischiocavernosus_proxy_right"
+    ],
+    "posterior_bowel": [
+      "distal_sigmoid_bowel_stub",
+      "rectum",
+      "anorectal_junction_marker",
+      "anal_canal",
+      "internal_anal_sphincter_proxy",
+      "external_anal_sphincter_proxy"
+    ],
+    "pelvic_perineal_support": [
+      "levator_ani_proxy",
+      "coccygeus_proxy",
+      "endopelvic_support_proxy",
+      "perineal_membrane",
+      "perineal_body",
+      "rectoprostatic_septum_proxy",
+      "ischioanal_space_proxy_left",
+      "ischioanal_space_proxy_right"
+    ],
+    "orientation": [
+      "bony_pelvis_proxy",
+      "pubic_landmark",
+      "sacral_coccygeal_landmark",
+      "ischial_landmark_left",
+      "ischial_landmark_right",
+      "inguinal_landmark_left",
+      "inguinal_landmark_right",
+      "pelvic_side_anchor_left",
+      "pelvic_side_anchor_right"
+    ]
+  },
+  "per_mesh_required_metadata": [
+    "anatomy_id",
+    "system",
+    "laterality",
+    "review_visibility",
+    "material_id",
+    "source_contract_id",
+    "function_implemented"
+  ],
+  "clinical_review_materials": {
+    "required_distinct_material_ids": [
+      "clinical_urinary",
+      "clinical_reproductive",
+      "clinical_penile_support",
+      "clinical_bowel",
+      "clinical_pelvic_support",
+      "clinical_bony_landmark"
+    ],
+    "muted_opaque_schematic_only": true,
+    "fluid_arousal_elimination_or_activity_animation_allowed": false
+  },
+  "route_topology": {
+    "external_outlet_count_in_scope": 2,
+    "external_outlet_bindings": [
+      {
+        "anchor": "external_urethral_meatus",
+        "systems": ["urinary", "reproductive"],
+        "terminal": "spongy_urethra",
+        "shared_downstream_conduit_is_anatomically_required": true
+      },
+      {
+        "anchor": "anal_opening",
+        "systems": ["bowel"],
+        "terminal": "anal_canal",
+        "exclusive": true
+      }
+    ],
+    "urinary_route": [
+      "kidney_proxies",
+      "ureters",
+      "bladder_shell",
+      "bladder_neck",
+      "preprostatic_urethra",
+      "prostatic_urethra",
+      "membranous_urethra",
+      "spongy_urethra",
+      "fossa_navicularis_marker",
+      "external_urethral_meatus"
+    ],
+    "reproductive_route_each_side": [
+      "testis",
+      "epididymis",
+      "vas_deferens",
+      "seminal_vesicle_duct_contribution",
+      "ejaculatory_duct",
+      "prostatic_urethra"
+    ],
+    "bowel_route": [
+      "distal_sigmoid_bowel_stub",
+      "rectum",
+      "anorectal_junction_marker",
+      "anal_canal",
+      "anal_opening"
+    ],
+    "permitted_cross_system_junctions": [
+      "ejaculatory_duct_left_to_prostatic_urethra",
+      "ejaculatory_duct_right_to_prostatic_urethra",
+      "bulbourethral_duct_left_to_designated_bulbar_spongy_urethra",
+      "bulbourethral_duct_right_to_designated_bulbar_spongy_urethra"
+    ],
+    "other_cross_system_lumen_or_endpoint_merging_allowed": false,
+    "bowel_urogenital_shared_lumen_or_outlet_allowed": false,
+    "female_three_outlet_rule_applies": false,
+    "duplicated_urinary_and_reproductive_external_meatus_required": false
+  },
+  "attachment_interface": {
+    "accepted_carrier_required": true,
+    "source_carrier_hash_must_match_before_and_after": true,
+    "required_carrier_inputs": [
+      "carrier_path",
+      "carrier_sha256",
+      "source_package_manifest",
+      "carrier_object_ids",
+      "carrier_armature_id",
+      "rest_pose_matrices",
+      "unit_and_scale_evidence",
+      "external_outlet_boundary_ids",
+      "pelvic_perineal_anchor_transforms"
+    ],
+    "module_local_armature_or_deformer_required": true,
+    "carrier_dependency_mode": "READ_ONLY_TRANSFORM_FOLLOWING_ONLY",
+    "forbidden_carrier_writes": [
+      "vertices",
+      "uvs",
+      "materials",
+      "armature_bones",
+      "constraints",
+      "weights",
+      "shape_keys",
+      "drivers",
+      "actions"
+    ],
+    "module_manifest_required": [
+      "source_hash_before",
+      "source_hash_after",
+      "module_mesh_hashes",
+      "anchor_transforms",
+      "source_contract_hash",
+      "review_results"
+    ]
+  },
+  "rig_collision_and_deformation_gates": [
+    "root_attached_with_bounded_stretch",
+    "no_abdominal_thigh_scrotal_perineal_seat_bed_or_toilet_penetration",
+    "left_right_scrotal_compartments_distinct_not_fused_inverted_or_collapsed",
+    "distal_meatus_remains_on_glans_and_connected_to_spongy_urethra",
+    "external_surface_manifold_normals_semantic_and_material_continuity",
+    "only_named_urogenital_internal_junctions",
+    "bowel_route_separate_in_every_pose",
+    "paired_internal_structures_do_not_drift_detach_or_cross_incorrectly",
+    "no_forbidden_internal_internal_or_internal_body_shell_intersection"
+  ],
+  "acceptance_matrix": {
+    "required_poses": [
+      "neutral_standing",
+      "seated_chair_contact",
+      "supine",
+      "prone",
+      "squat",
+      "kneel",
+      "left_knee_flexion",
+      "right_knee_flexion",
+      "bilateral_knee_flexion",
+      "bounded_hip_flexion_and_abduction",
+      "walk_stride",
+      "jog_run_stride",
+      "step_up",
+      "forward_overhead_reach",
+      "door_handle_reach",
+      "handwashing_reach",
+      "shower_bath_entry",
+      "seated_toilet_contact",
+      "neutral_standing_bathroom_posture"
+    ],
+    "required_private_views": [
+      "full_front",
+      "full_rear",
+      "profile_left",
+      "profile_right",
+      "three_quarter_left",
+      "three_quarter_right",
+      "top_orientation",
+      "bottom_orientation",
+      "external_pelvic_perineal_close_views",
+      "schematic_sagittal_left_and_right",
+      "schematic_coronal",
+      "schematic_axial",
+      "outlet_to_route_correspondence",
+      "topology_wireframe_normals",
+      "all_required_functional_pose_views"
+    ],
+    "hard_gates": [
+      "accepted_exact_hash_carrier",
+      "protected_reference_privacy_and_subject_binding",
+      "source_body_face_rig_skin_material_hash_preservation",
+      "one_complete_connected_external_body_surface",
+      "two_correct_external_outlet_bindings",
+      "continuous_segmented_urinary_route",
+      "paired_reproductive_routes_and_only_named_urethral_convergence",
+      "separate_bowel_route",
+      "closed_manifold_normals_and_bounded_deformation",
+      "zero_forbidden_self_or_cross_system_intersection",
+      "pose_contact_clearance_and_return_to_neutral",
+      "private_review_lease_and_no_public_export",
+      "owner_visual_review_on_exact_hash"
+    ]
+  },
+  "bathroom_readiness": {
+    "current_status": "NOT_IMPLEMENTED_NOT_TESTED",
+    "geometry_ready_claim_requires_all_exact_hash_gates": true,
+    "required_structural_evidence": [
+      "two_external_outlet_bindings",
+      "continuous_internal_route_geometry",
+      "pelvic_floor_and_perineal_support",
+      "nonpenetrating_toilet_and_seat_contact",
+      "thigh_clearance_and_body_balance",
+      "clean_return_to_neutral"
+    ],
+    "fluid_waste_semen_sound_odor_health_or_memory_emission_allowed": false,
+    "geometry_ready_equals_urination_or_defecation_implemented": false
+  },
+  "truth_limits": {
+    "geometry_proves_living_tissue_or_biological_function": false,
+    "urination_implemented": false,
+    "defecation_implemented": false,
+    "continence_implemented": false,
+    "erection_or_arousal_implemented": false,
+    "ejaculation_implemented": false,
+    "spermatogenesis_or_fertility_implemented": false,
+    "hormone_or_endocrine_function_implemented": false,
+    "sensation_or_subjective_experience_implemented": false,
+    "hygiene_or_bathroom_use_implemented": false,
+    "health_disease_or_diagnosis_implemented": false,
+    "anatomy_or_body_response_is_consent": false,
+    "anatomy_or_body_response_is_desire_or_preference": false,
+    "private_reference_is_medical_diagnosis": false,
+    "future_function_requires_separate_versioned_source_bound_privacy_preserving_supervised_acceptance": true
+  },
+  "future_runtime_truth_separation": {
+    "separate_state_domains": [
+      "urinary_state",
+      "bowel_state",
+      "reproductive_state",
+      "erectile_or_arousal_physiology_state",
+      "private_sensation_state",
+      "desire_and_preference",
+      "consent",
+      "external_action",
+      "health_state",
+      "memory"
+    ],
+    "anatomy_or_physiology_can_auto_grant_consent": false,
+    "runtime_activation_without_separate_acceptance": false
+  }
+}

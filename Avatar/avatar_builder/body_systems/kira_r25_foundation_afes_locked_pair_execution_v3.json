@@ -1,0 +1,132 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_locked_pair_execution.v3",
+  "attempt_id": "attempt_03",
+  "status": "PENDING_FRESH_INDEPENDENT_AUDIT_READ_ONLY_DIAGNOSTIC_PAIR_ONLY",
+  "scope": {
+    "body_work_only": true,
+    "read_only_blender_diagnostic": true,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "render_allowed": false,
+    "candidate_creation_allowed": false,
+    "body_authoring_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "export_allowed": false,
+    "publication_allowed": false
+  },
+  "authorization_basis": {
+    "owner_requested_body_progress": true,
+    "owner_authorized_blender_problem_repair": true,
+    "bounded_operation": "extract_existing_foundation_afes_and_two_transition_rings_without_mutation",
+    "does_not_authorize_candidate_or_runtime_change": true,
+    "fresh_independent_attempt03_audit_required_before_execution": true
+  },
+  "bindings": {
+    "blender_executable": {"path": "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe", "bytes": 108687824, "sha256": "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5"},
+    "foundation_blend": {"path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend", "bytes": 789620, "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"},
+    "afes_v5_config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v5.json", "bytes": 9972, "sha256": "0f51a937117912ef2863655a30d4e10da299042d4cfc975310ad18e5fa2c98ab"},
+    "afes_v5_private_loader": {"path": "tools/kira_r25_afes_topology_core_v5.py", "bytes": 16970, "sha256": "2cf8bfcb65efa1f1e557f5e9dc66208fad98023d5ad71b66c5fe513f86e7f48e"},
+    "afes_v5_extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v5.py", "bytes": 23834, "sha256": "333b17e064ae9cd681f309606076da17961eb738b1bbace462533bd30918959a"},
+    "canonical_receipt": {"path": "tools/kira_r25_canonical_receipt.py", "bytes": 19262, "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"},
+    "afes_v5_test": {"path": "Testing/test_kira_r25_afes_read_only_extraction_attempt05.py", "bytes": 19222, "sha256": "062c5972e24232a862b80946a42414ecd2b7a24da118daf857c8dcd3310e6f38"},
+    "afes_v5_checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_05/CHECKPOINT.md", "bytes": 7889, "sha256": "5083eec171718c65bcdb15a1f89ab841dd7db7c713b24a05713b11833da2fabd"},
+    "afes_v5_independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_05/INDEPENDENT_AUDIT.md", "bytes": 7208, "sha256": "a739451fbde83ab1202a245640e39b41a11d2973ff91300356883c7c4b06f527"},
+    "execution_wrapper": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3.py", "bytes": 15343, "sha256": "58ca9009a9274f94640dc66cfe9ec2c30a4208a42f8d7c1dc86263e2aeabddbe"},
+    "parent_controller": {"path": "tools/run_kira_r25_foundation_afes_locked_pair_v3.py", "bytes": 52830, "sha256": "a0d5ea75c8062c66646da6f2d06ba131952f98f89515606bf53905d22016cdee"},
+    "locked_pair_attempt01_contract": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v1.json", "bytes": 4226, "sha256": "2d814be92de63978ac1b7f2427ea67b8fbea6c21acbe5da1613641a18ed31b32"},
+    "locked_pair_attempt01_wrapper": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v1.py", "bytes": 7666, "sha256": "57c3894800477a35ed8631168b836541da7703c31b8c4009297213ed80b88131"},
+    "locked_pair_attempt01_controller": {"path": "tools/run_kira_r25_foundation_afes_locked_pair.py", "bytes": 18382, "sha256": "4568bd9fb7b2cc0072d3e97d9fd5603dfa6943dd736c122bae218d2102119fd5"},
+    "locked_pair_attempt01_test": {"path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution.py", "bytes": 5523, "sha256": "f8de598e7bf4ec40d5535f73196576419f1498dde50ad4d65f7ac41e1221e145"},
+    "locked_pair_attempt01_checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/CHECKPOINT.md", "bytes": 3235, "sha256": "7ce537d69a8954f7ccbd023aa2840ccd5870db99f039243280d7741f9c463092"},
+    "locked_pair_attempt01_independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md", "bytes": 8704, "sha256": "eda4a07a27e89196a9e4cb083cdb10506500d4fc845d748017952e735eaab654"},
+    "locked_pair_attempt02_contract": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v2.json", "bytes": 5719, "sha256": "4bae4355ad48a3afc9339434efa1fb7212308674b51401eff513472830163571"},
+    "locked_pair_attempt02_wrapper": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v2.py", "bytes": 8281, "sha256": "01380a34c065cee1c67ba700d342d22c811aa985aa5722525718aa39d4f56f8e"},
+    "locked_pair_attempt02_controller": {"path": "tools/run_kira_r25_foundation_afes_locked_pair_v2.py", "bytes": 31503, "sha256": "4f1f0413526b6c9449033f070e1a0d46fef965cc6fea6af46f1c1b52461adb06"},
+    "locked_pair_attempt02_test": {"path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v2.py", "bytes": 14895, "sha256": "dcccf95734812d5d9b5fbad2f0154d1e59bdb690ff7bd465f8a65b5fcb27e56d"},
+    "locked_pair_attempt02_checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_02/CHECKPOINT.md", "bytes": 5693, "sha256": "11188258ab3e978a5646988f19bf22cc7fb85dd9a2fa82eaf1e06e2086698888"},
+    "locked_pair_attempt02_supersession": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/ATTEMPT_02_SUPERSESSION_NOTICE.md", "bytes": 1184, "sha256": "6ca38c1417558c7e88460bbca5f16809ee6f6192ba0cdd0a1c91cd939ddc8fc5"},
+    "locked_pair_attempt03_rebase_plan": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/LOCKED_PAIR_ATTEMPT_03_REBASE_PLAN_PENDING_AFES_V4_AUDIT.md", "bytes": 6788, "sha256": "097390c29dd791b9b838e47c0c3f3310ee140dd17c716b9e6ee25655e113a930"}
+  },
+  "afes_v5_transitive_rows": {
+    "bindings": {
+      "attempt_05_private_loader_core": {"path": "tools/kira_r25_afes_topology_core_v5.py", "bytes": 16970, "sha256": "2cf8bfcb65efa1f1e557f5e9dc66208fad98023d5ad71b66c5fe513f86e7f48e"},
+      "attempt_01_topology_core_execution_dependency": {"path": "tools/kira_r25_afes_topology_core.py", "bytes": 10005, "sha256": "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce"},
+      "attempt_02_hardening_core_execution_dependency": {"path": "tools/kira_r25_afes_topology_core_v2.py", "bytes": 28732, "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"},
+      "attempt_03_hardening_core_execution_dependency": {"path": "tools/kira_r25_afes_topology_core_v3.py", "bytes": 8732, "sha256": "c3c5f6f21a0b133fae6ef0439932193a9d0e922001a97026fd022ff0a682dc8e"},
+      "canonical_receipt_helper": {"path": "tools/kira_r25_canonical_receipt.py", "bytes": 19262, "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"},
+      "attempt_05_extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v5.py", "bytes": 23834, "sha256": "333b17e064ae9cd681f309606076da17961eb738b1bbace462533bd30918959a"}
+    },
+    "attempt_01_preservation": {
+      "config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v1.json", "bytes": 6989, "sha256": "3f1f57d95a28287f024cd6806af9180c623d134b68249a547cb81475f8fe5fdc"},
+      "topology_core": {"path": "tools/kira_r25_afes_topology_core.py", "bytes": 10005, "sha256": "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce"},
+      "extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings.py", "bytes": 18513, "sha256": "706a1035354bb133a8cc2a2c0dbeff414f6f1172bbedaaf7dafbf70e14c57bc2"},
+      "tests": {"path": "Testing/test_kira_r25_afes_read_only_extraction_preparation.py", "bytes": 7352, "sha256": "6132c8fc82f60f924f81a4124358369ee2af6e51924e5b59aaa8d0b5f6588eb5"},
+      "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/CHECKPOINT.md", "bytes": 4673, "sha256": "5c96a9c5da3303733f431344223f64736a7148e2361d6d3e69d34cf31015b84a"},
+      "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md", "bytes": 3834, "sha256": "aa096db67515a2a6330bd3809d1c30e71d9a8afec4fed7a9e745b87a973480b3"}
+    },
+    "attempt_02_preservation": {
+      "config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v2.json", "bytes": 11046, "sha256": "b4c992012f3f621d4bef5252c7cb7bf26d6d524b3859cc2685487ba10589f7dc"},
+      "topology_core": {"path": "tools/kira_r25_afes_topology_core_v2.py", "bytes": 28732, "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"},
+      "extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v2.py", "bytes": 20082, "sha256": "508900309d7847e41997da72d2c85ee28317c9439e52c5f7311b82aac4553fc5"},
+      "tests": {"path": "Testing/test_kira_r25_afes_read_only_extraction_attempt02.py", "bytes": 13272, "sha256": "ab1753305a0bc357e94fccf36160bc893197be23d69675f26651e42784efc970"},
+      "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/CHECKPOINT.md", "bytes": 8284, "sha256": "df91b0a2b414c10b16bc6af86d02f20bda676b8e89d1f236e0573bd0fd18a670"},
+      "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT.md", "bytes": 3969, "sha256": "504be87d2ae20cdc30a4dd47d043cdde4c5de1e1568cf2e28676b9e84b93e952"},
+      "rejection_addendum": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT_REJECTION_ADDENDUM.md", "bytes": 2275, "sha256": "aa0d2487710d5f8ce7df5ff428a77d8a65f425238366bcbef1a5faa0caf38b4a"}
+    },
+    "attempt_03_preservation": {
+      "config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v3.json", "bytes": 7125, "sha256": "97648d764bf218c3c25e77be9979af0c277e012b690323afaade0d1db0bda23a"},
+      "topology_core": {"path": "tools/kira_r25_afes_topology_core_v3.py", "bytes": 8732, "sha256": "c3c5f6f21a0b133fae6ef0439932193a9d0e922001a97026fd022ff0a682dc8e"},
+      "extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v3.py", "bytes": 23790, "sha256": "861344dce0bb203400ef50875124127fe1ed21ea79d036c6eee73b1c7c4ee366"},
+      "tests": {"path": "Testing/test_kira_r25_afes_read_only_extraction_attempt03.py", "bytes": 11241, "sha256": "07b5bdd76262fbf6bb7cff9d2bcdd45c85ab6c77603b3301b7b0b31c1f481c62"},
+      "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/CHECKPOINT.md", "bytes": 6427, "sha256": "109ac676aa1206404cf3679433c6d800efb308fce9f040de20fc0d5c19bea02a"},
+      "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/INDEPENDENT_AUDIT.md", "bytes": 2542, "sha256": "7680627e5943413b293a7152ae4592c93ef5692a03ae850b662e047a607be212"}
+    },
+    "attempt_04_preservation": {
+      "config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v4.json", "bytes": 8035, "sha256": "e25149b133715d9a4ad3578bfdf081986394ebdf61b1fbe2e46a109d89bb5102"},
+      "topology_core": {"path": "tools/kira_r25_afes_topology_core_v4.py", "bytes": 9529, "sha256": "d70a3c15d5c929ea2a5f60c6d73445c7fa894481736691c9e5c1ace6c4bef1d4"},
+      "extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v4.py", "bytes": 22751, "sha256": "088c811cc0745e7519516d94c0c449d2ee8bf296f8cb10cc8e8d7d343de6f079"},
+      "tests": {"path": "Testing/test_kira_r25_afes_read_only_extraction_attempt04.py", "bytes": 14077, "sha256": "f9a644233a0618ce4f9f8f55c358d99f4b2aa235cf0dc42f0a07c51e6b6d74d7"},
+      "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_04/CHECKPOINT.md", "bytes": 5994, "sha256": "517deca1772b5b1893238503c3014d1d22bbe0bbde5132a981f108dfba023274"},
+      "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_04/INDEPENDENT_AUDIT.md", "bytes": 3674, "sha256": "4feaa449b3dd5e17d880c6ab6d9c850539876e5b1964a1179946d31ff73895e9"}
+    }
+  },
+  "afes_v5_exact_contract_sections": {
+    "schema": "kira.avatar.r25.foundation_afes_read_only_extraction.v5",
+    "attempt_id": "attempt_05",
+    "status": "STATIC_PREPARATION_ONLY_EXECUTION_NOT_AUTHORIZED",
+    "scope": {"read_only": true, "private": true, "inactive": true, "candidate_creation_allowed": false, "blend_edit_allowed": false, "blend_save_allowed": false, "render_allowed": false, "export_allowed": false, "runtime_activation_allowed": false, "path_output_allowed": false, "result_transport": "one_canonical_receipt_frame_to_caller_inherited_win32_pipe_only"},
+    "attempt_04_baseline_config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v4.json", "bytes": 8035, "sha256": "e25149b133715d9a4ad3578bfdf081986394ebdf61b1fbe2e46a109d89bb5102"},
+    "private_exact_byte_execution_contract": {"ambient_project_sys_modules_dependencies_allowed": false, "security_sources_physically_read_per_child": 1, "exact_retained_bytes_used_for_hash_and_compile": true, "fresh_private_module_type_required": true, "private_project_modules_inserted_into_sys_modules": false, "explicit_dependency_order": ["attempt_05_private_loader_core", "attempt_01_topology_core_execution_dependency", "attempt_02_hardening_core_execution_dependency", "attempt_03_hardening_core_execution_dependency", "private_single_use_declarative_record_shim", "canonical_receipt_helper"], "project_imports_inside_bound_sources_resolve_only_to_private_graph": true, "unbound_project_imports_fail_closed": true, "ambient_metadata_or_symbol_spoof_must_be_ignored": true, "private_v3_must_retain_private_attempt01_and_attempt02_objects": true, "private_v2_analyzer_must_be_private_attempt01_analyzer": true, "receipt_runtime_name": "_kira_private_canonical_receipt_attempt05", "receipt_runtime_name_must_be_unique_private": true, "private_record_shim_runtime_name": "_kira_private_dataclass_shim_attempt05", "ambient_dataclasses_import_allowed": false, "ambient_dataclasses_decorator_consumption_allowed": false, "ambient_dataclasses_alias_allowed": false, "ambient_sys_modules_receipt_or_record_lookup_allowed": false, "private_record_decorator_scope": "DecodedReceipt:@dataclass(frozen=True)", "private_record_decorator_single_use": true},
+    "topology_sealing_contract": {"prior_sealed_expected_full_normalized_topology_sha256": null, "required_fresh_locked_matching_extractions": 2, "one_extraction_is_acceptance": false, "invented_expected_digest_forbidden": true},
+    "truth_boundary": {"static_preparation_is_not_execution": true, "attempts_01_through_04_rejected_and_preserved": true, "attempt_05_fresh_independent_audit_required": true, "attempt_05_self_authorization_forbidden": true, "controller_or_pipe_creation_implemented": false, "child_process_authentication_implemented": false, "replay_protection_implemented": false, "parent_binding_of_this_config_hash_implemented": false, "two_fresh_locked_matching_extractions_still_required": true, "blender_execution_authorized": false, "body_authoring_authorized": false}
+  },
+  "accepted_afes_v5_audit": {"decision": "ACCEPTED_FOR_STATIC_PREPARATION_ONLY", "audit_sha256": "a739451fbde83ab1202a245640e39b41a11d2973ff91300356883c7c4b06f527", "audit_required_again_for_locked_pair_attempt03": true},
+  "locked_pair_attempt_01_preservation": {
+    "contract": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v1.json", "bytes": 4226, "sha256": "2d814be92de63978ac1b7f2427ea67b8fbea6c21acbe5da1613641a18ed31b32"},
+    "wrapper": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v1.py", "bytes": 7666, "sha256": "57c3894800477a35ed8631168b836541da7703c31b8c4009297213ed80b88131"},
+    "controller": {"path": "tools/run_kira_r25_foundation_afes_locked_pair.py", "bytes": 18382, "sha256": "4568bd9fb7b2cc0072d3e97d9fd5603dfa6943dd736c122bae218d2102119fd5"},
+    "test": {"path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution.py", "bytes": 5523, "sha256": "f8de598e7bf4ec40d5535f73196576419f1498dde50ad4d65f7ac41e1221e145"},
+    "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/CHECKPOINT.md", "bytes": 3235, "sha256": "7ce537d69a8954f7ccbd023aa2840ccd5870db99f039243280d7741f9c463092"},
+    "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md", "bytes": 8704, "sha256": "eda4a07a27e89196a9e4cb083cdb10506500d4fc845d748017952e735eaab654"}
+  },
+  "locked_pair_attempt_02_preservation": {
+    "contract": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v2.json", "bytes": 5719, "sha256": "4bae4355ad48a3afc9339434efa1fb7212308674b51401eff513472830163571"},
+    "wrapper": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v2.py", "bytes": 8281, "sha256": "01380a34c065cee1c67ba700d342d22c811aa985aa5722525718aa39d4f56f8e"},
+    "controller": {"path": "tools/run_kira_r25_foundation_afes_locked_pair_v2.py", "bytes": 31503, "sha256": "4f1f0413526b6c9449033f070e1a0d46fef965cc6fea6af46f1c1b52461adb06"},
+    "test": {"path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v2.py", "bytes": 14895, "sha256": "dcccf95734812d5d9b5fbad2f0154d1e59bdb690ff7bd465f8a65b5fcb27e56d"},
+    "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_02/CHECKPOINT.md", "bytes": 5693, "sha256": "11188258ab3e978a5646988f19bf22cc7fb85dd9a2fa82eaf1e06e2086698888"},
+    "supersession": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/ATTEMPT_02_SUPERSESSION_NOTICE.md", "bytes": 1184, "sha256": "6ca38c1417558c7e88460bbca5f16809ee6f6192ba0cdd0a1c91cd939ddc8fc5"}
+  },
+  "process_contract": {
+    "factory_startup": true, "background": true, "autoexec_disabled": true, "python_exit_code": 1, "stdin": "DEVNULL", "restricted_environment": true, "least_handle_inheritance": true, "result_handle_must_be_win32_pipe": true, "concurrent_bounded_pipe_drain": true, "exactly_one_frame_and_eof": true, "maximum_frame_bytes": 1048628, "maximum_stdout_bytes": 4194304, "maximum_stderr_bytes": 4194304, "fresh_pair_64_hex_nonce": true, "fresh_distinct_run_64_hex_nonce_per_run": true, "process_timeout_seconds": 180, "windows_job_kill_on_close": true, "create_suspended_assign_job_then_resume": true, "terminate_exact_job_tree_on_timeout_or_output_limit": true, "project_modules_imported": false, "private_graph_load_only_after_locked_verification": true, "retained_exact_bytes_used_for_private_execution": true, "shell": false, "close_fds": true, "working_directory": ".",
+    "environment_allowlist": ["SYSTEMROOT", "WINDIR", "TEMP", "TMP", "USERNAME", "USERPROFILE", "HOMEDRIVE", "HOMEPATH", "LOCALAPPDATA", "APPDATA", "Path"],
+    "forced_environment_relative_to_project": {"PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0", "BLENDER_USER_CONFIG": "RecoverySprint/runtime_cache/r25_blender/user_config", "BLENDER_USER_SCRIPTS": "RecoverySprint/runtime_cache/r25_blender/user_scripts", "BLENDER_USER_DATAFILES": "RecoverySprint/runtime_cache/r25_blender/user_datafiles"},
+    "exact_command_template": ["<BLENDER_EXECUTABLE>", "--background", "--factory-startup", "--disable-autoexec", "<FOUNDATION_BLEND>", "--python-exit-code", "1", "--python", "<EXECUTION_WRAPPER>", "--", "--result-handle", "<INHERITED_WIN32_PIPE_HANDLE>", "--execution-contract-sha256", "<EXPECTED_CONTRACT_SHA256>", "--pair-session-nonce", "<FRESH_PAIR_64_HEX_NONCE>", "--run-nonce", "<FRESH_RUN_64_HEX_NONCE>", "--run-number", "<ONE_OR_TWO>"]
+  },
+  "controller_audit_gate": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03/INDEPENDENT_AUDIT.md", "sha256_supplied_out_of_band": true, "decision_marker": "Decision: **ACCEPTED FOR ONE BOUNDED READ-ONLY PAIR ONLY**", "must_bind_contract_controller_and_wrapper_hashes": true},
+  "required_fresh_run_count": 2,
+  "pair_acceptance": {"distinct_pair_and_run_nonces": true, "exact_authenticated_inner_payload_match": true, "exact_full_normalized_topology_digest_match": true, "compact_afes_evidence_validation": true, "all_bound_inputs_locked_before_verification": true, "all_bound_inputs_locked_through_after_snapshot": true, "all_bound_inputs_unchanged_after_pair": true, "each_raw_frame_persisted_append_only": true, "canonical_outcome_for_every_post_root_exception": true, "no_empty_orphan_root_on_reservation_failure": true, "fixed_root_second_use_is_rejected": true, "fresh_independent_audit_required_before_execution": true},
+  "append_only_output_root": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution/attempt_03",
+  "truth_boundary": {"pair_pass_would_only_satisfy_foundation_afes_plus_transition_vertex_set_audit": true, "semantic_cage_still_required": true, "positive_jacobian_and_intersection_fixtures_still_required": true, "body_authoring_not_granted": true, "candidate_not_created": true, "owner_review_not_implied": true, "runtime_authority_not_implied": true, "static_package_is_not_execution_authority_until_fresh_independent_audit": true}
+}

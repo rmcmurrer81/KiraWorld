@@ -1,0 +1,105 @@
+{
+  "schema": "kira.blackwell.v17.native_whole_document_manifest_control_anchor_contract.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_whole_document_manifest_control_anchor_candidate_v17",
+  "attempt_id": "attempt_01",
+  "status": "AUTHOR_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT",
+  "execution_authority": "NONE",
+  "repair": {
+    "predecessor": "V16_REJECTED_UNINVOKED_DO_NOT_RUN",
+    "id": "V16_WHOLE_DOCUMENT_CANONICAL_SET_EQUALITY_REPAIR",
+    "v16_findings_closed_by_design": [
+      "trailing_byte_acceptance",
+      "trailing_json_whitespace_acceptance",
+      "42nd_subject_logical_duplicate_acceptance",
+      "declared_count_without_actual_object_count",
+      "terminal_dot_segment_acceptance",
+      "stale_v15_outcome_and_audit_provenance"
+    ]
+  },
+  "canonical_manifest_grammar": {
+    "encoding": "ASCII_subset_of_UTF8",
+    "whitespace_allowed": false,
+    "top_level_keys": "exact_once_exact_order_no_unknowns",
+    "row_keys": "path_then_bytes_then_sha256_exact_once_no_unknowns",
+    "document_end": "exact_after_final_closing_brace",
+    "subject_objects": "parse_actual_objects_and_require_exactly_55",
+    "binding_relation": "ordered_bijection_with_55_locked_bindings",
+    "duplicate_paths": "reject",
+    "missing_or_extra_rows": "reject",
+    "path_rules": [
+      "nonempty",
+      "printable_ascii",
+      "forward_slash_only",
+      "no_json_escape",
+      "no_empty_segment",
+      "no_dot_segment_in_any_position",
+      "no_dot_dot_segment_in_any_position",
+      "relative_except_exact_C_colon_slash_Python314_slash_python314_dot_dll_binding"
+    ],
+    "bytes_rules": [
+      "positive",
+      "canonical_decimal",
+      "no_sign",
+      "no_leading_zero",
+      "no_fraction",
+      "no_exponent",
+      "no_string_or_boolean_coercion",
+      "checked_u64_overflow"
+    ],
+    "digest_rules": "exactly_64_lowercase_hex_digits"
+  },
+  "retained_closure": {
+    "v16_author_seal_subjects": 41,
+    "v16_author_seal_included": true,
+    "v16_rejection_artifacts_included": 7,
+    "preserved_v16_rows_derived_from_exact_author_seal": true,
+    "preserved_v16_rejection_rows_derived_from_exact_audit_evidence": true
+  },
+  "audit_grammar": {
+    "magic": "KIRA_BLACKWELL_VOICE_V17_WHOLE_DOCUMENT_CONTROL_AUDIT\\t1",
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_DISCONNECTED_STATIC_CONTROL_VALIDATION_V17_ONLY",
+    "seal_subject_count": 55,
+    "one_shot_only": true
+  },
+  "record_provenance": {
+    "reservation_magic": "KIRA_BLACKWELL_V17_RESERVATION",
+    "terminal_magic": "KIRA_BLACKWELL_V17_TERMINAL",
+    "evidence_name": "RUN_EVIDENCE_V17.jsonl",
+    "receipt_name": "STATIC_CONTROL_OUTCOME_V17.receipt.bin"
+  },
+  "required_author_checks": {
+    "compiled_exact_parser_hostile_harness": true,
+    "v16_bypasses_as_negative_controls": true,
+    "source_predicate_mutants_refused": true,
+    "strict_msvc_x64": ["/W4", "/WX", "/O2", "/MT", "/guard:cf", "/std:c17"],
+    "separate_analyze_zero_unsuppressed": true,
+    "pe32_plus_high_entropy_aslr_nx_cfg": true,
+    "permitted_imports": ["bcrypt.dll", "KERNEL32.dll"]
+  },
+  "stop_before": [
+    "V15 invocation",
+    "V16 invocation",
+    "V17 invocation",
+    "Python",
+    "model",
+    "GPU",
+    "synthesis",
+    "audio",
+    "playback",
+    "latency",
+    "network",
+    "camera",
+    "microphone",
+    "speaker",
+    "person state",
+    "body",
+    "Blender",
+    "Sarah"
+  ],
+  "different_fresh_static_audit_required": true,
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false
+}

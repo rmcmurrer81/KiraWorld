@@ -1,0 +1,347 @@
+{
+  "schema": "kira.avatar.r25.semantic_control_cage_diagnostic.v4r1",
+  "attempt_id": "attempt_04r1_static_unsealed",
+  "status": "STATIC_PREPARATION_ONLY_ATTEMPT04_REPAIRS_UNSEALED_EXECUTION_FORBIDDEN",
+  "scope": {
+    "body_work_only": true,
+    "read_only_diagnostic": true,
+    "blender_execution_authorized": false,
+    "controller_execution_authorized": false,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "deformation_allowed": false,
+    "candidate_creation_allowed": false,
+    "render_allowed": false,
+    "export_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "publication_allowed": false,
+    "path_result_allowed": false,
+    "input_transport": "one_controller_capability_frame_then_three_exact_pair_run01_run02_canonical_frames_over_two_distinct_inherited_win32_pipes",
+    "result_transport": "one_canonical_receipt_frame_over_one_third_distinct_inherited_win32_pipe"
+  },
+  "preserved_attempt04_rejection_lineage": {
+    "config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_semantic_control_cage_diagnostic_v4.json",
+      "bytes": 15852,
+      "sha256": "cffb4b9244c50b18d00e88ebff1278f34247c71d867fdee87581565d1f03768f"
+    },
+    "adapter": {
+      "path": "tools/kira_r25_semantic_control_cage_afes_v3r3_adapter_v4.py",
+      "bytes": 16352,
+      "sha256": "52768f0566efe413378c075adbb7cad6064ec64c546b64e8a19005277fc1fb9c"
+    },
+    "wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4.py",
+      "bytes": 12831,
+      "sha256": "64105b25a52cc7203d182be9ab865b2246c31ed24469646f490ba10ec6b91819"
+    },
+    "controller": {
+      "path": "tools/run_kira_r25_semantic_control_cage_v4.py",
+      "bytes": 7760,
+      "sha256": "859843e1e6211195cc78acdd726414411d5ccd5c7b1acd6f066259ff9d1c0e95"
+    },
+    "test": {
+      "path": "Testing/test_kira_r25_semantic_control_cage_attempt04.py",
+      "bytes": 10876,
+      "sha256": "59d1474354a76d21f01632929a540f29fdc5f49ee9c5c6e62fa820942d9d15bf"
+    },
+    "checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04/CHECKPOINT.md",
+      "bytes": 4780,
+      "sha256": "81b3fde707e327760144aa905323b9ef6924a2ec9ec626638e051519d8bb668e"
+    },
+    "independent_rejection_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04/INDEPENDENT_AUDIT.md",
+      "bytes": 10055,
+      "sha256": "e2e42e9d4bb27baa7737ad19a89ad6878a29b95e5a1799a1476378e1f8897f8e",
+      "decision": "REJECTED"
+    }
+  },
+  "accepted_semantic_attempt03_lineage": {
+    "config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_semantic_control_cage_diagnostic_v3.json",
+      "bytes": 12845,
+      "sha256": "42a96cb62ede275a247d1bcae836a0bfe800f2ec02449b697f8709ffd56efd45"
+    },
+    "wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v3.py",
+      "bytes": 35374,
+      "sha256": "4d3fab98efc822950078aa905e2290aad5b6021659e8a036c774325e6cc29379"
+    },
+    "independent_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_03/INDEPENDENT_AUDIT.md",
+      "bytes": 8279,
+      "sha256": "9e762318cc6aa3da99de3460947ade84086e27d0be0a9370de52f77c2c7768e5",
+      "decision": "ACCEPTED_STATIC_UNSEALED"
+    }
+  },
+  "bindings": {
+    "r25_boundary_document": {
+      "path": "System/Docs/KIRA_R24_CLOSURE_AND_R25_FOUNDATION_FIRST_BOUNDARY_20260809.md",
+      "bytes": 6933,
+      "sha256": "cc27f886edb18fdcc700b38d010b6a573ab2ddddad667c4d83312db72dae022d"
+    },
+    "r25_machine_boundary": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_first_whole_surface_retarget_boundary_v1.json",
+      "bytes": 9639,
+      "sha256": "205f3b4636ac53c78cd836089d543e94d9b4cd5c788e17bcf0012fe3acc5c672"
+    },
+    "qualified_foundation_blend": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+      "bytes": 789620,
+      "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+      "object_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface",
+      "mesh_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface__bounded_intersection_cleanup__generic_continuous_adult_female_external_surface_v1",
+      "vertices": 14658,
+      "edges": 30632,
+      "faces": 15976
+    },
+    "r19_visual_target_blend": {
+      "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/kira_r19_bald_targeted_material_movement_correction.blend",
+      "bytes": 90861425,
+      "sha256": "dee1017f72c50dfba6583864bb1f9ec81405e2ef6d37f7c724831a24df49b53f",
+      "object_name": "Kira_R19_BlackProject_Radial_Patch_Primary_Surface",
+      "mesh_name": "Kira_R19_BlackProject_Radial_Patch_Primary_Surface_Mesh",
+      "vertices": 12612,
+      "faces": 24936
+    },
+    "r20_exact_rejected_target_region": {
+      "path": "RecoverySprint/continuation_20260802/kira_r20_local_pelvic_retopology_read_only_audit/R20_PELVIC_MASK_TOPOLOGY_AND_ACCEPTANCE_PLAN.json",
+      "bytes": 17495,
+      "sha256": "d9907f9ac7db74999ce2853b8865f614ccacabfabacef82b3111374dd89d0035",
+      "selector": "r19_primary_surface_polygon_material_index_equals_1",
+      "selected_faces": 376,
+      "incident_vertices": 206,
+      "face_connected_components": 1,
+      "interface_edges": 34,
+      "interface_vertices": 34
+    },
+    "makehuman_default_weights": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/rigs/default_weights.mhw",
+      "bytes": 912134,
+      "sha256": "ae2d830adb5ee890c90e071bde6efaa2b9c1f2937b49770f7b5264041637b071",
+      "license": "CC0",
+      "exact_group_count": 139,
+      "sorted_exact_group_names_sha256": "a988f4a0674d7b7068468116453769218a113188a7b01a8d90eeefc8597d09d4"
+    },
+    "canonical_receipt_primitive": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"
+    },
+    "pure_control_cage_core": {
+      "path": "tools/kira_r25_semantic_control_cage_core_v2.py",
+      "bytes": 65998,
+      "sha256": "c07e53d60de41432be784376c1e9e9adc542f64f25bf7daec7e9de207f3d6f7a"
+    },
+    "attempt03_accepted_runtime": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v3.py",
+      "bytes": 35374,
+      "sha256": "4d3fab98efc822950078aa905e2290aad5b6021659e8a036c774325e6cc29379"
+    },
+    "accepted_afes_v5_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v5.json",
+      "bytes": 9972,
+      "sha256": "0f51a937117912ef2863655a30d4e10da299042d4cfc975310ad18e5fa2c98ab"
+    },
+    "accepted_afes_v5_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v5.py",
+      "bytes": 23834,
+      "sha256": "333b17e064ae9cd681f309606076da17961eb738b1bbace462533bd30918959a"
+    },
+    "attempt04_rejection_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04/INDEPENDENT_AUDIT.md",
+      "bytes": 10055,
+      "sha256": "e2e42e9d4bb27baa7737ad19a89ad6878a29b95e5a1799a1476378e1f8897f8e"
+    },
+    "v3r3_afes_adapter": {
+      "path": "tools/kira_r25_semantic_control_cage_afes_v3r3_adapter_v4r1.py",
+      "bytes": 19457,
+      "sha256": "b954a47a7103a9bb4a119cf11c26ce997e16c04ef23069796db627a31b2df766"
+    },
+    "execution_wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4r1.py",
+      "bytes": 18492,
+      "sha256": "4bfee203edde730e00c23e0a713c317dfea0eb70f742ce4bfe799fc65c283a4c"
+    },
+    "static_controller": {
+      "path": "tools/run_kira_r25_semantic_control_cage_v4r1.py",
+      "bytes": 13208,
+      "sha256": "4fd1faf532dcbc3a43d53b7a552a3d0a388e9568d6652ff669eced5450e70d3b"
+    }
+  },
+  "afes_v3r3_pair_binding": {
+    "seal_status": "PENDING_NEW_APPEND_ONLY_SEALED_SUCCESSOR_AFTER_ACCEPTED_04R1_AUDIT_AND_REAL_V3R3_EVIDENCE",
+    "binding_rule": "NEVER_REWRITE_04R1_AND_NEVER_FILL_FROM_AUTHOR_ONLY_REJECTED_UNAUDITED_OR_UNEXECUTED_VALUES",
+    "final_locked_pair_execution_contract_binding": null,
+    "final_locked_pair_independent_audit_binding": null,
+    "final_locked_pair_native_manifest_binding": null,
+    "final_locked_pair_execution_outcome_binding": null,
+    "final_run_01_receipt_binding": null,
+    "final_run_02_receipt_binding": null,
+    "required_final_placeholders": [
+      "FINAL_INDEPENDENT_AFES_ATTEMPT_AUDIT_PATH_BYTES_SHA256_AND_PASS_STATUS",
+      "FINAL_INDEPENDENTLY_ACCEPTED_LOCKED_PAIR_EXECUTION_CONTRACT_PATH_BYTES_SHA256",
+      "FINAL_PAIR_ACCEPTANCE_FRAME_SHA256",
+      "FINAL_RUN_01_FRAME_SHA256",
+      "FINAL_RUN_02_FRAME_SHA256",
+      "FINAL_PAIR_RUN_INNER_SCHEMAS_AND_STATUSES",
+      "FINAL_EXACT_EXTRACTION_VERIFIED_INPUT_ROWS",
+      "FINAL_FOUNDATION_FULL_NORMALIZED_TOPOLOGY_SHA256",
+      "FINAL_AFES_UNION_COUNT_AND_SHA256",
+      "FINAL_RING_1_COUNT_AND_SHA256",
+      "FINAL_RING_2_COUNT_AND_SHA256",
+      "FINAL_COMBINED_RING_COUNT_AND_SHA256",
+      "FINAL_LOCKED_UNION_COUNT_AND_SHA256",
+      "FINAL_EXACT_TOPOLOGY_STRUCTURE",
+      "FINAL_EXACT_AFES_BOUNDS_OBJECT_NANOMETERS",
+      "FINAL_TWO_DISTINCT_FRESH_SESSION_NONCES_AND_MATCHING_INNER_DECISION"
+    ],
+    "expected_pair_and_analysis": null,
+    "frozen_literal_protocol": {
+      "pair_schema": "kira.avatar.r25.foundation_afes_locked_pair_acceptance.v3r3",
+      "pair_status": "AFES_AND_TRANSITION_RINGS_EXTRACTED_READ_ONLY_PAIR_MATCHED",
+      "run_schema": "kira.avatar.r25.foundation_afes_locked_extraction_run.v3r3",
+      "run_status": "READ_ONLY_EXTRACTION_COMPLETE_PENDING_PAIR_MATCH",
+      "inner_schema": "kira.avatar.r25.foundation_afes_transition_diagnostic.v5",
+      "inner_artifact_kind": "READ_ONLY_PRIVATE_EXACT_BYTE_AFES_DIAGNOSTIC",
+      "inner_status": "EXTRACTED_UNSEALED_REQUIRES_MATCHING_FRESH_LOCKED_RUN",
+      "semantic_output_schema": "kira.r25.semantic_control_cage_diagnostic.v4r1",
+      "semantic_success_status": "V3R3_BOUND_CONTROL_CAGE_DIAGNOSTIC_COMPUTED_NOT_A_BODY",
+      "semantic_failure_status": "DIAGNOSTIC_FAILED_NO_CAGE_NO_CANDIDATE"
+    },
+    "expected_pair_and_analysis_exact_fields": [
+      "pair_schema", "pair_status", "pair_truth_boundary",
+      "pair_acceptance_frame_sha256", "execution_contract_binding",
+      "input_snapshot_sha256", "matching_inner_payload_sha256",
+      "run_schema", "run_status", "run_truth_boundary",
+      "run_01_frame_sha256", "run_02_frame_sha256",
+      "run_01_payload_sha256", "run_02_payload_sha256",
+      "pair_session_nonce", "run_01_nonce", "run_02_nonce", "exact_run_metadata",
+      "accepted_afes_v5_config", "accepted_afes_v5_extractor",
+      "inner_schema", "inner_artifact_kind", "inner_status", "inner_truth_boundary",
+      "exact_extraction_verified_inputs", "private_receipt_runtime", "exact_read_only_guards",
+      "foundation_object", "foundation_mesh", "foundation_vertex_count",
+      "foundation_edge_count", "foundation_face_count", "foundation_topology_sha256",
+      "required_afes_group_names", "afes_union_count", "afes_union_sha256",
+      "ring_1_count", "ring_1_sha256", "ring_2_count", "ring_2_sha256",
+      "combined_ring_count", "combined_ring_sha256", "locked_vertex_count",
+      "locked_vertex_sha256", "exact_topology_structure", "exact_afes_bounds_object_nm"
+    ]
+  },
+  "controller_capability_contract": {
+    "schema": "kira.avatar.r25.semantic_control_cage_execution_capability.v4r1",
+    "status": "INDEPENDENT_AUDIT_ACCEPTED_ONE_RUN_CAPABILITY",
+    "transport": "one_controller_server_owned_inherited_win32_pipe_one_canonical_frame_then_eof",
+    "capability_handle_must_be_distinct_from_input_and_result_handles": true,
+    "pipe_server_process_id_must_equal_child_parent_process_id": true,
+    "payload_must_bind_controller_wrapper_config_audit_child_parent_handles_and_three_input_frame_hashes": true,
+    "nonce": "fresh_256_bit_controller_secret_never_command_line_or_path",
+    "single_read_nonreusable": true,
+    "wrapper_direct_invocation_without_capability": "FAIL_BEFORE_INPUT_OR_BLEND"
+  },
+  "semantic_contract": {
+    "classification_source": "exact_positive_vertex_weights_from_the_139_official_MakeHuman_default_weights_names_only",
+    "unknown_positive_group_behavior": "FAIL",
+    "substring_aliases_allowed": false,
+    "mixamo_aliases_allowed": false,
+    "coordinate_classification_fallback_allowed": false,
+    "minimum_recognized_weight_fixed_1e9": 500000000,
+    "required_regions": [
+      "face", "head", "neck", "torso", "upper_arm.L", "lower_arm.L", "hand.L",
+      "upper_arm.R", "lower_arm.R", "hand.R", "thigh.L", "shin.L", "foot.L",
+      "thigh.R", "shin.R", "foot.R"
+    ],
+    "physical_side_rule": "anatomical_left_is_positive_X_and_has_greater_centroid_X_than_anatomical_right_on_both_source_and_target",
+    "same_region_target_triangle_required": true,
+    "left_right_cross_mapping_allowed": false,
+    "mixed_region_target_triangles_allowed": false
+  },
+  "alignment_contract": {
+    "method": "positive_uniform_scale_proper_rotation_translation_from_16_equally_weighted_region_centroids",
+    "minimum_rank_ratio_fixed_1e9": 10000,
+    "minimum_scale_fixed_1e9": 500000000,
+    "maximum_scale_fixed_1e9": 2000000000,
+    "maximum_normalized_rms_residual_fixed_1e9": 150000000,
+    "maximum_orthonormal_residual_fixed_1e12": 10000,
+    "minimum_left_right_separation_micrometers": 5000,
+    "reflection_allowed": false,
+    "proper_rotation_determinant_required": true,
+    "source_and_target_full_rank_required": true
+  },
+  "control_cage_contract": {
+    "label": "REGION_BALANCED_432_CONTROL_ANCHORS_NOT_DIRECT_MAPPING_OF_ALL_VERTICES",
+    "foundation_afes_or_transition_vertex_may_be_anchor": false,
+    "every_permissible_vertex_must_be_in_one_same_region_component": true,
+    "every_permissible_vertex_must_be_within_configured_same_region_edge_geodesic_radius": true,
+    "disconnected_or_loose_vertex_behavior": "FAIL",
+    "anchors_per_region": {
+      "face": 36, "head": 24, "neck": 12, "torso": 64,
+      "upper_arm.L": 20, "lower_arm.L": 20, "hand.L": 28,
+      "upper_arm.R": 20, "lower_arm.R": 20, "hand.R": 28,
+      "thigh.L": 28, "shin.L": 24, "foot.L": 28,
+      "thigh.R": 28, "shin.R": 24, "foot.R": 28
+    },
+    "total_control_anchor_count": 432,
+    "maximum_same_region_geodesic_radius_micrometers": {
+      "face": 80000, "head": 120000, "neck": 80000, "torso": 200000,
+      "upper_arm.L": 120000, "lower_arm.L": 100000, "hand.L": 50000,
+      "upper_arm.R": 120000, "lower_arm.R": 100000, "hand.R": 50000,
+      "thigh.L": 140000, "shin.L": 130000, "foot.L": 70000,
+      "thigh.R": 140000, "shin.R": 130000, "foot.R": 70000
+    }
+  },
+  "projection_gates": {
+    "barycentric_fixed_scale": 1000000000,
+    "minimum_normal_dot_fixed_1e9": {
+      "face": 100000000, "head": 100000000, "neck": 100000000, "torso": 100000000,
+      "upper_arm.L": 100000000, "lower_arm.L": 100000000, "hand.L": 100000000,
+      "upper_arm.R": 100000000, "lower_arm.R": 100000000, "hand.R": 100000000,
+      "thigh.L": 100000000, "shin.L": 100000000, "foot.L": 100000000,
+      "thigh.R": 100000000, "shin.R": 100000000, "foot.R": 100000000
+    },
+    "maximum_distance_micrometers": {
+      "face": 45000, "head": 60000, "neck": 50000, "torso": 80000,
+      "upper_arm.L": 65000, "lower_arm.L": 65000, "hand.L": 40000,
+      "upper_arm.R": 65000, "lower_arm.R": 65000, "hand.R": 40000,
+      "thigh.L": 75000, "shin.L": 75000, "foot.L": 50000,
+      "thigh.R": 75000, "shin.R": 75000, "foot.R": 50000
+    },
+    "r20_rejected_face_count": 376,
+    "pelvic_or_afes_target_fit": "FORBIDDEN"
+  },
+  "append_only_execution_paths": {
+    "independent_audit": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r1/INDEPENDENT_AUDIT.json",
+    "outcome_receipt": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r1/EXECUTION_OUTCOME.receipt.bin",
+    "evidence_root": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_execution/attempt_04r1",
+    "all_paths_must_not_exist_before_reservation": true
+  },
+  "future_independent_audit_gate": {
+    "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r1/INDEPENDENT_AUDIT.json",
+    "schema": "kira.avatar.r25.semantic_control_cage_independent_audit.v4r1",
+    "required_decision": {
+      "status": "ACCEPTED_STATIC_UNSEALED",
+      "current_preparation_execution_authorized": false,
+      "new_append_only_sealed_successor_plan_permitted": true
+    },
+    "must_bind_exact_subject_labels": [
+      "attempt04_rejection_audit", "attempt04r1_adapter", "attempt04r1_checkpoint",
+      "attempt04r1_config", "attempt04r1_controller", "attempt04r1_test", "attempt04r1_wrapper"
+    ],
+    "accepted_audit_sha256_supplied_out_of_band_only_after_exact_parse": true,
+    "audit_does_not_exist_in_this_preparation": true
+  },
+  "truth_boundary": {
+    "attempt_03_is_preserved": true,
+    "attempt_04_is_rejected_and_preserved_byte_for_byte": true,
+    "attempt_04r1_is_static_unsealed_preparation_only": true,
+    "all_sixteen_result_placeholders_remain_unresolved": true,
+    "seven_result_slots_remain_null": true,
+    "no_result_or_audit_hash_is_claimed": true,
+    "later_sealing_requires_a_new_append_only_revision": true,
+    "static_preparation_is_not_execution": true,
+    "future_diagnostic_is_not_an_accepted_deformation_cage_or_body": true,
+    "body_authoring_and_owner_approval_remain_separate": true
+  }
+}

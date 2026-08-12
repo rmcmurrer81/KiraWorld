@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "boundary_id": "kira_r25_foundation_first_whole_surface_retarget_boundary_v1",
+  "status": "STATIC_BOUNDARY_ONLY_NO_AUTHORING_OR_BLENDER_AUTHORITY",
+  "subject_id": "kira",
+  "candidate_label": "KIRA_R25_FOUNDATION_FIRST_WHOLE_SURFACE_RETARGET",
+  "scope": {
+    "private": true,
+    "inactive": true,
+    "unassigned": true,
+    "unpublished": true,
+    "runtime_eligible": false,
+    "owner_approved": false,
+    "execution_authority": false,
+    "blender_authority": false,
+    "activation_authority": false,
+    "assignment_authority": false,
+    "export_authority": false
+  },
+  "immutable_inputs": {
+    "r19_appearance_target": {
+      "blend": {
+        "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/kira_r19_bald_targeted_material_movement_correction.blend",
+        "bytes": 90861425,
+        "sha256": "dee1017f72c50dfba6583864bb1f9ec81405e2ef6d37f7c724831a24df49b53f"
+      },
+      "package_manifest": {
+        "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/PACKAGE_MANIFEST.json",
+        "bytes": 13209,
+        "sha256": "9c7038b60e2c712e49e810c0b7f7932bf36a18042dd00a6951834be59bb40f0c",
+        "entry_count": 49
+      },
+      "build_evidence": {
+        "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/BUILD_EVIDENCE.json",
+        "bytes": 167951,
+        "sha256": "f1c20f0570418506150f60df25a6b6ac548597b3108878b1920116f3d0fd714c"
+      },
+      "use": "visual_and_semantic_target_only_outside_the_exact_rejected_pelvic_mask",
+      "must_remain_byte_for_byte_unchanged": true,
+      "topology_or_rig_donor": false
+    },
+    "r20_exact_rejected_region": {
+      "mask_plan": {
+        "path": "RecoverySprint/continuation_20260802/kira_r20_local_pelvic_retopology_read_only_audit/R20_PELVIC_MASK_TOPOLOGY_AND_ACCEPTANCE_PLAN.json",
+        "bytes": 17495,
+        "sha256": "d9907f9ac7db74999ce2853b8865f614ccacabfabacef82b3111374dd89d0035"
+      },
+      "nonpelvic_freeze_ledger": {
+        "path": "RecoverySprint/continuation_20260802/kira_r20_local_pelvic_retopology_read_only_audit/R20_NONPELVIC_FREEZE_LEDGER.json",
+        "bytes": 14705,
+        "sha256": "b63bdff693d8efe239f982d72591e4523c860abe89107a79d7b4607e43243873"
+      },
+      "selected_face_count": 376,
+      "incident_vertex_count": 206,
+      "removable_interior_vertex_count": 172,
+      "interface_vertex_count": 34,
+      "interface_edge_count": 34,
+      "interface_evidence_sha256": "01beed05140bb22bff2de23922d280fb312952078b496f16fb4fd80d9d742c86",
+      "excluded_from_r19_appearance_fit": true
+    },
+    "qualified_continuous_foundation": {
+      "blend": {
+        "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+        "bytes": 789620,
+        "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"
+      },
+      "qualification": {
+        "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json",
+        "bytes": 2471,
+        "sha256": "c91c11f649fca7dcdff4530df15a5ed4654d0fe4ca723740cca55660a4b969e0"
+      },
+      "topology_audit": {
+        "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FOUNDATION_TOPOLOGY_AUDIT_V2.json",
+        "bytes": 3738,
+        "sha256": "de2d1f0a82aa2a0015f7374707b7e12afae830ef5314f518bcb7956adf8180de"
+      },
+      "relationship_review": {
+        "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FEMALE_RELATIONSHIP_REVIEW_V2.json",
+        "bytes": 37722,
+        "sha256": "b321f2d852b2242c462501a396ddb9aca648229187868a158da6571450a1cb88"
+      },
+      "authoring_config": {
+        "path": "Avatar/avatar_builder/tooling/makehuman_adult_female_foundation_inactive_authoring_v1.json",
+        "bytes": 893,
+        "sha256": "9c42dd4056ba5d0543cdee211d4b95c04d17d48f1a437348e2fedfbcb3e60d07"
+      },
+      "topology": {
+        "vertices": 14658,
+        "edges": 30632,
+        "faces": 15976,
+        "connected_components": 1,
+        "boundary_edges": 0,
+        "nonmanifold_internal_edges": 0,
+        "degenerate_faces": 0,
+        "duplicate_triangles": 0,
+        "nonadjacent_intersection_pairs": 0
+      },
+      "candidate_topology_donor": true,
+      "must_remain_topologically_identical": true,
+      "current_limit": "normalized_skin_weights_exist_but_no_armature_or_pose_proof"
+    },
+    "terminal_r24_evidence": {
+      "planner_blocker": {
+        "path": "System/Docs/KIRA_R24_EXTERNAL_SURFACE_AUTHOR_PLANNER_TWO_STRATEGY_BLOCKER_20260809.md",
+        "sha256": "9e6047c5caaeb993c266a0c1bd7e8fe128de06681412cb6ca92f60d09d96ad76"
+      },
+      "controller_v3_rejection": {
+        "path": "System/Docs/KIRA_R24_ONE_SHOT_AUTHOR_TRANSACTION_V3_INDEPENDENT_REJECTION_20260809.md",
+        "sha256": "fd55140dc2536a5793ba8775db6856b20176a3b1b839ba034d0cdc74af7b797d"
+      },
+      "r7_deep_rejection": {
+        "path": "System/Docs/KIRA_R24_R7_DEEP_INDEPENDENT_AUDIT_ADDENDUM_20260809.md",
+        "bytes": 13428,
+        "sha256": "71f80081ce7e619a7ef1e786260043ddea4c0dbe3f02b3021139f8272c654fe3"
+      },
+      "must_not_be_reopened_as_minor_r8_or_v4": true
+    }
+  },
+  "materially_different_method": {
+    "direction": "fit_kira_nonpelvic_appearance_onto_the_clean_continuous_foundation",
+    "forbidden_reverse_direction": "do_not_graft_foundation_anatomy_into_r19_topology",
+    "topology_change_allowed": false,
+    "cut_or_graft_allowed": false,
+    "r19_pelvic_vertex_or_face_copy_allowed": false,
+    "stages": [
+      "global_similarity_alignment",
+      "audited_semantic_cage_correspondence_outside_r20_rejected_mask",
+      "positive_jacobian_harmonic_or_arap_deformation",
+      "foundation_afes_and_transition_lock",
+      "bone_rest_fit_through_the_same_deformation_field",
+      "static_and_fresh_process_geometry_rig_and_pose_acceptance",
+      "private_owner_review_gallery"
+    ],
+    "required_locked_foundation_region": {
+      "expected_afes_landmark_union_vertex_count": 1169,
+      "minimum_geodesic_transition_rings": 2,
+      "exact_vertex_set_currently_audited": false,
+      "pelvic_frame_relationship_digests_must_remain_exact": true
+    },
+    "required_geometry_gates": {
+      "positive_jacobians": true,
+      "normal_flips": 0,
+      "new_intersection_pairs": 0,
+      "boundary_edges": 0,
+      "nonmanifold_internal_edges": 0,
+      "degenerate_faces": 0,
+      "duplicate_triangles": 0,
+      "bounded_area_edge_and_normal_distortion": true
+    }
+  },
+  "rig_boundary": {
+    "r19_native_188_joint_rig_preserved": false,
+    "r19_actions_preserved": false,
+    "required_candidate_rig": "official_makehuman_compatible_rig_attached_to_existing_normalized_weights",
+    "bone_rest_positions_fit_through_same_deformation_field": true,
+    "full_weight_and_action_retarget_if_needed_is_separate_work": true,
+    "may_not_claim_movement_until_pose_acceptance_passes": true
+  },
+  "authoritative_artifact_boundary": {
+    "identity": "canonical_mesh_rig_material_receipt",
+    "transport": "framed_canonical_bytes_over_inherited_pipe",
+    "parent_validation": "in_memory_before_persistence",
+    "persistence": "parent_owned_held_win32_create_new_handle",
+    "blend_is_authoritative": false,
+    "blend_role": "optional_private_convenience_copy_only",
+    "review_render_transport": "factory_started_renderer_returns_raw_rgba_over_pipe",
+    "review_png_persistence": "parent_owned_exclusive_create",
+    "implemented": false
+  },
+  "required_preconditions_before_blender": {
+    "fresh_r19_49_entry_manifest_verification": false,
+    "r19_nonpelvic_to_foundation_semantic_cage_map": false,
+    "foundation_afes_plus_transition_vertex_set_audit": false,
+    "positive_jacobian_and_intersection_static_fixtures": false,
+    "pipe_receipt_protocol_implemented": false,
+    "pipe_receipt_protocol_independently_audited": false,
+    "new_append_only_output_root_reserved": false,
+    "live_kira_pre_hash_recorded": false
+  },
+  "acceptance_sequence_after_preconditions": [
+    "one_neutral_candidate_only",
+    "exact_foundation_topology_and_afes_relationship_recheck",
+    "zero_intersection_and_positive_jacobian_recheck",
+    "rig_and_normalized_weight_integrity",
+    "unilateral_and_bilateral_knee_30_55_80_degrees",
+    "seated_contact",
+    "supine_contact",
+    "reach_and_hand_contact",
+    "complete_private_owner_review_gallery",
+    "at_most_one_targeted_identity_fit_adjustment",
+    "stop_for_robert_visual_decision"
+  ],
+  "explicitly_deferred": [
+    "internal_pelvic_module_attachment_until_external_carrier_owner_acceptance",
+    "scalp_hair_runtime_loading",
+    "clothing",
+    "runtime_activation",
+    "body_assignment",
+    "publication_or_upload",
+    "biological_robert_authoring"
+  ],
+  "implementation_truth": {
+    "r25_contract_only": true,
+    "semantic_cage_map_exists": false,
+    "author_worker_exists": false,
+    "receipt_protocol_exists": false,
+    "blender_run_occurred": false,
+    "candidate_exists": false,
+    "owner_review_gallery_exists": false,
+    "movement_passed": false,
+    "external_body_owner_accepted": false,
+    "internal_anatomy_implemented": false,
+    "runtime_connected": false
+  }
+}

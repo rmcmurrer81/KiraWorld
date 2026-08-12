@@ -1,0 +1,72 @@
+{
+  "schema_version": 4,
+  "binding_id": "avatar_builder_body_system_modeling_acceptance_plan_binding_v4",
+  "status": "R23_DIAGNOSTIC_BOUND_PLAN_NOT_EXECUTED_NOT_RUNTIME_AUTHORITY",
+  "inherits": {
+    "path": "Avatar/avatar_builder/body_systems/modeling_acceptance_plan_binding_v3.json",
+    "bytes": 4028,
+    "sha256": "51932507aad44d302d78e013b46215b3f8110e70dacc70dbdce3272b0a1dd9a5",
+    "all_scope_truth_and_implementation_false_flags_remain_mandatory": true
+  },
+  "body_authoring_contract": {
+    "path": "Avatar/avatar_builder/tooling/bounded_body_authoring_quality_contract_v3.json",
+    "bytes": 4145,
+    "sha256": "c033bc6d32b3859626aa149f363ed0c5474b4e614512aa688e6dddb38267b862",
+    "selectable_geometry_method": false
+  },
+  "system_truth_note": {
+    "path": "System/Docs/KIRA_R23_ATTEMPT08_CARRIER_ANNULUS_REPAIR_BOUNDARY_20260803.md",
+    "bytes": 5655,
+    "sha256": "043f2d1369ec1d9ddaabca52a6fb32aad9b78b9237816232588a6d80b9839cad"
+  },
+  "evidence": {
+    "attempt08": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_localized_patch_repair_simulation/attempt_08/SIMULATION_EVIDENCE.json",
+      "bytes": 425562,
+      "sha256": "30c71605606dcae3fdd9bb5d13703abafdef139bdb4bc21afd44ec3d68d8d7c6",
+      "required_status": "NO_VARIANT_PASSED_ALL_LOCALIZED_REPAIRABLE_GATES",
+      "required_stage_c_count": 0
+    },
+    "focused_localization": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_localized_best_variant_diagnostic/attempt_01/EXACT_LOCALIZATION.json",
+      "bytes": 285428,
+      "sha256": "98e03df238c0788d64a5868288f2432a38c06b4d556e492cfd82bed110acb5a3",
+      "required_status": "READ_ONLY_EXACT_LOCALIZATION_NOT_ACCEPTANCE",
+      "required_patch_pair_count": 47,
+      "required_failed_seam_normal_count": 34
+    },
+    "carrier_annulus_attempt01": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_carrier_annulus_repair_simulation/attempt_01/ANNULUS_SIMULATION_EVIDENCE.json",
+      "bytes": 332814,
+      "sha256": "c94f291fd78b0a51d1d27bfac32b02cdb247d0809372e8e5bebbc8d3a673839a",
+      "required_status": "NO_CARRIER_ANNULUS_VARIANT_PASSED_ALL_ADDED_FAIL_CLOSED_GATES",
+      "required_stage_a_count": 9,
+      "required_stage_b_count": 4,
+      "required_stage_c_count": 0,
+      "required_selected_variant": null
+    }
+  },
+  "current_method_boundary": {
+    "fixed_two_ring_hermite_family_reusable": false,
+    "concentric_harmonic_carrier_annulus_reusable": false,
+    "another_scale_radius_power_sweep_allowed": false,
+    "future_authoring_requires_materially_different_transition_correspondence": true,
+    "future_authoring_requires_pose_aware_weight_solve": true,
+    "new_body_restart_authorized": false
+  },
+  "implementation_state": {
+    "all_acceptance_matrix_tests_run": false,
+    "accepted_complete_external_candidate_exists": false,
+    "accepted_r23_candidate_exists": false,
+    "r23_owner_review_images_exist": false,
+    "movement_accepted": false,
+    "internal_routes_implemented": false,
+    "physiology_implemented": false,
+    "bathroom_function_implemented": false,
+    "pregnancy_or_reproductive_function_implemented": false,
+    "private_sensation_storage_implemented": false,
+    "privacy_integration_implemented": false,
+    "memory_integration_implemented": false,
+    "runtime_connected": false
+  }
+}

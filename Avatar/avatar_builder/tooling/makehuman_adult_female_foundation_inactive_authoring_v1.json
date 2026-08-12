@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "foundation_id": "makehuman_hm08_female_macro_source",
+  "candidate_id": "generic_makehuman_adult_female_foundation_inactive_v1",
+  "target_height_m": 1.7,
+  "frame": {
+    "coordinate_space": "object_local",
+    "origin": [
+      0.0,
+      -0.07,
+      0.79
+    ],
+    "lateral_axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "longitudinal_axis": [
+      0.0,
+      -0.3,
+      0.9539392014
+    ],
+    "outward_axis": [
+      0.0,
+      -0.9539392014,
+      -0.3
+    ],
+    "half_width_m": 0.06,
+    "half_length_m": 0.135,
+    "max_surface_offset_m": 0.09
+  },
+  "parameters": {
+    "subdivision_cuts": 3,
+    "relief_scale_m": 0.0024,
+    "boundary_taper_power": 3,
+    "minimum_face_normal_alignment": 0.05,
+    "minimum_landmark_vertices": 8,
+    "landmark_influence_threshold": 0.1,
+    "maximum_skin_influences": 4,
+    "degeneracy_area_m2": 1e-12
+  }
+}

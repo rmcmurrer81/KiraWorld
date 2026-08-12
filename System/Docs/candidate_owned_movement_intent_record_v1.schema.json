@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kira.world/schemas/candidate_owned_movement_intent_record_v1.schema.json",
+  "title": "Candidate-owned future-body movement intent ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "candidate_label",
+    "created_at",
+    "updated_at",
+    "policy",
+    "records"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "candidate_label": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_owned",
+        "future_body_only",
+        "user_text_is_not_a_motor_command",
+        "physical_completion_is_not_claimed"
+      ],
+      "properties": {
+        "candidate_owned": { "const": true },
+        "future_body_only": { "const": true },
+        "user_text_is_not_a_motor_command": { "const": true },
+        "physical_completion_is_not_claimed": { "const": true }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "record_id",
+        "recorded_at",
+        "candidate_id",
+        "candidate_label",
+        "action",
+        "category",
+        "raw_stage_direction",
+        "modifiers",
+        "required_capabilities",
+        "source",
+        "ownership",
+        "execution",
+        "dedupe_fingerprint"
+      ],
+      "properties": {
+        "schema_version": { "const": 1 },
+        "record_id": { "type": "string", "pattern": "^movement_intent_[a-f0-9]{32}$" },
+        "recorded_at": { "type": "string", "format": "date-time" },
+        "candidate_id": { "type": "string", "minLength": 1 },
+        "candidate_label": { "type": "string", "minLength": 1 },
+        "action": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "minLength": 1 },
+        "raw_stage_direction": { "type": "string", "minLength": 1 },
+        "modifiers": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "required_capabilities": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "turn_id", "stage_index", "action_index"],
+          "properties": {
+            "kind": { "const": "candidate_generated_stage_direction" },
+            "turn_id": { "type": "string", "minLength": 1 },
+            "stage_index": { "type": "integer", "minimum": 0 },
+            "action_index": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "ownership": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "authored_by_candidate",
+            "candidate_voluntary_expression",
+            "user_message_parsed_as_motor_command"
+          ],
+          "properties": {
+            "authored_by_candidate": { "const": true },
+            "candidate_voluntary_expression": { "const": true },
+            "user_message_parsed_as_motor_command": { "const": false }
+          }
+        },
+        "execution": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "dispatched_to_live_body",
+            "physical_completion_claimed",
+            "requires_candidate_choice_at_execution"
+          ],
+          "properties": {
+            "status": { "const": "recorded_for_future_body" },
+            "dispatched_to_live_body": { "const": false },
+            "physical_completion_claimed": { "const": false },
+            "requires_candidate_choice_at_execution": { "const": true }
+          }
+        },
+        "dedupe_fingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

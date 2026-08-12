@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-22T23:01:12-04:00",
+  "package_kind": "post_change_evidence_snapshot",
+  "is_pre_change_rollback": false,
+  "candidate_id": "kira",
+  "activation_performed": false,
+  "visual_review_performed": false,
+  "audible_review_performed": false,
+  "truth_limit": "No trustworthy byte-for-byte immediate pre-change copy was available. This package preserves only the current post-change payload and its hashes.",
+  "files": [
+    {
+      "package_path": "runtime/existing_mouth_lipsync.js",
+      "source_path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/src/existing_mouth_lipsync.js",
+      "size_bytes": 21717,
+      "sha256": "9a049cb769c117a518820c9cfb9cc6f1f74f17f59af900e6464fb20dd4872ab7"
+    },
+    {
+      "package_path": "runtime/kira_world_shell_server.py",
+      "source_path": "tools/kira_world_shell_server.py",
+      "size_bytes": 361145,
+      "sha256": "28cf54a24c4499682c2dc7ec5674230c85d9442e992960121555bc965fea9590"
+    },
+    {
+      "package_path": "runtime/main.js",
+      "source_path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/src/main.js",
+      "size_bytes": 936234,
+      "sha256": "25345857f8b2c21d02a99f4e707c7960e821966cfdb2fed5dd9cde04ddc63a14"
+    },
+    {
+      "package_path": "verifier/verify_kira_movement_realism_r5.mjs",
+      "source_path": "tools/verify_kira_movement_realism_r5.mjs",
+      "size_bytes": 19183,
+      "sha256": "f7f2f012a6cc6fe69f356c4bae3deefbef51d6ca38c20e3cae565ef3eba58f15"
+    },
+    {
+      "package_path": "tests/test_existing_mouth_lipsync.mjs",
+      "source_path": "Testing/test_existing_mouth_lipsync.mjs",
+      "size_bytes": 7035,
+      "sha256": "4e698db3934585f7bdd54dd87213e447ccaed0e661343b0a0d88712a575277ac"
+    },
+    {
+      "package_path": "tests/test_kira_chat_body_intent_bridge.py",
+      "source_path": "Testing/test_kira_chat_body_intent_bridge.py",
+      "size_bytes": 8903,
+      "sha256": "fb2fc74d8082ceaed2e3a161e5a1c2825f3db5f7ca4dab21ead3614e60266230"
+    },
+    {
+      "package_path": "tests/test_kira_movement_realism_r5.py",
+      "source_path": "Testing/test_kira_movement_realism_r5.py",
+      "size_bytes": 6293,
+      "sha256": "fa94d88a79ba7d176168c799febfe0c6561331bab97a0f774aa6aae058a088d3"
+    },
+    {
+      "package_path": "tests/test_kira_unified_body_intent.py",
+      "source_path": "Testing/test_kira_unified_body_intent.py",
+      "size_bytes": 18666,
+      "sha256": "26ab95044075a67c87e48b17e99bbbb684510cb2935efe545c2296d8f6061c54"
+    },
+    {
+      "package_path": "tests/test_kira_world_dialogue_audio_continuity.py",
+      "source_path": "Testing/test_kira_world_dialogue_audio_continuity.py",
+      "size_bytes": 14967,
+      "sha256": "62dec5fc803e5869320d0e98164744bc2c9f2d0a7cf8a8c7ced2ea6d435e3132"
+    },
+    {
+      "package_path": "tests/test_kira_world_latest_session_repairs.py",
+      "source_path": "Testing/test_kira_world_latest_session_repairs.py",
+      "size_bytes": 21060,
+      "sha256": "c308e6777a80960d91942c92e02c148a8d1eec0090ee6cb44e1a000ea36a5bd6"
+    },
+    {
+      "package_path": "tests/test_kira_world_shell_lipsync_playback.py",
+      "source_path": "Testing/test_kira_world_shell_lipsync_playback.py",
+      "size_bytes": 7777,
+      "sha256": "8ff25f9171b923503b26a5a6a9eaf8fab4ec81548bad15d46fc259afdfe7a078"
+    }
+  ]
+}
+

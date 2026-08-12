@@ -1,0 +1,87 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_native_outcome_reservation.v3r14",
+  "status": "STATIC_CANDIDATE_PENDING_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "execution_authority": "NONE",
+  "purpose": "Append-only native-only successor that advances exactly one stage beyond the successful v3r13 pre-outcome stop by reserving, writing, readback-verifying, and completing one fixed diagnostic outcome receipt, then stopping before Python, controller, AFES, Blender, body mutation, save, render, or export.",
+  "predecessor_truth": {
+    "v3r13_authority": "CONSUMED_SUCCESS_NO_RETRY",
+    "v3r13_run_evidence": {
+      "path": "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r13_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+      "bytes": 3409,
+      "sha256": "d5a115546d8e7f59c08fd6d6dc91f6bd0460ff9509648fa5a31292e50142fa39"
+    },
+    "v3r13_result": "all native pre-outcome gates passed; exact terminal accepted; no Python/controller/outcome/AFES/Blender"
+  },
+  "single_stage_boundary": {
+    "allowed": [
+      "zero-argument exact native executable entry",
+      "read-only exact-byte verification of fixed v3r14 and v3r13 subjects",
+      "fresh different-agent audit verification",
+      "CREATE_NEW write-through reservation of one fixed RUN_EVIDENCE.jsonl",
+      "CREATE_NEW write-through reservation of one fixed NATIVE_DIAGNOSTIC_OUTCOME.receipt.bin",
+      "exact normalized final-path verification on both newly created file handles",
+      "one bounded reservation-record write and same-handle readback",
+      "exact byte and stable file-identity comparison",
+      "one append-only completion-record write after reservation readback succeeds",
+      "whole-file same-handle readback and exact comparison",
+      "append-only completion evidence and immediate native return"
+    ],
+    "forbidden": [
+      "v3r13, v3r12, or v3r9 retry",
+      "DLL loading or dynamic symbol resolution by application code",
+      "Python initialization or Python API calls",
+      "controller or bootstrap evaluation",
+      "AFES extraction or pair execution",
+      "Blender or Blend launch/open",
+      "mesh or body mutation",
+      "save, render, export, activation, assignment, publication, or upload",
+      "receipt deletion, replacement, truncation, rewrite, move, or retry"
+    ]
+  },
+  "outcome_protocol": {
+    "evidence_path": "RecoverySprint/continuation_20260810/kira_r25_afes_native_outcome_reservation_v3r14_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "receipt_path": "RecoverySprint/continuation_20260810/kira_r25_afes_native_outcome_reservation_v3r14_static_preparation/attempt_01/NATIVE_DIAGNOSTIC_OUTCOME.receipt.bin",
+    "reservation": "CREATE_NEW plus FILE_FLAG_WRITE_THROUGH; any file creation consumes a later one-shot authority regardless of outcome",
+    "record_1": "fixed-size packed reservation record marked RESERVED_PENDING_READBACK and bound to exact executable, audit, v3r13 evidence, retained manifest, random nonce, volume serial, and file ID",
+    "record_2": "fixed-size packed completion record appended only after exact same-handle readback of record 1; marked READBACK_VERIFIED and bound to SHA-256 of record 1",
+    "final_gate": "each newly created handle first proves its exact normalized final path; the same owned receipt handle then reads exactly both records, rejects extra or missing bytes, compares exact bytes, and rechecks stable file identity",
+    "partial_truth": "a reservation-only or partial receipt consumes authority and is failure evidence; it is never retried or called complete"
+  },
+  "fixed_predecessor_subjects": {
+    "v3r13_run_evidence": "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r13_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "v3r13_audit_checkpoint": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r13_fresh_static_audit/attempt_01/CHECKPOINT.md",
+    "v3r13_one_shot_authority": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r13_fresh_static_audit/attempt_01/ONE_SHOT_AUTHORITY.txt",
+    "v3r13_independent_audit": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r13_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "v3r13_post_success_checkpoint": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r13_consumed_success_postmortem/attempt_01/CHECKPOINT.md",
+    "retained_manifest": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv"
+  },
+  "fresh_audit": {
+    "required": true,
+    "auditor": "different fresh exact-byte static auditor",
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_NATIVE_OUTCOME_RESERVATION_ONLY",
+    "audit_path": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r14_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "audit_digest_path": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r14_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+    "maximum_later_invocations": 1,
+    "retry": "none regardless of outcome",
+    "must_bind": [
+      "native executable",
+      "identity anchor",
+      "contract",
+      "native source",
+      "static hostile test",
+      "runtime control checkpoint",
+      "v3r13 run evidence",
+      "v3r13 audit checkpoint",
+      "v3r13 one-shot authority",
+      "v3r13 independent audit",
+      "v3r13 post-success checkpoint",
+      "retained manifest"
+    ]
+  },
+  "next_stage_if_successful": "A separate append-only successor may investigate retained Python initialization and controller/bootstrap entry, still without AFES/Blender mutation, only after this exact receipt succeeds and another fresh audit grants that separate boundary.",
+  "truth_limits": [
+    "Static compilation and tests do not prove runtime outcome reservation.",
+    "A later successful v3r14 run would prove only native receipt reservation and exact readback.",
+    "It would not prove Python, controller, AFES, Blender, anatomy, movement, or a completed Kira body."
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "config_id": "kira_appearance_delivery_v3",
+  "method_id": "kira_appearance_delivery_v3",
+  "status": "UNPROMOTED_INACTIVE_REUSABLE_APPEARANCE_COMPONENT",
+  "reference_policy": {
+    "root": "Avatar/library/female",
+    "use": "qualitative adult-human appearance principles only",
+    "identity_match_claim_allowed": false,
+    "measured_color_claim_allowed": false,
+    "texture_or_geometry_copy_allowed": false,
+    "observations": [
+      "eyebrows read as continuous tapered forms with soft density variation, not separated vertical strokes",
+      "upper lash lines and eyelid creases are fine layered structures rather than heavy drawn outlines",
+      "human skin has bounded regional color variation instead of one flat body-wide color",
+      "lips and nipple-areola regions commonly read darker and/or warmer than nearby skin while remaining naturally related to it"
+    ],
+    "reviewed_exact_files": [
+      {
+        "path": "Avatar/library/female/face_structure/female_face_structure_reference_001.jpg",
+        "sha256": "8b06c8c096dd6ee8c1e5e97c6038a0f3c934e6728f6305de19db0e9616f6de96"
+      },
+      {
+        "path": "Avatar/library/female/face_structure/female_face_structure_reference_007.jpg",
+        "sha256": "79e630fef4009bb60e01ea48bed3831abf396050025a5a465cd590fe8b03df55"
+      },
+      {
+        "path": "Avatar/library/female/face_structure/female_face_structure_reference_014.jpg",
+        "sha256": "bed445d7afcac8423af74177cc091f61df16bf803716e5bb7e2f0d9e3fba537c"
+      },
+      {
+        "path": "Avatar/library/female/body/female_body_reference_001.jpg",
+        "sha256": "838ea826042f817121269602b82858ddb74da501d9c6581cf66d07ce4c9caff2"
+      },
+      {
+        "path": "Avatar/library/female/body/female_body_reference_007.jpg",
+        "sha256": "02cb1feddc47ab15fd2fe099bb6e32efc6a3de8344e4c15bd881bc8ceb5ef9b9"
+      },
+      {
+        "path": "Avatar/library/female/body/female_body_reference_014.jpg",
+        "sha256": "0d59007effeb42924db4113f76443ca708a54006e00abedc4d0f1c9f56617646"
+      }
+    ]
+  },
+  "skin": {
+    "regional_tint_attribute": "Kira_Regional_Skin_Tint_V3",
+    "shader_attribute_node": "Kira_Regional_Skin_Tint_V3",
+    "shader_multiply_node": "Kira_Regional_Skin_Multiply_V3",
+    "attribute_type": "BYTE_COLOR",
+    "attribute_domain": "CORNER",
+    "minimum_channel_multiplier": 0.9,
+    "maximum_channel_multiplier": 1.04,
+    "maximum_absolute_channel_deviation": 0.1,
+    "roughness": 0.54,
+    "subsurface_weight": 0.075,
+    "non_flat_regions": [
+      "craniofacial_warmth",
+      "central_face_warmth",
+      "elbow_warmth",
+      "knee_warmth",
+      "hand_warmth",
+      "foot_warmth"
+    ],
+    "procedural_only": true,
+    "image_textures_added": false
+  },
+  "surface_tones": {
+    "lip": {
+      "tone_mode": "soft_real_albedo_corner_tint_on_existing_skin_material_index",
+      "qualitative_target_srgb_hex": "#945E57",
+      "center_color_multiplier": [0.9, 0.77, 0.75],
+      "minimum_edge_multiplier_weight": 0.0,
+      "source_vertex_groups": [
+        "oris01",
+        "oris03.L",
+        "oris03.R",
+        "oris05",
+        "oris07.L",
+        "oris07.R"
+      ],
+      "minimum_source_weight": 0.15,
+      "minimum_polygon_count": 20
+    },
+    "nipple_areola": {
+      "tone_mode": "soft_real_albedo_corner_tint_on_existing_skin_material_index",
+      "qualitative_target_srgb_hex": "#8A594F",
+      "areola_center_color_multiplier": [0.86, 0.7, 0.67],
+      "nipple_core_color_multiplier": [0.82, 0.64, 0.61],
+      "soft_edge_start_normalized_radius": 0.62,
+      "source_vertex_groups": [
+        "AFES_TORSO__areola_left",
+        "AFES_TORSO__areola_right"
+      ],
+      "fallback_baseline_height_m": 1.7,
+      "fallback_center_abs_x_m": 0.102,
+      "fallback_center_z_m": 1.285,
+      "fallback_radius_m": 0.024,
+      "minimum_front_normal_alignment": 0.18,
+      "minimum_polygon_count_per_side": 2
+    }
+  },
+  "eye_surrounds": {
+    "brow": {
+      "representation": "single_continuous_tapered_conformal_mesh_per_side",
+      "sample_count": 21,
+      "material_name": "Kira_Natural_Continuous_Brow_V3",
+      "srgb_hex": "#3C2924",
+      "roughness": 0.74,
+      "procedural_density_variation": true,
+      "inner_edge_thicker_than_outer_tail": true,
+      "perfect_geometric_symmetry_forbidden": true
+    },
+    "upper_lash": {
+      "representation": "single_continuous_tapered_curve_per_side",
+      "sample_count": 19,
+      "material_name": "Kira_Natural_Upper_Lash_V3",
+      "srgb_hex": "#1C1515",
+      "roughness": 0.68
+    },
+    "upper_lid_crease": {
+      "representation": "fine_continuous_tapered_curve_per_side",
+      "sample_count": 19
+    },
+    "lower_lid": {
+      "representation": "fine_continuous_tapered_curve_per_side",
+      "sample_count": 19,
+      "material_name": "Kira_Natural_Lid_Definition_V3",
+      "srgb_hex": "#704B43",
+      "roughness": 0.78
+    }
+  },
+  "bald_low_resource_boundary": {
+    "natural_scalp_is_primary_skin_surface": true,
+    "separate_scalp_material_allowed": false,
+    "scalp_hair_provider_allowed": false,
+    "scalp_hair_object_allowed": false,
+    "scalp_hair_material_allowed": false,
+    "scalp_hair_texture_allowed": false,
+    "scalp_hair_controller_allowed": false,
+    "eyebrows_and_eyelashes_are_facial_components": true
+  },
+  "forbidden": {
+    "body_geometry_change": true,
+    "rig_or_weight_change": true,
+    "separate_lip_mesh": true,
+    "separate_nipple_or_areola_mesh": true,
+    "scalp_cap_or_dome": true,
+    "scalp_hair_instantiation": true,
+    "runtime_activation": true,
+    "glb_export": true,
+    "clothing": true,
+    "publication_or_upload": true
+  },
+  "independent_visual_review_required": true
+}

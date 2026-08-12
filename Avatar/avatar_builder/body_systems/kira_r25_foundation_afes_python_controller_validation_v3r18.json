@@ -1,0 +1,59 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_python_controller_validation.v3r18",
+  "attempt_id": "attempt_01",
+  "status": "STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "predecessor": {
+    "version": "v3r17",
+    "status": "CONSUMED_SUCCESS_NO_RETRY",
+    "accepted_audit_sha256": "7bdde7188f621fba6732c6a350500071220c0f9723865e7d8282c3862060233b",
+    "run_evidence_sha256": "e0e4968efa52efc924cc7e9e3841c04047bf25389dde87bbf379cc5ddda2aafa",
+    "outcome_receipt_sha256": "7a2d0b9f54b3b96a8621528b794afc07458a870b0cf37ea3b7318ad8bae7b385",
+    "run_outcome_sha256": "da77906313f94d77a356d579349d12f80498745693f66bcd9135479067f54c51",
+    "post_run_checkpoint_sha256": "96d3fa631c0f7fc4bbac8e47d4019c4741267fbae72e7fce314da3cbe2d11f46"
+  },
+  "single_stage": {
+    "name": "reservation_first_granular_contract_and_isolated_python_controller_validation",
+    "ordered_steps": [
+      "verify exact native image, static subjects, predecessor closure, and future different-agent audit",
+      "CREATE_NEW fixed evidence and receipt and durably read back the reservation",
+      "open the exact v3r15 contract once and prove attributes, size, final path, file identity, and two SHA-256 snapshots granularly on that same retained handle",
+      "open and retain exact manifest, Python DLL, stdlib zip, controller, and execution contract",
+      "prove exactly one retained-manifest row for every retained runtime subject",
+      "delayed-load only the exact retained Python DLL",
+      "initialize an isolated interpreter and evaluate only inert controller definitions",
+      "verify exactly five callable exports and strict execution-contract projection",
+      "finalize Python, unload its DLL, and recheck every retained identity and digest",
+      "recheck and close the original contract handle and durably store granular terminal telemetry",
+      "stop"
+    ]
+  },
+  "granular_contract_gate": {
+    "target": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r15.json",
+    "bytes": 6174,
+    "sha256": "ad33386d767b516425dcbed073e22dfc9747a963a64dc5d205483d210acac79d",
+    "same_handle": true,
+    "reservation_first": true,
+    "gates": ["open", "attributes", "size_first", "final_path_first", "file_id_first", "snapshot_one", "size_second", "final_path_second", "file_id_second", "snapshot_two", "size_final", "final_path_final", "file_id_final", "snapshot_final", "snapshot_equality_and_close"]
+  },
+  "retained_runtime_subjects": {
+    "manifest": ["RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv", 24975, "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96"],
+    "python_runtime_dll": ["C:/Python314/python314.dll", 6767440, "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"],
+    "retained_stdlib_zip": ["tools/native/runtime/python314_stdlib_v3r4.zip", 28997479, "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"],
+    "parent_controller": ["tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py", 50907, "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf"],
+    "execution_contract": ["Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r9.json", 146969, "f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5"]
+  },
+  "controller_boundary": {
+    "exact_callable_exports": ["_build_execution_plan", "_validate_child_payload", "_compare_pair", "_success_payload", "_failure_payload"],
+    "definitions_only": true,
+    "strict_execution_contract_projection": true,
+    "build_execution_plan_called": false
+  },
+  "terminal_receipt": {
+    "creation": "CREATE_NEW_WRITE_THROUGH",
+    "same_handle_readback": true,
+    "granular_contract_telemetry_embedded": true,
+    "failure_is_consumed_no_retry": true
+  },
+  "stop_before": ["_build_execution_plan", "bootstrap", "broker", "process", "AFES", "Blender", "body", "save", "render", "export"],
+  "truth_boundary": ["STATIC_PREPARATION_IS_NOT_EXECUTION", "NO_BODY_OR_ANATOMY_RESULT", "NO_OWNER_ACCEPTANCE", "NO_PRODUCTION_AUTHORITY"]
+}

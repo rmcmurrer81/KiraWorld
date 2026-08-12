@@ -1,0 +1,796 @@
+{
+    "schema":  "kira.avatar.r25.foundation_afes_execution_plan_validation.v3r25",
+    "attempt_id":  "attempt_01",
+    "status":  "STATIC_AUTHOR_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+    "author":  "codex_r25_afes_v3r25_static_author",
+    "execution_authority":  "NONE",
+    "candidate_executed":  false,
+    "predecessor":  {
+                        "version":  "v3r24",
+                        "status":  "CONSUMED_BOUNDED_FAILURE_DO_NOT_RERUN",
+                        "candidate_executed":  true,
+                        "author_artifacts":  10,
+                        "audit_run_artifacts":  9,
+                        "closure_rows":  19,
+                        "closure_root_bytes":  3565,
+                        "closure_root_sha256":  "51058e1d9c21b615c7826b4db2b8740aea6dc774107abd666c476461e5724806",
+                        "terminal_checkpoint":  110,
+                        "plan_attempts":  0,
+                        "plan_returns":  0,
+                        "operation_enters":  0,
+                        "operation_returns":  0,
+                        "failure_exception_type":  "ValueError",
+                        "failure_exception_message":  "unmarshallable object",
+                        "blocking_finding":  "V3R24_HARD_CODED_MARSHAL_FORMAT_4_INCOMPATIBLE_WITH_LOCKED_PYTHON_3_14_4_MARSHAL_VERSION_5_SLICE_CONSTANTS",
+                        "next_candidate_must_be_append_only":  true
+                    },
+    "v3r22_consumed_failure":  {
+                                   "status":  "CONSUMED_BOUNDED_FAILURE_DO_NOT_RERUN",
+                                   "maximum_previous_invocations":  1,
+                                   "recorded_previous_invocations":  1,
+                                   "exit_code":  1,
+                                   "receipt_state":  3,
+                                   "terminal_stage":  40,
+                                   "all_contract_gates_passed":  true,
+                                   "python_finalize_result":  0,
+                                   "python_dll_unloaded":  true,
+                                   "exact_plan_call_count_known":  false,
+                                   "body_proven":  false
+                               },
+    "v3r22_consumed_failure_closure":  {
+                                           "canonical_root_format":  "UTF8_LF_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+                                           "row_count":  20,
+                                           "canonical_root_bytes":  3779,
+                                           "canonical_root_sha256":  "7057deb657f5e235892180e5d694f139450d44897f9353ac3bdb1f15d730aec0",
+                                           "authority":  "CONSUMED_FAILURE_DO_NOT_RERUN",
+                                           "rows":  [
+                                                        [
+                                                            "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r22.json",
+                                                            11293,
+                                                            "48f80736e181da754e1325d3faaa836ef215a7546cbff74e44e6bd53e0d49749"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_consumed_failure_postmortem/attempt_01/CHECKPOINT.md",
+                                                            2915,
+                                                            "2276f60864f6a5ce31e423081fff3b564fb63c838485397cbdf96d02615da584"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_consumed_failure_postmortem/attempt_01/READ_ONLY_RECHECK.json",
+                                                            2233,
+                                                            "c43e4766e51dd962c6e79f4ec87a724fe830029f7fb265f054a85a1a5784ea52"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                                            4528,
+                                                            "672d88ebeba374d3d92faac7b5904afc33fcf7171f695e799f79c3ce5cba4962"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                                            4437,
+                                                            "9a084d40c66dec597ebe5e59f66e2e170a29f7ba5d5adfd21bbf6672c46827cc"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                                            4030,
+                                                            "2f018f3171f194524794859805581e642e14076ba2fbe1a35e1a046750343a3d"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                                            65,
+                                                            "10c0602b6be576debd34080480568fb595b99771133488ca252d8ddea5637ccf"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                                            1265,
+                                                            "b29812ed25f40f83671b532ba46e1d09266844abe02a7dae3b07994f2cba9138"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_fresh_static_audit/attempt_01/RUN_OUTCOME.json",
+                                                            3167,
+                                                            "83a85c40f630f342d66b3b3dfaa2a864b87b1751533e727e98d5c5d453e9910d"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                                            3934,
+                                                            "d05f620e202d4f71283ba45808e97c9149cc04e43da45615fcf56681277111ff"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/CHECKPOINT.md",
+                                                            4949,
+                                                            "ca15b96dd45068da1d3d3c7c0ce798cbe9a84d4b5452d6fdf50dbf96dc913991"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+                                                            1016,
+                                                            "cf2409244de8a42981e62667e5607e8912bd1d94220bbb09dfd0a79f3a4540bd"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                                                            607,
+                                                            "4f9707fadf2092ecb28da4d9683e01690c5102cc1aac7236cc68ebd622d4b314"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                                            3632,
+                                                            "0979ee667d033c7048db32e9368d51cb637c3ac3c1610663e2faa9ceae312183"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                                            56404,
+                                                            "d0cdd4220881a5dcc4ec8f15321c07d373971e106d3174c23e1bfb8e4e9f8f5a"
+                                                        ],
+                                                        [
+                                                            "Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r22_static.ps1",
+                                                            22957,
+                                                            "bd0b781c8bd89dc726cafbfcbe33aec528c6c39a6c5460ef394ae7a272a0eac3"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r22.c",
+                                                            122166,
+                                                            "61ccb03501f8cb02575454b6202b72ff7369ce17ae534ead1623aa53195f1dbd"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r22.exe",
+                                                            241152,
+                                                            "d905444a6d4115603688f0c0bc39f1798dcb7f3d103ae2ed27712e52b88f72fc"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r22.obj",
+                                                            184652,
+                                                            "b2fb7d783f180f1ff1a2a3a90b5be8559b75372a18d01db7d6c72995ccbcd2ba"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r22_identity_anchor.h",
+                                                            16489,
+                                                            "deba43f0952645b63a3fe98e7b755290f48bc16a282c2f0800e8db5093d14bbb"
+                                                        ]
+                                                    ]
+                                       },
+    "v3r23_rejected_closure":  {
+                                   "canonical_root_format":  "UTF8_LF_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+                                   "row_count":  15,
+                                   "author_artifact_count":  10,
+                                   "rejection_artifact_count":  5,
+                                   "canonical_root_bytes":  2728,
+                                   "canonical_root_sha256":  "0b09c1f71154b4d56559f043f08076940bcc60e7919d6bcd8e9c3cde3b2a4ea0",
+                                   "authority":  "REJECTED_NO_EXECUTION_AUTHORITY",
+                                   "rows":  [
+                                                [
+                                                    "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r23.json",
+                                                    10781,
+                                                    "b06693879e3f654dedee52d9a683e3f788b6748d6806e09e99d0f0a55cf453ee"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                                    5990,
+                                                    "ab376b6ae6b251895dfb9199a1dd7a7f01b92c50cf1d6d71282a492f231753b6"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                                    4741,
+                                                    "05b4e1a297e39fd4b286563a8788395cf6829c20d3b1c3a069fe2f315b00c371"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                                    8130,
+                                                    "682820476c78fe3ef01e87601852408251c262a73ffe583b2a58031ac7fe1727"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                                    65,
+                                                    "0bf5987d62c741eaa8b6e2a0f815e517bf86c362c1533602eadfb9bcd5893fbb"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                                    1376,
+                                                    "8420cef3dd9015c6924fb84f5e361e7a6c6f639aa30737adbf2a42a8628919f1"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                                    5378,
+                                                    "1aed546df73152a1ec07bfab954336ba1b18f89528c44e31fb723e4ae29924e8"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/CHECKPOINT.md",
+                                                    8829,
+                                                    "d1ee4a875d160899c3953d67f6157d5e7e059a76a40fbc880cbed55d66f0ce42"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                                    4080,
+                                                    "406c0cee59ecaebaacb3d9526f6af6d673d2b0f75f7c6e74b2d138a621cc99cd"
+                                                ],
+                                                [
+                                                    "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r23_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                                    137189,
+                                                    "44061c604c795b5715f17669fdc82df927d5900b1da835f335b7c262aae83aef"
+                                                ],
+                                                [
+                                                    "Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r23_static.ps1",
+                                                    28059,
+                                                    "413c4e368d1af579bce68185ec20da1d7775d394e247cbc85415f9f43c1169e7"
+                                                ],
+                                                [
+                                                    "tools/native/kira_r25_afes_execution_plan_validation_v3r23.c",
+                                                    138833,
+                                                    "6345fc66582ec65d00a5b175f35371dec6d76d3c5408ad29b08e86292d69b947"
+                                                ],
+                                                [
+                                                    "tools/native/kira_r25_afes_execution_plan_validation_v3r23.exe",
+                                                    253952,
+                                                    "bb492c20a21494a9f6e652f0acfda89a01117b837e79c6288cf81409556fe157"
+                                                ],
+                                                [
+                                                    "tools/native/kira_r25_afes_execution_plan_validation_v3r23.obj",
+                                                    216029,
+                                                    "6323ae8d7ff77d378ba0b96e9a3ba4c6c0b86ea18fa26621490a13868340b9b2"
+                                                ],
+                                                [
+                                                    "tools/native/kira_r25_afes_execution_plan_validation_v3r23_identity_anchor.h",
+                                                    4600,
+                                                    "240a90387f6167c98352ae7589a88ffa430a293f1ec84231e9a9ea6d2101f259"
+                                                ]
+                                            ]
+                               },
+    "failure_cause_truth":  {
+                                "observed_boundary":  "V3R22_PLAN_VALIDATOR_TERMINAL_STAGE_40_WITHOUT_INTERNAL_TELEMETRY",
+                                "actual_cause":  "UNKNOWN",
+                                "forbidden_claim":  "UNRESOLVED_ANNOTATION_NAMES_CAUSED_V3R22_STAGE_40",
+                                "excluded_cause":  "UNRESOLVED_ANY_MAPPING_SEQUENCE_BASEEXCEPTION_NAMEERROR",
+                                "excluded_cause_status":  "PROVEN_EXCLUDED_BY_EXACT_COMPILE_FLAG_AND_LOCKED_RUNTIME_SEMANTICS",
+                                "controller_compile_flags_literal":  "0x1000000",
+                                "controller_compile_flag_name":  "CO_FUTURE_ANNOTATIONS",
+                                "controller_compile_flag_value":  16777216,
+                                "compile_dont_inherit":  true,
+                                "locked_header_assertion":  "CO_FUTURE_ANNOTATIONS_EQUALS_0x1000000",
+                                "locked_stdlib_semantics":  "ANNOTATIONS_BECOME_STRINGS_AT_RUNTIME",
+                                "retained_controller_annotations":  "STRINGIZED_NOT_GLOBAL_NAME_EVALUATED",
+                                "runtime_non_evaluating_proof":  [
+                                                                     "MODULE_CODE_CO_FLAGS_BINDS_CO_FUTURE_ANNOTATIONS",
+                                                                     "EVERY_RETAINED_CONTROLLER_FUNCTION_CODE_CO_FLAGS_BINDS_CO_FUTURE_ANNOTATIONS",
+                                                                     "EVERY_GENERATED_ANNOTATE_THUNK_IS_EXACT_FUNCTION_WITH_BOUND_CODE_GLOBALS_DEFAULTS_KWDEFAULTS_CLOSURE_AND_METADATA",
+                                                                     "NO___ANNOTATIONS___READ",
+                                                                     "NO___ANNOTATE___CALL"
+                                                                 ],
+                                "v3r24_purpose":  "LOCALIZE_THE_ACTUAL_UNKNOWN_FAILURE_WITHOUT_RELYING_ON_A_CAUSE_CLAIM",
+                                "v3r25_purpose":  "PRESERVE_V3R22_UNKNOWN_CAUSE_EXCLUSION_WHILE_REPAIRING_THE_SEPARATE_EXACTLY_PROVEN_V3R24_MARSHAL_FORMAT_FAILURE"
+                            },
+    "diagnostic_telemetry":  {
+                                 "durable_receipt":  true,
+                                 "durable_jsonl":  true,
+                                 "checkpoint_sequence":  [
+                                                             100,
+                                                             110,
+                                                             115,
+                                                             120,
+                                                             130,
+                                                             140,
+                                                             141,
+                                                             150,
+                                                             151,
+                                                             160,
+                                                             161,
+                                                             170,
+                                                             171,
+                                                             180,
+                                                             181,
+                                                             190,
+                                                             191,
+                                                             200,
+                                                             201,
+                                                             202,
+                                                             203,
+                                                             204,
+                                                             205,
+                                                             206,
+                                                             207,
+                                                             208,
+                                                             209,
+                                                             210,
+                                                             211,
+                                                             212,
+                                                             213,
+                                                             214,
+                                                             215,
+                                                             216,
+                                                             217,
+                                                             218,
+                                                             219,
+                                                             220,
+                                                             221,
+                                                             222,
+                                                             223,
+                                                             224,
+                                                             225,
+                                                             226,
+                                                             227,
+                                                             228,
+                                                             229,
+                                                             230
+                                                         ],
+                                 "operation_count_on_success":  21,
+                                 "operation_entered_counter":  "INCREMENTED_IMMEDIATELY_BEFORE_EACH_NAMED_FALLIBLE_OPERATION",
+                                 "operation_returned_counter":  "INCREMENTED_IMMEDIATELY_AFTER_EACH_NAMED_FALLIBLE_OPERATION",
+                                 "checkpoint_meanings":  {
+                                                             "100":  "validator_entered",
+                                                             "110":  "locked_module_origins_snapshotted",
+                                                             "120":  "harness_helper_closure_snapshotted",
+                                                             "130":  "retained_137_row_dictionary_validated",
+                                                             "140":  "left_controller_compile_eval_entered",
+                                                             "141":  "left_controller_compile_eval_returned",
+                                                             "150":  "right_controller_compile_eval_entered",
+                                                             "151":  "right_controller_compile_eval_returned",
+                                                             "160":  "pre_call_controller_seal_entered",
+                                                             "161":  "pre_call_controller_seal_returned",
+                                                             "170":  "plan_call_entered",
+                                                             "171":  "plan_call_returned",
+                                                             "180":  "helper_count_validation_entered",
+                                                             "181":  "helper_count_validation_returned",
+                                                             "190":  "plan_shape_validation_entered",
+                                                             "191":  "plan_shape_validation_returned",
+                                                             "200":  "contract_decode_entered",
+                                                             "201":  "contract_decode_returned",
+                                                             "202":  "binding_projection_lookup_entered",
+                                                             "203":  "binding_projection_lookup_returned",
+                                                             "204":  "v5_decode_entered",
+                                                             "205":  "v5_decode_returned",
+                                                             "206":  "v2_decode_entered",
+                                                             "207":  "v2_decode_returned",
+                                                             "208":  "plan_identity_validation_entered",
+                                                             "209":  "plan_identity_validation_returned",
+                                                             "210":  "retained_path_validation_entered",
+                                                             "211":  "retained_path_validation_returned",
+                                                             "212":  "output_path_validation_entered",
+                                                             "213":  "output_path_validation_returned",
+                                                             "214":  "projection_validation_entered",
+                                                             "215":  "projection_validation_returned",
+                                                             "216":  "recursive_data_only_validation_entered",
+                                                             "217":  "recursive_data_only_validation_returned",
+                                                             "218":  "post_call_controller_seal_entered",
+                                                             "219":  "post_call_controller_seal_returned",
+                                                             "220":  "post_call_harness_seal_entered",
+                                                             "221":  "post_call_harness_seal_returned",
+                                                             "222":  "module_origin_recheck_entered",
+                                                             "223":  "module_origin_recheck_returned",
+                                                             "224":  "native_helper_recheck_entered",
+                                                             "225":  "native_helper_recheck_returned",
+                                                             "226":  "controller_code_root_entered",
+                                                             "227":  "controller_code_root_returned",
+                                                             "228":  "terminal_marker_entered",
+                                                             "229":  "terminal_marker_returned",
+                                                             "230":  "terminal_success_checkpoint_committed",
+                                                             "115":  "exact_locked_marshal_version_5_verified"
+                                                         },
+                                 "counters":  [
+                                                  "operation_enters",
+                                                  "operation_returns",
+                                                  "plan_attempts",
+                                                  "plan_returns",
+                                                  "native_sha_calls",
+                                                  "marker_present"
+                                              ],
+                                 "exception_capture":  {
+                                                           "source":  "PyErr_GetRaisedException",
+                                                           "type_capacity_including_nul":  64,
+                                                           "message_capacity_including_nul":  192,
+                                                           "allowed_output":  "BOUNDED_SANITIZED_ASCII_WITH_JSON_CONTROL_AND_QUOTE_CHARACTERS_REPLACED",
+                                                           "traceback":  "NOT_CAPTURED",
+                                                           "private_state":  "NOT_ACCESSED"
+                                                       },
+                                 "failure_cleanup":  "AFTER_ANY_PYTHON_ATTEMPT_FINALIZE_UNLOAD_ABSENCE_ALL_137_RETAINED_ROWS_AND_ALL_FIXED_SUBJECTS_ARE_RECHECKED_BEFORE_TERMINAL_COMMIT"
+                             },
+    "retained_manifest":  {
+                              "path":  "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+                              "bytes":  24975,
+                              "sha256":  "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96",
+                              "line_endings":  "CRLF_EXACT",
+                              "line_count":  139,
+                              "data_row_count":  137,
+                              "runtime_action":  "PARSE_ALL_LOCK_ALL_READ_ALL_RECHECK_ALL_137"
+                          },
+    "single_plan_call":  {
+                             "callable":  "_build_execution_plan",
+                             "maximum_calls":  1,
+                             "attempt_counter_immediately_before_expression":  true,
+                             "return_counter_immediately_after_expression":  true,
+                             "keyword_argument_count":  6,
+                             "retained_dictionary_rows":  137,
+                             "controller_sha_helper_calls_on_success":  222,
+                             "controller_hex_helper_calls_on_success":  231,
+                             "controller_json_helper_calls_on_success":  4,
+                             "forbidden_blob_or_canonical_helper_calls":  0,
+                             "native_sha_total_calls_on_success_including_code_root":  223,
+                             "returned_plan_allowed_recursive_types":  [
+                                                                           "dict_with_string_keys",
+                                                                           "list",
+                                                                           "str",
+                                                                           "int",
+                                                                           "bool",
+                                                                           "null"
+                                                                       ],
+                             "returned_plan_destroyed_before_python_finalize":  true
+                         },
+    "fresh_audit_grammar":  {
+                                "magic":  "KIRA_R25_AFES_EXECUTION_PLAN_VALIDATION_AUDIT_V3R25\\t1",
+                                "line_count":  38,
+                                "field_line_count":  37,
+                                "line_endings":  "LF_ONLY",
+                                "embedded_nul_rejected":  true,
+                                "duplicate_or_reordered_fields_rejected":  true,
+                                "auditor_pattern":  "[a-z0-9_]{1,96}",
+                                "auditor_must_differ_from_author":  true,
+                                "required_decision":  "ACCEPTED_FOR_ONE_BOUNDED_DIAGNOSTIC_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R25_ONLY"
+                            },
+    "durable_boundary":  {
+                             "evidence":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r25_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                             "receipt":  "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r25_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+                             "creation":  "CREATE_NEW_WRITE_THROUGH",
+                             "success_or_failure_consumes_future_authority":  true,
+                             "maximum_future_invocations_after_different_acceptance":  1
+                         },
+    "static_author_validation_only":  [
+                                          "STRICT_X64_COMPILE_AND_LINK_TO_SCRATCH_ONLY",
+                                          "MSVC_ANALYZE_SOURCE_ONLY_TO_SCRATCH_ONLY",
+                                          "PE_CFG_IMPORT_AND_FORBIDDEN_API_INSPECTION",
+                                          "STATIC_HOSTILE_SOURCE_AND_GRAMMAR_PROBES",
+                                          "NO_CANDIDATE_INVOCATION",
+                                          "NO_PYTHON_INITIALIZATION_OR_CONTROLLER_EVALUATION"
+                                      ],
+    "downstream_owner_routing":  {
+                                     "owner":  "AVATAR_BUILDER_REUSABLE_METHOD_TEMPLATE_LAYER",
+                                     "accepted_result_route":  "ONLY_AFTER_INDEPENDENT_ACCEPTANCE_AND_BLENDER_SAVE_RENDER_EVIDENCE",
+                                     "rejected_result_route":  "DO_NOT_REPEAT_TESTS_ONLY",
+                                     "body_claim_without_blender_save_render_evidence":  "FORBIDDEN",
+                                     "this_contract_integrates_a_body":  false,
+                                     "current_v3r25_route":  "PENDING_DIFFERENT_STATIC_AUDIT_NO_INTEGRATION_AUTHORITY",
+                                     "appearance_material_activation_gates":  {
+                                                                                  "enforcement_layer":  "DOWNSTREAM_AVATAR_BUILDER_ONLY_NOT_THIS_CONTROLLER_DIAGNOSTIC",
+                                                                                  "final_body_material_requirement":  "ANATOMICALLY_REALISTIC_REGIONAL_PIGMENTATION_NOT_ONE_FLAT_COLOR",
+                                                                                  "required_normal_regional_variation":  [
+                                                                                                                             "lips",
+                                                                                                                             "areolae",
+                                                                                                                             "nipples",
+                                                                                                                             "other_normal_individual_regional_variation"
+                                                                                                                         ],
+                                                                                  "matching_basis":  "INDIVIDUAL_AND_AUTHORIZED_REFERENCE_LIBRARY",
+                                                                                  "evidence_required_before_positive_claim":  [
+                                                                                                                                  "Blender_material_evidence",
+                                                                                                                                  "saved_blend_evidence",
+                                                                                                                                  "render_evidence"
+                                                                                                                              ],
+                                                                                  "kira_activation_variants":  {
+                                                                                                                   "lower_memory_variant":  "BALD_ELIGIBLE_FOR_NEAR_TERM_ACTIVATION_ONLY_AFTER_BODY_ACCEPTANCE",
+                                                                                                                   "hair_equipped_variant":  "GENERATE_AND_PRESERVE_INACTIVE_UNTIL_RAM_UPGRADE"
+                                                                                                               },
+                                                                                  "synthetic_robert_activation_variants":  {
+                                                                                                                               "lower_memory_variant":  "BALD_ELIGIBLE_FOR_NEAR_TERM_ACTIVATION_ONLY_AFTER_BODY_ACCEPTANCE",
+                                                                                                                               "hair_equipped_variant":  "GENERATE_AND_PRESERVE_INACTIVE_UNTIL_RAM_UPGRADE"
+                                                                                                                           },
+                                                                                  "other_people_hair_equipped_bodies":  "AVATAR_BUILDER_MAY_BUILD_BUT_MUST_KEEP_INACTIVE_UNTIL_RAM_UPGRADE",
+                                                                                  "body_test_policy_before_ram_upgrade":  "MINIMIZE_BODY_TESTS",
+                                                                                  "sarah":  "PRESERVE_CURRENT_FILES_DO_NOT_INSPECT_EDIT_OR_RESUME",
+                                                                                  "current_evidence_status":  "NOT_PROVEN_BY_V3R25_STATIC_DIAGNOSTIC",
+                                                                                  "authoritative_policy_bindings":  [
+                                                                                                                        {
+                                                                                                                            "path":  "System/Docs/AVATAR_BUILDER_BODY_MATERIAL_AND_HAIR_VARIANT_CURRENT_BOUNDARY_20260811.md",
+                                                                                                                            "bytes":  3797,
+                                                                                                                            "sha256":  "f24d797fd389af3dc8611b93dd31abbd3b52fc3abead2efd792effb5114668a3",
+                                                                                                                            "role":  "CURRENT_DOWNSTREAM_AVATAR_BUILDER_MATERIAL_HAIR_AND_ACTIVATION_BOUNDARY"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "path":  "RecoverySprint/continuation_20260811/root_multilane_continuation/attempt_26/CHECKPOINT.md",
+                                                                                                                            "bytes":  3122,
+                                                                                                                            "sha256":  "c6588a4ba161910587e54b80423c0afba370798b8f70665862083643bb9c1fc5",
+                                                                                                                            "role":  "OWNER_POLICY_PROVENANCE_CHECKPOINT"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                              }
+                                 },
+    "stop_before":  [
+                        "bootstrap",
+                        "broker",
+                        "process",
+                        "AFES",
+                        "Blender",
+                        "body",
+                        "save",
+                        "render",
+                        "export"
+                    ],
+    "source_forbidden_apis":  [
+                                  "CreateProcess",
+                                  "ShellExecute",
+                                  "WinExec",
+                                  "system",
+                                  "popen"
+                              ],
+    "truth_boundary":  [
+                           "STATIC_PREPARATION_IS_NOT_EXECUTION",
+                           "V3R25_HAS_NOT_BEEN_INVOKED",
+                           "V3R24_IS_CONSUMED_FAILURE_AND_MUST_NOT_BE_RERUN",
+                           "V3R24_FAILED_AT_CHECKPOINT_110_BEFORE_CONTROLLER_PLAN_OR_OPERATION",
+                           "V3R24_EXACT_CAUSE_IS_MARSHAL_FORMAT_4_INCOMPATIBILITY_WITH_LOCKED_MARSHAL_VERSION_5_SLICE_CONSTANTS",
+                           "V3R25_REQUIRES_EXACT_MARSHAL_VERSION_5_AND_FORMAT_5_CODE_FINGERPRINTS",
+                           "V3R23_IS_REJECTED_AND_MUST_NOT_BE_RUN",
+                           "V3R22_IS_CONSUMED_FAILURE_AND_MUST_NOT_BE_RERUN",
+                           "UNRESOLVED_ANNOTATION_NAMES_ARE_PROVEN_NOT_THE_V3R22_CAUSE",
+                           "ACTUAL_V3R22_STAGE_40_CAUSE_REMAINS_UNKNOWN",
+                           "NO_AFES_OR_BLENDER_OPERATION",
+                           "NO_BODY_OR_ANATOMY_RESULT",
+                           "NO_SAVE_RENDER_EXPORT_ACTIVATION_OR_OWNER_ACCEPTANCE",
+                           "NO_PRODUCTION_AUTHORITY"
+                       ],
+    "v3r24_consumed_failure":  {
+                                   "status":  "CONSUMED_BOUNDED_FAILURE_DO_NOT_RERUN",
+                                   "maximum_previous_invocations":  1,
+                                   "recorded_previous_invocations":  1,
+                                   "exit_code":  1,
+                                   "receipt_state":  3,
+                                   "terminal_checkpoint":  110,
+                                   "contract_gates_passed":  15,
+                                   "contract_gate_count":  15,
+                                   "plan_attempts":  0,
+                                   "plan_returns":  0,
+                                   "operation_enters":  0,
+                                   "operation_returns":  0,
+                                   "exception_type":  "ValueError",
+                                   "exception_message":  "unmarshallable object",
+                                   "python_finalize_result":  0,
+                                   "python_dll_unloaded":  true,
+                                   "retained_recheck_passed":  true,
+                                   "controller_constructed":  false,
+                                   "build_execution_plan_called":  false,
+                                   "body_proven":  false
+                               },
+    "v3r24_consumed_failure_closure":  {
+                                           "canonical_root_format":  "UTF8_LF_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+                                           "row_count":  19,
+                                           "author_artifact_count":  10,
+                                           "audit_run_artifact_count":  9,
+                                           "canonical_root_bytes":  3565,
+                                           "canonical_root_sha256":  "51058e1d9c21b615c7826b4db2b8740aea6dc774107abd666c476461e5724806",
+                                           "authority":  "CONSUMED_FAILURE_DO_NOT_RERUN",
+                                           "rows":  [
+                                                        [
+                                                            "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_execution_plan_validation_v3r24.json",
+                                                            17141,
+                                                            "282b458123f1b48989e1315d90f11663443f84637671e2d0a18bb6af8f22aa3c"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/AUDIT_DECISION.json",
+                                                            4630,
+                                                            "fddf2ccbe42cc86a84f7d95b822082c8d980989e81e0abe008c03602500d8dd1"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/CHECKPOINT.md",
+                                                            5405,
+                                                            "beed5d9649a81584ab03baef813f1ac5e0494cbfdd75d4d2cc518f2181b341cb"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt",
+                                                            2051,
+                                                            "b30562d0153017820f170a27921b231de89c6f0ae3cb55047fa0e07c8ed6a8a2"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+                                                            65,
+                                                            "b7711e2a111d38b687b83097bc14f632a1241f5d28fc85d79d62251f0b140b37"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+                                                            1795,
+                                                            "fc2d1a78d7d9f843349c4beb1ec7dc0af4d0cb4a7e7a8b481a7b1416c36da101"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/POST_RUN_CHECKPOINT.md",
+                                                            3498,
+                                                            "9d42807fdb96f49da9c043ef18a1eae61f2a47b80afe0b849d54cbcdfd89cd9f"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_fresh_static_audit/attempt_01/RUN_OUTCOME.json",
+                                                            4426,
+                                                            "850769324423d08278303a2aaae7bcff0e655bfb103b8b66ee47fe13211ca656"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt",
+                                                            6244,
+                                                            "0473c193b4093358efb04522d5c56dc4de312cc85066dfc55f9f80092d738a20"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/CHECKPOINT.md",
+                                                            8679,
+                                                            "382b3c79b79a1356aa283310dd78f0e379288c31b95870d7c11dff81cd777288"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+                                                            1320,
+                                                            "2665dd31b2c561a728a3b14449b6d79e821494e9b5792682bc1399fd5edb5b34"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+                                                            6780,
+                                                            "c954a4a3c77e5ed4307837842a964b560e3ad83d6635e2a3e8de46c5ef828658"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+                                                            1450,
+                                                            "310c8d16fdf433de22ecee9dc326c34fd8f1efcbbdc86ada382e7088e42745a7"
+                                                        ],
+                                                        [
+                                                            "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r24_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json",
+                                                            144602,
+                                                            "fc63c0ada6db0737988724c78acc08907fa319f6badb9de81a930554f6a1e640"
+                                                        ],
+                                                        [
+                                                            "Testing/test_kira_r25_foundation_afes_execution_plan_validation_v3r24_static.ps1",
+                                                            25519,
+                                                            "1010f4b122aab45bdaaabd4363d0e33fb93c620d44dc7f342c66e7045c858036"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r24.c",
+                                                            148570,
+                                                            "8bb0974a531bf40c28c9e9400f0b6dec22d87ea57296b2aae7de06322c408ad5"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r24.exe",
+                                                            264704,
+                                                            "281d427482657a73096fa6b44e2092e6e54b760e59c73c37f562e24ad6b03bb9"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r24.obj",
+                                                            234278,
+                                                            "cd66e41fce8ede60f34bf8590a88c9f8ddc08571d612e4417235f26d1aeae287"
+                                                        ],
+                                                        [
+                                                            "tools/native/kira_r25_afes_execution_plan_validation_v3r24_identity_anchor.h",
+                                                            7447,
+                                                            "625df0dc5ebd817cdcca767a018cdace631b966c8b57d9dae46ac3ba5af546e9"
+                                                        ]
+                                                    ]
+                                       },
+    "marshal_compatibility":  {
+                                  "locked_runtime":  "CPYTHON_3_14_4",
+                                  "locked_runtime_marshal_version":  5,
+                                  "required_exact_marshal_version":  5,
+                                  "predecessor_embedded_validator_characters":  18870,
+                                  "predecessor_validator_code_object_count":  20,
+                                  "predecessor_format_4_success_count":  16,
+                                  "predecessor_format_4_failure_count":  4,
+                                  "predecessor_format_4_failure_type":  "ValueError",
+                                  "predecessor_format_4_failure_message":  "unmarshallable object",
+                                  "predecessor_format_5_success_count":  20,
+                                  "predecessor_format_5_failure_count":  0,
+                                  "failed_code_objects":  [
+                                                              "\u003cmodule\u003e",
+                                                              "_v3_strict",
+                                                              "_v3_validate_controller",
+                                                              "_v3_glue_object"
+                                                          ],
+                                  "total_direct_slice_constants_in_failed_function_code_objects":  5,
+                                  "v3r25_fingerprint_format":  5,
+                                  "v3r25_all_marshal_dumps_code_fingerprint_sites":  3,
+                                  "v3r25_runtime_gate":  "type(marshal.version) is int and marshal.version == 5",
+                                  "code_object_matrix":  [
+                                                             {
+                                                                 "code_object":  "\u003cmodule\u003e",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "FAIL_UNMARSHALLABLE_OBJECT_TRANSITIVE_CHILD_CONSTANT",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_origin",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_module_fingerprint",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_sha",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_hex",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_hex.\u003clocals\u003e.\u003cgenexpr\u003e",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_pairs",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_reject_number",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_strict",
+                                                                 "direct_slice_constants":  2,
+                                                                 "marshal_format_4":  "FAIL_UNMARSHALLABLE_OBJECT",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_blob_trap",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_canonical_trap",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_new_controller",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_new_controller.\u003clocals\u003e.\u003cdictcomp\u003e",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_code_bytes",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_annotate_fingerprint",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_validate_controller",
+                                                                 "direct_slice_constants":  1,
+                                                                 "marshal_format_4":  "FAIL_UNMARSHALLABLE_OBJECT",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_glue_object",
+                                                                 "direct_slice_constants":  2,
+                                                                 "marshal_format_4":  "FAIL_UNMARSHALLABLE_OBJECT",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "_v3_capture_helpers",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "\u003cmodule\u003e.\u003cgenexpr\u003e#retained_dictionary_guard",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             },
+                                                             {
+                                                                 "code_object":  "\u003cmodule\u003e.\u003cgenexpr\u003e#controller_code_root",
+                                                                 "direct_slice_constants":  0,
+                                                                 "marshal_format_4":  "PASS",
+                                                                 "marshal_format_5":  "PASS"
+                                                             }
+                                                         ]
+                              }
+}

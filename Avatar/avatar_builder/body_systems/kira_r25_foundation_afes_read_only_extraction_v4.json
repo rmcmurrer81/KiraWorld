@@ -1,0 +1,117 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_read_only_extraction.v4",
+  "attempt_id": "attempt_04",
+  "status": "STATIC_PREPARATION_ONLY_EXECUTION_NOT_AUTHORIZED",
+  "scope": {
+    "read_only": true,
+    "private": true,
+    "inactive": true,
+    "candidate_creation_allowed": false,
+    "blend_edit_allowed": false,
+    "blend_save_allowed": false,
+    "render_allowed": false,
+    "export_allowed": false,
+    "runtime_activation_allowed": false,
+    "path_output_allowed": false,
+    "result_transport": "one_canonical_receipt_frame_to_caller_inherited_win32_pipe_only"
+  },
+  "attempt_03_baseline_config": {
+    "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v3.json",
+    "bytes": 7125,
+    "sha256": "97648d764bf218c3c25e77be9979af0c277e012b690323afaade0d1db0bda23a"
+  },
+  "bindings": {
+    "attempt_04_private_loader_core": {
+      "path": "tools/kira_r25_afes_topology_core_v4.py",
+      "bytes": 9529,
+      "sha256": "d70a3c15d5c929ea2a5f60c6d73445c7fa894481736691c9e5c1ace6c4bef1d4"
+    },
+    "attempt_01_topology_core_execution_dependency": {
+      "path": "tools/kira_r25_afes_topology_core.py",
+      "bytes": 10005,
+      "sha256": "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce"
+    },
+    "attempt_02_hardening_core_execution_dependency": {
+      "path": "tools/kira_r25_afes_topology_core_v2.py",
+      "bytes": 28732,
+      "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"
+    },
+    "attempt_03_hardening_core_execution_dependency": {
+      "path": "tools/kira_r25_afes_topology_core_v3.py",
+      "bytes": 8732,
+      "sha256": "c3c5f6f21a0b133fae6ef0439932193a9d0e922001a97026fd022ff0a682dc8e"
+    },
+    "canonical_receipt_helper": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"
+    },
+    "attempt_04_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v4.py",
+      "bytes": 22751,
+      "sha256": "088c811cc0745e7519516d94c0c449d2ee8bf296f8cb10cc8e8d7d343de6f079"
+    }
+  },
+  "private_exact_byte_execution_contract": {
+    "ambient_project_sys_modules_dependencies_allowed": false,
+    "security_sources_physically_read_per_child": 1,
+    "exact_retained_bytes_used_for_hash_and_compile": true,
+    "fresh_private_module_type_required": true,
+    "private_project_modules_inserted_into_sys_modules": false,
+    "explicit_dependency_order": [
+      "attempt_04_private_loader_core",
+      "attempt_01_topology_core_execution_dependency",
+      "attempt_02_hardening_core_execution_dependency",
+      "attempt_03_hardening_core_execution_dependency",
+      "canonical_receipt_helper"
+    ],
+    "project_imports_inside_bound_sources_resolve_only_to_private_graph": true,
+    "unbound_project_imports_fail_closed": true,
+    "ambient_metadata_or_symbol_spoof_must_be_ignored": true,
+    "private_v3_must_retain_private_attempt01_and_attempt02_objects": true,
+    "private_v2_analyzer_must_be_private_attempt01_analyzer": true,
+    "receipt_dataclass_uses_only_standard_library_annotation_context": true
+  },
+  "attempt_01_preservation": {
+    "config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v1.json", "bytes": 6989, "sha256": "3f1f57d95a28287f024cd6806af9180c623d134b68249a547cb81475f8fe5fdc"},
+    "topology_core": {"path": "tools/kira_r25_afes_topology_core.py", "bytes": 10005, "sha256": "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce"},
+    "extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings.py", "bytes": 18513, "sha256": "706a1035354bb133a8cc2a2c0dbeff414f6f1172bbedaaf7dafbf70e14c57bc2"},
+    "tests": {"path": "Testing/test_kira_r25_afes_read_only_extraction_preparation.py", "bytes": 7352, "sha256": "6132c8fc82f60f924f81a4124358369ee2af6e51924e5b59aaa8d0b5f6588eb5"},
+    "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/CHECKPOINT.md", "bytes": 4673, "sha256": "5c96a9c5da3303733f431344223f64736a7148e2361d6d3e69d34cf31015b84a"},
+    "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md", "bytes": 3834, "sha256": "aa096db67515a2a6330bd3809d1c30e71d9a8afec4fed7a9e745b87a973480b3"}
+  },
+  "attempt_02_preservation": {
+    "config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v2.json", "bytes": 11046, "sha256": "b4c992012f3f621d4bef5252c7cb7bf26d6d524b3859cc2685487ba10589f7dc"},
+    "topology_core": {"path": "tools/kira_r25_afes_topology_core_v2.py", "bytes": 28732, "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"},
+    "extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v2.py", "bytes": 20082, "sha256": "508900309d7847e41997da72d2c85ee28317c9439e52c5f7311b82aac4553fc5"},
+    "tests": {"path": "Testing/test_kira_r25_afes_read_only_extraction_attempt02.py", "bytes": 13272, "sha256": "ab1753305a0bc357e94fccf36160bc893197be23d69675f26651e42784efc970"},
+    "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/CHECKPOINT.md", "bytes": 8284, "sha256": "df91b0a2b414c10b16bc6af86d02f20bda676b8e89d1f236e0573bd0fd18a670"},
+    "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT.md", "bytes": 3969, "sha256": "504be87d2ae20cdc30a4dd47d043cdde4c5de1e1568cf2e28676b9e84b93e952"},
+    "rejection_addendum": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT_REJECTION_ADDENDUM.md", "bytes": 2275, "sha256": "aa0d2487710d5f8ce7df5ff428a77d8a65f425238366bcbef1a5faa0caf38b4a"}
+  },
+  "attempt_03_preservation": {
+    "config": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v3.json", "bytes": 7125, "sha256": "97648d764bf218c3c25e77be9979af0c277e012b690323afaade0d1db0bda23a"},
+    "topology_core": {"path": "tools/kira_r25_afes_topology_core_v3.py", "bytes": 8732, "sha256": "c3c5f6f21a0b133fae6ef0439932193a9d0e922001a97026fd022ff0a682dc8e"},
+    "extractor": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v3.py", "bytes": 23790, "sha256": "861344dce0bb203400ef50875124127fe1ed21ea79d036c6eee73b1c7c4ee366"},
+    "tests": {"path": "Testing/test_kira_r25_afes_read_only_extraction_attempt03.py", "bytes": 11241, "sha256": "07b5bdd76262fbf6bb7cff9d2bcdd45c85ab6c77603b3301b7b0b31c1f481c62"},
+    "checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/CHECKPOINT.md", "bytes": 6427, "sha256": "109ac676aa1206404cf3679433c6d800efb308fce9f040de20fc0d5c19bea02a"},
+    "independent_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/INDEPENDENT_AUDIT.md", "bytes": 2542, "sha256": "7680627e5943413b293a7152ae4592c93ef5692a03ae850b662e047a607be212"}
+  },
+  "topology_sealing_contract": {
+    "prior_sealed_expected_full_normalized_topology_sha256": null,
+    "required_fresh_locked_matching_extractions": 2,
+    "one_extraction_is_acceptance": false,
+    "invented_expected_digest_forbidden": true
+  },
+  "truth_boundary": {
+    "static_preparation_is_not_execution": true,
+    "attempts_01_through_03_rejected_and_preserved": true,
+    "controller_or_pipe_creation_implemented": false,
+    "child_process_authentication_implemented": false,
+    "replay_protection_implemented": false,
+    "parent_binding_of_this_config_hash_implemented": false,
+    "two_fresh_locked_matching_extractions_still_required": true,
+    "blender_execution_authorized": false,
+    "body_authoring_authorized": false
+  }
+}

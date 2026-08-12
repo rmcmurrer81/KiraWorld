@@ -1,0 +1,124 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_python_controller_validation.v3r15",
+  "attempt_id": "attempt_01",
+  "status": "STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "predecessor": {
+    "version": "v3r14",
+    "status": "CONSUMED_SUCCESS_NO_RETRY",
+    "run_evidence_sha256": "8132271b60034d3afbad5138390d8a2e49a5bee91aeb2e0c9d9b1c0a97b552b1",
+    "outcome_receipt_sha256": "d6734ad3faaae2ca0c60c969d380af9d1c834fed2b87b45034da8336fcc1a58e"
+  },
+  "single_stage": {
+    "name": "retained_python_and_controller_definition_validation",
+    "steps": [
+      "verify exact no-argument native image and sealed candidate subjects",
+      "verify a different-agent exact-byte audit and digest sidecar",
+      "open and retain exact manifest, Python DLL, stdlib zip, controller, and execution-contract files",
+      "prove the retained manifest contains exactly one exact row for each retained runtime subject",
+      "reserve fixed evidence and binary outcome files with CREATE_NEW and write-through semantics",
+      "write, flush, and same-handle read back the pending reservation record",
+      "load only the retained Python DLL with DLL-load-directory and System32 search",
+      "resolve an exact allowlist of Python lifecycle and object APIs",
+      "initialize isolated Python with environment, user site, site import, bytecode, signal handlers, and argv parsing disabled",
+      "read the exact retained controller from its already-held handle",
+      "compile and evaluate only its documented inert module definitions",
+      "verify the exact five callable controller exports",
+      "validate the exact retained execution contract projection using the retained stdlib zip",
+      "finalize Python, unload the exact DLL, and recheck every retained file identity and digest",
+      "append and read back one terminal record on the same receipt handle",
+      "stop"
+    ]
+  },
+  "retained_runtime_subjects": {
+    "manifest": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+      "bytes": 24975,
+      "sha256": "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96"
+    },
+    "python_runtime_dll": {
+      "path": "C:/Python314/python314.dll",
+      "bytes": 6767440,
+      "sha256": "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"
+    },
+    "retained_stdlib_zip": {
+      "path": "tools/native/runtime/python314_stdlib_v3r4.zip",
+      "bytes": 28997479,
+      "sha256": "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"
+    },
+    "parent_controller": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py",
+      "bytes": 50907,
+      "sha256": "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf"
+    },
+    "execution_contract": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r9.json",
+      "bytes": 146969,
+      "sha256": "f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5"
+    }
+  },
+  "controller_validation": {
+    "top_level_execution_is_permitted_only_because_exact_retained_controller_declares_and_statically_proves_direct_execution_inert": true,
+    "expected_exports": [
+      "_build_execution_plan",
+      "_validate_child_payload",
+      "_compare_pair",
+      "_success_payload",
+      "_failure_payload"
+    ],
+    "exports_must_be_callable": true,
+    "build_execution_plan_called": false,
+    "reason_plan_builder_not_called": "Calling it requires exposing all 137 retained byte snapshots to Python and is a separate capability/data-expansion boundary. v3r15 validates the controller definition surface and exact retained execution-contract projection, then stops.",
+    "bootstrap_evaluated": false,
+    "native_broker_created": false
+  },
+  "contract_projection": {
+    "schema": "kira.avatar.r25.foundation_afes_locked_pair_execution.v3r9",
+    "attempt_id": "attempt_03r9",
+    "status": "PENDING_FRESH_INDEPENDENT_AUDIT_READ_ONLY_DIAGNOSTIC_PAIR_ONLY",
+    "required_fresh_run_count": 2,
+    "requires_body_work_only": true,
+    "requires_no_blend_mutation": true,
+    "requires_no_blend_save": true,
+    "requires_no_render": true,
+    "requires_no_candidate_creation": true,
+    "requires_no_body_authoring": true,
+    "requires_no_runtime_activation": true,
+    "requires_no_assignment": true,
+    "requires_no_export": true,
+    "requires_no_publication": true,
+    "requires_exact_runtime_binding_rows": true
+  },
+  "receipt": {
+    "path": "RecoverySprint/continuation_20260810/kira_r25_afes_python_controller_validation_v3r15_static_preparation/attempt_01/PYTHON_CONTROLLER_VALIDATION_OUTCOME.receipt.bin",
+    "evidence_path": "RecoverySprint/continuation_20260810/kira_r25_afes_python_controller_validation_v3r15_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "creation": "CREATE_NEW_WRITE_THROUGH",
+    "records": 2,
+    "record_1": "RESERVED_PENDING_PYTHON_CONTROLLER_VALIDATION",
+    "record_2": "TERMINAL_SUCCESS_OR_FAILURE_AFTER_PYTHON_FINALIZE_AND_DLL_UNLOAD",
+    "same_handle_readback_required": true,
+    "trailing_bytes_rejected": true,
+    "preexisting_or_partial_receipt_is_consumed_failure_no_retry": true
+  },
+  "forbidden": [
+    "candidate execution before a different fresh exact-byte acceptance",
+    "any v3r14 or earlier retry",
+    "trusted bootstrap evaluation",
+    "native broker creation",
+    "_build_execution_plan invocation",
+    "AFES child creation or extraction",
+    "process creation",
+    "Blender or Blend access",
+    "body, mesh, armature, material, anatomy, or movement mutation",
+    "save, render, export, activation, assignment, publication, or upload",
+    "deletion, truncation, replacement, rename, overwrite, or repair of an existing output"
+  ],
+  "truth_boundary": [
+    "STATIC_PREPARATION_IS_NOT_EXECUTION",
+    "PYTHON_CONTROLLER_DEFINITION_VALIDATION_IS_NOT_AFES",
+    "CONTRACT_PROJECTION_VALIDATION_IS_NOT_PLAN_BUILDER_EXECUTION",
+    "NO_BODY_OR_ANATOMY_RESULT",
+    "NO_MOVEMENT_OR_RENDER_RESULT",
+    "NO_OWNER_ACCEPTANCE",
+    "NO_PRODUCTION_AUTHORITY"
+  ]
+}

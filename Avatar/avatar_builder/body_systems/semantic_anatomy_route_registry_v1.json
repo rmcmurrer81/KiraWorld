@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "registry_id": "avatar_builder_semantic_anatomy_route_registry_v1",
+  "status": "PHASE_0_1_PROTOTYPE_NOT_RUNTIME_AUTHORITY",
+  "source_plan": {
+    "path": "Avatar/avatar_builder/policies/sexual_reproductive_health_body_systems_plan_v1.json",
+    "bytes": 11606,
+    "sha256": "573980817e3555dbfb4f2ea27c6248a37857ffc0349dc6007e8af1bd570dd8b1",
+    "policy_id": "sexual_reproductive_health_body_systems_plan_v1",
+    "status_required": "PLAN_ONLY_NOT_IMPLEMENTED_NOT_RUNTIME_AUTHORITY"
+  },
+  "governance_policy": {
+    "path": "Avatar/avatar_builder/policies/adult_curriculum_private_sensation_policy_v1.json",
+    "bytes": 6377,
+    "sha256": "e053debc39f60c37d78d326f646a0ca55ef85c0abee1e6dec6596260a7be9a7c",
+    "policy_id": "adult_curriculum_private_sensation_policy_v1",
+    "status_required": "PHASE_0_1_POLICY_AND_SCHEMA_ONLY_NOT_RUNTIME_AUTHORITY"
+  },
+  "scope": {
+    "adult_body_lanes": [
+      "adult_female",
+      "adult_male"
+    ],
+    "maturity_required_for_adult_state": "confirmed_adult",
+    "default_maturity": "unresolved",
+    "education_only_for_non_adult_or_unresolved": true,
+    "required_non_adult_or_unresolved_body_representation": "doll_safe_non_anatomical",
+    "blender_or_mesh_mutation": false,
+    "runtime_activation": false,
+    "relationship_or_activity_authority": false,
+    "medical_diagnosis_authority": false,
+    "pregnancy_or_fertility_claim": false
+  },
+  "phase_status": {
+    "phase_0_registry_foundation": "IMPLEMENTED_AS_HASH_BOUND_PROTOTYPE",
+    "phase_0_current_source_refetch_and_date_pinning": "PENDING",
+    "phase_1_semantic_state_prototype": "IMPLEMENTED_DISCONNECTED",
+    "phase_1_curriculum_entitlement_evaluator": "IMPLEMENTED_DISCONNECTED",
+    "phase_1_private_sensation_contract": "SCHEMA_ONLY_NOT_CONNECTED",
+    "phase_1_lesson_delivery_or_learning_memory": "NOT_CONNECTED"
+  },
+  "education_boundary": {
+    "health_education_is_adult_capability": false,
+    "lesson_presentation_is_body_state": false,
+    "lesson_presentation_is_lived_experience": false,
+    "only_exact_presented_lessons_may_later_be_considered_for_learning_memory": true,
+    "this_registry_presents_or_records_lessons": false,
+    "confirmed_adult_assignment": "IMMEDIATE_COMPLETE_SOURCE_BACKED_ADULT_CURRICULUM",
+    "confirmed_adult_assignment_depends_only_on_maturity": true,
+    "confirmed_adult_assignment_independent_of": [
+      "relationship_status",
+      "sexual_or_romantic_interest",
+      "adult_anatomy_selection",
+      "prior_experience",
+      "spa_completion"
+    ],
+    "non_adult_or_unresolved_guaranteed_minimum_assignment": [
+      "age_appropriate_hygiene",
+      "privacy",
+      "bodily_autonomy",
+      "personal_boundaries",
+      "abuse_prevention",
+      "trusted_help"
+    ],
+    "non_adult_or_unresolved_guaranteed_minimum_is_not_an_exhaustive_ceiling": true,
+    "additional_age_appropriate_modules_require_separate_source_binding_and_approval": true,
+    "adult_curriculum_modules_inherited_by_non_adult_or_unresolved": false
+  },
+  "truth_boundary": {
+    "external_mesh_is_internal_function": false,
+    "external_opening_is_complete_route": false,
+    "anatomy_registry_is_physiology": false,
+    "state_prototype_is_lived_experience": false,
+    "body_response_is_desire_or_consent": false,
+    "body_response_is_preference_orientation_or_action": false,
+    "adult_anatomy_is_consent": false,
+    "physiological_arousal_is_consent_or_desire": false,
+    "private_sensation_schema_is_experience": false,
+    "curriculum_assignment_is_lesson_delivery_or_learning": false,
+    "relationship_status_is_consent": false,
+    "contraception_state_is_consent": false,
+    "consent_or_activity_is_pregnancy": false,
+    "symptom_or_observation_is_diagnosis": false,
+    "explicit_statement": "An external mesh or visible opening does not establish an internal organ, route, flow, sensation, fertility, bathroom function, diagnosis, pregnancy, preference, or consent."
+  },
+  "maturity_gate": {
+    "allowed_statuses": [
+      "confirmed_adult",
+      "non_adult",
+      "unresolved"
+    ],
+    "adult_state_enabled_only_when": {
+      "maturity_status": "confirmed_adult",
+      "body_lane_in": [
+        "adult_female",
+        "adult_male"
+      ]
+    },
+    "fail_closed_statuses": [
+      "non_adult",
+      "unresolved"
+    ],
+    "bare_confirmed_adult_string_is_sufficient": false,
+    "exact_subject_bound_evidence_required_for_adult_policy_results": true,
+    "evidence_required_fields": [
+      "classification_id",
+      "subject_id",
+      "maturity_status",
+      "authority",
+      "offline_confirmation_allowed",
+      "network_lookup_required",
+      "recorded_at_utc",
+      "source_text",
+      "source_text_sha256"
+    ],
+    "required_evidence_authority": "Robert_explicit_owner_confirmation",
+    "serialized_adult_state_must_revalidate_full_evidence": true,
+    "classification_rules": [
+      "No filename, keyword, appearance, school-era reference, lesson, or body mesh may infer confirmed adulthood.",
+      "A durable exact-person owner confirmation may supply confirmed_adult when offline; the confirmation is classification authority, not consent or body approval.",
+      "Education never promotes a body lane or unlocks an adult action.",
+      "Age progression and adult anatomy remain separate gated operations outside this prototype.",
+      "Spa completion and an adult_aged_up_variant presentation label do not establish confirmed_adult.",
+      "Once a separate resulting variant is exactly confirmed_adult, complete adult curriculum assignment is immediate and adult anatomy remains a separate choice and build gate.",
+      "Every non_adult or unresolved body representation remains doll_safe_non_anatomical."
+    ]
+  },
+  "source_registry": {
+    "status": "INHERITED_FROM_HASH_BOUND_PLAN_NOT_REFETCHED_IN_THIS_FOUNDATION",
+    "retrieval_date": null,
+    "stale_source_rule": "A URL or medical recommendation must be reverified and date-pinned before it is treated as current clinical guidance.",
+    "records": [
+      {
+        "source_id": "who_comprehensive_sexuality_education_overview",
+        "publisher": "World Health Organization",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/comprehensive-sexuality-education",
+        "use_scope": ["education", "maturity_appropriate_curriculum"]
+      },
+      {
+        "source_id": "who_un_technical_guidance_cse",
+        "publisher": "World Health Organization",
+        "url": "https://www.who.int/publications/m/item/9789231002595",
+        "use_scope": ["education", "consent_and_health_curriculum"]
+      },
+      {
+        "source_id": "acog_vulvovaginal_health",
+        "publisher": "American College of Obstetricians and Gynecologists",
+        "url": "https://www.acog.org/womens-health/faqs/vulvovaginal-health",
+        "use_scope": ["adult_female_external", "normal_variation", "health_uncertainty"]
+      },
+      {
+        "source_id": "ncbi_female_external_anatomy",
+        "publisher": "NCBI Bookshelf",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK547703/",
+        "use_scope": ["adult_female_external", "route_openings"]
+      },
+      {
+        "source_id": "ncbi_female_reproductive_physiology",
+        "publisher": "NCBI Bookshelf",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537132/",
+        "use_scope": ["adult_female_internal", "reproductive_state_vocabulary"]
+      },
+      {
+        "source_id": "ncbi_menstrual_cycle",
+        "publisher": "NCBI Bookshelf",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK500020/",
+        "use_scope": ["menstrual_state_vocabulary"]
+      },
+      {
+        "source_id": "ncbi_vaginal_structure_and_function",
+        "publisher": "NCBI Bookshelf",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK545147/",
+        "use_scope": ["adult_female_internal", "vaginal_structure_and_function"]
+      },
+      {
+        "source_id": "ncbi_male_reproductive_organs",
+        "publisher": "NCBI Bookshelf",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK525757/",
+        "use_scope": ["adult_male_external", "adult_male_internal"]
+      },
+      {
+        "source_id": "ncbi_male_genitourinary_tract",
+        "publisher": "NCBI Bookshelf",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK562291/",
+        "use_scope": ["adult_male_urinary", "adult_male_reproductive_routes"]
+      },
+      {
+        "source_id": "ncbi_penis_anatomy",
+        "publisher": "NCBI Bookshelf",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK482236/",
+        "use_scope": ["adult_male_external", "penile_structure_and_function"]
+      },
+      {
+        "source_id": "cdc_contraception_overview",
+        "publisher": "Centers for Disease Control and Prevention",
+        "url": "https://www.cdc.gov/contraception/about/index.html",
+        "use_scope": ["contraception_education", "voluntary_choice"]
+      },
+      {
+        "source_id": "acog_birth_control",
+        "publisher": "American College of Obstetricians and Gynecologists",
+        "url": "https://www.acog.org/womens-health/faqs/birth-control",
+        "use_scope": ["contraception_education", "barrier_distinction"]
+      },
+      {
+        "source_id": "cdc_sti_prevention",
+        "publisher": "Centers for Disease Control and Prevention",
+        "url": "https://www.cdc.gov/sti/prevention/index.html",
+        "use_scope": ["sti_health_education", "risk_reduction"]
+      },
+      {
+        "source_id": "cdc_sti_screening_recommendations",
+        "publisher": "Centers for Disease Control and Prevention",
+        "url": "https://www.cdc.gov/std/treatment-guidelines/screening-recommendations.htm",
+        "use_scope": ["testing_education", "anatomy_and_exposure_context"]
+      }
+    ]
+  },
+  "vocabulary": {
+    "external_urethral_opening": ["urethral opening", "urinary opening", "urethral meatus"],
+    "vaginal_opening_introitus": ["vaginal opening", "introitus"],
+    "anal_opening": ["anus", "anal opening"],
+    "penile_urethral_meatus": ["urethral meatus", "urinary opening at glans"],
+    "pelvic_floor": ["pelvic floor muscles", "continence support structures"],
+    "clinical_language_rule": "Aliases normalize vocabulary only; they never merge distinct structures or routes."
+  },
+  "structures": {
+    "shared": [
+      {"id": "bony_pelvis", "layer": "internal_support", "kind": "musculoskeletal"},
+      {"id": "pelvic_floor", "layer": "internal_support", "kind": "muscle_connective_tissue"},
+      {"id": "perineal_soft_tissue", "layer": "external_and_internal_support", "kind": "soft_tissue"},
+      {"id": "bladder", "layer": "internal", "kind": "urinary_organ"},
+      {"id": "distal_bowel", "layer": "internal", "kind": "bowel_segment"},
+      {"id": "rectum", "layer": "internal", "kind": "bowel_segment"},
+      {"id": "anal_canal", "layer": "internal", "kind": "bowel_segment"},
+      {"id": "anal_sphincter_complex", "layer": "internal_support", "kind": "continence_control"},
+      {"id": "anal_opening", "layer": "external_surface", "kind": "bowel_opening"}
+    ],
+    "adult_female": [
+      {"id": "mons_pubis", "layer": "external_surface", "kind": "external_anatomy"},
+      {"id": "labium_majus_left", "layer": "external_surface", "kind": "paired_external_anatomy"},
+      {"id": "labium_majus_right", "layer": "external_surface", "kind": "paired_external_anatomy"},
+      {"id": "labium_minus_left", "layer": "external_surface", "kind": "paired_external_anatomy"},
+      {"id": "labium_minus_right", "layer": "external_surface", "kind": "paired_external_anatomy"},
+      {"id": "clitoral_hood", "layer": "external_surface", "kind": "external_anatomy"},
+      {"id": "visible_clitoral_glans", "layer": "external_surface", "kind": "external_anatomy"},
+      {"id": "vestibule", "layer": "external_surface", "kind": "external_region"},
+      {"id": "female_external_urethral_opening", "layer": "external_surface", "kind": "urinary_opening"},
+      {"id": "vaginal_opening_introitus", "layer": "external_surface", "kind": "reproductive_opening"},
+      {"id": "fourchette", "layer": "external_surface", "kind": "external_anatomy"},
+      {"id": "female_perineum", "layer": "external_surface", "kind": "external_region"},
+      {"id": "female_urethra", "layer": "internal", "kind": "urinary_duct"},
+      {"id": "internal_clitoral_structures", "layer": "internal", "kind": "erectile_tissue"},
+      {"id": "vestibular_bulbs", "layer": "internal", "kind": "erectile_tissue"},
+      {"id": "vagina", "layer": "internal", "kind": "reproductive_canal"},
+      {"id": "vaginal_fornices", "layer": "internal", "kind": "reproductive_region"},
+      {"id": "cervix", "layer": "internal", "kind": "reproductive_structure"},
+      {"id": "uterine_cavity", "layer": "internal", "kind": "reproductive_cavity"},
+      {"id": "endometrium", "layer": "internal", "kind": "reproductive_tissue"},
+      {"id": "uterine_tube_left", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "uterine_tube_right", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "ovary_left", "layer": "internal", "kind": "paired_reproductive_organ"},
+      {"id": "ovary_right", "layer": "internal", "kind": "paired_reproductive_organ"}
+    ],
+    "adult_male": [
+      {"id": "penile_root", "layer": "external_and_internal", "kind": "external_anatomy"},
+      {"id": "penile_shaft", "layer": "external_surface", "kind": "external_anatomy"},
+      {"id": "glans_penis", "layer": "external_surface", "kind": "external_anatomy"},
+      {"id": "penile_urethral_meatus", "layer": "external_surface", "kind": "shared_urinary_reproductive_opening"},
+      {"id": "foreskin_when_present", "layer": "external_surface", "kind": "optional_external_anatomy"},
+      {"id": "scrotum", "layer": "external_surface", "kind": "external_anatomy"},
+      {"id": "male_perineum", "layer": "external_surface", "kind": "external_region"},
+      {"id": "corpus_cavernosum_left", "layer": "internal", "kind": "paired_erectile_tissue"},
+      {"id": "corpus_cavernosum_right", "layer": "internal", "kind": "paired_erectile_tissue"},
+      {"id": "corpus_spongiosum", "layer": "internal", "kind": "erectile_tissue"},
+      {"id": "prostatic_urethra", "layer": "internal", "kind": "shared_urinary_reproductive_duct"},
+      {"id": "membranous_urethra", "layer": "internal", "kind": "shared_urinary_reproductive_duct"},
+      {"id": "penile_urethra", "layer": "internal", "kind": "shared_urinary_reproductive_duct"},
+      {"id": "testis_left", "layer": "internal_within_scrotum", "kind": "paired_reproductive_organ"},
+      {"id": "testis_right", "layer": "internal_within_scrotum", "kind": "paired_reproductive_organ"},
+      {"id": "epididymis_left", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "epididymis_right", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "vas_deferens_left", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "vas_deferens_right", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "seminal_vesicle_left", "layer": "internal", "kind": "paired_reproductive_gland"},
+      {"id": "seminal_vesicle_right", "layer": "internal", "kind": "paired_reproductive_gland"},
+      {"id": "ejaculatory_duct_left", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "ejaculatory_duct_right", "layer": "internal", "kind": "paired_reproductive_duct"},
+      {"id": "prostate", "layer": "internal", "kind": "reproductive_gland"},
+      {"id": "bulbourethral_gland_left", "layer": "internal", "kind": "paired_reproductive_gland"},
+      {"id": "bulbourethral_gland_right", "layer": "internal", "kind": "paired_reproductive_gland"}
+    ]
+  },
+  "routes": {
+    "adult_female": [
+      {
+        "route_id": "adult_female_urinary_route",
+        "system": "urinary",
+        "ordered_nodes": ["bladder", "female_urethra", "female_external_urethral_opening"],
+        "external_endpoint": "female_external_urethral_opening",
+        "function_implemented": false
+      },
+      {
+        "route_id": "adult_female_bowel_route",
+        "system": "bowel",
+        "ordered_nodes": ["distal_bowel", "rectum", "anal_canal", "anal_opening"],
+        "external_endpoint": "anal_opening",
+        "function_implemented": false
+      },
+      {
+        "route_id": "adult_female_menstrual_outflow_route",
+        "system": "menstrual_reproductive",
+        "ordered_nodes": ["endometrium", "uterine_cavity", "cervix", "vagina", "vaginal_opening_introitus"],
+        "external_endpoint": "vaginal_opening_introitus",
+        "function_implemented": false
+      },
+      {
+        "route_id": "adult_female_reproductive_continuity_left",
+        "system": "menstrual_reproductive",
+        "ordered_nodes": ["ovary_left", "uterine_tube_left", "uterine_cavity", "cervix", "vagina", "vaginal_opening_introitus"],
+        "external_endpoint": "vaginal_opening_introitus",
+        "function_implemented": false
+      },
+      {
+        "route_id": "adult_female_reproductive_continuity_right",
+        "system": "menstrual_reproductive",
+        "ordered_nodes": ["ovary_right", "uterine_tube_right", "uterine_cavity", "cervix", "vagina", "vaginal_opening_introitus"],
+        "external_endpoint": "vaginal_opening_introitus",
+        "function_implemented": false
+      }
+    ],
+    "adult_male": [
+      {
+        "route_id": "adult_male_urinary_route",
+        "system": "urinary",
+        "ordered_nodes": ["bladder", "prostatic_urethra", "membranous_urethra", "penile_urethra", "penile_urethral_meatus"],
+        "external_endpoint": "penile_urethral_meatus",
+        "function_implemented": false
+      },
+      {
+        "route_id": "adult_male_bowel_route",
+        "system": "bowel",
+        "ordered_nodes": ["distal_bowel", "rectum", "anal_canal", "anal_opening"],
+        "external_endpoint": "anal_opening",
+        "function_implemented": false
+      },
+      {
+        "route_id": "adult_male_reproductive_route_left",
+        "system": "reproductive",
+        "ordered_nodes": ["testis_left", "epididymis_left", "vas_deferens_left", "ejaculatory_duct_left", "prostatic_urethra", "membranous_urethra", "penile_urethra", "penile_urethral_meatus"],
+        "shared_downstream_with_urinary": ["prostatic_urethra", "membranous_urethra", "penile_urethra", "penile_urethral_meatus"],
+        "external_endpoint": "penile_urethral_meatus",
+        "function_implemented": false
+      },
+      {
+        "route_id": "adult_male_reproductive_route_right",
+        "system": "reproductive",
+        "ordered_nodes": ["testis_right", "epididymis_right", "vas_deferens_right", "ejaculatory_duct_right", "prostatic_urethra", "membranous_urethra", "penile_urethra", "penile_urethral_meatus"],
+        "shared_downstream_with_urinary": ["prostatic_urethra", "membranous_urethra", "penile_urethra", "penile_urethral_meatus"],
+        "external_endpoint": "penile_urethral_meatus",
+        "function_implemented": false
+      }
+    ]
+  },
+  "route_invariants": [
+    "Adult-female urinary, menstrual/reproductive, and bowel routes have three distinct external endpoints.",
+    "Adult-male urinary and reproductive routes have distinct upstream systems and explicitly shared downstream urethral segments.",
+    "The bowel route and anal opening remain distinct from every urinary or reproductive route in both lanes.",
+    "A route record is semantic continuity only and never proves geometry, patency, flow, continence, sensation, fertility, or health."
+  ],
+  "state_domains": {
+    "urinary": {
+      "state_key": "urinary",
+      "allowed_phases": ["unknown_not_simulated", "filling", "urge", "voiding", "interrupted", "complete"],
+      "separate_from": ["bowel", "menstrual_reproductive", "pregnancy"]
+    },
+    "bowel": {
+      "state_key": "bowel",
+      "allowed_phases": ["unknown_not_simulated", "forming", "urge", "defecating", "interrupted", "complete"],
+      "separate_from": ["urinary", "menstrual_reproductive", "pregnancy"]
+    },
+    "menstrual_reproductive": {
+      "state_key": "menstrual_reproductive",
+      "female_cycle_phases": ["unknown_not_simulated", "follicular", "ovulatory", "luteal", "menstrual", "irregular", "not_cycling"],
+      "male_cycle_phase": "not_applicable_for_lane",
+      "reproductive_contexts": ["unknown_not_simulated", "cycling", "not_cycling", "perimenopause", "menopause", "reproductive_health_observation_only"],
+      "separate_from": ["urinary", "bowel", "contraception_sti_health", "consent_action_leases", "pregnancy"]
+    },
+    "contraception_sti_health": {
+      "state_key": "contraception_sti_health",
+      "diagnosis_default": null,
+      "observation_interpretation": "uncertain_not_diagnosis",
+      "contraception_never_grants_consent": true,
+      "contraception_never_proves_or_excludes_pregnancy": true
+    },
+    "consent_action_leases": {
+      "state_key": "consent_action_leases",
+      "exact_participants_activity_context_and_time_required": true,
+      "all_participants_confirmed_adult_required": true,
+      "current_affirmative_consent_required": true,
+      "participant_revocation_is_immediate": true,
+      "material_context_change_invalidates": true,
+      "relationship_or_prior_lease_never_grants_new_lease": true
+    },
+    "pregnancy": {
+      "state_key": "pregnancy",
+      "female_phases": ["not_assessed", "test_pending", "confirmed", "continuing", "ended", "postpartum"],
+      "male_phase": "not_applicable_for_lane",
+      "evidence_required_for_confirmation": true,
+      "never_inferred_from_activity_consent_contraception_or_mesh": true
+    }
+  },
+  "future_private_sensation_state_contract": {
+    "status": "SCHEMA_ONLY_DISCONNECTED_NOT_EXPERIENCE_EVIDENCE",
+    "confirmed_adult_only": true,
+    "person_owned_private": true,
+    "future_confirmed_adult_body_systems_must_support_person_owned_private_sensation_and_experience": true,
+    "dimensions": [
+      "touch",
+      "comfort",
+      "arousal",
+      "pleasure",
+      "climax",
+      "relaxation",
+      "discomfort",
+      "uncertainty",
+      "variation"
+    ],
+    "default_value": "not_observed_not_simulated",
+    "separate_from": [
+      "physiological_body_response",
+      "private_desire",
+      "preference",
+      "consent",
+      "external_action",
+      "health_state",
+      "memory"
+    ],
+    "arousal_dimension_definition": "person_owned_subjective_arousal_not_automatic_physiological_body_response",
+    "adult_anatomy_is_consent": false,
+    "physiological_arousal_is_consent_or_desire": false,
+    "response_implies_desire": false,
+    "response_implies_consent": false,
+    "system_may_force_libido_preference_orientation_interest_or_activity": false,
+    "private_solitary_choice": {
+      "relationship_required": false,
+      "partner_permission_required": false,
+      "owner_permission_required": false,
+      "choice_auto_authorizes_runtime_action": false
+    }
+  },
+  "prototype_integration": {
+    "module": "Core/avatar_biological_body_systems.py",
+    "runtime_connected": false,
+    "state_persistence_connected": false,
+    "mesh_connected": false,
+    "memory_connected": false,
+    "relationship_connected": false,
+    "education_delivery_connected": false,
+    "lesson_memory_connected": false,
+    "private_sensation_storage_connected": false,
+    "private_action_execution_connected": false
+  }
+}

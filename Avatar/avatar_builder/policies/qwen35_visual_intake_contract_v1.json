@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "contract_id": "avatar_builder_qwen35_visual_intake_v1",
+  "status": "STATIC_INERT_ROUTE_IMPLEMENTED_NOT_LIVE_ACCEPTED",
+  "model": {
+    "name": "qwen3.5:9b",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "installed_digest_must_be_rechecked_at_execution": true,
+    "advertised_vision_capability_must_be_rechecked_at_execution": true,
+    "alternate_model_allowed": false
+  },
+  "inputs": {
+    "project_private_allowlist_required": true,
+    "exact_item_sha256_required": true,
+    "owner_authorized_private_use_required": true,
+    "rights_and_provenance_required": true,
+    "supported_still_formats": [
+      "bmp",
+      "jpeg",
+      "png",
+      "webp"
+    ],
+    "video_policy": {
+      "raw_video_sent_to_model": false,
+      "preextracted_exact_frames_only": true,
+      "parent_video_sha256_required": true,
+      "sample_timestamp_seconds_required": true,
+      "sample_index_required": true,
+      "full_video_viewing_claim_allowed": false,
+      "unsampled_intervals_observed": false
+    }
+  },
+  "subject_authority": {
+    "robert_selects_exact_subject": true,
+    "selection_is_face_identification": false,
+    "model_face_identity_claim_allowed": false,
+    "canonical_profile_maturity_is_authoritative": true,
+    "maturity_may_be_inferred_from_appearance": false,
+    "confirmed_adult_template_lane": "confirmed_adult_template",
+    "non_adult_template_lane": "non_adult_doll_safe_template",
+    "uncertain_template_lane": "non_adult_doll_safe_template",
+    "uncertain_profile_allows_body_authoring": false,
+    "fictional_or_historical_timepoint_binding_required": true,
+    "owner_corrections_are_exact_person_append_only": true,
+    "pending_maturity_correction_requires_profile_reconciliation": true
+  },
+  "model_output": {
+    "schema_id": "avatar_builder_qwen35_visual_observation_v1",
+    "coverage_enum": "BOUND_STILLS_AND_EXACT_VIDEO_SAMPLE_FRAMES_ONLY",
+    "identity_status_enum": "USER_SELECTED_SUBJECT_BINDING_ONLY_NOT_MODEL_IDENTIFIED",
+    "maturity_inference": false,
+    "per_observation_source_binding_required": true,
+    "per_observation_uncertainty_required": true,
+    "contradictions_supported": true,
+    "allowed_suggestion_groups": [
+      "morph",
+      "material",
+      "hair"
+    ],
+    "geometry_output_allowed": false,
+    "direct_body_mutation_allowed": false,
+    "body_activation_allowed": false,
+    "assignment_allowed": false,
+    "publication_allowed": false
+  },
+  "execution_boundary": {
+    "this_contract_executes_model": false,
+    "this_contract_uses_gpu": false,
+    "this_contract_runs_blender": false,
+    "this_contract_authors_geometry": false,
+    "this_contract_approves_visual_likeness": false,
+    "future_worker_must_rehash_sources_immediately_before_encoding": true,
+    "future_worker_must_validate_strict_output_before_consumption": true,
+    "owner_visual_review_required_after_later_authoring": true
+  }
+}

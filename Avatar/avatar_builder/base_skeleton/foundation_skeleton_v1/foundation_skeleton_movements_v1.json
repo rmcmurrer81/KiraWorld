@@ -1,0 +1,242 @@
+{
+  "version": "2026-07-04.foundation-movement-v14",
+  "purpose": "Shared movement knowledge for the simple foundation skeleton and future avatar-builder bodies.",
+  "phase_breakdown": {
+    "phase_1_now": [
+      "Remove blocking front-entry geometry through runtime cleanup.",
+      "Tune grounded walk so root travel, stride length, knee bend, foot plant, and clip playback agree.",
+      "Phase-lock the walk clip to actual meters moved so legs cannot drift away from travel distance.",
+      "Stage door opening as reach, finger grip, door rotation, and release instead of opening instantly.",
+      "Replace fixed hand proxy fingers with visible finger segments weighted to the actual finger bones.",
+      "Quantize stairs to individual tread contacts instead of floating directly to upstairs/downstairs height.",
+      "Add couch sit, manual grass lie-down, Ladybug guest-bed lie-down/sleep-cover, and desk chair/computer practice tests.",
+      "Keep couch sit available as a manual body-practice skill, but remove it from the unattended roam loop so the avatar does not zip into and out of the couch repeatedly.",
+      "Keep grass lie-down manual so the normal loop does not look like an accidental face-down fall.",
+      "Make kitchen counter/island solid so body routing cannot walk through them.",
+      "Cooldown failed door reaches so a missed handle does not loop the same bad arm motion.",
+      "Add support-surface checks so unsupported upstairs holes fall toward the lower floor.",
+      "Add movement learning registry so attempts and draft moments are not lost.",
+      "Keep the current body as a readable foundation skeleton before likeness work resumes.",
+      "Curl the default relaxed hand pose so walking no longer shows fingers pointing straight outward.",
+      "Route upstairs movement through the actual Ladybug guest-room divider opening before bed and desk tests.",
+      "Replace visible proxy hand rods with one skinned hand mesh per side plus invisible fingertip contact colliders.",
+      "Run a post-mixer IK grip solver before door opening so the real hand reaches and locks contact on the handle.",
+      "Smooth the hand mesh back down by removing lumpy palm heel/thumb/knuckle pad geometry while preserving the one-piece hand mesh and fingertip contact colliders.",
+      "Add object-level fingertip contact state for door handles so grip success records the collider/object pair.",
+      "Add first-pass post-mixer foot contact locks against support surfaces.",
+      "Move the couch-TV route target into the open aisle and move the TV/console closer to its wall side.",
+      "Replace the open under-stair toilet with an enclosed downstairs powder-room fixture set.",
+      "Open the powder-room divider with a readable doorway frame and threshold.",
+      "Upgrade the kitchen with an interactive hinged refrigerator, stove burners, oven glass, hood, sink/faucet, cabinets, toaster, island, cutting board, and fruit bowl.",
+      "Constrain the unattended downstairs roam loop to open foyer/living-room aisle points until a real navigation graph is built.",
+      "Split the player stairs interaction into bottom and upstairs landing zones so walking under the upper stairs no longer teleports the player upstairs.",
+      "Refine the downstairs powder room with a rear-wall toilet, reflective mirror object, privacy curtain, visible faucet/knobs, and sink-water toggle.",
+      "Adjust hand proportions with a smaller smooth palm and slightly thicker fingers.",
+      "Remove kitchen-conflicting window openings so cabinets and the refrigerator no longer cover perfect repeating windows.",
+      "Promote the current skeleton to avatar-builder foundation_skeleton_v1 reuse, while keeping final Marinette likeness/body work separate.",
+      "Replace unattended walking-loop validation with a bounded self-test battery that records sit, door reach, stairs, bed sleep, desk computer, and back-door reach rewards.",
+      "Add an activity truth check so reading, sketching, and computer-work claims require nearby physical evidence in the 3D world.",
+      "Move the self-test finish pose to Marinette's upstairs design workbench instead of sending her back into a living-room pacing loop.",
+      "Add a first safe civilian outfit shell to the foundation GLB for avatar-builder testing."
+    ],
+    "phase_2_next": [
+      "Extend foot-contact locks into full closed-loop pelvis/step correction for stairs, turns, and obstacle avoidance.",
+      "Extend object-level finger collision from door handles to phones, books, purses, handles, and furniture.",
+      "Add pick-up, turn-in-place, stand-up, and clothing-change clips."
+    ],
+    "phase_3_body": [
+      "Bind a more realistic Marinette visual mesh to the foundation rig.",
+      "Add facial blink and speech blendshapes.",
+      "Add hair and clothing simulation proxies after the motion rig is stable."
+    ],
+    "phase_4_learning": [
+      "Let AIs review videos/media and create candidate motion clips.",
+      "Store learned clips as untrusted drafts until reviewed.",
+      "Promote approved clips into this movement library for future avatars."
+    ]
+  },
+  "rig_contract": {
+    "root": [
+      "root",
+      "pelvis",
+      "spine",
+      "chest",
+      "neck",
+      "head"
+    ],
+    "arms": [
+      "clavicle",
+      "upper_arm",
+      "lower_arm",
+      "wrist"
+    ],
+    "hands": {
+      "digits_per_hand": 5,
+      "joints_per_digit": 3,
+      "controls": [
+        "curl",
+        "spread",
+        "thumbOppose",
+        "pinch",
+        "relax",
+        "handleGrip"
+      ],
+      "current_status": "The foundation GLB now exports one smoother skinned hand mesh per side, weighted to the hand/thumb/index/middle/ring/pinky bones, plus invisible fingertip contact colliders. The lumpy palm/knuckle pad objects were removed after visual review; the latest proportion pass uses a smaller palm and slightly thicker fingers. Runtime relaxed hand correction keeps fingers curled down, and runtime door use applies post-mixer arm IK/finger curl before opening only after object-level fingertip contact locks."
+    },
+    "legs": [
+      "hip",
+      "thigh",
+      "shin",
+      "foot",
+      "toe"
+    ],
+    "hair": "Later visual pass should bind hair cards/strands to hair bones and wetness parameters."
+  },
+  "clips": {
+    "idle_balance_v1": {
+      "loop": true,
+      "seconds": 3.0,
+      "notes": "Small breathing, weight shift, eye/head attention. No root translation."
+    },
+    "walk_grounded_v6": {
+      "loop": true,
+      "authored_clip_seconds": 2.5,
+      "runtime_ground_meters_per_second": 0.52,
+      "runtime_upstairs_meters_per_second": 0.42,
+      "observed_ground_time_scale": 1.529,
+      "stride_meters": 0.85,
+      "phase_locked_to_distance": true,
+      "support_phase": 0.52,
+      "knee_lift_degrees": 48,
+      "knee_plant_degrees": 10,
+      "toe_off_degrees": 20,
+      "shoulder_swing_degrees": 14,
+      "elbow_swing_degrees": 24,
+      "runtime_time_scale_rule": "Diagnostic value only when phase_locked_to_distance is true: authoredClipSeconds / (strideMeters / actualMetersPerSecond), clamped to the runtime safety range.",
+      "phase_rule": "Runtime walk clip frame, bob, and sway advance from actual meters moved, not wall-clock time.",
+      "rule": "Do not free-run the walk animation; distance traveled owns the leg phase."
+    },
+    "turn_in_place_v1": {
+      "loop": false,
+      "seconds": 0.8,
+      "notes": "Use before walking to prevent sideways/backwards skating."
+    },
+    "stairs_step_v1": {
+      "loop": false,
+      "seconds": 0.72,
+      "runtime_treads": 16,
+      "notes": "Runtime quantizes the avatar's height by stair tread index and records step_contact draft moments. The controlled stair route now climbs to a clear upstairs landing and finishes in upstairs roam instead of wrapping back down. True IK foot locks are still next."
+    },
+    "support_surface_v1": {
+      "loop": false,
+      "notes": "Runtime classifies first-floor, outside, upstairs slabs, landing infills, and stair treads as support surfaces. Unsupported upstairs positions fall toward the next lower support instead of hovering."
+    },
+    "foot_contact_locks_v1": {
+      "loop": false,
+      "notes": "Runtime now applies a first-pass post-mixer IK correction on planted feet toward the current support surface and records per-foot contact state. This is not full balance control yet, but it starts closing the gap between walk pose and floor contact."
+    },
+    "hand_open_close_v1": {
+      "loop": false,
+      "seconds": 0.5,
+      "notes": "Hand test clip for future door handles, phones, purses, and books."
+    },
+    "relaxed_hands_v3": {
+      "loop": false,
+      "seconds": 1.04,
+      "notes": "Default non-rigid hand pose now uses a reversed/downward relaxed curl in the exported GLB and a post-mixer runtime clamp, so walking and idle no longer lift the fingers into a pointing pose."
+    },
+    "door_handle_reach_v5": {
+      "loop": false,
+      "seconds": 2.5,
+      "opens_after_seconds": 0.95,
+      "finish_seconds": 2.35,
+      "required_hand_distance_meters": 0.48,
+      "success_rule": "Runtime only opens the door after the real hand IK pass locks a fingertip contact collider within the handle threshold.",
+      "sequence": [
+        "face_handle",
+        "reach",
+        "finger_grip",
+        "door_rotates",
+        "release"
+      ],
+      "notes": "Avatar stops at handle range, faces the handle, applies post-mixer IK to upper_arm/forearm/hand, curls the finger bones, and records nearest fingertip-contact distance plus an object-level fingerContacts entry. If the hand misses the handle, the door stays closed, the miss is logged for IK retraining, and that door enters a short cooldown instead of repeating the same reach immediately."
+    },
+    "sit_couch_v1": {
+      "loop": false,
+      "seconds": 4.8,
+      "clip": "sit_foundation",
+      "target": "living_room_couch",
+      "notes": "Scripted body-practice test for lowering into the couch sit position. Runtime now applies a larger seated root drop and longer hold, while the exported sit clip bends thighs forward and shins downward instead of folding the legs backward through the couch."
+    },
+    "lie_down_v1": {
+      "loop": false,
+      "seconds": 3.6,
+      "clip": "lie_down_foundation",
+      "targets": [
+        "front_lawn_grass",
+        "ladybug_guest_bed"
+      ],
+      "notes": "Scripted body-practice test for lying on grass or bed. Runtime tilts the root to a back-lying orientation while the foundation clip controls limbs."
+    },
+    "sleep_bed_v1": {
+      "loop": false,
+      "seconds": 6.2,
+      "clip": "lie_down_foundation",
+      "target": "ladybug_guest_bed",
+      "notes": "Scripted bed sleep practice. Runtime shows a pulled-up blanket/cover over the Ladybug guest bed while the avatar holds a lying posture."
+    },
+    "desk_computer_v1": {
+      "loop": false,
+      "seconds": 7.2,
+      "target": "ladybug_temporary_workbench",
+      "sequence": [
+        "approach_and_pull_chair_out",
+        "sit_on_chair",
+        "scoot_chair_in",
+        "work_on_computer",
+        "scoot_chair_out",
+        "stand_from_chair"
+      ],
+      "notes": "Runtime furniture-practice sequence for chair use and computer work. The chair is a movable group so scoot-in/out produces data instead of a static sit test."
+    },
+    "upstairs_guest_room_route_v2": {
+      "loop": false,
+      "target": "ladybug_guest_room",
+      "notes": "Upstairs waypoints now pass through the real divider opening at x=3.25,z=-5.35 before bed sleep and desk-computer practice, preventing the avatar from waiting at a wall."
+    },
+    "body_self_test_v1": {
+      "loop": false,
+      "seconds": 46.0,
+      "steps": [
+        "sit_couch",
+        "front_door_reach",
+        "stairs_step",
+        "sleep_bed",
+        "desk_computer",
+        "back_door_reach"
+      ],
+      "notes": "Bounded avatar-builder validation battery. Runtime can auto-start this once when the desktop shell activates Marinette/Ladybug, or manually with window.kiraBodyPractice.startSkill('self_test'). Each step records reward data into the movement-learning registry. The finish pose now waits at the upstairs design workbench rather than resuming a small downstairs roam loop."
+    },
+    "activity_truth_v1": {
+      "loop": false,
+      "target": "runtime_claim_vs_world_evidence",
+      "props": [
+        "computer",
+        "keyboard",
+        "notebook",
+        "sketchbook",
+        "pencil",
+        "design_wall"
+      ],
+      "notes": "Runtime exposes window.__kiraHomeWorldRuntime.activityTruth and window.kiraHomeWorldDebug.activityTruth(action). Reading, sketching, and computer-work actions are only grounded when matching physical props are near the active body."
+    }
+  },
+  "learning_policy": {
+    "walk_to_walk": "Navigation goals choose destinations; walk clips should never move without a goal except in calibration/test mode.",
+    "ground_support": "Every locomotion update should resolve support before trusting a waypoint y value. If no upper surface is below the body, the body should fall toward the lower support.",
+    "body_practice": "Practice skills record started/contact/finished draft moments so the body can learn from attempts instead of only looping waypoints. Door misses are intentionally preserved as failed moments when hand contact is too far from the handle. The current default validation is the bounded body_self_test battery, not an infinite living-room walking loop.",
+    "truth_grounding": "If an AI says it is reading, sketching, designing, or using a computer, the runtime should expose matching nearby props before that activity is considered true.",
+    "new_motion": "Door, stair, sit, lie, jog, run, dance, and object-use clips are stored as draft attempts first, then promoted after review.",
+    "avatar_builder": "Promoted clips are reusable by new AIs if their rig satisfies rig_contract."
+  }
+}

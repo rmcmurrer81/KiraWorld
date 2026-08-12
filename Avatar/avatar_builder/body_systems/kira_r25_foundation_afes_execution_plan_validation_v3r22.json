@@ -1,0 +1,147 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_execution_plan_validation.v3r22",
+  "attempt_id": "attempt_01",
+  "status": "STATIC_AUTHOR_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "author": "codex_r25_afes_v3r22_static_author",
+  "execution_authority": "NONE",
+  "candidate_executed": false,
+  "predecessor": {
+    "version": "v3r21",
+    "status": "CONSUMED_BOUNDED_SUCCESS_DO_NOT_RERUN",
+    "maximum_previous_invocations": 1,
+    "recorded_previous_invocations": 1,
+    "exit_code": 0,
+    "body_proven": false,
+    "next_candidate_must_be_append_only": true
+  },
+  "v3r21_consumed_success_closure": {
+    "canonical_root_format": "UTF8_LF_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+    "row_count": 19,
+    "canonical_root_bytes": 3622,
+    "canonical_root_sha256": "e7fb0f85513a0cfd068a9cf79fd5ab9f1070842ac78fbef250b082684e82a898",
+    "rows": [
+      ["Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r21.json", 8327, "008ec197cf8f05f1ea26eb42c240d9260e5d03d1a3259b9c27293badc8e7267b"],
+      ["tools/native/kira_r25_afes_python_controller_validation_v3r21.c", 84245, "7e78c480643fb7735b1d6738e565c06d169cbd50410e040c8f1f8c7416a0f6f6"],
+      ["tools/native/kira_r25_afes_python_controller_validation_v3r21_identity_anchor.h", 9825, "99c5a828cbe2970191a69d02c4f5492c4214b5a72404e9009a83181c85e521da"],
+      ["tools/native/kira_r25_afes_python_controller_validation_v3r21.obj", 137184, "b1711756e91f52068abaf43f5d7b0e948f22115e76f333e97fecf2b3f968b4bf"],
+      ["tools/native/kira_r25_afes_python_controller_validation_v3r21.exe", 203776, "d61bc0db5fa8229dfd5922aa3ecc51116908378bb80bcb443739d8c7d96c83fc"],
+      ["Testing/test_kira_r25_foundation_afes_python_controller_validation_v3r21_static.ps1", 24053, "2be6643c7fc8a92a328c675cde7fca19d142a26ce17c4735d135d1a1c3e3e9c5"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md", 3328, "875b36cfe5a3d1a648a6b123800ec25711fe6f3e498e6de69817215d801f0486"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/BUILD_AND_STATIC_TEST_RESULTS.txt", 3144, "f6e498f23971ff19d2622ab5c0e43b0b1946032cefa746225e1a46740fbfc38a"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/STATIC_SEAL_MANIFEST.json", 43485, "6323c0c8708dd871c411b2f8a8c236d28634cc31c94b749f8a79f8295f719f20"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/CHECKPOINT.md", 5445, "c888e083f5bc35c92e149281c774b78aa31761b18554421bcc35651c40d03bc8"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv", 6259, "235e13793ed4112c9dfaa7173125b31712cb84323d46224932f5fda135f69fd5"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256", 65, "5b12a7534239ac1bba7174cc4f2c44cf3ad63a3a8ba555fffe0d260988d34773"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/AUDIT_DECISION.json", 2263, "e02ad4252df2338b05fdbeec5bf2e7d719b45beb103f5a25d10a81d901380355"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/HOSTILE_STATIC_PROBES.txt", 2825, "95e1bfd37cf036ee552f046d3ad49ebd88b6369aad0d1614d69ea007f3c8de4f"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/CHECKPOINT.md", 2954, "9b81bda48a01652cbe17ad83d4e3a1f9c59642d2d3755684071e6eedfcab9d95"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/RUN_EVIDENCE.jsonl", 1312, "76ce1202eb11b0e5d7a9473800179b9f01665cfd235e89558bcfd55aa723d8e4"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_static_preparation/attempt_01/PYTHON_CONTROLLER_VALIDATION_OUTCOME.receipt.bin", 1016, "7c53fc7beef0a350a2c15f8e0dd6c82730c6dea48f56cf24324a78145ecad31a"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/RUN_OUTCOME.json", 2142, "ce26d16412c8e90d752af9f4182368db45241146dedd26b5cdee9ec55de68f6d"],
+      ["RecoverySprint/continuation_20260811/kira_r25_afes_python_controller_validation_v3r21_fresh_static_audit/attempt_01/POST_RUN_CHECKPOINT.md", 3530, "86dbeb13bdd284bda80cedb4e12200151451df90c99db97d4b4832e9218a237b"]
+    ]
+  },
+  "retained_v3r9_v3r10_v3r11_history": {
+    "canonical_root_format": "UTF8_LF_SORTED_PATH_TAB_BYTES_TAB_LOWER_SHA256_LF",
+    "row_count": 27,
+    "canonical_root_bytes": 4593,
+    "canonical_root_sha256": "ac609d3149b18546431377a8ec846d4cd3af098663649c03f41e4d83a0a9ff82",
+    "v3r9": "CONSUMED_EXIT_1_EMPTY_STREAMS_NO_OUTCOME_NO_RETRY",
+    "v3r10": "REJECTED_NO_EXECUTION_AUTHORITY_NEVER_RUN",
+    "v3r11": "INCOMPLETE_NOT_BUILDABLE_NO_EXECUTION_AUTHORITY_FROZEN"
+  },
+  "retained_manifest": {
+    "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+    "bytes": 24975,
+    "sha256": "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96",
+    "line_endings": "CRLF_EXACT",
+    "line_count": 139,
+    "data_row_count": 137,
+    "unique_labels": 137,
+    "unique_paths": 137,
+    "runtime_action": "PARSE_ALL_LOCK_ALL_READ_ALL_RECHECK_ALL_137",
+    "static_seal_action": "ENUMERATE_ALL_137_ROWS_WITH_EXACT_PATH_BYTES_SHA256"
+  },
+  "retained_plan_inputs": {
+    "controller": ["tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py", 50907, "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf"],
+    "execution_contract": ["Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r9.json", 146969, "f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5"],
+    "accepted_v3r9_audit": ["RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/INDEPENDENT_AUDIT.json", 923, "2e21632eb1d394e43af6da8dbdfcdfbd2db4c86b7460fc3def319273e4e4c414"],
+    "python_runtime": ["C:/Python314/python314.dll", 6767440, "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"],
+    "stdlib_zip": ["tools/native/runtime/python314_stdlib_v3r4.zip", 28997479, "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"]
+  },
+  "v3r10_defect_closure": {
+    "crlf_magic_failure": "FIXED_BY_EXACT_CRLF_139_LINE_PARSER_REJECTING_BARE_LF_BARE_CR_MIXED_OR_NUL",
+    "syntax_only_audit_bindings": "FIXED_BY_EXACT_17_LINE_RUNTIME_AUDIT_VALUES_AND_DIFFERENT_AUDITOR",
+    "coherent_contract_audit_command_substitution": "FIXED_BY_NO_ARGUMENTS_FIXED_PATHS_ANCHOR_AND_FIXED_CLOSURE_ROOTS",
+    "observer_unbound_child_reservation_nonce": "REMOVED_NO_CHILD_NO_NONCE_NO_PROCESS_API",
+    "unnecessary_python_loader": "PYTHON_NOW_REQUIRED_ONLY_FOR_THE_PURE_PLAN_CALL_AFTER_ALL_137_LOCKS",
+    "empty_reserved_evidence_limit": "FAILURE_AFTER_RESERVATION_IS_CONSUMED_AND_TERMINALLY_RECORDED_WHERE_WRITABLE"
+  },
+  "controller_binding": {
+    "evaluation": "TWO_INDEPENDENT_RESTRICTED_DEFINITION_EVALUATIONS_FROM_THE_SAME_EXACT_RETAINED_SOURCE",
+    "exact_global_key_count": 57,
+    "restricted_builtin_count": 14,
+    "function_count": 26,
+    "each_function_globals_identity": true,
+    "each_function_defaults": null,
+    "each_function_kwdefaults": null,
+    "each_function_closure": null,
+    "code_binding": "BOTH_LEFT_AND_RIGHT_FUNCTION_IDENTITIES_CODE_IDENTITIES_MARSHAL_V4_CODE_BYTES_DEFAULT_IDENTITIES_DEFAULT_VALUES_KWDEFAULT_IDENTITIES_KWDEFAULT_VALUES_ANNOTATION_IDENTITIES_AND_ANNOTATION_VALUES_CAPTURED_PRE_CALL_AND_EXACT_POST_CALL",
+    "shared_injected_helper_binding": "ALL_14_HARNESS_HELPERS_BIND_EXACT_FUNCTION_AND_CODE_IDENTITIES_MARSHAL_V4_CODE_DEFAULTS_KWDEFAULTS_ANNOTATIONS_CLOSURE_ABSENCE_GLOBALS_IDENTITY_MODULE_AND_QUALNAME_PRE_CALL_AND_POST_CALL",
+    "native_sha_helper_binding": "EXACT_C_FUNCTION_IDENTITY_TYPE_NAME_AND_MODULE_PRE_CALL_AND_POST_CALL",
+    "nonfunction_globals": "EXACT_TYPE_AND_VALUE_OR_FIXED_HELPER_IDENTITY_TWIN_COMPARISON",
+    "native_sha_backend": "BCRYPT_RETAINED_NO_HASHLIB_EXTENSION_DEPENDENCY",
+    "isolated_imports": ["builtins", "json", "marshal", "types"],
+    "isolated_module_origin_binding": {
+      "builtins": "EXACT_BUILT_IN_ORIGIN_FROM_LOCKED_PYTHON_DLL",
+      "marshal": "EXACT_BUILT_IN_ORIGIN_FROM_LOCKED_PYTHON_DLL",
+      "json": "EXACT_LOCKED_STDLIB_ZIP_JSON_INIT_SOURCE_OR_CPYTHON314_BYTECODE_PATH",
+      "types": "EXACT_LOCKED_STDLIB_ZIP_SOURCE_OR_CPYTHON314_BYTECODE_PATH_OR_FROZEN_IN_LOCKED_PYTHON_DLL",
+      "pre_post": "MODULE_SPEC_LOADER_IDENTITIES_AND_NORMALIZED_ORIGINS_EXACTLY_STABLE_ACROSS_CALL"
+    }
+  },
+  "single_plan_call": {
+    "callable": "_build_execution_plan",
+    "call_count": 1,
+    "keyword_argument_count": 6,
+    "retained_dictionary_rows": 137,
+    "controller_sha_helper_calls": 222,
+    "controller_hex_helper_calls": 231,
+    "controller_json_helper_calls": 4,
+    "forbidden_blob_or_canonical_helper_calls": 0,
+    "native_sha_total_calls_including_code_root": 223,
+    "returned_plan_exact_key_count": 13,
+    "returned_plan_allowed_recursive_types": ["dict_with_string_keys", "list", "str", "int", "bool", "null"],
+    "returned_plan_forbidden": ["callable", "module", "capsule", "handle", "bytes", "tuple", "custom_object"],
+    "returned_plan_destroyed_before_python_finalize": true
+  },
+  "fresh_audit_grammar": {
+    "magic": "KIRA_R25_AFES_EXECUTION_PLAN_VALIDATION_AUDIT_V3R22\\t1",
+    "line_count": 18,
+    "field_line_count": 17,
+    "line_endings": "LF_ONLY",
+    "embedded_nul_rejected": true,
+    "duplicate_or_reordered_fields_rejected": true,
+    "auditor_pattern": "[a-z0-9_]{1,96}",
+    "auditor_must_differ_from_author": true,
+    "required_decision": "ACCEPTED_FOR_ONE_BOUNDED_PURE_BUILD_EXECUTION_PLAN_VALIDATION_V3R22_ONLY"
+  },
+  "durable_boundary": {
+    "evidence": "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "receipt": "RecoverySprint/continuation_20260811/kira_r25_afes_execution_plan_validation_v3r22_static_preparation/attempt_01/EXECUTION_PLAN_VALIDATION_OUTCOME.receipt.bin",
+    "creation": "CREATE_NEW_WRITE_THROUGH",
+    "success_or_failure_consumes_future_authority": true,
+    "maximum_future_invocations_after_different_acceptance": 1
+  },
+  "stop_before": ["bootstrap", "broker", "process", "AFES", "Blender", "body", "save", "render", "export"],
+  "source_forbidden_apis": ["CreateProcess", "ShellExecute", "WinExec", "system", "popen"],
+  "truth_boundary": [
+    "STATIC_PREPARATION_IS_NOT_EXECUTION",
+    "V3R22_HAS_NOT_BEEN_INVOKED",
+    "V3R21_MUST_NOT_BE_RERUN",
+    "NO_AFES_OR_BLENDER_OPERATION",
+    "NO_BODY_OR_ANATOMY_RESULT",
+    "NO_SAVE_RENDER_EXPORT_ACTIVATION_OR_OWNER_ACCEPTANCE",
+    "NO_PRODUCTION_AUTHORITY"
+  ]
+}

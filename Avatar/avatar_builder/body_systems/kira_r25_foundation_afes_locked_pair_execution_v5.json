@@ -1,0 +1,244 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_locked_pair_execution.v5",
+  "attempt_id": "attempt_05",
+  "status": "PENDING_FRESH_INDEPENDENT_AUDIT_READ_ONLY_DIAGNOSTIC_PAIR_ONLY",
+  "scope": {
+    "body_work_only": true,
+    "read_only_blender_diagnostic": true,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "render_allowed": false,
+    "candidate_creation_allowed": false,
+    "body_authoring_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "export_allowed": false,
+    "publication_allowed": false
+  },
+  "authorization_basis": {
+    "owner_requested_body_progress": true,
+    "owner_authorized_blender_problem_repair": true,
+    "bounded_operation": "extract_existing_foundation_afes_and_two_transition_rings_without_mutation",
+    "does_not_authorize_candidate_or_runtime_change": true,
+    "fresh_independent_attempt05_audit_required_before_execution": true
+  },
+  "execution_sources": {
+    "external_bootstrap": {
+      "path": "tools/launch_kira_r25_foundation_afes_locked_pair_v5.py",
+      "bytes": 34865,
+      "sha256": "0ab300425d6f850e77f8074064028a8e6ec9f2fa5247154bc3b9fd7f86d15c87"
+    },
+    "private_controller": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_v5.py",
+      "bytes": 34800,
+      "sha256": "e3018488f4de34c36b36a68c806056e68d681ed915a0e2fb6e64c23879831db8"
+    },
+    "child_wrapper": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v5.py",
+      "bytes": 11906,
+      "sha256": "fb35b3469b7aeaacc47d3f914b9bf221bb4bd80ebd1d25d29818769e3069f90e"
+    },
+    "static_hostile_test": {
+      "path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_attempt05.py",
+      "bytes": 21602,
+      "sha256": "4b5ff5f98031738028d7f8f2f3bcdef5275e0f408652196d71e815ebcae15b03"
+    },
+    "blender_executable": {
+      "path": "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe",
+      "bytes": 108687824,
+      "sha256": "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5"
+    },
+    "attempt04_controller_core": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_v4.py",
+      "bytes": 39032,
+      "sha256": "c5863757a121b892b38a11a0ffcafac8c08ea59b4434c3b4b24dc670628cc390"
+    },
+    "attempt04_child_wrapper_core": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v4.py",
+      "bytes": 12823,
+      "sha256": "526217e23b7445c70804211b9299ba420d5c5b62052014e0f2af67c84626093c"
+    }
+  },
+  "inherited_attempt04_contract": {
+    "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v4.json",
+    "bytes": 18707,
+    "sha256": "0b676c632dc907643fb33d25a15f55dd6bd3c83468021ebf8f7ed47563b473a1"
+  },
+  "recursive_closure_contract": {
+    "algorithm": "exact_inherited_attempt04_v5_v4_v3_v2_table_walk",
+    "unique_project_file_count": 35,
+    "canonical_closure_sha256": "cde7ed10ab51b5ed57405b47aba0d986aff96e529fa637cc75dd3f4a7ad7b591",
+    "includes_all_five_attempt03_audit_omissions": true,
+    "verified_under_complete_parent_lock_set": true
+  },
+  "process_contract": {
+    "factory_startup": true,
+    "background": true,
+    "autoexec_disabled": true,
+    "python_exit_code": 1,
+    "stdin": "DEVNULL",
+    "shell": false,
+    "close_fds": true,
+    "least_handle_inheritance": true,
+    "result_handle_must_be_win32_pipe": true,
+    "concurrent_bounded_pipe_drain": true,
+    "exactly_one_frame_and_eof": true,
+    "maximum_frame_bytes": 1048628,
+    "maximum_stdout_bytes": 4194304,
+    "maximum_stderr_bytes": 4194304,
+    "process_timeout_seconds": 180,
+    "windows_job_kill_on_close": true,
+    "create_suspended_assign_job_start_drains_then_resume": true,
+    "exception_safe_post_creation_finally_cleanup": true,
+    "fresh_pair_64_hex_nonce": true,
+    "fresh_distinct_run_64_hex_nonce_per_run": true,
+    "environment_passthrough_if_present": [
+      "SYSTEMROOT",
+      "WINDIR",
+      "USERNAME",
+      "USERPROFILE",
+      "HOMEDRIVE",
+      "HOMEPATH",
+      "LOCALAPPDATA",
+      "APPDATA"
+    ],
+    "forced_environment": {
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0"
+    },
+    "controlled_runtime_root_template": "RecoverySprint/runtime_cache/r25_blender_v5/attempt_05/pair_<PAIR_SHA256_PREFIX_32>/run_<ONE_OR_TWO>_<PAIR_RUN_SHA256_PREFIX_32>",
+    "controlled_runtime_directories": [
+      "temp",
+      "user_config",
+      "user_scripts",
+      "user_datafiles"
+    ],
+    "runtime_root_and_children_created_exclusively": true,
+    "runtime_root_and_children_verified_empty_before_child": true,
+    "runtime_reparse_points_rejected": true,
+    "user_config_scripts_datafiles_held_deny_write_delete_and_reverified_empty": true,
+    "temp_is_fresh_nonce_scoped_and_never_imported_as_project_source": true,
+    "runtime_cache_is_not_automatically_deleted": true,
+    "path_rule": "exact_blender_directory_then_system32_then_windows_directory",
+    "working_directory": ".",
+    "exact_command_template": [
+      "<BLENDER_EXECUTABLE>",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "<FOUNDATION_BLEND>",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "<CHILD_WRAPPER>",
+      "--",
+      "--result-handle",
+      "<INHERITED_WIN32_PIPE_HANDLE>",
+      "--execution-contract-sha256",
+      "<EXPECTED_CONTRACT_SHA256>",
+      "--pair-session-nonce",
+      "<FRESH_PAIR_64_HEX_NONCE>",
+      "--run-nonce",
+      "<FRESH_RUN_64_HEX_NONCE>",
+      "--run-number",
+      "<ONE_OR_TWO>"
+    ]
+  },
+  "audit_gate": {
+    "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_05/INDEPENDENT_AUDIT.json",
+    "sha256_supplied_out_of_band": true,
+    "document_schema": "kira.avatar.r25.foundation_afes_locked_pair_independent_audit.v5",
+    "authoritative_decision_code": "ACCEPTED_FOR_ONE_BOUNDED_READ_ONLY_PAIR_ONLY",
+    "exact_key_and_value_schema_required": true,
+    "extra_or_contradictory_decision_fields_rejected": true,
+    "quoted_substrings_are_not_authority": true,
+    "pre_audit_absence_is_valid_static_preparation_state": true,
+    "post_audit_exact_hash_bound_acceptance_is_valid_verification_state": true
+  },
+  "required_fresh_run_count": 2,
+  "pair_acceptance": {
+    "distinct_pair_and_run_nonces": true,
+    "exact_authenticated_outer_and_inner_payload_schema": true,
+    "exact_recursive_nested_schema_and_types": true,
+    "exact_foundation_mesh_counts_and_identity_bound_in_parent": true,
+    "exact_foundation_group_set_counts_and_semantic_hashes_bound_in_parent": true,
+    "exact_afes_union_counts_and_semantic_hashes_bound_in_parent": true,
+    "exact_bounds_codec_shape_types_and_expected_tolerance_bound_in_parent": true,
+    "all_compact_array_and_transition_invariants_validated_in_parent": true,
+    "exact_full_normalized_topology_digest_match": true,
+    "complete_recursive_child_project_inputs_locked_before_verification": true,
+    "all_declared_inputs_locked_through_after_snapshot": true,
+    "all_declared_inputs_unchanged_after_pair": true,
+    "each_raw_frame_and_log_created_exclusively": true,
+    "fixed_root_second_use_is_rejected": true,
+    "post_outcome_reservation_failures_attempt_canonical_failure_receipt": true,
+    "abrupt_process_or_storage_failure_can_prevent_failure_receipt": true,
+    "pre_reservation_failure_has_no_receipt": true,
+    "fresh_independent_audit_required_before_execution": true
+  },
+  "append_only_output_root": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution/attempt_05",
+  "preserved_rejected_attempt04": {
+    "contract": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v4.json",
+      "bytes": 18707,
+      "sha256": "0b676c632dc907643fb33d25a15f55dd6bd3c83468021ebf8f7ed47563b473a1"
+    },
+    "external_bootstrap": {
+      "path": "tools/launch_kira_r25_foundation_afes_locked_pair_v4.py",
+      "bytes": 33199,
+      "sha256": "7a734b715eef1cb8d1fdee949fb3b25bb28a23d1f2d53e600cdf0d29da2fba6d"
+    },
+    "private_controller": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_v4.py",
+      "bytes": 39032,
+      "sha256": "c5863757a121b892b38a11a0ffcafac8c08ea59b4434c3b4b24dc670628cc390"
+    },
+    "child_wrapper": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v4.py",
+      "bytes": 12823,
+      "sha256": "526217e23b7445c70804211b9299ba420d5c5b62052014e0f2af67c84626093c"
+    },
+    "static_hostile_test": {
+      "path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_attempt04.py",
+      "bytes": 21975,
+      "sha256": "124477213121ba1177c416cd964d9c332e630433fc69ced24eec0b3409454359"
+    },
+    "checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_04/CHECKPOINT.md",
+      "bytes": 8918,
+      "sha256": "e81dc8bf3d49c95de4f6d4efe369fb7bd103710a0533ac33f326827ff68c1649"
+    },
+    "rejection_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_04/INDEPENDENT_AUDIT.md",
+      "bytes": 12003,
+      "sha256": "6da1ad25c9aab51fd1803fda8bb2c692184ee92737081d931fb23144435e0234"
+    }
+  },
+  "runtime_dependency_truth": {
+    "inherited_attempt04_child_closure_count": 35,
+    "complete_recursive_project_file_reads_of_bound_v5_extractor": true,
+    "blender_executable_locked_and_hashed": true,
+    "attempt04_controller_and_child_adapter_cores_locked_and_hashed": true,
+    "controller_compiled_from_retained_locked_bytes": true,
+    "structured_audit_parsed_before_private_controller_compile": true,
+    "external_bootstrap_already_executing_bytes_cannot_self_prove": true,
+    "external_bootstrap_is_explicit_independent_audit_trust_root": true,
+    "windows_system_dlls_and_blender_bundled_dynamic_runtime_files_individually_sealed": false,
+    "windows_system_dlls_and_blender_bundled_dynamic_runtime_files_are_platform_dependencies": true,
+    "network_dependency_expected": false,
+    "model_dependency_expected": false,
+    "unlisted_project_file_read_authorized": false
+  },
+  "truth_boundary": {
+    "pair_pass_would_only_satisfy_foundation_afes_plus_transition_vertex_set_audit": true,
+    "semantic_cage_still_required": true,
+    "positive_jacobian_and_intersection_fixtures_still_required": true,
+    "body_authoring_not_granted": true,
+    "candidate_not_created": true,
+    "owner_review_not_implied": true,
+    "runtime_authority_not_implied": true,
+    "static_package_is_not_execution_authority_until_fresh_independent_audit": true,
+    "attempts_01_through_04_and_all_rejection_audits_preserved": true
+  }
+}

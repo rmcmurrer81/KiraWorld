@@ -1,0 +1,166 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_read_only_extraction.v3",
+  "attempt_id": "attempt_03",
+  "status": "STATIC_PREPARATION_ONLY_EXECUTION_NOT_AUTHORIZED",
+  "scope": {
+    "read_only": true,
+    "private": true,
+    "inactive": true,
+    "candidate_creation_allowed": false,
+    "blend_edit_allowed": false,
+    "blend_save_allowed": false,
+    "render_allowed": false,
+    "export_allowed": false,
+    "runtime_activation_allowed": false,
+    "path_output_allowed": false,
+    "result_transport": "one_canonical_receipt_frame_to_caller_inherited_win32_pipe_only"
+  },
+  "attempt_02_baseline_config": {
+    "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v2.json",
+    "bytes": 11046,
+    "sha256": "b4c992012f3f621d4bef5252c7cb7bf26d6d524b3859cc2685487ba10589f7dc"
+  },
+  "bindings": {
+    "attempt_01_topology_core_execution_dependency": {
+      "path": "tools/kira_r25_afes_topology_core.py",
+      "bytes": 10005,
+      "sha256": "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce"
+    },
+    "attempt_02_hardening_core_execution_dependency": {
+      "path": "tools/kira_r25_afes_topology_core_v2.py",
+      "bytes": 28732,
+      "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"
+    },
+    "attempt_03_topology_core": {
+      "path": "tools/kira_r25_afes_topology_core_v3.py",
+      "bytes": 8732,
+      "sha256": "c3c5f6f21a0b133fae6ef0439932193a9d0e922001a97026fd022ff0a682dc8e"
+    },
+    "attempt_03_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v3.py",
+      "bytes": 23790,
+      "sha256": "861344dce0bb203400ef50875124127fe1ed21ea79d036c6eee73b1c7c4ee366"
+    },
+    "canonical_receipt_helper": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"
+    }
+  },
+  "execution_module_contract": {
+    "verification_must_precede_analysis": true,
+    "module_object_required": true,
+    "exact_module_name_required": true,
+    "resolved_dunder_file_must_equal_bound_path": true,
+    "import_spec_origin_must_equal_bound_path": true,
+    "file_backed_loader_filename_must_equal_bound_path": true,
+    "bound_file_bytes_and_sha256_must_match": true,
+    "required_symbol_defining_module_must_match": true,
+    "attempt_03_core_must_hold_same_verified_attempt_01_module_object": true,
+    "attempt_03_core_must_hold_same_verified_attempt_02_module_object": true,
+    "fake_or_in_memory_sys_modules_entry_must_fail": true,
+    "attempt_01_required_symbols": [
+      "AfesTopologyError",
+      "analyze_afes_topology",
+      "canonical_index_sha256",
+      "canonical_json_sha256",
+      "normalize_edges",
+      "normalize_faces"
+    ]
+  },
+  "inherited_attempt_02_hardening": {
+    "exact_attempt_02_config_bound": true,
+    "all_attempt_02_input_bindings_reverified": true,
+    "all_attempt_02_attempt_01_preservation_rows_reverified": true,
+    "canonical_receipt_contract_inherited_exactly": true,
+    "binary_array_contract_inherited_exactly": true,
+    "integer_nanometer_quantization_inherited_exactly": true,
+    "foundation_and_r23_contracts_inherited_exactly": true,
+    "whole_topology_and_structure_contract_inherited_exactly": true,
+    "file_type_pipe_guard_inherited_exactly": true,
+    "two_fresh_matching_run_requirement_inherited_exactly": true
+  },
+  "attempt_01_preservation": {
+    "config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v1.json",
+      "bytes": 6989,
+      "sha256": "3f1f57d95a28287f024cd6806af9180c623d134b68249a547cb81475f8fe5fdc"
+    },
+    "topology_core": {
+      "path": "tools/kira_r25_afes_topology_core.py",
+      "bytes": 10005,
+      "sha256": "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce"
+    },
+    "extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings.py",
+      "bytes": 18513,
+      "sha256": "706a1035354bb133a8cc2a2c0dbeff414f6f1172bbedaaf7dafbf70e14c57bc2"
+    },
+    "tests": {
+      "path": "Testing/test_kira_r25_afes_read_only_extraction_preparation.py",
+      "bytes": 7352,
+      "sha256": "6132c8fc82f60f924f81a4124358369ee2af6e51924e5b59aaa8d0b5f6588eb5"
+    },
+    "checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/CHECKPOINT.md",
+      "bytes": 4673,
+      "sha256": "5c96a9c5da3303733f431344223f64736a7148e2361d6d3e69d34cf31015b84a"
+    },
+    "independent_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md",
+      "bytes": 3834,
+      "sha256": "aa096db67515a2a6330bd3809d1c30e71d9a8afec4fed7a9e745b87a973480b3"
+    }
+  },
+  "attempt_02_preservation": {
+    "config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v2.json",
+      "bytes": 11046,
+      "sha256": "b4c992012f3f621d4bef5252c7cb7bf26d6d524b3859cc2685487ba10589f7dc"
+    },
+    "topology_core": {
+      "path": "tools/kira_r25_afes_topology_core_v2.py",
+      "bytes": 28732,
+      "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"
+    },
+    "extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v2.py",
+      "bytes": 20082,
+      "sha256": "508900309d7847e41997da72d2c85ee28317c9439e52c5f7311b82aac4553fc5"
+    },
+    "tests": {
+      "path": "Testing/test_kira_r25_afes_read_only_extraction_attempt02.py",
+      "bytes": 13272,
+      "sha256": "ab1753305a0bc357e94fccf36160bc893197be23d69675f26651e42784efc970"
+    },
+    "checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/CHECKPOINT.md",
+      "bytes": 8284,
+      "sha256": "df91b0a2b414c10b16bc6af86d02f20bda676b8e89d1f236e0573bd0fd18a670"
+    },
+    "independent_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT.md",
+      "bytes": 3969,
+      "sha256": "504be87d2ae20cdc30a4dd47d043cdde4c5de1e1568cf2e28676b9e84b93e952"
+    }
+  },
+  "topology_sealing_contract": {
+    "prior_sealed_expected_full_normalized_topology_sha256": null,
+    "required_fresh_locked_matching_extractions": 2,
+    "one_extraction_is_acceptance": false,
+    "invented_expected_digest_forbidden": true
+  },
+  "truth_boundary": {
+    "static_preparation_is_not_execution": true,
+    "attempt_01_remains_rejected_and_preserved": true,
+    "attempt_02_remains_rejected_and_preserved": true,
+    "successful_extraction_would_not_create_or_approve_a_body": true,
+    "controller_or_pipe_creation_implemented": false,
+    "child_process_authentication_implemented": false,
+    "replay_protection_implemented": false,
+    "parent_binding_of_this_config_hash_implemented": false,
+    "two_fresh_locked_matching_extractions_still_required": true,
+    "blender_execution_authorized": false,
+    "body_authoring_authorized": false
+  }
+}

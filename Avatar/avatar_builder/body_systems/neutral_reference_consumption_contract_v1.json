@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "contract_id": "avatar_builder_neutral_reference_consumption_v1",
+  "status": "STATIC_REFERENCE_ROLE_BINDING_UNREVIEWED_NO_AUTHORING_AUTHORITY",
+  "reference_manifest": {
+    "path": "Avatar/library/neutral_generated_reference_charts_v1/REFERENCE_ASSET_MANIFEST.json",
+    "bytes": 13710,
+    "sha256": "61a9912eade5d26766509318258640f532c98c9a370543f022bbb8f97f215ad2"
+  },
+  "authority": {
+    "generated_chart_is_medical_authority": false,
+    "generated_chart_is_identity_or_likeness_evidence": false,
+    "medical_diagram_is_identity_or_likeness_evidence": false,
+    "appearance_may_classify_maturity": false,
+    "reference_selection_may_activate_or_assign_a_body": false,
+    "reference_selection_proves_mesh_or_body_function": false,
+    "owner_visual_review_required": true,
+    "classification_must_come_from_external_durable_person_profile": true
+  },
+  "roles": {
+    "skin_and_regional_material_direction": [
+      "skin_regional_color_material_atlas_v1.png"
+    ],
+    "eye_eyebrow_lip_shape_direction": [
+      "eye_eyebrow_lip_morphology_atlas_v1.png"
+    ],
+    "detachable_hair_private_master_direction": [
+      "hair_style_and_physics_atlas_v1.png"
+    ],
+    "torso_chest_silhouette_direction_only": [
+      "torso_chest_silhouette_atlas_v1.png"
+    ],
+    "hands_feet_nails_and_contact_direction": [
+      "hands_feet_nails_contact_atlas_v1.png"
+    ],
+    "adult_female_head_shape_direction": [
+      "adult_female_head_ear_nose_jaw_morphology_atlas_v1.png"
+    ],
+    "adult_male_head_shape_direction": [
+      "adult_male_head_ear_nose_jaw_morphology_atlas_v1.png"
+    ],
+    "pose_deformation_and_contact_review_direction": [
+      "human_pose_deformation_contact_atlas_v1.png"
+    ],
+    "adult_female_full_body_proportion_direction": [
+      "adult_female_full_body_proportion_silhouette_atlas_v1.png"
+    ],
+    "adult_male_full_body_proportion_direction": [
+      "adult_male_full_body_proportion_silhouette_atlas_v1.png"
+    ],
+    "adult_female_urinary_and_lower_abdomen_medical_structure": [
+      "niddk_female_urinary_tract_front_labeled.jpg",
+      "niddk_female_lower_abdomen_side_labeled.jpg"
+    ],
+    "adult_female_external_medical_structure": [
+      "wikimedia_female_external_anatomy_cc_by_sa_4.svg"
+    ],
+    "adult_male_urinary_and_reproductive_medical_structure": [
+      "niddk_male_reproductive_tract_side_labeled.jpg",
+      "niddk_male_urinary_tract_front_labeled.jpg"
+    ]
+  },
+  "selection_rules": {
+    "generated_role_assets_are_selectors_only": true,
+    "medical_role_assets_are_general_structure_only": true,
+    "adult_female_roles_require_external_confirmed_adult_female_lane": true,
+    "adult_male_roles_require_external_confirmed_adult_male_lane": true,
+    "nonadult_or_unresolved_lane_must_remain_doll_safe_non_anatomical": true,
+    "hair_never_regenerates_face_body_skin_rig_or_weights": true,
+    "hair_runtime_instantiation_on_current_32gb_system_allowed": false,
+    "old_photo_deletion_authorized": false,
+    "automatic_blender_execution_authorized": false,
+    "automatic_body_acceptance_authorized": false
+  },
+  "required_downstream_evidence": [
+    "exact_external_person_profile_and_classification_binding",
+    "exact_selected_asset_paths_and_sha256_values",
+    "real_mesh_or_material change evidence for each selected role",
+    "front_side_rear_and_required_pose renders",
+    "intersection_deformation_contact_and_movement results",
+    "owner_visual_decision",
+    "inactive_private_unassigned_unpublished_state"
+  ],
+  "known_gaps": [
+    "no_calibrated_color_or_shader_measurements",
+    "no_medically_calibrated_soft_tissue_or_joint_deformation atlas",
+    "no_complete_external_chest_variation reference",
+    "no_complete_male_external_anatomy or pelvic_floor image set",
+    "no_proof_that_each_old_reference_photo_has_a_consumed_replacement",
+    "no_body_or_function_acceptance"
+  ]
+}

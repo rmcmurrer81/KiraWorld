@@ -1,0 +1,29 @@
+{
+  "schema": "kira.voice.persistent_v2_first_waveform_offline_replay.v1",
+  "recorded_utc": "2026-08-12T01:38:49.962Z",
+  "source": "Data/runtime/kira_world_life_loop_log.jsonl",
+  "source_selection": "latest_seven_blackwell_gpu_persistent_candidate_v2_voice_output_events",
+  "live_route_invoked": false,
+  "timing_claim": "NONE_OFFLINE_CHUNK_SHAPE_ONLY",
+  "parameters": {
+    "full_waveform_max_characters": 220,
+    "first_waveform_max_characters": 72,
+    "refine_single_chunk": true
+  },
+  "summary": {
+    "events": 7,
+    "changed": 3,
+    "unchanged": 4,
+    "exact_spoken_word_preservation": true
+  },
+  "events": [
+    {"at":"2026-08-10T23:51:53.410534+00:00","public_text_characters":123,"before_chunk_characters":[123],"after_chunk_characters":[65,57],"changed":true},
+    {"at":"2026-08-10T23:52:50.513801+00:00","public_text_characters":166,"before_chunk_characters":[166],"after_chunk_characters":[71,94],"changed":true},
+    {"at":"2026-08-10T23:53:38.643366+00:00","public_text_characters":132,"before_chunk_characters":[132],"after_chunk_characters":[67,64],"changed":true},
+    {"at":"2026-08-10T23:55:07.219210+00:00","public_text_characters":242,"before_chunk_characters":[69,172],"after_chunk_characters":[69,172],"changed":false},
+    {"at":"2026-08-10T23:56:32.582522+00:00","public_text_characters":263,"before_chunk_characters":[65,197],"after_chunk_characters":[65,197],"changed":false},
+    {"at":"2026-08-10T23:58:58.977124+00:00","public_text_characters":360,"before_chunk_characters":[66,71,159,61],"after_chunk_characters":[66,71,159,61],"changed":false},
+    {"at":"2026-08-11T00:00:49.957909+00:00","public_text_characters":304,"before_chunk_characters":[63,99,140],"after_chunk_characters":[63,99,140],"changed":false}
+  ],
+  "claim_boundary": "This replay proves deterministic chunk-shape changes only. It does not prove synthesis speed, playback API timing, device first sample, owner-heard onset, or subjective quality."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-12T08:56:42.776256+00:00",
+  "status": "active",
+  "strict_rule": "Reference character models may be used only as measurement/construction references. They must not be copied into an AI/avatar body.",
+  "disqualifying_failure": "If a builder pass imports/copies a reference character model as the preview body, that body is unusable and disqualified.",
+  "required_method": [
+    "choose the correct approved base body first",
+    "derive proportions, eye color, hair silhouette, and clothing notes from references",
+    "generate or fit new avatar-specific meshes on the base body",
+    "keep adult and non-adult body policies separate",
+    "record every exception explicitly"
+  ],
+  "allowed_exception": {
+    "type": "accessory_copy",
+    "rule": "Small props/accessories can be copied when Robert explicitly asks for the exact item, but only into an accessory library, not an avatar body.",
+    "current_exception": "Marinette backpack and purse copied from the Marinette reference model for her future home/accessory inventory."
+  }
+}

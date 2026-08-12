@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "registry_id": "kira_model_upgrade_candidates_v1",
+  "as_of_date": "2026-07-31",
+  "purpose": "A reversible, no-download evaluation registry. Presence here is not approval to install, activate, publish, or replace a current default.",
+  "detected_host": {
+    "gpu": "NVIDIA GeForce RTX 5060 Ti",
+    "vram_gib": 16,
+    "system_ram_gib": 32,
+    "operating_system": "Windows",
+    "root_python_observed": "3.14.4",
+    "ollama_observed": "0.32.5",
+    "scheduling_policy": "one_heavy_gpu_workload_at_a_time"
+  },
+  "invariants": {
+    "downloads_allowed_by_registry": false,
+    "automatic_pull_allowed": false,
+    "changes_current_defaults": false,
+    "automatic_memory_or_canon_writes": false,
+    "automatic_adoption": false,
+    "benchmark_endpoint_scope": "loopback_only",
+    "benchmark_output": "stdout_json_only",
+    "owner_review_required": true
+  },
+  "global_adoption_gates": [
+    "Record an exact model revision or digest, artifact provenance, license, and rollback target.",
+    "Use a fresh workload-specific sidecar environment when the candidate is not served by the existing Ollama runtime.",
+    "Run only after chat, World, TTS, and other heavy GPU work are stopped; verify free VRAM before and after.",
+    "Pass a short smoke test, a one-hour soak, and a four-hour supervised soak without resource leakage or state corruption.",
+    "Compare against the rollback baseline on the same private, authorized fixtures.",
+    "Do not promote benchmark output into autobiographical memory, canon, identity evidence, or source-media truth.",
+    "Require explicit owner review before changing any default or enabling an inactive capability."
+  ],
+  "ollama_fixture_suite": {
+    "suite_id": "kira_local_model_contracts_v1",
+    "num_predict": 128,
+    "fixture_ids": [
+      "json_contract",
+      "tool_contract",
+      "persona_contract",
+      "memory_honesty_contract"
+    ],
+    "interpretation": "Mechanical fixture success is screening evidence only, not an adoption decision."
+  },
+  "ollama_request_profile_policy": {
+    "allowed_candidate_request_fields": [
+      "think"
+    ],
+    "placement": "top_level_chat_request_not_options",
+    "official_api_url": "https://docs.ollama.com/api/chat",
+    "default_when_candidate_has_no_profile": "omit_all_candidate_request_fields",
+    "reasoning_trace_policy": "Record counts and character lengths when returned, but do not copy hidden thinking text into the benchmark report."
+  },
+  "candidates": [
+    {
+      "candidate_id": "llama31_8b_rollback",
+      "workload": "llm_text",
+      "role": "dormant_installed_rollback",
+      "disposition": "preserve_installed_exclude_from_current_execution",
+      "reversible_against": null,
+      "provenance": {
+        "publisher": "Meta",
+        "official_model_url": "https://github.com/meta-llama/llama-models/tree/main/models/llama3_1",
+        "serving_catalog_url": "https://ollama.com/library/llama3.1",
+        "license": {
+          "id": "Llama 3.1 Community License",
+          "url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/LICENSE",
+          "constraints": "Custom community license and acceptable-use policy; review before redistribution or external deployment."
+        }
+      },
+      "runtime": {
+        "isolation": "existing_ollama_service",
+        "hardware_fit": "observed_current_baseline",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "ollama",
+          "request_model": "llama3.1:8b",
+          "accepted_installed_names": [
+            "llama3.1:8b"
+          ],
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Preserve the installed artifact unchanged, but never select, test, probe, or use it as an automatic fallback under the current owner decision.",
+        "Any future activation requires a new explicit owner decision after Qwen 3.5 is found completely unusable."
+      ]
+    },
+    {
+      "candidate_id": "qwen35_9b_q4_first",
+      "workload": "llm_text_image",
+      "role": "primary_challenger",
+      "disposition": "try_first_if_already_installed",
+      "reversible_against": "llama31_8b_rollback",
+      "provenance": {
+        "publisher": "Qwen",
+        "official_model_url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+        "serving_catalog_url": "https://ollama.com/library/qwen3.5/tags",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://huggingface.co/Qwen/Qwen3.5-9B/blob/main/LICENSE",
+          "constraints": "Preserve license and notices; independently review model-card usage guidance."
+        }
+      },
+      "runtime": {
+        "isolation": "existing_ollama_service",
+        "quantization": "Q4_K_M",
+        "published_artifact_size_gb": 6.6,
+        "hardware_fit": "plausible_unverified; begin at 4096 to 8192 context because artifact size excludes KV cache and runtime overhead",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "ollama",
+          "request_model": "qwen3.5:9b-q4_K_M",
+          "accepted_installed_names": [
+            "qwen3.5:9b-q4_K_M",
+            "qwen3.5:9b"
+          ],
+          "default_request_profile": "operational",
+          "request_profiles": {
+            "operational": {
+              "purpose": "Kira operational, persona, JSON, tool, and memory-honesty contracts need visible answers within the fixed output budget.",
+              "request_fields": {
+                "think": false
+              }
+            },
+            "reasoning": {
+              "purpose": "Explicit opt-in for a future reasoning-mode benchmark; not the operational Kira contract default.",
+              "request_fields": {
+                "think": true
+              },
+              "interpretation": "Keep the same fixed fixture budget. A length stop or empty visible answer is recorded as evidence, never worked around by weakening the contract."
+            }
+          },
+          "default_probe": true
+        }
+      },
+      "adoption_gates": [
+        "Verify the observed Ollama version can run the installed artifact without changing the server or pulling anything.",
+        "Use the operational request profile with top-level think=false for Kira contract screening; reasoning mode must remain an explicit separate run.",
+        "Pass Kira identity, persona, tool/JSON, memory-honesty, privacy-boundary, and no-invented-capabilities checks.",
+        "Measure 4K, 8K, and 16K context separately; do not infer that the advertised maximum context is practical here.",
+        "For images or sampled video frames, measure grounding errors and never auto-promote descriptions to memory or canon."
+      ]
+    },
+    {
+      "candidate_id": "qwen3vl_4b_q4_headroom",
+      "workload": "vision_language",
+      "role": "lower_headroom_challenger",
+      "disposition": "benchmark_if_already_installed",
+      "reversible_against": "llama31_8b_rollback",
+      "provenance": {
+        "publisher": "Qwen",
+        "official_model_url": "https://github.com/QwenLM/Qwen3-VL",
+        "serving_catalog_url": "https://ollama.com/library/qwen3-vl/tags",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://github.com/QwenLM/Qwen3-VL/blob/main/LICENSE",
+          "constraints": "Preserve license and notices; independently review the selected checkpoint model card."
+        }
+      },
+      "runtime": {
+        "isolation": "existing_ollama_service",
+        "quantization": "Q4_K_M",
+        "published_artifact_size_gb": 3.3,
+        "hardware_fit": "plausible_unverified_lower_vram_option",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "ollama",
+          "request_model": "qwen3-vl:4b",
+          "accepted_installed_names": [
+            "qwen3-vl:4b",
+            "qwen3-vl:4b-instruct-q4_K_M"
+          ],
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Demonstrate a material VRAM or latency advantage over Qwen3.5-9B on the same owned image and sampled-video fixtures.",
+        "Measure OCR exactness, temporal-order mistakes, spatial grounding, and hallucinations on absent text."
+      ]
+    },
+    {
+      "candidate_id": "gpt_oss_20b_reasoning_challenger",
+      "workload": "llm_text_reasoning",
+      "role": "controlled_challenger",
+      "disposition": "benchmark_only_if_already_installed",
+      "reversible_against": "llama31_8b_rollback",
+      "provenance": {
+        "publisher": "OpenAI",
+        "official_model_url": "https://github.com/openai/gpt-oss",
+        "serving_guide_url": "https://github.com/openai/openai-cookbook/blob/main/articles/gpt-oss/run-locally-ollama.md",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://github.com/openai/gpt-oss/blob/main/LICENSE",
+          "constraints": "OpenAI usage policy also applies; the Harmony response format must be integrated correctly."
+        }
+      },
+      "runtime": {
+        "isolation": "existing_ollama_service",
+        "quantization": "MXFP4",
+        "hardware_fit": "edge_of_16gb_memory_guidance; CPU offload and no concurrent GPU workload expected",
+        "concurrency": "strictly_exclusive_gpu_lane",
+        "benchmark": {
+          "driver": "ollama",
+          "request_model": "gpt-oss:20b",
+          "accepted_installed_names": [
+            "gpt-oss:20b"
+          ],
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Verify Harmony roles, tool calls, and visible-answer extraction before judging response quality.",
+        "Reject if it cannot fully unload, causes sustained CPU offload, or leaves insufficient headroom for safe operation."
+      ]
+    },
+    {
+      "candidate_id": "chatterbox_017_voice_rollback",
+      "workload": "tts_voice_clone",
+      "role": "rollback_baseline",
+      "disposition": "keep_available_unchanged",
+      "reversible_against": null,
+      "provenance": {
+        "publisher": "Resemble AI",
+        "official_model_url": "https://github.com/resemble-ai/chatterbox",
+        "installed_package_observed": "chatterbox-tts==0.1.7",
+        "license": {
+          "id": "MIT",
+          "url": "https://github.com/resemble-ai/chatterbox/blob/master/LICENSE",
+          "constraints": "Generated audio contains the project's PerTh watermark; preserve provenance and use authorized references only."
+        }
+      },
+      "runtime": {
+        "isolation": "existing_voice_runtime_only",
+        "hardware_fit": "observed_but_previous_combined_workloads_have_exhausted_vram",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Retain the exact current package and voice references as rollback evidence.",
+        "Do not use voice output as identity authorization or proof of an exact likeness."
+      ]
+    },
+    {
+      "candidate_id": "chatterbox_turbo_live_english",
+      "workload": "tts_voice_clone",
+      "role": "primary_challenger",
+      "disposition": "isolated_benchmark_first",
+      "reversible_against": "chatterbox_017_voice_rollback",
+      "provenance": {
+        "publisher": "Resemble AI",
+        "official_model_url": "https://github.com/resemble-ai/chatterbox",
+        "license": {
+          "id": "MIT",
+          "url": "https://github.com/resemble-ai/chatterbox/blob/master/LICENSE",
+          "constraints": "Generated audio contains the project's PerTh watermark; preserve provenance and use authorized references only."
+        }
+      },
+      "runtime": {
+        "isolation": "fresh_python_3_11_sidecar",
+        "model_scale": "350M",
+        "hardware_fit": "plausible_unverified",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Add a reversible adapter for ChatterboxTurboTTS without modifying the rollback runtime.",
+        "Pass blind owner similarity review, name pronunciation, prosody, reference-tail leakage, repetition, first-audio latency, real-time factor, and unload tests."
+      ]
+    },
+    {
+      "candidate_id": "chatterbox_multilingual_v3_studio",
+      "workload": "tts_voice_clone",
+      "role": "studio_challenger",
+      "disposition": "isolated_benchmark_after_turbo",
+      "reversible_against": "chatterbox_017_voice_rollback",
+      "provenance": {
+        "publisher": "Resemble AI",
+        "official_model_url": "https://github.com/resemble-ai/chatterbox",
+        "license": {
+          "id": "MIT",
+          "url": "https://github.com/resemble-ai/chatterbox/blob/master/LICENSE",
+          "constraints": "Generated audio contains the project's PerTh watermark; preserve provenance and use authorized references only."
+        }
+      },
+      "runtime": {
+        "isolation": "fresh_python_3_11_sidecar",
+        "model_scale": "500M",
+        "hardware_fit": "plausible_unverified_heavier_than_turbo",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Demonstrate a reviewed studio-quality or multilingual gain over Turbo and the rollback model.",
+        "Pass language switching, accent retention, code-switching, long-form continuity, and VRAM cleanup checks."
+      ]
+    },
+    {
+      "candidate_id": "qwen3_tts_06b_base",
+      "workload": "tts_voice_clone",
+      "role": "controlled_challenger",
+      "disposition": "isolated_benchmark_only",
+      "reversible_against": "chatterbox_017_voice_rollback",
+      "provenance": {
+        "publisher": "Qwen",
+        "official_model_url": "https://github.com/QwenLM/Qwen3-TTS",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://github.com/QwenLM/Qwen3-TTS/blob/main/LICENSE",
+          "constraints": "Preserve license and notices; use authorized voice references only."
+        }
+      },
+      "runtime": {
+        "isolation": "fresh_python_3_12_sidecar",
+        "model_scale": "0.6B Base",
+        "hardware_fit": "plausible_unverified; Windows FlashAttention availability must not be assumed",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Beat Chatterbox on the same authorized references without reference-tail leakage, hallucinated speech, or worse cleanup.",
+        "Record performance both with and without any optional acceleration that is actually available on Windows."
+      ]
+    },
+    {
+      "candidate_id": "whisper_turbo_asr_baseline",
+      "workload": "asr",
+      "role": "primary_offline_baseline",
+      "disposition": "benchmark_when_weights_are_separately_approved_and_present",
+      "reversible_against": null,
+      "provenance": {
+        "publisher": "OpenAI",
+        "official_model_url": "https://github.com/openai/whisper",
+        "license": {
+          "id": "MIT",
+          "url": "https://github.com/openai/whisper/blob/main/LICENSE",
+          "constraints": "Turbo is transcription-focused; use an appropriate multilingual model for translation."
+        }
+      },
+      "runtime": {
+        "isolation": "existing_faster_whisper_package_or_fresh_asr_sidecar_after_review",
+        "published_vram_gb": 6,
+        "hardware_fit": "plausible_unverified",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Measure WER and CER for proper nouns, accents, noise, music, overlap, silence, long media, and timestamps.",
+        "Keep diarization and speaker identity as separate untrusted problems."
+      ]
+    },
+    {
+      "candidate_id": "qwen3_asr_06b_challenger",
+      "workload": "asr",
+      "role": "controlled_challenger",
+      "disposition": "isolated_benchmark_after_whisper",
+      "reversible_against": "whisper_turbo_asr_baseline",
+      "provenance": {
+        "publisher": "Qwen",
+        "official_model_url": "https://github.com/QwenLM/Qwen3-ASR",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://github.com/QwenLM/Qwen3-ASR/blob/main/LICENSE",
+          "constraints": "Preserve license and notices; timestamp coverage varies by aligner and language."
+        }
+      },
+      "runtime": {
+        "isolation": "fresh_python_3_12_sidecar",
+        "model_scale": "0.6B",
+        "hardware_fit": "plausible_unverified",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Compare with Whisper on the identical audio corpus and timestamp contract.",
+        "Reject any model that hallucinates text on silence or conflates transcription with speaker identity."
+      ]
+    },
+    {
+      "candidate_id": "tesseract_5_ocr_rollback",
+      "workload": "ocr",
+      "role": "rollback_baseline",
+      "disposition": "keep_available_unchanged",
+      "reversible_against": null,
+      "provenance": {
+        "publisher": "Tesseract OCR project",
+        "official_model_url": "https://github.com/tesseract-ocr/tesseract",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://github.com/tesseract-ocr/tesseract/blob/main/LICENSE",
+          "constraints": "Preserve license and notices; language data files must be tracked separately."
+        }
+      },
+      "runtime": {
+        "isolation": "existing_ocr_runtime",
+        "hardware_fit": "observed_current_baseline",
+        "concurrency": "cpu_safe_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Retain as a deterministic comparison and fallback.",
+        "Always preserve the original document and source-to-sidecar traceability."
+      ]
+    },
+    {
+      "candidate_id": "pp_ocrv6_small_medium",
+      "workload": "ocr",
+      "role": "primary_challenger",
+      "disposition": "isolated_benchmark_first",
+      "reversible_against": "tesseract_5_ocr_rollback",
+      "provenance": {
+        "publisher": "PaddlePaddle",
+        "official_model_url": "https://github.com/PaddlePaddle/PaddleOCR",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/LICENSE",
+          "constraints": "Preserve license and notices; verify individual bundled dependency and model terms."
+        }
+      },
+      "runtime": {
+        "isolation": "fresh_ocr_sidecar",
+        "model_scale": "PP-OCRv6 small then medium",
+        "hardware_fit": "plausible_unverified",
+        "concurrency": "exclusive_when_gpu_accelerated",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Compare character and word error, page completeness, rotation, blur, low-resolution scans, blank pages, and throughput against Tesseract.",
+        "Do not overwrite originals or accept generative reconstruction as source truth."
+      ]
+    },
+    {
+      "candidate_id": "paddleocr_vl_16_complex_docs",
+      "workload": "document_vision_language",
+      "role": "complex_document_challenger",
+      "disposition": "defer_until_simple_ocr_gap_is_proven",
+      "reversible_against": "tesseract_5_ocr_rollback",
+      "provenance": {
+        "publisher": "PaddlePaddle",
+        "official_model_url": "https://github.com/PaddlePaddle/PaddleOCR",
+        "hardware_guide_url": "https://www.paddleocr.ai/main/en/version3.x/pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.html",
+        "license": {
+          "id": "Apache-2.0",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/LICENSE",
+          "constraints": "Accelerated serving backends have Windows limitations; verify checkpoint and dependency terms."
+        }
+      },
+      "runtime": {
+        "isolation": "future_wsl_or_reviewed_windows_sidecar",
+        "model_scale": "0.9B",
+        "hardware_fit": "5060_ti_is_listed_but_this_exact_host_is_unverified",
+        "concurrency": "exclusive_heavy_gpu_lane",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Use only if tables, formulas, or page layout justify the extra stack.",
+        "Measure reading order, hallucinated fields, tables, formulas, page completeness, and Windows stability."
+      ]
+    },
+    {
+      "candidate_id": "real_esrgan_derivative_restoration",
+      "workload": "image_video_restoration",
+      "role": "optional_derivative_tool",
+      "disposition": "benchmark_on_copies_only",
+      "reversible_against": null,
+      "provenance": {
+        "publisher": "Tencent ARC and contributors",
+        "official_model_url": "https://github.com/xinntao/Real-ESRGAN",
+        "license": {
+          "id": "BSD-3-Clause",
+          "url": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+          "constraints": "Review third-party components and weights separately; enhanced pixels are generated estimates, not recovered facts."
+        }
+      },
+      "runtime": {
+        "isolation": "portable_ncnn_vulkan_or_fresh_restoration_sidecar",
+        "hardware_fit": "plausible_unverified_with_tiling",
+        "concurrency": "exclusive_when_gpu_accelerated",
+        "benchmark": {
+          "driver": "manual_sidecar",
+          "default_probe": false
+        }
+      },
+      "adoption_gates": [
+        "Operate on copies and label every result as an enhanced derivative.",
+        "Measure controlled-downsample quality, tiling seams, facial and texture invention, OCR before and after, and human side-by-side review."
+      ]
+    }
+  ]
+}

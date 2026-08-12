@@ -1,0 +1,81 @@
+{
+  "approval_truth": {
+    "clothing_approved": false,
+    "final_hair_approved": false,
+    "kira_selected": false,
+    "movement_approved": false,
+    "owner_approved": false
+  },
+  "artifact_type": "avatar_builder_rapid_body_workspace_record",
+  "candidate_state": "PRIVATE_INSPECTION_CANDIDATE",
+  "no_new_launcher_or_interface_created": true,
+  "normal_entry_point": "EXISTING_AVATAR_BUILDER_WORKSPACE",
+  "owner_controls": {
+    "anatomy": {
+      "movement_function_proven": false,
+      "owner_visual_acceptance": false,
+      "requested": "integrated_adult_anatomy",
+      "status": "REQUIRED_UNPROVEN_UNTIL_EXACT_CANDIDATE_AUDIT"
+    },
+    "arms_legs": {
+      "arms": 0.0,
+      "legs": 0.02
+    },
+    "build": {
+      "body_mass": 0.0,
+      "muscularity": 0.18,
+      "preset": "natural_athletic"
+    },
+    "eyes": "natural_brown",
+    "face": "bounded_generic_adult_female",
+    "hair": {
+      "color": "black",
+      "review_style": "simple_removable_shoulders_clear",
+      "texture": "straight"
+    },
+    "hands_feet": {
+      "feet": 0.0,
+      "hands": 0.0
+    },
+    "height": {
+      "bounded_range_m": [
+        1.35,
+        2.2
+      ],
+      "height_m": 1.651
+    },
+    "neck": 0.0,
+    "skin": "light_natural_regional_variation",
+    "torso_waist_hips": {
+      "chest_torso": 0.0,
+      "hips_pelvis": 0.02,
+      "shoulders": 0.0,
+      "waist_abdomen": -0.04
+    }
+  },
+  "owner_id": "kira",
+  "owner_name": "Kira Hart",
+  "privacy": {
+    "identifiable_person_likeness_allowed": false,
+    "private_local_review_only": true,
+    "robert_private_data_allowed": false
+  },
+  "request": {
+    "path": "Avatar/avatar_builder/rapid_body_pipeline/requests/kira_temporary_functional_body_20260730.json",
+    "sha256": "9c694741772699bb476e7e24fdd0e0dbfecf186be3fdfd5d8a77ac3035ec006b"
+  },
+  "runtime_assignment": {
+    "allowed": false,
+    "performed": false,
+    "runtime_profile_truth": "NO_BODY_UNCHANGED"
+  },
+  "schema_version": 1,
+  "skeleton_policy": {
+    "accepted_private_candidate_profile": "ANY_INDEPENDENTLY_PROVEN_ADULT_HUMANOID_RIG",
+    "candidate_skeleton_profile_record_required": true,
+    "current_runtime_compatibility_claimed": false,
+    "fixed_runtime_joint_count_required_at_this_phase": false,
+    "future_runtime_adapter_or_eligibility_proof_required": true
+  },
+  "workspace_id": "kira_temporary_functional_body_20260730"
+}

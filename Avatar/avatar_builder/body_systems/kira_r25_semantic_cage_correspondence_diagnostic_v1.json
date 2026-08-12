@@ -1,0 +1,207 @@
+{
+  "schema": "kira.avatar.r25.semantic_cage_correspondence_diagnostic.v1",
+  "status": "STATIC_PREPARATION_ONLY_READ_ONLY_BLENDER_DIAGNOSTIC_NOT_AUTHORIZED",
+  "scope": {
+    "body_work_only": true,
+    "read_only_diagnostic": true,
+    "blender_execution_authorized": false,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "candidate_creation_allowed": false,
+    "deformation_allowed": false,
+    "pelvic_or_afes_target_fit_allowed": false,
+    "render_allowed": false,
+    "runtime_activation_allowed": false,
+    "result_path_allowed": false,
+    "result_transport": "existing_kira_r25_canonical_receipt_frame_over_caller_inherited_binary_handle"
+  },
+  "bindings": {
+    "r25_boundary_document": {
+      "path": "System/Docs/KIRA_R24_CLOSURE_AND_R25_FOUNDATION_FIRST_BOUNDARY_20260809.md",
+      "bytes": 6933,
+      "sha256": "cc27f886edb18fdcc700b38d010b6a573ab2ddddad667c4d83312db72dae022d"
+    },
+    "r25_machine_boundary": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_first_whole_surface_retarget_boundary_v1.json",
+      "bytes": 9639,
+      "sha256": "205f3b4636ac53c78cd836089d543e94d9b4cd5c788e17bcf0012fe3acc5c672"
+    },
+    "r19_visual_target_blend": {
+      "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/kira_r19_bald_targeted_material_movement_correction.blend",
+      "bytes": 90861425,
+      "sha256": "dee1017f72c50dfba6583864bb1f9ec81405e2ef6d37f7c724831a24df49b53f",
+      "object_name": "Kira_R19_BlackProject_Radial_Patch_Primary_Surface",
+      "mesh_name": "Kira_R19_BlackProject_Radial_Patch_Primary_Surface_Mesh",
+      "vertices": 12612,
+      "faces": 24936
+    },
+    "r20_exact_rejected_target_region": {
+      "path": "RecoverySprint/continuation_20260802/kira_r20_local_pelvic_retopology_read_only_audit/R20_PELVIC_MASK_TOPOLOGY_AND_ACCEPTANCE_PLAN.json",
+      "bytes": 17495,
+      "sha256": "d9907f9ac7db74999ce2853b8865f614ccacabfabacef82b3111374dd89d0035",
+      "selector": "r19_primary_surface_polygon_material_index_equals_1",
+      "selected_faces": 376,
+      "incident_vertices": 206,
+      "face_connected_components": 1,
+      "interface_edges": 34,
+      "interface_vertices": 34
+    },
+    "qualified_foundation_blend": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+      "bytes": 789620,
+      "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+      "object_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface",
+      "mesh_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface__bounded_intersection_cleanup__generic_continuous_adult_female_external_surface_v1",
+      "vertices": 14658,
+      "edges": 30632,
+      "faces": 15976
+    },
+    "foundation_afes_extraction_contract": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v1.json",
+      "bytes": 6989,
+      "sha256": "3f1f57d95a28287f024cd6806af9180c623d134b68249a547cb81475f8fe5fdc",
+      "required_future_receipt_status": "AFES_AND_TRANSITION_RINGS_EXTRACTED_READ_ONLY",
+      "afes_union_vertices": 1169,
+      "afes_union_vertex_index_sha256": "e176a908e76fbca6f7bf2b843e3745fe9bc51cf4c46add2fa6dcd384fd413195",
+      "minimum_transition_rings": 2
+    },
+    "makehuman_default_weights": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/rigs/default_weights.mhw",
+      "bytes": 912134,
+      "sha256": "ae2d830adb5ee890c90e071bde6efaa2b9c1f2937b49770f7b5264041637b071"
+    },
+    "canonical_receipt_primitive": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8",
+      "maximum_payload_bytes": 1048576,
+      "maximum_depth": 32,
+      "maximum_nodes": 8192
+    },
+    "pure_correspondence_core": {
+      "path": "tools/kira_r25_semantic_cage_correspondence_core.py",
+      "bytes": 32648,
+      "sha256": "89e40d87c4ccc27dd9bdef5c3a1d4ca5b9c20b80097b9326a5f58031a99f8881"
+    }
+  },
+  "semantic_contract": {
+    "classification_source": "exact_positive_vertex_group_weights_only",
+    "coordinate_fallback_allowed": false,
+    "minimum_recognized_weight_fixed_1e9": 500000000,
+    "required_regions": [
+      "face",
+      "head",
+      "neck",
+      "torso",
+      "upper_arm.L",
+      "lower_arm.L",
+      "hand.L",
+      "upper_arm.R",
+      "lower_arm.R",
+      "hand.R",
+      "thigh.L",
+      "shin.L",
+      "foot.L",
+      "thigh.R",
+      "shin.R",
+      "foot.R"
+    ],
+    "same_region_source_face_projection_required": true,
+    "left_right_cross_mapping_allowed": false,
+    "mixed_region_target_triangles_eligible": false,
+    "missing_region_behavior": "FAIL_WITHOUT_UNRESTRICTED_NEAREST_SURFACE_FALLBACK"
+  },
+  "alignment_and_anchor_contract": {
+    "global_alignment": "uniform_scale_positive_rotation_translation_from_equally_region_balanced_centroids",
+    "alignment_excludes_foundation_afes_and_transition_locks": true,
+    "alignment_excludes_all_r19_vertices_incident_to_r20_rejected_faces": true,
+    "anchor_selection": "deterministic_region_balanced_farthest_point_sampling_over_foundation_surface_edge_geodesics",
+    "anchors_per_region": {
+      "face": 36,
+      "head": 24,
+      "neck": 12,
+      "torso": 64,
+      "upper_arm.L": 20,
+      "lower_arm.L": 20,
+      "hand.L": 28,
+      "upper_arm.R": 20,
+      "lower_arm.R": 20,
+      "hand.R": 28,
+      "thigh.L": 28,
+      "shin.L": 24,
+      "foot.L": 28,
+      "thigh.R": 28,
+      "shin.R": 24,
+      "foot.R": 28
+    },
+    "total_required_anchor_count": 432,
+    "foundation_afes_or_transition_vertex_may_be_anchor": false
+  },
+  "projection_gates": {
+    "barycentric_fixed_scale": 1000000000,
+    "minimum_normal_dot_fixed_1e9": {
+      "face": 100000000,
+      "head": 100000000,
+      "neck": 100000000,
+      "torso": 100000000,
+      "upper_arm.L": 100000000,
+      "lower_arm.L": 100000000,
+      "hand.L": 100000000,
+      "upper_arm.R": 100000000,
+      "lower_arm.R": 100000000,
+      "hand.R": 100000000,
+      "thigh.L": 100000000,
+      "shin.L": 100000000,
+      "foot.L": 100000000,
+      "thigh.R": 100000000,
+      "shin.R": 100000000,
+      "foot.R": 100000000
+    },
+    "maximum_distance_micrometers": {
+      "face": 45000,
+      "head": 60000,
+      "neck": 50000,
+      "torso": 80000,
+      "upper_arm.L": 65000,
+      "lower_arm.L": 65000,
+      "hand.L": 40000,
+      "upper_arm.R": 65000,
+      "lower_arm.R": 65000,
+      "hand.R": 40000,
+      "thigh.L": 75000,
+      "shin.L": 75000,
+      "foot.L": 50000,
+      "thigh.R": 75000,
+      "shin.R": 75000,
+      "foot.R": 50000
+    },
+    "excluded_r19_face_count": 376,
+    "pelvic_or_afes_target_fit": "FORBIDDEN"
+  },
+  "result_contract": {
+    "top_level_values": "integer_string_list_or_object_only_no_float_boolean_or_null",
+    "mapping_encoding": "fixed_width_little_endian_binary_base64_with_codec_count_and_sha256",
+    "mapping_record_contains": [
+      "foundation_vertex_index",
+      "canonical_region_id_applies_to_both_foundation_and_target",
+      "exact_r19_face_index",
+      "deterministic_r19_triangle_index",
+      "three_r19_triangle_vertex_indices",
+      "three_barycentric_weights_fixed_1e9",
+      "distance_micrometers",
+      "normal_dot_fixed_1e9"
+    ],
+    "canonical_frame_roundtrip_required": true,
+    "maximum_payload_bytes": 1048576,
+    "maximum_depth": 32,
+    "maximum_nodes": 8192,
+    "result_path_allowed": false
+  },
+  "truth_boundary": {
+    "static_preparation_is_not_a_computed_map": true,
+    "future_read_only_map_is_not_an_accepted_cage": true,
+    "future_diagnostic_does_not_deform_or_create_a_body": true,
+    "blender_execution_requires_separate_root_authorization": true,
+    "body_authoring_remains_separately_gated": true
+  }
+}

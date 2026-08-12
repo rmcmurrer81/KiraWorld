@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "policy_id": "kira_bald_low_resource_body_delivery_v1",
+  "asset_id": "KIRA_BALD_LOW_RESOURCE_BODY",
+  "candidate_class": "complete_inactive_private_owner_review_body",
+  "body_mode": "complete_natural_bald_scalp",
+  "required_review_view_labels": [
+    "front",
+    "rear",
+    "left_profile",
+    "right_profile",
+    "left_three_quarter",
+    "right_three_quarter",
+    "face_close",
+    "eyes_close",
+    "left_hand_nails_close",
+    "right_hand_nails_close",
+    "left_foot_nails_close",
+    "right_foot_nails_close",
+    "left_knee_flexion",
+    "right_knee_flexion",
+    "protected_adult_relationship_front",
+    "protected_adult_relationship_side",
+    "protected_adult_relationship_three_quarter",
+    "neutral_standing",
+    "crown_top_scalp",
+    "rear_scalp_hairline",
+    "bilateral_knee_flexion",
+    "seated_front_three_quarter",
+    "seated_side_contact"
+  ],
+  "scalp_hair_policy": {
+    "scalp_hair_provider_allowed": false,
+    "scalp_hair_objects_allowed": false,
+    "scalp_hair_materials_allowed": false,
+    "scalp_hair_images_or_textures_allowed": false,
+    "scalp_hair_guides_allowed": false,
+    "scalp_hair_controllers_allowed": false,
+    "black_scalp_cap_or_dome_allowed": false,
+    "painted_scalp_hair_allowed": false,
+    "hair_state_review_renders_allowed": false,
+    "natural_primary_skin_surface_continues_over_scalp": true,
+    "eyebrows_lashes_and_lid_definition_are_facial_presentation_not_scalp_hair": true
+  },
+  "resource_boundary": {
+    "duplicate_body_geometry_for_future_hair_composition": false,
+    "future_hair_master_asset_id": "KIRA_HAIR_MASTER_INACTIVE",
+    "future_review_composition_id": "KIRA_WITH_HAIR_FUTURE_REVIEW_COMPOSITION",
+    "future_composition_manifests_deferred_until_exact_body_and_hair_hashes_exist": true
+  },
+  "output_policy": {
+    "append_only_private_owner_review_directory": true,
+    "blend_required": true,
+    "glb_exported_by_this_builder": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "clothing_included": false,
+    "publication_allowed": false
+  },
+  "status": "BOUND_FOR_NEXT_PRIVATE_DELIVERY_CANDIDATE"
+}

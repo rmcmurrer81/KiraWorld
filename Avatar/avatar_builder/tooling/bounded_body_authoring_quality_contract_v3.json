@@ -1,0 +1,90 @@
+{
+  "schema_version": 3,
+  "contract_id": "bounded_body_authoring_quality_contract_v3",
+  "status": "MANDATORY_R23_FAILURE_PREVENTION_ADDENDUM_NOT_A_SELECTABLE_GEOMETRY_METHOD",
+  "inherits": {
+    "path": "Avatar/avatar_builder/tooling/bounded_body_authoring_quality_contract_v2.json",
+    "bytes": 6456,
+    "sha256": "f8565509ffd770d2336e69adbcf0ae48501e134baac0ba8e5ca276dd7ee5a4c0",
+    "all_parent_requirements_remain_mandatory": true
+  },
+  "evidence": {
+    "immutable_r19": {
+      "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/kira_r19_bald_targeted_material_movement_correction.blend",
+      "bytes": 90861425,
+      "sha256": "dee1017f72c50dfba6583864bb1f9ec81405e2ef6d37f7c724831a24df49b53f"
+    },
+    "rejected_r23_attempt05": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_cc0_afes_author/attempt_05/kira_r23_cc0_afes_core_transfer_attempt_05.blend",
+      "bytes": 82564331,
+      "sha256": "394cba65c2ec1fefa22981079c3b53486a4dfd6037e89caf1504990a7cbbce4e"
+    },
+    "attempt08": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_localized_patch_repair_simulation/attempt_08/SIMULATION_EVIDENCE.json",
+      "bytes": 425562,
+      "sha256": "30c71605606dcae3fdd9bb5d13703abafdef139bdb4bc21afd44ec3d68d8d7c6"
+    },
+    "focused_localization": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_localized_best_variant_diagnostic/attempt_01/EXACT_LOCALIZATION.json",
+      "bytes": 285428,
+      "sha256": "98e03df238c0788d64a5868288f2432a38c06b4d556e492cfd82bed110acb5a3"
+    },
+    "carrier_annulus_attempt01": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_carrier_annulus_repair_simulation/attempt_01/ANNULUS_SIMULATION_EVIDENCE.json",
+      "bytes": 332814,
+      "sha256": "c94f291fd78b0a51d1d27bfac32b02cdb247d0809372e8e5bebbc8d3a673839a"
+    }
+  },
+  "exact_mapping": {
+    "saved_local_global_creation_ordinal_mapping_required": true,
+    "numeric_face_or_vertex_range_classification_forbidden": true,
+    "all_patch_sections_resolved_through_exact_mapping": true
+  },
+  "intersection_gates": {
+    "retained_retained_baseline_bucket_required": true,
+    "patch_involving_bucket_required": true,
+    "new_patch_involving_exact_pair_count_required": 0,
+    "attempt08_observed_new_patch_pairs": 47,
+    "carrier_best_observed_new_patch_pairs": 327,
+    "broad_phase_used_before_exact_shortlist": true,
+    "neutral_exact_pass_required_before_pose_stage": true
+  },
+  "seam_and_orientation_gates": {
+    "required_seam_edge_count": 91,
+    "minimum_direct_patch_retained_normal_dot_per_edge": 0.7,
+    "binary_placeholder_is_not_enumeration": true,
+    "directed_shared_edge_orientation_required": true,
+    "whole_patch_flip_allowed": false,
+    "candidate_source_position_weight_and_uv_seam_nonregression_required": true
+  },
+  "uv_gates": {
+    "exact_source_loop_choice_required": true,
+    "per_vertex_uv_mean_forbidden": true,
+    "maximum_exact_source_choice_error": 1e-12,
+    "zero_area_face_count_required": 0,
+    "unintended_opposite_orientation_face_count_required": 0
+  },
+  "rig_and_pose_gates": {
+    "maximum_new_patch_edge_stretch_ratio_each_required_pose": 1.35,
+    "inherited_absolute_seam_quality_reported_separately": true,
+    "candidate_source_seam_nonregression_required": true,
+    "raw_weight_delta_envelope_is_movement_pass": false,
+    "pose_aware_lbs_displacement_strain_and_collision_objective_required": true,
+    "exact_pose_stage_requires_neutral_exact_pass": true,
+    "fresh_reopen_full_pass_required_before_render": true
+  },
+  "disqualified_methods_for_this_transition": [
+    "fixed_two_ring_hermite_parameter_sweep",
+    "concentric_harmonic_carrier_annulus_radius_power_sweep"
+  ],
+  "implementation_truth": {
+    "accepted_r23_external_candidate_exists": false,
+    "r23_owner_review_images_exist": false,
+    "movement_passed": false,
+    "internal_routes_implemented": false,
+    "bathroom_function_implemented": false,
+    "pregnancy_or_reproductive_function_implemented": false,
+    "private_subjective_experience_implemented": false,
+    "runtime_connected": false
+  }
+}

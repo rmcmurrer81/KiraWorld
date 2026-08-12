@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T21:44:39.754003+00:00",
+  "purpose": "Provide skin material targets and image-comparison swatches for avatar creation.",
+  "matching_rule": {
+    "sample_regions": [
+      "face",
+      "neck",
+      "forearm_or_hand_when_visible"
+    ],
+    "avoid_regions": [
+      "deep shadow",
+      "strong highlight",
+      "makeup-heavy patches",
+      "colored clothing reflections"
+    ],
+    "comparison_space": "convert sampled colors to perceptual LAB or HSV before selecting the nearest template",
+    "review": "store the chosen template with front/side screenshots; allow manual correction when the photo lighting misleads the match"
+  },
+  "templates": [
+    {
+      "id": "caucasian_light_neutral_adult",
+      "display_name": "Caucasian light neutral",
+      "hex": "#e6c0a9",
+      "rgb": [
+        230,
+        192,
+        169
+      ],
+      "allowed_for": "adult and non-adult-safe skin material use"
+    },
+    {
+      "id": "fair_cool",
+      "display_name": "Fair cool",
+      "hex": "#efd0c4",
+      "rgb": [
+        239,
+        208,
+        196
+      ],
+      "allowed_for": "adult and non-adult-safe skin material use"
+    },
+    {
+      "id": "medium_warm",
+      "display_name": "Medium warm",
+      "hex": "#b87955",
+      "rgb": [
+        184,
+        121,
+        85
+      ],
+      "allowed_for": "adult and non-adult-safe skin material use"
+    },
+    {
+      "id": "deep_neutral",
+      "display_name": "Deep neutral",
+      "hex": "#6d3f2f",
+      "rgb": [
+        109,
+        63,
+        47
+      ],
+      "allowed_for": "adult and non-adult-safe skin material use"
+    }
+  ],
+  "kira_current_assignment": {
+    "template_id": "caucasian_light_neutral_adult",
+    "runtime_material_hex": "#e6c0a9",
+    "maturity": "adult"
+  }
+}

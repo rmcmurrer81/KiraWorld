@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "registry_id": "avatar_builder_adult_foundation_registry_v1",
+  "policy": "Avatar/avatar_builder/policies/adult_foundation_qualification_v1.json",
+  "status": "QUALIFIED_ADULT_FOUNDATION_PRESENT_INACTIVE",
+  "entries": [
+    {
+      "foundation_id": "makehuman_hm08_female_macro_source",
+      "display_name": "MakeHuman hm08 female macro source set",
+      "source_artifact": {
+        "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/3dobjs/base.obj",
+        "sha256": "bea00279464133e86b634220cd2774ebf3b470de280d11222a6b2269e4a8d950"
+      },
+      "artifact_kind": "parametric_source_set",
+      "source_configuration_artifacts": [
+        {
+          "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/targets/macrodetails/universal-female-young-averagemuscle-averageweight.target",
+          "sha256": "9537a8b2d76a06f49f5f8cb25955b52f1245e3119cfe0cb2634a9ca4e12b3e1f",
+          "weight": 1.0
+        },
+        {
+          "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/targets/macrodetails/caucasian-female-young.target",
+          "sha256": "6352040adcd91d48bc2266a65246ff0be39afb1f3d309311426204a95c1cbd77",
+          "weight": 1.0
+        }
+      ],
+      "source_provenance": {
+        "title": "MakeHuman hm08 base mesh and bundled female macro assets",
+        "author": "MakeHuman Team",
+        "source_url": "https://github.com/makehumancommunity/makehuman"
+      },
+      "maturity": {
+        "status": "confirmed_adult",
+        "body_class": "adult_female"
+      },
+      "foundation_role": "adaptable_foundation",
+      "candidate_use": {
+        "new_surface_derivative_allowed": true,
+        "copy_as_candidate_body_allowed": true
+      },
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "adaptation_allowed": true,
+        "foundation_use_allowed": true,
+        "evidence": {
+          "path": "Avatar/avatar_builder/tooling/makehuman_official/LICENSE.ASSETS.md",
+          "sha256": "5f3ab0cf6f7ebe92efe4b83213131c617d308d164eeefd5da230373640b0c226"
+        }
+      },
+      "known_blockers": [
+        {
+          "code": "doll_safe_or_incomplete",
+          "evidence": {
+            "path": "Avatar/private_owner_review/kira_temporary_functional_body_20260730/kira_tfb_makehuman_r11/INDEPENDENT_VISUAL_AND_ENGINEERING_REVIEW.json",
+            "sha256": "892b0a7baef2562caa94915e24acd8a16da1262aba82122768640f59a92cf5ca"
+          }
+        },
+        {
+          "code": "adult_female_relationships_not_proven",
+          "evidence": {
+            "path": "Avatar/private_owner_review/kira_temporary_functional_body_20260730/kira_tfb_makehuman_r11/INDEPENDENT_VISUAL_AND_ENGINEERING_REVIEW.json",
+            "sha256": "892b0a7baef2562caa94915e24acd8a16da1262aba82122768640f59a92cf5ca"
+          }
+        },
+        {
+          "code": "wrong_sex_helper_present_in_source_set",
+          "evidence": {
+            "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/3dobjs/base.obj",
+            "sha256": "bea00279464133e86b634220cd2774ebf3b470de280d11222a6b2269e4a8d950"
+          }
+        },
+        {
+          "code": "latest_exact_candidate_self_intersections_present",
+          "evidence": {
+            "path": "Avatar/private_owner_review/kira_temporary_functional_body_20260730/kira_tfb_makehuman_r12b_knee_export_engineering/INDEPENDENT_TOPOLOGY.json",
+            "sha256": "93d9a4c83ba4a95fa5b818aca8d9afabaaeefc22902b265105aba3cff48bde02"
+          }
+        }
+      ],
+      "positive_independent_evidence": null,
+      "qualified": false
+    },
+    {
+      "foundation_id": "blackproject_base_female_character_cc_by_4",
+      "display_name": "BlackProject Base Female Character",
+      "source_artifact": {
+        "path": "Avatar/avatar_builder/asset_library/base_body_reference/base_female_character_blackproject_cc_by_4.glb",
+        "sha256": "26e107ea57c92a0905283d3655cf4e1155e16c2c0c24b0b071a66cccddf567df"
+      },
+      "artifact_kind": "single_asset",
+      "source_configuration_artifacts": [],
+      "source_provenance": {
+        "title": "Base Female Character",
+        "author": "BlackProject",
+        "source_url": "https://sketchfab.com/3d-models/base-female-character-ec7445f61d9e499186578b8ef4814b6a"
+      },
+      "maturity": {
+        "status": "confirmed_adult",
+        "body_class": "adult_female"
+      },
+      "foundation_role": "adaptable_foundation",
+      "candidate_use": {
+        "new_surface_derivative_allowed": true,
+        "copy_as_candidate_body_allowed": false
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "adaptation_allowed": true,
+        "foundation_use_allowed": true,
+        "evidence": {
+          "path": "Avatar/avatar_builder/asset_library/base_body_reference/base_female_character_blackproject_cc_by_4.authority.json",
+          "sha256": "d632a501edb2177aed7299aa257b61784685bdf2d9c88fa280370b640c4b508c"
+        }
+      },
+      "known_blockers": [
+        {
+          "code": "self_intersections_present",
+          "evidence": {
+            "path": "Avatar/private_owner_review/kira_temporary_functional_body_20260730/kira_tfb_blackproject_r9b_20260730_072700/independent_topology_intersection_strict.json",
+            "sha256": "7a88a21e6acacd5f1ac69fbe07b63baa8a57d92918e8a104620816ebdb9671f9"
+          }
+        },
+        {
+          "code": "fragmented_primary_surface",
+          "evidence": {
+            "path": "Avatar/avatar_builder/asset_library/base_body_reference/base_female_character_blackproject_cc_by_4.authority.json",
+            "sha256": "d632a501edb2177aed7299aa257b61784685bdf2d9c88fa280370b640c4b508c"
+          }
+        },
+        {
+          "code": "adult_surface_visual_review_failed",
+          "evidence": {
+            "path": "Avatar/private_owner_review/kira_temporary_functional_body_20260730/kira_tfb_blackproject_r9b_20260730_072700/INDEPENDENT_VISUAL_REVIEW.json",
+            "sha256": "efa9aea04d637fe00312b063fc63503c1eba34c8a630f789a4e36ef7d051afa6"
+          }
+        }
+      ],
+      "positive_independent_evidence": null,
+      "qualified": false
+    },
+    {
+      "foundation_id": "womenfemale_body_base_rigged_3ec62ba8d7",
+      "display_name": "Women/Female Body Base Rigged",
+      "source_artifact": {
+        "path": "Avatar/avatar_builder/asset_library/base_body_reference/womenfemale_body_base_rigged_3ec62ba8d7.glb",
+        "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e"
+      },
+      "artifact_kind": "single_asset",
+      "source_configuration_artifacts": [],
+      "source_provenance": {
+        "title": "Women/Female Body Base Rigged",
+        "author": "camilooh",
+        "source_url": "https://sketchfab.com/3d-models/womenfemale-body-base-rigged-45caea510e4b4b65bf4ef9bbb4d2045c"
+      },
+      "maturity": {
+        "status": "confirmed_adult",
+        "body_class": "adult_female"
+      },
+      "foundation_role": "cage_fit_only",
+      "candidate_use": {
+        "new_surface_derivative_allowed": true,
+        "copy_as_candidate_body_allowed": false
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "adaptation_allowed": true,
+        "foundation_use_allowed": true,
+        "evidence": {
+          "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+          "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+        }
+      },
+      "known_blockers": [
+        {
+          "code": "cage_fit_only",
+          "evidence": {
+            "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+            "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+          }
+        },
+        {
+          "code": "adult_topology_unproven",
+          "evidence": {
+            "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+            "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+          }
+        },
+        {
+          "code": "continuous_watertight_surface_unproven",
+          "evidence": {
+            "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+            "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+          }
+        }
+      ],
+      "positive_independent_evidence": null,
+      "qualified": false
+    },
+    {
+      "foundation_id": "base_female_game_ready_rigged_low_poly_471903a311",
+      "display_name": "Base Female Game Ready Rigged Low Poly",
+      "source_artifact": {
+        "path": "Avatar/avatar_builder/asset_library/base_body_reference/base_female_game_ready_rigged_low_poly_1_471903a311.glb",
+        "sha256": "471903a31194e6cd364b2980580ddc976c48ac755a2bfacfe3115615501eceb2"
+      },
+      "artifact_kind": "single_asset",
+      "source_configuration_artifacts": [],
+      "source_provenance": {
+        "title": "Base Female - Game Ready - Rigged - Low Poly",
+        "author": "arte_art",
+        "source_url": "https://sketchfab.com/3d-models/base-female-game-ready-rigged-low-poly-5fcef75a94be4ee3a996a0ea91106e4d"
+      },
+      "maturity": {
+        "status": "confirmed_adult",
+        "body_class": "adult_female"
+      },
+      "foundation_role": "cage_fit_only",
+      "candidate_use": {
+        "new_surface_derivative_allowed": true,
+        "copy_as_candidate_body_allowed": false
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "adaptation_allowed": true,
+        "foundation_use_allowed": true,
+        "evidence": {
+          "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+          "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+        }
+      },
+      "known_blockers": [
+        {
+          "code": "cage_fit_only",
+          "evidence": {
+            "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+            "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+          }
+        },
+        {
+          "code": "adult_topology_unproven",
+          "evidence": {
+            "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+            "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+          }
+        },
+        {
+          "code": "segmented_joint_boundaries_observed",
+          "evidence": {
+            "path": "Avatar/avatar_builder/multiview_authoring/base_catalog/authority.json",
+            "sha256": "678da9f3aca70a756f820f11a8fcca2f8d1928a2ceceb75507521ae636d62a85"
+          }
+        }
+      ],
+      "positive_independent_evidence": null,
+      "qualified": false
+    },
+    {
+      "foundation_id": "female_anatomy_study_progress_2_b0577836d8",
+      "display_name": "Female Anatomy Study Progress 2",
+      "source_artifact": {
+        "path": "Avatar/avatar_builder/asset_library/adult_anatomy_reference/female_anatomy_study_progress_2_b0577836d8.glb",
+        "sha256": "b0577836d830965866244bd89cb49a482518cc3ac3cb1ad8a22474ef118b0da0"
+      },
+      "artifact_kind": "single_asset",
+      "source_configuration_artifacts": [],
+      "source_provenance": {
+        "title": "Female Anatomy Study Progress 2",
+        "author": "",
+        "source_url": ""
+      },
+      "maturity": {
+        "status": "confirmed_adult",
+        "body_class": "adult_female"
+      },
+      "foundation_role": "reference_only",
+      "candidate_use": {
+        "new_surface_derivative_allowed": false,
+        "copy_as_candidate_body_allowed": false
+      },
+      "license": {
+        "id": "UNVERIFIED_FOR_FOUNDATION_USE",
+        "url": "",
+        "adaptation_allowed": false,
+        "foundation_use_allowed": false,
+        "evidence": {
+          "path": "Avatar/avatar_builder/asset_library/manifest.json",
+          "sha256": "7a2c8c37fa9414c7a44991e30b75f88748c03978b26912f8ce47b180123a62cb"
+        }
+      },
+      "known_blockers": [
+        {
+          "code": "reference_only_never_copy_as_ai_body",
+          "evidence": {
+            "path": "Avatar/avatar_builder/asset_library/manifest.json",
+            "sha256": "7a2c8c37fa9414c7a44991e30b75f88748c03978b26912f8ce47b180123a62cb"
+          }
+        },
+        {
+          "code": "foundation_license_authority_missing",
+          "evidence": {
+            "path": "Avatar/avatar_builder/asset_library/manifest.json",
+            "sha256": "7a2c8c37fa9414c7a44991e30b75f88748c03978b26912f8ce47b180123a62cb"
+          }
+        }
+      ],
+      "positive_independent_evidence": null,
+      "qualified": false
+    },
+    {
+      "foundation_id": "generic_makehuman_adult_female_foundation_v1_20260801",
+      "display_name": "Generic MakeHuman adult-female foundation v1 (inactive)",
+      "source_artifact": {
+        "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+        "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"
+      },
+      "artifact_kind": "single_asset",
+      "source_configuration_artifacts": [],
+      "source_provenance": {
+        "title": "Generic MakeHuman adult-female foundation v1 derived from the enrolled hm08 female macro source",
+        "author": "Kira Avatar Builder neutral foundation authoring pipeline",
+        "source_url": "https://github.com/makehumancommunity/makehuman"
+      },
+      "derivation": {
+        "parent_foundation_id": "makehuman_hm08_female_macro_source",
+        "builder": "tools/blender_build_makehuman_adult_female_foundation_inactive.py",
+        "neutral_config": {
+          "path": "Avatar/avatar_builder/tooling/makehuman_adult_female_foundation_inactive_authoring_v1.json",
+          "sha256": "9c42dd4056ba5d0543cdee211d4b95c04d17d48f1a437348e2fedfbcb3e60d07"
+        },
+        "identity_scope": "generic_identity_neutral",
+        "kira_styling_applied": false,
+        "clothing_applied": false,
+        "armature_present": false
+      },
+      "maturity": {
+        "status": "confirmed_adult",
+        "body_class": "adult_female"
+      },
+      "foundation_role": "adaptable_foundation",
+      "candidate_use": {
+        "new_surface_derivative_allowed": true,
+        "copy_as_candidate_body_allowed": true
+      },
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "adaptation_allowed": true,
+        "foundation_use_allowed": true,
+        "evidence": {
+          "path": "Avatar/avatar_builder/tooling/makehuman_official/LICENSE.ASSETS.md",
+          "sha256": "5f3ab0cf6f7ebe92efe4b83213131c617d308d164eeefd5da230373640b0c226"
+        }
+      },
+      "known_blockers": [],
+      "positive_independent_evidence": {
+        "topology": {
+          "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FOUNDATION_TOPOLOGY_AUDIT_V2.json",
+          "sha256": "de2d1f0a82aa2a0015f7374707b7e12afae830ef5314f518bcb7956adf8180de"
+        },
+        "relationships": {
+          "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FEMALE_RELATIONSHIP_REVIEW_V2.json",
+          "sha256": "b321f2d852b2242c462501a396ddb9aca648229187868a158da6571450a1cb88"
+        }
+      },
+      "downstream_requirements": {
+        "identity_specific_kira_styling_requires_this_foundation_qualification": true,
+        "pose_space_pelvic_patch_deformation_audit_required_before_kira_candidate_use": true,
+        "pose_space_pelvic_patch_deformation_audit_status": "NOT_PERFORMED_NO_ARMATURE",
+        "runtime_activation_allowed": false,
+        "public_export_allowed": false
+      },
+      "qualified": true
+    }
+  ],
+  "invariants": {
+    "confirmed_adult_implies_complete_topology": false,
+    "reference_only_assets_are_foundations": false,
+    "cage_fit_sources_are_complete_foundations": false,
+    "known_blockers_may_be_overridden_by_caller": false,
+    "qualified_foundation_implies_runtime_activation": false,
+    "pose_space_deformation_is_a_separate_downstream_gate": true,
+    "runtime_mutation_allowed": false,
+    "runtime_activation_allowed": false
+  }
+}

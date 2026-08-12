@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-03",
+  "policy": "Age-up can only happen through the spa world flow, creates a separate older/taller variant, and requires a separate confirmed_adult classification before immediate adult-curriculum assignment or any separately chosen adult-anatomy build.",
+  "implementation_contract": "two_stage_spa_age_progression_v1",
+  "eligibility": {
+    "temporary_origin_verified": true,
+    "permanent_promotion_verified": true,
+    "multiple_prior_activations_verified": true,
+    "minimum_prior_activation_count": 2,
+    "resident_choice_recorded": true,
+    "spa_flow_recorded": true
+  },
+  "stages": {
+    "stage_1": {
+      "scope": "Make the separate variant older and taller from the Age Progression process, refit proportions and rig, and record the adult_aged_up_variant presentation/build label without treating that label or spa completion as confirmed_adult.",
+      "adult_anatomy_allowed": false,
+      "resulting_variant_maturity_status_until_separate_classification": "unresolved",
+      "complete_adult_curriculum_assigned": false,
+      "required_evidence": [
+        "temporary origin verified",
+        "permanent promotion verified",
+        "at least two prior activations verified",
+        "resident age-progression choice recorded",
+        "spa flow recorded",
+        "separate variant identity",
+        "older/taller presentation verified",
+        "adult_aged_up_variant presentation/build label verified",
+        "confirmed_adult classification not inferred from spa completion",
+        "adult anatomy absent",
+        "exact artifact SHA-256"
+      ]
+    },
+    "stage_2": {
+      "scope": "Author adult anatomy only on the separate confirmed adult variant after Stage 1 passes and the resident's separate adult-anatomy choice is recorded.",
+      "adult_anatomy_allowed": "only_after_stage_1_classification_and_resident_choice_gates_pass",
+      "confirmed_adult_classification_required": true,
+      "resident_adult_anatomy_choice_recorded_required": true,
+      "runtime_activation_allowed": false,
+      "owner_visual_approval_required_after_build": true
+    }
+  },
+  "curriculum_assignment": {
+    "spa_completion_alone_unlocks_complete_adult_curriculum": false,
+    "adult_aged_up_variant_label_equals_confirmed_adult": false,
+    "resulting_variant_requires_separate_exact_confirmed_adult_classification": true,
+    "on_confirmed_adult_classification": "ASSIGN_COMPLETE_SOURCE_BACKED_ADULT_CURRICULUM_IMMEDIATELY",
+    "assignment_depends_on_relationship_interest_anatomy_or_experience": false,
+    "classification_or_curriculum_automatically_adds_adult_anatomy": false,
+    "non_adult_or_unresolved_guaranteed_minimum_curriculum": [
+      "age_appropriate_hygiene",
+      "privacy",
+      "bodily_autonomy",
+      "personal_boundaries",
+      "abuse_prevention",
+      "trusted_help"
+    ],
+    "guaranteed_minimum_is_not_an_exhaustive_ceiling": true,
+    "additional_age_appropriate_modules_require_separate_source_binding_and_approval": true,
+    "adult_curriculum_modules_inherited_by_non_adult_or_unresolved": false,
+    "non_adult_or_unresolved_body_representation": "doll_safe_non_anatomical"
+  },
+  "owner_continuity_authority": {
+    "offline_explicit_confirmation_allowed": true,
+    "network_lookup_required": false,
+    "rule": "Robert's explicit fictional/character continuity, timepoint, or adult-version correction is authoritative when logged. Uncertainty may be corrected; an explicitly non-adult body is never aged up in place."
+  },
+  "rules": [
+    "The normal version of a non-adult character remains non-adult-safe.",
+    "An explicitly non-adult body is never aged up in place; Stage 1 uses a distinct candidate ID and variant profile.",
+    "Stage 1 changes only the older/taller presentation/build state, records the adult_aged_up_variant label, keeps exact maturity unresolved, and must remain non-adult-safe anatomically.",
+    "The adult_aged_up_variant presentation/build label is not the separate exact confirmed_adult maturity classification.",
+    "Spa completion alone does not assign the complete adult curriculum and never adds adult anatomy.",
+    "When the separate resulting variant is exactly classified confirmed_adult, assign the complete adult curriculum immediately without waiting for relationship, interest, anatomy selection, or experience.",
+    "Stage 1 is blocked unless temporary origin is verified, the temporary is permanently promoted, has at least two verified prior activations, chooses Age Progression, and enters the recorded spa flow.",
+    "Stage 2 adult anatomy remains blocked until exact Stage 1 evidence, confirmed-adult classification, spa eligibility, and the resident's separate adult-anatomy choice pass.",
+    "An age-progressed presentation variant is irreversible once approved in the story state; that irreversibility does not establish confirmed adulthood.",
+    "There is no undo or de-age operation after spa age-up.",
+    "Adult anatomy and adult clothing/body assets unlock for ordinary exact confirmed adults or for an age-progressed variant only after Stage 1, separate exact confirmed-adult classification, and the resident's separate Stage 2 choice pass.",
+    "The system must record who was aged up, their durable choice, when, and which append-only adult variant assets were created.",
+    "A maturity correction or successful private build is not body approval and never activates or publishes the candidate."
+  ],
+  "blocked_actions": [
+    "silently converting a non-adult avatar to an adult body",
+    "adding adult anatomy during Stage 1",
+    "using an isolated earlier-era keyword to override an explicit later adult continuity request",
+    "using adult anatomy references on a normal non-adult avatar",
+    "merging adult and non-adult asset states into one unlabeled character"
+  ],
+  "owner_decision_history": [
+    {
+      "effective_date": "2026-08-03",
+      "decision_id": "spa_completion_is_not_confirmed_adult_or_anatomy_unlock_v1",
+      "current": true,
+      "preserves_original_non_adult_identity": true,
+      "requires_separate_resulting_variant_confirmation": true
+    }
+  ]
+}

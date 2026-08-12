@@ -1,0 +1,96 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_locked_pair_preoutcome_diagnostic.v3r10",
+  "status": "SEALED_STATIC_CANDIDATE_AWAITING_DIFFERENT_FRESH_AUDIT",
+  "execution_authority": "NONE",
+  "purpose": "Produce native evidence that distinguishes observer entry, child process creation, child wmain entry, exact raw child exit, captured child streams, retained-graph verification, Python DLL load identity, and the pre-outcome stop boundary after the consumed v3r9 empty-stream invocation.",
+  "authoring_boundary": {
+    "mode": "append_only_static_only",
+    "v3r9_one_shot_authority": "CONSUMED_NO_RETRY",
+    "launcher_controller_bootstrap_wrapper_blender_execution": false,
+    "body_mutation_save_render_export": false,
+    "main_handoff_or_current_truth_registry_update": false
+  },
+  "sealed_v3r9_inputs": {
+    "retained_manifest": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+      "bytes": 24975,
+      "sha256": "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96"
+    },
+    "consumed_run_postmortem": {
+      "path": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r9_consumed_run_static_postmortem/attempt_01/CHECKPOINT.md",
+      "bytes": 8451,
+      "sha256": "275fd7501a5d35ec6c5648a3935cafa56eb7854dfb80c173a2adc364738afed3"
+    },
+    "native_launcher": {
+      "path": "tools/native/kira_r25_afes_locked_pair_launcher_v3r9.exe",
+      "bytes": 282112,
+      "sha256": "2aec90c36e3150c258f6089fd1ba3f9e5c336ca0b69d8d1a4d826bc6a8764760"
+    },
+    "native_source": {
+      "path": "tools/native/kira_r25_afes_locked_pair_launcher_v3r9.c",
+      "bytes": 263949,
+      "sha256": "703f9683c44f8506558b85dbf3480425f0da0a05c115c1da2ef5bdd092e7addd"
+    },
+    "static_test": {
+      "path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r9.py",
+      "bytes": 67410,
+      "sha256": "ff6f1c75f773fa29e9c6815705e8ca8b9f4f1e80e8dea64c508489eb929eae6d"
+    },
+    "bootstrap": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_bootstrap_v3r9.py",
+      "bytes": 9381,
+      "sha256": "57ecda2ce2aecc75a259c3b6e9296eeec1512a296ebe7309f803e5ada3ea8378"
+    },
+    "controller": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py",
+      "bytes": 50907,
+      "sha256": "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf"
+    },
+    "wrapper": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r9.py",
+      "bytes": 25343,
+      "sha256": "a9c3da1146f2b8057338eb8ce679f96cc3f1d14582ecbb7212249c6a69e2383b"
+    }
+  },
+  "runtime_boundary": {
+    "observer_child_model": "one_native_pe_spawns_only_its_own_exact_image_suspended",
+    "audit_gate": "canonical_tsv_exact_hash_and_different_fresh_auditor_required",
+    "evidence_creation": "fixed_project_relative_path_create_new_write_through_no_delete_no_replace",
+    "child_process_recorded_before_resume": true,
+    "captured_stream_limit_bytes_each": 4096,
+    "child_wait_limit_milliseconds": 30000,
+    "retained_rows_expected": 137,
+    "retained_graph_access": "read_only_locked_hash_and_size_verification",
+    "original_outcome_receipt_access": "parent_directory_FILE_ADD_FILE_probe_only_receipt_must_remain_absent",
+    "python_boundary": "LoadLibraryEx_and_exact_file_identity_only_no_Python_C_API_or_initialization",
+    "terminal_boundary": "PRE_OUTCOME_STOP_NO_RESERVATION",
+    "body_operation_authority": "NONE"
+  },
+  "fixed_paths": {
+    "future_audit": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r10_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "one_shot_evidence": "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r10_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "protected_v3r9_outcome_receipt": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/EXECUTION_OUTCOME.receipt.bin"
+  },
+  "fresh_audit_contract": {
+    "format": "KIRA_R25_AFES_PREOUTCOME_DIAGNOSTIC_AUDIT_V3R10_TSV_1",
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_NATIVE_DIAGNOSTIC_ONLY",
+    "auditor_boundary": "different_fresh_exact_byte_static_auditor",
+    "author_id_forbidden_as_auditor": "codex_r25_afes_v3r10_recovery_author",
+    "exact_subjects_required": [
+      "contract",
+      "native_executable",
+      "native_source",
+      "static_test",
+      "static_checkpoint",
+      "retained_manifest",
+      "v3r9_postmortem"
+    ]
+  },
+  "explicit_nonclaims": [
+    "No v3r9 retry authority.",
+    "No execution authority exists at this static checkpoint.",
+    "No Python initialization or retained controller evaluation is implemented by v3r10.",
+    "No AFES extraction, Blender child, body access for mutation, candidate, save, render, export, activation, assignment, or acceptance is implemented.",
+    "A successful future diagnostic narrows the native startup boundary only; it is not a body result or proof that v3r9 would have completed."
+  ]
+}

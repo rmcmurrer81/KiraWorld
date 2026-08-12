@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "run_id": "kira_r7_adult_surface_reconstructed_neck_r4_v8_20260722",
+  "mode": "inactive_topological_neck_reconstruction_r4_v8",
+  "parent_artifacts": {
+    "r3_blend": {
+      "path": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\inactive_measured_neck_bridge_r3.blend",
+      "sha256": "327e072e128179dbe379673ca58e61d2e9db065a12ec36b4ae6844130dce4145"
+    },
+    "r3_evidence": {
+      "path": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\evidence.json",
+      "sha256": "7e690445d4af96b7fd8d30ddfa0b36cb6b641432e36575bf032ef5bc050c5d7d"
+    },
+    "r3_manifest": {
+      "path": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\manifest.json",
+      "sha256": "30dada3566c7325a21215c28412477efce645a4175ab920148125b928e3b31e1"
+    }
+  },
+  "transition": {
+    "method": "topological_erosion_tangent_guided_hermite_neck_reconstruction",
+    "removed_r3_bridge_faces": 230,
+    "body_erosion_depth_edges": 6,
+    "head_erosion_depth_edges": 10,
+    "body_removed_source_vertices": 317,
+    "head_removed_source_vertices": 792,
+    "body_clean_endpoint_vertices": 56,
+    "head_clean_endpoint_vertices": 88,
+    "intermediate_ring_count": 12,
+    "vertices_per_intermediate_ring": 88,
+    "added_transition_vertices": 1056,
+    "added_transition_faces": 1200,
+    "transition_height_m": 0.10644322633743286,
+    "angular_correspondence": true,
+    "arc_length_correspondence": true,
+    "loop_alignment_mean_radial_direction_error_squared": 0.03972268569419493,
+    "endpoint_derivatives_forced_flat": false,
+    "endpoint_derivative_model": "retained_surface_tangent_guided_cubic_hermite",
+    "maximum_tangent_lateral_slope": 0.45,
+    "body_tangent_fallback_count": 2,
+    "head_tangent_fallback_count": 2,
+    "clean_endpoint_center_lateral_mismatch_m": 0.02676692650327719,
+    "body_clean_loop": {
+      "mean_z_m": 0.9380576014518738,
+      "mean_radius_m": 0.06367805553439929,
+      "minimum_radius_m": 0.04761164376818785,
+      "maximum_radius_m": 0.08664710233340962
+    },
+    "head_clean_loop": {
+      "mean_z_m": 1.0445008277893066,
+      "mean_radius_m": 0.03800470006671491,
+      "minimum_radius_m": 0.03519487835471981,
+      "maximum_radius_m": 0.042030637763884056
+    },
+    "transition_profile": [
+      {
+        "ring": 1,
+        "t": 0.07692307692307693,
+        "center_x_m": 2.8715565349557437e-05,
+        "center_y_m": 0.05095643922686577,
+        "mean_z_m": 0.9464314579963684,
+        "mean_radius_m": 0.06424763739833429,
+        "minimum_radius_m": 0.03467537795253701,
+        "maximum_radius_m": 0.08299157609695176
+      },
+      {
+        "ring": 2,
+        "t": 0.15384615384615385,
+        "center_x_m": 3.180939893354662e-05,
+        "center_y_m": 0.04980415105819702,
+        "mean_z_m": 0.9546104073524475,
+        "mean_radius_m": 0.06118176285132083,
+        "minimum_radius_m": 0.03347019956628538,
+        "maximum_radius_m": 0.07828612048694401
+      },
+      {
+        "ring": 3,
+        "t": 0.23076923076923078,
+        "center_x_m": 3.284015110693872e-05,
+        "center_y_m": 0.047490496188402176,
+        "mean_z_m": 0.9627849459648132,
+        "mean_radius_m": 0.057800077262289425,
+        "minimum_radius_m": 0.03258572627475734,
+        "maximum_radius_m": 0.07305664283103312
+      },
+      {
+        "ring": 4,
+        "t": 0.3076923076923077,
+        "center_x_m": 3.213934905943461e-05,
+        "center_y_m": 0.044250499457120895,
+        "mean_z_m": 0.9709557890892029,
+        "mean_radius_m": 0.05424609171356421,
+        "minimum_radius_m": 0.03200892156566887,
+        "maximum_radius_m": 0.06765097340421357
+      },
+      {
+        "ring": 5,
+        "t": 0.38461538461538464,
+        "center_x_m": 3.0019702535355464e-05,
+        "center_y_m": 0.040319282561540604,
+        "mean_z_m": 0.9791240096092224,
+        "mean_radius_m": 0.05066717269051231,
+        "minimum_radius_m": 0.0317275516760768,
+        "maximum_radius_m": 0.06225056868282533
+      },
+      {
+        "ring": 6,
+        "t": 0.46153846153846156,
+        "center_x_m": 2.6818397600436583e-05,
+        "center_y_m": 0.03593185544013977,
+        "mean_z_m": 0.9872907400131226,
+        "mean_radius_m": 0.04721005170226945,
+        "minimum_radius_m": 0.031730267164010166,
+        "maximum_radius_m": 0.056992349913029386
+      },
+      {
+        "ring": 7,
+        "t": 0.5384615384615384,
+        "center_x_m": 2.2849852030049078e-05,
+        "center_y_m": 0.03132333606481552,
+        "mean_z_m": 0.9954568147659302,
+        "mean_radius_m": 0.04401718547304101,
+        "minimum_radius_m": 0.03200627800008839,
+        "maximum_radius_m": 0.05207706387061796
+      },
+      {
+        "ring": 8,
+        "t": 0.6153846153846154,
+        "center_x_m": 1.8435795936966315e-05,
+        "center_y_m": 0.026728754863142967,
+        "mean_z_m": 1.003623604774475,
+        "mean_radius_m": 0.04122441432100819,
+        "minimum_radius_m": 0.0325452573123716,
+        "maximum_radius_m": 0.047702216259710974
+      },
+      {
+        "ring": 9,
+        "t": 0.6923076923076923,
+        "center_x_m": 1.3889248293708079e-05,
+        "center_y_m": 0.022383179515600204,
+        "mean_z_m": 1.0117918252944946,
+        "mean_radius_m": 0.03896127154408553,
+        "minimum_radius_m": 0.03302672192561262,
+        "maximum_radius_m": 0.04406324554409832
+      },
+      {
+        "ring": 10,
+        "t": 0.7692307692307693,
+        "center_x_m": 9.547940862830728e-06,
+        "center_y_m": 0.01852169632911682,
+        "mean_z_m": 1.0199623107910156,
+        "mean_radius_m": 0.037355809190881335,
+        "minimum_radius_m": 0.03191560782166063,
+        "maximum_radius_m": 0.04135899894723854
+      },
+      {
+        "ring": 11,
+        "t": 0.8461538461538461,
+        "center_x_m": 5.722945843444904e-06,
+        "center_y_m": 0.01537936832755804,
+        "mean_z_m": 1.02813720703125,
+        "mean_radius_m": 0.03654547860704729,
+        "minimum_radius_m": 0.031870337098653785,
+        "maximum_radius_m": 0.03980276231305806
+      },
+      {
+        "ring": 12,
+        "t": 0.9230769230769231,
+        "center_x_m": 2.7435387437435566e-06,
+        "center_y_m": 0.013191260397434235,
+        "mean_z_m": 1.0363163948059082,
+        "mean_radius_m": 0.03669343475919913,
+        "minimum_radius_m": 0.03306212193321519,
+        "maximum_radius_m": 0.04025237934322892
+      }
+    ],
+    "smooth_polygon_normals": true,
+    "retained_endpoint_coordinates_changed": false,
+    "protected_face_mouth_eye_cranium_coordinates_changed": false
+  },
+  "identity_preservation": {
+    "all_original_r3_vertex_count": 22376,
+    "retained_original_r3_vertex_count": 21267,
+    "reconstructed_original_r3_vertex_count": 1109,
+    "retained_original_r3_maximum_coordinate_delta_m": 0.0,
+    "all_retained_original_r3_coordinates_preserved": true,
+    "body_vertex_count": 11591,
+    "body_approved_reconstruction_vertex_count": 317,
+    "body_reconstructed_source_vertex_count": 317,
+    "exact_r6_head_vertex_count": 10785,
+    "lower_neck_head_approved_reconstruction_vertex_count": 792,
+    "lower_neck_head_reconstructed_source_vertex_count": 792,
+    "protected_face_mouth_eye_cranium_vertex_count": 9993,
+    "protected_face_mouth_eye_cranium_maximum_coordinate_delta_m": 0.0,
+    "protected_face_mouth_eye_cranium_digest_before": "3a6530ca86be2f2f77943e7cf0d52abd5e5734e8b69148815832cb2ea17dc073",
+    "protected_face_mouth_eye_cranium_digest_after": "3a6530ca86be2f2f77943e7cf0d52abd5e5734e8b69148815832cb2ea17dc073",
+    "sealed_eye_mouth_aperture_vertex_count": 172,
+    "sealed_eye_mouth_aperture_maximum_coordinate_delta_m": 0.0,
+    "adult_surface_outside_bounded_transition_vertex_count": 21267,
+    "adult_surface_outside_bounded_transition_maximum_coordinate_delta_m": 0.0,
+    "reconstruction_subset_of_approved_topological_zone": true,
+    "face_and_mouth_vertices_smoothed_or_moved": false,
+    "second_mouth_added": false
+  },
+  "topology": {
+    "vertices": 22323,
+    "edges": 65744,
+    "polygons": 43420,
+    "connected_components": 1,
+    "component_sizes": [
+      22323
+    ],
+    "boundary_closed_cycle_count": 3,
+    "overused_edge_count": 0,
+    "minimum_face_area_m2": 3.4486780098319514e-10,
+    "degenerate_face_count_under_1e_12_m2": 0
+  },
+  "weights": {
+    "vertex_count": 22323,
+    "weighted_vertex_count": 22323,
+    "unweighted_vertex_count": 0,
+    "maximum_positive_groups_per_vertex": 4,
+    "invalid_target_groups": [],
+    "weight_sum_minimum": 0.9999999552965164,
+    "weight_sum_maximum": 1.0000000447034836,
+    "defined_vertex_group_count": 79
+  },
+  "deformation": {
+    "rest": {
+      "rotations_degrees_xyz": {},
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "p05": 1.0,
+          "p95": 1.0,
+          "fraction_under_half": 0.0,
+          "fraction_over_2x": 0.0
+        }
+      }
+    },
+    "upper_limb": {
+      "rotations_degrees_xyz": {
+        "mixamorig:LeftArm_09": [
+          0.0,
+          -25.0,
+          38.0
+        ],
+        "mixamorig:LeftForeArm_010": [
+          0.0,
+          68.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "p05": 0.999999071155083,
+          "p95": 1.0000020813158221,
+          "fraction_under_half": 7.605256753467997e-05,
+          "fraction_over_2x": 0.00031942078364565585
+        }
+      }
+    },
+    "hip_knee": {
+      "rotations_degrees_xyz": {
+        "mixamorig:LeftUpLeg_055": [
+          42.0,
+          0.0,
+          8.0
+        ],
+        "mixamorig:LeftLeg_056": [
+          -62.0,
+          0.0,
+          0.0
+        ],
+        "mixamorig:LeftFoot_057": [
+          18.0,
+          0.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "p05": 1.0,
+          "p95": 1.0000011511841858,
+          "fraction_under_half": 0.00036505232416646384,
+          "fraction_over_2x": 0.00038026283767339986
+        }
+      }
+    },
+    "spine_neck": {
+      "rotations_degrees_xyz": {
+        "mixamorig:Spine_02": [
+          0.0,
+          10.0,
+          0.0
+        ],
+        "mixamorig:Spine1_03": [
+          5.0,
+          0.0,
+          -8.0
+        ],
+        "mixamorig:Neck_05": [
+          8.0,
+          -12.0,
+          5.0
+        ],
+        "mixamorig:Head_06": [
+          -4.0,
+          7.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "p05": 0.9999223261190416,
+          "p95": 1.0000932042345911,
+          "fraction_under_half": 0.0,
+          "fraction_over_2x": 0.0
+        }
+      }
+    },
+    "bilateral_squat": {
+      "rotations_degrees_xyz": {
+        "mixamorig:Hips_01": [
+          -8.0,
+          0.0,
+          0.0
+        ],
+        "mixamorig:LeftUpLeg_055": [
+          48.0,
+          0.0,
+          4.0
+        ],
+        "mixamorig:RightUpLeg_060": [
+          48.0,
+          0.0,
+          -4.0
+        ],
+        "mixamorig:LeftLeg_056": [
+          -72.0,
+          0.0,
+          0.0
+        ],
+        "mixamorig:RightLeg_061": [
+          -72.0,
+          0.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "p05": 0.9999278068053713,
+          "p95": 1.0001339852013809,
+          "fraction_under_half": 0.0009430518374300317,
+          "fraction_over_2x": 0.0010038938914577757
+        }
+      }
+    }
+  },
+  "pose_gate_results": {
+    "rest": true,
+    "upper_limb": true,
+    "hip_knee": true,
+    "spine_neck": true,
+    "bilateral_squat": false
+  },
+  "renders": {
+    "neutral_front": "neutral_front.png",
+    "neutral_back": "neutral_back.png",
+    "neutral_left": "neutral_left.png",
+    "neutral_right": "neutral_right.png",
+    "neck_closeup_front": "neck_closeup_front.png",
+    "neck_closeup_back": "neck_closeup_back.png",
+    "neck_closeup_left": "neck_closeup_left.png",
+    "neck_closeup_right": "neck_closeup_right.png",
+    "identity_front": "identity_front.png",
+    "identity_left_profile": "identity_left_profile.png",
+    "pose_upper_limb": "pose_upper_limb.png",
+    "pose_hip_knee": "pose_hip_knee.png",
+    "pose_spine_neck": "pose_spine_neck.png",
+    "pose_bilateral_squat": "pose_bilateral_squat.png"
+  },
+  "gates": {
+    "single_connected_external_mesh": true,
+    "exact_79_joint_weights": true,
+    "tangent_guided_endpoint_continuity": true,
+    "transition_profile_bounded_and_monotonic": true,
+    "bounded_topological_neck_layers_only": true,
+    "protected_face_mouth_eye_apertures_cranium_preserved": true,
+    "adult_surface_outside_transition_preserved": true,
+    "fixed_pose_deformation": false,
+    "engineering_bounded_reconstruction_passed": false,
+    "original_resolution_visual_review_passed": false,
+    "owner_visual_review_approved": false,
+    "candidate_export_allowed": false,
+    "live_binding_allowed": false
+  },
+  "skin": {
+    "srgb_hex": "#e6c0a9",
+    "material": "KIRA_PRE_R6_LIGHT_SKIN_UNTEXTURED",
+    "untextured": true
+  },
+  "decision": {
+    "status": "rejected_r4v8_engineering_gate_failed_no_candidate",
+    "engineering_passed": false,
+    "candidate_glb_created": false,
+    "live_binding_changed": false,
+    "why": [
+      "R4-v8 removes the visibly defective R3 collar and adjacent neck layers instead of smoothing their silhouette.",
+      "One longer tangent-guided Hermite surface joins clean retained shoulder and neck loops without moving any retained source vertex.",
+      "The exact face, mouth and eye apertures, ears, cranium, adult surface outside the bounded reconstruction, and all 79 rig groups remain protected.",
+      "Original-resolution front/left/back/right neck and full-body visual review is still required; no GLB or live binding exists."
+    ]
+  },
+  "truth_limits": {
+    "complete_adult_topology_proven": false,
+    "internal_anatomy_proven": false,
+    "eyes_completed": false,
+    "lip_sync_completed": false,
+    "natural_long_duration_motion_proven": false
+  }
+}

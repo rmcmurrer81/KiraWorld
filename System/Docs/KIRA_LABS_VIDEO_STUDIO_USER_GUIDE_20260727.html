@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kira Labs Video Studio — Illustrated User Guide</title>
+<style>
+@page { size: Letter; margin: .55in; }
+* { box-sizing: border-box; }
+body { margin:0; color:#10263a; font:15px/1.46 "Segoe UI",Arial,sans-serif; background:#fff; }
+h1,h2,h3 { color:#08243b; line-height:1.15; }
+h1 { font-size:34px; margin:0 0 10px; } h2 { font-size:24px; border-bottom:3px solid #f3a51b; padding-bottom:7px; }
+h3 { font-size:18px; margin-bottom:5px; } p { margin:6px 0 12px; }
+.cover { min-height:9.2in; padding:.75in; color:#fff; background:linear-gradient(145deg,#061b2c,#0d3550 64%,#0b6274); position:relative; }
+.cover h1,.cover h2 { color:#fff; border:0; }.cover .bar { width:150px;height:8px;background:#f3a51b;margin:28px 0; }
+.cover .tag { color:#ffc24a; font-weight:700; letter-spacing:.08em; }
+.page { page-break-before:always; }
+.shot { width:100%; max-height:5.8in; object-fit:contain; border:2px solid #214a67; border-radius:8px; background:#061522; }
+.caption { font-size:12px; color:#456; margin-top:4px; }
+.steps { counter-reset:step; padding:0; }
+.steps li { list-style:none; margin:11px 0; padding:10px 12px 10px 48px; border-left:4px solid #f3a51b; background:#f4f8fa; position:relative; }
+.steps li:before { counter-increment:step; content:counter(step); position:absolute; left:10px; top:9px; width:26px;height:26px;border-radius:50%; background:#0b6f87;color:white;text-align:center;line-height:26px;font-weight:700; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.card { border:1px solid #b8ccd7; border-radius:8px; padding:12px; background:#f8fbfc; break-inside:avoid; }
+.warn { border-left:5px solid #f3a51b; background:#fff7e8; padding:11px; }
+.ok { border-left:5px solid #17895b; background:#edf9f3; padding:11px; }
+table { width:100%; border-collapse:collapse; } th,td { border:1px solid #b8ccd7; padding:8px; vertical-align:top; } th { background:#0b3048;color:#fff; }
+code { color:#7a3500; background:#fff3df; padding:1px 4px; }
+ul { margin-top:5px; } .small { font-size:12px; color:#526a78; }
+</style>
+</head>
+<body>
+<section class="cover">
+  <p class="tag">KIRA LABS • VIDEO STUDIO</p>
+  <h1>Illustrated User Guide</h1>
+  <div class="bar"></div>
+  <h2>From a new project to an owner-review video</h2>
+  <p>Project types • source footage • narration • storyboard review • corrections • thumbnails • publication text • FAQ • troubleshooting</p>
+  <p style="position:absolute;bottom:.8in">2.0.0-alpha.1 staging guide • July 27, 2026<br>
+  Nothing in Video Studio uploads or publishes automatically.</p>
+</section>
+
+<section class="page">
+<h2>1. Know the workspace</h2>
+<img class="shot" src="file:///C:/KiraVideos/KiraLabsVideoStudio_v2_staging/2.0.0-alpha.1/ui_editor_workspace_validation.png">
+<p class="caption">The Editor workspace combines the live storyboard, video/thumbnail preview, decisions, and Editor Chat.</p>
+<div class="grid">
+  <div class="card"><h3>Project &amp; controls</h3><p>Choose the subject, format, length, research strictness, outputs, voice, captions, and source-video policy.</p></div>
+  <div class="card"><h3>Editor workspace</h3><p>Review each proposed clip, image, title card, audio decision, thumbnail, and concept slot.</p></div>
+  <div class="card"><h3>Workflow</h3><p>Run research, fact sheet, script, visual planning, narration, owner review, corrections, and packaging.</p></div>
+  <div class="card"><h3>Review &amp; corrections</h3><p>Approve, Reject, Replace, Edit, or Lock an item. A rejected item cannot enter the deliverable.</p></div>
+</div>
+<p class="warn"><b>Staging rule:</b> an owner-review render is a draft for watching. It is not an approval, a clean final, or permission to publish.</p>
+</section>
+
+<section class="page">
+<h2>2. Start a project</h2>
+<ol class="steps">
+  <li>Select <b>New private project</b>.</li>
+  <li>Enter a precise subject. A useful subject names the work and its scope, such as “Detroit: Become Human — story, android treatment, and branching outcomes.”</li>
+  <li>Choose the video type. The type controls the chapter structure and visual expectations.</li>
+  <li>Choose the desired length and chapter count. Length is an editorial target, never permission to pad or repeat.</li>
+  <li>Enter required talking points, subjects to include, subjects to avoid, and your notes.</li>
+  <li>Enable captions and the required landscape, vertical, or square outputs.</li>
+  <li>Enable trailer/video use only when relevant footage can be sourced and reviewed. Choose whether source audio is heard, ducked, or muted for each clip.</li>
+  <li>Save. The project gets its own folder, records, assets, review decisions, and audit history.</li>
+</ol>
+<img class="shot" src="file:///C:/Users/robmc/Pictures/Screenshots/Screenshot%202026-07-26%20022319.png">
+<p class="caption">Project controls. The current styled build uses the same workflow with a darker editorial interface.</p>
+</section>
+
+<section class="page">
+<h2>3. Choose the right video type</h2>
+<table>
+<tr><th>Type</th><th>Best visual approach</th><th>Editorial checks</th></tr>
+<tr><td>Synthetic Spotlight</td><td>Character stills beside concise text, selected character footage, continuity graphics, covers and posters.</td><td>The exact character/version must remain visible while discussed. Do not merge reboots, adaptations, or branches.</td></tr>
+<tr><td>Game Review</td><td>Brief branded opener, then mostly relevant gameplay: characters, exploration, choices, consequences, and interface examples.</td><td>Avoid spoiling outcomes without warning. Match footage to the named character, chapter, choice, or ending path.</td></tr>
+<tr><td>Movie history / continuity</td><td>Chronological trailers, official stills, posters, actor images, interviews, and short explanatory timelines.</td><td>Switch films when narration switches. Keep narration dominant; use source audio deliberately.</td></tr>
+<tr><td>Kira World Update</td><td>Real screenshots and screen recordings, before/after comparisons, pans/zooms, timelines, and labeled architecture.</td><td>Separate current functionality, failed experiments, limits, and future concepts.</td></tr>
+<tr><td>Tutorial</td><td>Actual screen recording, visible cursor and button presses, zooms, highlights, before/after correction, final output.</td><td>Highlights must point to the correct control. Use direct “you” language for public viewers.</td></tr>
+</table>
+</section>
+
+<section class="page">
+<h2>4. Research, script, and source planning</h2>
+<ol class="steps">
+  <li>Run research from inside Video Studio so the project records every query, candidate, selected source, and rejection.</li>
+  <li>Prefer first-party sources: official publishers, studios, networks, developers, press kits, manuals, and credited releases.</li>
+  <li>Review the fact sheet. Correct disputed dates, versions, identity knowledge, and timeline boundaries before narration.</li>
+  <li>Read the complete script aloud. Remove repetition, production language, broken thoughts, and corrections that refer to rejected drafts.</li>
+  <li>Review the pronunciation dictionary. Generate a short proof for names that have been mispronounced.</li>
+  <li>Inspect the shot list. Every item needs its source, exact in/out point, audio mode, purpose, continuity/subject ID, and rights note.</li>
+</ol>
+<p class="ok"><b>Good test:</b> if the narration changes from one movie, game chapter, character, or continuity to another, the storyboard should show a deliberate visual change at the same moment.</p>
+</section>
+
+<section class="page">
+<h2>5. Review visuals and concepts</h2>
+<img class="shot" src="file:///C:/KiraVideos/KiraLabsVideoStudio_v2_staging/2.0.0-alpha.1/ui_editor_workspace_validation.png">
+<ol class="steps">
+  <li>Select a storyboard row and inspect it at full size and at small preview size.</li>
+  <li><b>Approve</b> a correct candidate, <b>Reject</b> a wrong one, <b>Replace</b> its source, <b>Edit</b> its timing/text/crop, or <b>Lock</b> a choice you do not want automation to change.</li>
+  <li>Use Editor Chat for specific corrections, such as “Replace this clip with Connor questioning the deviant; keep narration unchanged.”</li>
+  <li>For generated concepts, approve the prompt and storyboard slot first. The Studio records provider, prompt, date, purpose, and hash.</li>
+  <li>Concepts must permanently read <b>CONCEPT — NOT CURRENT FUNCTIONALITY</b>. Rejected concepts are excluded automatically.</li>
+</ol>
+<p class="warn">A concept image is not a substitute for available runtime evidence, gameplay, a screenshot, or an approved source image.</p>
+</section>
+
+<section class="page">
+<h2>6. Narration, clips, and audio</h2>
+<div class="grid">
+<div class="card"><h3>Muted</h3><p>Robert’s narration is the only intended audio. Use for most explanatory footage.</p></div>
+<div class="card"><h3>Ducked</h3><p>Source ambience remains low beneath narration. Robert’s voice must remain clearly dominant.</p></div>
+<div class="card"><h3>Heard</h3><p>A deliberate source excerpt is featured. Use a precise in/out and return cleanly to narration.</p></div>
+<div class="card"><h3>Never accidental</h3><p>No unintended silence, clipped narration, corrupted AAC, mismatched stream duration, or wrong-version visuals.</p></div>
+</div>
+<h3>Before rendering</h3>
+<ul>
+<li>Listen to pronunciation proofs.</li>
+<li>Confirm every narration WAV exists and belongs to the correct chapter.</li>
+<li>Ensure each visual plan lasts at least as long as its planned narration.</li>
+<li>If a good clip is shorter, follow it with another matched clip or sourced still; never cut the sentence.</li>
+</ul>
+</section>
+
+<section class="page">
+<h2>7. Render and complete owner review</h2>
+<p class="ok"><b>Clean-export rule:</b> Owner-review is an internal project status. Video Studio never burns draft or review labels into the exported video. The one exported MP4 remains visually clean while its project metadata continues to say that Robert’s review and rights review are pending.</p>
+<ol class="steps">
+  <li>Create the owner-review MP4. The Studio decodes video and audio through EOF and compares their true durations.</li>
+  <li>Generate captions and chapter times from the completed timeline, not from an earlier estimate.</li>
+  <li>Watch the complete MP4. Check story order, visual changes, narration, source audio, repeated footage, captions, and ending.</li>
+  <li>Record corrections against exact storyboard items. Re-render only what needs changing when accepted media and narration can be reused.</li>
+  <li>Review thumbnails at full resolution, normal YouTube size, and phone size. Keep aspect ratio and faces undistorted.</li>
+  <li>Review one clean YouTube set and one clean Facebook set. No upload occurs.</li>
+</ol>
+<p class="warn"><b>Status language:</b> use <code>AWAITING_ROBERT_OWNER_REVIEW</code> until Robert accepts the watched package. Machine checks do not make a video approved.</p>
+</section>
+
+<section class="page">
+<h2>8. FAQ</h2>
+<h3>Does Video Studio upload automatically?</h3><p>No. Uploading and publishing are disabled.</p>
+<h3>Can I change one bad clip without rebuilding accepted narration?</h3><p>Yes. Reject or replace the storyboard item and preserve accepted files. Hash records show which files were reused unchanged.</p>
+<h3>What if a trailer is shorter than the narration?</h3><p>Add another correctly matched shot, then a sourced still or labeled comparison graphic. The Studio must not truncate narration or loop unrelated footage.</p>
+<h3>Why is a project blocked after a video file exists?</h3><p>A file is not enough. Stream decoding, audio/video duration, silence, narration coverage, captions, source alignment, rights notes, and review state can still fail.</p>
+<h3>Can generated art be used?</h3><p>Only through the Studio’s disclosed concept workflow after prompt approval. It remains labeled as a concept and cannot pose as current functionality or evidence.</p>
+<h3>What does Lock do?</h3><p>It preserves an accepted choice from later automatic replacement. Lock does not grant publication rights.</p>
+</section>
+
+<section class="page">
+<h2>9. Troubleshooting</h2>
+<table>
+<tr><th>Problem</th><th>What to check</th><th>Correction</th></tr>
+<tr><td>Video ends before narration</td><td>Chapter visual duration versus WAV duration; source clip EOF.</td><td>Add matched visual coverage. The coverage gate should fail the render.</td></tr>
+<tr><td>Audio ends early or AAC errors</td><td>Decode report and independent stream timestamps.</td><td>Rebuild audio concat/mix; do not mark ready.</td></tr>
+<tr><td>Wrong movie/game/version remains onscreen</td><td>Storyboard subject ID and visual switch time.</td><td>Replace or retime that exact item.</td></tr>
+<tr><td>Voice mispronounces a name</td><td>Dictionary entry and short proof.</td><td>Regenerate only affected narration segments.</td></tr>
+<tr><td>Thumbnail looks stretched</td><td>Source/output aspect ratio and focal crop.</td><td>Use contain or aspect-preserving cover; reject distortion.</td></tr>
+<tr><td>Editor buttons unavailable</td><td>A project and storyboard item must be selected.</td><td>Open the project, select a row, then choose a decision.</td></tr>
+<tr><td>Launcher does not open</td><td>Run <code>CHECK_SETUP.bat</code>; inspect the launcher log.</td><td>Correct the reported dependency/path issue; avoid administrator launch as the normal fix.</td></tr>
+<tr><td>Research source is only a secondary summary</td><td>Source provenance and authority.</td><td>Use it as a lead, then acquire the first-party authority through Studio.</td></tr>
+</table>
+<p class="small">Staged program: C:\KiraVideos\KiraLabsVideoStudio_v2_staging\2.0.0-alpha.1</p>
+</section>
+</body>
+</html>

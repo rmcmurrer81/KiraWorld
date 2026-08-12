@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avatar Multiview Owner Review</title>
+  <style>
+    :root { color-scheme: dark; --bg:#09111d; --panel:#101d2c; --line:#29445e; --ink:#eaf3fb; --muted:#a8bfd2; --accent:#55c9ff; --good:#73dfa2; --warn:#ffd479; --bad:#ff8f94; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 system-ui, sans-serif; }
+    header { padding:18px 24px; border-bottom:1px solid var(--line); background:#0c1725; position:sticky; top:0; z-index:5; }
+    h1,h2,h3 { margin:0 0 10px; }
+    h1 { font-size:22px; } h2 { font-size:18px; } h3 { font-size:15px; }
+    main { max-width:1500px; margin:auto; padding:18px; display:grid; gap:16px; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; }
+    .safety { border-left:5px solid var(--warn); }
+    .grid { display:grid; grid-template-columns:minmax(430px, 1.25fr) minmax(390px, .75fr); gap:16px; }
+    .fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .fields.four { grid-template-columns:repeat(4,minmax(0,1fr)); }
+    label { display:block; color:var(--muted); font-size:13px; }
+    input, select, textarea, button { width:100%; margin-top:4px; border:1px solid #365874; border-radius:6px; padding:8px; color:var(--ink); background:#0a1522; font:inherit; }
+    input[type=checkbox] { width:auto; margin:0 8px 0 0; }
+    label.check { display:flex; align-items:flex-start; margin:8px 0; color:var(--ink); }
+    button { cursor:pointer; background:#17344d; font-weight:650; }
+    button:hover { background:#20506f; }
+    button.danger { background:#4a2428; }
+    .meta { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; }
+    .meta div { min-width:0; }
+    code { color:#bde8ff; overflow-wrap:anywhere; }
+    #image-wrap { position:relative; min-height:320px; background:#050a10; border:1px solid var(--line); overflow:auto; display:flex; align-items:center; justify-content:center; }
+    #source-image { display:block; max-width:100%; max-height:72vh; object-fit:contain; }
+    #overlay { position:absolute; pointer-events:auto; cursor:crosshair; }
+    .status { padding:10px; border-radius:6px; background:#0a1522; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .good { color:var(--good); } .warn { color:var(--warn); } .bad { color:var(--bad); }
+    table { border-collapse:collapse; width:100%; margin-top:10px; }
+    th,td { border-bottom:1px solid var(--line); padding:7px; text-align:left; vertical-align:top; }
+    th { color:var(--muted); font-size:12px; }
+    td button { padding:4px 7px; margin:0; }
+    .chips { display:flex; flex-wrap:wrap; gap:5px; }
+    .chip { border:1px solid var(--line); border-radius:999px; padding:3px 7px; color:var(--muted); font-size:12px; }
+    .chip.done { color:var(--good); border-color:#337857; }
+    pre { background:#07101a; border:1px solid var(--line); border-radius:6px; padding:12px; max-height:420px; overflow:auto; white-space:pre-wrap; }
+    .span2 { grid-column:1 / -1; }
+    @media(max-width:1000px){ .grid,.meta { grid-template-columns:1fr; } .fields.four { grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Avatar Multiview Owner Review</h1>
+  <div id="top-status" class="status">Loading exact-hash session…</div>
+</header>
+<main>
+  <section class="panel safety">
+    <strong>Private review boundary.</strong> Images are fetched only from this loopback server. Nothing on this page can queue or build a body, create a mesh, export images, or activate anyone. Saving always requires explicit confirmations and the current manifest hash.
+  </section>
+
+  <section class="panel">
+    <h2>Locked identity and routing</h2>
+    <div class="meta">
+      <div><label>Candidate</label><code id="candidate"></code></div>
+      <div><label>Subject</label><code id="subject"></code></div>
+      <div><label>Selected version</label><code id="version"></code></div>
+      <div><label>Topology lane</label><code id="topology"></code></div>
+      <div><label>Reviewer</label><code id="reviewer"></code></div>
+    </div>
+    <p><label>Current manifest SHA-256</label><code id="manifest-sha"></code></p>
+    <p><label>Canonical registry/profile route</label><code id="canonical-route"></code></p>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>Exact source inspection</h2>
+      <label>Enrolled source
+        <select id="source-select"></select>
+      </label>
+      <p id="source-meta" class="status"></p>
+      <div id="image-wrap"><img id="source-image" alt="Exact enrolled source"><canvas id="overlay"></canvas></div>
+      <p class="warn">Click the image to capture a native-pixel coordinate for a landmark. The page never suggests landmarks.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Source identity, view, crop, calibration, and landmarks</h2>
+      <div class="fields">
+        <label>View label<select id="view-label"></select></label>
+        <label>Shared coordinate-frame ID<input id="frame-id" placeholder="owner_review_frame_01"></label>
+        <label>Camera model<select id="camera-model"></select></label>
+        <label>Review notes<input id="source-notes" maxlength="4000"></label>
+      </div>
+      <h3>Reviewed crop in native pixels</h3>
+      <div class="fields four">
+        <label>X<input id="crop-x" type="number" min="0"></label>
+        <label>Y<input id="crop-y" type="number" min="0"></label>
+        <label>Width<input id="crop-width" type="number" min="1"></label>
+        <label>Height<input id="crop-height" type="number" min="1"></label>
+      </div>
+      <button id="full-frame" type="button">Fill crop with exact full frame (still requires approval)</button>
+
+      <h3>Manual landmark entry</h3>
+      <div class="fields">
+        <label>Unique landmark name<input id="landmark-name" placeholder="left_eye_outer"></label>
+        <label>Required region<select id="landmark-region"></select></label>
+        <label>Native X<input id="landmark-x" type="number" min="0" step="0.1"></label>
+        <label>Native Y<input id="landmark-y" type="number" min="0" step="0.1"></label>
+      </div>
+      <label class="check"><input id="landmark-reviewed" type="checkbox">I inspected this point and explicitly confirm its name, region, and exact-source coordinate.</label>
+      <button id="add-landmark" type="button">Add explicitly reviewed landmark</button>
+      <div id="region-chips" class="chips"></div>
+      <table>
+        <thead><tr><th>Name</th><th>Region</th><th>X, Y</th><th></th></tr></thead>
+        <tbody id="landmark-list"></tbody>
+      </table>
+
+      <h3>Required confirmations</h3>
+      <label class="check"><input id="same-subject" type="checkbox">This exact image depicts the locked subject shown above.</label>
+      <label class="check"><input id="same-version" type="checkbox">This exact image depicts the locked selected version shown above.</label>
+      <label class="check"><input id="confirm-crop" type="checkbox">I inspected and approve the crop values.</label>
+      <label class="check"><input id="confirm-calibration" type="checkbox">I inspected and approve the camera model and shared coordinate frame.</label>
+      <label class="check"><input id="confirm-landmarks" type="checkbox">I inspected every listed landmark; none was auto-approved.</label>
+      <label class="check"><input id="approve-source" type="checkbox">Save this source review as an immutable approved artifact.</label>
+      <button id="save-source" type="button">Save exact-hash source review</button>
+      <p id="source-save-status" class="status"></p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>Scale decision</h2>
+      <label>Mode
+        <select id="scale-mode">
+          <option value="">Choose explicitly…</option>
+          <option value="reviewed_metric">Reviewed metric height</option>
+          <option value="scale_unknown_review_only">Scale unknown; private review only</option>
+        </select>
+      </label>
+      <label>Target height in meters (metric mode only)<input id="target-height" type="number" min="0.5" max="2.8" step="0.001"></label>
+      <label>Notes<input id="scale-notes" maxlength="4000"></label>
+      <label class="check"><input id="scale-identity" type="checkbox">This scale decision applies to the locked subject and selected version.</label>
+      <label class="check"><input id="metric-confirm" type="checkbox">For metric mode, I independently reviewed and approve this height.</label>
+      <label class="check"><input id="unknown-confirm" type="checkbox">For unknown mode, I confirm no height may be inferred.</label>
+      <label class="check"><input id="approve-scale" type="checkbox">Save this scale decision as an immutable approved artifact.</label>
+      <button id="save-scale" type="button">Save exact-hash scale review</button>
+      <p id="scale-save-status" class="status"></p>
+    </div>
+
+    <div class="panel">
+      <h2>Topology-base review</h2>
+      <label>Audited base/cage authority<select id="base-authority"></select></label>
+      <p id="base-authority-meta" class="status"></p>
+      <label>Notes<input id="base-notes" maxlength="4000"></label>
+      <label class="check"><input id="base-route" type="checkbox">This base is appropriate for the locked identity/version and exact topology lane.</label>
+      <label class="check"><input id="base-file" type="checkbox">I selected and inspected this exact hash-bound audited base/cage entry.</label>
+      <label class="check"><input id="base-rig" type="checkbox">I confirm it is a rig-compatible cage source for this lane.</label>
+      <label class="check"><input id="base-new-surface" type="checkbox">A new candidate-specific surface is required.</label>
+      <label class="check"><input id="base-no-copy" type="checkbox">Copying this base as the candidate body is forbidden.</label>
+      <label class="check"><input id="approve-base" type="checkbox">Save this topology-base review as an immutable approved artifact.</label>
+      <button id="save-base" type="button">Save exact-hash topology-base review</button>
+      <p id="base-save-status" class="status"></p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Path-free owner review report</h2>
+    <button id="refresh-report" type="button">Refresh report</button>
+    <pre id="report"></pre>
+  </section>
+</main>
+<script>
+"use strict";
+const csrfToken = __CSRF_TOKEN_JSON__;
+let session = null;
+let currentSource = null;
+let landmarks = [];
+const $ = id => document.getElementById(id);
+
+async function api(path, options={}) {
+  const headers = Object.assign({"X-Owner-Review-CSRF": csrfToken}, options.headers || {});
+  const response = await fetch(path, Object.assign({}, options, {headers, cache:"no-store", credentials:"same-origin"}));
+  const contentType = response.headers.get("content-type") || "";
+  const body = contentType.includes("application/json") ? await response.json() : await response.text();
+  if (!response.ok) throw new Error(typeof body === "string" ? body : (body.error || JSON.stringify(body)));
+  return body;
+}
+
+function setStatus(id, text, kind="") {
+  const node=$(id); node.textContent=text; node.className=`status ${kind}`;
+}
+
+function fillSelect(node, values, placeholder="Choose explicitly…") {
+  node.textContent="";
+  const first=document.createElement("option"); first.value=""; first.textContent=placeholder; node.appendChild(first);
+  for (const value of values) { const option=document.createElement("option"); option.value=value; option.textContent=value; node.appendChild(option); }
+}
+
+function renderBaseAuthority() {
+  const catalog=(session && session.base_authority_catalog) || {status:"not_ready",options:[]};
+  const option=(catalog.options || []).find(item=>item.base_id===$("base-authority").value);
+  if (option) {
+    const metrics=option.structural_proof.metrics;
+    setStatus("base-authority-meta", `${option.project_relative_path}\nSHA-256 ${option.sha256}\n${metrics.referenced_position_vertex_count} vertices; ${metrics.indexed_or_sequential_triangle_count} triangles; ${metrics.unique_joint_count} joints; weighted/skinned cage gate passed.\nStable motion, likeness, and anatomy are not proven.`, "warn");
+  } else {
+    setStatus("base-authority-meta", (catalog.options || []).length
+      ? `${catalog.options.length} exact audited option(s) for ${session.topology_lane}. Choose one explicitly.`
+      : `Base not ready: ${catalog.reason || catalog.status}. No free-form path is accepted.`,
+      (catalog.options || []).length ? "warn" : "bad");
+  }
+}
+
+async function refreshSession(preferredSource="") {
+  session = await api("/api/session");
+  $("candidate").textContent=session.candidate_id;
+  $("subject").textContent=session.subject_id;
+  $("version").textContent=session.selected_version_id;
+  $("topology").textContent=session.topology_lane;
+  $("reviewer").textContent=session.reviewer_id;
+  $("manifest-sha").textContent=session.manifest_sha256;
+  $("canonical-route").textContent=`${session.canonical_route.canonical_candidate_id} | registry ${session.canonical_route.registry_sha256} | profile ${session.canonical_route.canonical_profile_sha256}`;
+  setStatus("top-status", `${session.evaluation.status} · ${session.evaluation.reviewed_source_count}/${session.evaluation.source_count} reviewed · no queue/build/activation operations`, session.evaluation.authoring_queue_ready ? "warn" : "good");
+  fillSelect($("view-label"), session.allowed_views);
+  fillSelect($("camera-model"), session.camera_models);
+  fillSelect($("landmark-region"), session.required_landmark_regions);
+  const baseCatalog=session.base_authority_catalog || {status:"not_ready",options:[]};
+  const baseSelect=$("base-authority"); baseSelect.textContent="";
+  const baseFirst=document.createElement("option"); baseFirst.value=""; baseFirst.textContent="Choose audited authority explicitly..."; baseSelect.appendChild(baseFirst);
+  for (const option of baseCatalog.options || []) {
+    const node=document.createElement("option"); node.value=option.base_id;
+    node.textContent=`${option.base_id} - ${option.sha256.slice(0,12)}...`;
+    baseSelect.appendChild(node);
+  }
+  $("save-base").disabled=(baseCatalog.options || []).length===0;
+  renderBaseAuthority();
+  const select=$("source-select"); select.textContent="";
+  for (const source of session.source_images) {
+    const option=document.createElement("option"); option.value=source.source_id;
+    option.textContent=`${source.source_id} · ${source.review ? "reviewed" : "pending"}`;
+    select.appendChild(option);
+  }
+  if (preferredSource && session.source_images.some(item=>item.source_id===preferredSource)) select.value=preferredSource;
+  loadSelectedSource();
+  await refreshReport();
+}
+
+function loadSelectedSource() {
+  currentSource=session.source_images.find(item=>item.source_id===$("source-select").value) || session.source_images[0];
+  if (!currentSource) return;
+  $("source-select").value=currentSource.source_id;
+  $("source-meta").textContent=`${currentSource.dimensions.width} × ${currentSource.dimensions.height} native pixels\nSHA-256 ${currentSource.sha256}`;
+  const review=currentSource.review || {};
+  $("view-label").value=review.view_label || "";
+  $("frame-id").value=(review.calibration && review.calibration.coordinate_frame_id) || "";
+  $("camera-model").value=(review.calibration && review.calibration.camera_model) || "";
+  $("source-notes").value=review.review_notes || "";
+  const crop=review.crop_pixels || {};
+  for (const [id,key] of [["crop-x","x"],["crop-y","y"],["crop-width","width"],["crop-height","height"]]) $(id).value=crop[key] ?? "";
+  landmarks=(review.landmarks || []).map(item=>Object.assign({},item));
+  for (const id of ["same-subject","same-version","confirm-crop","confirm-calibration","confirm-landmarks","approve-source","landmark-reviewed"]) $(id).checked=false;
+  renderLandmarks();
+  const image=$("source-image"); image.removeAttribute("src"); image.src=currentSource.image_url;
+}
+
+function syncOverlay() {
+  const image=$("source-image"), canvas=$("overlay");
+  const rect=image.getBoundingClientRect(); const wrap=$("image-wrap").getBoundingClientRect();
+  canvas.width=Math.max(1,Math.round(rect.width)); canvas.height=Math.max(1,Math.round(rect.height));
+  canvas.style.width=`${rect.width}px`; canvas.style.height=`${rect.height}px`;
+  canvas.style.left=`${rect.left-wrap.left+$("image-wrap").scrollLeft}px`;
+  canvas.style.top=`${rect.top-wrap.top+$("image-wrap").scrollTop}px`;
+  drawOverlay();
+}
+
+function drawOverlay() {
+  const canvas=$("overlay"), ctx=canvas.getContext("2d"); ctx.clearRect(0,0,canvas.width,canvas.height);
+  if (!currentSource) return;
+  ctx.fillStyle="#55c9ff"; ctx.strokeStyle="#06111b"; ctx.lineWidth=2;
+  landmarks.forEach((item,index)=>{ const x=item.x/currentSource.dimensions.width*canvas.width; const y=item.y/currentSource.dimensions.height*canvas.height; ctx.beginPath(); ctx.arc(x,y,5,0,Math.PI*2); ctx.fill(); ctx.stroke(); ctx.fillStyle="#fff"; ctx.fillText(String(index+1),x+7,y-7); ctx.fillStyle="#55c9ff"; });
+}
+
+function renderLandmarks() {
+  const tbody=$("landmark-list"); tbody.textContent="";
+  landmarks.forEach((item,index)=>{
+    const row=document.createElement("tr");
+    for (const value of [item.name,item.region,`${Number(item.x).toFixed(1)}, ${Number(item.y).toFixed(1)}`]) { const cell=document.createElement("td"); cell.textContent=value; row.appendChild(cell); }
+    const cell=document.createElement("td"), button=document.createElement("button"); button.type="button"; button.textContent="Remove"; button.className="danger"; button.onclick=()=>{landmarks.splice(index,1);renderLandmarks();}; cell.appendChild(button); row.appendChild(cell); tbody.appendChild(row);
+  });
+  const regions=new Set(landmarks.map(item=>item.region)); const chips=$("region-chips"); chips.textContent="";
+  for (const region of session.required_landmark_regions) { const chip=document.createElement("span"); chip.className=`chip ${regions.has(region)?"done":""}`; chip.textContent=region; chips.appendChild(chip); }
+  drawOverlay();
+}
+
+$("source-select").addEventListener("change",loadSelectedSource);
+$("base-authority").addEventListener("change",renderBaseAuthority);
+$("source-image").addEventListener("load",syncOverlay);
+window.addEventListener("resize",syncOverlay);
+$("overlay").addEventListener("click",event=>{
+  if (!currentSource) return; const rect=$("overlay").getBoundingClientRect();
+  $("landmark-x").value=((event.clientX-rect.left)/rect.width*currentSource.dimensions.width).toFixed(1);
+  $("landmark-y").value=((event.clientY-rect.top)/rect.height*currentSource.dimensions.height).toFixed(1);
+});
+$("full-frame").addEventListener("click",()=>{ if(!currentSource)return; $("crop-x").value=0; $("crop-y").value=0; $("crop-width").value=currentSource.dimensions.width; $("crop-height").value=currentSource.dimensions.height; });
+$("add-landmark").addEventListener("click",()=>{
+  try {
+    if (!$("landmark-reviewed").checked) throw new Error("Explicitly confirm this landmark first.");
+    const item={name:$("landmark-name").value.trim(),region:$("landmark-region").value,x:Number($("landmark-x").value),y:Number($("landmark-y").value),reviewed:true};
+    if (!item.name || !item.region || !Number.isFinite(item.x) || !Number.isFinite(item.y)) throw new Error("Name, region, X, and Y are required.");
+    if (landmarks.some(existing=>existing.name===item.name)) throw new Error("Landmark names must be unique.");
+    if (item.x<0 || item.y<0 || item.x>=currentSource.dimensions.width || item.y>=currentSource.dimensions.height) throw new Error("Landmark is outside the source image.");
+    landmarks.push(item); $("landmark-name").value=""; $("landmark-reviewed").checked=false; renderLandmarks();
+  } catch(error){ setStatus("source-save-status",error.message,"bad"); }
+});
+
+async function postReview(path,payload,statusId,sourceId="") {
+  try {
+    const result=await api(path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({expected_manifest_sha256:session.manifest_sha256,payload})});
+    setStatus(statusId,`Saved artifact ${result.artifact_sha256}\nNew manifest ${result.manifest_sha256}\nNo body queued or activated.`,"good");
+    await refreshSession(sourceId);
+  } catch(error){ setStatus(statusId,error.message,"bad"); }
+}
+
+$("save-source").addEventListener("click",()=>postReview("/api/review/source",{
+  source_id:currentSource.source_id,
+  confirm_candidate_id:session.candidate_id, confirm_subject_id:session.subject_id, confirm_selected_version_id:session.selected_version_id,
+  confirm_source_sha256:currentSource.sha256,
+  same_subject_confirmed:$("same-subject").checked, selected_version_confirmed:$("same-version").checked,
+  view_label:$("view-label").value,
+  crop_pixels:{x:$("crop-x").value,y:$("crop-y").value,width:$("crop-width").value,height:$("crop-height").value},
+  confirm_crop:$("confirm-crop").checked,
+  calibration:{camera_model:$("camera-model").value,coordinate_frame_id:$("frame-id").value.trim()},
+  confirm_calibration:$("confirm-calibration").checked,
+  landmarks, confirm_landmarks:$("confirm-landmarks").checked,
+  approve_source_review:$("approve-source").checked, review_notes:$("source-notes").value
+},"source-save-status",currentSource.source_id));
+
+$("save-scale").addEventListener("click",()=>postReview("/api/review/scale",{
+  confirm_candidate_id:session.candidate_id, confirm_subject_id:session.subject_id, confirm_selected_version_id:session.selected_version_id,
+  confirm_identity_and_version:$("scale-identity").checked, scale_mode:$("scale-mode").value,
+  target_height_m:$("target-height").value, confirm_metric_height:$("metric-confirm").checked,
+  confirm_no_height_inference:$("unknown-confirm").checked, approve_scale_review:$("approve-scale").checked,
+  review_notes:$("scale-notes").value
+},"scale-save-status"));
+
+$("save-base").addEventListener("click",()=>postReview("/api/review/base",{
+  confirm_candidate_id:session.candidate_id, confirm_subject_id:session.subject_id, confirm_selected_version_id:session.selected_version_id,
+  confirm_topology_lane:session.topology_lane, confirm_identity_version_and_topology_lane:$("base-route").checked,
+  base_authority_id:$("base-authority").value,
+  confirm_base_authority_catalog_sha256:session.base_authority_catalog.catalog_sha256,
+  confirm_base_sha256:((session.base_authority_catalog.options || []).find(item=>item.base_id===$("base-authority").value) || {}).sha256 || "",
+  confirm_exact_base_file:$("base-file").checked,
+  rig_compatible_cage_source_confirmed:$("base-rig").checked, new_candidate_surface_required:$("base-new-surface").checked,
+  confirm_surface_copy_forbidden:$("base-no-copy").checked, copy_as_candidate_body_allowed:false,
+  approve_base_review:$("approve-base").checked, review_notes:$("base-notes").value
+},"base-save-status"));
+
+async function refreshReport(){ try { $("report").textContent=await api("/api/report"); } catch(error){ $("report").textContent=error.message; } }
+$("refresh-report").addEventListener("click",refreshReport);
+refreshSession().catch(error=>setStatus("top-status",error.message,"bad"));
+</script>
+</body>
+</html>

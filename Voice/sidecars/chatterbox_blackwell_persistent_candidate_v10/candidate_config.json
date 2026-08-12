@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_typed_memory_candidate_v10",
+  "candidate_status": "inactive_static_repair_pending_fresh_different_agent_audit",
+  "production_routing_authorized": false,
+  "live_execution_authorized_by_this_candidate": false,
+  "playback_authorized_by_this_candidate": false,
+  "current_production_route_changed": false,
+  "worker_integration_implemented": false,
+  "future_live_attempt_authorized": false,
+  "repair_scope": {
+    "consumed_attempt": "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02",
+    "failed_source": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/live_adapter.py",
+    "failed_function": "_windows_memory_mib",
+    "failed_api": "GetProcessMemoryInfo",
+    "observed_winerror": 6,
+    "exact_cause": "ctypes_default_c_int_truncated_pointer_width_GetCurrentProcess_pseudohandle",
+    "replacement": "Core/blackwell_v10_windows_memory.py",
+    "uses_open_process": false,
+    "changes_access_rights": false
+  },
+  "win32_contract": {
+    "GetCurrentProcess_argtypes": [],
+    "GetCurrentProcess_restype": "wintypes.HANDLE",
+    "GetProcessMemoryInfo_argtypes": ["wintypes.HANDLE", "POINTER(PROCESS_MEMORY_COUNTERS)", "wintypes.DWORD"],
+    "GetProcessMemoryInfo_restype": "wintypes.BOOL",
+    "GlobalMemoryStatusEx_argtypes": ["POINTER(MEMORYSTATUSEX)"],
+    "GlobalMemoryStatusEx_restype": "wintypes.BOOL",
+    "failure_includes_winerror": true,
+    "current_process_pseudohandle_only": true
+  },
+  "fresh_audit_contract": {
+    "required_before_any_integration_or_live_attempt": true,
+    "required_relative_path": "RecoverySprint/continuation_20260810/blackwell_v10_windows_memory_fresh_static_audit/attempt_01/AUDIT_AUTHORIZATION.json",
+    "required_seal_manifest_path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v10/STATIC_SEAL_MANIFEST.json",
+    "required_verdict": "ACCEPT_V10_STATIC_MEMORY_REPAIR_FOR_FUTURE_HARNESS_AUTHORING_ONLY",
+    "required_auditor_relationship": "different_agent_from_v10_author",
+    "author_may_not_create_audit_authorization": true,
+    "audit_does_not_authorize_live_execution": true
+  },
+  "preserved_attempt_02_evidence": {
+    "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02/events/001_authorization.json": "e4a673b2882cd68aad155ef178fb36a2487e6fb34266079cf01c847c57fe6102",
+    "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02/events/002_pre_live.json": "23d4ec7a9b9c02d2b6bfbed71242895dde7ad5ac3c7024f990290ced9aca6d27",
+    "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02/events/003_worker_start.json": "0b370c605e34bb382eccb29e293492ebe5a7a805f6756972a438f4bc06de190e",
+    "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02/events/004_voice_load.json": "c921424c165f14730c47e8c5bd794621fcfdd32792c1273f277f0218008556bb",
+    "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02/events/005_finally_cleanup.json": "4a7f5669749ee4f93b02389b1397a968558a24e338962978c4088318c5bd2abe",
+    "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02/FINAL_REPORT.json": "6b492ee55e7e8a7af94564096e4071e2b4c8a2c4034a415ef270e47e6fcdf50b",
+    "RecoverySprint/continuation_20260810/blackwell_v9_bounded_live_acceptance/attempt_02/RUN_AUTHORIZATION.json": "3af002912c12455a97282bd66779f691982f5c8dfdf10d5802037cf7b03644b6"
+  },
+  "preserved_failure_boundary": {
+    "Core/blackwell_v9_process_boundary.py": "0dfed07df16a5ded935ac904f73dcba03570681c7ec1a65797138eadf5d4510a",
+    "Core/persistent_blackwell_voice_integration_v9.py": "cbb2e9cf04c2b21dafa03c96ca699bbbdac0a927269cd72ed10d9f9e74de3b09",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/live_adapter.py": "7565203c1d548f576d2264f7c0ee84b16a35dcf5e57ec9f56909ae1278b022eb",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/worker_entry.py": "f537a1362ed4f49eb1026824ee9419b1d01de6c74f626d0b84ecbd231bcf6421",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v8/STATIC_SEAL_MANIFEST.json": "831e02d7a511ecdb86d450727a4d90b298af2da3372df628bd040a00d8cb5de8",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v9/STATIC_SEAL_MANIFEST.json": "ae8bee6c09fbf96fe57354b04111e86823744bb001ed8bb8ffcdf3e18d95a779",
+    "Voice/sidecars/kira_approved_voice_routing.json": "a343572b25937926ea0181274976b53f57ca219ce1e4d3e1780343994aea7b81",
+    "tools/run_blackwell_v9_bounded_live_acceptance_attempt02.py": "1eb9492810285c8f433282fd02471153da1ccdf03e62bb466de0e9836d02b646"
+  },
+  "static_test_contract": {
+    "may_call_current_process_memory_information_apis": true,
+    "may_import_torch": false,
+    "may_touch_cuda": false,
+    "may_contact_ollama_or_qwen": false,
+    "may_load_chatterbox": false,
+    "may_synthesize_audio": false,
+    "may_play_audio": false,
+    "may_start_person_body_or_blender": false,
+    "must_reject_changed_v8_adapter_bytes": true,
+    "must_prove_typed_pointer_width_handle": true,
+    "must_prove_winerror_is_preserved": true
+  }
+}

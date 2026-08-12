@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "config_id": "avatar_shading_normal_repair_v1",
+  "method_id": "avatar_shading_normal_repair_v1",
+  "status": "UNPROMOTED_INACTIVE_REUSABLE_NORMAL_REPAIR",
+  "diagnosed_source": {
+    "path": "RecoverySprint/continuation_20260801/kira_r17_integrated_visual_probe/attempt_05/r17_corrected_components_private_staging.blend",
+    "scope": "neutral private staging checkpoint only",
+    "observations": [
+      "all primary-body polygons already use smooth shading",
+      "the primary mesh has no custom normals and no sharp-edge attribute",
+      "rear head-neck vertex normals rotate rapidly across several dense horizontal rings",
+      "bilateral flexion darkness occurs after armature and corrective-smooth evaluation"
+    ]
+  },
+  "rear_scalp_mask": {
+    "normalized_body_height_fade_in": [0.84, 0.875],
+    "normalized_body_height_fade_out": [0.925, 0.955],
+    "normalized_head_rearwardness_fade_in": [0.62, 0.78],
+    "normalized_head_lateral_fade_out": [0.8, 1.05],
+    "required_existing_membership_groups": ["head", "neck01", "neck02", "neck03"],
+    "minimum_existing_membership_sum": 0.12
+  },
+  "knee_mask": {
+    "required_existing_groups": [
+      "AVATAR_BUILDER_KNEE_CORRECTIVE_V2_L",
+      "AVATAR_BUILDER_KNEE_CORRECTIVE_V2_R"
+    ],
+    "maximum_existing_group_weight_used": 1.0
+  },
+  "normal_modifier": {
+    "name": "AvatarBuilder_Local_Shading_Normal_Repair_V1",
+    "type": "WEIGHTED_NORMAL",
+    "mode": "FACE_AREA_WITH_ANGLE",
+    "weight": 24,
+    "threshold_radians": 0.01,
+    "keep_sharp": true,
+    "use_face_influence": false,
+    "mask_vertex_group": "AVATAR_BUILDER_SHADING_NORMAL_MASK_V1",
+    "must_be_last_modifier": true
+  },
+  "hard_gates": {
+    "primary_mesh_coordinates_unchanged": true,
+    "evaluated_vertex_positions_unchanged": true,
+    "topology_unchanged": true,
+    "existing_deform_weight_hash_unchanged": true,
+    "existing_vertex_groups_unchanged": true,
+    "only_new_vertex_group_is_non_deform_shading_mask": true,
+    "material_slots_and_polygon_indices_unchanged": true,
+    "regional_skin_attribute_unchanged": true,
+    "clean_bald_scalp_material_unchanged": true,
+    "scalp_hair_dependencies_added": 0
+  },
+  "forbidden": {
+    "mesh_coordinate_edit": true,
+    "topology_edit": true,
+    "existing_rig_weight_edit": true,
+    "face_or_anatomy_edit": true,
+    "material_or_texture_edit": true,
+    "scalp_cap_or_hair": true,
+    "candidate_save_or_export": true,
+    "runtime_activation": true,
+    "publication_or_upload": true
+  },
+  "owner_visual_review_required": true
+}

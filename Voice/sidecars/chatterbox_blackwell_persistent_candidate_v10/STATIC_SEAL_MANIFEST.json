@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kira_chatterbox_blackwell_typed_memory_candidate_v10",
+  "status": "static_only_pending_fresh_different_agent_audit",
+  "candidate_config_sha256": "60a1ed5f156d1b4cb9868a5779210130a77894ffe69f83db781d091dff3f9748",
+  "live_execution_authorized": false,
+  "playback_authorized": false,
+  "files": {
+    "Core/blackwell_v10_windows_memory.py": {"bytes": 6342, "sha256": "bf2460a33c528749ad075366e2847cdc8fc82b04754545db75db06bba95d587d"},
+    "Testing/test_blackwell_persistent_voice_candidate_v10_hostile_static.py": {"bytes": 7300, "sha256": "2e2b8757b3c6e9b55d2ad7d1b097a6df7c15258a5c7a8fe801d82d878fd7524d"},
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v10/README.md": {"bytes": 1934, "sha256": "a8d9572b7920209e33d27d3a735bfd7caff84589a37485ae2b3a581c97893a00"},
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v10/candidate_config.json": {"bytes": 5161, "sha256": "60a1ed5f156d1b4cb9868a5779210130a77894ffe69f83db781d091dff3f9748"},
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v10/candidate_contract.py": {"bytes": 9763, "sha256": "3279bec63634044aaadc9465b739d967075de7a11fde74f7c7a6b8f7b540347f"}
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "schema": "kira.avatar.r25.semantic_control_cage_diagnostic.v4r2",
+  "attempt_id": "attempt_04r2_static_unsealed",
+  "status": "STATIC_PREPARATION_ONLY_NATIVE_CONTROLLER_BINDING_UNRESOLVED_EXECUTION_FORBIDDEN",
+  "scope": {
+    "body_work_only": true,
+    "read_only_diagnostic": true,
+    "blender_execution_authorized": false,
+    "controller_execution_authorized": false,
+    "native_controller_exists": false,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "deformation_allowed": false,
+    "candidate_creation_allowed": false,
+    "render_allowed": false,
+    "export_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "publication_allowed": false,
+    "path_result_allowed": false,
+    "input_transport": "one_native_controller_owned_capability_frame_then_three_exact_pair_run01_run02_canonical_frames_over_two_distinct_inherited_win32_pipes",
+    "result_transport": "one_canonical_receipt_frame_over_one_third_distinct_inherited_win32_pipe"
+  },
+  "preserved_attempt04r1_rejection_lineage": {
+    "config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_semantic_control_cage_diagnostic_v4r1.json",
+      "bytes": 17956,
+      "sha256": "ac527161220bfe7eaad29828052567799ce54e106e11096950a0cc78fb8c38dc"
+    },
+    "adapter": {
+      "path": "tools/kira_r25_semantic_control_cage_afes_v3r3_adapter_v4r1.py",
+      "bytes": 19457,
+      "sha256": "b954a47a7103a9bb4a119cf11c26ce997e16c04ef23069796db627a31b2df766"
+    },
+    "wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4r1.py",
+      "bytes": 18492,
+      "sha256": "4bfee203edde730e00c23e0a713c317dfea0eb70f742ce4bfe799fc65c283a4c"
+    },
+    "controller": {
+      "path": "tools/run_kira_r25_semantic_control_cage_v4r1.py",
+      "bytes": 13208,
+      "sha256": "4fd1faf532dcbc3a43d53b7a552a3d0a388e9568d6652ff669eced5450e70d3b"
+    },
+    "test": {
+      "path": "Testing/test_kira_r25_semantic_control_cage_attempt04r1.py",
+      "bytes": 20290,
+      "sha256": "08f1eccb95fa716ffc8a99451e1024652322227d6886b471767021213afb07c3"
+    },
+    "checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r1/CHECKPOINT.md",
+      "bytes": 4594,
+      "sha256": "fd2b2827db3fad70a49dd18f672a78546b42fc80b296d99107e322dd179de748"
+    },
+    "independent_rejection_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r1/INDEPENDENT_AUDIT.md",
+      "bytes": 10403,
+      "sha256": "a0c7c18b6150e26069ef0c2100b46d9398019c26b0650677d43a332079120967",
+      "decision": "REJECTED",
+      "sole_blocker_repaired_here": "04R1_CAPABILITY_WAS_SELF_MINTABLE_BY_ARBITRARY_PARENT_WITHOUT_SEPARATE_TRUST_ROOT"
+    }
+  },
+  "bindings": {
+    "attempt04r1_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_semantic_control_cage_diagnostic_v4r1.json",
+      "bytes": 17956,
+      "sha256": "ac527161220bfe7eaad29828052567799ce54e106e11096950a0cc78fb8c38dc"
+    },
+    "attempt04r1_wrapper_runtime": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4r1.py",
+      "bytes": 18492,
+      "sha256": "4bfee203edde730e00c23e0a713c317dfea0eb70f742ce4bfe799fc65c283a4c"
+    },
+    "v3r3_afes_adapter": {
+      "path": "tools/kira_r25_semantic_control_cage_afes_v3r3_adapter_v4r1.py",
+      "bytes": 19457,
+      "sha256": "b954a47a7103a9bb4a119cf11c26ce997e16c04ef23069796db627a31b2df766"
+    },
+    "canonical_receipt_primitive": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"
+    },
+    "execution_wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4r2.py",
+      "bytes": 32293,
+      "sha256": "10161701eeccd0476edb1af35b9a635dbffbcc4582d3099da585404c095e5e1b"
+    },
+    "static_controller": {
+      "path": "tools/run_kira_r25_semantic_control_cage_v4r2.py",
+      "bytes": 15227,
+      "sha256": "be8b2dc84fdef89bc65e0b62d2ac637a613c4545f22a4e892a69ac12d7db3567"
+    }
+  },
+  "preserved_semantic_runtime_contract": {
+    "source": "attempt04r1_config",
+    "load_rule": "LOAD_EXACT_HASH_BOUND_04R1_CONFIG_AND_RUNTIME_WITHOUT_REWRITING_ANY_04R1_SUBJECT",
+    "semantic_contract": "EXACT_04R1_SEMANTIC_CONTRACT",
+    "alignment_contract": "EXACT_04R1_ALIGNMENT_CONTRACT",
+    "control_cage_contract": "EXACT_04R1_CONTROL_CAGE_CONTRACT",
+    "projection_gates": "EXACT_04R1_PROJECTION_GATES",
+    "runtime_output_remains": "READ_ONLY_DIAGNOSTIC_NOT_A_BODY_OR_ACCEPTED_DEFORMATION_CAGE"
+  },
+  "afes_v3r3_pair_binding": {
+    "seal_status": "PENDING_NEW_APPEND_ONLY_SEALED_SUCCESSOR_AFTER_ACCEPTED_04R2_AUDIT_NATIVE_BINDING_AND_REAL_V3R3_EVIDENCE",
+    "binding_rule": "NEVER_REWRITE_04R2_AND_NEVER_FILL_FROM_AUTHOR_ONLY_REJECTED_UNAUDITED_OR_UNEXECUTED_VALUES",
+    "final_locked_pair_execution_contract_binding": null,
+    "final_locked_pair_independent_audit_binding": null,
+    "final_locked_pair_native_manifest_binding": null,
+    "final_locked_pair_execution_outcome_binding": null,
+    "final_run_01_receipt_binding": null,
+    "final_run_02_receipt_binding": null,
+    "required_final_placeholders": [
+      "FINAL_INDEPENDENT_AFES_ATTEMPT_AUDIT_PATH_BYTES_SHA256_AND_PASS_STATUS",
+      "FINAL_INDEPENDENTLY_ACCEPTED_LOCKED_PAIR_EXECUTION_CONTRACT_PATH_BYTES_SHA256",
+      "FINAL_PAIR_ACCEPTANCE_FRAME_SHA256",
+      "FINAL_RUN_01_FRAME_SHA256",
+      "FINAL_RUN_02_FRAME_SHA256",
+      "FINAL_PAIR_RUN_INNER_SCHEMAS_AND_STATUSES",
+      "FINAL_EXACT_EXTRACTION_VERIFIED_INPUT_ROWS",
+      "FINAL_FOUNDATION_FULL_NORMALIZED_TOPOLOGY_SHA256",
+      "FINAL_AFES_UNION_COUNT_AND_SHA256",
+      "FINAL_RING_1_COUNT_AND_SHA256",
+      "FINAL_RING_2_COUNT_AND_SHA256",
+      "FINAL_COMBINED_RING_COUNT_AND_SHA256",
+      "FINAL_LOCKED_UNION_COUNT_AND_SHA256",
+      "FINAL_EXACT_TOPOLOGY_STRUCTURE",
+      "FINAL_EXACT_AFES_BOUNDS_OBJECT_NANOMETERS",
+      "FINAL_TWO_DISTINCT_FRESH_SESSION_NONCES_AND_MATCHING_INNER_DECISION"
+    ],
+    "expected_pair_and_analysis": null,
+    "frozen_literal_protocol": {
+      "pair_schema": "kira.avatar.r25.foundation_afes_locked_pair_acceptance.v3r3",
+      "pair_status": "AFES_AND_TRANSITION_RINGS_EXTRACTED_READ_ONLY_PAIR_MATCHED",
+      "run_schema": "kira.avatar.r25.foundation_afes_locked_extraction_run.v3r3",
+      "run_status": "READ_ONLY_EXTRACTION_COMPLETE_PENDING_PAIR_MATCH",
+      "inner_schema": "kira.avatar.r25.foundation_afes_transition_diagnostic.v5",
+      "inner_artifact_kind": "READ_ONLY_PRIVATE_EXACT_BYTE_AFES_DIAGNOSTIC",
+      "inner_status": "EXTRACTED_UNSEALED_REQUIRES_MATCHING_FRESH_LOCKED_RUN",
+      "semantic_output_schema": "kira.r25.semantic_control_cage_diagnostic.v4r2",
+      "semantic_success_status": "V3R3_BOUND_CONTROL_CAGE_DIAGNOSTIC_COMPUTED_NOT_A_BODY",
+      "semantic_failure_status": "DIAGNOSTIC_FAILED_NO_CAGE_NO_CANDIDATE"
+    },
+    "expected_pair_and_analysis_exact_fields": [
+      "pair_schema", "pair_status", "pair_truth_boundary",
+      "pair_acceptance_frame_sha256", "execution_contract_binding",
+      "input_snapshot_sha256", "matching_inner_payload_sha256",
+      "run_schema", "run_status", "run_truth_boundary",
+      "run_01_frame_sha256", "run_02_frame_sha256",
+      "run_01_payload_sha256", "run_02_payload_sha256",
+      "pair_session_nonce", "run_01_nonce", "run_02_nonce", "exact_run_metadata",
+      "accepted_afes_v5_config", "accepted_afes_v5_extractor",
+      "inner_schema", "inner_artifact_kind", "inner_status", "inner_truth_boundary",
+      "exact_extraction_verified_inputs", "private_receipt_runtime", "exact_read_only_guards",
+      "foundation_object", "foundation_mesh", "foundation_vertex_count",
+      "foundation_edge_count", "foundation_face_count", "foundation_topology_sha256",
+      "required_afes_group_names", "afes_union_count", "afes_union_sha256",
+      "ring_1_count", "ring_1_sha256", "ring_2_count", "ring_2_sha256",
+      "combined_ring_count", "combined_ring_sha256", "locked_vertex_count",
+      "locked_vertex_sha256", "exact_topology_structure", "exact_afes_bounds_object_nm"
+    ]
+  },
+  "native_semantic_controller_binding": {
+    "state": "UNRESOLVED_NON_NULL_SENTINEL_STATIC_ONLY",
+    "final_image_path": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_FINAL_IMAGE_PATH_SENTINEL",
+    "bytes": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_BYTES_SENTINEL",
+    "sha256": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_SHA256_SENTINEL",
+    "volume_serial_number": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_VOLUME_SERIAL_SENTINEL",
+    "file_id_128_hex": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_FILE_ID_128_SENTINEL",
+    "image_file_creation_time_100ns": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_IMAGE_CREATION_TIME_SENTINEL",
+    "parent_process_creation_time_100ns": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_PROCESS_CREATION_TIME_SENTINEL",
+    "windows_session_id": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_WINDOWS_SESSION_SENTINEL",
+    "authorized_one_shot_run_nonce_sha256": "UNRESOLVED_NATIVE_SEMANTIC_CONTROLLER_ONE_SHOT_NONCE_SHA256_SENTINEL"
+  },
+  "native_controller_capability_contract": {
+    "schema": "kira.avatar.r25.semantic_control_cage_native_execution_capability.v4r2",
+    "status": "EXACT_NATIVE_CONTROLLER_AUDIT_ACCEPTED_ONE_SHOT",
+    "trust_root": "FUTURE_INDEPENDENTLY_ACCEPTED_NATIVE_EXECUTABLE_EXACT_OS_IDENTITY_PLUS_CONFIG_COMMITTED_SECRET_PREIMAGE",
+    "named_pipe_server_process_id_must_equal_os_parent_process_id": true,
+    "parent_process_handle_access": "PROCESS_QUERY_LIMITED_INFORMATION_AND_SYNCHRONIZE_HELD_UNTIL_DIAGNOSTIC_END",
+    "parent_image_handle_access": "GENERIC_READ_AND_FILE_READ_ATTRIBUTES_HELD_UNTIL_DIAGNOSTIC_END",
+    "exact_identity_fields": [
+      "final_image_path", "bytes", "sha256", "volume_serial_number",
+      "file_id_128_hex", "image_file_creation_time_100ns",
+      "parent_process_creation_time_100ns", "windows_session_id"
+    ],
+    "capability_binds": [
+      "config_sha256", "wrapper_sha256", "accepted_audit_sha256",
+      "native_controller_sha256", "native_controller_identity_sha256",
+      "native_controller_process_id", "native_controller_process_creation_time_100ns",
+      "native_controller_session_id", "intended_child_process_id",
+      "intended_child_process_creation_time_100ns", "three_distinct_handles",
+      "three_exact_input_frame_sha256s", "fresh_one_shot_run_nonce_preimage"
+    ],
+    "single_frame_then_eof": true,
+    "single_read_nonreusable": true,
+    "same_name_different_path_or_image_or_file_identity": "FAIL_BEFORE_RUNTIME_INPUT_OR_BLEND",
+    "arbitrary_parent_or_self_issued_pipe": "FAIL_BEFORE_RUNTIME_INPUT_OR_BLEND",
+    "direct_python_or_blender_invocation": "FAIL_BEFORE_RUNTIME_INPUT_OR_BLEND"
+  },
+  "append_only_execution_paths": {
+    "independent_audit": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r2/INDEPENDENT_AUDIT.json",
+    "outcome_receipt": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r2/EXECUTION_OUTCOME.receipt.bin",
+    "evidence_root": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_execution/attempt_04r2",
+    "all_paths_must_not_exist_before_reservation": true
+  },
+  "future_independent_audit_gate": {
+    "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r2/INDEPENDENT_AUDIT.json",
+    "schema": "kira.avatar.r25.semantic_control_cage_independent_audit.v4r2",
+    "required_decision": {
+      "status": "ACCEPTED_STATIC_UNSEALED_NATIVE_BOUNDARY",
+      "current_preparation_execution_authorized": false,
+      "new_append_only_sealed_successor_plan_permitted": true
+    },
+    "must_bind_exact_subject_labels": [
+      "attempt04r1_adapter_dependency",
+      "attempt04r1_rejection_audit",
+      "attempt04r2_checkpoint",
+      "attempt04r2_config",
+      "attempt04r2_controller_planner",
+      "attempt04r2_test",
+      "attempt04r2_wrapper"
+    ],
+    "must_bind_exact_native_controller_identity_object": true,
+    "accepted_audit_sha256": "UNRESOLVED_INDEPENDENT_04R2_AUDIT_SHA256_SENTINEL",
+    "audit_does_not_exist_in_this_preparation": true
+  },
+  "truth_boundary": {
+    "attempt_03_is_preserved": true,
+    "attempt_04_and_attempt_04r1_are_rejected_and_preserved_byte_for_byte": true,
+    "attempt_04r2_is_static_unsealed_preparation_only": true,
+    "native_semantic_controller_binary_does_not_exist_in_this_preparation": true,
+    "all_native_controller_binding_fields_are_explicit_non_null_sentinels": true,
+    "all_sixteen_result_placeholders_remain_unresolved": true,
+    "seven_result_slots_remain_null": true,
+    "no_result_audit_native_controller_or_capability_hash_is_claimed": true,
+    "python_controller_is_an_inert_plan_validator_and_never_authority": true,
+    "later_sealing_requires_a_new_append_only_revision": true,
+    "static_preparation_is_not_execution": true,
+    "future_diagnostic_is_not_an_accepted_deformation_cage_or_body": true,
+    "body_authoring_and_owner_approval_remain_separate": true
+  }
+}

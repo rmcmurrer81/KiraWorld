@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "LEVEL_A_NON_PERSON_BODY_LIFE_RUNTIME_CONTRACT",
+  "contract_id": "level_a_body_life_runtime_contract_v1",
+  "status": "NON_PERSON_FIXTURE_PASS",
+  "scope": {
+    "deterministic_non_person_fixture_only": true,
+    "blender_or_body_asset_mutation": false,
+    "body_asset_binding": false,
+    "person_activation": false,
+    "person_private_state_access": false,
+    "external_world_action": false,
+    "adult_activity_simulation": false,
+    "robert_avatar_proxy_instantiation": false
+  },
+  "capability_ladder": [
+    "NOT_IMPLEMENTED",
+    "CONTRACT_ONLY",
+    "NON_PERSON_FIXTURE_PASS",
+    "BODY_HOOKS_VERIFIED",
+    "PHYSIOLOGY_STATE_VERIFIED",
+    "PERSON_DECISION_INTEGRATED",
+    "PRIVACY_AND_CONTINUITY_PASS",
+    "OWNER_SUPERVISED_PASS",
+    "GENERALIZATION_PASS",
+    "AVATAR_BUILDER_METHOD_PROMOTED"
+  ],
+  "level_a_evidence_ceiling": "NON_PERSON_FIXTURE_PASS",
+  "layers": {
+    "avatar_builder_hooks": {
+      "module": "Core/avatar_builder_level_a_hooks.py",
+      "sha256": "88edca17e563d2e022bb80974d47d93d0702f4ec9db210cd92dc4f8097754385",
+      "owns": [
+        "neutral_non_intimate_sensation_zone_names",
+        "semantic_route_attachment_names",
+        "disjoint_fixture_endpoint_requirements"
+      ],
+      "does_not_own": [
+        "mesh_or_private_coordinates",
+        "physiology",
+        "person_identity",
+        "preference_or_consent",
+        "memory"
+      ]
+    },
+    "body_systems_runtime": {
+      "module": "Core/body_systems_level_a_runtime.py",
+      "sha256": "ad3e0ce9f5bb3ad6ed0cae5f0f974d67ea0f896020d1c0b50f39489f3bf06297",
+      "owns": [
+        "neutral_signal_receipts",
+        "urinary_fixture_storage_urge_delay_release_conservation",
+        "bowel_fixture_storage_urge_delay_release_conservation",
+        "menstrual_cycle_fixture_phase_and_material_conservation",
+        "health_observation_test_diagnosis_separation",
+        "fixture_controlled_activity_stop_interrupt_recovery"
+      ],
+      "does_not_own": [
+        "biological_function_claims",
+        "subjective_experience",
+        "person_volition_or_consent",
+        "diagnosis_or_treatment",
+        "external_action"
+      ]
+    },
+    "person_world_boundary": {
+      "module": "Core/person_world_level_a_runtime.py",
+      "sha256": "f5158c8d23bf687a0812c8ca05beb36974c8629f976cc766cdbd271adb5df4e2",
+      "owns": [
+        "content_free_locked_context_fixture",
+        "fresh_fixture_coordination_responses",
+        "decision_action_separation",
+        "stop_interrupt_recovery",
+        "audit_evidence_that_is_not_person_memory"
+      ],
+      "does_not_own": [
+        "person_privacy_content",
+        "person_consent",
+        "relationship_state",
+        "person_memory",
+        "authorized_or_performed_world_action"
+      ]
+    },
+    "orchestrator": {
+      "module": "Core/level_a_body_life_fixture.py",
+      "sha256": "c4ad94686128ee5e4e3d0100060ce6e45a7e75a48fb3b96f9dafeedc31af4590",
+      "owns": [
+        "three_layer_separation",
+        "sibling_layer_hash_preservation",
+        "pure_serialization_and_restore",
+        "global_append_only_event_ids"
+      ]
+    },
+    "shared_validation": {
+      "module": "Core/level_a_runtime_common.py",
+      "sha256": "55cfe52370f47db60c0be04ebea9c367df221ae873a7856ba2b9ee4175ac0bb1"
+    }
+  },
+  "current_capability_statuses": {
+    "three_layer_contract": "NON_PERSON_FIXTURE_PASS",
+    "neutral_non_intimate_signal_routing": "NON_PERSON_FIXTURE_PASS",
+    "urinary_fixture_state_route_and_conservation": "NON_PERSON_FIXTURE_PASS",
+    "bowel_fixture_state_route_and_conservation": "NON_PERSON_FIXTURE_PASS",
+    "menstrual_cycle_fixture_state_route_and_conservation": "NON_PERSON_FIXTURE_PASS",
+    "health_observation_diagnosis_separation": "NON_PERSON_FIXTURE_PASS",
+    "content_free_privacy_and_fixture_coordination": "NON_PERSON_FIXTURE_PASS",
+    "voluntary_label_fixture_control_stop_interrupt_recovery": "NON_PERSON_FIXTURE_PASS",
+    "persistence_restart_and_no_false_memory": "NON_PERSON_FIXTURE_PASS",
+    "exact_body_hooks": "NOT_IMPLEMENTED",
+    "biological_physiology": "NOT_IMPLEMENTED",
+    "person_decision_integration": "NOT_IMPLEMENTED",
+    "person_privacy_and_continuity": "NOT_IMPLEMENTED",
+    "owner_supervised_acceptance": "NOT_IMPLEMENTED",
+    "generalization": "NOT_IMPLEMENTED",
+    "avatar_builder_method_promotion": "NOT_IMPLEMENTED"
+  },
+  "mandatory_negative_boundaries": [
+    "reject_person_identity_private_mind_memory_relationship_preference_desire_consent_maturity_voice_or_likeness_event_payloads",
+    "reject_body_asset_or_private_geometry_binding",
+    "reject_shared_or_wrong_route_endpoints",
+    "reject_output_above_stored_state_or_capacity",
+    "reject_release_without_fixture_control_signal",
+    "reject_cycle_phase_skip_or_output_outside_menstrual_fixture_phase",
+    "reject_observation_or_test_as_diagnosis_or_treatment",
+    "reject_prior_fixture_response_as_current_response",
+    "reject_fixture_response_as_person_consent",
+    "reject_external_action_authorization_or_performance",
+    "reject_audit_evidence_as_person_memory_or_lived_experience",
+    "reject_exact_subject_bound_adult_evidence_or_active_person_in_level_a",
+    "reject_any_capability_status_above_non_person_fixture_pass"
+  ],
+  "source_bindings": [
+    {
+      "path": "owner_uploaded_level_a_acceptance_framework_20260803",
+      "sha256": "f4883920c473aed2b9b83172306860f5b2edf249fbf95ad43f80820a5dc92595",
+      "bytes": 18746
+    },
+    {
+      "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/BODY_SYSTEM_MODELING_AND_ACCEPTANCE_PLAN.md",
+      "sha256": "31e162c869665bb25e56f327c3fa8661a02106ccd74c565c403fcf9d3cc73f4a",
+      "bytes": 26028
+    },
+    {
+      "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/ACCEPTANCE_MATRIX.json",
+      "sha256": "f76aab978eeb8f2da4b780cffd4fb113e39ef0cd12ca9a4cb2bb48a8d4232708",
+      "bytes": 8717
+    }
+  ],
+  "implementation_truth": {
+    "fixture_events_are_person_events": false,
+    "audit_logs_are_person_memory": false,
+    "fixture_control_is_person_volition": false,
+    "fixture_responses_are_person_consent": false,
+    "semantic_routes_are_body_geometry_or_patent_anatomy": false,
+    "reservoir_math_is_biological_physiology": false,
+    "health_observations_are_diagnoses": false,
+    "runtime_or_person_activation_occurred": false
+  }
+}

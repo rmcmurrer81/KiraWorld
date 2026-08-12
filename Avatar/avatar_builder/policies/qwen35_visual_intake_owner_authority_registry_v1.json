@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "registry_id": "qwen35_visual_intake_owner_authority_registry_v1",
+  "status": "NO_OWNER_AUTHORITY_ARTIFACTS_REGISTERED_FAIL_CLOSED",
+  "authority_root": "Avatar/avatar_builder/owner_authority/qwen35_visual_intake",
+  "entries": [],
+  "policy": {
+    "request_may_supply_unregistered_authority": false,
+    "request_boolean_counts_as_robert_authority": false,
+    "request_provenance_text_counts_as_rights_authority": false,
+    "exact_authority_artifact_sha256_required": true,
+    "canonical_profile_and_correction_reconciliation_required": true,
+    "registry_update_is_separate_owner_authority_workflow": true
+  }
+}

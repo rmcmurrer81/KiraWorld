@@ -1,0 +1,2560 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-23T08:13:56.378Z",
+  "status": "passed",
+  "isolation": {
+    "livePersonActivated": false,
+    "lifeLoopStarted": false,
+    "shellStatePersisted": false,
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "shellBefore": {
+      "exists": true,
+      "activeCandidate": "",
+      "conversationMode": "",
+      "sha256": "9de74fcff4e4fb0ff4596ecf7fc1eeeb817ae4eed9472501367ae0b1229ec5aa"
+    },
+    "shellAfter": {
+      "exists": true,
+      "activeCandidate": "",
+      "conversationMode": "",
+      "sha256": "9de74fcff4e4fb0ff4596ecf7fc1eeeb817ae4eed9472501367ae0b1229ec5aa"
+    }
+  },
+  "assets": {
+    "bodyPath": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb",
+    "bodySha256Before": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "bodySha256After": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "stagedEyePath": "Avatar/models/staged/kira/eyes/kira_socket_eye_rig_v3_3/kira_socket_eye_rig_v3_3.glb",
+    "stagedEyeSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "publicEyePath": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "publicEyeSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5"
+  },
+  "requestedVisualFit": {},
+  "requestedBindingMode": "skin",
+  "checks": {
+    "exact_current_r6_body_hash": true,
+    "exact_reviewed_eye_hash": true,
+    "active_body_hash_unchanged": true,
+    "no_live_person_activated": true,
+    "live_shell_state_unchanged": true,
+    "default_url_attached_v3_3": true,
+    "explicit_v3_3_url_attached": true,
+    "opt_out_url_did_not_attach": true,
+    "structural_complete": true,
+    "head_bound": true,
+    "head_binding_distance_stable": true,
+    "no_old_procedural_eye_nodes": true,
+    "gaze_moves_only_iris_surface": true,
+    "blink_fails_honestly_without_fake_lids": true,
+    "no_runtime_errors": true
+  },
+  "metrics": {
+    "horizontalIrisTravelMeters": 0.0025,
+    "verticalIrisTravelMeters": 0.00144,
+    "maxSocketScleraCorneaLocalMotionMeters": 0,
+    "maxHeadBindingDistanceDeltaMeters": 2e-10
+  },
+  "center": {
+    "active": true,
+    "version": "3.3.0",
+    "modelUrl": "/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "expectedSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "runtimeVisualFit": {
+      "irisLimbusPupilDiameterScale": 1,
+      "corneaDiameterScale": 1,
+      "socketTranslationApplied": true,
+      "affectedNodes": [
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea",
+        "KiraLeftSclera",
+        "KiraRightSclera"
+      ],
+      "liveBodyGlbModified": false,
+      "eyeGlobeTranslation": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "eyeGlobeTranslationApplied": true,
+      "r6VisualPlacementApplied": true,
+      "r6VisualPlacementSourceOfTruth": "rendered_full_face_existing_r6_head_apertures"
+    },
+    "direction": "center",
+    "blink": {
+      "left": 0,
+      "right": 0
+    },
+    "blinkSupported": false,
+    "blinkUnsupportedRequest": null,
+    "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+    "leftIrisLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightIrisLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "rightIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "leftScleraMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1056,
+      "localBounds": {
+        "min": [
+          -0.00905,
+          -0.00312,
+          0.00495
+        ],
+        "max": [
+          0.00905,
+          0.00312,
+          0.00585
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Living_Sclera",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_sclera_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 512
+          }
+        }
+      ]
+    },
+    "leftCorneaMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 2143,
+      "localBounds": {
+        "min": [
+          -0.9999997,
+          -1,
+          -1
+        ],
+        "max": [
+          0.99999988,
+          1,
+          0.99999976
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Physical_Cornea",
+          "visible": true,
+          "side": 2,
+          "opacity": 0.20000000298023224,
+          "transparent": true,
+          "depthTest": true,
+          "depthWrite": false,
+          "color": "#f6fcff",
+          "map": null
+        }
+      ]
+    },
+    "blinkMorphInfluences": {},
+    "testRunning": false,
+    "testPhase": null,
+    "headBound": true,
+    "headBoneName": "mixamorigHead_06",
+    "rootParentName": "mixamorigHead_06",
+    "leftSocketWorld": {
+      "x": -19.11505,
+      "y": 1.576744,
+      "z": 4.984572
+    },
+    "rightSocketWorld": {
+      "x": -19.175811,
+      "y": 1.578593,
+      "z": 4.979905
+    },
+    "leftSocketLocal": {
+      "x": -0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "rightSocketLocal": {
+      "x": 0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "leftScleraWorld": {
+      "x": -19.11505,
+      "y": 1.576744,
+      "z": 4.984572
+    },
+    "rightScleraWorld": {
+      "x": -19.175811,
+      "y": 1.578593,
+      "z": 4.979905
+    },
+    "leftScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftCorneaWorld": {
+      "x": -19.114432,
+      "y": 1.576505,
+      "z": 4.976436
+    },
+    "rightCorneaWorld": {
+      "x": -19.175193,
+      "y": 1.578354,
+      "z": 4.971769
+    },
+    "leftCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "rightCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "leftEyeForward": {
+      "x": 0.075664,
+      "y": -0.029298,
+      "z": -0.996703
+    },
+    "rightEyeForward": {
+      "x": 0.075664,
+      "y": -0.029298,
+      "z": -0.996703
+    },
+    "socketFitAudit": {
+      "interocularDistance": 0.04459681,
+      "centerlineOffset": 0,
+      "heightDelta": 0,
+      "depthDelta": 0,
+      "symmetricWithinOneMicrometer": true,
+      "staticSocketTranslationApplied": false,
+      "supersededPreR6HeadApertureEstimate": {
+        "measuredCenterX": [
+          -0.021,
+          0.021
+        ],
+        "measuredOpenBandZ": [
+          1.1056,
+          1.109
+        ],
+        "authoredSocketCenterX": [
+          -0.02232,
+          0.02232
+        ],
+        "authoredSocketCenterZ": 1.10676,
+        "usedForR6Placement": false,
+        "conclusion": "legacy pre-R6 estimate retained only for audit history; the reversible R6 eye-globe placement and rendered full-face proof are authoritative"
+      },
+      "r6RuntimeVisualPlacement": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "r6VisualPlacementSourceOfTruth": "R7_v3_fixed_original_resolution_socket_and_profile_review",
+      "centeredIdleGazeFit": {
+        "active": true,
+        "method": "very small parallel iris-surface micro-saccade; socket, sclera, and cornea unchanged",
+        "optOutFlag": "?kiraEyeIdleFit=off"
+      }
+    },
+    "headWorld": {
+      "x": -19.154251,
+      "y": 1.498545,
+      "z": 5.065728
+    },
+    "eyeCenterToHeadDistance": 0.11536359,
+    "bindingDistanceDelta": 2e-10,
+    "oldProceduralNodeCount": 0,
+    "structural": {
+      "version": "3.3.0",
+      "requiredNames": [
+        "KiraBrownEyeRig_R7_V3_SocketSeated",
+        "KiraLeftEyeSocket",
+        "KiraRightEyeSocket",
+        "KiraLeftEyePivot",
+        "KiraRightEyePivot",
+        "KiraLeftSclera",
+        "KiraRightSclera",
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea"
+      ],
+      "missingNames": [],
+      "complete": true,
+      "blinkMorphs": {},
+      "headBound": true,
+      "headBoneName": "mixamorigHead_06",
+      "oldProceduralNodeCount": 0,
+      "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+      "blinkSupported": false,
+      "blinkReason": "R7-v3 does not contain visually approved eyelid geometry; no fake eyelids are generated."
+    },
+    "error": null
+  },
+  "left": {
+    "active": true,
+    "version": "3.3.0",
+    "modelUrl": "/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "expectedSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "runtimeVisualFit": {
+      "irisLimbusPupilDiameterScale": 1,
+      "corneaDiameterScale": 1,
+      "socketTranslationApplied": true,
+      "affectedNodes": [
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea",
+        "KiraLeftSclera",
+        "KiraRightSclera"
+      ],
+      "liveBodyGlbModified": false,
+      "eyeGlobeTranslation": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "eyeGlobeTranslationApplied": true,
+      "r6VisualPlacementApplied": true,
+      "r6VisualPlacementSourceOfTruth": "rendered_full_face_existing_r6_head_apertures"
+    },
+    "direction": "left",
+    "blink": {
+      "left": 0,
+      "right": 0
+    },
+    "blinkSupported": false,
+    "blinkUnsupportedRequest": null,
+    "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+    "leftIrisLocal": {
+      "x": -0.00125,
+      "y": 0,
+      "z": 0
+    },
+    "rightIrisLocal": {
+      "x": -0.00125,
+      "y": 0,
+      "z": 0
+    },
+    "leftIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "rightIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "leftScleraMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1056,
+      "localBounds": {
+        "min": [
+          -0.00905,
+          -0.00312,
+          0.00495
+        ],
+        "max": [
+          0.00905,
+          0.00312,
+          0.00585
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Living_Sclera",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_sclera_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 512
+          }
+        }
+      ]
+    },
+    "leftCorneaMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 2143,
+      "localBounds": {
+        "min": [
+          -0.9999997,
+          -1,
+          -1
+        ],
+        "max": [
+          0.99999988,
+          1,
+          0.99999976
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Physical_Cornea",
+          "visible": true,
+          "side": 2,
+          "opacity": 0.20000000298023224,
+          "transparent": true,
+          "depthTest": true,
+          "depthWrite": false,
+          "color": "#f6fcff",
+          "map": null
+        }
+      ]
+    },
+    "blinkMorphInfluences": {},
+    "testRunning": false,
+    "testPhase": null,
+    "headBound": true,
+    "headBoneName": "mixamorigHead_06",
+    "rootParentName": "mixamorigHead_06",
+    "leftSocketWorld": {
+      "x": -19.115172,
+      "y": 1.581335,
+      "z": 4.993819
+    },
+    "rightSocketWorld": {
+      "x": -19.175935,
+      "y": 1.583377,
+      "z": 4.989265
+    },
+    "leftSocketLocal": {
+      "x": -0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "rightSocketLocal": {
+      "x": 0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "leftScleraWorld": {
+      "x": -19.115172,
+      "y": 1.581335,
+      "z": 4.993819
+    },
+    "rightScleraWorld": {
+      "x": -19.175935,
+      "y": 1.583377,
+      "z": 4.989265
+    },
+    "leftScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftCorneaWorld": {
+      "x": -19.114554,
+      "y": 1.581568,
+      "z": 4.985683
+    },
+    "rightCorneaWorld": {
+      "x": -19.175318,
+      "y": 1.583611,
+      "z": 4.981129
+    },
+    "leftCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "rightCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "leftEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "rightEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "socketFitAudit": {
+      "interocularDistance": 0.04459681,
+      "centerlineOffset": 0,
+      "heightDelta": 0,
+      "depthDelta": 0,
+      "symmetricWithinOneMicrometer": true,
+      "staticSocketTranslationApplied": false,
+      "supersededPreR6HeadApertureEstimate": {
+        "measuredCenterX": [
+          -0.021,
+          0.021
+        ],
+        "measuredOpenBandZ": [
+          1.1056,
+          1.109
+        ],
+        "authoredSocketCenterX": [
+          -0.02232,
+          0.02232
+        ],
+        "authoredSocketCenterZ": 1.10676,
+        "usedForR6Placement": false,
+        "conclusion": "legacy pre-R6 estimate retained only for audit history; the reversible R6 eye-globe placement and rendered full-face proof are authoritative"
+      },
+      "r6RuntimeVisualPlacement": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "r6VisualPlacementSourceOfTruth": "R7_v3_fixed_original_resolution_socket_and_profile_review",
+      "centeredIdleGazeFit": {
+        "active": true,
+        "method": "very small parallel iris-surface micro-saccade; socket, sclera, and cornea unchanged",
+        "optOutFlag": "?kiraEyeIdleFit=off"
+      }
+    },
+    "headWorld": {
+      "x": -19.154276,
+      "y": 1.498517,
+      "z": 5.070306
+    },
+    "eyeCenterToHeadDistance": 0.11536359,
+    "bindingDistanceDelta": 0,
+    "oldProceduralNodeCount": 0,
+    "structural": {
+      "version": "3.3.0",
+      "requiredNames": [
+        "KiraBrownEyeRig_R7_V3_SocketSeated",
+        "KiraLeftEyeSocket",
+        "KiraRightEyeSocket",
+        "KiraLeftEyePivot",
+        "KiraRightEyePivot",
+        "KiraLeftSclera",
+        "KiraRightSclera",
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea"
+      ],
+      "missingNames": [],
+      "complete": true,
+      "blinkMorphs": {},
+      "headBound": true,
+      "headBoneName": "mixamorigHead_06",
+      "oldProceduralNodeCount": 0,
+      "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+      "blinkSupported": false,
+      "blinkReason": "R7-v3 does not contain visually approved eyelid geometry; no fake eyelids are generated."
+    },
+    "error": null
+  },
+  "right": {
+    "active": true,
+    "version": "3.3.0",
+    "modelUrl": "/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "expectedSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "runtimeVisualFit": {
+      "irisLimbusPupilDiameterScale": 1,
+      "corneaDiameterScale": 1,
+      "socketTranslationApplied": true,
+      "affectedNodes": [
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea",
+        "KiraLeftSclera",
+        "KiraRightSclera"
+      ],
+      "liveBodyGlbModified": false,
+      "eyeGlobeTranslation": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "eyeGlobeTranslationApplied": true,
+      "r6VisualPlacementApplied": true,
+      "r6VisualPlacementSourceOfTruth": "rendered_full_face_existing_r6_head_apertures"
+    },
+    "direction": "right",
+    "blink": {
+      "left": 0,
+      "right": 0
+    },
+    "blinkSupported": false,
+    "blinkUnsupportedRequest": null,
+    "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+    "leftIrisLocal": {
+      "x": 0.00125,
+      "y": 0,
+      "z": 0
+    },
+    "rightIrisLocal": {
+      "x": 0.00125,
+      "y": 0,
+      "z": 0
+    },
+    "leftIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "rightIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "leftScleraMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1056,
+      "localBounds": {
+        "min": [
+          -0.00905,
+          -0.00312,
+          0.00495
+        ],
+        "max": [
+          0.00905,
+          0.00312,
+          0.00585
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Living_Sclera",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_sclera_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 512
+          }
+        }
+      ]
+    },
+    "leftCorneaMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 2143,
+      "localBounds": {
+        "min": [
+          -0.9999997,
+          -1,
+          -1
+        ],
+        "max": [
+          0.99999988,
+          1,
+          0.99999976
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Physical_Cornea",
+          "visible": true,
+          "side": 2,
+          "opacity": 0.20000000298023224,
+          "transparent": true,
+          "depthTest": true,
+          "depthWrite": false,
+          "color": "#f6fcff",
+          "map": null
+        }
+      ]
+    },
+    "blinkMorphInfluences": {},
+    "testRunning": false,
+    "testPhase": null,
+    "headBound": true,
+    "headBoneName": "mixamorigHead_06",
+    "rootParentName": "mixamorigHead_06",
+    "leftSocketWorld": {
+      "x": -19.115172,
+      "y": 1.579446,
+      "z": 4.993819
+    },
+    "rightSocketWorld": {
+      "x": -19.175935,
+      "y": 1.581488,
+      "z": 4.989265
+    },
+    "leftSocketLocal": {
+      "x": -0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "rightSocketLocal": {
+      "x": 0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "leftScleraWorld": {
+      "x": -19.115172,
+      "y": 1.579446,
+      "z": 4.993819
+    },
+    "rightScleraWorld": {
+      "x": -19.175935,
+      "y": 1.581488,
+      "z": 4.989265
+    },
+    "leftScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftCorneaWorld": {
+      "x": -19.114554,
+      "y": 1.579679,
+      "z": 4.985683
+    },
+    "rightCorneaWorld": {
+      "x": -19.175318,
+      "y": 1.581722,
+      "z": 4.981129
+    },
+    "leftCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "rightCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "leftEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "rightEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "socketFitAudit": {
+      "interocularDistance": 0.04459681,
+      "centerlineOffset": 0,
+      "heightDelta": 0,
+      "depthDelta": 0,
+      "symmetricWithinOneMicrometer": true,
+      "staticSocketTranslationApplied": false,
+      "supersededPreR6HeadApertureEstimate": {
+        "measuredCenterX": [
+          -0.021,
+          0.021
+        ],
+        "measuredOpenBandZ": [
+          1.1056,
+          1.109
+        ],
+        "authoredSocketCenterX": [
+          -0.02232,
+          0.02232
+        ],
+        "authoredSocketCenterZ": 1.10676,
+        "usedForR6Placement": false,
+        "conclusion": "legacy pre-R6 estimate retained only for audit history; the reversible R6 eye-globe placement and rendered full-face proof are authoritative"
+      },
+      "r6RuntimeVisualPlacement": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "r6VisualPlacementSourceOfTruth": "R7_v3_fixed_original_resolution_socket_and_profile_review",
+      "centeredIdleGazeFit": {
+        "active": true,
+        "method": "very small parallel iris-surface micro-saccade; socket, sclera, and cornea unchanged",
+        "optOutFlag": "?kiraEyeIdleFit=off"
+      }
+    },
+    "headWorld": {
+      "x": -19.154276,
+      "y": 1.496628,
+      "z": 5.070306
+    },
+    "eyeCenterToHeadDistance": 0.11536359,
+    "bindingDistanceDelta": 0,
+    "oldProceduralNodeCount": 0,
+    "structural": {
+      "version": "3.3.0",
+      "requiredNames": [
+        "KiraBrownEyeRig_R7_V3_SocketSeated",
+        "KiraLeftEyeSocket",
+        "KiraRightEyeSocket",
+        "KiraLeftEyePivot",
+        "KiraRightEyePivot",
+        "KiraLeftSclera",
+        "KiraRightSclera",
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea"
+      ],
+      "missingNames": [],
+      "complete": true,
+      "blinkMorphs": {},
+      "headBound": true,
+      "headBoneName": "mixamorigHead_06",
+      "oldProceduralNodeCount": 0,
+      "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+      "blinkSupported": false,
+      "blinkReason": "R7-v3 does not contain visually approved eyelid geometry; no fake eyelids are generated."
+    },
+    "error": null
+  },
+  "up": {
+    "active": true,
+    "version": "3.3.0",
+    "modelUrl": "/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "expectedSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "runtimeVisualFit": {
+      "irisLimbusPupilDiameterScale": 1,
+      "corneaDiameterScale": 1,
+      "socketTranslationApplied": true,
+      "affectedNodes": [
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea",
+        "KiraLeftSclera",
+        "KiraRightSclera"
+      ],
+      "liveBodyGlbModified": false,
+      "eyeGlobeTranslation": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "eyeGlobeTranslationApplied": true,
+      "r6VisualPlacementApplied": true,
+      "r6VisualPlacementSourceOfTruth": "rendered_full_face_existing_r6_head_apertures"
+    },
+    "direction": "up",
+    "blink": {
+      "left": 0,
+      "right": 0
+    },
+    "blinkSupported": false,
+    "blinkUnsupportedRequest": null,
+    "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+    "leftIrisLocal": {
+      "x": 0,
+      "y": 0.00072,
+      "z": 0
+    },
+    "rightIrisLocal": {
+      "x": 0,
+      "y": 0.00072,
+      "z": 0
+    },
+    "leftIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "rightIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "leftScleraMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1056,
+      "localBounds": {
+        "min": [
+          -0.00905,
+          -0.00312,
+          0.00495
+        ],
+        "max": [
+          0.00905,
+          0.00312,
+          0.00585
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Living_Sclera",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_sclera_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 512
+          }
+        }
+      ]
+    },
+    "leftCorneaMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 2143,
+      "localBounds": {
+        "min": [
+          -0.9999997,
+          -1,
+          -1
+        ],
+        "max": [
+          0.99999988,
+          1,
+          0.99999976
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Physical_Cornea",
+          "visible": true,
+          "side": 2,
+          "opacity": 0.20000000298023224,
+          "transparent": true,
+          "depthTest": true,
+          "depthWrite": false,
+          "color": "#f6fcff",
+          "map": null
+        }
+      ]
+    },
+    "blinkMorphInfluences": {},
+    "testRunning": false,
+    "testPhase": null,
+    "headBound": true,
+    "headBoneName": "mixamorigHead_06",
+    "rootParentName": "mixamorigHead_06",
+    "leftSocketWorld": {
+      "x": -19.115172,
+      "y": 1.578898,
+      "z": 4.993819
+    },
+    "rightSocketWorld": {
+      "x": -19.175935,
+      "y": 1.580941,
+      "z": 4.989265
+    },
+    "leftSocketLocal": {
+      "x": -0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "rightSocketLocal": {
+      "x": 0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "leftScleraWorld": {
+      "x": -19.115172,
+      "y": 1.578898,
+      "z": 4.993819
+    },
+    "rightScleraWorld": {
+      "x": -19.175935,
+      "y": 1.580941,
+      "z": 4.989265
+    },
+    "leftScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftCorneaWorld": {
+      "x": -19.114554,
+      "y": 1.579132,
+      "z": 4.985683
+    },
+    "rightCorneaWorld": {
+      "x": -19.175318,
+      "y": 1.581174,
+      "z": 4.981129
+    },
+    "leftCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "rightCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "leftEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "rightEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "socketFitAudit": {
+      "interocularDistance": 0.04459681,
+      "centerlineOffset": 0,
+      "heightDelta": 0,
+      "depthDelta": 0,
+      "symmetricWithinOneMicrometer": true,
+      "staticSocketTranslationApplied": false,
+      "supersededPreR6HeadApertureEstimate": {
+        "measuredCenterX": [
+          -0.021,
+          0.021
+        ],
+        "measuredOpenBandZ": [
+          1.1056,
+          1.109
+        ],
+        "authoredSocketCenterX": [
+          -0.02232,
+          0.02232
+        ],
+        "authoredSocketCenterZ": 1.10676,
+        "usedForR6Placement": false,
+        "conclusion": "legacy pre-R6 estimate retained only for audit history; the reversible R6 eye-globe placement and rendered full-face proof are authoritative"
+      },
+      "r6RuntimeVisualPlacement": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "r6VisualPlacementSourceOfTruth": "R7_v3_fixed_original_resolution_socket_and_profile_review",
+      "centeredIdleGazeFit": {
+        "active": true,
+        "method": "very small parallel iris-surface micro-saccade; socket, sclera, and cornea unchanged",
+        "optOutFlag": "?kiraEyeIdleFit=off"
+      }
+    },
+    "headWorld": {
+      "x": -19.154276,
+      "y": 1.49608,
+      "z": 5.070306
+    },
+    "eyeCenterToHeadDistance": 0.11536359,
+    "bindingDistanceDelta": 0,
+    "oldProceduralNodeCount": 0,
+    "structural": {
+      "version": "3.3.0",
+      "requiredNames": [
+        "KiraBrownEyeRig_R7_V3_SocketSeated",
+        "KiraLeftEyeSocket",
+        "KiraRightEyeSocket",
+        "KiraLeftEyePivot",
+        "KiraRightEyePivot",
+        "KiraLeftSclera",
+        "KiraRightSclera",
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea"
+      ],
+      "missingNames": [],
+      "complete": true,
+      "blinkMorphs": {},
+      "headBound": true,
+      "headBoneName": "mixamorigHead_06",
+      "oldProceduralNodeCount": 0,
+      "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+      "blinkSupported": false,
+      "blinkReason": "R7-v3 does not contain visually approved eyelid geometry; no fake eyelids are generated."
+    },
+    "error": null
+  },
+  "down": {
+    "active": true,
+    "version": "3.3.0",
+    "modelUrl": "/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "expectedSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "runtimeVisualFit": {
+      "irisLimbusPupilDiameterScale": 1,
+      "corneaDiameterScale": 1,
+      "socketTranslationApplied": true,
+      "affectedNodes": [
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea",
+        "KiraLeftSclera",
+        "KiraRightSclera"
+      ],
+      "liveBodyGlbModified": false,
+      "eyeGlobeTranslation": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "eyeGlobeTranslationApplied": true,
+      "r6VisualPlacementApplied": true,
+      "r6VisualPlacementSourceOfTruth": "rendered_full_face_existing_r6_head_apertures"
+    },
+    "direction": "down",
+    "blink": {
+      "left": 0,
+      "right": 0
+    },
+    "blinkSupported": false,
+    "blinkUnsupportedRequest": null,
+    "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+    "leftIrisLocal": {
+      "x": 0,
+      "y": -0.00072,
+      "z": 0
+    },
+    "rightIrisLocal": {
+      "x": 0,
+      "y": -0.00072,
+      "z": 0
+    },
+    "leftIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "rightIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "leftScleraMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1056,
+      "localBounds": {
+        "min": [
+          -0.00905,
+          -0.00312,
+          0.00495
+        ],
+        "max": [
+          0.00905,
+          0.00312,
+          0.00585
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Living_Sclera",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_sclera_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 512
+          }
+        }
+      ]
+    },
+    "leftCorneaMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 2143,
+      "localBounds": {
+        "min": [
+          -0.9999997,
+          -1,
+          -1
+        ],
+        "max": [
+          0.99999988,
+          1,
+          0.99999976
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Physical_Cornea",
+          "visible": true,
+          "side": 2,
+          "opacity": 0.20000000298023224,
+          "transparent": true,
+          "depthTest": true,
+          "depthWrite": false,
+          "color": "#f6fcff",
+          "map": null
+        }
+      ]
+    },
+    "blinkMorphInfluences": {},
+    "testRunning": false,
+    "testPhase": null,
+    "headBound": true,
+    "headBoneName": "mixamorigHead_06",
+    "rootParentName": "mixamorigHead_06",
+    "leftSocketWorld": {
+      "x": -19.115172,
+      "y": 1.580601,
+      "z": 4.993819
+    },
+    "rightSocketWorld": {
+      "x": -19.175935,
+      "y": 1.582644,
+      "z": 4.989265
+    },
+    "leftSocketLocal": {
+      "x": -0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "rightSocketLocal": {
+      "x": 0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "leftScleraWorld": {
+      "x": -19.115172,
+      "y": 1.580601,
+      "z": 4.993819
+    },
+    "rightScleraWorld": {
+      "x": -19.175935,
+      "y": 1.582644,
+      "z": 4.989265
+    },
+    "leftScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftCorneaWorld": {
+      "x": -19.114554,
+      "y": 1.580835,
+      "z": 4.985683
+    },
+    "rightCorneaWorld": {
+      "x": -19.175318,
+      "y": 1.582877,
+      "z": 4.981129
+    },
+    "leftCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "rightCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "leftEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "rightEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "socketFitAudit": {
+      "interocularDistance": 0.04459681,
+      "centerlineOffset": 0,
+      "heightDelta": 0,
+      "depthDelta": 0,
+      "symmetricWithinOneMicrometer": true,
+      "staticSocketTranslationApplied": false,
+      "supersededPreR6HeadApertureEstimate": {
+        "measuredCenterX": [
+          -0.021,
+          0.021
+        ],
+        "measuredOpenBandZ": [
+          1.1056,
+          1.109
+        ],
+        "authoredSocketCenterX": [
+          -0.02232,
+          0.02232
+        ],
+        "authoredSocketCenterZ": 1.10676,
+        "usedForR6Placement": false,
+        "conclusion": "legacy pre-R6 estimate retained only for audit history; the reversible R6 eye-globe placement and rendered full-face proof are authoritative"
+      },
+      "r6RuntimeVisualPlacement": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "r6VisualPlacementSourceOfTruth": "R7_v3_fixed_original_resolution_socket_and_profile_review",
+      "centeredIdleGazeFit": {
+        "active": true,
+        "method": "very small parallel iris-surface micro-saccade; socket, sclera, and cornea unchanged",
+        "optOutFlag": "?kiraEyeIdleFit=off"
+      }
+    },
+    "headWorld": {
+      "x": -19.154276,
+      "y": 1.497784,
+      "z": 5.070306
+    },
+    "eyeCenterToHeadDistance": 0.11536359,
+    "bindingDistanceDelta": 0,
+    "oldProceduralNodeCount": 0,
+    "structural": {
+      "version": "3.3.0",
+      "requiredNames": [
+        "KiraBrownEyeRig_R7_V3_SocketSeated",
+        "KiraLeftEyeSocket",
+        "KiraRightEyeSocket",
+        "KiraLeftEyePivot",
+        "KiraRightEyePivot",
+        "KiraLeftSclera",
+        "KiraRightSclera",
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea"
+      ],
+      "missingNames": [],
+      "complete": true,
+      "blinkMorphs": {},
+      "headBound": true,
+      "headBoneName": "mixamorigHead_06",
+      "oldProceduralNodeCount": 0,
+      "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+      "blinkSupported": false,
+      "blinkReason": "R7-v3 does not contain visually approved eyelid geometry; no fake eyelids are generated."
+    },
+    "error": null
+  },
+  "afterUnsupportedBlinkRequest": {
+    "active": true,
+    "version": "3.3.0",
+    "modelUrl": "/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "expectedSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "runtimeVisualFit": {
+      "irisLimbusPupilDiameterScale": 1,
+      "corneaDiameterScale": 1,
+      "socketTranslationApplied": true,
+      "affectedNodes": [
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea",
+        "KiraLeftSclera",
+        "KiraRightSclera"
+      ],
+      "liveBodyGlbModified": false,
+      "eyeGlobeTranslation": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "eyeGlobeTranslationApplied": true,
+      "r6VisualPlacementApplied": true,
+      "r6VisualPlacementSourceOfTruth": "rendered_full_face_existing_r6_head_apertures"
+    },
+    "direction": "down",
+    "blink": {
+      "left": 0,
+      "right": 0
+    },
+    "blinkSupported": false,
+    "blinkUnsupportedRequest": {
+      "side": "both",
+      "amount": 1,
+      "reason": "no_visually_approved_skinned_eyelid_geometry"
+    },
+    "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+    "leftIrisLocal": {
+      "x": 0,
+      "y": -0.00072,
+      "z": 0
+    },
+    "rightIrisLocal": {
+      "x": 0,
+      "y": -0.00072,
+      "z": 0
+    },
+    "leftIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "rightIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "leftScleraMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1056,
+      "localBounds": {
+        "min": [
+          -0.00905,
+          -0.00312,
+          0.00495
+        ],
+        "max": [
+          0.00905,
+          0.00312,
+          0.00585
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Living_Sclera",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_sclera_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 512
+          }
+        }
+      ]
+    },
+    "leftCorneaMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 2143,
+      "localBounds": {
+        "min": [
+          -0.9999997,
+          -1,
+          -1
+        ],
+        "max": [
+          0.99999988,
+          1,
+          0.99999976
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Physical_Cornea",
+          "visible": true,
+          "side": 2,
+          "opacity": 0.20000000298023224,
+          "transparent": true,
+          "depthTest": true,
+          "depthWrite": false,
+          "color": "#f6fcff",
+          "map": null
+        }
+      ]
+    },
+    "blinkMorphInfluences": {},
+    "testRunning": false,
+    "testPhase": null,
+    "headBound": true,
+    "headBoneName": "mixamorigHead_06",
+    "rootParentName": "mixamorigHead_06",
+    "leftSocketWorld": {
+      "x": -19.115172,
+      "y": 1.581204,
+      "z": 4.993819
+    },
+    "rightSocketWorld": {
+      "x": -19.175935,
+      "y": 1.583246,
+      "z": 4.989265
+    },
+    "leftSocketLocal": {
+      "x": -0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "rightSocketLocal": {
+      "x": 0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "leftScleraWorld": {
+      "x": -19.115172,
+      "y": 1.581204,
+      "z": 4.993819
+    },
+    "rightScleraWorld": {
+      "x": -19.175935,
+      "y": 1.583246,
+      "z": 4.989265
+    },
+    "leftScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftCorneaWorld": {
+      "x": -19.114554,
+      "y": 1.581437,
+      "z": 4.985683
+    },
+    "rightCorneaWorld": {
+      "x": -19.175318,
+      "y": 1.58348,
+      "z": 4.981129
+    },
+    "leftCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "rightCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "leftEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "rightEyeForward": {
+      "x": 0.075671,
+      "y": 0.028598,
+      "z": -0.996723
+    },
+    "socketFitAudit": {
+      "interocularDistance": 0.04459681,
+      "centerlineOffset": 0,
+      "heightDelta": 0,
+      "depthDelta": 0,
+      "symmetricWithinOneMicrometer": true,
+      "staticSocketTranslationApplied": false,
+      "supersededPreR6HeadApertureEstimate": {
+        "measuredCenterX": [
+          -0.021,
+          0.021
+        ],
+        "measuredOpenBandZ": [
+          1.1056,
+          1.109
+        ],
+        "authoredSocketCenterX": [
+          -0.02232,
+          0.02232
+        ],
+        "authoredSocketCenterZ": 1.10676,
+        "usedForR6Placement": false,
+        "conclusion": "legacy pre-R6 estimate retained only for audit history; the reversible R6 eye-globe placement and rendered full-face proof are authoritative"
+      },
+      "r6RuntimeVisualPlacement": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "r6VisualPlacementSourceOfTruth": "R7_v3_fixed_original_resolution_socket_and_profile_review",
+      "centeredIdleGazeFit": {
+        "active": true,
+        "method": "very small parallel iris-surface micro-saccade; socket, sclera, and cornea unchanged",
+        "optOutFlag": "?kiraEyeIdleFit=off"
+      }
+    },
+    "headWorld": {
+      "x": -19.154276,
+      "y": 1.498386,
+      "z": 5.070306
+    },
+    "eyeCenterToHeadDistance": 0.11536359,
+    "bindingDistanceDelta": 0,
+    "oldProceduralNodeCount": 0,
+    "structural": {
+      "version": "3.3.0",
+      "requiredNames": [
+        "KiraBrownEyeRig_R7_V3_SocketSeated",
+        "KiraLeftEyeSocket",
+        "KiraRightEyeSocket",
+        "KiraLeftEyePivot",
+        "KiraRightEyePivot",
+        "KiraLeftSclera",
+        "KiraRightSclera",
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea"
+      ],
+      "missingNames": [],
+      "complete": true,
+      "blinkMorphs": {},
+      "headBound": true,
+      "headBoneName": "mixamorigHead_06",
+      "oldProceduralNodeCount": 0,
+      "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+      "blinkSupported": false,
+      "blinkReason": "R7-v3 does not contain visually approved eyelid geometry; no fake eyelids are generated."
+    },
+    "error": null
+  },
+  "optOutStatus": {
+    "active": false,
+    "enabled": false,
+    "version": "3.3.0",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3"
+  },
+  "explicitStatus": {
+    "active": true,
+    "version": "3.3.0",
+    "modelUrl": "/models/home_world/kira/kira_socket_eye_rig_v3_3.glb",
+    "expectedSha256": "b79ba1a3ad593d13b41f16c2c83af96913ec82fa27a6b63f959f816f8be897e5",
+    "defaultEnabled": true,
+    "optOutFlag": "?kiraEyeRig=off",
+    "explicitVersionFlag": "?kiraEyeRig=v3.3",
+    "runtimeVisualFit": {
+      "irisLimbusPupilDiameterScale": 1,
+      "corneaDiameterScale": 1,
+      "socketTranslationApplied": true,
+      "affectedNodes": [
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea",
+        "KiraLeftSclera",
+        "KiraRightSclera"
+      ],
+      "liveBodyGlbModified": false,
+      "eyeGlobeTranslation": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "eyeGlobeTranslationApplied": true,
+      "r6VisualPlacementApplied": true,
+      "r6VisualPlacementSourceOfTruth": "rendered_full_face_existing_r6_head_apertures"
+    },
+    "direction": "idle_centered_socket_fit",
+    "blink": {
+      "left": 0,
+      "right": 0
+    },
+    "blinkSupported": false,
+    "blinkUnsupportedRequest": null,
+    "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+    "leftIrisLocal": {
+      "x": 0.00001452,
+      "y": 0.00000868,
+      "z": 0
+    },
+    "rightIrisLocal": {
+      "x": 0.00001452,
+      "y": 0.00000868,
+      "z": 0
+    },
+    "leftIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "rightIrisMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1248,
+      "localBounds": {
+        "min": [
+          -0.0029,
+          -0.0029,
+          0.00618
+        ],
+        "max": [
+          0.0029,
+          0.0029,
+          0.006225
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Source_Derived_Brown_Iris",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_brown_iris_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 1024
+          }
+        }
+      ]
+    },
+    "leftScleraMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 1056,
+      "localBounds": {
+        "min": [
+          -0.00905,
+          -0.00312,
+          0.00495
+        ],
+        "max": [
+          0.00905,
+          0.00312,
+          0.00585
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Living_Sclera",
+          "visible": true,
+          "side": 2,
+          "opacity": 1,
+          "transparent": false,
+          "depthTest": true,
+          "depthWrite": true,
+          "color": "#ffffff",
+          "map": {
+            "name": "kira_r7_v2_sclera_base_color",
+            "imageWidth": 1024,
+            "imageHeight": 512
+          }
+        }
+      ]
+    },
+    "leftCorneaMeshAudit": {
+      "visible": true,
+      "renderOrder": 0,
+      "frustumCulled": true,
+      "positionCount": 2143,
+      "localBounds": {
+        "min": [
+          -0.9999997,
+          -1,
+          -1
+        ],
+        "max": [
+          0.99999988,
+          1,
+          0.99999976
+        ]
+      },
+      "materials": [
+        {
+          "name": "Kira_R7_V2_Physical_Cornea",
+          "visible": true,
+          "side": 2,
+          "opacity": 0.20000000298023224,
+          "transparent": true,
+          "depthTest": true,
+          "depthWrite": false,
+          "color": "#f6fcff",
+          "map": null
+        }
+      ]
+    },
+    "blinkMorphInfluences": {},
+    "testRunning": false,
+    "testPhase": null,
+    "headBound": true,
+    "headBoneName": "mixamorigHead_06",
+    "rootParentName": "mixamorigHead_06",
+    "leftSocketWorld": {
+      "x": -19.13178,
+      "y": 1.579913,
+      "z": 4.98234
+    },
+    "rightSocketWorld": {
+      "x": -19.192606,
+      "y": 1.579681,
+      "z": 4.986489
+    },
+    "leftSocketLocal": {
+      "x": -0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "rightSocketLocal": {
+      "x": 0.0222984,
+      "y": 1.09876432,
+      "z": 0.0412
+    },
+    "leftScleraWorld": {
+      "x": -19.13178,
+      "y": 1.579913,
+      "z": 4.98234
+    },
+    "rightScleraWorld": {
+      "x": -19.192606,
+      "y": 1.579681,
+      "z": 4.986489
+    },
+    "leftScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rightScleraLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "leftCorneaWorld": {
+      "x": -19.132335,
+      "y": 1.57992,
+      "z": 4.974196
+    },
+    "rightCorneaWorld": {
+      "x": -19.193162,
+      "y": 1.579689,
+      "z": 4.978345
+    },
+    "leftCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "rightCorneaLocal": {
+      "x": 0,
+      "y": 0,
+      "z": 0.005971
+    },
+    "leftEyeForward": {
+      "x": -0.06807,
+      "y": 0.000948,
+      "z": -0.99768
+    },
+    "rightEyeForward": {
+      "x": -0.06807,
+      "y": 0.000948,
+      "z": -0.99768
+    },
+    "socketFitAudit": {
+      "interocularDistance": 0.04459681,
+      "centerlineOffset": 0,
+      "heightDelta": 0,
+      "depthDelta": 0,
+      "symmetricWithinOneMicrometer": true,
+      "staticSocketTranslationApplied": false,
+      "supersededPreR6HeadApertureEstimate": {
+        "measuredCenterX": [
+          -0.021,
+          0.021
+        ],
+        "measuredOpenBandZ": [
+          1.1056,
+          1.109
+        ],
+        "authoredSocketCenterX": [
+          -0.02232,
+          0.02232
+        ],
+        "authoredSocketCenterZ": 1.10676,
+        "usedForR6Placement": false,
+        "conclusion": "legacy pre-R6 estimate retained only for audit history; the reversible R6 eye-globe placement and rendered full-face proof are authoritative"
+      },
+      "r6RuntimeVisualPlacement": {
+        "forwardOffset": 0,
+        "verticalOffset": 0,
+        "horizontalOffset": 0,
+        "commonHorizontalOffset": 0,
+        "neutralYawDegrees": 0,
+        "irisHorizontalOffset": 0,
+        "irisVerticalOffset": 0,
+        "irisDepthOffset": 0,
+        "socketVerticalOffset": -0.008,
+        "socketDepthOffset": -0.002,
+        "units": "metres_in_authored_eye_socket_space",
+        "reversible": true,
+        "sourceGlbModified": false,
+        "headGeometryModified": false
+      },
+      "r6VisualPlacementSourceOfTruth": "R7_v3_fixed_original_resolution_socket_and_profile_review",
+      "centeredIdleGazeFit": {
+        "active": true,
+        "method": "very small parallel iris-surface micro-saccade; socket, sclera, and cornea unchanged",
+        "optOutFlag": "?kiraEyeIdleFit=off"
+      }
+    },
+    "headWorld": {
+      "x": -19.156337,
+      "y": 1.498134,
+      "z": 5.06569
+    },
+    "eyeCenterToHeadDistance": 0.11536359,
+    "bindingDistanceDelta": 0,
+    "oldProceduralNodeCount": 0,
+    "structural": {
+      "version": "3.3.0",
+      "requiredNames": [
+        "KiraBrownEyeRig_R7_V3_SocketSeated",
+        "KiraLeftEyeSocket",
+        "KiraRightEyeSocket",
+        "KiraLeftEyePivot",
+        "KiraRightEyePivot",
+        "KiraLeftSclera",
+        "KiraRightSclera",
+        "KiraLeftIris",
+        "KiraRightIris",
+        "KiraLeftCornea",
+        "KiraRightCornea"
+      ],
+      "missingNames": [],
+      "complete": true,
+      "blinkMorphs": {},
+      "headBound": true,
+      "headBoneName": "mixamorigHead_06",
+      "oldProceduralNodeCount": 0,
+      "gazeMethod": "fixed_socket_and_cornea_bounded_iris_surface_translation",
+      "blinkSupported": false,
+      "blinkReason": "R7-v3 does not contain visually approved eyelid geometry; no fake eyelids are generated."
+    },
+    "error": null
+  },
+  "screenshots": {
+    "center": "Data/world_tests/kira_socket_eye_v3_3_20260722/browser/center.png",
+    "lookLeft": "Data/world_tests/kira_socket_eye_v3_3_20260722/browser/look_left.png",
+    "lookRight": "Data/world_tests/kira_socket_eye_v3_3_20260722/browser/look_right.png",
+    "lookUp": "Data/world_tests/kira_socket_eye_v3_3_20260722/browser/look_up.png",
+    "lookDown": "Data/world_tests/kira_socket_eye_v3_3_20260722/browser/look_down.png"
+  },
+  "visualReview": {
+    "performedByScript": false,
+    "claim": "Screenshots require original-resolution visual review; numeric checks do not prove facial realism."
+  },
+  "diagnostics": {
+    "pageErrors": [],
+    "consoleErrors": [],
+    "requestFailures": [],
+    "httpErrors": []
+  },
+  "viteOutputTail": "\n  \u001b[32m\u001b[1mVITE\u001b[22m v7.3.6\u001b[39m  \u001b[2mready in \u001b[0m\u001b[1m185\u001b[22m\u001b[2m\u001b[0m ms\u001b[22m\n\n  \u001b[32m➜\u001b[39m  \u001b[1mLocal\u001b[22m:   \u001b[36mhttp://127.0.0.1:\u001b[1m58463\u001b[22m/\u001b[39m\n"
+}

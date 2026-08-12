@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "config_id": "adult_female_surface_delivery_v2_inactive_refinement",
+  "method_id": "generic_continuous_adult_female_external_surface_delivery_v2",
+  "required_base_detail_method_id": "generic_continuous_adult_female_external_surface_v2",
+  "baseline_height_m": 1.7,
+  "scale_metric_values_to_body_height": true,
+  "front_visible_sheet_frame": {
+    "coordinate_space": "object_local",
+    "origin": [0.0, -0.07, 0.79],
+    "lateral_axis": [1.0, 0.0, 0.0],
+    "longitudinal_axis": [0.0, 0.0, 1.0],
+    "outward_axis": [0.0, -1.0, 0.0],
+    "half_width_m": 0.045,
+    "half_length_m": 0.09,
+    "max_surface_offset_m": 0.09
+  },
+  "rear_anal_sheet_frame": {
+    "coordinate_space": "object_local",
+    "origin": [0.0, 0.05, 0.82],
+    "lateral_axis": [1.0, 0.0, 0.0],
+    "longitudinal_axis": [0.0, 0.0, 1.0],
+    "outward_axis": [0.0, 1.0, 0.0],
+    "half_width_m": 0.045,
+    "half_length_m": 0.07,
+    "max_surface_offset_m": 0.085
+  },
+  "parameters": {
+    "local_subdivision_cuts": 3,
+    "front_prominence_scale_m": 0.006,
+    "rear_prominence_scale_m": 0.0055,
+    "minimum_front_normal_alignment": 0.12,
+    "minimum_rear_normal_alignment": 0.1,
+    "minimum_feature_vertices": 10,
+    "maximum_skin_influences": 4,
+    "degeneracy_area_m2": 1e-12,
+    "maximum_new_vertices": 12000
+  },
+  "surface_selection": {
+    "front_visible_sheet_minimum_outward_depth_m": -0.02,
+    "rear_visible_sheet_minimum_outward_depth_m": -0.05,
+    "require_face_normal_alignment_before_subdivision": true,
+    "require_selected_faces_connected_to_existing_primary_surface": true,
+    "forbid_cross_sheet_nearest_sample_substitution": true
+  },
+  "legacy_v2_full_field_removal": {
+    "required": true,
+    "operation_order": "after_stable_local_subdivision_and_delivery_field",
+    "reverse_order": ["posterior_v2_target", "front_v2_target"],
+    "minimum_normal_alignment_from_v1_base": 0.05,
+    "failed_pre_subdivision_cleanup_attempt_preserved": true
+  },
+  "same_primary_surface_torso_landmarks": {
+    "enabled": true,
+    "navel_relief": true,
+    "bilateral_nipple_areola_relief": true,
+    "material_region_metadata": true,
+    "separate_geometry": false,
+    "paint_only_anatomy_claim": false
+  },
+  "topology_and_rig_gates": {
+    "same_primary_mesh_object": true,
+    "primary_surface_components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "degenerate_faces": 0,
+    "new_global_nonadjacent_self_intersection_pairs": 0,
+    "interpolate_and_normalize_new_vertex_weights": true,
+    "preserve_existing_vertex_indices": true,
+    "maximum_skin_influences": 4
+  },
+  "forbidden": {
+    "source_anatomy_geometry_copy": true,
+    "separate_anatomy_mesh": true,
+    "boolean_anatomy_union": true,
+    "paint_only_relationship": true,
+    "internal_tract_claim": true,
+    "runtime_activation": true,
+    "publication": true,
+    "hair_dependency": true
+  },
+  "status": "UNPROMOTED_INACTIVE_SECOND_AND_FINAL_BOUNDED_DELIVERY_COMPONENT",
+  "independent_visual_review_required": true
+}

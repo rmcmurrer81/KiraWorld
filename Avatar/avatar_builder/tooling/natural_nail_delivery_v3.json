@@ -1,0 +1,92 @@
+{
+  "schema_version": 3,
+  "method_id": "avatar_natural_nail_delivery_v3",
+  "status": "INACTIVE_REUSABLE_COMPONENT_READY_FOR_APPEND_ONLY_CANDIDATE_INTEGRATION",
+  "created_at": "2026-08-01",
+  "purpose": "Replace opaque square R16 nail patches with twenty short rounded/oval conformal natural nails without changing the primary body mesh, identity, rig, or weights.",
+  "r16_failure_diagnosis": {
+    "preserved_candidate": "Avatar/private_owner_review/kira_profiled_adult_candidate_r16_bald_delivery_20260801_134650",
+    "observed_defect": "The safe fallback nails retained visibly square, opaque plate silhouettes.",
+    "prior_bounded_result": "RecoverySprint/continuation_20260801/KIRA_NAIL_DELIVERY_BOUNDED_RESULT_20260801.json",
+    "why_v3_differs": "V3 applies the rounded width profile before each body-surface raycast. It does not pull an already fitted rectangular grid across curved skin, which was the intersection mechanism in the two R16 rounding attempts.",
+    "r16_modified": false
+  },
+  "implementation": {
+    "pure_contract": "Core/avatar_natural_nail_delivery_v3.py",
+    "blender_adapter": "tools/blender_avatar_natural_nail_delivery_v3.py",
+    "pure_tests": "tools/test_avatar_natural_nail_delivery_v3.py",
+    "entry_point": "add_natural_nails_v3",
+    "projection_grid": [
+      9,
+      9
+    ],
+    "construction": "rounded footprint first, then body-surface raycast, bounded outward normal lift, exact terminal-bone rigid binding, outward-only thin plate thickness",
+    "materials": {
+      "nail_bed": "soft translucent natural pink",
+      "free_edge": "one distal face-row band, softly paler and translucent",
+      "opaque_white_polish": false
+    }
+  },
+  "input_contract": {
+    "body": "already-built exact primary MakeHuman adult body mesh",
+    "armature": "already-built exact official rig with all finger and toe terminal bones",
+    "target_height_m": "finite positive owner-profile height",
+    "candidate_id": "non-empty append-only private candidate identifier",
+    "body_topology_or_weights_may_be_changed": false,
+    "rig_or_pose_may_be_changed": false
+  },
+  "output_contract": {
+    "nail_count": 20,
+    "fingernail_count": 10,
+    "toenail_count": 10,
+    "separate_conformal_helper_objects": true,
+    "short_rounded_oval_silhouette": true,
+    "translucent_pink_bed": true,
+    "softly_paler_free_edge": true,
+    "outward_only_plate_thickness_m": 0.00018,
+    "private_owner_review_only": true,
+    "inactive": true
+  },
+  "hard_gates": [
+    "exact bilateral inventory of digits 1 through 5 on both hands and feet",
+    "all coordinates finite",
+    "ordinary bounded length, width, and aspect ratio",
+    "rounded proximal cuticle and rounded short distal edge",
+    "zero primary-body triangle overlap at construction",
+    "minimum surface clearance 0.000040 m",
+    "maximum surface clearance 0.000450 m",
+    "exact terminal bone vertex group with unit weight on every nail vertex",
+    "exact armature parent and exact armature-modifier target",
+    "primary body mesh hash, rig hash, and body modifier count unchanged"
+  ],
+  "integration_contract": {
+    "replace_old_nail_constructor_call_in_next_builder": true,
+    "do_not_build_both_old_and_v3_nails": true,
+    "do_not_edit_or_overwrite_r16": true,
+    "dynamic_pose_clearance_requalification_required": true,
+    "required_pose_rechecks": [
+      "neutral standing",
+      "left and right hand close review",
+      "left and right foot close review",
+      "left and right knee bend",
+      "bilateral knee bend",
+      "supported seated pose",
+      "supine lying foundation",
+      "eating-ready foundation"
+    ],
+    "repair_scope": "If one nail fails, repair or replace only the nail component and preserve the body, face, anatomy, skin, rig, weights, eyes, brows, and detachable hair assets."
+  },
+  "truth_boundaries": {
+    "candidate_built_or_saved": false,
+    "render_performed": false,
+    "runtime_activation_allowed": false,
+    "assignment_or_registration_allowed": false,
+    "export_or_publication_allowed": false,
+    "dynamic_pose_visual_acceptance_claimed": false,
+    "next_private_candidate_visual_review_required": true
+  },
+  "rollback": {
+    "body_or_rig_rollback_required": false,
+    "component_rollback": "Remove only the twenty V3 nail objects and their two unused V3 materials; the primary body and rig are hash-guarded unchanged."
+  }
+}

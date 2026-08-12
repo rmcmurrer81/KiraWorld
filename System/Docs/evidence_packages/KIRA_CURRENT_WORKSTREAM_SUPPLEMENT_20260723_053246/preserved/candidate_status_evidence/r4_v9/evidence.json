@@ -1,0 +1,696 @@
+{
+  "schema_version": 1,
+  "run_id": "kira_r7_adult_surface_reconstructed_neck_r4_v9_20260722",
+  "mode": "inactive_topological_neck_reconstruction_r4_v9",
+  "parent_artifacts": {
+    "r3_blend": {
+      "path": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\inactive_measured_neck_bridge_r3.blend",
+      "sha256": "327e072e128179dbe379673ca58e61d2e9db065a12ec36b4ae6844130dce4145"
+    },
+    "r3_evidence": {
+      "path": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\evidence.json",
+      "sha256": "7e690445d4af96b7fd8d30ddfa0b36cb6b641432e36575bf032ef5bc050c5d7d"
+    },
+    "r3_manifest": {
+      "path": "C:\\Users\\robmc\\Kira\\Data\\avatar_builder_workspace_tests\\kira_r7_adult_surface_trial_20260722\\measured_neck_bridge_r3\\manifest.json",
+      "sha256": "30dada3566c7325a21215c28412477efce645a4175ab920148125b928e3b31e1"
+    }
+  },
+  "transition": {
+    "method": "topological_erosion_arc_length_ruled_loft_neck_reconstruction",
+    "removed_r3_bridge_faces": 230,
+    "body_erosion_depth_edges": 6,
+    "head_erosion_depth_edges": 10,
+    "body_removed_source_vertices": 317,
+    "head_removed_source_vertices": 792,
+    "body_clean_endpoint_vertices": 56,
+    "head_clean_endpoint_vertices": 88,
+    "intermediate_ring_count": 24,
+    "vertices_per_intermediate_ring": 88,
+    "added_transition_vertices": 2112,
+    "added_transition_faces": 2256,
+    "transition_height_m": 0.10644322633743286,
+    "angular_correspondence": true,
+    "arc_length_correspondence": true,
+    "loop_alignment_mean_radial_direction_error_squared": 0.03972268569419493,
+    "endpoint_derivatives_forced_flat": false,
+    "endpoint_derivative_model": "arc_length_corresponded_ruled_loft_without_per_vertex_tangent_field",
+    "circumferential_relax_iterations": 10,
+    "circumferential_relax_strength_at_midpoint": 0.28,
+    "circumferential_relaxation_fades_to_zero_at_retained_boundaries": true,
+    "body_tangent_fallback_count": 0,
+    "head_tangent_fallback_count": 0,
+    "clean_endpoint_center_lateral_mismatch_m": 0.02676692650327719,
+    "body_clean_loop": {
+      "mean_z_m": 0.9380576014518738,
+      "mean_radius_m": 0.06367805553439929,
+      "minimum_radius_m": 0.04761164376818785,
+      "maximum_radius_m": 0.08664710233340962
+    },
+    "head_clean_loop": {
+      "mean_z_m": 1.0445008277893066,
+      "mean_radius_m": 0.03800470006671491,
+      "minimum_radius_m": 0.03519487835471981,
+      "maximum_radius_m": 0.042030637763884056
+    },
+    "transition_profile": [
+      {
+        "ring": 1,
+        "t": 0.04,
+        "center_x_m": 2.235551073681563e-05,
+        "center_y_m": 0.049171432852745056,
+        "mean_z_m": 0.9424967765808105,
+        "mean_radius_m": 0.0657013484470251,
+        "minimum_radius_m": 0.03636977873662704,
+        "maximum_radius_m": 0.0850032519982999
+      },
+      {
+        "ring": 2,
+        "t": 0.08,
+        "center_x_m": 2.1469008061103523e-05,
+        "center_y_m": 0.04763065651059151,
+        "mean_z_m": 0.9467467665672302,
+        "mean_radius_m": 0.06453948316676407,
+        "minimum_radius_m": 0.03660851742571738,
+        "maximum_radius_m": 0.08289868767409013
+      },
+      {
+        "ring": 3,
+        "t": 0.12,
+        "center_x_m": 2.057138226518873e-05,
+        "center_y_m": 0.04608987271785736,
+        "mean_z_m": 0.9509974718093872,
+        "mean_radius_m": 0.06337803723230585,
+        "minimum_radius_m": 0.03689629700005105,
+        "maximum_radius_m": 0.08082051023060495
+      },
+      {
+        "ring": 4,
+        "t": 0.16,
+        "center_x_m": 1.9677692762343213e-05,
+        "center_y_m": 0.044549088925123215,
+        "mean_z_m": 0.9552474021911621,
+        "mean_radius_m": 0.062217033537132954,
+        "minimum_radius_m": 0.03719799895873915,
+        "maximum_radius_m": 0.07880398961462941
+      },
+      {
+        "ring": 5,
+        "t": 0.2,
+        "center_x_m": 1.8781729522743262e-05,
+        "center_y_m": 0.04300828278064728,
+        "mean_z_m": 0.9594975709915161,
+        "mean_radius_m": 0.06105649443019622,
+        "minimum_radius_m": 0.037486854981564656,
+        "maximum_radius_m": 0.07679277623892017
+      },
+      {
+        "ring": 6,
+        "t": 0.24,
+        "center_x_m": 1.7893838958116248e-05,
+        "center_y_m": 0.04146749898791313,
+        "mean_z_m": 0.9637480974197388,
+        "mean_radius_m": 0.059896440945274215,
+        "minimum_radius_m": 0.03774617115919551,
+        "maximum_radius_m": 0.07480173146167542
+      },
+      {
+        "ring": 7,
+        "t": 0.28,
+        "center_x_m": 1.7002817912725732e-05,
+        "center_y_m": 0.03992670774459839,
+        "mean_z_m": 0.9679979085922241,
+        "mean_radius_m": 0.05873690298636744,
+        "minimum_radius_m": 0.03796749066793651,
+        "maximum_radius_m": 0.07289188934022407
+      },
+      {
+        "ring": 8,
+        "t": 0.32,
+        "center_x_m": 1.610200706636533e-05,
+        "center_y_m": 0.03838589787483215,
+        "mean_z_m": 0.9722480177879333,
+        "mean_radius_m": 0.057577906479693804,
+        "minimum_radius_m": 0.03814756849836878,
+        "maximum_radius_m": 0.07100648560756578
+      },
+      {
+        "ring": 9,
+        "t": 0.36,
+        "center_x_m": 1.5212710422929376e-05,
+        "center_y_m": 0.03684510663151741,
+        "mean_z_m": 0.9764983654022217,
+        "mean_radius_m": 0.05641948200584059,
+        "minimum_radius_m": 0.03828653719040783,
+        "maximum_radius_m": 0.06912878531994619
+      },
+      {
+        "ring": 10,
+        "t": 0.4,
+        "center_x_m": 1.432472618034808e-05,
+        "center_y_m": 0.03530432656407356,
+        "mean_z_m": 0.980748176574707,
+        "mean_radius_m": 0.055261664889427874,
+        "minimum_radius_m": 0.03838668995860761,
+        "maximum_radius_m": 0.06726357445729292
+      },
+      {
+        "ring": 11,
+        "t": 0.44,
+        "center_x_m": 1.3429787941277027e-05,
+        "center_y_m": 0.03376352787017822,
+        "mean_z_m": 0.9849987030029297,
+        "mean_radius_m": 0.05410449083829719,
+        "minimum_radius_m": 0.038452006703247534,
+        "maximum_radius_m": 0.0654133831256051
+      },
+      {
+        "ring": 12,
+        "t": 0.48,
+        "center_x_m": 1.2541719115688466e-05,
+        "center_y_m": 0.032222721725702286,
+        "mean_z_m": 0.9892486333847046,
+        "mean_radius_m": 0.05294799966412464,
+        "minimum_radius_m": 0.03848749425396111,
+        "maximum_radius_m": 0.06357878691795224
+      },
+      {
+        "ring": 13,
+        "t": 0.52,
+        "center_x_m": 1.1645564882201143e-05,
+        "center_y_m": 0.03068193607032299,
+        "mean_z_m": 0.9934987425804138,
+        "mean_radius_m": 0.051792235195680186,
+        "minimum_radius_m": 0.038498918715698605,
+        "maximum_radius_m": 0.06175892153398772
+      },
+      {
+        "ring": 14,
+        "t": 0.56,
+        "center_x_m": 1.0750246474344749e-05,
+        "center_y_m": 0.029141144827008247,
+        "mean_z_m": 0.9977490305900574,
+        "mean_radius_m": 0.05063724837351209,
+        "minimum_radius_m": 0.03849270234058567,
+        "maximum_radius_m": 0.05998700461159345
+      },
+      {
+        "ring": 15,
+        "t": 0.6,
+        "center_x_m": 9.861849321168847e-06,
+        "center_y_m": 0.027600346133112907,
+        "mean_z_m": 1.001999020576477,
+        "mean_radius_m": 0.04948308918518291,
+        "minimum_radius_m": 0.038475362102459776,
+        "maximum_radius_m": 0.05823637549909703
+      },
+      {
+        "ring": 16,
+        "t": 0.64,
+        "center_x_m": 8.962339961726684e-06,
+        "center_y_m": 0.026059554889798164,
+        "mean_z_m": 1.0062490701675415,
+        "mean_radius_m": 0.048329822474777843,
+        "minimum_radius_m": 0.038453529214471475,
+        "maximum_radius_m": 0.05651176662393023
+      },
+      {
+        "ring": 17,
+        "t": 0.68,
+        "center_x_m": 8.078483006102033e-06,
+        "center_y_m": 0.024518772959709167,
+        "mean_z_m": 1.0104999542236328,
+        "mean_radius_m": 0.04717750882996812,
+        "minimum_radius_m": 0.038433553526900525,
+        "maximum_radius_m": 0.05480221574755039
+      },
+      {
+        "ring": 18,
+        "t": 0.72,
+        "center_x_m": 7.178242867666995e-06,
+        "center_y_m": 0.022977981716394424,
+        "mean_z_m": 1.0147500038146973,
+        "mean_radius_m": 0.04602622611735378,
+        "minimum_radius_m": 0.03842133420554433,
+        "maximum_radius_m": 0.05310206835968519
+      },
+      {
+        "ring": 19,
+        "t": 0.76,
+        "center_x_m": 6.2842582337907515e-06,
+        "center_y_m": 0.02143719419836998,
+        "mean_z_m": 1.018999695777893,
+        "mean_radius_m": 0.04487605822709512,
+        "minimum_radius_m": 0.03842206707259944,
+        "maximum_radius_m": 0.05140885866945655
+      },
+      {
+        "ring": 20,
+        "t": 0.8,
+        "center_x_m": 5.396051619754871e-06,
+        "center_y_m": 0.01989639550447464,
+        "mean_z_m": 1.023249864578247,
+        "mean_radius_m": 0.04372709733004952,
+        "minimum_radius_m": 0.038440096692799935,
+        "maximum_radius_m": 0.04972049599798078
+      },
+      {
+        "ring": 21,
+        "t": 0.84,
+        "center_x_m": 4.499843726080144e-06,
+        "center_y_m": 0.018355602398514748,
+        "mean_z_m": 1.0274999141693115,
+        "mean_radius_m": 0.04257945080557114,
+        "minimum_radius_m": 0.0384787427707921,
+        "maximum_radius_m": 0.0480341643182217
+      },
+      {
+        "ring": 22,
+        "t": 0.88,
+        "center_x_m": 3.6136480048298836e-06,
+        "center_y_m": 0.016814813017845154,
+        "mean_z_m": 1.031749963760376,
+        "mean_radius_m": 0.041433237346204695,
+        "minimum_radius_m": 0.03853981576178317,
+        "maximum_radius_m": 0.046344115431561674
+      },
+      {
+        "ring": 23,
+        "t": 0.92,
+        "center_x_m": 2.7133978619531263e-06,
+        "center_y_m": 0.015274014323949814,
+        "mean_z_m": 1.0360004901885986,
+        "mean_radius_m": 0.04028859722479929,
+        "minimum_radius_m": 0.03775673595929246,
+        "maximum_radius_m": 0.04463956710966226
+      },
+      {
+        "ring": 24,
+        "t": 0.96,
+        "center_x_m": 1.8186084389526513e-06,
+        "center_y_m": 0.013733227737247944,
+        "mean_z_m": 1.0402507781982422,
+        "mean_radius_m": 0.039145691169957045,
+        "minimum_radius_m": 0.03665928657044591,
+        "maximum_radius_m": 0.04290580872457061
+      }
+    ],
+    "smooth_polygon_normals": true,
+    "retained_endpoint_coordinates_changed": false,
+    "protected_face_mouth_eye_cranium_coordinates_changed": false
+  },
+  "identity_preservation": {
+    "all_original_r3_vertex_count": 22376,
+    "retained_original_r3_vertex_count": 21267,
+    "reconstructed_original_r3_vertex_count": 1109,
+    "retained_original_r3_maximum_coordinate_delta_m": 0.0,
+    "all_retained_original_r3_coordinates_preserved": true,
+    "body_vertex_count": 11591,
+    "body_approved_reconstruction_vertex_count": 317,
+    "body_reconstructed_source_vertex_count": 317,
+    "exact_r6_head_vertex_count": 10785,
+    "lower_neck_head_approved_reconstruction_vertex_count": 792,
+    "lower_neck_head_reconstructed_source_vertex_count": 792,
+    "protected_face_mouth_eye_cranium_vertex_count": 9993,
+    "protected_face_mouth_eye_cranium_maximum_coordinate_delta_m": 0.0,
+    "protected_face_mouth_eye_cranium_digest_before": "3a6530ca86be2f2f77943e7cf0d52abd5e5734e8b69148815832cb2ea17dc073",
+    "protected_face_mouth_eye_cranium_digest_after": "3a6530ca86be2f2f77943e7cf0d52abd5e5734e8b69148815832cb2ea17dc073",
+    "sealed_eye_mouth_aperture_vertex_count": 172,
+    "sealed_eye_mouth_aperture_maximum_coordinate_delta_m": 0.0,
+    "adult_surface_outside_bounded_transition_vertex_count": 21267,
+    "adult_surface_outside_bounded_transition_maximum_coordinate_delta_m": 0.0,
+    "reconstruction_subset_of_approved_topological_zone": true,
+    "face_and_mouth_vertices_smoothed_or_moved": false,
+    "second_mouth_added": false
+  },
+  "topology": {
+    "vertices": 23379,
+    "edges": 67856,
+    "polygons": 44476,
+    "connected_components": 1,
+    "component_sizes": [
+      23379
+    ],
+    "boundary_closed_cycle_count": 3,
+    "overused_edge_count": 0,
+    "minimum_face_area_m2": 3.4486780098319514e-10,
+    "degenerate_face_count_under_1e_12_m2": 0
+  },
+  "weights": {
+    "vertex_count": 23379,
+    "weighted_vertex_count": 23379,
+    "unweighted_vertex_count": 0,
+    "maximum_positive_groups_per_vertex": 4,
+    "invalid_target_groups": [],
+    "weight_sum_minimum": 0.9999999552965164,
+    "weight_sum_maximum": 1.0000000447034836,
+    "defined_vertex_group_count": 79
+  },
+  "deformation": {
+    "rest": {
+      "rotations_degrees_xyz": {},
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "edge_count": 67856,
+          "p05": 1.0,
+          "p95": 1.0,
+          "under_half_count": 0,
+          "over_2x_count": 0,
+          "fraction_under_half": 0.0,
+          "fraction_over_2x": 0.0
+        }
+      }
+    },
+    "upper_limb": {
+      "rotations_degrees_xyz": {
+        "mixamorig:LeftArm_09": [
+          0.0,
+          -25.0,
+          38.0
+        ],
+        "mixamorig:LeftForeArm_010": [
+          0.0,
+          68.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "edge_count": 67856,
+          "p05": 0.9999987507386288,
+          "p95": 1.000002547812262,
+          "under_half_count": 5,
+          "over_2x_count": 21,
+          "fraction_under_half": 7.368545154444707e-05,
+          "fraction_over_2x": 0.00030947889648667767
+        }
+      }
+    },
+    "hip_knee": {
+      "rotations_degrees_xyz": {
+        "mixamorig:LeftUpLeg_055": [
+          42.0,
+          0.0,
+          8.0
+        ],
+        "mixamorig:LeftLeg_056": [
+          -62.0,
+          0.0,
+          0.0
+        ],
+        "mixamorig:LeftFoot_057": [
+          18.0,
+          0.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "edge_count": 67856,
+          "p05": 1.0,
+          "p95": 1.0000009109119372,
+          "under_half_count": 24,
+          "over_2x_count": 25,
+          "fraction_under_half": 0.0003536901674133459,
+          "fraction_over_2x": 0.0003684272577222353
+        }
+      }
+    },
+    "spine_neck": {
+      "rotations_degrees_xyz": {
+        "mixamorig:Spine_02": [
+          0.0,
+          10.0,
+          0.0
+        ],
+        "mixamorig:Spine1_03": [
+          5.0,
+          0.0,
+          -8.0
+        ],
+        "mixamorig:Neck_05": [
+          8.0,
+          -12.0,
+          5.0
+        ],
+        "mixamorig:Head_06": [
+          -4.0,
+          7.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "edge_count": 67856,
+          "p05": 0.9998794742033339,
+          "p95": 1.0002201255688892,
+          "under_half_count": 0,
+          "over_2x_count": 0,
+          "fraction_under_half": 0.0,
+          "fraction_over_2x": 0.0
+        }
+      }
+    },
+    "bilateral_squat": {
+      "rotations_degrees_xyz": {
+        "mixamorig:Hips_01": [
+          -8.0,
+          0.0,
+          0.0
+        ],
+        "mixamorig:LeftUpLeg_055": [
+          48.0,
+          0.0,
+          4.0
+        ],
+        "mixamorig:RightUpLeg_060": [
+          48.0,
+          0.0,
+          -4.0
+        ],
+        "mixamorig:LeftLeg_056": [
+          -72.0,
+          0.0,
+          0.0
+        ],
+        "mixamorig:RightLeg_061": [
+          -72.0,
+          0.0,
+          0.0
+        ]
+      },
+      "metrics": {
+        "all_coordinates_finite": true,
+        "edge_stretch_ratio": {
+          "edge_count": 67856,
+          "p05": 0.9999307362289168,
+          "p95": 1.0001184940123746,
+          "under_half_count": 62,
+          "over_2x_count": 66,
+          "fraction_under_half": 0.0009136995991511437,
+          "fraction_over_2x": 0.0009726479603867012
+        }
+      }
+    }
+  },
+  "pose_gate_results": {
+    "rest": true,
+    "upper_limb": true,
+    "hip_knee": true,
+    "spine_neck": true,
+    "bilateral_squat": true
+  },
+  "renders": {
+    "neutral_front": "neutral_front.png",
+    "neutral_back": "neutral_back.png",
+    "neutral_left": "neutral_left.png",
+    "neutral_right": "neutral_right.png",
+    "neck_closeup_front": "neck_closeup_front.png",
+    "neck_closeup_back": "neck_closeup_back.png",
+    "neck_closeup_left": "neck_closeup_left.png",
+    "neck_closeup_right": "neck_closeup_right.png",
+    "identity_front": "identity_front.png",
+    "identity_left_profile": "identity_left_profile.png",
+    "pose_upper_limb": "pose_upper_limb.png",
+    "pose_hip_knee": "pose_hip_knee.png",
+    "pose_spine_neck": "pose_spine_neck.png",
+    "pose_bilateral_squat": "pose_bilateral_squat.png"
+  },
+  "gates": {
+    "single_connected_external_mesh": true,
+    "exact_79_joint_weights": true,
+    "finite_bounded_ruled_loft": true,
+    "transition_profile_bounded_and_monotonic": true,
+    "bounded_topological_neck_layers_only": true,
+    "protected_face_mouth_eye_apertures_cranium_preserved": true,
+    "adult_surface_outside_transition_preserved": true,
+    "fixed_pose_deformation": true,
+    "engineering_bounded_reconstruction_passed": true,
+    "original_resolution_visual_review_passed": false,
+    "owner_visual_review_approved": false,
+    "candidate_export_allowed": false,
+    "live_binding_allowed": false
+  },
+  "skin": {
+    "srgb_hex": "#e6c0a9",
+    "material": "KIRA_PRE_R6_LIGHT_SKIN_UNTEXTURED",
+    "untextured": true
+  },
+  "decision": {
+    "status": "inactive_r4v9_engineering_pass_visual_review_pending_no_candidate",
+    "engineering_passed": true,
+    "candidate_glb_created": false,
+    "live_binding_changed": false,
+    "why": [
+      "R4-v9 removes the visibly defective R3 collar and adjacent neck layers instead of smoothing their silhouette.",
+      "One longer arc-length ruled loft joins clean retained shoulder and neck loops without the rejected per-vertex tangent spikes.",
+      "The exact face, mouth and eye apertures, ears, cranium, adult surface outside the bounded reconstruction, and all 79 rig groups remain protected.",
+      "Original-resolution front/left/back/right neck and full-body visual review is still required; no GLB or live binding exists."
+    ]
+  },
+  "truth_limits": {
+    "complete_adult_topology_proven": false,
+    "internal_anatomy_proven": false,
+    "eyes_completed": false,
+    "lip_sync_completed": false,
+    "natural_long_duration_motion_proven": false
+  },
+  "host_verification": {
+    "blender_path": "C:\\Program Files\\Blender Foundation\\Blender 5.1\\blender.exe",
+    "author_returncode": 0,
+    "reopen_returncode": 0,
+    "reopen_verification": {
+      "object_found": true,
+      "object_type": "MESH",
+      "vertices": 23379,
+      "polygons": 44476,
+      "defined_vertex_groups": 79,
+      "armature_79_count": 1,
+      "armature_modifier_targets_79_joint_cage": true,
+      "transition_method": "topological_erosion_arc_length_ruled_loft_neck_reconstruction",
+      "bounded_body_neck_reconstruction": true,
+      "finite_bounded_ruled_loft": true,
+      "protected_r6_face_mouth_eye_cranium_coordinates_preserved": true,
+      "adult_surface_outside_bounded_transition_preserved": true,
+      "scene_flags": {
+        "inactive_review_only": true,
+        "candidate_export_allowed": false,
+        "live_binding_allowed": false,
+        "runtime_activation_allowed": false,
+        "owner_approved": false,
+        "complete_adult_topology_proven": false,
+        "protected_r6_face_mouth_eye_cranium_coordinates_preserved": true,
+        "adult_surface_outside_bounded_transition_preserved": true,
+        "bounded_body_neck_reconstruction": true,
+        "finite_bounded_ruled_loft": true,
+        "engineering_bounded_reconstruction_passed": true
+      },
+      "passed": true
+    },
+    "parent_hashes_before": {
+      "r3_blend": "327e072e128179dbe379673ca58e61d2e9db065a12ec36b4ae6844130dce4145",
+      "r3_evidence": "7e690445d4af96b7fd8d30ddfa0b36cb6b641432e36575bf032ef5bc050c5d7d",
+      "r3_manifest": "30dada3566c7325a21215c28412477efce645a4175ab920148125b928e3b31e1"
+    },
+    "parent_hashes_after": {
+      "r3_blend": "327e072e128179dbe379673ca58e61d2e9db065a12ec36b4ae6844130dce4145",
+      "r3_evidence": "7e690445d4af96b7fd8d30ddfa0b36cb6b641432e36575bf032ef5bc050c5d7d",
+      "r3_manifest": "30dada3566c7325a21215c28412477efce645a4175ab920148125b928e3b31e1"
+    },
+    "runtime_state_before": {
+      "sha256": "9de74fcff4e4fb0ff4596ecf7fc1eeeb817ae4eed9472501367ae0b1229ec5aa",
+      "active_candidate": "",
+      "active_conversation_mode": "",
+      "location": "home"
+    },
+    "runtime_state_after": {
+      "sha256": "9de74fcff4e4fb0ff4596ecf7fc1eeeb817ae4eed9472501367ae0b1229ec5aa",
+      "active_candidate": "",
+      "active_conversation_mode": "",
+      "location": "home"
+    },
+    "all_guarded_inputs_and_runtime_byte_unchanged": true,
+    "artifacts": {
+      "blender_author.log": {
+        "bytes": 3071,
+        "sha256": "1a6baebbf5697ac39974927e755ce95d76c8203d52e546a28de834757c7c3bbd"
+      },
+      "blender_reopen.log": {
+        "bytes": 494,
+        "sha256": "b950b132acb99a14612f276f7774e132da5c21f91d1f312453d46d93a7dc2d3b"
+      },
+      "config.json": {
+        "bytes": 1693,
+        "sha256": "1b436f537faf7a36b15692b84cdc07a2a0a48049873d5217692a61a884bc65ab"
+      },
+      "identity_front.png": {
+        "bytes": 1134649,
+        "sha256": "83c92cd4555a83030c060d9a2dbb4cde11f6e102b1688ec771f26aa9a42ffd4c"
+      },
+      "identity_left_profile.png": {
+        "bytes": 1133605,
+        "sha256": "08d7df289984b700249e312d2914234acdb499e0e3c046d411bdcb3cdcfba281"
+      },
+      "inactive_reconstructed_neck_surface_r4_v9.blend": {
+        "bytes": 135340834,
+        "sha256": "b8f874f02a184f6b90275a6883dc9cc25bcd9fd7a2498d4f75190637eb1037f8"
+      },
+      "neck_closeup_back.png": {
+        "bytes": 1101963,
+        "sha256": "f37a2b8f643fdca6a970e527246e5b4395d269033387c32fde53cb183f4e5520"
+      },
+      "neck_closeup_front.png": {
+        "bytes": 1141169,
+        "sha256": "5407abc93ecc03c7a772376542f7eec0cffb0835826ac50aefeeafc867512c29"
+      },
+      "neck_closeup_left.png": {
+        "bytes": 1084564,
+        "sha256": "84118047d8f36951b8ba1b978d8e58dd01fa95233cfa192ba9648fbd4c088f05"
+      },
+      "neck_closeup_right.png": {
+        "bytes": 1075473,
+        "sha256": "130e3d8a4180b5eee39f72abbd03230917698b9937abfd9d0d1dd3c7bf4dffea"
+      },
+      "neutral_back.png": {
+        "bytes": 1038621,
+        "sha256": "9869e4e0a66127e43326b24c52342503f9779232eb58562fde709957c75b0941"
+      },
+      "neutral_front.png": {
+        "bytes": 1051842,
+        "sha256": "f4f3099a31377ee19674df0afe09316838d896c66c70606323b1f8bb40c0a04d"
+      },
+      "neutral_left.png": {
+        "bytes": 1016904,
+        "sha256": "d7db7d341333e7a7722d2e6453bb0190082f3e5b421bf1efb9159109fd8c5ba2"
+      },
+      "neutral_right.png": {
+        "bytes": 1012877,
+        "sha256": "24c4f06950a935d402a1c249c5ee49f90230bb6abcd2e7e30ebf315ec051efa3"
+      },
+      "pose_bilateral_squat.png": {
+        "bytes": 1056196,
+        "sha256": "7359da9c480bde92704e74557b06a0b6a88bd5c90ee579e5084abe6dafe96084"
+      },
+      "pose_hip_knee.png": {
+        "bytes": 1048019,
+        "sha256": "0e2870a35c1dccbdfd88f4c33f6e58f3a54bb5b6da854692651fd9e3ed629b3b"
+      },
+      "pose_spine_neck.png": {
+        "bytes": 1016058,
+        "sha256": "70d8a8cdb0236e8af2bb20e7b49b7776de9dd6b8606c15ac845a87ac5781971b"
+      },
+      "pose_upper_limb.png": {
+        "bytes": 1047549,
+        "sha256": "91d57ce4f21c99eecd7febce017ef416b400745cdbcbeab07d34b8d91ed93566"
+      },
+      "reopen_verification.json": {
+        "bytes": 1069,
+        "sha256": "393befb25e2dc6d54fb7d9ee64526f5ad5cfc8f09b39c6231bf79f74eb77b256"
+      }
+    }
+  }
+}

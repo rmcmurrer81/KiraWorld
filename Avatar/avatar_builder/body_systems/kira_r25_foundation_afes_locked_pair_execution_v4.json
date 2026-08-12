@@ -1,0 +1,367 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_locked_pair_execution.v4",
+  "attempt_id": "attempt_04",
+  "status": "PENDING_FRESH_INDEPENDENT_AUDIT_READ_ONLY_DIAGNOSTIC_PAIR_ONLY",
+  "scope": {
+    "body_work_only": true,
+    "read_only_blender_diagnostic": true,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "render_allowed": false,
+    "candidate_creation_allowed": false,
+    "body_authoring_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "export_allowed": false,
+    "publication_allowed": false
+  },
+  "authorization_basis": {
+    "owner_requested_body_progress": true,
+    "owner_authorized_blender_problem_repair": true,
+    "bounded_operation": "extract_existing_foundation_afes_and_two_transition_rings_without_mutation",
+    "does_not_authorize_candidate_or_runtime_change": true,
+    "fresh_independent_attempt04_audit_required_before_execution": true
+  },
+  "execution_sources": {
+    "external_bootstrap": {
+      "path": "tools/launch_kira_r25_foundation_afes_locked_pair_v4.py",
+      "bytes": 33199,
+      "sha256": "7a734b715eef1cb8d1fdee949fb3b25bb28a23d1f2d53e600cdf0d29da2fba6d"
+    },
+    "private_controller": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_v4.py",
+      "bytes": 39032,
+      "sha256": "c5863757a121b892b38a11a0ffcafac8c08ea59b4434c3b4b24dc670628cc390"
+    },
+    "child_wrapper": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v4.py",
+      "bytes": 12823,
+      "sha256": "526217e23b7445c70804211b9299ba420d5c5b62052014e0f2af67c84626093c"
+    },
+    "static_hostile_test": {
+      "path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_attempt04.py",
+      "bytes": 21975,
+      "sha256": "124477213121ba1177c416cd964d9c332e630433fc69ced24eec0b3409454359"
+    },
+    "blender_executable": {
+      "path": "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe",
+      "bytes": 108687824,
+      "sha256": "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5"
+    }
+  },
+  "child_project_read_closure": {
+    "afes_attempt_01_checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/CHECKPOINT.md",
+      "bytes": 4673,
+      "sha256": "5c96a9c5da3303733f431344223f64736a7148e2361d6d3e69d34cf31015b84a"
+    },
+    "afes_attempt_01_independent_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/INDEPENDENT_AUDIT_ATTEMPT_01.md",
+      "bytes": 3834,
+      "sha256": "aa096db67515a2a6330bd3809d1c30e71d9a8afec4fed7a9e745b87a973480b3"
+    },
+    "afes_attempt_02_checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/CHECKPOINT.md",
+      "bytes": 8284,
+      "sha256": "df91b0a2b414c10b16bc6af86d02f20bda676b8e89d1f236e0573bd0fd18a670"
+    },
+    "afes_attempt_02_independent_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT.md",
+      "bytes": 3969,
+      "sha256": "504be87d2ae20cdc30a4dd47d043cdde4c5de1e1568cf2e28676b9e84b93e952"
+    },
+    "afes_attempt_02_rejection_addendum": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_02/INDEPENDENT_AUDIT_REJECTION_ADDENDUM.md",
+      "bytes": 2275,
+      "sha256": "aa0d2487710d5f8ce7df5ff428a77d8a65f425238366bcbef1a5faa0caf38b4a"
+    },
+    "afes_attempt_03_checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/CHECKPOINT.md",
+      "bytes": 6427,
+      "sha256": "109ac676aa1206404cf3679433c6d800efb308fce9f040de20fc0d5c19bea02a"
+    },
+    "afes_attempt_03_independent_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_03/INDEPENDENT_AUDIT.md",
+      "bytes": 2542,
+      "sha256": "7680627e5943413b293a7152ae4592c93ef5692a03ae850b662e047a607be212"
+    },
+    "afes_attempt_04_checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_04/CHECKPOINT.md",
+      "bytes": 5994,
+      "sha256": "517deca1772b5b1893238503c3014d1d22bbe0bbde5132a981f108dfba023274"
+    },
+    "afes_attempt_04_independent_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_04/INDEPENDENT_AUDIT.md",
+      "bytes": 3674,
+      "sha256": "4feaa449b3dd5e17d880c6ab6d9c850539876e5b1964a1179946d31ff73895e9"
+    },
+    "afes_topology_core_v1": {
+      "path": "tools/kira_r25_afes_topology_core.py",
+      "bytes": 10005,
+      "sha256": "972d5cdd5c9b9f511388607350b8c950e7b92df942e5d897eac98d08acfbfdce"
+    },
+    "afes_topology_core_v2": {
+      "path": "tools/kira_r25_afes_topology_core_v2.py",
+      "bytes": 28732,
+      "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"
+    },
+    "afes_topology_core_v3": {
+      "path": "tools/kira_r25_afes_topology_core_v3.py",
+      "bytes": 8732,
+      "sha256": "c3c5f6f21a0b133fae6ef0439932193a9d0e922001a97026fd022ff0a682dc8e"
+    },
+    "afes_topology_core_v4": {
+      "path": "tools/kira_r25_afes_topology_core_v4.py",
+      "bytes": 9529,
+      "sha256": "d70a3c15d5c929ea2a5f60c6d73445c7fa894481736691c9e5c1ace6c4bef1d4"
+    },
+    "afes_v1_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v1.json",
+      "bytes": 6989,
+      "sha256": "3f1f57d95a28287f024cd6806af9180c623d134b68249a547cb81475f8fe5fdc"
+    },
+    "afes_v1_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings.py",
+      "bytes": 18513,
+      "sha256": "706a1035354bb133a8cc2a2c0dbeff414f6f1172bbedaaf7dafbf70e14c57bc2"
+    },
+    "afes_v1_test": {
+      "path": "Testing/test_kira_r25_afes_read_only_extraction_preparation.py",
+      "bytes": 7352,
+      "sha256": "6132c8fc82f60f924f81a4124358369ee2af6e51924e5b59aaa8d0b5f6588eb5"
+    },
+    "afes_v2_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v2.json",
+      "bytes": 11046,
+      "sha256": "b4c992012f3f621d4bef5252c7cb7bf26d6d524b3859cc2685487ba10589f7dc"
+    },
+    "afes_v2_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v2.py",
+      "bytes": 20082,
+      "sha256": "508900309d7847e41997da72d2c85ee28317c9439e52c5f7311b82aac4553fc5"
+    },
+    "afes_v2_test": {
+      "path": "Testing/test_kira_r25_afes_read_only_extraction_attempt02.py",
+      "bytes": 13272,
+      "sha256": "ab1753305a0bc357e94fccf36160bc893197be23d69675f26651e42784efc970"
+    },
+    "afes_v3_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v3.json",
+      "bytes": 7125,
+      "sha256": "97648d764bf218c3c25e77be9979af0c277e012b690323afaade0d1db0bda23a"
+    },
+    "afes_v3_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v3.py",
+      "bytes": 23790,
+      "sha256": "861344dce0bb203400ef50875124127fe1ed21ea79d036c6eee73b1c7c4ee366"
+    },
+    "afes_v3_test": {
+      "path": "Testing/test_kira_r25_afes_read_only_extraction_attempt03.py",
+      "bytes": 11241,
+      "sha256": "07b5bdd76262fbf6bb7cff9d2bcdd45c85ab6c77603b3301b7b0b31c1f481c62"
+    },
+    "afes_v4_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v4.json",
+      "bytes": 8035,
+      "sha256": "e25149b133715d9a4ad3578bfdf081986394ebdf61b1fbe2e46a109d89bb5102"
+    },
+    "afes_v4_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v4.py",
+      "bytes": 22751,
+      "sha256": "088c811cc0745e7519516d94c0c449d2ee8bf296f8cb10cc8e8d7d343de6f079"
+    },
+    "afes_v4_test": {
+      "path": "Testing/test_kira_r25_afes_read_only_extraction_attempt04.py",
+      "bytes": 14077,
+      "sha256": "f9a644233a0618ce4f9f8f55c358d99f4b2aa235cf0dc42f0a07c51e6b6d74d7"
+    },
+    "afes_v5_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v5.json",
+      "bytes": 9972,
+      "sha256": "0f51a937117912ef2863655a30d4e10da299042d4cfc975310ad18e5fa2c98ab"
+    },
+    "afes_v5_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v5.py",
+      "bytes": 23834,
+      "sha256": "333b17e064ae9cd681f309606076da17961eb738b1bbace462533bd30918959a"
+    },
+    "afes_v5_private_loader": {
+      "path": "tools/kira_r25_afes_topology_core_v5.py",
+      "bytes": 16970,
+      "sha256": "2cf8bfcb65efa1f1e557f5e9dc66208fad98023d5ad71b66c5fe513f86e7f48e"
+    },
+    "canonical_receipt": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"
+    },
+    "foundation_blend": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+      "bytes": 789620,
+      "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"
+    },
+    "foundation_qualification": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json",
+      "bytes": 2471,
+      "sha256": "c91c11f649fca7dcdff4530df15a5ed4654d0fe4ca723740cca55660a4b969e0"
+    },
+    "foundation_relationship_review": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FEMALE_RELATIONSHIP_REVIEW_V2.json",
+      "bytes": 37722,
+      "sha256": "b321f2d852b2242c462501a396ddb9aca648229187868a158da6571450a1cb88"
+    },
+    "foundation_topology_audit": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FOUNDATION_TOPOLOGY_AUDIT_V2.json",
+      "bytes": 3738,
+      "sha256": "de2d1f0a82aa2a0015f7374707b7e12afae830ef5314f518bcb7956adf8180de"
+    },
+    "r23_preflight_config": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_cc0_afes_expanded_mask_preparation/KIRA_R23_CC0_AFES_EXPANDED_MASK_PREFLIGHT_CONFIG.json",
+      "bytes": 14768,
+      "sha256": "e2b1d947f0171f14e8e5330f73fdb0ba0570bf62e5784ba147dc2d370b2be286"
+    },
+    "r23_preflight_result": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_cc0_afes_expanded_mask/preflight_attempt_04/PREFLIGHT.json",
+      "bytes": 98383,
+      "sha256": "2fd7968db9e7d00882d031d519aa04472b343cdf2141f6dcc6c672a77c0a5935"
+    }
+  },
+  "recursive_closure_contract": {
+    "algorithm": "explicit_v5_v4_v3_v2_table_walk_matching_bound_v5_extractor",
+    "unique_project_file_count": 35,
+    "canonical_closure_sha256": "cde7ed10ab51b5ed57405b47aba0d986aff96e529fa637cc75dd3f4a7ad7b591",
+    "includes_all_five_attempt03_audit_omissions": true,
+    "verified_under_complete_parent_lock_set": true
+  },
+  "process_contract": {
+    "factory_startup": true,
+    "background": true,
+    "autoexec_disabled": true,
+    "python_exit_code": 1,
+    "stdin": "DEVNULL",
+    "shell": false,
+    "close_fds": true,
+    "least_handle_inheritance": true,
+    "result_handle_must_be_win32_pipe": true,
+    "concurrent_bounded_pipe_drain": true,
+    "exactly_one_frame_and_eof": true,
+    "maximum_frame_bytes": 1048628,
+    "maximum_stdout_bytes": 4194304,
+    "maximum_stderr_bytes": 4194304,
+    "process_timeout_seconds": 180,
+    "windows_job_kill_on_close": true,
+    "create_suspended_assign_job_start_drains_then_resume": true,
+    "exception_safe_post_creation_finally_cleanup": true,
+    "fresh_pair_64_hex_nonce": true,
+    "fresh_distinct_run_64_hex_nonce_per_run": true,
+    "environment_passthrough_if_present": [
+      "SYSTEMROOT",
+      "WINDIR",
+      "USERNAME",
+      "USERPROFILE",
+      "HOMEDRIVE",
+      "HOMEPATH",
+      "LOCALAPPDATA",
+      "APPDATA"
+    ],
+    "forced_environment": {
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0"
+    },
+    "controlled_runtime_directories": {
+      "TEMP": "RecoverySprint/runtime_cache/r25_blender_v4/temp",
+      "TMP": "RecoverySprint/runtime_cache/r25_blender_v4/temp",
+      "BLENDER_USER_CONFIG": "RecoverySprint/runtime_cache/r25_blender_v4/user_config",
+      "BLENDER_USER_SCRIPTS": "RecoverySprint/runtime_cache/r25_blender_v4/user_scripts",
+      "BLENDER_USER_DATAFILES": "RecoverySprint/runtime_cache/r25_blender_v4/user_datafiles"
+    },
+    "path_rule": "exact_blender_directory_then_system32_then_windows_directory",
+    "working_directory": ".",
+    "exact_command_template": [
+      "<BLENDER_EXECUTABLE>",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "<FOUNDATION_BLEND>",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "<CHILD_WRAPPER>",
+      "--",
+      "--result-handle",
+      "<INHERITED_WIN32_PIPE_HANDLE>",
+      "--execution-contract-sha256",
+      "<EXPECTED_CONTRACT_SHA256>",
+      "--pair-session-nonce",
+      "<FRESH_PAIR_64_HEX_NONCE>",
+      "--run-nonce",
+      "<FRESH_RUN_64_HEX_NONCE>",
+      "--run-number",
+      "<ONE_OR_TWO>"
+    ]
+  },
+  "audit_gate": {
+    "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_04/INDEPENDENT_AUDIT.json",
+    "sha256_supplied_out_of_band": true,
+    "document_schema": "kira.avatar.r25.foundation_afes_locked_pair_independent_audit.v4",
+    "authoritative_decision_code": "ACCEPTED_FOR_ONE_BOUNDED_READ_ONLY_PAIR_ONLY",
+    "exact_key_and_value_schema_required": true,
+    "extra_or_contradictory_decision_fields_rejected": true,
+    "quoted_substrings_are_not_authority": true
+  },
+  "required_fresh_run_count": 2,
+  "pair_acceptance": {
+    "distinct_pair_and_run_nonces": true,
+    "exact_authenticated_outer_and_inner_payload_schema": true,
+    "exact_full_normalized_topology_digest_match": true,
+    "compact_afes_evidence_validation": true,
+    "complete_recursive_child_project_inputs_locked_before_verification": true,
+    "all_declared_inputs_locked_through_after_snapshot": true,
+    "all_declared_inputs_unchanged_after_pair": true,
+    "each_raw_frame_and_log_created_exclusively": true,
+    "fixed_root_second_use_is_rejected": true,
+    "post_outcome_reservation_failures_attempt_canonical_failure_receipt": true,
+    "abrupt_process_or_storage_failure_can_prevent_failure_receipt": true,
+    "pre_reservation_failure_has_no_receipt": true,
+    "fresh_independent_audit_required_before_execution": true
+  },
+  "append_only_output_root": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution/attempt_04",
+  "preserved_rejected_attempt03": {
+    "v3_contract": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3.json", "bytes": 22563, "sha256": "ef002867881a78fd805754da4c9668cf08d4df0c2e8cd97af3c529b58f7531be"},
+    "v3_wrapper": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3.py", "bytes": 15343, "sha256": "58ca9009a9274f94640dc66cfe9ec2c30a4208a42f8d7c1dc86263e2aeabddbe"},
+    "v3_controller": {"path": "tools/run_kira_r25_foundation_afes_locked_pair_v3.py", "bytes": 52830, "sha256": "a0d5ea75c8062c66646da6f2d06ba131952f98f89515606bf53905d22016cdee"},
+    "v3_test": {"path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_attempt03.py", "bytes": 15979, "sha256": "ef99b71d64ee39d57afbb4d628eb8515fb275d8284c81536f236fbdbd47f5bf7"},
+    "attempt03_current_checkpoint": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03/CHECKPOINT.md", "bytes": 8073, "sha256": "72bc13a800dcc5a537e37594756d9f3a7afd84be35a4bdfca2beb7c3e188e908"},
+    "attempt03_rejection_audit": {"path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03/INDEPENDENT_AUDIT.md", "bytes": 10456, "sha256": "db97ba7580484db17f55aaa402fc29e49db8e521b6c5ae14ea27e6801ec1c095"},
+    "v3r1_contract_draft": {"path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r1.json", "bytes": 25163, "sha256": "b21a7a0901cae6eacbbf69f3aa6a50fd31ddc5674fc3e4bbdc13965a578274d7"},
+    "v3r1_wrapper_draft": {"path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v3r1.py", "bytes": 16211, "sha256": "4ba9f6b44eb2d644bcd8ca2d13ed8f0bf443341c87ba1e7eed687b35457b551c"},
+    "v3r1_controller_draft": {"path": "tools/run_kira_r25_foundation_afes_locked_pair_v3r1.py", "bytes": 46633, "sha256": "2375b5657be3df280a4f969b03cec7ecc644cd797f7ec6ea80709cda306e3496"},
+    "v3r1_test_draft": {"path": "Testing/test_kira_r25_foundation_afes_locked_pair_execution_v3r1.py", "bytes": 21849, "sha256": "ba79a1573d0e1bf60ce8ce9aac823011da10b5cae1c4f976925134ce0e143c8a"}
+  },
+  "runtime_dependency_truth": {
+    "complete_recursive_project_file_reads_of_bound_v5_extractor": true,
+    "complete_recursive_project_file_count": 35,
+    "blender_executable_locked_and_hashed": true,
+    "controller_compiled_from_retained_locked_bytes": true,
+    "structured_audit_parsed_before_private_controller_compile": true,
+    "external_bootstrap_already_executing_bytes_cannot_self_prove": true,
+    "external_bootstrap_is_explicit_independent_audit_trust_root": true,
+    "windows_system_dlls_and_blender_bundled_dynamic_runtime_files_individually_sealed": false,
+    "windows_system_dlls_and_blender_bundled_dynamic_runtime_files_are_platform_dependencies": true,
+    "network_dependency_expected": false,
+    "model_dependency_expected": false,
+    "unlisted_project_file_read_authorized": false
+  },
+  "truth_boundary": {
+    "pair_pass_would_only_satisfy_foundation_afes_plus_transition_vertex_set_audit": true,
+    "semantic_cage_still_required": true,
+    "positive_jacobian_and_intersection_fixtures_still_required": true,
+    "body_authoring_not_granted": true,
+    "candidate_not_created": true,
+    "owner_review_not_implied": true,
+    "runtime_authority_not_implied": true,
+    "static_package_is_not_execution_authority_until_fresh_independent_audit": true,
+    "attempts_01_02_03_and_v3r1_preserved": true
+  }
+}

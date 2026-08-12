@@ -1,0 +1,84 @@
+{
+  "schema": "kira.blackwell.v16.native_exact_manifest_row_control_anchor_contract.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_exact_manifest_row_control_anchor_candidate_v16",
+  "attempt_id": "attempt_01",
+  "status": "AUTHOR_STATIC_ONLY_PENDING_BUILD_SEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "trust_root": "exact_x64_native_retained_handles_complete_compact_manifest_rows_and_retained_v15_private_control_graph",
+  "v15_consumed_failure": {
+    "status": "CONSUMED_FAILURE_DO_NOT_RERUN_V15",
+    "invocations": 1,
+    "exit_code": 4,
+    "coarse_stage": 10,
+    "output_created": false,
+    "cause": "V15 required spaced JSON fragments while its 21 sealed subject rows were compact JSON",
+    "old_spaced_object_path_count": 0,
+    "old_spaced_build_path_count": 0,
+    "old_spaced_subject_path_matches": 0,
+    "exact_compact_subject_rows": 21
+  },
+  "manifest_row_repair": {
+    "format": "{\"path\":\"<canonical-path>\",\"bytes\":<positive-decimal>,\"sha256\":\"<64-lower-hex>\"}",
+    "match_unit": "one_complete_row",
+    "required_occurrences_per_runtime_binding": 1,
+    "required_total_rows": 41,
+    "path_restrictions": ["nonempty", "ASCII", "forward-slash-only", "no-JSON-escape", "no-empty-segment", "no-dot-segment"],
+    "refusals": [
+      "missing complete row",
+      "duplicate complete row",
+      "whitespace-mutated row",
+      "path-only decoy",
+      "bytes-only decoy",
+      "digest-only decoy",
+      "fields split across rows",
+      "wrong bytes",
+      "wrong digest",
+      "NUL in seal",
+      "wrong total row count"
+    ]
+  },
+  "retained_control_plane": {
+    "python_source": "Core/persistent_blackwell_voice_integration_v15.py",
+    "private_validator": "tools/native/kira_blackwell_voice_control_anchor_v15_validator.py",
+    "control_config": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v15/candidate_config.json",
+    "semantic_scope": "the already accepted V15 immutable origin-bound graph only",
+    "v14_blockers_remain_closed": true,
+    "new_v16_python_candidate": false
+  },
+  "required_compiler": {
+    "toolchain": "MSVC_x64",
+    "compile_flags": ["/W4", "/WX", "/O2", "/MT", "/guard:cf", "/DUNICODE", "/D_UNICODE", "/std:c17"],
+    "analyze_flags": ["/W4", "/WX", "/analyze", "/c", "/DUNICODE", "/D_UNICODE", "/std:c17"],
+    "warning_suppression_allowed": false,
+    "required_unsuppressed_analyzer_warnings": 0,
+    "permitted_pe_imports": ["bcrypt.dll", "KERNEL32.dll"]
+  },
+  "single_stage": {
+    "name": "disconnected_exact_manifest_row_and_retained_v15_static_control_validation",
+    "maximum_invocations_after_different_acceptance": 1,
+    "arguments": [],
+    "failure_or_success_consumes_authority": true,
+    "ordered_steps": [
+      "accept no arguments",
+      "retain exact fresh V16 audit decision and digest sidecar",
+      "lock the running V16 image, V16 header, complete 41-row V16 seal, every runtime input, exact V15 accepted-then-consumed closure, Python DLL, and stdlib zip",
+      "match every runtime binding as one exact complete compact manifest row exactly once",
+      "reserve append-only write-through evidence and one terminal receipt before Python",
+      "delayed-load only the retained exact Python DLL in isolated mode",
+      "run the exact retained V15 private validator, source, config, and six V14 attestations",
+      "recheck every retained handle and exact audit identity",
+      "destroy private state, finalize Python, FreeLibrary, prove module/path absence, write one terminal record, and stop"
+    ]
+  },
+  "stop_before": [
+    "model", "Qwen", "GPU", "Torch", "CUDA", "Chatterbox", "synthesis",
+    "audio", "playback", "latency measurement", "network", "subprocess",
+    "person state", "production route", "body", "Blender"
+  ],
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false,
+  "different_fresh_static_audit_required": true
+}

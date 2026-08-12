@@ -1,0 +1,96 @@
+{
+  "schema_version": 3,
+  "binding_id": "avatar_builder_body_system_modeling_acceptance_plan_binding_v3",
+  "status": "PLAN_BOUND_NOT_EXECUTED_NOT_RUNTIME_AUTHORITY",
+  "supersedes_binding": {
+    "path": "Avatar/avatar_builder/body_systems/modeling_acceptance_plan_binding_v2.json",
+    "bytes": 5199,
+    "sha256": "b7129d9b8b7f1914cd672c43a0ad1b5746604893faba9862cdbc1b74eefe85e3"
+  },
+  "preserved_previous_overlay": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_avatar_builder_binding_correction/SOURCE_BINDINGS_VERIFICATION_OVERLAY_V2.json",
+    "bytes": 1711,
+    "sha256": "bce50aec4d96fbb1bd67e9b94af7161fb4aac7ad5072e2f88b6e3dd9ecfb1226"
+  },
+  "preserved_no_go_review": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_avatar_builder_binding_independent_review/attempt_01/MANIFEST.json",
+    "bytes": 2933,
+    "sha256": "825f6f855a88896c512462217e6770e19b5a3dd9f518eef2960529b62723bf5f"
+  },
+  "bound_plan": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/BODY_SYSTEM_MODELING_AND_ACCEPTANCE_PLAN.md",
+    "bytes": 26028,
+    "sha256": "31e162c869665bb25e56f327c3fa8661a02106ccd74c565c403fcf9d3cc73f4a"
+  },
+  "bound_acceptance_matrix": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/ACCEPTANCE_MATRIX.json",
+    "bytes": 8717,
+    "sha256": "f76aab978eeb8f2da4b780cffd4fb113e39ef0cd12ca9a4cb2bb48a8d4232708",
+    "required_status": "PLAN_ONLY_ALL_TESTS_NOT_RUN"
+  },
+  "bound_base_source_inventory": {
+    "path": "RecoverySprint/continuation_20260803/body_system_modeling_and_acceptance_plan/SOURCE_BINDINGS.json",
+    "bytes": 10516,
+    "sha256": "3872ab99d091b95ac148916da66b12f876bfbd1cf25d1e9d6c3035b24d39d721",
+    "historical_record_count": 41
+  },
+  "source_verification_overlay": {
+    "path": "RecoverySprint/continuation_20260803/adult_curriculum_private_sensation_policy_gap_correction/SOURCE_BINDINGS_VERIFICATION_OVERLAY_V3.json",
+    "bytes": 4420,
+    "sha256": "8e62866e385261b152d25873ddf55d0729dd1aba0eba8947b99589c549ab8113",
+    "required_historical_record_count": 41,
+    "required_excluded_mutable_verifier_count": 1,
+    "required_intentional_replacement_count": 5,
+    "required_unchanged_current_record_count": 35,
+    "required_verified_current_source_count": 40,
+    "required_mismatch_count": 0
+  },
+  "current_source_inventory_contract": {
+    "authoritative_url_count": 14,
+    "plan_registry_and_system_document_exact_ordered_equality_required": true,
+    "added_existing_documented_sources": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK545147/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK482236/"
+    ]
+  },
+  "current_adult_evidence_contract": {
+    "bare_confirmed_adult_string_is_sufficient": false,
+    "exact_subject_bound_evidence_required_end_to_end": true,
+    "full_evidence_revalidated_in_serialized_state": true,
+    "applies_to": [
+      "curriculum_entitlement",
+      "private_sensation_contract",
+      "private_solitary_choice_evaluator",
+      "adult_body_system_state"
+    ]
+  },
+  "inherits_unchanged_from_superseded_v2": [
+    "scope",
+    "current_testable_domains",
+    "future_unimplemented_domains",
+    "stage_order",
+    "transfer_targets",
+    "future_proposed_targets_not_created",
+    "mandatory_truth_separation",
+    "promotion_rules",
+    "implementation_state"
+  ],
+  "implementation_state": {
+    "all_matrix_tests_run": false,
+    "runtime_connected": false,
+    "physiology_implemented": false,
+    "private_sensation_storage_implemented": false,
+    "person_memory_mutated": false,
+    "relationship_state_mutated": false,
+    "body_or_blender_mutated": false
+  },
+  "preservation": {
+    "historical_base_inventory_unchanged": true,
+    "v1_binding_unchanged": true,
+    "v2_binding_unchanged": true,
+    "v2_overlay_unchanged": true,
+    "no_go_review_unchanged": true,
+    "five_changed_sources_are_replacements_not_exclusions": true,
+    "only_mutable_self_verifier_is_excluded": true
+  }
+}

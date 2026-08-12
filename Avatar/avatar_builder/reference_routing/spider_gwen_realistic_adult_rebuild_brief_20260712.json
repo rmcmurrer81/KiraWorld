@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-12T21:15:00Z",
+  "candidate_id": "spider_gwen_spider_gwen_20260606_013325",
+  "status": "brief_ready_for_future_builder_pass",
+  "maturity_policy": "adult",
+  "base_body_policy": "adult female base body with adult anatomy-guided proportions; no Barbie/non-adult treatment",
+  "identity_goal": "A realistic synthetic-person Gwen Stacy/Spider-Gwen inspired by Spider-Verse movie Gwen, not a flat movie/comic copy.",
+  "source_policy": [
+    "Movie-frame Gwen references define identity, head shape, expression language, hair, eye color, and suit identity.",
+    "Realistic multi-view fan/concept turnarounds can help with 3D realism and body/suit views, but cannot be copied.",
+    "Comic strips are design references only: suit markings, color blocks, pose language, and recurring identity cues.",
+    "Do not use voice-actress photos, cosplayers, toys, or unrelated real people for likeness."
+  ],
+  "head_targets": [
+    "asymmetrical blond/white side-swept hair with shaved/shorter side where reference shows it",
+    "recognizable Gwen brow shape and expressive eyebrow range",
+    "real eye sockets with blue-gray irises, movable eyes, eyelids, and catchlights",
+    "profile follows references: nose bridge, nose tip, lips, chin, jaw, ear, and neck depth",
+    "mouth opens naturally with teeth, tongue, lips, and speech shapes",
+    "subtle freckles/skin detail if approved from references"
+  ],
+  "body_targets": [
+    "adult athletic dancer/superhero silhouette",
+    "not skin-tight painted anatomy; base body remains separate under wardrobe",
+    "suit silhouette should read as spandex/superhero suit when worn",
+    "hands and feet must remain correctly scaled and rigged",
+    "walk, turn, sit, look-around, and talk tests required"
+  ],
+  "wardrobe_targets": [
+    "Spider-Gwen suit is a wardrobe/morph garment layer, not the base body",
+    "hood, white upper layer, black torso/legs, pink web gloves/inner arms, teal shoes, and back markings should be separate named garment/material regions",
+    "support future normal clothes separately from the superhero suit",
+    "if the suit is treated as a normal garment, it needs stored, dressing, worn, removed, folded/hung states",
+    "if the suit is treated as a superhero morph/magic exception, record that separately and do not pretend it was physically dressed"
+  ],
+  "proofs_required": [
+    "head_front_realistic.png",
+    "head_side_profile_realistic.png",
+    "head_three_quarter_realistic.png",
+    "eyes_socket_side_proof.png",
+    "mouth_open_lips_teeth_tongue_proof.png",
+    "adult_base_body_front_side_back.png",
+    "suit_wardrobe_layer_front_side_back.png",
+    "walk_with_suit_test.mp4_or_json",
+    "wardrobe_state_machine_report.json"
+  ],
+  "linked_records": [
+    "Avatar/temp_ai/spider_gwen_spider_gwen_20260606_013325/gwen_chat_reference_batch_20260712_2.json",
+    "Avatar/avatar_builder/policies/realistic_character_adaptation_policy_20260712.json",
+    "Avatar/avatar_builder/policies/avatar_world_wardrobe_boundary_20260712.json"
+  ]
+}

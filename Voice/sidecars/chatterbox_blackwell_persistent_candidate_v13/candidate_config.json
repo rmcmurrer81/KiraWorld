@@ -1,0 +1,18 @@
+{
+  "schema": "kira.blackwell.v13.control_plane_binding_config.v1",
+  "candidate_id": "kira_chatterbox_blackwell_control_plane_binding_candidate_v13",
+  "status": "SEALED_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT",
+  "control_module_path": "Core/persistent_blackwell_voice_integration_v13.py",
+  "control_module_bytes": 27096,
+  "control_module_sha256": "a1a24c3cfb4383feda35d088ce2495991db1f643c116bbcd8dbb13fa3d218f38",
+  "preserved_v12_path": "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v12/canonical_typed_memory_binding.py",
+  "preserved_v12_bytes": 27300,
+  "preserved_v12_sha256": "9d2ac1101b5b372aa7881e6c627960753b83ee711fd0db23eb059c216c92b187",
+  "v12_rejection_checkpoint_path": "RecoverySprint/continuation_20260811/blackwell_v12_canonical_typed_memory_integration_fresh_static_audit/attempt_01/CHECKPOINT.md",
+  "v12_rejection_checkpoint_sha256": "05d43410e7604979732eb58af944b799a6a90718d1b9647bb40c7901bd2475ea",
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "playback_authorized": false,
+  "different_fresh_static_audit_required": true
+}

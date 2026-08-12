@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "policy_id": "avatar_positive_proof_autobuild_gate_v1",
+  "status": "locked_awaiting_owner_approved_positive_proof",
+  "current_proof_path": "",
+  "owner_authority_id": "real_robert",
+  "maximum_concurrent_downstream_builds": 1,
+  "required_component_artifacts": [
+    "body",
+    "eyes",
+    "hair",
+    "clothing",
+    "rig"
+  ],
+  "required_gates": [
+    "topology_lane_correct",
+    "visual_likeness_reviewed",
+    "clothed_visual_integrity",
+    "stable_rig",
+    "walk_sit_reach_deformation",
+    "skin_material_and_deformation_integrity",
+    "face_controls",
+    "visible_realistic_eyes",
+    "feet_and_ground_contact",
+    "walk_stop_turn",
+    "sit_stand_lie_rise",
+    "prop_contact",
+    "separate_clothing_integrity",
+    "privacy_review",
+    "owner_visual_approval"
+  ],
+  "required_owner_decision": "approve_body_for_two_subject_autobuild_qualification",
+  "subject_qualification_only": true,
+  "may_release_batch_autobuild_without_two_subject_gate": false,
+  "authoritative_batch_gate": "Avatar/avatar_builder/policies/two_subject_autobuild_gate_v2.json",
+  "runtime_activation_allowed": false,
+  "public_export_allowed": false,
+  "truth_note": "This validates one subject only and cannot release batch authoring. Passing schemas, a static render, an unclothed mesh, or an automatic score cannot qualify a subject. Exact component hashes, skin/deformation, embodied motion/contact evidence, clothed review, and Robert's exact approval record are required; two distinct canonical subjects must then pass the separate v2 gate."
+}

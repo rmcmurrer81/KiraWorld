@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+  "status": "SOURCE_BACKED_DESIGN_CONTRACT_ONLY_NOT_IMPLEMENTED_NOT_RUNTIME_AUTHORITY",
+  "system_document": "System/Docs/KIRA_CONFIRMED_ADULT_INTERNAL_PELVIC_ANATOMY_MODULE_CONTRACT_20260809.md",
+  "scope": {
+    "confirmed_adult_required": true,
+    "external_body_mesh_mutation_authorized": false,
+    "approved_face_mutation_authorized": false,
+    "approved_skin_mutation_authorized": false,
+    "carrier_rig_mutation_authorized": false,
+    "blender_execution_authorized": false,
+    "runtime_activation_authorized": false,
+    "explicit_behavior_scene_authorized": false,
+    "physiology_simulation_implemented": false
+  },
+  "carrier_inventory_read_only": {
+    "r19_candidate": {
+      "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/kira_r19_bald_targeted_material_movement_correction.blend",
+      "sha256": "dee1017f72c50dfba6583864bb1f9ec81405e2ef6d37f7c724831a24df49b53f",
+      "bytes": 90861425,
+      "status": "PRIVATE_INACTIVE_NOT_OWNER_APPROVED_EXTERNAL_PELVIC_PANEL_REJECTED"
+    },
+    "r24_candidate": {
+      "status": "NO_ACCEPTED_R24_CARRIER_INVENTORIED_BY_THIS_CONTRACT",
+      "may_be_selected_only_after": ["exact_manifest_hash", "separate_owner_review_acceptance"]
+    }
+  },
+  "source_registry": [
+    {"id": "ncbi_female_reproduction", "url": "https://www.ncbi.nlm.nih.gov/books/NBK537132/", "claims": ["female_internal_and_external_structures", "vaginal_bladder_rectum_relation"]},
+    {"id": "ncbi_female_internal_genitals", "url": "https://www.ncbi.nlm.nih.gov/books/NBK554601/", "claims": ["uterus_cervix_tubes_ovaries", "common_uterine_orientation"]},
+    {"id": "ncbi_vaginal_structure", "url": "https://www.ncbi.nlm.nih.gov/books/NBK545147/", "claims": ["vagina_vestibule_to_cervix", "anterior_urinary_posterior_rectal_relation"]},
+    {"id": "ncbi_female_pelvic_cavity", "url": "https://www.ncbi.nlm.nih.gov/books/NBK538435/", "claims": ["bladder_anterior_uterus_central_rectum_posterior"]},
+    {"id": "ncbi_pelvic_floor", "url": "https://www.ncbi.nlm.nih.gov/books/NBK482200/", "claims": ["anterior_middle_posterior_compartments", "pelvic_support"]},
+    {"id": "niddk_urinary_tract", "url": "https://www.niddk.nih.gov/-/media/Files/Urologic-Diseases/YourUrinary_508.pdf", "claims": ["kidneys_ureters_bladder_urethra", "bladder_storage_is_physiology"]},
+    {"id": "niddk_lower_gi", "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/anatomic-problems-lower-gi-tract/about-lower-gi-tract", "claims": ["rectum_anus_separate_route", "anal_sphincter_control_is_physiology"]}
+  ],
+  "maturity_and_privacy": {
+    "maturity_status_required": "confirmed_adult",
+    "non_adult_or_unresolved_body_representation": "doll_safe_non_anatomical",
+    "default_module_visible": false,
+    "private_review_lease_required": true,
+    "review_lease_is_consent_or_activity_authority": false,
+    "public_export_allowed": false,
+    "general_gallery_allowed": false,
+    "runtime_instantiation_allowed": false
+  },
+  "required_module_meshes": {
+    "urinary": ["bladder_shell", "bladder_neck_trigone_marker", "ureter_stub_left", "ureter_stub_right", "female_urethra_shell", "urethral_support_sleeve"],
+    "reproductive": ["vaginal_canal", "vaginal_fornices_marker", "cervix", "uterine_body_fundus", "uterine_cavity_endometrium_display_layer", "uterine_tube_left", "uterine_tube_right", "ovary_left", "ovary_right"],
+    "posterior_bowel": ["distal_bowel_stub", "rectum", "anal_canal", "anal_sphincter_complex_marker"],
+    "support": ["pelvic_diaphragm_proxy", "perineal_body", "endopelvic_support_proxy", "rectovaginal_septum_proxy"],
+    "orientation": ["bony_pelvis_proxy", "pubic_landmark_empty", "sacral_landmark_empty", "pelvic_side_anchor_left", "pelvic_side_anchor_right"]
+  },
+  "per_mesh_required_metadata": ["anatomy_id", "system", "laterality", "review_visibility", "material_id", "source_contract_id", "function_implemented"],
+  "materials": {
+    "required_distinct_material_ids": ["clinical_urinary", "clinical_reproductive", "clinical_bowel", "clinical_support", "clinical_landmark"],
+    "muted_opaque_clinical_review_only": true,
+    "fluid_or_activity_animation_allowed": false
+  },
+  "external_outlet_bindings": [
+    {"anchor": "female_external_urethral_opening", "route": "urinary", "module_terminal": "female_urethra_shell", "exclusive": true},
+    {"anchor": "vaginal_opening_introitus", "route": "reproductive", "module_terminal": "vaginal_canal", "exclusive": true},
+    {"anchor": "anal_opening", "route": "bowel", "module_terminal": "anal_canal", "exclusive": true}
+  ],
+  "spatial_relationships": {
+    "sagittal_order_anterior_to_posterior": ["bladder_and_female_urethra", "vaginal_canal_cervix_uterus", "rectum_and_anal_canal"],
+    "vaginal_route": ["vaginal_opening_introitus", "vaginal_canal", "cervix", "uterine_body_fundus"],
+    "paired_reproductive_structures": ["uterine_tube_left", "uterine_tube_right", "ovary_left", "ovary_right"],
+    "compartment_merging_allowed": false,
+    "shared_lumen_allowed": false,
+    "shared_external_endpoint_allowed": false
+  },
+  "attachment_interface": {
+    "source_carrier_hash_must_match_before_and_after": true,
+    "required_carrier_inputs": ["carrier_path", "carrier_sha256", "carrier_object_ids", "carrier_armature_id", "rest_pose_matrix", "source_package_manifest"],
+    "required_anchor_ids": ["female_external_urethral_opening", "vaginal_opening_introitus", "anal_opening", "pubic_reference", "sacral_reference", "pelvic_side_left", "pelvic_side_right", "perineal_body"],
+    "module_local_armature_or_deformer_required": true,
+    "carrier_dependency_mode": "READ_ONLY_TRANSFORM_FOLLOWING_ONLY",
+    "forbidden_carrier_writes": ["vertices", "uvs", "materials", "armature_bones", "constraints", "shape_keys", "drivers", "actions", "vertex_groups"],
+    "module_manifest_required": ["source_hash_before", "source_hash_after", "module_mesh_hashes", "anchor_transforms", "source_contract_hash", "review_results"]
+  },
+  "acceptance_matrix": {
+    "required_poses": ["neutral_standing", "seated_contact", "supine", "left_knee_flexion", "right_knee_flexion", "bilateral_knee_flexion", "bounded_hip_flexion_thigh_separation_diagnostic"],
+    "required_views": ["sagittal_left", "sagittal_right", "coronal", "axial", "neutral_external_internal_correspondence", "posed_relation_views"],
+    "hard_gates": ["source_body_face_rig_material_hash_preservation", "no_module_self_intersection", "no_forbidden_module_carrier_intersection", "no_cross_system_route_intersection", "three_distinct_exclusive_outlet_bindings", "ordered_sagittal_relationship", "paired_structures_lateral_no_midline_crossing", "closed_manifold_normals_and_bounded_deformation", "seat_bed_contact_without_physiology_claim", "private_review_lease_and_no_public_export"]
+  },
+  "truth_limits": {
+    "geometry_proves_biological_function": false,
+    "urination_implemented": false,
+    "defecation_implemented": false,
+    "menstrual_cycle_implemented": false,
+    "pregnancy_implemented": false,
+    "sensation_implemented": false,
+    "health_or_diagnosis_implemented": false,
+    "anatomy_or_body_response_is_consent": false,
+    "anatomy_or_body_response_is_desire_or_preference": false,
+    "future_function_requires_separate_versioned_source_bound_privacy_preserving_acceptance": true
+  }
+}

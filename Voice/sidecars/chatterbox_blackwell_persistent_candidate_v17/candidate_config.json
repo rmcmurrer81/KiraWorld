@@ -1,0 +1,36 @@
+{
+  "schema": "kira.blackwell.v17.native_whole_document_manifest_control_anchor_config.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_whole_document_manifest_control_anchor_candidate_v17",
+  "status": "AUTHOR_STATIC_ONLY_PENDING_DIFFERENT_FRESH_AUDIT",
+  "execution_authority": "NONE",
+  "v15_authority": "CONSUMED_FAILURE_DO_NOT_RERUN",
+  "v16_status": "REJECTED_UNINVOKED_DO_NOT_RUN",
+  "repair_id": "V16_WHOLE_DOCUMENT_CANONICAL_SET_EQUALITY_REPAIR",
+  "manifest_contract": {
+    "format": "canonical_compact_json_no_whitespace",
+    "top_level_field_order_exact": true,
+    "row_field_order_exact": true,
+    "whole_document_eof_exact": true,
+    "actual_subject_objects": 55,
+    "unique_canonical_paths": 55,
+    "ordered_binding_set_equality": true,
+    "positive_canonical_u64_bytes": true,
+    "lowercase_sha256_hex_digits": 64,
+    "only_absolute_binding": "C:/Python314/python314.dll",
+    "all_dot_and_dot_dot_segments_rejected": true
+  },
+  "preserved_v16": {
+    "author_seal_bytes": 9065,
+    "author_seal_sha256": "b02ecdace1727a5ab9e8dba9a580932fe886e9ae05561f5241b1fbbffc21acd4",
+    "author_seal_subjects": 41,
+    "rejection_decision": "REJECT_STATIC_NO_EXECUTION_AUTHORITY",
+    "candidate_invocations": 0
+  },
+  "different_fresh_static_audit_required": true,
+  "future_harness_authoring_authorized": false,
+  "live_execution_authorized": false,
+  "production_routing_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false
+}

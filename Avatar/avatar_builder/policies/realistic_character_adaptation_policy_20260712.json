@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-12T21:15:00Z",
+  "status": "active_policy",
+  "purpose": "Guide Avatar Builder when Robert wants a character to look more physically real than a movie/cartoon/comic source while still preserving recognizable identity.",
+  "core_rule": "Do not make a flat cartoon, comic-strip copy, cosplay copy, toy copy, or copied reference model. Build a realistic synthetic-person avatar from an approved base body and use source images as identity, silhouette, hairstyle, clothing, expression, and color references.",
+  "realism_targets": [
+    "real 3D head volume with skull, jaw, cheek, brow, nose, lip, and ear structure",
+    "eyes are round movable eyeballs in sockets with eyelids, lashes, brows, iris depth, cornea, and catchlights",
+    "mouth opens with lips, teeth, tongue, jaw controls, and speech/lip-sync shape keys",
+    "skin shader uses subtle pores, roughness variation, blush/freckle detail, and subsurface scattering where appropriate",
+    "hair is built as real hair cards/curves or sculpted clumps with roots, parting, layered strands, flyaways, and variant hairstyles",
+    "body starts from the correct adult/non-adult base policy, then is shaped toward references without copying a reference model",
+    "clothing is separate wearable garment geometry unless explicitly a magic/morph suit exception"
+  ],
+  "source_priority": [
+    "Robert-approved movie/episode frames or official stills",
+    "multi-angle turnarounds that clarify silhouette and proportions",
+    "high-quality fan/concept references only for secondary realism, not as authority over canon/approved frames",
+    "comic panels only as design and identity references, not as literal anatomy or final render style"
+  ],
+  "comic_strip_rule": "Comic strips can help identify suit markings, color blocks, pose language, and recurring identity cues. They should not drive realistic head anatomy, body anatomy, eye placement, or final skin/hair realism.",
+  "must_not_do": [
+    "do not paste flat eye planes onto the face",
+    "do not use photos of actors or voice actors as character likeness unless Robert explicitly asks for that separate person",
+    "do not copy a reference model head/body as the active avatar",
+    "do not use non-adult body policy on an adult character",
+    "do not use adult anatomy references for non-adult characters",
+    "do not mark a realistic adaptation as passed without front, side, three-quarter, mouth-open, eye-socket, and body/suit proof renders"
+  ],
+  "required_review_outputs": [
+    "front_head_overlay.png",
+    "left_profile_overlay.png",
+    "right_profile_overlay.png",
+    "three_quarter_head_overlay.png",
+    "eyes_inside_socket_side_proof.png",
+    "mouth_open_lip_sync_proof.png",
+    "front_body_silhouette_overlay.png",
+    "side_body_silhouette_overlay.png",
+    "hair_turnaround_proof.png",
+    "wardrobe_layer_separation_proof.png",
+    "likeness_and_realism_report.json"
+  ]
+}

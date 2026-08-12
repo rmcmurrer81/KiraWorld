@@ -1,0 +1,313 @@
+{
+  "schema": "kira.avatar.r25.semantic_control_cage_diagnostic.v3",
+  "attempt_id": "attempt_03",
+  "status": "STATIC_PREPARATION_ONLY_BLENDER_EXECUTION_NOT_AUTHORIZED",
+  "scope": {
+    "body_work_only": true,
+    "read_only_diagnostic": true,
+    "blender_execution_authorized": false,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "deformation_allowed": false,
+    "candidate_creation_allowed": false,
+    "render_allowed": false,
+    "export_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "publication_allowed": false,
+    "path_result_allowed": false,
+    "input_transport": "three_exact_canonical_receipt_frames_over_one_caller_inherited_win32_FILE_TYPE_PIPE",
+    "result_transport": "one_canonical_receipt_frame_over_one_distinct_caller_inherited_win32_FILE_TYPE_PIPE"
+  },
+  "bindings": {
+    "r25_boundary_document": {
+      "path": "System/Docs/KIRA_R24_CLOSURE_AND_R25_FOUNDATION_FIRST_BOUNDARY_20260809.md",
+      "bytes": 6933,
+      "sha256": "cc27f886edb18fdcc700b38d010b6a573ab2ddddad667c4d83312db72dae022d"
+    },
+    "r25_machine_boundary": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_first_whole_surface_retarget_boundary_v1.json",
+      "bytes": 9639,
+      "sha256": "205f3b4636ac53c78cd836089d543e94d9b4cd5c788e17bcf0012fe3acc5c672"
+    },
+    "qualified_foundation_blend": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+      "bytes": 789620,
+      "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+      "object_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface",
+      "mesh_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface__bounded_intersection_cleanup__generic_continuous_adult_female_external_surface_v1",
+      "vertices": 14658,
+      "edges": 30632,
+      "faces": 15976
+    },
+    "r19_visual_target_blend": {
+      "path": "RecoverySprint/continuation_20260802/kira_r19_bald_targeted_correction/attempt_06/kira_r19_bald_targeted_material_movement_correction.blend",
+      "bytes": 90861425,
+      "sha256": "dee1017f72c50dfba6583864bb1f9ec81405e2ef6d37f7c724831a24df49b53f",
+      "object_name": "Kira_R19_BlackProject_Radial_Patch_Primary_Surface",
+      "mesh_name": "Kira_R19_BlackProject_Radial_Patch_Primary_Surface_Mesh",
+      "vertices": 12612,
+      "faces": 24936
+    },
+    "r20_exact_rejected_target_region": {
+      "path": "RecoverySprint/continuation_20260802/kira_r20_local_pelvic_retopology_read_only_audit/R20_PELVIC_MASK_TOPOLOGY_AND_ACCEPTANCE_PLAN.json",
+      "bytes": 17495,
+      "sha256": "d9907f9ac7db74999ce2853b8865f614ccacabfabacef82b3111374dd89d0035",
+      "selector": "r19_primary_surface_polygon_material_index_equals_1",
+      "selected_faces": 376,
+      "incident_vertices": 206,
+      "face_connected_components": 1,
+      "interface_edges": 34,
+      "interface_vertices": 34
+    },
+    "makehuman_default_weights": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/rigs/default_weights.mhw",
+      "bytes": 912134,
+      "sha256": "ae2d830adb5ee890c90e071bde6efaa2b9c1f2937b49770f7b5264041637b071",
+      "license": "CC0",
+      "exact_group_count": 139,
+      "sorted_exact_group_names_sha256": "a988f4a0674d7b7068468116453769218a113188a7b01a8d90eeefc8597d09d4"
+    },
+    "canonical_receipt_primitive": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8",
+      "maximum_payload_bytes": 1048576,
+      "maximum_depth": 32,
+      "maximum_nodes": 8192
+    },
+    "pure_control_cage_core": {
+      "path": "tools/kira_r25_semantic_control_cage_core_v2.py",
+      "bytes": 65998,
+      "sha256": "c07e53d60de41432be784376c1e9e9adc542f64f25bf7daec7e9de207f3d6f7a"
+    },
+    "execution_wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v3.py",
+      "bytes": 35374,
+      "sha256": "4d3fab98efc822950078aa905e2290aad5b6021659e8a036c774325e6cc29379"
+    }
+  },
+  "private_runtime_contract": {
+    "verified_dependency_execution_count": {
+      "canonical_receipt_primitive": 1,
+      "pure_control_cage_core": 1
+    },
+    "same_receipt_instance_for_input_success_and_failure_frames": true,
+    "same_control_instance_passed_into_extraction": true,
+    "extractor_may_reload_verified_dependencies": false,
+    "private_project_modules_registered_in_sys_modules": false,
+    "private_dataclass_shims_registered_in_sys_modules": false,
+    "ambient_dataclasses_dataclass_allowed": false,
+    "dataclass_strategy": "separate_single_use_narrow_frozen_record_shim_for_receipt_and_core_via_per_module_copied_builtins_importer",
+    "global_builtins_import_mutation_allowed": false,
+    "global_sys_modules_dataclasses_replacement_allowed": false,
+    "cleanup_required_on_success_and_every_failure_path": true
+  },
+  "afes_pair_binding": {
+    "seal_status": "PENDING_UNSEALED_FINAL_INDEPENDENT_AUDIT_AND_FRESH_PAIR_EXECUTION",
+    "binding_rule": "DO_NOT_REPLACE_THESE_PLACEHOLDERS_WITH_AUTHOR_ONLY_OR_REJECTED_AFES_EVIDENCE",
+    "final_independently_accepted_afes_static_attempt_binding": null,
+    "final_locked_pair_execution_contract_binding": null,
+    "final_locked_pair_execution_result_binding": null,
+    "final_afes_result_binding": null,
+    "pending_attempt_04_author_artifacts_not_yet_accepted": {
+      "config": {
+        "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v4.json",
+        "bytes": 8035,
+        "sha256": "e25149b133715d9a4ad3578bfdf081986394ebdf61b1fbe2e46a109d89bb5102"
+      },
+      "core": {
+        "path": "tools/kira_r25_afes_topology_core_v4.py",
+        "bytes": 9529,
+        "sha256": "d70a3c15d5c929ea2a5f60c6d73445c7fa894481736691c9e5c1ace6c4bef1d4"
+      },
+      "extractor": {
+        "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v4.py",
+        "bytes": 22751,
+        "sha256": "088c811cc0745e7519516d94c0c449d2ee8bf296f8cb10cc8e8d7d343de6f079"
+      },
+      "tests": {
+        "path": "Testing/test_kira_r25_afes_read_only_extraction_attempt04.py",
+        "bytes": 14077,
+        "sha256": "f9a644233a0618ce4f9f8f55c358d99f4b2aa235cf0dc42f0a07c51e6b6d74d7"
+      },
+      "checkpoint": {
+        "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_extraction_static_preparation/attempt_04/CHECKPOINT.md",
+        "bytes": 5994,
+        "sha256": "517deca1772b5b1893238503c3014d1d22bbe0bbde5132a981f108dfba023274"
+      }
+    },
+    "required_final_placeholders": [
+      "FINAL_INDEPENDENT_AFES_ATTEMPT_AUDIT_PATH_BYTES_SHA256_AND_PASS_STATUS",
+      "FINAL_INDEPENDENTLY_ACCEPTED_LOCKED_PAIR_EXECUTION_CONTRACT_PATH_BYTES_SHA256",
+      "FINAL_PAIR_ACCEPTANCE_FRAME_SHA256",
+      "FINAL_RUN_01_FRAME_SHA256",
+      "FINAL_RUN_02_FRAME_SHA256",
+      "FINAL_PAIR_RUN_INNER_SCHEMAS_AND_STATUSES",
+      "FINAL_EXACT_EXTRACTION_VERIFIED_INPUT_ROWS",
+      "FINAL_FOUNDATION_FULL_NORMALIZED_TOPOLOGY_SHA256",
+      "FINAL_AFES_UNION_COUNT_AND_SHA256",
+      "FINAL_RING_1_COUNT_AND_SHA256",
+      "FINAL_RING_2_COUNT_AND_SHA256",
+      "FINAL_COMBINED_RING_COUNT_AND_SHA256",
+      "FINAL_LOCKED_UNION_COUNT_AND_SHA256",
+      "FINAL_EXACT_TOPOLOGY_STRUCTURE",
+      "FINAL_EXACT_AFES_BOUNDS_OBJECT_NANOMETERS",
+      "FINAL_TWO_DISTINCT_FRESH_SESSION_NONCES_AND_MATCHING_INNER_DECISION"
+    ],
+    "expected_pair_and_analysis": null
+  },
+  "semantic_contract": {
+    "classification_source": "exact_positive_vertex_weights_from_the_139_official_MakeHuman_default_weights_names_only",
+    "unknown_positive_group_behavior": "FAIL",
+    "substring_aliases_allowed": false,
+    "mixamo_aliases_allowed": false,
+    "coordinate_classification_fallback_allowed": false,
+    "minimum_recognized_weight_fixed_1e9": 500000000,
+    "required_regions": [
+      "face",
+      "head",
+      "neck",
+      "torso",
+      "upper_arm.L",
+      "lower_arm.L",
+      "hand.L",
+      "upper_arm.R",
+      "lower_arm.R",
+      "hand.R",
+      "thigh.L",
+      "shin.L",
+      "foot.L",
+      "thigh.R",
+      "shin.R",
+      "foot.R"
+    ],
+    "physical_side_rule": "anatomical_left_is_positive_X_and_has_greater_centroid_X_than_anatomical_right_on_both_source_and_target",
+    "same_region_target_triangle_required": true,
+    "left_right_cross_mapping_allowed": false,
+    "mixed_region_target_triangles_allowed": false
+  },
+  "alignment_contract": {
+    "method": "positive_uniform_scale_proper_rotation_translation_from_16_equally_weighted_region_centroids",
+    "minimum_rank_ratio_fixed_1e9": 10000,
+    "minimum_scale_fixed_1e9": 500000000,
+    "maximum_scale_fixed_1e9": 2000000000,
+    "maximum_normalized_rms_residual_fixed_1e9": 150000000,
+    "maximum_orthonormal_residual_fixed_1e12": 10000,
+    "minimum_left_right_separation_micrometers": 5000,
+    "reflection_allowed": false,
+    "proper_rotation_determinant_required": true,
+    "source_and_target_full_rank_required": true
+  },
+  "control_cage_contract": {
+    "label": "REGION_BALANCED_432_CONTROL_ANCHORS_NOT_DIRECT_MAPPING_OF_ALL_VERTICES",
+    "foundation_afes_or_transition_vertex_may_be_anchor": false,
+    "every_permissible_vertex_must_be_in_one_same_region_component": true,
+    "every_permissible_vertex_must_be_within_configured_same_region_edge_geodesic_radius": true,
+    "disconnected_or_loose_vertex_behavior": "FAIL",
+    "anchors_per_region": {
+      "face": 36,
+      "head": 24,
+      "neck": 12,
+      "torso": 64,
+      "upper_arm.L": 20,
+      "lower_arm.L": 20,
+      "hand.L": 28,
+      "upper_arm.R": 20,
+      "lower_arm.R": 20,
+      "hand.R": 28,
+      "thigh.L": 28,
+      "shin.L": 24,
+      "foot.L": 28,
+      "thigh.R": 28,
+      "shin.R": 24,
+      "foot.R": 28
+    },
+    "total_control_anchor_count": 432,
+    "maximum_same_region_geodesic_radius_micrometers": {
+      "face": 80000,
+      "head": 120000,
+      "neck": 80000,
+      "torso": 200000,
+      "upper_arm.L": 120000,
+      "lower_arm.L": 100000,
+      "hand.L": 50000,
+      "upper_arm.R": 120000,
+      "lower_arm.R": 100000,
+      "hand.R": 50000,
+      "thigh.L": 140000,
+      "shin.L": 130000,
+      "foot.L": 70000,
+      "thigh.R": 140000,
+      "shin.R": 130000,
+      "foot.R": 70000
+    }
+  },
+  "projection_gates": {
+    "barycentric_fixed_scale": 1000000000,
+    "minimum_normal_dot_fixed_1e9": {
+      "face": 100000000,
+      "head": 100000000,
+      "neck": 100000000,
+      "torso": 100000000,
+      "upper_arm.L": 100000000,
+      "lower_arm.L": 100000000,
+      "hand.L": 100000000,
+      "upper_arm.R": 100000000,
+      "lower_arm.R": 100000000,
+      "hand.R": 100000000,
+      "thigh.L": 100000000,
+      "shin.L": 100000000,
+      "foot.L": 100000000,
+      "thigh.R": 100000000,
+      "shin.R": 100000000,
+      "foot.R": 100000000
+    },
+    "maximum_distance_micrometers": {
+      "face": 45000,
+      "head": 60000,
+      "neck": 50000,
+      "torso": 80000,
+      "upper_arm.L": 65000,
+      "lower_arm.L": 65000,
+      "hand.L": 40000,
+      "upper_arm.R": 65000,
+      "lower_arm.R": 65000,
+      "hand.R": 40000,
+      "thigh.L": 75000,
+      "shin.L": 75000,
+      "foot.L": 50000,
+      "thigh.R": 75000,
+      "shin.R": 75000,
+      "foot.R": 50000
+    },
+    "r20_rejected_face_count": 376,
+    "pelvic_or_afes_target_fit": "FORBIDDEN"
+  },
+  "strict_mapping_record_contract": {
+    "exact_mapping_count": 432,
+    "unique_source_indices_required": true,
+    "source_set_must_equal_control_anchor_set": true,
+    "nonnegative_face_triangle_and_vertex_indices_required": true,
+    "face_and_triangle_bounds_required": true,
+    "triangle_vertices_must_equal_exact_live_triangle": true,
+    "three_barycentrics_each_in_closed_0_to_1e9": true,
+    "barycentric_sum_must_equal_1e9": true,
+    "distance_and_normal_gates_rechecked_after_decode": true,
+    "canonical_base64_required": true,
+    "binary_sha256_required": true,
+    "semantic_mapping_sha256_required": true,
+    "alias_keys_allowed": false
+  },
+  "truth_boundary": {
+    "attempt_01_is_rejected_and_preserved_byte_for_byte": true,
+    "attempt_02_is_rejected_and_preserved_byte_for_byte": true,
+    "attempt_03_is_pending_unsealed_until_final_afes_acceptance": true,
+    "static_preparation_is_not_execution": true,
+    "control_cage_is_not_direct_mapping_of_all_vertices": true,
+    "future_read_only_diagnostic_is_not_an_accepted_deformation_cage": true,
+    "future_diagnostic_does_not_deform_or_create_a_body": true,
+    "positive_jacobian_and_intersection_fixtures_remain_separate": true,
+    "body_authoring_and_owner_approval_remain_separate": true
+  }
+}

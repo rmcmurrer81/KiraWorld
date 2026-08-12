@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "display_owner": {
+    "stable_id": "kira",
+    "display_name": "Kira Hart"
+  },
+  "body_purpose": "TEMPORARY_FUNCTIONAL_BODY",
+  "adult_status": "adult",
+  "body_class": "adult_female",
+  "parameters": {
+    "height_m": 1.651,
+    "build_preset": "natural_athletic",
+    "muscularity": 0.18,
+    "body_mass": 0.0,
+    "shoulder_width": 0.0,
+    "chest_torso": 0.0,
+    "waist_abdomen": -0.04,
+    "hips_pelvis": 0.02,
+    "arms": 0.0,
+    "legs": 0.02,
+    "hands": 0.0,
+    "feet": 0.0,
+    "neck": 0.0,
+    "face_landmarks": "bounded_generic_adult_female",
+    "skin_direction": "light_natural_regional_variation",
+    "iris_color": "natural_brown",
+    "hair": {
+      "color": "black",
+      "texture": "straight",
+      "review_style": "simple_removable_shoulders_clear"
+    }
+  },
+  "foundation_requirements": {
+    "selection": "AUTO_SELECT_ENROLLED_CLEAN_ADULT_FEMALE",
+    "selected_source_path": "",
+    "continuous_topology": true,
+    "integrated_adult_anatomy": true,
+    "movement_ready_rig": true,
+    "deformation_regions": true,
+    "future_clothing_compatible": true,
+    "future_hair_compatible": true
+  },
+  "reference_inputs": [
+    {
+      "subject_id": "generic_non_identifiable",
+      "type": "owner_text_specification",
+      "purpose": "starting appearance only; not an identifiable-person likeness",
+      "content_hash_recorded_by_builder": false
+    }
+  ],
+  "privacy": {
+    "robert_private_data_allowed": false,
+    "identifiable_person_likeness_allowed": false,
+    "copy_existing_person_body_allowed": false,
+    "private_local_review_only": true
+  },
+  "output": {
+    "private_candidate_root": "Avatar/private_owner_review/kira_temporary_functional_body_20260730",
+    "candidate_state": "PRIVATE_INSPECTION_CANDIDATE",
+    "runtime_assignment_allowed": false,
+    "owner_approved": false,
+    "kira_permanent_selection_claimed": false
+  },
+  "runtime_nonmutation_baseline": {
+    "live_body": {
+      "path": "Avatar/models/temp_ai/kira/avatar.glb",
+      "bytes": 4559016,
+      "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e"
+    },
+    "body_selection": {
+      "path": "Avatar/state/body_selections/kira_runtime_body_selection.json",
+      "bytes": 3620,
+      "sha256": "245668981c10ba82399c8685f77b4ad111c26dbb5ccc4d9bad729eef2029f94b"
+    },
+    "world_shell_state": {
+      "path": "Data/runtime/kira_world_shell_state.json",
+      "bytes": 22025,
+      "sha256": "3d91020a37b3565a36a550909a14b9ddde7ff5545b227906f8a34dd62d961116"
+    },
+    "prior_r6_review_candidate": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb",
+      "bytes": 5105808,
+      "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77"
+    }
+  }
+}

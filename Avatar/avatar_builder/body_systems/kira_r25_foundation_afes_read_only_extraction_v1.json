@@ -1,0 +1,146 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_read_only_extraction.v1",
+  "status": "STATIC_PREPARATION_ONLY_EXECUTION_NOT_AUTHORIZED",
+  "scope": {
+    "read_only": true,
+    "private": true,
+    "inactive": true,
+    "candidate_creation_allowed": false,
+    "blend_edit_allowed": false,
+    "blend_save_allowed": false,
+    "render_allowed": false,
+    "export_allowed": false,
+    "runtime_activation_allowed": false,
+    "path_output_allowed": false,
+    "result_transport": "caller_provided_inherited_binary_handle_only"
+  },
+  "bindings": {
+    "foundation_blend": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+      "bytes": 789620,
+      "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"
+    },
+    "r23_preflight_config": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_cc0_afes_expanded_mask_preparation/KIRA_R23_CC0_AFES_EXPANDED_MASK_PREFLIGHT_CONFIG.json",
+      "bytes": 14768,
+      "sha256": "e2b1d947f0171f14e8e5330f73fdb0ba0570bf62e5784ba147dc2d370b2be286"
+    },
+    "r23_preflight_attempt_04": {
+      "path": "RecoverySprint/continuation_20260803/kira_r23_cc0_afes_expanded_mask/preflight_attempt_04/PREFLIGHT.json",
+      "bytes": 98383,
+      "sha256": "2fd7968db9e7d00882d031d519aa04472b343cdf2141f6dcc6c672a77c0a5935"
+    },
+    "foundation_qualification": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json",
+      "bytes": 2471,
+      "sha256": "c91c11f649fca7dcdff4530df15a5ed4654d0fe4ca723740cca55660a4b969e0"
+    },
+    "foundation_topology_audit": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FOUNDATION_TOPOLOGY_AUDIT_V2.json",
+      "bytes": 3738,
+      "sha256": "de2d1f0a82aa2a0015f7374707b7e12afae830ef5314f518bcb7956adf8180de"
+    },
+    "foundation_relationship_audit": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FEMALE_RELATIONSHIP_REVIEW_V2.json",
+      "bytes": 37722,
+      "sha256": "b321f2d852b2242c462501a396ddb9aca648229187868a158da6571450a1cb88"
+    }
+  },
+  "foundation_contract": {
+    "object_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface",
+    "mesh_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface__bounded_intersection_cleanup__generic_continuous_adult_female_external_surface_v1",
+    "vertices": 14658,
+    "edges": 30632,
+    "faces": 15976,
+    "required_transition_ring_count": 2,
+    "membership_weight_threshold": 0.0,
+    "required_groups": {
+      "AFES_LANDMARK__clitoral_hood": {
+        "vertex_count": 110,
+        "vertex_index_sha256": "e85dee0794407f89ced0610ee3314246cc29779d6c85cc6a7dcbfaac4a14b014"
+      },
+      "AFES_LANDMARK__clitoris": {
+        "vertex_count": 20,
+        "vertex_index_sha256": "5198b6e516bbc86d9534183b7f620232368e46c86c273a07baac7fdd21a6fdad"
+      },
+      "AFES_LANDMARK__fourchette": {
+        "vertex_count": 84,
+        "vertex_index_sha256": "dcef9e5f74023eab2028e0921cb914b7e533f8d3c261d2bc9c068d116b26c397"
+      },
+      "AFES_LANDMARK__labia_majora": {
+        "vertex_count": 1085,
+        "vertex_index_sha256": "dadbcddd59ae87cf312ad14ef0fb57fc81615a4401556ac2e152ab91d033e26f"
+      },
+      "AFES_LANDMARK__labia_majora__left": {
+        "vertex_count": 558,
+        "vertex_index_sha256": "a981f6b12b6d4156bbd0e7d2d3ede8f74dbcf380efb00e353b68a347a401546d"
+      },
+      "AFES_LANDMARK__labia_majora__right": {
+        "vertex_count": 558,
+        "vertex_index_sha256": "9eecf6365a30c8108a95c4454038eb16e281844273a3fe9ae3482f3773e7aa9c"
+      },
+      "AFES_LANDMARK__labia_minora": {
+        "vertex_count": 416,
+        "vertex_index_sha256": "a6ba2f16cfb1cd4a9bab8df1f1f16a9a379e66e9a9bc8cc850f9b3a8a5acc186"
+      },
+      "AFES_LANDMARK__labia_minora__left": {
+        "vertex_count": 221,
+        "vertex_index_sha256": "8e86df41acbe09e0ec4605ad70609ef156d286b29eb22834175a5b3a18a4a3c4"
+      },
+      "AFES_LANDMARK__labia_minora__right": {
+        "vertex_count": 221,
+        "vertex_index_sha256": "cad570625bef25f1d0dab7d75a2bc928fbf05f58edaeef07117529664ba1537e"
+      },
+      "AFES_LANDMARK__mons_pubis": {
+        "vertex_count": 313,
+        "vertex_index_sha256": "a188c782dcd0d2b4971ec2abf8a9a67342806ebee286f338a33b7f62a224e060"
+      },
+      "AFES_LANDMARK__perineal_path": {
+        "vertex_count": 379,
+        "vertex_index_sha256": "42e5d77dd8c105c8a34982115757935615d33be2c6e8871b460d74f1aa39da47"
+      },
+      "AFES_LANDMARK__perineal_path__anal_recess": {
+        "vertex_count": 34,
+        "vertex_index_sha256": "9fbb4000d335d2a38a04b8d17ba893c27bdb26c5f0e5934fbf4fd19cf7699cc6"
+      },
+      "AFES_LANDMARK__perineal_path__transition": {
+        "vertex_count": 379,
+        "vertex_index_sha256": "42e5d77dd8c105c8a34982115757935615d33be2c6e8871b460d74f1aa39da47"
+      },
+      "AFES_LANDMARK__urethral_opening": {
+        "vertex_count": 13,
+        "vertex_index_sha256": "c807dac4bc2a7e3ada7ea3d1b1fe3547b1f5192d54abe78e842839eb6ab42c6f"
+      },
+      "AFES_LANDMARK__vaginal_opening": {
+        "vertex_count": 299,
+        "vertex_index_sha256": "e325c3df1153987eb9f576d873ef08d388d60f37fa558f5a09a682e11dc92dff"
+      },
+      "AFES_LANDMARK__vestibule": {
+        "vertex_count": 532,
+        "vertex_index_sha256": "6b6ab38cf77b071a820a594e4f516d1b7a59857eb8383cffd359ecaf107f70de"
+      }
+    },
+    "afes_union": {
+      "vertex_count": 1169,
+      "vertex_index_sha256": "e176a908e76fbca6f7bf2b843e3745fe9bc51cf4c46add2fa6dcd384fd413195",
+      "incident_face_count": 2488,
+      "incident_face_index_sha256": "79a841ad5202c7bcf74ddd7c79eb074c13b3db5c7d82ec749450aa2c2df0c4a1",
+      "internal_face_count": 2142,
+      "internal_face_index_sha256": "a68ec8d0ff0e7b9af46c215fc7d7bd85c80224ae726d6b0fb8de29c7b0a3fcda",
+      "primary_connection_edge_count": 346,
+      "connection_edge_sha256": "cc5cb6ed7858b3ec060490d3f3381c0ce489c148a31d64f1bb3b106003508885",
+      "bounds_object_m": {
+        "minimum": [-0.05359687656164169, -0.1333065629005432, 0.6790808439254761],
+        "maximum": [0.05359687656164169, -0.007144271396100521, 0.898148775100708]
+      },
+      "bounds_tolerance_m": 1e-7
+    }
+  },
+  "truth_boundary": {
+    "static_preparation_is_not_execution": true,
+    "successful_extraction_would_not_create_or_approve_a_body": true,
+    "transition_rings_are_topological_diagnostics_not_an_authoring_mask": true,
+    "r23_transfer_or_graft_strategy_remains_rejected": true,
+    "execution_requires_separate_root_review_and_authorization": true
+  }
+}

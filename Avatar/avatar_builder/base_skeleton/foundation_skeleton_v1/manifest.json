@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "base_rig_id": "foundation_skeleton_v1",
+  "updated_at": "2026-07-05T06:31:59.343150+00:00",
+  "status": "ready_for_avatar_builder_reuse",
+  "source_candidate": "ladybug_marinette_expanded_smoke",
+  "truth_note": "This is the shared foundation rig, not a finished Marinette likeness.",
+  "copied_assets": {
+    "avatar_glb": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/avatar.glb",
+    "skeleton_metadata": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/avatar_foundation_skeleton_v1.json",
+    "movement_library": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/foundation_skeleton_movements_v1.json",
+    "rigged_hand_base_mesh": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_hand_base_mesh.glb",
+    "rigged_arms_reference": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_arms.glb"
+  },
+  "retarget_layers": {
+    "production_hands_body_v1": "Avatar/avatar_builder/retarget_layers/production_hands_body_v1.json"
+  },
+  "runtime_fallbacks": {
+    "generic_humanoid_v1": {
+      "purpose": "Drive imported rigged bodies that have humanoid bones but no walk/run animation clips.",
+      "used_for": [
+        "spider_man_no_way_home",
+        "spider_gwen",
+        "stormtrooper_or_other_rigged_npcs"
+      ],
+      "debug_field": "window.__kiraHomeWorldRuntime.proceduralRig"
+    }
+  },
+  "validation_gates": [
+    "walk_grounded",
+    "sit_couch",
+    "lie_bed",
+    "sleep_bed",
+    "stairs_step",
+    "door_reach",
+    "desk_computer",
+    "bounded_self_test"
+  ],
+  "known_limitations": [
+    "The active runtime hand layer now uses a single skinned surface per side, but the staged rigged hand source still needs full topology transfer.",
+    "Finger contact exists for door testing but object-level collision must expand to clothing, props, and hair.",
+    "Closed-loop locomotion is scaffolded through reward records, not full reinforcement learning yet."
+  ],
+  "production_hand_layer": {
+    "status": "runtime_bridge_ready_retarget_sources_staged",
+    "runtime_rule": "Future bodies must start from skinned hand surfaces bound to hand/finger bones, not bead-hand geometry.",
+    "copied_sources": {
+      "rigged_hand_base_mesh": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_hand_base_mesh.glb",
+      "rigged_arms_reference": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_arms.glb"
+    },
+    "next_required_layers": [
+      "transfer staged hand topology onto the foundation skeleton",
+      "object-level finger colliders",
+      "IK grip targets for handles, books, clothing, and tools",
+      "per-finger contact rewards"
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "schema": "kira.avatar.r25.semantic_control_cage_diagnostic.v4r3",
+  "attempt_id": "attempt_04r3_static_unsealed",
+  "status": "STATIC_PREPARATION_ONLY_IMMUTABLE_NATIVE_IMAGE_UNRESOLVED_EXECUTION_FORBIDDEN",
+  "scope": {
+    "body_work_only": true,
+    "read_only_diagnostic": true,
+    "blender_execution_authorized": false,
+    "controller_execution_authorized": false,
+    "native_controller_exists": false,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "deformation_allowed": false,
+    "candidate_creation_allowed": false,
+    "render_allowed": false,
+    "export_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "publication_allowed": false,
+    "path_result_allowed": false
+  },
+  "preserved_attempt04r2_rejection_lineage": {
+    "config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_semantic_control_cage_diagnostic_v4r2.json",
+      "bytes": 13213,
+      "sha256": "9921e1448a66075fa45b8c6fd5646a64fa66a38ba461f79b3c805289e59bdbca"
+    },
+    "adapter": {
+      "path": "tools/kira_r25_semantic_control_cage_afes_v3r3_adapter_v4r1.py",
+      "bytes": 19457,
+      "sha256": "b954a47a7103a9bb4a119cf11c26ce997e16c04ef23069796db627a31b2df766"
+    },
+    "wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4r2.py",
+      "bytes": 32293,
+      "sha256": "10161701eeccd0476edb1af35b9a635dbffbcc4582d3099da585404c095e5e1b"
+    },
+    "controller": {
+      "path": "tools/run_kira_r25_semantic_control_cage_v4r2.py",
+      "bytes": 15227,
+      "sha256": "be8b2dc84fdef89bc65e0b62d2ac637a613c4545f22a4e892a69ac12d7db3567"
+    },
+    "test": {
+      "path": "Testing/test_kira_r25_semantic_control_cage_attempt04r2.py",
+      "bytes": 22567,
+      "sha256": "4511ee3c45b83bd2f07edd431ef02cb25e24d4f8f6f78f91e336d528dba7f371"
+    },
+    "checkpoint": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r2/CHECKPOINT.md",
+      "bytes": 4688,
+      "sha256": "63795762018055adee56483691d3a369c47dae0e02bc52c5ca3169ecb9b0c3e6"
+    },
+    "independent_rejection_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r2/INDEPENDENT_AUDIT.md",
+      "bytes": 12746,
+      "sha256": "1529eb2cf2e6484f7ce4062f11475a1ced26612c92d144ff1bed322651d2af92",
+      "decision": "REJECTED"
+    }
+  },
+  "bindings": {
+    "attempt04r1_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_semantic_control_cage_diagnostic_v4r1.json",
+      "bytes": 17956,
+      "sha256": "ac527161220bfe7eaad29828052567799ce54e106e11096950a0cc78fb8c38dc"
+    },
+    "attempt04r1_wrapper_runtime": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4r1.py",
+      "bytes": 18492,
+      "sha256": "4bfee203edde730e00c23e0a713c317dfea0eb70f742ce4bfe799fc65c283a4c"
+    },
+    "v3r3_afes_adapter": {
+      "path": "tools/kira_r25_semantic_control_cage_afes_v3r3_adapter_v4r1.py",
+      "bytes": 19457,
+      "sha256": "b954a47a7103a9bb4a119cf11c26ce997e16c04ef23069796db627a31b2df766"
+    },
+    "canonical_receipt_primitive": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"
+    },
+    "attempt04r2_rejection_audit": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_semantic_cage_correspondence_static_preparation/attempt_04r2/INDEPENDENT_AUDIT.md",
+      "bytes": 12746,
+      "sha256": "1529eb2cf2e6484f7ce4062f11475a1ced26612c92d144ff1bed322651d2af92"
+    },
+    "execution_wrapper": {
+      "path": "tools/blender_diagnose_kira_r25_semantic_control_cage_v4r3.py",
+      "bytes": 40465,
+      "sha256": "a6a8f849a394faa18999495b57a9ec5ffd530ece3ef9495e960a35e3b9f78d56"
+    },
+    "static_controller": {
+      "path": "tools/run_kira_r25_semantic_control_cage_v4r3.py",
+      "bytes": 14868,
+      "sha256": "a31eaef5b6e75ea394d595a1ffd5455a080faf91a57cf9f635052efb7ba147c2"
+    }
+  },
+  "preserved_semantic_runtime_contract": {
+    "source": "attempt04r1_config",
+    "load_rule": "LOAD_EXACT_HASH_BOUND_04R1_CONFIG_AND_RUNTIME_WITHOUT_REWRITING_ANY_PRESERVED_SUBJECT",
+    "semantic_contract": "EXACT_04R1_SEMANTIC_CONTRACT",
+    "alignment_contract": "EXACT_04R1_ALIGNMENT_CONTRACT",
+    "control_cage_contract": "EXACT_04R1_CONTROL_CAGE_CONTRACT",
+    "projection_gates": "EXACT_04R1_PROJECTION_GATES",
+    "runtime_output_remains": "READ_ONLY_DIAGNOSTIC_NOT_A_BODY_OR_ACCEPTED_DEFORMATION_CAGE"
+  },
+  "afes_v3r3_pair_binding": {
+    "seal_status": "PENDING_NEW_APPEND_ONLY_SEALED_SUCCESSOR_AFTER_ACCEPTED_04R3_AUDIT_NATIVE_IMAGE_AND_REAL_V3R3_EVIDENCE",
+    "binding_rule": "NEVER_REWRITE_04R3_AND_NEVER_FILL_FROM_AUTHOR_ONLY_REJECTED_UNAUDITED_OR_UNEXECUTED_VALUES",
+    "final_locked_pair_execution_contract_binding": null,
+    "final_locked_pair_independent_audit_binding": null,
+    "final_locked_pair_native_manifest_binding": null,
+    "final_locked_pair_execution_outcome_binding": null,
+    "final_run_01_receipt_binding": null,
+    "final_run_02_receipt_binding": null,
+    "required_final_placeholders": [
+      "FINAL_INDEPENDENT_AFES_ATTEMPT_AUDIT_PATH_BYTES_SHA256_AND_PASS_STATUS",
+      "FINAL_INDEPENDENTLY_ACCEPTED_LOCKED_PAIR_EXECUTION_CONTRACT_PATH_BYTES_SHA256",
+      "FINAL_PAIR_ACCEPTANCE_FRAME_SHA256",
+      "FINAL_RUN_01_FRAME_SHA256",
+      "FINAL_RUN_02_FRAME_SHA256",
+      "FINAL_PAIR_RUN_INNER_SCHEMAS_AND_STATUSES",
+      "FINAL_EXACT_EXTRACTION_VERIFIED_INPUT_ROWS",
+      "FINAL_FOUNDATION_FULL_NORMALIZED_TOPOLOGY_SHA256",
+      "FINAL_AFES_UNION_COUNT_AND_SHA256",
+      "FINAL_RING_1_COUNT_AND_SHA256",
+      "FINAL_RING_2_COUNT_AND_SHA256",
+      "FINAL_COMBINED_RING_COUNT_AND_SHA256",
+      "FINAL_LOCKED_UNION_COUNT_AND_SHA256",
+      "FINAL_EXACT_TOPOLOGY_STRUCTURE",
+      "FINAL_EXACT_AFES_BOUNDS_OBJECT_NANOMETERS",
+      "FINAL_TWO_DISTINCT_FRESH_SESSION_NONCES_AND_MATCHING_INNER_DECISION"
+    ],
+    "expected_pair_and_analysis": null,
+    "frozen_literal_protocol": {
+      "pair_schema": "kira.avatar.r25.foundation_afes_locked_pair_acceptance.v3r3",
+      "pair_status": "AFES_AND_TRANSITION_RINGS_EXTRACTED_READ_ONLY_PAIR_MATCHED",
+      "run_schema": "kira.avatar.r25.foundation_afes_locked_extraction_run.v3r3",
+      "run_status": "READ_ONLY_EXTRACTION_COMPLETE_PENDING_PAIR_MATCH",
+      "inner_schema": "kira.avatar.r25.foundation_afes_transition_diagnostic.v5",
+      "inner_artifact_kind": "READ_ONLY_PRIVATE_EXACT_BYTE_AFES_DIAGNOSTIC",
+      "inner_status": "EXTRACTED_UNSEALED_REQUIRES_MATCHING_FRESH_LOCKED_RUN",
+      "semantic_output_schema": "kira.r25.semantic_control_cage_diagnostic.v4r3",
+      "semantic_success_status": "V3R3_BOUND_CONTROL_CAGE_DIAGNOSTIC_COMPUTED_NOT_A_BODY",
+      "semantic_failure_status": "DIAGNOSTIC_FAILED_NO_CAGE_NO_CANDIDATE"
+    },
+    "expected_pair_and_analysis_exact_fields": [
+      "pair_schema", "pair_status", "pair_truth_boundary",
+      "pair_acceptance_frame_sha256", "execution_contract_binding",
+      "input_snapshot_sha256", "matching_inner_payload_sha256",
+      "run_schema", "run_status", "run_truth_boundary",
+      "run_01_frame_sha256", "run_02_frame_sha256",
+      "run_01_payload_sha256", "run_02_payload_sha256",
+      "pair_session_nonce", "run_01_nonce", "run_02_nonce", "exact_run_metadata",
+      "accepted_afes_v5_config", "accepted_afes_v5_extractor",
+      "inner_schema", "inner_artifact_kind", "inner_status", "inner_truth_boundary",
+      "exact_extraction_verified_inputs", "private_receipt_runtime", "exact_read_only_guards",
+      "foundation_object", "foundation_mesh", "foundation_vertex_count",
+      "foundation_edge_count", "foundation_face_count", "foundation_topology_sha256",
+      "required_afes_group_names", "afes_union_count", "afes_union_sha256",
+      "ring_1_count", "ring_1_sha256", "ring_2_count", "ring_2_sha256",
+      "combined_ring_count", "combined_ring_sha256", "locked_vertex_count",
+      "locked_vertex_sha256", "exact_topology_structure", "exact_afes_bounds_object_nm"
+    ]
+  },
+  "native_semantic_controller_executable_binding": {
+    "state": "UNRESOLVED_STATIC_NATIVE_EXECUTABLE_IDENTITY_SENTINEL",
+    "final_image_path": "UNRESOLVED_NATIVE_EXECUTABLE_FINAL_IMAGE_PATH_SENTINEL",
+    "bytes": "UNRESOLVED_NATIVE_EXECUTABLE_BYTES_SENTINEL",
+    "sha256": "UNRESOLVED_NATIVE_EXECUTABLE_SHA256_SENTINEL",
+    "volume_serial_number": "UNRESOLVED_NATIVE_EXECUTABLE_VOLUME_SERIAL_SENTINEL",
+    "file_id_128_hex": "UNRESOLVED_NATIVE_EXECUTABLE_FILE_ID_128_SENTINEL",
+    "image_file_creation_time_100ns": "UNRESOLVED_NATIVE_EXECUTABLE_FILE_CREATION_TIME_SENTINEL"
+  },
+  "truth_boundary": {
+    "attempt_03_is_preserved": true,
+    "attempt_04_through_attempt_04r2_are_rejected_and_preserved_byte_for_byte": true,
+    "attempt_04r3_is_static_unsealed_preparation_only": true,
+    "native_semantic_controller_binary_does_not_exist_in_this_preparation": true,
+    "native_binding_contains_only_immutable_executable_identity_sentinels": true,
+    "accepted_audit_and_process_instance_lease_are_not_stored_in_this_config": true,
+    "all_sixteen_result_placeholders_remain_unresolved": true,
+    "seven_result_slots_remain_null": true,
+    "no_result_or_future_authority_hash_is_claimed": true,
+    "python_controller_is_an_inert_plan_validator_and_never_authority": true,
+    "later_sealing_requires_a_new_append_only_revision": true,
+    "static_preparation_is_not_execution": true,
+    "future_diagnostic_is_not_an_accepted_deformation_cage_or_body": true,
+    "body_authoring_and_owner_approval_remain_separate": true
+  }
+}

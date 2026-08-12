@@ -1,0 +1,110 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_python_controller_validation.v3r21",
+  "attempt_id": "attempt_01",
+  "status": "STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "predecessor": {
+    "version": "v3r20",
+    "status": "REJECTED_NO_EXECUTION_AUTHORITY",
+    "static_checkpoint_sha256": "0fb6f383a85ef9df800a67e0be96e2cb8b3cc79a20279476c1400521f6452e71",
+    "static_seal_sha256": "3dacef076bc0046cd42c1fdbe34f331e391177776125efb146465801fcbf13c2",
+    "rejection_audit_sha256": "790b122d1eb135754b78673b57fa74e48babf0bec4b5e07498015b95bd7a1273",
+    "rejection_audit_sidecar_file_sha256": "711db9924daf28ff525f2d3e6c86dc91b115f645cf998813881aaeb2cb90124f",
+    "rejection_decision_sha256": "1921c66435efc5ba400b4a4374beb20ea35629770fc1268816787fc2e4a0010a",
+    "msvc_analyze_results_sha256": "697a9987dbd224478ae4e759bf00ee28b3928b03494ddf8283cf103e78acaa8c",
+    "rejection_checkpoint_sha256": "16174d65ab9da57c1f9508de2ef71aae07aa5d95fd2c1bed7517a5ba35c40a4c",
+    "blocking_diagnostics": ["C6385_RESERVATION_LITERAL_READS_TWO_BYTES_PAST_OBJECT", "C6385_TERMINAL_LITERAL_READS_TWO_BYTES_PAST_OBJECT"],
+    "candidate_executed": false,
+    "run_evidence_present": false,
+    "outcome_receipt_present": false
+  },
+  "rejected_v3r20_closure": {
+    "contract": [5875, "4f81b85565e62c6de41e9270e696b6a95c48aca4322b36dfd119cc17ac6fa809"],
+    "source": [77359, "d9050f8a407595da2e0c733d4d5946043aeb9ee058b9c25aa8f6c025fc368b69"],
+    "identity_anchor": [7563, "3705f769367596fbf89cdfff4978662f667b3314c063322613520d802b0f71bb"],
+    "object": [121813, "fbee2be25f57e9116eaf19e0b07449f6421fb85172684f102cd0e14af2ed5865"],
+    "executable": [196608, "dc48be07c1f4505751d029df017acb48d91fe673a97e89d308cfcececf8b4213"],
+    "static_test": [19733, "8f892d750d9da3512599961a7ad20c3540c81a7d64467224c8bd944c148f9f2e"],
+    "runtime_control": [2760, "bfea85067eefd5f1eed9f4aef96a8536b10ab625ba3db07c44c030402f10163c"],
+    "build_result": [2548, "81f98c59a5f3d3a5f41a30614171e223c98540080649806e88b738e597502a1e"],
+    "static_seal": [36152, "3dacef076bc0046cd42c1fdbe34f331e391177776125efb146465801fcbf13c2"],
+    "static_checkpoint": [4923, "0fb6f383a85ef9df800a67e0be96e2cb8b3cc79a20279476c1400521f6452e71"],
+    "rejection_audit": [4841, "790b122d1eb135754b78673b57fa74e48babf0bec4b5e07498015b95bd7a1273"],
+    "rejection_sidecar": [65, "711db9924daf28ff525f2d3e6c86dc91b115f645cf998813881aaeb2cb90124f"],
+    "rejection_decision": [3459, "1921c66435efc5ba400b4a4374beb20ea35629770fc1268816787fc2e4a0010a"],
+    "rejection_analyze": [1878, "697a9987dbd224478ae4e759bf00ee28b3928b03494ddf8283cf103e78acaa8c"],
+    "rejection_checkpoint": [2799, "16174d65ab9da57c1f9508de2ef71aae07aa5d95fd2c1bed7517a5ba35c40a4c"]
+  },
+  "single_stage": {
+    "name": "reservation_first_granular_contract_and_isolated_python_controller_validation",
+    "ordered_steps": [
+      "verify the exact native image, every runtime-bound subject, and the exact future different-reviewer audit whose external review rehashed the complete 91-row seal",
+      "use an exact-subject identity-capture function only for a newly observed handle and a separate bound-identity recheck function for every retained handle",
+      "open and retain the exact v3r21 authority contract before accepting the audit, and bind its digest and file identity into both durable records",
+      "CREATE_NEW fixed evidence and receipt and durably read back the reservation",
+      "open the exact v3r15 contract once and prove attributes, size, final path, file identity, and two SHA-256 snapshots granularly on that same retained handle",
+      "open and retain exact manifest, Python DLL, stdlib zip, controller, and execution contract",
+      "prove exactly one retained-manifest row for every retained runtime subject",
+      "delayed-load only the exact retained Python DLL",
+      "initialize an isolated interpreter and evaluate only inert controller definitions",
+      "verify exactly five callable exports and strict execution-contract projection",
+      "finalize Python, release its DLL, prove the old module base and exact Python DLL path are absent from a fail-closed process-module inventory, and recheck every retained identity and digest",
+      "recheck the retained v3r21 authority contract on its original handle before terminal completion",
+      "recheck and close the original contract handle and durably store granular terminal telemetry",
+      "stop"
+    ]
+  },
+  "inherited_file_identity_control": {
+    "v3r19_negative_control": "zero_initialized_identity_was_compared_before_capture_and_refused_the_first_exact_source_subject",
+    "capture_operation": "verify exact regular file, bytes, final path and SHA-256, then return observed FILE_ID_INFO",
+    "bound_operation": "run the capture operation into a fresh local value, then compare it to the previously retained FILE_ID_INFO",
+    "ambiguous_zero_sentinel_removed": true,
+    "weakened_recheck": false
+  },
+  "literal_copy_and_analyzer_repair": {
+    "v3r20_reservation_negative_control": "34-byte memcpy from a 32-byte string object; sealed layout consumed NUL plus adjacent K and I bytes",
+    "v3r20_terminal_negative_control": "31-byte memcpy from a 29-byte string object; two-byte read beyond the literal object",
+    "v3r21_magic_copy_bound": "sizeof(named_magic_array) - 1U after zero initialization",
+    "c17_static_assert_fits_destination": true,
+    "final_path_buffers": "heap allocated, explicitly terminated, securely cleared, and released",
+    "python_module_path_capacity": "MAX_PATH",
+    "cleanup_handle_predicate": "handle is neither NULL nor INVALID_HANDLE_VALUE",
+    "required_msvc_analyze_result": "ZERO_UNSUPPRESSED_WARNINGS"
+  },
+  "granular_contract_gate": {
+    "target": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r15.json",
+    "bytes": 6174,
+    "sha256": "ad33386d767b516425dcbed073e22dfc9747a963a64dc5d205483d210acac79d",
+    "same_handle": true,
+    "reservation_first": true,
+    "gates": ["open", "attributes", "size_first", "final_path_first", "file_id_first", "snapshot_one", "size_second", "final_path_second", "file_id_second", "snapshot_two", "size_final", "final_path_final", "file_id_final", "snapshot_final", "snapshot_equality_and_close"]
+  },
+  "retained_runtime_subjects": {
+    "manifest": ["RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv", 24975, "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96"],
+    "python_runtime_dll": ["C:/Python314/python314.dll", 6767440, "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"],
+    "retained_stdlib_zip": ["tools/native/runtime/python314_stdlib_v3r4.zip", 28997479, "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"],
+    "parent_controller": ["tools/run_kira_r25_foundation_afes_locked_pair_v3r9.py", 50907, "60674e104d69ac9166aca7ea9001ff32e8494d07677748fbb633955ee1d9ebaf"],
+    "execution_contract": ["Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_locked_pair_execution_v3r9.json", 146969, "f50df32a70093cf968e2d6be7c7de228d84f003605f854b97bfa542b9ea396d5"]
+  },
+  "controller_boundary": {
+    "exact_callable_exports": ["_build_execution_plan", "_validate_child_payload", "_compare_pair", "_success_payload", "_failure_payload"],
+    "definitions_only": true,
+    "strict_execution_contract_projection": true,
+    "build_execution_plan_called": false
+  },
+  "terminal_receipt": {
+    "creation": "CREATE_NEW_WRITE_THROUGH",
+    "same_handle_readback": true,
+    "granular_contract_telemetry_embedded": true,
+    "authority_contract_digest_and_file_identity_embedded": true,
+    "python_finalize_release_and_absence_telemetry_embedded": true,
+    "failure_is_consumed_no_retry": true
+  },
+  "stop_before": ["_build_execution_plan", "bootstrap", "broker", "process", "AFES", "Blender", "body", "save", "render", "export"],
+  "fresh_audit_grammar": {
+    "raw_length_comparisons": true,
+    "embedded_nul_rejected": true,
+    "auditor_pattern": "[a-z0-9_]{1,96}",
+    "lowercase_sha256_exactly_64_bytes": true
+  },
+  "truth_boundary": ["STATIC_PREPARATION_IS_NOT_EXECUTION", "NO_BODY_OR_ANATOMY_RESULT", "NO_OWNER_ACCEPTANCE", "NO_PRODUCTION_AUTHORITY"]
+}

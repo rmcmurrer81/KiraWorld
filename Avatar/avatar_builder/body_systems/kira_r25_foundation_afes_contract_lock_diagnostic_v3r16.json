@@ -1,0 +1,103 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_contract_lock_diagnostic.v3r16",
+  "status": "STATIC_CANDIDATE_PENDING_DIFFERENT_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "author": "codex_r25_afes_v3r16_static_author_blackwell_v9_agent",
+  "predecessor": {
+    "version": "v3r15",
+    "status": "CONSUMED_FAILURE_NO_RETRY",
+    "observed_result": "V3R15_SUBJECT_REFUSED:contract",
+    "run_evidence_present": false,
+    "outcome_receipt_present": false,
+    "python_dll_touched": false,
+    "controller_touched": false,
+    "postmortem": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r15_consumed_failure_postmortem/attempt_01/CHECKPOINT.md",
+    "read_only_recheck": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r15_consumed_failure_postmortem/attempt_01/READ_ONLY_CONTRACT_RECHECK.json"
+  },
+  "single_stage": {
+    "name": "RESERVATION_FIRST_GRANULAR_CONTRACT_LOCK_DIAGNOSTIC_ONLY",
+    "target": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_python_controller_validation_v3r15.json",
+    "target_expected_bytes": 6174,
+    "target_expected_sha256": "ad33386d767b516425dcbed073e22dfc9747a963a64dc5d205483d210acac79d",
+    "ordered_boundary": [
+      "verify exact no-argument, cwd, module, self, sealed V3r16 subjects, future different-auditor authorization, and output parent",
+      "CREATE_NEW write-through reserve fixed V3r16 evidence and binary outcome receipt",
+      "open only the exact V3r15 contract using GENERIC_READ and FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE",
+      "record exact CreateFileW result and GetLastError",
+      "verify same-handle regular non-reparse attributes",
+      "verify same-handle exact file size",
+      "verify same-handle normalized final path",
+      "capture same-handle FileIdInfo",
+      "read and hash snapshot one from the same handle",
+      "recheck path, file ID, and size on that same handle",
+      "read and hash snapshot two from that same handle",
+      "recheck path, file ID, and size again",
+      "require both snapshots to match each other and the sealed expected bytes and SHA-256",
+      "append terminal evidence and terminal receipt",
+      "close handles and stop"
+    ],
+    "python_dll_load": false,
+    "python_interpreter_initialization": false,
+    "controller_read_or_evaluation": false,
+    "execution_contract_read": false,
+    "plan_builder_called": false,
+    "broker_or_child_created": false
+  },
+  "diagnostic_truth": {
+    "result_classes": [
+      "CONTRACT_LOCK_DIAGNOSTIC_SUCCESS",
+      "CONTRACT_LOCK_DIAGNOSTIC_FAILURE_WITH_EXACT_SUBGATE"
+    ],
+    "subgates": [
+      "TARGET_OPEN",
+      "ATTRIBUTES",
+      "SIZE_FIRST",
+      "FINAL_PATH_FIRST",
+      "FILE_ID_FIRST",
+      "SNAPSHOT_ONE",
+      "SIZE_SECOND",
+      "FINAL_PATH_SECOND",
+      "FILE_ID_SECOND",
+      "SNAPSHOT_TWO",
+      "SIZE_FINAL",
+      "FINAL_PATH_FINAL",
+      "FILE_ID_FINAL",
+      "SNAPSHOT_EQUALITY_AND_EXPECTED_DIGEST"
+    ],
+    "win32_error_rule": "Capture GetLastError immediately for a failing Win32 call; use ERROR_INVALID_DATA for a completed API whose returned attributes, path, identity, size, byte count, or digest violates the sealed contract.",
+    "historical_v3r15_cause_reconstructed": false,
+    "success_meaning": "Only that the V3r15 contract could be stably observed twice through one handle during this new bounded run. It does not reinterpret or retry V3r15."
+  },
+  "outputs": {
+    "evidence_path": "RecoverySprint/continuation_20260810/kira_r25_afes_contract_lock_diagnostic_v3r16_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+    "outcome_path": "RecoverySprint/continuation_20260810/kira_r25_afes_contract_lock_diagnostic_v3r16_static_preparation/attempt_01/CONTRACT_LOCK_DIAGNOSTIC_OUTCOME.receipt.bin",
+    "creation": "CREATE_NEW_WRITE_THROUGH",
+    "receipt_records": 2,
+    "record_1": "RESERVED_PENDING_CONTRACT_LOCK_DIAGNOSTIC",
+    "record_2": "TERMINAL_SUCCESS_OR_FAILURE_WITH_SUBGATE_AND_ERROR",
+    "append_only": true,
+    "readback_required": true,
+    "trailing_bytes_rejected": true,
+    "starting_executable_consumes_authority": true,
+    "partial_output_consumes_authority": true,
+    "retry": false
+  },
+  "required_future_audit": {
+    "auditor": "different from codex_r25_afes_v3r16_static_author_blackwell_v9_agent",
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_CONTRACT_LOCK_DIAGNOSTIC_ONLY",
+    "audit_path": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r16_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "audit_digest_path": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r16_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256"
+  },
+  "forbidden": [
+    "V3r15 or predecessor retry",
+    "Python DLL load or Python interpreter initialization",
+    "controller read, parse, compile, evaluation, import, or call",
+    "execution-contract read or projection",
+    "plan builder, bootstrap, broker, child, shell, or process creation",
+    "AFES or Blender access",
+    "Blend open, inspect, mutate, save, render, or export",
+    "body, mesh, armature, anatomy, material, pose, or movement access",
+    "DeleteFile, MoveFile, ReplaceFile, CREATE_ALWAYS, OPEN_ALWAYS, or TRUNCATE_EXISTING",
+    "self-audit or execution by the author",
+    "production promotion or pointer change"
+  ]
+}

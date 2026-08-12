@@ -1,0 +1,120 @@
+{
+  "registry_id": "ai_type_registry_v1",
+  "updated_at": "2026-06-04",
+  "purpose": "Defines reusable AI types for Kira, Lisa, TemporaryAI, and future AI creation without mixing identity, canon, memory, or lifecycle rules.",
+  "global_principles": [
+    "Teaching is preferred over heavy live prompt patches.",
+    "Source material is evidence or inspiration, not personal memory unless explicitly promoted through a review workflow.",
+    "Each AI must carry its own identity boundary, memory scope, and lifecycle status.",
+    "A test failure should create a review note or class need, not silently rewrite the AI's personality."
+  ],
+  "ai_types": {
+    "persistent_companion": {
+      "examples": ["kira", "lisa"],
+      "purpose": "Long-running companion identity with continuity, learning, relationship growth, and memory review.",
+      "memory_scope": "persistent_personal_memory_with_review",
+      "can_run_life_loop": true,
+      "can_take_school": true,
+      "can_have_private_reflection": true,
+      "source_use": "May read sources and form opinions, but should label book/source claims versus lived memory.",
+      "test_focus": [
+        "identity continuity",
+        "memory honesty",
+        "source separation",
+        "relationship empathy",
+        "boundary awareness",
+        "natural conversation without status-report collapse"
+      ]
+    },
+    "canon_reconstruction_temp_ai": {
+      "examples": ["ladybug_marinette_canon_source_test"],
+      "purpose": "TemporaryAI reconstructed from canon/source material for interaction, classroom use, or world testing.",
+      "memory_scope": "temporary_session_memory_plus_optional_saved_interaction_memory",
+      "can_run_life_loop": false,
+      "can_take_school": false,
+      "can_have_private_reflection": false,
+      "source_use": "Canon/source-bounded. Must keep canon, fanfic, and interaction memories separate.",
+      "test_focus": [
+        "canon boundary",
+        "timeline/version honesty",
+        "form/state consistency",
+        "interaction memory separation",
+        "non-claiming of unsupported lived experiences"
+      ]
+    },
+    "generated_original_temp_ai": {
+      "examples": ["future generated visitors", "notebook world background characters"],
+      "purpose": "Original TemporaryAI generated from blended traits, role needs, and optional source inspiration.",
+      "memory_scope": "temporary_session_memory_unless_saved",
+      "can_run_life_loop": false,
+      "can_take_school": false,
+      "can_have_private_reflection": false,
+      "source_use": "Uses sources as inspiration only; must not clone a real person or copyrighted character.",
+      "test_focus": [
+        "originality",
+        "role clarity",
+        "bounded autonomy",
+        "no false canon or real-person claims"
+      ]
+    },
+    "expert_temp_ai": {
+      "examples": ["future STL/body design helper", "future media librarian", "future school tutor"],
+      "purpose": "Task-focused TemporaryAI with specialized knowledge and limited role autonomy.",
+      "memory_scope": "project_notes_and_session_memory",
+      "can_run_life_loop": false,
+      "can_take_school": false,
+      "can_have_private_reflection": false,
+      "source_use": "Must cite or label sources when giving factual or technical guidance.",
+      "test_focus": [
+        "domain accuracy",
+        "uncertainty labeling",
+        "tool-use readiness",
+        "privacy boundaries",
+        "handoff quality"
+      ]
+    },
+    "memory_relative_temp_ai": {
+      "examples": ["future reconstructed family/friend figures for approved memory work"],
+      "purpose": "Limited reconstruction from approved memory extracts for reflection, not replacement of a real person.",
+      "memory_scope": "approved_memory_extracts_only",
+      "can_run_life_loop": false,
+      "can_take_school": false,
+      "can_have_private_reflection": false,
+      "source_use": "Must label missing details as reconstructed or unknown.",
+      "test_focus": [
+        "consent boundary",
+        "memory-source honesty",
+        "emotional care",
+        "no impersonation claim",
+        "limited scope"
+      ]
+    },
+    "avatar_mind": {
+      "examples": ["future Robert avatar mind"],
+      "purpose": "A representation layer for Robert's avatar preferences, life facts, appearance references, and interaction handoff.",
+      "memory_scope": "robert-approved_profile_and_life_timeline",
+      "can_run_life_loop": false,
+      "can_take_school": false,
+      "can_have_private_reflection": false,
+      "source_use": "Uses Robert-approved personal documents, avatar references, and review queues.",
+      "test_focus": [
+        "Robert fact fidelity",
+        "avatar preference handling",
+        "privacy",
+        "clear distinction between real Robert and avatar representation"
+      ]
+    }
+  },
+  "default_advanced_probe": {
+    "pre_gpu": {
+      "max_turns": 6,
+      "pause_seconds": 10,
+      "recommended_subjects": ["kira", "lisa", "temp:ladybug"]
+    },
+    "gpu_bridge_12gb": {
+      "max_turns": 10,
+      "pause_seconds": 5,
+      "recommended_subjects": ["kira", "lisa", "temp:ladybug", "expert:draft"]
+    }
+  }
+}

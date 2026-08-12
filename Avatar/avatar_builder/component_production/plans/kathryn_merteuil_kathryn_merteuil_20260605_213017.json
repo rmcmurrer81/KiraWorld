@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "subject_id": "kathryn_merteuil_adult_continuation",
+  "canonical_candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "candidate_alias_used": false,
+  "identity_preflight_status": "passed",
+  "identity_preflight_blocking_reasons": [],
+  "topology_lane": "confirmed_adult_topology",
+  "source_lane": "photo_primary_with_reference_model_measurement",
+  "production_state": "blocked_multiview_evidence_manifest_missing",
+  "next_action": "create_exact_hash_multiview_manifest_then_review_inputs",
+  "orchestration_status": "capability_review_blocked",
+  "orchestration_blocking_reasons": [
+    "new_candidate_surface_authorship_required",
+    "photo_reconstruction_contract_not_ready",
+    "photo_primary_multiview_identity_set_missing",
+    "component_manifest_missing",
+    "topology_evidence_missing",
+    "rig_binding_sha256_invalid_or_missing",
+    "rig_binding_exact_hash_not_verified",
+    "stable_rig_evidence_missing",
+    "face_lip_sync_evidence_missing",
+    "locomotion_contact_evidence_missing",
+    "wearable_capability_manifest_missing",
+    "owner_identity_authority_not_verified",
+    "owner_identity_authority_artifact_sha256_invalid",
+    "owner_identity_authority_artifact_hash_not_verified",
+    "owner_clothed_review_evidence_missing"
+  ],
+  "body_private_review_ready": false,
+  "body_blocking_reasons": [
+    "new_candidate_surface_authorship_required",
+    "photo_reconstruction_contract_not_ready",
+    "photo_primary_multiview_identity_set_missing",
+    "component_manifest_missing",
+    "topology_evidence_missing",
+    "rig_binding_sha256_invalid_or_missing",
+    "rig_binding_exact_hash_not_verified",
+    "stable_rig_evidence_missing",
+    "face_lip_sync_evidence_missing",
+    "locomotion_contact_evidence_missing",
+    "owner_identity_authority_not_verified",
+    "owner_identity_authority_artifact_sha256_invalid",
+    "owner_identity_authority_artifact_hash_not_verified",
+    "owner_clothed_review_evidence_missing",
+    "multiview_evidence_manifest_missing"
+  ],
+  "advanced_garment_capability_ready": false,
+  "garment_blocking_reasons": [
+    "wearable_capability_manifest_missing"
+  ],
+  "authored_component_set_present": false,
+  "multiview_authoring": {
+    "status": "not_prepared",
+    "manifest_sha256": "",
+    "manifest_exact_hash_verified": false,
+    "source_count": 0,
+    "exact_hash_source_count": 0,
+    "reviewed_source_count": 0,
+    "front_view_ready": false,
+    "depth_view_ready": false,
+    "full_body_view_ready": false,
+    "single_calibration_frame_ready": false,
+    "reviewed_landmark_count": 0,
+    "missing_landmark_regions": [],
+    "scale_review": {
+      "ready": false,
+      "mode": "pending"
+    },
+    "base_body_review": {
+      "ready": false
+    },
+    "integrity_failures": [],
+    "review_gaps": [],
+    "authoring_queue_ready": false,
+    "author_backend_available": false
+  },
+  "activation_requested": false,
+  "activation_allowed": false,
+  "truth_note": "A production plan is not a body, likeness, topology review, stable rig proof, or activation authorization.",
+  "orchestration_request_sha256": "1e169ce391c52f299480154e9d2788dc96d2cc88abc936c0bc5450735e8b66a0"
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "review_id": "kira_r7_adult_surface_reconstructed_neck_r4_v10_20260722",
+  "status": "inactive_r4v10_engineering_pass_visual_review_pending_no_candidate",
+  "mode": "inactive_topological_neck_reconstruction_r4_v10",
+  "parent_hashes": {
+    "r3_blend": "327e072e128179dbe379673ca58e61d2e9db065a12ec36b4ae6844130dce4145",
+    "r3_evidence": "7e690445d4af96b7fd8d30ddfa0b36cb6b641432e36575bf032ef5bc050c5d7d",
+    "r3_manifest": "30dada3566c7325a21215c28412477efce645a4175ab920148125b928e3b31e1"
+  },
+  "artifacts": {
+    "evidence": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/evidence.json",
+    "evidence_sha256": "04580989c19952916d2dc0965c49c816df5d06b7db5c1634b514f759654d5307",
+    "inactive_review_blend": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/inactive_reconstructed_neck_surface_r4_v10.blend",
+    "inactive_review_blend_sha256": "41ce3556beefaba1e8e48224b3af704832d2f5919fefe3eb171ee08714161822",
+    "reopen_verification": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/reopen_verification.json",
+    "reopen_verification_sha256": "861e1c38df50d60811118c859c286b24ff3d1cc9205966b9981c75573c713ab7",
+    "fixed_renders": {
+      "neutral_front": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neutral_front.png",
+        "sha256": "8330d59c035ddb9b570a8cfab13193c45176e4503c416d11b973f7fab2f8cd4c"
+      },
+      "neutral_back": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neutral_back.png",
+        "sha256": "8bd6d7f3fa1ae6a4fcfdf94be9942be635d49bf62c6bedfa0ff8c6bbdd345a82"
+      },
+      "neutral_left": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neutral_left.png",
+        "sha256": "8398b1f41d96cd17090a3c101ffa1132b4bd97c74bdb586a96df3709eb977c3e"
+      },
+      "neutral_right": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neutral_right.png",
+        "sha256": "884240e0e1016c2dd34f2c9000daf1d8deb67345f4c9a5d050026711ffa30401"
+      },
+      "neck_closeup_front": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neck_closeup_front.png",
+        "sha256": "dd814c6cecb4c893e3028976cc538d6e680896a2a596b801c84ab4894e4ffeb6"
+      },
+      "neck_closeup_back": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neck_closeup_back.png",
+        "sha256": "95bcc1015dc294657c06b7d854a420dc32ee26c48c344dcbc50fff1a3f2fab15"
+      },
+      "neck_closeup_left": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neck_closeup_left.png",
+        "sha256": "c66b8d39f68396d821c6831f0913267304c0ac4bd79f2ea84d405580e83f2c5a"
+      },
+      "neck_closeup_right": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/neck_closeup_right.png",
+        "sha256": "0c270bb90ff94aae7a9111c30999686f778453379baf2e2c2795292a6d0a2d88"
+      },
+      "identity_front": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/identity_front.png",
+        "sha256": "5019986a71914a640a8452c8f7a38f7106ee3bd5c304181b182538456afd84e5"
+      },
+      "identity_left_profile": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/identity_left_profile.png",
+        "sha256": "c67febe22a920b072822dcc1bf98da3b3a9cd15a382bdc2a0491bc1d96a5e788"
+      },
+      "pose_upper_limb": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/pose_upper_limb.png",
+        "sha256": "1f921d37559c777178e1023ef1ce041eba5b3b7091883abbeb1cb1ca49d6d41b"
+      },
+      "pose_hip_knee": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/pose_hip_knee.png",
+        "sha256": "78c58dcc9f4d6686c9b4788762d1a4df4d4c87316475e3b1105b46db8175b03a"
+      },
+      "pose_spine_neck": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/pose_spine_neck.png",
+        "sha256": "30c32e5cfec77c3ef1d22afd9fe84750207e31a39f380235e9d2819baae76982"
+      },
+      "pose_bilateral_squat": {
+        "path": "Data/avatar_builder_workspace_tests/kira_r7_adult_surface_trial_20260722/reconstructed_neck_surface_r4_v10/pose_bilateral_squat.png",
+        "sha256": "1d31a71462c181644f90c7088c7fd36497a7e6656ef891ca9c7b333913c7e8c8"
+      }
+    }
+  },
+  "gates": {
+    "single_connected_external_mesh": true,
+    "exact_79_joint_weights": true,
+    "finite_bounded_ruled_loft": true,
+    "transition_profile_bounded_and_monotonic": true,
+    "bounded_topological_neck_layers_only": true,
+    "protected_face_mouth_eye_apertures_cranium_preserved": true,
+    "adult_surface_outside_transition_preserved": true,
+    "fixed_pose_deformation": true,
+    "engineering_bounded_reconstruction_passed": true,
+    "original_resolution_visual_review_passed": false,
+    "owner_visual_review_approved": false,
+    "candidate_export_allowed": false,
+    "live_binding_allowed": false
+  },
+  "candidate_glb_created": false,
+  "candidate_export_allowed": false,
+  "avatar_builder_binding_changed": false,
+  "avatar_builder_promotion_allowed": false,
+  "live_body_changed": false,
+  "runtime_state_changed": false,
+  "runtime_activation_allowed": false,
+  "owner_approved": false,
+  "complete_adult_topology_proven": false,
+  "truth_note": "Inactive R4-v10 shallow topological neck-reconstruction engineering review only; fixed-view visual review remains required before any rollback-safe export."
+}

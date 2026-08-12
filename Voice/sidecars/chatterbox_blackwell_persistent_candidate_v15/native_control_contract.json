@@ -1,0 +1,66 @@
+{
+  "schema": "kira.blackwell.v15.immutable_origin_bound_control_anchor_contract.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_exact_control_anchor_candidate_v15",
+  "attempt_id": "attempt_01",
+  "status": "AUTHOR_STATIC_ONLY_PENDING_BUILD_SEAL_AND_DIFFERENT_FRESH_AUDIT",
+  "trust_root": "exact_x64_native_retained_handles_private_graphs_and_recursively_immutable_origin_bound_result",
+  "required_compiler": {
+    "toolchain": "MSVC_x64",
+    "compile_flags": ["/W4", "/WX", "/O2", "/MT", "/guard:cf", "/DUNICODE", "/D_UNICODE", "/std:c17"],
+    "analyze_flags": ["/W4", "/WX", "/analyze", "/c", "/DUNICODE", "/D_UNICODE", "/std:c17"],
+    "warning_suppression_allowed": false,
+    "required_unsuppressed_analyzer_warnings": 0,
+    "permitted_pe_imports": ["bcrypt.dll", "KERNEL32.dll"]
+  },
+  "retained_runtime": {
+    "python_dll": {
+      "path": "C:/Python314/python314.dll",
+      "bytes": 6767440,
+      "sha256": "a07f7d09c3121492bb066535c6d0811df5fbc2090cbca7031a97bb47ce1480c9"
+    },
+    "stdlib_zip": {
+      "path": "tools/native/runtime/python314_stdlib_v3r4.zip",
+      "bytes": 28997479,
+      "sha256": "7e07541a67b8eba5835c9c371ec90e5732fba6602576ae0a6f22e09b09271846"
+    }
+  },
+  "single_stage": {
+    "name": "disconnected_immutable_origin_bound_exact_control_validation",
+    "ordered_steps": [
+      "accept no arguments",
+      "retain exact fresh-audit decision and digest sidecar",
+      "lock the running image, header, complete seal, every V15 input, six V14 rejection-closure subjects, Python DLL, and stdlib zip",
+      "prove regular non-reparse exact final paths, sizes, SHA-256 values, and FILE_ID_INFO for every retained handle",
+      "reserve append-only write-through evidence and one terminal receipt before Python",
+      "delayed-load only the retained Python DLL and initialize isolated mode with only the retained stdlib zip",
+      "compile V15 twice into private dictionaries and recursively seal every function, class member, referenced value, static namespace field, and static path field",
+      "independently compile V14 twice and retain its complete immutable native creation-time graph signature",
+      "invoke one stored V15 factory with the exact six native attestation rows and exact native creation-time V14 graph",
+      "require one recursively immutable built-in tuple whose attestation and graph objects are the original native inputs",
+      "exact-type the loader tuple and every default-off authority Boolean",
+      "recheck all V15, V14, V13, private-graph, private-V12, normal-V12 module slots and both Core and V12 parent-package attributes before and after calls",
+      "destroy all private dictionaries and result objects, finalize Python, FreeLibrary, prove module/path absence, recheck every retained handle, write one terminal record, and stop"
+    ]
+  },
+  "v14_blocker_closure": {
+    "mutable_snapshot": "No snapshot class or writable slots exist; the only result is a recursively immutable exact built-in tuple.",
+    "origin_binding": "Result attestation rows and complete V14 graph are identity-and-value compared to native creation-time inputs.",
+    "loader_graph_exact_types": "Loader state is an exact five-element built-in tuple and the complete graph is recursively exact typed, not positive-count or equality-spoof validated.",
+    "mutable_graph_fields": "Static import namespace and static path slot values are recursively serialized into both same-identity and cross-compile graph signatures.",
+    "package_slots": "V15, V14, V13, private graph, private V12, normal V12, Core attributes, and the V12 parent attribute are checked pre/post.",
+    "canonical_config": "V15 config is duplicate-rejecting and must byte-equal sorted-key minimal UTF-8 canonical JSON plus one LF, with exact semantic types and fixed predecessor values."
+  },
+  "stop_before": [
+    "model", "Qwen", "GPU", "Torch", "CUDA", "Chatterbox", "synthesis",
+    "audio", "playback", "latency measurement", "network", "subprocess",
+    "person state", "production route", "body", "Blender"
+  ],
+  "production_routing_authorized": false,
+  "live_execution_authorized": false,
+  "future_harness_authoring_authorized": false,
+  "synthesis_authorized": false,
+  "playback_authorized": false,
+  "latency_run_authorized": false,
+  "different_fresh_static_audit_required": true,
+  "one_decision_consumed_by_any_invocation": true
+}

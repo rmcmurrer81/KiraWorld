@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "policy_id": "avatar_two_distinct_subject_autobuild_gate_v2",
+  "status": "locked_awaiting_two_distinct_owner_approved_bodies",
+  "minimum_distinct_canonical_subjects": 2,
+  "maximum_enrolled_qualifications": 8,
+  "maximum_concurrent_downstream_builds": 1,
+  "owner_authority_id": "real_robert",
+  "required_owner_decision": "approve_body_for_two_subject_autobuild_qualification",
+  "required_component_artifacts": [
+    "body",
+    "eyes",
+    "hair",
+    "clothing",
+    "rig"
+  ],
+  "required_evidence_domains": [
+    "topology",
+    "rig_and_deformation",
+    "skin_integrity",
+    "ground_contact",
+    "object_contact",
+    "clothed_visual_quality"
+  ],
+  "required_legacy_gates_by_domain": {
+    "topology": [
+      "topology_lane_correct"
+    ],
+    "rig_and_deformation": [
+      "stable_rig",
+      "walk_sit_reach_deformation",
+      "face_controls",
+      "walk_stop_turn",
+      "sit_stand_lie_rise"
+    ],
+    "skin_integrity": [
+      "skin_material_and_deformation_integrity"
+    ],
+    "ground_contact": [
+      "feet_and_ground_contact"
+    ],
+    "object_contact": [
+      "prop_contact"
+    ],
+    "clothed_visual_quality": [
+      "visual_likeness_reviewed",
+      "clothed_visual_integrity",
+      "visible_realistic_eyes",
+      "separate_clothing_integrity",
+      "privacy_review",
+      "owner_visual_approval"
+    ]
+  },
+  "required_owner_review_flags": [
+    "reviewed_clothed",
+    "reviewed_in_motion",
+    "reviewed_full_body",
+    "reviewed_face_and_eyes",
+    "reviewed_skin_and_deformation",
+    "reviewed_ground_contact",
+    "reviewed_object_contact",
+    "counts_toward_two_subject_gate",
+    "allow_batch_authoring_after_two_distinct_qualified_subjects"
+  ],
+  "immutable_roots": {
+    "subject_proofs": "Avatar/avatar_builder/autobuild_two_subject/immutable/subject_proofs",
+    "owner_reviews": "Avatar/avatar_builder/autobuild_two_subject/immutable/owner_reviews",
+    "domain_evidence": "Avatar/avatar_builder/autobuild_two_subject/immutable/domain_evidence"
+  },
+  "qualification_bindings": [],
+  "runtime_activation_allowed": false,
+  "live_body_replacement_allowed": false,
+  "public_export_allowed": false,
+  "queue_creation_allowed_by_evaluator": false,
+  "truth_note": "Batch auto-authoring stays locked until two different canonical subject IDs each have an immutable exact-hash subject proof, six immutable domain proof records with retained evidence, and Robert's immutable clothed in-motion approval. Two variants or aliases of one subject count once. Passing only permits a one-at-a-time authoring schedule; it never activates, replaces, publishes, or auto-approves another body."
+}

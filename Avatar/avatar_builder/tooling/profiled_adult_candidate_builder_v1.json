@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "builder_id": "profiled_confirmed_adult_female_candidate_builder_v1",
+  "required_qualified_foundation_id": "generic_makehuman_adult_female_foundation_v1_20260801",
+  "style_profile": {
+    "path": "Avatar/avatar_builder/style_profiles/natural_athletic_warm_asymmetric_waves_v1.json",
+    "sha256": "2cc411d0d2ac63a13969f9a427e9f3b26b8488bae7539f4c26e0a1a81ee07d5c",
+    "required_profile_id": "natural_athletic_warm_asymmetric_waves_v1",
+    "required_target_count": 12,
+    "required_target_height_m": 1.651
+  },
+  "makehuman_source_set": {
+    "base_body": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/3dobjs/base.obj",
+      "sha256": "bea00279464133e86b634220cd2774ebf3b470de280d11222a6b2269e4a8d950",
+      "face_group": "body"
+    },
+    "female_macros": [
+      {
+        "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/targets/macrodetails/universal-female-young-averagemuscle-averageweight.target",
+        "sha256": "9537a8b2d76a06f49f5f8cb25955b52f1245e3119cfe0cb2634a9ca4e12b3e1f",
+        "weight": 1.0
+      },
+      {
+        "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/targets/macrodetails/caucasian-female-young.target",
+        "sha256": "6352040adcd91d48bc2266a65246ff0be39afb1f3d309311426204a95c1cbd77",
+        "weight": 1.0
+      }
+    ],
+    "male_helper_groups_allowed": false,
+    "copied_anatomy_geometry_allowed": false
+  },
+  "official_rig": {
+    "skeleton": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/rigs/default.mhskel",
+      "sha256": "5acfcaff5f0f46f88bc2a2935c18b65f7ba4f10c99a6628e97d08d2ef7bb9ba0"
+    },
+    "weights": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/rigs/default_weights.mhw",
+      "sha256": "ae2d830adb5ee890c90e071bde6efaa2b9c1f2937b49770f7b5264041637b071"
+    },
+    "maximum_influences": 4,
+    "normalize_every_vertex": true,
+    "fallback_root_for_unweighted": true
+  },
+  "source_license": {
+    "license_id": "CC0-1.0",
+    "source_url": "https://github.com/makehumancommunity/makehuman",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "adaptation_allowed": true,
+    "foundation_and_style_use_allowed": true,
+    "evidence": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/LICENSE.ASSETS.md",
+      "sha256": "5f3ab0cf6f7ebe92efe4b83213131c617d308d164eeefd5da230373640b0c226"
+    }
+  },
+  "adult_surface_authoring": {
+    "method_id": "generic_continuous_adult_female_external_surface_v1",
+    "qualified_neutral_config": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_adult_female_foundation_inactive_authoring_v1.json",
+      "sha256": "9c42dd4056ba5d0543cdee211d4b95c04d17d48f1a437348e2fedfbcb3e60d07"
+    },
+    "baseline_height_m": 1.7,
+    "scale_frame_and_metric_parameters_to_target_height": true,
+    "frame": {
+      "coordinate_space": "object_local",
+      "origin": [
+        0.0,
+        -0.07,
+        0.79
+      ],
+      "lateral_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "longitudinal_axis": [
+        0.0,
+        -0.3,
+        0.9539392014
+      ],
+      "outward_axis": [
+        0.0,
+        -0.9539392014,
+        -0.3
+      ],
+      "half_width_m": 0.06,
+      "half_length_m": 0.135,
+      "max_surface_offset_m": 0.09
+    },
+    "parameters": {
+      "subdivision_cuts": 3,
+      "relief_scale_m": 0.0024,
+      "boundary_taper_power": 3,
+      "minimum_face_normal_alignment": 0.05,
+      "minimum_landmark_vertices": 8,
+      "landmark_influence_threshold": 0.1,
+      "maximum_skin_influences": 4,
+      "degeneracy_area_m2": 1e-12
+    },
+    "structured_detail_refinement": {
+      "method_id": "generic_continuous_adult_female_external_surface_v2",
+      "baseline_relief_scale_m": 0.0032,
+      "boundary_taper_power": 2,
+      "posterior_frame": {
+        "coordinate_space": "object_local",
+        "origin": [
+          0.0,
+          0.005,
+          0.775
+        ],
+        "lateral_axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "longitudinal_axis": [
+          0.0,
+          -0.8,
+          0.6
+        ],
+        "outward_axis": [
+          0.0,
+          -0.6,
+          -0.8
+        ],
+        "half_width_m": 0.05,
+        "half_length_m": 0.06,
+        "max_surface_offset_m": 0.07
+      },
+      "continuous_primary_surface_only": true,
+      "no_internal_tract_claim": true,
+      "independent_topology_relationship_visual_requalification_required": true
+    },
+    "retain_all_landmark_groups": true,
+    "independent_requalification_required": true
+  },
+  "output_policy": {
+    "allowed_root": "Avatar/private_owner_review",
+    "required_directory_prefix": "kira_profiled_adult_candidate_",
+    "direct_new_child_only": true,
+    "overwrite_allowed": false,
+    "inactive": true,
+    "assigned": false,
+    "clothing_included": false,
+    "publication_allowed": false,
+    "runtime_activation_allowed": false,
+    "private_glb_allowed_only_with_explicit_flag": true,
+    "owner_review_rendering_allowed_only_with_explicit_flag": true
+  },
+  "protected_live_kira_state": [
+    "Avatar/models/temp_ai/kira/avatar.glb",
+    "Avatar/state/body_selections/kira_runtime_body_selection.json",
+    "Data/runtime/kira_world_shell_state.json"
+  ],
+  "owner_review_view_labels": [
+    "front",
+    "rear",
+    "left_profile",
+    "right_profile",
+    "left_three_quarter",
+    "right_three_quarter",
+    "face_close",
+    "eyes_close",
+    "left_hand_nails_close",
+    "right_hand_nails_close",
+    "left_foot_nails_close",
+    "right_foot_nails_close",
+    "left_knee_flexion",
+    "right_knee_flexion",
+    "protected_adult_relationship_front",
+    "protected_adult_relationship_side",
+    "protected_adult_relationship_three_quarter"
+  ],
+  "hair_provider_interface": {
+    "callable_name": "build_dynamic_hair",
+    "provider_must_be_project_relative_and_sha256_bound": true,
+    "provider_optional_for_hairless_engineering_candidate": true,
+    "static_legacy_hair_import_allowed": false,
+    "blackproject_hair_or_geometry_allowed": false,
+    "wind_and_wet_runtime_proof_still_required": true
+  }
+}

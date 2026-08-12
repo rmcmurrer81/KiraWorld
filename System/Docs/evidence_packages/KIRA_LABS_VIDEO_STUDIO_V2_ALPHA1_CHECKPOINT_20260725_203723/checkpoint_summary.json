@@ -1,0 +1,152 @@
+{
+  "active_v1": {
+    "byte_count": 21953950,
+    "canonical_posix_tree_sha256": "7bcfc1bcc58cf3c93658a4dbcd9e3bcc38c8f908cda3ab7fe0c88417879ea891",
+    "file_count": 118,
+    "matches_preserved_seal": true,
+    "root": "C:\\KiraVideos\\VideoStudio",
+    "tree_sha256": "7e36756a953a266d0adf52343b7271c0306bcdd3908508c1567615ffc58a5460"
+  },
+  "approved_voice": {
+    "path": "C:\\KiraVideos\\KiraLabsVideoStudio_v2_staging\\2.0.0-alpha.1\\voice\\approved_reference.wav",
+    "sha256": "761458a0fe9c5da1c2671faa738c1e329336630cd47138a4e738f7de2030542b"
+  },
+  "concept_motion_private_proof": {
+    "byte_count": 784505,
+    "file_count": 10,
+    "root": "C:\\Users\\robmc\\KiraVideos\\StudioOutputs\\V2_PrivateTests\\20260725_193114_kira_labs_concept_motion_private_proof_v2_concept_motion_pr",
+    "tree_sha256": "01a26a2f35b1a17ef48d6a54960bfbe5264abe0444083f526d9fa1199cac8eb7",
+    "verified_state": {
+      "clean_final_allowed": false,
+      "documentary_evidence": false,
+      "external_or_ai_generation_used": false,
+      "motion_preview": {
+        "bytes": 523021,
+        "modified_utc": "2026-07-25T23:31:15.284416+00:00",
+        "relative_path": "build/private_review/concept_motion/concept_4c911a00607b_still_pan_zoom_landscape_16_9_001_landscape_16_9_PRIVATE_REVIEW.mp4",
+        "sha256": "1ee2651e992e01c19bbd075218010f6f23dd6f7e40c5a5d4d43bdddfb055f78f"
+      },
+      "motion_preview_decoded": true,
+      "motion_preview_silent": true,
+      "narration_regenerated": false,
+      "narration_unchanged": true,
+      "permission_status": "private_review_only",
+      "persistent_on_screen_disclosure": true,
+      "pngs": {
+        "landscape_16_9": {
+          "bytes": 70977,
+          "modified_utc": "2026-07-25T23:31:14.795479+00:00",
+          "relative_path": "visual_candidates/concepts/concept_4c911a00607b/concept_4c911a00607b_landscape_16_9.png",
+          "sha256": "aaddf553d66afe7836a954f45471f9352942468d5bff327731e537d67f7a6d05"
+        },
+        "square_1_1": {
+          "bytes": 72411,
+          "modified_utc": "2026-07-25T23:31:14.913113+00:00",
+          "relative_path": "visual_candidates/concepts/concept_4c911a00607b/concept_4c911a00607b_square_1_1.png",
+          "sha256": "2c31f7b76392bc20830401e9270286fc5d1afd122c865a85238291120536512f"
+        },
+        "vertical_9_16": {
+          "bytes": 72644,
+          "modified_utc": "2026-07-25T23:31:14.859736+00:00",
+          "relative_path": "visual_candidates/concepts/concept_4c911a00607b/concept_4c911a00607b_vertical_9_16.png",
+          "sha256": "c9610dcf1cb8d463ae78efc9e2cf2bb46935cab1384df430db51595dd13bb9df"
+        }
+      },
+      "publication_performed": false,
+      "resident_activation_performed": false,
+      "rights_review_status": "unknown",
+      "robert_visual_review_approved": false,
+      "runtime_capture_used": false,
+      "status": "PASSED_PRIVATE_REVIEW_PROOF",
+      "truth_label": "CONCEPT VISUALIZATION",
+      "unexpected_clean_artifacts": [],
+      "unexpected_non_private_mp4s": []
+    }
+  },
+  "created_utc": "2026-07-26T00:38:18.972773+00:00",
+  "narration_reuse_proof": {
+    "bytes": 6933,
+    "modified_utc": "2026-07-25T19:43:47.966392+00:00",
+    "relative_path": "review/narration_reuse_proof.json",
+    "sha256": "719e13cad8376d1f516bebf31d49b59fdc1601e1baac76bd27095240afc0344f"
+  },
+  "private_only_state": {
+    "automatic_upload_enabled": false,
+    "posting_performed": false,
+    "public_release_approved": false,
+    "robert_review_state": "awaiting_robert_review",
+    "unexpected_clean_artifacts": [],
+    "unexpected_non_private_mp4s": []
+  },
+  "private_proof": {
+    "byte_count": 44213300,
+    "file_count": 118,
+    "root": "C:\\Users\\robmc\\KiraVideos\\StudioOutputs\\V2_PrivateTests\\20260723_111612_kira_world_july_23_2026_engineering_checkpoint_v2_kira_world_july_2",
+    "tree_sha256": "3406cffe101c384ee0ce4cece9134b5e7af8e9e5581c2364a7e35f94041b4e07"
+  },
+  "project_service_rebuild_proof": {
+    "bytes": 6460,
+    "modified_utc": "2026-07-25T20:32:10.600919+00:00",
+    "relative_path": "review/project_service_rebuild_proof.json",
+    "sha256": "feecdeeefce9879781fa163458b01caa5d1b85c13fa2099bef362c3cafd779cf"
+  },
+  "r6": {
+    "matches_recovery_hash": true,
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\kira_provisional_body_r6.glb",
+    "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77"
+  },
+  "runtime_state": {
+    "active_candidate": "",
+    "active_conversation_mode": "",
+    "last_activation_at": "2026-07-25T18:42:08.731681+00:00",
+    "last_deactivation_at": "2026-07-25T19:17:23.638331+00:00",
+    "note": "This proves only that the runtime was inactive when sealed. It does not claim that Robert or the runtime activated nobody earlier in the day.",
+    "path": "C:\\Users\\robmc\\Kira\\Data\\runtime\\kira_world_shell_state.json",
+    "sha256": "dfa586fa52988565f42da8d20e33dab06529f9e8f675982d6184f293694e3c42",
+    "updated_at": "2026-07-25T19:17:23.638495+00:00"
+  },
+  "safety": {
+    "active_v1_modified_by_seal": false,
+    "automatic_publication_available": false,
+    "clean_final_built": false,
+    "concept_motion_is_silent_still_motion_only": true,
+    "concept_visuals_labeled": true,
+    "external_or_ai_image_generator_connected": false,
+    "kira_activated_by_seal": false
+  },
+  "stage": {
+    "authored_only": true,
+    "byte_count": 6254140,
+    "excluded": [
+      "**/__pycache__/**",
+      "*.pyc"
+    ],
+    "file_count": 65,
+    "root": "C:\\KiraVideos\\KiraLabsVideoStudio_v2_staging\\2.0.0-alpha.1",
+    "tree_sha256": "b312c5a9ea30984a24516cfb8ced2171066f41d3de438d50d98ce0b096c9b388"
+  },
+  "staging_backup": {
+    "authored_only": true,
+    "byte_count": 6254140,
+    "excluded": [
+      "**/__pycache__/**",
+      "*.pyc"
+    ],
+    "file_count": 65,
+    "matches_staging": true,
+    "root": "C:\\KiraVideos\\Backups\\KiraLabsVideoStudio_v2_alpha1_checkpoint_20260725_203101",
+    "tree_sha256": "b312c5a9ea30984a24516cfb8ced2171066f41d3de438d50d98ce0b096c9b388",
+    "verification": {
+      "alternate_data_streams_passed": true,
+      "backup_tree_sha256": "4d0d9dd1e7484c6b0ce9fb77dc88fdbaabff73fa485903d5e1dbaaa01bd9176b",
+      "byte_count": 6254140,
+      "file_count": 65,
+      "passed": true,
+      "path": "C:\\Users\\robmc\\Kira\\Data\\codex_reports\\20260725_kira_labs_video_studio_v2_alpha1_backup_verification.json",
+      "sha256": "4fa647b5949c516a7a19140e984794a412876c30e80ec638d31cd5b829fe39e6",
+      "source_tree_sha256": "4d0d9dd1e7484c6b0ce9fb77dc88fdbaabff73fa485903d5e1dbaaa01bd9176b"
+    }
+  },
+  "status": "private_staging_checkpoint_awaiting_robert_review",
+  "version": "2.0.0-alpha.1"
+}

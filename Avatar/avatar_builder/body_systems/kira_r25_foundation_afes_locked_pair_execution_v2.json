@@ -1,0 +1,151 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_locked_pair_execution.v2",
+  "attempt_id": "attempt_02",
+  "status": "AUTHORIZED_READ_ONLY_DIAGNOSTIC_PAIR_ONLY",
+  "scope": {
+    "body_work_only": true,
+    "read_only_blender_diagnostic": true,
+    "blend_mutation_allowed": false,
+    "blend_save_allowed": false,
+    "render_allowed": false,
+    "candidate_creation_allowed": false,
+    "body_authoring_allowed": false,
+    "runtime_activation_allowed": false,
+    "assignment_allowed": false,
+    "export_allowed": false,
+    "publication_allowed": false
+  },
+  "authorization_basis": {
+    "owner_requested_body_progress": true,
+    "owner_authorized_blender_problem_repair": true,
+    "bounded_operation": "extract_existing_foundation_afes_and_two_transition_rings_without_mutation",
+    "does_not_authorize_candidate_or_runtime_change": true
+  },
+  "bindings": {
+    "blender_executable": {
+      "path": "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe",
+      "bytes": 108687824,
+      "sha256": "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5"
+    },
+    "foundation_blend": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+      "bytes": 789620,
+      "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"
+    },
+    "attempt02_config": {
+      "path": "Avatar/avatar_builder/body_systems/kira_r25_foundation_afes_read_only_extraction_v2.json",
+      "bytes": 11046,
+      "sha256": "b4c992012f3f621d4bef5252c7cb7bf26d6d524b3859cc2685487ba10589f7dc"
+    },
+    "attempt02_extractor": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_v2.py",
+      "bytes": 20082,
+      "sha256": "508900309d7847e41997da72d2c85ee28317c9439e52c5f7311b82aac4553fc5"
+    },
+    "attempt02_topology_core": {
+      "path": "tools/kira_r25_afes_topology_core_v2.py",
+      "bytes": 28732,
+      "sha256": "ed777757d39fa0e47f04133c3376ea358272837391bca99b69228bba13ae7484"
+    },
+    "canonical_receipt": {
+      "path": "tools/kira_r25_canonical_receipt.py",
+      "bytes": 19262,
+      "sha256": "d36e25630105f026a60523268434dce85324fb3d1eebb8129549e48bb67f51e8"
+    },
+    "execution_wrapper": {
+      "path": "tools/blender_extract_kira_r25_foundation_afes_transition_rings_execution_v2.py",
+      "bytes": 8281,
+      "sha256": "01380a34c065cee1c67ba700d342d22c811aa985aa5722525718aa39d4f56f8e"
+    },
+    "parent_controller": {
+      "path": "tools/run_kira_r25_foundation_afes_locked_pair_v2.py",
+      "bytes": 31503,
+      "sha256": "4f1f0413526b6c9449033f070e1a0d46fef965cc6fea6af46f1c1b52461adb06"
+    }
+  },
+  "process_contract": {
+    "factory_startup": true,
+    "background": true,
+    "autoexec_disabled": true,
+    "python_exit_code": 1,
+    "stdin": "DEVNULL",
+    "restricted_environment": true,
+    "least_handle_inheritance": true,
+    "result_handle_must_be_win32_pipe": true,
+    "concurrent_bounded_pipe_drain": true,
+    "exactly_one_frame_and_eof": true,
+    "maximum_frame_bytes": 1048628,
+    "maximum_stdout_bytes": 4194304,
+    "maximum_stderr_bytes": 4194304,
+    "fresh_64_hex_session_nonce_per_run": true,
+    "process_timeout_seconds": 180,
+    "terminate_only_exact_child_on_timeout": true,
+    "terminate_only_exact_child_on_output_limit": true,
+    "project_modules_import_only_after_locked_verification": true,
+    "shell": false,
+    "close_fds": true,
+    "working_directory": ".",
+    "environment_allowlist": [
+      "SYSTEMROOT",
+      "WINDIR",
+      "TEMP",
+      "TMP",
+      "USERNAME",
+      "USERPROFILE",
+      "HOMEDRIVE",
+      "HOMEPATH",
+      "LOCALAPPDATA",
+      "APPDATA",
+      "Path"
+    ],
+    "forced_environment_relative_to_project": {
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "BLENDER_USER_CONFIG": "RecoverySprint/runtime_cache/r25_blender/user_config",
+      "BLENDER_USER_SCRIPTS": "RecoverySprint/runtime_cache/r25_blender/user_scripts",
+      "BLENDER_USER_DATAFILES": "RecoverySprint/runtime_cache/r25_blender/user_datafiles"
+    },
+    "exact_command_template": [
+      "<BLENDER_EXECUTABLE>",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "<FOUNDATION_BLEND>",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "<EXECUTION_WRAPPER>",
+      "--",
+      "--result-handle",
+      "<INHERITED_WIN32_PIPE_HANDLE>",
+      "--execution-contract-sha256",
+      "<EXPECTED_CONTRACT_SHA256>",
+      "--session-nonce",
+      "<FRESH_64_HEX_NONCE>",
+      "--run-number",
+      "<ONE_OR_TWO>"
+    ]
+  },
+  "required_fresh_run_count": 2,
+  "pair_acceptance": {
+    "distinct_session_nonces": true,
+    "exact_inner_payload_match": true,
+    "exact_full_normalized_topology_digest_match": true,
+    "compact_afes_evidence_validation": true,
+    "all_bound_inputs_locked_before_verification": true,
+    "all_bound_inputs_locked_through_after_snapshot": true,
+    "all_bound_inputs_unchanged_after_pair": true,
+    "each_raw_frame_persisted_append_only": true,
+    "canonical_outcome_for_every_post_root_exception": true
+  },
+  "append_only_output_root": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution/attempt_02",
+  "truth_boundary": {
+    "pair_pass_would_only_satisfy_foundation_afes_plus_transition_vertex_set_audit": true,
+    "semantic_cage_still_required": true,
+    "positive_jacobian_and_intersection_fixtures_still_required": true,
+    "body_authoring_not_granted": true,
+    "candidate_not_created": true,
+    "owner_review_not_implied": true,
+    "runtime_authority_not_implied": true
+  }
+}

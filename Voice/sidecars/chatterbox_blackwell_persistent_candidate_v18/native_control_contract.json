@@ -1,0 +1,118 @@
+{
+  "schema": "kira.blackwell.v18.native_diagnostic_telemetry_control_contract.v1",
+  "candidate_id": "kira_chatterbox_blackwell_native_diagnostic_telemetry_control_anchor_candidate_v18",
+  "status": "STATIC_DIAGNOSIS_TELEMETRY_ONLY",
+  "predecessor": {
+    "candidate": "V17",
+    "status": "CONSUMED_FAILURE_DO_NOT_RERUN",
+    "terminal_stage": 50,
+    "exact_failure_cause": "UNRESOLVED_WITH_CURRENT_TELEMETRY"
+  },
+  "repair": {
+    "id": "V17_STAGE50_DIAGNOSTIC_TELEMETRY_DISAMBIGUATION",
+    "durable_call_categories": [
+      "call_null_with_exception",
+      "call_null_without_exception",
+      "non_null_result_mismatch",
+      "post_validation_recheck_failure"
+    ],
+    "durable_result_predicates": [
+      "tuple_size_10",
+      "schema_is_unicode",
+      "schema_exact_value",
+      "success_boolean_true",
+      "predecessor_count_integer",
+      "predecessor_count_exact_6",
+      "graph_count_integer",
+      "graph_count_positive",
+      "boolean_4_false",
+      "boolean_5_false",
+      "boolean_6_false",
+      "boolean_7_false",
+      "boolean_8_false",
+      "boolean_9_false",
+      "no_pending_python_error"
+    ],
+    "evidence_stages": [
+      "python_call_pre",
+      "python_call_return",
+      "python_result_validation",
+      "python_post_validation_recheck"
+    ],
+    "exception_telemetry": {
+      "type_ascii_capacity": 64,
+      "message_ascii_capacity": 192,
+      "newlines_and_tabs_folded_to_space": true,
+      "non_ascii_replaced": true,
+      "no_unbounded_exception_text": true,
+      "no_person_or_private_state_input": true
+    }
+  },
+  "retained_validator_provenance": {
+    "path": "tools/native/kira_blackwell_voice_control_anchor_v15_validator.py",
+    "bytes": 21931,
+    "sha256": "2bf232b07b0b7b93de8776f5210bd2d89068ad76cb4ee46555b861ad2818d16a",
+    "private_module_name": "_kira_blackwell_v15_private_native_validator",
+    "callable": "validate_static_control_graph_v15",
+    "result_schema": "kira.blackwell.v15.native_validator_result.v1"
+  },
+  "v17_consumed_closure": {
+    "run_evidence_sha256": "269d1eadda20ca6a8a3d6e1679f80d850e32b79146aa562e22765fb624bad32b",
+    "receipt_sha256": "83c7b11b7c458bdcd5aa75308fe24f5ceae9f700de672eb01affd1f900ffa21d",
+    "run_outcome_sha256": "2651db197caa103b33b7d16fb718707a81cb3a5f2c9906246b775d7a46357dea",
+    "post_run_checkpoint_sha256": "758c444a4c6b989de1ea9a2413f23b2b798668c22561150889ad9c5e52b60f8f",
+    "root_attempt_35_sha256": "65d212ae07d8f7eeea4a23cc328965be13f647a5cd3fe4fd038b7cba9793dbc4"
+  },
+  "future_explicit_one_still_latency_observation": {
+    "schema_only_non_executable": true,
+    "camera_mode": "explicit_one_still_only",
+    "queue_cause_to_distinguish": "vision_lock_held_during_transient_qwen_vision_load_inference_unload",
+    "required_monotonic_timestamps": [
+      "look_now_requested",
+      "vision_lock_wait_started",
+      "vision_lock_acquired",
+      "vision_model_load_started",
+      "vision_model_load_completed",
+      "vision_inference_completed",
+      "vision_model_unload_completed_keep_alive_zero",
+      "vision_lock_released",
+      "normal_text_queue_wait_started",
+      "normal_text_generation_started",
+      "normal_text_first_token",
+      "normal_text_generation_completed",
+      "blackwell_voice_queue_wait_started",
+      "blackwell_voice_started",
+      "blackwell_audio_ready",
+      "playback_started"
+    ],
+    "required_derived_durations": [
+      "vision_lock_queue_wait_ms",
+      "vision_model_load_ms",
+      "vision_inference_ms",
+      "vision_unload_ms",
+      "normal_text_queue_wait_ms",
+      "normal_text_first_token_ms",
+      "normal_text_total_ms",
+      "voice_queue_wait_ms",
+      "voice_audio_ready_ms",
+      "text_complete_to_audio_ready_ms"
+    ],
+    "v18_native_static_control_records_live_timings": false,
+    "separate_audited_latency_executor_required": true
+  },
+  "execution_boundary": {
+    "v17_rerun_authorized": false,
+    "v18_execution_authority": "NONE",
+    "model_calls_authorized": false,
+    "gpu_calls_authorized": false,
+    "synthesis_authorized": false,
+    "audio_or_playback_authorized": false,
+    "latency_measurement_authorized": false,
+    "camera_or_device_authorized": false,
+    "person_state_authorized": false,
+    "body_or_blender_authorized": false,
+    "sarah_authorized": false,
+    "production_routing_authorized": false,
+    "different_fresh_audit_required": true
+  }
+}

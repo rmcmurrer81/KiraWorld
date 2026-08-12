@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "registry_id": "avatar_builder_reusable_method_registry_v1",
+  "policy": "Avatar/avatar_builder/policies/reusable_method_promotion_gate_v1.json",
+  "status": "LOCKED_NO_PROMOTED_METHODS",
+  "selectable_methods": [],
+  "rejected_method_archive": [
+    {
+      "archive_id": "clean_bridge_milestone_20260729",
+      "method_id": "clean_local_bridge_milestone",
+      "method_fingerprint_sha256": "e9b168e90f610ee419973db82dd3f0315c095b51d4f28567f889b7c50ae0e126",
+      "status": "REJECTED_ARCHIVED_NOT_SELECTABLE",
+      "selectable": false,
+      "failure_codes": [
+        "owner_approved_foundation_missing",
+        "independent_generalization_proof_missing",
+        "engineering_milestone_not_complete_method"
+      ],
+      "raw_payload_stored": false,
+      "private_data_stored": false,
+      "evidence_retention": "PRIVATE EVIDENCE REMAINS OUTSIDE THIS REGISTRY"
+    },
+    {
+      "archive_id": "same_surface_relief_trial_20260729",
+      "method_id": "same_surface_relief_trial",
+      "method_fingerprint_sha256": "0c619d13bdcb66cf199bd98bc73e28151fda8be43fb87d6b1e0b6c40712d7636",
+      "status": "REJECTED_ARCHIVED_NOT_SELECTABLE",
+      "selectable": false,
+      "failure_codes": [
+        "encoded_front_view_schematic",
+        "encoded_side_view_planar",
+        "owner_approved_foundation_missing",
+        "independent_generalization_proof_missing"
+      ],
+      "raw_payload_stored": false,
+      "private_data_stored": false,
+      "evidence_retention": "PRIVATE EVIDENCE REMAINS OUTSIDE THIS REGISTRY"
+    },
+    {
+      "archive_id": "symmetric_root_graft_trial_20260729",
+      "method_id": "symmetric_root_graft_trial",
+      "method_fingerprint_sha256": "34a83e9a2874440c16958d88eac6efeb8285a68db101409392ecbad961aef7e4",
+      "status": "REJECTED_ARCHIVED_NOT_SELECTABLE",
+      "selectable": false,
+      "failure_codes": [
+        "nonadjacent_self_intersections",
+        "retained_surface_intersections",
+        "encoded_lower_envelope_recessed",
+        "owner_approved_foundation_missing",
+        "independent_generalization_proof_missing"
+      ],
+      "raw_payload_stored": false,
+      "private_data_stored": false,
+      "evidence_retention": "PRIVATE EVIDENCE REMAINS OUTSIDE THIS REGISTRY"
+    }
+  ],
+  "invariants": {
+    "rejected_methods_are_selectable": false,
+    "raw_private_payloads_are_stored": false,
+    "owner_approval_may_be_inferred": false,
+    "generalization_may_use_private_data": false,
+    "runtime_activation_allowed": false
+  }
+}

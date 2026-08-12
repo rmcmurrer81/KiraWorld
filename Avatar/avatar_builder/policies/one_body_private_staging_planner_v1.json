@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "policy_id": "avatar_one_body_private_staging_planner_v1",
+  "purpose": "Permit a private, serial preparation plan only after one exact inactive body candidate passes the single-body objective and independent rendered-visual gates.",
+  "unlock_gate": "single_body_two_pass_quality_v1",
+  "required_unlock_status": "two_pass_quality_passed",
+  "maximum_concurrent_private_jobs": 1,
+  "allowed_private_job_types": [
+    "private_reference_audit",
+    "private_candidate_preparation"
+  ],
+  "eligible_maturity_lanes": {
+    "adult": {
+      "topology_lane": "confirmed_adult_topology",
+      "adult_anatomy_allowed": true
+    },
+    "non_adult_doll_safe": {
+      "topology_lane": "non_adult_doll_safe_topology",
+      "adult_anatomy_allowed": false
+    }
+  },
+  "unresolved_maturity_is_eligible": false,
+  "queue_creation_allowed_by_evaluator": false,
+  "automatic_execution_allowed_by_planner": false,
+  "owner_approval_inferred": false,
+  "runtime_activation_allowed": false,
+  "live_body_replacement_allowed": false,
+  "public_export_allowed": false,
+  "release_allowed": false,
+  "authoritative_batch_gate": "Avatar/avatar_builder/policies/two_subject_autobuild_gate_v2.json",
+  "authoritative_batch_gate_unchanged": true,
+  "truth_note": "A one-body pass may unlock only a content-addressed, dry-run plan of private reference-audit and candidate-preparation work, one job at a time. It cannot approve, activate, replace, export, release, or satisfy the separate two-distinct-subject gate. Every later candidate retains its exact identity, version, maturity, topology, privacy, evidence, and owner-review requirements."
+}

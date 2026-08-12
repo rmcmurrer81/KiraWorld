@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "contract_id": "avatar_builder_qwen35_visual_intake_v2",
+  "status": "STATIC_INERT_REPAIR_SUCCESSOR_NOT_LIVE_ACCEPTED",
+  "model": {
+    "name": "qwen3.5:9b",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "alternate_model_allowed": false,
+    "execution_in_this_contract": false
+  },
+  "authority": {
+    "registry_path": "Avatar/avatar_builder/policies/qwen35_visual_intake_owner_authority_registry_v1.json",
+    "registry_sha256": "e69c845427103c8166811ee5da0b3082ce9b5d8a406b87b51c74625b5180e0ac",
+    "caller_authored_authority_allowed": false,
+    "exact_registered_authority_artifact_required": true,
+    "canonical_profile_preflight_repeated_at_preparation_and_consumption": true,
+    "canonical_profile_subject_binding_object": "qwen35_visual_intake_subject_binding",
+    "canonical_profile_correction_reconciliation_object": "qwen35_visual_intake_reconciliation",
+    "profile_bytes_bind_owner_event_id_sha_subject_kind_version_and_timepoint": true,
+    "profile_bytes_bind_latest_exact_person_correction_event_id_and_sha": true,
+    "maximum_json_artifact_bytes": 8388608,
+    "latest_exact_person_correction_reconciled_both_directions": true,
+    "subject_kind_cross_checked_to_canonical_identity_class": true
+  },
+  "media": {
+    "source_metadata_loaded_from_registered_authority": true,
+    "caller_source_paths_or_provenance_allowed": false,
+    "real_bounded_image_decode_required": true,
+    "maximum_image_bytes": 25165824,
+    "maximum_parent_video_bytes": 4294967296,
+    "maximum_width": 8192,
+    "maximum_height": 8192,
+    "maximum_pixels": 40000000,
+    "maximum_source_items": 12,
+    "duplicate_physical_sources_rejected": true,
+    "video_sample_requires_registered_extractor_receipt": true,
+    "video_receipt_fields": [
+      "extractor_name",
+      "extractor_version",
+      "extractor_binary_sha256",
+      "exact_options",
+      "parent_video_sha256",
+      "stream_id",
+      "time_base",
+      "requested_timestamp_seconds",
+      "actual_pts",
+      "actual_timestamp_seconds",
+      "frame_index",
+      "duration_seconds",
+      "decoded_width",
+      "decoded_height",
+      "pixel_format",
+      "frame_sha256",
+      "independent_reextract_sha256",
+      "independent_reextract_bytes_match"
+    ],
+    "full_video_viewing_claim_allowed": false,
+    "unsampled_interval_claim_allowed": false,
+    "source_rehash_and_same_bytes_lock_required_before_encoding": true,
+    "source_and_authority_revalidation_required_after_response": true
+  },
+  "output": {
+    "schema_id": "avatar_builder_qwen35_visual_observation_v2",
+    "free_text_is_untrusted_non_executable_evidence": true,
+    "all_free_text_fields_receive_defense_in_depth_semantic_scan": true,
+    "regex_scan_claims_complete_semantic_proof": false,
+    "deterministic_allowlisted_translation_required_before_authoring": true,
+    "translation_implemented_here": false,
+    "allowed_suggestion_groups": [
+      "morph",
+      "material",
+      "hair"
+    ],
+    "direct_geometry_or_body_mutation_allowed": false,
+    "runtime_activation_allowed": false,
+    "publication_allowed": false
+  },
+  "persistence": {
+    "plan_root": "RecoverySprint/avatar_builder_qwen35_visual_intake_v2/plans",
+    "validated_observation_root": "RecoverySprint/avatar_builder_qwen35_visual_intake_v2/validated_observations",
+    "json_only": true,
+    "existing_destination_overwrite_allowed": false,
+    "atomic_exclusive_create_required": true,
+    "profile_policy_blend_or_body_destination_allowed": false
+  }
+}

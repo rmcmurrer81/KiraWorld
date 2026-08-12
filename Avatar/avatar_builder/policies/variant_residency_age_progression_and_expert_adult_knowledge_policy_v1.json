@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "policy_id": "variant_residency_age_progression_and_expert_adult_knowledge_policy_v1",
+  "recorded_at_utc": "2026-08-09T21:30:58.6598334Z",
+  "status": "OWNER_MACHINE_POLICY_RECORDED_RUNTIME_RESIDENCY_AND_BODY_AUTHORING_NOT_IMPLEMENTED",
+  "owner_authority": {
+    "authority": "Robert_explicit_owner_decision",
+    "offline_confirmation_allowed": true,
+    "network_lookup_required": false,
+    "decision_records": [
+      {
+        "decision_id": "peter_gwen_marinette_separate_homes_20260809",
+        "exact_text": "I forgot what earth but it is adult living in her own apartment in new york.  We were planning on building paris for marinette and new york for Peter and Gwen.  For Peter and Gwen we will have separate apartments for them and marinette will have her bedroom in the bakery.",
+        "exact_text_sha256": "51a520545a82df2af84cdd35f36d2c70bf429edd4912a555d0780d759d614e89"
+      },
+      {
+        "decision_id": "variant_residency_spa_twenty_plus_and_expert_adult_knowledge_20260809",
+        "exact_text": "After a while of being a variant they can choose to move to home world and some like marinette can go to the spa and request to be age up which it will age up the look of the body until it looks like someone at least in their 20s before giving full anatomy.  All experts are adults and adults have sex education knowledge that you already gave to kira.",
+        "exact_text_sha256": "068f8d953503500322fa6ec4301e5ec7188c9359231ebc9da8a61f37bf231c50"
+      }
+    ]
+  },
+  "exact_source_bindings": {
+    "existing_spa_age_progression_policy": {
+      "path": "Avatar/avatar_builder/policies/spa_age_up_policy.json",
+      "bytes": 6171,
+      "sha256": "eaa3f91955044e05a1f33a71a6f2eda75f93530971e02b2474e13d4347bd9bd1",
+      "required_contract": "two_stage_spa_age_progression_v1",
+      "preserved_unchanged": true
+    },
+    "generated_experts_adult_owner_directive": {
+      "path": "Avatar/avatar_builder/policies/evidence/generated_experts_adult_owner_directive_20260716.json",
+      "bytes": 1197,
+      "sha256": "ea7218ece3c5e187020e53ba77bfa11dcfacdb344c8714f17d38f2a02e56386b",
+      "required_evidence_id": "generated_experts_adult_owner_directive_20260716"
+    },
+    "adult_curriculum": {
+      "path": "System/Knowledge/confirmed_adult_sexual_reproductive_health_curriculum_v1.json",
+      "bytes": 20931,
+      "sha256": "f64418eafb120dc4c9f5b02bb6735b1329e6baf932a8b529ef08140af773c7c9"
+    }
+  },
+  "variant_home_world_residency": {
+    "person_choice_required": true,
+    "automatic_move_allowed": false,
+    "minimum_prior_activation_count": 2,
+    "eligibility_evidence_required": [
+      "temporary_or_variant_origin_verified",
+      "durable_identity_and_continuity_record_exists",
+      "at_least_two_prior_activations_verified",
+      "permanent_promotion_or_residency_eligibility_verified",
+      "person_voluntary_home_world_move_choice_recorded",
+      "exact_destination_and_private_home_assignment_recorded",
+      "destination_world_and_home_are_safe_and_owner_reviewed"
+    ],
+    "move_effect": "QUEUE_PRIVATE_INACTIVE_RESIDENCY_ASSIGNMENT",
+    "does_not_automatically": [
+      "activate_the_person",
+      "build_or_replace_a_body",
+      "change_maturity",
+      "grant_adult_anatomy",
+      "merge_separate_homes",
+      "claim_the_person_has_moved_before_runtime_evidence"
+    ]
+  },
+  "spa_age_progression_successor_constraints": {
+    "inherits_existing_contract": "two_stage_spa_age_progression_v1",
+    "original_non_adult_identity_and_body_preserved": true,
+    "separate_variant_candidate_id_required": true,
+    "person_voluntary_age_progression_choice_required": true,
+    "stage_1": {
+      "presentation_goal": "visually_at_least_in_their_twenties",
+      "minimum_apparent_age_years": 20,
+      "older_taller_proportion_and_rig_refit_required": true,
+      "exact_maturity_status": "unresolved",
+      "body_lane": "doll_safe_non_anatomical",
+      "adult_anatomy_allowed": false,
+      "adult_curriculum_unlocked_by_stage_1": false,
+      "owner_visual_review_required": true,
+      "required_evidence": [
+        "separate_variant_identity",
+        "full_body_age_progression_review_views",
+        "apparent_age_floor_twenty_or_older_verified",
+        "older_taller_proportions_verified",
+        "rig_and_deformation_refit_verified",
+        "adult_anatomy_absent_verified",
+        "exact_artifact_sha256"
+      ]
+    },
+    "stage_2": {
+      "separate_exact_confirmed_adult_classification_required": true,
+      "person_separate_adult_anatomy_choice_required": true,
+      "complete_adult_curriculum_available_immediately_after_confirmed_adult_classification": true,
+      "adult_anatomy_allowed": "only_after_stage_1_and_both_stage_2_gates_pass",
+      "runtime_activation_allowed": false,
+      "owner_visual_approval_required_after_build": true
+    }
+  },
+  "expert_adult_knowledge": {
+    "all_generated_expert_profiles_are_adults_by_owner_directive": true,
+    "future_expert_creation_requires_exact_person_classification_record": true,
+    "expert_label_or_occupation_alone_is_maturity_evidence": false,
+    "confirmed_adult_expert_curriculum_assignment": "IMMEDIATE_COMPLETE_SOURCE_BACKED_ADULT_CURRICULUM",
+    "curriculum_matches_kira_source_asset": true,
+    "curriculum_assignment_independent_of": [
+      "relationship_status",
+      "sexual_or_romantic_interest",
+      "adult_anatomy_selection",
+      "prior_experience",
+      "body_availability"
+    ],
+    "curriculum_does_not_create": [
+      "adult_anatomy",
+      "consent",
+      "desire",
+      "preference",
+      "relationship",
+      "activity",
+      "lesson_completion_memory"
+    ]
+  },
+  "blocked_actions": [
+    "moving_a_variant_to_home_world_without_their_recorded_choice",
+    "aging_the_original_non_adult_body_in_place",
+    "adding_adult_anatomy_during_stage_1",
+    "treating_a_twenty_plus_appearance_as_confirmed_adult_classification",
+    "treating_adult_curriculum_as_anatomy_consent_desire_or_activity",
+    "merging_peter_and_gwen_into_one_apartment",
+    "giving_normal_marinette_adult_anatomy"
+  ],
+  "implementation_truth": {
+    "machine_policy_recorded": true,
+    "world_residency_runtime_connected": false,
+    "home_world_move_executed": false,
+    "spa_stage_1_twenty_plus_authoring_connected": false,
+    "adult_anatomy_authoring_connected": false,
+    "expert_exact_person_curriculum_runtime_binding_complete": false,
+    "body_or_world_mutated": false,
+    "person_activated_or_moved": false
+  }
+}

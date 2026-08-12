@@ -1,0 +1,77 @@
+{
+  "schema": "kira.avatar.r25.foundation_afes_locked_pair_preoutcome_diagnostic.v3r13",
+  "status": "STATIC_CANDIDATE_PENDING_FRESH_AUDIT_NO_EXECUTION_AUTHORITY",
+  "execution_authority": "NONE",
+  "purpose": "Append-only native reachability diagnostic repairing only the v3r12 terminal-marker CRLF false negative while stopping before Python code, controller, AFES, Blender, outcome reservation, body mutation, save, render, or export.",
+  "authoring_boundary": {
+    "mode": "append_only_static_compile_and_inspection_only",
+    "v3r12_one_shot_authority": "CONSUMED_NO_RETRY",
+    "v3r12_source_binary_audit_authority_and_run_evidence": "PRESERVE_BYTE_FOR_BYTE",
+    "launcher_child_python_afes_blender_execution": false,
+    "body_mutation_save_render_export": false,
+    "main_handoff_or_current_truth_registry_update": false
+  },
+  "repair": {
+    "exact_cause": "v3r12 child fputs LF was translated by the Microsoft CRT to CRLF; the frozen observer correctly required the 51-byte LF-only literal and therefore falsely rejected the otherwise exact 52-byte capture ending 0d0a",
+    "producer": "one compile-time unsigned-byte marker written once to the inherited stdout pipe with direct Win32 WriteFile and an exact full-write count; no CRT text output function is used for the marker",
+    "observer": "one strict exact-size and memcmp gate against the same compile-time byte array, plus raw exit 41, empty stderr, no stdout overflow, and no stderr overflow",
+    "rejected_variants": [
+      "CRLF marker",
+      "partial marker",
+      "marker with trailing bytes",
+      "marker prefix or suffix only",
+      "stdout overflow",
+      "stderr content or overflow",
+      "wrong raw exit"
+    ],
+    "no_broad_acceptance": "no line-ending normalization, trimming, alternate marker, substring, prefix, or suffix acceptance"
+  },
+  "fixed_runtime_subjects": {
+    "retained_manifest": {
+      "path": "RecoverySprint/continuation_20260809/kira_r25_foundation_afes_locked_pair_execution_static_preparation/attempt_03r9/RETAINED_NATIVE_LOCK_MANIFEST.tsv",
+      "bytes": 24975,
+      "sha256": "6df14df08a3f4c5a68c22b3eb3ccd8d8ce46209a156784a7582357071fc78d96"
+    },
+    "v3r12_accepted_audit_checkpoint": {
+      "path": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r12_fresh_static_audit/attempt_01/CHECKPOINT.md",
+      "bytes": 8289,
+      "sha256": "55a5a348d05fd8dd53ee370f2e108248aecf6ba3d8fc6e78881ae274e98d0ee7"
+    },
+    "v3r12_consumed_run_evidence": {
+      "path": "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r12_static_preparation/attempt_01/RUN_EVIDENCE.jsonl",
+      "bytes": 3243,
+      "sha256": "58a5bff850ccfe6838b3c6eb6e834745a5bb992075a8af5744659807fc2a9ca9"
+    },
+    "v3r12_consumed_run_postmortem": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r12_consumed_run_static_postmortem/attempt_01/CHECKPOINT.md",
+    "runtime_control_checkpoint": "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r13_static_preparation/attempt_01/RUNTIME_CONTROL_CHECKPOINT.md",
+    "native_source": "tools/native/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r13.c",
+    "static_test": "Testing/test_kira_r25_foundation_afes_locked_pair_preoutcome_diagnostic_v3r13_static.ps1"
+  },
+  "fixed_future_surfaces": {
+    "fresh_audit": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r13_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.tsv",
+    "fresh_audit_digest": "RecoverySprint/continuation_20260810/kira_r25_afes_v3r13_fresh_static_audit/attempt_01/INDEPENDENT_AUDIT.sha256",
+    "one_shot_evidence": "RecoverySprint/continuation_20260810/kira_r25_afes_locked_pair_preoutcome_diagnostic_v3r13_static_preparation/attempt_01/RUN_EVIDENCE.jsonl"
+  },
+  "fresh_audit_requirements": {
+    "decision": "ACCEPTED_FOR_ONE_BOUNDED_NATIVE_DIAGNOSTIC_ONLY",
+    "boundary": "different_fresh_exact_byte_static_auditor",
+    "canonical_encoding": "ASCII TSV with LF only, exact key order, exact one-line lowercase digest sidecar",
+    "must_bind": [
+      "native_executable_sha256",
+      "identity_anchor_sha256",
+      "contract_sha256",
+      "native_source_sha256",
+      "static_test_sha256",
+      "runtime_control_checkpoint_sha256",
+      "predecessor_audit_checkpoint_sha256",
+      "retained_manifest_sha256",
+      "v3r12_run_evidence_sha256",
+      "v3r12_postmortem_sha256"
+    ]
+  },
+  "truth_limits": [
+    "Static compilation and inspection are not execution acceptance.",
+    "A later successful diagnostic would prove only native reachability through the explicit pre-outcome boundary.",
+    "No body, anatomy, movement, Python, AFES, or Blender result is produced by this diagnostic."
+  ]
+}

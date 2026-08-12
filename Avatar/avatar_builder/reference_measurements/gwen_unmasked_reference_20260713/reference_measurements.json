@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-13T16:04:00.480750+00:00",
+  "source_asset": "Assets/third_party/intake/3d_models_kira_world/characters/spider_gwen/spider_gwen_low_poly_unmasked_reference.glb",
+  "reference_only_no_mesh_copying": true,
+  "scene_bounds": {
+    "low": [
+      -0.72183,
+      -0.13601,
+      0.00066
+    ],
+    "high": [
+      0.72123,
+      0.14062,
+      1.79223
+    ],
+    "height": 1.79157,
+    "center": [
+      -0.0003,
+      0.00231,
+      0.89645
+    ]
+  },
+  "body_mesh": {
+    "name": "Object_2",
+    "vertices": 7490,
+    "bounds_low": [
+      -0.72183,
+      -0.13601,
+      0.00066
+    ],
+    "bounds_high": [
+      0.72123,
+      0.14062,
+      1.78151
+    ]
+  },
+  "body_core_band_widths": {
+    "shoulder": {
+      "z_norm": [
+        0.7,
+        0.82
+      ],
+      "core_width": 0.71619,
+      "width_to_height": 0.39975
+    },
+    "chest": {
+      "z_norm": [
+        0.57,
+        0.69
+      ],
+      "core_width": 0.28855,
+      "width_to_height": 0.16106
+    },
+    "waist": {
+      "z_norm": [
+        0.45,
+        0.55
+      ],
+      "core_width": 0.3544,
+      "width_to_height": 0.19782
+    },
+    "hip": {
+      "z_norm": [
+        0.34,
+        0.46
+      ],
+      "core_width": 0.34674,
+      "width_to_height": 0.19354
+    },
+    "thigh": {
+      "z_norm": [
+        0.2,
+        0.34
+      ],
+      "core_width": 0.27666,
+      "width_to_height": 0.15442
+    },
+    "calf": {
+      "z_norm": [
+        0.08,
+        0.22
+      ],
+      "core_width": 0.27089,
+      "width_to_height": 0.1512
+    }
+  },
+  "hair_meshes": [
+    {
+      "name": "Object_3",
+      "dims": [
+        0.20872,
+        0.24081,
+        0.2761
+      ],
+      "center": [
+        -0.004,
+        0.00625,
+        1.65418
+      ]
+    }
+  ],
+  "views": {
+    "front": "Avatar/avatar_builder/reference_measurements/gwen_unmasked_reference_20260713/reference_front.png",
+    "side": "Avatar/avatar_builder/reference_measurements/gwen_unmasked_reference_20260713/reference_side.png",
+    "back": "Avatar/avatar_builder/reference_measurements/gwen_unmasked_reference_20260713/reference_back.png",
+    "head_front": "Avatar/avatar_builder/reference_measurements/gwen_unmasked_reference_20260713/reference_head_front.png",
+    "head_side": "Avatar/avatar_builder/reference_measurements/gwen_unmasked_reference_20260713/reference_head_side.png"
+  }
+}

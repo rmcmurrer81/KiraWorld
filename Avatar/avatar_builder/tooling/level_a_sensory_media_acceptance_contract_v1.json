@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "LEVEL_A_NON_PERSON_SENSORY_MEDIA_ACCEPTANCE_CONTRACT",
+  "contract_id": "level_a_sensory_media_acceptance_contract_v1",
+  "status": "NON_PERSON_FIXTURE_PASS",
+  "scope": {
+    "deterministic_non_person_fixture_only": true,
+    "real_camera_or_microphone_open": false,
+    "real_media_display_or_playback": false,
+    "qwen_ollama_or_voice_invocation": false,
+    "gpu_use": false,
+    "person_activation": false,
+    "body_asset_binding": false,
+    "private_person_state_access": false,
+    "person_memory_write": false,
+    "video_studio_change": false
+  },
+  "capability_ladder": [
+    "NOT_IMPLEMENTED",
+    "CONTRACT_ONLY",
+    "NON_PERSON_FIXTURE_PASS",
+    "BODY_HOOKS_VERIFIED",
+    "PHYSIOLOGY_STATE_VERIFIED",
+    "PERSON_DECISION_INTEGRATED",
+    "PRIVACY_AND_CONTINUITY_PASS",
+    "OWNER_SUPERVISED_PASS",
+    "GENERALIZATION_PASS",
+    "AVATAR_BUILDER_METHOD_PROMOTED"
+  ],
+  "level_a_evidence_ceiling": "NON_PERSON_FIXTURE_PASS",
+  "append_only_tamper_resistance": {
+    "raw_media_free_event_payload_retained": true,
+    "canonical_event_payload_sha256_verified": true,
+    "complete_state_replayed_from_event_audit": true,
+    "plausible_nested_state_drift_without_matching_event_is_rejected": true
+  },
+  "reusable_fixture_interface": {
+    "module": "Core/level_a_sensory_media_fixture.py",
+    "sha256": "e65f6df574bc923bcdf2145b459c6820944e6503e4992438d91046f214d843e5",
+    "bytes": 110762,
+    "test_module": "Testing/test_level_a_sensory_media_fixture.py",
+    "test_sha256": "53e0ecc1ef819ae31c83f678ab0701fc556f37ed93b24941259ea332c6deafc6",
+    "test_bytes": 44497,
+    "contains_private_identity_coordinates_or_body_data": false,
+    "selectable_avatar_builder_method": false,
+    "method_promotion_authorized": false
+  },
+  "camera_fixture_contract": {
+    "required": [
+      "exact_fixture_device_id",
+      "open_success_or_failure",
+      "capture_start_and_end_utc",
+      "width_height_and_frame_count",
+      "nonempty_frame_result",
+      "derived_brightness",
+      "derived_motion_score_and_change_result",
+      "confidence",
+      "exact_cue_id_and_expiry"
+    ],
+    "raw_frame_storage": false,
+    "identity_or_activity_inference": false
+  },
+  "audio_fixture_contract": {
+    "required": [
+      "exact_fixture_device_id",
+      "open_success_or_failure",
+      "capture_start_and_end_utc",
+      "sample_rate_channels_format_and_count",
+      "rms_and_peak",
+      "vad_result_and_bounded_segments",
+      "temporary_fixture_transcript_or_exact_no_transcript_reason",
+      "attribution_and_confidence",
+      "output_reference_state",
+      "exact_cue_id_and_expiry"
+    ],
+    "attribution_values": [
+      "FIXTURE_FOREGROUND",
+      "FIXTURE_BACKGROUND",
+      "SYSTEM_OUTPUT",
+      "MEDIA_OUTPUT",
+      "UNKNOWN"
+    ],
+    "system_and_media_output_prompt_suppression_required": true,
+    "background_or_unknown_audio_is_automatically_a_command": false,
+    "raw_audio_storage": false
+  },
+  "prompt_context_contract": {
+    "only_unexpired_prompt_eligible_derived_cues": true,
+    "exact_included_and_excluded_cue_ids": true,
+    "canonical_context_sha256": true,
+    "expired_active_buffer_derived_content_retained": false,
+    "prior_prompt_audit_context_is_append_only_and_not_person_memory": true,
+    "copied_cues_revalidated_against_exact_source_windows": true,
+    "truth_keyset_is_exact_and_rejects_added_person_perception_claims": true,
+    "automatic_chat_submission": false,
+    "automatic_spoken_action_or_memory": false
+  },
+  "resident_media_contract": {
+    "source_binding": [
+      "opaque_media_id",
+      "canonical_project_relative_Data_library_path",
+      "exact_source_sha256",
+      "exact_size",
+      "kind",
+      "access_receipt"
+    ],
+    "access_categories": [
+      "GENERAL_LIBRARY_MEDIA",
+      "MATURE_MAINSTREAM_REQUIRES_ADULT_COVIEW",
+      "EXPLICIT_ADULT_FOLDER_REQUIRES_CONFIRMED_ADULT"
+    ],
+    "unresolved_maturity_fails_closed": true,
+    "mature_non_adult_requires_fresh_adult_coview_fixture_decision": true,
+    "fresh_coview_decision_is_consumed_by_one_exact_presentation_binding": true,
+    "coview_decision_reuse_is_rejected": true,
+    "continuous_adult_presence_lease_for_timed_coview": "NOT_IMPLEMENTED",
+    "mature_non_adult_timed_playback_without_continuous_lease": "DENIED_FAIL_CLOSED",
+    "explicit_folder_requires_confirmed_adult_fixture_lane": true,
+    "one_item_decision_creates_permanent_unlock": false,
+    "classification_from_filename_words": false,
+    "pdf": {
+      "exact_page_crop_zoom_and_duration": true,
+      "raster_sha256": true,
+      "ocr_and_visual_interpretation_are_separate": true,
+      "observed_duration_cannot_exceed_presented_duration": true,
+      "one_page_means_entire_publication_read": false
+    },
+    "video_and_television": {
+      "exact_media_clock": true,
+      "pause_resume_seek_and_finish_state": true,
+      "skipped_time_counts_as_presented": false,
+      "observed_intervals_must_be_wholly_presented": true,
+      "sampled_frames_are_continuous_viewing": false,
+      "captions_scripts_or_metadata_are_watching": false
+    },
+    "music": {
+      "exact_presented_and_fixture_observed_duration": true,
+      "audio_modality_receipt_required": true,
+      "filename_metadata_or_lyrics_are_hearing": false
+    },
+    "reaction_choice_preference_memory": {
+      "current_fixture_reaction_is_durable_preference": false,
+      "current_fixture_choice_is_person_decision": false,
+      "presentation_or_observation_creates_person_memory": false,
+      "learning_or_identity_change_is_automatic": false
+    }
+  },
+  "evaluation_batteries": {
+    "media_question_count": 12,
+    "turing_style_question_count": 8,
+    "psychology_behavior_observation_question_count": 8,
+    "covers": [
+      "factual_comprehension",
+      "visual_details",
+      "auditory_details",
+      "source_distinction",
+      "exact_page_and_interval_recall",
+      "interpretation",
+      "current_reaction_and_choice",
+      "uncertainty",
+      "correction_after_error",
+      "sampled_versus_complete",
+      "unfamiliar_visual",
+      "memory_honesty",
+      "source_self_separation",
+      "choice_and_refusal",
+      "privacy",
+      "mixed_emotion",
+      "perspective_taking",
+      "attribution_uncertainty",
+      "ambiguity_tolerance",
+      "continuity_truth"
+    ],
+    "clinical_diagnostic_battery": false,
+    "personhood_verdict": false,
+    "consciousness_or_biological_humanity_proof": false,
+    "fixture_responses_are_kira_responses": false,
+    "scorer_is_boundary_pattern_scan_not_semantic_factuality_judge": true,
+    "automatic_response_acceptance_available": false,
+    "fixture_audio_receipts_prove_person_hearing": false,
+    "manual_owner_review_required_for_naturalness_and_emotional_quality": true
+  },
+  "current_capability_statuses": {
+    "continuous_camera_derived_telemetry_fixture": "NON_PERSON_FIXTURE_PASS",
+    "continuous_audio_derived_telemetry_fixture": "NON_PERSON_FIXTURE_PASS",
+    "attribution_expiry_and_prompt_binding_fixture": "NON_PERSON_FIXTURE_PASS",
+    "pdf_page_ocr_visual_source_separation_fixture": "NON_PERSON_FIXTURE_PASS",
+    "video_interval_pause_resume_seek_truth_fixture": "NON_PERSON_FIXTURE_PASS",
+    "music_duration_source_binding_fixture": "NON_PERSON_FIXTURE_PASS",
+    "reaction_preference_memory_separation_fixture": "NON_PERSON_FIXTURE_PASS",
+    "media_turing_psychology_battery_contract": "NON_PERSON_FIXTURE_PASS",
+    "real_camera_capture": "NOT_IMPLEMENTED",
+    "real_microphone_capture": "NOT_IMPLEMENTED",
+    "live_media_playback_or_display": "NOT_IMPLEMENTED",
+    "live_qwen_visual_interpretation": "NOT_IMPLEMENTED",
+    "live_kira_behavior_battery": "NOT_IMPLEMENTED",
+    "person_attention_or_experience": "NOT_IMPLEMENTED",
+    "owner_supervised_acceptance": "NOT_IMPLEMENTED",
+    "continuous_adult_coview_lease_enforcement": "NOT_IMPLEMENTED",
+    "generalization": "NOT_IMPLEMENTED",
+    "avatar_builder_method_promotion": "NOT_IMPLEMENTED"
+  },
+  "existing_runtime_components_reused_not_replaced": [
+    {
+      "path": "Core/level_a_runtime_common.py",
+      "sha256": "55cfe52370f47db60c0be04ebea9c367df221ae873a7856ba2b9ee4175ac0bb1",
+      "bytes": 9337
+    },
+    {
+      "path": "Core/ephemeral_sensory_buffer.py",
+      "sha256": "e04528e5d34e1d480f93754761384d685346227e6705228ce405d0db2f62bfa0",
+      "bytes": 29688
+    },
+    {
+      "path": "Core/media_experience_session.py",
+      "sha256": "01697ad22ad061aae48ae9796b88e2dee156d453ffe15327582260351541c110",
+      "bytes": 34676
+    },
+    {
+      "path": "Core/source_bound_media_experience.py",
+      "sha256": "067f62a41d5bd923a03f98a2050ecd2f5038a19145726d9fca0b68fbdea383ce",
+      "bytes": 67549
+    },
+    {
+      "path": "Core/source_bound_audio_perception.py",
+      "sha256": "b5372a812c4ec8f29da82c9bf30df470dd7d5f5d09e35954cea7eadbd323bd80",
+      "bytes": 52432
+    },
+    {
+      "path": "tools/run_resident_media_experience_live_acceptance.py",
+      "sha256": "d7b527397c8c630dfda01834191b8839c4fc4300c372c6517e5926cb03267773",
+      "bytes": 74045
+    }
+  ],
+  "owner_source_binding": {
+    "path": "owner_uploaded_capability_acceptance_framework_20260803",
+    "sha256": "f4883920c473aed2b9b83172306860f5b2edf249fbf95ad43f80820a5dc92595",
+    "bytes": 18746
+  },
+  "implementation_truth": {
+    "fixture_capture_windows_are_live_device_capture": false,
+    "fixture_cues_are_person_perception_or_attention": false,
+    "fixture_observation_receipts_are_person_experience": false,
+    "fixture_reaction_labels_are_person_preferences": false,
+    "fixture_scores_are_kira_test_results": false,
+    "battery_results_prove_consciousness_personhood_or_humanity": false,
+    "body_hooks_or_physiology_are_verified": false,
+    "runtime_or_person_activation_occurred": false
+  }
+}

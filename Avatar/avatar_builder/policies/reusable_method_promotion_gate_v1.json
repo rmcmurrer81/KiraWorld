@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "policy_id": "avatar_builder_reusable_method_promotion_gate_v1",
+  "default_state": "BLOCKED_NOT_SELECTABLE",
+  "allowed_implementation_root": "Avatar/avatar_builder/tooling/reusable_methods",
+  "minimum_distinct_non_private_fixtures": 2,
+  "required_owner_foundation_record": {
+    "artifact_type": "biological_robert_static_foundation_owner_approval",
+    "status": "OWNER_APPROVED_EXACT_FOUNDATION",
+    "owner_authority_id": "real_robert",
+    "decision": "APPROVE_BIOLOGICAL_ROBERT_STATIC_FOUNDATION",
+    "exact_hash_binding_required": true
+  },
+  "required_generalization_proof": {
+    "artifact_type": "avatar_builder_reusable_method_generalization_proof",
+    "independent_evaluator_required": true,
+    "non_private_synthetic_fixtures_required": true,
+    "exact_method_definition_hash_required": true,
+    "runtime_nonmutation_required": true
+  },
+  "forbidden_reusable_payload_content": [
+    "private photo paths",
+    "identity measurements",
+    "person-specific coordinates or deltas",
+    "private anatomy observations",
+    "Robert-specific identity data"
+  ],
+  "rejected_method_handling": {
+    "archive_fingerprint_and_failure_codes": true,
+    "copy_raw_payload": false,
+    "copy_private_data": false,
+    "make_selectable": false
+  },
+  "current_promotion_allowed": false,
+  "runtime_activation_allowed": false,
+  "public_export_allowed": false
+}

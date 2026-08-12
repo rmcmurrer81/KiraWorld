@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "policy_id": "separate_shareable_wearable_components_v1",
+  "status": "contract_available_no_production_garment_approved",
+  "body_separation": {
+    "garment_must_be_a_separate_artifact": true,
+    "clothing_baked_into_body_allowed": false,
+    "body_surface_copy_as_garment_allowed": false,
+    "hair_is_not_clothing": true,
+    "shoes_and_accessories_are_separate_components": true
+  },
+  "size_compatibility": {
+    "scheme": "body_measurement_envelope_v1",
+    "measurement_unit": "metre",
+    "size_label_alone_counts_as_fit_proof": false,
+    "target_measurements_must_be_inside_reviewed_envelope": true,
+    "ease_allowance_must_be_reviewed": true,
+    "same_maturity_lane_required": true,
+    "exact_target_body_and_rig_binding_required": true,
+    "target_deformation_and_penetration_review_required": true
+  },
+  "sharing": {
+    "same_size_sharing_supported_after_review": true,
+    "single_physical_item_identity_persists": true,
+    "clone_on_transfer_allowed": false,
+    "owner_consent_required": true,
+    "wearer_consent_required": true,
+    "transfer_record_required": true,
+    "per_target_fit_binding_is_an_adapter_not_a_new_garment": true
+  },
+  "lifecycle": {
+    "required_capabilities": [
+      "stored",
+      "grasped",
+      "put_on",
+      "worn",
+      "take_off",
+      "released",
+      "transferred_between_people"
+    ],
+    "physical_transition_evidence_required": true,
+    "timer_or_state_name_only_counts_as_proof": false,
+    "put_on_and_take_off_must_be_reviewed_for_each_target_binding": true
+  },
+  "release_limits": {
+    "this_policy_authors_or_approves_a_garment": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false,
+    "may_release_positive_proof_autobuild": false,
+    "positive_proof_policy_remains": "Avatar/avatar_builder/policies/positive_proof_autobuild_gate_v1.json"
+  },
+  "truth_note": "This is a compatibility contract, not a passing garment. No current garment gains sharing, runtime, public-export, or auto-build authority merely because this policy exists."
+}
