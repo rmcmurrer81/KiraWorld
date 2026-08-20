@@ -1,0 +1,134 @@
+{
+  "contract_id": "temporary_ai_qwen3_tts_original_voice_forge_acceptance_v1",
+  "version": 1,
+  "status": "INERT_ACCEPTANCE_HARNESS_IMPLEMENTED_REAL_MODEL_EXECUTION_NOT_RUN",
+  "scope": "Private append-only acceptance of one original trait-described TemporaryAI expert voice using Qwen3-TTS VoiceDesign followed by an exact reusable 0.6B Base clone prompt.",
+  "execution": {
+    "default_is_inert": true,
+    "explicit_execute_flag_required": true,
+    "exact_contract_hash_required": true,
+    "exact_job_hash_required": true,
+    "exact_worker_hash_required": true,
+    "exact_environment_spec_hash_required": true,
+    "no_download_acknowledgement_required": true,
+    "private_unreviewed_acknowledgement_required": true,
+    "network_allowed": false,
+    "playback_allowed": false,
+    "activation_assignment_publication_or_upload_allowed": false,
+    "one_heavy_model_at_a_time": true,
+    "torch_compile_allowed": false,
+    "flash_attention_or_triton_required": false,
+    "attention_implementation": "sdpa",
+    "device_map": "cuda:0",
+    "dtype": "bfloat16"
+  },
+  "paths": {
+    "isolated_sidecar_root": "Voice/sidecars/qwen3_tts_voice_forge",
+    "isolated_python": "Voice/sidecars/qwen3_tts_voice_forge/.venv/Scripts/python.exe",
+    "local_model_root": "Voice/models/qwen3_tts",
+    "voice_design_model_directory": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+    "base_model_directory": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-0.6B-Base",
+    "private_output_root": "Voice/voice_forge/private_review",
+    "worker": "tools/qwen3_tts_original_voice_forge_worker.py",
+    "environment_spec": "Voice/sidecars/qwen3_tts_voice_forge/environment_spec_v1.json"
+  },
+  "required_offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "TOKENIZERS_PARALLELISM": "false"
+  },
+  "identity": {
+    "voice_origin": "ORIGINAL_SYNTHETIC_TEXT_DESIGN_NOT_PERSON_CLONE",
+    "required_identity_basis": "original_trait_description",
+    "named_real_person_imitation_allowed": false,
+    "authorized_human_reference_clone_allowed_in_this_harness": false,
+    "design_prompt_must_be_trait_based": true
+  },
+  "official_api_sequence": [
+    "Qwen3TTSModel.from_pretrained",
+    "generate_voice_design",
+    "UNLOAD_VOICE_DESIGN_AND_VERIFY_VRAM_RELEASE",
+    "Qwen3TTSModel.from_pretrained",
+    "create_voice_clone_prompt",
+    "generate_voice_clone",
+    "UNLOAD_BASE_AND_VERIFY_VRAM_RELEASE"
+  ],
+  "exact_models": [
+    {
+      "role": "voice_design",
+      "repository": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+      "local_directory": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-1.7B-VoiceDesign"
+    },
+    {
+      "role": "runtime_clone",
+      "repository": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+      "local_directory": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-0.6B-Base"
+    }
+  ],
+  "required_job_bindings": [
+    "candidate_id",
+    "opaque_voice_id",
+    "voice_origin",
+    "identity_basis",
+    "design_traits_text",
+    "design_traits_sha256",
+    "reference_text",
+    "reference_text_sha256",
+    "test_text",
+    "test_text_sha256",
+    "language",
+    "voice_design_model_manifest",
+    "voice_design_model_manifest_sha256",
+    "base_model_manifest",
+    "base_model_manifest_sha256"
+  ],
+  "acceptance_gates": {
+    "exact_input_text_hashes": true,
+    "local_model_manifests_and_files_verified": true,
+    "readable_non_silent_pcm16_wavs": true,
+    "actual_cuda_allocation_above_baseline": true,
+    "peak_process_ram_recorded": true,
+    "peak_cuda_allocated_and_reserved_recorded": true,
+    "load_generation_prompt_and_total_timings_recorded": true,
+    "voice_design_unloaded_before_base_load": true,
+    "final_vram_return_within_bytes": 268435456,
+    "profile_and_manifest_hashes_recorded": true,
+    "clean_worker_exit_required_for_parent_acceptance": true,
+    "owner_hearing_acceptance_required_before_assignment": true
+  },
+  "failure_behavior": {
+    "status": "FAILED_TEXT_PLUS_SILENCE_ONLY",
+    "generic_voice_fallback_allowed": false,
+    "sapi_fallback_allowed": false,
+    "other_person_voice_fallback_allowed": false,
+    "current_voice_routing_change_allowed": false,
+    "partial_private_evidence_is_preserved": true
+  },
+  "watermark": {
+    "initial_status": "NO_DOCUMENTED_INTENTIONAL_AUDIO_WATERMARK",
+    "stronger_status": "NO_DOCUMENTED_OR_KNOWN_WATERMARK_DETECTED_AT_ACCEPTED_REVISION",
+    "stronger_status_requires_explicit_detector_evidence": true,
+    "stronger_status_requires_positive_controls": true,
+    "stronger_status_requires_exact_revision_source_and_dependency_scans": true,
+    "stronger_status_requires_wav_inventory": true,
+    "stronger_status_requires_repeated_generated_samples": true,
+    "stronger_status_requires_owner_hearing_acceptance": true,
+    "removal_disabling_evasion_or_circumvention_allowed": false,
+    "unknown_watermark_absence_may_be_claimed": false
+  },
+  "forbidden_environment_roots": [
+    "Voice/sidecars/chatterbox_blackwell_gpu",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate",
+    "Voice/sidecars/chatterbox_blackwell_persistent_candidate_v2",
+    "Voice/sidecars/chatterbox_py311"
+  ],
+  "queue_worker_metadata": {
+    "queue_kind": "TEMPORARYAI_ORIGINAL_VOICE_FORGE_PRIVATE_ACCEPTANCE_V1",
+    "runner": "tools/run_temporary_ai_qwen3_tts_voice_forge_acceptance.py",
+    "worker": "tools/qwen3_tts_original_voice_forge_worker.py",
+    "execution_status_before_explicit_run": "QUEUED_INERT_NOT_RUN",
+    "result_on_failure": "TEXT_PLUS_SILENCE_ONLY"
+  }
+}

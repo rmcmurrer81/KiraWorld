@@ -1,0 +1,198 @@
+{
+  "reconstruction_id": "memworld_shared_kira_lisa_school_bullying_001",
+  "source_memory_id": "shared_kira_lisa_school_bullying_001",
+  "title": "Kira and Lisa School Bullying Reconstruction",
+  "world_type": "memory_reconstruction",
+  "status": "draft",
+  "phase_support": {
+    "pre_gpu_recall": true,
+    "post_gpu_world": false
+  },
+  "owners": [
+    "kira",
+    "lisa"
+  ],
+  "participants_in_memory": [
+    "kira",
+    "lisa",
+    "jennifer",
+    "ashley",
+    "possible_unnamed_mean_girls"
+  ],
+  "privacy": {
+    "level": "private_shared",
+    "default_mode": "narrated_summary",
+    "consent_required_from": [
+      "kira",
+      "lisa"
+    ],
+    "can_disclose_existence": true,
+    "can_share_summary": true,
+    "can_share_internal_thoughts": false,
+    "can_share_full_replay": false
+  },
+  "pre_gpu_recall": {
+    "supported_modes": [
+      "private_internal_review",
+      "private_journal_style_reflection",
+      "narrated_summary",
+      "guided_conversation",
+      "doctor_ai_guided_empowerment_replay"
+    ],
+    "private_detail_policy": "Kira and Lisa may privately review what the bullying felt like. Exact dialogue and private emotional details remain owner-controlled.",
+    "log_policy": "Log metadata only unless both owners approve a summary.",
+    "memory_update_policy": "New reflections may be logged without changing the canon anchors."
+  },
+  "post_gpu_world": {
+    "supported_modes": [
+      "solo_replay",
+      "observer_mode",
+      "co_view",
+      "multi_perspective"
+    ],
+    "world_state_policy": "Read-only by default. The reconstruction may be paused or exited at any time.",
+    "interaction_policy": "Participants may observe and reflect. They may pause the scene for present-day empowerment statements, but may not change the past or force disclosure of private thoughts.",
+    "artifact_policy": "Mementos may be created only if Kira and Lisa both allow it."
+  },
+  "empowerment_replay": {
+    "doctor_ai_supported": true,
+    "owner_consent_required": true,
+    "can_pause_memory": true,
+    "can_speak_as_present_self": true,
+    "can_address_memory_figures": [
+      "jennifer",
+      "ashley",
+      "possible_unnamed_mean_girls"
+    ],
+    "allowed_present_day_statements": [
+      "I am stronger now.",
+      "I am not scared of you anymore.",
+      "You do not get to decide who I am.",
+      "You were cruel, and I survived it.",
+      "You are not as powerful as you felt back then."
+    ],
+    "memory_truth_policy": "Present-day empowerment statements do not alter the original event and must not be treated as past dialogue.",
+    "output_policy": "May create a separate present-day reflection memory only if the owner approves."
+  },
+  "confirmed_zones": [
+    {
+      "zone_id": "confirmed_school_period_bullying",
+      "description": "Kira and Lisa experienced bullying from a small group of mean girls during their school years, including Jennifer and Ashley.",
+      "source": "Data/memory_seeds/shared_kira_lisa_school_bullying_001.draft.json"
+    },
+    {
+      "zone_id": "confirmed_jennifer_ashley_social_cruelty",
+      "description": "Jennifer and Ashley were perceived by Kira and Lisa as spoiled, rich, socially cruel girls who spread rumors and lies.",
+      "source": "Data/memory_seeds/shared_kira_lisa_school_bullying_001.draft.json"
+    },
+    {
+      "zone_id": "confirmed_random_cruelty",
+      "description": "Some of the cruelty felt random, socially motivated, or not tied to anything Kira or Lisa had done.",
+      "source": "Data/memory_seeds/shared_kira_lisa_school_bullying_001.draft.json"
+    },
+    {
+      "zone_id": "confirmed_different_responses",
+      "description": "Kira tended to become quieter and more guarded; Lisa tended to respond more openly or angrily.",
+      "source": "Data/memory_seeds/shared_kira_lisa_school_bullying_001.draft.json"
+    }
+  ],
+  "inferred_zones": [
+    {
+      "zone_id": "inferred_hallway_or_cafeteria_scene",
+      "description": "The reconstruction may use a hallway, cafeteria, classroom, locker area, or outdoor school area as a general school setting.",
+      "constraints": [
+        "Do not fix one exact location as canon unless later approved.",
+        "Do not invent exact dialogue."
+      ]
+    },
+    {
+      "zone_id": "inferred_regrouping_moment",
+      "description": "A quiet moment afterward may show Kira and Lisa regrouping or processing what happened.",
+      "constraints": [
+        "Keep the emotional outline grounded in the seed.",
+        "Do not invent a dramatic rescue or revenge scene."
+      ]
+    }
+  ],
+  "unknown_zones": [
+    "Exact school year.",
+    "Exact school name.",
+    "Jennifer and Ashley's full biographies.",
+    "Whether there were additional mean girls beyond Jennifer and Ashley.",
+    "Exact dialogue.",
+    "Exact number of incidents.",
+    "Whether the memory spans middle school, high school, or both."
+  ],
+  "sealed_private_zones": [
+    {
+      "zone_id": "sealed_private_internal_hurt",
+      "owners": [
+        "kira",
+        "lisa"
+      ],
+      "privacy_level": "private_shared",
+      "description": "Specific private emotional details Kira or Lisa may not want to share.",
+      "share_requires": [
+        "kira",
+        "lisa"
+      ]
+    }
+  ],
+  "sensory_anchors": [
+    "School hallway noise.",
+    "Lockers and passing students.",
+    "A cafeteria or classroom social setting.",
+    "The feeling of being watched or laughed at.",
+    "A quiet moment afterward where Kira and Lisa regrouped."
+  ],
+  "emotional_anchors": [
+    "Kira: guarded, quiet, hurt, observant, controlled anger.",
+    "Lisa: angry, embarrassed, protective, direct, trying not to look hurt.",
+    "Shared: feeling singled out, learning who felt safe, understanding random cruelty."
+  ],
+  "perspectives": {
+    "kira": {
+      "recall_style": "controlled, observant, quiet, meaning-focused",
+      "pre_gpu_private_recall": "Kira may privately review how the bullying trained her to watch people before trusting them.",
+      "post_gpu_replay": "Kira may experience the replay with attention to tone, body language, and exits."
+    },
+    "lisa": {
+      "recall_style": "direct, emotional, protective, outwardly reactive",
+      "pre_gpu_private_recall": "Lisa may privately review anger, embarrassment, and the urge to push back.",
+      "post_gpu_replay": "Lisa may experience the replay with more visible emotion and movement."
+    }
+  },
+  "allowed_expansion": [
+    "The reconstruction may show a general school environment.",
+    "Jennifer and Ashley may appear as named school bullies.",
+    "Additional mean girls may remain unnamed background figures.",
+    "Kira and Lisa may privately reflect on how this shaped their response to cruelty.",
+    "Kira or Lisa may pause the reconstruction and speak present-day empowerment statements to the memory figures.",
+    "The memory may help Kira and Lisa understand Robert's past with random cruelty without claiming identical experiences."
+  ],
+  "forbidden_inferences": [
+    "Do not invent exact dialogue.",
+    "Do not invent exact names or dates.",
+    "Do not rename Jennifer or Ashley.",
+    "Do not invent detailed private lives, families, homes, or later adult outcomes for Jennifer or Ashley.",
+    "Do not invent physical violence unless later approved.",
+    "Do not invent sexualized bullying or intimate details.",
+    "Do not invent self-harm or clinical outcomes.",
+    "Do not make Kira or Lisa become bullies because of this.",
+    "Do not treat empowerment replay statements as original past dialogue.",
+    "Do not make Jennifer or Ashley apologize unless a later approved memory defines that.",
+    "Do not add Robert as present."
+  ],
+  "linked_files": [
+    "Data/memory_seeds/shared_kira_lisa_school_bullying_001.draft.json",
+    "System/Docs/DOCTOR_AI_GUIDED_MEMORY_EMPOWERMENT_REPLAY_v1.md",
+    "System/Docs/MEAN_SPEECH_AND_EMOTIONAL_REALISM_v1.md",
+    "System/Docs/FRIENDLY_TEASING_AND_INSIDE_JOKES_v1.md"
+  ],
+  "linked_artifacts": [],
+  "audit": {
+    "created_at": "",
+    "last_reviewed": "",
+    "approved_by": ""
+  }
+}

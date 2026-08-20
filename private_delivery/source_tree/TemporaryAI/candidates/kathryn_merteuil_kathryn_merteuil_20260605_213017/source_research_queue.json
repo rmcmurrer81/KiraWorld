@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-06-06T01:30:18.295493+00:00",
+  "status": "research_queue_created",
+  "source_policy": {
+    "preferred_sources": "official show/movie/comic sources first, then carefully labeled fan wiki metadata",
+    "wikipedia_is_preview_only": true,
+    "requires_robert_or_codex_review_before_activation": true
+  },
+  "lookup_summary": {
+    "status": "summary_found",
+    "query": "Kathryn Merteuil",
+    "provider": "Wikipedia API",
+    "matched_title": "Kathryn Merteuil",
+    "summary": "Kathryn Merteuil is a fictional character from the Cruel Intentions franchise, created for it by Roger Kumble based on the Marquise Isabelle de Merteuil from Pierre Choderlos de Laclos's 1782 novel Les Liaisons dangereuses.",
+    "url": "https://en.wikipedia.org/wiki/Kathryn_Merteuil",
+    "candidates": [
+      {
+        "title": "Kathryn Merteuil",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Kathryn_Merteuil"
+      }
+    ],
+    "review_note": "This is a public preview lookup, not a verified source pack.",
+    "errors": []
+  },
+  "suggested_search_urls": [
+    "https://www.google.com/search?q=Kathryn+Merteuil",
+    "https://www.bing.com/search?q=Kathryn+Merteuil",
+    "https://en.wikipedia.org/w/index.php?search=Kathryn+Merteuil"
+  ],
+  "next_review_steps": [
+    "Confirm the lookup points at the right person, character, domain, or version.",
+    "Collect better official or primary sources when needed.",
+    "Run a short TemporaryAI probe before Kira or Lisa uses the candidate."
+  ]
+}

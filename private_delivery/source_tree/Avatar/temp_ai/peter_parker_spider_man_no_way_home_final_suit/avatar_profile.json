@@ -1,0 +1,38 @@
+{
+  "avatar_profile_id": "peter_parker_spider_man_no_way_home_final_suit_avatar_profile_v1",
+  "created_at": "2026-07-05T05:00:04.517303+00:00",
+  "target_type": "temp_ai",
+  "target_id": "peter_parker_spider_man_no_way_home_final_suit",
+  "display_name": "Peter Parker / Spider-Man (No Way Home Final Suit)",
+  "build_mode": "reconstruction_fictional",
+  "stage": "rigged_model_staged",
+  "reference_sources": {
+    "local_reference_paths": [
+      "Avatar/models/temp_ai/peter_parker_spider_man_no_way_home_final_suit/avatar.glb",
+      "Assets/third_party/intake/3d_models_kira_world/characters/spider_man_no_way_home/tom_holland_spiderman_unmasked.glb"
+    ],
+    "online_reference_queue": "Avatar/temp_ai/peter_parker_spider_man_no_way_home_final_suit/online_reference_queue.json",
+    "downloaded_references_folder": "Avatar/temp_ai/peter_parker_spider_man_no_way_home_final_suit/references/downloaded",
+    "approved_references_folder": "Avatar/temp_ai/peter_parker_spider_man_no_way_home_final_suit/references/approved",
+    "rejected_references_folder": "Avatar/temp_ai/peter_parker_spider_man_no_way_home_final_suit/references/rejected"
+  },
+  "visual_profile": {
+    "forms_or_variants": [
+      "final_suit_masked",
+      "unmasked_head_reference_staged"
+    ],
+    "face_notes": "Unmasked Tom Holland reference is staged for later head fitting; it is not merged into the active suit yet.",
+    "hair_notes": "No hair system has been generated for this temporary body.",
+    "body_notes": "Active avatar uses the downloaded rigged No Way Home final suit GLB.",
+    "wardrobe_notes": "Suit is the active default form.",
+    "movement_or_pose_notes": "Rigged model imported successfully in Blender smoke test; locomotion retargeting is still a later pass."
+  },
+  "policy": {
+    "references_do_not_create_memory": true,
+    "source_images_must_be_labeled": true,
+    "real_person_reconstruction_requires_extra_review": true,
+    "owner_or_project_review_required_before_generation": true,
+    "public_export_allowed": false
+  },
+  "status": "staged_model_ready"
+}

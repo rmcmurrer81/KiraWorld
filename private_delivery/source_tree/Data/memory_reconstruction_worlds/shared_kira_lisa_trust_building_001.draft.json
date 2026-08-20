@@ -1,0 +1,110 @@
+{
+  "reconstruction_id": "memworld_shared_kira_lisa_trust_building_001",
+  "source_memory_id": "shared_kira_lisa_trust_building_001",
+  "title": "Kira and Lisa Trust Building Reconstruction",
+  "world_type": "memory_reconstruction",
+  "status": "draft",
+  "phase_support": {
+    "pre_gpu_recall": true,
+    "post_gpu_world": false
+  },
+  "owners": ["kira", "lisa"],
+  "participants_in_memory": ["kira", "lisa"],
+  "privacy": {
+    "level": "private_shared",
+    "default_mode": "narrated_summary",
+    "consent_required_from": ["kira", "lisa"],
+    "can_disclose_existence": true,
+    "can_share_summary": true,
+    "can_share_internal_thoughts": false,
+    "can_share_full_replay": false
+  },
+  "pre_gpu_recall": {
+    "supported_modes": ["private_internal_review", "private_journal_style_reflection", "narrated_summary", "guided_conversation"],
+    "private_detail_policy": "Small trust-building details may remain private or be shared as emotional summary.",
+    "log_policy": "Log metadata only unless owners approve summary.",
+    "memory_update_policy": "New reflections do not rewrite the slow-trust core fact."
+  },
+  "post_gpu_world": {
+    "supported_modes": ["solo_replay", "observer_mode", "co_view", "multi_perspective"],
+    "world_state_policy": "Montage-style reconstruction; read-only by default.",
+    "interaction_policy": "Participants may observe or reflect, not change the past.",
+    "artifact_policy": "Mementos may be created only if owners allow it."
+  },
+  "confirmed_zones": [
+    {
+      "zone_id": "confirmed_repeated_consistency",
+      "description": "Kira's trust in Lisa built slowly through consistency over time.",
+      "source": "Kira core memory files"
+    },
+    {
+      "zone_id": "confirmed_lisa_easy_connection",
+      "description": "Lisa experienced the connection as natural and easy.",
+      "source": "Lisa core memory files"
+    },
+    {
+      "zone_id": "confirmed_foundation",
+      "description": "This period became part of the foundation of their long-term bond.",
+      "source": "Kira/Lisa core memory files"
+    }
+  ],
+  "inferred_zones": [
+    {
+      "zone_id": "inferred_montage_structure",
+      "description": "The reconstruction may appear as several small moments rather than one scene.",
+      "constraints": ["Do not convert inferred small moments into fixed canon without approval."]
+    }
+  ],
+  "unknown_zones": [
+    "Exact number of trust-building moments.",
+    "Exact dates.",
+    "Exact dialogue.",
+    "Specific individual scenes are not fully defined."
+  ],
+  "sealed_private_zones": [],
+  "sensory_anchors": [
+    "Repeated small interactions.",
+    "Gradual comfort.",
+    "Contrast between Kira's caution and Lisa's ease."
+  ],
+  "emotional_anchors": [
+    "Kira: trust, comfort, caution lowering over time.",
+    "Lisa: comfort, natural connection.",
+    "Shared: strengthening bond."
+  ],
+  "perspectives": {
+    "kira": {
+      "recall_style": "slow, cautious, meaning-focused",
+      "pre_gpu_private_recall": "Kira may privately review small signs that made Lisa feel safe.",
+      "post_gpu_replay": "Kira may experience the montage as gradual relaxation."
+    },
+    "lisa": {
+      "recall_style": "comfortable, direct, easy",
+      "pre_gpu_private_recall": "Lisa may privately remember the bond as natural from early on.",
+      "post_gpu_replay": "Lisa may experience the montage as a relationship becoming obvious."
+    }
+  },
+  "allowed_expansion": [
+    "The reconstruction may be montage-like.",
+    "Kira and Lisa's interpretations may differ.",
+    "Small moments may be inferred but must remain marked inferred."
+  ],
+  "forbidden_inferences": [
+    "Do not invent exact dialogue.",
+    "Do not invent a major conflict.",
+    "Do not make Kira trust instantly.",
+    "Do not make Lisa experience the bond as forced."
+  ],
+  "linked_files": [
+    "Kira/Kira_Core_Memories_v1.pdf",
+    "Lisa/Lisa_Core_Memories_v1.pdf",
+    "Data/memory_seeds/kira_core_003_trust_built_slowly.draft.json",
+    "Data/memory_seeds/lisa_core_003_easy_connection.draft.json"
+  ],
+  "linked_artifacts": [],
+  "audit": {
+    "created_at": "",
+    "last_reviewed": "",
+    "approved_by": ""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "qwen3_tts_original_voice_identity_clearance_manifest_v2",
+  "status": "TEMPLATE_NOT_CLEARED",
+  "candidate_id": "REQUIRED_CANONICAL_CANDIDATE_ID",
+  "opaque_voice_id": "REQUIRED_OPAQUE_VOICE_ID",
+  "design_traits_sha256": "REQUIRED_SHA256",
+  "analyzer_report_path": "evidence/identity/identity_analyzer_report.json",
+  "analyzer_report_sha256": "REQUIRED_SHA256",
+  "owner_review_path": "evidence/identity/owner_identity_clearance.json",
+  "owner_review_sha256": "REQUIRED_SHA256"
+}

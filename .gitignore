@@ -43,3 +43,9 @@ private_owner_reviews/
 private_owner_review/
 private_review/
 node_modules/
+
+# Curated, allowlisted private-team mirror. The sync tool copies only the
+# approved source paths into this tree; no broad Data/TemporaryAI unignore is
+# permitted.
+!private_delivery/
+!private_delivery/**

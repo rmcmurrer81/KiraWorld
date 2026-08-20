@@ -1,0 +1,22 @@
+{
+  "suppliers": [
+    {
+      "id": "1",
+      "name": "Supplier A",
+      "location": "Paris, France",
+      "contact_details": {"email": "suppliera@example.com", "phone": "+33 1234567890"},
+      "product_offerings": ["Fashion fabrics", "Accessories"],
+      "reputation_rating": 4.5,
+      "notes": "Excellent reputation and high-quality products"
+    },
+    {
+      "id": "2",
+      "name": "Supplier B",
+      "location": "Tokyo, Japan",
+      "contact_details": {"email": "supplierb@example.com", "phone": "+81 1234567890"},
+      "product_offerings": ["Fashion fabrics", "Electronics"],
+      "reputation_rating": 3.8,
+      "notes": "Good reputation and decent products"
+    }
+  ]
+}

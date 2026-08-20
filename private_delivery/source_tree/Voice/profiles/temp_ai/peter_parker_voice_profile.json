@@ -1,0 +1,96 @@
+{
+  "voice_id": "peter_parker_reviewed_reference_v1",
+  "name": "Peter Parker",
+  "target_name": "Peter Parker",
+  "target_type": "temp_ai",
+  "voice_mode": "reconstruction",
+  "source_type": "fictional_character_style_reference",
+  "source_description": "Voice based on Robert-reviewed Peter target clips from the supplied source lead.",
+  "voice_identity_tags": {
+    "current_assignment": "peter_parker_voice",
+    "source_person": "Tom Holland",
+    "known_for": [
+      "Peter Parker / Spider-Man"
+    ],
+    "status": "active_character_voice_reference",
+    "reuse_tags": [
+      "tom_holland",
+      "peter_parker",
+      "spider_man"
+    ]
+  },
+  "source_audio": {
+    "required": true,
+    "status": "reviewed_target_clips_prepared_for_backend",
+    "reference_pack": "Voice/reference_packs/peter_parker/peter_parker_online_source_20260706_035930",
+    "model_input_request": "Voice/reference_packs/peter_parker/peter_parker_online_source_20260706_035930/model_input/voice_model_request.json",
+    "approved_reference_wav": "Voice/reference_packs/peter_parker/peter_parker_online_source_20260706_035930/model_input/approved_reference.wav",
+    "candidate_clip_count": 48,
+    "reviewed_target_clip_count": 15,
+    "reviewed_target_seconds": 28.83,
+    "approved_clips": [
+      "clip_0011",
+      "clip_0013",
+      "clip_0014",
+      "clip_0024",
+      "clip_0025",
+      "clip_0026",
+      "clip_0031",
+      "clip_0032",
+      "clip_0033",
+      "clip_0034",
+      "clip_0036",
+      "clip_0037",
+      "clip_0038",
+      "clip_0039",
+      "clip_0048"
+    ],
+    "source_leads": [
+      "Voice/reference_sources/peter_parker/source_leads_20260706.md"
+    ]
+  },
+  "voice_characteristics": {
+    "pitch_range": "medium",
+    "tone": "young, earnest, quick, lightly nervous",
+    "cadence": "fast but clear, with small hesitations when thinking",
+    "energy_level": "medium_high",
+    "clarity": "clear",
+    "emotional_range": [
+      "friendly",
+      "awkward_humor",
+      "concerned",
+      "focused"
+    ]
+  },
+  "speech_style": {
+    "default_style": "casual_earnest",
+    "in_combat_style": "focused_and_breathless",
+    "casual_style": "quick_warm_and_slightly_awake-too-late",
+    "emotional_shift_behavior": "faster when excited, softer when worried"
+  },
+  "sapi_approximation": {
+    "voice_name": "Microsoft David Desktop",
+    "rate": 1,
+    "volume": 92,
+    "max_chars": 1300,
+    "note": "Immediate Windows male approximation only. This is not a clone and not a reviewed Peter voice model."
+  },
+  "reconstruction_rules": {
+    "must_not_copy_exact_actor_voice": true,
+    "must_use_only_reviewed_target_only_clips_for_any_reference_model": true,
+    "must_not_use_mixed_dialogue_or_music": true,
+    "must_remain_labeled_placeholder_until_reviewed": false
+  },
+  "status": {
+    "approval_state": "draft",
+    "ready_for_use": false,
+    "ready_for_text_tts": true,
+    "ready_for_clone": false,
+    "source_audio_collected": true,
+    "current_playback_engine": "chatterbox_tts",
+    "voice_model_backend_ready": true,
+    "reference_model_input_ready": true,
+    "readiness_label": "reviewed_reference_active_with_chatterbox_tts",
+    "note": "The 15 Robert-reviewed Peter clips have been prepared as approved_reference.wav and are now available to the local Chatterbox TTS playback path."
+  }
+}

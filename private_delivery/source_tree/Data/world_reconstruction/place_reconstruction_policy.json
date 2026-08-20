@@ -1,0 +1,71 @@
+{
+  "policy_id": "place_reconstruction_world_builder_v1",
+  "status": "draft",
+  "source_root": "Data/world_reconstruction/sources",
+  "plan_root": "Data/world_reconstruction/plans",
+  "core_rules": [
+    "Build from sources before guessing.",
+    "Mark every zone with a confidence label.",
+    "Unknown areas stay unknown unless explicitly made original extensions.",
+    "Blueprints and photos do not override Kira/Lisa privacy.",
+    "Pre-GPU mode creates plans and source inventories, not finished 3D worlds."
+  ],
+  "supported_place_types": [
+    "home",
+    "neighborhood",
+    "movie_theater",
+    "mall",
+    "video_store",
+    "venue",
+    "store",
+    "school",
+    "original_extension",
+    "hybrid"
+  ],
+  "source_types": [
+    "blueprints",
+    "floor_plans",
+    "exterior_photos",
+    "interior_photos",
+    "room_photos",
+    "videos",
+    "maps",
+    "manual_notes",
+    "style_refs"
+  ],
+  "confidence_labels": [
+    "blueprint_confirmed",
+    "photo_confirmed",
+    "video_confirmed",
+    "map_confirmed",
+    "manual_note_confirmed",
+    "inferred_from_sources",
+    "style_fill",
+    "unknown",
+    "blocked_private"
+  ],
+  "default_privacy": {
+    "home_world_visibility": "private_only",
+    "private_rooms_allowed": true,
+    "locked_private_rooms_allowed": true,
+    "robert_default_visibility": "plan_only",
+    "tardis_access": "enabled_when_world_exists"
+  },
+  "pre_gpu_actions": [
+    "create_source_folders",
+    "inventory_sources",
+    "draft_room_list",
+    "draft_zone_confidence_map",
+    "draft_privacy_zones",
+    "draft_notebook_world_request"
+  ],
+  "post_gpu_actions": [
+    "generate_3d_layout",
+    "place_furniture",
+    "build_navigation",
+    "connect_tardis",
+    "add_virtual_screen",
+    "add_library_and_music_objects",
+    "add_approved_limited_ai_or_temporary_ai"
+  ]
+}

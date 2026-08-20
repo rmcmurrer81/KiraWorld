@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "status": "initial_state_pending_first_life_loop",
+  "current_world_id": "paris_notebook_world",
+  "current_world_build_id": "notebook_world_louvre_courtyard_20260628_210935",
+  "first_loop_preferred_start_area": "marinette_bedroom_above_bakery",
+  "first_loop_fallback_until_bedroom_built": "bakery_exterior",
+  "last_non_private_location": null,
+  "last_public_activity": null,
+  "privacy_state": "not_private",
+  "resume_rule": "Start future life loops from last_non_private_location when present; otherwise use the first-loop preferred start or fallback.",
+  "location_truth": {
+    "marinette_bedroom_above_bakery": "references_indexed_not_built",
+    "bakery_exterior": "rough_walkable_exterior_pass",
+    "louvre_courtyard": "rough_vr_scale_landmark_pass"
+  }
+}

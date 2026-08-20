@@ -1,0 +1,45 @@
+{
+  "schema": "kira.temporary_creator_shared_growth_template.v1",
+  "status": "STATIC_CANDIDATE_PENDING_FRESH_AUDIT",
+  "policy_path": "Data/foundation/shared_person_growth_capabilities_v1.json",
+  "core_path": "Core/shared_person_growth_capabilities_v1.py",
+  "creator_successor_path": "tools/create_temporary_ai_growth_profile_v1.py",
+  "output_name": "shared_person_growth_capabilities_v1.json",
+  "new_person_defaults": {
+    "maturity_status": "unresolved",
+    "live_activation": false,
+    "model_connection": false,
+    "memory_writer_connection": false,
+    "external_action_connection": false,
+    "sensory_connection": false,
+    "media_connection": false,
+    "body_control_connection": false
+  },
+  "fresh_per_person_values": [
+    "opaque_person_id",
+    "profile_id",
+    "private_root_nonce",
+    "private_state_roots",
+    "activation_lease",
+    "provenance_chain"
+  ],
+  "never_copy": [
+    "identity",
+    "memories",
+    "backstory",
+    "private_emotion_state",
+    "relationships",
+    "permissions",
+    "maturity_classification",
+    "adult_curriculum_entitlement",
+    "body_selection",
+    "sensory_or_media_experience",
+    "acceptance_receipts"
+  ],
+  "promotion_gate": {
+    "static_tests_required": true,
+    "different_fresh_audit_required": true,
+    "bounded_live_acceptance_required_before_shared_enablement": true,
+    "current_shared_enablement_allowed": false
+  }
+}

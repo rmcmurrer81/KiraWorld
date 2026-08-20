@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-06-09T00:07:50.096181+00:00",
+  "status": "source_pack_created",
+  "query": "Quantum Mechanics",
+  "version_or_life_point": "",
+  "source_count": 1,
+  "fetched_count": 1,
+  "policy": {
+    "downloaded_information_is_source_evidence_not_memory": true,
+    "expert_candidate_outputs_are_reviewable_drafts_not_final_professional_representation": false,
+    "requires_review_before_activation": true,
+    "prefer_official_or_primary_sources": true
+  },
+  "sources": [
+    {
+      "name": "Wikipedia preview - Quantum mechanics",
+      "url": "https://en.wikipedia.org/wiki/Quantum_mechanics",
+      "reliability": "preview_only",
+      "why": "Quick orientation only; not enough for verified expert behavior.",
+      "fetch_status": "summary_found",
+      "title": "Quantum mechanics",
+      "excerpt": "Quantum mechanics is the fundamental physical theory that describes the behavior of matter and of light; its unusual characteristics typically occur at and below the scale of atoms. It is the foundation of all quantum physics, which includes quantum chemistry, quantum biology, quantum field theory, quantum technology, and quantum information science.",
+      "error": ""
+    }
+  ],
+  "next_steps": [
+    "Review source excerpts for relevance.",
+    "Add or remove sources if the field is too broad.",
+    "Run a short live chat/probe before Kira or Lisa uses the candidate."
+  ]
+}

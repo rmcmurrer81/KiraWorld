@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "display_name": "Marinette / Ladybug",
+  "updated_at": "2026-07-05T06:31:59.344077+00:00",
+  "status": "avatar_builder_scaffold_ready",
+  "answer_to_current_design_question": {
+    "foundation_skeleton_good_enough_to_copy": true,
+    "final_character_body_finished": false,
+    "first_clothed_runtime_body_available": true,
+    "next_real_step": "Refine the clothed Marinette body, wardrobe fits, facial likeness, and material quality on top of the copied foundation rig, then validate with self-practice rewards."
+  },
+  "foundation_rig": {
+    "base_rig_id": "foundation_skeleton_v1",
+    "manifest": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/manifest.json",
+    "assets": {
+      "avatar_glb": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/avatar.glb",
+      "skeleton_metadata": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/avatar_foundation_skeleton_v1.json",
+      "movement_library": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/foundation_skeleton_movements_v1.json",
+      "rigged_hand_base_mesh": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_hand_base_mesh.glb",
+      "rigged_arms_reference": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_arms.glb"
+    },
+    "use_for_future_bodies": true
+  },
+  "reference_inputs": {
+    "latest_intake_report": "Avatar/reference_intake/avatar_reference_intake_20260704_041525.json",
+    "desktop_ladybug_character_reference_count": 34,
+    "desktop_bedroom_room_reference_count": 20,
+    "desktop_bedroom_reference_role": "future Paris/bakery bedroom and Louvre/Paris world layout reference, not current Home World wardrobe input",
+    "character_references": [
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/0dcbccdd7969a32acca8f79302392c10_1080bd76ad.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/12a97809dcb43448a7c487f19458636c_847a7ba559.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/2f1a74ea87ded885fd6bcf8d0e4e3800_c3cb16ba4a.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/33c9de7304f9b86fc4d44ab3aa35d0f0_5aef07e2f5.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/3fd86636422ea7759f380279f5328a7e_6eac77a750.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/44fe3c1cffbba4ffead04d4e51a64ae2_6a547cdb66.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/4ac5c0bb33e13c1496dba6a3915ed740_9439f50ae7.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/571d633e84f86e2c8e96c2c6c978ed46_ee9b570186.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/5a46370782507ed0c842a003002ba1c8_a5a1af01c4.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/5dc7e028988ae53f4671c47894c8dcee_e36a894c71.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/609458fb0bd81297f489b6cda56dea2d_094b04dcee.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/62747d67ac3d02e5bc39f92a3de155db_a2308828a7.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/753337a72492be3e2add52cbf956186d_1ece31233f.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/7d3021994150aa126b07f855a3f1296c_b96814ffcf.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/9786bc0f46e59c6fa21bc83acc07c7e0_d1c04095a6.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/ab08a63b0b7032c468ab8d6ee294bb14_64cf718e3a.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/b2d38d812e344aa11c3b1fece70a64c0_e22ec828f3.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/b56454c5f896f6b8e41803c7002b9485_4371a5be83.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/b750ee423cf4ade118a3714fbc801e60_5a0b48275a.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/bf7f9ea45e965dbafc4893c9d40f8c27_4b3579bb48.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/c591971b82220cb82c07991a77cc66b7_dc1a9dadb5.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/c6e0d2bf8b890dc1b53e03647929f897_5b8172b5bd.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/cb0c75c869ff338d697b9a8360a6aef3_9ce403b8f3.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/cute_miraculous_ladybug_pictures_tkmrgj9tunhwup1r_f008c4666e.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/d61f55a1a31a7d7c2312b25614e46bdc_5f9a042adf.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/d8467a008ecb3ae14bc11577d0683703_5f18ad13fc.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/dbe2fdd5d9d351c02a1b141ff9193261_cb9b042913.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/df0ae2687a1ded688b94b83a3e883f46_814943eb82.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/e1c8be099eed9575b336f4738beefb03_2c9bcfe0ba.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/fb4a07a58b6e00fa5c5959391bb65a05_bf2fb8827d.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/guardian_ladybug_marinette_dupain_cheng_by_dba216403_djaopw3_pre_8c9543650d.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/marinette_png_by_miraculouspng_di0wdk1_fullview_526fa17629.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/maxresdefault_3e9de02f17.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/miraculous_ladybug_marinette_sans_titre_557_20220725151602_5245b00d60.jpg"
+    ],
+    "room_references_for_world_builder": [
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/077e7c5bfc7831a2920c1960890701d3_524f9fe24b.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/16181f3d062e9c21126642005898_579fe8215d.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/245cde1a50c2d39b49dc142e70bc5ee0_fccd7febed.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/24875ad375a2132f80be12d9a677ecad_d7c31279f2.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/333bba3555bd0df546265b5dde3ee82f_b0560f4e03.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/33da87bf27ad26c9b1249d57c4e50daf_9f64c257fd.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/35dfcbf7f6b67acd01811b45555347c7_e2fec9a3d9.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/3808fbb8277826933bf084f5f3fdb39c_38f9dbfc11.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/448ef605b7d94d0faeee1c6837f9f191_85fac3aa53.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/58eb4ecb5babf7121c8ddcfb2e72637f_f2f8359317.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/6f064cbabf98354cde954d7b6cb3d8a6_19530127e6.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/849af370f9814b8f8e627b408c46d58d_df00a5a308.jpeg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/ee14a2da8952a76f66c03ca47374c4b4_a7a720c82c.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/fd82770ef87180dd25185aec46c0279a_b50a0a406f.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/flag_feedback_b31517a7fc.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/miraculous_ladybug_background_19_by_sailorflower_dcpcnta_fullview_7868df25e7.jpg",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/screen_shot_2015_12_21_at_1_11_34_pm_37b55c7f6f.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/static_assets_upload15562404389426038245_34432eb5bb.webp",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/tumblr_nyb9qg7qao1umjpkto7_1280_f51d58374c.png",
+      "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/tumblr_nyb9qg7qao1umjpkto9_1280_eecc1bc625.png"
+    ]
+  },
+  "body_pipeline": {
+    "target_style_now": "real_world_readable_but_still_safe_low_poly_runtime",
+    "target_style_later": "higher fidelity real-world materials, better topology, textures, and room-scale proportions",
+    "base_layer_policy": {
+      "policy": "minor_safe_non_anatomical_skin_tone_base",
+      "description": "Use a smooth skin-tone privacy base under clothing, like a simple fashion doll underlayer.",
+      "normal_visibility_requires_clothing": true,
+      "explicit_anatomy": false
+    },
+    "mesh_fit_rule": "Fit body, face, hair, and clothes to foundation_skeleton_v1 instead of teaching a new body from scratch.",
+    "required_validation_before_approval": [
+      "walk_grounded",
+      "sit_couch",
+      "lie_bed",
+      "sleep_bed",
+      "stairs_step",
+      "door_reach",
+      "desk_computer",
+      "bounded_self_test"
+    ],
+    "hand_pipeline": {
+      "required_for_all_new_bodies": true,
+      "active_runtime_layer": "one skinned hand surface per side on the v6 hand/finger bones",
+      "retarget_contract": "Avatar/avatar_builder/retarget_layers/production_hands_body_v1.json",
+      "runtime_fallback_note": "generic_humanoid_v1 is for imported temporary rigged bodies; Marinette still uses the foundation skeleton plus dedicated hand and door IK.",
+      "retarget_sources": {
+        "rigged_hand_base_mesh": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_hand_base_mesh.glb",
+        "rigged_arms_reference": "Avatar/avatar_builder/base_skeleton/foundation_skeleton_v1/hand_references/rigged_arms.glb"
+      },
+      "do_not_use": "bead palm, floating fingertip spheres, or unweighted cylinder fingers"
+    }
+  },
+  "wardrobe_pipeline": {
+    "catalog": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/outfit_catalog.json",
+    "default_worn_outfit": "civilian_everyday_current",
+    "closet_inventory_source": "civilian_closet_pool",
+    "hero_costume_rule": "hero_ladybug_earring_gated",
+    "future_actions": [
+      "open wardrobe",
+      "select clothing",
+      "hand IK grabs clothing edges",
+      "dress over non-anatomical base layer",
+      "close wardrobe",
+      "rerun movement self-test"
+    ]
+  },
+  "self_practice_runtime": {
+    "auto_starts_once_per_world_launch": true,
+    "manual_start": "window.kiraBodyPractice.startSkill('self_test')",
+    "records_to": "localStorage kira.avatar.movementLearning.v1",
+    "skills": [
+      "sit_couch",
+      "front_door_reach",
+      "stairs_step",
+      "sleep_bed",
+      "desk_computer",
+      "back_door_reach"
+    ],
+    "reward_rule": "Pass = 1.0, known miss or timeout = 0.0, partial started attempts stay as draft movement moments."
+  },
+  "realism_plan": [
+    "Remove impossible/repeating windows and stop placing cabinets over windows.",
+    "Replace block furniture with measured furniture meshes and believable clearances.",
+    "Add PBR-like material groups for drywall, wood, fabric, brushed metal, glass, water, and mirrors.",
+    "Move from mannequin skeleton preview to clothed character mesh fitted to the base rig.",
+    "Only after movement and avatar-builder gates pass, spend a full pass on photoreal-ish house layout and props."
+  ],
+  "truth_note": "This prepares the avatar builder. It does not claim the final Marinette likeness, wardrobe, or photoreal house is finished."
+}

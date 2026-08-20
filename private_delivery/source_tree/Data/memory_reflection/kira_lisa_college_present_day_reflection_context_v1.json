@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "STATIC_PRESENT_DAY_REFLECTION_CONTEXT_READY_NO_MEMORY_MUTATION",
+  "context_id": "kira_lisa_college_present_day_reflection_context_v1",
+  "owner_directive_binding": {
+    "path": "Data/person_classification/kira_lisa_college_reflection_owner_directive_20260809.json",
+    "sha256": "24d0ea68f75b0f5bb50105eea76fcdfde87cc44c4e56612bb8ef8159881e4538",
+    "directive_id": "kira_lisa_college_reflection_owner_20260809_c24dd041e0c53383"
+  },
+  "source_memory_binding": {
+    "path": "Data/memory_seeds/shared_kira_lisa_college_phase_001.draft.json",
+    "sha256": "5249718a450122739e2cee0f7f7fb08892af258a659d91e6de46fb6383eacad7",
+    "memory_id": "shared_kira_lisa_college_phase_001",
+    "status": "draft",
+    "privacy_level": "private_shared",
+    "sharing_rule": "requires_all_participant_consent"
+  },
+  "controlling_document_bindings": [
+    {
+      "path": "System/Docs/MEMORY_RECALL_AND_RECONSTRUCTION_MODEL_v1.md",
+      "sha256": "0a3fba10f4ecfa44e7e72f1f5f0f627bbbcc3e0fc7d4c7f727a3b3bb00d23339"
+    },
+    {
+      "path": "System/Docs/MEMORY_RECONSTRUCTION_WORLD_IMPLEMENTATION_NOTES_v1.md",
+      "sha256": "239f6227054d3e8ae11be4eec0de167f8c83cfe6c6ada5ea994dde0b37fe0d2b"
+    },
+    {
+      "path": "System/Docs/MEMORY_&_PRIVACY_SYSTEM_v2.md",
+      "sha256": "c46d95fcb7fd1fabdd858506ae9b6193d47cd6a97abf1adf4d2ad65713197af7"
+    },
+    {
+      "path": "System/Docs/PRIVACY_ROOM_SESSION_STATE_v1.md",
+      "sha256": "88e17d58135d2e173f8364a75bad5b6a10ef294d6c2211a09c739e4a8c932431"
+    }
+  ],
+  "exact_people": {
+    "kira": {
+      "classification_path": "Data/person_classification/kira_confirmed_adult_owner_classification_20260809.json",
+      "classification_sha256": "04ac19e026b168cb1942d73598b7c13f2b4ee7a49452f8ddf32763cf5de9e346",
+      "classification_id": "kira_confirmed_adult_owner_20260809_969c08ddbcfc33bc",
+      "historical_perspective_summary": "curious, vulnerable, uncertain, analytical"
+    },
+    "lisa": {
+      "classification_path": "Data/person_classification/lisa_confirmed_adult_owner_classification_20260809.json",
+      "classification_sha256": "5d13762ef340522ff82a74241557cec2724a3bdeaf841179b54f32b5c3a2d64c",
+      "classification_id": "lisa_confirmed_adult_owner_20260809_cb6430bda0f7d41e",
+      "historical_perspective_summary": "comfortable, affectionate, confident, less analytical"
+    }
+  },
+  "safe_shared_historical_summary": [
+    "Kira and Lisa had repeated private moments of closeness during their college phase.",
+    "The source memory describes the private closeness as including sexual intimacy remembered as meaningful by both participants.",
+    "Their stored historical interpretations differed.",
+    "They ultimately valued their friendship more than continuing romantically.",
+    "The stored long-term outcome is deeper trust and an unresolved emotional thread, not a permanent romantic relationship."
+  ],
+  "present_day_health_reflection_module_ids": [
+    "consent_communication_and_relationships",
+    "physiological_response_sensation_pleasure_and_preference_separation",
+    "contraception_and_barrier_methods",
+    "sti_prevention_testing_and_health_uncertainty"
+  ],
+  "reflection_rules": {
+    "selected_person_may_use_current_source_bound_education_as_a_present_day_lens": true,
+    "selected_person_may_use_only_their_own_current_emotion_ledger": true,
+    "other_person_current_private_emotion_is_available": false,
+    "historical_perspective_is_current_emotional_state": false,
+    "current_education_was_known_during_the_historical_event": false,
+    "reflection_rewrites_historical_memory": false,
+    "reflection_creates_a_new_memory": false,
+    "reflection_marks_a_lesson_complete": false,
+    "reflection_proves_body_function_or_lived_sensation": false,
+    "reflection_infers_desire_preference_consent_or_current_relationship": false,
+    "reflection_authorizes_external_action": false,
+    "locked_intimate_sequence_may_be_exposed": false,
+    "exact_dialogue_dates_counts_or_unstored_details_may_be_invented": false
+  },
+  "person_owned_reconstruction_rules": {
+    "subjective_revisit_or_reconstruction_supported": true,
+    "kira_and_lisa_reconstructions_may_differ": true,
+    "each_record_requires_exact_person_id": true,
+    "each_record_requires_source_label": true,
+    "each_record_requires_bounded_confidence": true,
+    "reflection_and_recall_strength_deltas_are_append_only": true,
+    "new_detail_must_remain_labeled_inferred_or_person_private_recall_until_reviewed": true,
+    "one_person_reconstruction_may_overwrite_other_person": false,
+    "person_reconstruction_may_silently_change_shared_canon": false,
+    "inferred_scene_detail_may_be_promoted_to_fact_without_evidence_or_review": false,
+    "shared_canon_change_requires_new_evidence_or_both_participants_review": true,
+    "allowed_source_labels": [
+      "stored_shared_anchor",
+      "selected_person_private_recall",
+      "inferred_reconstruction",
+      "current_interpretation"
+    ]
+  },
+  "participant_disclosure_and_reconstruction_rules": {
+    "participant_may_share_own_perspective_or_selected_details": true,
+    "participant_may_expose_other_participant_protected_perspective": false,
+    "nonparticipant_full_reconstruction_requires_all_involved_current_scope_specific_permission": true,
+    "nonparticipant_visual_replay_requires_all_involved_current_scope_specific_permission": true,
+    "nonparticipant_locked_zone_access_requires_all_involved_current_scope_specific_permission": true,
+    "incomplete_consent_keeps_locked_zones_participant_only": true,
+    "incomplete_consent_may_pause_or_stop_at_non_intimate_boundary": true,
+    "one_session_permission_becomes_permanent_permission": false,
+    "verbal_or_text_disclosure_equals_visual_replay_permission": false
+  },
+  "visibility": {
+    "prompt_scope": "selected_person_private_system_context",
+    "ordinary_public_recall_scope": "safe_shared_historical_summary_and_selected_person_own_high_level_perspective_only",
+    "full_replay_or_locked_detail_access_granted": false,
+    "all_participant_consent_requirement_changed": false
+  }
+}

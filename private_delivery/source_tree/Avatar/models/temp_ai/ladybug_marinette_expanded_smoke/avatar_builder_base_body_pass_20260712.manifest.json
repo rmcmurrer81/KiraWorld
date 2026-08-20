@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "pass_id": "avatar_builder_base_body_pass_20260712",
+  "created_at": "2026-07-12T08:56:44.544186+00:00",
+  "status": "failed_body_policy_adult_only_lineage_review_only",
+  "previous_status": "round_eye_mechanics_preview_ready_overlay_required",
+  "body_policy_review": {
+    "audited_at": "2026-07-15T22:02:49.6133242Z",
+    "status": "failed",
+    "review_only": true,
+    "runtime_activation_allowed": false,
+    "failure": "non_adult_or_uncertain_candidate_selected_adult_only_assets",
+    "source_lineage_manifest": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_body_base_rebuild_v1.json"
+  },
+  "output_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_base_body_pass_20260712.glb",
+  "base_body_source": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+  "reference_models_used_as_references_only": [
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_reference_light.glb",
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_pyjama_casual_reference_light.glb",
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/ladybug_rigged_reference_light.glb"
+  ],
+  "copied_reference_model_meshes_into_body": false,
+  "runtime_model_replaced": false,
+  "maturity_policy": "non_adult_doll_safe",
+  "actions": [
+    "Started from the restored Marinette female/base body branch, not a character reference model.",
+    "Removed empty helper primitives from the source scene.",
+    "Rebuilt named eye socket, sclera, iris, pupil, cornea, eyelid, and look-target parts.",
+    "Rebuilt eyes as round eyeballs seated inside head volume; no flat floating eye plates.",
+    "Added a small named mouth-control mesh and viseme anchors; real fitted blendshapes require the next face-mesh pass.",
+    "Added generated low-pigtail hair proxies and recorded hair-down/up variant slots.",
+    "Applied base normalization scale 1.147686."
+  ],
+  "scene_bounds": {
+    "low": [
+      -0.47897836565971375,
+      -0.10329170525074005,
+      0.0
+    ],
+    "high": [
+      0.47897836565971375,
+      0.10329172015190125,
+      1.3599998950958252
+    ]
+  },
+  "adult_anatomy_assets_used": false,
+  "removed_helper_primitives": [
+    "Icosphere"
+  ],
+  "renamed_base_parts": [
+    "marinette_rebuild_body_base_deforming_mesh->marinette_base_body_smooth_non_adult_doll_safe"
+  ],
+  "renamed_mesh_data": [
+    "Sphere.001->marinette_single_body_back_hair_mass_mesh",
+    "Sphere.002->marinette_single_body_low_pigtail_volume.L_mesh",
+    "Sphere.004->marinette_single_body_low_pigtail_volume.R_mesh",
+    "Sphere.003->marinette_single_body_pigtail_tie_red.L_mesh",
+    "Sphere.005->marinette_single_body_pigtail_tie_red.R_mesh",
+    "Sphere->marinette_single_body_side_swept_bangs_mesh",
+    "Cylinder->marinette_single_body_soft_side_lock.L_mesh",
+    "Cylinder.001->marinette_single_body_soft_side_lock.R_mesh",
+    "marinette_base_pass_lip_sync_mouth_control_mesh->marinette_base_pass_lip_sync_mouth_control_mesh_mesh"
+  ],
+  "generated_eye_parts": [
+    "marinette_base_pass_left_eye_socket_anchor",
+    "marinette_base_pass_left_eye_look_target",
+    "marinette_base_pass_left_upper_eyelid_control_anchor",
+    "marinette_base_pass_left_lower_eyelid_control_anchor",
+    "marinette_base_pass_left_round_eye_sclera",
+    "marinette_base_pass_left_iris_on_round_eye_surface",
+    "marinette_base_pass_left_pupil_on_round_eye_surface",
+    "marinette_base_pass_left_round_eye_catchlight",
+    "marinette_base_pass_right_eye_socket_anchor",
+    "marinette_base_pass_right_eye_look_target",
+    "marinette_base_pass_right_upper_eyelid_control_anchor",
+    "marinette_base_pass_right_lower_eyelid_control_anchor",
+    "marinette_base_pass_right_round_eye_sclera",
+    "marinette_base_pass_right_iris_on_round_eye_surface",
+    "marinette_base_pass_right_pupil_on_round_eye_surface",
+    "marinette_base_pass_right_round_eye_catchlight"
+  ],
+  "generated_mouth_parts": [
+    "marinette_base_pass_lip_sync_mouth_control_mesh",
+    "marinette_base_pass_separate_lips_expression_ring",
+    "marinette_base_pass_viseme_A_jaw_open_target",
+    "marinette_base_pass_viseme_E_wide_target",
+    "marinette_base_pass_viseme_O_round_target",
+    "marinette_base_pass_viseme_M_closed_target",
+    "marinette_base_pass_smile_target",
+    "marinette_base_pass_frown_target"
+  ],
+  "generated_hair_parts": [
+    "marinette_generated_scalp_cap_reference_only_not_copied",
+    "marinette_generated_side_swept_bangs",
+    "marinette_generated_back_hair_mass",
+    "marinette_generated_low_pigtail_left",
+    "marinette_generated_low_pigtail_right",
+    "marinette_generated_pigtail_tie_left",
+    "marinette_generated_pigtail_tie_right"
+  ]
+}

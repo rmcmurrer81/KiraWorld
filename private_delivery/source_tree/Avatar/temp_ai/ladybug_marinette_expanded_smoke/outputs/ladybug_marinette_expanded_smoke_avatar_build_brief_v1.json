@@ -1,0 +1,35 @@
+{
+  "brief_id": "ladybug_marinette_expanded_smoke_avatar_build_brief_v1",
+  "created_at": "2026-06-05T18:22:53.093616+00:00",
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "display_name": "Ladybug / Marinette Expanded Smoke",
+  "ai_type": "canon_reconstruction_temp_ai",
+  "build_mode": "reconstruction_fictional",
+  "status": "ready_for_reference_review",
+  "references": {
+    "approved": [],
+    "downloaded_needs_review": [],
+    "online_candidates_need_review_count": 1
+  },
+  "visual_profile": {
+    "forms_or_variants": [],
+    "face_notes": "",
+    "hair_notes": "",
+    "body_notes": "",
+    "wardrobe_notes": "",
+    "movement_or_pose_notes": ""
+  },
+  "policy": {
+    "references_do_not_create_memory": true,
+    "source_images_must_be_labeled": true,
+    "real_person_reconstruction_requires_extra_review": true,
+    "owner_or_project_review_required_before_generation": true,
+    "public_export_allowed": false
+  },
+  "next_steps": [
+    "Review downloaded references and move good ones to references/approved.",
+    "Write face/hair/body/wardrobe notes in avatar_profile.json.",
+    "Use approved references only for the first visual concept.",
+    "Do not claim a rendered avatar exists until one is generated and reviewed."
+  ]
+}

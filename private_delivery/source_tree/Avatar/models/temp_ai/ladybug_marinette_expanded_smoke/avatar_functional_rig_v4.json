@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-01T16:38:56.580226+00:00",
+  "avatar_glb": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+  "backup_glb": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_before_rig_mesh_v4_20260701_163852.glb",
+  "target_height_m": 1.57,
+  "added_finger_controls": 20,
+  "added_hair_strands": 108,
+  "added_eye_catchlights": 2,
+  "shape_key_hooks": {
+    "shared_face": [
+      "blink_left",
+      "blink_right",
+      "smile_soft",
+      "viseme_EE",
+      "viseme_MBP"
+    ],
+    "shared_mouth": [
+      "blink_left",
+      "blink_right",
+      "smile_soft",
+      "viseme_EE",
+      "viseme_MBP"
+    ]
+  },
+  "actions": [
+    "stand_idle",
+    "walk",
+    "jog",
+    "sit_proxy_runtime",
+    "open_hand",
+    "close_hand",
+    "talking"
+  ],
+  "limits": "functional mesh/blendshape hook pass; final realistic hair simulation and production facial rig still require a real sculpt/groom pipeline",
+  "robert_review_2026_07_02": {
+    "reference_images": [
+      "C:/Users/robmc/Desktop/Ladybug/571d633e84f86e2c8e96c2c6c978ed46.jpg",
+      "C:/Users/robmc/Desktop/Ladybug/0dcbccdd7969a32acca8f79302392c10.jpg",
+      "C:/Users/robmc/Desktop/Ladybug/d8467a008ecb3ae14bc11577d0683703.jpg",
+      "C:/Users/robmc/Desktop/Ladybug/33c9de7304f9b86fc4d44ab3aa35d0f0.jpg",
+      "C:/Users/robmc/Desktop/Ladybug/bf7f9ea45e965dbafc4893c9d40f8c27.jpg",
+      "C:/Users/robmc/Desktop/Ladybug/df0ae2687a1ded688b94b83a3e883f46.png"
+    ],
+    "hand_requirements": [
+      "hands need visible usable fingers, not loose helper dots on the floor",
+      "fingers need open, close, point, pinch, hold phone, hold purse strap, type, and touch-face training targets"
+    ],
+    "hair_requirements": [
+      "civilian hair should read as dark blue layered bangs with low pigtails and strand highlights",
+      "hair should be style-change ready for loose hair, beret/headband, pool hair, and future outfits",
+      "wet hair needs separate simulation/appearance states for swimming: darker, heavier, clumped, dripping, and affected by motion"
+    ],
+    "pool_requirement": "Home World now has a placeholder backyard pool; future avatar body pass must support diving, swimming, splash reaction, wet hair, and wet clothing states."
+  }
+}

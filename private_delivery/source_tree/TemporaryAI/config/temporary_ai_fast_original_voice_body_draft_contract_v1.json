@@ -1,0 +1,140 @@
+{
+  "contract_id": "temporary_ai_fast_original_voice_body_draft_contract_v1",
+  "version": 1,
+  "status": "STATIC_CONTRACT_IMPLEMENTED_EXECUTION_NOT_RUN",
+  "owner_intent": "Create an immediate private voice-and-body draft when an original generated or expert TemporaryAI candidate is scaffolded, then validate it asynchronously.",
+  "eligible_ai_types": [
+    "expert_temp_ai",
+    "generated_original_temp_ai"
+  ],
+  "preserved_separate_lanes": [
+    "canon_reconstruction_temp_ai",
+    "historical_person_voice_provenance",
+    "memory_relative_temp_ai"
+  ],
+  "draft_truth": {
+    "status": "AUTO_DRAFT_PRIVATE_INACTIVE_UNASSIGNED",
+    "created_with_candidate_scaffold": true,
+    "validation_status": "ASYNC_VALIDATION_QUEUED_NOT_RUN",
+    "voice_or_body_completion_claim_allowed_at_scaffold_time": false,
+    "high_quality_body_claim_allowed_without_a_sealed_template_and_acceptance": false,
+    "activation_allowed": false,
+    "assignment_allowed": false,
+    "publication_or_upload_allowed": false
+  },
+  "scheduling": {
+    "voice_and_body_drafts_are_parallel": true,
+    "heavy_gpu_execution_is_serialized": true,
+    "one_heavy_gpu_model_at_a_time": true,
+    "normal_runtime_must_remain_responsive": true
+  },
+  "voice_lane": {
+    "origin": "ORIGINAL_SYNTHETIC_TEXT_DESIGN_NOT_PERSON_CLONE",
+    "offline_after_local_install_and_cache": true,
+    "normal_synthesis_requires_network_after_cache": false,
+    "engine_sequence": [
+      {
+        "order": 1,
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+        "role": "Create an original synthetic voice reference from reviewed natural-language traits."
+      },
+      {
+        "order": 2,
+        "action": "UNLOAD_VOICE_DESIGN_AND_VERIFY_VRAM_RELEASE"
+      },
+      {
+        "order": 3,
+        "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+        "role": "Create and run the exact offline profile derived from the original designed reference."
+      },
+      {
+        "order": 4,
+        "action": "UNLOAD_BASE_AND_VERIFY_VRAM_RELEASE"
+      }
+    ],
+    "watermark": {
+      "initial_status": "NO_DOCUMENTED_INTENTIONAL_AUDIO_WATERMARK",
+      "meaning": "The reviewed upstream documentation does not document an intentional audio watermark. This is not a detector-backed claim that generated audio contains no watermark-like signal.",
+      "stronger_claim_allowed_before_acceptance": false,
+      "stronger_claim_gates": [
+        "PINNED_OFFICIAL_SOURCE_AND_LICENSE_ACCEPTED",
+        "PINNED_DEPENDENCY_LOCK_AND_HASHES_ACCEPTED",
+        "REPRESENTATIVE_GENERATED_AUDIO_DETECTOR_ACCEPTANCE_PASSED",
+        "OWNER_HEARING_ACCEPTANCE_PASSED"
+      ],
+      "removal_disabling_evasion_or_circumvention_allowed": false
+    },
+    "excluded_from_no_watermark_lane": [
+      {
+        "engine_family": "Chatterbox",
+        "reason": "Its official runtime includes PerTh watermarking. No removal, disablement, evasion, or concealment is authorized."
+      }
+    ],
+    "validation": [
+      "official source repository and license pinned",
+      "model and dependency hashes pinned",
+      "representative detector results recorded",
+      "voice differs from every sealed resident profile",
+      "requested text fidelity",
+      "readable non-silent WAV",
+      "offline synthesis after cache",
+      "latency RAM VRAM and clean release",
+      "owner hearing decision"
+    ],
+    "failure_behavior": {
+      "exact_profile_mismatch": "TEXT_PLUS_SILENCE_ONLY",
+      "unavailable_or_unvalidated_profile": "TEXT_PLUS_SILENCE_ONLY",
+      "generic_voice_fallback_allowed": false,
+      "other_person_voice_fallback_allowed": false
+    },
+    "acceptance_worker_metadata": {
+      "queue_kind": "TEMPORARYAI_ORIGINAL_VOICE_FORGE_PRIVATE_ACCEPTANCE_V1",
+      "acceptance_contract": "TemporaryAI/config/temporary_ai_qwen3_tts_original_voice_forge_acceptance_v1.json",
+      "runner": "tools/run_temporary_ai_qwen3_tts_voice_forge_acceptance.py",
+      "worker": "tools/qwen3_tts_original_voice_forge_worker.py",
+      "isolated_environment_spec": "Voice/sidecars/qwen3_tts_voice_forge/environment_spec_v1.json",
+      "execution_status": "QUEUED_INERT_NOT_RUN",
+      "fallback_on_failure": "TEXT_PLUS_SILENCE_ONLY"
+    }
+  },
+  "body_lane": {
+    "execution_source": "FUTURE_SEALED_TEMPLATE_PLUS_PRECOMPUTED_PARAMETERS_ONLY",
+    "freeform_body_generation_in_fast_lane_allowed": false,
+    "maturity_must_be_explicit": true,
+    "adulthood_inference_allowed": false,
+    "routing": {
+      "confirmed_adult": "CONFIRMED_ADULT_SEALED_TEMPLATE",
+      "non_adult": "DOLL_SAFE_NON_ANATOMICAL_SEALED_TEMPLATE",
+      "unresolved": "DOLL_SAFE_NON_ANATOMICAL_SEALED_TEMPLATE"
+    },
+    "adult_anatomy_requires_confirmed_adult": true,
+    "hair": {
+      "must_be_detached": true,
+      "must_be_separately_versioned": true,
+      "hair_change_must_not_regenerate_body": true,
+      "runtime_attachment_requires_acceptance": true
+    },
+    "required_acceptance": [
+      "sealed template hash and version",
+      "parameter bounds",
+      "maturity-route proof",
+      "structural and nonintersection checks",
+      "movement and contact checks",
+      "private multiview renders",
+      "owner visual decision"
+    ],
+    "truth_until_templates_exist": "AUTO_DRAFT_PRIVATE_INACTIVE_UNASSIGNED_TEMPLATE_BLOCKED"
+  },
+  "forbidden_claims_or_actions": [
+    "voice generated when only a plan exists",
+    "body generated or completed when only a plan exists",
+    "no watermark detected before detector acceptance",
+    "high-quality completed body before a sealed template and acceptance",
+    "inferred adulthood",
+    "activation",
+    "assignment",
+    "publication",
+    "upload",
+    "watermark removal or circumvention"
+  ]
+}

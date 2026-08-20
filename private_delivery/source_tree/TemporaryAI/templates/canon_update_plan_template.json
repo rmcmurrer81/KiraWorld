@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "template_type": "canon_update_plan",
+  "temporary_ai_id": "",
+  "character_id": "",
+  "variant_id": "",
+  "current_profile_version": "",
+  "new_profile_version": "",
+  "new_sources": [],
+  "update_type": "new_season | new_movie | new_book | corrected_source | manual_review",
+  "update_steps": [
+    "Preserve current profile as previous version.",
+    "Scan and process new sources.",
+    "Extract major events, relationship changes, opinion changes, emotional patterns, and visual/context details.",
+    "Compare new canon data with existing canon profile.",
+    "Create updated profile version.",
+    "Attach existing interaction memory file unchanged.",
+    "Write update notes explaining what changed.",
+    "Require review if changes strongly alter personality, relationships, or canon interpretation."
+  ],
+  "merge_rules": {
+    "preserve_interaction_memories": true,
+    "preserve_previous_profile_versions": true,
+    "canon_updates_extend_or_refine": true,
+    "contradictions_require_notes": true,
+    "do_not_merge_different_canons_unless_labeled_hybrid": true
+  },
+  "approval": {
+    "requires_kira_or_lisa_review": true,
+    "allow_delay_update": true,
+    "allow_keep_old_version_active": true
+  }
+}

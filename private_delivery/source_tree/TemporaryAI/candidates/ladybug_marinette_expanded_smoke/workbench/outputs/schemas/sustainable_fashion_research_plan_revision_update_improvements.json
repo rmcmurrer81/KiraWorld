@@ -1,0 +1,24 @@
+{
+    "researchPlan": {
+        "title": "string",
+        "description": "string",
+        "methods": [
+            {
+                "name": "textileWasteAnalysis",
+                "type": "object",
+                "properties": {
+                    "wasteType": {"type": "string"},
+                    "amount": {"type": "number"}
+                }
+            },
+            {
+                "name": "environmentalImpactAssessment",
+                "type": "object",
+                "properties": {
+                    "impactCategory": {"type": "string"},
+                    "score": {"type": "number"}
+                }
+            }
+        ]
+    }
+}

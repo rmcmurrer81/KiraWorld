@@ -1,0 +1,56 @@
+{
+  "request_id": "peter_parker_spider_man_no_way_home_final_suit_avatar_request_v1",
+  "target_type": "temp_ai",
+  "target_id": "peter_parker_spider_man_no_way_home_final_suit",
+  "requested_by": "system_scaffold",
+  "build_mode": "reconstruction_fictional",
+  "stage": "post_gpu",
+  "purpose": "Prepare avatar references and later avatar generation for Peter Parker / Spider-Man (No Way Home Final Suit).",
+  "source_policy": {
+    "references_are_evidence_not_memory": true,
+    "online_references_require_review": true,
+    "local_references_require_review": true
+  },
+  "privacy": {
+    "owner_controls_visibility": true,
+    "body_generation_private": true,
+    "pre_clothing_visibility_allowed": false,
+    "underwear_or_clothing_required_before_default_visibility": true,
+    "allowed_preview_levels": [
+      "feature_only",
+      "shoulders_up",
+      "clothed_only"
+    ]
+  },
+  "private_reference_policy": {
+    "owner_controlled": true,
+    "may_be_used_for_other_avatars": false,
+    "may_be_used_for_public_exports": false
+  },
+  "feature_selection": {
+    "owner_final_decision": true,
+    "allowed_features": [
+      "face",
+      "hair",
+      "eyes",
+      "body_proportions",
+      "wardrobe",
+      "pose",
+      "expression"
+    ]
+  },
+  "wardrobe_plan": {
+    "starts_after_body_creation": true,
+    "minimum_starter_outfits": [
+      "everyday",
+      "formal_or_work",
+      "relaxed_home"
+    ]
+  },
+  "output_expectation": {
+    "claim_rendered_avatar_exists": false,
+    "first_output": "reference-reviewed visual brief",
+    "later_output": "generated 2D/3D avatar candidate"
+  },
+  "status": "draft"
+}

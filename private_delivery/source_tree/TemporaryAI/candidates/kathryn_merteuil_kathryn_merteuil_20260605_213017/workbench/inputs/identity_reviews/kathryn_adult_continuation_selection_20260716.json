@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "review_id": "kathryn_adult_continuation_selection_20260716",
+  "recorded_at": "2026-07-16T00:00:00-04:00",
+  "reviewed_by": "real_robert",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "subject_id": "kathryn_merteuil_adult_continuation",
+  "decision": {
+    "version_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+    "version_kind": "user_directed_composite_continuation",
+    "present_timepoint": "Cruel Intentions 2016 NBC unaired-pilot period",
+    "present_maturity_lane": "adult",
+    "present_topology_lane": "confirmed_adult_topology",
+    "adult_anatomy_allowed": true,
+    "non_adult_doll_safe_treatment_allowed": false,
+    "approximate_elapsed_years_after_1999_film": 17,
+    "age_interpretation": "Robert identifies Kathryn as 17 in the 1999 film; carrying that project age through the approximately 17-year continuation makes the selected present Kathryn an adult. Exact birthday/age remains non-canon unless a reviewed source establishes it."
+  },
+  "continuity_order": [
+    {
+      "order": 1,
+      "work": "Cruel Intentions 2",
+      "role": "owner-approved origin/backstory layer only",
+      "character_timepoint": "teen/prequel period",
+      "performer_for_kathryn": "Amy Adams",
+      "allowed_uses": [
+        "broad origin and relationship backstory after contradiction review"
+      ],
+      "forbidden_uses": [
+        "Sarah Michelle Gellar voice evidence",
+        "Sarah Michelle Gellar likeness evidence",
+        "present-day adult body evidence",
+        "unreviewed replacement of 1999-film facts"
+      ],
+      "local_media_status": "not_found_in_Data_library_on_2026_07_16"
+    },
+    {
+      "order": 2,
+      "work": "Cruel Intentions (1999)",
+      "role": "core earlier-life events and Sarah Michelle Gellar performance history",
+      "character_timepoint": "Robert-reviewed age 17; backstory only for maturity-sensitive behavior",
+      "performer_for_kathryn": "Sarah Michelle Gellar",
+      "local_media": {
+        "path": "Data/library/movies/cruel_intentions/cruel_intentions.mp4",
+        "sha256": "c5fc74d03258850d03d433fe6e883e209de678573216b1c69a41fe2d6be365dc",
+        "size_bytes": 1403670246,
+        "duration": "01:37:25.80"
+      }
+    },
+    {
+      "order": 3,
+      "work": "Cruel Intentions 2016 NBC unaired pilot",
+      "role": "selected adult-present continuation and primary adult performance lane",
+      "character_timepoint": "approximately 17 years after the 1999 film",
+      "performer_for_kathryn": "Sarah Michelle Gellar",
+      "local_media": {
+        "path": "Data/library/tv_shows/unaired_pilots/cruel_intentions_nbc_unaired_pilot_2016_sd.mp4",
+        "sha256": "757b2577b38b6b70e7bce6f62e4afd43e8c13c97d12a2317dc9b9f40e5f10d05",
+        "size_bytes": 210529942,
+        "duration": "00:44:48.06"
+      }
+    }
+  ],
+  "source_context": [
+    {
+      "url": "https://www.sonypictures.com/movies/cruelintentions2",
+      "supports": "Sony describes Cruel Intentions 2 as the earlier Manchester Prep story and credits Amy Adams as Kathryn."
+    },
+    {
+      "url": "https://deadline.com/2016/02/sarah-michelle-gellar-cast-cruel-intentions-nbc-pilot-1201708911/",
+      "supports": "The 2016 continuation is set more than 15 years after the film and Sarah Michelle Gellar reprises Kathryn."
+    },
+    {
+      "url": "https://variety.com/2016/tv/news/sarah-michelle-gellar-cruel-intentions-tv-show-reboot-nbc-1201713384/",
+      "supports": "Sarah Michelle Gellar is the returning Kathryn performer in the NBC pilot."
+    }
+  ],
+  "contradictions_and_repairs": [
+    "Cruel Intentions 2 was assembled from the Manchester Prep project and uses Amy Adams as Kathryn, so it is a user-approved backstory layer rather than literal Sarah Michelle Gellar performance continuity.",
+    "If Cruel Intentions 2 conflicts with the 1999 film or 2016 pilot, the 1999 film and its direct 2016 continuation control the selected adult branch; the conflict must be logged instead of silently merged.",
+    "The 1999 character is non-adult under Robert's age review. That period may inform history but may not be used as the selected present body/maturity or adult/private relationship timepoint.",
+    "The 2016 pilot is an unaired continuation, so this selected version is a clearly labeled Kira-project branch and not a claim that every franchise adaptation shares one timeline."
+  ],
+  "personality_and_branch_memory_preservation": {
+    "mode": "additive_source_grounding_no_personality_reset",
+    "existing_live_chat": {
+      "path": "Data/personhood_evaluations/temporary_ai_live_chats/temporary_ai_live_chat_kathryn_merteuil_kathryn_merteuil_20260605_213017_20260605_213041.json",
+      "sha256": "6d8479ecd8cdcd6471782e5e3b1f36b89b2170a80584acfa1975fbe55402fc7e",
+      "preserve_as": "existing in-project interaction continuity, not canon source evidence"
+    },
+    "monitor_transcript": {
+      "path": "Data/personhood_evaluations/temporary_ai_live_chats/temporary_ai_live_chat_kathryn_merteuil_kathryn_merteuil_20260605_213017_20260605_213041.monitor.md",
+      "sha256": "d0a5c8a0fab62fbb9a5f404be9b0e48235bddec71ec9d5f7da9abcf6f6b83a4d"
+    },
+    "retain": [
+      "polished, socially strategic, competitive, controlling, teasing, and guarded delivery",
+      "natural conversation instead of status-report speech",
+      "her demonstrated ability to set boundaries or refuse",
+      "the fact that Robert and this branch have spoken before"
+    ],
+    "review_not_blindly_promote": [
+      "claims in the old chat about family names or relationships that conflict with the selected source continuity",
+      "stage directions as literal physical events when no embodied action occurred",
+      "model-invented social connections or past events not supported by source or branch logs"
+    ]
+  },
+  "voice_and_likeness_boundary": {
+    "present_primary_performance_lane": "Sarah Michelle Gellar as adult Kathryn in the 2016 pilot",
+    "earlier_supplemental_performance_lane": "Sarah Michelle Gellar as Kathryn in the 1999 film",
+    "cruel_intentions_2_performance_lane": "Amy Adams; backstory facts only, never Sarah Michelle Gellar voice or likeness evidence",
+    "mixed_cast_media_requires_target_only_bounded_human_review": true
+  },
+  "action_boundary": {
+    "profile_or_memory_replacement_performed": false,
+    "media_extraction_performed": false,
+    "voice_generation_or_assignment_performed": false,
+    "body_generation_or_runtime_replacement_performed": false,
+    "activation_performed": false
+  }
+}

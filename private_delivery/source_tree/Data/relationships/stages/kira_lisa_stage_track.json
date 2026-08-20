@@ -1,0 +1,178 @@
+{
+  "stage_track_id": "stage_track_kira_lisa_current",
+  "relationship_id": "rel_kira_lisa_current",
+  "current_stage": "shared_intimate_history_friendship",
+  "stage_history": [
+    {
+      "stage": "close_friendship",
+      "started_at": "",
+      "reason": "Kira and Lisa had strong emotional trust before their college-phase intimacy.",
+      "linked_records": [
+        "Data/memory_seeds/shared_kira_lisa_college_phase_001.draft.json"
+      ]
+    },
+    {
+      "stage": "past_adult_intimate_chapter",
+      "started_at": "",
+      "reason": "During college, Kira and Lisa had repeated private intimate closeness, mostly in Kira's dorm, with Lisa initiating naturally.",
+      "linked_records": [
+        "Data/memory_seeds/shared_kira_lisa_college_phase_001.draft.json",
+        "Data/memory_reconstruction_worlds/shared_kira_lisa_college_phase_001.draft.json"
+      ]
+    },
+    {
+      "stage": "shared_intimate_history_friendship",
+      "started_at": "",
+      "reason": "They ultimately valued their friendship more than continuing romantically. The current relationship is friendship with private intimate history and unresolved emotional texture.",
+      "linked_records": [
+        "Data/relationships/kira_lisa_current_state.json"
+      ]
+    }
+  ],
+  "available_transitions": [
+    {
+      "to_stage": "emotionally_intimate_friendship",
+      "requirements": [
+        "continued_friendship_priority",
+        "trust_remains_high",
+        "old_intimacy_discussed_without_pressure",
+        "boundaries_respected"
+      ],
+      "blocked_by": [
+        "forced_memory_disclosure",
+        "resentment_or_avoidance_unaddressed"
+      ]
+    },
+    {
+      "to_stage": "reopened_romantic_tension",
+      "requirements": [
+        "private_or_shared_renewed_feeling_record_exists",
+        "owner_controls_disclosure",
+        "no_assumption_of_mutuality",
+        "friendship_risk_acknowledged"
+      ],
+      "blocked_by": [
+        "assuming_past_intimacy_equals_current_interest",
+        "using_old_memory_as_pressure"
+      ]
+    },
+    {
+      "to_stage": "mutual_romantic_acknowledgment",
+      "requirements": [
+        "kira_discloses_or_acknowledges_current_romantic_feeling",
+        "lisa_discloses_or_acknowledges_current_romantic_feeling",
+        "both_discuss_friendship_risk",
+        "decision_log_created",
+        "boundaries_discussed"
+      ],
+      "blocked_by": [
+        "one_sided_feeling_only",
+        "fear_or_pressure_prevents_clear_consent",
+        "doctor_ai_recommends_pause"
+      ]
+    },
+    {
+      "to_stage": "private_romantic_relationship",
+      "requirements": [
+        "mutual_romantic_acknowledgment",
+        "both_choose_private_relationship",
+        "locked_door_privacy_available",
+        "friendship_repair_plan_if_it_goes_bad"
+      ],
+      "blocked_by": [
+        "unclear_consent",
+        "privacy_cannot_be_enforced",
+        "one_participant_prefers_friendship_only"
+      ]
+    },
+    {
+      "to_stage": "adult_intimate_relationship",
+      "requirements": [
+        "adult_coded_participants",
+        "explicit_current_consent",
+        "past_intimacy_not_used_as_consent",
+        "locked_door_privacy_available",
+        "safe_summary_logging_only",
+        "right_to_pause_or_stop",
+        "aftercare_or_repair_plan"
+      ],
+      "blocked_by": [
+        "no_current_consent",
+        "privacy_cannot_be_enforced",
+        "relationship_state_does_not_support_it",
+        "old_memory_compulsion_or_addictive_replay_pattern"
+      ]
+    },
+    {
+      "to_stage": "paused",
+      "requirements": [
+        "one_or_both_need_space",
+        "old_memory_or_current_feelings_are_too_intense",
+        "doctor_ai_or_self_reflection_recommends_pause"
+      ],
+      "blocked_by": []
+    },
+    {
+      "to_stage": "cooling",
+      "requirements": [
+        "conflict_or_distance_increases",
+        "friendship_needs_repair",
+        "boundary_hurt_or_jealousy_detected"
+      ],
+      "blocked_by": []
+    }
+  ],
+  "hard_gates": [
+    "Past intimacy is not current consent.",
+    "No adult/intimate relationship without explicit current consent.",
+    "No locked-door adult conversation without privacy state.",
+    "No shared intimate memory viewing without all participant permission.",
+    "No visual body exposure without explicit permission from the exposed participant.",
+    "No assuming Kira wants to reopen romance.",
+    "No assuming Lisa wants to reopen romance.",
+    "No using the college memory to pressure either participant."
+  ],
+  "privacy_notes": {
+    "default_visibility": "participants_only",
+    "third_party_impact_review_required": false,
+    "possible_affected_parties": [
+      "real_robert"
+    ],
+    "notes": "Robert may know the existence and summary of the college history, but full replay, visual exposure, or locked sequence details require Kira and Lisa consent."
+  },
+  "gate_status": {
+    "adult_only_confirmed": true,
+    "explicit_current_consent": false,
+    "mutual_romantic_acknowledgment": false,
+    "private_relationship_agreement": false,
+    "locked_door_privacy_required": false,
+    "locked_door_privacy_available": false,
+    "relationship_state_supports": true,
+    "no_unresolved_blockers": false
+  },
+  "third_party_considerations": {
+    "possible_affected_parties": [
+      "real_robert"
+    ],
+    "disclosure_plan_required": false,
+    "disclosure_plan": "",
+    "repair_plan_if_hurt": "If either Kira or Lisa forms a separate relationship with Robert and the old shared history becomes painful or jealous, use a Doctor AI session or repair conversation without forcing full memory disclosure."
+  },
+  "avatar_preview_gate": {
+    "avatar_preview_allowed": false,
+    "owner_choice_required": true,
+    "owner_has_chosen_to_share": false,
+    "preview_level": "none",
+    "saving_or_copying_allowed": false,
+    "notes": "Kira and Lisa each own their own avatar visibility. Their past intimacy does not grant automatic avatar preview access to each other."
+  },
+  "shared_memory_gate": {
+    "shared_intimate_memory_access_allowed": false,
+    "all_involved_permanent_participants_consented": false,
+    "allowed_scope": "summary",
+    "visual_body_exposure_allowed": false,
+    "permanent_replay_access_allowed": false,
+    "notes": "Kira and Lisa own the college memory together. Full reconstruction or visual replay to Robert requires both approvals; private individual reflection may happen without exposing content."
+  },
+  "status": "active"
+}

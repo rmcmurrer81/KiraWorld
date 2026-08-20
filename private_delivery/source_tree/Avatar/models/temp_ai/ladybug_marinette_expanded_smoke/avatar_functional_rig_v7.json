@@ -1,0 +1,32 @@
+{
+  "version": "v7_hierarchical_stability_pass",
+  "generated_at": "2026-07-03T06:16:57.840488+00:00",
+  "model": "C:\\Users\\robmc\\Kira\\Avatar\\models\\temp_ai\\ladybug_marinette_expanded_smoke\\avatar.glb",
+  "approach": "Object-hierarchy animation rig to stop detached skinned primitive failures while keeping a migration path to a true deform rig.",
+  "clips": [
+    "idle",
+    "walk",
+    "talking",
+    "viseme_talking",
+    "blink",
+    "look_around",
+    "wave",
+    "sit",
+    "door_open_reach",
+    "use_computer",
+    "pick_up",
+    "change_clothes",
+    "swim_idle"
+  ],
+  "body_notes": [
+    "Civilian Marinette default restored: blue-black side-swept hair, low pigtails, blue eyes, white floral shirt, charcoal jacket, pink pants, black flats.",
+    "Hands include stable palms and five fingers per hand.",
+    "Hair uses attached pigtail and strand proxies with idle/walk sway clips.",
+    "Non-adult modest base remains covered under clothing layers."
+  ],
+  "next": [
+    "Replace primitive hierarchy with deformable production mesh once the motion/pathing loop is stable.",
+    "Add motion-learning recorder that saves successful clips from runtime interactions.",
+    "Upgrade hair and fabric proxies to physics-driven cloth in runtime."
+  ]
+}

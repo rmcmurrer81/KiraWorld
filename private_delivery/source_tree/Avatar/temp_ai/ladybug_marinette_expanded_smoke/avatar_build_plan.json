@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "updated_at": "2026-07-12T05:58:26.156044+00:00",
+  "goal": "An identity-reviewed, articulated civilian/hero avatar with idle, greeting, talking, and emotion motion.",
+  "current_preview": "The UI prefers generated 2D full-body pose assets when available and otherwise falls back to a reference still. It is not yet a rigged 3D body or true lip sync.",
+  "required_reference_views": [
+    {
+      "form": "civilian",
+      "view": "head_front",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "civilian",
+      "view": "head_left_three_quarter",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "civilian",
+      "view": "head_right_three_quarter",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "civilian",
+      "view": "head_left_profile",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "civilian",
+      "view": "head_right_profile",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "civilian",
+      "view": "full_body_front",
+      "status": "reference_available",
+      "reference_files": [
+        "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/downloaded/reference_02.png"
+      ]
+    },
+    {
+      "form": "civilian",
+      "view": "full_body_side",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "hero",
+      "view": "head_front",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "hero",
+      "view": "head_left_three_quarter",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "hero",
+      "view": "head_right_three_quarter",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "hero",
+      "view": "head_left_profile",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "hero",
+      "view": "head_right_profile",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "hero",
+      "view": "full_body_front",
+      "status": "reference_available",
+      "reference_files": [
+        "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/downloaded/reference_03.png"
+      ]
+    },
+    {
+      "form": "hero",
+      "view": "full_body_side",
+      "status": "needed",
+      "reference_files": []
+    }
+  ],
+  "motion_targets": [
+    "idle_breathing",
+    "hello_wave",
+    "talking",
+    "joy",
+    "excitement",
+    "concern",
+    "sadness"
+  ],
+  "generated_body_manifest": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/avatar_body_manifest.json",
+  "future_pipeline": [
+    "review multi-angle references",
+    "generate a consistent six-pose sheet",
+    "review pose identity",
+    "create/rig avatar",
+    "map emotion states",
+    "add phoneme or viseme lip sync"
+  ]
+}

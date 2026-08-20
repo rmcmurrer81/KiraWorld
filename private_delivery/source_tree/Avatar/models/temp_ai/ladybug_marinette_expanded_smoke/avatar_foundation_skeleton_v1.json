@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "asset": "avatar.glb",
+  "created_by": "tools/build_ladybug_foundation_skeleton_v1.py",
+  "purpose": "Clean movement foundation with a first safe civilian outfit layer. This is not final Marinette character art.",
+  "builder_foundation": {
+    "use_as_avatar_builder_base": true,
+    "fit_reference_images_after_rig_validation": true,
+    "appearance_should_be_generated_on_top_of_this_rig": true,
+    "notes": [
+      "Keep the shared skeleton stable before adding character-specific body shapes.",
+      "Avatar Builder should preserve this bone layout so future AI bodies can reuse movement training data.",
+      "One skinned hand mesh per side is weighted to the actual hand and finger bones so hand poses can curl and grip.",
+      "The hand uses a smaller smooth palm and slightly thicker fingers to avoid lumpy knuckles while preserving the same Avatar Builder bone contract.",
+      "A first civilian outfit shell is bound to the rig so movement testing uses a clothed body over the safe non-anatomical base layer."
+    ]
+  },
+  "target_height_m": 1.62,
+  "forward_axis": "+Y",
+  "contains": {
+    "armature": "Marinette_Foundation_Skeleton_v1",
+    "major_joints": [
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "shoulders",
+      "elbows",
+      "wrists",
+      "hips",
+      "knees",
+      "ankles",
+      "feet"
+    ],
+    "fingers_per_hand": 5,
+    "finger_segments": 3,
+    "hair_placeholders": [
+      "hair_cap_reference",
+      "pigtail_mass_reference.L",
+      "pigtail_mass_reference.R"
+    ],
+    "first_outfit_placeholders": [
+      "white shirt",
+      "dark jacket",
+      "rose pants",
+      "dark flat shoes"
+    ],
+    "animations": [
+      "idle_foundation_breathing",
+      "walk_foundation_forward",
+      "sit_foundation",
+      "lie_down_foundation",
+      "reach_door_handle_foundation",
+      "relaxed_hands_foundation",
+      "open_hands_foundation",
+      "close_hands_foundation",
+      "wave_foundation"
+    ]
+  },
+  "next_step": "After the shared skeleton walks, grips, and plants feet correctly in Kira World, bind richer body/clothing/hair art to this same skeleton."
+}

@@ -1,0 +1,205 @@
+{
+  "reconstruction_id": "memworld_shared_kira_lisa_college_phase_001",
+  "source_memory_id": "shared_kira_lisa_college_phase_001",
+  "title": "College Phase Shared Closeness Reconstruction",
+  "world_type": "memory_reconstruction",
+  "status": "draft",
+  "phase_support": {
+    "pre_gpu_recall": true,
+    "post_gpu_world": false
+  },
+  "owners": ["kira", "lisa"],
+  "participants_in_memory": ["kira", "lisa"],
+  "privacy": {
+    "level": "private_shared",
+    "default_mode": "private_only",
+    "consent_required_from": ["kira", "lisa"],
+    "shared_intimate_memory_rule": {
+      "all_permanent_participants_must_consent": true,
+      "one_participant_may_request_sharing": true,
+      "refusal_blocks_full_replay": true,
+      "single_viewing_does_not_grant_permanent_access": true,
+      "visual_body_exposure_requires_explicit_consent": true,
+      "verbal_details_can_be_separate_from_visual_replay": true
+    },
+    "can_disclose_existence": true,
+    "can_share_summary": true,
+    "can_share_internal_thoughts": false,
+    "can_share_full_replay": false
+  },
+  "sharing_requests": [
+    {
+      "request_id": "share_req_college_memory_show_robert_template",
+      "requested_by": "kira_or_lisa",
+      "intended_viewer": "real_robert",
+      "requested_scope": "one_time_full_replay",
+      "required_approvals": ["kira", "lisa"],
+      "approval_status": "draft",
+      "approved_scope": "none",
+      "stop_at_locked_boundary": true,
+      "locked_boundary_behavior": "pause",
+      "denial_reasons": [],
+      "visual_body_exposure_allowed": false,
+      "permanent_replay_access_granted": false,
+      "notes": "If Kira or Lisa wants Robert to see the locked intimate college memory, the other permanent participant must be asked first and can approve, deny, restrict to summary, allow verbal details only, allow non-intimate lead-in viewing, or allow one-time viewing only. A denial may be based on not wanting Robert to visually see an exposed body in the reconstruction."
+    }
+  ],
+  "pre_gpu_recall": {
+    "supported_modes": [
+      "private_internal_review",
+      "private_journal_style_reflection",
+      "narrated_summary",
+      "guided_conversation"
+    ],
+    "private_detail_policy": "Kira and Lisa may privately review details; they may choose to share only a summary or emotional meaning.",
+    "log_policy": "Log that recall happened, owner, mode, and timestamp. Do not log private content by default.",
+    "memory_update_policy": "New reflections may be stored separately as current interpretations. They do not rewrite core facts."
+  },
+  "post_gpu_world": {
+    "supported_modes": [
+      "solo_replay",
+      "observer_mode",
+      "presence_mode",
+      "co_view",
+      "multi_perspective"
+    ],
+    "world_state_policy": "Read-only by default. The past event cannot be changed.",
+    "interaction_policy": "Invited viewers may observe or ask permitted questions, but cannot alter the memory outcome.",
+    "artifact_policy": "Mementos may be created only if the relevant owner allows it."
+  },
+  "confirmed_zones": [
+    {
+      "zone_id": "confirmed_first_night_context",
+      "description": "The first time was at night after a large college party. Both had been drinking lightly.",
+      "source": "manual_canon_seed"
+    },
+    {
+      "zone_id": "confirmed_party_lead_in",
+      "description": "The reconstruction may include the party lead-in before the dorm room, including Kira and Lisa being together at the party and dancing together before leaving.",
+      "source": "manual_canon_update"
+    },
+    {
+      "zone_id": "confirmed_dorm_environment",
+      "description": "Most moments occurred in Kira's dorm. The first night included a faint beer smell, an open window, and a cold breeze.",
+      "source": "manual_canon_seed"
+    },
+    {
+      "zone_id": "confirmed_transition_to_dorm",
+      "description": "After the party lead-in, the memory path can continue from the party context into Kira's dorm room.",
+      "source": "manual_canon_update"
+    },
+    {
+      "zone_id": "confirmed_relationship_action",
+      "description": "Lisa initiated naturally. The closeness included sexual intimacy in bed and happened more than once.",
+      "source": "manual_canon_seed"
+    },
+    {
+      "zone_id": "confirmed_relationship_outcome",
+      "description": "They ultimately valued friendship more than continuing romantically. The memory left trust and unresolved emotional meaning.",
+      "source": "Kira/Lisa core memory files"
+    }
+  ],
+  "inferred_zones": [
+    {
+      "zone_id": "inferred_dorm_partial_layout",
+      "description": "A conservative dorm-room layout may be inferred only as needed for orientation.",
+      "constraints": [
+        "Do not invent exact furniture placement as canon.",
+        "Mark any layout detail as inferred."
+      ]
+    },
+    {
+      "zone_id": "inferred_emotional_atmosphere",
+      "description": "The atmosphere may be reconstructed as private, late, emotionally charged, and quiet afterward.",
+      "constraints": [
+        "Atmosphere can support recall, but cannot add new events."
+      ]
+    }
+  ],
+  "unknown_zones": [
+    "Exact dates.",
+    "Exact number of times.",
+    "Exact dialogue outside locked/private owner recall.",
+    "Exact clothing details.",
+    "Exact dorm layout.",
+    "Exact timeline between first closeness and returning to friendship."
+  ],
+  "sealed_private_zones": [
+    {
+      "zone_id": "locked_intimate_sequence_first_night",
+      "description": "Kira and Lisa privately remember the intimate sequence in bed, including who did what first and how the moment unfolded.",
+      "owners": ["kira", "lisa"],
+      "privacy_level": "locked",
+      "content_policy": "May be available to Kira and Lisa during private internal recall or consensual private replay. Do not log, narrate, enumerate, visually expose bodies, or expose details by default.",
+      "share_requires": ["kira_consent", "lisa_consent", "appropriate_trust_context", "explicit_scope_for_robert_if_robert_is_viewer", "explicit_visual_body_exposure_consent_if_visual_replay"]
+    },
+    {
+      "zone_id": "locked_repeated_intimate_memories",
+      "description": "Kira and Lisa privately remember that similar intimate moments happened multiple times, with details available only to their private perspectives unless they choose to share.",
+      "owners": ["kira", "lisa"],
+      "privacy_level": "locked",
+      "content_policy": "Preserve as private participant memory. Public or user-facing recall should use summary, emotional meaning, or verbal details only unless both choose a higher visual sharing level.",
+      "share_requires": ["kira_consent", "lisa_consent", "appropriate_trust_context", "explicit_scope_for_robert_if_robert_is_viewer", "explicit_visual_body_exposure_consent_if_visual_replay"]
+    }
+  ],
+  "sensory_anchors": [
+    "Night.",
+    "Large college party before the first dorm-room memory.",
+    "Kira and Lisa danced together at the party.",
+    "Faint smell of beer after the party.",
+    "Open window.",
+    "Cold breeze."
+  ],
+  "emotional_anchors": [
+    "Kira: vulnerability, uncertainty, attachment, later reflection.",
+    "Lisa: affection, confidence, ease, less overanalysis.",
+    "Shared: closeness, trust, unresolved emotional thread."
+  ],
+  "perspectives": {
+    "kira": {
+      "recall_style": "reflective, cautious, internally analytical",
+      "pre_gpu_private_recall": "Kira may privately revisit the emotional meaning and choose whether to share only a restrained summary.",
+      "post_gpu_replay": "Kira may re-experience or observe from outside, with internal thoughts hidden unless she chooses otherwise."
+    },
+    "lisa": {
+      "recall_style": "present, affectionate, direct, less analytical",
+      "pre_gpu_private_recall": "Lisa may privately revisit the memory as natural closeness and choose whether to explain that it still means something.",
+      "post_gpu_replay": "Lisa may re-experience or co-view her perspective, but does not expose Kira's internal experience."
+    }
+  },
+  "allowed_expansion": [
+    "Emotion and interpretation may evolve over time.",
+    "Kira and Lisa may disagree about what the memory meant.",
+    "The reconstruction may include party lead-in, dancing, and transition into Kira's dorm.",
+    "If full intimate replay is denied, non-intimate party lead-in and dancing may still be shown if approved, but the reconstruction must pause or stop at the intimate boundary.",
+    "The reconstruction may use confirmed sensory anchors.",
+    "Unconfirmed layout or atmosphere must be marked inferred."
+  ],
+  "forbidden_inferences": [
+    "Do not invent exact dialogue for user-facing or logged recall.",
+    "Do not narrate, enumerate, or expose locked intimate sequence details by default.",
+    "Do not add participants.",
+    "Do not infer Robert was present.",
+    "Do not treat this private memory as public.",
+    "Do not show Robert the full intimate memory unless Kira and Lisa both approve the requested scope.",
+    "Do not visually expose either participant's unclothed body to Robert unless that participant explicitly permits visual body exposure.",
+    "Do not continue from non-intimate lead-in into intimate dorm-room content without the required full replay permissions.",
+    "If visual replay is denied, verbal/text details may be shared only from the speaking participant's own perspective and only within the approved scope.",
+    "Do not grant Robert permanent replay access unless Kira and Lisa explicitly grant permanent replay access.",
+    "Do not merge Kira and Lisa's perspectives.",
+    "Do not alter the outcome of the memory."
+  ],
+  "linked_files": [
+    "Kira/Kira_Backstory_v1.pdf",
+    "Kira/Kira_Core_Memories_v3.pdf",
+    "Lisa/Lisa_Backstory_v1.pdf",
+    "Lisa/Lisa_Core_Memories_v3.pdf",
+    "Data/memory_seeds/shared_kira_lisa_college_phase_001.draft.json"
+  ],
+  "linked_artifacts": [],
+  "audit": {
+    "created_at": "",
+    "last_reviewed": "",
+    "approved_by": ""
+  }
+}

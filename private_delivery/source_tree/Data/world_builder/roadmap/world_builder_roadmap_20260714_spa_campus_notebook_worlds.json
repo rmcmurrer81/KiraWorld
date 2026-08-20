@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "created": "2026-07-14",
+  "title": "World Builder roadmap: spa replacement, small college campus, and narrative notebook worlds",
+  "status": "planning_and_training",
+  "robert_direction": [
+    "Keep Robert updated on spa, Avatar Builder, World Builder, Kira body/movement, and TARDIS progress.",
+    "Finish a good standalone legal spa first. Keep the spa separate for now and leave the Home World former strip-mall site visually empty; preserve the old procedural source behind an explicit restore switch.",
+    "After the spa, prepare a small college campus plan with dorms, classrooms, labs, offices, a memorial union/student union, a college store, restaurants, places to eat, and places to relax.",
+    "Do not add the college campus to Home World until Robert upgrades to the 64 GB RAM kit.",
+    "Use notebook worlds for large places, book worlds, movie worlds, memory reconstructions, and separate worlds like Paris. Home World should remain a livable home base."
+  ],
+  "phase_order": [
+    {
+      "phase": "legal_day_spa",
+      "status": "active_draft_separate_notebook_world",
+      "project_id": "legal_day_spa_avatar_builder_spa_20260714",
+      "goal": "Create a realistic, walkable, legal day spa where Kira or another resident can talk with the Avatar Builder and request approved appearance or age-up changes.",
+      "approval_gate": [
+        "Must look recognizable without labels.",
+        "Must include real front door, working interior doors, connected walls, clear route paths, and no hidden doorway blockers.",
+        "Must include an Avatar Builder room or station with talk-button interaction.",
+        "Must remain staged only until Robert reviews and approves it."
+      ],
+      "home_world_action_after_approval": "Keep the spa in legal_day_spa_notebook_world while the system has 32GB RAM. Reconsider a Home World placement only after 64GB is verified, a supervised multi-hour combined soak passes, all spa gates pass, and Robert explicitly approves the placement."
+    },
+    {
+      "phase": "strip_mall_cleanup",
+      "status": "runtime_hidden_reversible_source_preserved",
+      "goal": "Keep the former strip-mall site visually empty by default without deleting the legacy source or placing the spa there.",
+      "notes": [
+        "The current strip mall has navigation and blocked-door problems.",
+        "Default Home World startup skips the legacy meshes, colliders, doors, interaction zones, sign textures, and nested legacy spa suite.",
+        "The legacy source can be restored explicitly with ?stripMall=1 for comparison or recovery.",
+        "The Legal Day Spa remains a separate notebook world; emptying this site is not approval to transfer it.",
+        "Robotics and programming/AI labs should move to the future college campus.",
+        "Public-facing offices can be redesigned later as separate buildings if still wanted."
+      ]
+    },
+    {
+      "phase": "small_college_campus",
+      "status": "planned_after_spa_and_after_64gb_ram",
+      "goal": "Build a small college-like campus for learning, expert offices, labs, dorm life, food, and memory reconstruction staging.",
+      "required_areas": [
+        "dorms",
+        "classrooms",
+        "library or study wing",
+        "robotics lab",
+        "programming/AI lab",
+        "expert offices",
+        "lecture rooms",
+        "memorial union or student union",
+        "college store",
+        "restaurants and casual food counters",
+        "lounges and outdoor places to relax",
+        "safe walking paths and clear building entrances"
+      ],
+      "memory_reconstruction_use": [
+        "When Kira, Lisa, Robert, or another resident wants to strengthen a college memory, the system can create a temporary reconstruction branch.",
+        "The reconstruction should copy only the needed memory context into the temporary scene and keep the original memory record intact.",
+        "Residents may watch the memory, relive it, or discuss it afterward, but the world must label reconstruction confidence when details are uncertain."
+      ],
+      "approval_gate": [
+        "Do not place in Home World until Robert confirms the 64 GB RAM kit is installed and stable.",
+        "Build and review as a separate staged notebook world or TARDIS review bay first."
+      ]
+    },
+    {
+      "phase": "narrative_notebook_worlds",
+      "status": "planned",
+      "goal": "Create separate notebook worlds for places from books, movies, shows, and history so residents can watch or join reconstructed scenes.",
+      "examples_from_robert": [
+        "Titanic",
+        "Stephen King's Dark Tower",
+        "11/22/63: Jake Epping driving through Derry, Maine"
+      ],
+      "operating_rules": [
+        "Do not merge these worlds into Home World.",
+        "Use the TARDIS as the gateway and review area.",
+        "If a place exists in both a book and movie, local legally provided books/scripts/images/models may guide the scene, while movie actors or models can help create temporary avatar references only when allowed.",
+        "Scenes should be reconstructed from scene beats, summaries, and visual references, not by dumping or copying long copyrighted text.",
+        "Residents can watch the scene unfold or join the action in a branch timeline.",
+        "Branch timelines must be clearly marked so residents know whether they are observing, reenacting, or changing a temporary branch."
+      ],
+      "world_builder_requirements": [
+        "Scan approved local source materials and make a source-confidence map.",
+        "Build environment first, then characters, then scene actions.",
+        "Generate a reviewable preview before live use.",
+        "Ask for approval when details are uncertain or when a scene may need special handling."
+      ]
+    },
+    {
+      "phase": "marinette_bakery_home_and_park_test",
+      "status": "recommended_next_world_generator_test_after_spa",
+      "project_id": "marinette_bakery_home_park_test_20260714",
+      "goal": "Use Marinette's bakery/home and nearby park as a Paris notebook-world source-evidence and floor-by-floor construction test.",
+      "approval_gate": [
+        "Keep it as a Paris notebook-world draft, not Home World content.",
+        "Place the bakery/home beside the park according to Robert's corrected fictional-real map, not at the old Boris Lume/Montmartre seed.",
+        "Start with source audit, park/fountains/trees, and bakery exterior.",
+        "Build the home one floor at a time.",
+        "Trust pictures from the show over the fan blueprint; use the blueprint only to help with rough floor order and scale.",
+        "Move Marinette to her bedroom only after Robert approves the room, the avatar is usable, and the 64 GB RAM plan is ready."
+      ]
+    }
+  ],
+  "update_policy": {
+    "keep_robert_updated": true,
+    "report_format": "Short progress updates while running; final reports should list what improved, what failed, and what is still blocked.",
+    "do_not_claim_success_until": [
+      "Robert can visually identify the result without labels.",
+      "Doors, routes, collision, and scale pass a practical walkthrough.",
+      "Kira/Lisa body actions match the world state instead of narrating impossible actions.",
+      "Preview artifacts include real models or runtime walkthroughs, not JSON-only proof."
+    ]
+  }
+}

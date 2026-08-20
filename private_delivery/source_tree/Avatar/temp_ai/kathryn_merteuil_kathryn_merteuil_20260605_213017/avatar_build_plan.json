@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "updated_at": "2026-07-16T00:00:00-04:00",
+  "identity_selection": {
+    "version_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+    "present_timepoint": "Cruel Intentions 2016 NBC unaired-pilot period",
+    "maturity_lane": "adult",
+    "evidence_path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/identity_reviews/kathryn_adult_continuation_selection_20260716.json",
+    "evidence_sha256": "60b46f8fc329299a63b3aa4b4dc946a1c2b94eb29c6bfcccdff0c813447c6065"
+  },
+  "goal": "A reviewed, articulated civilian/hero avatar with idle, greeting, talking, and emotion motion.",
+  "current_preview": "The UI prefers generated full-body pose assets when available and otherwise falls back to a reviewed still. It is not yet a rigged 3D body or true lip sync.",
+  "required_reference_views": [
+    {
+      "form": "default",
+      "view": "head_front",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "default",
+      "view": "head_left_three_quarter",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "default",
+      "view": "head_right_three_quarter",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "default",
+      "view": "head_left_profile",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "default",
+      "view": "head_right_profile",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "default",
+      "view": "full_body_front",
+      "status": "needed",
+      "reference_files": []
+    },
+    {
+      "form": "default",
+      "view": "full_body_side",
+      "status": "needed",
+      "reference_files": []
+    }
+  ],
+  "motion_targets": [
+    "idle_breathing",
+    "hello_wave",
+    "talking",
+    "joy",
+    "excitement",
+    "concern",
+    "sadness"
+  ],
+  "generated_body_manifest": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/generated_body/avatar_body_manifest.json",
+  "future_pipeline": [
+    "review multi-angle references",
+    "generate a consistent six-pose sheet",
+    "review pose identity",
+    "create/rig avatar",
+    "map emotion states",
+    "add phoneme or viseme lip sync"
+  ]
+}

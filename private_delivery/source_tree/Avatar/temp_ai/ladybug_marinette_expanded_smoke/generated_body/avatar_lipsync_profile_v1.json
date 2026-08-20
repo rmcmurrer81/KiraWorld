@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "updated_at": "2026-06-30T00:00:00-04:00",
+  "mode": "text_timed_viseme_proxy_v1",
+  "description": "Interim mouth-shape driver for the local avatar runtime until reviewed voice audio can provide phoneme or viseme timings.",
+  "mouth_rules": {
+    "vowels": "wide open mouth",
+    "bmp": "nearly closed mouth",
+    "fv": "small lower-lip movement",
+    "spaces_and_punctuation": "closed/rest mouth",
+    "other_consonants": "medium open mouth"
+  },
+  "future_upgrade": [
+    "Generate viseme timestamps from the selected voice clip or TTS waveform.",
+    "Drive jaw, lips, cheeks, and tongue controls on the rigged GLB when those blend shapes exist.",
+    "Use the same profile for live chat replies, life-loop speech, and recorded motion tests."
+  ]
+}

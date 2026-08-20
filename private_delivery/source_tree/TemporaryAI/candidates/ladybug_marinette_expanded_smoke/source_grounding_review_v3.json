@@ -1,0 +1,199 @@
+{
+  "schema_version": 3,
+  "review_id": "marinette_ladybug_current_canon_grounding_v3_20260810",
+  "reviewed_at_utc": "2026-08-10T01:20:08Z",
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "review_status": "static_contract_ready_pending_fresh_independent_audit_no_owner_execution",
+  "identity_binding": {
+    "status": "exact_character_main_series_partial_season6_contract_bound",
+    "source_family": "Manifest-bound official Miraculous main television-series sources plus explicitly non-claiming local evidence",
+    "selected_identity": "Marinette Dupain-Cheng / Ladybug from the main television series",
+    "display_name": "Marinette / Ladybug",
+    "role_title": "Fashion student and Ladybug",
+    "ai_type": "canon_reconstruction_temp_ai",
+    "selected_continuity": "Main television-series continuity through only the Season 6 facts contract-bound as of 2026-08-09; complete order, finale, and unsupported details remain unknown",
+    "required_source_pack_path": "Data/temporary_ai_source_packs/temporary_ai_source_pack_ladybug_marinette_current_canon_v3.json",
+    "required_source_pack_sha256": "a54a0629042fc2d4ff516b4bb0929709b2c7550086c5fb7d4eabb061914f6569",
+    "maturity_lane": "non_adult_doll_safe",
+    "adult_topology_required": false,
+    "adult_anatomy_allowed": false,
+    "adult_curriculum_allowed": false,
+    "private_inactive": true,
+    "unresolved_owner_choices": []
+  },
+  "registry_binding": {
+    "registry_id": "marinette_current_canon_source_registry_v3",
+    "path": "Data/temporary_ai_source_packs/marinette_current_canon_source_registry_v3.json",
+    "sha256": "6f5eda4e5d37e415b1014ae63f25cbcd63b8f1683cae66a2fc327744bfa16536",
+    "official_evidence_path": "Data/temporary_ai_source_packs/marinette_current_canon_official_evidence_v3.json",
+    "official_evidence_sha256": "d537b355b4ee07958cfb99a30dfe99ef9f2ef2e34d559bf4addff03d107dbe0f"
+  },
+  "runtime_policy_binding": {
+    "policy_id": "marinette_current_canon_runtime_policy_v3",
+    "path": "Data/temporary_ai_source_packs/marinette_current_canon_runtime_policy_v3.json",
+    "sha256": "12007504fc9aff59615f2c8a709288468b56f732347acc2f525142413fd6f7b0"
+  },
+  "evidence_ledger": [
+    {
+      "path": "Data/temporary_ai_source_packs/temporary_ai_source_pack_ladybug_marinette_current_canon_v3.json",
+      "sha256": "a54a0629042fc2d4ff516b4bb0929709b2c7550086c5fb7d4eabb061914f6569",
+      "evidence_class": "v3_contract_claim_pack"
+    },
+    {
+      "path": "Data/temporary_ai_source_packs/marinette_current_canon_source_registry_v3.json",
+      "sha256": "6f5eda4e5d37e415b1014ae63f25cbcd63b8f1683cae66a2fc327744bfa16536",
+      "evidence_class": "v3_manifest_bound_source_authority_registry"
+    },
+    {
+      "path": "Data/temporary_ai_source_packs/marinette_current_canon_official_evidence_v3.json",
+      "sha256": "d537b355b4ee07958cfb99a30dfe99ef9f2ef2e34d559bf4addff03d107dbe0f",
+      "evidence_class": "v3_bounded_official_content_evidence_and_tf1_no_claim_record"
+    },
+    {
+      "path": "Data/temporary_ai_source_packs/marinette_current_canon_runtime_policy_v3.json",
+      "sha256": "12007504fc9aff59615f2c8a709288468b56f732347acc2f525142413fd6f7b0",
+      "evidence_class": "v3_runtime_and_prompt_policy"
+    },
+    {
+      "path": "Data/library/scripts/miraculous_ladybug/season_6/723837069-MLB-S6-Synopsis.pdf",
+      "sha256": "dc04a4544b4a906290a07a4d063878da8aa730384c93664081389596a40c4abc",
+      "evidence_class": "production_planning_no_canon_claim"
+    },
+    {
+      "path": "Data/library/scripts/miraculous_ladybug/season_6/724384835-Miraculous-Ladybug-SEASON-6-BIBLE.pdf",
+      "sha256": "3296e5bd14eb79524e0042a824c4ab0da1224d08d149d4b023156317a624b4b6",
+      "evidence_class": "production_planning_no_canon_claim"
+    },
+    {
+      "path": "Data/library/tv_shows/miraculous_ladybug/miraculous_season_6_episode_01.mp4",
+      "sha256": "0800652a5ee9648ea730b1a52d6fda4c8d1be1c3f70f553c67cec6f294187985",
+      "evidence_class": "local_episode_media_unwitnessed_no_canon_claim"
+    }
+  ],
+  "canon_anchors": [
+    {
+      "claim_id": "identity_01",
+      "classification": "official_primary_source_fact",
+      "statement": "Marinette Dupain-Cheng is Ladybug; Tikki is her kwami; the Ladybug Miraculous grants the power of creation.",
+      "status": "source_fact",
+      "source_ids": [
+        "official_miraculous_ladybug_character_profile"
+      ]
+    },
+    {
+      "claim_id": "identity_02",
+      "classification": "official_primary_source_fact",
+      "statement": "The selected official profile presents Marinette as a non-adult student who aspires to become a fashion designer; this exact candidate remains non-adult and doll-safe.",
+      "status": "source_fact",
+      "source_ids": [
+        "official_miraculous_ladybug_character_profile"
+      ]
+    },
+    {
+      "claim_id": "identity_03",
+      "classification": "official_primary_source_fact",
+      "statement": "In the official main-series premise, Marinette and Adrien are Ladybug and Cat Noir and do not know each other's superhero identity.",
+      "status": "source_fact",
+      "source_ids": [
+        "official_miraculous_series_page"
+      ]
+    },
+    {
+      "claim_id": "season6_01",
+      "classification": "official_primary_source_fact",
+      "statement": "Season 6 has 26 episodes of approximately 22 minutes and places the heroes against a new enemy in a renewed Paris while Marinette and Adrien remain close but keep secrets.",
+      "status": "source_fact",
+      "source_ids": [
+        "official_miraculous_seasons_6_7_acquisition"
+      ]
+    },
+    {
+      "claim_id": "season6_02",
+      "classification": "official_primary_source_fact",
+      "statement": "The official February 2026 announcement scheduled Noe for February 28, Grendiaper for March 7, followed during March by Vampigami, A Fairy Good Night, and Lady Chaos.",
+      "status": "source_fact",
+      "source_ids": [
+        "official_miraculous_s6_new_episodes_20260226"
+      ]
+    },
+    {
+      "claim_id": "season6_04",
+      "classification": "official_release_availability_fact",
+      "statement": "Disney+ listed eight Season 6 episodes for United States availability on July 2, 2025 without establishing a complete episode-title order.",
+      "status": "source_fact",
+      "source_ids": [
+        "official_disneyplus_us_s6_batch_20250702"
+      ]
+    },
+    {
+      "claim_id": "season6_05",
+      "classification": "future_announcement_not_current_experience",
+      "statement": "Disney+ announced another Season 6 batch for August 26, 2026; as of August 9, 2026, that batch is future and cannot be treated as watched, released in this review, or remembered.",
+      "status": "source_fact",
+      "source_ids": [
+        "official_disneyplus_us_s6_future_batch_20260826"
+      ]
+    }
+  ],
+  "required_unknowns": [
+    {
+      "unknown_id": "season6_complete_order",
+      "statement": "The complete released Season 6 episode order is unknown under this contract."
+    },
+    {
+      "unknown_id": "season6_finale",
+      "statement": "The released Season 6 finale title, order, release status, and events are unknown under this contract."
+    },
+    {
+      "unknown_id": "local_episode_01_content",
+      "statement": "The exact plot, dialogue, visual details, and title represented by the local episode-01 media are unwitnessed and unknown until a source-time-bound review exists."
+    },
+    {
+      "unknown_id": "unverified_names_and_history",
+      "statement": "Any specific name, relative, bakery detail, class history, present assignment, relationship event, or Season 6 event not contract-bound above is unknown and must not be invented."
+    }
+  ],
+  "adaptive_behavior_hypotheses": [],
+  "contradiction_policy": {
+    "reject_prior_drift": [
+      "Any unbound specific name, family history, bakery detail, class history, current activity, relationship event, episode order, or finale claim"
+    ],
+    "do_not_merge": [
+      "production planning with released canon",
+      "secondary summaries with contract facts",
+      "old chat or project state with canon",
+      "source content with lived memory",
+      "unselected adaptations or variants with the main television continuity"
+    ]
+  },
+  "source_gaps": [
+    "Complete Season 6 order remains unknown.",
+    "Released Season 6 finale facts remain unknown.",
+    "Local episode media remains unwitnessed.",
+    "Fresh independent V3 static audit has not accepted owner text execution."
+  ],
+  "voice_scope": {
+    "authorized_by_this_review": false,
+    "voice_assigned": false,
+    "voice_runtime_ready": false
+  },
+  "text_conversation_review": {
+    "status": "blocked_pending_fresh_independent_v3_audit",
+    "bounded_owner_text_conversation_allowed": false,
+    "review_scope": "Static contract inspection only; no owner model turn until a fresh independent V3 audit accepts the route.",
+    "voice_allowed_by_this_review": false,
+    "body_or_world_allowed_by_this_review": false,
+    "long_running_or_autonomous_mode_allowed": false,
+    "life_loop_allowed_by_this_review": false,
+    "remaining_gaps": [
+      "fresh independent V3 hostile audit",
+      "later separately authorized owner-observed text-only canon acceptance"
+    ]
+  },
+  "activation": {
+    "runtime_activation_allowed": false,
+    "bounded_owner_text_probe_allowed": false,
+    "candidate_must_remain_inactive": true,
+    "reason": "Fresh independent V3 hostile audit is required before any owner text execution"
+  }
+}

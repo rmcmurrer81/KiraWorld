@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kira 3D Avatar Room</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="stage" aria-label="Interactive 3D avatar room"></canvas>
+      <header class="topbar">
+        <div>
+          <h1 id="name">3D Avatar</h1>
+          <p id="activity">Preparing the room...</p>
+        </div>
+        <div class="status"><span id="live-dot"></span><span id="status">LOCAL</span></div>
+      </header>
+      <nav class="actions" aria-label="Avatar actions">
+        <button data-action="idle">Stand</button>
+        <button data-action="walk">Walk</button>
+        <button data-action="jog">Jog</button>
+        <button data-action="wave">Wave</button>
+        <button data-action="open_hand">Open hand</button>
+        <button data-action="close_hand">Close hand</button>
+        <button data-action="talking">Talk</button>
+        <button data-action="sit">Sit</button>
+        <button data-action="read_book">Read book</button>
+        <button data-action="read_magazine">Read magazine</button>
+        <button data-action="use_computer">Computer</button>
+      </nav>
+      <div class="forms" aria-label="Appearance">
+        <button data-form="civilian">Civilian</button>
+        <button data-form="hero">Hero</button>
+        <button data-form="sleepwear">Sleepwear</button>
+      </div>
+      <p class="truth">V1 procedural rig. Reviewed likeness and clothing reconstruction are still in progress.</p>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

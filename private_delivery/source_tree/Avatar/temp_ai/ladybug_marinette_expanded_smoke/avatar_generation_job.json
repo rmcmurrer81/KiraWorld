@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "updated_at": "2026-07-12T05:58:26.158162+00:00",
+  "status": "generated_pose_preview_available",
+  "identity_mode": "exact_version_likeness",
+  "reference_count": 59,
+  "generated_2d_pose_count": 12,
+  "requested_outputs": {
+    "forms": [
+      "civilian",
+      "hero"
+    ],
+    "review_views": [
+      "head_front",
+      "head_left_profile",
+      "head_right_profile",
+      "full_body_front",
+      "full_body_side",
+      "full_body_back"
+    ],
+    "final_model": "rigged GLB with identity-consistent clothing variants",
+    "animations": [
+      "idle",
+      "walk",
+      "wave",
+      "sit",
+      "read",
+      "use_computer",
+      "talking"
+    ]
+  },
+  "avatar_builder_asset_library": {
+    "manifest": "Avatar/avatar_builder/asset_library/manifest.json",
+    "hair_trial_report": "Avatar/avatar_builder/hair_training/hair_style_trials.json",
+    "hair_generation_curriculum": "Avatar/avatar_builder/hair_training/hair_generation_curriculum.json",
+    "body_generation_curriculum": "Avatar/avatar_builder/body_training/body_generation_curriculum.json",
+    "adult_face_body_trials": "Avatar/avatar_builder/face_body_training/adult_face_body_trials.json",
+    "shoe_generation_curriculum": "Avatar/avatar_builder/wardrobe_training/shoe_generation_curriculum.json",
+    "skin_tone_templates": "Avatar/avatar_builder/skin_tone/skin_tone_templates.json",
+    "spa_age_up_policy": "Avatar/avatar_builder/policies/spa_age_up_policy.json",
+    "selection_rule": "Use indexed model assets first. Hair, eyes, body, hands, and movement references must be selected and self-graded before fitting."
+  },
+  "anatomy_policy": {
+    "schema_version": 1,
+    "candidate_id": "ladybug_marinette_expanded_smoke",
+    "maturity_class": "non_adult_doll_safe",
+    "anatomy_allowed": false,
+    "adult_anatomy_assets_allowed": false,
+    "required_base_body_policy": "use non-explicit doll-safe base body; block adult anatomy and explicit body assets",
+    "notes": [
+      "Full anatomy references are adult-only.",
+      "Normal Marinette/Ladybug remains non-adult unless a separate aged-up adult variant is explicitly requested.",
+      "Uncertain age defaults to non-adult-safe body policy."
+    ]
+  },
+  "backend_availability": {
+    "background_removal": false,
+    "multi_view_identity_reconstruction": false,
+    "mesh_generation": false,
+    "skeleton_rigging": false,
+    "animation_retargeting": false,
+    "note": "No compatible local automated image-to-rig backend is installed yet."
+  },
+  "truth_note": "This is an automatic build job and progress record. It does not claim that a reviewed likeness, 3D mesh, rig, or animation set has already been generated."
+}

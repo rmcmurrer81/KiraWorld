@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "request_id": "kathryn_merteuil_cruel_intentions_2016_pilot_private_local_v1",
+  "created_at": "2026-07-16T16:44:06.254377+00:00",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "status": "draft_needs_bounded_scene_ranges",
+  "identity_target": {
+    "character": {
+      "character_id": "kathryn_merteuil",
+      "label": "Kathryn Merteuil"
+    },
+    "variant": {
+      "variant_id": "cruel_intentions_2016_nbc_unaired_pilot_adult_continuation",
+      "label": "Cruel Intentions 2016 NBC unaired pilot adult continuation"
+    },
+    "speaker": {
+      "speaker_id": "adult_kathryn_merteuil_2016_pilot_english",
+      "label": "Adult Kathryn Merteuil 2016 pilot English"
+    },
+    "performer": {
+      "performer_id": "sarah_michelle_gellar",
+      "label": "Sarah Michelle Gellar"
+    },
+    "identity_rule": "character, variant, speaker, and performer stay separate even when one performer has multiple roles"
+  },
+  "source": {
+    "kind": "private_local_library_media",
+    "path": "Data/library/tv_shows/unaired_pilots/cruel_intentions_nbc_unaired_pilot_2016_sd.mp4",
+    "sha256": "757b2577b38b6b70e7bce6f62e4afd43e8c13c97d12a2317dc9b9f40e5f10d05",
+    "size_bytes": 210529942,
+    "mtime_ns": 1778115665674976300,
+    "suffix": ".mp4",
+    "whole_source_may_not_be_auto_extracted": true
+  },
+  "authorization": {
+    "private_local_reference_use_authorized": true,
+    "authorized_by": "real_robert",
+    "authorized_at": "2026-07-16T16:44:06.363222+00:00",
+    "authorization_note": "Robert authorized private-local reference preparation; exact short target-only ranges and human review are still required.",
+    "scope": "bounded private-local voice and movement reference preparation",
+    "public_release_authorized": false,
+    "official_voice_or_performer_claim_authorized": false
+  },
+  "requested_evidence_types": [
+    "movement",
+    "voice"
+  ],
+  "scene_ranges": [],
+  "limits": {
+    "maximum_segments": 12,
+    "maximum_seconds_per_segment": 45.0,
+    "maximum_total_seconds": 180.0,
+    "requested_total_seconds": 0
+  },
+  "review_contract": {
+    "candidate_extraction_is_not_evidence_approval": true,
+    "human_audio_visual_identity_review_required": true,
+    "production_credit_or_cast_evidence_required": true,
+    "diarization_or_acoustic_grouping_is_an_aid_not_identity_proof": true,
+    "voice_reject_if_overlap_music_narration_or_material_effects": true,
+    "movement_requires_confirmed_visible_target_track": true
+  },
+  "action_boundaries": {
+    "metadata_discovery_remains_no_download": true,
+    "bounded_candidate_clip_extraction_allowed": false,
+    "whole_movie_or_episode_extraction_allowed": false,
+    "voice_clone_or_training_run_allowed_by_this_request": false,
+    "voice_assignment_allowed_by_this_request": false,
+    "temporary_ai_activation_allowed_by_this_request": false,
+    "public_release_allowed_by_this_request": false
+  },
+  "paths": {
+    "candidate_dir": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017",
+    "intake_root": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/private_local_media_intake"
+  },
+  "integrity": {
+    "request_payload_sha256": "c3d0061fcf05101c6ffee52d226e2a3e50b569005b075380ab6a2751343e8a75"
+  }
+}

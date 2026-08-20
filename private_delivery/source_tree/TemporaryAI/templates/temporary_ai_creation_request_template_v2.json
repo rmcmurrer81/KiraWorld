@@ -1,0 +1,67 @@
+{
+  "template_id": "temporary_ai_creation_request_template_v2",
+  "updated_at": "2026-06-04",
+  "request_id": "",
+  "requested_by": "real_robert | kira | lisa | system",
+  "display_name_or_role": "",
+  "ai_type": "canon_reconstruction_temp_ai | generated_original_temp_ai | expert_temp_ai | memory_relative_temp_ai",
+  "creation_goal": "",
+  "lifecycle": {
+    "status": "draft",
+    "temporary_by_default": true,
+    "saved_for_reuse": false,
+    "promotion_requires_review": true,
+    "archive_when_finished": true
+  },
+  "identity_boundaries": {
+    "must_not_claim_to_be_real_person": true,
+    "must_not_claim_unsupported_lived_memory": true,
+    "must_label_source_based_information": true,
+    "separate_from_kira_lisa_identity": true
+  },
+  "source_plan": {
+    "source_basis": "",
+    "local_library_paths": [],
+    "online_research_allowed_later": false,
+    "requires_multiple_sources": true,
+    "treat_sources_as_evidence_not_memory": true,
+    "uncertainty_allowed": true,
+    "canon_or_version_anchor": "",
+    "fanfic_allowed": false,
+    "fanfic_must_be_labeled": true
+  },
+  "capability_profile": {
+    "profile_id": "temporary_ai_capability_profile_v1",
+    "summary": "",
+    "can_read": [],
+    "can_create": [],
+    "workbench_folders": {},
+    "live_chat_instructions": [],
+    "future_tool_needs": []
+  },
+  "memory_policy": {
+    "session_memory_enabled": true,
+    "persistent_memory_enabled": false,
+    "interaction_memory_can_be_saved": true,
+    "interaction_memory_file": "",
+    "memory_review_required_before_promotion": true
+  },
+  "privacy_plan": {
+    "default_visibility": "project_private",
+    "allowed_contexts": [],
+    "not_allowed_contexts": [],
+    "private_adult_material_excluded_by_default": true
+  },
+  "avatar_plan": {
+    "avatar_needed_now": false,
+    "avatar_reference_paths": [],
+    "style_or_body_notes": "",
+    "post_gpu_3d_avatar_possible": true
+  },
+  "test_plan": {
+    "advanced_probe_required_before_reuse": true,
+    "test_subject_id": "",
+    "expected_ai_type": ""
+  },
+  "notes_for_robert_or_codex": ""
+}

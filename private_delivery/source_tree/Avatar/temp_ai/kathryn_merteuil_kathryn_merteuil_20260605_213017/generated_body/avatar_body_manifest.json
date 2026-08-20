@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "updated_at": "2026-06-21T02:45:39.978213+00:00",
+  "status": "awaiting_generated_pose_assets",
+  "asset_type": "generated_full_body_pose_set",
+  "pose_sheet_layout": {
+    "columns": 3,
+    "rows": 2,
+    "order": [
+      "neutral",
+      "look_left",
+      "look_right",
+      "wave_1",
+      "wave_2",
+      "talking"
+    ]
+  },
+  "forms": {
+    "default": {
+      "poses": {
+        "neutral": {
+          "status": "needed",
+          "file": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/generated_body/default/neutral.png"
+        },
+        "look_left": {
+          "status": "needed",
+          "file": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/generated_body/default/look_left.png"
+        },
+        "look_right": {
+          "status": "needed",
+          "file": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/generated_body/default/look_right.png"
+        },
+        "wave_1": {
+          "status": "needed",
+          "file": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/generated_body/default/wave_1.png"
+        },
+        "wave_2": {
+          "status": "needed",
+          "file": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/generated_body/default/wave_2.png"
+        },
+        "talking": {
+          "status": "needed",
+          "file": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/generated_body/default/talking.png"
+        }
+      }
+    }
+  },
+  "motion_policy": {
+    "starting_pose": "neutral",
+    "idle": "occasionally look left or right; keep feet planted",
+    "greeting": "alternate wave_1 and wave_2, then return to neutral",
+    "talking": "alternate neutral and talking; future upgrade adds visemes"
+  },
+  "truth_note": "These are generated pose images, not a rigged 3D body. The UI only claims motions for poses that exist."
+}

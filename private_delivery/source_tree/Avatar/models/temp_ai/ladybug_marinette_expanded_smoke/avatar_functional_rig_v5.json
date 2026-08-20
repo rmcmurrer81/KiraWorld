@@ -1,0 +1,24 @@
+{
+  "version": "v5",
+  "created_utc": "20260703_012229",
+  "backup": "C:\\Users\\robmc\\Kira\\Avatar\\models\\temp_ai\\ladybug_marinette_expanded_smoke\\avatar_before_rig_v5_20260703_012229.glb",
+  "removed_old_helper_count": 344,
+  "new_finger_mesh_count": 60,
+  "blink_lids": [
+    "v5_left_blink_lid",
+    "v5_right_blink_lid"
+  ],
+  "bound_mesh_count": 212,
+  "armature": "Marinette_Rig_v5",
+  "clips": [
+    "idle",
+    "walk",
+    "talking",
+    "wave",
+    "use_computer"
+  ],
+  "notes": [
+    "Functional procedural rig pass with deform bones, hand bones, face shape keys, eyelid blink proxies, and exported locomotion/social clips.",
+    "Hair has pigtail and bang bones/proxy meshes for future cloth or spring-bone simulation; full wet-hair physics remains a later runtime pass."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "qwen3_tts_voice_forge_harness_manifest_v3",
+  "status": "IMPLEMENTED_REQUIRES_INDEPENDENT_AUDIT",
+  "execution_allowed": false,
+  "revision": "R3_APPEND_ONLY_ATTEMPT_02_FOUR_BLOCKER_REPAIR",
+  "predecessor_manifest": {
+    "path": "TemporaryAI/config/qwen3_tts_voice_forge_harness_manifest_v2.json",
+    "sha256": "682d95880d93fffa68a7c9bbf6005ca52e59f1ab241be827c3f0c1d2938844a4",
+    "preserved_byte_for_byte": true
+  },
+  "rejected_audit_preserved": {
+    "path": "System/Docs/TEMPORARYAI_QWEN3_TTS_ORIGINAL_VOICE_FORGE_R2_REPAIRED_INDEPENDENT_AUDIT_ATTEMPT_02_20260809.md",
+    "sha256": "304f28d06cd37e45693dd88206a7979cde5c8e7cf729c33cf9dc36e2e59bad00",
+    "verdict": "REJECT_FOR_BOUNDED_REAL_EXECUTION"
+  },
+  "repair_scope": {
+    "only_attempt_02_blockers_repaired": true,
+    "persisted_prompt": "EXACT_FLUSHED_RUNTIME_CLONE_PROMPT_RELOADED_SEMANTIC_HASH_VERIFIED_AND_RELOADED_OBJECT_ONLY_USED_FOR_FINAL_CLONE",
+    "artifact_mutation": "REFERENCE_AND_CLONE_WAVS_SEALED_AND_RECHECKED_BEFORE_AND_AFTER_EVERY_EVALUATOR_OPERATION_BEFORE_WORKER_ACCEPTANCE_AND_BY_PARENT_AFTER_CLEAN_EXIT",
+    "distribution_completeness": "EVERY_FILESYSTEM_DIST_INFO_ENUMERATED_ONE_TO_ONE_AND_DIST_INFO_CANNOT_BE_RELABELED_LOOSE",
+    "wheel_binding": "REAL_CP311_WINDOWS_TORCH_AND_TORCHAUDIO_PAYLOAD_REQUIRED_AND_EVERY_INSTALLED_RECORD_FILE_BOUND_TO_EXACT_WHEEL_OR_EXPLICIT_INSTALLER_DIFFERENCE"
+  },
+  "inertness": {
+    "no_install": true,
+    "no_download": true,
+    "no_network": true,
+    "no_model_import_or_load": true,
+    "no_inference": true,
+    "no_voice_generation": true,
+    "no_playback": true,
+    "no_current_voice_change": true,
+    "no_chatterbox_change": true,
+    "no_handoff_change": true
+  },
+  "real_execution_blocked_by": [
+    "FRESH_INDEPENDENT_HOSTILE_AUDIT_NOT_YET_ACCEPTED",
+    "ISOLATED_ENVIRONMENT_NOT_CREATED_OR_ACCEPTED",
+    "NO_OWNER_AUTHORIZED_BUNDLE_REGISTERED",
+    "REAL_COLLISION_CORPUS_PENDING"
+  ],
+  "audit_transition_rule": "A_FRESH_INDEPENDENT_AUDITOR_MUST_REPRODUCE_ALL_FOUR_ATTEMPT_02_EXPLOITS_AND_ACCEPT_THIS_EXACT_HASHED_REVISION_BEFORE_STATUS_OR_EXECUTION_ALLOWED_MAY_CHANGE",
+  "files": [
+    {
+      "path": "TemporaryAI/config/temporary_ai_qwen3_tts_original_voice_forge_acceptance_v2.json",
+      "bytes": 6884,
+      "sha256": "8ae41050fcb5cef73d6dfc65a60a97302b0e8d7278f1dd40cc1cc9908233bab1"
+    },
+    {
+      "path": "Voice/sidecars/qwen3_tts_voice_forge_v2/environment_spec_v2.json",
+      "bytes": 3633,
+      "sha256": "8cc507aaa6737a8d61920242f3c6e9cd3b0ac4670aa90cbc3a728f3cac88c69f"
+    },
+    {
+      "path": "Data/voice/policies/temporaryai_qwen3_tts_voice_forge_bundle_registry_v2.json",
+      "bytes": 154,
+      "sha256": "089a88f4ddcf96a2c557d3d3200d095f6dfe9198add90997736963389dff940a"
+    },
+    {
+      "path": "Data/voice/policies/qwen3_tts_voice_forge_evaluation_corpus_v2.json",
+      "bytes": 433,
+      "sha256": "6348031cbbc8205d03d44dbdbef1fdf3d2ae984e8a7027347d4fdee11a5a1853"
+    },
+    {
+      "path": "tools/qwen3_tts_original_voice_forge_worker_v2.py",
+      "bytes": 163093,
+      "sha256": "b22d735abdc649760ff65134bbdb157bd039ec71abdd04ad081b33f5d99f222c"
+    },
+    {
+      "path": "tools/run_temporary_ai_qwen3_tts_voice_forge_acceptance_v2.py",
+      "bytes": 48980,
+      "sha256": "88c4d3856d2854e91ee5266802dc87f9af3ea1bd2b2304eac1d8ed44e602ec45"
+    },
+    {
+      "path": "TemporaryAI/config/qwen3_tts_voice_forge_harness_manifest_v2.json",
+      "bytes": 5557,
+      "sha256": "682d95880d93fffa68a7c9bbf6005ca52e59f1ab241be827c3f0c1d2938844a4"
+    },
+    {
+      "path": "System/Docs/TEMPORARYAI_QWEN3_TTS_ORIGINAL_VOICE_FORGE_ACCEPTANCE_HARNESS_R2_CHECKPOINT_20260809.md",
+      "bytes": 10672,
+      "sha256": "c48444632f3af96d064ef01bfacb21cbdbd644415e66fae7e5ce1c399e056310"
+    },
+    {
+      "path": "System/Docs/TEMPORARYAI_QWEN3_TTS_ORIGINAL_VOICE_FORGE_R2_INDEPENDENT_AUDIT_20260809.md",
+      "bytes": 17870,
+      "sha256": "cc77ae5f8b2d068b4133e259a7141bc9d3c5485ec1bc546a32f6ce44ef3b0639"
+    },
+    {
+      "path": "System/Docs/TEMPORARYAI_QWEN3_TTS_ORIGINAL_VOICE_FORGE_R2_REPAIRED_INDEPENDENT_AUDIT_ATTEMPT_02_20260809.md",
+      "bytes": 14481,
+      "sha256": "304f28d06cd37e45693dd88206a7979cde5c8e7cf729c33cf9dc36e2e59bad00"
+    },
+    {
+      "path": "tools/qwen3_tts_voice_forge_r3_guards.py",
+      "bytes": 33123,
+      "sha256": "869ee27a048d2c40b8f1433b1fb17abf94c538f32bf3e74ec68417a2f9b4045c"
+    },
+    {
+      "path": "tools/qwen3_tts_original_voice_forge_worker_v3.py",
+      "bytes": 17134,
+      "sha256": "dcf9803afe4c519f19ff2eb6fc677454eb5b33d0e0d62861cfefe689ac90b020"
+    },
+    {
+      "path": "tools/run_temporary_ai_qwen3_tts_voice_forge_acceptance_v3.py",
+      "bytes": 17858,
+      "sha256": "f2aa4dca82bed34a88f46a4e8529829072f1aba0f56e61d12d1be522957eb53d"
+    },
+    {
+      "path": "Testing/test_temporary_ai_qwen3_tts_original_voice_forge_acceptance_v3.py",
+      "bytes": 27123,
+      "sha256": "7bb2b518d11a2ab1e19213369fa07cb01815445dff284b2e5c2831203c07d7a8"
+    }
+  ]
+}

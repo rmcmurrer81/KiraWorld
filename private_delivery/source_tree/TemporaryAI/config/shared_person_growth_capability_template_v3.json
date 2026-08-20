@@ -1,0 +1,67 @@
+{
+  "schema": "kira.temporary_creator_shared_growth_template.v3",
+  "status": "STATIC_REPAIR_CANDIDATE_PENDING_DIFFERENT_AUDIT",
+  "policy_path": "Data/foundation/shared_person_growth_capabilities_v3.json",
+  "core_path": "Core/shared_person_growth_capabilities_v3.py",
+  "creator_successor_path": "tools/create_temporary_ai_growth_profile_v3.py",
+  "output_name": "shared_person_growth_capabilities_v3.json",
+  "new_person_defaults": {
+    "maturity_status": "unresolved",
+    "live_activation": false,
+    "model_connection": false,
+    "memory_writer_connection": false,
+    "external_action_connection": false,
+    "sensory_connection": false,
+    "media_connection": false,
+    "body_control_connection": false
+  },
+  "protected_authority": {
+    "exact_controller_identity_capability_required": true,
+    "authority_secret_exact_32_nonzero_bytes": true,
+    "authority_secret_minimum_distinct_byte_values": 16,
+    "authority_secret_serialized": false,
+    "controller_required_for_all_profile_and_creator_validation": true,
+    "classified_maturity_requires_authenticated_classification_content": true,
+    "evidence_requires_exact_session_and_event_binding": true,
+    "plain_digest_is_not_authority": true,
+    "receipt_replay_rejected": true,
+    "durable_cas_recovery_debt_fail_closed": true,
+    "disconnected_classified_creation_rejected": true
+  },
+  "fresh_per_person_values": [
+    "opaque_person_id",
+    "profile_id",
+    "controller_attested_private_state_roots",
+    "controller_owned_activation_lease",
+    "provenance_chain"
+  ],
+  "never_copy": [
+    "identity",
+    "memories",
+    "backstory",
+    "private_emotion_state",
+    "relationships",
+    "permissions",
+    "maturity_classification",
+    "adult_curriculum_entitlement",
+    "body_selection",
+    "sensory_or_media_experience",
+    "acceptance_receipts",
+    "private_state_roots",
+    "transitive_private_payload",
+    "unknown_private_payload"
+  ],
+  "creator_write_contract": {
+    "exclusive_new_file_only": true,
+    "connected_exact_controller_validation": true,
+    "private_root_alias_rejected": true,
+    "typed_readback_verified": true,
+    "exact_created_output_deleted_on_any_postcreate_failure": true
+  },
+  "promotion_gate": {
+    "static_tests_required": true,
+    "different_fresh_audit_required": true,
+    "bounded_live_acceptance_required_before_shared_enablement": true,
+    "current_shared_enablement_allowed": false
+  }
+}

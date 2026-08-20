@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-06-09T00:07:50.096140+00:00",
+  "status": "research_queue_created",
+  "source_policy": {
+    "preferred_sources": "official/public education sources, professional organizations, courts, universities, or primary sources",
+    "wikipedia_is_preview_only": true,
+    "requires_robert_or_codex_review_before_activation": true
+  },
+  "lookup_summary": {
+    "status": "summary_found",
+    "query": "Quantum Mechanics",
+    "provider": "Wikipedia API",
+    "matched_title": "Quantum mechanics",
+    "summary": "Quantum mechanics is the fundamental physical theory that describes the behavior of matter and of light; its unusual characteristics typically occur at and below the scale of atoms. It is the foundation of all quantum physics, which includes quantum chemistry, quantum biology, quantum field theory, quantum technology, and quantum information science.",
+    "url": "https://en.wikipedia.org/wiki/Quantum_mechanics",
+    "candidates": [
+      {
+        "title": "Quantum mechanics",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Quantum_mechanics"
+      },
+      {
+        "title": "Introduction to quantum mechanics",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Introduction_to_quantum_mechanics"
+      },
+      {
+        "title": "Quantum mechanics of time travel",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Quantum_mechanics_of_time_travel"
+      },
+      {
+        "title": "Quantum Mechanics (book)",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Quantum_Mechanics_(book)"
+      },
+      {
+        "title": "Quantum mechanics of nuclear magnetic resonance spectroscopy",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Quantum_mechanics_of_nuclear_magnetic_resonance_spectroscopy"
+      }
+    ],
+    "review_note": "This is a public preview lookup, not a verified source pack.",
+    "errors": []
+  },
+  "suggested_search_urls": [
+    "https://www.google.com/search?q=Quantum+Mechanics",
+    "https://www.bing.com/search?q=Quantum+Mechanics",
+    "https://en.wikipedia.org/w/index.php?search=Quantum+Mechanics"
+  ],
+  "next_review_steps": [
+    "Confirm the lookup points at the right person, character, domain, or version.",
+    "Collect better official or primary sources when needed.",
+    "Run a short TemporaryAI probe before Kira or Lisa uses the candidate."
+  ],
+  "expanded_gather": {
+    "status": "expanded_gather_complete",
+    "wikipedia_titles_checked": [
+      "Quantum mechanics"
+    ],
+    "web_search_result_count": 0,
+    "fetched_search_source_count": 0,
+    "avatar_reference_status": "",
+    "avatar_reference_count": 0
+  }
+}

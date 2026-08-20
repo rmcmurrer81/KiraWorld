@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "request_id": "h_h_holmes_h_h_holmes_20260605_221432_voice_discovery_v1",
+  "created_at": "2026-07-16T00:00:00-04:00",
+  "candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+  "status": "metadata_discovery_request_ready",
+  "identity_target": {
+    "subject_kind": "historical_person",
+    "display_name": "H. H. Holmes",
+    "character": {
+      "character_id": "",
+      "label": ""
+    },
+    "variant": {
+      "variant_id": "historical_late_life_pre_death_timepoint",
+      "label": "about two years before death, with no posthumous knowledge"
+    },
+    "speaker": {
+      "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+      "label": "Herman Webster Mudgett / H. H. Holmes"
+    },
+    "performer": {
+      "performer_id": "historical_subject_self_if_authentic_recording",
+      "name": "Herman Webster Mudgett / H. H. Holmes",
+      "living_status": "deceased",
+      "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+      "consent_evidence_urls": []
+    },
+    "version_or_timepoint": "late-life reconstruction around 1894; exact anchor requires historical review",
+    "identity_aliases": [
+      "H. H. Holmes",
+      "Herman Webster Mudgett"
+    ],
+    "excluded_identity_names": [
+      "Sherlock Holmes"
+    ],
+    "shared_performer_does_not_merge_speakers": true
+  },
+  "discovery": {
+    "metadata_only": true,
+    "allow_media_download": false,
+    "allow_audio_extraction": false,
+    "allow_model_download": false,
+    "recording_queries": [
+      "H. H. Holmes verified voice recording archive",
+      "Herman Webster Mudgett authentic recording"
+    ],
+    "archive_queries": [
+      "(H. H. Holmes OR Herman Webster Mudgett) AND (audio OR sound OR cylinder)"
+    ],
+    "synthetic_model_queries": [
+      "english tts",
+      "male tts",
+      "H. H. Holmes voice model"
+    ],
+    "desired_non_imitative_voice_traits": [
+      "licensed generic adult masculine voice",
+      "English",
+      "historical pronunciation to be researched separately",
+      "no authentic-H.-H.-Holmes claim"
+    ],
+    "max_results_per_query": 5
+  },
+  "seed_recordings": [],
+  "seed_synthetic_models": [],
+  "historical_voice_factors": {
+    "anchor_date_or_era": {
+      "value": "approximately 1894, pending stronger primary-source anchoring",
+      "evidence_urls": [
+        "https://en.wikipedia.org/wiki/H._H._Holmes"
+      ],
+      "confidence": "low_orientation_source_only"
+    },
+    "chronological_age_or_band": {
+      "value": "adult; exact age band intentionally unresolved until a stronger biographical source is reviewed",
+      "evidence_urls": [],
+      "confidence": "low"
+    },
+    "places_and_regions": {
+      "value": [
+        "Chicago, Illinois context; upbringing and later regional influences not yet reviewed for voice design"
+      ],
+      "evidence_urls": [
+        "https://en.wikipedia.org/wiki/H._H._Holmes"
+      ],
+      "confidence": "low_orientation_source_only"
+    },
+    "education_and_profession": {
+      "value": [
+        "No education-based vocal inference is approved from the current voice evidence"
+      ],
+      "evidence_urls": [],
+      "confidence": "unknown"
+    },
+    "languages_and_dialects": {
+      "value": [
+        "English is the working language; exact historical regional pronunciation is unverified"
+      ],
+      "evidence_urls": [],
+      "confidence": "low_project_assumption"
+    },
+    "documented_health_or_voice_notes": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "no_reviewed_evidence"
+    }
+  },
+  "unverified_leads_excluded_from_voice_fact": [
+    "A supposed wax-cylinder confession is not accepted as recording evidence without an archival object record, provenance chain, speaker verification, and rights review.",
+    "Search-summary descriptions such as high-pitched or young-sounding are not treated as verified biometric traits."
+  ],
+  "policy": {
+    "living_performer_exact_voice_requires_explicit_consent_and_rights": true,
+    "official_media_is_not_voice_clone_permission": true,
+    "licensed_model_is_not_performer_consent": true,
+    "historical_missing_recording_requires_speculative_label": true,
+    "false_official_voice_claim_forbidden": true,
+    "activation_allowed": false
+  }
+}

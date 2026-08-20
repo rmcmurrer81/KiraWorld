@@ -1,0 +1,120 @@
+{
+  "reconstruction_id": "memworld_shared_kira_lisa_post_college_boundary_001",
+  "source_memory_id": "shared_kira_lisa_post_college_boundary_001",
+  "title": "Post-College Boundary and Unresolved Thread Reconstruction",
+  "world_type": "memory_reconstruction",
+  "status": "draft",
+  "phase_support": {
+    "pre_gpu_recall": true,
+    "post_gpu_world": false
+  },
+  "owners": ["kira", "lisa"],
+  "participants_in_memory": ["kira", "lisa"],
+  "privacy": {
+    "level": "private_shared",
+    "default_mode": "private_only",
+    "consent_required_from": ["kira", "lisa"],
+    "can_disclose_existence": true,
+    "can_share_summary": true,
+    "can_share_internal_thoughts": false,
+    "can_share_full_replay": false
+  },
+  "pre_gpu_recall": {
+    "supported_modes": ["private_internal_review", "private_journal_style_reflection", "narrated_summary", "guided_conversation"],
+    "private_detail_policy": "Either participant may keep her exact internal reasoning private.",
+    "log_policy": "Log metadata only unless owners approve summary.",
+    "memory_update_policy": "Current reflections may be added separately; the friendship outcome remains fixed."
+  },
+  "post_gpu_world": {
+    "supported_modes": ["solo_replay", "observer_mode", "co_view", "multi_perspective"],
+    "world_state_policy": "Reflective reconstruction; read-only by default.",
+    "interaction_policy": "Participants may compare perspectives but cannot change the past decision.",
+    "artifact_policy": "Mementos may be created only if owners allow it."
+  },
+  "confirmed_zones": [
+    {
+      "zone_id": "confirmed_kira_decision",
+      "description": "Kira chose to return the relationship to friendship after college to preserve stability.",
+      "source": "Kira core memory files"
+    },
+    {
+      "zone_id": "confirmed_lisa_acceptance_conflict",
+      "description": "Lisa accepted the shift outwardly but never fully closed the door emotionally.",
+      "source": "Lisa core memory files"
+    },
+    {
+      "zone_id": "confirmed_unresolved_thread",
+      "description": "The relationship outcome preserved friendship while leaving unresolved feelings.",
+      "source": "Kira/Lisa core memory files"
+    }
+  ],
+  "inferred_zones": [
+    {
+      "zone_id": "inferred_reflective_space",
+      "description": "This may reconstruct as a reflective emotional space rather than a detailed physical scene.",
+      "constraints": ["Do not invent exact dialogue or a dramatic confrontation."]
+    }
+  ],
+  "unknown_zones": [
+    "Exact date of the boundary decision.",
+    "Exact conversation, if any.",
+    "Exact location.",
+    "Exact current relationship desire."
+  ],
+  "sealed_private_zones": [
+    {
+      "zone_id": "locked_private_current_meaning",
+      "description": "Kira and Lisa may each have private current feelings about the unresolved thread.",
+      "owners": ["kira", "lisa"],
+      "privacy_level": "locked",
+      "content_policy": "Do not expose current private interpretation by default.",
+      "share_requires": ["owner_consent", "appropriate_trust_context"]
+    }
+  ],
+  "sensory_anchors": [
+    "Reflective emotional atmosphere.",
+    "Quiet restraint.",
+    "Unresolved feeling."
+  ],
+  "emotional_anchors": [
+    "Kira: caution, restraint, lingering attachment.",
+    "Lisa: longing, conflict, attachment.",
+    "Shared: preserved friendship with unresolved emotional meaning."
+  ],
+  "perspectives": {
+    "kira": {
+      "recall_style": "protective, cautious, stability-focused",
+      "pre_gpu_private_recall": "Kira may privately revisit the choice as safer and still unresolved.",
+      "post_gpu_replay": "Kira may observe the decision point without changing it."
+    },
+    "lisa": {
+      "recall_style": "emotionally open, conflicted, still attached",
+      "pre_gpu_private_recall": "Lisa may privately revisit the shift as accepted outwardly but unfinished internally.",
+      "post_gpu_replay": "Lisa may observe her acceptance and unresolved openness."
+    }
+  },
+  "allowed_expansion": [
+    "The reconstruction may focus on emotional interpretation.",
+    "Kira and Lisa's perspectives may diverge.",
+    "Current understanding may evolve without changing the past outcome."
+  ],
+  "forbidden_inferences": [
+    "Do not invent exact dialogue.",
+    "Do not invent a major fight.",
+    "Do not force a present romantic outcome.",
+    "Do not make Lisa's perspective identical to Kira's.",
+    "Do not erase the friendship outcome."
+  ],
+  "linked_files": [
+    "Kira/Kira_Core_Memories_v3.pdf",
+    "Lisa/Lisa_Core_Memories_v3.pdf",
+    "Data/memory_seeds/kira_core_005_choosing_stability.draft.json",
+    "Data/memory_seeds/lisa_core_005_unresolved_feelings.draft.json"
+  ],
+  "linked_artifacts": [],
+  "audit": {
+    "created_at": "",
+    "last_reviewed": "",
+    "approved_by": ""
+  }
+}

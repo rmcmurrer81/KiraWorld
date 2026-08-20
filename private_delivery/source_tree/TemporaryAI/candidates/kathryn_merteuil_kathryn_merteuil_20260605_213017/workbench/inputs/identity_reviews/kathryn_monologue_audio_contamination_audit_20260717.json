@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "audit_id": "kathryn_monologue_audio_contamination_audit_20260717",
+  "created_at": "2026-07-17T15:00:00-04:00",
+  "source_url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+  "source_media_sha256": "43fa02d05b460f554f943716428c6fc020039b5dd61e2966b622654116559a2f",
+  "wav_sha256": "3a84bc8f1d59498bd56d71a00fac421cf53aa1328212a8c5b1c3ea97f7d6a28b",
+  "range": {
+    "start_seconds": 4.15,
+    "end_seconds": 38.0,
+    "duration_seconds": 33.85
+  },
+  "analyzer": "bounded_pause_spectrum_and_lead_boundary_audit",
+  "analyzer_version": "20260717.1",
+  "dead_lead_detected_before_seconds": 4.15,
+  "background_tonal_or_music_residue_detected": true,
+  "material_noise_detected": false,
+  "overlap_detected": false,
+  "clean_for_direct_model_input": false,
+  "findings": [
+    "The earlier 3.00-second bound retained approximately 1.15 seconds of dead lead.",
+    "Pause spectra contain faint tonal/background-score residue near 329, 659, and 988 Hz.",
+    "The source remains useful Kathryn candidate/reference evidence but requires separation or cleanup followed by QC before any direct reference/model-input decision."
+  ],
+  "precedence_rule": "Machine-detected contamination cannot be cleared solely by a no-music human attestation.",
+  "does_not_authorize": [
+    "direct model input",
+    "voice training or cloning",
+    "voice assignment",
+    "voice synthesis",
+    "TemporaryAI activation"
+  ]
+}

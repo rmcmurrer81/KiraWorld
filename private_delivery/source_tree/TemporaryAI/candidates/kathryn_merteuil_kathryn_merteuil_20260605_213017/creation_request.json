@@ -1,0 +1,131 @@
+{
+  "template_id": "temporary_ai_control_center_request_v1",
+  "created_at": "2026-06-06T01:30:18.295594+00:00",
+  "request_id": "temp_ai_request_kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "requested_by": "real_robert",
+  "display_name_or_role": "Kathryn Merteuil",
+  "role_title": "Kathryn Merteuil",
+  "ui_category": "Fictional Character",
+  "ai_type": "canon_reconstruction_temp_ai",
+  "status": "adult_continuation_selected_pending_source_avatar_and_activation_review",
+  "input": {
+    "query_or_domain": "Kathryn Merteuil",
+    "role_title": "Kathryn Merteuil",
+    "version_life_point_or_canon_point": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+    "gender_preference": "Female",
+    "personality_notes": ""
+  },
+  "ambiguity_questions": [],
+  "ambiguity_resolution": {
+    "resolved_by": "real_robert",
+    "resolved_at": "2026-07-16T00:00:00-04:00",
+    "version_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+    "selected_present": "Cruel Intentions 2016 NBC unaired-pilot period",
+    "maturity_lane": "adult",
+    "continuity_order": ["Cruel Intentions 2 backstory", "Cruel Intentions 1999", "Cruel Intentions 2016 NBC unaired pilot"],
+    "evidence_path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/identity_reviews/kathryn_adult_continuation_selection_20260716.json",
+    "evidence_sha256": "60b46f8fc329299a63b3aa4b4dc946a1c2b94eb29c6bfcccdff0c813447c6065"
+  },
+  "knowledge_plan": {
+    "status": "reviewed_adult_continuation_selected",
+    "focus": "Kathryn Merteuil",
+    "version_or_life_point": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+    "gender_preference": "Female",
+    "source_policy": {
+      "sources_are_evidence_not_memory": true,
+      "requires_review_before_activation": true,
+      "private_project_memory_excluded_by_default": true,
+      "kira_lisa_private_memory_excluded_by_default": true,
+      "adult_private_material_excluded_by_default": true
+    },
+    "recommended_source_queries": [
+      "Cruel Intentions 2 Kathryn Merteuil Amy Adams prequel official",
+      "Cruel Intentions 1999 Kathryn Merteuil Sarah Michelle Gellar",
+      "Cruel Intentions 2016 NBC pilot adult Kathryn Sarah Michelle Gellar continuation"
+    ],
+    "core_competency_seed": [
+      "Stay within the selected version/canon point.",
+      "Label fanfic, alternate timelines, and project variants.",
+      "Do not claim unsupported lived memory.",
+      "Ask for clarification when multiple versions exist."
+    ]
+  },
+  "online_preview_lookup": {
+    "status": "summary_found",
+    "query": "Kathryn Merteuil",
+    "provider": "Wikipedia API",
+    "matched_title": "Kathryn Merteuil",
+    "summary": "Kathryn Merteuil is a fictional character from the Cruel Intentions franchise, created for it by Roger Kumble based on the Marquise Isabelle de Merteuil from Pierre Choderlos de Laclos's 1782 novel Les Liaisons dangereuses.",
+    "url": "https://en.wikipedia.org/wiki/Kathryn_Merteuil",
+    "candidates": [
+      {
+        "title": "Kathryn Merteuil",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Kathryn_Merteuil"
+      }
+    ],
+    "review_note": "This is a public preview lookup, not a verified source pack.",
+    "errors": []
+  },
+  "reliable_source_pack_status": {
+    "status": "source_pack_created",
+    "source_count": 1,
+    "fetched_count": 1,
+    "path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/reliable_source_pack.json"
+  },
+  "creation_estimate": {
+    "plain_estimate": "Needs Robert clarification first. Usually 5-15 minutes after the version/life point/domain is chosen.",
+    "candidate_files": "created now",
+    "online_preview": "summary_found",
+    "reliable_sources_fetched": 1,
+    "avatar": "request created now; rendered avatar is later after references/design choices",
+    "activation": "after Robert review and a short probe"
+  },
+  "identity_boundaries": {
+    "separate_from_kira_lisa_identity": true,
+    "must_not_claim_unsupported_lived_memory": true,
+    "sources_are_evidence_not_memory": true,
+    "historical_or_fictional_reconstruction_must_be_labeled": true,
+    "expert_must_label_fact_vs_interpretation": false,
+    "earlier_non_adult_periods_are_backstory_not_present_maturity": true,
+    "cruel_intentions_2_amy_adams_is_not_sarah_michelle_gellar_voice_or_likeness_evidence": true,
+    "existing_live_chat_must_be_preserved_by_hash_not_replaced": true
+  },
+  "activation_policy": {
+    "available_to_kira_after_review": true,
+    "available_to_lisa_after_review": true,
+    "robert_review_required": true,
+    "probe_required_before_longer_use": true,
+    "current_status": "candidate_created_pending_review"
+  },
+  "avatar_plan": {
+    "avatar_requested": true,
+    "adult_candidate": true,
+    "maturity_policy": "adult",
+    "adult_topology_required": true,
+    "non_adult_doll_safe_treatment_allowed": false,
+    "present_timepoint": "Cruel Intentions 2016 NBC unaired-pilot period",
+    "identity_selection_evidence_path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/identity_reviews/kathryn_adult_continuation_selection_20260716.json",
+    "identity_selection_evidence_sha256": "60b46f8fc329299a63b3aa4b4dc946a1c2b94eb29c6bfcccdff0c813447c6065",
+    "avatar_folder": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017",
+    "timeline": {
+      "status": "avatar_request_created_not_rendered",
+      "estimate": "The adult 2016-pilot-period continuation is selected. A usable avatar still needs approved adult-present multiview references, landmark fitting, rig/deformation proof, and Robert's clothed review.",
+      "current_machine_note": "GPU is available for bridge work, but this tool only creates the reviewed build request.",
+      "done_now": [
+        "candidate avatar folder",
+        "avatar request JSON",
+        "reference review folders"
+      ],
+      "still_needed": [
+        "approved adult-present multiview references and reviewed landmarks",
+        "avatar build brief",
+        "future renderer/modeling step"
+      ]
+    },
+    "references_require_review": true,
+    "online_image_download_not_run_by_this_tool": true
+  },
+  "updated_at": "2026-07-16T00:00:00-04:00"
+}

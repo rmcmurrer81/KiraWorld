@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "candidate_id": "peter_parker_spider_man_no_way_home_final_suit",
+  "builder": "avatar_builder",
+  "activation_policy": "inactive until Robert opens builder chat, runs a builder pass, or enters the spa builder station",
+  "updated_at": "2026-07-12T06:22:22.762448+00:00",
+  "maturity_override": "adult",
+  "preview_adjustments": {
+    "non_adult_review_garment": false
+  },
+  "build_targets": [
+    {
+      "created_at": "2026-07-12T06:22:22.762437+00:00",
+      "updated_at": "2026-07-12T06:22:22.762440+00:00",
+      "area": "body",
+      "source": "builder review",
+      "instruction": "Use adult male base-body/anatomy references for a neutral face/body trial before hair and wardrobe.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:22:22.762442+00:00",
+      "updated_at": "2026-07-12T06:22:22.762443+00:00",
+      "area": "eyes",
+      "source": "builder review",
+      "instruction": "Use named eyes and sockets; reject mask/face planes that hide bad eye placement.",
+      "status": "queued_for_builder_review"
+    }
+  ],
+  "learning_notes": [
+    {
+      "created_at": "2026-07-12T06:22:22.762445+00:00",
+      "tags": [
+        "builder_review",
+        "robert_f_grade_correction"
+      ],
+      "text": "Builder review ran and updated correction targets."
+    }
+  ],
+  "conversation": [],
+  "approval_status": "failed_needs_rebuild_or_review",
+  "maturity_reason": "Robert selected Peter as an adult avatar-builder test pick.",
+  "test_role": "adult_reference_test_pick"
+}

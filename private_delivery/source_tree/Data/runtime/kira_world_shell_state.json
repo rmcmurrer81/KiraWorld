@@ -1,0 +1,689 @@
+{
+  "active_candidate": "",
+  "active_conversation_mode": "",
+  "last_active_candidate": "kira",
+  "last_activation_at": "2026-08-12T05:46:15.062704+00:00",
+  "last_deactivation_at": "2026-08-13T05:35:20.825500+00:00",
+  "location": "home",
+  "tardis_return_location": "home",
+  "last_arrival": "",
+  "user": "Robert",
+  "one_window_mode": true,
+  "tardis_owner": "",
+  "last_message": "Kira, please say one different brief natural sentence so I can measure the second voice response.",
+  "browser_lease": {},
+  "updated_at": "2026-08-13T05:35:20.825656+00:00",
+  "last_presence_heartbeat_at": 1786406766.221675,
+  "last_avatar_positions": {
+    "ladybug_marinette_expanded_smoke": {
+      "candidate": "ladybug_marinette_expanded_smoke",
+      "location": "home",
+      "world": "home_world",
+      "position": {
+        "x": -0.978,
+        "y": 0.05,
+        "z": 5.524
+      },
+      "roamZone": "downstairs",
+      "roamIndex": 0,
+      "action": "walk",
+      "supportState": {
+        "id": "outside_ground",
+        "supported": true,
+        "falling": false,
+        "y": 0.05,
+        "floor": 0,
+        "stepIndex": null,
+        "isStair": false
+      },
+      "updated_at": "2026-07-09T08:24:50.257078+00:00"
+    },
+    "kira": {
+      "candidate": "kira",
+      "location": "home",
+      "world": "home_world",
+      "position": {
+        "x": -19.334,
+        "y": 0.05,
+        "z": 2.652
+      },
+      "roamZone": "kira_home_world",
+      "roamIndex": 1,
+      "action": "idle",
+      "supportState": {
+        "id": "outside_ground",
+        "supported": true,
+        "falling": false,
+        "y": 0.05,
+        "floor": 0,
+        "stepIndex": null,
+        "isStair": false
+      },
+      "snapshotRequestId": "body-1784753973662-3",
+      "snapshotSequence": 192,
+      "capturedAtMonotonicSeconds": 286.562,
+      "updated_at": "2026-07-22T20:59:33.676709+00:00",
+      "activeMoving": false,
+      "activeGaitMode": null,
+      "rotationY": null,
+      "place": {
+        "areaId": "Kira one-bedroom living/kitchen",
+        "label": "Kira one-bedroom living/kitchen",
+        "summary": "inside Kira's accepted one-bedroom living and kitchen area",
+        "category": "kira_home",
+        "inside": true,
+        "outside": false,
+        "confidence": "high",
+        "nearDoor": false,
+        "nearWindow": false,
+        "canEnter": false,
+        "canReadHere": true,
+        "canSitHere": true,
+        "canLieHere": false,
+        "canGetCoffeeHere": false,
+        "canGetDrinkHere": true,
+        "canEatHere": true,
+        "canStudyHere": false,
+        "position": {
+          "x": -19.334,
+          "y": 0.05,
+          "z": 2.652
+        }
+      },
+      "affordances": {
+        "read": {
+          "available": true,
+          "grounded": false,
+          "evidence": []
+        },
+        "sit": {
+          "available": true,
+          "grounded": true
+        },
+        "lieDown": {
+          "available": false,
+          "grounded": false
+        },
+        "lookWindow": {
+          "available": false,
+          "grounded": false
+        },
+        "coffee": {
+          "available": false,
+          "grounded": false,
+          "evidence": []
+        },
+        "drink": {
+          "available": true,
+          "grounded": true,
+          "evidence": []
+        },
+        "eat": {
+          "available": true,
+          "grounded": false
+        },
+        "enterDoor": {
+          "available": false,
+          "grounded": false
+        },
+        "study": {
+          "available": false,
+          "grounded": false
+        },
+        "projectWork": {
+          "available": false,
+          "grounded": false,
+          "activeUse": false,
+          "evidence": []
+        }
+      },
+      "autonomousIntent": null,
+      "autonomousIntentDistanceMeters": null,
+      "activeHeldProp": null,
+      "activityTruth": {
+        "action": "idle",
+        "grounded": true,
+        "requirement": "no prop gate for this action",
+        "reason": "This action does not claim a specific held or nearby object.",
+        "evidence": []
+      },
+      "activityTruthByAction": {
+        "read_book": {
+          "action": "read_book",
+          "rule": "read_book",
+          "grounded": false,
+          "requirement": "a visible book, notebook, sketchbook, computer, phone, or tablet near the body",
+          "reason": "No matching physical prop is close enough for read_book.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "tablet",
+            "label": "Kira one-bedroom temporary coffee-table tablet",
+            "floor": 0,
+            "actionHints": [
+              "look_online",
+              "browse_books",
+              "read_book",
+              "take_notes",
+              "type_notes",
+              "research",
+              "control_tv",
+              "play_music"
+            ],
+            "x": -20.181,
+            "y": 0.535,
+            "z": 6.35,
+            "distanceMeters": 3.825
+          }
+        },
+        "project_work": {
+          "action": "project_work",
+          "rule": "project_work",
+          "grounded": false,
+          "requirement": "an actively reached and used tablet, phone, notebook, sketchbook, or computer",
+          "reason": "No matching physical work tool is close enough for project_work.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "tablet",
+            "label": "Kira one-bedroom temporary coffee-table tablet",
+            "floor": 0,
+            "actionHints": [
+              "look_online",
+              "browse_books",
+              "read_book",
+              "take_notes",
+              "type_notes",
+              "research",
+              "control_tv",
+              "play_music"
+            ],
+            "x": -20.181,
+            "y": 0.535,
+            "z": 6.35,
+            "distanceMeters": 3.825
+          },
+          "activeUse": false
+        },
+        "creative_write": {
+          "action": "creative_write",
+          "rule": "project_work",
+          "grounded": false,
+          "requirement": "an actively reached and used tablet, phone, notebook, sketchbook, or computer",
+          "reason": "No matching physical work tool is close enough for creative_write.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "tablet",
+            "label": "Kira one-bedroom temporary coffee-table tablet",
+            "floor": 0,
+            "actionHints": [
+              "look_online",
+              "browse_books",
+              "read_book",
+              "take_notes",
+              "type_notes",
+              "research",
+              "control_tv",
+              "play_music"
+            ],
+            "x": -20.181,
+            "y": 0.535,
+            "z": 6.35,
+            "distanceMeters": 3.825
+          },
+          "activeUse": false
+        },
+        "take_notes": {
+          "action": "take_notes",
+          "rule": "project_work",
+          "grounded": false,
+          "requirement": "an actively reached and used tablet, phone, notebook, sketchbook, or computer",
+          "reason": "No matching physical work tool is close enough for take_notes.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "tablet",
+            "label": "Kira one-bedroom temporary coffee-table tablet",
+            "floor": 0,
+            "actionHints": [
+              "look_online",
+              "browse_books",
+              "read_book",
+              "take_notes",
+              "type_notes",
+              "research",
+              "control_tv",
+              "play_music"
+            ],
+            "x": -20.181,
+            "y": 0.535,
+            "z": 6.35,
+            "distanceMeters": 3.825
+          },
+          "activeUse": false
+        },
+        "look_online": {
+          "action": "look_online",
+          "rule": "use_phone",
+          "grounded": false,
+          "requirement": "a visible phone, tablet, computer, or notebook near the body",
+          "reason": "No matching physical prop is close enough for look_online.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "tablet",
+            "label": "Kira one-bedroom temporary coffee-table tablet",
+            "floor": 0,
+            "actionHints": [
+              "look_online",
+              "browse_books",
+              "read_book",
+              "take_notes",
+              "type_notes",
+              "research",
+              "control_tv",
+              "play_music"
+            ],
+            "x": -20.181,
+            "y": 0.535,
+            "z": 6.35,
+            "distanceMeters": 3.825
+          }
+        },
+        "use_computer": {
+          "action": "use_computer",
+          "rule": "use_computer",
+          "grounded": false,
+          "requirement": "a visible computer, phone, tablet, or notebook near the body",
+          "reason": "No matching physical prop is close enough for use_computer.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "tablet",
+            "label": "Kira one-bedroom temporary coffee-table tablet",
+            "floor": 0,
+            "actionHints": [
+              "look_online",
+              "browse_books",
+              "read_book",
+              "take_notes",
+              "type_notes",
+              "research",
+              "control_tv",
+              "play_music"
+            ],
+            "x": -20.181,
+            "y": 0.535,
+            "z": 6.35,
+            "distanceMeters": 3.825
+          }
+        },
+        "use_phone": {
+          "action": "use_phone",
+          "rule": "use_phone",
+          "grounded": false,
+          "requirement": "a visible phone, tablet, computer, or notebook near the body",
+          "reason": "No matching physical prop is close enough for use_phone.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "tablet",
+            "label": "Kira one-bedroom temporary coffee-table tablet",
+            "floor": 0,
+            "actionHints": [
+              "look_online",
+              "browse_books",
+              "read_book",
+              "take_notes",
+              "type_notes",
+              "research",
+              "control_tv",
+              "play_music"
+            ],
+            "x": -20.181,
+            "y": 0.535,
+            "z": 6.35,
+            "distanceMeters": 3.825
+          }
+        },
+        "drink": {
+          "action": "drink",
+          "rule": "drink",
+          "grounded": false,
+          "requirement": "a visible cup, bottle, or milk carton nearby or in the hand",
+          "reason": "No matching physical prop is close enough for drink.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "cup",
+            "label": "clean cup 1 on Kira's kitchen counter",
+            "floor": 0,
+            "actionHints": [
+              "drink",
+              "drink_coffee",
+              "get_drink"
+            ],
+            "x": -18.3,
+            "y": 1.14,
+            "z": -1.06,
+            "distanceMeters": 4.005
+          }
+        },
+        "drink_coffee": {
+          "action": "drink_coffee",
+          "rule": "drink",
+          "grounded": false,
+          "requirement": "a visible cup, bottle, or milk carton nearby or in the hand",
+          "reason": "No matching physical prop is close enough for drink_coffee.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "cup",
+            "label": "clean cup 1 on Kira's kitchen counter",
+            "floor": 0,
+            "actionHints": [
+              "drink",
+              "drink_coffee",
+              "get_drink"
+            ],
+            "x": -18.3,
+            "y": 1.14,
+            "z": -1.06,
+            "distanceMeters": 4.005
+          }
+        },
+        "attend_school": {
+          "action": "attend_school",
+          "rule": "attend_school",
+          "grounded": false,
+          "requirement": "a visible classroom, desk, chair, notebook, phone, or book near the body",
+          "reason": "No matching physical prop is close enough for attend_school.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "chair",
+            "label": "one-bedroom dining chair front",
+            "floor": 0,
+            "actionHints": [
+              "sit",
+              "eat"
+            ],
+            "x": -22.692,
+            "y": 0.097,
+            "z": 0.199,
+            "distanceMeters": 4.159
+          }
+        },
+        "eat_food": {
+          "action": "eat_food",
+          "rule": "eat_food",
+          "grounded": false,
+          "requirement": "visible food, fruit, milk, a dining table, counter, or refrigerator near the body",
+          "reason": "No matching physical prop is close enough for eat_food.",
+          "evidence": [],
+          "nearestEvidence": {
+            "kind": "food",
+            "label": "small snack plate on Kira's kitchen counter",
+            "floor": 0,
+            "actionHints": [
+              "eat_food",
+              "snack"
+            ],
+            "x": -17.13,
+            "y": 1.12,
+            "z": -1.06,
+            "distanceMeters": 4.448
+          }
+        }
+      },
+      "mindBodyTruth": {
+        "reason": "periodic_runtime_truth",
+        "checkedAtSeconds": 283.041,
+        "shellClaim": {
+          "candidate": "kira",
+          "label": "Kira",
+          "action": "talking",
+          "location": "home",
+          "model": null
+        },
+        "runtimeAction": "idle",
+        "body": {
+          "modelLoaded": true,
+          "moving": false,
+          "postureState": null,
+          "supportState": {
+            "id": "outside_ground",
+            "supported": true,
+            "falling": false,
+            "y": 0.05,
+            "floor": 0,
+            "stepIndex": null,
+            "isStair": false
+          },
+          "walkSpeed": 0,
+          "walkTimeScale": 0,
+          "footContacts": null,
+          "fingerContacts": [],
+          "transitionEvidence": null,
+          "navigationRecovery": null,
+          "localSteeringEvidence": null,
+          "locomotionTransition": {
+            "mode": "distance_driven_start_stop_blend_v1",
+            "blend": 0,
+            "desired": 0,
+            "turnInPlaceBlend": 0,
+            "startSeconds": 0.24,
+            "stopSeconds": 0.34,
+            "phaseFrozenWhileStopped": true,
+            "visuallyReviewedThisSession": false
+          },
+          "turnEvidence": null,
+          "routeProgress": null,
+          "currentPlace": {
+            "areaId": "Kira one-bedroom living/kitchen",
+            "label": "Kira one-bedroom living/kitchen",
+            "summary": "inside Kira's accepted one-bedroom living and kitchen area",
+            "category": "kira_home",
+            "inside": true,
+            "outside": false,
+            "confidence": "high",
+            "nearDoor": false,
+            "nearWindow": false,
+            "canEnter": false,
+            "canReadHere": true,
+            "canSitHere": true,
+            "canLieHere": false,
+            "canGetCoffeeHere": false,
+            "canGetDrinkHere": true,
+            "canEatHere": true,
+            "canStudyHere": false,
+            "position": {
+              "x": -19.334,
+              "y": 0.05,
+              "z": 2.652
+            }
+          },
+          "lastEmbodimentCapabilityBlock": null,
+          "lastRouteFailureTruth": null,
+          "doorInteraction": null,
+          "furnitureInteraction": null,
+          "position": {
+            "x": -19.334,
+            "y": 0.05,
+            "z": 2.652
+          }
+        },
+        "truth": {
+          "action": "talking",
+          "grounded": true,
+          "requirement": "no prop gate for this action",
+          "reason": "This action does not claim a specific held or nearby object.",
+          "evidence": []
+        },
+        "agrees": false,
+        "mismatchReasons": [
+          "shell claims talking while body action is idle"
+        ]
+      },
+      "armMotionEvidence": {
+        "mode": "calibrated_bind_axis_joint_limited_swing_v9_asymmetric_expression",
+        "predecessorMode": "calibrated_bind_axis_joint_limited_swing_v8",
+        "objectContactClaimed": false,
+        "objectContactIkReservedForInteraction": true,
+        "ordinaryLocomotionUsesHandIk": false,
+        "elbowPoleFlipAvoided": true,
+        "jointLimitsRadians": {
+          "upperZ": [
+            0.06,
+            0.16
+          ],
+          "upperY": [
+            0.95,
+            1.18
+          ],
+          "upperX": [
+            -0.34,
+            0.34
+          ],
+          "lowerX": [
+            0.06,
+            0.22
+          ],
+          "handZ": [
+            -0.08,
+            0.08
+          ]
+        },
+        "idleMotionMode": "identity_seeded_low_frequency_idle_v1",
+        "comfortIdleMode": "person_owned_ambient_micro_movement_no_translation_no_scale_v1",
+        "comfortIdleRootTranslation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "expressionAction": "idle",
+        "actualPlaybackExpression": false,
+        "leftGesture": 0.9913,
+        "rightGesture": 0.4411,
+        "fingerStrength": 0.026,
+        "locomotionBlend": 0,
+        "ambientMicroMovement": {
+          "version": "2026-07-19.person-owned-ambient-v1",
+          "mode": "person_owned_ambient_micro_movement_no_translation_no_scale_v1",
+          "ownership": "person_owned_not_user_motor_command",
+          "suppression": {
+            "reason": "ambient_idle",
+            "body": 1,
+            "hands": 1,
+            "face": 1,
+            "locomotion": false,
+            "deliberate": false,
+            "lipSyncActive": false
+          },
+          "rootTranslation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rootRotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scaleDelta": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "existingMouthSmile": 0.24,
+          "createsSecondMouth": false
+        },
+        "visuallyReviewedThisSession": false
+      },
+      "doorInteraction": null,
+      "activeSkillInteraction": null,
+      "postureInteraction": null,
+      "postureState": null,
+      "visualGroundContact": {
+        "mode": "precise_deformed_mesh_ground_contact_v1",
+        "calibrated": true,
+        "supportY": 0.05,
+        "desiredMinY": 0.058,
+        "visualMinY": 0.058,
+        "gapMeters": 0,
+        "withinTolerance": true,
+        "correctionY": 0.0134,
+        "correctionClamped": false,
+        "modelUrl": "http://127.0.0.1:8767/Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb?v=1784407032"
+      },
+      "turnEvidence": null,
+      "persistentQuietActivity": null,
+      "transitionEvidence": null,
+      "lastEmbodimentCapabilityBlock": null,
+      "tardisState": null,
+      "telemetryErrors": {},
+      "wardrobeState": {
+        "schemaVersion": 1,
+        "garments": [
+          {
+            "id": "dress_shirt_001",
+            "label": "prototype dress shirt",
+            "state": "OnHanger",
+            "lifecycle": "HUNG_IN_CLOSET",
+            "buttoned": false,
+            "selected": false
+          }
+        ],
+        "equippedGarmentIds": [],
+        "resumePolicy": "restore_same_visible_garment_state_without_replaying_dressing_animation"
+      },
+      "kiraExistingMouthLipSync": {
+        "active": true,
+        "version": "existing-lip-island-audio-playback-v7-bounded-anchored-seam",
+        "method": "in_place_existing_position_attribute_bounded_seam_deformation_plus_anchored_perimeter_tint",
+        "inactiveReason": "",
+        "meshName": "Object_85",
+        "restored": false,
+        "createdSceneNodes": 0,
+        "secondMouthCreated": false,
+        "deformationOnly": true,
+        "sourceHasPhonemeMorphTargets": false,
+        "sourceHasFacialBones": false,
+        "visemeReady": false,
+        "visualMotionProven": false,
+        "playingMatchedActiveAvatar": false,
+        "vertexCount": 207,
+        "updateCount": 28293,
+        "meshCountBefore": 1,
+        "meshCountAfter": 1,
+        "amount": 0.0,
+        "peakAmount": 0.935568,
+        "openingDistance": 0.0,
+        "regionScore": 0.126572,
+        "playback": {
+          "revision": 15,
+          "active": false,
+          "playing": false,
+          "phase": "idle",
+          "candidate": "",
+          "chunkIndex": 0
+        }
+      },
+      "kiraEyeRig": {
+        "active": true,
+        "enabled": true,
+        "version": "3.2.0",
+        "disabledReason": "",
+        "headBound": true,
+        "headBoneName": "mixamorigHead_06",
+        "testRunning": false,
+        "testPhase": "",
+        "eyeCenterToHeadDistance": 0.12076528,
+        "bindingDistanceDelta": 2e-10,
+        "oldProceduralNodeCount": 0,
+        "socketFitAudit": {
+          "interocularDistance": 0.04464,
+          "centerlineOffset": 0.0,
+          "heightDelta": 0.0,
+          "depthDelta": 0.0,
+          "symmetricWithinOneMicrometer": true,
+          "staticSocketTranslationApplied": false
+        }
+      }
+    }
+  },
+  "last_runtime_snapshot_logged_at": {
+    "kira": 1784753935.8602676
+  }
+}

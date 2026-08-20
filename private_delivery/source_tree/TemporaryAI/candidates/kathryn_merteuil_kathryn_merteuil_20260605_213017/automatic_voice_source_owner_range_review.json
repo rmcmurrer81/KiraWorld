@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "review_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_owner_attested_online_range_v1",
+  "created_at": "2026-07-17T23:23:16.447624+00:00",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "identity_target": {
+    "target_name": "Kathryn Merteuil",
+    "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+    "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+    "performer": "Sarah Michelle Gellar"
+  },
+  "source": {
+    "url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+    "title": "Kathryn’s Monologue",
+    "publisher": "Lesa",
+    "publisher_authority": "third_party_upload_metadata_not_rightsholder_authority",
+    "local_media_path": "_tmp_kathryn_youtube_source/source.mp4",
+    "local_media_sha256": "43fa02d05b460f554f943716428c6fc020039b5dd61e2966b622654116559a2f",
+    "local_media_bytes": 1782468,
+    "media_was_downloaded_before_this_review_builder": true,
+    "review_builder_downloaded_media": false
+  },
+  "range": {
+    "start_seconds": 4.15,
+    "end_seconds": 38.0,
+    "duration_seconds": 33.85
+  },
+  "owner_attestation": {
+    "path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/identity_reviews/kathryn_monologue_youtube_owner_attestation_20260717.json",
+    "sha256": "53028533909635b04945b9fa847d74e71a60555e3e768b9d596a774e33b8dab9",
+    "checks": {
+      "reviewer_is_real_robert": true,
+      "exact_url": true,
+      "exact_range": true,
+      "audiovisual_source_reviewed": true,
+      "target_identity_confirmed": true,
+      "target_only_speech_confirmed": true,
+      "no_other_speaker_confirmed": true,
+      "no_overlap_confirmed": true,
+      "no_music_confirmed": true,
+      "scope_is_review_evidence_only": true
+    },
+    "passed": true
+  },
+  "automatic_audio_diagnostics": {
+    "path": "_tmp_kathryn_youtube_source/kathryn_4p15s_to_end.wav",
+    "sha256": "3a84bc8f1d59498bd56d71a00fac421cf53aa1328212a8c5b1c3ea97f7d6a28b",
+    "bytes": 1624878,
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "sample_width_bits": 16,
+    "duration_seconds": 33.85,
+    "peak": 0.25708,
+    "overall_rms_dbfs": -34.897,
+    "clipping_ratio": 0.0,
+    "active_frame_ratio": 0.593972,
+    "silence_frame_ratio": 0.210402,
+    "noise_floor_dbfs_p10_proxy": -55.213,
+    "speech_level_dbfs_p90_proxy": -30.939,
+    "snr_db_percentile_proxy": 24.274,
+    "limits": [
+      "Percentile SNR is a diagnostic proxy, not source-separation or a proof of no background noise.",
+      "These measurements cannot identify a person, detect all music, or prove that only one speaker is present."
+    ],
+    "quality_gate": {
+      "passed": true,
+      "thresholds": {
+        "minimum_sample_rate_hz": 16000,
+        "required_channels": 1,
+        "minimum_duration_seconds": 6.0,
+        "maximum_clipping_ratio": 0.005,
+        "minimum_active_frame_ratio": 0.35,
+        "maximum_silence_frame_ratio": 0.4,
+        "minimum_snr_db_percentile_proxy": 15.0,
+        "overall_rms_dbfs_range": [
+          -50.0,
+          -3.0
+        ]
+      }
+    }
+  },
+  "automatic_contamination_review": {
+    "path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/identity_reviews/kathryn_monologue_audio_contamination_audit_20260717.json",
+    "sha256": "bd45702383231331bc999605873eb70efd961343497321ab590ce054dd99b658",
+    "checks": {
+      "evidence_present": true,
+      "exact_url": true,
+      "exact_range": true,
+      "exact_wav_sha256": true,
+      "analyzer_provenance": true,
+      "no_background_tonal_or_music_residue": false,
+      "no_material_noise": true,
+      "no_overlap": true,
+      "explicit_clean_for_direct_model_input": false
+    },
+    "passed_for_direct_reference_input": false,
+    "contamination_detected": true,
+    "findings": [
+      "The earlier 3.00-second bound retained approximately 1.15 seconds of dead lead.",
+      "Pause spectra contain faint tonal/background-score residue near 329, 659, and 988 Hz.",
+      "The source remains useful Kathryn candidate/reference evidence but requires separation or cleanup followed by QC before any direct reference/model-input decision."
+    ],
+    "rule": "A no-music human attestation cannot override exact-bound machine contamination evidence."
+  },
+  "range_bindings": {
+    "wav_duration_matches_exact_range": true,
+    "metadata_has_no_music_risk_term": true,
+    "active_speaker_automation": "not_available; exact target-only identity comes from Robert's audiovisual review",
+    "face_identity_automation": "not_available; screenshots/contact sheet are context, not biometric proof"
+  },
+  "status": "owner_attested_target_only_candidate_cleanup_and_qc_required",
+  "candidate_reference_evidence_ready": true,
+  "eligible_for_cleanup_and_qc_workbench": true,
+  "eligible_for_private_reference_pack_input": false,
+  "eligible_for_direct_model_input": false,
+  "manual_clip_by_clip_box_required_for_this_exact_range": false,
+  "model_or_runtime_authority": {
+    "voice_training_or_cloning_allowed": false,
+    "voice_assignment_allowed": false,
+    "voice_synthesis_allowed": false,
+    "candidate_activation_allowed": false,
+    "official_voice_claim_allowed": false
+  },
+  "limits": [
+    "This is one private source-review range, not consent for public distribution or an official-voice claim.",
+    "The 1999 performance is earlier same-performer Kathryn evidence, not the selected 2016 adult-present continuity itself.",
+    "No biometric voice or face identification was performed."
+  ]
+}

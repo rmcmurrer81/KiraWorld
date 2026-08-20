@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "updated_at": "2026-07-12T05:58:26.157757+00:00",
+  "status": "pose_assets_ready",
+  "asset_type": "generated_full_body_pose_set",
+  "coverage_status": "complete",
+  "ready_pose_count": 12,
+  "expected_pose_count": 12,
+  "review_status": "unreviewed",
+  "rigged_3d_body_ready": false,
+  "pose_sheet_layout": {
+    "columns": 3,
+    "rows": 2,
+    "order": [
+      "neutral",
+      "look_left",
+      "look_right",
+      "wave_1",
+      "wave_2",
+      "talking"
+    ]
+  },
+  "forms": {
+    "civilian": {
+      "poses": {
+        "neutral": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/civilian/neutral.png"
+        },
+        "look_left": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/civilian/look_left.png"
+        },
+        "look_right": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/civilian/look_right.png"
+        },
+        "wave_1": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/civilian/wave_1.png"
+        },
+        "wave_2": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/civilian/wave_2.png"
+        },
+        "talking": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/civilian/talking.png"
+        }
+      }
+    },
+    "hero": {
+      "poses": {
+        "neutral": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/hero/neutral.png"
+        },
+        "look_left": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/hero/look_left.png"
+        },
+        "look_right": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/hero/look_right.png"
+        },
+        "wave_1": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/hero/wave_1.png"
+        },
+        "wave_2": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/hero/wave_2.png"
+        },
+        "talking": {
+          "status": "ready",
+          "file": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/hero/talking.png"
+        }
+      }
+    }
+  },
+  "motion_policy": {
+    "starting_pose": "neutral",
+    "idle": "occasionally look left or right; keep feet planted",
+    "greeting": "alternate wave_1 and wave_2, then return to neutral",
+    "talking": "alternate neutral and talking; future upgrade adds visemes"
+  },
+  "truth_note": "These are generated 2D pose images, not a reviewed likeness or a rigged 3D body. The UI only claims motions for poses that exist."
+}

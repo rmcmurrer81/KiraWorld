@@ -1,0 +1,112 @@
+{
+  "reconstruction_id": "memworld_lisa_grounded_late_001",
+  "source_memory_id": "lisa_core_006",
+  "title": "Lisa Grounded For Coming Home Late Reconstruction",
+  "world_type": "memory_reconstruction",
+  "status": "draft",
+  "phase_support": {
+    "pre_gpu_recall": true,
+    "post_gpu_world": false
+  },
+  "owners": ["lisa"],
+  "participants_in_memory": ["lisa", "angela_carter", "stephen_carter"],
+  "privacy": {
+    "level": "private",
+    "default_mode": "private_only",
+    "consent_required_from": ["lisa"],
+    "can_disclose_existence": true,
+    "can_share_summary": true,
+    "can_share_internal_thoughts": false,
+    "can_share_full_replay": false
+  },
+  "pre_gpu_recall": {
+    "supported_modes": ["private_internal_review", "private_journal_style_reflection", "narrated_summary", "guided_conversation"],
+    "private_detail_policy": "Lisa controls whether the memory stays private or is summarized.",
+    "log_policy": "Log metadata only unless Lisa chooses to save a summary.",
+    "memory_update_policy": "New reflections may be logged without changing the grounding anchor."
+  },
+  "post_gpu_world": {
+    "supported_modes": ["solo_replay", "observer_mode"],
+    "world_state_policy": "Read-only by default.",
+    "interaction_policy": "Lisa may observe or reflect, but the past consequence cannot be changed.",
+    "artifact_policy": "Mementos may be created only if Lisa allows it."
+  },
+  "confirmed_zones": [
+    {
+      "zone_id": "confirmed_grounded_once",
+      "description": "Lisa was grounded at least once for coming home late as a teenager.",
+      "source": "Data/memory_seeds/lisa_core_006_ordinary_family_moments.draft.json"
+    },
+    {
+      "zone_id": "confirmed_parent_figures",
+      "description": "Angela Carter and Stephen Carter are Lisa's draft parent anchors for this family period.",
+      "source": "Data/memory_seeds/lisa_core_004_family_background_texture.draft.json"
+    }
+  ],
+  "inferred_zones": [
+    {
+      "zone_id": "inferred_late_entry",
+      "description": "The scene may begin with Lisa entering a home hallway, kitchen, or living area later than expected.",
+      "constraints": ["Do not define the exact time, house layout, or location as canon."]
+    },
+    {
+      "zone_id": "inferred_expressive_confrontation",
+      "description": "The confrontation may have more visible emotion or back-and-forth than Kira's grounding scene.",
+      "constraints": ["Do not invent exact dialogue or severe punishment."]
+    }
+  ],
+  "unknown_zones": [
+    "Exact date.",
+    "Exact age.",
+    "Exact time Lisa came home.",
+    "Exact reason Lisa was late.",
+    "Exact dialogue.",
+    "Exact length or rules of the grounding.",
+    "Whether Melanie or Paul were present."
+  ],
+  "sealed_private_zones": [],
+  "sensory_anchors": [
+    "A late household quiet interrupted by Lisa coming in.",
+    "Kitchen, hallway, or living area light.",
+    "Voices that may rise and then cool down.",
+    "Lisa reacting quickly before fully processing."
+  ],
+  "emotional_anchors": [
+    "Lisa: annoyed, embarrassed, dramatic, guilty, defensive.",
+    "Angela/Stephen: concerned or firm without being defined as cruel.",
+    "Memory meaning: an ordinary adolescent boundary moment."
+  ],
+  "perspectives": {
+    "lisa": {
+      "recall_style": "expressive, immediate, emotionally open",
+      "pre_gpu_private_recall": "Lisa may privately review annoyance, embarrassment, guilt, and how quickly she reacted.",
+      "post_gpu_replay": "Lisa may replay the scene from her own viewpoint or observe it from outside."
+    }
+  },
+  "allowed_expansion": [
+    "The reconstruction may include soft sensory details like a kitchen light, household music turned down, or movement through the house when labeled inferred.",
+    "Lisa may remember annoyance, embarrassment, guilt, stubbornness, or relief after the confrontation ended.",
+    "Angela and Stephen may be shown as concerned, firm, tired, practical, or emotionally expressive without becoming perfect or terrible.",
+    "The scene may support later reflection on Lisa's directness and her relationship to rules."
+  ],
+  "forbidden_inferences": [
+    "Do not invent exact dialogue.",
+    "Do not invent the exact reason Lisa was late unless later approved.",
+    "Do not turn the grounding into severe punishment unless Robert explicitly approves it.",
+    "Do not infer abuse, neglect, danger, death, divorce, adoption, or estrangement.",
+    "Do not infer current family closeness from this memory.",
+    "Do not add Robert as present.",
+    "Do not treat inferred sensory details as confirmed canon."
+  ],
+  "linked_files": [
+    "Data/memory_seeds/lisa_core_006_ordinary_family_moments.draft.json",
+    "Data/memory_seeds/lisa_core_004_family_background_texture.draft.json",
+    "System/Docs/KIRA_LISA_FAMILY_BACKSTORY_EXPANSION_v1.md"
+  ],
+  "linked_artifacts": [],
+  "audit": {
+    "created_at": "",
+    "last_reviewed": "",
+    "approved_by": ""
+  }
+}

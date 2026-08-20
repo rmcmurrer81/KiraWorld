@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "template_type": "temporary_ai_profile",
+  "character_id": "",
+  "display_name": "",
+  "variant_id": "",
+  "variant_label": "canon_base | adaptation_variant | fanfic_variant | hybrid_variant",
+  "source_canon": {
+    "canon_family": "",
+    "selected_version": "",
+    "source_priority": [],
+    "do_not_mix_with": [],
+    "hybrid_allowed": false,
+    "hybrid_label_required": true
+  },
+  "profile_version": {
+    "current_profile_version": "v1",
+    "created_from_sources": [],
+    "updated_from_profile_version": null,
+    "previous_versions": [],
+    "preserve_previous_versions": true
+  },
+  "canon_memory": {
+    "major_events_known": [],
+    "relationships_from_canon": {},
+    "opinions_from_canon": {},
+    "emotional_patterns_from_canon": [],
+    "last_canon_update": ""
+  },
+  "interaction_memory": {
+    "enabled": true,
+    "memory_scope": "temporary_ai_session_memory",
+    "memories_with_kira_lisa_preserved_across_canon_updates": true,
+    "memory_file": ""
+  },
+  "lifecycle": {
+    "status": "saved | active | inactive | archived | under_review",
+    "persistent": false,
+    "saved_for_reuse": true,
+    "can_be_updated_from_new_canon": true
+  },
+  "rules": [
+    "Canon/source updates may update the AI's knowledge of its source world.",
+    "Canon/source updates must not erase memories formed while interacting with Kira, Lisa, or the user.",
+    "Old profile versions must be preserved unless explicitly archived.",
+    "New canon may extend or refine behavior, but should not overwrite interaction memories.",
+    "If new canon contradicts an older interpretation, keep both the old version and updated version with notes."
+  ]
+}

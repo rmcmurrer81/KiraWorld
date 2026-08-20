@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "updated_at": "2026-07-12T06:51:41.173153+00:00",
+  "status": "female_base_branch_restored_for_robert_review",
+  "active_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+  "restored_from": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_rebuild_single_body_no_head_graft_v3_20260706.glb",
+  "rejected_procedural_redo_backup": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_rejected_procedural_doll_safe_redo_20260712_024911.glb",
+  "reason": "Robert said the procedural doll-safe redo looked much worse and should have started from the female-base branch already in use.",
+  "next_focus": [
+    "use the female-base branch as the body starting point",
+    "focus first on realistic eye model placement and iris recolor",
+    "do not approve hair/head/body likeness until references are compared again",
+    "normal Marinette remains non-adult-safe; no explicit adult anatomy details for her normal body"
+  ],
+  "inspection": {
+    "model_path": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+    "model_ready": true,
+    "node_count": 94,
+    "mesh_count": 9,
+    "material_count": 5,
+    "skin_count": 1,
+    "animation_count": 0,
+    "head_names": [
+      "mixamorig:HeadTop_End_end_065",
+      "mixamorig:HeadTop_End_07",
+      "mixamorig:Head_06"
+    ],
+    "eye_names": [],
+    "hair_names": [
+      "marinette_single_body_back_hair_mass",
+      "marinette_single_body_low_pigtail_volume.L",
+      "marinette_single_body_low_pigtail_volume.R",
+      "marinette_single_body_pigtail_tie_red.L",
+      "marinette_single_body_pigtail_tie_red.R",
+      "marinette_single_body_side_swept_bangs",
+      "marinette_rebuild_blue_black_hair",
+      "marinette_rebuild_blue_hair_highlight"
+    ],
+    "generic_sphere_candidates": [
+      "Sphere.001",
+      "Sphere.002",
+      "Sphere.004",
+      "Sphere.003",
+      "Sphere.005",
+      "Sphere"
+    ],
+    "issues": [
+      "no named eye/iris/pupil meshes; eye-socket checks cannot be automatic yet"
+    ]
+  }
+}

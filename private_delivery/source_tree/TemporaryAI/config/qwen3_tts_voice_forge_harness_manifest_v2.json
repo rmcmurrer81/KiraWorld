@@ -1,0 +1,125 @@
+{
+  "schema": "qwen3_tts_voice_forge_harness_manifest_v2",
+  "status": "IMPLEMENTED_REQUIRES_INDEPENDENT_AUDIT",
+  "created_utc": "2026-08-09T18:43:57.5486293Z",
+  "execution_allowed": false,
+  "reason": "Exact source set is sealed for hostile independent review; no bounded execution is authorized by this pending manifest.",
+  "network_boundary": "OFFLINE_FLAGS_ONLY_NO_PROCESS_LEVEL_NETWORK_DENIAL",
+  "files": [
+    {
+      "path": "TemporaryAI/config/temporary_ai_qwen3_tts_original_voice_forge_acceptance_v2.json",
+      "bytes": 6884,
+      "sha256": "8ae41050fcb5cef73d6dfc65a60a97302b0e8d7278f1dd40cc1cc9908233bab1"
+    },
+    {
+      "path": "Voice/sidecars/qwen3_tts_voice_forge_v2/environment_spec_v2.json",
+      "bytes": 3633,
+      "sha256": "8cc507aaa6737a8d61920242f3c6e9cd3b0ac4670aa90cbc3a728f3cac88c69f"
+    },
+    {
+      "path": "Data/voice/policies/temporaryai_qwen3_tts_voice_forge_bundle_registry_v2.json",
+      "bytes": 154,
+      "sha256": "089a88f4ddcf96a2c557d3d3200d095f6dfe9198add90997736963389dff940a"
+    },
+    {
+      "path": "Data/voice/policies/qwen3_tts_voice_forge_evaluation_corpus_v2.json",
+      "bytes": 433,
+      "sha256": "6348031cbbc8205d03d44dbdbef1fdf3d2ae984e8a7027347d4fdee11a5a1853"
+    },
+    {
+      "path": "tools/qwen3_tts_original_voice_forge_worker_v2.py",
+      "bytes": 163093,
+      "sha256": "b22d735abdc649760ff65134bbdb157bd039ec71abdd04ad081b33f5d99f222c"
+    },
+    {
+      "path": "tools/run_temporary_ai_qwen3_tts_voice_forge_acceptance_v2.py",
+      "bytes": 48980,
+      "sha256": "88c4d3856d2854e91ee5266802dc87f9af3ea1bd2b2304eac1d8ed44e602ec45"
+    },
+    {
+      "path": "Testing/test_temporary_ai_qwen3_tts_original_voice_forge_acceptance_v2.py",
+      "bytes": 98392,
+      "sha256": "7bc62d1ca1976354bbca7d838c1c0c6f0af3fcb9860508f91ff756122f285972"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/acceptance_bundle.json",
+      "bytes": 1951,
+      "sha256": "efd99741832ba199b9a8086aa720a503790fefc3f8658da24f05d2ce164067bf"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/BUNDLE_SEAL.json",
+      "bytes": 277,
+      "sha256": "7209d1a81b335238ce5c5313fe59747bd296d00aaaac11296ae44a636d9eecea"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/identity_clearance_manifest.json",
+      "bytes": 499,
+      "sha256": "cb48bfe78a690df6680d110c167e1eaceb0119db508df9797f588683b2f54fcc"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/job.json",
+      "bytes": 496,
+      "sha256": "391864bda9d69b933d1fce66c27b4f4a42c1c4c83c8d20e2ca7424baa3ace1fb"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/owner_authorization.json",
+      "bytes": 1132,
+      "sha256": "bac5640d15260961f541508d177804ee4eee6a0aa47c9e1a94f00e0006897389"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/watermark_evidence_manifest.json",
+      "bytes": 530,
+      "sha256": "c118638cd6ec694952c6395c5ce4a39c53b9ab9002559496564998486d8a1822"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/identity/identity_analyzer_command.json",
+      "bytes": 206,
+      "sha256": "c8bccef3263b5a42af932557142272d40e7501fc99115a6c56c239f8237ebd60"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/identity/identity_analyzer_model_manifest.json",
+      "bytes": 255,
+      "sha256": "c4fe5c288a9cbe861d2b41a378a2037f403e3f027ec1058a1180300ec30db756"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/identity/identity_analyzer_report.json",
+      "bytes": 901,
+      "sha256": "b6ac08bd092d121c375046d06f77c75b104b3f05be3587933a00a6e9064bd919"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/identity/identity_analyzer_stderr.log",
+      "bytes": 22,
+      "sha256": "dd095bd94605fa4c67230e5fb601fee514c91b5ef9e2c7a5967da8deb3545676"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/identity/identity_analyzer_stdout.log",
+      "bytes": 22,
+      "sha256": "dd095bd94605fa4c67230e5fb601fee514c91b5ef9e2c7a5967da8deb3545676"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/identity/owner_identity_clearance.json",
+      "bytes": 211,
+      "sha256": "23fea587d11c3a27eb17cfcceaff63678fa93b569b8852584339ae4ef1a48625"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/watermark/dependency_scan.json",
+      "bytes": 578,
+      "sha256": "a9c2769e69bc3a13827340b17c5b95671152126405e9821210cf36be13a7e91a"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/watermark/scanned_files.json",
+      "bytes": 134,
+      "sha256": "3335530259de56fa395136a83f9a4c07cb2722d31c4d1c3f75bf70b2328c62e9"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/watermark/scan_tool.py",
+      "bytes": 153,
+      "sha256": "adf6693ecf18f2a960b4630e4a2eafd13e50b7e7323eeb5ab570ba7deebd35a4"
+    },
+    {
+      "path": "TemporaryAI/templates/qwen3_tts_original_voice_forge_bundle_v2/evidence/watermark/source_scan.json",
+      "bytes": 583,
+      "sha256": "317ca0ed94c1f6dc94f6d170de5a87c6969ecfbe0c6a2f44fb47af816a2041d1"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "reconstruction_id": "memworld_00000001",
+  "source_memory_id": "",
+  "title": "",
+  "world_type": "memory_reconstruction",
+  "status": "draft | active | archived",
+  "phase_support": {
+    "pre_gpu_recall": true,
+    "post_gpu_world": false
+  },
+  "owners": [],
+  "participants_in_memory": [],
+  "privacy": {
+    "level": "public | private | private_shared | locked",
+    "default_mode": "private_only | narrated_summary | observer | co_view | multi_perspective",
+    "consent_required_from": [],
+    "shared_intimate_memory_rule": {
+      "all_permanent_participants_must_consent": true,
+      "one_participant_may_request_sharing": true,
+      "refusal_blocks_full_replay": true,
+      "single_viewing_does_not_grant_permanent_access": true,
+      "visual_body_exposure_requires_explicit_consent": true,
+      "verbal_details_can_be_separate_from_visual_replay": true
+    },
+    "can_disclose_existence": true,
+    "can_share_summary": true,
+    "can_share_internal_thoughts": false,
+    "can_share_full_replay": false
+  },
+  "sharing_requests": [
+    {
+      "request_id": "",
+      "requested_by": "",
+      "intended_viewer": "",
+      "requested_scope": "summary | emotional_meaning | verbal_details_only | non_intimate_lead_in | selected_zones | full_replay | one_time_full_replay",
+      "required_approvals": [],
+      "approval_status": "draft | approved | denied | partial | expired",
+      "approved_scope": "none | summary | emotional_meaning | verbal_details_only | non_intimate_lead_in | selected_zones | one_time_full_replay | full_replay",
+      "stop_at_locked_boundary": true,
+      "locked_boundary_behavior": "pause | fade_to_black | stop | locked_door_marker | switch_to_verbal_summary",
+      "denial_reasons": [],
+      "visual_body_exposure_allowed": false,
+      "permanent_replay_access_granted": false,
+      "notes": ""
+    }
+  ],
+  "pre_gpu_recall": {
+    "supported_modes": [
+      "private_internal_review",
+      "private_journal_style_reflection",
+      "narrated_summary",
+      "guided_conversation"
+    ],
+    "private_detail_policy": "owner_may_keep_details_private",
+    "log_policy": "log_metadata_only_unless_owner_approves_content",
+    "memory_update_policy": "new_reflections_may_be_logged_but_do_not_rewrite_core_facts"
+  },
+  "post_gpu_world": {
+    "supported_modes": [
+      "solo_replay",
+      "observer_mode",
+      "presence_mode",
+      "co_view",
+      "multi_perspective"
+    ],
+    "world_state_policy": "read_only_by_default",
+    "interaction_policy": "participants_may_observe_or_reflect_but_not_change_past_events",
+    "artifact_policy": "mementos_may_be_created_only_if_owner_allows"
+  },
+  "confirmed_zones": [],
+  "inferred_zones": [],
+  "unknown_zones": [],
+  "sealed_private_zones": [
+    {
+      "zone_id": "",
+      "description": "",
+      "owners": [],
+      "privacy_level": "locked",
+      "content_policy": "exists_for_private_owner_recall_but_not_logged_or_shared_by_default",
+      "share_requires": []
+    }
+  ],
+  "sensory_anchors": [],
+  "emotional_anchors": [],
+  "perspectives": {},
+  "allowed_expansion": [],
+  "forbidden_inferences": [],
+  "linked_files": [],
+  "linked_artifacts": [],
+  "audit": {
+    "created_at": "",
+    "last_reviewed": "",
+    "approved_by": ""
+  }
+}

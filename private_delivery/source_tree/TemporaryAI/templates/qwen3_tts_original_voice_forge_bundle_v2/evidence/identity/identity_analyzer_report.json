@@ -1,0 +1,19 @@
+{
+  "schema": "qwen3_tts_identity_analyzer_report_v2",
+  "mode": "REAL_LOCAL_NER_AND_IMITATION_CLASSIFIER",
+  "analyzer_name": "REQUIRED_EXACT_LOCAL_ANALYZER",
+  "analyzer_version": "REQUIRED_EXACT_VERSION",
+  "analyzer_model_manifest_path": "evidence/identity/identity_analyzer_model_manifest.json",
+  "analyzer_model_manifest_sha256": "REQUIRED_SHA256",
+  "input_sha256": "REQUIRED_DESIGN_TRAITS_SHA256",
+  "execution_mode": "HASH_BOUND_LOCAL_ANALYZER_EXECUTION",
+  "process_returncode": null,
+  "command_path": "evidence/identity/identity_analyzer_command.json",
+  "command_sha256": "REQUIRED_SHA256",
+  "stdout_path": "evidence/identity/identity_analyzer_stdout.log",
+  "stdout_sha256": "REQUIRED_SHA256",
+  "stderr_path": "evidence/identity/identity_analyzer_stderr.log",
+  "stderr_sha256": "REQUIRED_SHA256",
+  "detected_named_person_entities": [],
+  "named_person_imitation_requested": false
+}

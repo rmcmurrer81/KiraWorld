@@ -1,0 +1,18 @@
+{
+  "schema": "qwen3_tts_original_voice_watermark_preflight_manifest_v2",
+  "status": "TEMPLATE_INCOMPLETE",
+  "permitted_runtime_status": "NO_DOCUMENTED_INTENTIONAL_AUDIO_WATERMARK",
+  "stronger_status_requested": false,
+  "evidence": [
+    {
+      "kind": "EXACT_REVISION_SOURCE_SCAN",
+      "path": "evidence/watermark/source_scan.json",
+      "sha256": "REQUIRED_SHA256"
+    },
+    {
+      "kind": "EXACT_DEPENDENCY_SCAN",
+      "path": "evidence/watermark/dependency_scan.json",
+      "sha256": "REQUIRED_SHA256"
+    }
+  ]
+}

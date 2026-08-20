@@ -1,0 +1,18 @@
+{
+  "candidate_id": "ryan_hale_quantum_mechanics_expert_20260608_200749",
+  "display_name": "Ryan Hale",
+  "role_title": "Quantum Mechanics expert",
+  "created_at": "2026-06-09T00:07:50.096349+00:00",
+  "status": "pending_review",
+  "may_be_activated_by": {
+    "kira": true,
+    "lisa": true,
+    "robert": true
+  },
+  "required_before_activation": [
+    "Robert reviews candidate profile.",
+    "Run a short TemporaryAI probe.",
+    "Resolve any ambiguity questions."
+  ],
+  "activation_context_goal": "Let Kira/Lisa talk to this candidate after review without merging identities or private memories."
+}

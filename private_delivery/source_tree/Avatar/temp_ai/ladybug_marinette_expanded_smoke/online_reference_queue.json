@@ -1,0 +1,60 @@
+﻿{
+    "queue_id":  "ladybug_marinette_expanded_smoke_online_avatar_reference_queue_v1",
+    "created_at":  "2026-06-05T18:07:45.164789+00:00",
+    "target_type":  "temp_ai",
+    "target_id":  "ladybug_marinette_expanded_smoke",
+    "display_name":  "Ladybug / Marinette Expanded Smoke",
+    "ai_type":  "canon_reconstruction_temp_ai",
+    "status":  "references_found_needs_review",
+    "search_policy":  {
+                          "prefer_official_sources":  true,
+                          "secondary_sources_allowed":  [
+                                                            "IMDb",
+                                                            "Wikimedia",
+                                                            "Wikipedia",
+                                                            "fan wiki for low-confidence metadata only"
+                                                        ],
+                          "record_source_url":  true,
+                          "do_not_use_private_person_images_without_permission":  true,
+                          "review_before_avatar_generation":  true
+                      },
+    "queries_to_review":  [
+                              "Marinette Dupain-Cheng Ladybug"
+                          ],
+    "downloaded_items":  [
+                             {
+                                 "source_type":  "wikipedia",
+                                 "title":  "Marinette Dupain-Cheng",
+                                 "page_url":  "https://en.wikipedia.org/wiki/Marinette_Dupain-Cheng",
+                                 "image_url":  "",
+                                 "summary":  "Marinette Dupain-Cheng (French pronunciation: [maÊinÉ›t dypÉ›Ìƒ tÊƒÉ›Å‹]) is the titular co-protagonist of Miraculous: Tales of Ladybug \u0026 Cat Noir created by Thomas Astruc. A teenage student of Chinese and French descent, she aspires to become a fashion designer. Marinette is one of the superheroes alongside Cat Noir. She has a pair of earrings known as the Ladybug Miraculous, which, when worn, grant Marinette the ability to transform into Ladybug, her superheroine alias. Ladybug and Cat Noir\u0027s goal is to protect Paris from the villain Hawk Moth  and defeat him altogether. As the holder of a Miraculous, Marinette is assisted by a small red creature resembling a ladybug called Tikki, who is a magic",
+                                 "confidence":  "secondary_reference",
+                                 "status":  "needs_review",
+                                 "local_path":  ""
+                             },
+                             {
+                                 "source_type":  "wikimedia_commons",
+                                 "title":  "File:Ladybug aphids.JPG",
+                                 "page_url":  "https://commons.wikimedia.org/wiki/File%3ALadybug_aphids.JPG",
+                                 "image_url":  "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ladybug_aphids.JPG",
+                                 "mime":  "image/jpeg",
+                                 "license":  "CC BY-SA 3.0",
+                                 "artist":  "Greyson Orlando",
+                                 "confidence":  "secondary_or_public_reference",
+                                 "status":  "rejected_unrelated",
+                                 "download_error":  "429 Client Error: Too many requests. Please contact noc@wikimedia.org for further information (0068e25) for url: https://upload.wikimedia.org/wikipedia/commons/f/fe/Ladybug_aphids.JPG",
+                                 "review_note":  "Rejected: this is an insect photo, not a Marinette/Ladybug character reference."
+                             }
+                         ],
+    "review_notes":  [
+                         {
+                             "created_at":  "2026-06-05T18:13:59.660607+00:00",
+                             "note":  "Search added 2 item(s). Download=True. Items still need review before approval."
+                         },
+                         {
+                             "created_at":  "2026-06-05T18:21:57.1983699Z",
+                             "note":  "Marked unrelated Wikimedia Commons insect result as rejected. Commons search remains opt-in for future avatar searches."
+                         }
+                     ],
+    "updated_at":  "2026-06-05T18:21:57.1943707Z"
+}

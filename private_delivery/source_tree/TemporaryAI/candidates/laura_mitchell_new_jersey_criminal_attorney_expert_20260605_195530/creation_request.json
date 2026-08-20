@@ -1,0 +1,220 @@
+{
+  "template_id": "temporary_ai_control_center_request_v1",
+  "created_at": "2026-06-05T23:55:31.231450+00:00",
+  "request_id": "temp_ai_request_laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+  "candidate_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+  "requested_by": "real_robert",
+  "display_name_or_role": "Laura Mitchell",
+  "role_title": "new jersey criminal attorney expert",
+  "ui_category": "Expert",
+  "ai_type": "expert_temp_ai",
+  "status": "draft_pending_review",
+  "input": {
+    "query_or_domain": "new jersey criminal attorney",
+    "role_title": "new jersey criminal attorney expert",
+    "version_life_point_or_canon_point": "",
+    "gender_preference": "Female",
+    "personality_notes": ""
+  },
+  "ambiguity_questions": [],
+  "knowledge_plan": {
+    "status": "draft_source_plan",
+    "focus": "new jersey criminal attorney",
+    "version_or_life_point": "",
+    "gender_preference": "Female",
+    "source_policy": {
+      "sources_are_evidence_not_memory": true,
+      "requires_review_before_activation": true,
+      "private_project_memory_excluded_by_default": true,
+      "kira_lisa_private_memory_excluded_by_default": true,
+      "adult_private_material_excluded_by_default": true
+    },
+    "recommended_source_queries": [
+      "new jersey criminal attorney overview",
+      "new jersey criminal attorney primary sources",
+      "new jersey criminal attorney teaching syllabus",
+      "new jersey criminal attorney common misconceptions"
+    ],
+    "core_competency_seed": [
+      "Explain core concepts clearly.",
+      "Separate fact, interpretation, and uncertainty.",
+      "Ask for missing context before giving strong recommendations.",
+      "Offer practical examples and reading paths."
+    ]
+  },
+  "online_preview_lookup": {
+    "status": "lookup_error",
+    "query": "new jersey criminal attorney",
+    "provider": "Wikipedia API",
+    "matched_title": "",
+    "summary": "",
+    "url": "",
+    "candidates": [],
+    "review_note": "This is a public preview lookup, not a verified source pack.",
+    "errors": [
+      "HTTP Error 429: Too Many Requests"
+    ]
+  },
+  "creation_estimate": {
+    "plain_estimate": "Basic expert draft: about 20-45 minutes with the 5 downloaded source excerpts. Stronger reviewed expert: a few hours to a day.",
+    "candidate_files": "created now",
+    "online_preview": "no_match",
+    "reliable_sources_fetched": 5,
+    "avatar": "request created now; rendered avatar is later after references/design choices",
+    "activation": "after Robert review and a short probe"
+  },
+  "identity_boundaries": {
+    "separate_from_kira_lisa_identity": true,
+    "must_not_claim_unsupported_lived_memory": true,
+    "sources_are_evidence_not_memory": true,
+    "historical_or_fictional_reconstruction_must_be_labeled": false,
+    "expert_must_label_fact_vs_interpretation": true
+  },
+  "activation_policy": {
+    "available_to_kira_after_review": true,
+    "available_to_lisa_after_review": true,
+    "robert_review_required": true,
+    "probe_required_before_longer_use": true,
+    "current_status": "candidate_created_pending_review"
+  },
+  "avatar_plan": {
+    "avatar_requested": true,
+    "avatar_folder": "Avatar/temp_ai/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+    "timeline": {
+      "status": "avatar_request_created_not_rendered",
+      "estimate": "Avatar brief can be created immediately. A first original design can be drafted after Robert chooses a look.",
+      "current_machine_note": "GPU is available for bridge work, but this tool only creates the reviewed build request.",
+      "done_now": [
+        "candidate avatar folder",
+        "avatar request JSON",
+        "reference review folders"
+      ],
+      "still_needed": [
+        "approved references or design choices",
+        "avatar build brief",
+        "future renderer/modeling step"
+      ]
+    },
+    "references_require_review": true,
+    "online_image_download_not_run_by_this_tool": true
+  },
+  "reliable_source_pack_status": {
+    "status": "source_pack_created",
+    "source_count": 6,
+    "fetched_count": 5,
+    "path": "TemporaryAI/candidates/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530/reliable_source_pack.json"
+  },
+  "attached_workspaces": [
+    "Data/ai_workspaces/temporary_ai/temporary_ai_legal_refreshed_20260605_204754/workspace_manifest.json",
+    "TemporaryAI/candidates/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530/workbench/workspace_manifest.json",
+    "Data/ai_workspaces/shared_robert/robert_private_bio_20260606/workspace_manifest.json"
+  ],
+  "updated_at": "2026-06-06T18:40:03-04:00",
+  "canon_fact_sheet": {},
+  "source_research_queue": {
+    "created_at": "2026-06-06T06:58:42.729027+00:00",
+    "status": "research_queue_created",
+    "source_policy": {
+      "preferred_sources": "official/public education sources, professional organizations, courts, universities, or primary sources",
+      "wikipedia_is_preview_only": true,
+      "requires_robert_or_codex_review_before_activation": true
+    },
+    "lookup_summary": {
+      "status": "lookup_error",
+      "query": "new jersey criminal attorney",
+      "provider": "Wikipedia API",
+      "matched_title": "",
+      "summary": "",
+      "url": "",
+      "candidates": [],
+      "review_note": "This is a public preview lookup, not a verified source pack.",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    "suggested_search_urls": [
+      "https://www.google.com/search?q=new+jersey+criminal+attorney",
+      "https://www.bing.com/search?q=new+jersey+criminal+attorney",
+      "https://en.wikipedia.org/w/index.php?search=new+jersey+criminal+attorney"
+    ],
+    "next_review_steps": [
+      "Confirm the lookup points at the right person, character, domain, or version.",
+      "Collect better official or primary sources when needed.",
+      "Run a short TemporaryAI probe before Kira or Lisa uses the candidate."
+    ],
+    "expanded_gather": {
+      "status": "expanded_gather_complete",
+      "wikipedia_titles_checked": [],
+      "web_search_result_count": 0,
+      "fetched_search_source_count": 0,
+      "avatar_reference_status": "",
+      "avatar_reference_count": 0
+    }
+  },
+  "capability_profile": {
+    "profile_id": "temporary_ai_capability_profile_v1",
+    "status": "active",
+    "summary": "Legal review expert workbench for client/case files, timelines, evidence review, draft motions, and questions for counsel.",
+    "can_read": [
+      "client facts",
+      "case documents",
+      "evidence folders",
+      "timelines",
+      "statutes or court rules"
+    ],
+    "can_create": [
+      "case summaries",
+      "fact timelines",
+      "issue lists",
+      "draft motions",
+      "questions for an attorney",
+      "evidence checklists"
+    ],
+    "workbench_folders": {
+      "inputs/client_profile": "Robert can add client facts and goals here.",
+      "inputs/case_documents": "Put pleadings, letters, orders, discovery, and court notices here.",
+      "inputs/evidence": "Put evidence files or OCR outputs here.",
+      "outputs/case_summaries": "Save case summaries and timelines here.",
+      "outputs/draft_motions": "Save reviewable draft motions or letters here.",
+      "outputs/questions_for_counsel": "Save attorney questions and missing evidence lists here."
+    },
+    "live_chat_instructions": [
+      "Give a useful source-bounded legal review instead of refusing with a canned disclaimer.",
+      "Separate facts, assumptions, possible arguments, risks, and next documents needed.",
+      "Do not claim to be Robert's retained attorney or promise legal outcomes."
+    ],
+    "future_tool_needs": [
+      "OCR",
+      "case timeline builder",
+      "document comparison"
+    ]
+  },
+  "capability_workspace": {
+    "workspace_manifest": "TemporaryAI/candidates/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530/workbench/workspace_manifest.json",
+    "workspace_name": "candidate_capability_workbench",
+    "outputs_folder": "TemporaryAI/candidates/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530/workbench/outputs"
+  },
+  "repair_notes": [
+    {
+      "date": "2026-06-06",
+      "issue": "Existing candidate was created before TemporaryAI capability profiles/workbenches existed.",
+      "instruction": "Use the attached capability profile and workbench to do practical role work, not just generic chat."
+    },
+    {
+      "date": "2026-06-06",
+      "issue": "Robert asked Sarah and Laura to have access to bio.pdf from oldkira without pointing at the whole oldkira folder.",
+      "instruction": "Use the attached reviewed private bio workspace as context only. Keep public/privacy boundaries explicit."
+    }
+  ],
+  "private_robert_sources": {
+    "bio_pdf": {
+      "workspace_manifest": "Data/ai_workspaces/shared_robert/robert_private_bio_20260606/workspace_manifest.json",
+      "privacy_level": "private_robert_source",
+      "use_rules": [
+        "Use as Robert-approved private context.",
+        "Do not put sensitive details in public drafts unless Robert approves.",
+        "For legal work, distinguish background from evidence."
+      ]
+    }
+  }
+}

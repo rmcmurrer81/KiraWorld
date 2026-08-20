@@ -1,0 +1,53 @@
+{
+  "schema": "kira.temporary_creator_shared_growth_template.v2",
+  "status": "STATIC_REPAIR_CANDIDATE_PENDING_DIFFERENT_AUDIT",
+  "policy_path": "Data/foundation/shared_person_growth_capabilities_v2.json",
+  "core_path": "Core/shared_person_growth_capabilities_v2.py",
+  "creator_successor_path": "tools/create_temporary_ai_growth_profile_v2.py",
+  "output_name": "shared_person_growth_capabilities_v2.json",
+  "new_person_defaults": {
+    "maturity_status": "unresolved",
+    "live_activation": false,
+    "model_connection": false,
+    "memory_writer_connection": false,
+    "external_action_connection": false,
+    "sensory_connection": false,
+    "media_connection": false,
+    "body_control_connection": false
+  },
+  "protected_authority": {
+    "controller_required_for_session_open": true,
+    "classified_maturity_requires_identity_receipt": true,
+    "plain_digest_is_not_authority": true,
+    "receipt_replay_rejected": true,
+    "disconnected_classified_creation_rejected": true
+  },
+  "fresh_per_person_values": [
+    "opaque_person_id",
+    "profile_id",
+    "private_root_nonce",
+    "private_state_roots",
+    "controller_owned_activation_lease",
+    "provenance_chain"
+  ],
+  "never_copy": [
+    "identity",
+    "memories",
+    "backstory",
+    "private_emotion_state",
+    "relationships",
+    "permissions",
+    "maturity_classification",
+    "adult_curriculum_entitlement",
+    "body_selection",
+    "sensory_or_media_experience",
+    "acceptance_receipts",
+    "unknown_private_payload"
+  ],
+  "promotion_gate": {
+    "static_tests_required": true,
+    "different_fresh_audit_required": true,
+    "bounded_live_acceptance_required_before_shared_enablement": true,
+    "current_shared_enablement_allowed": false
+  }
+}

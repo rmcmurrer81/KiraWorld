@@ -1,0 +1,14 @@
+{
+  "schema": "qwen3_tts_watermark_preflight_evidence_v2",
+  "kind": "EXACT_DEPENDENCY_SCAN",
+  "status": "TEMPLATE_NOT_RUN",
+  "scan_tool": "evidence/watermark/scan_tool.py",
+  "scan_tool_version": "REQUIRED_EXACT_VERSION",
+  "scan_tool_sha256": "REQUIRED_SHA256",
+  "scanned_file_manifest_path": "evidence/watermark/scanned_files.json",
+  "scanned_file_manifest_sha256": "REQUIRED_SHA256",
+  "findings": [],
+  "watermark_removal_or_circumvention_attempted": false,
+  "voice_design_model_manifest_sha256": "REQUIRED_SHA256",
+  "base_model_manifest_sha256": "REQUIRED_SHA256"
+}

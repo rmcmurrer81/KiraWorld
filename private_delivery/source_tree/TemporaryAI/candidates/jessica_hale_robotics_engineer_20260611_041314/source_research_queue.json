@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-06-11T08:13:15.525492+00:00",
+  "status": "research_queue_created",
+  "source_policy": {
+    "preferred_sources": "official/public education sources, professional organizations, courts, universities, or primary sources",
+    "wikipedia_is_preview_only": true,
+    "requires_robert_or_codex_review_before_activation": true
+  },
+  "lookup_summary": {
+    "status": "summary_found",
+    "query": "Robotics Engineer",
+    "provider": "Wikipedia API",
+    "matched_title": "Robotics engineering",
+    "summary": "Robotics engineering is a branch of engineering that focuses on the conception, design, manufacturing, and operation of robots. It involves a multidisciplinary approach, drawing primarily from mechanical, electrical, software, and artificial intelligence (AI) engineering.",
+    "url": "https://en.wikipedia.org/wiki/Robotics_engineering",
+    "candidates": [
+      {
+        "title": "Robotics engineering",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Robotics_engineering"
+      },
+      {
+        "title": "Robotics Engineering Systems",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Robotics_Engineering_Systems"
+      }
+    ],
+    "review_note": "This is a public preview lookup, not a verified source pack.",
+    "errors": []
+  },
+  "suggested_search_urls": [
+    "https://www.google.com/search?q=Robotics+Engineer",
+    "https://www.bing.com/search?q=Robotics+Engineer",
+    "https://en.wikipedia.org/w/index.php?search=Robotics+Engineer"
+  ],
+  "next_review_steps": [
+    "Confirm the lookup points at the right person, character, domain, or version.",
+    "Collect better official or primary sources when needed.",
+    "Run a short TemporaryAI probe before Kira or Lisa uses the candidate."
+  ],
+  "expanded_gather": {
+    "status": "expanded_gather_complete",
+    "wikipedia_titles_checked": [
+      "Robotics engineering"
+    ],
+    "web_search_result_count": 0,
+    "fetched_search_source_count": 0,
+    "avatar_reference_status": "",
+    "avatar_reference_count": 0
+  }
+}

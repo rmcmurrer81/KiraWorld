@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-06-20T00:29:16.909755+00:00",
+  "status": "source_pack_created",
+  "query": "Marinette / Ladybug",
+  "version_or_life_point": "",
+  "source_count": 2,
+  "fetched_count": 2,
+  "policy": {
+    "downloaded_information_is_source_evidence_not_memory": true,
+    "expert_candidate_outputs_are_reviewable_drafts_not_final_professional_representation": false,
+    "requires_review_before_activation": true,
+    "prefer_official_or_primary_sources": true
+  },
+  "sources": [
+    {
+      "name": "Wikipedia preview - Marinette Dupain-Cheng",
+      "url": "https://en.wikipedia.org/wiki/Marinette_Dupain-Cheng",
+      "reliability": "preview_only",
+      "why": "Quick orientation only; not enough for verified expert behavior.",
+      "fetch_status": "summary_found",
+      "title": "Marinette Dupain-Cheng",
+      "excerpt": "Marinette Dupain-Cheng is the titular co-protagonist of Miraculous: Tales of Ladybug & Cat Noir created by Thomas Astruc. A teenage student of Chinese and French descent, she aspires to become a fashion designer. Marinette is one of the superheroes alongside Cat Noir. She has a pair of earrings known as the Ladybug Miraculous, which, when worn, grant Marinette the ability to transform into Ladybug, her superheroine alias. Ladybug and Cat Noir's goal is to protect Paris from the villain Hawk Moth and defeat him altogether. As the holder of a Miraculous, Marinette is assisted by a small red creature resembling a ladybug called Tikki, who is a magical being known as a kwami. As Ladybug, Marinette's signature ability is creation. Marinette appears in most Miraculous media, including the main series, the film, the Roblox game, the mobile running game, and the comic books.",
+      "error": ""
+    },
+    {
+      "name": "Wikipedia summary - Miraculous: Tales of Ladybug & Cat Noir",
+      "url": "https://en.wikipedia.org/wiki/Miraculous%3A_Tales_of_Ladybug_%26_Cat_Noir",
+      "reliability": "public_reference",
+      "why": "Expanded gather Wikipedia context.",
+      "fetch_status": "summary_found",
+      "title": "Miraculous: Tales of Ladybug & Cat Noir",
+      "excerpt": "Miraculous: Tales of Ladybug & Cat Noir is a French independent animated superhero television series created by Thomas Astruc and developed by Jeremy Zag. The series is produced by the French company Miraculous Corp., and co-produced with Japanese studio Toei Animation's European division, as well as several international companies.",
+      "error": ""
+    }
+  ],
+  "next_steps": [
+    "Review source excerpts for relevance.",
+    "Add or remove sources if the field is too broad.",
+    "Run a short live chat/probe before Kira or Lisa uses the candidate."
+  ]
+}

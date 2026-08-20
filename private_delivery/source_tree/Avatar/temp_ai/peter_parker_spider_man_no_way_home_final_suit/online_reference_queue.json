@@ -1,0 +1,49 @@
+{
+  "queue_id": "peter_parker_spider_man_no_way_home_final_suit_online_avatar_reference_queue_v1",
+  "created_at": "2026-07-05T05:00:04.517310+00:00",
+  "target_type": "temp_ai",
+  "target_id": "peter_parker_spider_man_no_way_home_final_suit",
+  "display_name": "Peter Parker / Spider-Man (No Way Home Final Suit)",
+  "ai_type": "canon_reconstruction_temp_ai",
+  "status": "official_references_recorded",
+  "search_policy": {
+    "prefer_official_sources": true,
+    "secondary_sources_allowed": [
+      "IMDb",
+      "Wikimedia",
+      "Wikipedia",
+      "fan wiki for low-confidence metadata only"
+    ],
+    "record_source_url": true,
+    "do_not_use_private_person_images_without_permission": true,
+    "review_before_avatar_generation": true
+  },
+  "queries_to_review": [
+    "Peter Parker / Spider-Man (No Way Home Final Suit)",
+    "Peter Parker / Spider-Man (No Way Home Final Suit) official image",
+    "Peter Parker / Spider-Man (No Way Home Final Suit) character reference"
+  ],
+  "downloaded_items": [
+    {
+      "title": "Spider-Man (Peter Parker) On Screen Profile - Marvel.com",
+      "url": "https://www.marvel.com/characters/spider-man-peter-parker/on-screen/profile",
+      "kind": "official_character_reference",
+      "local_use": "source-bounded identity and background"
+    },
+    {
+      "title": "Spider-Man: No Way Home - Marvel.com",
+      "url": "https://www.marvel.com/movies/spider-man-no-way-home",
+      "kind": "official_movie_reference",
+      "local_use": "film context and release/cast metadata"
+    },
+    {
+      "title": "Spider-Man: No Way Home - Sony Pictures",
+      "url": "https://www.sonypictures.com/movies/spidermannowayhome",
+      "kind": "official_movie_reference",
+      "local_use": "official synopsis context"
+    }
+  ],
+  "review_notes": [
+    "Active model is the local rigged suit GLB. The local screenplay PDF is the main dialogue/emotion reference. The Tom Holland unmasked model is staged only; it needs a separate mesh-fit pass before mask-off mode."
+  ]
+}

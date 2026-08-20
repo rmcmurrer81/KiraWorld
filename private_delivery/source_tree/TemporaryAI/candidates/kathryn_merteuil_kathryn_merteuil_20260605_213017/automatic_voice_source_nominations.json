@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "result_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_automatic_voice_source_nominations_v1",
+  "created_at": "2026-07-17T23:23:16.315252+00:00",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "request_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_automatic_voice_source_nomination_v1",
+  "request_sha256": "4c5f1ca049268b8a65f14cc4765b53e700cba9345207cac32f32551fcd522c0a",
+  "identity_target": {
+    "target_name": "Kathryn Merteuil",
+    "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+    "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+    "performer": "Sarah Michelle Gellar"
+  },
+  "status": "ranked_nominations_ready_no_source_approved",
+  "ranked_target_only_candidate_ranges": [
+    {
+      "source_id": "online_nomination_001",
+      "exact_url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+      "metadata": {
+        "title": "Kathryn’s Monologue",
+        "publisher": "Lesa",
+        "publisher_url": "https://www.youtube.com/channel/UCh1CMutKJ8IoLD_0GSo34pA",
+        "published_at": "20220516",
+        "duration_seconds": 38,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 4.15,
+        "end_seconds": 38.0,
+        "duration_seconds": 33.85,
+        "basis": "owner_exact_source_range_nomination",
+        "owner_note": "Robert confirms Kathryn alone; machine review trims the dead lead and keeps faint score residue flagged for cleanup/QC.",
+        "notes": [
+          "end inferred from provider duration metadata"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 205,
+        "reasons": [
+          "owner nominated the exact source and start time",
+          "explicit source seed is ranked ahead of unreviewed search noise",
+          "metadata labels a monologue",
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 1
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_007",
+      "exact_url": "https://www.youtube.com/watch?v=lomltiHiArc",
+      "metadata": {
+        "title": "kathryn merteuil tribute (cruel intentions 1999)",
+        "publisher": "oasisnl",
+        "publisher_url": "https://www.youtube.com/channel/UCDFh8L4l8Z-vyHx9GNVqLZA",
+        "published_at": "",
+        "duration_seconds": 192.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": true,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 35,
+        "reasons": [
+          "metadata contains the exact target name",
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 2
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_002",
+      "exact_url": "https://www.youtube.com/watch?v=mx7ufdAF_1I",
+      "metadata": {
+        "title": "Sarah Michelle Gellar's Best Lines In Cruel Intentions",
+        "publisher": "Us Weekly",
+        "publisher_url": "https://www.youtube.com/channel/UCVxZlxikHMY8LzspzinH1ww",
+        "published_at": "",
+        "duration_seconds": 44.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 44.0,
+        "duration_seconds": 44.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": true,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 25,
+        "reasons": [
+          "metadata contains the selected performer name",
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 3
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_003",
+      "exact_url": "https://www.youtube.com/watch?v=CgBeBag4ir0",
+      "metadata": {
+        "title": "Cruel Intentions (7/8) Movie CLIP - Kathryn's Triumph (1999) HD",
+        "publisher": "Movieclips",
+        "publisher_url": "https://www.youtube.com/channel/UC3gNmTGu-TTbFPpfSs5kNkg",
+        "published_at": "",
+        "duration_seconds": 152.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 5,
+        "reasons": [
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 4
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_008",
+      "exact_url": "https://www.youtube.com/watch?v=DToj3xM2b1E",
+      "metadata": {
+        "title": "Cruel Intentions (8/8) Movie CLIP - Sebastians' Journal (1999) HD",
+        "publisher": "Movieclips",
+        "publisher_url": "https://www.youtube.com/channel/UC3gNmTGu-TTbFPpfSs5kNkg",
+        "published_at": "",
+        "duration_seconds": 162.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 5,
+        "reasons": [
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 5
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_009",
+      "exact_url": "https://www.youtube.com/watch?v=NGJE5FYwg4w",
+      "metadata": {
+        "title": "Kathryn Cruel Intentions Self Tape Audition",
+        "publisher": "Rhys Westbury",
+        "publisher_url": "https://www.youtube.com/channel/UC7iSmlpq_kIEJnMaQTif5xQ",
+        "published_at": "",
+        "duration_seconds": 130.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 5,
+        "reasons": [
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 6
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_006",
+      "exact_url": "https://www.youtube.com/watch?v=RYpEB4UDEeg",
+      "metadata": {
+        "title": "Cruel Intentions Unaired Pilot | Kiss Scene",
+        "publisher": "moonxhyuna",
+        "publisher_url": "https://www.youtube.com/channel/UC-Csv_6XV4ASyrk-DzDzxgA",
+        "published_at": "",
+        "duration_seconds": 115.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 5,
+        "reasons": [
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 7
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_010",
+      "exact_url": "https://www.youtube.com/watch?v=YAFAZaR0Q2M",
+      "metadata": {
+        "title": "He has no respect for women 😡",
+        "publisher": "Boxoffice Movie Scenes",
+        "publisher_url": "https://www.youtube.com/channel/UCfk4Df9QxO267wlFbStSyAw",
+        "published_at": "",
+        "duration_seconds": 245.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 5,
+        "reasons": [
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 8
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_005",
+      "exact_url": "https://www.youtube.com/watch?v=yDTbJ58pktw",
+      "metadata": {
+        "title": "Kathryn's bet. Cruel Intentions (1999) movie scene",
+        "publisher": "larsthaman",
+        "publisher_url": "https://www.youtube.com/channel/UCxSUfSXTylNLJ8cH1GJTqjw",
+        "published_at": "",
+        "duration_seconds": 96.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": 5,
+        "reasons": [
+          "bounded range length is suitable for later analysis",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 9
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    },
+    {
+      "source_id": "online_nomination_004",
+      "exact_url": "https://www.youtube.com/watch?v=GyQ_YmNJHkE",
+      "metadata": {
+        "title": "Cruel Intentions 1999 school interview scene",
+        "publisher": "Movie clips channel",
+        "publisher_url": "https://www.youtube.com/channel/UC8XnSnXe_O7r1jDtYBw3XHA",
+        "published_at": "",
+        "duration_seconds": 267.0,
+        "provider": "youtube_metadata_via_yt_dlp",
+        "metadata_only": true
+      },
+      "identity_target": {
+        "target_name": "Kathryn Merteuil",
+        "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+        "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+        "performer": "Sarah Michelle Gellar"
+      },
+      "candidate_range": {
+        "start_seconds": 0.0,
+        "end_seconds": 45.0,
+        "duration_seconds": 45.0,
+        "basis": "metadata_analysis_window_only",
+        "owner_note": "automatically discovered metadata lead",
+        "notes": [
+          "end inferred from provider duration metadata",
+          "analysis window truncated to the 45-second nomination limit"
+        ]
+      },
+      "metadata_checks": {
+        "target_name_in_metadata": false,
+        "performer_name_in_metadata": false,
+        "music_terms": [],
+        "mixed_source_terms": [
+          "interview"
+        ],
+        "metadata_does_not_identify_the_speaker": true
+      },
+      "machine_evidence_gate": {
+        "passed": false,
+        "status": "not_run_no_authorized_local_media_evidence",
+        "failed_gates": [
+          "exact media hash and analyzer provenance",
+          "owner-approved target face reference",
+          "target face is the active speaker",
+          "single-speaker and overlap rejection",
+          "music/noise/clipping quality"
+        ]
+      },
+      "ranking": {
+        "score": -20,
+        "reasons": [
+          "bounded range length is suitable for later analysis",
+          "metadata signals mixed-source risk",
+          "publisher authority is third-party or unverified"
+        ],
+        "rank": 10
+      },
+      "status": "ranked_candidate_range_pending_authorized_machine_analysis",
+      "target_only_approved": false,
+      "voice_reference_ready": false,
+      "voice_training_or_cloning_allowed": false,
+      "voice_assignment_allowed": false,
+      "candidate_activation_allowed": false
+    }
+  ],
+  "capabilities": {
+    "yt_dlp_metadata_provider": true,
+    "local_audio_quality_libraries": {
+      "torch": true,
+      "torchaudio": true,
+      "librosa": true,
+      "soundfile": true
+    },
+    "local_visual_identity_and_active_speaker": {
+      "opencv": false,
+      "mediapipe": false,
+      "pyannote": false,
+      "status": "unavailable_until_an_authorized_local_media_analyzer_and_reference_binding_exist"
+    },
+    "external_exact_bound_machine_evidence_supported": true
+  },
+  "provider_errors": [],
+  "selection": {
+    "highest_ranked_source_id": "online_nomination_001",
+    "source_approved": false,
+    "target_only_range_approved": false,
+    "voice_reference_ready": false,
+    "voice_trained_or_cloned": false,
+    "voice_assigned": false,
+    "voice_synthesized": false,
+    "candidate_activated": false
+  },
+  "next_automatic_stage": {
+    "status": "blocked_until_bounded_online_media_analysis_has_explicit_project_authority",
+    "required": [
+      "download only the nominated bounded source under an explicit private-local evidence authorization",
+      "bind exact source bytes by SHA-256",
+      "match the visible face to an owner-approved target reference",
+      "bind the target face to the active speaker",
+      "reject overlap, music, noise, clipping, and materially reverberant audio",
+      "emit review evidence without training, cloning, assigning, synthesizing, or activating"
+    ],
+    "manual_clip_by_clip_box_required_now": false
+  },
+  "operation_evidence": {
+    "metadata_only": true,
+    "media_downloaded": false,
+    "audio_extracted": false,
+    "voice_trained_or_cloned": false,
+    "voice_assigned": false,
+    "voice_synthesized": false,
+    "candidate_activated": false
+  }
+}

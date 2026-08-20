@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "request_id": "notebook_world_normalized_subject_yyyymmdd_hhmmss",
+  "request_type": "notebook_world",
+  "title": "Review title",
+  "requested_by": "robert | kira | lisa | kira_lisa",
+  "trigger": {
+    "source": "world_generator_request",
+    "summary": "Why this draft was requested",
+    "created_at": "ISO-8601 UTC timestamp"
+  },
+  "subject": {
+    "name": "Subject name",
+    "category": "real_place | real_historic_place | fictional_or_original_place | fictional_place | memory_place | original_idea | hybrid",
+    "city": "",
+    "region": "",
+    "country": "",
+    "era": "current_or_best_sourced",
+    "private_use_allowed": true,
+    "public_export_requires_review": true
+  },
+  "source_collection_plan": {
+    "allowed_source_types": [
+      "official_site",
+      "local_library",
+      "web_search",
+      "map_or_satellite_view",
+      "street_level_photos",
+      "public_photos",
+      "public_video",
+      "floor_plans",
+      "blueprints",
+      "measurements",
+      "manual_notes",
+      "style_or_era_references"
+    ],
+    "requires_robert_approval_now": true,
+    "auto_collection_allowed_later": false,
+    "download_policy": "record_source_leads_first_download_only_after_review",
+    "source_tasks_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/source_tasks.json"
+  },
+  "creation_mode": {
+    "mode": "saved_world | blank_world | memory_reconstruction | source_reconstruction | original_creation",
+    "starts_from_blank": false,
+    "description": ""
+  },
+  "access_gateway": {
+    "gateway_id": "tardis_notebook_world_gateway",
+    "entry_location": "outside_protected_home_world",
+    "selection_method": "interior_console"
+  },
+  "world_plan": {
+    "notebook_world_id": "example_notebook_world",
+    "notebook_world_title": "Example Notebook World",
+    "starting_area": "",
+    "initial_scope": "small_prototype",
+    "confirmed_zones": [],
+    "inferred_zones": [],
+    "unknown_zones": [],
+    "npc_policy": "none | generic | source_inspired | temporary_ai_allowed",
+    "ride_or_attraction_policy": "none | exterior_only | partial_recreation | full_private_recreation",
+    "truth_labels": [
+      "blueprint_confirmed",
+      "photo_confirmed",
+      "video_confirmed",
+      "map_confirmed",
+      "manual_note_confirmed",
+      "inferred_from_sources",
+      "style_fill",
+      "unknown",
+      "blocked_private"
+    ],
+    "placement_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/placement.json",
+    "scene_plan_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/scene_plan.json",
+    "blueprint_preview_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/blueprint_preview.json",
+    "tardis_review_stage_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/tardis_review_stage.json",
+    "quality_gate_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/quality_gate.json",
+    "resource_isolation_gate_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/resource_isolation_gate.json",
+    "collection_id": null
+  },
+  "approval_workflow": {
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "current_stage": "draft_request_only",
+    "review_location": "TARDIS builder review bay",
+    "required_previews_before_approval": [
+      "blueprint/map placement",
+      "isolated exterior or representative room preview",
+      "walkable TARDIS review stage"
+    ]
+  },
+  "isolation_policy": {
+    "world_class": "separate_notebook_world",
+    "home_world_import_requested": false,
+    "home_world_mutation_allowed": false,
+    "strip_mall_mutation_allowed": false,
+    "co_load_with_home_world": false,
+    "co_load_with_other_notebook_worlds": false,
+    "runtime_load_policy": "one_notebook_world_at_a_time",
+    "collection_id": null,
+    "collection_members_are_logical_not_co_loaded": true
+  },
+  "resource_policy": {
+    "hardware_profile": "Data/launch/hardware_capability_profile.json",
+    "current_decision": "request_paperwork_only_no_runtime",
+    "loads_kira_mind": false,
+    "loads_kira_body": false,
+    "loads_voice": false,
+    "loads_ollama": false,
+    "loads_second_person": false,
+    "future_preview_policy": "isolated_preview_only_one_heavy_workload_at_a_time"
+  },
+  "quality_gates": {
+    "source_evidence": "not_run | blocked | failed",
+    "scale_and_placement": "not_run | blocked | failed",
+    "doors_routes_and_collision": "not_run | blocked | failed",
+    "visual_realism": "not_run | blocked | failed",
+    "runtime_route": "not_run | blocked | failed",
+    "pinned_deployment": "not_run | blocked | failed",
+    "explicit_robert_approval": "not_run | blocked | failed"
+  },
+  "visibility_scope": "private_only | share_with_robert | public_export_candidate",
+  "autonomy_level_required": "manual_only | request_mode | approved_autonomy | mature_autonomy",
+  "status": "draft"
+}
