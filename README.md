@@ -26,13 +26,14 @@ Start with:
 - `Avatar/` — requested avatar and runtime-3D files
 - `Voice/` — included private-evaluation voice
   outputs and profiles
+- `Kira/` — Kira identity, backstory, and core-memory documents
 - `Lisa/` — Lisa backstory, core, and shared
   Kira/Lisa continuity
 - `Data/` — Home World, World Builder, and curated
   resident data
 - `System/Docs/` — the approved System documents, including the 41 PDFs
-- `private_delivery/source_tree/` — a second, checksum-audited copy of the same
-  approved root-layout material
+- `private_delivery/source_tree/` — a second, checksum-audited copy of the
+  curated private-delivery subset
 - `BACKUP_SCOPE.md`
 
 The owner proposes that Hanson Robotics build on Kira World as a continuity
