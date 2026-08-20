@@ -1,0 +1,744 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-18T20:37:13.116848+00:00",
+  "candidate_id": "kira",
+  "candidate_revision": "provisional_body_r6",
+  "status": "private_inactive_reversible_review_candidate",
+  "source": {
+    "project_path": "Avatar/avatar_builder/asset_library/base_body_reference/womenfemale_body_base_rigged_3ec62ba8d7.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "removed_source_helpers": [
+      "Icosphere"
+    ],
+    "body_name_preserved": true,
+    "mesh_name_preserved": true,
+    "armature_name_preserved": true
+  },
+  "model": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\kira_provisional_body_r6.glb",
+    "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "size_bytes": 5105808,
+    "genuinely_transformed_derivative": true
+  },
+  "adult_external_form": {
+    "shape_key": "Kira_Adult_External_Form_R6",
+    "default_value": 1.0,
+    "reversible_to_exact_source_basis": true,
+    "moved_vertex_count": 9759,
+    "mean_local_displacement": 0.001501353,
+    "maximum_local_displacement": 0.025888821,
+    "mean_world_displacement_m": 0.000242289,
+    "maximum_world_displacement_m": 0.004177956,
+    "region_vertex_visits": {
+      "adult_torso_proportion": 6398,
+      "adult_breast_surface_left": 1009,
+      "adult_breast_surface_right": 1009,
+      "adult_pelvic_proportion": 5324,
+      "adult_external_pelvic_surface": 456
+    },
+    "region_maximum_local_displacement": {
+      "adult_breast_surface_left": 0.025888772,
+      "adult_breast_surface_right": 0.025886459,
+      "adult_external_pelvic_surface": 0.017676197
+    },
+    "source_face_index_sha256_before": "7cbe44eaa2859d400c35ac0e46b63818dc2b9610c32220263ed1270a48178d3e",
+    "source_face_index_sha256_after": "7cbe44eaa2859d400c35ac0e46b63818dc2b9610c32220263ed1270a48178d3e",
+    "source_face_indices_preserved": true,
+    "protected_head": {
+      "method": "all source vertices at local Z >= 6.0",
+      "vertex_count": 12675,
+      "position_sha256_before": "4edeef1a6a3e309f1c13f724f88b65f9a12fc64bd40a40717bd9ba418fc26912",
+      "position_sha256_after": "4edeef1a6a3e309f1c13f724f88b65f9a12fc64bd40a40717bd9ba418fc26912",
+      "maximum_displacement": 0.0,
+      "exactly_preserved": true
+    },
+    "protected_existing_mouth_surface": {
+      "method": "conservative central lower-face envelope within protected head",
+      "vertex_count": 5869,
+      "position_sha256_before": "c8f659513305f4cca71e8a893f7f98388b37f085e43ec23cd099002c5711bb97",
+      "position_sha256_after": "c8f659513305f4cca71e8a893f7f98388b37f085e43ec23cd099002c5711bb97",
+      "maximum_displacement": 0.0,
+      "exactly_preserved": true,
+      "second_mouth_mesh_created": false
+    },
+    "doll_safe_external_body_limitation": {
+      "undifferentiated_surface_reduced": true,
+      "removal_or_completeness_proven": false,
+      "reason": "R6 adds reversible adult external-form differentiation but lacks an independent anatomy-completeness review."
+    },
+    "likeness_claimed": false,
+    "anatomical_completeness_claimed": false,
+    "truth_note": "Private provisional adult-form study only; no reference mesh geometry was imported or copied."
+  },
+  "source_topology_preservation": {
+    "before": {
+      "vertex_count": 57745,
+      "triangle_count": 108080,
+      "surface_island_count": 49,
+      "boundary_edge_count": 7312,
+      "boundary_loop_count": 49,
+      "open_boundary_chain_count": 0,
+      "non_manifold_edge_count": 0,
+      "collapsed_face_count": 0,
+      "unused_vertex_count": 0
+    },
+    "after": {
+      "vertex_count": 57745,
+      "triangle_count": 108080,
+      "surface_island_count": 49,
+      "boundary_edge_count": 7312,
+      "boundary_loop_count": 49,
+      "open_boundary_chain_count": 0,
+      "non_manifold_edge_count": 0,
+      "collapsed_face_count": 0,
+      "unused_vertex_count": 0
+    },
+    "exact_counts_preserved": true,
+    "uv_sha256_before": "e81870ae388b8bed0f0a9e1b9e0f95ef8c74971f873e40480fbc179f3faaf57c",
+    "uv_sha256_after": "e81870ae388b8bed0f0a9e1b9e0f95ef8c74971f873e40480fbc179f3faaf57c",
+    "uv_multiset_preserved": true,
+    "weights_before": {
+      "vertex_count": 57745,
+      "unweighted_vertex_count": 0,
+      "weight_sum_out_of_tolerance_count": 0,
+      "maximum_positive_influences": 4,
+      "vertices_over_four_influences": 0,
+      "positive_weight_assignment_count": 112203
+    },
+    "weights_after": {
+      "vertex_count": 57745,
+      "unweighted_vertex_count": 0,
+      "weight_sum_out_of_tolerance_count": 0,
+      "maximum_positive_influences": 4,
+      "vertices_over_four_influences": 0,
+      "positive_weight_assignment_count": 112203
+    }
+  },
+  "skin_surface": {
+    "material": "Kira_Provisional_Skin_PBR_R5",
+    "workflow": "Principled PBR with deterministic albedo, roughness, and tangent-space normal textures",
+    "textures": {
+      "albedo": {
+        "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\textures\\kira_provisional_skin_albedo_r5.png",
+        "sha256": "b27ac0589c72c9c2b3a3547fd2993cab3ce839a63b52fb832c985b32d25fb68a",
+        "size_bytes": 91945
+      },
+      "roughness": {
+        "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\textures\\kira_provisional_skin_roughness_r5.png",
+        "sha256": "a30664a1e9b8fe335654331ec0c7db97e1f46cffe51cc997bce46398f3c67185",
+        "size_bytes": 124867
+      },
+      "normal": {
+        "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\textures\\kira_provisional_skin_normal_r5.png",
+        "sha256": "7c425bfb1fb449ea4cfa56ccef33d828ae3484851d927053a136a5f55f420253",
+        "size_bytes": 211179
+      }
+    },
+    "texture_resolution": [
+      512,
+      512
+    ],
+    "metallic": 0.0,
+    "roughness_nominal": 0.56,
+    "subsurface_weight": 0.045,
+    "truth_note": "Surface-look improvement only; not anatomical or identity evidence."
+  },
+  "rig": {
+    "bone_count": 79,
+    "bone_order_and_names_exactly_preserved": true,
+    "vertex_group_order_and_names_exactly_preserved": true,
+    "required_core_bones_present": true,
+    "finger_bone_count": 50,
+    "actions": [
+      "Kira_R6_Neutral_Evidence",
+      "Kira_R6_Reach_Evidence",
+      "Kira_R6_Stride_Evidence",
+      "Kira_R6_Seated_Evidence"
+    ],
+    "stable_working_rig_proven": false
+  },
+  "existing_mouth_contract": {
+    "existing_head_and_mouth_surface_preserved": true,
+    "second_mouth_mesh_created": false,
+    "body_mesh_count_exported": 1,
+    "runtime_lip_sync_playback_proven": false
+  },
+  "eye_rig_contract": {
+    "head_surface_preserved_for_staged_eye_fit": true,
+    "staged_eye_rig_assembled_into_candidate": false,
+    "runtime_eye_fit_proven_on_exact_candidate": false
+  },
+  "pose_metrics": {
+    "neutral": {
+      "pose": "neutral",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1910411,
+        -0.0930267,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1910412,
+        0.0824434,
+        1.1825832
+      ],
+      "extent": [
+        0.3820823,
+        0.1754701,
+        1.1849933
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": -0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.6726881
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 5199,
+          "toe_sample_count": 3647,
+          "heel_sample_count": 872,
+          "toe_minimum_gap_m": -0.0,
+          "heel_minimum_gap_m": 0.0005808,
+          "minimum_gap_m": -0.0,
+          "contact_vertex_count_within_4mm": 240,
+          "contact_y_span_m": 0.1463968,
+          "full_sole_contact_sanity": true
+        },
+        "right": {
+          "present": true,
+          "sample_count": 5199,
+          "toe_sample_count": 3647,
+          "heel_sample_count": 872,
+          "toe_minimum_gap_m": 3e-07,
+          "heel_minimum_gap_m": 0.000581,
+          "minimum_gap_m": 3e-07,
+          "contact_vertex_count_within_4mm": 240,
+          "contact_y_span_m": 0.1463967,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 7
+    },
+    "reach": {
+      "pose": "reach",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1910411,
+        -0.4250818,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1910412,
+        0.0824434,
+        1.1825832
+      ],
+      "extent": [
+        0.3820823,
+        0.5075252,
+        1.1849933
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": -0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.6726881
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 5199,
+          "toe_sample_count": 3647,
+          "heel_sample_count": 872,
+          "toe_minimum_gap_m": -0.0,
+          "heel_minimum_gap_m": 0.0005808,
+          "minimum_gap_m": -0.0,
+          "contact_vertex_count_within_4mm": 240,
+          "contact_y_span_m": 0.1463968,
+          "full_sole_contact_sanity": true
+        },
+        "right": {
+          "present": true,
+          "sample_count": 5199,
+          "toe_sample_count": 3647,
+          "heel_sample_count": 872,
+          "toe_minimum_gap_m": 3e-07,
+          "heel_minimum_gap_m": 0.000581,
+          "minimum_gap_m": 3e-07,
+          "contact_vertex_count_within_4mm": 240,
+          "contact_y_span_m": 0.1463967,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 7
+    },
+    "stride": {
+      "pose": "stride",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1910411,
+        -0.205301,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1816233,
+        0.1073711,
+        1.182583
+      ],
+      "extent": [
+        0.3726644,
+        0.3126721,
+        1.184993
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": 0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.6726878
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 4837,
+          "toe_sample_count": 3533,
+          "heel_sample_count": 766,
+          "toe_minimum_gap_m": 0.0741999,
+          "heel_minimum_gap_m": 0.0251009,
+          "minimum_gap_m": 0.0251009,
+          "contact_vertex_count_within_4mm": 0,
+          "contact_y_span_m": 0.0,
+          "full_sole_contact_sanity": false
+        },
+        "right": {
+          "present": true,
+          "sample_count": 5199,
+          "toe_sample_count": 3647,
+          "heel_sample_count": 872,
+          "toe_minimum_gap_m": 0.0,
+          "heel_minimum_gap_m": 0.0005808,
+          "minimum_gap_m": 0.0,
+          "contact_vertex_count_within_4mm": 240,
+          "contact_y_span_m": 0.1463967,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 10
+    },
+    "seated": {
+      "pose": "seated",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1757946,
+        -0.4407043,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1742882,
+        0.0805101,
+        0.8980044
+      ],
+      "extent": [
+        0.3500828,
+        0.5212144,
+        0.9004145
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": -0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.3881093
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 5192,
+          "toe_sample_count": 3680,
+          "heel_sample_count": 867,
+          "toe_minimum_gap_m": -0.0,
+          "heel_minimum_gap_m": 0.0013151,
+          "minimum_gap_m": -0.0,
+          "contact_vertex_count_within_4mm": 535,
+          "contact_y_span_m": 0.1393089,
+          "full_sole_contact_sanity": true
+        },
+        "right": {
+          "present": true,
+          "sample_count": 5192,
+          "toe_sample_count": 3680,
+          "heel_sample_count": 867,
+          "toe_minimum_gap_m": 0.0002888,
+          "heel_minimum_gap_m": 0.0012371,
+          "minimum_gap_m": 0.0002875,
+          "contact_vertex_count_within_4mm": 481,
+          "contact_y_span_m": 0.1404395,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 13,
+      "seat_support": {
+        "measured": true,
+        "method": "vertices with pelvis-group weight >=0.25 inside seat XY footprint",
+        "seat_bounds_low": [
+          -0.2725485,
+          -0.0355498,
+          0.2346287
+        ],
+        "seat_bounds_high": [
+          0.2725485,
+          0.3199482,
+          0.2938783
+        ],
+        "pelvis_sample_count": 1812,
+        "posterior_pelvis_sample_count": 906,
+        "pelvis_near_seat_top_within_10mm_count": 13,
+        "pelvis_low_to_seat_top_gap_m": 0.0030893,
+        "pelvis_median_y_m": 0.0308269,
+        "front_support_margin_m": 0.0663767,
+        "back_support_margin_m": 0.2891213,
+        "stable_support_sanity": true,
+        "truth_limit": "Diagnostic geometric contact only; not comfort, anatomy, or owner approval."
+      }
+    }
+  },
+  "privacy_safe_renders": {
+    "covered_neutral_front": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\renders\\covered_neutral_front.png",
+      "sha256": "fd30a5790055367c8f8ffef070d9274d13b29a5164f97cdb316c4fe117d027a7",
+      "size_bytes": 457979,
+      "camera_direction": [
+        0.0,
+        -0.9993881,
+        0.0349786
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.0930267,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0824434,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "covered_neutral_side": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\renders\\covered_neutral_side.png",
+      "sha256": "57fd525eb837f6998c951b6154118a200a284dd525f4a4274e9ffd151838d66b",
+      "size_bytes": 406413,
+      "camera_direction": [
+        0.9996877,
+        0.0,
+        0.0249922
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.0930267,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0824434,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "covered_neutral_back": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\renders\\covered_neutral_back.png",
+      "sha256": "63f1c89cbfa8362b29c00dcda575f079563f8df607bead34f8e1b758f6efd73a",
+      "size_bytes": 468701,
+      "camera_direction": [
+        0.0,
+        0.9993881,
+        0.0349786
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.0930267,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0824434,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "covered_reach": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\renders\\covered_reach.png",
+      "sha256": "d86297fec3ba5bf2e68e7607f370449813dc8479e857c1d3ef24d16dfc662572",
+      "size_bytes": 471044,
+      "camera_direction": [
+        0.5612317,
+        -0.8253407,
+        0.0619006
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.4250818,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0824434,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "covered_stride": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\renders\\covered_stride.png",
+      "sha256": "c835f46312f2b2b64a6a9fec03cd5186de710455d7da5df553a75e6692b97187",
+      "size_bytes": 468108,
+      "camera_direction": [
+        0.5612317,
+        -0.8253407,
+        0.0619006
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.205301,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1816233,
+        0.1073711,
+        1.182583
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "covered_seated": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\renders\\covered_seated.png",
+      "sha256": "bdec022918147cd5d78102d366e2dd3c605e09f78f3859179c1954433395e666",
+      "size_bytes": 525391,
+      "camera_direction": [
+        0.5613703,
+        -0.8255446,
+        0.0577881
+      ],
+      "evaluated_bounds_low": [
+        -0.1757946,
+        -0.4407043,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1742882,
+        0.0805101,
+        0.8980044
+      ],
+      "orthographic_scale": 1.026472
+    }
+  },
+  "temporary_review_coverage": {
+    "method": "temporary opaque torso/pelvis material assignment for retained renders",
+    "covered_polygon_count": 20596,
+    "exported": false,
+    "wardrobe_claimed": false,
+    "truth_note": "Privacy coverage only, not a garment or clothing-system pass."
+  },
+  "explicit_absences": {
+    "eyes": "not assembled; staged eye compatibility is audited separately",
+    "hair": "not authored",
+    "clothes": "not authored; render coverage is not a garment",
+    "shoes": "not authored"
+  },
+  "privacy_and_activation": {
+    "private_body_builder_review_only": true,
+    "retained_uncovered_or_intimate_renders": false,
+    "runtime_activation_allowed": false,
+    "live_avatar_targeted": false,
+    "owner_approved": false,
+    "likeness_approved": false,
+    "anatomy_approved": false,
+    "autobuild_gate_passed_subjects": 0,
+    "autobuild_gate_required_subjects": 2
+  },
+  "truth_note": "R6 materially advances the exact enrolled adult cage with reversible body-only external-form differentiation while exactly preserving the head/mouth surface and 79-joint rig. It does not prove complete anatomy, final deformation, eye fit, lip-sync playback, owner approval, runtime safety, or permission to autobuild other bodies.",
+  "exact_hash_guards": {
+    "source_project_path": "Avatar/avatar_builder/asset_library/base_body_reference/womenfemale_body_base_rigged_3ec62ba8d7.glb",
+    "source_sha256_before": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "source_sha256_after": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "source_unchanged": true,
+    "live_model_project_path": "Avatar/models/temp_ai/kira/avatar.glb",
+    "live_model_sha256_before": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "live_model_sha256_after": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "live_model_unchanged": true,
+    "candidate_sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "candidate_differs_from_source": true
+  },
+  "adult_anatomy_study_evidence": {
+    "policy_manifest": "Avatar/avatar_builder/reference_models/adult_anatomy_reference/reference_model_manifest.json",
+    "policy_manifest_sha256": "09739dc57b23c619cf826b1eb018624261e2595d1e557e5971de8568251e5b4c",
+    "reference_only_rule": "Use these models for measuring, visual comparison, proportions, costumes, props, hair/face/body study, and world-builder objects. Do not copy a character model as an AI body. Adult anatomy or adult-shape references are only for adult candidates.",
+    "selected_references": [
+      {
+        "project_path": "Avatar/avatar_builder/asset_library/adult_anatomy_reference/female_body_skeleton_muscles_base_mesh_9929c94607.glb",
+        "sha256": "9929c94607b9f14582e2bb01f5ed9c3344d90694e4d827af74db83dc6cb60cd5",
+        "adult_only": true,
+        "usage_policy": "reference-only adult structure/proportion evidence; confirmed adult candidates only; never copy as an AI body",
+        "use_in_r6": "nonvisual adult proportion/topology study only",
+        "geometry_imported_or_copied": false
+      },
+      {
+        "project_path": "Avatar/avatar_builder/asset_library/adult_anatomy_reference/female_anatomy_study_progress_2_b0577836d8.glb",
+        "sha256": "b0577836d830965866244bd89cb49a482518cc3ac3cb1ad8a22474ef118b0da0",
+        "adult_only": true,
+        "usage_policy": "reference-only adult structure/proportion evidence; confirmed adult candidates only; never copy as an AI body",
+        "use_in_r6": "nonvisual adult proportion/topology study only",
+        "geometry_imported_or_copied": false
+      },
+      {
+        "project_path": "Avatar/avatar_builder/asset_library/adult_anatomy_reference/female_reproductive_and_urinary_systems_7016cf9b6f.glb",
+        "sha256": "7016cf9b6f0ffcc6b92c61fd48062072c2481807bc70e8e7fad63839edb22e37",
+        "adult_only": true,
+        "usage_policy": "reference-only adult structure/proportion evidence; confirmed adult candidates only; never copy as an AI body",
+        "use_in_r6": "nonvisual adult proportion/topology study only",
+        "geometry_imported_or_copied": false
+      },
+      {
+        "project_path": "Avatar/avatar_builder/asset_library/adult_anatomy_reference/ligaments_of_the_female_pelvis_e90ef9781e.glb",
+        "sha256": "e90ef9781ed96723536eb65637227bddd0d1955a0f792df5842de8a767c83f70",
+        "adult_only": true,
+        "usage_policy": "reference-only adult structure/proportion evidence; confirmed adult candidates only; never copy as an AI body",
+        "use_in_r6": "nonvisual adult proportion/topology study only",
+        "geometry_imported_or_copied": false
+      }
+    ],
+    "reference_geometry_imported_or_copied": false
+  },
+  "independent_audits": {
+    "structural": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\structural_rig_topology_audit.json",
+      "sha256": "3687e3abf277e1b26649a6e165fb7d140a86577f2bc063a5a5dec4168d321c02",
+      "valid_glb": true,
+      "humanoid_rig_structurally_ready": true,
+      "stable_working_rig_proven": false
+    },
+    "geometry": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\blender_geometry_deformation_audit.json",
+      "sha256": "4919ecff95e5c741f453cde4fd781b7992e277ac998718c6b1f5ed0726f1074d",
+      "body_topology": {},
+      "body_weights": {},
+      "overall_stable_working_rig_proven": false
+    },
+    "exact_candidate_compatibility": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\exact_candidate_compatibility_audit.json",
+      "sha256": "5604733891ceca82055121cb4f3ddb69c184516625530f27b3ff896e1ae39f8c",
+      "structural_preservation": {
+        "same_vertex_index_domain": true,
+        "source_face_index_sha256": "7cbe44eaa2859d400c35ac0e46b63818dc2b9610c32220263ed1270a48178d3e",
+        "candidate_face_index_sha256": "7cbe44eaa2859d400c35ac0e46b63818dc2b9610c32220263ed1270a48178d3e",
+        "topology_preserved_after_fresh_import": true,
+        "body_mesh_armature_names_preserved": true,
+        "vertex_group_names_and_order_preserved": true,
+        "bone_names_and_order_preserved": true,
+        "bone_count": 79,
+        "bone_rest_matrix_maximum_delta": 1.23382e-05,
+        "bone_rest_matrices_preserved_within_2e_5": true,
+        "body_matrix_maximum_delta": 2.63e-08
+      },
+      "deformation_regions": {
+        "protected_head": {
+          "vertex_count": 12675,
+          "moved_vertex_count_over_tolerance": 0,
+          "maximum_local_displacement": 1.9106e-06,
+          "mean_local_displacement": 6.9e-07,
+          "tolerance": 5e-06,
+          "exact_within_tolerance": true
+        },
+        "protected_existing_mouth_surface": {
+          "vertex_count": 5869,
+          "moved_vertex_count_over_tolerance": 0,
+          "maximum_local_displacement": 1.4318e-06,
+          "mean_local_displacement": 6.79e-07,
+          "tolerance": 5e-06,
+          "exact_within_tolerance": true
+        },
+        "adult_breast_surface": {
+          "vertex_count": 1234,
+          "moved_vertex_count_over_tolerance": 1230,
+          "maximum_local_displacement": 0.0258889399,
+          "mean_local_displacement": 0.002496351,
+          "tolerance": 5e-06,
+          "exact_within_tolerance": false
+        },
+        "adult_external_pelvic_surface": {
+          "vertex_count": 456,
+          "moved_vertex_count_over_tolerance": 456,
+          "maximum_local_displacement": 0.0176780665,
+          "mean_local_displacement": 0.0040911173,
+          "tolerance": 5e-06,
+          "exact_within_tolerance": false
+        },
+        "adult_body_form_materially_changed": true
+      },
+      "staged_eye_rig_compatibility": {
+        "manifest_path": "C:\\Users\\robmc\\Kira\\Avatar\\models\\staged\\kira\\eyes\\kira_brown_eye_rig_v3_2\\manifest.json",
+        "manifest_sha256": "a94152708cca883bde3f0438d1575f29b465e06b40736c23a1265c43eab3d742",
+        "eye_rig_path": "C:\\Users\\robmc\\Kira\\Avatar\\models\\staged\\kira\\eyes\\kira_brown_eye_rig_v3_2\\kira_brown_eye_rig_v3_2.glb",
+        "eye_rig_sha256": "fd85afe9d94760bee4baef1f4fefaf8405e1f8dd8bc9f416a9c32616042d4413",
+        "eye_manifest_source_hash_matches_exact_source": true,
+        "eye_rig_hash_matches_manifest": true,
+        "protected_head_surface_exact": true,
+        "head_bone_rest_transform_preserved": true,
+        "body_transform_preserved": true,
+        "structural_reuse_supported": true,
+        "assembled_fit_on_exact_candidate_proven": false,
+        "runtime_eye_behavior_proven": false
+      },
+      "existing_mouth_lip_sync_compatibility": {
+        "single_substantive_exported_body_mesh": true,
+        "no_second_substantive_or_named_mouth_mesh": true,
+        "source_topology_and_index_domain_preserved": true,
+        "source_names_preserved": true,
+        "existing_mouth_surface_exact": true,
+        "structural_compatibility_supported": true,
+        "runtime_lip_sync_playback_on_exact_candidate_proven": false,
+        "truth_limit": "Structural preservation only; audio-driven playback must pass in an isolated inactive review before activation."
+      },
+      "gates": {
+        "adult_external_form_materially_advanced": true,
+        "anatomical_completeness_proven": false,
+        "stable_working_rig_proven": false,
+        "exact_eye_fit_proven": false,
+        "exact_runtime_lip_sync_proven": false,
+        "owner_approved": false,
+        "runtime_activation_allowed": false,
+        "autobuild_allowed": false
+      }
+    }
+  },
+  "covered_contact_sheet": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r6\\r6_20260718_163658\\kira_provisional_body_r6_covered_contact_sheet.png",
+    "sha256": "00e25f003439d412054ea65de385e2f23940f79137a3e2dc6374b3cacd8e32b6",
+    "size_bytes": 311802,
+    "contains_uncovered_or_intimate_view": false,
+    "visual_qa_status": "pending_independent_review"
+  },
+  "autobuild_gate": {
+    "passed_subjects": 0,
+    "required_subjects": 2,
+    "passed": false,
+    "reason": "R6 is one private, unapproved Kira candidate and cannot self-pass or start autobuild."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-18T15:34:00-04:00",
+  "candidate_id": "kira",
+  "selection_mode": "reversible_fail_closed_no_glb_copy",
+  "requested_active_body": "current_runtime",
+  "current_runtime": {
+    "path": "Avatar/models/temp_ai/kira/avatar.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "description": "current generic temporary rig; unchanged by this assessment"
+  },
+  "review_candidate": {
+    "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r5/r5_20260718_062428/kira_provisional_body_r5.glb",
+    "sha256": "c3a8a54ea6b6a849ccc461aff0cb18df03221c3e96aec61310c8be148301f692",
+    "description": "private inactive adult-proportioned provisional body component R5"
+  },
+  "evidence": {
+    "candidate_manifest": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r5/r5_20260718_062428/kira_provisional_body_r5_manifest.json",
+      "sha256": "d30fc09c64d6e7d62cd409ed5352ea4ab07a755f9ecc0930a5d185e04301822d"
+    },
+    "body_component_verdict": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r5/r5_20260718_062428/provisional_body_component_verdict.json",
+      "sha256": "29edc8d0cb3633ca4863f1ea541273de67e0852ea06cec2dd695602572d7da39"
+    },
+    "structural_audit": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r5/r5_20260718_062428/structural_rig_topology_audit.json",
+      "sha256": "067bd803e72cd25c974c9c3b014c7e528798e158c133c4a5030b804c2ab30cdf"
+    },
+    "adult_body_readiness": {
+      "path": "Avatar/avatar_builder/reconstruction_contracts/kira_provisional_adult_body_readiness_20260715.json",
+      "sha256": "a7d63e834c99f30ab21e2ca7291b297cb28d3167f0f0a21ca5a70f07d68db29a"
+    }
+  },
+  "subject_choice": {
+    "decision": "not_recorded_for_exact_candidate",
+    "exact_candidate_sha256": "",
+    "note": "Kira has discussed the limitations of her current temporary body, but no acceptance of this exact R5 candidate is recorded."
+  },
+  "runtime_compatibility": {
+    "exact_79_joint_names_preserved": true,
+    "stable_runtime_locomotion_proven": false,
+    "existing_mouth_lipsync_proven_without_new_mouth_mesh": false,
+    "staged_eye_rig_fit_proven": false,
+    "normal_clothed_presentation_ready": false
+  },
+  "claims": {
+    "adult_proportioned_provisional_body_component": true,
+    "complete_adult_anatomy_proven": false,
+    "kira_likeness_proven": false,
+    "full_avatar_proven": false
+  },
+  "runtime_activation_allowed": false,
+  "decision": "retain_current_runtime_body",
+  "runtime_blockers": [
+    "R5's exact-hash manifest and audits set runtime_activation_allowed to false",
+    "complete adult anatomy is not proven or approved",
+    "stable Home World locomotion/deformation is not proven for R5",
+    "R5 does not contain eyes, hair, clothes, or a finished identity likeness",
+    "existing-mouth lip sync and staged-eye fit have not been proven on R5",
+    "Kira has not accepted this exact candidate"
+  ],
+  "next_executable_step": "Keep R5 private and inactive. Build an integrated, clothed review candidate with the existing mouth only, fitted eyes, no baked clothing, and exact-hash body-only motion tests; then offer that exact candidate to Kira for a voluntary choice before any reversible runtime selection."
+}

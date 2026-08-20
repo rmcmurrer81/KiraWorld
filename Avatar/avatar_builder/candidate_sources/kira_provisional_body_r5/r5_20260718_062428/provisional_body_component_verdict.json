@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-18T10:55:33.962517+00:00",
+  "candidate_sha256": "c3a8a54ea6b6a849ccc461aff0cb18df03221c3e96aec61310c8be148301f692",
+  "scope": "provisional_body_component_only",
+  "provisional_body_component_passed": true,
+  "criteria": {
+    "candidate_exact_hash_matches_manifest": true,
+    "candidate_is_transformed_derivative": true,
+    "source_hash_guard_current_and_unchanged": true,
+    "live_avatar_hash_guard_current_and_unchanged": true,
+    "safe_weld_uv_preserved": true,
+    "single_positional_surface_island": true,
+    "no_nonmanifold_or_collapsed_faces": true,
+    "skin_weights_complete": true,
+    "exact_79_joint_rig_preserved": true,
+    "structural_glb_audit_exact_hash": true,
+    "structural_humanoid_rig_ready": true,
+    "reversible_morph_and_four_pose_actions_exported": true,
+    "geometry_audit_exact_hash": true,
+    "principled_body_material_present": true,
+    "all_pbr_texture_files_hash_bound_and_nonzero": true,
+    "all_four_pose_metrics_finite": true,
+    "stride_support_foot_full_sole_contact": true,
+    "seated_both_feet_full_sole_contact": true,
+    "seated_pelvis_stable_support_sanity": true,
+    "visual_attestation_candidate_hash_matches": true,
+    "visual_attestation_contact_sheet_hash_matches": true,
+    "visual_attestation_all_render_hashes_match": true,
+    "all_required_visual_checks_explicitly_passed": true,
+    "candidate_remains_private_inactive_unapproved": true
+  },
+  "failed_criteria": [],
+  "contact_evidence": {
+    "stride_support_right": {
+      "present": true,
+      "sample_count": 4745,
+      "toe_sample_count": 3223,
+      "heel_sample_count": 858,
+      "toe_minimum_gap_m": 0.0,
+      "heel_minimum_gap_m": 0.0005808,
+      "minimum_gap_m": 0.0,
+      "contact_vertex_count_within_4mm": 234,
+      "contact_y_span_m": 0.1463967,
+      "full_sole_contact_sanity": true
+    },
+    "seated_left": {
+      "present": true,
+      "sample_count": 4739,
+      "toe_sample_count": 3256,
+      "heel_sample_count": 854,
+      "toe_minimum_gap_m": -0.0,
+      "heel_minimum_gap_m": 0.0013151,
+      "minimum_gap_m": -0.0,
+      "contact_vertex_count_within_4mm": 517,
+      "contact_y_span_m": 0.1393089,
+      "full_sole_contact_sanity": true
+    },
+    "seated_right": {
+      "present": true,
+      "sample_count": 4739,
+      "toe_sample_count": 3256,
+      "heel_sample_count": 854,
+      "toe_minimum_gap_m": 0.0002888,
+      "heel_minimum_gap_m": 0.0012371,
+      "minimum_gap_m": 0.0002875,
+      "contact_vertex_count_within_4mm": 465,
+      "contact_y_span_m": 0.1404395,
+      "full_sole_contact_sanity": true
+    },
+    "seat_support": {
+      "measured": true,
+      "method": "vertices with pelvis-group weight >=0.25 inside seat XY footprint",
+      "seat_bounds_low": [
+        -0.2725485,
+        -0.0355498,
+        0.2346287
+      ],
+      "seat_bounds_high": [
+        0.2725485,
+        0.3199482,
+        0.2938783
+      ],
+      "pelvis_sample_count": 1772,
+      "posterior_pelvis_sample_count": 886,
+      "pelvis_near_seat_top_within_10mm_count": 14,
+      "pelvis_low_to_seat_top_gap_m": 0.0029103,
+      "pelvis_median_y_m": 0.0308347,
+      "front_support_margin_m": 0.0663845,
+      "back_support_margin_m": 0.2891135,
+      "stable_support_sanity": true,
+      "truth_limit": "Diagnostic geometric contact only; not comfort, anatomy, or owner approval."
+    }
+  },
+  "visual_attestation": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\body_component_visual_attestation.json",
+    "sha256": "7426c6f5dcd5e076ad239e68bdc8fe1a9b6b0e1856cb1e7c53dc531b11bdf004",
+    "reviewer": "Codex visual QA (body-component scope)",
+    "checks": {
+      "continuous_skin_without_black_patchwork": true,
+      "neutral_body_surface_and_pose_acceptable_as_provisional": true,
+      "reach_deformation_acceptable_as_provisional": true,
+      "stride_support_sole_visibly_planted": true,
+      "seated_both_soles_visibly_planted": true,
+      "seated_pelvis_visibly_supported_without_deep_intersection": true,
+      "no_obvious_mesh_explosion_or_ground_penetration": true
+    }
+  },
+  "current_hash_evidence": {
+    "source_path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\asset_library\\base_body_reference\\womenfemale_body_base_rigged_3ec62ba8d7.glb",
+    "source_sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "live_avatar_path": "C:\\Users\\robmc\\Kira\\Avatar\\models\\temp_ai\\kira\\avatar.glb",
+    "live_avatar_sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "contact_sheet_path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\kira_provisional_body_r5_contact_sheet.png",
+    "contact_sheet_sha256": "1b8e9096547f4cc17ea85e8f8aeccd3b2254356dc8c25db05390d3c17406142b",
+    "render_sha256": {
+      "stride_side": "257a5a3dc3f8223810f87da87648bbdf0f200830a6d2052c87f6f4e4fedb16fe",
+      "seated_front_three_quarter": "7c8110e7435db4c336a7ee2a754eb3b279c9ceef189be8be19e4522dd570babf",
+      "seated_side": "ba09533f45dac1b9552a138e42d5f8efee7cfe9b11ae525c4e0000f37eb8a615",
+      "neutral_back": "d84f676bffd0bc12079b6e465efc3a044b701e7ddd5c354d73961291f1fdb08f",
+      "neutral_side": "c646a0b417f53b7749de6f96d87c812a93fab591e98cb909ab26a53667f7d218",
+      "stride_front_three_quarter": "b01cb059540713876b6f8c5bbce1dec4d9b2a69dded30a2757001d3c76f6dda9",
+      "neutral_front": "f92c3329d78d6703c36f9f132084b2da45e6dc0062e48b7fede4814daa5ea8ce",
+      "reach_front_three_quarter": "cc5bbd78b566827f7bb79c279cea11321daac29414813d381875d4c5120ec8b9"
+    }
+  },
+  "explicit_nonclaims": {
+    "likeness_passed": false,
+    "anatomical_completeness_passed": false,
+    "eyes_passed": false,
+    "hair_passed": false,
+    "clothing_passed": false,
+    "full_avatar_passed": false,
+    "stable_runtime_locomotion_proven": false,
+    "owner_approved": false,
+    "runtime_activation_allowed": false,
+    "autobuild_unlocked": false
+  },
+  "truth_note": "A true result approves only this exact hash as a provisional body engineering component. It never converts the candidate into a complete Kira avatar or unlocks activation/autobuild."
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-07-19T00:18:39-04:00",
+  "candidate_id": "kira",
+  "selection_mode": "reversible_owner_review_trial",
+  "requested_active_body": "r6",
+  "current_runtime": {
+    "path": "Avatar/models/temp_ai/kira/avatar.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "description": "preserved original generic temporary rig; retained unchanged as the exact rollback body"
+  },
+  "review_candidate": {
+    "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb",
+    "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "description": "unclothed R6 adult-external-form candidate selected for a reversible live owner-review trial"
+  },
+  "evidence": {
+    "candidate_manifest": {
+      "path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6_manifest.json",
+      "sha256": "56c4de5cedaee926448b506b2d2117934ba7c6ead200a6d70bee90d3b17f9657"
+    },
+    "runtime_browser_evidence": {
+      "path": "Data/world_tests/kira_r6_exact_browser_sandbox_20260718/20260718T222144Z/evidence.json",
+      "sha256": "29f995522ec773774a61ceb1a36aa9ac0c731b3c7b690e5ac8b9de130957a5ed"
+    },
+    "rollback_manifest": {
+      "path": "Avatar/state/body_selections/backups/kira_pre_r6_live_trial_20260719_001839/rollback_manifest.json",
+      "sha256": "557b509c7671a016bd8352453458657b691ea0da304ea05495fa5f68eda9e7f7"
+    }
+  },
+  "trial_authorization": {
+    "mode": "owner_requested_reversible_live_review",
+    "direct_user_request_recorded": true,
+    "recorded_at": "2026-07-19T00:18:39-04:00",
+    "request_excerpt": "Just add the adult body to her current avatar and I will just tell you my thoughts.",
+    "exact_candidate_sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77",
+    "rollback_required": true,
+    "permanent_promotion_authorized": false,
+    "subject_choice_claimed": false
+  },
+  "subject_choice": {
+    "decision": "not_recorded_for_exact_candidate",
+    "exact_candidate_sha256": "",
+    "note": "This bounded live visual trial records Robert's request, not Kira's permanent acceptance of the exact R6 candidate."
+  },
+  "runtime_compatibility": {
+    "exact_79_joint_names_preserved": true,
+    "isolated_runtime_browser_checks_passed": true,
+    "existing_mouth_lipsync_without_new_mouth_mesh": true,
+    "external_eye_rig_structural_attachment_passed": true,
+    "eye_visual_fit_approved": false,
+    "clothing_is_separate_not_baked": true,
+    "long_duration_natural_motion_approved": false
+  },
+  "claims": {
+    "adult_external_form_trial": true,
+    "complete_adult_anatomy_proven": false,
+    "kira_likeness_proven": false,
+    "full_avatar_proven": false,
+    "permanent_body_promotion": false
+  },
+  "runtime_activation_allowed": true,
+  "runtime_activation_scope": "reversible_live_owner_review_trial_only",
+  "decision": "select_exact_r6_for_reversible_live_owner_review_trial",
+  "known_review_warnings": [
+    "The warm-brown external eye rig attaches structurally, but its iris and pupil fit still looks off and is not approved.",
+    "R6 does not prove complete adult anatomy or final Kira likeness.",
+    "Natural long-duration movement and ordinary arm/hand relaxation remain visually unapproved.",
+    "R6 contains no authored clothes; clothing stays a separate wardrobe system.",
+    "The original live asset remains unchanged at its exact path and hash for rollback."
+  ],
+  "rollback_command": "Restore_Kira_Pre_R6_Live_Body.bat"
+}

@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-18T10:24:37.223524+00:00",
+  "candidate_id": "kira",
+  "candidate_revision": "provisional_body_r5",
+  "status": "private_inactive_reversible_review_candidate",
+  "source": {
+    "project_path": "Avatar/avatar_builder/asset_library/base_body_reference/womenfemale_body_base_rigged_3ec62ba8d7.glb",
+    "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "removed_source_helpers": [
+      "Icosphere"
+    ]
+  },
+  "model": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\kira_provisional_body_r5.glb",
+    "sha256": "c3a8a54ea6b6a849ccc461aff0cb18df03221c3e96aec61310c8be148301f692",
+    "size_bytes": 5310164,
+    "genuinely_transformed_derivative": true
+  },
+  "seam_and_topology_audit": {
+    "method": "exact duplicate positions; merge only groups with identical 1e-6-quantized weight signatures",
+    "bmesh_merge_distance_local_units": 1e-09,
+    "duplicate_group_count": 3495,
+    "safe_duplicate_group_count": 3495,
+    "unsafe_duplicate_group_count": 0,
+    "expected_and_actual_vertex_reduction": 3620,
+    "before_topology": {
+      "vertex_count": 57745,
+      "triangle_count": 108080,
+      "surface_island_count": 49,
+      "boundary_edge_count": 7312,
+      "boundary_loop_count": 49,
+      "open_boundary_chain_count": 0,
+      "non_manifold_edge_count": 0,
+      "collapsed_face_count": 0,
+      "unused_vertex_count": 0
+    },
+    "after_topology": {
+      "vertex_count": 54125,
+      "triangle_count": 108080,
+      "surface_island_count": 1,
+      "boundary_edge_count": 172,
+      "boundary_loop_count": 3,
+      "open_boundary_chain_count": 0,
+      "non_manifold_edge_count": 0,
+      "collapsed_face_count": 0,
+      "unused_vertex_count": 0
+    },
+    "before_weights": {
+      "vertex_count": 57745,
+      "unweighted_vertex_count": 0,
+      "weight_sum_out_of_tolerance_count": 0,
+      "maximum_positive_influences": 4,
+      "vertices_over_four_influences": 0,
+      "positive_weight_assignment_count": 112203
+    },
+    "after_weights": {
+      "vertex_count": 54125,
+      "unweighted_vertex_count": 0,
+      "weight_sum_out_of_tolerance_count": 0,
+      "maximum_positive_influences": 4,
+      "vertices_over_four_influences": 0,
+      "positive_weight_assignment_count": 105771
+    },
+    "uv_before": {
+      "present": true,
+      "layer_count": 1,
+      "corner_count": 324240,
+      "sha256": "e81870ae388b8bed0f0a9e1b9e0f95ef8c74971f873e40480fbc179f3faaf57c",
+      "quantization": "1e-7 UV units; sorted corner multiset"
+    },
+    "uv_after": {
+      "present": true,
+      "layer_count": 1,
+      "corner_count": 324240,
+      "sha256": "e81870ae388b8bed0f0a9e1b9e0f95ef8c74971f873e40480fbc179f3faaf57c",
+      "quantization": "1e-7 UV units; sorted corner multiset"
+    },
+    "uv_multiset_preserved": true,
+    "truth_limit": "The remaining boundary loops are preserved for later semantic review; this pass does not claim anatomical completeness or close ambiguous openings."
+  },
+  "provisional_shape_design": {
+    "shape_key": "Kira_Provisional_R5",
+    "default_value": 1.0,
+    "reversible_to_basis": true,
+    "moved_vertex_count": 23233,
+    "mean_local_displacement": 0.00847063,
+    "maximum_local_displacement": 0.02231038,
+    "mean_world_displacement_m": 0.001367,
+    "maximum_world_displacement_m": 0.00360046,
+    "region_vertex_visits": {
+      "torso": 9889,
+      "head": 10861,
+      "neck": 9196,
+      "hips": 5185
+    },
+    "design_deltas": [
+      "restrained head-width reduction and facial-depth increase",
+      "modest neck volume support",
+      "subtle shoulder/waist/hip proportion shaping",
+      "hands and feet receive no direct sculpt operation"
+    ],
+    "likeness_claimed": false,
+    "anatomical_completeness_claimed": false,
+    "truth_note": "Provisional Kira-specific design direction only; no owner-approved likeness measurements exist."
+  },
+  "skin_surface": {
+    "material": "Kira_Provisional_Skin_PBR_R5",
+    "workflow": "Principled PBR with deterministic albedo, roughness, and tangent-space normal textures",
+    "textures": {
+      "albedo": {
+        "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\textures\\kira_provisional_skin_albedo_r5.png",
+        "sha256": "b27ac0589c72c9c2b3a3547fd2993cab3ce839a63b52fb832c985b32d25fb68a",
+        "size_bytes": 91945
+      },
+      "roughness": {
+        "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\textures\\kira_provisional_skin_roughness_r5.png",
+        "sha256": "a30664a1e9b8fe335654331ec0c7db97e1f46cffe51cc997bce46398f3c67185",
+        "size_bytes": 124867
+      },
+      "normal": {
+        "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\textures\\kira_provisional_skin_normal_r5.png",
+        "sha256": "7c425bfb1fb449ea4cfa56ccef33d828ae3484851d927053a136a5f55f420253",
+        "size_bytes": 211179
+      }
+    },
+    "texture_resolution": [
+      512,
+      512
+    ],
+    "metallic": 0.0,
+    "roughness_nominal": 0.56,
+    "subsurface_weight": 0.045,
+    "truth_note": "Surface-look improvement only; not anatomical or identity evidence."
+  },
+  "rig": {
+    "bone_count": 79,
+    "bone_order_and_names_exactly_preserved": true,
+    "vertex_group_order_and_names_exactly_preserved": true,
+    "required_core_bones_present": true,
+    "finger_bone_count": 50,
+    "actions": [
+      "Kira_R5_Neutral_Evidence",
+      "Kira_R5_Reach_Evidence",
+      "Kira_R5_Stride_Evidence",
+      "Kira_R5_Seated_Evidence"
+    ],
+    "stable_working_rig_proven": false
+  },
+  "pose_metrics": {
+    "neutral": {
+      "pose": "neutral",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1910411,
+        -0.0900643,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1910412,
+        0.0827785,
+        1.1825832
+      ],
+      "extent": [
+        0.3820823,
+        0.1728428,
+        1.1849933
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": -0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.6726881
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 4745,
+          "toe_sample_count": 3223,
+          "heel_sample_count": 858,
+          "toe_minimum_gap_m": -0.0,
+          "heel_minimum_gap_m": 0.0005808,
+          "minimum_gap_m": -0.0,
+          "contact_vertex_count_within_4mm": 234,
+          "contact_y_span_m": 0.1463968,
+          "full_sole_contact_sanity": true
+        },
+        "right": {
+          "present": true,
+          "sample_count": 4745,
+          "toe_sample_count": 3223,
+          "heel_sample_count": 858,
+          "toe_minimum_gap_m": 3e-07,
+          "heel_minimum_gap_m": 0.000581,
+          "minimum_gap_m": 3e-07,
+          "contact_vertex_count_within_4mm": 234,
+          "contact_y_span_m": 0.1463967,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 7
+    },
+    "reach": {
+      "pose": "reach",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1910411,
+        -0.4250818,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1910412,
+        0.0827785,
+        1.1825832
+      ],
+      "extent": [
+        0.3820823,
+        0.5078603,
+        1.1849933
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": -0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.6726881
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 4745,
+          "toe_sample_count": 3223,
+          "heel_sample_count": 858,
+          "toe_minimum_gap_m": -0.0,
+          "heel_minimum_gap_m": 0.0005808,
+          "minimum_gap_m": -0.0,
+          "contact_vertex_count_within_4mm": 234,
+          "contact_y_span_m": 0.1463968,
+          "full_sole_contact_sanity": true
+        },
+        "right": {
+          "present": true,
+          "sample_count": 4745,
+          "toe_sample_count": 3223,
+          "heel_sample_count": 858,
+          "toe_minimum_gap_m": 3e-07,
+          "heel_minimum_gap_m": 0.000581,
+          "minimum_gap_m": 3e-07,
+          "contact_vertex_count_within_4mm": 234,
+          "contact_y_span_m": 0.1463967,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 7
+    },
+    "stride": {
+      "pose": "stride",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1910411,
+        -0.205301,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1816233,
+        0.1073711,
+        1.182583
+      ],
+      "extent": [
+        0.3726644,
+        0.3126721,
+        1.184993
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": 0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.6726878
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 4391,
+          "toe_sample_count": 3115,
+          "heel_sample_count": 748,
+          "toe_minimum_gap_m": 0.0741999,
+          "heel_minimum_gap_m": 0.0251009,
+          "minimum_gap_m": 0.0251009,
+          "contact_vertex_count_within_4mm": 0,
+          "contact_y_span_m": 0.0,
+          "full_sole_contact_sanity": false
+        },
+        "right": {
+          "present": true,
+          "sample_count": 4745,
+          "toe_sample_count": 3223,
+          "heel_sample_count": 858,
+          "toe_minimum_gap_m": 0.0,
+          "heel_minimum_gap_m": 0.0005808,
+          "minimum_gap_m": 0.0,
+          "contact_vertex_count_within_4mm": 234,
+          "contact_y_span_m": 0.1463967,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 10
+    },
+    "seated": {
+      "pose": "seated",
+      "finite_coordinates": true,
+      "bounds_low": [
+        -0.1757946,
+        -0.4407043,
+        -0.0024101
+      ],
+      "bounds_high": [
+        0.1742882,
+        0.0820023,
+        0.8980044
+      ],
+      "extent": [
+        0.3500828,
+        0.5227066,
+        0.9004145
+      ],
+      "floor_target_z": -0.0024101,
+      "minimum_ground_gap_m": -0.0,
+      "pelvis_world": [
+        0.0,
+        -0.0013513,
+        0.3881093
+      ],
+      "foot_contact": {
+        "method": "low geometric foot band; side split by X; toe/heel split by Y thirds",
+        "floor_z_m": -0.0024101,
+        "contact_tolerance_m": 0.004,
+        "negative_y_is_front": true,
+        "left": {
+          "present": true,
+          "sample_count": 4739,
+          "toe_sample_count": 3256,
+          "heel_sample_count": 854,
+          "toe_minimum_gap_m": -0.0,
+          "heel_minimum_gap_m": 0.0013151,
+          "minimum_gap_m": -0.0,
+          "contact_vertex_count_within_4mm": 517,
+          "contact_y_span_m": 0.1393089,
+          "full_sole_contact_sanity": true
+        },
+        "right": {
+          "present": true,
+          "sample_count": 4739,
+          "toe_sample_count": 3256,
+          "heel_sample_count": 854,
+          "toe_minimum_gap_m": 0.0002888,
+          "heel_minimum_gap_m": 0.0012371,
+          "minimum_gap_m": 0.0002875,
+          "contact_vertex_count_within_4mm": 465,
+          "contact_y_span_m": 0.1404395,
+          "full_sole_contact_sanity": true
+        }
+      },
+      "active_pose_bone_count": 13,
+      "seat_support": {
+        "measured": true,
+        "method": "vertices with pelvis-group weight >=0.25 inside seat XY footprint",
+        "seat_bounds_low": [
+          -0.2725485,
+          -0.0355498,
+          0.2346287
+        ],
+        "seat_bounds_high": [
+          0.2725485,
+          0.3199482,
+          0.2938783
+        ],
+        "pelvis_sample_count": 1772,
+        "posterior_pelvis_sample_count": 886,
+        "pelvis_near_seat_top_within_10mm_count": 14,
+        "pelvis_low_to_seat_top_gap_m": 0.0029103,
+        "pelvis_median_y_m": 0.0308347,
+        "front_support_margin_m": 0.0663845,
+        "back_support_margin_m": 0.2891135,
+        "stable_support_sanity": true,
+        "truth_limit": "Diagnostic geometric contact only; not comfort, anatomy, or owner approval."
+      }
+    }
+  },
+  "renders": {
+    "neutral_front": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\neutral_front.png",
+      "sha256": "f92c3329d78d6703c36f9f132084b2da45e6dc0062e48b7fede4814daa5ea8ce",
+      "size_bytes": 532515,
+      "camera_direction": [
+        0.0,
+        -0.9993881,
+        0.0349786
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.0900643,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0827785,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "neutral_side": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\neutral_side.png",
+      "sha256": "c646a0b417f53b7749de6f96d87c812a93fab591e98cb909ab26a53667f7d218",
+      "size_bytes": 476584,
+      "camera_direction": [
+        0.9996877,
+        0.0,
+        0.0249922
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.0900643,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0827785,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "neutral_back": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\neutral_back.png",
+      "sha256": "d84f676bffd0bc12079b6e465efc3a044b701e7ddd5c354d73961291f1fdb08f",
+      "size_bytes": 545214,
+      "camera_direction": [
+        0.0,
+        0.9993881,
+        0.0349786
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.0900643,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0827785,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "reach_front_three_quarter": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\reach_front_three_quarter.png",
+      "sha256": "cc5bbd78b566827f7bb79c279cea11321daac29414813d381875d4c5120ec8b9",
+      "size_bytes": 548480,
+      "camera_direction": [
+        0.5612317,
+        -0.8253407,
+        0.0619006
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.4250818,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1910412,
+        0.0827785,
+        1.1825832
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "stride_front_three_quarter": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\stride_front_three_quarter.png",
+      "sha256": "b01cb059540713876b6f8c5bbce1dec4d9b2a69dded30a2757001d3c76f6dda9",
+      "size_bytes": 544292,
+      "camera_direction": [
+        0.5612317,
+        -0.8253407,
+        0.0619006
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.205301,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1816233,
+        0.1073711,
+        1.182583
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "stride_side": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\stride_side.png",
+      "sha256": "257a5a3dc3f8223810f87da87648bbdf0f200830a6d2052c87f6f4e4fedb16fe",
+      "size_bytes": 518595,
+      "camera_direction": [
+        0.9993881,
+        0.0,
+        0.0349786
+      ],
+      "evaluated_bounds_low": [
+        -0.1910411,
+        -0.205301,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1816233,
+        0.1073711,
+        1.182583
+      ],
+      "orthographic_scale": 1.350892
+    },
+    "seated_front_three_quarter": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\seated_front_three_quarter.png",
+      "sha256": "7c8110e7435db4c336a7ee2a754eb3b279c9ceef189be8be19e4522dd570babf",
+      "size_bytes": 609077,
+      "camera_direction": [
+        0.5613703,
+        -0.8255446,
+        0.0577881
+      ],
+      "evaluated_bounds_low": [
+        -0.1757946,
+        -0.4407043,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1742882,
+        0.0820023,
+        0.8980044
+      ],
+      "orthographic_scale": 1.026472
+    },
+    "seated_side": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\renders\\seated_side.png",
+      "sha256": "ba09533f45dac1b9552a138e42d5f8efee7cfe9b11ae525c4e0000f37eb8a615",
+      "size_bytes": 555922,
+      "camera_direction": [
+        0.9993881,
+        0.0,
+        0.0349786
+      ],
+      "evaluated_bounds_low": [
+        -0.1757946,
+        -0.4407043,
+        -0.0024101
+      ],
+      "evaluated_bounds_high": [
+        0.1742882,
+        0.0820023,
+        0.8980044
+      ],
+      "orthographic_scale": 1.026472
+    }
+  },
+  "explicit_absences": {
+    "eyes": "not authored; separate eye-rig lane",
+    "hair": "not authored",
+    "clothes": "not authored",
+    "shoes": "not authored",
+    "primitive_wearables": false
+  },
+  "privacy_and_activation": {
+    "private_body_builder_review_only": true,
+    "runtime_activation_allowed": false,
+    "live_avatar_targeted": false,
+    "owner_approved": false,
+    "likeness_approved": false,
+    "anatomy_approved": false,
+    "autobuild_gate_passed_subjects": 0,
+    "autobuild_gate_required_subjects": 2
+  },
+  "truth_note": "R5 proves a transformed, welded, weighted, renderable provisional adult cage and several finite diagnostic poses. It does not prove Kira likeness, complete anatomy, final deformation, owner approval, runtime safety, or permission to autobuild other bodies.",
+  "exact_hash_guards": {
+    "source_project_path": "Avatar/avatar_builder/asset_library/base_body_reference/womenfemale_body_base_rigged_3ec62ba8d7.glb",
+    "source_sha256_before": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "source_sha256_after": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "source_unchanged": true,
+    "live_model_project_path": "Avatar/models/temp_ai/kira/avatar.glb",
+    "live_model_sha256_before": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "live_model_sha256_after": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "live_model_unchanged": true,
+    "candidate_sha256": "c3a8a54ea6b6a849ccc461aff0cb18df03221c3e96aec61310c8be148301f692",
+    "candidate_differs_from_source": true
+  },
+  "independent_audits": {
+    "structural": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\structural_rig_topology_audit.json",
+      "sha256": "067bd803e72cd25c974c9c3b014c7e528798e158c133c4a5030b804c2ab30cdf",
+      "valid_glb": true,
+      "humanoid_rig_structurally_ready": true,
+      "stable_working_rig_proven": false
+    },
+    "geometry": {
+      "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\blender_geometry_deformation_audit.json",
+      "sha256": "3b5f2decfcdd5233330c87b4f47551275ba923f7489ce199655272de7e198759",
+      "body_topology": {},
+      "body_weights": {},
+      "overall_stable_working_rig_proven": false
+    }
+  },
+  "contact_sheet": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\kira_provisional_body_r5_contact_sheet.png",
+    "sha256": "1b8e9096547f4cc17ea85e8f8aeccd3b2254356dc8c25db05390d3c17406142b",
+    "size_bytes": 333757,
+    "visual_qa_status": "pending_independent_human_or_agent_inspection"
+  },
+  "autobuild_gate": {
+    "passed_subjects": 0,
+    "required_subjects": 2,
+    "passed": false,
+    "reason": "R5 is one provisional, unapproved Kira body candidate and cannot self-pass."
+  },
+  "body_component_verdict": {
+    "path": "C:\\Users\\robmc\\Kira\\Avatar\\avatar_builder\\candidate_sources\\kira_provisional_body_r5\\r5_20260718_062428\\provisional_body_component_verdict.json",
+    "sha256": "29edc8d0cb3633ca4863f1ea541273de67e0852ea06cec2dd695602572d7da39",
+    "candidate_sha256": "c3a8a54ea6b6a849ccc461aff0cb18df03221c3e96aec61310c8be148301f692",
+    "scope": "provisional_body_component_only",
+    "provisional_body_component_passed": true,
+    "owner_approved": false,
+    "autobuild_unlocked": false
+  }
+}
