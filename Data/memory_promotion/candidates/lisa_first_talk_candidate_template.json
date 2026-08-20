@@ -1,0 +1,42 @@
+{
+  "candidate_id": "lisa_first_talk_candidate_template",
+  "owner": "lisa",
+  "memory_type": "conversation",
+  "summary": "",
+  "detail": "",
+  "core_facts": [],
+  "known_unknowns": [],
+  "allowed_interpretation": [],
+  "forbidden_inferences": [
+    "Do not treat model wording as canon unless Robert explicitly approved it.",
+    "Do not infer unstated backstory.",
+    "Do not claim the 3D world, avatar, voice, internet, or webcam were active unless they were enabled.",
+    "Do not treat conversation logs as trusted memory.",
+    "Do not inherit Kira's memories, feelings, or relationship status.",
+    "Do not claim Kira's private thoughts or memories."
+  ],
+  "privacy": {
+    "level": "private",
+    "sharing_rule": "owner_only"
+  },
+  "emotional_context": {
+    "primary_emotion": "neutral",
+    "intensity": 0.0,
+    "residue": 0.0
+  },
+  "importance": {
+    "weight": "medium",
+    "score": 0.5
+  },
+  "source": {
+    "type": "conversation_promotion_candidate",
+    "path": "Data/logs/conversation_log.jsonl",
+    "confidence": 0.8
+  },
+  "approval": {
+    "approved_by": "",
+    "approval_reason": "",
+    "approved_at": ""
+  },
+  "status": "draft"
+}

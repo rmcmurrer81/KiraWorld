@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "authorization_id": "REPLACE_WITH_STABLE_PRIVATE_AUTHORIZATION_ID",
+  "recorded_date": "REPLACE_WITH_DATE",
+  "voice_profile_id": "sophia",
+  "authorized_identity_profiles": [
+    "synthetic_sophia"
+  ],
+  "authorization_source": "REPLACE WITH THE CONSENT/LICENSE RECORD SOURCE",
+  "authorized_by": {
+    "name": "REPLACE WITH AUTHORIZING SUBJECT OR RIGHTS HOLDER"
+  },
+  "asset_binding": {
+    "path": "reference.wav",
+    "sha256": "REPLACE_WITH_EXACT_REFERENCE_WAV_SHA256",
+    "bytes": 0
+  },
+  "named_recipients": [
+    "REPLACE WITH NAMED PRIVATE REVIEWER"
+  ],
+  "allowed": {
+    "private_evaluation": true
+  },
+  "not_allowed": {
+    "public_release": true,
+    "onward_redistribution": true,
+    "identity_authentication": true
+  },
+  "handling": {
+    "repository_visibility": "private",
+    "honor_withdrawal_or_supersession": true,
+    "hash_mismatch_behavior": "refuse_use"
+  }
+}

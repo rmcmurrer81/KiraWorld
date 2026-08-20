@@ -1,0 +1,28 @@
+:root { color-scheme: dark; font-family: "Segoe UI", Arial, sans-serif; }
+* { box-sizing: border-box; }
+html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #11151a; }
+#stage { width: 100%; height: 100%; display: block; }
+.topbar { position: fixed; inset: 0 0 auto 0; display: flex; justify-content: space-between; align-items: flex-start; padding: 18px 22px; pointer-events: none; background: linear-gradient(#11151ad9, transparent); }
+h1 { margin: 0; font-size: 21px; letter-spacing: 0; }
+p { margin: 4px 0 0; color: #c8d0d8; font-size: 13px; }
+.status { display: flex; align-items: center; gap: 7px; color: #dfe7ee; font-size: 12px; }
+#live-dot { width: 8px; height: 8px; border-radius: 50%; background: #45d483; box-shadow: 0 0 10px #45d483; }
+.actions, .forms { position: fixed; display: flex; gap: 5px; padding: 7px; background: #11151acc; border: 1px solid #38434d; }
+.actions { left: 18px; bottom: 18px; flex-wrap: wrap; max-width: min(720px, calc(100vw - 36px)); }
+.forms { right: 18px; bottom: 18px; }
+button { min-height: 34px; border: 1px solid #56616b; background: #20272e; color: #f4f7f9; padding: 7px 11px; cursor: pointer; font-size: 12px; }
+button:hover, button.active { background: #3b82a0; border-color: #72bed9; }
+.truth { position: fixed; right: 20px; top: 56px; max-width: 360px; text-align: right; color: #aeb8c2; font-size: 11px; }
+body.embedded .topbar,
+body.embedded .actions,
+body.embedded .forms,
+body.embedded .truth { display: none; }
+body.embedded #stage { cursor: default; }
+@media (max-width: 760px) {
+  .topbar { padding: 12px; }
+  h1 { font-size: 17px; }
+  .truth { top: 52px; right: 12px; max-width: 230px; }
+  .actions { left: 8px; right: 8px; bottom: 58px; max-width: none; justify-content: center; }
+  .forms { left: 8px; right: 8px; bottom: 8px; justify-content: center; }
+  button { min-height: 32px; padding: 5px 8px; }
+}

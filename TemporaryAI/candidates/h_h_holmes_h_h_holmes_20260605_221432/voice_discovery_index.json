@@ -1,0 +1,2005 @@
+{
+  "schema_version": 1,
+  "index_id": "h_h_holmes_h_h_holmes_20260605_221432_voice_discovery_index_v1",
+  "created_at": "2026-07-16T14:43:07.006422+00:00",
+  "candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+  "status": "metadata_search_complete",
+  "request_id": "h_h_holmes_h_h_holmes_20260605_221432_voice_discovery_v1",
+  "request_sha256": "f7e63f9d2f4f6faa60f5956a5962cb6ccad0913bfe2a4b8f41cbd2c118d2c394",
+  "identity_target": {
+    "subject_kind": "historical_person",
+    "display_name": "H. H. Holmes",
+    "character": {
+      "character_id": "",
+      "label": ""
+    },
+    "variant": {
+      "variant_id": "historical_late_life_pre_death_timepoint",
+      "label": "about two years before death, with no posthumous knowledge"
+    },
+    "speaker": {
+      "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+      "label": "Herman Webster Mudgett / H. H. Holmes"
+    },
+    "performer": {
+      "performer_id": "historical_subject_self_if_authentic_recording",
+      "name": "Herman Webster Mudgett / H. H. Holmes",
+      "living_status": "deceased",
+      "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+      "consent_evidence_urls": []
+    },
+    "version_or_timepoint": "late-life reconstruction around 1894; exact anchor requires historical review",
+    "identity_aliases": [
+      "H. H. Holmes",
+      "Herman Webster Mudgett"
+    ],
+    "excluded_identity_names": [
+      "Sherlock Holmes"
+    ],
+    "shared_performer_does_not_merge_speakers": true
+  },
+  "identity_rule": "Character, variant, speaker, and performer are separate records. A shared performer never merges character speakers.",
+  "recording_candidates": [
+    {
+      "source_id": "recording_candidate_001",
+      "exact_url": "https://www.youtube.com/watch?v=uWQD8kcYggw",
+      "canonical_url": "https://www.youtube.com/watch?v=uWQD8kcYggw",
+      "title": "The Terrifying Story Of HH Holmes – True Crime & Paranormal Documentary",
+      "publisher_or_channel": "Mystery Archives and The Tape Library",
+      "publisher_url": "",
+      "published_at": "",
+      "duration_seconds": 2878.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "H. H. Holmes verified voice recording archive",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "holmes"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_002",
+      "exact_url": "https://www.youtube.com/watch?v=mWQVT8y1FNg",
+      "canonical_url": "https://www.youtube.com/watch?v=mWQVT8y1FNg",
+      "title": "The Murder Castle of H.H. Holmes - America's First Serial Killer",
+      "publisher_or_channel": "Wendigang",
+      "publisher_url": "https://www.youtube.com/channel/UCuX9VrqRC3-EUq1eZ0NBbQg",
+      "published_at": "",
+      "duration_seconds": 2385.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "H. H. Holmes verified voice recording archive",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "holmes"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_003",
+      "exact_url": "https://www.youtube.com/watch?v=Gh4VA5ELPxQ",
+      "canonical_url": "https://www.youtube.com/watch?v=Gh4VA5ELPxQ",
+      "title": "Holmes' Own Story by Herman W. Mudgett read by Anautumnous | Full Audio Book",
+      "publisher_or_channel": "LibriVox Audiobooks",
+      "publisher_url": "https://www.youtube.com/channel/UCsHiFXTYJrc6ZKK_HJMX6jA",
+      "published_at": "",
+      "duration_seconds": 18385.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "H. H. Holmes verified voice recording archive",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "herman",
+          "holmes",
+          "mudgett"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_004",
+      "exact_url": "https://www.youtube.com/watch?v=aOBQGZW0RwU",
+      "canonical_url": "https://www.youtube.com/watch?v=aOBQGZW0RwU",
+      "title": "American Ripper: Evidence Beneath The Riverbed | Tuesdays 10/9c | History",
+      "publisher_or_channel": "HISTORY",
+      "publisher_url": "https://www.youtube.com/channel/UC9MAhZQQd9egwWCxrwSIsJQ",
+      "published_at": "",
+      "duration_seconds": 121.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "H. H. Holmes verified voice recording archive",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_005",
+      "exact_url": "https://www.youtube.com/watch?v=wT11NlQZTPY",
+      "canonical_url": "https://www.youtube.com/watch?v=wT11NlQZTPY",
+      "title": "H.H. Holmes The Lie That Built America's First Serial Killer?!",
+      "publisher_or_channel": "AMERICA'S MOST EVIL",
+      "publisher_url": "https://www.youtube.com/channel/UC9kPKUPQOljjDo2UwFUaeGw",
+      "published_at": "",
+      "duration_seconds": 2004.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "H. H. Holmes verified voice recording archive",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "holmes"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_006",
+      "exact_url": "https://www.youtube.com/watch?v=UFSkNY-Nb-k",
+      "canonical_url": "https://www.youtube.com/watch?v=UFSkNY-Nb-k",
+      "title": "The Chilling Story Of Americas First Serial Killer: HH Holmes | Our History",
+      "publisher_or_channel": "Our History",
+      "publisher_url": "https://www.youtube.com/channel/UCx88hWQrq8fWZnpsiZZBqnA",
+      "published_at": "",
+      "duration_seconds": 2917.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "Herman Webster Mudgett authentic recording",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "holmes"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_007",
+      "exact_url": "https://www.youtube.com/watch?v=wQ0fHFawFUY",
+      "canonical_url": "https://www.youtube.com/watch?v=wQ0fHFawFUY",
+      "title": "H.H. Holmes–“America’s First Serial Killer”| FALL ASLEEP TO TRUE CRIMINAL DOCUMENTARY",
+      "publisher_or_channel": "True Crime Records",
+      "publisher_url": "https://www.youtube.com/channel/UCXdeT5b8_Xs_rT8-6bOnBwQ",
+      "published_at": "",
+      "duration_seconds": 8651.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "Herman Webster Mudgett authentic recording",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "holmes"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_008",
+      "exact_url": "https://www.youtube.com/watch?v=I2ANQW-v_gw",
+      "canonical_url": "https://www.youtube.com/watch?v=I2ANQW-v_gw",
+      "title": "The Real H.H. Holmes Story (How He Built a Hotel to Kill) Full Documentary",
+      "publisher_or_channel": "Lost Eras",
+      "publisher_url": "https://www.youtube.com/channel/UCv0D-NUw8nViMGaqxXjq3Gg",
+      "published_at": "",
+      "duration_seconds": 2538.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "Herman Webster Mudgett authentic recording",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "holmes"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_009",
+      "exact_url": "https://archive.org/details/svkosunebgeh5h1hjom65fvkodgs6zzbi9qhewda",
+      "canonical_url": "https://archive.org/details/svkosunebgeh5h1hjom65fvkodgs6zzbi9qhewda",
+      "title": "Sherlock Holmes \"The Adventure Of The Second Stain\" (1-30-55) - Boxcars711 Old Time Radio Pod",
+      "publisher_or_channel": "Boxcars711 Old Time Radio",
+      "publisher_url": "",
+      "published_at": "2008-02-26T00:00:00Z",
+      "duration_seconds": null,
+      "source_kind": "archive_item_metadata",
+      "authority": "archive_catalog_candidate_identity_unverified",
+      "discovery_provider": "internet_archive_metadata_api",
+      "discovery_query": "(H. H. Holmes OR Herman Webster Mudgett) AND (audio OR sound OR cylinder)",
+      "metadata_relevance": {
+        "status": "rejected_wrong_or_ambiguous_identity_metadata",
+        "matched_target_terms": [
+          "holmes"
+        ],
+        "excluded_identity_hits": [
+          "Sherlock Holmes"
+        ],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_010",
+      "exact_url": "https://archive.org/details/BBCSessionsComplete19972016Part2Songs1733",
+      "canonical_url": "https://archive.org/details/BBCSessionsComplete19972016Part2Songs1733",
+      "title": "Sessions Complete B.B.C. 1997 2016 Part 2 Songs 17-33",
+      "publisher_or_channel": "James Patrick LZ",
+      "publisher_url": "",
+      "published_at": "",
+      "duration_seconds": null,
+      "source_kind": "archive_item_metadata",
+      "authority": "archive_catalog_candidate_identity_unverified",
+      "discovery_provider": "internet_archive_metadata_api",
+      "discovery_query": "(H. H. Holmes OR Herman Webster Mudgett) AND (audio OR sound OR cylinder)",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "http://creativecommons.org/publicdomain/mark/1.0/",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_011",
+      "exact_url": "https://archive.org/details/cia-readingroom-document-cia-rdp99-01448r000301310023-6",
+      "canonical_url": "https://archive.org/details/cia-readingroom-document-cia-rdp99-01448r000301310023-6",
+      "title": "CIA Reading Room cia-rdp99-01448r000301310023-6: MACARTHUR AND CARNEGIE FOUNDATIONS SUPPORT CIS/CEES DISARMAMENT STUDY",
+      "publisher_or_channel": "CIA Reading Room",
+      "publisher_url": "",
+      "published_at": "1987-09-25T00:00:00Z",
+      "duration_seconds": null,
+      "source_kind": "archive_item_metadata",
+      "authority": "archive_catalog_candidate_identity_unverified",
+      "discovery_provider": "internet_archive_metadata_api",
+      "discovery_query": "(H. H. Holmes OR Herman Webster Mudgett) AND (audio OR sound OR cylinder)",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_012",
+      "exact_url": "https://archive.org/details/VOA_Africa_20191004_030000",
+      "canonical_url": "https://archive.org/details/VOA_Africa_20191004_030000",
+      "title": "VOA [Voice of America] Africa : October 03, 2019 11:00PM-12:00AM EDT",
+      "publisher_or_channel": "",
+      "publisher_url": "",
+      "published_at": "2019-10-04T00:00:00Z",
+      "duration_seconds": null,
+      "source_kind": "archive_item_metadata",
+      "authority": "archive_catalog_candidate_identity_unverified",
+      "discovery_provider": "internet_archive_metadata_api",
+      "discovery_query": "(H. H. Holmes OR Herman Webster Mudgett) AND (audio OR sound OR cylinder)",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_013",
+      "exact_url": "https://archive.org/details/VOA_Africa_20170601_150000",
+      "canonical_url": "https://archive.org/details/VOA_Africa_20170601_150000",
+      "title": "VOA [Voice of America] Africa : June 01, 2017 11:00AM-12:00PM EDT",
+      "publisher_or_channel": "",
+      "publisher_url": "",
+      "published_at": "2017-06-01T00:00:00Z",
+      "duration_seconds": null,
+      "source_kind": "archive_item_metadata",
+      "authority": "archive_catalog_candidate_identity_unverified",
+      "discovery_provider": "internet_archive_metadata_api",
+      "discovery_query": "(H. H. Holmes OR Herman Webster Mudgett) AND (audio OR sound OR cylinder)",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "voice-model/training rights are not explicitly established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Resolve provenance/rights/consent, then use the separate reviewed audio intake and target-speaker workflow if authorized."
+      }
+    }
+  ],
+  "synthetic_model_candidates": [
+    {
+      "model_candidate_id": "SYSPIN/tts-hifigan-EnglishMale",
+      "exact_url": "https://huggingface.co/SYSPIN/tts-hifigan-EnglishMale",
+      "title": "SYSPIN/tts-hifigan-EnglishMale",
+      "publisher": "SYSPIN",
+      "last_modified": "2023-09-27T10:03:18.000Z",
+      "pipeline_tag": "",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "english tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "cc-by-4.0",
+        "license_url": "",
+        "model_code_or_weights_license_known": true,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": true,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "Baghdad99/english_voice_tts",
+      "exact_url": "https://huggingface.co/Baghdad99/english_voice_tts",
+      "title": "Baghdad99/english_voice_tts",
+      "publisher": "Baghdad99",
+      "last_modified": "2023-11-17T06:39:47.000Z",
+      "pipeline_tag": "text-to-speech",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "english tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "cc-by-nc-4.0",
+        "license_url": "",
+        "model_code_or_weights_license_known": false,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": false,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license is absent, unknown, custom, or not yet reviewed",
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "SYSPIN/tts_vits_coquiai_EnglishMale",
+      "exact_url": "https://huggingface.co/SYSPIN/tts_vits_coquiai_EnglishMale",
+      "title": "SYSPIN/tts_vits_coquiai_EnglishMale",
+      "publisher": "SYSPIN",
+      "last_modified": "2024-02-13T12:01:04.000Z",
+      "pipeline_tag": "",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "english tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "cc-by-4.0",
+        "license_url": "",
+        "model_code_or_weights_license_known": true,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": true,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "SYSPIN/tts_vits_coquiai_EnglishFemale",
+      "exact_url": "https://huggingface.co/SYSPIN/tts_vits_coquiai_EnglishFemale",
+      "title": "SYSPIN/tts_vits_coquiai_EnglishFemale",
+      "publisher": "SYSPIN",
+      "last_modified": "2024-02-13T10:54:30.000Z",
+      "pipeline_tag": "",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "english tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "cc-by-4.0",
+        "license_url": "",
+        "model_code_or_weights_license_known": true,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": true,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "Adignite/English_TTS_Technical_Terms_Finetuned",
+      "exact_url": "https://huggingface.co/Adignite/English_TTS_Technical_Terms_Finetuned",
+      "title": "Adignite/English_TTS_Technical_Terms_Finetuned",
+      "publisher": "Adignite",
+      "last_modified": "2024-10-15T09:43:16.000Z",
+      "pipeline_tag": "",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "english tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "mit",
+        "license_url": "",
+        "model_code_or_weights_license_known": true,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": true,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "SYSPIN/Marathi_Male_TTS",
+      "exact_url": "https://huggingface.co/SYSPIN/Marathi_Male_TTS",
+      "title": "SYSPIN/Marathi_Male_TTS",
+      "publisher": "SYSPIN",
+      "last_modified": "2022-07-07T12:35:12.000Z",
+      "pipeline_tag": "text-to-speech",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "male tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "",
+        "license_url": "",
+        "model_code_or_weights_license_known": false,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": false,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license is absent, unknown, custom, or not yet reviewed",
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "SYSPIN/Telugu_Male_TTS",
+      "exact_url": "https://huggingface.co/SYSPIN/Telugu_Male_TTS",
+      "title": "SYSPIN/Telugu_Male_TTS",
+      "publisher": "SYSPIN",
+      "last_modified": "2022-06-29T07:32:17.000Z",
+      "pipeline_tag": "text-to-speech",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "male tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "",
+        "license_url": "",
+        "model_code_or_weights_license_known": false,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": false,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license is absent, unknown, custom, or not yet reviewed",
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "Kamtera/persian-tts-male-glow_tts",
+      "exact_url": "https://huggingface.co/Kamtera/persian-tts-male-glow_tts",
+      "title": "Kamtera/persian-tts-male-glow_tts",
+      "publisher": "Kamtera",
+      "last_modified": "2023-01-02T14:10:15.000Z",
+      "pipeline_tag": "",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "male tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "openrail",
+        "license_url": "",
+        "model_code_or_weights_license_known": false,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": false,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license is absent, unknown, custom, or not yet reviewed",
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "Kamtera/persian-tts-male-vits",
+      "exact_url": "https://huggingface.co/Kamtera/persian-tts-male-vits",
+      "title": "Kamtera/persian-tts-male-vits",
+      "publisher": "Kamtera",
+      "last_modified": "2025-01-26T09:54:14.000Z",
+      "pipeline_tag": "text-to-speech",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "male tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "openrail",
+        "license_url": "",
+        "model_code_or_weights_license_known": false,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": false,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license is absent, unknown, custom, or not yet reviewed",
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    },
+    {
+      "model_candidate_id": "Kamtera/persian-tts-male1-vits",
+      "exact_url": "https://huggingface.co/Kamtera/persian-tts-male1-vits",
+      "title": "Kamtera/persian-tts-male1-vits",
+      "publisher": "Kamtera",
+      "last_modified": "2025-01-25T11:07:53.000Z",
+      "pipeline_tag": "",
+      "discovery_provider": "huggingface_model_metadata_api",
+      "discovery_query": "male tts",
+      "identity_binding": {
+        "character": {
+          "character_id": "",
+          "label": ""
+        },
+        "variant": {
+          "variant_id": "historical_late_life_pre_death_timepoint",
+          "label": "about two years before death, with no posthumous knowledge"
+        },
+        "speaker": {
+          "speaker_id": "herman_webster_mudgett_h_h_holmes_historical_subject",
+          "label": "Herman Webster Mudgett / H. H. Holmes"
+        },
+        "performer": {
+          "performer_id": "historical_subject_self_if_authentic_recording",
+          "name": "Herman Webster Mudgett / H. H. Holmes",
+          "living_status": "deceased",
+          "consent_status": "not_applicable_but_recording_likeness_and_rights_review_still_required",
+          "consent_evidence_urls": []
+        },
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "voice_identity_type": "unknown_review_required",
+      "claims_target_performer_or_character_voice": false,
+      "matched_target_identity_labels": [],
+      "license": {
+        "license_id": "",
+        "license_url": "",
+        "model_code_or_weights_license_known": false,
+        "voice_or_dataset_rights_documented": false,
+        "identity_authorization_documented": false,
+        "review_note": "An open model-code/weights license is not proof that a named voice, dataset, character, or performer likeness is authorized."
+      },
+      "artifact_state": {
+        "metadata_only": true,
+        "model_downloaded": false,
+        "voice_generated": false
+      },
+      "eligibility": {
+        "eligible_for_technical_license_review": false,
+        "eligible_for_candidate_voice_now": false,
+        "blocked_reasons": [
+          "model license is absent, unknown, custom, or not yet reviewed",
+          "model license does not by itself prove the voice/dataset identity rights",
+          "voice identity authorization is not documented"
+        ],
+        "official_voice_claim_allowed": false
+      }
+    }
+  ],
+  "historical_person_lane": {
+    "applicable": true,
+    "status": "speculative_educational_voice_design_only_no_verified_recording_indexed",
+    "verified_recording_source_ids": [],
+    "verified_recording_available": false,
+    "recording_evidence": [],
+    "factors": [
+      {
+        "factor": "anchor_date_or_era",
+        "value": "approximately 1894, pending stronger primary-source anchoring",
+        "evidence_urls": [
+          "https://en.wikipedia.org/wiki/H._H._Holmes"
+        ],
+        "confidence": "low_orientation_source_only"
+      },
+      {
+        "factor": "chronological_age_or_band",
+        "value": "adult; exact age band intentionally unresolved until a stronger biographical source is reviewed",
+        "evidence_urls": [],
+        "confidence": "low"
+      },
+      {
+        "factor": "places_and_regions",
+        "value": [
+          "Chicago, Illinois context; upbringing and later regional influences not yet reviewed for voice design"
+        ],
+        "evidence_urls": [
+          "https://en.wikipedia.org/wiki/H._H._Holmes"
+        ],
+        "confidence": "low_orientation_source_only"
+      },
+      {
+        "factor": "education_and_profession",
+        "value": [
+          "No education-based vocal inference is approved from the current voice evidence"
+        ],
+        "evidence_urls": [],
+        "confidence": "unknown"
+      },
+      {
+        "factor": "languages_and_dialects",
+        "value": [
+          "English is the working language; exact historical regional pronunciation is unverified"
+        ],
+        "evidence_urls": [],
+        "confidence": "low_project_assumption"
+      },
+      {
+        "factor": "documented_health_or_voice_notes",
+        "value": [],
+        "evidence_urls": [],
+        "confidence": "no_reviewed_evidence"
+      }
+    ],
+    "design": {
+      "required_label": "speculative educational reconstruction; not the historical person's authentic voice",
+      "base_voice_requirement": "Choose a licensed generic synthetic voice with no known-person identity claim.",
+      "age_presentation": "adult; exact age band intentionally unresolved until a stronger biographical source is reviewed",
+      "era_pronunciation_brief": "approximately 1894, pending stronger primary-source anchoring",
+      "regional_pronunciation_brief": [
+        "Chicago, Illinois context; upbringing and later regional influences not yet reviewed for voice design"
+      ],
+      "register_brief": [
+        "No education-based vocal inference is approved from the current voice evidence"
+      ],
+      "language_brief": [
+        "English is the working language; exact historical regional pronunciation is unverified"
+      ],
+      "documented_voice_or_health_constraints": [],
+      "uninferred_traits": [
+        "exact biometric timbre",
+        "exact pitch",
+        "exact cadence",
+        "exact accent",
+        "medical or psychological voice traits"
+      ],
+      "artistic_defaults_must_be_labeled": true,
+      "confidence": "low_until_factor_sources_are_reviewed",
+      "voice_generated": false
+    },
+    "authentic_voice_claim_allowed_now": false
+  },
+  "selection": {
+    "recommended_lane": "speculative_educational_voice_design_from_reviewed_factors",
+    "voice_assigned": false,
+    "voice_generated": false,
+    "voice_model_built_or_downloaded": false,
+    "official_voice_claim_allowed": false,
+    "activation_allowed": false,
+    "human_review_required": true
+  },
+  "provider_errors": [],
+  "provider_skips": [],
+  "operation_evidence": {
+    "metadata_only": true,
+    "media_download_attempted": false,
+    "audio_extraction_attempted": false,
+    "model_download_attempted": false,
+    "voice_clone_attempted": false,
+    "speech_generation_attempted": false,
+    "candidate_activation_attempted": false
+  },
+  "next_steps": [
+    "Review exact source URLs, speaker/variant labels, performer credits, and rights evidence.",
+    "For living performers, obtain explicit performer consent and recording/model rights before any exact-voice model path.",
+    "For an authorized recording, use the separate clip extraction, diarization-as-review-aid, and human target-speaker approval workflow.",
+    "For a blocked fictional-character reconstruction, audition licensed original voices for a non-imitative character design.",
+    "Never label a generated result official, authentic, or the performer's voice without matching authority evidence."
+  ]
+}

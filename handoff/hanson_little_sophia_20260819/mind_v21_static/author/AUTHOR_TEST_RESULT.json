@@ -1,0 +1,27 @@
+{
+  "schema": "kira.mind.continuity.v21.author_test_result.v1",
+  "status": "AUTHOR_TESTS_PASS",
+  "round_count": 2,
+  "tests_per_round": 64,
+  "total_tests_run": 128,
+  "candidate_false_accept_count": 0,
+  "v20_exact_findings_regressed": 3,
+  "v19_exact_hiding_predicate_state_erasure_retention_groups_regressed": 8,
+  "fixed_preaudit_case_count_bound": 102,
+  "rounds": [
+    {
+      "tests_run": 64,
+      "failures": 0,
+      "errors": 0,
+      "successful": true
+    },
+    {
+      "tests_run": 64,
+      "failures": 0,
+      "errors": 0,
+      "successful": true
+    }
+  ],
+  "self_audit_performed": false,
+  "production_public_log_private_memory_or_launcher_accessed": false
+}

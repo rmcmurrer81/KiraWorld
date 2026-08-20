@@ -1,0 +1,59 @@
+{
+  "version": "marinette_single_body_no_head_graft_v4",
+  "generated_at": "2026-07-06T09:11:29.771155+00:00",
+  "body_policy_review": {
+    "audited_at": "2026-07-15T22:02:49.6133242Z",
+    "status": "failed_adult_only_source_used_for_non_adult_candidate",
+    "review_only": true,
+    "runtime_activation_allowed": false,
+    "candidate_maturity": "non_adult_doll_safe",
+    "body_treatment": "non_adult_doll_safe",
+    "source_sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "matched_asset_id": "base_body_reference:womenfemale_body_base_rigged_3ec62ba8d7:3ec62ba8d7",
+    "failure": "non_adult_or_uncertain_candidate_selected_adult_only_assets",
+    "required_action": "Rebuild from a separately approved non-adult doll-safe source; do not reactivate or derive new previews from this model."
+  },
+  "active_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+  "staged_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_rebuild_single_body_no_head_graft_v3_20260706.glb",
+  "source_body": "Assets/third_party/intake/3d_models_kira_world/avatar_builder_references/womenfemale_body_base_rigged.glb",
+  "reference_models": [
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_reference_light.glb",
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_pyjama_casual_reference_light.glb",
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/ladybug_rigged_reference_light.glb"
+  ],
+  "reference_head_model": "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_pyjama_casual_reference_light.glb",
+  "strategy": [
+    "Use the rigged womenfemale base body as the deforming body instead of a stitched proxy body.",
+    "Material-zone the one body mesh into one even skin tone plus temporary shoes/hair markers so knees and shoulders remain on one skeleton.",
+    "Keep the base body's own head attached to the same rig. Do not graft a head from another downloaded model.",
+    "Use the downloaded Marinette/Ladybug models as visual references only; keep hair markers but disable the floating accessory eyes/mouth until proper morph-capable face parts are authored.",
+    "Opt the active runtime into the generic Mixamo procedural gait driver through runtime bone detection."
+  ],
+  "bounds": {
+    "min": [
+      -0.41734,
+      -0.097,
+      -0.00241
+    ],
+    "max": [
+      0.41734,
+      0.083,
+      1.18258
+    ],
+    "size": [
+      0.83469,
+      0.18,
+      1.18499
+    ]
+  },
+  "reference_head_meshes": 0,
+  "removed_base_head_faces": 0,
+  "removed_export_helpers": 0,
+  "notes_for_next_pass": [
+    "Build proper blink and mouth morph targets on the single body/head path instead of copying another model's head.",
+    "Add selectable hair variants as head-bone-bound wearable hair meshes: pigtails, hair down, and hair up.",
+    "Build separate wearable civilian/Ladybug clothing layers after the base gait is stable.",
+    "Do not re-enable the simple eye/mouth accessory spheres; they floated in front of the face and must be replaced by fitted morph targets.",
+    "Do not reintroduce a separate neck splice, imported reference-head graft, or runtime torso overlay on this rebuilt base."
+  ]
+}

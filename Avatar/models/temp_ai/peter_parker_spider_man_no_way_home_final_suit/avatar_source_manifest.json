@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-05T05:02:00+00:00",
+  "candidate_id": "peter_parker_spider_man_no_way_home_final_suit",
+  "display_name": "Peter Parker / Spider-Man (No Way Home Final Suit)",
+  "active_avatar_model": {
+    "path": "Avatar/models/temp_ai/peter_parker_spider_man_no_way_home_final_suit/avatar.glb",
+    "source": "C:/Users/robmc/Desktop/no way home/spiderman_no_way_home_rigged.glb",
+    "status": "installed_as_active_temp_ai_body"
+  },
+  "staged_references": [
+    {
+      "id": "tom_holland_spider_man_unmasked_head",
+      "path": "Assets/third_party/intake/3d_models_kira_world/characters/spider_man_no_way_home/tom_holland_spiderman_unmasked.glb",
+      "source": "C:/Users/robmc/Desktop/3D Models Kira World/Tom Holland/tom_holland_spiderman_unmasked.glb",
+      "status": "staged_not_merged",
+      "notes": "The head needs material cleanup, scale matching, neck seam fitting, and a mask-off swap controller before it should be combined with the suit."
+    }
+  ],
+  "local_story_sources": [
+    {
+      "id": "spider_man_no_way_home_screenplay",
+      "path": "Data/library/scripts/spider_man/555726778-Spider-Man-No-Way-Home-Read-the-Screenplay.pdf",
+      "use": "Dialogue cadence, emotional beats, and scene context for a source-bounded temporary fictional-character AI."
+    }
+  ],
+  "official_reference_sources": [
+    {
+      "title": "Spider-Man (Peter Parker) On Screen Profile - Marvel.com",
+      "url": "https://www.marvel.com/characters/spider-man-peter-parker/on-screen/profile",
+      "use": "Official on-screen character background."
+    },
+    {
+      "title": "Spider-Man: No Way Home - Marvel.com",
+      "url": "https://www.marvel.com/movies/spider-man-no-way-home",
+      "use": "Official movie release, cast, and production reference."
+    },
+    {
+      "title": "Spider-Man: No Way Home - Sony Pictures",
+      "url": "https://www.sonypictures.com/movies/spidermannowayhome",
+      "use": "Official film synopsis reference."
+    }
+  ],
+  "runtime_notes": [
+    "This is a temporary fictional-character AI body hookup, not a completed avatar-builder generated body.",
+    "Keep the downloaded rigged suit intact for now; do not splice the unmasked head until a separate fit pass validates scale, materials, and bones.",
+    "The active model should be usable for basic world-presence tests while the avatar builder improves."
+  ]
+}

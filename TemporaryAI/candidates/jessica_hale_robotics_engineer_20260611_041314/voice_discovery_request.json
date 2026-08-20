@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "request_id": "jessica_hale_robotics_engineer_20260611_041314_voice_discovery_v1",
+  "created_at": "2026-07-16T16:13:15.030444+00:00",
+  "candidate_id": "jessica_hale_robotics_engineer_20260611_041314",
+  "status": "metadata_discovery_request_not_run",
+  "identity_target": {
+    "subject_kind": "generated_original",
+    "display_name": "Jessica Hale",
+    "character": {
+      "character_id": "",
+      "label": ""
+    },
+    "variant": {
+      "variant_id": "base_version_review_required",
+      "label": ""
+    },
+    "speaker": {
+      "speaker_id": "jessica_hale",
+      "label": "Jessica Hale"
+    },
+    "performer": {
+      "performer_id": "not_applicable_or_subject_self",
+      "name": "",
+      "living_status": "deceased_or_unknown_review_required",
+      "consent_status": "not_found",
+      "consent_evidence_urls": []
+    },
+    "version_or_timepoint": "",
+    "shared_performer_does_not_merge_speakers": true
+  },
+  "discovery": {
+    "metadata_only": true,
+    "allow_media_download": false,
+    "allow_audio_extraction": false,
+    "allow_model_download": false,
+    "recording_queries": [],
+    "archive_queries": [],
+    "synthetic_model_queries": [
+      "english tts",
+      "female tts"
+    ],
+    "desired_non_imitative_voice_traits": [
+      "English",
+      "synthetic voice",
+      "licensed",
+      "adult feminine"
+    ],
+    "max_results_per_query": 5
+  },
+  "seed_recordings": [],
+  "seed_synthetic_models": [],
+  "historical_voice_factors": {
+    "anchor_date_or_era": {
+      "value": "",
+      "evidence_urls": [],
+      "confidence": "unreviewed"
+    },
+    "chronological_age_or_band": {
+      "value": "",
+      "evidence_urls": [],
+      "confidence": "unknown"
+    },
+    "places_and_regions": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unknown"
+    },
+    "education_and_profession": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unknown"
+    },
+    "languages_and_dialects": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unreviewed"
+    },
+    "documented_health_or_voice_notes": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unknown"
+    }
+  },
+  "policy": {
+    "living_performer_exact_voice_requires_explicit_consent_and_rights": true,
+    "living_performer_consent_gate_scope": "model_assignment_official_claim_or_public_use_not_bounded_private_local_candidate_intake",
+    "official_media_is_not_voice_clone_permission": true,
+    "licensed_model_is_not_performer_consent": true,
+    "historical_missing_recording_requires_speculative_label": true,
+    "false_official_voice_claim_forbidden": true,
+    "discovery_no_download_boundary_is_stage_scoped": true,
+    "separate_private_local_bounded_intake_supported": true,
+    "private_local_intake_path": "Core/temp_ai_local_media_intake.py",
+    "private_local_intake_does_not_grant_public_release_or_official_claims": true,
+    "activation_allowed": false
+  }
+}

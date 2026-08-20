@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "voice_id": "kira_current_private_hanson_review_v2",
+  "person_id": "kira",
+  "display_name": "Kira",
+  "voice_mode": "authorized_reference_conditioned_neural_voice",
+  "provider": "chatterbox_reference",
+  "reference_wav": "approved_reference.wav",
+  "reference_sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c",
+  "reference_bytes": 9856844,
+  "preferred_backend": "chatterbox_tts",
+  "default_for_person": true,
+  "fallback": {
+    "mode": "text_only_fail_closed",
+    "generic_voice_allowed": false,
+    "reason": "Do not silently replace Kira's selected voice with a generic system voice."
+  },
+  "authorization": "VOICE_DISTRIBUTION_AUTHORIZATION_20260820.json",
+  "authorization_sha256": "a6419a9ee750931015c93f5d628452c6ce52c0108b9421dbe8906cbe33e3d08c",
+  "permission_evidence": "project_owner_attestation_received; written form copy pending attachment",
+  "speaker_purity_review_status": "pending_human_speaker_review",
+  "multi_speaker_or_narration_risk": true,
+  "handling": {
+    "private_named_reviewers_only": true,
+    "public_release_allowed": false,
+    "onward_redistribution_allowed": false,
+    "identity_authentication_allowed": false,
+    "hash_mismatch_behavior": "refuse_voice_and_continue_text_only"
+  },
+  "claim_boundary": "This private voice pack is owner-attested for the named Hanson review team. It is a speech-rendering resource, not identity authentication or proof of personhood."
+}

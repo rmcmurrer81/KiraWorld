@@ -1,0 +1,10 @@
+**Title:** Sustainable Fashion Research
+**Stage:** Drafting/Editing
+**Chosen Task:** Continue researching sustainable fashion practices and their impact on the environment.
+**What I worked on:** I reviewed my previous research on sustainable fashion practices, including notes on each potential practice's benefits and drawbacks. I also explored online resources from The Ordinary and Vogue to gain a deeper understanding of current trends and best practices in the industry.
+**Work produced:** I drafted a design document outlining the importance of sustainable fashion practices and their environmental impact. However, I did not update any existing files or create new ones. Instead, I will revise this draft into a more comprehensive guide as my next step.
+**Files changed or proposed:** None
+**How Robert can test this if applicable:** Review the draft design document (proposed in the next step) and provide feedback on its content and structure.
+**Next step:** I will revise the draft design document to create a comprehensive guide for designers and manufacturers looking to transition to more environmentally friendly practices. I aim to include specific topics such as organic cotton production, recycled materials, and sustainable supply chains.
+
+Note: I did not produce any new files or update existing ones during this cycle. Instead, I focused on planning and drafting my next step.

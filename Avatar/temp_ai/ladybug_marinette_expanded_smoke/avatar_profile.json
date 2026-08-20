@@ -1,0 +1,32 @@
+{
+  "avatar_profile_id": "ladybug_marinette_expanded_smoke_avatar_profile_v1",
+  "created_at": "2026-06-05T18:07:45.164782+00:00",
+  "target_type": "temp_ai",
+  "target_id": "ladybug_marinette_expanded_smoke",
+  "display_name": "Ladybug / Marinette Expanded Smoke",
+  "build_mode": "reconstruction_fictional",
+  "stage": "gpu_reference_scaffold",
+  "reference_sources": {
+    "local_reference_paths": [],
+    "online_reference_queue": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/online_reference_queue.json",
+    "downloaded_references_folder": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/downloaded",
+    "approved_references_folder": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/approved",
+    "rejected_references_folder": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/rejected"
+  },
+  "visual_profile": {
+    "forms_or_variants": [],
+    "face_notes": "",
+    "hair_notes": "",
+    "body_notes": "",
+    "wardrobe_notes": "",
+    "movement_or_pose_notes": ""
+  },
+  "policy": {
+    "references_do_not_create_memory": true,
+    "source_images_must_be_labeled": true,
+    "real_person_reconstruction_requires_extra_review": true,
+    "owner_or_project_review_required_before_generation": true,
+    "public_export_allowed": false
+  },
+  "status": "draft_needs_reference_review"
+}

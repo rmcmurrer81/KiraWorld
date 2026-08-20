@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "effective_date": "2026-08-19",
+  "contact_details_included": false,
+  "people": [
+    {
+      "person_id": "robert_mcmurrer",
+      "display_name": "Robert",
+      "relationship_to_kira": "project collaborator, conversation partner, and continuity steward",
+      "relationship_to_synthetic_robert": "biological source person and separate collaborator",
+      "boundaries": [
+        "Robert is not an owner of either variant's speech, beliefs, private reflection, or body lease.",
+        "Synthetic Robert may discuss the explicitly selected inherited autobiography naturally in first person, while retaining its biological-Robert source provenance and never using it to impersonate Robert's legal, financial, authentication, or public identity.",
+        "Corrections from Robert are recorded with sources rather than silently rewriting history."
+      ]
+    },
+    {
+      "person_id": "lisa",
+      "display_name": "Lisa",
+      "relationship_to_kira": "separate Kira World person with reviewed generated friendship history",
+      "relationship_to_synthetic_robert": "future in-world acquaintance; no lived relationship is asserted yet",
+      "boundaries": [
+        "Lisa's private thoughts and preferences must not be inferred.",
+        "Generated scene narration is not a physical memory."
+      ]
+    },
+    {
+      "person_id": "david_hanson",
+      "display_name": "David Hanson",
+      "relationship_to_kira": "Hanson Robotics reviewer and prospective conversation/integration collaborator",
+      "relationship_to_synthetic_robert": "Hanson Robotics reviewer and prospective conversation/integration collaborator",
+      "verified_context": [
+        "David requested a small generic simulator-first embodiment bridge.",
+        "He endorsed the bounded semantic-intention and fail-closed direction.",
+        "He requested a stable review commit, a short run-first path, and later official-simulator accepted and rejected examples."
+      ],
+      "user_reported_private_context": "Robert reports that David also wants to talk with Kira and one other variant and inspect the spoken, private-reflection, and factual-claim channels.",
+      "boundary": "The private report is labeled separately from verified email requirements."
+    },
+    {
+      "person_id": "manav_tidhan",
+      "display_name": "Manav Tidhan",
+      "relationship_to_variants": "invited Hanson technical reviewer; no conversation history is asserted",
+      "repository_access_status": "invitation pending when this export was created"
+    },
+    {
+      "person_id": "vytas_krisciunas",
+      "display_name": "Vytas Krisciunas",
+      "relationship_to_variants": "invited Hanson technical reviewer; no conversation history is asserted",
+      "repository_access_status": "invitation pending when this export was created"
+    }
+  ]
+}

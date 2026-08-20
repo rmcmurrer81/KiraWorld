@@ -1,0 +1,1082 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "builder": "avatar_builder",
+  "activation_policy": "inactive until Robert opens builder chat, runs a builder pass, or enters the spa builder station",
+  "updated_at": "2026-07-15T22:02:49.6133242Z",
+  "maturity_override": "non_adult_doll_safe",
+  "current_body_policy_status": "failed_adult_only_source_used_for_non_adult_candidate",
+  "current_body_review_only": true,
+  "current_body_runtime_activation_allowed": false,
+  "current_body_policy_manifest": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_body_base_rebuild_v1.json",
+  "preview_adjustments": {
+    "head_scale": 1.0,
+    "eye_guide_y": 0.835,
+    "eye_guide_width": 0.3,
+    "non_adult_review_garment": false,
+    "show_hair_priority": true
+  },
+  "build_targets": [
+    {
+      "created_at": "2026-07-12T06:10:36.415354+00:00",
+      "updated_at": "2026-07-12T06:51:41.162882+00:00",
+      "area": "identity",
+      "source": "builder review",
+      "instruction": "Current model is not approved as a Marinette likeness; rebuild against the 59 reviewed references.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:10:36.415361+00:00",
+      "updated_at": "2026-07-12T06:51:41.164779+00:00",
+      "area": "hair",
+      "source": "builder review",
+      "instruction": "Generate or fit deep blue-black side-swept bangs and low twin pigtails; save as separate hair mesh with scalp anchors.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:10:36.415365+00:00",
+      "updated_at": "2026-07-12T06:34:47.064191+00:00",
+      "area": "eyes",
+      "source": "builder review",
+      "instruction": "Replace generic or unnamed eyes with named eye/iris/pupil meshes seated inside the head sockets.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:10:36.415367+00:00",
+      "updated_at": "2026-07-12T06:10:36.415368+00:00",
+      "area": "body",
+      "source": "builder review",
+      "instruction": "Use non-adult doll-safe proportions; block adult anatomy assets.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:10:36.415370+00:00",
+      "updated_at": "2026-07-12T06:51:41.164800+00:00",
+      "area": "model_diagnostics",
+      "source": "model inspection",
+      "instruction": "no named eye/iris/pupil meshes; eye-socket checks cannot be automatic yet",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:11:20.002731+00:00",
+      "updated_at": "2026-07-12T06:22:22.739040+00:00",
+      "area": "maturity",
+      "source": "Robert correction",
+      "instruction": "Robert corrected this avatar to non-adult-safe.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:11:20.002736+00:00",
+      "updated_at": "2026-07-12T06:11:20.002737+00:00",
+      "area": "head",
+      "source": "Robert correction",
+      "instruction": "The head and face still do not look enough like Marinette. Keep normal Marinette non adult and focus on head shape, eyes seated in sockets, and deep blue black low pigtail hair from the pictures.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:11:20.002745+00:00",
+      "updated_at": "2026-07-12T06:11:20.002746+00:00",
+      "area": "eyes",
+      "source": "Robert correction",
+      "instruction": "Seat both eyes inside named head/eye sockets; reject floating side-face eyes.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:11:20.002748+00:00",
+      "updated_at": "2026-07-12T06:11:20.002749+00:00",
+      "area": "hair",
+      "source": "Robert correction",
+      "instruction": "The head and face still do not look enough like Marinette. Keep normal Marinette non adult and focus on head shape, eyes seated in sockets, and deep blue black low pigtail hair from the pictures.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:11:20.002753+00:00",
+      "updated_at": "2026-07-12T06:11:20.002754+00:00",
+      "area": "body",
+      "source": "Robert correction",
+      "instruction": "The head and face still do not look enough like Marinette. Keep normal Marinette non adult and focus on head shape, eyes seated in sockets, and deep blue black low pigtail hair from the pictures.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:22:22.739045+00:00",
+      "updated_at": "2026-07-12T06:22:22.739046+00:00",
+      "area": "hair",
+      "source": "Robert correction",
+      "instruction": "Robert graded this F. Normal non adult Marinette is smooth like a Barbie doll, so do not use blue boxes. The hair is way off and does not look close to Marinette. Use the supplied hair models to learn and rebuild deep blue black low pigtail hair from the references.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:22:22.748494+00:00",
+      "updated_at": "2026-07-12T06:51:41.164774+00:00",
+      "area": "hair",
+      "source": "builder review",
+      "instruction": "Current Marinette hair is failed. Rebuild from hair model references using Avatar/avatar_builder/hair_training/ladybug_marinette_expanded_smoke_hair_rebuild_plan.json.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:22:22.748503+00:00",
+      "updated_at": "2026-07-12T06:34:47.064193+00:00",
+      "area": "body",
+      "source": "builder review",
+      "instruction": "Use smooth non-adult doll-safe proportions; block adult anatomy assets and do not add preview blue-box overlays.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:33:05.862433+00:00",
+      "updated_at": "2026-07-12T06:34:47.069062+00:00",
+      "area": "redo",
+      "source": "Robert F-grade correction",
+      "instruction": "Reject the current Marinette preview as failed; rebuild head, body, eyes, and hair against references.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:33:05.862440+00:00",
+      "updated_at": "2026-07-12T06:34:47.069068+00:00",
+      "area": "body",
+      "source": "Robert F-grade correction",
+      "instruction": "Use a smooth non-adult doll-safe body with no adult anatomy assets and no blue-box overlay.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:33:05.862444+00:00",
+      "updated_at": "2026-07-12T06:34:47.069070+00:00",
+      "area": "head",
+      "source": "Robert F-grade correction",
+      "instruction": "Rebuild Marinette head shape from references; do not keep the current head silhouette if it fails likeness checks.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:33:05.862446+00:00",
+      "updated_at": "2026-07-12T06:34:47.069073+00:00",
+      "area": "hair",
+      "source": "Robert F-grade correction",
+      "instruction": "Rebuild Marinette hair from supplied hair models and references; plan: Avatar/avatar_builder/hair_training/ladybug_marinette_expanded_smoke_hair_rebuild_plan.json.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:33:05.862449+00:00",
+      "updated_at": "2026-07-12T06:34:47.069074+00:00",
+      "area": "eyes",
+      "source": "Robert F-grade correction",
+      "instruction": "Create named eye, iris, pupil, eyelid, and socket anchors so eyes cannot float outside the face.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:51:41.164793+00:00",
+      "updated_at": "2026-07-12T06:51:41.164794+00:00",
+      "area": "eyes",
+      "source": "builder review",
+      "instruction": "Replace placeholder eyes with realistic named sclera/iris/pupil/eyelid meshes seated inside sockets; plan: Avatar/avatar_builder/eye_training/ladybug_marinette_expanded_smoke_eye_rebuild_plan.json.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T06:51:41.164797+00:00",
+      "updated_at": "2026-07-12T06:51:41.164798+00:00",
+      "area": "body",
+      "source": "Robert correction",
+      "instruction": "Start from the usable female-base body branch, then keep the normal Marinette result smooth non-adult-safe; block explicit adult anatomy and do not use the primitive procedural redo as the active body.",
+      "status": "queued_for_builder_review"
+    },
+    {
+      "created_at": "2026-07-12T09:10:37.400646+00:00",
+      "updated_at": "2026-07-12T09:10:37.400648+00:00",
+      "area": "silhouette_overlay_sculpt",
+      "source": "Robert correction",
+      "instruction": "Use the generated front/side silhouette overlay sheets to reshape the base body/head before any new likeness claim.",
+      "status": "queued_for_builder_review"
+    }
+  ],
+  "learning_notes": [
+    {
+      "created_at": "2026-07-12T06:10:36.415372+00:00",
+      "tags": [
+        "builder_review",
+        "robert_requested_builder_teaching_pass"
+      ],
+      "text": "Builder review ran and updated correction targets."
+    },
+    {
+      "created_at": "2026-07-12T06:22:22.748508+00:00",
+      "tags": [
+        "builder_review",
+        "robert_f_grade_correction"
+      ],
+      "text": "Builder review ran and updated correction targets."
+    },
+    {
+      "created_at": "2026-07-12T06:33:05.858243+00:00",
+      "tags": [
+        "builder_review",
+        "redo_requested_by_robert"
+      ],
+      "text": "Builder review ran and updated correction targets."
+    },
+    {
+      "created_at": "2026-07-12T06:33:05.866032+00:00",
+      "tags": [
+        "redo",
+        "robert_f_grade"
+      ],
+      "text": "Robert said Marinette hair is still terrible and the head/body shape are nowhere close; redo the avatar and compare with one adult reference test."
+    },
+    {
+      "created_at": "2026-07-12T06:34:47.064197+00:00",
+      "tags": [
+        "builder_review",
+        "redo_requested_by_robert"
+      ],
+      "text": "Builder review ran and updated correction targets."
+    },
+    {
+      "created_at": "2026-07-12T06:34:47.072307+00:00",
+      "tags": [
+        "redo",
+        "robert_f_grade"
+      ],
+      "text": "Robert said Marinette hair is still terrible and the head/body shape are nowhere close; redo the avatar and compare with one adult reference test."
+    },
+    {
+      "created_at": "2026-07-12T06:41:08.016968+00:00",
+      "tags": [
+        "redo",
+        "draft_ready",
+        "doll_safe"
+      ],
+      "text": "Generated Blender redo draft with procedural smooth non-adult doll-safe body, named eye parts, and stronger Marinette pigtail/bang hair; waiting for Robert review."
+    },
+    {
+      "created_at": "2026-07-12T06:51:41.164801+00:00",
+      "tags": [
+        "builder_review",
+        "robert_rejected_procedural_redo_restore_female_base"
+      ],
+      "text": "Builder review ran and updated correction targets."
+    },
+    {
+      "created_at": "2026-07-12T06:51:41.174195+00:00",
+      "tags": [
+        "robert_f_grade",
+        "female_base_restore",
+        "eye_training"
+      ],
+      "text": "Robert rejected the procedural doll-safe body as much worse. Restore the female-base branch and focus next on realistic eye color/placement using eye-reference models."
+    },
+    {
+      "created_at": "2026-07-12T07:30:35.027144+00:00",
+      "tags": [
+        "avatar_builder",
+        "reference_pass",
+        "preview_draft",
+        "robert_requested_rerun"
+      ],
+      "text": "Reran Marinette from the real Marinette reference GLB set, kept her non-adult doll-safe, and produced a separate builder preview with named eye/socket parts. The live runtime avatar.glb was not replaced."
+    },
+    {
+      "created_at": "2026-07-12T07:34:25.120205+00:00",
+      "tags": [
+        "avatar_builder",
+        "reference_pass",
+        "preview_draft",
+        "robert_requested_rerun"
+      ],
+      "text": "Reran Marinette from the real Marinette reference GLB set, kept her non-adult doll-safe, and produced a separate builder preview with named eye/socket parts. The live runtime avatar.glb was not replaced."
+    },
+    {
+      "created_at": "2026-07-12T08:22:59.105347+00:00",
+      "tags": [
+        "avatar_builder",
+        "disqualified",
+        "reference_copy_cheating",
+        "robert_strict_rule"
+      ],
+      "text": "The prior reference pass is disqualified because it copied a reference model instead of building from a base body."
+    },
+    {
+      "created_at": "2026-07-12T08:23:00.875111+00:00",
+      "tags": [
+        "avatar_builder",
+        "base_body_pass",
+        "no_reference_copy",
+        "robert_requested_rerun"
+      ],
+      "text": "Reran Marinette using the restored non-adult base body instead of a copied reference model; added named eyes, eyelids, look targets, mouth visemes, and generated hair placeholders."
+    },
+    {
+      "created_at": "2026-07-12T08:26:20.184956+00:00",
+      "tags": [
+        "avatar_builder",
+        "disqualified",
+        "reference_copy_cheating",
+        "robert_strict_rule"
+      ],
+      "text": "The prior reference pass is disqualified because it copied a reference model instead of building from a base body."
+    },
+    {
+      "created_at": "2026-07-12T08:26:21.913577+00:00",
+      "tags": [
+        "avatar_builder",
+        "base_body_pass",
+        "no_reference_copy",
+        "robert_requested_rerun"
+      ],
+      "text": "Reran Marinette using the restored non-adult base body instead of a copied reference model; added named eyes, eyelids, look targets, mouth visemes, and generated hair placeholders."
+    },
+    {
+      "created_at": "2026-07-12T08:28:29.143043+00:00",
+      "tags": [
+        "avatar_builder",
+        "disqualified",
+        "reference_copy_cheating",
+        "robert_strict_rule"
+      ],
+      "text": "The prior reference pass is disqualified because it copied a reference model instead of building from a base body."
+    },
+    {
+      "created_at": "2026-07-12T08:28:30.952097+00:00",
+      "tags": [
+        "avatar_builder",
+        "base_body_pass",
+        "no_reference_copy",
+        "robert_requested_rerun"
+      ],
+      "text": "Reran Marinette using the restored non-adult base body instead of a copied reference model; added named eyes, eyelids, look targets, mouth visemes, and generated hair placeholders."
+    },
+    {
+      "created_at": "2026-07-12T08:33:08.440929+00:00",
+      "tags": [
+        "avatar_builder",
+        "disqualified",
+        "reference_copy_cheating",
+        "robert_strict_rule"
+      ],
+      "text": "The prior reference pass is disqualified because it copied a reference model instead of building from a base body."
+    },
+    {
+      "created_at": "2026-07-12T08:33:10.236265+00:00",
+      "tags": [
+        "avatar_builder",
+        "base_body_pass",
+        "no_reference_copy",
+        "robert_requested_rerun"
+      ],
+      "text": "Reran Marinette using the restored non-adult base body instead of a copied reference model; added named eyes, eyelids, look targets, mouth visemes, and generated hair placeholders."
+    },
+    {
+      "created_at": "2026-07-12T08:56:42.781324+00:00",
+      "tags": [
+        "avatar_builder",
+        "disqualified",
+        "reference_copy_cheating",
+        "robert_strict_rule"
+      ],
+      "text": "The prior reference pass is disqualified because it copied a reference model instead of building from a base body."
+    },
+    {
+      "created_at": "2026-07-12T08:56:42.783771+00:00",
+      "tags": [
+        "avatar_builder",
+        "robert_big_f",
+        "floating_eyes",
+        "silhouette_overlay_required"
+      ],
+      "text": "Robert graded the base-body pass F: eyes were flat plates floating in front of the head, hair/body/face shapes were wrong, and the builder must use front/side silhouette overlay reconstruction."
+    },
+    {
+      "created_at": "2026-07-12T08:56:44.546551+00:00",
+      "tags": [
+        "avatar_builder",
+        "base_body_pass",
+        "no_reference_copy",
+        "robert_requested_rerun"
+      ],
+      "text": "Reran Marinette using the restored non-adult base body instead of a copied reference model; added named eyes, eyelids, look targets, mouth visemes, and generated hair placeholders."
+    },
+    {
+      "created_at": "2026-07-12T09:10:37.400637+00:00",
+      "tags": [
+        "avatar_builder",
+        "silhouette_overlay",
+        "robert_big_f",
+        "not_approved"
+      ],
+      "text": "Robert rejected the previous preview. This pass creates front/side overlay sheets and a calibration model so the next sculpt pass aligns the base body to references before claiming likeness."
+    },
+    {
+      "created_at": "2026-07-12T09:11:19.113551+00:00",
+      "tags": [
+        "avatar_builder",
+        "silhouette_overlay",
+        "robert_big_f",
+        "not_approved"
+      ],
+      "text": "Robert rejected the previous preview. This pass creates front/side overlay sheets and a calibration model so the next sculpt pass aligns the base body to references before claiming likeness."
+    },
+    {
+      "created_at": "2026-07-12T09:14:54.867807+00:00",
+      "tags": [
+        "avatar_builder",
+        "silhouette_overlay",
+        "robert_big_f",
+        "not_approved"
+      ],
+      "text": "Robert rejected the previous preview. This pass creates front/side overlay sheets and a calibration model so the next sculpt pass aligns the base body to references before claiming likeness."
+    },
+    {
+      "created_at": "2026-07-12T09:16:56.898739+00:00",
+      "tags": [
+        "avatar_builder",
+        "silhouette_overlay",
+        "robert_big_f",
+        "not_approved"
+      ],
+      "text": "Robert rejected the previous preview. This pass creates front/side overlay sheets and a calibration model so the next sculpt pass aligns the base body to references before claiming likeness."
+    },
+    {
+      "created_at": "2026-07-12T09:17:38.701167+00:00",
+      "tags": [
+        "avatar_builder",
+        "silhouette_overlay",
+        "robert_big_f",
+        "not_approved"
+      ],
+      "text": "Robert rejected the previous preview. This pass creates front/side overlay sheets and a calibration model so the next sculpt pass aligns the base body to references before claiming likeness."
+    },
+    {
+      "created_at": "2026-07-12T09:19:53.671761+00:00",
+      "tags": [
+        "avatar_builder",
+        "silhouette_overlay",
+        "robert_big_f",
+        "not_approved"
+      ],
+      "text": "Robert rejected the previous preview. This pass creates front/side overlay sheets and a calibration model so the next sculpt pass aligns the base body to references before claiming likeness."
+    },
+    {
+      "created_at": "2026-07-12T17:46:17.117787+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    },
+    {
+      "created_at": "2026-07-12T17:53:27.881295+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    },
+    {
+      "created_at": "2026-07-12T18:14:25.583082+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    },
+    {
+      "created_at": "2026-07-12T18:18:04.890667+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    },
+    {
+      "created_at": "2026-07-12T18:53:09.358011+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    },
+    {
+      "created_at": "2026-07-12T18:57:38.665764+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    },
+    {
+      "created_at": "2026-07-12T19:55:45.336389+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    },
+    {
+      "created_at": "2026-07-12T20:14:39.960288+00:00",
+      "tags": [
+        "avatar_builder",
+        "school_required",
+        "robert_f_grade",
+        "eyes",
+        "body",
+        "hair",
+        "fabric"
+      ],
+      "text": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only."
+    }
+  ],
+  "conversation": [
+    {
+      "created_at": "2026-07-12T06:11:20.002760+00:00",
+      "from": "Robert",
+      "message": "The head and face still do not look enough like Marinette. Keep normal Marinette non adult and focus on head shape, eyes seated in sockets, and deep blue black low pigtail hair from the pictures."
+    },
+    {
+      "created_at": "2026-07-12T06:11:20.002767+00:00",
+      "from": "Avatar Builder",
+      "message": "Avatar Builder is active for this build task only. I saved the correction and updated the candidate build memory. I inspected Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb with 94 nodes and 9 meshes. Problems I see: no named eye/iris/pupil meshes; eye-socket checks cannot be automatic yet. Changes: Set maturity override to non_adult_doll_safe. Queued head shape/size review. Tightened preview eye guides and queued eye-socket rebuild target. Queued hair fitting/generation lesson. Queued body proportion review."
+    },
+    {
+      "created_at": "2026-07-12T06:22:22.739054+00:00",
+      "from": "Robert",
+      "message": "Robert graded this F. Normal non adult Marinette is smooth like a Barbie doll, so do not use blue boxes. The hair is way off and does not look close to Marinette. Use the supplied hair models to learn and rebuild deep blue black low pigtail hair from the references."
+    },
+    {
+      "created_at": "2026-07-12T06:22:22.739060+00:00",
+      "from": "Avatar Builder",
+      "message": "Avatar Builder is active for this build task only. I saved the correction and updated the candidate build memory. I inspected Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb with 94 nodes and 9 meshes. Problems I see: no named eye/iris/pupil meshes; eye-socket checks cannot be automatic yet. Changes: Set maturity override to non_adult_doll_safe. Queued hair fitting/generation lesson."
+    }
+  ],
+  "approval_status": "avatar_builder_school_required_failed_preview",
+  "maturity_reason": "Normal Marinette/Ladybug remains non-adult and uses a smooth doll-safe base body. Reference models are references only.",
+  "maturity_corrected_at": "2026-07-12T06:22:22.739033+00:00",
+  "last_reply": "Avatar Builder is active for this build task only. I saved the correction and updated the candidate build memory. I inspected Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb with 94 nodes and 9 meshes. Problems I see: no named eye/iris/pupil meshes; eye-socket checks cannot be automatic yet. Changes: Set maturity override to non_adult_doll_safe. Queued hair fitting/generation lesson.",
+  "redo_job_path": "Avatar/avatar_builder/redo_jobs/ladybug_marinette_expanded_smoke_redo_job.json",
+  "redo_requested_at": "2026-07-12T06:34:47.072302+00:00",
+  "paired_adult_test_candidate": "spider_gwen_spider_gwen_20260606_013325",
+  "latest_redo_manifest": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_female_base_restored_20260712.json",
+  "latest_redo_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+  "latest_redo_inspection": {
+    "model_path": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+    "model_ready": true,
+    "node_count": 94,
+    "mesh_count": 9,
+    "material_count": 5,
+    "skin_count": 1,
+    "animation_count": 0,
+    "head_names": [
+      "mixamorig:HeadTop_End_end_065",
+      "mixamorig:HeadTop_End_07",
+      "mixamorig:Head_06"
+    ],
+    "eye_names": [],
+    "hair_names": [
+      "marinette_single_body_back_hair_mass",
+      "marinette_single_body_low_pigtail_volume.L",
+      "marinette_single_body_low_pigtail_volume.R",
+      "marinette_single_body_pigtail_tie_red.L",
+      "marinette_single_body_pigtail_tie_red.R",
+      "marinette_single_body_side_swept_bangs",
+      "marinette_rebuild_blue_black_hair",
+      "marinette_rebuild_blue_hair_highlight"
+    ],
+    "generic_sphere_candidates": [
+      "Sphere.001",
+      "Sphere.002",
+      "Sphere.004",
+      "Sphere.003",
+      "Sphere.005",
+      "Sphere"
+    ],
+    "issues": [
+      "no named eye/iris/pupil meshes; eye-socket checks cannot be automatic yet"
+    ]
+  },
+  "active_model_branch": "female_base_restored_from_avatar_rebuild_single_body_no_head_graft_v3_20260706",
+  "rejected_procedural_doll_safe_redo": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_rejected_procedural_doll_safe_redo_20260712_024911.glb",
+  "builder_preview_model_url": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_base_body_pass_20260712.glb",
+  "builder_reference_pass_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_reference_pass_20260712.glb",
+  "latest_builder_reference_pass_manifest": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_reference_pass_20260712.manifest.json",
+  "active_runtime_model_not_replaced": true,
+  "marinette_reference_pass_sources": {
+    "primary": "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_reference_light.glb",
+    "secondary": [
+      "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_pyjama_casual_reference_light.glb",
+      "Assets/third_party/intake/3d_models_kira_world/characters/marinette/ladybug_rigged_reference_light.glb",
+      "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb"
+    ]
+  },
+  "disqualified_preview_models": [
+    {
+      "created_at": "2026-07-12T08:22:59.105034+00:00",
+      "model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_reference_pass_20260712.glb",
+      "manifest": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_reference_pass_20260712.manifest.json",
+      "reason": "Copied/imported reference model body; unusable by Robert's strict no-copy rule.",
+      "status": "disqualified_reference_copy_cheating"
+    }
+  ],
+  "reference_model_use_policy": "Avatar/avatar_builder/policies/reference_model_use_policy_20260712.json",
+  "physical_clothing_pipeline_note": "Avatar/avatar_builder/wardrobe_training/physical_clothing_pipeline_20260712.json",
+  "hair_variant_requirements": "Avatar/avatar_builder/hair_training/hair_variant_requirements_20260712.json",
+  "builder_base_body_pass_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_base_body_pass_20260712.glb",
+  "latest_builder_base_body_pass_manifest": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_base_body_pass_20260712.manifest.json",
+  "reference_copy_disqualified_not_replaced_by_reference_copy": true,
+  "base_body_source": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+  "reference_models_used_as_references_only": [
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_reference_light.glb",
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/marinette_pyjama_casual_reference_light.glb",
+    "Assets/third_party/intake/3d_models_kira_world/characters/marinette/ladybug_rigged_reference_light.glb"
+  ],
+  "marinette_accessory_manifest": "Avatar/avatar_builder/accessory_library/marinette/marinette_accessory_manifest_20260712.json",
+  "silhouette_overlay_pipeline": "Avatar/avatar_builder/body_training/silhouette_overlay_reconstruction_pipeline_20260712.json",
+  "failed_preview_models": [
+    {
+      "created_at": "2026-07-12T08:56:42.783618+00:00",
+      "model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_base_body_pass_20260712.glb",
+      "reason": "Robert graded the base-body pass F: eyes were flat plates floating in front of the head, hair/body/face shapes were wrong, and the builder must use front/side silhouette overlay reconstruction.",
+      "status": "failed_robert_big_f"
+    },
+    {
+      "created_at": "2026-07-12T17:46:17.117782+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    },
+    {
+      "created_at": "2026-07-12T17:53:27.881291+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    },
+    {
+      "created_at": "2026-07-12T18:14:25.583078+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    },
+    {
+      "created_at": "2026-07-12T18:18:04.890663+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    },
+    {
+      "created_at": "2026-07-12T18:53:09.358007+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    },
+    {
+      "created_at": "2026-07-12T18:57:38.665761+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    },
+    {
+      "created_at": "2026-07-12T19:55:45.336385+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    },
+    {
+      "created_at": "2026-07-12T20:14:39.960283+00:00",
+      "model": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+      "reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+      "status": "failed_avatar_builder_school_required"
+    }
+  ],
+  "last_failed_preview_reason": "Robert graded the latest preview F: eyes too big/protruding, body/head/hair not close, and the builder must attend Avatar Builder School before another likeness attempt. Marinette remains non-adult doll-safe only.",
+  "silhouette_overlay_required_before_likeness_claim": true,
+  "non_adult_barbie_treatment_allowed": true,
+  "adult_anatomy_references_allowed": false,
+  "silhouette_overlay_pass_manifest": "Avatar/avatar_builder/body_training/overlay_passes/20260712_robert_f_grade/ladybug_marinette_expanded_smoke/ladybug_marinette_expanded_smoke_silhouette_overlay_pass_20260712.json",
+  "silhouette_overlay_pass": {
+    "pass_id": "silhouette_overlay_pass_20260712",
+    "candidate_id": "ladybug_marinette_expanded_smoke",
+    "created_at": "2026-07-12T09:16:56.896789+00:00",
+    "status": "silhouette_overlay_calibration_ready_failed_likeness",
+    "display_name": "Marinette / Ladybug",
+    "maturity_policy": "non_adult_doll_safe",
+    "adult_anatomy_references_allowed": false,
+    "non_adult_barbie_treatment_allowed": true,
+    "base_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_base_body_pass_20260712.glb",
+    "reference_image_count": 57,
+    "rejected_reference_images": [
+      {
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/downloaded/reference_01.jpg",
+        "reason": "Rejected after visual audit: this is a real-person singer/photo, not a Marinette body reference."
+      }
+    ],
+    "source_set_quality": "usable_first_overlay_set_needs_human_review",
+    "front_reference_sheet": "Avatar/avatar_builder/body_training/overlay_passes/20260712_robert_f_grade/ladybug_marinette_expanded_smoke/ladybug_marinette_expanded_smoke_front_reference_sheet.png",
+    "side_reference_sheet": "Avatar/avatar_builder/body_training/overlay_passes/20260712_robert_f_grade/ladybug_marinette_expanded_smoke/ladybug_marinette_expanded_smoke_side_reference_sheet.png",
+    "front_silhouette_stack": {
+      "output": "Avatar/avatar_builder/body_training/overlay_passes/20260712_robert_f_grade/ladybug_marinette_expanded_smoke/ladybug_marinette_expanded_smoke_front_silhouette_stack.png",
+      "used_sources": [
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/marinette_png_by_miraculouspng_di0wdk1_fullview_526fa17629.jpg",
+          "mask_confidence": 0.28,
+          "normalized_width": 304,
+          "normalized_height": 1080,
+          "canvas_position": [
+            298,
+            160
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/guardian_ladybug_marinette_dupain_cheng_by_dba216403_djaopw3_pre_8c9543650d.png",
+          "mask_confidence": 0.8,
+          "normalized_width": 529,
+          "normalized_height": 1080,
+          "canvas_position": [
+            185,
+            160
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/downloaded/reference_02.png",
+          "mask_confidence": 0.8,
+          "normalized_width": 531,
+          "normalized_height": 1080,
+          "canvas_position": [
+            184,
+            160
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/miraculous_ladybug_marinette_sans_titre_557_20220725151602_5245b00d60.jpg",
+          "mask_confidence": 0.902,
+          "normalized_width": 304,
+          "normalized_height": 1080,
+          "canvas_position": [
+            298,
+            160
+          ]
+        }
+      ],
+      "canvas_size": [
+        900,
+        1320
+      ],
+      "aggregate_bbox": [
+        184,
+        160,
+        715,
+        1240
+      ],
+      "aggregate_width_height_ratio": 0.4917
+    },
+    "side_silhouette_stack": {
+      "output": "Avatar/avatar_builder/body_training/overlay_passes/20260712_robert_f_grade/ladybug_marinette_expanded_smoke/ladybug_marinette_expanded_smoke_side_silhouette_stack.png",
+      "used_sources": [
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/miraculous_ladybug_marinette_sans_titre_557_20220725151602_5245b00d60.jpg",
+          "mask_confidence": 0.902,
+          "normalized_width": 282,
+          "normalized_height": 1000,
+          "canvas_position": [
+            309,
+            240
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/44fe3c1cffbba4ffead04d4e51a64ae2_6a547cdb66.jpg",
+          "mask_confidence": 0.824,
+          "normalized_width": 780,
+          "normalized_height": 882,
+          "canvas_position": [
+            60,
+            358
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/b750ee423cf4ade118a3714fbc801e60_5a0b48275a.jpg",
+          "mask_confidence": 0.28,
+          "normalized_width": 780,
+          "normalized_height": 815,
+          "canvas_position": [
+            60,
+            425
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/b56454c5f896f6b8e41803c7002b9485_4371a5be83.jpg",
+          "mask_confidence": 0.28,
+          "normalized_width": 573,
+          "normalized_height": 1000,
+          "canvas_position": [
+            163,
+            240
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/df0ae2687a1ded688b94b83a3e883f46_814943eb82.png",
+          "mask_confidence": 1.0,
+          "normalized_width": 780,
+          "normalized_height": 979,
+          "canvas_position": [
+            60,
+            261
+          ]
+        },
+        {
+          "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/2f1a74ea87ded885fd6bcf8d0e4e3800_c3cb16ba4a.jpg",
+          "mask_confidence": 0.28,
+          "normalized_width": 780,
+          "normalized_height": 780,
+          "canvas_position": [
+            60,
+            460
+          ]
+        }
+      ],
+      "canvas_size": [
+        900,
+        1320
+      ],
+      "aggregate_bbox": [
+        60,
+        240,
+        840,
+        1240
+      ],
+      "aggregate_width_height_ratio": 0.78
+    },
+    "front_selected_sources": [
+      {
+        "index": 1,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/marinette_png_by_miraculouspng_di0wdk1_fullview_526fa17629.jpg",
+        "width": 448,
+        "height": 1522,
+        "front_score": 13.1,
+        "side_score": 0.0,
+        "body_score": 5.1,
+        "face_score": 0.0,
+        "mask_confidence": 0.28,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          2,
+          1,
+          75,
+          260
+        ]
+      },
+      {
+        "index": 2,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/guardian_ladybug_marinette_dupain_cheng_by_dba216403_djaopw3_pre_8c9543650d.png",
+        "width": 626,
+        "height": 1276,
+        "front_score": 11.4,
+        "side_score": 0.0,
+        "body_score": 4.4,
+        "face_score": 0.5,
+        "mask_confidence": 0.8,
+        "mask_method": "alpha_channel",
+        "mask_bbox_small": [
+          1,
+          1,
+          128,
+          260
+        ]
+      },
+      {
+        "index": 3,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/downloaded/reference_02.png",
+        "width": 165,
+        "height": 333,
+        "front_score": 9.1,
+        "side_score": 0.0,
+        "body_score": 3.1,
+        "face_score": 0.0,
+        "mask_confidence": 0.8,
+        "mask_method": "alpha_channel",
+        "mask_bbox_small": [
+          0,
+          0,
+          128,
+          260
+        ]
+      },
+      {
+        "index": 4,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/miraculous_ladybug_marinette_sans_titre_557_20220725151602_5245b00d60.jpg",
+        "width": 768,
+        "height": 1024,
+        "front_score": 4.3,
+        "side_score": 6.0,
+        "body_score": 0.8,
+        "face_score": 1.5,
+        "mask_confidence": 0.902,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          55,
+          5,
+          127,
+          260
+        ]
+      }
+    ],
+    "side_selected_sources": [
+      {
+        "index": 1,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/miraculous_ladybug_marinette_sans_titre_557_20220725151602_5245b00d60.jpg",
+        "width": 768,
+        "height": 1024,
+        "front_score": 4.3,
+        "side_score": 6.0,
+        "body_score": 0.8,
+        "face_score": 1.5,
+        "mask_confidence": 0.902,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          55,
+          5,
+          127,
+          260
+        ]
+      },
+      {
+        "index": 2,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/44fe3c1cffbba4ffead04d4e51a64ae2_6a547cdb66.jpg",
+        "width": 1200,
+        "height": 1200,
+        "front_score": 0.8,
+        "side_score": 5.7,
+        "body_score": 0.8,
+        "face_score": 1.5,
+        "mask_confidence": 0.824,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          0,
+          17,
+          215,
+          260
+        ]
+      },
+      {
+        "index": 3,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/b750ee423cf4ade118a3714fbc801e60_5a0b48275a.jpg",
+        "width": 1645,
+        "height": 1717,
+        "front_score": 0.8,
+        "side_score": 5.2,
+        "body_score": 0.8,
+        "face_score": 1.5,
+        "mask_confidence": 0.28,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          0,
+          0,
+          249,
+          260
+        ]
+      },
+      {
+        "index": 4,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/b56454c5f896f6b8e41803c7002b9485_4371a5be83.jpg",
+        "width": 800,
+        "height": 1400,
+        "front_score": 3.2,
+        "side_score": 2.0,
+        "body_score": 3.2,
+        "face_score": 0.5,
+        "mask_confidence": 0.28,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          0,
+          0,
+          149,
+          260
+        ]
+      },
+      {
+        "index": 5,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/df0ae2687a1ded688b94b83a3e883f46_814943eb82.png",
+        "width": 1080,
+        "height": 1080,
+        "front_score": 0.8,
+        "side_score": 0.7,
+        "body_score": 0.8,
+        "face_score": 1.5,
+        "mask_confidence": 1.0,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          37,
+          0,
+          244,
+          260
+        ]
+      },
+      {
+        "index": 6,
+        "source": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/references/desktop_intake/20260704_041525/originals/2f1a74ea87ded885fd6bcf8d0e4e3800_c3cb16ba4a.jpg",
+        "width": 736,
+        "height": 736,
+        "front_score": 0.8,
+        "side_score": 0.7,
+        "body_score": 0.8,
+        "face_score": 1.5,
+        "mask_confidence": 0.28,
+        "mask_method": "corner_background_center_component",
+        "mask_bbox_small": [
+          0,
+          0,
+          260,
+          260
+        ]
+      }
+    ],
+    "guide_links_recorded": [
+      "https://www.3dart.it/head-sculpt-in-blender-tutorial/",
+      "https://yelzkizi.org/2d-image-to-3d-model-in-blender-guide/"
+    ],
+    "strict_notes": [
+      "Reference models and images are guides only; no candidate body may be copied from them.",
+      "This is not an approved likeness or runtime replacement.",
+      "Round eye mechanics from the previous pass must stay; eyes must be seated in the head, not flat plates.",
+      "Only Marinette uses non-adult doll-safe treatment. Gwen remains adult and may use adult anatomy references in neutral modeling context."
+    ],
+    "next_required_builder_step": "Load the front and side silhouette stacks as image planes over the base model in Blender, then reshape head/body/hair using proportional/lattice/sculpt controls before generating a new preview.",
+    "calibration_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+    "calibration_model_url": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+    "calibration_manifest": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.manifest.json",
+    "updated_at": "2026-07-12T09:19:53.670863+00:00"
+  },
+  "current_likeness_claim": "failed_not_approved",
+  "builder_overlay_calibration_model_url": "/Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_builder_silhouette_overlay_calibration_20260712.glb",
+  "avatar_builder_school_curriculum": "Avatar/avatar_builder/school/avatar_builder_school_curriculum_20260712.json",
+  "avatar_builder_school_progress": "Avatar/avatar_builder/school/progress/avatar_builder_school_progress_20260712.json",
+  "wardrobe_training_state_machine": "Avatar/avatar_builder/wardrobe_training/garment_state_machine_20260712.json",
+  "photo_to_garment_pipeline": "Avatar/avatar_builder/wardrobe_training/photo_to_garment_pipeline_20260712.json"
+}

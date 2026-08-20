@@ -1,0 +1,53 @@
+common:
+  minimum_confidence: 0.0
+  maximum_ttl_ms: 30000
+  maximum_future_skew_ms: 250
+  maximum_identifier_chars: 128
+  maximum_evidence_ref_chars: 256
+  reject_stale: true
+  allowed_source_identities:
+    - kira
+  replay_cache_entries: 2048
+
+evidence:
+  include_speech_text: false
+  include_evidence_ref: false
+  include_gaze_coordinates: false
+
+speech:
+  maximum_chars: 500
+  maximum_duration_ms: 20000
+  allowed_voices:
+    - default
+
+gaze:
+  allowed_frames:
+    - world
+    - person
+    - object
+    - camera
+    - head
+  maximum_abs_coordinate_m: 5.0
+  maximum_duration_ms: 10000
+
+expression:
+  allowed:
+    - neutral
+    - attentive
+    - curious
+    - smile
+    - concerned
+  maximum_intensity: 1.0
+  maximum_duration_ms: 10000
+
+gesture:
+  allowed:
+    - hands_rest
+    - nod
+    - shake_head
+    - wave
+    - point_left
+    - point_right
+  maximum_intensity: 1.0
+  maximum_speed: 0.7
+  maximum_duration_ms: 10000

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kira Home World Prototype</title>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #b8c9d5; font-family: Segoe UI, Arial, sans-serif; }
+    #hud {
+      position: fixed;
+      left: 16px;
+      top: 16px;
+      width: min(520px, calc(100vw - 32px));
+      box-sizing: border-box;
+      padding: 14px 16px;
+      color: #f6fbff;
+      background: rgba(18, 26, 33, 0.78);
+      border: 1px solid rgba(255,255,255,0.22);
+      pointer-events: none;
+    }
+    #hud h1 { margin: 0 0 6px; font-size: 22px; letter-spacing: 0; }
+    #hud p { margin: 3px 0; font-size: 14px; line-height: 1.35; }
+    #toast {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      max-width: 520px;
+      box-sizing: border-box;
+      padding: 12px 14px;
+      color: #f6fbff;
+      background: rgba(18, 26, 33, 0.78);
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    #blueprint {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      width: min(620px, calc(100vw - 32px));
+      max-height: 46vh;
+      overflow: auto;
+      box-sizing: border-box;
+      padding: 14px 16px;
+      color: #eaf8ff;
+      background: rgba(7, 17, 28, 0.9);
+      border: 1px solid #4aa5df;
+      display: none;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    #blueprint.visible { display: block; }
+    #blueprint h2 { margin: 0 0 8px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    <h1 id="hud-location-title">Home World</h1>
+    <p>Living world preview with Kira's home, library, Starbucks, school, and activity locations.</p>
+    <p>Click to walk - WASD move - Mouse look - Shift faster - E stairs/doors - B blueprint - Esc release</p>
+  </div>
+  <div id="blueprint">
+    <h2>Blueprint Summary</h2>
+    <p>Active house: one-bedroom brick home with living room, cleaned kitchen, bedroom closet, bathroom fixtures against the wall, Reflector mirror, and imported bath/shower combo.</p>
+    <p>The previous two-story main house is disabled in this build. The former strip-mall site is intentionally empty by default; its old procedural blockout is preserved only for reversible comparison with <code>?stripMall=1</code>. The staged legal spa remains a separate notebook world.</p>
+  </div>
+  <div id="toast">Ready. One-bedroom house repair build loaded. Press B to review the blueprint.</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

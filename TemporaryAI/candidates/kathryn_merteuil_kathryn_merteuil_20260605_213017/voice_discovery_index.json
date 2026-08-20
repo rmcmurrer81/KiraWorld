@@ -1,0 +1,2847 @@
+{
+  "schema_version": 1,
+  "index_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_voice_discovery_index_v1",
+  "created_at": "2026-07-17T07:30:01.355574+00:00",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "status": "metadata_search_complete",
+  "request_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_voice_discovery_v1",
+  "request_sha256": "bfbbcaa20a915582a2b3f17cb446bb89c32f6d653bb191204819b57750f887c6",
+  "identity_target": {
+    "subject_kind": "fictional_character",
+    "display_name": "Kathryn Merteuil",
+    "character": {
+      "character_id": "kathryn_merteuil",
+      "label": "Kathryn Merteuil"
+    },
+    "variant": {
+      "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+      "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+    },
+    "speaker": {
+      "speaker_id": "kathryn_merteuil_2016_pilot_english",
+      "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+    },
+    "performer": {
+      "performer_id": "sarah_michelle_gellar",
+      "name": "Sarah Michelle Gellar",
+      "living_status": "living",
+      "consent_status": "not_found",
+      "consent_evidence_urls": []
+    },
+    "version_or_timepoint": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+    "shared_performer_does_not_merge_speakers": true
+  },
+  "identity_rule": "Character, variant, speaker, and performer are separate records. A shared performer never merges character speakers.",
+  "recording_candidates": [
+    {
+      "source_id": "recording_candidate_002",
+      "exact_url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+      "canonical_url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+      "title": "Kathryn’s Monologue",
+      "publisher_or_channel": "Lesa",
+      "publisher_url": "https://www.youtube.com/channel/UCh1CMutKJ8IoLD_0GSo34pA",
+      "published_at": "",
+      "duration_seconds": 39.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" 2016 unaired pilot Sarah Michelle Gellar dialogue official",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "kathryn"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 20,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 1
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_003",
+      "exact_url": "https://www.youtube.com/watch?v=1bohWKMErrw",
+      "canonical_url": "https://www.youtube.com/watch?v=1bohWKMErrw",
+      "title": "Episode 7: The Unaired Cruel Intentions Pilot",
+      "publisher_or_channel": "AW",
+      "publisher_url": "https://www.youtube.com/channel/UCQcIrUuPR3NsoLVFSJRHr2g",
+      "published_at": "",
+      "duration_seconds": 1700.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" 2016 unaired pilot Sarah Michelle Gellar dialogue official",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "pilot",
+          "unaired"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 20,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 2
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_006",
+      "exact_url": "https://www.youtube.com/watch?v=CgBeBag4ir0",
+      "canonical_url": "https://www.youtube.com/watch?v=CgBeBag4ir0",
+      "title": "Cruel Intentions (7/8) Movie CLIP - Kathryn's Triumph (1999) HD",
+      "publisher_or_channel": "Movieclips",
+      "publisher_url": "https://www.youtube.com/channel/UC3gNmTGu-TTbFPpfSs5kNkg",
+      "published_at": "",
+      "duration_seconds": 152.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" Cruel Intentions 1999 Sarah Michelle Gellar scene official Sony Pictures",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "kathryn"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 20,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 3
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_011",
+      "exact_url": "https://www.youtube.com/watch?v=RYpEB4UDEeg",
+      "canonical_url": "https://www.youtube.com/watch?v=RYpEB4UDEeg",
+      "title": "Cruel Intentions Unaired Pilot | Kiss Scene",
+      "publisher_or_channel": "moonxhyuna",
+      "publisher_url": "https://www.youtube.com/channel/UC-Csv_6XV4ASyrk-DzDzxgA",
+      "published_at": "",
+      "duration_seconds": 115.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "Cruel Intentions television pilot Sarah Michelle Gellar Kathryn official NBC",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "pilot",
+          "unaired"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 20,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 4
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_012",
+      "exact_url": "https://www.youtube.com/watch?v=SX7SVZDnCck",
+      "canonical_url": "https://www.youtube.com/watch?v=SX7SVZDnCck",
+      "title": "Cruel Intentions (2016) Unaired Pilot Ending (HD)",
+      "publisher_or_channel": "Lucas Bueno",
+      "publisher_url": "https://www.youtube.com/channel/UCFx4E4Dx2yp_PrQLxzs6AhA",
+      "published_at": "",
+      "duration_seconds": 173.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "Cruel Intentions television pilot Sarah Michelle Gellar Kathryn official NBC",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "2016",
+          "pilot",
+          "unaired"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 20,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 5
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_013",
+      "exact_url": "https://www.youtube.com/watch?v=RmOfJVRLvGk",
+      "canonical_url": "https://www.youtube.com/watch?v=RmOfJVRLvGk",
+      "title": "So I Finally Watched NBC's Cruel Intentions Pilot",
+      "publisher_or_channel": "AtRandom with KeN-K",
+      "publisher_url": "https://www.youtube.com/channel/UCAEKR99Rpq383ulGPwOlWlQ",
+      "published_at": "",
+      "duration_seconds": 655.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "Cruel Intentions television pilot Sarah Michelle Gellar Kathryn official NBC",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "pilot"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 20,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 6
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_014",
+      "exact_url": "https://www.youtube.com/watch?v=RbMLM2qr1bY",
+      "canonical_url": "https://www.youtube.com/watch?v=RbMLM2qr1bY",
+      "title": "Cruel Intentions - UNAIRED PILOT CLIP!",
+      "publisher_or_channel": "Jordan Cobb",
+      "publisher_url": "https://www.youtube.com/channel/UCURZ3VS85HuEqbT9eewUqfg",
+      "published_at": "",
+      "duration_seconds": 47.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "Cruel Intentions television pilot Sarah Michelle Gellar Kathryn official NBC",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "pilot",
+          "unaired"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 20,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 7
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_001",
+      "exact_url": "https://www.youtube.com/watch?v=naZtg9PMNy8",
+      "canonical_url": "https://www.youtube.com/watch?v=naZtg9PMNy8",
+      "title": "Unaired Cruel Intentions Pilot Interview Scene",
+      "publisher_or_channel": "DanKest",
+      "publisher_url": "https://www.youtube.com/channel/UCIf0VH8NiZMmvapsIGazfdQ",
+      "published_at": "",
+      "duration_seconds": 129.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" 2016 unaired pilot Sarah Michelle Gellar dialogue official",
+      "metadata_relevance": {
+        "status": "possible_target_lead_metadata_only",
+        "matched_target_terms": [
+          "pilot",
+          "unaired"
+        ],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 14,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "target terms +20",
+          "content-risk flags -6"
+        ],
+        "content_risk_flags": [
+          "performer_interview_is_not_character_delivery"
+        ],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 8
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_004",
+      "exact_url": "https://www.youtube.com/watch?v=aEjA3ef4LIc",
+      "canonical_url": "https://www.youtube.com/watch?v=aEjA3ef4LIc",
+      "title": "Sarah Michelle Gellar Says ‘Never Say Never’ to Joining ‘Cruel Intentions’ Reboot",
+      "publisher_or_channel": "Top And Best",
+      "publisher_url": "https://www.youtube.com/channel/UCgeVMtjbB3ZdhvjO53kdAEA",
+      "published_at": "",
+      "duration_seconds": 47.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" 2016 unaired pilot Sarah Michelle Gellar dialogue official",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 0,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "low metadata relevance -10"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 9
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_005",
+      "exact_url": "https://www.youtube.com/watch?v=YAFAZaR0Q2M",
+      "canonical_url": "https://www.youtube.com/watch?v=YAFAZaR0Q2M",
+      "title": "He has no respect for women 😡",
+      "publisher_or_channel": "Boxoffice Movie Scenes",
+      "publisher_url": "https://www.youtube.com/channel/UCfk4Df9QxO267wlFbStSyAw",
+      "published_at": "",
+      "duration_seconds": 245.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" 2016 unaired pilot Sarah Michelle Gellar dialogue official",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 0,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "low metadata relevance -10"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 10
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_007",
+      "exact_url": "https://www.youtube.com/watch?v=hpliHwPiYYU",
+      "canonical_url": "https://www.youtube.com/watch?v=hpliHwPiYYU",
+      "title": "Cruel Intentions (5/8) Movie CLIP - Practice Makes Perfect (1999) HD",
+      "publisher_or_channel": "Movieclips",
+      "publisher_url": "https://www.youtube.com/channel/UC3gNmTGu-TTbFPpfSs5kNkg",
+      "published_at": "",
+      "duration_seconds": 156.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" Cruel Intentions 1999 Sarah Michelle Gellar scene official Sony Pictures",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 0,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "low metadata relevance -10"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 11
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_008",
+      "exact_url": "https://www.youtube.com/watch?v=DToj3xM2b1E",
+      "canonical_url": "https://www.youtube.com/watch?v=DToj3xM2b1E",
+      "title": "Cruel Intentions (8/8) Movie CLIP - Sebastians' Journal (1999) HD",
+      "publisher_or_channel": "Movieclips",
+      "publisher_url": "https://www.youtube.com/channel/UC3gNmTGu-TTbFPpfSs5kNkg",
+      "published_at": "",
+      "duration_seconds": 162.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" Cruel Intentions 1999 Sarah Michelle Gellar scene official Sony Pictures",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 0,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "low metadata relevance -10"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 12
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_009",
+      "exact_url": "https://www.youtube.com/watch?v=UzlKsS-IhEo",
+      "canonical_url": "https://www.youtube.com/watch?v=UzlKsS-IhEo",
+      "title": "CRUEL INTENTIONS - Official Trailer - Back in Theaters for the 20th Anniversary",
+      "publisher_or_channel": "Sony Pictures Entertainment",
+      "publisher_url": "https://www.youtube.com/channel/UCz97F7dMxBNOfGYu3rx8aCw",
+      "published_at": "",
+      "duration_seconds": 140.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" Cruel Intentions 1999 Sarah Michelle Gellar scene official Sony Pictures",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 0,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "low metadata relevance -10",
+          "content-risk flags -6"
+        ],
+        "content_risk_flags": [
+          "trailer_likely_mixed_music_effects_and_speakers"
+        ],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 13
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    },
+    {
+      "source_id": "recording_candidate_010",
+      "exact_url": "https://www.youtube.com/watch?v=xEqdoVnIFug",
+      "canonical_url": "https://www.youtube.com/watch?v=xEqdoVnIFug",
+      "title": "Cruel Intentions (6/8) Movie CLIP - It's Not You, It's Me (1999) HD",
+      "publisher_or_channel": "Movieclips",
+      "publisher_url": "https://www.youtube.com/channel/UC3gNmTGu-TTbFPpfSs5kNkg",
+      "published_at": "",
+      "duration_seconds": 163.0,
+      "source_kind": "online_video_metadata",
+      "authority": "unknown_until_reviewed",
+      "discovery_provider": "youtube_metadata_via_yt_dlp",
+      "discovery_query": "\"Kathryn Merteuil\" Cruel Intentions 1999 Sarah Michelle Gellar scene official Sony Pictures",
+      "metadata_relevance": {
+        "status": "low_relevance_or_unverified_search_result",
+        "matched_target_terms": [],
+        "excluded_identity_hits": [],
+        "note": "Title/query relevance is only triage; it never verifies the person, character variant, speaker, or performer."
+      },
+      "review_ranking": {
+        "score": 0,
+        "band": "low_priority_or_reject_lead",
+        "reasons": [
+          "low metadata relevance -10"
+        ],
+        "content_risk_flags": [],
+        "metadata_rank_only": true,
+        "auto_select_allowed": false,
+        "note": "Rank chooses review order only. It never verifies a speaker, grants rights, or assigns a voice.",
+        "rank": 14
+      },
+      "identity_binding": {
+        "character": {
+          "character_id": "kathryn_merteuil",
+          "label": "Kathryn Merteuil"
+        },
+        "variant": {
+          "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+          "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+        },
+        "speaker": {
+          "speaker_id": "kathryn_merteuil_2016_pilot_english",
+          "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+        },
+        "performer": {
+          "performer_id": "sarah_michelle_gellar",
+          "name": "Sarah Michelle Gellar",
+          "living_status": "living",
+          "consent_status": "not_found",
+          "consent_evidence_urls": []
+        },
+        "continuity": {},
+        "shared_performer_does_not_merge_speakers": true
+      },
+      "source_authority_gate": {
+        "status": "unverified_source_authority",
+        "publisher_verification_status": "unverified_publisher_metadata",
+        "evidence_urls": [],
+        "passed_for_provenance_triage": false,
+        "voice_use_rights_proven": false,
+        "ranking_points": 0,
+        "note": "A source badge or official uploader can support provenance triage but cannot grant voice-model rights."
+      },
+      "identity_evidence_gate": {
+        "continuity": {
+          "status": "unverified_from_metadata",
+          "selected_title": "",
+          "evidence_urls": [],
+          "passed": false
+        },
+        "performer_credit": {
+          "status": "unverified_from_metadata",
+          "performer_id": "",
+          "target_performer_id": "sarah_michelle_gellar",
+          "performer_id_matches": false,
+          "evidence_urls": [],
+          "passed": false
+        },
+        "exact_character_variant_speaker_binding_required": true,
+        "passed": false
+      },
+      "speakers_present": [],
+      "performers_present": [],
+      "speaker_identity_verification": {
+        "status": "unverified_metadata_candidate",
+        "evidence_urls": [],
+        "note": "Search metadata is not biometric or speaker identity proof."
+      },
+      "recording_authenticity_status": "unverified_metadata_candidate",
+      "rights": {
+        "recording_copyright_status": "unknown",
+        "license_id": "",
+        "license_url": "",
+        "voice_model_or_training_rights": "not_established",
+        "performer_consent_status": "not_found",
+        "performer_consent_evidence_urls": [],
+        "character_or_brand_rights_status": "not_established",
+        "review_note": "Public availability and an official uploader do not grant voice-model rights."
+      },
+      "media_state": {
+        "metadata_only": true,
+        "media_downloaded": false,
+        "audio_extracted": false,
+        "audio_saved": false,
+        "captions_downloaded": false
+      },
+      "clean_segment_gate": {
+        "status": "pending_no_audio_ingested",
+        "target_speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "known_speakers_present": [],
+        "shared_performer_note": "Two character variants may share one performer and base timbre; their dialogue segments still need correct speaker/variant labels.",
+        "requirements": [
+          "Obtain media only in a later explicitly authorized intake step.",
+          "Use diarization only to create review groups; it is not speaker identity proof.",
+          "Align a reliable transcript, production credit, or human listening review to the target speaker and variant.",
+          "Reject overlapping voices, narration, music-heavy speech, effects-heavy speech, and unclear speaker turns.",
+          "Approve only target-only clean segments; keep every source time range and exact URL.",
+          "Require at least 20 seconds of reviewed clean target-only speech before model-reference preparation."
+        ],
+        "diarization_required_if_mixed_or_unknown": true,
+        "diarization_is_speaker_identity_proof": false,
+        "human_target_speaker_review_required": true,
+        "approved_clean_seconds": 0.0,
+        "target_only_segment_verification": {
+          "status": "pending_no_reviewed_segments",
+          "approved_source_ranges": [],
+          "transcript_alignment_status": "pending",
+          "human_identity_review_status": "pending",
+          "overlap_rejected": false,
+          "music_and_effects_rejected": false,
+          "minimum_reviewed_seconds": 20.0,
+          "passed": false
+        }
+      },
+      "technical_quality_gate": {
+        "status": "pending_no_audio_ingested",
+        "reported_metadata": {},
+        "requirements": {
+          "minimum_sample_rate_hz": 24000,
+          "minimum_total_reviewed_target_only_seconds": 20.0,
+          "speech_not_clipped": true,
+          "speech_to_noise_and_reverb_human_review": true,
+          "reject_overlapping_speakers": true,
+          "reject_music_heavy_or_effects_heavy_speech": true,
+          "consistent_language_and_character_delivery": true
+        },
+        "passed": false,
+        "note": "Page metadata cannot prove acoustic quality; analyze only after separately authorized intake."
+      },
+      "eligibility": {
+        "broad_non_biometric_style_reference": true,
+        "eligible_for_voice_model_input_now": false,
+        "blocked_reasons": [
+          "source authority/provenance is not fully reviewed",
+          "exact selected-title continuity binding is not verified",
+          "official performer credit is not exactly bound to this target speaker and title",
+          "voice-model/training rights are not explicitly established",
+          "explicit living-performer consent is not established",
+          "target speaker identity is not verified",
+          "recording authenticity/provenance is not fully verified",
+          "search-result identity relevance is low, ambiguous, or rejected",
+          "no clean target-only audio segments have been ingested and reviewed"
+        ],
+        "official_voice_claim_allowed": false,
+        "next_step": "Review the highest-ranked exact-continuity sources, then resolve provenance/rights/consent and use the separate target-only speaker/quality intake if authorized."
+      }
+    }
+  ],
+  "ranked_recording_review_queue": [
+    {
+      "rank": 1,
+      "source_id": "recording_candidate_002",
+      "score": 20,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+      "title": "Kathryn’s Monologue"
+    },
+    {
+      "rank": 2,
+      "source_id": "recording_candidate_003",
+      "score": 20,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=1bohWKMErrw",
+      "title": "Episode 7: The Unaired Cruel Intentions Pilot"
+    },
+    {
+      "rank": 3,
+      "source_id": "recording_candidate_006",
+      "score": 20,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=CgBeBag4ir0",
+      "title": "Cruel Intentions (7/8) Movie CLIP - Kathryn's Triumph (1999) HD"
+    },
+    {
+      "rank": 4,
+      "source_id": "recording_candidate_011",
+      "score": 20,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=RYpEB4UDEeg",
+      "title": "Cruel Intentions Unaired Pilot | Kiss Scene"
+    },
+    {
+      "rank": 5,
+      "source_id": "recording_candidate_012",
+      "score": 20,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=SX7SVZDnCck",
+      "title": "Cruel Intentions (2016) Unaired Pilot Ending (HD)"
+    },
+    {
+      "rank": 6,
+      "source_id": "recording_candidate_013",
+      "score": 20,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=RmOfJVRLvGk",
+      "title": "So I Finally Watched NBC's Cruel Intentions Pilot"
+    },
+    {
+      "rank": 7,
+      "source_id": "recording_candidate_014",
+      "score": 20,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=RbMLM2qr1bY",
+      "title": "Cruel Intentions - UNAIRED PILOT CLIP!"
+    },
+    {
+      "rank": 8,
+      "source_id": "recording_candidate_001",
+      "score": 14,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=naZtg9PMNy8",
+      "title": "Unaired Cruel Intentions Pilot Interview Scene"
+    },
+    {
+      "rank": 9,
+      "source_id": "recording_candidate_004",
+      "score": 0,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=aEjA3ef4LIc",
+      "title": "Sarah Michelle Gellar Says ‘Never Say Never’ to Joining ‘Cruel Intentions’ Reboot"
+    },
+    {
+      "rank": 10,
+      "source_id": "recording_candidate_005",
+      "score": 0,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=YAFAZaR0Q2M",
+      "title": "He has no respect for women 😡"
+    },
+    {
+      "rank": 11,
+      "source_id": "recording_candidate_007",
+      "score": 0,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=hpliHwPiYYU",
+      "title": "Cruel Intentions (5/8) Movie CLIP - Practice Makes Perfect (1999) HD"
+    },
+    {
+      "rank": 12,
+      "source_id": "recording_candidate_008",
+      "score": 0,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=DToj3xM2b1E",
+      "title": "Cruel Intentions (8/8) Movie CLIP - Sebastians' Journal (1999) HD"
+    },
+    {
+      "rank": 13,
+      "source_id": "recording_candidate_009",
+      "score": 0,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=UzlKsS-IhEo",
+      "title": "CRUEL INTENTIONS - Official Trailer - Back in Theaters for the 20th Anniversary"
+    },
+    {
+      "rank": 14,
+      "source_id": "recording_candidate_010",
+      "score": 0,
+      "band": "low_priority_or_reject_lead",
+      "exact_url": "https://www.youtube.com/watch?v=xEqdoVnIFug",
+      "title": "Cruel Intentions (6/8) Movie CLIP - It's Not You, It's Me (1999) HD"
+    }
+  ],
+  "local_source_review_manifest": {
+    "schema_version": 1,
+    "created_at": "2026-07-17T07:30:01.355553+00:00",
+    "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+    "status": "local_sources_audited_clean_ranges_pending",
+    "identity_target": {
+      "subject_kind": "fictional_character",
+      "display_name": "Kathryn Merteuil",
+      "character": {
+        "character_id": "kathryn_merteuil",
+        "label": "Kathryn Merteuil"
+      },
+      "variant": {
+        "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+        "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+      },
+      "speaker": {
+        "speaker_id": "kathryn_merteuil_2016_pilot_english",
+        "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+      },
+      "performer": {
+        "performer_id": "sarah_michelle_gellar",
+        "name": "Sarah Michelle Gellar",
+        "living_status": "living",
+        "consent_status": "not_found",
+        "consent_evidence_urls": []
+      },
+      "version_or_timepoint": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+      "shared_performer_does_not_merge_speakers": true
+    },
+    "sources": [
+      {
+        "source_id": "local_cruel_intentions_2016_nbc_unaired_pilot",
+        "path": "Data/library/tv_shows/unaired_pilots/cruel_intentions_nbc_unaired_pilot_2016_sd.mp4",
+        "role": "primary adult-present voice and movement source",
+        "selected_title": "Cruel Intentions 2016 NBC unaired pilot",
+        "request_field": "private_local_source_candidates",
+        "integrity": {
+          "sha256": "757b2577b38b6b70e7bce6f62e4afd43e8c13c97d12a2317dc9b9f40e5f10d05",
+          "request_sha256": "757b2577b38b6b70e7bce6f62e4afd43e8c13c97d12a2317dc9b9f40e5f10d05",
+          "request_hash_matches": true,
+          "size_bytes": 210529942,
+          "mtime_ns": 1778115665674976300
+        },
+        "container_metadata": {
+          "status": "container_metadata_read_no_decode_or_playback",
+          "duration_seconds": 2688.06,
+          "video_streams": [
+            {
+              "codec": "h264 (Constrained Baseline) (avc1 / 0x31637661)",
+              "width": 640,
+              "height": 360,
+              "fps": 29.97
+            }
+          ],
+          "audio_streams": [
+            {
+              "codec": "aac (LC) (mp4a / 0x6134706D)",
+              "sample_rate_hz": 44100,
+              "channel_layout": "stereo"
+            }
+          ]
+        },
+        "continuity_binding_status": "project_owner_selected_exact_continuity",
+        "performer_binding_status": "project_owner_identified_pending_human_scene_and_production_credit_review",
+        "known_content_risks": [
+          "mixed_speaker_risk",
+          "music_or_effects_unknown_until_range_review"
+        ],
+        "review_ranking": {
+          "score": 53,
+          "raw_score_before_0_100_clamp": 53,
+          "band": "supplementary_clean_range_review",
+          "reasons": [
+            "owner-authorized local-library lead +10",
+            "primary adult-present continuity +45",
+            "explicit selected-title binding +18",
+            "mixed_speaker_risk -14",
+            "music_or_effects_unknown_until_range_review -6"
+          ],
+          "metadata_rank_only": true,
+          "auto_select_source": false,
+          "auto_select_speaker_or_acoustic_group": false,
+          "rank": 1
+        },
+        "clean_range_review": {
+          "queue_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_local_cruel_intentions_2016_nbc_unaired_pilot_clean_range_review_v1",
+          "status": "needs_exact_bounded_ranges_and_human_audiovisual_review",
+          "source_id": "local_cruel_intentions_2016_nbc_unaired_pilot",
+          "selected_ranges": [],
+          "target": {
+            "character": {
+              "character_id": "kathryn_merteuil",
+              "label": "Kathryn Merteuil"
+            },
+            "variant": {
+              "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+              "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+            },
+            "speaker": {
+              "speaker_id": "kathryn_merteuil_2016_pilot_english",
+              "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+            },
+            "performer": {
+              "performer_id": "sarah_michelle_gellar",
+              "name": "Sarah Michelle Gellar",
+              "living_status": "living",
+              "consent_status": "not_found",
+              "consent_evidence_urls": []
+            }
+          },
+          "known_content_risks": [
+            "mixed_speaker_risk",
+            "music_or_effects_unknown_until_range_review"
+          ],
+          "range_constraints": {
+            "minimum_seconds": 1.0,
+            "maximum_seconds_each": 45.0,
+            "maximum_ranges": 12,
+            "maximum_total_seconds": 180.0,
+            "minimum_approved_target_only_seconds_for_later_reference": 20.0
+          },
+          "speaker_selection_contract": {
+            "diarization_or_acoustic_grouping_may_group_similar_clips": true,
+            "diarization_or_acoustic_grouping_identifies_a_person": false,
+            "automatic_target_group_selection_allowed": false,
+            "human_audiovisual_identity_review_required": true,
+            "production_credit_or_cast_record_required": true,
+            "wrong_or_uncertain_group_must_remain_unselected": true
+          },
+          "clean_speech_checks": {
+            "target_only_speech": "pending",
+            "overlapping_speech": "pending_reject_if_true",
+            "music": "pending_reject_if_material",
+            "narration": "pending_reject_if_true",
+            "sound_effects": "pending_reject_if_material",
+            "stable_character_delivery": "pending",
+            "technical_quality": "pending"
+          },
+          "next_action": "A human selects exact short time ranges, confirms the visible/audible target, then runs bounded private-local extraction."
+        },
+        "readiness": {
+          "container_and_integrity_audited": true,
+          "speaker_identity_proven": false,
+          "clean_target_only_range_selected": false,
+          "voice_reference_ready": false,
+          "voice_assignment_ready": false,
+          "activation_ready": false
+        }
+      },
+      {
+        "source_id": "local_cruel_intentions_1999_movie",
+        "path": "Data/library/movies/cruel_intentions/cruel_intentions.mp4",
+        "role": "earlier same-performer character delivery supplement",
+        "selected_title": "Cruel Intentions (1999)",
+        "request_field": "private_local_source_candidates",
+        "integrity": {
+          "sha256": "c5fc74d03258850d03d433fe6e883e209de678573216b1c69a41fe2d6be365dc",
+          "request_sha256": "c5fc74d03258850d03d433fe6e883e209de678573216b1c69a41fe2d6be365dc",
+          "request_hash_matches": true,
+          "size_bytes": 1403670246,
+          "mtime_ns": 1778115479356455800
+        },
+        "container_metadata": {
+          "status": "container_metadata_read_no_decode_or_playback",
+          "duration_seconds": 5845.8,
+          "video_streams": [
+            {
+              "codec": "h264 (High) (avc1 / 0x31637661)",
+              "width": 1920,
+              "height": 1040,
+              "fps": 23.97
+            }
+          ],
+          "audio_streams": [
+            {
+              "codec": "aac (LC) (mp4a / 0x6134706D)",
+              "sample_rate_hz": 48000,
+              "channel_layout": "stereo"
+            }
+          ]
+        },
+        "continuity_binding_status": "project_owner_selected_exact_continuity",
+        "performer_binding_status": "project_owner_identified_pending_human_scene_and_production_credit_review",
+        "known_content_risks": [
+          "mixed_speaker_risk",
+          "music_or_effects_unknown_until_range_review"
+        ],
+        "review_ranking": {
+          "score": 30,
+          "raw_score_before_0_100_clamp": 30,
+          "band": "low_priority_or_reject_before_range_selection",
+          "reasons": [
+            "owner-authorized local-library lead +10",
+            "same-performer continuity supplement +22",
+            "explicit selected-title binding +18",
+            "mixed_speaker_risk -14",
+            "music_or_effects_unknown_until_range_review -6"
+          ],
+          "metadata_rank_only": true,
+          "auto_select_source": false,
+          "auto_select_speaker_or_acoustic_group": false,
+          "rank": 2
+        },
+        "clean_range_review": {
+          "queue_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_local_cruel_intentions_1999_movie_clean_range_review_v1",
+          "status": "needs_exact_bounded_ranges_and_human_audiovisual_review",
+          "source_id": "local_cruel_intentions_1999_movie",
+          "selected_ranges": [],
+          "target": {
+            "character": {
+              "character_id": "kathryn_merteuil",
+              "label": "Kathryn Merteuil"
+            },
+            "variant": {
+              "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+              "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+            },
+            "speaker": {
+              "speaker_id": "kathryn_merteuil_2016_pilot_english",
+              "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+            },
+            "performer": {
+              "performer_id": "sarah_michelle_gellar",
+              "name": "Sarah Michelle Gellar",
+              "living_status": "living",
+              "consent_status": "not_found",
+              "consent_evidence_urls": []
+            }
+          },
+          "known_content_risks": [
+            "mixed_speaker_risk",
+            "music_or_effects_unknown_until_range_review"
+          ],
+          "range_constraints": {
+            "minimum_seconds": 1.0,
+            "maximum_seconds_each": 45.0,
+            "maximum_ranges": 12,
+            "maximum_total_seconds": 180.0,
+            "minimum_approved_target_only_seconds_for_later_reference": 20.0
+          },
+          "speaker_selection_contract": {
+            "diarization_or_acoustic_grouping_may_group_similar_clips": true,
+            "diarization_or_acoustic_grouping_identifies_a_person": false,
+            "automatic_target_group_selection_allowed": false,
+            "human_audiovisual_identity_review_required": true,
+            "production_credit_or_cast_record_required": true,
+            "wrong_or_uncertain_group_must_remain_unselected": true
+          },
+          "clean_speech_checks": {
+            "target_only_speech": "pending",
+            "overlapping_speech": "pending_reject_if_true",
+            "music": "pending_reject_if_material",
+            "narration": "pending_reject_if_true",
+            "sound_effects": "pending_reject_if_material",
+            "stable_character_delivery": "pending",
+            "technical_quality": "pending"
+          },
+          "next_action": "A human selects exact short time ranges, confirms the visible/audible target, then runs bounded private-local extraction."
+        },
+        "readiness": {
+          "container_and_integrity_audited": true,
+          "speaker_identity_proven": false,
+          "clean_target_only_range_selected": false,
+          "voice_reference_ready": false,
+          "voice_assignment_ready": false,
+          "activation_ready": false
+        }
+      }
+    ],
+    "selection": {
+      "highest_ranked_source_id": "local_cruel_intentions_2016_nbc_unaired_pilot",
+      "source_auto_selected": false,
+      "speaker_or_acoustic_group_auto_selected": false,
+      "voice_assigned": false,
+      "candidate_activated": false
+    },
+    "operation_evidence": {
+      "local_files_read_for_hash_and_container_metadata": true,
+      "audio_decoded_for_listening": false,
+      "audio_played": false,
+      "bounded_audio_extracted": false,
+      "diarization_run": false,
+      "voice_model_or_clone_run": false,
+      "speech_generated": false,
+      "voice_assigned": false,
+      "candidate_activated": false
+    },
+    "truth_note": "Ranking chooses which source a human should inspect first. It never proves or selects a target speaker, diarization group, or voice."
+  },
+  "synthetic_model_candidates": [],
+  "historical_person_lane": {
+    "applicable": false
+  },
+  "selection": {
+    "recommended_lane": "licensed_original_non_imitative_character_voice",
+    "voice_assigned": false,
+    "voice_generated": false,
+    "voice_model_built_or_downloaded": false,
+    "official_voice_claim_allowed": false,
+    "activation_allowed": false,
+    "human_review_required": true
+  },
+  "readiness_gates": {
+    "metadata_discovery_completed": true,
+    "ranked_recording_leads_found": true,
+    "local_source_leads_audited": true,
+    "local_clean_range_review_pending": true,
+    "exact_continuity_and_performer_binding_complete": false,
+    "target_only_speaker_segments_approved": false,
+    "technical_quality_passed": false,
+    "voice_use_rights_and_consent_passed": false,
+    "voice_reference_ready": false,
+    "voice_assignment_ready": false,
+    "voice_runtime_ready": false,
+    "temporary_ai_activation_ready": false
+  },
+  "provider_errors": [],
+  "provider_skips": [],
+  "operation_evidence": {
+    "metadata_only": true,
+    "media_download_attempted": false,
+    "audio_extraction_attempted": false,
+    "model_download_attempted": false,
+    "voice_clone_attempted": false,
+    "speech_generation_attempted": false,
+    "candidate_activation_attempted": false,
+    "local_audio_played": false,
+    "local_audio_extracted": false,
+    "local_diarization_run": false
+  },
+  "next_steps": [
+    "Review exact source URLs, speaker/variant labels, performer credits, and rights evidence.",
+    "For living performers, obtain explicit performer consent and recording/model rights before any exact-voice model path.",
+    "For an authorized recording, use the separate clip extraction, diarization-as-review-aid, and human target-speaker approval workflow.",
+    "For a blocked fictional-character reconstruction, audition licensed original voices for a non-imitative character design.",
+    "Never label a generated result official, authentic, or the performer's voice without matching authority evidence."
+  ]
+}

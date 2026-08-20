@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "authorization_id": "robert_self_voice_private_hanson_review_20260819",
+  "recorded_date": "2026-08-19",
+  "authorization_source": "direct project-owner instruction recorded in the Codex work session",
+  "authorized_by": {
+    "name": "Robert McMurrer",
+    "self_voice_subject": true,
+    "project_owner": true
+  },
+  "asset_binding": {
+    "path": "approved_reference.wav",
+    "sha256": "761458a0fe9c5da1c2671faa738c1e329336630cd47138a4e738f7de2030542b",
+    "bytes": 1755404,
+    "source_kind": "reviewed self-voice reference",
+    "model_weights_included": false
+  },
+  "named_recipients": [
+    "David Hanson",
+    "Manav Tidhan",
+    "Vytas Krisciunas"
+  ],
+  "allowed": {
+    "private_evaluation": true,
+    "private_little_sophia_integration_research": true,
+    "private_local_speech_rendering_for_synthetic_robert": true,
+    "internal_derivative_voice_model_for_the_same_bound_variant": true
+  },
+  "not_allowed": {
+    "public_release": true,
+    "onward_redistribution": true,
+    "identity_authentication": true,
+    "biological_robert_impersonation": true,
+    "use_for_an_unrelated_person_or_product": true,
+    "automatic_external_messages_or_calls": true
+  },
+  "handling": {
+    "repository_visibility": "private",
+    "retain_only_while_needed_for_review": true,
+    "honor_withdrawal_or_supersession": true,
+    "hash_mismatch_behavior": "refuse_use"
+  }
+}
+

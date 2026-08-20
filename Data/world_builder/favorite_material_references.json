@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-08T18:30:00-04:00",
+  "purpose": "Small curated material list for textures Robert specifically liked or approved for reuse by the world builder.",
+  "materials": [
+    {
+      "id": "starbucks_red_brick_exterior",
+      "name": "Starbucks red brick exterior",
+      "category": "brick",
+      "source_model": "Assets/third_party/intake/3d_models_kira_world/activities/starbucks_coffee_shop.glb",
+      "runtime_model": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/activities/starbucks_coffee_shop.glb",
+      "liked_by_robert": true,
+      "approved_for": [
+        "house exterior accent wall",
+        "coffee shop exterior",
+        "storefront exterior",
+        "urban notebook world brick buildings"
+      ],
+      "usage_notes": "Use as a real brick texture reference before falling back to flat red/brown generated walls. Preserve readable brick scale and mortar lines."
+    }
+  ]
+}

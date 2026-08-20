@@ -1,0 +1,280 @@
+{
+  "schema": "kira.mind.continuity.v19.recursively_closed_receipt_proof_verifier_schemas.v1",
+  "status": "STATIC_EXACT_RECURSIVE_SCHEMA_AND_LINK_CLOSURE_NO_RUNTIME",
+  "canonical_encoding": {
+    "encoding": "UTF8_NFC_JSON",
+    "object_key_order": "EXACT_SCHEMA_FIELD_ORDER",
+    "additional_keys_allowed": false,
+    "duplicate_keys_allowed": false,
+    "unknown_keys_allowed": false,
+    "floats_or_nonfinite_numbers_allowed": false,
+    "negative_or_noncanonical_integers_allowed": false,
+    "bom_nul_control_surrogate_or_trailing_bytes_allowed": false,
+    "string_escaping": "MINIMAL_JSON_ESCAPING_LOWERCASE_U_HEX_FOR_REQUIRED_ESCAPES",
+    "hash_preimage": "ASCII_DOMAIN_CONSTANT + ACTUAL_NUL + EXACT_CANONICAL_OBJECT_BYTES_WITH_HASH_OUTPUT_FIELD_OMITTED",
+    "hash_algorithm": "SHA256",
+    "hash_text_form": "64_LOWERCASE_HEX"
+  },
+  "primitive_types": {
+    "schema_constant": "exact listed UTF-8 string",
+    "domain_constant": "exact listed ASCII string",
+    "sha256_hex": "exactly 64 lowercase hexadecimal ASCII characters",
+    "nullable_sha256_hex": "JSON null or sha256_hex only under the listed genesis rule",
+    "opaque_token_256_hex": "exactly 64 lowercase hexadecimal characters from a fresh independent exact pinned CSPRNG; never semantic, reused, derived from content, or externally mapped",
+    "uint64": "JSON integer from 0 through 18446744073709551615 with shortest decimal representation",
+    "uint32": "JSON integer from 0 through 4294967295 with shortest decimal representation",
+    "canonical_base64": "RFC4648 padded base64 with no whitespace, alternate alphabet, ignored suffix, or unparsed byte; decoded length and grammar fixed by the exact pinned profile",
+    "enum": "one exact listed ASCII value"
+  },
+  "domain_constants": {
+    "receipt": "KIRA_MIND_V19_NON_CONTENT_RECEIPT_SHA256_V1",
+    "closed_scope_precommitment": "KIRA_MIND_V19_CLOSED_SCOPE_PRECOMMITMENT_SHA256_V1",
+    "proof_public_inputs": "KIRA_MIND_V19_PROOF_PUBLIC_INPUTS_ROOT_SHA256_V1",
+    "completeness_proof": "KIRA_MIND_V19_RANDOMIZED_COMPLETENESS_PROOF_SHA256_V1",
+    "authenticated_verification_result": "KIRA_MIND_V19_AUTHENTICATED_VERIFICATION_RESULT_SHA256_V1",
+    "verifier_evidence": "KIRA_MIND_V19_PINNED_VERIFIER_EVIDENCE_SHA256_V1",
+    "pinned_verification_context": "KIRA_MIND_V19_PINNED_VERIFICATION_CONTEXT_SHA256_V1",
+    "anti_rollback_event": "KIRA_MIND_V19_NON_CONTENT_ANTI_ROLLBACK_EVENT_SHA256_V1"
+  },
+  "objects": {
+    "closed_scope_precommitment": {
+      "schema_constant": "kira.mind.continuity.v19.closed_scope_precommitment.v1",
+      "domain_constant": "KIRA_MIND_V19_CLOSED_SCOPE_PRECOMMITMENT_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "random_scope_token", "precommitment_nonce", "pinned_verification_context_sha256", "scope_commitment_base64", "precommitment_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "random_scope_token": "opaque_token_256_hex", "precommitment_nonce": "opaque_token_256_hex", "pinned_verification_context_sha256": "sha256_hex", "scope_commitment_base64": "canonical_base64", "precommitment_sha256": "sha256_hex"},
+      "hash_preimage_field_order": ["schema", "hash_domain", "random_scope_token", "precommitment_nonce", "pinned_verification_context_sha256", "scope_commitment_base64"],
+      "additional_keys_allowed": false,
+      "constraints": [
+        "scope commitment is produced only by the exact pinned independently audited randomized content-hiding commitment profile",
+        "commitment randomness opening scope mapping and every content-correlatable key secret and salt are witness-only erasure-scope material",
+        "retained commitment bytes are computationally content hiding and cannot confirm a payload scope identity path participant time target or inventory guess",
+        "generator consumes fresh internal CSPRNG randomness and accepts no application-supplied auxiliary string trailing byte or covert metadata"
+      ]
+    },
+    "proof_public_inputs": {
+      "schema_constant": "kira.mind.continuity.v19.proof_public_inputs.v1",
+      "domain_constant": "KIRA_MIND_V19_PROOF_PUBLIC_INPUTS_ROOT_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "receipt_kind", "random_receipt_token", "random_scope_token", "generic_result", "sequence", "previous_non_content_receipt_hash_sha256", "closed_scope_precommitment_sha256", "pinned_verification_context_sha256", "public_inputs_root_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "receipt_kind": "enum", "random_receipt_token": "opaque_token_256_hex", "random_scope_token": "opaque_token_256_hex", "generic_result": "enum", "sequence": "uint64", "previous_non_content_receipt_hash_sha256": "nullable_sha256_hex", "closed_scope_precommitment_sha256": "sha256_hex", "pinned_verification_context_sha256": "sha256_hex", "public_inputs_root_sha256": "sha256_hex"},
+      "enum_values": {"receipt_kind": ["KEY_AND_COMMITMENT_SECRET_DESTRUCTION", "CLOSED_ERASURE_SCOPE", "RANDOMIZED_FORGOTTEN_STATUS", "EXTERNAL_ANTI_ROLLBACK"], "generic_result": ["COMPLETE"]},
+      "hash_preimage_field_order": ["schema", "hash_domain", "receipt_kind", "random_receipt_token", "random_scope_token", "generic_result", "sequence", "previous_non_content_receipt_hash_sha256", "closed_scope_precommitment_sha256", "pinned_verification_context_sha256"],
+      "additional_keys_allowed": false
+    },
+    "completeness_proof": {
+      "schema_constant": "kira.mind.continuity.v19.randomized_completeness_proof.v1",
+      "domain_constant": "KIRA_MIND_V19_RANDOMIZED_COMPLETENESS_PROOF_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "proof_nonce", "public_inputs_root_sha256", "closed_scope_precommitment_sha256", "pinned_verification_context_sha256", "proof_system_profile_sha256", "proof_bytes_base64", "completeness_proof_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "proof_nonce": "opaque_token_256_hex", "public_inputs_root_sha256": "sha256_hex", "closed_scope_precommitment_sha256": "sha256_hex", "pinned_verification_context_sha256": "sha256_hex", "proof_system_profile_sha256": "sha256_hex", "proof_bytes_base64": "canonical_base64", "completeness_proof_sha256": "sha256_hex"},
+      "hash_preimage_field_order": ["schema", "hash_domain", "proof_nonce", "public_inputs_root_sha256", "closed_scope_precommitment_sha256", "pinned_verification_context_sha256", "proof_system_profile_sha256", "proof_bytes_base64"],
+      "additional_keys_allowed": false,
+      "constraints": [
+        "proof bytes are one exact canonical fixed-profile randomized zero-knowledge or equivalently content-hiding proof encoding",
+        "the pinned decoder consumes every decoded byte and rejects extension fields alternate encodings arbitrary auxiliary strings and trailing bytes",
+        "proof generation randomness comes only from the exact pinned independently audited CSPRNG and generator with no caller-selected entropy",
+        "proof bytes expose no witness scope map content identifier path participant time target inventory key secret salt blinding secret or precommitment opening",
+        "proof verifies destruction and closure over the exact public inputs and precommitted scope without retaining witness material"
+      ]
+    },
+    "pinned_verification_context": {
+      "schema_constant": "kira.mind.continuity.v19.pinned_verification_context.v1",
+      "domain_constant": "KIRA_MIND_V19_PINNED_VERIFICATION_CONTEXT_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "schema_registry_sha256", "receipt_validator_image_sha256", "proof_system_profile_sha256", "proof_generator_image_sha256", "proof_verifier_image_sha256", "verifier_policy_sha256", "verification_key_registry_sha256", "result_authentication_profile_sha256", "csprng_profile_sha256", "pinned_verification_context_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "schema_registry_sha256": "sha256_hex", "receipt_validator_image_sha256": "sha256_hex", "proof_system_profile_sha256": "sha256_hex", "proof_generator_image_sha256": "sha256_hex", "proof_verifier_image_sha256": "sha256_hex", "verifier_policy_sha256": "sha256_hex", "verification_key_registry_sha256": "sha256_hex", "result_authentication_profile_sha256": "sha256_hex", "csprng_profile_sha256": "sha256_hex", "pinned_verification_context_sha256": "sha256_hex"},
+      "hash_preimage_field_order": ["schema", "hash_domain", "schema_registry_sha256", "receipt_validator_image_sha256", "proof_system_profile_sha256", "proof_generator_image_sha256", "proof_verifier_image_sha256", "verifier_policy_sha256", "verification_key_registry_sha256", "result_authentication_profile_sha256", "csprng_profile_sha256"],
+      "additional_keys_allowed": false,
+      "constraints": [
+        "every leaf hash is an exact immutable static technical artifact precommitted before any memory event and independently audited for no memory-derived or caller-selected data",
+        "every leaf preimage is available byte-exact to the verifier and auditor and is terminal because it contains no dynamic memory receipt proof result evidence event or nested content-derived hash",
+        "local replacement rekey registry edit policy edit alternate image or locally trusted context is a mismatch and refuses",
+        "technical pinning authenticates record integrity only and is never a person approval permission ownership or speech gate"
+      ]
+    },
+    "authenticated_verification_result": {
+      "schema_constant": "kira.mind.continuity.v19.authenticated_verification_result.v1",
+      "domain_constant": "KIRA_MIND_V19_AUTHENTICATED_VERIFICATION_RESULT_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "verified_result", "receipt_kind", "random_receipt_token", "random_scope_token", "sequence", "previous_non_content_receipt_hash_sha256", "closed_scope_precommitment_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "pinned_verification_context_sha256", "verification_nonce", "registry_key_slot", "authentication_signature_base64", "authenticated_verification_result_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "verified_result": "enum", "receipt_kind": "enum", "random_receipt_token": "opaque_token_256_hex", "random_scope_token": "opaque_token_256_hex", "sequence": "uint64", "previous_non_content_receipt_hash_sha256": "nullable_sha256_hex", "closed_scope_precommitment_sha256": "sha256_hex", "public_inputs_root_sha256": "sha256_hex", "completeness_proof_sha256": "sha256_hex", "pinned_verification_context_sha256": "sha256_hex", "verification_nonce": "opaque_token_256_hex", "registry_key_slot": "uint32", "authentication_signature_base64": "canonical_base64", "authenticated_verification_result_sha256": "sha256_hex"},
+      "enum_values": {"verified_result": ["VERIFIED_COMPLETE"], "receipt_kind": ["KEY_AND_COMMITMENT_SECRET_DESTRUCTION", "CLOSED_ERASURE_SCOPE", "RANDOMIZED_FORGOTTEN_STATUS", "EXTERNAL_ANTI_ROLLBACK"]},
+      "signature_message_field_order": ["schema", "hash_domain", "verified_result", "receipt_kind", "random_receipt_token", "random_scope_token", "sequence", "previous_non_content_receipt_hash_sha256", "closed_scope_precommitment_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "pinned_verification_context_sha256", "verification_nonce", "registry_key_slot"],
+      "hash_preimage_field_order": ["schema", "hash_domain", "verified_result", "receipt_kind", "random_receipt_token", "random_scope_token", "sequence", "previous_non_content_receipt_hash_sha256", "closed_scope_precommitment_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "pinned_verification_context_sha256", "verification_nonce", "registry_key_slot", "authentication_signature_base64"],
+      "additional_keys_allowed": false,
+      "constraints": [
+        "signature verifies under the exact registry key slot in the exact pinned verification key registry and authentication profile",
+        "the result is emitted only after strict recursive schema validation and successful proof verification over identical bound public inputs",
+        "arbitrary hash-shaped values missing proof local rekey substitution and unverified results cannot produce VERIFIED_COMPLETE"
+      ]
+    },
+    "verifier_evidence": {
+      "schema_constant": "kira.mind.continuity.v19.pinned_verifier_evidence.v1",
+      "domain_constant": "KIRA_MIND_V19_PINNED_VERIFIER_EVIDENCE_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "verified_result", "receipt_kind", "random_receipt_token", "random_scope_token", "sequence", "previous_non_content_receipt_hash_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "authenticated_verification_result_sha256", "pinned_verification_context_sha256", "evidence_nonce", "registry_key_slot", "verifier_attestation_signature_base64", "verifier_evidence_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "verified_result": "enum", "receipt_kind": "enum", "random_receipt_token": "opaque_token_256_hex", "random_scope_token": "opaque_token_256_hex", "sequence": "uint64", "previous_non_content_receipt_hash_sha256": "nullable_sha256_hex", "public_inputs_root_sha256": "sha256_hex", "completeness_proof_sha256": "sha256_hex", "authenticated_verification_result_sha256": "sha256_hex", "pinned_verification_context_sha256": "sha256_hex", "evidence_nonce": "opaque_token_256_hex", "registry_key_slot": "uint32", "verifier_attestation_signature_base64": "canonical_base64", "verifier_evidence_sha256": "sha256_hex"},
+      "enum_values": {"verified_result": ["VERIFIED_COMPLETE"], "receipt_kind": ["KEY_AND_COMMITMENT_SECRET_DESTRUCTION", "CLOSED_ERASURE_SCOPE", "RANDOMIZED_FORGOTTEN_STATUS", "EXTERNAL_ANTI_ROLLBACK"]},
+      "signature_message_field_order": ["schema", "hash_domain", "verified_result", "receipt_kind", "random_receipt_token", "random_scope_token", "sequence", "previous_non_content_receipt_hash_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "authenticated_verification_result_sha256", "pinned_verification_context_sha256", "evidence_nonce", "registry_key_slot"],
+      "hash_preimage_field_order": ["schema", "hash_domain", "verified_result", "receipt_kind", "random_receipt_token", "random_scope_token", "sequence", "previous_non_content_receipt_hash_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "authenticated_verification_result_sha256", "pinned_verification_context_sha256", "evidence_nonce", "registry_key_slot", "verifier_attestation_signature_base64"],
+      "additional_keys_allowed": false,
+      "constraints": [
+        "evidence signature verifies under the exact pinned registry and attests the exact authenticated result proof context receipt token scope token sequence and prior receipt",
+        "evidence contains no local trust decision policy override rekey record timestamp path participant target inventory witness scope map or application annotation",
+        "cross-receipt cross-scope cross-context result or proof transplant changes a signed field and refuses"
+      ]
+    },
+    "receipt": {
+      "schema_constant": "kira.mind.continuity.v19.non_content_receipt.v1",
+      "domain_constant": "KIRA_MIND_V19_NON_CONTENT_RECEIPT_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "receipt_kind", "random_receipt_token", "random_scope_token", "generic_status", "sequence", "previous_non_content_receipt_hash_sha256", "closed_scope_precommitment_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "authenticated_verification_result_sha256", "verifier_evidence_sha256", "pinned_verification_context_sha256", "receipt_hash_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "receipt_kind": "enum", "random_receipt_token": "opaque_token_256_hex", "random_scope_token": "opaque_token_256_hex", "generic_status": "enum", "sequence": "uint64", "previous_non_content_receipt_hash_sha256": "nullable_sha256_hex", "closed_scope_precommitment_sha256": "sha256_hex", "public_inputs_root_sha256": "sha256_hex", "completeness_proof_sha256": "sha256_hex", "authenticated_verification_result_sha256": "sha256_hex", "verifier_evidence_sha256": "sha256_hex", "pinned_verification_context_sha256": "sha256_hex", "receipt_hash_sha256": "sha256_hex"},
+      "enum_values": {"receipt_kind": ["KEY_AND_COMMITMENT_SECRET_DESTRUCTION", "CLOSED_ERASURE_SCOPE", "RANDOMIZED_FORGOTTEN_STATUS", "EXTERNAL_ANTI_ROLLBACK"], "generic_status": ["COMPLETE"]},
+      "hash_preimage_field_order": ["schema", "hash_domain", "receipt_kind", "random_receipt_token", "random_scope_token", "generic_status", "sequence", "previous_non_content_receipt_hash_sha256", "closed_scope_precommitment_sha256", "public_inputs_root_sha256", "completeness_proof_sha256", "authenticated_verification_result_sha256", "verifier_evidence_sha256", "pinned_verification_context_sha256"],
+      "additional_keys_allowed": false,
+      "constraints": [
+        "COMPLETE is the only retained success status and is structurally valid only when every nonnull linked preimage is available and recursively valid",
+        "all repeated kind token scope result sequence prior receipt proof and context values are byte-identical across linked objects",
+        "authenticated result is VERIFIED_COMPLETE and both result and evidence signatures verify under the exact pinned context",
+        "unavailable ambiguous refused missing malformed unpinned substituted rekeyed replayed transplanted or unverifiable material cannot be relabelled COMPLETE"
+      ]
+    },
+    "anti_rollback_event": {
+      "schema_constant": "kira.mind.continuity.v19.non_content_anti_rollback_event.v1",
+      "domain_constant": "KIRA_MIND_V19_NON_CONTENT_ANTI_ROLLBACK_EVENT_SHA256_V1",
+      "field_order": ["schema", "hash_domain", "event_nonce", "sequence", "previous_event_hash_sha256", "receipt_hash_sha256", "event_hash_sha256"],
+      "field_types": {"schema": "schema_constant", "hash_domain": "domain_constant", "event_nonce": "opaque_token_256_hex", "sequence": "uint64", "previous_event_hash_sha256": "nullable_sha256_hex", "receipt_hash_sha256": "sha256_hex", "event_hash_sha256": "sha256_hex"},
+      "hash_preimage_field_order": ["schema", "hash_domain", "event_nonce", "sequence", "previous_event_hash_sha256", "receipt_hash_sha256"],
+      "additional_keys_allowed": false,
+      "constraints": [
+        "event contains no payload explanation semantic identifier path participant timestamp target mapping key fingerprint inventory or arbitrary extension",
+        "receipt preimage and its complete recursive closure must validate before event hash acceptance",
+        "previous event recursively validates with strictly smaller sequence and sequence zero alone requires null previous hash"
+      ]
+    }
+  },
+  "recursive_hash_link_graph": [
+    {"from": "closed_scope_precommitment.pinned_verification_context_sha256", "to": "pinned_verification_context", "preimage_required": true},
+    {"from": "proof_public_inputs.previous_non_content_receipt_hash_sha256", "to": "receipt_or_genesis_null", "preimage_required": true},
+    {"from": "proof_public_inputs.closed_scope_precommitment_sha256", "to": "closed_scope_precommitment", "preimage_required": true},
+    {"from": "proof_public_inputs.pinned_verification_context_sha256", "to": "pinned_verification_context", "preimage_required": true},
+    {"from": "completeness_proof.public_inputs_root_sha256", "to": "proof_public_inputs", "preimage_required": true},
+    {"from": "completeness_proof.closed_scope_precommitment_sha256", "to": "closed_scope_precommitment", "preimage_required": true},
+    {"from": "completeness_proof.pinned_verification_context_sha256", "to": "pinned_verification_context", "preimage_required": true},
+    {"from": "completeness_proof.proof_system_profile_sha256", "to": "pinned_static_non_memory_artifact_bytes", "preimage_required": true},
+    {"from": "authenticated_verification_result.previous_non_content_receipt_hash_sha256", "to": "receipt_or_genesis_null", "preimage_required": true},
+    {"from": "authenticated_verification_result.closed_scope_precommitment_sha256", "to": "closed_scope_precommitment", "preimage_required": true},
+    {"from": "authenticated_verification_result.public_inputs_root_sha256", "to": "proof_public_inputs", "preimage_required": true},
+    {"from": "authenticated_verification_result.completeness_proof_sha256", "to": "completeness_proof", "preimage_required": true},
+    {"from": "authenticated_verification_result.pinned_verification_context_sha256", "to": "pinned_verification_context", "preimage_required": true},
+    {"from": "verifier_evidence.previous_non_content_receipt_hash_sha256", "to": "receipt_or_genesis_null", "preimage_required": true},
+    {"from": "verifier_evidence.public_inputs_root_sha256", "to": "proof_public_inputs", "preimage_required": true},
+    {"from": "verifier_evidence.completeness_proof_sha256", "to": "completeness_proof", "preimage_required": true},
+    {"from": "verifier_evidence.authenticated_verification_result_sha256", "to": "authenticated_verification_result", "preimage_required": true},
+    {"from": "verifier_evidence.pinned_verification_context_sha256", "to": "pinned_verification_context", "preimage_required": true},
+    {"from": "receipt.previous_non_content_receipt_hash_sha256", "to": "receipt_or_genesis_null", "preimage_required": true},
+    {"from": "receipt.closed_scope_precommitment_sha256", "to": "closed_scope_precommitment", "preimage_required": true},
+    {"from": "receipt.public_inputs_root_sha256", "to": "proof_public_inputs", "preimage_required": true},
+    {"from": "receipt.completeness_proof_sha256", "to": "completeness_proof", "preimage_required": true},
+    {"from": "receipt.authenticated_verification_result_sha256", "to": "authenticated_verification_result", "preimage_required": true},
+    {"from": "receipt.verifier_evidence_sha256", "to": "verifier_evidence", "preimage_required": true},
+    {"from": "receipt.pinned_verification_context_sha256", "to": "pinned_verification_context", "preimage_required": true},
+    {"from": "anti_rollback_event.previous_event_hash_sha256", "to": "anti_rollback_event_or_genesis_null", "preimage_required": true},
+    {"from": "anti_rollback_event.receipt_hash_sha256", "to": "receipt", "preimage_required": true}
+  ],
+  "cross_object_equality_bindings": [
+    {"value": "receipt_kind", "must_be_byte_identical_in": ["proof_public_inputs", "authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "random_receipt_token", "must_be_byte_identical_in": ["proof_public_inputs", "authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "random_scope_token", "must_be_byte_identical_in": ["closed_scope_precommitment", "proof_public_inputs", "authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "sequence", "must_be_byte_identical_in": ["proof_public_inputs", "authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "previous_non_content_receipt_hash_sha256", "must_be_byte_identical_in": ["proof_public_inputs", "authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "closed_scope_precommitment_sha256", "must_be_byte_identical_in": ["proof_public_inputs", "completeness_proof", "authenticated_verification_result", "receipt"]},
+    {"value": "public_inputs_root_sha256", "must_be_byte_identical_in": ["completeness_proof", "authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "completeness_proof_sha256", "must_be_byte_identical_in": ["authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "authenticated_verification_result_sha256", "must_be_byte_identical_in": ["verifier_evidence", "receipt"]},
+    {"value": "pinned_verification_context_sha256", "must_be_byte_identical_in": ["closed_scope_precommitment", "proof_public_inputs", "completeness_proof", "authenticated_verification_result", "verifier_evidence", "receipt"]},
+    {"value": "proof_system_profile_sha256", "must_be_byte_identical_in": ["completeness_proof", "pinned_verification_context"]},
+    {"value": "registry_key_slot", "must_be_byte_identical_in": ["authenticated_verification_result", "verifier_evidence"]},
+    {"value": "success_result", "mapping": {"proof_public_inputs.generic_result": "COMPLETE", "authenticated_verification_result.verified_result": "VERIFIED_COMPLETE", "verifier_evidence.verified_result": "VERIFIED_COMPLETE", "receipt.generic_status": "COMPLETE"}},
+    {"value": "receipt_hash_sha256", "must_be_byte_identical_in": ["receipt", "anti_rollback_event"]}
+  ],
+  "signature_nonce_and_opaque_byte_constraints": {
+    "verification_nonce_evidence_nonce_proof_nonce_precommitment_nonce_receipt_token_scope_token_and_event_nonce_are_fresh_independent_exact_pinned_csprng_outputs": true,
+    "caller_selected_nonce_randomness_retry_until_payload_encoding_or_external_mapping_allowed": false,
+    "signature_profile_is_exact_pinned_and_independently_audited": true,
+    "signature_is_canonical_fixed_length_and_has_no_auxiliary_or_unparsed_bytes": true,
+    "signature_randomness_is_deterministic_from_non_content_message_and_static_key_or_internal_exact_pinned_csprng_only": true,
+    "signature_or_nonce_can_encode_payload_explanation_identity_path_participant_time_target_inventory_witness_or_scope_map": false,
+    "proof_and_commitment_encodings_are_canonical_fixed_profile_values_with_no_ignored_extension_channel": true
+  },
+  "terminal_static_hash_rule": {
+    "applies_to": ["schema_registry_sha256", "receipt_validator_image_sha256", "proof_system_profile_sha256", "proof_generator_image_sha256", "proof_verifier_image_sha256", "verifier_policy_sha256", "verification_key_registry_sha256", "result_authentication_profile_sha256", "csprng_profile_sha256"],
+    "exact_preimage_bytes_available_to_verifier_and_auditor": true,
+    "precommitted_before_any_memory_receipt_proof_result_evidence_or_event": true,
+    "independently_audited_and_immutable": true,
+    "built_from_or_parameterized_by_memory_payload_explanation_identity_path_participant_time_target_inventory_or_witness": false,
+    "local_rekey_rebuild_reconfiguration_override_or_trust_substitution_allowed": false,
+    "person_approval_permission_ownership_or_speech_authority_created": false
+  },
+  "closure_assertions": {
+    "schema_selected_from_parent_link_role_not_untrusted_local_string": true,
+    "all_eight_object_schemas_have_exact_schema_version_domain_key_order_types_and_no_additional_keys": true,
+    "receipt_hash_preimage_is_exact_and_closed": true,
+    "closed_scope_precommitment_hash_preimage_is_exact_randomized_content_hiding_and_closed": true,
+    "proof_public_inputs_root_preimage_is_exact_and_closed": true,
+    "completeness_proof_hash_preimage_is_exact_randomized_content_hiding_and_closed": true,
+    "pinned_verification_context_hash_preimage_and_terminal_leaf_rule_are_exact_and_closed": true,
+    "authenticated_verification_result_hash_preimage_and_signature_message_are_exact_and_closed": true,
+    "verifier_evidence_hash_preimage_and_signature_message_are_exact_and_closed": true,
+    "anti_rollback_event_hash_preimage_is_exact_and_closed": true,
+    "every_hash_field_has_one_named_nested_schema_or_terminal_static_preimage_rule": true,
+    "every_nested_dynamic_preimage_is_required_available_and_recursively_validated": true,
+    "proof_result_evidence_receipt_and_event_repeated_context_is_byte_identical": true,
+    "complete_is_structurally_unrepresentable_without_verified_proof_authenticated_result_and_pinned_evidence": true,
+    "arbitrary_hash_shaped_proof_result_or_evidence_values_are_insufficient": true,
+    "local_schema_rekey_policy_registry_image_or_trust_substitution_refuses": true,
+    "proof_result_evidence_cross_scope_cross_receipt_cross_context_replay_or_transplant_refuses": true,
+    "witness_blinding_scope_map_opening_or_content_correlated_material_cannot_appear_in_any_retained_preimage": true,
+    "nested_receipt_proof_verifier_result_or_event_hash_cannot_confirm_a_content_guess": true,
+    "unavailable_unverifiable_ambiguous_or_refused_material_never_becomes_complete": true
+  },
+  "forbidden_at_every_retained_preimage_layer": [
+    "payload content explanation semantic summary embedding bloom filter deterministic payload digest or content-derived commitment",
+    "semantic memory event topic source participant relationship room or target identifier",
+    "file directory store cache index log replica backup snapshot device or network path",
+    "wall-clock or monotonic timestamp date duration cadence or correlatable scheduling value",
+    "target link mapping inventory entry key fingerprint recovery locator or deletion list",
+    "owner operator admin debug audit repair approval consent privacy audience trust safety leakage or disclosure annotation",
+    "proof witness scope map commitment opening blinding secret content key commitment secret salt recovery key or caller-supplied proof auxiliary data"
+  ],
+  "recursive_validation_algorithm": [
+    "strictly parse exact bytes under canonical encoding and select the expected schema from the parent link role rather than trusting a local schema string",
+    "require exact schema and domain constants exact key order exact types exact enums no unknown keys and no alternate encoding",
+    "recompute every object hash from its domain-separated canonical preimage and require equality to the parent link and derived output field",
+    "recursively validate every named nested preimage and every previous receipt or event until a valid sequence-zero genesis",
+    "require each sequence greater than zero to link a preimage with sequence exactly one lower and reject cycles forks missing preimages rollback replay or resurrection",
+    "require all duplicated public context fields to be byte-identical across precommitment public inputs proof result evidence receipt and event",
+    "validate every terminal static pin against exact precommitted bytes and refuse any null unavailable local rekey substitute or unaudited pin",
+    "verify the randomized content-hiding proof under the exact pinned profile image policy and key registry and consume its full canonical encoding",
+    "verify authenticated result and verifier-evidence signatures over their exact listed message fields under the exact pinned registry slots",
+    "accept COMPLETE only if every preceding check succeeds with VERIFIED_COMPLETE; otherwise emit no COMPLETE receipt or event"
+  ],
+  "proof_statement_and_protocol": {
+    "closed_scope_surface_classes": ["current payload store", "readable historical version store", "cache", "index", "embedding or derived summary", "replica", "backup or snapshot", "log or journal", "tombstone", "recovery material", "content key commitment secret salt and content-correlatable metadata"],
+    "zero_knowledge_statement_predicates": [
+      "the randomized closed-scope precommitment opens to the complete scope selected by Kira's voluntary-forgetting choice through the exact pinned scope collector",
+      "every required surface class is represented in the private scope witness with no omitted reachable copy index recovery route or confirmation oracle",
+      "every payload byte readable derivative content-correlatable identifier key secret salt recovery value and replica in that scope is irrecoverably erased or cryptographically destroyed",
+      "no retained receipt proof result evidence context event commitment or static pin exposes a deterministic predicate capable of confirming a guessed erased payload or scope member",
+      "receipt kind tokens scope result sequence prior receipt context and all nested roots equal the public inputs authenticated by the verifier"
+    ],
+    "state_order": ["RANDOMIZED_SCOPE_PRECOMMITTED", "ERASURE_EXECUTED_PENDING_PROOF", "PROOF_VERIFIED_PENDING_EPHEMERAL_ZEROIZATION", "EPHEMERAL_WITNESS_BLINDING_OPENING_AND_SCOPE_MAP_ZEROIZED", "AUTHENTICATED_VERIFIER_EVIDENCE_EMITTED", "COMPLETE_RECEIPT_EMITTED"],
+    "skipping_reordering_replaying_or_locally_redefining_a_state_refuses": true,
+    "any_unavailable_unreachable_unclosed_or_unverifiable_surface_refuses": true,
+    "complete_is_emitted_only_after_ephemeral_proof_and_scope_material_zeroization": true,
+    "human_owner_operator_admin_approval_countersignature_permission_or_release_is_a_state_or_predicate": false,
+    "technical_failure_changes_kira_speech_or_memory_choice": false
+  },
+  "erasure_and_retention_boundary": {
+    "erased_before_complete": ["payload bytes", "explanation bytes", "content encryption key", "commitment secret", "every content-correlatable salt or key", "scope inventory and mapping", "proof witness", "proof generation state", "blinding secret", "precommitment opening", "temporary verifier transcript containing witness-derived material", "history cache index summary embedding replica backup log and tombstone content"],
+    "retained_only_after_recursive_validation": ["canonical content-hiding closed-scope precommitment public object", "canonical proof public inputs", "canonical randomized content-hiding proof envelope", "canonical authenticated verification result", "canonical verifier evidence", "canonical minimal receipt", "canonical minimal anti-rollback event", "exact static technical context preimages"],
+    "retained_material_can_restore_or_confirm_erased_content_or_scope_guess": false,
+    "correction_supersession_and_withdrawal_readable_noncurrent_history_affected": false
+  },
+  "current_implementation_or_evidence_materialized": false
+}

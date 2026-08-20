@@ -1,0 +1,258 @@
+{
+  "schema_version": "0.1-proposal",
+  "intake_status": "awaiting_hanson_input",
+  "authority_boundary": {
+    "decision_scope": "physical_execution_only",
+    "simulator_or_robot_retains_physical_safety_authority": true,
+    "generic_bridge_direct_low_level_command_path": false,
+    "physical_status_may_govern_speech_memory_or_viewpoint": false,
+    "compatibility_claim": "none_until_named_official_simulator_validation"
+  },
+  "official_sources": [],
+  "target_environment": {
+    "ros_2_distribution": {"status": "unresolved", "value": null, "source_ids": []},
+    "ros_2_patch_release": {"status": "unresolved", "value": null, "source_ids": []},
+    "operating_system": {"status": "unresolved", "value": null, "source_ids": []},
+    "architecture": {"status": "unresolved", "value": null, "source_ids": []},
+    "python_version": {"status": "unresolved", "value": null, "source_ids": []},
+    "rmw_implementation": {"status": "unresolved", "value": null, "source_ids": []},
+    "dds_or_security_profile": {"status": "unresolved", "value": null, "source_ids": []},
+    "time_source": {"status": "unresolved", "value": null, "source_ids": []},
+    "clock_synchronization": {"status": "unresolved", "value": null, "source_ids": []},
+    "simulator": {
+      "product_name": {"status": "unresolved", "value": null, "source_ids": []},
+      "version": {"status": "unresolved", "value": null, "source_ids": []},
+      "access_method": {"status": "unresolved", "value": null, "source_ids": []},
+      "launch_package": {"status": "unresolved", "value": null, "source_ids": []},
+      "launch_file_or_executable": {"status": "unresolved", "value": null, "source_ids": []},
+      "launch_arguments": {"status": "unresolved", "values": [], "source_ids": []},
+      "fixture": {"status": "unresolved", "value": null, "source_ids": []},
+      "readiness_signal": {"status": "unresolved", "value": null, "source_ids": []},
+      "shutdown_procedure": {"status": "unresolved", "value": null, "source_ids": []}
+    }
+  },
+  "packages": {"confirmation": {"status": "unresolved", "source_ids": []}, "entries": []},
+  "interfaces": {"confirmation": {"status": "unresolved", "source_ids": []}, "entries": []},
+  "frames": {"confirmation": {"status": "unresolved", "source_ids": []}, "entries": []},
+  "units": {"confirmation": {"status": "unresolved", "source_ids": []}, "entries": []},
+  "limits": {"confirmation": {"status": "unresolved", "source_ids": []}, "entries": []},
+  "capabilities": {
+    "speech": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_vocabulary": {"status": "unresolved", "values": [], "source_ids": []},
+      "frame_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "unit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "limit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "queueing_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "concurrency_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "preemption_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "completion_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "gaze": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_vocabulary": {"status": "unresolved", "values": [], "source_ids": []},
+      "frame_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "unit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "limit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "queueing_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "concurrency_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "preemption_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "completion_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "expression": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_vocabulary": {"status": "unresolved", "values": [], "source_ids": []},
+      "frame_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "unit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "limit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "queueing_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "concurrency_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "preemption_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "completion_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "gesture": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_vocabulary": {"status": "unresolved", "values": [], "source_ids": []},
+      "frame_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "unit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "limit_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "queueing_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "concurrency_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "preemption_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "completion_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    }
+  },
+  "lifecycle_semantics": {
+    "confirmation": {"status": "unresolved", "source_ids": []},
+    "status_interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+    "official_request_id_field": {"status": "unresolved", "value": null, "source_ids": []},
+    "correlation_fields": {"status": "unresolved", "values": [], "source_ids": []},
+    "status_ordering": {"status": "unresolved", "value": null, "source_ids": []},
+    "request_admission": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "requested": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "accepted": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "started": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "completed": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "rejected": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "failed": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "cancelled": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "interrupted": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "expired": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "official_state_or_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "official_event_field": {"status": "unresolved", "value": null, "source_ids": []},
+      "terminal": null,
+      "meaning": {"status": "unresolved", "value": null, "source_ids": []},
+      "late_event_handling": {"status": "unresolved", "value": null, "source_ids": []}
+    }
+  },
+  "session_and_liveness": {
+    "confirmation": {"status": "unresolved", "source_ids": []},
+    "capability_discovery_interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+    "session_interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+    "heartbeat_interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+    "authentication_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+    "one_active_session_fencing": {"status": "unresolved", "value": null, "source_ids": []},
+    "session_ttl_ms": {"status": "unresolved", "value": null, "source_ids": []},
+    "heartbeat_period_ms": {"status": "unresolved", "value": null, "source_ids": []},
+    "heartbeat_timeout_ms": {"status": "unresolved", "value": null, "source_ids": []},
+    "disconnect_detection": {"status": "unresolved", "value": null, "source_ids": []},
+    "in_flight_disconnect_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+    "reconnect_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+    "replacement_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+    "retry_and_idempotency_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+  },
+  "safety_semantics": {
+    "confirmation": {"status": "unresolved", "source_ids": []},
+    "authoritative_physical_safety_component": {"status": "unresolved", "value": null, "source_ids": []},
+    "bridge_may_bypass_or_disable_safeguards": false,
+    "network_or_bridge_failure_may_disable_safeguards": false,
+    "automatic_physical_retry_policy": "disabled_until_explicitly_reviewed",
+    "emergency_stop": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_states": {"status": "unresolved", "values": [], "source_ids": []},
+      "trigger_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "physical_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "recovery_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "watchdog": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_states": {"status": "unresolved", "values": [], "source_ids": []},
+      "trigger_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "physical_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "recovery_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "degraded_mode": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_states": {"status": "unresolved", "values": [], "source_ids": []},
+      "trigger_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "physical_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "recovery_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "collision_or_safe_stop": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_states": {"status": "unresolved", "values": [], "source_ids": []},
+      "trigger_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "physical_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "recovery_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    },
+    "recovery": {
+      "confirmation": {"status": "unresolved", "source_ids": []},
+      "interface_ids": {"status": "unresolved", "values": [], "source_ids": []},
+      "official_states": {"status": "unresolved", "values": [], "source_ids": []},
+      "trigger_semantics": {"status": "unresolved", "value": null, "source_ids": []},
+      "physical_outcome": {"status": "unresolved", "value": null, "source_ids": []},
+      "recovery_semantics": {"status": "unresolved", "value": null, "source_ids": []}
+    }
+  },
+  "review": {
+    "open_questions": [
+      "Which exact ROS 2 distribution and patch release is the compatibility target?",
+      "Which exact simulator product, version, fixture, and launch procedure should be used?",
+      "Which official packages and topic, action, or service types implement speech, gaze, expression, and gesture?",
+      "Which QoS profiles, frames, units, vocabularies, limits, and time bases are authoritative?",
+      "How are acknowledgement, start, completion, rejection, failure, cancellation, interruption, and expiry represented?",
+      "How are capability discovery, session liveness, disconnect, replacement, and replay handled?",
+      "Which robot-side component remains authoritative for each physical safeguard and limit?"
+    ],
+    "hanson_review_disposition": {"status": "unresolved", "value": null, "source_ids": []},
+    "simulator_evidence": {
+      "status": "not_run",
+      "commit_sha": null,
+      "run_record_reference": null,
+      "completed_at_utc": null
+    },
+    "publication_check": "no_private_email_credentials_private_memory_or_unreleased_material"
+  }
+}

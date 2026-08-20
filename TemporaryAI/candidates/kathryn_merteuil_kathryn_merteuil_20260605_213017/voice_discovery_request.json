@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "request_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_voice_discovery_v1",
+  "created_at": "2026-07-16T16:13:15.031131+00:00",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "status": "metadata_discovery_request_not_run",
+  "identity_target": {
+    "subject_kind": "fictional_character",
+    "display_name": "Kathryn Merteuil",
+    "character": {
+      "character_id": "kathryn_merteuil",
+      "label": "Kathryn Merteuil"
+    },
+    "variant": {
+      "variant_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+      "label": "Adult Kathryn continuation at the 2016 NBC unaired-pilot period"
+    },
+    "speaker": {
+      "speaker_id": "kathryn_merteuil_2016_pilot_english",
+      "label": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance"
+    },
+    "performer": {
+      "performer_id": "sarah_michelle_gellar",
+      "name": "Sarah Michelle Gellar",
+      "living_status": "living",
+      "consent_status": "not_found",
+      "consent_evidence_urls": []
+    },
+    "version_or_timepoint": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+    "shared_performer_does_not_merge_speakers": true
+  },
+  "discovery": {
+    "metadata_only": true,
+    "allow_media_download": false,
+    "allow_audio_extraction": false,
+    "allow_model_download": false,
+    "recording_queries": [
+      "\"Kathryn Merteuil\" 2016 unaired pilot Sarah Michelle Gellar dialogue official",
+      "\"Kathryn Merteuil\" Cruel Intentions 1999 Sarah Michelle Gellar scene official Sony Pictures",
+      "Cruel Intentions television pilot Sarah Michelle Gellar Kathryn official NBC"
+    ],
+    "archive_queries": [],
+    "synthetic_model_queries": [],
+    "desired_non_imitative_voice_traits": [
+      "English",
+      "synthetic voice",
+      "licensed",
+      "adult feminine"
+    ],
+    "max_results_per_query": 5
+  },
+  "seed_recordings": [],
+  "private_local_source_candidates": [
+    {
+      "source_id": "local_cruel_intentions_2016_nbc_unaired_pilot",
+      "role": "primary adult-present voice and movement source",
+      "selected_title": "Cruel Intentions 2016 NBC unaired pilot",
+      "path": "Data/library/tv_shows/unaired_pilots/cruel_intentions_nbc_unaired_pilot_2016_sd.mp4",
+      "sha256": "757b2577b38b6b70e7bce6f62e4afd43e8c13c97d12a2317dc9b9f40e5f10d05",
+      "performer": "Sarah Michelle Gellar",
+      "continuity_binding_status": "project_owner_selected_exact_continuity",
+      "performer_binding_status": "project_owner_identified_pending_human_scene_and_production_credit_review",
+      "known_content_risks": [
+        "mixed_speaker_risk",
+        "music_or_effects_unknown_until_range_review"
+      ],
+      "whole_source_extraction_allowed": false,
+      "bounded_target_only_human_review_required": true
+    },
+    {
+      "source_id": "local_cruel_intentions_1999_movie",
+      "role": "earlier same-performer character delivery supplement",
+      "selected_title": "Cruel Intentions (1999)",
+      "path": "Data/library/movies/cruel_intentions/cruel_intentions.mp4",
+      "sha256": "c5fc74d03258850d03d433fe6e883e209de678573216b1c69a41fe2d6be365dc",
+      "performer": "Sarah Michelle Gellar",
+      "continuity_binding_status": "project_owner_selected_exact_continuity",
+      "performer_binding_status": "project_owner_identified_pending_human_scene_and_production_credit_review",
+      "known_content_risks": [
+        "mixed_speaker_risk",
+        "music_or_effects_unknown_until_range_review"
+      ],
+      "whole_source_extraction_allowed": false,
+      "bounded_target_only_human_review_required": true
+    }
+  ],
+  "excluded_voice_or_likeness_sources": [
+    {
+      "work": "Cruel Intentions 2",
+      "reason": "Kathryn is performed by Amy Adams; this work is backstory evidence only and cannot enter Sarah Michelle Gellar voice or likeness packs.",
+      "official_evidence_url": "https://www.sonypictures.com/movies/cruelintentions2"
+    }
+  ],
+  "official_source_research": {
+    "bounded_search_date": "2026-07-17",
+    "verified_exclusion": {
+      "work": "Cruel Intentions 2",
+      "official_url": "https://www.sonypictures.com/movies/cruelintentions2",
+      "finding": "Sony's official title page credits Amy Adams as Kathryn Merteuil, so this title cannot bind the selected Sarah Michelle Gellar speaker."
+    },
+    "exact_selected_performer_binding": {
+      "status": "official_exact-title_page_not_found_in_bounded_search",
+      "next_action": "Keep the 2016 pilot and 1999 film as owner-selected local leads until a human confirms Kathryn on screen and checks production credits; do not infer speaker identity from acoustic grouping."
+    }
+  },
+  "seed_synthetic_models": [],
+  "historical_voice_factors": {
+    "anchor_date_or_era": {
+      "value": "",
+      "evidence_urls": [],
+      "confidence": "unreviewed"
+    },
+    "chronological_age_or_band": {
+      "value": "",
+      "evidence_urls": [],
+      "confidence": "unknown"
+    },
+    "places_and_regions": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unknown"
+    },
+    "education_and_profession": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unknown"
+    },
+    "languages_and_dialects": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unreviewed"
+    },
+    "documented_health_or_voice_notes": {
+      "value": [],
+      "evidence_urls": [],
+      "confidence": "unknown"
+    }
+  },
+  "policy": {
+    "living_performer_exact_voice_requires_explicit_consent_and_rights": true,
+    "living_performer_consent_gate_scope": "model_assignment_official_claim_or_public_use_not_bounded_private_local_candidate_intake",
+    "official_media_is_not_voice_clone_permission": true,
+    "licensed_model_is_not_performer_consent": true,
+    "historical_missing_recording_requires_speculative_label": true,
+    "false_official_voice_claim_forbidden": true,
+    "discovery_no_download_boundary_is_stage_scoped": true,
+    "separate_private_local_bounded_intake_supported": true,
+    "private_local_intake_path": "Core/temp_ai_local_media_intake.py",
+    "private_local_intake_does_not_grant_public_release_or_official_claims": true,
+    "activation_allowed": false
+  }
+}

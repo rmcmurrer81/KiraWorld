@@ -1,0 +1,9 @@
+std_msgs/Header header
+string<=128 intent_id
+string<=128 source_identity
+string<=64 target_frame
+geometry_msgs/Point target
+float32 confidence
+uint32 duration_ms
+uint32 ttl_ms
+string<=256 evidence_ref

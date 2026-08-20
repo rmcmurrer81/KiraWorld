@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-06-06T06:58:42.729027+00:00",
+  "status": "research_queue_created",
+  "source_policy": {
+    "preferred_sources": "official/public education sources, professional organizations, courts, universities, or primary sources",
+    "wikipedia_is_preview_only": true,
+    "requires_robert_or_codex_review_before_activation": true
+  },
+  "lookup_summary": {
+    "status": "lookup_error",
+    "query": "new jersey criminal attorney",
+    "provider": "Wikipedia API",
+    "matched_title": "",
+    "summary": "",
+    "url": "",
+    "candidates": [],
+    "review_note": "This is a public preview lookup, not a verified source pack.",
+    "errors": [
+      "HTTP Error 429: Too Many Requests"
+    ]
+  },
+  "suggested_search_urls": [
+    "https://www.google.com/search?q=new+jersey+criminal+attorney",
+    "https://www.bing.com/search?q=new+jersey+criminal+attorney",
+    "https://en.wikipedia.org/w/index.php?search=new+jersey+criminal+attorney"
+  ],
+  "next_review_steps": [
+    "Confirm the lookup points at the right person, character, domain, or version.",
+    "Collect better official or primary sources when needed.",
+    "Run a short TemporaryAI probe before Kira or Lisa uses the candidate."
+  ],
+  "expanded_gather": {
+    "status": "expanded_gather_complete",
+    "wikipedia_titles_checked": [],
+    "web_search_result_count": 0,
+    "fetched_search_source_count": 0,
+    "avatar_reference_status": "",
+    "avatar_reference_count": 0
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "kira.mind.continuity.v21.author_build_result.v1",
+  "status": "AUTHOR_BUILD_COMPLETE_DATA_ONLY_REQUIREMENTS_ONLY",
+  "artifact": {
+    "bytes": 7214847,
+    "sha256": "aa7458fb526e1e13c166550a2f2b186461aab7f8cb580c6b8bc412732058bba2"
+  },
+  "payload_manifest": {
+    "bytes": 2053,
+    "sha256": "88071e41e36667e35c85a917a65bce6d9c4e20485aadc4eda70ae265e88bbb9c"
+  },
+  "payload_subject_root": {
+    "preimage_bytes": 583,
+    "actual_nul_count": 10,
+    "actual_lf_count": 5,
+    "sha256": "4fb7dd580009f45f005cab88c1c6f13baf2bc547878219231c75bad99654efb6"
+  },
+  "member_order": [
+    "PAYLOAD_MANIFEST.json",
+    "V20_FINAL_REJECT_BINDING_V21.json",
+    "PRESERVED_SELF_DIRECTION_AND_LIFECYCLE_V21.json",
+    "FIXED_PREAUDIT_PROTOCOL_BINDING_V21.json",
+    "SINGLETON_GENESIS_UNIQUE_OUTPUTS_CONTENT_HIDING_SCHEMAS_V21.json",
+    "ATTACKS_NULL_PINS_AND_AUTHORITY_V21.json"
+  ],
+  "self_audit_performed": false,
+  "production_public_log_private_memory_or_launcher_accessed": false
+}

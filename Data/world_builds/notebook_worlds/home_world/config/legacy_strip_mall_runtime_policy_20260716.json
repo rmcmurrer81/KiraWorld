@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "world_id": "home_world",
+  "policy_id": "legacy_strip_mall_runtime_policy_20260716",
+  "owner_choice": "nothing_on_former_strip_mall_site_for_now",
+  "default_runtime_state": "empty_lot",
+  "legacy_source_deleted": false,
+  "legacy_source_path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/src/main.js",
+  "restore_switch": "?stripMall=1",
+  "spa_placed_on_site": false,
+  "spa_policy": "legal_day_spa_remains_separate_notebook_world",
+  "default_startup_assertions": {
+    "legacy_meshes_constructed": false,
+    "legacy_colliders_added": false,
+    "legacy_door_colliders_added": false,
+    "legacy_interaction_zones_added": false,
+    "legacy_sign_textures_created": false,
+    "legacy_nested_spa_suite_created": false,
+    "named_place": "empty former strip-mall lot",
+    "can_enter": false
+  },
+  "source_expansion_estimate_if_restored": {
+    "measurement_kind": "static_source_expansion_estimate_not_live_ram_or_vram_measurement",
+    "procedural_mesh_objects": 128,
+    "box_geometry_objects": 122,
+    "plane_geometry_objects": 5,
+    "cylinder_geometry_objects": 1,
+    "canvas_sign_textures": 5,
+    "canvas_texture_base_rgba_bytes": 2949120,
+    "canvas_texture_estimated_mipmapped_bytes": 3932160,
+    "static_colliders": 37,
+    "door_colliders": 5,
+    "interaction_zones": 6,
+    "imported_glb_requests": 0,
+    "draw_call_interpretation": "Visible meshes can require at least one main render submission each, with extra shadow or transparent passes possible; exact calls depend on camera and renderer state.",
+    "memory_interpretation": "This block is procedural and has no GLB payload. Its memory cost is expected to be modest compared with an active avatar and model runtime, but only a controlled live A/B can quantify RAM or VRAM."
+  },
+  "verification_policy": {
+    "no_browser_or_3d_started_for_this_change": true,
+    "renderer_debug_snapshot_available": "window.kiraHomeWorldDebug.resourceSnapshot()",
+    "future_live_measurement": "Run two otherwise identical isolated sessions, default and ?stripMall=1, only when Robert asks for a controlled visual/resource test."
+  }
+}

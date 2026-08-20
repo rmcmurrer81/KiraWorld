@@ -1,0 +1,10 @@
+{
+  "backend": "auto",
+  "model": "qwen3.5:9b",
+  "expected_model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "ollama_url": "http://127.0.0.1:11434",
+  "data_dir": "local_data",
+  "default_voice_playback": true,
+  "voice_device": "auto",
+  "notes": "This digest was locally verified for qwen3.5:9b on 2026-08-20. Re-verify after any intentional model update. CLI flags or PORTABLE_MIND_* environment variables are authoritative. Keep config.local.json and local_data out of version control."
+}

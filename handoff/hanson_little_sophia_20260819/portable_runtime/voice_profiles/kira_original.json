@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "voice_profile_id": "kira_original",
+  "authorized_identity_profiles": [
+    "kira"
+  ],
+  "voice_mode": "original_non_imitative_neural",
+  "provider_id": "resemble_chatterbox_tts",
+  "default": false,
+  "audio_prompt_used": false,
+  "reference_audio_used": false,
+  "real_person_target_used": false,
+  "interview_derived_bytes_used": false,
+  "target_speaker": null,
+  "presentation_target": "warm feminine synthetic candidate",
+  "status": "model-default unconditioned synthetic candidate; do not call uniquely authored or feminine until listening review",
+  "listening_review": {
+    "status": "pending",
+    "reviewer": null,
+    "date": null,
+    "female_presentation_observed": null,
+    "naturalness_notes": null
+  },
+  "sample_asset": null,
+  "provenance_file": "voice_profiles/kira_original_provenance.json",
+  "fallback": "text only when the optional pinned neural route cannot run",
+  "boundary": "No real-person reference audio is used by this profile."
+}

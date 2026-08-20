@@ -1,0 +1,9 @@
+std_msgs/Header header
+string<=128 intent_id
+string<=128 source_identity
+string<=64 expression
+float32 intensity
+uint32 duration_ms
+float32 confidence
+uint32 ttl_ms
+string<=256 evidence_ref

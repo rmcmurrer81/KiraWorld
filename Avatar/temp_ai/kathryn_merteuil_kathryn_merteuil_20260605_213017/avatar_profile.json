@@ -1,0 +1,50 @@
+{
+  "avatar_profile_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_avatar_profile_v1",
+  "created_at": "2026-06-06T01:30:18.295820+00:00",
+  "target_type": "temporary_ai",
+  "target_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "display_name": "Kathryn Merteuil",
+  "role_title": "Kathryn Merteuil",
+  "ui_category": "Fictional Character",
+  "status": "adult_continuation_selected_needs_multiview_and_body_authoring",
+  "identity_selection": {
+    "version_id": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+    "present_timepoint": "Cruel Intentions 2016 NBC unaired-pilot period",
+    "maturity_lane": "adult",
+    "adult_topology_required": true,
+    "non_adult_doll_safe_treatment_allowed": false,
+    "evidence_path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/identity_reviews/kathryn_adult_continuation_selection_20260716.json",
+    "evidence_sha256": "60b46f8fc329299a63b3aa4b4dc946a1c2b94eb29c6bfcccdff0c813447c6065"
+  },
+  "timeline": {
+    "status": "avatar_request_created_not_rendered",
+    "estimate": "The adult 2016-pilot-period continuation is selected. A usable avatar still needs reviewed adult-present multiview references and the general landmark-to-mesh author.",
+    "current_machine_note": "GPU is available for bridge work, but this tool only creates the reviewed build request.",
+    "done_now": [
+      "candidate avatar folder",
+      "avatar request JSON",
+      "reference review folders"
+    ],
+    "still_needed": [
+      "approved adult-present multiview references and reviewed landmarks",
+      "avatar build brief",
+      "future renderer/modeling step"
+    ]
+  },
+  "visual_inputs": {
+    "gender_preference": "Female",
+    "version_life_point_or_canon_point": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1",
+    "personality_notes": "",
+    "approved_reference_folder": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/references/approved",
+    "downloaded_reference_folder": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/references/downloaded",
+    "rejected_reference_folder": "Avatar/temp_ai/kathryn_merteuil_kathryn_merteuil_20260605_213017/references/rejected"
+  },
+  "policy": {
+    "references_do_not_create_memory": true,
+    "official_or_reliable_sources_preferred": true,
+    "robert_review_required_before_generation": true,
+    "public_export_allowed": false,
+    "cruel_intentions_2_amy_adams_is_backstory_only": true,
+    "sarah_michelle_gellar_present_performance_source_is_2016_pilot": true
+  }
+}

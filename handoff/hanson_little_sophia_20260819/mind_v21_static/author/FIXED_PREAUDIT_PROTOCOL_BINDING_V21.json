@@ -1,0 +1,44 @@
+{
+  "schema": "kira.mind.continuity.v21.fixed_preaudit_protocol_binding.v1",
+  "status": "FIXED_BEFORE_AUTHOR_FREEZE_BOUND_WITHOUT_AUDIT_EXECUTION",
+  "protocol_root": {
+    "file_count": 3,
+    "preimage_bytes": 289,
+    "actual_nul_count": 6,
+    "actual_lf_count": 3,
+    "sha256": "894b577fba2f8fe9197f08728690fdde2c8fae8f6452b7e254d7bb7569e01bfb"
+  },
+  "protocol_identity": {
+    "bytes": 1260,
+    "sha256": "e95d3eb03f67cd002be109092f04b7af3c83be62621a83d3d5342a0e744f0cde"
+  },
+  "protocol_subjects": [
+    {
+      "path": "CHECKPOINT.md",
+      "bytes": 1030,
+      "sha256": "d718f76b5c829e297820443ef256ab1f35508f56753b2b57c288721acc5d84c5"
+    },
+    {
+      "path": "V21_PREAUDIT_ATTACK_MATRIX.json",
+      "bytes": 7731,
+      "sha256": "95e13f5d634ac17efa709d2e67251282e9fe68e998905bbbc627d89b1025e940"
+    },
+    {
+      "path": "V21_PREAUDIT_ATTACK_PROTOCOL.md",
+      "bytes": 14156,
+      "sha256": "da682c86f8ccebadc04764aea3ddab985779a3801b0eaba9091538df17db195a"
+    }
+  ],
+  "source_v20_audit_complete_root_sha256": "3ded9f4e56f793ae76d9b5b499b8e227f627013b0f39dbc7a4bd997f7b46226c",
+  "required_attack_group_ids": [
+    "RAW_AND_IMMUTABILITY",
+    "V20_STRUCTURAL_REGRESSION",
+    "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE",
+    "F02_EIGHT_RETAINED_CHOICE_FIELDS",
+    "F03_SINGLETON_NAMESPACE_AND_GENESIS",
+    "AUTONOMY_EQUALITY_AND_LIFECYCLE"
+  ],
+  "audit_started_by_author": false,
+  "author_program_execution_or_import_by_future_auditor_allowed": false,
+  "author_self_audit_performed": false
+}

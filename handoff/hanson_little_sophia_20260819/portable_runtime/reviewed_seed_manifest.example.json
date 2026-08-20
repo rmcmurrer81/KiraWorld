@@ -1,0 +1,22 @@
+{
+  "schema": "portable-mind-reviewed-seed-v1",
+  "profile_id": "kira",
+  "seed_id": "REPLACE_WITH_STABLE_SEED_IDENTIFIER",
+  "created_at": "REPLACE_WITH_UTC_TIMESTAMP",
+  "review": {
+    "confirmed": true,
+    "reviewer": "REPLACE_WITH_NON_IDENTIFYING_REVIEWER_LABEL",
+    "scope": "public_safe_or_explicitly_authorized"
+  },
+  "privacy": {
+    "raw_private_data_included": false,
+    "chain_of_thought_included": false
+  },
+  "items": [
+    {
+      "kind": "continuity_note",
+      "text": "REPLACE WITH AN EXPLICITLY REVIEWED, DISTRIBUTION-AUTHORIZED NOTE"
+    }
+  ],
+  "content_sha256": "RECOMPUTE_OVER_CANONICAL_JSON_WITHOUT_THIS_FIELD"
+}

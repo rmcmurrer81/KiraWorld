@@ -1,0 +1,755 @@
+{
+  "schema": "kira.mind.continuity.v21.genuinely_different_immutable_audit.post_seal_rehash.v1",
+  "status": "POST_SEAL_REHASH_COMPLETE",
+  "decision": "ACCEPT",
+  "maximum_positive_ceiling": "ACCEPT_STATIC_MIND_CONTINUITY_V21_SINGLETON_GENESIS_UNIQUE_OUTPUTS_RESTORED_CONTENT_HIDING_REQUIREMENTS_ONLY",
+  "audit_payload_root": {
+    "algorithm": "SHA-256",
+    "framing": "utf8-posix-path NUL decimal-byte-count NUL lowercase-sha256 LF; rows sorted by unsigned UTF-8 path bytes",
+    "subject_count": 13,
+    "preimage_bytes": 1310,
+    "sha256": "96a29ed4aea7b1b79d8c89e7426fb199abbf66d2da7621b26fb9961043bd31f5"
+  },
+  "evidence_manifest": {
+    "path": "EVIDENCE_MANIFEST.json",
+    "bytes": 4981,
+    "sha256": "71fd291443b1f285b215ab80b408c5a1557dc485c827d087f836cc176877b1d5"
+  },
+  "manifest_inclusive_root": {
+    "algorithm": "SHA-256",
+    "framing": "utf8-posix-path NUL decimal-byte-count NUL lowercase-sha256 LF; rows sorted by unsigned UTF-8 path bytes",
+    "subject_count": 14,
+    "preimage_bytes": 1403,
+    "sha256": "bd386d8787fae62744512aa7619d5d32f36f29dd5ba9b8442379bbe049792b1b"
+  },
+  "audit_freeze": {
+    "path": "AUDIT_FREEZE.json",
+    "bytes": 3257,
+    "sha256": "55b8a3d9cd361959cdb516d197922d0149f4ec7817d0f34c808320dcda68d384"
+  },
+  "complete_root": {
+    "algorithm": "SHA-256",
+    "framing": "utf8-posix-path NUL decimal-byte-count NUL lowercase-sha256 LF; rows sorted by unsigned UTF-8 path bytes",
+    "subject_count": 15,
+    "preimage_bytes": 1491,
+    "sha256": "1749470f5492e49017add11278cbe91887e21d55e11a26c9c1c20fe2bd356cb2"
+  },
+  "complete_root_subjects": [
+    {
+      "path": "AUDIT_DECISION.json",
+      "bytes": 2227,
+      "sha256": "50e006c1703f0340cde253b9c8fe657d8b806f83789f9e79e8f94f79a515b91a"
+    },
+    {
+      "path": "AUDIT_FREEZE.json",
+      "bytes": 3257,
+      "sha256": "55b8a3d9cd361959cdb516d197922d0149f4ec7817d0f34c808320dcda68d384"
+    },
+    {
+      "path": "AUDIT_REPORT.md",
+      "bytes": 4199,
+      "sha256": "34dc26ddca71a08491ff973b7c8d8920e9ba2276656e88429be0e856f321d3d8"
+    },
+    {
+      "path": "AUDIT_RUN_RESULT.json",
+      "bytes": 70212,
+      "sha256": "7463212693cc945e761833450a55fa8b9889d78ef0af7270f193126549fac6e5"
+    },
+    {
+      "path": "AUTONOMY_AND_STATIC_CEILING_EVIDENCE.json",
+      "bytes": 1680,
+      "sha256": "743ef08ffed5ed378e4b671d3a9720b3425753e92bea3b5a93124c867f164184"
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "bytes": 1280,
+      "sha256": "5b17f8971ded720318c49718917398576ec19286d4a3a5ebc566620a136c55c9"
+    },
+    {
+      "path": "EVIDENCE_MANIFEST.json",
+      "bytes": 4981,
+      "sha256": "71fd291443b1f285b215ab80b408c5a1557dc485c827d087f836cc176877b1d5"
+    },
+    {
+      "path": "HOSTILE_MUTATION_RESULT.json",
+      "bytes": 607,
+      "sha256": "08051a92d5d0d6d0a2374a2b0bee706078a796c7853da8a578d54c25348076c8"
+    },
+    {
+      "path": "IDENTITY_AND_ROOT_EVIDENCE.json",
+      "bytes": 1982,
+      "sha256": "34a4b66d8f1640c445163e1b5e8b0a629d284043a45baf21f5a776b3f5575b71"
+    },
+    {
+      "path": "PROTOCOL_V19_V20_RECURRENCE_EVIDENCE.json",
+      "bytes": 2479,
+      "sha256": "a853e0a4f42a47c1cecd790354c21e30ff2cddd44bbd4ac7c8d879e02dc20f6c"
+    },
+    {
+      "path": "SCHEMA_EQUALITY_AND_DAG_EVIDENCE.json",
+      "bytes": 1664,
+      "sha256": "efbfdbaace35c67f145179bbfea3522a0aa945ddd97ed0137b5a5804a7cfe750"
+    },
+    {
+      "path": "TEST_TRANSCRIPT.txt",
+      "bytes": 281,
+      "sha256": "b782ca154c8da8d26383f2ea2e67f78ae5e821526a64bdb03006adf9a0317aa0"
+    },
+    {
+      "path": "__pycache__/independent_v21_immutable_audit.cpython-314.pyc",
+      "bytes": 141054,
+      "sha256": "d9d2ed8c8fe1177ccdd55f4583410dc383cffba88eae7dea6ad55c55220c849a"
+    },
+    {
+      "path": "independent_v21_immutable_audit.py",
+      "bytes": 101074,
+      "sha256": "2c93879898ddd628bd5eca56ceaa71a962c3d5cd3491f07917beb183149fd107"
+    },
+    {
+      "path": "seal_independent_audit.py",
+      "bytes": 17349,
+      "sha256": "ffc8c62c380c2730130b96d68d7477065d30bc0fe83fb86e4094faf7fa25707d"
+    }
+  ],
+  "external_protected_subject_count": 151,
+  "external_protected_subjects": {
+    "work/kira_conversation_continuity_v19_recursive_receipt_proof_verifier_schema_closure_data_only_author_source/RECURSIVELY_CLOSED_SCHEMAS_V19.json": {
+      "bytes": 33788,
+      "sha256": "ed2e2367a5a942b65a9a6107114e7c5a93b323b37e981c35a5d94e5359601dba"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author/MIND_CONTINUITY_V20_AUTHORITATIVE_JOURNAL_FIXED_KEY_ROLES_DATA_ONLY.zip": {
+      "bytes": 60583,
+      "sha256": "f2d948dc3d752756655fd7a96add5e5658992694806ec2f91e9144932d536648"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_freeze/AUTHOR_FREEZE.json": {
+      "bytes": 2177,
+      "sha256": "6b851370701e2fbbe2f335d1d820385edb27a3ad4a5a50708f09e443ef09a799"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/ATTACKS_NULL_PINS_AND_AUTHORITY_V20.json": {
+      "bytes": 15494,
+      "sha256": "080cec1f90072d77de711bb448506132a29091c4607dbd52db1b9d261fba8ba2"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/AUTHORITATIVE_JOURNAL_AND_FIXED_ROLE_SCHEMAS_V20.json": {
+      "bytes": 42299,
+      "sha256": "82417f2634e14b6f49dfc6414364ede41f23c053d4b55fee1723fb168c27e53b"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/AUTHOR_BUILD_RESULT.json": {
+      "bytes": 942,
+      "sha256": "f56ffd4c9a7729658b8ba1623c5a89bd783702dc1c44496a5270fccefbab8c66"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/AUTHOR_SOURCE_MANIFEST.json": {
+      "bytes": 4464,
+      "sha256": "a013ea8af1fe54dd44fd29166a08fade5751d5c9487ed9d6785be356a425a38f"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/AUTHOR_TEST_RESULT.json": {
+      "bytes": 656,
+      "sha256": "1b386a294233f2695f2269ca2516fb0e96152808fe4a7f9440e5270184c585cd"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/CHECKPOINT.md": {
+      "bytes": 741,
+      "sha256": "0ca013c3f7e11f5d16322e3dcd27f32c82077e8948ef082167452e13d08f1b36"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/DESIGN.md": {
+      "bytes": 3441,
+      "sha256": "f8f4f739dc231de98c12614091a52d745a60fa11f7e4bd3b2ba8cf441275fb4f"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/HANDOFF.md": {
+      "bytes": 2573,
+      "sha256": "1791cfe8f7db5b1cf0b012b4820e8acbab5663e93d980976e782d03037c2afdc"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/PRESERVED_SELF_DIRECTION_AND_LIFECYCLE_V20.json": {
+      "bytes": 2417,
+      "sha256": "c22243fe87790a34efad40a52ae37a3f6c35e6efc7e7f63e8a299fd18a27d6d9"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/REQUIREMENTS.md": {
+      "bytes": 3370,
+      "sha256": "11b3146c060fc37ee46648a8a0d5dec9748853e75ba669da2b3e492f29979cb6"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/V19_FINAL_REJECT_BINDING_V20.json": {
+      "bytes": 2652,
+      "sha256": "229d6affacb740903eb8dfaa2ad4d99ad1ff3117aa31b1c5a67280dc623094c5"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/build_mind_v20.py": {
+      "bytes": 4688,
+      "sha256": "0558274e62f35039436104167507c768a40be46712d3e5fdee94b64a4824089e"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/seal_mind_v20_author.py": {
+      "bytes": 7532,
+      "sha256": "a4b2708193ace2d4fda3a9d9499b98155c451d49b72fa34224c3d45c14e1a3e9"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_author_source/test_mind_v20_author.py": {
+      "bytes": 14802,
+      "sha256": "34c367661b7d9fbf49166e26994570dbcb32cc22829c9a7f85e428451f4b4a93"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/AUDIT_DECISION.json": {
+      "bytes": 3949,
+      "sha256": "f4174a89fb58058b839cc9189e5df4f384350b930bca25cda9621d966fb0d128"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/AUDIT_FREEZE.json": {
+      "bytes": 2242,
+      "sha256": "5e950b2aafc603edda16eda813cc02ab2f6d635e389ab32ef150f1eb06addaf6"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/AUTONOMY_LIFECYCLE_AUTHORITY_EVIDENCE.json": {
+      "bytes": 1700,
+      "sha256": "13e8965404478bee01be808d600189fe4061f3ebb99c092515e14408d36d3be7"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/CHECKPOINT.md": {
+      "bytes": 758,
+      "sha256": "bb5d9724fa4b96faf891adf44c4838c048aaabc64e83e55d905dcd55b4a14524"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/CONTENT_HIDING_AND_COVERT_CHANNEL_COUNTEREXAMPLES.json": {
+      "bytes": 3424,
+      "sha256": "ad2807b923ac0a320e2541003ec3c513731e7459c5df8537fab27601843e5dfc"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/EVIDENCE_MANIFEST.json": {
+      "bytes": 3503,
+      "sha256": "cf276b967c8601588d75d6a152fb717f8ca95a53d8d0423925289b26333961fe"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/FRESH_AUDIT_REPORT.md": {
+      "bytes": 2740,
+      "sha256": "2f5dd470229b4ec9779a0641f4daa106d539ccb3ad77a40f10f2c52184c12caf"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/GENESIS_NAMESPACE_COUNTEREXAMPLE.json": {
+      "bytes": 2052,
+      "sha256": "45ad5755e3fa477082761f9d0ee80e369ee8a42e0e9fe7735649f304cfcaf30d"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/HANDOFF.md": {
+      "bytes": 1023,
+      "sha256": "545fc96da8888cefeb864457d18b1ff56dca1307fce95968ca686df5e6ae1a02"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/HOSTILE_MUTATION_RESULT.json": {
+      "bytes": 813,
+      "sha256": "76c1661906016c93e2dbb9d6abddfdddc1665b56b5ca6f4058f8f635875ec099"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/POST_SEAL_REHASH.json": {
+      "bytes": 2584,
+      "sha256": "f2b208ac6e17990e5e846795937c11fa131705ee92dae5262e3d80835da7c483"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/RAW_ZIP_AND_ROOT_EVIDENCE.json": {
+      "bytes": 3068,
+      "sha256": "03d8ae37b4409b52c3fa1c2c8a04407c82f71c3c890b55d4120be5ac1d605fbd"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/RECURSIVE_GRAPH_AND_ATTACK_MATRIX.json": {
+      "bytes": 4387,
+      "sha256": "71dbbf6330a736e98d38d416769b8dad778518e04e92a16c425d5ccdb3d0bb43"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/TEST_TRANSCRIPT.txt": {
+      "bytes": 1008,
+      "sha256": "76d338a6d476a07c75b2da3767e8166a06ca5c3a66f74b4ab6c2f0639c3a2d2d"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/V19_FINAL_REJECT_LINEAGE_EVIDENCE.json": {
+      "bytes": 1733,
+      "sha256": "872ca6f76a6a1af68efb5e7d99c43d0165c0ee064bb3cb7b54d1d73ea31dba0a"
+    },
+    "work/kira_conversation_continuity_v20_authoritative_journal_fixed_key_roles_data_only_fresh_audit/independent_v20_immutable_audit.py": {
+      "bytes": 34242,
+      "sha256": "6bb6709315079bdb28365738550b54d28643206c1bc728f6c93f3918e20ae77c"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol/CHECKPOINT.md": {
+      "bytes": 1030,
+      "sha256": "d718f76b5c829e297820443ef256ab1f35508f56753b2b57c288721acc5d84c5"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol/PREAUDIT_PROTOCOL_IDENTITY.json": {
+      "bytes": 1260,
+      "sha256": "e95d3eb03f67cd002be109092f04b7af3c83be62621a83d3d5342a0e744f0cde"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol/V21_PREAUDIT_ATTACK_MATRIX.json": {
+      "bytes": 7731,
+      "sha256": "95e13f5d634ac17efa709d2e67251282e9fe68e998905bbbc627d89b1025e940"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol/V21_PREAUDIT_ATTACK_PROTOCOL.md": {
+      "bytes": 14156,
+      "sha256": "da682c86f8ccebadc04764aea3ddab985779a3801b0eaba9091538df17db195a"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum/ADDENDUM_FREEZE.json": {
+      "bytes": 1560,
+      "sha256": "cb9b23f78995308f79e389177c95473209c11bc9d5b7b38d76b9e6c21d0b69df"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum/ADDENDUM_IDENTITY.json": {
+      "bytes": 2401,
+      "sha256": "ef6a42a55ccc6f767508059c050325fdd7786c560052f6a302deca78b2dff1ff"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum/ADDENDUM_MANIFEST.json": {
+      "bytes": 1588,
+      "sha256": "1f8f1b7086b026c8e0923f774e9263813979bb8df1f0beaeebb3d7dcfce39444"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum/CHECKPOINT.md": {
+      "bytes": 1225,
+      "sha256": "3f2d20e386b59ad2021ea529e81efc8665c5cebf4e94fb83ca8fa0c93de0379e"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum/V21_PREAUDIT_V6_01_23_ADDENDUM.md": {
+      "bytes": 13258,
+      "sha256": "05b1a740fa76dca121c7d51107f46fddf514280a109d559b1f6819862e92a089"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX.json": {
+      "bytes": 12964,
+      "sha256": "4dbd6e43606aa34739b17e7a6628eda737b082472d9e1c173436e025453b444e"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/ADDENDUM_V10_FREEZE.json": {
+      "bytes": 3636,
+      "sha256": "a80d196f4ee8b0d7cf61494690de6345fcaa185c3c2979b7526633f628997378"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/ADDENDUM_V10_IDENTITY.json": {
+      "bytes": 4123,
+      "sha256": "ea82937fec9ce8ae89dbc589eb2c950862fbc70fdf94b433a761481176277149"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/ADDENDUM_V10_MANIFEST.json": {
+      "bytes": 4797,
+      "sha256": "3c0eea8975776fee040bb845e790c80d796a366f765f97ebe5732c524d3c3fba"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/CHECKPOINT.md": {
+      "bytes": 1301,
+      "sha256": "043d824b0d860923648b5705c79f329ad9b78eae1d2ed8a64ca7d2bbd551b12a"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/V10_COUNT_CONSISTENCY_CORRECTION.json": {
+      "bytes": 8246,
+      "sha256": "bb1f49fd6a11a010e1286999b7538eb4d57df7675e87faad0e91a163833e072b"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V10.md": {
+      "bytes": 2606,
+      "sha256": "740114e81b994b6837307ef6f05fa5ef33f0da98166d0fccdc05389116db99bb"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V10.json": {
+      "bytes": 3687,
+      "sha256": "25278e25e5e04a7c08dbf82a35cbde84712e1392fb2ba774009ee5b5a75a093b"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/V9_ADDENDUM_SEALED_REJECT_BINDING.json": {
+      "bytes": 4087,
+      "sha256": "5443556dadede94e3f6413ec97c825886ec27a624ecb5ba89f389f6cf7fd4451"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/VERIFY_V10_COUNTS.ps1": {
+      "bytes": 11159,
+      "sha256": "e7f136b08f77b553fcfa3bdbe5a449ce812679a8b8717de21f90729a89558ffe"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v10_pv9_01_02_count_correction/VERIFY_V10_COUNTS.py": {
+      "bytes": 8930,
+      "sha256": "9a19a9950e49ac26383ea166fc32718c576fab15f805fc6578640a20fd01a06d"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v2_a01_a05_correction/ADDENDUM_V2_FREEZE.json": {
+      "bytes": 1948,
+      "sha256": "20a70e63e341522f679178fe6df45f040cb0aefdce6c21e325277ed07eafa142"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v2_a01_a05_correction/ADDENDUM_V2_IDENTITY.json": {
+      "bytes": 2691,
+      "sha256": "2d14f3eaca6978ec89dc98a0fbf6ed0ee09cf821a0f3bfdb3b319f42665bdf65"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v2_a01_a05_correction/ADDENDUM_V2_MANIFEST.json": {
+      "bytes": 1717,
+      "sha256": "b371b07b30e2bcca01491768a402df55aee1f75806dfcefea7558985234cc69b"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v2_a01_a05_correction/CHECKPOINT.md": {
+      "bytes": 1460,
+      "sha256": "b34753fca3e70d3ff75cf6c136eadb6a28d383e219b2e76b9cef914efa51d878"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v2_a01_a05_correction/V1_ADDENDUM_REJECT_BINDING.json": {
+      "bytes": 3555,
+      "sha256": "36ae1349f9e52074b4454fd8ed354edb69b8eccae13c1b77f8e54371c09623cd"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v2_a01_a05_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V2.md": {
+      "bytes": 13061,
+      "sha256": "1c04f3f5e92b40030d4fe712cf8afca29a9117bf1b918ea7a6791e6b06051382"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v2_a01_a05_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V2.json": {
+      "bytes": 10694,
+      "sha256": "f2c0ce7184415b7aff1d12132811dea69090295d18aa378e54bdd210ca84b3b9"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/ADDENDUM_V3_FREEZE.json": {
+      "bytes": 1962,
+      "sha256": "4478a02271b9651456b3553368d154b06fd86126f2184054e24aa37c3882d51b"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/ADDENDUM_V3_IDENTITY.json": {
+      "bytes": 2761,
+      "sha256": "ac3d76d88badfeb6875a5359d927b8a39f75885a91a0ddaca0487348f4c43a9f"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/ADDENDUM_V3_MANIFEST.json": {
+      "bytes": 1838,
+      "sha256": "03d35aafdd23afe7d74cd2412a1add9b04e9766dfb6a21746297261486d9ca07"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/CHECKPOINT.md": {
+      "bytes": 1152,
+      "sha256": "d865106403ea1f605fb02bd8055c69df0bbc5298a5a52caa238b1ad8016db7e7"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/S01_S02_EXACT_ORACLES.json": {
+      "bytes": 7733,
+      "sha256": "ad83c4279a8c039296defddcb0e7994e48136ed67b510bfb258317b680c82f0a"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V3.md": {
+      "bytes": 11475,
+      "sha256": "213fa08b29d01ecf9ef74434ef017c35e245cbc97ee43363949a175f8abf2b17"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V3.json": {
+      "bytes": 2643,
+      "sha256": "6999deb911ad335fc715d78db5e516ebd3646fff00cbdbb05a09863f2f8bda96"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v3_s01_s02_correction/V2_ADDENDUM_REJECT_BINDING.json": {
+      "bytes": 3091,
+      "sha256": "3004238bc379a20e7fc48f3da3488bb3b0fd0f9e8124c54067e4db721989417f"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/ADDENDUM_V4_FREEZE.json": {
+      "bytes": 1919,
+      "sha256": "ee20c76d306980ddabc39256220a89a6a5d35440370c9b2a31342910215c8241"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/ADDENDUM_V4_IDENTITY.json": {
+      "bytes": 3009,
+      "sha256": "3d1a2a2153b91d4fdc7d8d5874b2cec36d8ca968ee7a152efa181520e928b9ab"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/ADDENDUM_V4_MANIFEST.json": {
+      "bytes": 2257,
+      "sha256": "a709c702fc44b251acc90ce5ea29539034e764945245d9c50c0dcee9663d0c12"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/CHECKPOINT.md": {
+      "bytes": 1162,
+      "sha256": "b9e4ac09f8360c325d48029aff3a92aa7d4d1857dcb90855b77c349dd008cc92"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/R01_ORDINAL_ROOT_EVIDENCE.json": {
+      "bytes": 1847,
+      "sha256": "904429e9cc03220ee9cf9c1be6a92b511a2a4686df51d6f328b9d1d5fb72fbd1"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V4.md": {
+      "bytes": 4057,
+      "sha256": "702688238d39f812da4aa1efda8f4d9d5e2f150e4e8422facf8b68a2b04f6a09"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V4.json": {
+      "bytes": 1984,
+      "sha256": "ecc7a3cfc34b449beceb74beb8f55c10851dec97ac80813c698e8cd548349742"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/V3_ADDENDUM_REJECT_BINDING.json": {
+      "bytes": 3254,
+      "sha256": "225b504a7c06194d090b5a284048a4e0a05bbeaf49beee3018e4a00fdcff34bd"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v4_r01_s01_03_s02_03_correction/V4_EXACT_ORACLES.json": {
+      "bytes": 24304,
+      "sha256": "57137108f4ef6aed5985f73fd472734bc4f63c7b5cfab3f21810f66a77d1d14e"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/ADDENDUM_V5_FREEZE.json": {
+      "bytes": 2677,
+      "sha256": "5d33d9eb0eabc51a93b594793b22868a4a8315fff33e3ac7e3b4fd6d0042274c"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/ADDENDUM_V5_IDENTITY.json": {
+      "bytes": 3302,
+      "sha256": "4fa73eff3ad5050b58bc29e8f5f7b19c3171996951daa345b70e686f56c12ba7"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/ADDENDUM_V5_MANIFEST.json": {
+      "bytes": 2916,
+      "sha256": "b70acedb83ff0e47481f2293362926fcb47509ff49445f7c923f7bdfafdf0b45"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/CHECKPOINT.md": {
+      "bytes": 1041,
+      "sha256": "1fa42ed79ac618a0f3d3dee817bc1f9df1ab2a94a880e59717ad57b8352cdbba"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V5.md": {
+      "bytes": 5129,
+      "sha256": "cd17388b7ce81e3f20b6754acb4bb8470d08f03aef5cf55525afb60efdffb11d"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V5.json": {
+      "bytes": 1901,
+      "sha256": "7141960aceea822c6667d13c5e78be8a2a6944084c8b20e3a022a601a8a459b0"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/V4_ADDENDUM_REJECT_BINDING.json": {
+      "bytes": 3264,
+      "sha256": "93142d7a9c8357d62054fda64857b3d8abca262cf6de3102899f71f0067f0d48"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/V5_AUTHORITATIVE_COMPONENT_EQUALITIES.json": {
+      "bytes": 3764,
+      "sha256": "0daf86262120e2a0c53cdd6c19246b38266ff4247caa83fd916732f002ce1051"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/V5_EXACT_REGISTRATION_ORACLES.json": {
+      "bytes": 36169,
+      "sha256": "67e02866994783ecdfaaf3cbde6db8e28a765b09e51b121199fe5475848c2c11"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v5_v4_01_03_correction/V5_METADATA_PROPAGATION_ROWS.json": {
+      "bytes": 7010,
+      "sha256": "d26d6fde6025b499b367a22d45ee30920b4efa693ab3091b5b08179eb01267f0"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/ADDENDUM_V6_FREEZE.json": {
+      "bytes": 3001,
+      "sha256": "936e7f8d41030b6b78fb30cceb525c86d783c0bc8fed637bd19459ccb105c64f"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/ADDENDUM_V6_IDENTITY.json": {
+      "bytes": 3493,
+      "sha256": "490ccd8798337fc2952c2cc338240cb511355fe70861f359ba4be196b5cf6c6d"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/ADDENDUM_V6_MANIFEST.json": {
+      "bytes": 3166,
+      "sha256": "211b2764930f08d77f2b6360e80f9d0d313d5e4d65c9298f6fceb03376e493e8"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/CHECKPOINT.md": {
+      "bytes": 1225,
+      "sha256": "119198354a828ae72f3223b69b137a37cf4915cdee934d9df4eefbfe104049de"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V6.md": {
+      "bytes": 3774,
+      "sha256": "c516eb19a3f5989de45c0127e011fcd2935ee47c35f941c01ba66b7de7c7412f"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V6.json": {
+      "bytes": 2596,
+      "sha256": "c91b2c60f7a5fcf06759854ea6058e74e3d1c2f162d115c7783504dcf3b59271"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/V5_ADDENDUM_SEALED_REJECT_BINDING.json": {
+      "bytes": 3557,
+      "sha256": "f48b6140386052069c883e8af509539f6f5f7a7ad4015d9b12b5d925f72887f0"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/V6_AUTHORITATIVE_POST_HEAD_ORACLE.json": {
+      "bytes": 35977,
+      "sha256": "b540a051bc6aff89b6d07cf4cd0b533f6b95fcf0e4af408571cb29b8cdef4628"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/V6_EARLY_FIELD_ALLOWLISTS_AND_FORBIDDEN_PATHS.json": {
+      "bytes": 30465,
+      "sha256": "6db6d7e5a0a8341737080854d11bbe9eb31a8cbd4b5885899a8166ab0866e102"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/V6_INSTANCE_DEPENDENCY_DAG.json": {
+      "bytes": 75154,
+      "sha256": "4d93532198bd8e8493b5413ac8b425d564f2779a40a64ad0610afe0e823c5a96"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v6_v5_01_03_correction/V6_PROFILE_PIN_RESOLUTION_ORACLE.json": {
+      "bytes": 7282,
+      "sha256": "42d36714520fdacf71ddbd3364d73ada8749e7b4f464d4a703f75cf3fe13f66d"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/ADDENDUM_V7_FREEZE.json": {
+      "bytes": 3638,
+      "sha256": "4be96e29219dbda77b3c831e9c44e57fa52444244fb29ee2a04ac0aea0f81ae5"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/ADDENDUM_V7_IDENTITY.json": {
+      "bytes": 3782,
+      "sha256": "e83fb6d1fbb71706e32f781961212513068eba7d19e5f58aa1d538632b26b7b8"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/ADDENDUM_V7_MANIFEST.json": {
+      "bytes": 3793,
+      "sha256": "c24380c7416aabdd1068586377241bc4bcb1a4e19c5cd51bf2b60d448c6913aa"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/CHECKPOINT.md": {
+      "bytes": 1860,
+      "sha256": "6a64e0895a28cb5c37a9bbb82397e68ebcda32b070284d1cf5df7e4904253daa"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V7.md": {
+      "bytes": 4621,
+      "sha256": "d9d3912ef694356225685e3b7b1d28df17208ee05ca9ff3434c412b263237f65"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V7.json": {
+      "bytes": 6234,
+      "sha256": "56109dec5d1c1e60273db66837806b0c1eb3500339138fb691a9934d8075fc32"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/V6_ADDENDUM_SEALED_REJECT_BINDING.json": {
+      "bytes": 4585,
+      "sha256": "94fee6019d3e9eea441b3c64d8e8987105f206ec6b3ea7c046a4a0d755d3911c"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/V7_AUTHORITATIVE_PRESTATE_RECURRENCE.json": {
+      "bytes": 15802,
+      "sha256": "5e930837f6111ac75adc78ca63deda4f24339f078f6b6f245524c27dc04dd302"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/V7_EARLY_DEPENDENCY_CONTRACTS.json": {
+      "bytes": 38998,
+      "sha256": "634a157d98c1af7000849a90d8260a024052733c6053d8526eab400e064d6826"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/V7_INSTANCE_DEPENDENCY_DAG.json": {
+      "bytes": 66098,
+      "sha256": "4d0546feadbc16ca6c63b992fe3e52f6bff740efddbf8bf8ace847167f694093"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v7_v6_01_03_correction/V7_PROFILE_RESOLUTION_OBJECTS.json": {
+      "bytes": 30841,
+      "sha256": "40ff63fb70df50a82f7513087d4776fa2edef5f9c9be09110e6049f5113c2940"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/ADDENDUM_V8_FREEZE.json": {
+      "bytes": 3105,
+      "sha256": "72ca789f4549dd6b5caa2b4b19bb4c33d755167e7644d49fe32a1870c6d1174f"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/ADDENDUM_V8_IDENTITY.json": {
+      "bytes": 4123,
+      "sha256": "6f2e9764f8e6414aacc7a187fe436c57b5946ba37bf3a9819ad0d63b0879c916"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/ADDENDUM_V8_MANIFEST.json": {
+      "bytes": 5051,
+      "sha256": "e31b8042904e4f561f53ddab16220062353713850d3ccc1e7de0d6e996c6780f"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/CHECKPOINT.md": {
+      "bytes": 1401,
+      "sha256": "e9e2e0f06b0eda78a0143aa2f9789f0484a6dcc5367e3833d3fc28ba19ee2b75"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V8.md": {
+      "bytes": 3610,
+      "sha256": "b475c0bf07029cf80d0479f06a4de0bf11ae4cc54710e2e6ab9881d07b8d30f5"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V8.json": {
+      "bytes": 8323,
+      "sha256": "9bc4201c7ab68e7c4d683c0ec4471e91d3e836273ee4e4d510ea469aa3f9237b"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/V7_ADDENDUM_SEALED_REJECT_BINDING.json": {
+      "bytes": 4437,
+      "sha256": "c5a8023fa4b0bf6f0bc42a29acb5a33de1d5d9d76c308c1afd45f6d990b9fb83"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/V8_AUTHENTICATED_PREDECESSOR_CHAIN.json": {
+      "bytes": 96342,
+      "sha256": "f883db72246827f23e6b005952d22f0c15f0e4325b4ec139b5a22f19df16ac72"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/V8_INDEXED_PROFILE_PROOFS.json": {
+      "bytes": 538506,
+      "sha256": "4d773b7323faf7d3a1cdb0e6c47b13c08b813cffa761c51a7243f86a2e6c54ed"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/V8_INSTANCE_DEPENDENCY_DAG.json": {
+      "bytes": 389269,
+      "sha256": "4973a820eb0fdb4ee42be9df955b19816b1ceeba7041173897ce0a62fb138002"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v8_pv7_01_04_correction/V8_PER_OUTPUT_EARLY_CONTRACTS.json": {
+      "bytes": 689452,
+      "sha256": "38b56144da1b14b157c62b20367897cef1c78e81dfd76083b36bedc5f390eacb"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/ADDENDUM_V9_FREEZE.json": {
+      "bytes": 3373,
+      "sha256": "ec0608ebcddb6d994d41e9c66e707373a005f7a7896c527125071bd3ed6300d6"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/ADDENDUM_V9_IDENTITY.json": {
+      "bytes": 4274,
+      "sha256": "a600cefabb56ba5b341a7d0be995fe51c6250792cd8fad99c2d1d74436efad11"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/ADDENDUM_V9_MANIFEST.json": {
+      "bytes": 5908,
+      "sha256": "a9d1e98dd0c8f7eab283e2b50ba2b0d26fcc307296e9bc23dca3214fe89e0c1c"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/CHECKPOINT.md": {
+      "bytes": 1430,
+      "sha256": "83cd10793ea898d925dae12cbb4a71f7d4d91aef1710da00cf69b6d6f00d8ed5"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V21_PREAUDIT_V6_01_23_ADDENDUM_V9.md": {
+      "bytes": 4745,
+      "sha256": "747b58e8fa2e66e02b4b8ec9fb89e1f72eee4302cba4ac0a6c1d5f8f486c429b"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V21_PREAUDIT_V6_01_23_ATTACK_MATRIX_V9.json": {
+      "bytes": 9497,
+      "sha256": "504721f38ed5d01cd6d6db568261e8316d817e1b12b75d5cf81871b8fe91afdb"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V8_ADDENDUM_SEALED_REJECT_BINDING.json": {
+      "bytes": 4159,
+      "sha256": "6b30ed23d95fb802ec2c4d88210e4fa6caf4409acda114f27d132f4319219fae"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V9_AUTHORITATIVE_PRESTATE_CONSTANT_BRIDGE.json": {
+      "bytes": 8640,
+      "sha256": "56e57c54bbd67019fb40f3c752597e335c3a9ad1da3d9db180642bce025ae872"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V9_EFFECTIVE_PER_OUTPUT_CONTRACTS.json": {
+      "bytes": 387304,
+      "sha256": "02dd8f75fd4242f1542155260b422357e8a462c5d9e68fc4b5868a3e12bbacbc"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V9_EXACT_PRIOR_V5_V6_CHAIN.json": {
+      "bytes": 196659,
+      "sha256": "da961c7ef35a6ec4dd343dc04cec89cb26c9b33c6a6aa7170153aa06d255e051"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V9_INSTANCE_DEPENDENCY_DAG.json": {
+      "bytes": 898000,
+      "sha256": "3da64fa38a96d84b6267f7f756756b6ef058727a30ed0e4ebbffe98e202c0793"
+    },
+    "work/kira_conversation_continuity_v21_genuinely_different_pre_audit_protocol_v6_01_23_addendum_v9_pv8_01_02_correction/V9_PRIOR_PROFILE_RESOLUTION.json": {
+      "bytes": 510328,
+      "sha256": "ee53c81322bd8a47172ad318cecf5a79cb1afb529c810eba44e31162b3c7770f"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author/MIND_CONTINUITY_V21_SINGLETON_GENESIS_UNIQUE_OUTPUTS_RESTORED_CONTENT_HIDING_DATA_ONLY.zip": {
+      "bytes": 7214847,
+      "sha256": "aa7458fb526e1e13c166550a2f2b186461aab7f8cb580c6b8bc412732058bba2"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_freeze/AUTHOR_FREEZE.json": {
+      "bytes": 5114,
+      "sha256": "072d3c4e9654676e5251d992af26327932d329b28c098e2fe4493cc9de8b7bc5"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/ATTACKS_NULL_PINS_AND_AUTHORITY_V21.json": {
+      "bytes": 32990,
+      "sha256": "6c05df8229ab62a21e2c3e246e0396c36c51fd4da23f284492ca5ebdadc98f3c"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/AUTHOR_BUILD_RESULT.json": {
+      "bytes": 999,
+      "sha256": "28ec2442284106db75a9bbf117e986106ea540d2eda36e4e7917d7ba0730bce5"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/AUTHOR_SOURCE_MANIFEST.json": {
+      "bytes": 8337,
+      "sha256": "f9b04981644162e0a891de70108e6bc44ff99eec06cb3c357899a5b26abd8510"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/AUTHOR_TEST_RESULT.json": {
+      "bytes": 684,
+      "sha256": "8adba338e537aaf3dc73eec86830a379966103f9b642e40e03d9c8cd4fad36d1"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/CHECKPOINT.md": {
+      "bytes": 5410,
+      "sha256": "86e20e156989c5411caa36e75f90a2bfeeb5aa93511bcbc559db81d7166dd706"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/DESIGN.md": {
+      "bytes": 12017,
+      "sha256": "30305e368a2709e0865a7e443d6db2c475f9ae7ec17eeaf7381274f08fa1e007"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/FIXED_PREAUDIT_PROTOCOL_BINDING_V21.json": {
+      "bytes": 1523,
+      "sha256": "5e838e503bafa9428fdf71c63022f1a77075e89840b03b0730c88a2a81c98beb"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/HANDOFF.md": {
+      "bytes": 12464,
+      "sha256": "f5c9381a5f16f900957660d5c061cedaa232e15d881db8a02f67156342e649cf"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/PRESERVED_SELF_DIRECTION_AND_LIFECYCLE_V21.json": {
+      "bytes": 1902,
+      "sha256": "2a30fd745c22eedd7d6ea32a88ed2cefb98cd7ddb5532897ce408bd608ce172a"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/REQUIREMENTS.md": {
+      "bytes": 16417,
+      "sha256": "048da1f80058ab920521454b3ccc0ca2d7014608648dc85de02aa97e23f0824f"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/SINGLETON_GENESIS_UNIQUE_OUTPUTS_CONTENT_HIDING_SCHEMAS_V21.json": {
+      "bytes": 8880122,
+      "sha256": "7fcc7709360331117da0c6894ced76e8c6c183998947970be4fe8e3cac7af906"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/V20_FINAL_REJECT_BINDING_V21.json": {
+      "bytes": 2009,
+      "sha256": "32918983687a3933a9cb20fbb5faf57c3bb3472d16fc5d71c04eddef9423bd93"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/build_mind_v21.py": {
+      "bytes": 6958,
+      "sha256": "2c8dc483a651ac927741cf1da92d2084ffae94333759cd9ffcb1fa5e76478fca"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/compose_schema_v21.py": {
+      "bytes": 731960,
+      "sha256": "d108b32083a353daa58b6f9e6b03bf7a7e69814efd9a449abdf8c77479808155"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/compose_support_v21.py": {
+      "bytes": 4491,
+      "sha256": "cdb2cf281faf2e485b58610e65adc2d6e0fe35b59636a32ae8095dd78ff14890"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/seal_mind_v21_author.py": {
+      "bytes": 25136,
+      "sha256": "99058d6be8591972a17ba8ad4c512824b63a9027adc3f276a1c0d36b869e127d"
+    },
+    "work/kira_conversation_continuity_v21_singleton_genesis_unique_outputs_restored_content_hiding_data_only_author_source/test_mind_v21_author.py": {
+      "bytes": 69377,
+      "sha256": "77106d10ae4370aab73a2e7c3985b3f1811a886204fb6350f7fa6642659ac23f"
+    }
+  },
+  "external_protected_rehash_unchanged": true,
+  "author_and_protocol_bindings": {
+    "central": {
+      "bytes": 8880122,
+      "sha256": "7fcc7709360331117da0c6894ced76e8c6c183998947970be4fe8e3cac7af906"
+    },
+    "artifact": {
+      "bytes": 7214847,
+      "sha256": "aa7458fb526e1e13c166550a2f2b186461aab7f8cb580c6b8bc412732058bba2"
+    },
+    "author_freeze": {
+      "bytes": 5114,
+      "sha256": "072d3c4e9654676e5251d992af26327932d329b28c098e2fe4493cc9de8b7bc5"
+    },
+    "frozen_complete_root": "6f839672c5f1e988a99314a2a12375cc66c1e91c796821ed14352729b2317ece",
+    "artifact_payload_root": "4fb7dd580009f45f005cab88c1c6f13baf2bc547878219231c75bad99654efb6",
+    "baseline_protocol_root": "894b577fba2f8fe9197f08728690fdde2c8fae8f6452b7e254d7bb7569e01bfb",
+    "v10_payload_root": "3f086499a94a774439fdc9f4fb35e9a77e39c6db560b50d65f0f600d78edd622",
+    "v10_complete_root": "29aea591b0abdbf29d7341208e516ca2e2162f40e9884128f34d3e332f5b7978",
+    "v10_excluded_identity": {
+      "bytes": 4123,
+      "sha256": "ea82937fec9ce8ae89dbc589eb2c950862fbc70fdf94b433a761481176277149"
+    }
+  },
+  "post_seal_rehash_excluded_from_complete_root": true,
+  "append_only_seal_complete": true,
+  "static_only_no_go": {
+    "implemented_or_deployed": false,
+    "live_memory_or_executed_erasure": false,
+    "consciousness_personhood_body_or_biology": false,
+    "production_private_store_or_global_singleton": false,
+    "pending_action": false,
+    "go": null
+  }
+}

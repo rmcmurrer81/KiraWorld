@@ -1,0 +1,40 @@
+﻿{
+  "voice_id": "h_h_holmes_estimated_voice_v1",
+  "target_name": "H. H. Holmes",
+  "status": "estimated_reconstruction_only",
+  "authenticity": {
+    "verified_recording_available": false,
+    "authentic_voice_claim_allowed": false,
+    "note": "No verified recording has been added to Kira. Dramatizations and search summaries must not be represented as Holmes's authentic voice."
+  },
+  "evidence": [
+    {
+      "kind": "robert_provided_search_summary",
+      "review_status": "unverified_lead",
+      "claims": [
+        "possibly higher-pitched",
+        "possibly young-sounding",
+        "unsettling cadence and word choice"
+      ],
+      "excluded_claim": "A wax-cylinder confession recovered from Holmes's estate is not accepted without a reliable archival source."
+    }
+  ],
+  "sapi_approximation": {
+    "voice_name": "Microsoft David Desktop",
+    "rate": -2,
+    "volume": 90,
+    "max_chars": 1600,
+    "label": "temporary modern male approximation, not authentic"
+  },
+  "future_reference_policy": {
+    "use_period_primary_texts_for_word_choice": true,
+    "use_dramatizations_as_authentic_voice": false,
+    "allow_replacement_when_verified_audio_or_better_evidence_exists": true
+  },
+  "automatic_voice_discovery": {
+    "request": "TemporaryAI/candidates/h_h_holmes_h_h_holmes_20260605_221432/voice_discovery_request.json",
+    "index": "TemporaryAI/candidates/h_h_holmes_h_h_holmes_20260605_221432/voice_discovery_index.json",
+    "media_or_model_download_by_discovery": false,
+    "missing_verified_recording_falls_back_to_labeled_speculative_educational_design": true
+  }
+}

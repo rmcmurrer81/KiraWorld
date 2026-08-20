@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kiralabs.org/schemas/hanson-bridge/0.2/intention-envelope.schema.json",
+  "title": "Bounded high-level intention envelope proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "session_id",
+    "body_id",
+    "source_identity",
+    "intent_id",
+    "sequence",
+    "category",
+    "issued_at_utc",
+    "ttl_ms",
+    "payload",
+    "decision_scope"
+  ],
+  "properties": {
+    "protocol_version": {"const": "0.2-proposal"},
+    "session_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "body_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "source_identity": {"$ref": "#/$defs/opaqueIdentifier"},
+    "intent_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "sequence": {"type": "integer", "minimum": 1},
+    "category": {"enum": ["speech", "gaze", "expression", "gesture"]},
+    "issued_at_utc": {"type": "string", "format": "date-time"},
+    "ttl_ms": {"type": "integer", "minimum": 1, "maximum": 30000},
+    "payload": {"type": "object"},
+    "opaque_provenance_ref": {
+      "type": "string",
+      "maxLength": 256,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]*$"
+    },
+    "decision_scope": {"const": "physical_execution_only"}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "category": {"const": "speech"},
+        "payload": {"$ref": "#/$defs/speechPayload"}
+      }
+    },
+    {
+      "properties": {
+        "category": {"const": "gaze"},
+        "payload": {"$ref": "#/$defs/gazePayload"}
+      }
+    },
+    {
+      "properties": {
+        "category": {"const": "expression"},
+        "payload": {"$ref": "#/$defs/expressionPayload"}
+      }
+    },
+    {
+      "properties": {
+        "category": {"const": "gesture"},
+        "payload": {"$ref": "#/$defs/gesturePayload"}
+      }
+    }
+  ],
+  "$defs": {
+    "opaqueIdentifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    },
+    "boundedName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    },
+    "speechPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1, "maxLength": 500},
+        "voice": {"$ref": "#/$defs/boundedName"},
+        "max_duration_ms": {"type": "integer", "minimum": 1, "maximum": 20000}
+      }
+    },
+    "gazePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_frame", "target", "duration_ms"],
+      "properties": {
+        "target_frame": {"$ref": "#/$defs/boundedName"},
+        "target": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["x", "y", "z"],
+          "properties": {
+            "x": {"type": "number", "minimum": -5.0, "maximum": 5.0},
+            "y": {"type": "number", "minimum": -5.0, "maximum": 5.0},
+            "z": {"type": "number", "minimum": -5.0, "maximum": 5.0}
+          }
+        },
+        "duration_ms": {"type": "integer", "minimum": 1, "maximum": 10000}
+      }
+    },
+    "expressionPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["expression", "intensity", "duration_ms"],
+      "properties": {
+        "expression": {"$ref": "#/$defs/boundedName"},
+        "intensity": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "duration_ms": {"type": "integer", "minimum": 1, "maximum": 10000}
+      }
+    },
+    "gesturePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gesture", "intensity", "speed", "duration_ms"],
+      "properties": {
+        "gesture": {"$ref": "#/$defs/boundedName"},
+        "intensity": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "speed": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "duration_ms": {"type": "integer", "minimum": 1, "maximum": 10000}
+      }
+    }
+  }
+}

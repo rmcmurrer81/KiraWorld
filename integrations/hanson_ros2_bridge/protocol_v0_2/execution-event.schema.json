@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kiralabs.org/schemas/hanson-bridge/0.2/execution-event.schema.json",
+  "title": "Physical execution lifecycle event proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "session_id",
+    "body_id",
+    "intent_id",
+    "intent_sequence",
+    "status_sequence",
+    "category",
+    "state",
+    "terminal",
+    "reason_code",
+    "executor",
+    "recorded_at_utc",
+    "decision_scope"
+  ],
+  "properties": {
+    "protocol_version": {"const": "0.2-proposal"},
+    "session_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "body_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "intent_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "intent_sequence": {"type": "integer", "minimum": 1},
+    "status_sequence": {"type": "integer", "minimum": 1},
+    "category": {"enum": ["speech", "gaze", "expression", "gesture"]},
+    "state": {
+      "enum": [
+        "REQUESTED",
+        "ACCEPTED",
+        "STARTED",
+        "COMPLETED",
+        "REJECTED",
+        "FAILED",
+        "CANCELLED",
+        "INTERRUPTED",
+        "EXPIRED"
+      ]
+    },
+    "terminal": {"type": "boolean"},
+    "reason_code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "detail": {"type": "string", "maxLength": 512},
+    "executor": {"$ref": "#/$defs/opaqueIdentifier"},
+    "official_request_id": {
+      "type": ["string", "null"],
+      "maxLength": 128,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    },
+    "recorded_at_utc": {"type": "string", "format": "date-time"},
+    "evidence_record_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "decision_scope": {"const": "physical_execution_only"}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "enum": ["COMPLETED", "REJECTED", "FAILED", "CANCELLED", "INTERRUPTED", "EXPIRED"]
+          }
+        }
+      },
+      "then": {"properties": {"terminal": {"const": true}}},
+      "else": {"properties": {"terminal": {"const": false}}}
+    }
+  ],
+  "$defs": {
+    "opaqueIdentifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    }
+  }
+}

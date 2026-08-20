@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-05T05:20:00Z",
+  "notes": [
+    {
+      "source": "https://sketchfab.com/",
+      "label": "Sketchfab",
+      "use_for": [
+        "rigged character references when the avatar builder output is too primitive",
+        "environment reference models for Louvre, bakery, library, and house rebuilds",
+        "replacement props when hand-built low-poly placeholders block interaction testing"
+      ],
+      "intake_rule": "Copy useful downloads into Assets/third_party/intake with a manifest, smoke-test imports in Blender, and preserve originals until Robert approves cleanup.",
+      "caution": "Use downloaded models as references or staged bodies first; avoid destructive mesh merging until rig, scale, materials, and licensing notes are checked."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "request_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017_automatic_voice_source_nomination_v1",
+  "created_at": "2026-07-17T23:23:13.489459+00:00",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "identity_target": {
+    "target_name": "Kathryn Merteuil",
+    "version": "kathryn_ci2_ci1999_pilot2016_adult_continuation_v1; present at the 2016 NBC unaired-pilot period",
+    "speaker": "Adult Kathryn Merteuil, 2016 NBC unaired-pilot English performance",
+    "performer": "Sarah Michelle Gellar"
+  },
+  "sources": [
+    {
+      "url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+      "origin": "explicit_seed_url",
+      "nominated_start_seconds": 4.15,
+      "nominated_end_seconds": null,
+      "owner_nominated_target_only": true,
+      "owner_note": "Robert confirms Kathryn alone; machine review trims the dead lead and keeps faint score residue flagged for cleanup/QC."
+    }
+  ],
+  "search_queries": [
+    "Kathryn Merteuil Sarah Michelle Gellar non musical dialogue scene"
+  ],
+  "policy": {
+    "metadata_only": true,
+    "allow_media_download": false,
+    "allow_audio_extraction": false,
+    "allow_voice_training_or_cloning": false,
+    "allow_voice_assignment": false,
+    "allow_synthesis": false,
+    "allow_candidate_activation": false,
+    "owner_nomination_is_ranking_evidence_not_identity_proof": true,
+    "machine_identity_must_fail_closed": true
+  }
+}

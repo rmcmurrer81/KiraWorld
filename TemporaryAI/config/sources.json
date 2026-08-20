@@ -1,0 +1,165 @@
+{
+  "version": "1.1",
+  "purpose": "Define raw source folders for Kira's library and TemporaryAI source processing. Raw sources live in Kira/Data/library and extracted evidence is written elsewhere.",
+  "rules": {
+    "source_files_are_external_knowledge": true,
+    "do_not_treat_as_personal_memory": true,
+    "raw_sources_are_read_only": true,
+    "dedupe_by": "sha256_file_hash",
+    "auto_scan_new_files": true,
+    "manual_corrections_override_auto_detection": true,
+    "canon_sources_process_before_fanfic": true,
+    "fanfic_never_overwrites_canon": true,
+    "reading_a_file_does_not_equal_memory": true
+  },
+  "source_sets": {
+    "miraculous_canon_scripts": {
+      "description": "Canon script/transcript library for Miraculous Ladybug source processing.",
+      "source_folders": [
+        "Kira/Data/library/scripts/miraculous_ladybug"
+      ],
+      "file_patterns": [
+        "*.pdf",
+        "*.txt",
+        "*.md"
+      ],
+      "recursive": true,
+      "auto_scan": true,
+      "source_authority": "canon",
+      "content_format": "script_or_transcript",
+      "locked_sources": [],
+      "tags": [
+        "series:miraculous_ladybug",
+        "source_authority:canon",
+        "type:script",
+        "temporary_ai_source"
+      ]
+    },
+    "miraculous_fanfic_stories": {
+      "description": "Fanfic/story library for Miraculous Ladybug variant processing. These files are scanned as optional variant material only.",
+      "source_folders": [
+        "Kira/Data/library/stories/fanfic/miraculous_ladybug"
+      ],
+      "file_patterns": [
+        "*.txt",
+        "*.md",
+        "*.pdf"
+      ],
+      "recursive": true,
+      "auto_scan": true,
+      "source_authority": "fanfic_variant",
+      "content_format": "story_prose",
+      "locked_sources": [],
+      "tags": [
+        "series:miraculous_ladybug",
+        "source_authority:fanfic_variant",
+        "type:story",
+        "temporary_ai_variant_source",
+        "requires_review"
+      ]
+    }
+  },
+  "characters": {
+    "ladybug_marinette": {
+      "display_name": "Ladybug / Marinette Dupain-Cheng",
+      "aliases": [
+        "Ladybug",
+        "Marinette",
+        "Marinette Dupain-Cheng",
+        "Marinette Dupain Cheng"
+      ],
+      "source_sets": [
+        "miraculous_canon_scripts",
+        "miraculous_fanfic_stories"
+      ]
+    },
+    "cat_noir_adrien": {
+      "display_name": "Cat Noir / Adrien Agreste",
+      "aliases": [
+        "Cat Noir",
+        "Chat Noir",
+        "Adrien",
+        "Adrien Agreste"
+      ],
+      "source_sets": [
+        "miraculous_canon_scripts",
+        "miraculous_fanfic_stories"
+      ]
+    },
+    "bunnyx_alix": {
+      "display_name": "Bunnyx / Alix Kubdel",
+      "aliases": [
+        "Bunnyx",
+        "Bunnix",
+        "Alix",
+        "Alix Kubdel"
+      ],
+      "source_sets": [
+        "miraculous_canon_scripts",
+        "miraculous_fanfic_stories"
+      ]
+    },
+    "tikki": {
+      "display_name": "Tikki",
+      "aliases": [
+        "Tikki"
+      ],
+      "source_sets": [
+        "miraculous_canon_scripts",
+        "miraculous_fanfic_stories"
+      ]
+    },
+    "alya_cesaire": {
+      "display_name": "Alya Césaire",
+      "aliases": [
+        "Alya",
+        "Alya Césaire",
+        "Alya Cesaire"
+      ],
+      "source_sets": [
+        "miraculous_canon_scripts",
+        "miraculous_fanfic_stories"
+      ]
+    },
+    "gabriel_agreste_hawk_moth": {
+      "display_name": "Gabriel Agreste / Hawk Moth",
+      "aliases": [
+        "Gabriel",
+        "Gabriel Agreste",
+        "Hawk Moth",
+        "Shadow Moth",
+        "Monarch"
+      ],
+      "source_sets": [
+        "miraculous_canon_scripts",
+        "miraculous_fanfic_stories"
+      ]
+    },
+    "batman_bruce_wayne": {
+      "display_name": "Batman / Bruce Wayne",
+      "aliases": [
+        "Batman",
+        "Bruce",
+        "Bruce Wayne",
+        "Wayne"
+      ],
+      "source_sets": [
+        "miraculous_fanfic_stories"
+      ]
+    },
+    "joker": {
+      "display_name": "Joker",
+      "aliases": [
+        "Joker",
+        "the Joker"
+      ],
+      "source_sets": [
+        "miraculous_fanfic_stories"
+      ]
+    }
+  },
+  "index_output": {
+    "character_source_index": "Kira/Data/indexes/character_source_index.json",
+    "scan_log": "Kira/Data/indexes/source_scan_log.json"
+  }
+}

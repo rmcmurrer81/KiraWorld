@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sustainable Fashion Research Plan Revision Update Improvements v2",
+  "type": "object",
+  "properties": {
+    "research_question": {"type": "string"},
+    "methodology": {"type": "string"}
+  },
+  "required": ["research_question", "methodology"]
+}

@@ -1,0 +1,32 @@
+{
+  "voice_id": "kathryn_merteuil_owner_attested_reference_v1",
+  "name": "Kathryn Merteuil",
+  "target_name": "Kathryn Merteuil",
+  "target_type": "temp_ai",
+  "voice_mode": "private_reference_reconstruction",
+  "source_type": "owner_attested_fictional_character_dialogue",
+  "source_audio": {
+    "required": true,
+    "status": "owner_attested_target_only_range_cleaned_for_private_runtime_test",
+    "reference_pack": "Voice/reference_packs/kathryn_merteuil/owner_attested_youtube_20260717",
+    "approved_reference_wav": "Voice/reference_packs/kathryn_merteuil/owner_attested_youtube_20260717/model_input/approved_reference.wav",
+    "reviewed_target_clip_count": 1,
+    "reviewed_target_seconds": 33.85,
+    "source_range_seconds": [4.15, 38.0],
+    "cleanup": "70-10500 Hz speech band, narrow rejection at 329/659/988 Hz, peak normalized to -3 dBFS",
+    "evidence": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/automatic_voice_source_owner_range_review.json"
+  },
+  "sapi_approximation": {
+    "voice_name": "Microsoft Zira Desktop",
+    "rate": -1,
+    "volume": 92,
+    "max_chars": 1200
+  },
+  "status": {
+    "approval_state": "owner_attested_private_test",
+    "ready_for_text_tts": true,
+    "ready_for_use": true,
+    "current_playback_engine": "chatterbox_tts",
+    "readiness_label": "owner_attested_cleaned_reference_active_for_private_chat"
+  }
+}

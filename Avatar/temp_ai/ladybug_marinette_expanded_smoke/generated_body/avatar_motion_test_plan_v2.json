@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ladybug_marinette_expanded_smoke",
+  "updated_at": "2026-06-30T00:00:00-04:00",
+  "target_height_cm": 157,
+  "runtime_url_example": "/Avatar/runtime3d/dist/index.html?candidate=ladybug_marinette_expanded_smoke&manual=1&selftest=1",
+  "required_actions": [
+    {
+      "action": "stand",
+      "duration_seconds": 4,
+      "expected": "upright idle stance at 157 cm target height"
+    },
+    {
+      "action": "open_hand",
+      "duration_seconds": 4,
+      "expected": "both hands raised with five fingers extended"
+    },
+    {
+      "action": "close_hand",
+      "duration_seconds": 4,
+      "expected": "both hands raised with fingers curled into a closed-hand pose"
+    },
+    {
+      "action": "sit",
+      "duration_seconds": 5,
+      "expected": "seated pose for later desk, bed, or balcony furniture anchors"
+    },
+    {
+      "action": "walk",
+      "duration_seconds": 8,
+      "expected": "walk loop with arm swing and hair sway"
+    },
+    {
+      "action": "jog",
+      "duration_seconds": 60,
+      "expected": "one-minute jog loop with stronger arm, leg, and hair motion"
+    },
+    {
+      "action": "talking",
+      "duration_seconds": 8,
+      "expected": "mouth opens and closes from a timed text-viseme proxy"
+    }
+  ],
+  "known_limitations": [
+    "This is a runtime motion test, not final photoreal hair physics.",
+    "If the reviewed GLB lacks matching animation clips, the runtime falls back to procedural action handling.",
+    "Audio-accurate phoneme alignment remains a future pass after the voice system and viseme timings are available."
+  ]
+}

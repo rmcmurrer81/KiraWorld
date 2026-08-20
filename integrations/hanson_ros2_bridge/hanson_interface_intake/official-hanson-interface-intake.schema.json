@@ -1,0 +1,1573 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kiralabs.org/schemas/hanson-bridge/official-interface-intake/0.1/schema.json",
+  "title": "Official Hanson ROS 2 interface intake",
+  "description": "Closed, source-aware intake for simulator-first mapping. Empty and unresolved fields are intentional until Hanson supplies official values.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "intake_status",
+    "authority_boundary",
+    "official_sources",
+    "target_environment",
+    "packages",
+    "interfaces",
+    "frames",
+    "units",
+    "limits",
+    "capabilities",
+    "lifecycle_semantics",
+    "session_and_liveness",
+    "safety_semantics",
+    "review"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1-proposal"},
+    "intake_status": {
+      "enum": [
+        "awaiting_hanson_input",
+        "partially_sourced",
+        "hanson_reviewed",
+        "simulator_validated_for_named_versions"
+      ]
+    },
+    "authority_boundary": {"$ref": "#/$defs/authorityBoundary"},
+    "official_sources": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {"$ref": "#/$defs/officialSource"}
+    },
+    "target_environment": {"$ref": "#/$defs/targetEnvironment"},
+    "packages": {"$ref": "#/$defs/packageCatalog"},
+    "interfaces": {"$ref": "#/$defs/interfaceCatalog"},
+    "frames": {"$ref": "#/$defs/frameCatalog"},
+    "units": {"$ref": "#/$defs/unitCatalog"},
+    "limits": {"$ref": "#/$defs/limitCatalog"},
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["speech", "gaze", "expression", "gesture"],
+      "properties": {
+        "speech": {"$ref": "#/$defs/capabilitySemantics"},
+        "gaze": {"$ref": "#/$defs/capabilitySemantics"},
+        "expression": {"$ref": "#/$defs/capabilitySemantics"},
+        "gesture": {"$ref": "#/$defs/capabilitySemantics"}
+      }
+    },
+    "lifecycle_semantics": {"$ref": "#/$defs/lifecycleSemantics"},
+    "session_and_liveness": {"$ref": "#/$defs/sessionAndLiveness"},
+    "safety_semantics": {"$ref": "#/$defs/safetySemantics"},
+    "review": {"$ref": "#/$defs/review"}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "intake_status": {
+            "enum": ["hanson_reviewed", "simulator_validated_for_named_versions"]
+          }
+        },
+        "required": ["intake_status"]
+      },
+      "then": {
+        "properties": {
+          "official_sources": {"minItems": 1},
+          "target_environment": {
+            "properties": {
+              "ros_2_distribution": {"$ref": "#/$defs/officialText"},
+              "ros_2_patch_release": {"$ref": "#/$defs/officialText"},
+              "operating_system": {"$ref": "#/$defs/officialText"},
+              "architecture": {"$ref": "#/$defs/officialText"},
+              "rmw_implementation": {"$ref": "#/$defs/officialText"},
+              "simulator": {
+                "properties": {
+                  "product_name": {"$ref": "#/$defs/officialText"},
+                  "version": {"$ref": "#/$defs/officialText"},
+                  "fixture": {"$ref": "#/$defs/officialText"},
+                  "readiness_signal": {"$ref": "#/$defs/officialText"}
+                }
+              }
+            }
+          },
+          "packages": {"$ref": "#/$defs/officialNonemptyCatalog"},
+          "interfaces": {"$ref": "#/$defs/officialNonemptyCatalog"},
+          "frames": {"$ref": "#/$defs/officialNonemptyCatalog"},
+          "units": {"$ref": "#/$defs/officialNonemptyCatalog"},
+          "limits": {"$ref": "#/$defs/officialNonemptyCatalog"},
+          "capabilities": {
+            "properties": {
+              "speech": {"$ref": "#/$defs/officialCapabilityCore"},
+              "gaze": {"$ref": "#/$defs/officialCapabilityCore"},
+              "expression": {"$ref": "#/$defs/officialCapabilityCore"},
+              "gesture": {"$ref": "#/$defs/officialCapabilityCore"}
+            }
+          },
+          "lifecycle_semantics": {
+            "properties": {
+              "confirmation": {"$ref": "#/$defs/officialConfirmation"},
+              "status_interface_ids": {"$ref": "#/$defs/officialNonemptyStringList"}
+            }
+          },
+          "session_and_liveness": {
+            "properties": {
+              "confirmation": {"$ref": "#/$defs/officialConfirmation"},
+              "capability_discovery_interface_ids": {"$ref": "#/$defs/officialNonemptyStringList"},
+              "session_interface_ids": {"$ref": "#/$defs/officialNonemptyStringList"},
+              "heartbeat_interface_ids": {"$ref": "#/$defs/officialNonemptyStringList"}
+            }
+          },
+          "safety_semantics": {
+            "properties": {
+              "confirmation": {"$ref": "#/$defs/officialConfirmation"},
+              "authoritative_physical_safety_component": {"$ref": "#/$defs/officialText"},
+              "emergency_stop": {"$ref": "#/$defs/officialSafeguardCore"},
+              "watchdog": {"$ref": "#/$defs/officialSafeguardCore"},
+              "degraded_mode": {"$ref": "#/$defs/officialSafeguardCore"},
+              "collision_or_safe_stop": {"$ref": "#/$defs/officialSafeguardCore"},
+              "recovery": {"$ref": "#/$defs/officialSafeguardCore"}
+            }
+          },
+          "review": {
+            "properties": {
+              "hanson_review_disposition": {"$ref": "#/$defs/officialText"}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intake_status": {"const": "simulator_validated_for_named_versions"}
+        },
+        "required": ["intake_status"]
+      },
+      "then": {
+        "properties": {
+          "review": {
+            "properties": {
+              "simulator_evidence": {
+                "properties": {"status": {"const": "passed_for_named_versions"}},
+                "required": ["status"]
+              }
+            },
+            "required": ["simulator_evidence"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "review": {
+            "properties": {
+              "simulator_evidence": {
+                "properties": {"status": {"const": "passed_for_named_versions"}},
+                "required": ["status"]
+              }
+            },
+            "required": ["simulator_evidence"]
+          }
+        },
+        "required": ["review"]
+      },
+      "then": {
+        "properties": {
+          "intake_status": {"const": "simulator_validated_for_named_versions"}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intake_status": {"enum": ["awaiting_hanson_input", "partially_sourced"]}
+        },
+        "required": ["intake_status"]
+      },
+      "then": {
+        "properties": {
+          "review": {
+            "properties": {
+              "simulator_evidence": {
+                "properties": {"status": {"const": "not_run"}},
+                "required": ["status"]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$",
+      "not": {"pattern": "[\\u0000-\\u001F\\u007F]"}
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "\\S",
+      "not": {"pattern": "[\\u0000-\\u001F\\u007F-\\u009F\\u00AD\\u061C\\u200B-\\u200F\\u2028-\\u202E\\u2060-\\u206F\\uFEFF]"}
+    },
+    "reference": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "pattern": "\\S",
+      "not": {"pattern": "[\\u0000-\\u001F\\u007F-\\u009F\\u00AD\\u061C\\u200B-\\u200F\\u2028-\\u202E\\u2060-\\u206F\\uFEFF]"}
+    },
+    "rfc3339DateTime": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 35,
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,9})?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "not": {"pattern": "[\\u0000-\\u001F\\u007F]"}
+    },
+    "commitSha": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 40,
+      "pattern": "^[0-9a-f]{40}$",
+      "allOf": [
+        {"not": {"pattern": "[\\u0000-\\u001F\\u007F-\\u009F]"}},
+        {"not": {"const": "0000000000000000000000000000000000000000"}}
+      ]
+    },
+    "boundedNumber": {
+      "type": "number",
+      "minimum": -1000000000000,
+      "maximum": 1000000000000
+    },
+    "sourceIds": {
+      "type": "array",
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/identifier"}
+    },
+    "resolutionStatus": {
+      "enum": [
+        "unresolved",
+        "provided_unverified",
+        "confirmed_official",
+        "not_applicable_confirmed"
+      ]
+    },
+    "confirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "source_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/resolutionStatus"},
+        "source_ids": {"$ref": "#/$defs/sourceIds"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "unresolved"}}, "required": ["status"]},
+          "then": {"properties": {"source_ids": {"maxItems": 0}}}
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {"enum": ["confirmed_official", "not_applicable_confirmed"]}
+            },
+            "required": ["status"]
+          },
+          "then": {"properties": {"source_ids": {"minItems": 1}}}
+        }
+      ]
+    },
+    "entryConfirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "source_ids"],
+      "properties": {
+        "status": {"enum": ["provided_unverified", "confirmed_official"]},
+        "source_ids": {"$ref": "#/$defs/sourceIds"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "confirmed_official"}}, "required": ["status"]},
+          "then": {"properties": {"source_ids": {"minItems": 1}}}
+        }
+      ]
+    },
+    "sourcedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "source_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/resolutionStatus"},
+        "value": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]},
+        "source_ids": {"$ref": "#/$defs/sourceIds"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "unresolved"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "null"},
+              "source_ids": {"maxItems": 0}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "not_applicable_confirmed"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "null"},
+              "source_ids": {"minItems": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "provided_unverified"}}, "required": ["status"]},
+          "then": {"properties": {"value": {"$ref": "#/$defs/text"}}}
+        },
+        {
+          "if": {"properties": {"status": {"const": "confirmed_official"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"$ref": "#/$defs/text"},
+              "source_ids": {"minItems": 1}
+            }
+          }
+        }
+      ]
+    },
+    "sourcedNonnegativeInteger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "source_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/resolutionStatus"},
+        "value": {"type": ["integer", "null"], "minimum": 0, "maximum": 86400000},
+        "source_ids": {"$ref": "#/$defs/sourceIds"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "unresolved"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "null"},
+              "source_ids": {"maxItems": 0}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "not_applicable_confirmed"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "null"},
+              "source_ids": {"minItems": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "provided_unverified"}}, "required": ["status"]},
+          "then": {"properties": {"value": {"type": "integer", "minimum": 0, "maximum": 86400000}}}
+        },
+        {
+          "if": {"properties": {"status": {"const": "confirmed_official"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "integer", "minimum": 0, "maximum": 86400000},
+              "source_ids": {"minItems": 1}
+            }
+          }
+        }
+      ]
+    },
+    "sourcedPositiveInteger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "source_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/resolutionStatus"},
+        "value": {"type": ["integer", "null"], "minimum": 1, "maximum": 86400000},
+        "source_ids": {"$ref": "#/$defs/sourceIds"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "unresolved"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "null"},
+              "source_ids": {"maxItems": 0}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "not_applicable_confirmed"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "null"},
+              "source_ids": {"minItems": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "provided_unverified"}}, "required": ["status"]},
+          "then": {"properties": {"value": {"type": "integer", "minimum": 1, "maximum": 86400000}}}
+        },
+        {
+          "if": {"properties": {"status": {"const": "confirmed_official"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "value": {"type": "integer", "minimum": 1, "maximum": 86400000},
+              "source_ids": {"minItems": 1}
+            }
+          }
+        }
+      ]
+    },
+    "sourcedStringList": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "values", "source_ids"],
+      "properties": {
+        "status": {"$ref": "#/$defs/resolutionStatus"},
+        "values": {
+          "type": "array",
+          "maxItems": 512,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/text"}
+        },
+        "source_ids": {"$ref": "#/$defs/sourceIds"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "unresolved"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "values": {"maxItems": 0},
+              "source_ids": {"maxItems": 0}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "not_applicable_confirmed"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "values": {"maxItems": 0},
+              "source_ids": {"minItems": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "confirmed_official"}}, "required": ["status"]},
+          "then": {"properties": {"source_ids": {"minItems": 1}}}
+        }
+      ]
+    },
+    "officialConfirmation": {
+      "allOf": [
+        {"$ref": "#/$defs/confirmation"},
+        {"properties": {"status": {"const": "confirmed_official"}, "source_ids": {"minItems": 1}}}
+      ]
+    },
+    "officialText": {
+      "allOf": [
+        {"$ref": "#/$defs/sourcedText"},
+        {
+          "properties": {
+            "status": {"const": "confirmed_official"},
+            "value": {"$ref": "#/$defs/text"},
+            "source_ids": {"minItems": 1}
+          }
+        }
+      ]
+    },
+    "officialNonemptyStringList": {
+      "allOf": [
+        {"$ref": "#/$defs/sourcedStringList"},
+        {
+          "properties": {
+            "status": {"const": "confirmed_official"},
+            "values": {"minItems": 1},
+            "source_ids": {"minItems": 1}
+          }
+        }
+      ]
+    },
+    "officialNonemptyCatalog": {
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/officialConfirmation"},
+        "entries": {"minItems": 1}
+      },
+      "required": ["confirmation", "entries"]
+    },
+    "officialCapabilityCore": {
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/officialConfirmation"},
+        "interface_ids": {"$ref": "#/$defs/officialNonemptyStringList"}
+      },
+      "required": ["confirmation", "interface_ids"]
+    },
+    "officialSafeguardCore": {
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/officialConfirmation"},
+        "interface_ids": {"$ref": "#/$defs/officialNonemptyStringList"}
+      },
+      "required": ["confirmation", "interface_ids"]
+    },
+    "officialSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_kind",
+        "title",
+        "reference",
+        "revision",
+        "publication_clearance"
+      ],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/identifier"},
+        "source_kind": {
+          "enum": [
+            "public_documentation",
+            "authorized_repository",
+            "package_manifest",
+            "simulator_release_notes",
+            "authorized_hanson_confirmation"
+          ]
+        },
+        "title": {"$ref": "#/$defs/text"},
+        "reference": {"$ref": "#/$defs/reference"},
+        "revision": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]},
+        "publication_clearance": {"const": "public_or_authorized_for_repository"}
+      }
+    },
+    "authorityBoundary": {
+      "description": "Non-negotiable acceptance constraints for a future adapter, not claims about an existing Hanson implementation.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision_scope",
+        "simulator_or_robot_retains_physical_safety_authority",
+        "generic_bridge_direct_low_level_command_path",
+        "physical_status_may_govern_speech_memory_or_viewpoint",
+        "compatibility_claim"
+      ],
+      "properties": {
+        "decision_scope": {"const": "physical_execution_only"},
+        "simulator_or_robot_retains_physical_safety_authority": {"const": true},
+        "generic_bridge_direct_low_level_command_path": {"const": false},
+        "physical_status_may_govern_speech_memory_or_viewpoint": {"const": false},
+        "compatibility_claim": {"const": "none_until_named_official_simulator_validation"}
+      }
+    },
+    "simulatorEnvironment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "product_name",
+        "version",
+        "access_method",
+        "launch_package",
+        "launch_file_or_executable",
+        "launch_arguments",
+        "fixture",
+        "readiness_signal",
+        "shutdown_procedure"
+      ],
+      "properties": {
+        "product_name": {"$ref": "#/$defs/sourcedText"},
+        "version": {"$ref": "#/$defs/sourcedText"},
+        "access_method": {"$ref": "#/$defs/sourcedText"},
+        "launch_package": {"$ref": "#/$defs/sourcedText"},
+        "launch_file_or_executable": {"$ref": "#/$defs/sourcedText"},
+        "launch_arguments": {"$ref": "#/$defs/sourcedStringList"},
+        "fixture": {"$ref": "#/$defs/sourcedText"},
+        "readiness_signal": {"$ref": "#/$defs/sourcedText"},
+        "shutdown_procedure": {"$ref": "#/$defs/sourcedText"}
+      }
+    },
+    "targetEnvironment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ros_2_distribution",
+        "ros_2_patch_release",
+        "operating_system",
+        "architecture",
+        "python_version",
+        "rmw_implementation",
+        "dds_or_security_profile",
+        "time_source",
+        "clock_synchronization",
+        "simulator"
+      ],
+      "properties": {
+        "ros_2_distribution": {"$ref": "#/$defs/sourcedText"},
+        "ros_2_patch_release": {"$ref": "#/$defs/sourcedText"},
+        "operating_system": {"$ref": "#/$defs/sourcedText"},
+        "architecture": {"$ref": "#/$defs/sourcedText"},
+        "python_version": {"$ref": "#/$defs/sourcedText"},
+        "rmw_implementation": {"$ref": "#/$defs/sourcedText"},
+        "dds_or_security_profile": {"$ref": "#/$defs/sourcedText"},
+        "time_source": {"$ref": "#/$defs/sourcedText"},
+        "clock_synchronization": {"$ref": "#/$defs/sourcedText"},
+        "simulator": {"$ref": "#/$defs/simulatorEnvironment"}
+      }
+    },
+    "catalogResolutionGuard": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {
+                  "status": {"enum": ["unresolved", "not_applicable_confirmed"]}
+                },
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {"properties": {"entries": {"maxItems": 0}}}
+        },
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {
+                  "status": {"enum": ["provided_unverified", "confirmed_official"]}
+                },
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {"properties": {"entries": {"minItems": 1}}}
+        }
+      ]
+    },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "package_id",
+        "confirmation",
+        "official_name",
+        "version_or_commit",
+        "distribution_reference",
+        "license_identifier",
+        "purpose"
+      ],
+      "properties": {
+        "package_id": {"$ref": "#/$defs/identifier"},
+        "confirmation": {"$ref": "#/$defs/entryConfirmation"},
+        "official_name": {"$ref": "#/$defs/text"},
+        "version_or_commit": {"$ref": "#/$defs/text"},
+        "distribution_reference": {"$ref": "#/$defs/reference"},
+        "license_identifier": {"$ref": "#/$defs/text"},
+        "purpose": {"$ref": "#/$defs/text"}
+      }
+    },
+    "packageCatalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["confirmation", "entries"],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "entries": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {"$ref": "#/$defs/package"}
+        }
+      },
+      "allOf": [{"$ref": "#/$defs/catalogResolutionGuard"}]
+    },
+    "qosProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmation",
+        "channel",
+        "reliability",
+        "durability",
+        "history",
+        "depth",
+        "deadline_ms",
+        "lifespan_ms",
+        "liveliness",
+        "lease_duration_ms",
+        "notes"
+      ],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "channel": {
+          "type": ["string", "null"],
+          "enum": ["topic", "goal", "result", "feedback", "status", "cancel", "request", "response", "event", null]
+        },
+        "reliability": {"type": ["string", "null"], "enum": ["reliable", "best_effort", "system_default", null]},
+        "durability": {"type": ["string", "null"], "enum": ["volatile", "transient_local", "system_default", null]},
+        "history": {"type": ["string", "null"], "enum": ["keep_last", "keep_all", "system_default", null]},
+        "depth": {
+          "description": "Required and positive when history is keep_last; otherwise optional because official middleware conventions may still report it.",
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "deadline_ms": {"type": ["integer", "null"], "minimum": 0, "maximum": 86400000},
+        "lifespan_ms": {"type": ["integer", "null"], "minimum": 0, "maximum": 86400000},
+        "liveliness": {"type": ["string", "null"], "enum": ["automatic", "manual_by_topic", "system_default", null]},
+        "lease_duration_ms": {"type": ["integer", "null"], "minimum": 0, "maximum": 86400000},
+        "notes": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {
+                  "status": {"enum": ["unresolved", "not_applicable_confirmed"]}
+                },
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "channel": {"type": "null"},
+              "reliability": {"type": "null"},
+              "durability": {"type": "null"},
+              "history": {"type": "null"},
+              "depth": {"type": "null"},
+              "deadline_ms": {"type": "null"},
+              "lifespan_ms": {"type": "null"},
+              "liveliness": {"type": "null"},
+              "lease_duration_ms": {"type": "null"},
+              "notes": {"type": "null"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {
+                  "status": {"enum": ["provided_unverified", "confirmed_official"]}
+                },
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "channel": {"enum": ["topic", "goal", "result", "feedback", "status", "cancel", "request", "response", "event"]},
+              "reliability": {"enum": ["reliable", "best_effort", "system_default"]},
+              "durability": {"enum": ["volatile", "transient_local", "system_default"]},
+              "history": {"enum": ["keep_last", "keep_all", "system_default"]},
+              "deadline_ms": {"type": "integer", "minimum": 0, "maximum": 86400000},
+              "lifespan_ms": {"type": "integer", "minimum": 0, "maximum": 86400000},
+              "liveliness": {"enum": ["automatic", "manual_by_topic", "system_default"]},
+              "lease_duration_ms": {"type": "integer", "minimum": 0, "maximum": 86400000}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"history": {"const": "keep_last"}},
+            "required": ["history"]
+          },
+          "then": {
+            "properties": {
+              "depth": {"type": "integer", "minimum": 1, "maximum": 100000}
+            }
+          }
+        }
+      ]
+    },
+    "interface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "interface_id",
+        "confirmation",
+        "capability",
+        "kind",
+        "direction",
+        "package_id",
+        "ros_type",
+        "endpoint_name",
+        "qos_profiles",
+        "request_id_field",
+        "correlation_fields",
+        "frame_ids",
+        "unit_ids",
+        "acknowledgement_semantics",
+        "completion_semantics",
+        "cancellation_semantics",
+        "notes"
+      ],
+      "properties": {
+        "interface_id": {"$ref": "#/$defs/identifier"},
+        "confirmation": {"$ref": "#/$defs/entryConfirmation"},
+        "capability": {
+          "enum": [
+            "speech",
+            "gaze",
+            "expression",
+            "gesture",
+            "execution_status",
+            "capability_discovery",
+            "session_management",
+            "session_liveness",
+            "cancellation",
+            "safety_state"
+          ]
+        },
+        "kind": {"enum": ["topic", "action", "service"]},
+        "direction": {"enum": ["bridge_to_authority", "authority_to_bridge", "bidirectional"]},
+        "package_id": {"$ref": "#/$defs/identifier"},
+        "ros_type": {"$ref": "#/$defs/text"},
+        "endpoint_name": {"$ref": "#/$defs/text"},
+        "qos_profiles": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {"$ref": "#/$defs/qosProfile"}
+        },
+        "request_id_field": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]},
+        "correlation_fields": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/text"}
+        },
+        "frame_ids": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "unit_ids": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "acknowledgement_semantics": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]},
+        "completion_semantics": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]},
+        "cancellation_semantics": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]},
+        "notes": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"kind": {"const": "topic"}}, "required": ["kind"]},
+          "then": {
+            "properties": {
+              "qos_profiles": {
+                "items": {"properties": {"channel": {"enum": ["topic", null]}}}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"kind": {"const": "action"}}, "required": ["kind"]},
+          "then": {
+            "properties": {
+              "qos_profiles": {
+                "items": {"properties": {"channel": {"enum": ["goal", "result", "feedback", "status", "cancel", null]}}}
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"kind": {"const": "service"}}, "required": ["kind"]},
+          "then": {
+            "properties": {
+              "qos_profiles": {
+                "items": {"properties": {"channel": {"enum": ["request", "response", "event", null]}}}
+              }
+            }
+          }
+        }
+      ]
+    },
+    "interfaceCatalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["confirmation", "entries"],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "entries": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {"$ref": "#/$defs/interface"}
+        }
+      },
+      "allOf": [{"$ref": "#/$defs/catalogResolutionGuard"}]
+    },
+    "frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frame_id",
+        "confirmation",
+        "official_name",
+        "parent_frame_id",
+        "transform_authority",
+        "handedness",
+        "coordinate_convention",
+        "availability_semantics"
+      ],
+      "properties": {
+        "frame_id": {"$ref": "#/$defs/identifier"},
+        "confirmation": {"$ref": "#/$defs/entryConfirmation"},
+        "official_name": {"$ref": "#/$defs/text"},
+        "parent_frame_id": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/identifier"}]},
+        "transform_authority": {"$ref": "#/$defs/text"},
+        "handedness": {"type": ["string", "null"], "enum": ["right_handed", "left_handed", null]},
+        "coordinate_convention": {"$ref": "#/$defs/text"},
+        "availability_semantics": {"$ref": "#/$defs/text"}
+      }
+    },
+    "frameCatalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["confirmation", "entries"],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "entries": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {"$ref": "#/$defs/frame"}
+        }
+      },
+      "allOf": [{"$ref": "#/$defs/catalogResolutionGuard"}]
+    },
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unit_id",
+        "confirmation",
+        "quantity",
+        "official_unit_name",
+        "symbol",
+        "scale_to_si",
+        "offset_to_si"
+      ],
+      "properties": {
+        "unit_id": {"$ref": "#/$defs/identifier"},
+        "confirmation": {"$ref": "#/$defs/entryConfirmation"},
+        "quantity": {"$ref": "#/$defs/text"},
+        "official_unit_name": {"$ref": "#/$defs/text"},
+        "symbol": {"$ref": "#/$defs/text"},
+        "scale_to_si": {"type": "number", "exclusiveMinimum": 0, "maximum": 1000000000000},
+        "offset_to_si": {"$ref": "#/$defs/boundedNumber"}
+      }
+    },
+    "unitCatalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["confirmation", "entries"],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "entries": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {"$ref": "#/$defs/unit"}
+        }
+      },
+      "allOf": [{"$ref": "#/$defs/catalogResolutionGuard"}]
+    },
+    "limit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "limit_id",
+        "confirmation",
+        "capability",
+        "field_or_quantity",
+        "lower_bound",
+        "upper_bound",
+        "unit_id",
+        "enforcement_component",
+        "violation_outcome",
+        "notes"
+      ],
+      "properties": {
+        "limit_id": {"$ref": "#/$defs/identifier"},
+        "confirmation": {"$ref": "#/$defs/entryConfirmation"},
+        "capability": {"enum": ["speech", "gaze", "expression", "gesture", "cross_cutting"]},
+        "field_or_quantity": {"$ref": "#/$defs/text"},
+        "lower_bound": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/boundedNumber"}]},
+        "upper_bound": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/boundedNumber"}]},
+        "unit_id": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/identifier"}]},
+        "enforcement_component": {"$ref": "#/$defs/text"},
+        "violation_outcome": {"enum": ["reject", "interrupt", "safe_stop", "other_official_outcome"]},
+        "notes": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/text"}]}
+      },
+      "anyOf": [
+        {"properties": {"lower_bound": {"type": "number"}}},
+        {"properties": {"upper_bound": {"type": "number"}}}
+      ]
+    },
+    "limitCatalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["confirmation", "entries"],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "entries": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {"$ref": "#/$defs/limit"}
+        }
+      },
+      "allOf": [{"$ref": "#/$defs/catalogResolutionGuard"}]
+    },
+    "capabilityResolutionGuard": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/unresolvedMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "interface_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "official_vocabulary": {"$ref": "#/$defs/unresolvedMarker"},
+              "frame_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "unit_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "limit_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "queueing_semantics": {"$ref": "#/$defs/unresolvedMarker"},
+              "concurrency_semantics": {"$ref": "#/$defs/unresolvedMarker"},
+              "preemption_semantics": {"$ref": "#/$defs/unresolvedMarker"},
+              "completion_semantics": {"$ref": "#/$defs/unresolvedMarker"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/notApplicableMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "interface_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "official_vocabulary": {"$ref": "#/$defs/notApplicableMarker"},
+              "frame_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "unit_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "limit_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "queueing_semantics": {"$ref": "#/$defs/notApplicableMarker"},
+              "concurrency_semantics": {"$ref": "#/$defs/notApplicableMarker"},
+              "preemption_semantics": {"$ref": "#/$defs/notApplicableMarker"},
+              "completion_semantics": {"$ref": "#/$defs/notApplicableMarker"}
+            }
+          }
+        }
+      ]
+    },
+    "capabilitySemantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmation",
+        "interface_ids",
+        "official_vocabulary",
+        "frame_ids",
+        "unit_ids",
+        "limit_ids",
+        "queueing_semantics",
+        "concurrency_semantics",
+        "preemption_semantics",
+        "completion_semantics"
+      ],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "interface_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "official_vocabulary": {"$ref": "#/$defs/sourcedStringList"},
+        "frame_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "unit_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "limit_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "queueing_semantics": {"$ref": "#/$defs/sourcedText"},
+        "concurrency_semantics": {"$ref": "#/$defs/sourcedText"},
+        "preemption_semantics": {"$ref": "#/$defs/sourcedText"},
+        "completion_semantics": {"$ref": "#/$defs/sourcedText"}
+      },
+      "allOf": [{"$ref": "#/$defs/capabilityResolutionGuard"}]
+    },
+    "stateMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmation",
+        "official_state_or_outcome",
+        "official_event_field",
+        "terminal",
+        "meaning",
+        "late_event_handling"
+      ],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "official_state_or_outcome": {"$ref": "#/$defs/sourcedText"},
+        "official_event_field": {"$ref": "#/$defs/sourcedText"},
+        "terminal": {"type": ["boolean", "null"]},
+        "meaning": {"$ref": "#/$defs/sourcedText"},
+        "late_event_handling": {"$ref": "#/$defs/sourcedText"}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {"status": {"const": "unresolved"}},
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "official_state_or_outcome": {"properties": {"status": {"const": "unresolved"}}},
+              "official_event_field": {"properties": {"status": {"const": "unresolved"}}},
+              "terminal": {"type": "null"},
+              "meaning": {"properties": {"status": {"const": "unresolved"}}},
+              "late_event_handling": {"properties": {"status": {"const": "unresolved"}}}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {"status": {"const": "not_applicable_confirmed"}},
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "official_state_or_outcome": {"properties": {"status": {"const": "not_applicable_confirmed"}}},
+              "official_event_field": {"properties": {"status": {"const": "not_applicable_confirmed"}}},
+              "terminal": {"type": "null"},
+              "meaning": {"properties": {"status": {"const": "not_applicable_confirmed"}}},
+              "late_event_handling": {"properties": {"status": {"const": "not_applicable_confirmed"}}}
+            }
+          }
+        }
+      ]
+    },
+    "nonterminalStateMapping": {
+      "allOf": [
+        {"$ref": "#/$defs/stateMapping"},
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {"status": {"enum": ["provided_unverified", "confirmed_official"]}},
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {"properties": {"terminal": {"const": false}}}
+        }
+      ]
+    },
+    "terminalStateMapping": {
+      "allOf": [
+        {"$ref": "#/$defs/stateMapping"},
+        {
+          "if": {
+            "properties": {
+              "confirmation": {
+                "properties": {"status": {"enum": ["provided_unverified", "confirmed_official"]}},
+                "required": ["status"]
+              }
+            },
+            "required": ["confirmation"]
+          },
+          "then": {"properties": {"terminal": {"const": true}}}
+        }
+      ]
+    },
+    "unresolvedMarker": {
+      "properties": {"status": {"const": "unresolved"}},
+      "required": ["status"]
+    },
+    "notApplicableMarker": {
+      "properties": {"status": {"const": "not_applicable_confirmed"}},
+      "required": ["status"]
+    },
+    "unresolvedConfirmationMarker": {
+      "properties": {"confirmation": {"$ref": "#/$defs/unresolvedMarker"}},
+      "required": ["confirmation"]
+    },
+    "notApplicableConfirmationMarker": {
+      "properties": {"confirmation": {"$ref": "#/$defs/notApplicableMarker"}},
+      "required": ["confirmation"]
+    },
+    "lifecycleResolutionGuard": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/unresolvedMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "status_interface_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "official_request_id_field": {"$ref": "#/$defs/unresolvedMarker"},
+              "correlation_fields": {"$ref": "#/$defs/unresolvedMarker"},
+              "status_ordering": {"$ref": "#/$defs/unresolvedMarker"},
+              "request_admission": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "requested": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "accepted": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "started": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "completed": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "rejected": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "failed": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "cancelled": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "interrupted": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "expired": {"$ref": "#/$defs/unresolvedConfirmationMarker"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/notApplicableMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "status_interface_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "official_request_id_field": {"$ref": "#/$defs/notApplicableMarker"},
+              "correlation_fields": {"$ref": "#/$defs/notApplicableMarker"},
+              "status_ordering": {"$ref": "#/$defs/notApplicableMarker"},
+              "request_admission": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "requested": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "accepted": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "started": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "completed": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "rejected": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "failed": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "cancelled": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "interrupted": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "expired": {"$ref": "#/$defs/notApplicableConfirmationMarker"}
+            }
+          }
+        }
+      ]
+    },
+    "lifecycleSemantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmation",
+        "status_interface_ids",
+        "official_request_id_field",
+        "correlation_fields",
+        "status_ordering",
+        "request_admission",
+        "requested",
+        "accepted",
+        "started",
+        "completed",
+        "rejected",
+        "failed",
+        "cancelled",
+        "interrupted",
+        "expired"
+      ],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "status_interface_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "official_request_id_field": {"$ref": "#/$defs/sourcedText"},
+        "correlation_fields": {"$ref": "#/$defs/sourcedStringList"},
+        "status_ordering": {"$ref": "#/$defs/sourcedText"},
+        "request_admission": {"$ref": "#/$defs/nonterminalStateMapping"},
+        "requested": {"$ref": "#/$defs/nonterminalStateMapping"},
+        "accepted": {"$ref": "#/$defs/nonterminalStateMapping"},
+        "started": {"$ref": "#/$defs/nonterminalStateMapping"},
+        "completed": {"$ref": "#/$defs/terminalStateMapping"},
+        "rejected": {"$ref": "#/$defs/terminalStateMapping"},
+        "failed": {"$ref": "#/$defs/terminalStateMapping"},
+        "cancelled": {"$ref": "#/$defs/terminalStateMapping"},
+        "interrupted": {"$ref": "#/$defs/terminalStateMapping"},
+        "expired": {"$ref": "#/$defs/terminalStateMapping"}
+      },
+      "allOf": [{"$ref": "#/$defs/lifecycleResolutionGuard"}]
+    },
+    "sessionResolutionGuard": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/unresolvedMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "capability_discovery_interface_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "session_interface_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "heartbeat_interface_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "authentication_semantics": {"$ref": "#/$defs/unresolvedMarker"},
+              "one_active_session_fencing": {"$ref": "#/$defs/unresolvedMarker"},
+              "session_ttl_ms": {"$ref": "#/$defs/unresolvedMarker"},
+              "heartbeat_period_ms": {"$ref": "#/$defs/unresolvedMarker"},
+              "heartbeat_timeout_ms": {"$ref": "#/$defs/unresolvedMarker"},
+              "disconnect_detection": {"$ref": "#/$defs/unresolvedMarker"},
+              "in_flight_disconnect_outcome": {"$ref": "#/$defs/unresolvedMarker"},
+              "reconnect_semantics": {"$ref": "#/$defs/unresolvedMarker"},
+              "replacement_semantics": {"$ref": "#/$defs/unresolvedMarker"},
+              "retry_and_idempotency_semantics": {"$ref": "#/$defs/unresolvedMarker"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/notApplicableMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "capability_discovery_interface_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "session_interface_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "heartbeat_interface_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "authentication_semantics": {"$ref": "#/$defs/notApplicableMarker"},
+              "one_active_session_fencing": {"$ref": "#/$defs/notApplicableMarker"},
+              "session_ttl_ms": {"$ref": "#/$defs/notApplicableMarker"},
+              "heartbeat_period_ms": {"$ref": "#/$defs/notApplicableMarker"},
+              "heartbeat_timeout_ms": {"$ref": "#/$defs/notApplicableMarker"},
+              "disconnect_detection": {"$ref": "#/$defs/notApplicableMarker"},
+              "in_flight_disconnect_outcome": {"$ref": "#/$defs/notApplicableMarker"},
+              "reconnect_semantics": {"$ref": "#/$defs/notApplicableMarker"},
+              "replacement_semantics": {"$ref": "#/$defs/notApplicableMarker"},
+              "retry_and_idempotency_semantics": {"$ref": "#/$defs/notApplicableMarker"}
+            }
+          }
+        }
+      ]
+    },
+    "sessionAndLiveness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmation",
+        "capability_discovery_interface_ids",
+        "session_interface_ids",
+        "heartbeat_interface_ids",
+        "authentication_semantics",
+        "one_active_session_fencing",
+        "session_ttl_ms",
+        "heartbeat_period_ms",
+        "heartbeat_timeout_ms",
+        "disconnect_detection",
+        "in_flight_disconnect_outcome",
+        "reconnect_semantics",
+        "replacement_semantics",
+        "retry_and_idempotency_semantics"
+      ],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "capability_discovery_interface_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "session_interface_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "heartbeat_interface_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "authentication_semantics": {"$ref": "#/$defs/sourcedText"},
+        "one_active_session_fencing": {"$ref": "#/$defs/sourcedText"},
+        "session_ttl_ms": {"$ref": "#/$defs/sourcedPositiveInteger"},
+        "heartbeat_period_ms": {"$ref": "#/$defs/sourcedPositiveInteger"},
+        "heartbeat_timeout_ms": {"$ref": "#/$defs/sourcedPositiveInteger"},
+        "disconnect_detection": {"$ref": "#/$defs/sourcedText"},
+        "in_flight_disconnect_outcome": {"$ref": "#/$defs/sourcedText"},
+        "reconnect_semantics": {"$ref": "#/$defs/sourcedText"},
+        "replacement_semantics": {"$ref": "#/$defs/sourcedText"},
+        "retry_and_idempotency_semantics": {"$ref": "#/$defs/sourcedText"}
+      },
+      "allOf": [{"$ref": "#/$defs/sessionResolutionGuard"}]
+    },
+    "safeguard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmation",
+        "interface_ids",
+        "official_states",
+        "trigger_semantics",
+        "physical_outcome",
+        "recovery_semantics"
+      ],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "interface_ids": {"$ref": "#/$defs/sourcedStringList"},
+        "official_states": {"$ref": "#/$defs/sourcedStringList"},
+        "trigger_semantics": {"$ref": "#/$defs/sourcedText"},
+        "physical_outcome": {"$ref": "#/$defs/sourcedText"},
+        "recovery_semantics": {"$ref": "#/$defs/sourcedText"}
+      },
+      "allOf": [{"$ref": "#/$defs/safeguardResolutionGuard"}]
+    },
+    "safeguardResolutionGuard": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/unresolvedMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "interface_ids": {"$ref": "#/$defs/unresolvedMarker"},
+              "official_states": {"$ref": "#/$defs/unresolvedMarker"},
+              "trigger_semantics": {"$ref": "#/$defs/unresolvedMarker"},
+              "physical_outcome": {"$ref": "#/$defs/unresolvedMarker"},
+              "recovery_semantics": {"$ref": "#/$defs/unresolvedMarker"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/notApplicableMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "interface_ids": {"$ref": "#/$defs/notApplicableMarker"},
+              "official_states": {"$ref": "#/$defs/notApplicableMarker"},
+              "trigger_semantics": {"$ref": "#/$defs/notApplicableMarker"},
+              "physical_outcome": {"$ref": "#/$defs/notApplicableMarker"},
+              "recovery_semantics": {"$ref": "#/$defs/notApplicableMarker"}
+            }
+          }
+        }
+      ]
+    },
+    "safetyResolutionGuard": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/unresolvedMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "authoritative_physical_safety_component": {"$ref": "#/$defs/unresolvedMarker"},
+              "emergency_stop": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "watchdog": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "degraded_mode": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "collision_or_safe_stop": {"$ref": "#/$defs/unresolvedConfirmationMarker"},
+              "recovery": {"$ref": "#/$defs/unresolvedConfirmationMarker"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"confirmation": {"$ref": "#/$defs/notApplicableMarker"}},
+            "required": ["confirmation"]
+          },
+          "then": {
+            "properties": {
+              "authoritative_physical_safety_component": {"$ref": "#/$defs/notApplicableMarker"},
+              "emergency_stop": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "watchdog": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "degraded_mode": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "collision_or_safe_stop": {"$ref": "#/$defs/notApplicableConfirmationMarker"},
+              "recovery": {"$ref": "#/$defs/notApplicableConfirmationMarker"}
+            }
+          }
+        }
+      ]
+    },
+    "safetySemantics": {
+      "description": "Official safety mappings remain unresolved; constant fields are acceptance requirements rather than assertions about current products.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmation",
+        "authoritative_physical_safety_component",
+        "bridge_may_bypass_or_disable_safeguards",
+        "network_or_bridge_failure_may_disable_safeguards",
+        "automatic_physical_retry_policy",
+        "emergency_stop",
+        "watchdog",
+        "degraded_mode",
+        "collision_or_safe_stop",
+        "recovery"
+      ],
+      "properties": {
+        "confirmation": {"$ref": "#/$defs/confirmation"},
+        "authoritative_physical_safety_component": {"$ref": "#/$defs/sourcedText"},
+        "bridge_may_bypass_or_disable_safeguards": {"const": false},
+        "network_or_bridge_failure_may_disable_safeguards": {"const": false},
+        "automatic_physical_retry_policy": {"const": "disabled_until_explicitly_reviewed"},
+        "emergency_stop": {"$ref": "#/$defs/safeguard"},
+        "watchdog": {"$ref": "#/$defs/safeguard"},
+        "degraded_mode": {"$ref": "#/$defs/safeguard"},
+        "collision_or_safe_stop": {"$ref": "#/$defs/safeguard"},
+        "recovery": {"$ref": "#/$defs/safeguard"}
+      },
+      "allOf": [{"$ref": "#/$defs/safetyResolutionGuard"}]
+    },
+    "simulatorEvidence": {
+      "description": "A local validation record for exact named versions. The semantic validator also rejects Git's all-zero null object id and completion times more than five minutes in the future.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "commit_sha", "run_record_reference", "completed_at_utc"],
+      "properties": {
+        "status": {"enum": ["not_run", "failed", "passed_for_named_versions"]},
+        "commit_sha": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/commitSha"}]},
+        "run_record_reference": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/reference"}]},
+        "completed_at_utc": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/rfc3339DateTime"}]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "not_run"}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "commit_sha": {"type": "null"},
+              "run_record_reference": {"type": "null"},
+              "completed_at_utc": {"type": "null"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"enum": ["failed", "passed_for_named_versions"]}}, "required": ["status"]},
+          "then": {
+            "properties": {
+              "commit_sha": {"$ref": "#/$defs/commitSha"},
+              "run_record_reference": {"$ref": "#/$defs/reference"},
+              "completed_at_utc": {"$ref": "#/$defs/rfc3339DateTime"}
+            }
+          }
+        }
+      ]
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "open_questions",
+        "hanson_review_disposition",
+        "simulator_evidence",
+        "publication_check"
+      ],
+      "properties": {
+        "open_questions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/text"}
+        },
+        "hanson_review_disposition": {"$ref": "#/$defs/sourcedText"},
+        "simulator_evidence": {"$ref": "#/$defs/simulatorEvidence"},
+        "publication_check": {
+          "const": "no_private_email_credentials_private_memory_or_unreleased_material"
+        }
+      }
+    }
+  }
+}

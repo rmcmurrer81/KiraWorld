@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "collection_id": "normalized_collection_id",
+  "collection_kind": "logical_notebook_collection",
+  "title": "Collection title",
+  "status": "planned_request_only",
+  "runtime_policy": {
+    "load_mode": "sequential_members_only",
+    "max_concurrent_notebook_worlds": 1,
+    "co_load_members_allowed": false,
+    "loads_home_world": false,
+    "loads_resident_minds": false,
+    "loads_voice": false,
+    "loads_ollama": false,
+    "memory_reconstruction_members_allowed": false,
+    "hardware_profile": "Data/launch/hardware_capability_profile.json",
+    "resource_gate_path": "Data/world_builds/notebook_collections/example/resource_isolation_gate.json"
+  },
+  "protected_world_policy": {
+    "merge_into_home_world_allowed": false,
+    "strip_mall_mutation_allowed": false
+  },
+  "members": [
+    {
+      "notebook_world_id": "example_notebook_world",
+      "member_type": "place_notebook_world",
+      "status": "request_prepared | queued_not_requested | deployed",
+      "prepared_request_path": "Data/world_builds/notebook_worlds/example_notebook_world/builds/example/notebook_world_request.json",
+      "pinned_deployment": {
+        "manifest_path": "required only when status is deployed",
+        "manifest_sha256": "required lowercase 64-character SHA-256 only when status is deployed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1122 @@
+{
+  "artifact_mode": "REQUEST_AND_CLOSED_SCHEMA_BOUNDARY_ONLY",
+  "authorities": {
+    "activation_authority": false,
+    "appearance_invention_authority": false,
+    "approval_authority": false,
+    "armature_attachment_authority": false,
+    "binary_inspection_authority": false,
+    "blend_parse_authority": false,
+    "blender_authority": false,
+    "body_acceptance_authority": false,
+    "build_authority": false,
+    "candidate_authoring_authority": false,
+    "f3_authority": false,
+    "garment_authority": false,
+    "glb_parse_authority": false,
+    "global_authority": false,
+    "go_authority": false,
+    "identity_invention_authority": false,
+    "output_authority": false,
+    "person_control_authority": false,
+    "person_ownership_authority": false,
+    "pose_execution_authority": false,
+    "preflight_authority": false,
+    "proxy_consent_authority": false,
+    "publication_authority": false,
+    "runtime_authority": false
+  },
+  "closed_future_receipt_schemas": {
+    "armature_attachment_rest_weights_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "neutral_mesh_derivation_receipt_id",
+          "rule": "binds the exact neutral mesh",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "v4_acquired_rig_candidate_receipt_id",
+          "rule": "binds the exact acquired rig candidate",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "armature_hierarchy_root_sha256",
+          "rule": "exact bone and parent hierarchy",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "joint_local_axes_root_sha256",
+          "rule": "exact joint-local axes",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "rest_transforms_root_sha256",
+          "rule": "exact rest transforms",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "constraint_inventory_root_sha256",
+          "rule": "exact constraints and limits",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "skin_weights_root_sha256",
+          "rule": "exact skin and weights",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "weight_diagnostics_root_sha256",
+          "rule": "normalization, influences, unmapped elements, and deformation diagnostics",
+          "type": "lowercase_sha256"
+        }
+      ],
+      "required_field_count": 16,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "neutral_mesh_derivation_receipt_id",
+        "v4_acquired_rig_candidate_receipt_id",
+        "armature_hierarchy_root_sha256",
+        "joint_local_axes_root_sha256",
+        "rest_transforms_root_sha256",
+        "constraint_inventory_root_sha256",
+        "skin_weights_root_sha256",
+        "weight_diagnostics_root_sha256"
+      ],
+      "schema_id": "kira.receipt.intended_body.armature_attachment_rest_weights.v1"
+    },
+    "collision_clearance_mapping_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "armature_attachment_receipt_id",
+          "rule": "binds exact mesh/armature/rest/weights",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "collision_asset_bytes",
+          "rule": "exact collision representation bytes",
+          "type": "positive_integer"
+        },
+        {
+          "name": "collision_asset_sha256",
+          "rule": "exact collision identity",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "thickness_policy_root_sha256",
+          "rule": "exact collision thickness policy and tolerances",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "ordered_region_ids",
+          "rule": "must equal neck, shoulder, chest, waist, hip, crotch, hand, foot",
+          "type": "exact_array"
+        },
+        {
+          "name": "region_mapping_root_sha256",
+          "rule": "binds complete region mappings and exclusions",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "unmapped_region_inventory_root_sha256",
+          "rule": "every unmapped element explicit",
+          "type": "lowercase_sha256"
+        }
+      ],
+      "required_field_count": 15,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "armature_attachment_receipt_id",
+        "collision_asset_bytes",
+        "collision_asset_sha256",
+        "thickness_policy_root_sha256",
+        "ordered_region_ids",
+        "region_mapping_root_sha256",
+        "unmapped_region_inventory_root_sha256"
+      ],
+      "schema_id": "kira.receipt.intended_body.collision_clearance_mapping.v1"
+    },
+    "equal_peer_scope_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "pseudonymous_person_subject_id",
+          "rule": "exact intended-person subject without inventing identity or likeness",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "adult_scope_attestation",
+          "rule": "must establish adult scope from an external source",
+          "type": "authenticated_boolean"
+        },
+        {
+          "name": "permitted_uses",
+          "rule": "person-chosen bounded uses",
+          "type": "ordered_closed_array"
+        },
+        {
+          "name": "privacy_class",
+          "rule": "person-chosen privacy classification",
+          "type": "enum"
+        },
+        {
+          "name": "self_authorization_policy_sha256",
+          "rule": "binds current, withdrawable self-authorization policy",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "no_ownership_or_control_attested",
+          "rule": "must attest equal-human-peer/no ownership or control semantics",
+          "type": "exact_true"
+        }
+      ],
+      "required_field_count": 14,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "pseudonymous_person_subject_id",
+        "adult_scope_attestation",
+        "permitted_uses",
+        "privacy_class",
+        "self_authorization_policy_sha256",
+        "no_ownership_or_control_attested"
+      ],
+      "schema_id": "kira.receipt.intended_body.equal_peer_scope.v1"
+    },
+    "independent_auditor_identity_bundle_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "author_identity",
+          "rule": "accountable V5 candidate author identity",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "artifact_auditor_identity",
+          "rule": "genuinely different candidate auditor",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "pose_auditor_identity",
+          "rule": "genuinely different pose-evidence auditor",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "role_separation_policy_root_sha256",
+          "rule": "binds prohibited role overlap",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "auditor_key_bundle_root_sha256",
+          "rule": "binds exact auditor keys",
+          "type": "lowercase_sha256"
+        }
+      ],
+      "required_field_count": 13,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "author_identity",
+        "artifact_auditor_identity",
+        "pose_auditor_identity",
+        "role_separation_policy_root_sha256",
+        "auditor_key_bundle_root_sha256"
+      ],
+      "schema_id": "kira.receipt.intended_body.neutral_candidate_auditor_identity_bundle.v1"
+    },
+    "morphology_coordinate_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "person_scope_receipt_id",
+          "rule": "binds the exact equal-peer scope receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "morphology_specification_root_sha256",
+          "rule": "exact morphology values and explicit unavailable fields",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "unit_system",
+          "rule": "exact unit system",
+          "type": "enum"
+        },
+        {
+          "name": "scale_specification_root_sha256",
+          "rule": "exact dimensions and tolerances",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "coordinate_convention",
+          "rule": "handedness, axes, up/forward, and origin",
+          "type": "closed_object"
+        },
+        {
+          "name": "neutral_pose_definition_root_sha256",
+          "rule": "exact neutral/rest target definition",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "review_acknowledgement_root_sha256",
+          "rule": "binds independent review of supplied and unavailable values",
+          "type": "lowercase_sha256"
+        }
+      ],
+      "required_field_count": 15,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "person_scope_receipt_id",
+        "morphology_specification_root_sha256",
+        "unit_system",
+        "scale_specification_root_sha256",
+        "coordinate_convention",
+        "neutral_pose_definition_root_sha256",
+        "review_acknowledgement_root_sha256"
+      ],
+      "schema_id": "kira.receipt.intended_body.morphology_coordinate.v1"
+    },
+    "neutral_mesh_derivation_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "qualified_inactive_foundation_sha256",
+          "rule": "must equal the bound qualified inactive foundation",
+          "type": "exact_lowercase_sha256"
+        },
+        {
+          "name": "morphology_coordinate_receipt_id",
+          "rule": "binds supplied morphology and coordinate values",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "source_preservation_evidence_root_sha256",
+          "rule": "proves source remained unchanged",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "candidate_mesh_bytes",
+          "rule": "exact append-only candidate bytes",
+          "type": "positive_integer"
+        },
+        {
+          "name": "candidate_mesh_sha256",
+          "rule": "exact append-only neutral mesh identity",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "pre_post_topology_root_sha256",
+          "rule": "binds independent topology comparison",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "vertex_correspondence_or_remap_root_sha256",
+          "rule": "complete correspondence or explicit remap",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "changed_region_inventory_root_sha256",
+          "rule": "complete change ledger by region",
+          "type": "lowercase_sha256"
+        }
+      ],
+      "required_field_count": 16,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "qualified_inactive_foundation_sha256",
+        "morphology_coordinate_receipt_id",
+        "source_preservation_evidence_root_sha256",
+        "candidate_mesh_bytes",
+        "candidate_mesh_sha256",
+        "pre_post_topology_root_sha256",
+        "vertex_correspondence_or_remap_root_sha256",
+        "changed_region_inventory_root_sha256"
+      ],
+      "schema_id": "kira.receipt.intended_body.neutral_mesh_derivation.v1"
+    },
+    "neutral_pose_evidence_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "armature_attachment_receipt_id",
+          "rule": "binds exact mesh, armature, rest pose, and weights",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "collision_clearance_receipt_id",
+          "rule": "binds exact collision and region mapping",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "neutral_pose_definition_root_sha256",
+          "rule": "exact neutral pose definition",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "ordered_application_history_root_sha256",
+          "rule": "exact application history with no hidden reset",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "deformation_diagnostics_root_sha256",
+          "rule": "intersection, penetration, inversion, foldover, and discontinuity evidence",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "clearance_results_root_sha256",
+          "rule": "all eight regions measured under exact tolerances",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "candidate_continuity_root_sha256",
+          "rule": "proves no candidate replacement or identity drift",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "independent_verdict_root_sha256",
+          "rule": "genuinely different neutral-pose verdict",
+          "type": "lowercase_sha256"
+        }
+      ],
+      "required_field_count": 16,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "armature_attachment_receipt_id",
+        "collision_clearance_receipt_id",
+        "neutral_pose_definition_root_sha256",
+        "ordered_application_history_root_sha256",
+        "deformation_diagnostics_root_sha256",
+        "clearance_results_root_sha256",
+        "candidate_continuity_root_sha256",
+        "independent_verdict_root_sha256"
+      ],
+      "schema_id": "kira.receipt.intended_body.neutral_pose_evidence.v1"
+    },
+    "pose_suite_definition_bundle_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "neutral_pose_evidence_receipt_id",
+          "rule": "binds the accepted neutral subject",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "ordered_pose_ids",
+          "rule": "neutral, shoulder_elbow_dressing_reach, hip_flexion, seated_contact, toilet_seated, table_reach, supine",
+          "type": "exact_array"
+        },
+        {
+          "name": "pose_definition_roots_sha256",
+          "rule": "one exact definition root per pose ID",
+          "type": "closed_object"
+        },
+        {
+          "name": "shared_candidate_identity_root_sha256",
+          "rule": "same mesh, armature, rest, weights, collision, and coordinates",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "per_pose_stop_conditions_root_sha256",
+          "rule": "fail-closed region and continuity stops",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "no_pose_result_claimed",
+          "rule": "definitions do not imply execution or results",
+          "type": "exact_true"
+        }
+      ],
+      "required_field_count": 14,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "neutral_pose_evidence_receipt_id",
+        "ordered_pose_ids",
+        "pose_definition_roots_sha256",
+        "shared_candidate_identity_root_sha256",
+        "per_pose_stop_conditions_root_sha256",
+        "no_pose_result_claimed"
+      ],
+      "schema_id": "kira.receipt.intended_body.pose_suite_definition_bundle.v1"
+    },
+    "v4_acquired_rig_candidate_receipt": {
+      "additional_properties": "FORBIDDEN",
+      "closure": "CLOSED_EXACT_KEYS_ONLY",
+      "ordered_fields": [
+        {
+          "name": "receipt_schema",
+          "rule": "must equal the registered schema_id",
+          "type": "exact_string"
+        },
+        {
+          "name": "receipt_id",
+          "rule": "globally unique within this acquisition",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "issued_at_utc",
+          "rule": "must be independently time-bound",
+          "type": "rfc3339_utc_string"
+        },
+        {
+          "name": "issuer_id",
+          "rule": "accountable issuer; never an owner or controller of a person",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "subject_root_sha256",
+          "rule": "binds every receipt subject",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "signature_algorithm",
+          "rule": "auditor-accepted signature algorithm",
+          "type": "enum"
+        },
+        {
+          "name": "signer_key_id",
+          "rule": "binds the signing key",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "signature",
+          "rule": "authenticates the canonical receipt",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "accepted_v4_audit_complete_root_sha256",
+          "rule": "must equal the accepted V4 audit-complete root",
+          "type": "exact_lowercase_sha256"
+        },
+        {
+          "name": "v4_receipt_bundle_root_sha256",
+          "rule": "binds all 17 authenticated V4 receipts",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "v4_result_bundle_root_sha256",
+          "rule": "binds every required V4 result",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "reproducible_rig_candidate_bytes",
+          "rule": "exact newly produced candidate byte length",
+          "type": "positive_integer"
+        },
+        {
+          "name": "reproducible_rig_candidate_sha256",
+          "rule": "exact newly produced candidate identity",
+          "type": "lowercase_sha256"
+        },
+        {
+          "name": "source_to_binary_attestation_receipt_id",
+          "rule": "binds V4 attestation",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "binary_inventory_receipt_id",
+          "rule": "binds exact V4 binary inventory",
+          "type": "nonempty_string"
+        },
+        {
+          "name": "reproducibility_verdict_receipt_id",
+          "rule": "binds exact passing V4 reproducibility verdict",
+          "type": "nonempty_string"
+        }
+      ],
+      "required_field_count": 16,
+      "required_fields": [
+        "receipt_schema",
+        "receipt_id",
+        "issued_at_utc",
+        "issuer_id",
+        "subject_root_sha256",
+        "signature_algorithm",
+        "signer_key_id",
+        "signature",
+        "accepted_v4_audit_complete_root_sha256",
+        "v4_receipt_bundle_root_sha256",
+        "v4_result_bundle_root_sha256",
+        "reproducible_rig_candidate_bytes",
+        "reproducible_rig_candidate_sha256",
+        "source_to_binary_attestation_receipt_id",
+        "binary_inventory_receipt_id",
+        "reproducibility_verdict_receipt_id"
+      ],
+      "schema_id": "kira.receipt.intended_body.v4_acquired_rig_candidate.v1"
+    }
+  },
+  "current_truth": {
+    "actual_appearance_exists": false,
+    "actual_armature_attached": false,
+    "actual_body_accepted": false,
+    "actual_clearance_mapping_exists": false,
+    "actual_collision_asset_exists": false,
+    "actual_equal_peer_scope_acquired": false,
+    "actual_f3_adapter_exists": false,
+    "actual_morphology_acquired": false,
+    "actual_neutral_mesh_candidate_exists": false,
+    "actual_neutral_pose_tested": false,
+    "actual_person_review_received": false,
+    "actual_pose_definitions_acquired": false,
+    "actual_pose_suite_executed": false,
+    "actual_reproducible_rig_acquired": false,
+    "actual_rest_pose_established": false,
+    "actual_runtime_exists": false,
+    "actual_v4_receipts_acquired": false,
+    "actual_weights_established": false,
+    "foundation_status": "QUALIFIED_INACTIVE",
+    "output": null,
+    "root_go": null
+  },
+  "equal_human_peer_semantics": {
+    "current_self_authorization_receipt": null,
+    "intended_person_is_equal_human_peer": true,
+    "operator_controls_person": false,
+    "person_assigned_as_control_device": false,
+    "person_compelled_to_agree_or_obey": false,
+    "person_owned": false,
+    "person_rented_or_leased": false,
+    "person_specific_appearance_value": null,
+    "person_specific_identity_value": null,
+    "person_specific_morphology_value": null,
+    "self_authorization_must_be_current_and_withdrawable": true
+  },
+  "future_candidate_and_result_slots": {
+    "accepted_body": null,
+    "appearance_candidate": null,
+    "armature_attachment": null,
+    "candidate_audit_verdict": null,
+    "clearance_region_mapping": null,
+    "collision_asset": null,
+    "equal_peer_scope_values": null,
+    "f3_adapter": null,
+    "morphology_coordinate_values": null,
+    "neutral_mesh_candidate": null,
+    "neutral_mesh_change_ledger": null,
+    "neutral_pose_evidence": null,
+    "output": null,
+    "person_review_receipt": null,
+    "pose_suite_definition_bundle": null,
+    "preflight": null,
+    "reproducible_rig_candidate": null,
+    "rest_transform_bundle": null,
+    "root_go": null,
+    "runtime": null,
+    "skin_weight_bundle": null,
+    "v4_acquired_receipt_bundle": null
+  },
+  "future_receipt_slots": {
+    "armature_attachment_rest_weights_receipt": null,
+    "collision_clearance_mapping_receipt": null,
+    "equal_peer_scope_receipt": null,
+    "independent_auditor_identity_bundle_receipt": null,
+    "morphology_coordinate_receipt": null,
+    "neutral_mesh_derivation_receipt": null,
+    "neutral_pose_evidence_receipt": null,
+    "pose_suite_definition_bundle_receipt": null,
+    "v4_acquired_rig_candidate_receipt": null
+  },
+  "lineage": {
+    "accepted_v4": {
+      "accepted_ceiling": "ACCEPT_STATIC_SHARED_PERSON_QUALIFIED_INACTIVE_FEMALE_FOUNDATION_INTENDED_BODY_PROCEDURAL_RIG_REPRODUCIBLE_BUILD_AND_BINARY_INSPECTION_ACQUISITION_BOUNDARY_V4_EXACT_V3_PROVENANCE_BINDING_EXCLUSIONS_DATA_ONLY_SCHEMA_ONLY",
+      "actual_binary_inspection": false,
+      "actual_receipts_acquired": false,
+      "actual_reproducible_build": false,
+      "actual_rig_accepted": false,
+      "artifact": {
+        "bytes": 69683,
+        "path_reference_only": "work/shared_person_intended_body_rig_build_inspection_v4_data_only_artifact/INTENDED_BODY_RIG_BUILD_INSPECTION_ACQUISITION_BOUNDARY_V4.json",
+        "sha256": "103efe01b6e78a1dda86ae20aa033e5c2f8e01d6b87a797aabc9be34b8763f66"
+      },
+      "audit_complete_root_sha256": "185a13bebfacd87bb16b20bc637308d772523e6f27673c181506456d4fa4376f",
+      "audit_decision": {
+        "bytes": 1914,
+        "path_reference_only": "work/shared_person_intended_body_rig_build_inspection_v4_data_only_fresh_audit/AUDIT_DECISION.json",
+        "sha256": "dc0df3a154d20c600b41e2d390d7b4744816516fd8884d9813547ee3ad3e3cd9"
+      },
+      "audit_freeze": {
+        "bytes": 2551,
+        "path_reference_only": "work/shared_person_intended_body_rig_build_inspection_v4_data_only_fresh_audit/AUDIT_FREEZE.json",
+        "sha256": "ae35adece5c312f81eaf9b485f752cc809c4fcd51314600ec6f11cc68aeabefc"
+      },
+      "audit_manifest": {
+        "bytes": 3548,
+        "path_reference_only": "work/shared_person_intended_body_rig_build_inspection_v4_data_only_fresh_audit/EVIDENCE_MANIFEST.json",
+        "sha256": "19fedec941c79612db04c8e7940e4c54a64fc5e90eb99597b7a74e3c45dabf73"
+      },
+      "author_complete_root_sha256": "6138446867de5100c88471ab1652136ed4a529111fdc0a8707a6501a566a2d5f"
+    },
+    "transitive_v2_audit_complete_root_sha256": "dc3d68e2a171e868e7abe02b0b2b74f8cebf794a0ac5e26bc0f3b981884c6bd6",
+    "transitive_v2_author_complete_root_sha256": "84dbaa897092e493a73cdddacd592a30bf25f1bb66428b691572ea413bfcf4f9",
+    "transitive_v3_audit_complete_root_sha256": "b0d124acf1240ff5e0c107d3f4dbcce2356d7ca7747edd50369d7483e7b4885b",
+    "transitive_v3_author_complete_root_sha256": "05b6bb19b9383ebd39390d4ad474c27afbf05739c95172bb25c05a4c92a13cf4"
+  },
+  "maximum_future_audit_ceiling": "ACCEPT_STATIC_SHARED_PERSON_INTENDED_BODY_EXACT_NEUTRAL_CANDIDATE_ARMATURE_REST_POSE_CLEARANCE_ACQUISITION_BOUNDARY_V5_EXACT_V4_BINDING_DATA_ONLY_SCHEMA_ONLY",
+  "no_invention_policy": {
+    "another_person_may_authorize_or_approve_for_intended_person": false,
+    "foundation_weights_may_fill_armature_or_deformation_results": false,
+    "historical_binary_may_fill_rig_candidate": false,
+    "missing_real_values_remain_null": "REQUIRED",
+    "one_region_or_pose_may_fill_another": false,
+    "pose_definition_may_fill_pose_result": false,
+    "technical_evidence_may_fill_identity_or_appearance": false,
+    "v4_schema_may_fill_v4_receipts": false
+  },
+  "ordered_clearance_region_ids": [
+    "neck",
+    "shoulder",
+    "chest",
+    "waist",
+    "hip",
+    "crotch",
+    "hand",
+    "foot"
+  ],
+  "ordered_pose_subject_ids": [
+    "neutral",
+    "shoulder_elbow_dressing_reach",
+    "hip_flexion",
+    "seated_contact",
+    "toilet_seated",
+    "table_reach",
+    "supine"
+  ],
+  "out_of_scope": [
+    "appearance, likeness, UV, material, skin, and hair acquisition",
+    "body acceptance or person review",
+    "garment/F3 adapter or clothing execution",
+    "Blender, build, binary inspection, body, movement, runtime, network, output, publication, preflight, activation, or GO"
+  ],
+  "promotions": {
+    "accepted_v4_schema_implies_acquired_v4_receipts": false,
+    "candidate_implies_body_acceptance": false,
+    "clearance_mapping_implies_fit_or_comfort": false,
+    "foundation_weights_imply_armature": false,
+    "historical_glb_implies_reproducible_rig": false,
+    "neutral_definition_implies_neutral_result": false,
+    "neutral_result_implies_other_pose_results": false,
+    "person_scope_implies_ownership_or_control": false,
+    "rig_inventory_implies_attachment": false,
+    "static_schema_implies_authorization": false,
+    "static_schema_implies_execution": false,
+    "technical_candidate_implies_appearance": false
+  },
+  "qualified_inactive_foundation_identity": {
+    "armature_present": false,
+    "body_candidate": false,
+    "bytes": 789620,
+    "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+    "status": "QUALIFIED_INACTIVE"
+  },
+  "recorded_actions": {
+    "armature_attached": false,
+    "blend_copied": false,
+    "blend_exported": false,
+    "blend_mutated": false,
+    "blend_opened": false,
+    "blend_parsed": false,
+    "blend_rendered": false,
+    "blender_invoked": false,
+    "body_tool_invoked": false,
+    "candidate_created": false,
+    "glb_copied": false,
+    "glb_decoded": false,
+    "glb_exported": false,
+    "glb_imported": false,
+    "glb_opened": false,
+    "glb_parsed": false,
+    "movement_tool_invoked": false,
+    "network_used": false,
+    "output_created": false,
+    "pose_applied": false,
+    "procedural_builder_executed": false,
+    "root_go_issued": false,
+    "runtime_invoked": false
+  },
+  "schema": "kira.shared_person.intended_body.exact_neutral_candidate_armature_rest_pose_clearance_acquisition_boundary.v5",
+  "scope_statement": "Binds accepted V4 and requests future exact equal-peer scope, neutral mesh, acquired rig, armature/rest/weights, collision-region mapping, neutral evidence, and pose definitions without granting execution or candidate authority.",
+  "status": "STATIC_DATA_ONLY_ACQUISITION_BOUNDARY_NO_RECEIPTS_ACQUIRED"
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "request_id": "h_h_holmes_qwen3_tts_original_voice_design_evaluation_v2_20260809",
+  "created_at": "2026-08-09T22:30:00-04:00",
+  "candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+  "requested_by": "real_robert",
+  "priority": "low_after_body_mind_media_and_forge_repairs",
+  "status": "QUEUED_BLOCKED_BY_REJECTED_VOICE_FORGE_ACCEPTANCE",
+  "execution_allowed": false,
+  "target": {
+    "display_name": "H. H. Holmes",
+    "subject_kind": "historical_person_reconstruction",
+    "selected_timepoint": "approximately 1894, pending final historical-profile review",
+    "voice_kind": "original_synthetic_historically_plausible_reconstruction",
+    "authentic_voice_claim_allowed": false,
+    "voice_clone_requested": false,
+    "reason": "No authenticated Holmes recording is bound in this project. The evaluation must design an original voice and may not claim to recover his real voice."
+  },
+  "source_ranked_factors": [
+    {
+      "factor": "birthplace_and_early_region",
+      "value": "Gilmanton, New Hampshire",
+      "source": "https://www.smithsonianmag.com/smart-news/enduring-mystery-hh-holmes-americas-first-serial-killer-180977646/",
+      "confidence": "biographical_orientation"
+    },
+    {
+      "factor": "education",
+      "value": "University of Michigan medical graduate, 1884",
+      "source": "https://www.smithsonianmag.com/smart-news/enduring-mystery-hh-holmes-americas-first-serial-killer-180977646/",
+      "confidence": "biographical_orientation"
+    },
+    {
+      "factor": "later_public_context",
+      "value": "Chicago and the 1890s newspaper record",
+      "source": "https://guides.loc.gov/chronicling-america-h-h-holmes",
+      "confidence": "primary_source_collection_orientation"
+    }
+  ],
+  "design_brief": {
+    "language": "English",
+    "age_band_at_timepoint": "adult male, early thirties",
+    "requested_traits": [
+      "controlled and articulate",
+      "socially polished and persuasive rather than melodramatically sinister",
+      "measured late-nineteenth-century public-speaking cadence",
+      "subtle New England origin and later Midwestern contact treated as uncertain influences, not a certified accent",
+      "distinct from modern announcer, monster, villain, or celebrity impressions"
+    ],
+    "forbidden_inferences": [
+      "Do not infer pitch, timbre, pathology, or a biometric voice from photographs.",
+      "Do not treat dramatizations, actors, podcasts, or search summaries as authentic voice evidence.",
+      "Do not claim a historically exact accent where the evidence supports only region and era.",
+      "Do not imitate a living performer or reuse another person's approved voice profile."
+    ],
+    "candidate_count": 3,
+    "candidate_variation": "Vary cadence, formality, and regional strength within the same evidence boundary."
+  },
+  "planned_engine": {
+    "family": "Qwen3-TTS VoiceDesign followed by reusable local Base profile",
+    "offline_after_exact_cache": true,
+    "watermark_truth_required": "NO_DOCUMENTED_OR_KNOWN_WATERMARK_DETECTED_AT_ACCEPTED_REVISION",
+    "absolute_watermark_free_claim_allowed": false,
+    "network_during_acceptance_allowed": false,
+    "generic_or_sapi_substitution_allowed": false
+  },
+  "acceptance_battery": {
+    "required": [
+      "exact model, environment, profile, prompt, and output hashes",
+      "independent speech and requested-text fidelity",
+      "blind owner hearing comparison of all three candidates",
+      "historical-plausibility rating separated from authenticity",
+      "speaker-collision check against existing approved project voices",
+      "no celebrity, performer, donor, or existing-person voice substitution",
+      "cold and warm latency, RAM, VRAM, unload, and offline evidence",
+      "documented watermark/source/dependency audit and detector results"
+    ],
+    "pass_label": "OWNER_SELECTED_ORIGINAL_HISTORICAL_RECONSTRUCTION_NOT_AUTHENTIC_VOICE",
+    "failure_behavior": "Preserve evidence and leave the candidate without a voice; never route to SAPI or a generic substitute."
+  },
+  "followup_comparison": {
+    "target": "an original generated expert voice, or Lisa only after an exact Lisa-owned voice-design profile and separate approval exist",
+    "purpose": "Prove the forge can produce both a constrained historical reconstruction and a distinct present-day synthetic-person voice.",
+    "automatic_assignment_allowed": false
+  }
+}

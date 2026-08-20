@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kiralabs.org/schemas/hanson-bridge/0.2/session.schema.json",
+  "title": "Bounded embodiment session proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "session_id",
+    "body_id",
+    "source_identity",
+    "capabilities",
+    "opened_at_utc",
+    "expires_at_utc",
+    "session_ttl_ms",
+    "heartbeat_timeout_ms",
+    "decision_scope"
+  ],
+  "properties": {
+    "protocol_version": {"const": "0.2-proposal"},
+    "session_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "body_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "source_identity": {"$ref": "#/$defs/opaqueIdentifier"},
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["speech", "gaze", "expression", "gesture"]}
+    },
+    "opened_at_utc": {"type": "string", "format": "date-time"},
+    "expires_at_utc": {"type": "string", "format": "date-time"},
+    "session_ttl_ms": {"type": "integer", "minimum": 1},
+    "heartbeat_timeout_ms": {"type": "integer", "minimum": 1},
+    "decision_scope": {"const": "physical_execution_only"}
+  },
+  "$defs": {
+    "opaqueIdentifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    }
+  }
+}

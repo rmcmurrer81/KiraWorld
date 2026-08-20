@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kiralabs.org/schemas/hanson-bridge/0.2/capability-manifest.schema.json",
+  "title": "Robot or simulator capability manifest proposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "adapter_instance_id",
+    "body_id",
+    "readiness",
+    "capabilities",
+    "policy_sha256"
+  ],
+  "properties": {
+    "protocol_version": {"const": "0.2-proposal"},
+    "adapter_instance_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "body_id": {"$ref": "#/$defs/opaqueIdentifier"},
+    "readiness": {"enum": ["READY", "DEGRADED", "ESTOP", "DISCONNECTED"]},
+    "capabilities": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["speech", "gaze", "expression", "gesture"]}
+    },
+    "policy_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "official_interface_version": {
+      "type": ["string", "null"],
+      "maxLength": 128,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    }
+  },
+  "$defs": {
+    "opaqueIdentifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    }
+  }
+}

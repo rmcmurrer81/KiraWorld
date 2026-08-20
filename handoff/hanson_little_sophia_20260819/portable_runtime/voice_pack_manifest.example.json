@@ -1,0 +1,15 @@
+{
+  "schema_version": 3,
+  "voice_profile_id": "sophia",
+  "authorized_identity_profiles": [
+    "synthetic_sophia"
+  ],
+  "provider": "chatterbox_reference",
+  "reference_wav": "reference.wav",
+  "reference_wav_sha256": "REPLACE_WITH_EXACT_64_CHARACTER_SHA256",
+  "reference_wav_bytes": 0,
+  "local_only": true,
+  "authorization_record": "authorization.json",
+  "authorization_record_sha256": "REPLACE_WITH_EXACT_AUTHORIZATION_JSON_SHA256",
+  "fallback_sapi_voice": ""
+}

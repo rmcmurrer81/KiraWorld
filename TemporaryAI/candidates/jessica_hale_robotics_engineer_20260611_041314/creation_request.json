@@ -1,0 +1,151 @@
+{
+  "template_id": "temporary_ai_control_center_request_v1",
+  "created_at": "2026-06-11T08:13:15.525574+00:00",
+  "request_id": "temp_ai_request_jessica_hale_robotics_engineer_20260611_041314",
+  "candidate_id": "jessica_hale_robotics_engineer_20260611_041314",
+  "requested_by": "real_robert",
+  "display_name_or_role": "Jessica Hale",
+  "role_title": "Robotics Engineer",
+  "ui_category": "Expert",
+  "ai_type": "expert_temp_ai",
+  "status": "draft_pending_review",
+  "input": {
+    "query_or_domain": "Robotics Engineer",
+    "role_title": "Robotics Engineer",
+    "version_life_point_or_canon_point": "",
+    "gender_preference": "Female",
+    "personality_notes": ""
+  },
+  "ambiguity_questions": [],
+  "knowledge_plan": {
+    "status": "draft_source_plan",
+    "focus": "Robotics Engineer",
+    "version_or_life_point": "",
+    "gender_preference": "Female",
+    "source_policy": {
+      "sources_are_evidence_not_memory": true,
+      "requires_review_before_activation": true,
+      "private_project_memory_excluded_by_default": true,
+      "kira_lisa_private_memory_excluded_by_default": true,
+      "adult_private_material_excluded_by_default": true
+    },
+    "recommended_source_queries": [
+      "Robotics Engineer overview",
+      "Robotics Engineer primary sources",
+      "Robotics Engineer teaching syllabus",
+      "Robotics Engineer common misconceptions"
+    ],
+    "core_competency_seed": [
+      "Explain core concepts clearly.",
+      "Separate fact, interpretation, and uncertainty.",
+      "Ask for missing context before giving strong recommendations.",
+      "Offer practical examples and reading paths."
+    ]
+  },
+  "canon_fact_sheet": {},
+  "capability_profile": {
+    "profile_id": "temporary_ai_capability_profile_v1",
+    "status": "active",
+    "summary": "General TemporaryAI workspace for reviewed chat, notes, and drafts.",
+    "can_read": [
+      "reviewed source pack",
+      "attached workspace files"
+    ],
+    "can_create": [
+      "notes",
+      "draft answers",
+      "review summaries"
+    ],
+    "workbench_folders": {
+      "inputs/reference_material": "Robert can add approved source material here.",
+      "outputs/drafts": "Candidate can save reviewable drafts here.",
+      "outputs/notes": "Candidate can save review notes here."
+    },
+    "live_chat_instructions": [
+      "Use your role to produce concrete work, not only explanation.",
+      "Ask for missing details only when they matter to the next draft.",
+      "Keep source evidence separate from personal memory."
+    ],
+    "future_tool_needs": []
+  },
+  "online_preview_lookup": {
+    "status": "summary_found",
+    "query": "Robotics Engineer",
+    "provider": "Wikipedia API",
+    "matched_title": "Robotics engineering",
+    "summary": "Robotics engineering is a branch of engineering that focuses on the conception, design, manufacturing, and operation of robots. It involves a multidisciplinary approach, drawing primarily from mechanical, electrical, software, and artificial intelligence (AI) engineering.",
+    "url": "https://en.wikipedia.org/wiki/Robotics_engineering",
+    "candidates": [
+      {
+        "title": "Robotics engineering",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Robotics_engineering"
+      },
+      {
+        "title": "Robotics Engineering Systems",
+        "description": "",
+        "url": "https://en.wikipedia.org/wiki/Robotics_Engineering_Systems"
+      }
+    ],
+    "review_note": "This is a public preview lookup, not a verified source pack.",
+    "errors": []
+  },
+  "reliable_source_pack_status": {
+    "status": "source_pack_created",
+    "source_count": 1,
+    "fetched_count": 1,
+    "path": "TemporaryAI/candidates/jessica_hale_robotics_engineer_20260611_041314/reliable_source_pack.json"
+  },
+  "creation_estimate": {
+    "plain_estimate": "Basic expert draft: about 10-20 minutes. Stronger reviewed expert: a few hours to a day, depending on sources.",
+    "candidate_files": "created now",
+    "online_preview": "summary_found",
+    "reliable_sources_fetched": 1,
+    "avatar": "request created now; rendered avatar is later after references/design choices",
+    "activation": "after Robert review and a short probe"
+  },
+  "identity_boundaries": {
+    "separate_from_kira_lisa_identity": true,
+    "must_not_claim_unsupported_lived_memory": true,
+    "sources_are_evidence_not_memory": true,
+    "historical_or_fictional_reconstruction_must_be_labeled": false,
+    "expert_must_label_fact_vs_interpretation": true
+  },
+  "activation_policy": {
+    "available_to_kira_after_review": true,
+    "available_to_lisa_after_review": true,
+    "robert_review_required": true,
+    "probe_required_before_longer_use": true,
+    "current_status": "candidate_created_pending_review"
+  },
+  "avatar_plan": {
+    "avatar_requested": true,
+    "avatar_folder": "Avatar/temp_ai/jessica_hale_robotics_engineer_20260611_041314",
+    "timeline": {
+      "status": "avatar_request_created_not_rendered",
+      "estimate": "Avatar brief can be created immediately. A first original design can be drafted after Robert chooses a look.",
+      "current_machine_note": "GPU is available for bridge work, but this tool only creates the reviewed build request.",
+      "done_now": [
+        "candidate avatar folder",
+        "avatar request JSON",
+        "reference review folders"
+      ],
+      "still_needed": [
+        "approved references or design choices",
+        "avatar build brief",
+        "future renderer/modeling step"
+      ]
+    },
+    "references_require_review": true,
+    "online_image_download_not_run_by_this_tool": true,
+    "avatar_reference_manifest": "Avatar/temp_ai/jessica_hale_robotics_engineer_20260611_041314/references/avatar_reference_manifest.json"
+  },
+  "attached_workspaces": [
+    "TemporaryAI/candidates/jessica_hale_robotics_engineer_20260611_041314/workbench/workspace_manifest.json"
+  ],
+  "capability_workspace": {
+    "workspace_manifest": "TemporaryAI/candidates/jessica_hale_robotics_engineer_20260611_041314/workbench/workspace_manifest.json",
+    "workspace_name": "candidate_capability_workbench",
+    "outputs_folder": "TemporaryAI/candidates/jessica_hale_robotics_engineer_20260611_041314/workbench/outputs"
+  }
+}

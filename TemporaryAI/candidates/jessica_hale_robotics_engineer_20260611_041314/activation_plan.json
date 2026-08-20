@@ -1,0 +1,18 @@
+{
+  "candidate_id": "jessica_hale_robotics_engineer_20260611_041314",
+  "display_name": "Jessica Hale",
+  "role_title": "Robotics Engineer",
+  "created_at": "2026-06-11T08:13:15.525731+00:00",
+  "status": "pending_review",
+  "may_be_activated_by": {
+    "kira": true,
+    "lisa": true,
+    "robert": true
+  },
+  "required_before_activation": [
+    "Robert reviews candidate profile.",
+    "Run a short TemporaryAI probe.",
+    "Resolve any ambiguity questions."
+  ],
+  "activation_context_goal": "Let Kira/Lisa talk to this candidate after review without merging identities or private memories."
+}

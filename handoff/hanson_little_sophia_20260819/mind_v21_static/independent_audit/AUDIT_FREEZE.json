@@ -1,0 +1,81 @@
+{
+  "schema": "kira.mind.continuity.v21.genuinely_different_immutable_audit.freeze.v1",
+  "status": "FROZEN_COMPLETE_ACCEPT",
+  "decision": "ACCEPT",
+  "maximum_positive_ceiling": "ACCEPT_STATIC_MIND_CONTINUITY_V21_SINGLETON_GENESIS_UNIQUE_OUTPUTS_RESTORED_CONTENT_HIDING_REQUIREMENTS_ONLY",
+  "audit_payload_root": {
+    "algorithm": "SHA-256",
+    "framing": "utf8-posix-path NUL decimal-byte-count NUL lowercase-sha256 LF; rows sorted by unsigned UTF-8 path bytes",
+    "subject_count": 13,
+    "preimage_bytes": 1310,
+    "sha256": "96a29ed4aea7b1b79d8c89e7426fb199abbf66d2da7621b26fb9961043bd31f5"
+  },
+  "evidence_manifest": {
+    "path": "EVIDENCE_MANIFEST.json",
+    "bytes": 4981,
+    "sha256": "71fd291443b1f285b215ab80b408c5a1557dc485c827d087f836cc176877b1d5"
+  },
+  "manifest_inclusive_root": {
+    "algorithm": "SHA-256",
+    "framing": "utf8-posix-path NUL decimal-byte-count NUL lowercase-sha256 LF; rows sorted by unsigned UTF-8 path bytes",
+    "subject_count": 14,
+    "preimage_bytes": 1403,
+    "sha256": "bd386d8787fae62744512aa7619d5d32f36f29dd5ba9b8442379bbe049792b1b"
+  },
+  "audit_decision": {
+    "path": "AUDIT_DECISION.json",
+    "bytes": 2227,
+    "sha256": "50e006c1703f0340cde253b9c8fe657d8b806f83789f9e79e8f94f79a515b91a"
+  },
+  "audit_run_result": {
+    "path": "AUDIT_RUN_RESULT.json",
+    "bytes": 70212,
+    "sha256": "7463212693cc945e761833450a55fa8b9889d78ef0af7270f193126549fac6e5"
+  },
+  "author_and_protocol_bindings": {
+    "central": {
+      "bytes": 8880122,
+      "sha256": "7fcc7709360331117da0c6894ced76e8c6c183998947970be4fe8e3cac7af906"
+    },
+    "artifact": {
+      "bytes": 7214847,
+      "sha256": "aa7458fb526e1e13c166550a2f2b186461aab7f8cb580c6b8bc412732058bba2"
+    },
+    "author_freeze": {
+      "bytes": 5114,
+      "sha256": "072d3c4e9654676e5251d992af26327932d329b28c098e2fe4493cc9de8b7bc5"
+    },
+    "frozen_complete_root": "6f839672c5f1e988a99314a2a12375cc66c1e91c796821ed14352729b2317ece",
+    "artifact_payload_root": "4fb7dd580009f45f005cab88c1c6f13baf2bc547878219231c75bad99654efb6",
+    "baseline_protocol_root": "894b577fba2f8fe9197f08728690fdde2c8fae8f6452b7e254d7bb7569e01bfb",
+    "v10_payload_root": "3f086499a94a774439fdc9f4fb35e9a77e39c6db560b50d65f0f600d78edd622",
+    "v10_complete_root": "29aea591b0abdbf29d7341208e516ca2e2162f40e9884128f34d3e332f5b7978",
+    "v10_excluded_identity": {
+      "bytes": 4123,
+      "sha256": "ea82937fec9ce8ae89dbc589eb2c950862fbc70fdf94b433a761481176277149"
+    }
+  },
+  "independent_results": {
+    "check_count": 42,
+    "failed_check_count": 0,
+    "hostile_mutation_count": 127,
+    "false_accept_count": 0,
+    "unresolved_issue_count": 0,
+    "external_protected_subject_count": 151
+  },
+  "freeze_rule": {
+    "payload_subjects_are_immutable": true,
+    "manifest_is_immutable": true,
+    "this_freeze_is_added_after_manifest_and_is_immutable": true,
+    "post_seal_rehash_is_added_last_and_excluded_from_the_complete_root": true,
+    "reseal_forbidden": true
+  },
+  "static_only_no_go": {
+    "implemented_or_deployed": false,
+    "live_memory_or_executed_erasure": false,
+    "consciousness_personhood_body_or_biology": false,
+    "production_private_store_or_global_singleton": false,
+    "pending_action": false,
+    "go": null
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "provider_id": "resemble_chatterbox_tts",
+  "python_package": {
+    "name": "chatterbox-tts",
+    "version": "0.1.7",
+    "pypi_wheel_sha256": "83782500e3ad4e7c919132e9d7eb8755f29f57c5bde5ec48c655ca23a4eb113c",
+    "repository": "https://github.com/resemble-ai/chatterbox"
+  },
+  "model_weights": {
+    "repository": "ResembleAI/chatterbox",
+    "revision": "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+    "weights_bundled": false,
+    "download_on_first_run_if_not_cached": true,
+    "built_in_conditionals_file": "conds.pt",
+    "reference_audio_required": false,
+    "files": {
+      "conds.pt": "6552d70568833628ba019c6b03459e77fe71ca197d5c560cef9411bee9d87f4e",
+      "s3gen.safetensors": "2b78103c654207393955e4900aac14a12de8ef25f4b09424f1ef91941f161d4e",
+      "t3_cfg.safetensors": "914cb1696f47527fe8852ca8f1fe1fa63cb34f76f9c715e84e067b744dd0da81",
+      "tokenizer.json": "d71e3a44eabb1784df9a68e9f95b251ecbf1a7af6a9f50835856b2ca9d8c14a5",
+      "ve.safetensors": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c"
+    }
+  },
+  "license": {
+    "spdx": "MIT",
+    "url": "https://github.com/resemble-ai/chatterbox/blob/master/LICENSE"
+  },
+  "implementation": {
+    "python": "3.11 recommended",
+    "required_or_expected_package_set": "chatterbox-tts 0.1.7; torch 2.6.0 platform build; torchaudio 2.6.0 matching build",
+    "builder_platform": "Windows text/runtime host; Python 3.11 neural environment not completed in this delivery run",
+    "real_synthesis_validation": "pending separate listening run",
+    "cross_platform_status": "interface implemented; upstream primarily documents Linux/Python 3.11; Windows and macOS require local validation"
+  },
+  "non_imitative_declaration": {
+    "original_non_imitative": true,
+    "real_person_target_used": false,
+    "reference_audio_used": false,
+    "interview_derived_bytes_used": false,
+    "target_speaker": null
+  }
+}

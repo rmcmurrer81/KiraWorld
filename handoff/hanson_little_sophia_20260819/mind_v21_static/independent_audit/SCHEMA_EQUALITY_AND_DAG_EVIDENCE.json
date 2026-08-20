@@ -1,0 +1,21 @@
+{
+  "schema": "kira.mind.continuity.v21.genuinely_different_immutable_audit.schema_equality_and_dag_evidence.v1",
+  "status": "INDEPENDENT_DERIVATION_COMPLETE",
+  "object_schema_count": 53,
+  "domain_count": 53,
+  "derived_path_partitions": {"sha256_including_nullable": 1280, "token256": 92, "base64_including_nullable": 46, "nullable_sha256": 58, "enum_like": 253},
+  "partition_gap_duplicate_overlap_or_type_mismatch_count": 0,
+  "physical_equality_pair_count": 9036,
+  "physical_equality_duplicate_count": 0,
+  "equality_category_partition_counts": {"namespace_to_context": 241, "terminal_context_repeat": 769, "context_and_registration_root_repeat": 0, "outer_pin": 221, "role_conditioned_profile": 153, "registry_request_head_registration": 269, "generation_reservation_ledger_outcome_anchor": 5595, "scalar_and_token_repeat": 612, "sequence": 1, "recursive_hash_link": 499, "event_receipt_state_semantic": 676},
+  "typed_instance_alias_endpoint_errors": 0,
+  "direct_object_endpoint_errors": 0,
+  "authority_identity_path_count": 14,
+  "authentication_public_key_path_count": 16,
+  "complete_pairwise_inequality_count": 211,
+  "outer_equality_count": 221,
+  "outer_value_count": 221,
+  "nonnull_outer_value_count": 0,
+  "dag": {"node_count": 362, "declared_forward_edge_count": 636, "conditional_edge_count": 31, "parsed_condition_operand_count": 59, "declared_condition_operand_count": 59, "actual_dependency_edge_count": 637, "unresolved_endpoint_count": 0, "same_or_later_edge_count": 0, "cycle_residual_count": 0, "role_failure_condition_output_role_operand_count": 20, "nonexistent_refusal_boundary_role_operand_count": 0},
+  "all_checks_pass": true
+}

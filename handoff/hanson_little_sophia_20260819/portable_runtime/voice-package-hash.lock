@@ -1,0 +1,4 @@
+# Install only after platform-appropriate dependencies are present:
+# python -m pip install --no-deps --require-hashes -r voice-package-hash.lock
+chatterbox-tts==0.1.7 \
+    --hash=sha256:83782500e3ad4e7c919132e9d7eb8755f29f57c5bde5ec48c655ca23a4eb113c

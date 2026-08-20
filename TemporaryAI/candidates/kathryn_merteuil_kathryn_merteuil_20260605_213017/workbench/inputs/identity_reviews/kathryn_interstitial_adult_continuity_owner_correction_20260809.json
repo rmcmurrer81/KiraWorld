@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "correction_id": "kathryn_interstitial_adult_continuity_owner_correction_20260809",
+  "recorded_at_utc": "2026-08-10T00:49:24.3844778Z",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+  "speaker": "Robert",
+  "authority": "Robert_explicit_exact_person_continuity_and_maturity_correction",
+  "network_lookup_required_for_owner_authority": false,
+  "owner_exact_correction_texts": [
+    "Yes we agreed Kathryn was after the movie by a couple of years but way before the unaired pilot but we will use what she said near the beginning of the pilot to fill in that one or two years. The pilot is in the library with the first movie but I don't have the second one.",
+    "The second movie takes place before the first so the events and what happened should be in her memory.",
+    "I am sure there is some movie database you could get that details from."
+  ],
+  "supersedes_selection": {
+    "path": "TemporaryAI/candidates/kathryn_merteuil_kathryn_merteuil_20260605_213017/workbench/inputs/identity_reviews/kathryn_adult_continuation_selection_20260716.json",
+    "sha256": "60b46f8fc329299a63b3aa4b4dc946a1c2b94eb29c6bfcccdff0c813447c6065",
+    "previous_present_timepoint": "Cruel Intentions 2016 NBC unaired-pilot period",
+    "delete_previous_evidence": false
+  },
+  "corrected_selection": {
+    "version_id": "kathryn_post_1999_interstitial_pre_2016_adult_continuation_v2",
+    "version_kind": "owner_directed_interstitial_fictional_continuation",
+    "present_timepoint": "approximately two years after Cruel Intentions (1999), well before the 2016 NBC unaired pilot",
+    "elapsed_time_after_1999_film": {
+      "minimum_years": 1,
+      "target_years": 2,
+      "status": "owner_selected_approximation_not_exact_canon_date"
+    },
+    "maturity_lane": "confirmed_adult",
+    "body_lane": "adult_female",
+    "adult_curriculum_required": true,
+    "classification_is_body_or_visual_approval": false,
+    "runtime_activation_allowed_by_this_correction": false
+  },
+  "ordered_continuity_sources": [
+    {
+      "order": 1,
+      "work": "Cruel Intentions 2",
+      "role": "prequel_reconstruction_backstory",
+      "local_media_present": false,
+      "permitted_facts": "Only facts supported by an official studio page or a clearly labeled secondary database summary; continuity conflicts stay labeled.",
+      "performer_boundary": "Amy Adams material is not Sarah Michelle Gellar likeness or voice evidence.",
+      "memory_truth": "Source-backed prequel events may enter Kathryn's labeled reconstruction backstory; the absence of the local movie must not be described as watched or directly experienced by the runtime."
+    },
+    {
+      "order": 2,
+      "work": "Cruel Intentions (1999)",
+      "role": "direct_earlier_history",
+      "local_media": {
+        "path": "Data/library/movies/cruel_intentions/cruel_intentions.mp4",
+        "sha256": "c5fc74d03258850d03d433fe6e883e209de678573216b1c69a41fe2d6be365dc"
+      },
+      "memory_truth": "Reviewed source-bound events can support reconstruction history; file presence alone is not proof that Kathryn or any resident watched the whole movie."
+    },
+    {
+      "order": 3,
+      "work": "Owner-selected interstitial continuation",
+      "role": "current_present",
+      "timepoint": "approximately one to two years after the 1999 film",
+      "construction_boundary": "Do not invent the missing interval. Build only from reviewed prior events, owner decisions, and facts explicitly supported by later testimony about that interval."
+    },
+    {
+      "order": 4,
+      "work": "Cruel Intentions 2016 NBC unaired pilot",
+      "role": "later_future_evidence_not_selected_present",
+      "local_media": {
+        "path": "Data/library/tv_shows/unaired_pilots/cruel_intentions_nbc_unaired_pilot_2016_sd.mp4",
+        "sha256": "757b2577b38b6b70e7bce6f62e4afd43e8c13c97d12a2317dc9b9f40e5f10d05"
+      },
+      "permitted_use": "After exact transcript and speaker review, Kathryn's early-pilot statements may support bounded facts about the missing years. The pilot's later appearance, relationships, status, and knowledge are not the selected present.",
+      "currently_extracted_opening_facts": [],
+      "opening_fact_status": "pending_exact_local_transcript_and_speaker_review"
+    }
+  ],
+  "source_rank": [
+    "owner exact-person continuity decision",
+    "hash-bound local film or pilot after exact interval review",
+    "official studio synopsis or credits",
+    "clearly labeled secondary movie database summary",
+    "unknown"
+  ],
+  "fail_closed_unknowns": [
+    "exact calendar year and birthday",
+    "complete events between the 1999 film and selected present",
+    "exact opening-pilot statements and their speaker until transcribed and reviewed",
+    "Cruel Intentions 2 details not supported by the available official or labeled secondary source",
+    "any continuity conflict among the prequel, 1999 film, pilot, or other adaptations"
+  ],
+  "output_policy": {
+    "private_owner_review_only": true,
+    "active": false,
+    "assigned": false,
+    "published": false,
+    "body_or_voice_changed": false,
+    "older_selection_preserved_append_only": true
+  }
+}

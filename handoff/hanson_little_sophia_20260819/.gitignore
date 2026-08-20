@@ -1,0 +1,25 @@
+# Runtime and evaluation output must remain local.
+**/runtime_data/
+**/runs/
+**/local_state/
+**/local_data/
+**/.venv/
+**/.venv-*/
+**/venv/
+**/exports/private/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.tmp
+**/*.sqlite
+**/*.sqlite3
+**/*.jsonl
+**/*.log
+**/*.mp3
+**/*.mp4
+**/*.webm
+
+# The two owner-authorized, hash-bound reference WAVs are intentional private handoff subjects.
+**/*.wav
+!voice_packs/kira/approved_reference.wav
+!voice_packs/robert/approved_reference.wav

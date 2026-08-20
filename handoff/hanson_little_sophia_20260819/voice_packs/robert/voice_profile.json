@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "voice_id": "robert_mcmurrer_authorized_self_voice_private_hanson_review_v1",
+  "person_id": "synthetic_robert",
+  "display_name": "Synthetic Robert",
+  "source_subject": "Robert McMurrer",
+  "source_relationship": "self_voice_authorized_by_subject",
+  "reference_wav": "approved_reference.wav",
+  "reference_sha256": "761458a0fe9c5da1c2671faa738c1e329336630cd47138a4e738f7de2030542b",
+  "reference_bytes": 1755404,
+  "reviewed_target_seconds": 36.57,
+  "provider": "chatterbox_reference",
+  "preferred_backend": "chatterbox_tts",
+  "default_for_person": true,
+  "model_weights_included": false,
+  "fallback": {
+    "mode": "text_only_fail_closed",
+    "generic_voice_allowed": false,
+    "reason": "Do not silently replace Synthetic Robert's authorized self-voice with a generic system voice."
+  },
+  "claim_boundary": {
+    "synthetic_robert_is_distinct_from_biological_robert": true,
+    "voice_is_not_identity_authentication": true,
+    "legal_or_external_impersonation_allowed": false,
+    "public_release_allowed": false,
+    "onward_redistribution_allowed": false
+  },
+  "authorization": "VOICE_DISTRIBUTION_AUTHORIZATION_20260819.json",
+  "authorization_sha256": "bf7ccf7b1c087a624451dd9735f3a2acb07e94f421586fc631be8ae6f21ab52f"
+}

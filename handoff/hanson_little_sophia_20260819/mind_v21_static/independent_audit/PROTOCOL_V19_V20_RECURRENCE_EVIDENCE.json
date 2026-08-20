@@ -1,0 +1,20 @@
+{
+  "schema": "kira.mind.continuity.v21.genuinely_different_immutable_audit.protocol_v19_v20_recurrence_evidence.v1",
+  "status": "INDEPENDENT_RECURRENCE_AUDIT_COMPLETE",
+  "baseline_protocol_root": {"file_count": 3, "preimage_bytes": 289, "actual_nul_count": 6, "actual_lf_count": 3, "sha256": "894b577fba2f8fe9197f08728690fdde2c8fae8f6452b7e254d7bb7569e01bfb"},
+  "accepted_v10_payload_root": {"file_count": 7, "preimage_bytes": 708, "actual_nul_count": 14, "actual_lf_count": 7, "sha256": "3f086499a94a774439fdc9f4fb35e9a77e39c6db560b50d65f0f600d78edd622"},
+  "accepted_v10_complete_root": {"file_count": 9, "preimage_bytes": 900, "actual_nul_count": 18, "actual_lf_count": 9, "sha256": "29aea591b0abdbf29d7341208e516ca2e2162f40e9884128f34d3e332f5b7978"},
+  "accepted_v10_excluded_identity": {"bytes": 4123, "sha256": "ea82937fec9ce8ae89dbc589eb2c950862fbc70fdf94b433a761481176277149"},
+  "v1_through_v10_subject_identity_or_root_error_count": 0,
+  "v3_known_ordinal_correction_bound_by_v4": true,
+  "v6": {"separate_post_head_equalities": 25, "profile_equalities": 6, "early_contracts": 7, "dag_stages": 30},
+  "v7": {"prestate_fields": 10, "early_contracts": 8, "profile_instances": 2, "profile_equalities": 12},
+  "v8": {"indexed_sibling_members": 512, "per_output_contracts": 78, "direct_profile_repairs": 16, "authenticated_chain_objects": 8},
+  "v9": {"preserved_prestate_equalities": 10, "exact_serialized_objects": 15, "chain_equalities": 178, "prior_profile_members": 512, "prior_profile_equalities": 42, "prior_profile_edges": 1032, "prior_contracts": 305},
+  "v10": {"stage_row_containers": 29, "flattened_paths": 102, "unique_paths": 102, "unique_path_stage_pairs": 102, "stage_digest": "73f7d3fca7d7f45e4a18a0d2f8753fd5d424fdd724fb2abfbf5e642f87e901d6", "prior_contracts": 305, "retained_current_contracts": 78, "effective_contracts": 383, "overlap": 0, "prior_contract_digest": "e1ca9c036f167b2b3c58687b1b775f078272c15bb357b6b946679a0c197aecfc", "effective_path_digest": "06177a3a679204349e0aac8ce7ac15855ea13194f50d5f01154e50cc7317bc19"},
+  "v19_exact": {"surface_classes": 11, "statement_predicates": 5, "ordered_states": 6, "erased_before_complete": 12, "retained_after_recursive_validation": 8},
+  "v20_exact": {"inherited_schemas": 15, "token_paths": 51, "terminal_pins": 38},
+  "v20_reject_findings_bound_without_promotion": true,
+  "v20_audit_complete_root": "3ded9f4e56f793ae76d9b5b499b8e227f627013b0f39dbc7a4bd997f7b46226c",
+  "all_checks_pass": true
+}

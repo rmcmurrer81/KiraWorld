@@ -1,0 +1,33 @@
+{
+  "schema": "qwen3_tts_original_voice_forge_job_v1",
+  "execution_status": "TEMPLATE_INERT_NOT_RUN",
+  "candidate_id": "REQUIRED_SAFE_CANDIDATE_ID",
+  "opaque_voice_id": "REQUIRED_OPAQUE_VOICE_ID",
+  "voice_origin": "ORIGINAL_SYNTHETIC_TEXT_DESIGN_NOT_PERSON_CLONE",
+  "identity_basis": "original_trait_description",
+  "named_real_person_imitation_requested": false,
+  "named_real_person_names": [],
+  "design_traits_text": "REQUIRED_TRAIT_BASED_DESCRIPTION_WITHOUT_A_NAMED_REAL_PERSON",
+  "design_traits_sha256": "REQUIRED_SHA256",
+  "reference_text": "REQUIRED_EXACT_REFERENCE_TEXT",
+  "reference_text_sha256": "REQUIRED_SHA256",
+  "test_text": "REQUIRED_EXACT_TEST_TEXT",
+  "test_text_sha256": "REQUIRED_SHA256",
+  "language": "English",
+  "voice_design_model_directory": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+  "voice_design_model_manifest": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-1.7B-VoiceDesign/MODEL_FILE_MANIFEST.json",
+  "voice_design_model_manifest_sha256": "REQUIRED_SHA256",
+  "base_model_directory": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-0.6B-Base",
+  "base_model_manifest": "Voice/models/qwen3_tts/Qwen3-TTS-12Hz-0.6B-Base/MODEL_FILE_MANIFEST.json",
+  "base_model_manifest_sha256": "REQUIRED_SHA256",
+  "watermark_evidence": {
+    "requested_status": "NO_DOCUMENTED_INTENTIONAL_AUDIO_WATERMARK",
+    "exact_revision_source_scan_passed": false,
+    "dependency_scan_passed": false,
+    "wav_inventory_passed": false,
+    "detector_positive_controls_passed": false,
+    "detectors": [],
+    "repeated_generated_samples_no_known_mark_detected": false,
+    "owner_hearing_acceptance_passed": false
+  }
+}

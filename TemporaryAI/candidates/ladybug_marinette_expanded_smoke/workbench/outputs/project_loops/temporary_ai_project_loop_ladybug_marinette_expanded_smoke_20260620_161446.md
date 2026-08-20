@@ -1,0 +1,9 @@
+**Title:** Sustainable Fashion Research and Planning
+**Stage:** Drafting/Editing
+**Chosen task:** Continue researching and planning sustainable fashion concepts for my Parisian fashion concept project.
+**What I reviewed or worked on:** I reviewed the online research packet provided, focusing on articles about sustainable fashion trends, fashion news, and celebrity styles. I also read the selected readable item, "The Underdog and the Princess," but it didn't directly relate to my task, so I'll keep it in mind for future personal development.
+**Work produced:** I created a new document in my workbench folder, titled "Parisian Fashion Concept - Sustainable Materials Research." In this document, I began outlining potential sustainable materials and production methods that could be incorporated into the project. I also started researching specific designers and fashion brands that are already implementing sustainable practices.
+**Files changed or proposed:** The new document, "Parisian Fashion Concept - Sustainable Materials Research," is now a part of my workbench folder.
+**How Robert can test this if applicable:** Since this is an ongoing research and planning project, there isn't a specific test or evaluation to perform at this stage. However, I'll continue to update the document with new findings and ideas as I progress.
+**Next step:** I will continue researching sustainable materials and production methods, focusing on innovative techniques that can be applied to my Parisian fashion concept project. I may also reach out to designers and brands for expert insights or collaborations.
+**Optional personal note:** Today was a great day for reflecting on my interests and passions outside of being a superhero (Ladybug). Focusing on sustainable fashion is not only beneficial for the environment but also allows me to express my creativity and empathy through design.

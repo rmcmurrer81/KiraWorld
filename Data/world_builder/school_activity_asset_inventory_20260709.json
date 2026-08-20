@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-09T02:10:00Z",
+  "purpose": "World-builder asset index for the next Home World school/activity pass. These are preserved downloaded models to use instead of generated block furniture.",
+  "preservation_manifest": "Data/world_builder/model_preservation_manifest.json",
+  "school_assets": {
+    "source_folder": "C:/Users/robmc/Desktop/school",
+    "preserved_folder": "Data/world_builder/staged_assets_for_world_builder/desktop_school",
+    "served_folder": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/school",
+    "items": [
+      {
+        "id": "classroom_model_1",
+        "file": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/school/classroom_model_1.glb",
+        "tags": ["classroom", "school", "room", "desks", "learning_space"],
+        "use": "Primary classroom reference or imported class shell."
+      },
+      {
+        "id": "japanese_classroom",
+        "file": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/school/japanese_classroom.glb",
+        "tags": ["classroom", "school", "alternate_room"],
+        "use": "Alternate classroom reference if the primary classroom scale/layout is poor."
+      },
+      {
+        "id": "school_chair",
+        "file": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/school/school_chair.glb",
+        "tags": ["chair", "school", "desk_seating", "sit_target"],
+        "use": "Desk seating prop and sit-target reference."
+      },
+      {
+        "id": "old_metal_table_low_poly",
+        "file": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/school/old_metal_table_low_poly.glb",
+        "tags": ["table", "desk", "school", "study_surface"],
+        "use": "Desk/table prop for lessons, notebooks, phones, and writing."
+      },
+      {
+        "id": "frame_2_side_table",
+        "file": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/school/frame_2_side_table.glb",
+        "tags": ["table", "side_table", "teacher_table", "prop_surface"],
+        "use": "Teacher table or side table."
+      },
+      {
+        "id": "world_map_color_3d_scan",
+        "file": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/public/models/home_world/school/world_map_color_3d_scan.glb",
+        "tags": ["wall_map", "geography", "classroom_wall", "teaching_aid"],
+        "use": "Wall prop for geography/history lessons."
+      }
+    ]
+  },
+  "activity_assets": {
+    "source_folder": "C:/Users/robmc/Desktop/a bunch more",
+    "preserved_folder": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more",
+    "items": [
+      {
+        "id": "animated_doors_and_window_demo",
+        "file": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/animated_doors_and_a_window_demo.glb",
+        "tags": ["animated_door", "animated_window", "door_reference"],
+        "use": "Door/window animation reference for future realistic doors and enterable buildings."
+      },
+      {
+        "id": "starbucks_coffee_shop",
+        "file": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/starbucks_coffee_shop.glb",
+        "tags": ["coffee_shop", "cafe", "restaurant", "bathroom", "tables"],
+        "use": "Cafe activity place; needs scale/open-door/counter/cup placement checks."
+      },
+      {
+        "id": "coffee_shop_cup",
+        "file": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/coffee_shop_cup.glb",
+        "tags": ["cup", "coffee", "held_prop", "counter_prop"],
+        "use": "Visible coffee prop for truthful drinking/holding actions."
+      },
+      {
+        "id": "basketball_court",
+        "file": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/basket_ball_court__game_ready_asset (1).glb",
+        "tags": ["basketball_court", "park", "sport", "movement_training"],
+        "use": "Future park activity; must sit on ground with usable ball pickup/dribble/shoot targets."
+      },
+      {
+        "id": "basketball",
+        "file": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/basketball (1).glb",
+        "tags": ["basketball", "held_prop", "physics_ball"],
+        "use": "Pickup, bounce, dribble, and shooting prop."
+      }
+    ]
+  }
+}

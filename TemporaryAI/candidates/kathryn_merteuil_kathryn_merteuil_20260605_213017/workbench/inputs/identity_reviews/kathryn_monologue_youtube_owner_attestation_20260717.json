@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "attestation_id": "kathryn_monologue_youtube_owner_attestation_20260717",
+  "created_at": "2026-07-17T14:45:00-04:00",
+  "authorized_by": "real_robert",
+  "source_url": "https://www.youtube.com/watch?v=yPPzi-TjE94",
+  "source_title": "Kathryn’s Monologue",
+  "target_name": "Kathryn Merteuil",
+  "target_performer": "Sarah Michelle Gellar",
+  "source_continuity": "Cruel Intentions (1999) movie; earlier same-performer Kathryn delivery evidence",
+  "range": {
+    "start_seconds": 4.15,
+    "end_seconds": 38.0,
+    "basis": "Robert identified Kathryn-only dialogue after the opening; objective boundary review trims the dead lead and uses 4.15 seconds through the 38-second provider duration."
+  },
+  "audiovisual_source_reviewed": true,
+  "target_identity_confirmed": true,
+  "target_only_speech_confirmed": true,
+  "no_other_speaker_confirmed": true,
+  "no_overlap_confirmed": true,
+  "no_music_confirmed": true,
+  "machine_contamination_evidence_takes_precedence": true,
+  "review_context": "Robert supplied the exact URL and screenshots after finding the source specifically to avoid the noisy unaired-pilot review pack.",
+  "scope": "private_source_review_evidence_only_no_model_or_runtime_authority",
+  "does_not_authorize": [
+    "public redistribution",
+    "official voice claims",
+    "voice training or cloning",
+    "voice assignment",
+    "voice synthesis",
+    "TemporaryAI activation"
+  ]
+}

@@ -19,6 +19,20 @@ Start with:
 - `System/Docs/TEMPORARYAI_CREATOR_RESEARCH_AND_ASSET_INTAKE_SCOPE_20260820.md`
 - `System/Docs/KIRAWORLD_PRIVATE_REPO_SYNC_POLICY_20260820.md`
 - `private_delivery/README.md`
+- `Data/library/` — selected public-domain library and isolated
+  private-reference scripts
+- `TemporaryAI/` — TemporaryAI Creator packages,
+  requested candidates, experts, and supporting templates/configuration
+- `Avatar/` — requested avatar and runtime-3D files
+- `Voice/` — included private-evaluation voice
+  outputs and profiles
+- `Lisa/` — Lisa backstory, core, and shared
+  Kira/Lisa continuity
+- `Data/` — Home World, World Builder, and curated
+  resident data
+- `System/Docs/` — the approved System documents, including the 41 PDFs
+- `private_delivery/source_tree/` — a second, checksum-audited copy of the same
+  approved root-layout material
 - `BACKUP_SCOPE.md`
 
 The owner proposes that Hanson Robotics build on Kira World as a continuity

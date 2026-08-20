@@ -1,0 +1,39 @@
+{
+  "avatar_profile_id": "h_h_holmes_h_h_holmes_20260605_221432_avatar_profile_v1",
+  "created_at": "2026-06-06T02:14:32.752137+00:00",
+  "target_type": "temporary_ai",
+  "target_id": "h_h_holmes_h_h_holmes_20260605_221432",
+  "display_name": "H. H. Holmes",
+  "role_title": "H. H. Holmes",
+  "ui_category": "Historical Person",
+  "status": "draft_needs_reference_or_design_review",
+  "timeline": {
+    "status": "avatar_request_created_not_rendered",
+    "estimate": "Avatar request is immediate. A historical avatar needs life-point selection and approved public references.",
+    "current_machine_note": "GPU is available for bridge work, but this tool only creates the reviewed build request.",
+    "done_now": [
+      "candidate avatar folder",
+      "avatar request JSON",
+      "reference review folders"
+    ],
+    "still_needed": [
+      "approved references or design choices",
+      "avatar build brief",
+      "future renderer/modeling step"
+    ]
+  },
+  "visual_inputs": {
+    "gender_preference": "Male",
+    "version_life_point_or_canon_point": "",
+    "personality_notes": "",
+    "approved_reference_folder": "Avatar/temp_ai/h_h_holmes_h_h_holmes_20260605_221432/references/approved",
+    "downloaded_reference_folder": "Avatar/temp_ai/h_h_holmes_h_h_holmes_20260605_221432/references/downloaded",
+    "rejected_reference_folder": "Avatar/temp_ai/h_h_holmes_h_h_holmes_20260605_221432/references/rejected"
+  },
+  "policy": {
+    "references_do_not_create_memory": true,
+    "official_or_reliable_sources_preferred": true,
+    "robert_review_required_before_generation": true,
+    "public_export_allowed": false
+  }
+}

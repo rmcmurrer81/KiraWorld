@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-17T23:23:20.987356+00:00",
+  "operation": "bounded_wav_cross_source_speaker_consistency_evidence",
+  "model": {
+    "backend": "transformers.WavLMForXVector",
+    "model_id": "microsoft/wavlm-base-plus-sv",
+    "requested_revision": "main",
+    "resolved_revision": "feb593a6c23c1cc3d9510425c29b0a14d2b07b1e",
+    "local_files_only": true,
+    "download_explicitly_allowed": false,
+    "device": "cpu",
+    "loaded": true,
+    "embedding_dimension": 512
+  },
+  "configuration": {
+    "target_sample_rate_hz": 16000,
+    "split_on_silence": true,
+    "quality_policy": {
+      "min_file_seconds": 1.5,
+      "min_active_seconds": 1.25,
+      "min_rms_dbfs": -48.0,
+      "max_clipping_fraction": 0.01,
+      "min_segment_seconds": 1.25,
+      "max_segment_seconds": 12.0,
+      "max_silence_gap_seconds": 0.42,
+      "segment_padding_seconds": 0.12
+    },
+    "support_threshold": 0.8,
+    "reject_threshold": 0.6
+  },
+  "anchor": {
+    "source_id": "kathryn_youtube_1999_monologue",
+    "range_id": "owner_confirmed_anchor",
+    "path": "C:\\Users\\robmc\\Kira\\_tmp_kathryn_youtube_source\\kathryn_4p15s_to_end.wav",
+    "source_start_seconds": null,
+    "source_end_seconds": null,
+    "owner_confirmed_target_only": true,
+    "declared_source_media_sha256": "",
+    "sha256": "3a84bc8f1d59498bd56d71a00fac421cf53aa1328212a8c5b1c3ea97f7d6a28b",
+    "format": {
+      "channels_in_file": 1,
+      "sample_width_bytes": 2,
+      "sample_rate_hz": 24000,
+      "frame_count": 812400,
+      "mixed_to_mono": false
+    },
+    "quality": {
+      "status": "accepted_for_consistency_analysis",
+      "rejection_reasons": [],
+      "duration_seconds": 33.85,
+      "rms_dbfs": -34.897,
+      "peak_dbfs": -11.799,
+      "clipping_fraction": 0.0,
+      "active_seconds_energy_estimate": 21.54,
+      "active_fraction_energy_estimate": 0.636,
+      "energy_snr_proxy_db": 17.213,
+      "energy_threshold_dbfs": -46.094,
+      "note": "Energy estimates are quality/segmentation aids, not speech or speaker identity proof."
+    },
+    "segments": [
+      {
+        "segment_id": "segment_0001",
+        "start_seconds_in_bounded_wav": 0.0,
+        "end_seconds_in_bounded_wav": 1.65,
+        "duration_seconds": 1.65,
+        "canonical_16khz_float_sha256": "22a3a155dd1418d3a791f32044857d511a7a0cdf9f9342187f9464f53f719b83"
+      },
+      {
+        "segment_id": "segment_0002",
+        "start_seconds_in_bounded_wav": 2.4,
+        "end_seconds_in_bounded_wav": 8.13,
+        "duration_seconds": 5.73,
+        "canonical_16khz_float_sha256": "57a8ef3238874f536b93470a5df3c13f9d1b6b6b28fd198b51979278c70c6abe"
+      },
+      {
+        "segment_id": "segment_0003",
+        "start_seconds_in_bounded_wav": 8.97,
+        "end_seconds_in_bounded_wav": 12.33,
+        "duration_seconds": 3.36,
+        "canonical_16khz_float_sha256": "a2ea082fe3c1463785d10a44647b124eb8d00de9db476225d66907d09c1a2c00"
+      },
+      {
+        "segment_id": "segment_0004",
+        "start_seconds_in_bounded_wav": 13.14,
+        "end_seconds_in_bounded_wav": 25.14,
+        "duration_seconds": 12.0,
+        "canonical_16khz_float_sha256": "b34ad71bf93b766018911b8af94d4feda96a3bfbf7056f0fe20e98c0967b3ec6"
+      },
+      {
+        "segment_id": "segment_0005",
+        "start_seconds_in_bounded_wav": 26.1,
+        "end_seconds_in_bounded_wav": 28.38,
+        "duration_seconds": 2.28,
+        "canonical_16khz_float_sha256": "ff47064b139dcdb0f5b87c1a7204aa418fa49424f7b8719019e41e1178c03406"
+      },
+      {
+        "segment_id": "segment_0006",
+        "start_seconds_in_bounded_wav": 30.87,
+        "end_seconds_in_bounded_wav": 33.84,
+        "duration_seconds": 2.97,
+        "canonical_16khz_float_sha256": "b6cbde92890a4cdd302bb62011cd3cc81e5e24f0de0b19ebaa9ccfbe01fbe74e"
+      }
+    ],
+    "embedding_evidence": {
+      "status": "computed",
+      "segment_count": 6,
+      "embedding_dimension": 512,
+      "segment_embedding_hashes": [
+        {
+          "segment_id": "segment_0001",
+          "embedding_sha256": "386c8729f468dc022886dcbfccc6f6ad854a03e68a63c49b1b63fa7b28d2f04f"
+        },
+        {
+          "segment_id": "segment_0002",
+          "embedding_sha256": "b231b38be78d582ff162bbfea96be7c99d89ca0420d2820513e6c083133d8e1d"
+        },
+        {
+          "segment_id": "segment_0003",
+          "embedding_sha256": "ad4395de233a84318dfb9f0098ccd24410c175b7239ba21e821e793c0f9fedf3"
+        },
+        {
+          "segment_id": "segment_0004",
+          "embedding_sha256": "f5e0393f7344d701095dd65ae0c8a20adb768da9e45cb18e8a50b498fd382ce2"
+        },
+        {
+          "segment_id": "segment_0005",
+          "embedding_sha256": "233aab0b934cd4e3431ab5d044a11f24d9636e8eb8295858c951549e1f8e180d"
+        },
+        {
+          "segment_id": "segment_0006",
+          "embedding_sha256": "7bac1678ac930338992bd9433895f887b399ba7daf4a9c286e3d0fad0f0fcff5"
+        }
+      ]
+    }
+  },
+  "candidates": [
+    {
+      "source_id": "kathryn_2016_pilot_clip0345",
+      "range_id": "candidate_0001",
+      "path": "C:\\Users\\robmc\\Kira\\Voice\\reference_packs\\kathryn_merteuil_kathryn_merteuil_20260605_213017\\kathryn_merteuil_kathryn_merteuil_20260605_213017_cruel_intentions_nbc_unaired_pilot_2016_sd_20260717_035509\\candidate_clips\\clip_0345.wav",
+      "source_start_seconds": null,
+      "source_end_seconds": null,
+      "owner_confirmed_target_only": false,
+      "declared_source_media_sha256": "",
+      "sha256": "85bf043312d5d8f9fe2bd9b61e52c412490a723cc3f2bf11003d808f58575119",
+      "format": {
+        "channels_in_file": 1,
+        "sample_width_bytes": 2,
+        "sample_rate_hz": 24000,
+        "frame_count": 112320,
+        "mixed_to_mono": false
+      },
+      "quality": {
+        "status": "accepted_for_consistency_analysis",
+        "rejection_reasons": [],
+        "duration_seconds": 4.68,
+        "rms_dbfs": -26.718,
+        "peak_dbfs": -7.576,
+        "clipping_fraction": 0.0,
+        "active_seconds_energy_estimate": 4.47,
+        "active_fraction_energy_estimate": 0.9551,
+        "energy_snr_proxy_db": 8.209,
+        "energy_threshold_dbfs": -33.121,
+        "note": "Energy estimates are quality/segmentation aids, not speech or speaker identity proof."
+      },
+      "segments": [
+        {
+          "segment_id": "segment_0001",
+          "start_seconds_in_bounded_wav": 0.0,
+          "end_seconds_in_bounded_wav": 4.68,
+          "duration_seconds": 4.68,
+          "canonical_16khz_float_sha256": "6ffa8eb56fcf5be801f74296a4f80a5988fd1699fd8c9d3beed17a8e67802f02"
+        }
+      ],
+      "source_independence": {
+        "different_declared_source_ids": true,
+        "bounded_wav_sha256_differs": true,
+        "declared_source_media_sha256_differs": null,
+        "status": "accepted_declared_cross_source",
+        "note": "Different source IDs are owner/tool provenance; hashes additionally reject exact duplicate audio or a declared identical underlying media file."
+      },
+      "independent_source_from_anchor": true,
+      "consistency_evidence": {
+        "status": "computed",
+        "decision": "speaker_consistency_supported_not_identity_proof",
+        "aggregate_method": "median_of_all_cross_source_segment_pair_cosines",
+        "median_cosine_similarity": 0.887174,
+        "mean_cosine_similarity": 0.877125,
+        "minimum_cosine_similarity": 0.828688,
+        "maximum_cosine_similarity": 0.900527,
+        "support_threshold": 0.8,
+        "reject_threshold": 0.6,
+        "thresholds_are_operational_not_identity_calibrated": true,
+        "cosine_scores": [
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0001",
+            "cosine_similarity": 0.828688
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0002",
+            "cosine_similarity": 0.900527
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0003",
+            "cosine_similarity": 0.894609
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0004",
+            "cosine_similarity": 0.891564
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0005",
+            "cosine_similarity": 0.882784
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0006",
+            "cosine_similarity": 0.864577
+          }
+        ],
+        "candidate_embedding_hashes": [
+          {
+            "segment_id": "segment_0001",
+            "embedding_sha256": "c717efcf78ccd08ed98f8cc24f9f070a5ba824e5b809f30ff620ec5d6e76b686"
+          }
+        ],
+        "interpretation": "Similarity to an owner-confirmed anchor across a different recording. It is consistency evidence only and cannot identify or authorize a person."
+      }
+    },
+    {
+      "source_id": "kathryn_2016_pilot_clip0346",
+      "range_id": "candidate_0002",
+      "path": "C:\\Users\\robmc\\Kira\\Voice\\reference_packs\\kathryn_merteuil_kathryn_merteuil_20260605_213017\\kathryn_merteuil_kathryn_merteuil_20260605_213017_cruel_intentions_nbc_unaired_pilot_2016_sd_20260717_035509\\candidate_clips\\clip_0346.wav",
+      "source_start_seconds": null,
+      "source_end_seconds": null,
+      "owner_confirmed_target_only": false,
+      "declared_source_media_sha256": "",
+      "sha256": "e2f294b4a2e35d9a98ee03d09428a0240d9beb73c3c8e06d128031e9ba982f35",
+      "format": {
+        "channels_in_file": 1,
+        "sample_width_bytes": 2,
+        "sample_rate_hz": 24000,
+        "frame_count": 88560,
+        "mixed_to_mono": false
+      },
+      "quality": {
+        "status": "accepted_for_consistency_analysis",
+        "rejection_reasons": [],
+        "duration_seconds": 3.69,
+        "rms_dbfs": -26.153,
+        "peak_dbfs": -10.922,
+        "clipping_fraction": 0.0,
+        "active_seconds_energy_estimate": 3.21,
+        "active_fraction_energy_estimate": 0.8699,
+        "energy_snr_proxy_db": 6.907,
+        "energy_threshold_dbfs": -31.2,
+        "note": "Energy estimates are quality/segmentation aids, not speech or speaker identity proof."
+      },
+      "segments": [
+        {
+          "segment_id": "segment_0001",
+          "start_seconds_in_bounded_wav": 0.0,
+          "end_seconds_in_bounded_wav": 3.69,
+          "duration_seconds": 3.69,
+          "canonical_16khz_float_sha256": "b82bc1416cf48ff2135ca50b46dc84ddb121bfdc3c24700df5ec23038f45068c"
+        }
+      ],
+      "source_independence": {
+        "different_declared_source_ids": true,
+        "bounded_wav_sha256_differs": true,
+        "declared_source_media_sha256_differs": null,
+        "status": "accepted_declared_cross_source",
+        "note": "Different source IDs are owner/tool provenance; hashes additionally reject exact duplicate audio or a declared identical underlying media file."
+      },
+      "independent_source_from_anchor": true,
+      "consistency_evidence": {
+        "status": "computed",
+        "decision": "speaker_consistency_supported_not_identity_proof",
+        "aggregate_method": "median_of_all_cross_source_segment_pair_cosines",
+        "median_cosine_similarity": 0.946274,
+        "mean_cosine_similarity": 0.943349,
+        "minimum_cosine_similarity": 0.906791,
+        "maximum_cosine_similarity": 0.968728,
+        "support_threshold": 0.8,
+        "reject_threshold": 0.6,
+        "thresholds_are_operational_not_identity_calibrated": true,
+        "cosine_scores": [
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0001",
+            "cosine_similarity": 0.906791
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0002",
+            "cosine_similarity": 0.968728
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0003",
+            "cosine_similarity": 0.934418
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0004",
+            "cosine_similarity": 0.957611
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0005",
+            "cosine_similarity": 0.950559
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0006",
+            "cosine_similarity": 0.941988
+          }
+        ],
+        "candidate_embedding_hashes": [
+          {
+            "segment_id": "segment_0001",
+            "embedding_sha256": "e2db6e253a3952bc814684f558ddfb719995c973f9df416990eb2fac2063d655"
+          }
+        ],
+        "interpretation": "Similarity to an owner-confirmed anchor across a different recording. It is consistency evidence only and cannot identify or authorize a person."
+      }
+    },
+    {
+      "source_id": "kathryn_2016_pilot_clip0350",
+      "range_id": "candidate_0003",
+      "path": "C:\\Users\\robmc\\Kira\\Voice\\reference_packs\\kathryn_merteuil_kathryn_merteuil_20260605_213017\\kathryn_merteuil_kathryn_merteuil_20260605_213017_cruel_intentions_nbc_unaired_pilot_2016_sd_20260717_035509\\candidate_clips\\clip_0350.wav",
+      "source_start_seconds": null,
+      "source_end_seconds": null,
+      "owner_confirmed_target_only": false,
+      "declared_source_media_sha256": "",
+      "sha256": "c5097155804934e8d84a4fd04ec9cd86b6b1eb3b49bc6220c120810495724bf3",
+      "format": {
+        "channels_in_file": 1,
+        "sample_width_bytes": 2,
+        "sample_rate_hz": 24000,
+        "frame_count": 82080,
+        "mixed_to_mono": false
+      },
+      "quality": {
+        "status": "accepted_for_consistency_analysis",
+        "rejection_reasons": [],
+        "duration_seconds": 3.42,
+        "rms_dbfs": -24.117,
+        "peak_dbfs": -8.868,
+        "clipping_fraction": 0.0,
+        "active_seconds_energy_estimate": 3.39,
+        "active_fraction_energy_estimate": 0.9912,
+        "energy_snr_proxy_db": 8.158,
+        "energy_threshold_dbfs": -31.343,
+        "note": "Energy estimates are quality/segmentation aids, not speech or speaker identity proof."
+      },
+      "segments": [
+        {
+          "segment_id": "segment_0001",
+          "start_seconds_in_bounded_wav": 0.0,
+          "end_seconds_in_bounded_wav": 3.42,
+          "duration_seconds": 3.42,
+          "canonical_16khz_float_sha256": "2c8bc02942afb1c7a05545926978578e8403014d5a661e1d9c8c07246bcf8114"
+        }
+      ],
+      "source_independence": {
+        "different_declared_source_ids": true,
+        "bounded_wav_sha256_differs": true,
+        "declared_source_media_sha256_differs": null,
+        "status": "accepted_declared_cross_source",
+        "note": "Different source IDs are owner/tool provenance; hashes additionally reject exact duplicate audio or a declared identical underlying media file."
+      },
+      "independent_source_from_anchor": true,
+      "consistency_evidence": {
+        "status": "computed",
+        "decision": "speaker_consistency_supported_not_identity_proof",
+        "aggregate_method": "median_of_all_cross_source_segment_pair_cosines",
+        "median_cosine_similarity": 0.936888,
+        "mean_cosine_similarity": 0.928362,
+        "minimum_cosine_similarity": 0.864126,
+        "maximum_cosine_similarity": 0.95747,
+        "support_threshold": 0.8,
+        "reject_threshold": 0.6,
+        "thresholds_are_operational_not_identity_calibrated": true,
+        "cosine_scores": [
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0001",
+            "cosine_similarity": 0.864126
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0002",
+            "cosine_similarity": 0.952337
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0003",
+            "cosine_similarity": 0.951043
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0004",
+            "cosine_similarity": 0.95747
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0005",
+            "cosine_similarity": 0.92246
+          },
+          {
+            "candidate_segment_id": "segment_0001",
+            "anchor_segment_id": "segment_0006",
+            "cosine_similarity": 0.922733
+          }
+        ],
+        "candidate_embedding_hashes": [
+          {
+            "segment_id": "segment_0001",
+            "embedding_sha256": "c5953a57709821e7ea9b71ff83a85abbf87a9849e640ba2d8e74ef8054de1cfd"
+          }
+        ],
+        "interpretation": "Similarity to an owner-confirmed anchor across a different recording. It is consistency evidence only and cannot identify or authorize a person."
+      }
+    }
+  ],
+  "limits_and_actions": {
+    "consistency_is_identity_proof": false,
+    "may_auto_approve_or_select_a_speaker": false,
+    "voice_assignment_performed": false,
+    "voice_clone_or_training_performed": false,
+    "temporary_ai_activation_performed": false,
+    "source_download_performed_by_this_module": false,
+    "media_modified": false,
+    "only_optional_write": "JSON evidence manifest"
+  }
+}

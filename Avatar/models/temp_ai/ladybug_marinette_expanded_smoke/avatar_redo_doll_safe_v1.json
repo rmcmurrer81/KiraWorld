@@ -1,0 +1,51 @@
+{
+  "version": "marinette_doll_safe_redo_v1",
+  "generated_at": "2026-07-12T06:42:54.786633+00:00",
+  "status": "historical_output_staged_review_only_not_approved_for_runtime",
+  "runtime_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar.glb",
+  "staged_model": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_redo_doll_safe_v1_20260712.glb",
+  "staged_model_sha256": "06b12374b7ea0d66d4a5d1d3e267acda1b4019417caf725e592b7a5a59a8134e",
+  "current_runtime_model_sha256": "6030bdcd37883e9b890802028561ff76b8260442a101912db493e5ca31f5ef7c",
+  "active_model_replaced": false,
+  "runtime_activation_allowed": false,
+  "activation_approval_artifact": "Avatar/models/temp_ai/ladybug_marinette_expanded_smoke/avatar_redo_doll_safe_v1.activation_approval.json",
+  "activation_approval_artifact_exists": false,
+  "historical_generation_behavior": "The 2026-07-12 script copied this draft over the live model at generation time. The script is now hardened to stage only by default; the current live model has different bytes and this draft is not approved for activation.",
+  "maturity_policy": "non_adult_doll_safe",
+  "adult_anatomy_assets_used": false,
+  "source_body_mesh": "procedural smooth doll-safe body; no adult base mesh",
+  "reference_policy": "uses approved Marinette references as visual target; no head/body graft in this draft",
+  "named_parts": [
+    "head",
+    "eye_socket.L/R",
+    "eye_white.L/R",
+    "iris_blue.L/R",
+    "pupil_black.L/R",
+    "low_twin_pigtail_volume.L/R",
+    "side_swept_bangs",
+    "smooth_doll_safe_torso_no_anatomy"
+  ],
+  "bounds": {
+    "min": [
+      -0.269,
+      -0.148,
+      0.049
+    ],
+    "max": [
+      0.269,
+      0.2365,
+      2.272
+    ],
+    "size": [
+      0.538,
+      0.3845,
+      2.223
+    ]
+  },
+  "acceptance_notes": [
+    "This is a redo draft for Robert review, not a final approved likeness.",
+    "The body is intentionally smooth and non-explicit for normal non-adult Marinette.",
+    "Hair is built as named pigtail/bang parts so the next builder pass can replace or refine it.",
+    "Eyes are named and bound to eye_socket bones so placement can be checked automatically."
+  ]
+}

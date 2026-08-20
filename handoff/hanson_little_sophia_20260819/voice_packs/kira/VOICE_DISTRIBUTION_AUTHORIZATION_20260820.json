@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "authorization_id": "kira_private_hanson_voice_owner_attestation_20260820",
+  "recorded_date": "2026-08-20",
+  "authorization_basis": "project_owner_attestation_of_permission_from_voice_subject",
+  "owner_attestation": {
+    "synthetic_voice_use_permitted": true,
+    "private_named_hanson_sharing_permitted": true,
+    "exact_source_recording_sharing_permitted": true,
+    "form_attachment_status": "pending"
+  },
+  "named_recipients": [
+    "David Hanson",
+    "Manav Tidhan",
+    "Vytas Krisciunas"
+  ],
+  "allowed_uses": [
+    "private local Kira speech rendering",
+    "private technical review by the named Hanson team",
+    "private Little Sophia simulator and embodiment research"
+  ],
+  "asset_binding": {
+    "path": "approved_reference.wav",
+    "bytes": 9856844,
+    "sha256": "2039a2abd600a63c294d69c2b2e4d450c64c850dc6d1c9a4fbfa1700ba92069c"
+  },
+  "handling": {
+    "repository_visibility": "private",
+    "public_release_allowed": false,
+    "onward_redistribution_allowed": false,
+    "identity_authentication_allowed": false,
+    "honor_withdrawal_or_supersession": true,
+    "written_form_copy_pending_attachment": true
+  },
+  "withdrawal": {
+    "enabled": true,
+    "stop_future_use": true,
+    "remove_from_active_package": true,
+    "request_route": "Contact the project owner or a named repository administrator and identify authorization_id kira_private_hanson_voice_owner_attestation_20260820.",
+    "delete_or_history_remediation_process": "Stop synthesis, remove the reference and derived voice data from active packages, ask named reviewers to delete local copies, remove current-branch copies, purge Git history where practical, and rotate repository access when appropriate. Bytes already cloned by another party cannot be remotely erased."
+  },
+  "independent_legal_verification_performed": false,
+  "quality_disclosure": {
+    "speaker_purity_review_status": "pending_human_speaker_review",
+    "human_approved_clip_count": 0,
+    "auto_selected_clip_count": 86,
+    "auto_selected_seconds": 205.35,
+    "model_readiness_eligible": false,
+    "speaker_purity_verified": false,
+    "target_speaker_only_verified": false,
+    "multi_speaker_or_narration_risk": true
+  },
+  "claim_boundary": "The project owner attests that the permission covers the three listed scopes. This record is not an independent legal opinion, and the original written form has not yet been attached."
+}

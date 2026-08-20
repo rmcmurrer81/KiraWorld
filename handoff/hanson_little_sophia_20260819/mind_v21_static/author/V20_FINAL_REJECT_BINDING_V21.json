@@ -1,0 +1,26 @@
+{
+  "schema": "kira.mind.continuity.v21.v20_final_reject_binding.v1",
+  "status": "V20_FINAL_REJECT_BOUND_WITHOUT_PROMOTION",
+  "v20_artifact": {"bytes": 60583, "sha256": "f2d948dc3d752756655fd7a96add5e5658992694806ec2f91e9144932d536648"},
+  "v20_author_complete_root_sha256": "923803d84336394879a103f62921265c8c634894049b4a016a2b8cde0752eaef",
+  "v20_audit_decision": {"bytes": 3949, "sha256": "f4174a89fb58058b839cc9189e5df4f384350b930bca25cda9621d966fb0d128"},
+  "v20_audit_manifest": {"bytes": 3503, "sha256": "cf276b967c8601588d75d6a152fb717f8ca95a53d8d0423925289b26333961fe"},
+  "v20_audit_freeze": {"bytes": 2242, "sha256": "5e950b2aafc603edda16eda813cc02ab2f6d635e389ab32ef150f1eb06addaf6"},
+  "v20_audit_post_seal": {"bytes": 2584, "sha256": "f2b208ac6e17990e5e846795937c11fa131705ee92dae5262e3d80835da7c483"},
+  "v20_audit_complete_root_sha256": "3ded9f4e56f793ae76d9b5b499b8e227f627013b0f39dbc7a4bd997f7b46226c",
+  "verdict": "REJECT",
+  "finding_count": 3,
+  "finding_ids": [
+    "F01_V19_CONTENT_HIDING_COMMITMENT_AND_ZERO_KNOWLEDGE_PROOF_OBLIGATIONS_DROPPED",
+    "F02_RETAINED_SIGNATURE_PROOF_AND_QUORUM_BYTES_HAVE_NO_UNIQUE_CONTENT_INDEPENDENT_SELECTION_RULE",
+    "F03_GLOBAL_NAMESPACE_AND_COUNTER_ZERO_GENESIS_ARE_NOT_EXTERNALLY_SINGLETON_BOUND"
+  ],
+  "required_repairs": {
+    "F01": "restore exact V19 content-hiding commitment, randomized zero-knowledge proof, five predicates, six states and erasure/retention closure inside the recursively consumed V21 graph",
+    "F02": "bind every retained choice-byte field to byte uniqueness or externally verifiable attempt-zero content-independent generation with no caller choice retry rejection sampling or selective abort",
+    "F03": "bind one acyclic externally authenticated singleton namespace and counter-zero genesis through a distinct global registrar and trusted outer registration root"
+  },
+  "v20_positive_authority_promoted": false,
+  "implementation_live_production_private_global_pending_or_root_go": false,
+  "root_go": null
+}

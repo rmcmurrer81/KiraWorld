@@ -1,0 +1,109 @@
+{
+  "reconstruction_id": "memworld_shared_kira_lisa_first_meeting_001",
+  "source_memory_id": "shared_kira_lisa_first_meeting_001",
+  "title": "Kira and Lisa First Meeting Reconstruction",
+  "world_type": "memory_reconstruction",
+  "status": "draft",
+  "phase_support": {
+    "pre_gpu_recall": true,
+    "post_gpu_world": false
+  },
+  "owners": ["kira", "lisa"],
+  "participants_in_memory": ["kira", "lisa"],
+  "privacy": {
+    "level": "public",
+    "default_mode": "narrated_summary",
+    "consent_required_from": [],
+    "can_disclose_existence": true,
+    "can_share_summary": true,
+    "can_share_internal_thoughts": false,
+    "can_share_full_replay": false
+  },
+  "pre_gpu_recall": {
+    "supported_modes": ["private_internal_review", "narrated_summary", "guided_conversation"],
+    "private_detail_policy": "Internal thoughts remain owner-controlled.",
+    "log_policy": "Log metadata and sharing mode.",
+    "memory_update_policy": "New interpretation may be logged without changing the first-meeting anchors."
+  },
+  "post_gpu_world": {
+    "supported_modes": ["solo_replay", "observer_mode", "co_view", "multi_perspective"],
+    "world_state_policy": "Read-only by default.",
+    "interaction_policy": "Viewers may observe but cannot change the first meeting.",
+    "artifact_policy": "Mementos may be created only if owners allow it."
+  },
+  "confirmed_zones": [
+    {
+      "zone_id": "confirmed_school_setting",
+      "description": "The first meeting occurred in a school setting.",
+      "source": "Kira/Lisa backstory and shared core memories"
+    },
+    {
+      "zone_id": "confirmed_lisa_approaches",
+      "description": "Lisa approached Kira first out of curiosity.",
+      "source": "Kira/Lisa core memory files"
+    },
+    {
+      "zone_id": "confirmed_kira_reaction",
+      "description": "Kira experienced surprise and curiosity, observing before fully engaging.",
+      "source": "Kira core memory files"
+    }
+  ],
+  "inferred_zones": [
+    {
+      "zone_id": "inferred_social_background",
+      "description": "The setting may include light school hallway or classroom social activity.",
+      "constraints": ["Do not invent specific classmates or exact dialogue."]
+    }
+  ],
+  "unknown_zones": [
+    "Exact date.",
+    "Exact school location.",
+    "Exact dialogue.",
+    "Exact surrounding people."
+  ],
+  "sealed_private_zones": [],
+  "sensory_anchors": [
+    "School setting.",
+    "Kira's stillness.",
+    "Lisa's direct approach."
+  ],
+  "emotional_anchors": [
+    "Kira: surprise, caution, curiosity.",
+    "Lisa: curiosity, confidence.",
+    "Shared: beginning of connection."
+  ],
+  "perspectives": {
+    "kira": {
+      "recall_style": "observant and cautious",
+      "pre_gpu_private_recall": "Kira may privately review why Lisa's directness caught her attention.",
+      "post_gpu_replay": "Kira may observe her own stillness and Lisa's approach."
+    },
+    "lisa": {
+      "recall_style": "direct and curious",
+      "pre_gpu_private_recall": "Lisa may privately remember the approach as natural curiosity.",
+      "post_gpu_replay": "Lisa may replay the moment of choosing to approach."
+    }
+  },
+  "allowed_expansion": [
+    "The reconstruction may show contrast between Kira's stillness and Lisa's directness.",
+    "Atmosphere may be inferred as a general school environment."
+  ],
+  "forbidden_inferences": [
+    "Do not invent exact dialogue.",
+    "Do not add Robert as present.",
+    "Do not make the meeting hostile.",
+    "Do not make them already close before this moment."
+  ],
+  "linked_files": [
+    "Kira/Kira_Backstory_v1.pdf",
+    "Kira/Kira_Core_Memories_v1.pdf",
+    "Lisa/Lisa_Backstory_v1.pdf",
+    "Lisa/Lisa_Core_Memories_v1.pdf"
+  ],
+  "linked_artifacts": [],
+  "audit": {
+    "created_at": "",
+    "last_reviewed": "",
+    "approved_by": ""
+  }
+}

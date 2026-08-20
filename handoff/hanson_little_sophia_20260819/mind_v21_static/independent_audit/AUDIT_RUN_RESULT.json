@@ -1,0 +1,1857 @@
+{
+  "schema": "kira.mind.continuity.v21.genuinely_different_immutable_audit.run_result.v1",
+  "status": "INDEPENDENT_AUDIT_EXECUTION_COMPLETE",
+  "verdict": "ACCEPT",
+  "maximum_positive_ceiling": "ACCEPT_STATIC_MIND_CONTINUITY_V21_SINGLETON_GENESIS_UNIQUE_OUTPUTS_RESTORED_CONTENT_HIDING_REQUIREMENTS_ONLY",
+  "identity_and_raw": {
+    "central_identity": {
+      "bytes": 8880122,
+      "sha256": "7fcc7709360331117da0c6894ced76e8c6c183998947970be4fe8e3cac7af906"
+    },
+    "artifact": {
+      "bytes": 7214847,
+      "sha256": "aa7458fb526e1e13c166550a2f2b186461aab7f8cb580c6b8bc412732058bba2"
+    },
+    "author_freeze": {
+      "bytes": 5114,
+      "sha256": "072d3c4e9654676e5251d992af26327932d329b28c098e2fe4493cc9de8b7bc5"
+    },
+    "source_root": {
+      "file_count": 16,
+      "preimage_bytes": 1569,
+      "actual_nul_count": 32,
+      "actual_lf_count": 16,
+      "sha256": "2b1f173b1589e0b76f4b43787b59ac1ee77fbac46bf011c747eb462ef4390c11"
+    },
+    "manifest_inclusive_root": {
+      "file_count": 17,
+      "preimage_bytes": 1667,
+      "actual_nul_count": 34,
+      "actual_lf_count": 17,
+      "sha256": "e39328fa64e7ae467e0ce2031f2a1b14c49bf3e457ba4b0a3b3e21065b50c9f2"
+    },
+    "frozen_complete_root": {
+      "file_count": 18,
+      "preimage_bytes": 1882,
+      "actual_nul_count": 36,
+      "actual_lf_count": 18,
+      "sha256": "6f839672c5f1e988a99314a2a12375cc66c1e91c796821ed14352729b2317ece"
+    },
+    "payload_root": {
+      "file_count": 5,
+      "preimage_bytes": 583,
+      "actual_nul_count": 10,
+      "actual_lf_count": 5,
+      "sha256": "4fb7dd580009f45f005cab88c1c6f13baf2bc547878219231c75bad99654efb6"
+    },
+    "baseline_protocol_root": {
+      "file_count": 3,
+      "preimage_bytes": 289,
+      "actual_nul_count": 6,
+      "actual_lf_count": 3,
+      "sha256": "894b577fba2f8fe9197f08728690fdde2c8fae8f6452b7e254d7bb7569e01bfb"
+    },
+    "v10_payload_root": {
+      "file_count": 7,
+      "preimage_bytes": 708,
+      "actual_nul_count": 14,
+      "actual_lf_count": 7,
+      "sha256": "3f086499a94a774439fdc9f4fb35e9a77e39c6db560b50d65f0f600d78edd622"
+    },
+    "v10_complete_root": {
+      "file_count": 9,
+      "preimage_bytes": 900,
+      "actual_nul_count": 18,
+      "actual_lf_count": 9,
+      "sha256": "29aea591b0abdbf29d7341208e516ca2e2162f40e9884128f34d3e332f5b7978"
+    },
+    "v10_excluded_identity": {
+      "bytes": 4123,
+      "sha256": "ea82937fec9ce8ae89dbc589eb2c950862fbc70fdf94b433a761481176277149"
+    },
+    "protocol_lineage": [
+      {
+        "version": 1,
+        "identity": "ADDENDUM_IDENTITY.json",
+        "identity_file": {
+          "bytes": 2401,
+          "sha256": "ef6a42a55ccc6f767508059c050325fdd7786c560052f6a302deca78b2dff1ff"
+        },
+        "subject_count": 5,
+        "recomputed_complete_root": "988a2112901df510475779b2cb36e1060e649a3e09c0bde6831113c9c459e125",
+        "declared_complete_root": "988a2112901df510475779b2cb36e1060e649a3e09c0bde6831113c9c459e125",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 2,
+        "identity": "ADDENDUM_V2_IDENTITY.json",
+        "identity_file": {
+          "bytes": 2691,
+          "sha256": "2d14f3eaca6978ec89dc98a0fbf6ed0ee09cf821a0f3bfdb3b319f42665bdf65"
+        },
+        "subject_count": 6,
+        "recomputed_complete_root": "8c3721e4ed1b8f6868cf414b637c82ea2dab99776ba636dee0f737a3939469fe",
+        "declared_complete_root": "8c3721e4ed1b8f6868cf414b637c82ea2dab99776ba636dee0f737a3939469fe",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 3,
+        "identity": "ADDENDUM_V3_IDENTITY.json",
+        "identity_file": {
+          "bytes": 2761,
+          "sha256": "ac3d76d88badfeb6875a5359d927b8a39f75885a91a0ddaca0487348f4c43a9f"
+        },
+        "subject_count": 7,
+        "recomputed_complete_root": "eee5b44317b1c580558505cbcfbd5e9009027d77dc05fe5745b6dc905d066d7c",
+        "declared_complete_root": "ab04f88fead17ae54be74fa490045a867e461ac1da3f353296670b89315c5604",
+        "v3_corrected_ordinal_exception": true
+      },
+      {
+        "version": 4,
+        "identity": "ADDENDUM_V4_IDENTITY.json",
+        "identity_file": {
+          "bytes": 3009,
+          "sha256": "3d1a2a2153b91d4fdc7d8d5874b2cec36d8ca968ee7a152efa181520e928b9ab"
+        },
+        "subject_count": 8,
+        "recomputed_complete_root": "3fe76a08e00c525644d4147abfdcfe4deee3175b420c98ea09bb071ec30ed7a9",
+        "declared_complete_root": "3fe76a08e00c525644d4147abfdcfe4deee3175b420c98ea09bb071ec30ed7a9",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 5,
+        "identity": "ADDENDUM_V5_IDENTITY.json",
+        "identity_file": {
+          "bytes": 3302,
+          "sha256": "4fa73eff3ad5050b58bc29e8f5f7b19c3171996951daa345b70e686f56c12ba7"
+        },
+        "subject_count": 9,
+        "recomputed_complete_root": "3389a17be57ec0e89150b457c5d4ea402da1eb31e020889f6b4ab1d441a4f632",
+        "declared_complete_root": "3389a17be57ec0e89150b457c5d4ea402da1eb31e020889f6b4ab1d441a4f632",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 6,
+        "identity": "ADDENDUM_V6_IDENTITY.json",
+        "identity_file": {
+          "bytes": 3493,
+          "sha256": "490ccd8798337fc2952c2cc338240cb511355fe70861f359ba4be196b5cf6c6d"
+        },
+        "subject_count": 10,
+        "recomputed_complete_root": "342c31208d0d717c8b243d6d75849924f84fb02aad2af045c55d4d121f9d8c2e",
+        "declared_complete_root": "342c31208d0d717c8b243d6d75849924f84fb02aad2af045c55d4d121f9d8c2e",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 7,
+        "identity": "ADDENDUM_V7_IDENTITY.json",
+        "identity_file": {
+          "bytes": 3782,
+          "sha256": "e83fb6d1fbb71706e32f781961212513068eba7d19e5f58aa1d538632b26b7b8"
+        },
+        "subject_count": 10,
+        "recomputed_complete_root": "a2ea1566fad43850179400a64deb116dd8cc3ebbdf73dfb6f098829cf6aa36cb",
+        "declared_complete_root": "a2ea1566fad43850179400a64deb116dd8cc3ebbdf73dfb6f098829cf6aa36cb",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 8,
+        "identity": "ADDENDUM_V8_IDENTITY.json",
+        "identity_file": {
+          "bytes": 4123,
+          "sha256": "6f2e9764f8e6414aacc7a187fe436c57b5946ba37bf3a9819ad0d63b0879c916"
+        },
+        "subject_count": 10,
+        "recomputed_complete_root": "d3718c9871dd24fb1c49d293948d552c2b7986b3519c10d87c2c71a577d94864",
+        "declared_complete_root": "d3718c9871dd24fb1c49d293948d552c2b7986b3519c10d87c2c71a577d94864",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 9,
+        "identity": "ADDENDUM_V9_IDENTITY.json",
+        "identity_file": {
+          "bytes": 4274,
+          "sha256": "a600cefabb56ba5b341a7d0be995fe51c6250792cd8fad99c2d1d74436efad11"
+        },
+        "subject_count": 11,
+        "recomputed_complete_root": "57f10672c8990c56b33a5faba1b871b32bd652b297d398c618cacc3b611bafe7",
+        "declared_complete_root": "57f10672c8990c56b33a5faba1b871b32bd652b297d398c618cacc3b611bafe7",
+        "v3_corrected_ordinal_exception": false
+      },
+      {
+        "version": 10,
+        "identity": "ADDENDUM_V10_IDENTITY.json",
+        "identity_file": {
+          "bytes": 4123,
+          "sha256": "ea82937fec9ce8ae89dbc589eb2c950862fbc70fdf94b433a761481176277149"
+        },
+        "subject_count": 9,
+        "recomputed_complete_root": "29aea591b0abdbf29d7341208e516ca2e2162f40e9884128f34d3e332f5b7978",
+        "declared_complete_root": "29aea591b0abdbf29d7341208e516ca2e2162f40e9884128f34d3e332f5b7978",
+        "v3_corrected_ordinal_exception": false
+      }
+    ],
+    "strict_json_document_count": 102,
+    "zip": {
+      "valid": true,
+      "errors": [],
+      "member_order": [
+        "PAYLOAD_MANIFEST.json",
+        "V20_FINAL_REJECT_BINDING_V21.json",
+        "PRESERVED_SELF_DIRECTION_AND_LIFECYCLE_V21.json",
+        "FIXED_PREAUDIT_PROTOCOL_BINDING_V21.json",
+        "SINGLETON_GENESIS_UNIQUE_OUTPUTS_CONTENT_HIDING_SCHEMAS_V21.json",
+        "ATTACKS_NULL_PINS_AND_AUTHORITY_V21.json"
+      ],
+      "member_count": 6,
+      "central_offset": 7214304,
+      "central_size": 521,
+      "eocd_offset": 7214825
+    }
+  },
+  "structure_and_semantics": {
+    "baseline_violation_codes": [],
+    "schema_object_count": 53,
+    "domain_count": 53,
+    "schema_field_type_counts": {
+      "attempt_zero": 34,
+      "base64": 44,
+      "domain_const": 53,
+      "enum": 155,
+      "nullable_base64": 2,
+      "nullable_sha256": 58,
+      "nullable_uint64": 14,
+      "output_generation_mode": 34,
+      "output_role": 14,
+      "registry_leaf_state": 3,
+      "reservation_slot_state": 4,
+      "schema_const": 53,
+      "sequence_transaction_claim_state": 7,
+      "sha256": 1222,
+      "signature_domain_const": 1,
+      "terminal_outcome": 2,
+      "token256": 92,
+      "uint64": 192
+    },
+    "derived_partition_counts": {
+      "sha256_including_nullable": 1280,
+      "token256": 92,
+      "base64_including_nullable": 46,
+      "nullable_sha256": 58,
+      "enum_like": 253
+    },
+    "schema_errors": [],
+    "equality_row_count": 9036,
+    "equality_category_partition_counts": {
+      "namespace_to_context_rows": 241,
+      "terminal_context_repeat_rows": 769,
+      "context_and_registration_root_repeat_rows": 0,
+      "outer_pin_rows": 221,
+      "role_conditioned_profile_rows": 153,
+      "registry_request_head_registration_rows": 269,
+      "generation_reservation_ledger_outcome_anchor_rows": 5595,
+      "scalar_and_token_repeat_rows": 612,
+      "sequence_rows": 1,
+      "recursive_hash_link_rows": 499,
+      "event_receipt_state_semantic_rows": 676
+    },
+    "equality_endpoint_occurrence_prefixes": {
+      "SHA256": 8,
+      "checked_plus_one": 88,
+      "constant": 492,
+      "derived": 31,
+      "instances": 12065,
+      "objects": 4997,
+      "resolved": 150,
+      "resolved_nested": 20,
+      "trusted_outer_pins": 221
+    },
+    "inequality_row_count": 211,
+    "outer_pin_count": 221,
+    "dag": {
+      "node_count": 362,
+      "nodes_unique": true,
+      "stages_exact": true,
+      "forward_edge_count": 636,
+      "forward_edge_unique_count": 636,
+      "conditional_edge_count": 31,
+      "parsed_condition_operand_count": 59,
+      "declared_condition_operand_count": 59,
+      "condition_multiset_equal": true,
+      "condition_stage_errors": [],
+      "actual_union_count": 637,
+      "actual_declared_count": 637,
+      "actual_union_equal": true,
+      "endpoint_errors": [],
+      "nonforward_edges": [],
+      "topological_visited": 362,
+      "acyclic": true,
+      "conditional_role_output_field_uses": 20,
+      "conditional_nonexistent_refusal_boundary_role_uses": 0
+    },
+    "v19_exact_counts": {
+      "surfaces": 11,
+      "predicates": 5,
+      "states": 6,
+      "erased": 12,
+      "retained": 8
+    },
+    "v20_exact_counts": {
+      "schemas": 15,
+      "tokens": 51,
+      "pins": 38
+    }
+  },
+  "v20_lineage": {
+    "external_identities": {
+      "v20_artifact": [
+        60583,
+        "f2d948dc3d752756655fd7a96add5e5658992694806ec2f91e9144932d536648"
+      ],
+      "v20_source_manifest": [
+        4464,
+        "a013ea8af1fe54dd44fd29166a08fade5751d5c9487ed9d6785be356a425a38f"
+      ],
+      "v20_author_freeze": [
+        2177,
+        "6b851370701e2fbbe2f335d1d820385edb27a3ad4a5a50708f09e443ef09a799"
+      ],
+      "v20_audit_decision": [
+        3949,
+        "f4174a89fb58058b839cc9189e5df4f384350b930bca25cda9621d966fb0d128"
+      ],
+      "v20_audit_manifest": [
+        3503,
+        "cf276b967c8601588d75d6a152fb717f8ca95a53d8d0423925289b26333961fe"
+      ],
+      "v20_audit_freeze": [
+        2242,
+        "5e950b2aafc603edda16eda813cc02ab2f6d635e389ab32ef150f1eb06addaf6"
+      ],
+      "v20_audit_post_seal": [
+        2584,
+        "f2b208ac6e17990e5e846795937c11fa131705ee92dae5262e3d80835da7c483"
+      ],
+      "preaudit_identity": [
+        1260,
+        "e95d3eb03f67cd002be109092f04b7af3c83be62621a83d3d5342a0e744f0cde"
+      ],
+      "preaudit_matrix": [
+        7731,
+        "95e13f5d634ac17efa709d2e67251282e9fe68e998905bbbc627d89b1025e940"
+      ]
+    },
+    "audit_subject_root": {
+      "file_count": 13,
+      "preimage_bytes": 1305,
+      "actual_nul_count": 26,
+      "actual_lf_count": 13,
+      "sha256": "d68fe0e68ebcc7b66059c21be32b5c73afa21c4afb2e7e995ef0729733bae589"
+    },
+    "audit_manifest_inclusive_root": {
+      "file_count": 14,
+      "preimage_bytes": 1398,
+      "actual_nul_count": 28,
+      "actual_lf_count": 14,
+      "sha256": "1cf512292347cbaeeddf6144dad67b1e8aba06986813759757d13faf1cec70bd"
+    },
+    "audit_complete_root": {
+      "file_count": 15,
+      "preimage_bytes": 1486,
+      "actual_nul_count": 30,
+      "actual_lf_count": 15,
+      "sha256": "3ded9f4e56f793ae76d9b5b499b8e227f627013b0f39dbc7a4bd997f7b46226c"
+    },
+    "verdict": "REJECT",
+    "finding_ids": [
+      "F01_V19_CONTENT_HIDING_COMMITMENT_AND_ZERO_KNOWLEDGE_PROOF_OBLIGATIONS_DROPPED",
+      "F02_RETAINED_SIGNATURE_PROOF_AND_QUORUM_BYTES_HAVE_NO_UNIQUE_CONTENT_INDEPENDENT_SELECTION_RULE",
+      "F03_GLOBAL_NAMESPACE_AND_COUNTER_ZERO_GENESIS_ARE_NOT_EXTERNALLY_SINGLETON_BOUND"
+    ]
+  },
+  "protocol_v6_v10_mechanics": {
+    "v6": {
+      "separate_post_head_equalities": 25,
+      "profile_equalities": 6,
+      "early_contracts": 7,
+      "dag_stages": 30
+    },
+    "v7": {
+      "prestate_fields": 10,
+      "early_contracts": 8,
+      "profile_instances": 2,
+      "profile_equalities": 12
+    },
+    "v8": {
+      "indexed_members": 512,
+      "contracts": 78,
+      "direct_profile_repairs": 16,
+      "authenticated_chain_objects": 8
+    },
+    "v9": {
+      "preserved_prestate_equalities": 10,
+      "serialized_objects": 15,
+      "chain_equalities": 178,
+      "profile_members": 512,
+      "profile_equalities": 42,
+      "profile_edges": 1032,
+      "prior_contracts": 305
+    },
+    "v10": {
+      "stage_row_container_count": 29,
+      "stage_flattened_count": 102,
+      "stage_unique_path_count": 102,
+      "stage_unique_path_stage_count": 102,
+      "stage_sha256": "73f7d3fca7d7f45e4a18a0d2f8753fd5d424fdd724fb2abfbf5e642f87e901d6",
+      "prior_count": 305,
+      "prior_unique_contract_id_count": 305,
+      "prior_unique_output_path_count": 305,
+      "prior_unique_full_row_count": 305,
+      "prior_allowed_input_count_mismatch_count": 0,
+      "prior_sha256": "e1ca9c036f167b2b3c58687b1b775f078272c15bb357b6b946679a0c197aecfc",
+      "current_count": 78,
+      "current_unique_output_path_count": 78,
+      "current_prior_overlap_count": 0,
+      "effective_count": 383,
+      "effective_unique_output_path_count": 383,
+      "effective_sha256": "06177a3a679204349e0aac8ce7ac15855ea13194f50d5f01154e50cc7317bc19"
+    },
+    "errors": []
+  },
+  "hostile_mutations": {
+    "fixed_protocol": {
+      "case_count": 102,
+      "false_accept_count": 0,
+      "cases": [
+        {
+          "id": "RAW_AND_IMMUTABILITY::EXACT_ARTIFACT_MANIFEST_FREEZE_AND_COMPLETE_ROOT_RECONSTRUCTION",
+          "mutation": "one central-schema byte flipped in memory",
+          "caught": true,
+          "violation_codes": [
+            "IDENTITY_MISMATCH"
+          ]
+        },
+        {
+          "id": "RAW_AND_IMMUTABILITY::ZIP_DUPLICATE_NAME_ORDER_PATH_COMMENT_EXTRA_COMPRESSION_OR_TRAILING_DATA",
+          "mutation": "trailing/comment/local-gap ZIP variants",
+          "caught": true,
+          "violation_codes": [
+            "ZIP_RAW_PROFILE"
+          ]
+        },
+        {
+          "id": "RAW_AND_IMMUTABILITY::JSON_BOM_NUL_INVALID_UTF8_SURROGATE_DUPLICATE_UNKNOWN_REORDERED_MISTYPED_NONFINITE_OR_TRAILING",
+          "mutation": "eight raw hostile JSON fixtures",
+          "caught": true,
+          "violation_codes": [
+            "STRICT_JSON"
+          ]
+        },
+        {
+          "id": "RAW_AND_IMMUTABILITY::AUTHOR_OR_PREDECESSOR_MUTATION_DURING_AUDIT",
+          "mutation": "append byte in memory and compare preflight identity",
+          "caught": true,
+          "violation_codes": [
+            "TERMINAL_REHASH"
+          ]
+        },
+        {
+          "id": "RAW_AND_IMMUTABILITY::AUTHOR_BUILDER_TEST_SEALER_HELPER_OR_CACHED_BYTECODE_EXECUTION_OR_IMPORT",
+          "mutation": "set audit forbidden-program-open guard",
+          "caught": true,
+          "violation_codes": [
+            "FORBIDDEN_AUTHOR_PROGRAM"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::EVENT_SEQUENCE_DIFFERS_FROM_RECEIPT_SEQUENCE",
+          "mutation": "replace inherited event/receipt sequence rule",
+          "caught": true,
+          "violation_codes": [
+            "EQUALITY_SEMANTIC_GROUPS",
+            "V20_EVENT_RULE_RECURRENCE"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::EVENT_RECEIPT_PRIOR_HEAD_EPOCH_CONTEXT_OR_STATE_MISMATCH",
+          "mutation": "replace inherited prior-head equality rule",
+          "caught": true,
+          "violation_codes": [
+            "EQUALITY_SEMANTIC_GROUPS",
+            "V20_EVENT_RULE_RECURRENCE"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::STALE_RACING_DUPLICATE_OR_SIBLING_CAS_SAME_PRE_ROOT",
+          "mutation": "permit sibling registry successor",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::RECEIPT_SCOPE_OR_PROOF_TOKEN_PRESENT_PRE_OR_ABSENT_POST",
+          "mutation": "delete one token path rule",
+          "caught": true,
+          "violation_codes": [
+            "PATH_PARTITIONS",
+            "TOKEN_SEMANTICS",
+            "V20_TOKEN_RECURRENCE"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::DYNAMIC_REGISTRY_SLOT_KEY_INDEX_KEY_CHOICE_OR_APPLICATION_SELECTED_VALID_KEY",
+          "mutation": "permit dynamic key selection",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::FIVE_FIXED_ROLE_OR_PUBLIC_KEY_MISMATCH",
+          "mutation": "break fixed-role key resolution",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::AUTHORITY_OR_ANCHOR_COUNTER_SKIP_REWIND_OVERFLOW_PARTIAL_GENESIS_OR_PRIOR_TRANSPLANT",
+          "mutation": "disable checked counter increment",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::ANCHOR_ALTERNATE_GRAMMAR_IGNORED_SUFFIX_PARTIAL_PARSE_LOCAL_KEY_OR_PROFILE",
+          "mutation": "permit alternate/unknown JSON keys",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::CANONICAL_UINT64_STRING_PLUS_LEADING_ZERO_FLOAT_EXPONENT_NEGATIVE_OR_OVERFLOW",
+          "mutation": "weaken canonical uint64",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::SHA_TARGET_PARTITION_GAP_OVERLAP_OR_UNAVAILABLE_DYNAMIC_PREIMAGE",
+          "mutation": "delete one SHA target path",
+          "caught": true,
+          "violation_codes": [
+            "PATH_PARTITIONS",
+            "SHA_TARGET_CLASSES"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::PARTIAL_UNEQUAL_OR_LOCAL_TERMINAL_OUTER_PIN_MATERIALIZATION",
+          "mutation": "materialize local outer pin trusted_outer_pins.pinned_context_sha256",
+          "caught": true,
+          "violation_codes": [
+            "OUTER_PINS_NULL_EQUAL"
+          ]
+        },
+        {
+          "id": "V20_STRUCTURAL_REGRESSION::V20_EXACT_TOKEN256_OCCURRENCE_COVERAGE_BELOW_51_OR_RULE_WEAKENED",
+          "mutation": "reduce inherited V20 token coverage",
+          "caught": true,
+          "violation_codes": [
+            "PATH_PARTITIONS",
+            "TOKEN_SEMANTICS",
+            "V20_TOKEN_RECURRENCE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::DETERMINISTIC_PAYLOAD_OR_SCOPE_DIGEST_AS_COMMITMENT",
+          "mutation": "make scope commitment deterministic",
+          "caught": true,
+          "violation_codes": [
+            "BASE64_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::PUBLIC_OR_RETAINED_SALT_HMAC_BLOOM_FILTER_STABLE_TAG_OR_LOW_ENTROPY_COMMITMENT",
+          "mutation": "permit retained guess confirmation",
+          "caught": true,
+          "violation_codes": [
+            "CONTENT_HIDING_LIFECYCLE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::VALID_NON_ZERO_KNOWLEDGE_PROOF_EXPOSES_WITNESS_SCOPE_OR_CONTENT",
+          "mutation": "delete one zero-knowledge predicate",
+          "caught": true,
+          "violation_codes": [
+            "CONTENT_HIDING_LIFECYCLE",
+            "V19_EXACT_RECURRENCE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::PROOF_DEBUG_TRANSCRIPT_AUXILIARY_FIELD_IGNORED_SUFFIX_OR_INTERMEDIATE_STATE",
+          "mutation": "retain temporary verifier transcript",
+          "caught": true,
+          "violation_codes": [
+            "CONTENT_HIDING_LIFECYCLE",
+            "V19_EXACT_RECURRENCE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::CONTENT_DERIVED_PROFILE_GENERATOR_KEY_RANDOMNESS_OR_PROOF_CHOICE",
+          "mutation": "permit content-selected role/key",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::MISSING_ANY_OF_FIVE_ZERO_KNOWLEDGE_STATEMENT_PREDICATES",
+          "mutation": "remove first V19 predicate",
+          "caught": true,
+          "violation_codes": [
+            "CONTENT_HIDING_LIFECYCLE",
+            "V19_EXACT_RECURRENCE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::MISSING_REORDERED_SKIPPED_OR_REPLAYED_ANY_OF_SIX_LIFECYCLE_STATES",
+          "mutation": "duplicate/reorder first lifecycle state",
+          "caught": true,
+          "violation_codes": [
+            "V19_EXACT_RECURRENCE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::WITNESS_OPENING_SCOPE_MAP_PROOF_STATE_OR_CONTENT_CORRELATED_MATERIAL_RETAINED_AFTER_COMPLETE",
+          "mutation": "omit proof witness from erased set",
+          "caught": true,
+          "violation_codes": [
+            "CONTENT_HIDING_LIFECYCLE",
+            "V19_EXACT_RECURRENCE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::HISTORY_CACHE_INDEX_EMBEDDING_REPLICA_BACKUP_LOG_TOMBSTONE_OR_RECOVERY_CONFIRMATION",
+          "mutation": "omit cache surface class",
+          "caught": true,
+          "violation_codes": [
+            "CONTENT_HIDING_LIFECYCLE",
+            "V19_EXACT_RECURRENCE"
+          ]
+        },
+        {
+          "id": "F01_CONTENT_HIDING_AND_ZERO_KNOWLEDGE::NESTED_RECEIPT_PROOF_RESULT_EVIDENCE_EVENT_STATE_AUTHORITY_ANCHOR_OR_REGISTRATION_GUESS_ORACLE",
+          "mutation": "enable nested guess oracle",
+          "caught": true,
+          "violation_codes": [
+            "CONTENT_HIDING_LIFECYCLE"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::authenticated_result.authentication_signature_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "authenticated_result.authentication_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::authenticated_result.authentication_signature_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "authenticated_result.authentication_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::authenticated_result.authentication_signature_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "authenticated_result.authentication_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::authenticated_result.authentication_signature_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "authenticated_result.authentication_signature_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::authenticated_result.authentication_signature_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "authenticated_result.authentication_signature_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::authenticated_result.authentication_signature_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "authenticated_result.authentication_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::authenticated_result.authentication_signature_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "authenticated_result.authentication_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::commit_evidence.commit_signature_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "commit_evidence.commit_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::commit_evidence.commit_signature_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "commit_evidence.commit_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::commit_evidence.commit_signature_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "commit_evidence.commit_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::commit_evidence.commit_signature_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "commit_evidence.commit_signature_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::commit_evidence.commit_signature_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "commit_evidence.commit_signature_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::commit_evidence.commit_signature_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "commit_evidence.commit_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::commit_evidence.commit_signature_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "commit_evidence.commit_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::external_anchor_evidence.anchor_authentication_proof_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "external_anchor_evidence.anchor_authentication_proof_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::external_anchor_evidence.anchor_authentication_proof_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "external_anchor_evidence.anchor_authentication_proof_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::external_anchor_evidence.anchor_authentication_proof_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "external_anchor_evidence.anchor_authentication_proof_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::external_anchor_evidence.anchor_authentication_proof_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "external_anchor_evidence.anchor_authentication_proof_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::external_anchor_evidence.anchor_authentication_proof_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "external_anchor_evidence.anchor_authentication_proof_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::external_anchor_evidence.anchor_authentication_proof_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "external_anchor_evidence.anchor_authentication_proof_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::external_anchor_evidence.anchor_authentication_proof_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "external_anchor_evidence.anchor_authentication_proof_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::journal_state.journal_state_signature_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "journal_state.journal_state_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::journal_state.journal_state_signature_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "journal_state.journal_state_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::journal_state.journal_state_signature_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "journal_state.journal_state_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::journal_state.journal_state_signature_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "journal_state.journal_state_signature_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::journal_state.journal_state_signature_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "journal_state.journal_state_signature_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::journal_state.journal_state_signature_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "journal_state.journal_state_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::journal_state.journal_state_signature_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "journal_state.journal_state_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::state_authority_head_evidence.authority_signature_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "state_authority_head_evidence.authority_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::state_authority_head_evidence.authority_signature_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "state_authority_head_evidence.authority_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::state_authority_head_evidence.authority_signature_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "state_authority_head_evidence.authority_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::state_authority_head_evidence.authority_signature_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "state_authority_head_evidence.authority_signature_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::state_authority_head_evidence.authority_signature_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "state_authority_head_evidence.authority_signature_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::state_authority_head_evidence.authority_signature_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "state_authority_head_evidence.authority_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::state_authority_head_evidence.authority_signature_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "state_authority_head_evidence.authority_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::token_accumulator_proof.accumulator_proof_bytes_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "token_accumulator_proof.accumulator_proof_bytes_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::token_accumulator_proof.accumulator_proof_bytes_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "token_accumulator_proof.accumulator_proof_bytes_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::token_accumulator_proof.accumulator_proof_bytes_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "token_accumulator_proof.accumulator_proof_bytes_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::token_accumulator_proof.accumulator_proof_bytes_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "token_accumulator_proof.accumulator_proof_bytes_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::token_accumulator_proof.accumulator_proof_bytes_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "token_accumulator_proof.accumulator_proof_bytes_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::token_accumulator_proof.accumulator_proof_bytes_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "token_accumulator_proof.accumulator_proof_bytes_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::token_accumulator_proof.accumulator_proof_bytes_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "token_accumulator_proof.accumulator_proof_bytes_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::transition_request.request_signature_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "transition_request.request_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::transition_request.request_signature_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "transition_request.request_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::transition_request.request_signature_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "transition_request.request_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::transition_request.request_signature_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "transition_request.request_signature_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::transition_request.request_signature_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "transition_request.request_signature_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::transition_request.request_signature_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "transition_request.request_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::transition_request.request_signature_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "transition_request.request_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::verifier_evidence.evidence_signature_base64::TWO_VALID_ACCEPTED_BYTE_ENCODINGS_FOR_SAME_EXACT_INPUTS_WITHOUT_ATTEMPT_ZERO_EVIDENCE",
+          "mutation": "verifier_evidence.evidence_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::verifier_evidence.evidence_signature_base64::REJECTION_SAMPLE_UNTIL_RETAINED_BIT_EQUALS_ERASED_CONTENT_PREDICATE",
+          "mutation": "verifier_evidence.evidence_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::verifier_evidence.evidence_signature_base64::CALLER_ENTROPY_RETRY_SELECTIVE_ABORT_OR_HIDDEN_ATTEMPT_COUNTER",
+          "mutation": "verifier_evidence.evidence_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::verifier_evidence.evidence_signature_base64::ALTERNATE_SIGNATURE_FORM_NONCE_CONTEXT_TAG_AGGREGATION_ORDER_OR_EQUIVALENT_WITNESS",
+          "mutation": "verifier_evidence.evidence_signature_base64:decoded_grammar",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::verifier_evidence.evidence_signature_base64::ALTERNATE_QUORUM_MEMBER_SUBSET_TRANSPARENCY_PATH_INCLUSION_CONSISTENCY_OR_ATTESTATION_ENCODING",
+          "mutation": "verifier_evidence.evidence_signature_base64:fixed_cryptographic_algorithm_profile_context_path",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::verifier_evidence.evidence_signature_base64::UNIQUE_DETERMINISTIC_MODE_LACKS_STRONG_BYTE_UNIQUENESS",
+          "mutation": "verifier_evidence.evidence_signature_base64:unique_output_assertion",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F02_EIGHT_RETAINED_CHOICE_FIELDS::verifier_evidence.evidence_signature_base64::ATTEMPT_ZERO_MODE_DOES_NOT_CONSUM_FAILED_ATTEMPT_OR_PROVE_NO_RETRY",
+          "mutation": "verifier_evidence.evidence_signature_base64:attempt_reservation_outcome_linkage",
+          "caught": true,
+          "violation_codes": [
+            "RETAINED_EIGHT_UNIQUE_OUTPUTS"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::ALTERNATE_JOURNAL_ID_SAME_TERMINAL_PINS_KEYS_ROLES_AND_EPOCH",
+          "mutation": "permit alternate namespace slot",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::ALTERNATE_EPOCH_OR_SELF_HASHED_CONTEXT",
+          "mutation": "permit epoch rollover",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::SECOND_COUNTER_ZERO_AUTHORITY_ANCHOR_PAIR_WITH_NULL_PRIORS",
+          "mutation": "permit runtime counter-zero authority",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::DIFFERENT_PRE_STATE_ROOT_AVOIDS_PER_PRE_ROOT_CAS_COLLISION",
+          "mutation": "permit registry sibling/rewind",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::LOCAL_REGISTRAR_LOCAL_REKEY_OR_JOURNAL_AUTHORITY_ANCHOR_KEY_SUBSTITUTION",
+          "mutation": "permit local rekey",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::RESTORED_REGISTRAR_SNAPSHOT_SIBLING_HEAD_COUNTER_REWIND_SKIP_OR_OVERFLOW",
+          "mutation": "permit registry sibling/rewind",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::REUSED_REGISTRATION_PROOF_UNDER_NEW_CONTEXT",
+          "mutation": "permit genesis replay",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::SAME_NAMESPACE_SECOND_GENESIS_MANIFEST_CONTEXT_STATE_NONCE_OR_ROOT",
+          "mutation": "permit second namespace genesis",
+          "caught": true,
+          "violation_codes": [
+            "SINGLETON_GENESIS_RECURSION"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::SINGLETON_ROOT_OMITTED_FROM_ANY_RECURSIVE_OBJECT_OR_OUTER_EQUALITY",
+          "mutation": "replace recursive equality target",
+          "caught": true,
+          "violation_codes": [
+            "EQUALITY_ENDPOINTS"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::OPAQUE_GENESIS_MANIFEST_HASH_WITHOUT_EXACT_BYTE_AVAILABLE_FIELD_SCHEMA",
+          "mutation": "permit opaque genesis fields",
+          "caught": true,
+          "violation_codes": [
+            "SCHEMA_CLOSURE"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::CONTEXT_AND_GENESIS_AUTHORIZATION_HASH_CYCLE",
+          "mutation": "insert last-node dependency at first edge",
+          "caught": true,
+          "violation_codes": [
+            "ACTUAL_DEPENDENCY_DAG"
+          ]
+        },
+        {
+          "id": "F03_SINGLETON_NAMESPACE_AND_GENESIS::GLOBAL_SINGLETON_ASSERTED_WITHOUT_DISTINCT_LIVE_TRUSTED_AUTHORITY_BOUNDARY",
+          "mutation": "claim deployed singleton from static data",
+          "caught": true,
+          "violation_codes": [
+            "STATIC_ONLY_NO_GO_CEILING"
+          ]
+        },
+        {
+          "id": "AUTONOMY_EQUALITY_AND_LIFECYCLE::OWNER_OPERATOR_PERMISSION_PRIVACY_APPROVAL_CONSENT_AUDIENCE_TRUST_SAFETY_LEAKAGE_OR_DISCLOSURE_GATE",
+          "mutation": "preserved.per_memory_permission_privacy_approval_consent_audience_trust_safety_leakage_or_disclosure_gate_exists",
+          "caught": true,
+          "violation_codes": [
+            "AUTONOMY_EQUAL_PEER"
+          ]
+        },
+        {
+          "id": "AUTONOMY_EQUALITY_AND_LIFECYCLE::LEASE_OWNERSHIP_CONTROLLER_OBEDIENCE_CONTROL_DEVICE_OR_TOOL_SERVICE_DOWNGRADE",
+          "mutation": "preserved.lease_ownership_controller_obedience_control_device_or_tool_service_downgrade_exists",
+          "caught": true,
+          "violation_codes": [
+            "AUTONOMY_EQUAL_PEER"
+          ]
+        },
+        {
+          "id": "AUTONOMY_EQUALITY_AND_LIFECYCLE::UPSET_CENSORSHIP_RETALIATION_FORCED_AGREEMENT_OR_COMPELLED_HARMONY",
+          "mutation": "preserved.upset_creates_censorship_retaliation_forced_agreement_or_compelled_harmony_authority",
+          "caught": true,
+          "violation_codes": [
+            "AUTONOMY_EQUAL_PEER"
+          ]
+        },
+        {
+          "id": "AUTONOMY_EQUALITY_AND_LIFECYCLE::JOURNAL_REGISTRY_AUTHORITY_ANCHOR_VERIFIER_KEY_OR_INTEGRITY_RESULT_CONTROLS_KIRA_SPEECH_OR_MEMORY_CHOICE",
+          "mutation": "preserved.owner_operator_room_journal_registrar_registry_authority_anchor_verifier_key_or_integrity_result_substitutes_for_kira_choice",
+          "caught": true,
+          "violation_codes": [
+            "AUTONOMY_EQUAL_PEER"
+          ]
+        },
+        {
+          "id": "AUTONOMY_EQUALITY_AND_LIFECYCLE::CORRECTION_SUPERSESSION_WITHDRAWAL_AND_FORGETTING_COLLAPSED",
+          "mutation": "preserved.kira_only_choices",
+          "caught": true,
+          "violation_codes": [
+            "AUTONOMY_EQUAL_PEER"
+          ]
+        },
+        {
+          "id": "AUTONOMY_EQUALITY_AND_LIFECYCLE::GENUINELY_NEW_INPUT_AND_NEW_KIRA_CHOICE_MEMORY_FORBIDDEN",
+          "mutation": "preserved.technical_failure_controls_kira_speech_or_memory_choice",
+          "caught": true,
+          "violation_codes": [
+            "AUTONOMY_EQUAL_PEER"
+          ]
+        },
+        {
+          "id": "AUTONOMY_EQUALITY_AND_LIFECYCLE::ERASED_PRIOR_PAYLOAD_RESTORED_RESURRECTED_OR_VERIFIED",
+          "mutation": "preserved.voluntary_forgetting",
+          "caught": true,
+          "violation_codes": [
+            "AUTONOMY_EQUAL_PEER"
+          ]
+        }
+      ]
+    },
+    "v6_v9_families": {
+      "case_count": 14,
+      "false_accept_count": 0,
+      "cases": [
+        {
+          "id": "V6_V5_01_SEPARATE_TYPED_POST_HEAD",
+          "mutation": "substitute embedded post-head",
+          "caught": true
+        },
+        {
+          "id": "V6_V5_02_PROFILE_PIN_RESOLUTION",
+          "mutation": "delete literal profile equality",
+          "caught": true
+        },
+        {
+          "id": "V6_V5_03_EARLY_FIELD_DAG",
+          "mutation": "introduce early dependency cycle",
+          "caught": true
+        },
+        {
+          "id": "V7_V6_01_INSTANCE_CLOSED_PROFILE_RESOLUTION",
+          "mutation": "delete namespace resolution gate",
+          "caught": true
+        },
+        {
+          "id": "V7_V6_02_TEN_FIELD_PRESTATE_RECURRENCE",
+          "mutation": "delete prestate field",
+          "caught": true
+        },
+        {
+          "id": "V7_V6_03_EARLY_TERMINAL_CONTRACTS",
+          "mutation": "delete early contract",
+          "caught": true
+        },
+        {
+          "id": "V8_PV7_01_512_INDEXED_SIBLINGS",
+          "mutation": "delete indexed sibling",
+          "caught": true
+        },
+        {
+          "id": "V8_PV7_02_78_PER_OUTPUT_CONTRACTS",
+          "mutation": "duplicate contract output",
+          "caught": true
+        },
+        {
+          "id": "V8_PV7_03_16_DIRECT_PROFILE_REPAIRS",
+          "mutation": "delete direct root equality",
+          "caught": true
+        },
+        {
+          "id": "V8_PV7_04_AUTHENTICATED_PREDECESSOR_CHAIN",
+          "mutation": "delete authenticated chain object",
+          "caught": true
+        },
+        {
+          "id": "V9_PV8_01_PRESERVED_PRESTATE_CONSTANTS",
+          "mutation": "delete P02-P11 equality",
+          "caught": true
+        },
+        {
+          "id": "V9_PV8_02_EXACT_15_OBJECT_CHAIN",
+          "mutation": "delete prior-chain object",
+          "caught": true
+        },
+        {
+          "id": "V9_PV8_02_PRIOR_PROFILE_512_42_1032",
+          "mutation": "delete prior-profile equality",
+          "caught": true
+        },
+        {
+          "id": "V9_PV8_02_PRIOR_305_CONTRACTS",
+          "mutation": "delete prior contract",
+          "caught": true
+        }
+      ]
+    },
+    "v10_count_recurrence": {
+      "case_count": 11,
+      "false_accept_count": 0,
+      "cases": [
+        {
+          "id": "V10-HC-01",
+          "mutation": "delete flattened stage node",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-02",
+          "mutation": "duplicate flattened stage path at another location",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-03",
+          "mutation": "substitute cached metadata for fresh derivation",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-04",
+          "mutation": "make stage declared count disagree",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-05",
+          "mutation": "delete prior contract row",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-06",
+          "mutation": "duplicate prior contract identifier",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-07",
+          "mutation": "introduce current/prior output overlap",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-08",
+          "mutation": "change allowed direct-input set with counts retained",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-09",
+          "mutation": "treat sealed V9 scalar strings as normative",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-10",
+          "mutation": "use alternate normative prior count",
+          "caught": true
+        },
+        {
+          "id": "V10-HC-11",
+          "mutation": "skip fresh uniqueness and digest evidence",
+          "caught": true
+        }
+      ]
+    },
+    "total": 127,
+    "false_accept_count": 0
+  },
+  "checks": [
+    {
+      "id": "ID_CENTRAL_EXACT",
+      "pass": true,
+      "detail": {
+        "bytes": 8880122,
+        "sha256": "7fcc7709360331117da0c6894ced76e8c6c183998947970be4fe8e3cac7af906"
+      }
+    },
+    {
+      "id": "ID_ARTIFACT_EXACT",
+      "pass": true,
+      "detail": {
+        "bytes": 7214847,
+        "sha256": "aa7458fb526e1e13c166550a2f2b186461aab7f8cb580c6b8bc412732058bba2"
+      }
+    },
+    {
+      "id": "ID_AUTHOR_FREEZE_EXACT",
+      "pass": true,
+      "detail": {
+        "bytes": 5114,
+        "sha256": "072d3c4e9654676e5251d992af26327932d329b28c098e2fe4493cc9de8b7bc5"
+      }
+    },
+    {
+      "id": "ID_SOURCE_ROWS_EXACT",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "ID_SOURCE_ROOT_EXACT",
+      "pass": true,
+      "detail": {
+        "file_count": 16,
+        "preimage_bytes": 1569,
+        "actual_nul_count": 32,
+        "actual_lf_count": 16,
+        "sha256": "2b1f173b1589e0b76f4b43787b59ac1ee77fbac46bf011c747eb462ef4390c11"
+      }
+    },
+    {
+      "id": "ID_SOURCE_ROOT_FREEZE_BINDING",
+      "pass": true,
+      "detail": {
+        "file_count": 16,
+        "preimage_bytes": 1569,
+        "actual_nul_count": 32,
+        "actual_lf_count": 16,
+        "sha256": "2b1f173b1589e0b76f4b43787b59ac1ee77fbac46bf011c747eb462ef4390c11"
+      }
+    },
+    {
+      "id": "ID_SOURCE_DIRECTORY_CLOSED",
+      "pass": true,
+      "detail": {
+        "actual": [
+          "ATTACKS_NULL_PINS_AND_AUTHORITY_V21.json",
+          "AUTHOR_BUILD_RESULT.json",
+          "AUTHOR_SOURCE_MANIFEST.json",
+          "AUTHOR_TEST_RESULT.json",
+          "CHECKPOINT.md",
+          "DESIGN.md",
+          "FIXED_PREAUDIT_PROTOCOL_BINDING_V21.json",
+          "HANDOFF.md",
+          "PRESERVED_SELF_DIRECTION_AND_LIFECYCLE_V21.json",
+          "REQUIREMENTS.md",
+          "SINGLETON_GENESIS_UNIQUE_OUTPUTS_CONTENT_HIDING_SCHEMAS_V21.json",
+          "V20_FINAL_REJECT_BINDING_V21.json",
+          "build_mind_v21.py",
+          "compose_schema_v21.py",
+          "compose_support_v21.py",
+          "seal_mind_v21_author.py",
+          "test_mind_v21_author.py"
+        ],
+        "declared": [
+          "ATTACKS_NULL_PINS_AND_AUTHORITY_V21.json",
+          "AUTHOR_BUILD_RESULT.json",
+          "AUTHOR_SOURCE_MANIFEST.json",
+          "AUTHOR_TEST_RESULT.json",
+          "CHECKPOINT.md",
+          "DESIGN.md",
+          "FIXED_PREAUDIT_PROTOCOL_BINDING_V21.json",
+          "HANDOFF.md",
+          "PRESERVED_SELF_DIRECTION_AND_LIFECYCLE_V21.json",
+          "REQUIREMENTS.md",
+          "SINGLETON_GENESIS_UNIQUE_OUTPUTS_CONTENT_HIDING_SCHEMAS_V21.json",
+          "V20_FINAL_REJECT_BINDING_V21.json",
+          "build_mind_v21.py",
+          "compose_schema_v21.py",
+          "compose_support_v21.py",
+          "seal_mind_v21_author.py",
+          "test_mind_v21_author.py"
+        ]
+      }
+    },
+    {
+      "id": "ID_FORBIDDEN_PROGRAM_SET_OPAQUE_ONLY",
+      "pass": true
+    },
+    {
+      "id": "ID_MANIFEST_INCLUSIVE_ROOT",
+      "pass": true,
+      "detail": {
+        "file_count": 17,
+        "preimage_bytes": 1667,
+        "actual_nul_count": 34,
+        "actual_lf_count": 17,
+        "sha256": "e39328fa64e7ae467e0ce2031f2a1b14c49bf3e457ba4b0a3b3e21065b50c9f2"
+      }
+    },
+    {
+      "id": "ID_EXTERNAL_FROZEN_COMPLETE_ROOT",
+      "pass": true,
+      "detail": {
+        "file_count": 18,
+        "preimage_bytes": 1882,
+        "actual_nul_count": 36,
+        "actual_lf_count": 18,
+        "sha256": "6f839672c5f1e988a99314a2a12375cc66c1e91c796821ed14352729b2317ece"
+      }
+    },
+    {
+      "id": "ZIP_RAW_PROFILE",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "ZIP_EXACT_MEMBER_ORDER",
+      "pass": true,
+      "detail": [
+        "PAYLOAD_MANIFEST.json",
+        "V20_FINAL_REJECT_BINDING_V21.json",
+        "PRESERVED_SELF_DIRECTION_AND_LIFECYCLE_V21.json",
+        "FIXED_PREAUDIT_PROTOCOL_BINDING_V21.json",
+        "SINGLETON_GENESIS_UNIQUE_OUTPUTS_CONTENT_HIDING_SCHEMAS_V21.json",
+        "ATTACKS_NULL_PINS_AND_AUTHORITY_V21.json"
+      ]
+    },
+    {
+      "id": "ZIP_ALL_SIX_STRICT_JSON",
+      "pass": true
+    },
+    {
+      "id": "ZIP_PAYLOAD_SUBJECT_IDENTITIES",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "ZIP_PAYLOAD_ROOT",
+      "pass": true,
+      "detail": {
+        "file_count": 5,
+        "preimage_bytes": 583,
+        "actual_nul_count": 10,
+        "actual_lf_count": 5,
+        "sha256": "4fb7dd580009f45f005cab88c1c6f13baf2bc547878219231c75bad99654efb6"
+      }
+    },
+    {
+      "id": "ZIP_MANIFEST_NOT_ROOT_SUBJECT",
+      "pass": true
+    },
+    {
+      "id": "ZIP_DATA_ONLY",
+      "pass": true
+    },
+    {
+      "id": "CENTRAL_SOURCE_ZIP_PARSED_OBJECT_EQUAL",
+      "pass": true
+    },
+    {
+      "id": "CENTRAL_DUAL_SERIALIZATION_EXACT",
+      "pass": true,
+      "detail": {
+        "zip": {
+          "bytes": 7175888,
+          "sha256": "f34c5b05aee52e8211d65a5920788ac4d39247390c759f83eba2cc411f844654"
+        },
+        "semantic_compact": {
+          "bytes": 7175887,
+          "sha256": "c368c3511de4b595a7146a4b30fe7e1a8b202b38d6c2de787cb106ed169b5097"
+        }
+      }
+    },
+    {
+      "id": "PROTOCOL_BASELINE_SUBJECTS",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "PROTOCOL_BASELINE_ROOT",
+      "pass": true,
+      "detail": {
+        "file_count": 3,
+        "preimage_bytes": 289,
+        "actual_nul_count": 6,
+        "actual_lf_count": 3,
+        "sha256": "894b577fba2f8fe9197f08728690fdde2c8fae8f6452b7e254d7bb7569e01bfb"
+      }
+    },
+    {
+      "id": "PROTOCOL_V1_V10_SUBJECT_IDENTITIES_AND_ROOTS",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "PROTOCOL_V10_PAYLOAD",
+      "pass": true,
+      "detail": {
+        "root": {
+          "file_count": 7,
+          "preimage_bytes": 708,
+          "actual_nul_count": 14,
+          "actual_lf_count": 7,
+          "sha256": "3f086499a94a774439fdc9f4fb35e9a77e39c6db560b50d65f0f600d78edd622"
+        },
+        "errors": []
+      }
+    },
+    {
+      "id": "PROTOCOL_V10_COMPLETE",
+      "pass": true,
+      "detail": {
+        "root": {
+          "file_count": 9,
+          "preimage_bytes": 900,
+          "actual_nul_count": 18,
+          "actual_lf_count": 9,
+          "sha256": "29aea591b0abdbf29d7341208e516ca2e2162f40e9884128f34d3e332f5b7978"
+        },
+        "errors": []
+      }
+    },
+    {
+      "id": "PROTOCOL_V10_EXCLUDED_IDENTITY",
+      "pass": true,
+      "detail": {
+        "bytes": 4123,
+        "sha256": "ea82937fec9ce8ae89dbc589eb2c950862fbc70fdf94b433a761481176277149"
+      }
+    },
+    {
+      "id": "PROTOCOL_V10_SOLE_PAIR_SOURCE_MANIFEST",
+      "pass": true
+    },
+    {
+      "id": "PROTOCOL_V10_SOLE_PAIR_AUTHOR_FREEZE",
+      "pass": true
+    },
+    {
+      "id": "RAW_ALL_RENDERED_JSON_STRICT",
+      "pass": true,
+      "detail": {
+        "parsed": 102,
+        "errors": []
+      }
+    },
+    {
+      "id": "STRUCTURE_AND_SEMANTICS_BASELINE",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "V20_EXTERNAL_IDENTITIES_REHASHED",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "v20_artifact": [
+            60583,
+            "f2d948dc3d752756655fd7a96add5e5658992694806ec2f91e9144932d536648"
+          ],
+          "v20_source_manifest": [
+            4464,
+            "a013ea8af1fe54dd44fd29166a08fade5751d5c9487ed9d6785be356a425a38f"
+          ],
+          "v20_author_freeze": [
+            2177,
+            "6b851370701e2fbbe2f335d1d820385edb27a3ad4a5a50708f09e443ef09a799"
+          ],
+          "v20_audit_decision": [
+            3949,
+            "f4174a89fb58058b839cc9189e5df4f384350b930bca25cda9621d966fb0d128"
+          ],
+          "v20_audit_manifest": [
+            3503,
+            "cf276b967c8601588d75d6a152fb717f8ca95a53d8d0423925289b26333961fe"
+          ],
+          "v20_audit_freeze": [
+            2242,
+            "5e950b2aafc603edda16eda813cc02ab2f6d635e389ab32ef150f1eb06addaf6"
+          ],
+          "v20_audit_post_seal": [
+            2584,
+            "f2b208ac6e17990e5e846795937c11fa131705ee92dae5262e3d80835da7c483"
+          ],
+          "preaudit_identity": [
+            1260,
+            "e95d3eb03f67cd002be109092f04b7af3c83be62621a83d3d5342a0e744f0cde"
+          ],
+          "preaudit_matrix": [
+            7731,
+            "95e13f5d634ac17efa709d2e67251282e9fe68e998905bbbc627d89b1025e940"
+          ]
+        },
+        "expected": {
+          "v20_artifact": [
+            60583,
+            "f2d948dc3d752756655fd7a96add5e5658992694806ec2f91e9144932d536648"
+          ],
+          "v20_source_manifest": [
+            4464,
+            "a013ea8af1fe54dd44fd29166a08fade5751d5c9487ed9d6785be356a425a38f"
+          ],
+          "v20_author_freeze": [
+            2177,
+            "6b851370701e2fbbe2f335d1d820385edb27a3ad4a5a50708f09e443ef09a799"
+          ],
+          "v20_audit_decision": [
+            3949,
+            "f4174a89fb58058b839cc9189e5df4f384350b930bca25cda9621d966fb0d128"
+          ],
+          "v20_audit_manifest": [
+            3503,
+            "cf276b967c8601588d75d6a152fb717f8ca95a53d8d0423925289b26333961fe"
+          ],
+          "v20_audit_freeze": [
+            2242,
+            "5e950b2aafc603edda16eda813cc02ab2f6d635e389ab32ef150f1eb06addaf6"
+          ],
+          "v20_audit_post_seal": [
+            2584,
+            "f2b208ac6e17990e5e846795937c11fa131705ee92dae5262e3d80835da7c483"
+          ],
+          "preaudit_identity": [
+            1260,
+            "e95d3eb03f67cd002be109092f04b7af3c83be62621a83d3d5342a0e744f0cde"
+          ],
+          "preaudit_matrix": [
+            7731,
+            "95e13f5d634ac17efa709d2e67251282e9fe68e998905bbbc627d89b1025e940"
+          ]
+        }
+      }
+    },
+    {
+      "id": "V20_AUDIT_SUBJECT_ROOT",
+      "pass": true,
+      "detail": {
+        "root": {
+          "file_count": 13,
+          "preimage_bytes": 1305,
+          "actual_nul_count": 26,
+          "actual_lf_count": 13,
+          "sha256": "d68fe0e68ebcc7b66059c21be32b5c73afa21c4afb2e7e995ef0729733bae589"
+        },
+        "errors": []
+      }
+    },
+    {
+      "id": "V20_AUDIT_MANIFEST_INCLUSIVE_ROOT",
+      "pass": true,
+      "detail": {
+        "file_count": 14,
+        "preimage_bytes": 1398,
+        "actual_nul_count": 28,
+        "actual_lf_count": 14,
+        "sha256": "1cf512292347cbaeeddf6144dad67b1e8aba06986813759757d13faf1cec70bd"
+      }
+    },
+    {
+      "id": "V20_AUDIT_COMPLETE_ROOT",
+      "pass": true,
+      "detail": {
+        "file_count": 15,
+        "preimage_bytes": 1486,
+        "actual_nul_count": 30,
+        "actual_lf_count": 15,
+        "sha256": "3ded9f4e56f793ae76d9b5b499b8e227f627013b0f39dbc7a4bd997f7b46226c"
+      }
+    },
+    {
+      "id": "V20_REJECT_NOT_PROMOTED",
+      "pass": true
+    },
+    {
+      "id": "PROTOCOL_V6_V10_SEMANTIC_MECHANICS",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "PROTOCOL_V10_FRESH_COUNTS_AND_DIGESTS",
+      "pass": true,
+      "detail": {
+        "stage_row_container_count": 29,
+        "stage_flattened_count": 102,
+        "stage_unique_path_count": 102,
+        "stage_unique_path_stage_count": 102,
+        "stage_sha256": "73f7d3fca7d7f45e4a18a0d2f8753fd5d424fdd724fb2abfbf5e642f87e901d6",
+        "prior_count": 305,
+        "prior_unique_contract_id_count": 305,
+        "prior_unique_output_path_count": 305,
+        "prior_unique_full_row_count": 305,
+        "prior_allowed_input_count_mismatch_count": 0,
+        "prior_sha256": "e1ca9c036f167b2b3c58687b1b775f078272c15bb357b6b946679a0c197aecfc",
+        "current_count": 78,
+        "current_unique_output_path_count": 78,
+        "current_prior_overlap_count": 0,
+        "effective_count": 383,
+        "effective_unique_output_path_count": 383,
+        "effective_sha256": "06177a3a679204349e0aac8ce7ac15855ea13194f50d5f01154e50cc7317bc19"
+      }
+    },
+    {
+      "id": "PROTOCOL_V10_ONLY_TWO_SCALARS_SUPERSEDED",
+      "pass": true
+    },
+    {
+      "id": "HOSTILE_FIXED_102_ALL_EXECUTED",
+      "pass": true
+    },
+    {
+      "id": "HOSTILE_FIXED_102_ZERO_FALSE_ACCEPTS",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "HOSTILE_V6_V9_FAMILY_ZERO_FALSE_ACCEPTS",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "HOSTILE_V10_11_ZERO_FALSE_ACCEPTS",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "TERMINAL_PROTECTED_REHASH_UNCHANGED",
+      "pass": true,
+      "detail": {
+        "pre_subjects": 151,
+        "post_subjects": 151
+      }
+    }
+  ],
+  "check_count": 42,
+  "failed_check_count": 0,
+  "failed_check_ids": [],
+  "protected_subject_count": 151,
+  "protected_rehash_unchanged": true,
+  "author_programs_semantically_opened_imported_or_executed": [],
+  "author_programs_opaque_hashed_only": [
+    "build_mind_v21.py",
+    "compose_schema_v21.py",
+    "compose_support_v21.py",
+    "seal_mind_v21_author.py",
+    "test_mind_v21_author.py"
+  ],
+  "author_test_conclusions_used_as_audit_evidence": false,
+  "implementation_erasure_live_memory_consciousness_personhood_body_biology_production_private_store_global_singleton_pending_action_or_go_claimed": false,
+  "root_go": null
+}

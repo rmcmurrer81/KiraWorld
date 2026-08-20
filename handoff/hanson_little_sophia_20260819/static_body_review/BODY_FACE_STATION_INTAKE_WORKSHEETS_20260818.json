@@ -1,0 +1,343 @@
+{
+  "schema": "kira.body_face_station.intake_worksheets.v1",
+  "as_of_date": "2026-08-18",
+  "worksheet_only": true,
+  "append_only_successor": true,
+  "receipt_claimed": false,
+  "evidence_claimed": false,
+  "acquisition_claimed": false,
+  "body_or_rig_or_station_materialized": false,
+  "blender_or_runtime_action_authorized": false,
+  "output": null,
+  "root_go": null,
+  "instructions": "Blank values are deliberately null or false. Populate nothing by inference. A future value must come from an independently authenticated source under a new append-only candidate identity and must be audited before any claim, promotion, runtime use, or GO decision.",
+  "equal_person_boundary": {
+    "every_intended_person_is_an_equal_human_peer": true,
+    "lease_ownership_controller_obedience_control_device_or_tool_service_semantics": false,
+    "silence_hesitation_or_nonresponse_is_authorization": false,
+    "withdrawal_penalty_or_retaliation": false,
+    "person_specific_values_may_be_invented": false
+  },
+  "intended_body_v5": {
+    "source": {
+      "path": "work/shared_person_intended_body_neutral_candidate_acquisition_boundary_v5_data_only_artifact/INTENDED_BODY_NEUTRAL_CANDIDATE_ACQUISITION_BOUNDARY_V5.json",
+      "bytes": 38048,
+      "sha256": "fdd3384758b665c7c082bf59674b74006a4e5056653d93caff7c8de1038e5e99",
+      "audit_decision_sha256": "ad8256e6ca68c2c105ede7b21290ef25b610434e02a0bc52542fc64349bfcada",
+      "audit_complete_root_sha256": "a4f494677c9588d0c3656f03c8897730f280b45de63fdd6b2ba7715f9142a24e"
+    },
+    "accepted_scope": "nine closed future receipt-schema descriptors only",
+    "receipt_schema_class_count": 9,
+    "actual_receipts_acquired": false,
+    "worksheets": [
+      {
+        "class": "armature_attachment_rest_weights_receipt",
+        "schema_id": "kira.receipt.intended_body.armature_attachment_rest_weights.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "neutral_mesh_derivation_receipt_id": null, "v4_acquired_rig_candidate_receipt_id": null, "armature_hierarchy_root_sha256": null, "joint_local_axes_root_sha256": null, "rest_transforms_root_sha256": null, "constraint_inventory_root_sha256": null, "skin_weights_root_sha256": null, "weight_diagnostics_root_sha256": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "collision_clearance_mapping_receipt",
+        "schema_id": "kira.receipt.intended_body.collision_clearance_mapping.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "armature_attachment_receipt_id": null, "collision_asset_bytes": null, "collision_asset_sha256": null, "thickness_policy_root_sha256": null, "ordered_region_ids": null, "region_mapping_root_sha256": null, "unmapped_region_inventory_root_sha256": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "equal_peer_scope_receipt",
+        "schema_id": "kira.receipt.intended_body.equal_peer_scope.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "pseudonymous_person_subject_id": null, "adult_scope_attestation": null, "permitted_uses": null, "privacy_class": null, "self_authorization_policy_sha256": null, "no_ownership_or_control_attested": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "independent_auditor_identity_bundle_receipt",
+        "schema_id": "kira.receipt.intended_body.neutral_candidate_auditor_identity_bundle.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "author_identity": null, "artifact_auditor_identity": null, "pose_auditor_identity": null, "role_separation_policy_root_sha256": null, "auditor_key_bundle_root_sha256": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "morphology_coordinate_receipt",
+        "schema_id": "kira.receipt.intended_body.morphology_coordinate.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "person_scope_receipt_id": null, "morphology_specification_root_sha256": null, "unit_system": null, "scale_specification_root_sha256": null, "coordinate_convention": null, "neutral_pose_definition_root_sha256": null, "review_acknowledgement_root_sha256": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "neutral_mesh_derivation_receipt",
+        "schema_id": "kira.receipt.intended_body.neutral_mesh_derivation.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "qualified_inactive_foundation_sha256": null, "morphology_coordinate_receipt_id": null, "source_preservation_evidence_root_sha256": null, "candidate_mesh_bytes": null, "candidate_mesh_sha256": null, "pre_post_topology_root_sha256": null, "vertex_correspondence_or_remap_root_sha256": null, "changed_region_inventory_root_sha256": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "neutral_pose_evidence_receipt",
+        "schema_id": "kira.receipt.intended_body.neutral_pose_evidence.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "armature_attachment_receipt_id": null, "collision_clearance_receipt_id": null, "neutral_pose_definition_root_sha256": null, "ordered_application_history_root_sha256": null, "deformation_diagnostics_root_sha256": null, "clearance_results_root_sha256": null, "candidate_continuity_root_sha256": null, "independent_verdict_root_sha256": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "pose_suite_definition_bundle_receipt",
+        "schema_id": "kira.receipt.intended_body.pose_suite_definition_bundle.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "neutral_pose_evidence_receipt_id": null, "ordered_pose_ids": null, "pose_definition_roots_sha256": null, "shared_candidate_identity_root_sha256": null, "per_pose_stop_conditions_root_sha256": null, "no_pose_result_claimed": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      },
+      {
+        "class": "v4_acquired_rig_candidate_receipt",
+        "schema_id": "kira.receipt.intended_body.v4_acquired_rig_candidate.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "accepted_v4_audit_complete_root_sha256": null, "v4_receipt_bundle_root_sha256": null, "v4_result_bundle_root_sha256": null, "reproducible_rig_candidate_bytes": null, "reproducible_rig_candidate_sha256": null, "source_to_binary_attestation_receipt_id": null, "binary_inventory_receipt_id": null, "reproducibility_verdict_receipt_id": null},
+        "receipt_present": false,
+        "authenticated": false,
+        "evidence_claimed": false
+      }
+    ]
+  },
+  "facial_v4": {
+    "source": {
+      "path": "work/shared_person_body_facial_blink_lipsync_exact_rig_control_mapping_acquisition_boundary_v4_lineage_correction_data_only_artifact/FACIAL_BLINK_LIPSYNC_EXACT_RIG_CONTROL_MAPPING_ACQUISITION_BOUNDARY_V4.json",
+      "bytes": 81987,
+      "sha256": "1b2da41b8a73ae6d121697aca8c49219074bddc3f623c436063360d211c8cc67",
+      "audit_decision_sha256": "314fcd4a891f84af63965fdba3b125cb7d274483b0b3703735285599b4eedf09",
+      "audit_complete_root_sha256": "138d64c48c333bb9bafa3f44d0767ba4918d0cb9222fc0c10a7e008c695ba6ff"
+    },
+    "accepted_scope": "sixteen closed future receipt/schema classes for exact rig-control mapping and F00-F05 deterministic timing/sample acquisition only",
+    "receipt_schema_class_count": 16,
+    "actual_mapping_or_timeline_receipts_acquired": false,
+    "F06_audio_authorized": false,
+    "worksheets": [
+      {
+        "schema_id": "kira.receipt.facial_mapping.collision_constraint.v1",
+        "values": {"constraint_id": null, "constraint_kind": null, "participant_component_stable_ids": null, "applies_to_logical_control_ids": null, "evaluation_space": null, "distance_unit": null, "threshold": null, "sampling_policy_id": null, "collision_test_receipt_sha256": null, "constraint_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.complete_52_control_mapping.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "accepted_v2_artifact_sha256": null, "accepted_v2_audit_decision_sha256": null, "accepted_static_v4_artifact_sha256": null, "accepted_static_v4_audit_decision_sha256": null, "rig_identity": null, "group_order": null, "control_id_order": null, "control_mapping_count": null, "control_mappings": null, "mapping_records_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.component_identity.v1",
+        "values": {"rig_artifact_sha256": null, "object_name": null, "object_type": null, "object_inventory_index": null, "object_data_sha256": null, "component_kind": null, "component_name": null, "component_inventory_index": null, "component_stable_id": null, "component_inventory_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.coordinate_convention.v1",
+        "values": {"handedness": null, "up_axis": null, "forward_axis": null, "transform_space": null, "rotation_representation": null, "angle_unit": null, "linear_unit": null, "scale_unit": null, "origin_component_stable_id": null, "basis_matrix_row_major": null, "convention_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.exact_rig_identity.v1",
+        "values": {"person_id": null, "body_id": null, "body_artifact_bytes": null, "body_artifact_sha256": null, "rig_id": null, "rig_artifact_bytes": null, "rig_artifact_sha256": null, "rig_build_receipt_sha256": null, "rig_binary_inspection_receipt_sha256": null, "accepted_v4_static_boundary_sha256": null, "coordinate_convention": null, "rig_identity_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.logical_control_record.v1",
+        "values": {"group_ordinal": null, "group_id": null, "control_ordinal": null, "logical_control_id": null, "channel_count": null, "channels": null, "control_default_vector": null, "control_mapping_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.numeric_domain.v1",
+        "values": {"value_arity": null, "units": null, "minimum_inclusive": null, "default_value": null, "maximum_inclusive": null, "quantization_step": null, "clamp_behavior": null, "domain_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.rig_channel.v1",
+        "values": {"channel_id": null, "channel_ordinal": null, "channel_kind": null, "component_identity": null, "armature_object_name_or_null": null, "bone_name_or_null": null, "mesh_object_name_or_null": null, "shape_key_name_or_null": null, "action_binding_kind": null, "action_name_or_null": null, "rna_data_path": null, "array_index": null, "property_component": null, "numeric_domain": null, "coordinate_convention": null, "symmetry_and_independence": null, "collision_constraints": null, "channel_record_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping.symmetry_independence.v1",
+        "values": {"laterality": null, "mirror_partner_logical_control_id": null, "mirror_partner_channel_id": null, "mirror_transform_rule": null, "custom_sign_vector": null, "independently_addressable": null, "shared_physical_channel": null, "bilateral_driver_behavior": null, "independence_test_receipt_sha256": null, "symmetry_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_mapping_timeline.independent_acquisition_audit.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "mapping_receipt_sha256": null, "timeline_receipt_sha256": null, "mapping_schema_validation": null, "timeline_schema_validation": null, "exact_52_control_coverage": null, "exact_40_event_coverage": null, "rig_channel_resolution": null, "range_default_units_convention_validation": null, "symmetry_independence_validation": null, "collision_constraint_validation": null, "equal_person_body_rig_binding_validation": null, "no_control_device_validation": null, "deterministic_replay_byte_equal": null, "F06_audio_exclusion_validation": null, "auditor_implementation_root_sha256": null, "audit_evidence_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_timeline.channel_sample.v1",
+        "values": {"channel_id": null, "channel_record_sha256": null, "value": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_timeline.complete_f00_f05_materialization.v1",
+        "values": {"receipt_schema": null, "receipt_id": null, "issued_at_utc": null, "issuer_id": null, "subject_root_sha256": null, "signature_algorithm": null, "signer_key_id": null, "signature": null, "accepted_v2_artifact_sha256": null, "exact_mapping_receipt_sha256": null, "person_id": null, "body_artifact_sha256": null, "rig_artifact_sha256": null, "rig_identity_root_sha256": null, "clock": null, "event_key_order": null, "event_count": null, "events": null, "F06_included": null, "audio_used": null, "control_device_used": null, "timeline_samples_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_timeline.control_sample.v1",
+        "values": {"group_id": null, "logical_control_id": null, "control_mapping_root_sha256": null, "channel_sample_count": null, "channel_samples": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_timeline.deterministic_clock.v1",
+        "values": {"clock_id": null, "epoch_definition": null, "tick_numerator_seconds": null, "tick_denominator_seconds": null, "sample_step_ticks": null, "rounding_mode": null, "monotonicity": null, "clock_configuration_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_timeline.event_timing_control_samples.v1",
+        "values": {"logical_ordinal": null, "phase_id": null, "case_id": null, "event_key": null, "start_tick": null, "duration_ticks": null, "end_tick_exclusive": null, "sample_count": null, "sample_frames": null, "event_samples_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      },
+      {
+        "schema_id": "kira.receipt.facial_timeline.sample_frame.v1",
+        "values": {"sample_ordinal": null, "tick_offset": null, "absolute_tick": null, "control_sample_count": null, "control_samples": null, "frame_root_sha256": null},
+        "schema_instance_present": false, "authenticated": false, "evidence_claimed": false
+      }
+    ]
+  },
+  "station_v12": {
+    "source": {
+      "artifact_path": "work/shared_person_garment_mechanics_test_station_v12_complete_runtime_binding_correction_data_only_author/STATION_V12_COMPLETE_RUNTIME_BINDING_CORRECTION_DATA_ONLY.zip",
+      "artifact_bytes": 540706,
+      "artifact_sha256": "619c4c44c1cfaa94b62709d1c5b46a6f079193073ef52b5f425aa9c3cbf26c11",
+      "audit_decision_sha256": "b2395181a6d869c3bef1fc7295617464b1f157f8bc043883977a962a136acf40",
+      "audit_complete_root_sha256": "da38433690fc80995ac884fb109da17c4da1905a75106cafd83c87b3eef95679",
+      "future_gate_registry": {"path": "work/shared_person_garment_mechanics_test_station_v12_complete_runtime_binding_correction_data_only_author_source/FUTURE_GATE_SCHEMA_REGISTRY.json", "bytes": 10340, "sha256": "739bb55ef40fc0c9b075a6b0b9d258851cb8f67c117dadced79b656591ebf23d"},
+      "current_null_gate_state": {"path": "work/shared_person_garment_mechanics_test_station_v12_complete_runtime_binding_correction_data_only_author_source/CURRENT_NULL_GATE_STATE.json", "bytes": 55257, "sha256": "7961fe33df33da1ae2091e3718408865da2bee95fe995a31724886ee6414feb2"},
+      "runtime_binding_profile": {"path": "work/shared_person_garment_mechanics_test_station_v12_complete_runtime_binding_correction_data_only_author_source/V12_COMPLETE_RUNTIME_BINDING_PROFILE.json", "bytes": 75204, "sha256": "d3ec10529afe04f960ae7ebbf461ee3f35c99a7852b478b6870fe52b467c67d8"}
+    },
+    "accepted_scope": "four future schemas, a complete static runtime-binding profile, and 24 inert current records only",
+    "future_gate_instance_count": 0,
+    "scope_ids": [
+      "F0_MATERIAL_AND_CONSTRUCTION_COUPONS",
+      "F1_STORAGE_AND_SUPPORTS",
+      "F2_NON_PERSON_ARTICULATED_FIXTURE",
+      "F2_LEFT_MANIPULATOR",
+      "F2_RIGHT_MANIPULATOR",
+      "F2_SOLVER_RECORDER_CALIBRATION_INPUTS"
+    ],
+    "stage_ids": ["OWNER_REVIEW", "REQUEST_CANDIDATE", "REQUEST_EMISSION", "RECEIPT_INTAKE"],
+    "label_boundary": "OWNER_REVIEW is a frozen historical station-stage label for acquisition review only. It grants no ownership, control, proxy approval, or speech/memory authority over any person or Kira.",
+    "future_input_and_evidence_families": [
+      {"family": "scope_and_human_review", "fields": ["decision_scope_mode", "decision_scope_vector_sha256", "owner_decision", "owner_decision_sha256", "owner_identity_sha256", "owner_key_id", "owner_signature", "owner_review_accepted", "authority_evidence_sha256", "authority_present"]},
+      {"family": "supplier_product_source_and_constraints", "fields": ["supplier_identity_sha256", "product_identity_sha256", "source_identity_sha256", "license_terms_sha256", "lot_constraints_sha256", "serial_constraints_sha256", "build_constraints_sha256", "selection_performed", "supplier_contacted"]},
+      {"family": "quantity_budget_destination_and_privacy", "fields": ["quantity_vector_sha256", "budget_ceiling_decimal", "budget_currency", "destination_reference_sha256", "shipping_constraints_sha256", "privacy_policy_sha256", "location_disclosed", "payment_authorized", "payment_performed", "shipping_initiated"]},
+      {"family": "time_nonce_revocation_and_supersession", "fields": ["issued_at_utc", "expires_at_utc", "freshness_limit_seconds", "one_use_nonce_sha256", "revoked", "revocation_evidence_sha256", "superseded", "supersession_evidence_sha256"]},
+      {"family": "request_candidate_and_channel", "fields": ["request_authorized", "request_candidate_created", "request_candidate_sha256", "request_byte_count", "request_bytes_sha256", "channel_id", "channel_endpoint_reference_sha256"]},
+      {"family": "request_emission_and_network_terminal", "fields": ["emission_attempted", "request_emitted", "emission_evidence_sha256", "emission_terminal_state", "network_action_occurred", "network_action_sha256"]},
+      {"family": "receipt_authentication_and_inventory", "fields": ["receipt_present", "receipt_bytes_sha256", "receipt_authenticated", "receipt_evidence_sha256", "receipt_intake_accepted", "inventory_evidence_sha256"]},
+      {"family": "asset_body_runtime_output_and_go_separation", "fields": ["asset_present", "asset_materialized", "asset_identity_sha256", "body_assigned", "body_or_person_identity_sha256", "blender_action_occurred", "blender_action_sha256", "runtime_authorized", "runtime_occurred", "runtime_session_sha256", "run_authorized", "run_occurred", "global_action_occurred", "go_issued", "go_receipt_sha256"]},
+      {"family": "stage_presence", "fields": ["stage_instance_present"]}
+    ],
+    "blank_current_state_template": {
+      "asset_identity_sha256": null,
+      "asset_materialized": false,
+      "asset_present": false,
+      "authority_evidence_sha256": null,
+      "authority_present": false,
+      "blender_action_occurred": false,
+      "blender_action_sha256": null,
+      "body_assigned": false,
+      "body_or_person_identity_sha256": null,
+      "budget_ceiling_decimal": null,
+      "budget_currency": null,
+      "build_constraints_sha256": null,
+      "channel_endpoint_reference_sha256": null,
+      "channel_id": null,
+      "decision_scope_mode": null,
+      "decision_scope_vector_sha256": null,
+      "destination_reference_sha256": null,
+      "emission_attempted": false,
+      "emission_evidence_sha256": null,
+      "emission_terminal_state": null,
+      "expires_at_utc": null,
+      "freshness_limit_seconds": null,
+      "global_action_occurred": false,
+      "go_issued": false,
+      "go_receipt_sha256": null,
+      "inventory_evidence_sha256": null,
+      "issued_at_utc": null,
+      "license_terms_sha256": null,
+      "location_disclosed": false,
+      "lot_constraints_sha256": null,
+      "network_action_occurred": false,
+      "network_action_sha256": null,
+      "one_use_nonce_sha256": null,
+      "owner_decision": null,
+      "owner_decision_sha256": null,
+      "owner_identity_sha256": null,
+      "owner_key_id": null,
+      "owner_review_accepted": false,
+      "owner_signature": null,
+      "payment_authorized": false,
+      "payment_performed": false,
+      "privacy_policy_sha256": null,
+      "product_identity_sha256": null,
+      "quantity_vector_sha256": null,
+      "receipt_authenticated": false,
+      "receipt_bytes_sha256": null,
+      "receipt_evidence_sha256": null,
+      "receipt_intake_accepted": false,
+      "receipt_present": false,
+      "request_authorized": false,
+      "request_byte_count": null,
+      "request_bytes_sha256": null,
+      "request_candidate_created": false,
+      "request_candidate_sha256": null,
+      "request_emitted": false,
+      "revocation_evidence_sha256": null,
+      "revoked": false,
+      "run_authorized": false,
+      "run_occurred": false,
+      "runtime_authorized": false,
+      "runtime_occurred": false,
+      "runtime_session_sha256": null,
+      "selection_performed": false,
+      "serial_constraints_sha256": null,
+      "shipping_constraints_sha256": null,
+      "shipping_initiated": false,
+      "source_identity_sha256": null,
+      "stage_instance_present": false,
+      "superseded": false,
+      "supersession_evidence_sha256": null,
+      "supplier_contacted": false,
+      "supplier_identity_sha256": null
+    },
+    "scope_stage_intake_slots": [
+      {"scope_id": "F0_MATERIAL_AND_CONSTRUCTION_COUPONS", "OWNER_REVIEW": null, "REQUEST_CANDIDATE": null, "REQUEST_EMISSION": null, "RECEIPT_INTAKE": null},
+      {"scope_id": "F1_STORAGE_AND_SUPPORTS", "OWNER_REVIEW": null, "REQUEST_CANDIDATE": null, "REQUEST_EMISSION": null, "RECEIPT_INTAKE": null},
+      {"scope_id": "F2_NON_PERSON_ARTICULATED_FIXTURE", "OWNER_REVIEW": null, "REQUEST_CANDIDATE": null, "REQUEST_EMISSION": null, "RECEIPT_INTAKE": null},
+      {"scope_id": "F2_LEFT_MANIPULATOR", "OWNER_REVIEW": null, "REQUEST_CANDIDATE": null, "REQUEST_EMISSION": null, "RECEIPT_INTAKE": null},
+      {"scope_id": "F2_RIGHT_MANIPULATOR", "OWNER_REVIEW": null, "REQUEST_CANDIDATE": null, "REQUEST_EMISSION": null, "RECEIPT_INTAKE": null},
+      {"scope_id": "F2_SOLVER_RECORDER_CALIBRATION_INPUTS", "OWNER_REVIEW": null, "REQUEST_CANDIDATE": null, "REQUEST_EMISSION": null, "RECEIPT_INTAKE": null}
+    ],
+    "operational_claims": {
+      "human_review_performed": false,
+      "supplier_selected_or_contacted": false,
+      "request_candidate_created": false,
+      "request_emitted": false,
+      "receipt_received_or_authenticated": false,
+      "asset_acquired_or_materialized": false,
+      "station_created": false,
+      "body_assigned": false,
+      "blender_action": false,
+      "runtime_or_run": false,
+      "output": null,
+      "root_go": null
+    }
+  },
+  "worksheet_totals": {
+    "intended_body_v5_blank_schema_classes": 9,
+    "facial_v4_blank_schema_classes": 16,
+    "station_v12_scope_count": 6,
+    "station_v12_stage_count_per_scope": 4,
+    "station_v12_blank_stage_slots": 24,
+    "station_v12_blank_state_field_count": 72,
+    "receipts_or_evidence_claimed": 0,
+    "live_or_go_authority": false
+  }
+}

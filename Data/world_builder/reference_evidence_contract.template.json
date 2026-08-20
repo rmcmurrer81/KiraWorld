@@ -1,0 +1,32 @@
+{
+  "contract_kind": "world_area_reference_evidence_contract",
+  "schema_version": 1,
+  "world_id": "replace_with_normalized_world_id",
+  "status": "reference_review_draft_not_runtime_approval",
+  "coverage_policy": {
+    "minimum_distinct_photo_viewpoints": 3,
+    "minimum_distinct_video_viewpoints": 1,
+    "layout_source_required": true,
+    "scale_source_required": true,
+    "unsupported_destination_portals_locked": true,
+    "texture_import_requires_explicit_reuse_terms": true,
+    "restricted_map_content_derivation_prohibited": true
+  },
+  "areas": [
+    {
+      "area_id": "unknown_area",
+      "sources": [],
+      "evidence_sufficient_for_draft": false,
+      "runtime_approved": false
+    }
+  ],
+  "portals": [
+    {
+      "portal_id": "unknown_area_door",
+      "destination_area_id": "unknown_area",
+      "runtime_state": "closed_locked_solid",
+      "collision_solid": true,
+      "opens": false
+    }
+  ]
+}

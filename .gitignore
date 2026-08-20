@@ -49,3 +49,23 @@ node_modules/
 # permitted.
 !private_delivery/
 !private_delivery/**
+
+# Approved System/Docs PDFs are also visible in their expected repository path.
+!System/Docs/*.pdf
+!System/Docs/**/*.pdf
+
+# Curated root-layout mirrors. Only reviewed paths are staged explicitly.
+!Assets/
+!Assets/**
+!Avatar/
+!Avatar/**
+!Data/
+!Data/**
+!Lisa/
+!Lisa/**
+!System/
+!System/**
+!TemporaryAI/
+!TemporaryAI/**
+!Voice/
+!Voice/**
