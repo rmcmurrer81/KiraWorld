@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "controller_id": "makehuman_adult_female_rigged_carrier_v1",
+  "status": "PREPARED_NO_BLENDER_AUTHORITY",
+  "candidate": {
+    "candidate_id": "generic_makehuman_adult_female_rigged_carrier_v1_20260820",
+    "foundation_id": "generic_makehuman_adult_female_foundation_v1_20260801",
+    "body_class": "adult_female",
+    "maturity_status": "confirmed_adult",
+    "identity_scope": "generic_identity_neutral",
+    "armature_id": "generic_makehuman_adult_female_rigged_carrier_v1__armature"
+  },
+  "source": {
+    "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+    "bytes": 789620,
+    "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+    "decompressed_bytes": 2714373,
+    "decompressed_sha256": "995f66562d38c204e3722370c81551c796494ee827d7da722fbbee74561410fd",
+    "primary_object_id": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface",
+    "expected_vertex_count": 14658,
+    "expected_face_count": 15976,
+    "qualification": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json",
+      "bytes": 2471,
+      "sha256": "c91c11f649fca7dcdff4530df15a5ed4654d0fe4ca723740cca55660a4b969e0"
+    }
+  },
+  "source_build_inputs": {
+    "base_obj": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/3dobjs/base.obj",
+      "bytes": 1808470,
+      "sha256": "bea00279464133e86b634220cd2774ebf3b470de280d11222a6b2269e4a8d950"
+    },
+    "female_macro_targets": [
+      {
+        "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/targets/macrodetails/universal-female-young-averagemuscle-averageweight.target",
+        "bytes": 622,
+        "sha256": "9537a8b2d76a06f49f5f8cb25955b52f1245e3119cfe0cb2634a9ca4e12b3e1f",
+        "weight": 1.0
+      },
+      {
+        "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/targets/macrodetails/caucasian-female-young.target",
+        "bytes": 439727,
+        "sha256": "6352040adcd91d48bc2266a65246ff0be39afb1f3d309311426204a95c1cbd77",
+        "weight": 1.0
+      }
+    ],
+    "target_height_m": 1.7,
+    "license": {
+      "id": "CC0-1.0",
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/LICENSE.ASSETS.md",
+      "bytes": 7003,
+      "sha256": "5f3ab0cf6f7ebe92efe4b83213131c617d308d164eeefd5da230373640b0c226"
+    }
+  },
+  "skeleton": {
+    "definition": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/rigs/default.mhskel",
+      "bytes": 122625,
+      "sha256": "5acfcaff5f0f46f88bc2a2935c18b65f7ba4f10c99a6628e97d08d2ef7bb9ba0"
+    },
+    "weights": {
+      "path": "Avatar/avatar_builder/tooling/makehuman_official/makehuman/data/rigs/default_weights.mhw",
+      "bytes": 912134,
+      "sha256": "ae2d830adb5ee890c90e071bde6efaa2b9c1f2937b49770f7b5264041637b071"
+    },
+    "license_id": "CC0",
+    "expected_bone_count": 163,
+    "expected_weight_group_count": 139,
+    "expected_root_bone": "root",
+    "coordinate_conversion": "makehuman_y_up_positive_z_forward_to_blender_z_up_negative_y_forward"
+  },
+  "output": {
+    "allowed_root": "Avatar/avatar_builder/workspaces/inactive_adult_female_carriers",
+    "candidate_blend": "Avatar/avatar_builder/workspaces/inactive_adult_female_carriers/mh_female_carrier_v1_20260820/carrier.blend",
+    "build_report": "Avatar/avatar_builder/workspaces/inactive_adult_female_carriers/mh_female_carrier_v1_20260820/BUILD_REPORT.json",
+    "audit_report": "Avatar/avatar_builder/workspaces/inactive_adult_female_carriers/mh_female_carrier_v1_20260820/POSE_SPACE_AUDIT.json",
+    "one_run_authorization": "Avatar/avatar_builder/workspaces/inactive_adult_female_carriers/mh_female_carrier_v1_20260820/ONE_RUN_AUTHORIZATION.json"
+  },
+  "pose_audit": {
+    "required_pose_ids": [
+      "neutral_standing",
+      "seated_contact",
+      "supine",
+      "left_knee_flexion",
+      "right_knee_flexion",
+      "bilateral_knee_flexion",
+      "bounded_hip_flexion_thigh_separation_diagnostic"
+    ],
+    "pelvic_landmark_groups": [
+      "AFES_LANDMARK__mons_pubis",
+      "AFES_LANDMARK__labia_majora",
+      "AFES_LANDMARK__labia_minora",
+      "AFES_LANDMARK__clitoral_hood",
+      "AFES_LANDMARK__clitoris",
+      "AFES_LANDMARK__vestibule",
+      "AFES_LANDMARK__urethral_opening",
+      "AFES_LANDMARK__vaginal_opening",
+      "AFES_LANDMARK__fourchette",
+      "AFES_LANDMARK__perineal_path"
+    ],
+    "poses": [
+      {
+        "pose_id": "neutral_standing",
+        "rotations_degrees_xyz": {}
+      },
+      {
+        "pose_id": "seated_contact",
+        "rotations_degrees_xyz": {
+          "upperleg01.L": [70.0, 0.0, 4.0],
+          "upperleg01.R": [70.0, 0.0, -4.0],
+          "lowerleg01.L": [-65.0, 0.0, 0.0],
+          "lowerleg01.R": [-65.0, 0.0, 0.0]
+        }
+      },
+      {
+        "pose_id": "supine",
+        "rotations_degrees_xyz": {
+          "root": [90.0, 0.0, 0.0]
+        }
+      },
+      {
+        "pose_id": "left_knee_flexion",
+        "rotations_degrees_xyz": {
+          "upperleg01.L": [32.0, 0.0, 3.0],
+          "lowerleg01.L": [-58.0, 0.0, 0.0]
+        }
+      },
+      {
+        "pose_id": "right_knee_flexion",
+        "rotations_degrees_xyz": {
+          "upperleg01.R": [32.0, 0.0, -3.0],
+          "lowerleg01.R": [-58.0, 0.0, 0.0]
+        }
+      },
+      {
+        "pose_id": "bilateral_knee_flexion",
+        "rotations_degrees_xyz": {
+          "upperleg01.L": [25.0, 0.0, 3.0],
+          "upperleg01.R": [25.0, 0.0, -3.0],
+          "lowerleg01.L": [-45.0, 0.0, 0.0],
+          "lowerleg01.R": [-45.0, 0.0, 0.0]
+        }
+      },
+      {
+        "pose_id": "bounded_hip_flexion_thigh_separation_diagnostic",
+        "rotations_degrees_xyz": {
+          "upperleg01.L": [45.0, 0.0, 15.0],
+          "upperleg01.R": [45.0, 0.0, -15.0],
+          "lowerleg01.L": [-35.0, 0.0, 0.0],
+          "lowerleg01.R": [-35.0, 0.0, 0.0]
+        }
+      }
+    ],
+    "maximum_exact_nonadjacent_self_intersection_pairs_per_pose": 0,
+    "maximum_rest_pose_surface_displacement_m": 0.000001,
+    "movement_epsilon_m": 0.00001,
+    "minimum_nonneutral_pose_moved_vertex_count": 25,
+    "minimum_nonneutral_pose_maximum_displacement_m": 0.002,
+    "minimum_rotated_bone_group_maximum_displacement_m": 0.001,
+    "minimum_global_edge_ratio": 0.02,
+    "maximum_global_edge_ratio": 50.0,
+    "minimum_global_triangle_area_ratio": 0.01,
+    "maximum_global_triangle_area_ratio": 100.0,
+    "maximum_global_orientation_reversal_triangle_count": 0,
+    "minimum_signed_volume_ratio": 0.1,
+    "minimum_pelvic_patch_edge_ratio": 0.2,
+    "maximum_pelvic_patch_edge_ratio": 5.0,
+    "minimum_pelvic_patch_triangle_area_ratio": 0.1
+  },
+  "separation": {
+    "bald": true,
+    "contains_hair": false,
+    "contains_clothing": false,
+    "contains_internal_anatomy": false,
+    "contains_identity_styling": false,
+    "contains_actions": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false,
+    "carrier_dependency_mode_for_future_modules": "READ_ONLY_TRANSFORM_FOLLOWING_ONLY",
+    "forbidden_body_changes": [
+      "vertices",
+      "faces",
+      "uvs",
+      "materials",
+      "shape_keys",
+      "existing_vertex_groups",
+      "existing_weight_assignments"
+    ]
+  },
+  "authority": {
+    "blender_execution_authorized": false,
+    "candidate_assignment_authorized": false,
+    "owner_approved": false,
+    "anatomy_authoring_authorized": false,
+    "runtime_activation_authorized": false,
+    "public_export_authorized": false,
+    "required_one_run_authorization_schema": "kira.avatar.makehuman_rigged_carrier.one_run_authorization.v1"
+  }
+}
