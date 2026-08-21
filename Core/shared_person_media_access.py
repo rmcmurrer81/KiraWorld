@@ -74,6 +74,73 @@ def _load_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def _merge_media_index_documents(
+    primary: dict[str, Any],
+    additive: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Return an in-memory union with the primary index taking precedence.
+
+    The resident index remains authoritative when present.  Portable entries
+    may add exact paths that the resident index does not contain, but they can
+    never replace a resident row or rewrite either input file.
+    """
+
+    primary_entries = primary.get("entries")
+    if not isinstance(primary_entries, list):
+        raise SharedPersonMediaAccessError("media library index has no entries list.")
+    additive_entries: list[Any] = []
+    if additive is not None:
+        raw_additive = additive.get("entries")
+        if not isinstance(raw_additive, list):
+            raise SharedPersonMediaAccessError(
+                "portable media library index has no entries list."
+            )
+        additive_entries = raw_additive
+
+    merged_entries: list[Any] = []
+    seen: set[str] = set()
+    for raw in [*primary_entries, *additive_entries]:
+        if not isinstance(raw, dict):
+            merged_entries.append(raw)
+            continue
+        raw_path = raw.get("path")
+        key = (
+            str(raw_path).strip().replace("\\", "/").casefold()
+            if isinstance(raw_path, str)
+            else ""
+        )
+        if key and key in seen:
+            continue
+        if key:
+            seen.add(key)
+        merged_entries.append(raw)
+    merged = dict(primary)
+    merged["entries"] = merged_entries
+    merged["entry_count"] = len(merged_entries)
+    merged["portable_index_merged_in_memory"] = additive is not None
+    merged["resident_primary_precedence"] = additive is not None
+    return merged
+
+
+def _load_default_media_index(project_root: Path) -> dict[str, Any]:
+    private_path = project_root / "Data" / "indexes" / "media_library_index.json"
+    portable_path = (
+        project_root / "Data" / "indexes" / "portable_media_library_index.json"
+    )
+    private = _load_json(private_path) if private_path.is_file() else None
+    portable = _load_json(portable_path) if portable_path.is_file() else None
+    if private is None and portable is None:
+        raise SharedPersonMediaAccessError(
+            "neither Data/indexes/media_library_index.json nor "
+            "Data/indexes/portable_media_library_index.json is available"
+        )
+    if private is not None:
+        return _merge_media_index_documents(private, portable)
+    if portable is None:  # pragma: no cover - guarded above.
+        raise SharedPersonMediaAccessError("portable media library index is unavailable")
+    return _merge_media_index_documents(portable)
+
+
 def _exact_id(value: object, field: str) -> str:
     if not isinstance(value, str) or not value.strip():
         raise SharedPersonMediaAccessError(f"{field} must be a non-empty string.")
@@ -140,10 +207,13 @@ class SharedPersonMediaAccessPolicy:
         self._lock = threading.RLock()
         self._owner_corrections: dict[str, dict[str, Any]] = {}
         config_path = Path(access_config_path) if access_config_path else self._root / "config" / "shared_person_media_access.json"
-        index_path = Path(media_index_path) if media_index_path else self._root / "Data" / "indexes" / "media_library_index.json"
         registry_path = Path(identity_registry_path) if identity_registry_path else self._root / "Avatar" / "avatar_builder" / "policies" / "candidate_identity_variant_registry.json"
         config = _load_json(config_path)
-        index = _load_json(index_path)
+        index = (
+            _load_json(Path(media_index_path))
+            if media_index_path
+            else _load_default_media_index(self._root)
+        )
         registry = _load_json(registry_path) if registry_path.is_file() else {"candidates": []}
 
         adult_ids = {_exact_id(item, "explicit_adult_candidate_id") for item in config.get("explicit_adult_candidate_ids", [])}

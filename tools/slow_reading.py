@@ -19,7 +19,13 @@ from validate_slow_reading_session import validate_slow_reading_session
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INDEX_PATH = PROJECT_ROOT / "Data" / "indexes" / "media_library_index.json"
+PRIVATE_INDEX_PATH = PROJECT_ROOT / "Data" / "indexes" / "media_library_index.json"
+PORTABLE_INDEX_PATH = (
+    PROJECT_ROOT / "Data" / "indexes" / "portable_media_library_index.json"
+)
+DEFAULT_INDEX_PATH = (
+    PRIVATE_INDEX_PATH if PRIVATE_INDEX_PATH.is_file() else PORTABLE_INDEX_PATH
+)
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "Data" / "reading" / "sessions"
 READABLE_CATEGORIES = {"novel", "story", "script", "comic_books", "manga", "history"}
 READABLE_MEDIA_TYPES = {"document"}
@@ -89,8 +95,52 @@ def _unit_type_for(material_type: str) -> str:
     return "chapter"
 
 
+def _merge_index_documents(
+    primary: dict[str, Any], additive: dict[str, Any] | None
+) -> dict[str, Any]:
+    primary_entries = primary.get("entries")
+    if not isinstance(primary_entries, list):
+        raise ValueError("reading index has no entries list")
+    additive_entries: list[Any] = []
+    if additive is not None:
+        raw_additive = additive.get("entries")
+        if not isinstance(raw_additive, list):
+            raise ValueError("portable reading index has no entries list")
+        additive_entries = raw_additive
+    merged_entries: list[Any] = []
+    seen: set[str] = set()
+    for raw in [*primary_entries, *additive_entries]:
+        if not isinstance(raw, dict):
+            merged_entries.append(raw)
+            continue
+        path = raw.get("path")
+        key = (
+            str(path).strip().replace("\\", "/").casefold()
+            if isinstance(path, str)
+            else ""
+        )
+        if key and key in seen:
+            continue
+        if key:
+            seen.add(key)
+        merged_entries.append(raw)
+    result = dict(primary)
+    result["entries"] = merged_entries
+    result["entry_count"] = len(merged_entries)
+    result["portable_index_merged_in_memory"] = additive is not None
+    return result
+
+
 def _load_index(index_path: Path = DEFAULT_INDEX_PATH) -> dict[str, Any]:
-    return _load_json(index_path)
+    primary = _load_json(index_path)
+    additive = None
+    try:
+        is_private_default = index_path.resolve() == PRIVATE_INDEX_PATH.resolve()
+    except OSError:
+        is_private_default = False
+    if is_private_default and PORTABLE_INDEX_PATH.is_file():
+        additive = _load_json(PORTABLE_INDEX_PATH)
+    return _merge_index_documents(primary, additive)
 
 
 def readable_entries(index: dict[str, Any]) -> list[dict[str, Any]]:

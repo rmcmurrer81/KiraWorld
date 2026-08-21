@@ -16,13 +16,21 @@ from typing import Any
 
 from build_media_library_index import build_index
 from check_media_library_updates import check_updates
-from slow_reading import DEFAULT_INDEX_PATH, DEFAULT_OUTPUT_DIR, readable_entries
+from slow_reading import DEFAULT_INDEX_PATH, DEFAULT_OUTPUT_DIR, _load_index, readable_entries
 from validate_reading_interest_profile import validate_profile_file
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LIBRARY_ROOT = PROJECT_ROOT / "Data" / "library"
-DEFAULT_PROFILE_PATH = PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json"
+PRIVATE_PROFILE_PATH = (
+    PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json"
+)
+PORTABLE_PROFILE_PATH = (
+    PROJECT_ROOT / "Data" / "reading" / "portable_reading_interest_profiles.json"
+)
+DEFAULT_PROFILE_PATH = (
+    PRIVATE_PROFILE_PATH if PRIVATE_PROFILE_PATH.is_file() else PORTABLE_PROFILE_PATH
+)
 DEFAULT_UPDATE_CHECK_PATH = PROJECT_ROOT / "Data" / "indexes" / "media_library_update_check.json"
 DEFAULT_OUTPUT = PROJECT_ROOT / "Data" / "reading" / "reading_recommendations.json"
 DEFAULT_TASTE_DIR = PROJECT_ROOT / "Data" / "reading" / "tastes"
@@ -57,6 +65,25 @@ ERA_CONTEXT_KEYWORDS = {
 
 def _load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def resolve_profile_path(path: Path) -> Path:
+    """Keep resident preferences primary and use neutral portable defaults.
+
+    Only the missing resident-default path may fall back.  An arbitrary
+    explicit missing path still fails, so a caller cannot silently hide a
+    configuration mistake.
+    """
+
+    if path.is_file():
+        return path
+    try:
+        is_missing_resident_default = path.resolve() == PRIVATE_PROFILE_PATH.resolve()
+    except OSError:
+        is_missing_resident_default = False
+    if is_missing_resident_default and PORTABLE_PROFILE_PATH.is_file():
+        return PORTABLE_PROFILE_PATH
+    return path
 
 
 def _relative(path: Path) -> str:
@@ -210,7 +237,8 @@ def build_recommendations(
     limit: int = 5,
     include_active: bool = False,
 ) -> dict[str, Any]:
-    profiles = _load_json(profile_path)
+    resolved_profile_path = resolve_profile_path(profile_path)
+    profiles = _load_json(resolved_profile_path)
     errors = validate_profile_file(profiles)
     if errors:
         raise ValueError("; ".join(errors))
@@ -219,7 +247,7 @@ def build_recommendations(
         raise ValueError(f"No reading interest profile for owner: {owner}")
 
     if index_path.exists():
-        index = _load_json(index_path)
+        index = _load_index(index_path)
     else:
         index = build_index(library_root)
 

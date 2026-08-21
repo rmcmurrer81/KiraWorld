@@ -9,13 +9,18 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 TOOLS_ROOT = PROJECT_ROOT / "tools"
 sys.path.insert(0, str(TOOLS_ROOT))
 
-from recommend_reading import DEFAULT_OUTPUT, build_recommendations, output_path_for_owner  # noqa: E402
+from recommend_reading import (  # noqa: E402
+    DEFAULT_OUTPUT,
+    DEFAULT_PROFILE_PATH,
+    build_recommendations,
+    output_path_for_owner,
+)
 from validate_reading_interest_profile import validate_profile_file  # noqa: E402
 
 
 class ReadingRecommendationsTests(unittest.TestCase):
     def test_profiles_validate(self) -> None:
-        data = json.loads((PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json").read_text(encoding="utf-8"))
+        data = json.loads(DEFAULT_PROFILE_PATH.read_text(encoding="utf-8"))
         self.assertEqual(validate_profile_file(data), [])
 
     def test_default_output_is_owner_specific(self) -> None:
@@ -35,7 +40,7 @@ class ReadingRecommendationsTests(unittest.TestCase):
             history_file.write_text("x", encoding="utf-8")
             novel_file.write_text("x", encoding="utf-8")
             index_path = root / "index.json"
-            profile_path = PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json"
+            profile_path = DEFAULT_PROFILE_PATH
             result = build_recommendations(
                 owner="kira",
                 index_path=index_path,
@@ -60,7 +65,7 @@ class ReadingRecommendationsTests(unittest.TestCase):
             result = build_recommendations(
                 owner="lisa",
                 index_path=root / "index.json",
-                profile_path=PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json",
+                profile_path=DEFAULT_PROFILE_PATH,
                 library_root=library,
                 update_check_path=root / "updates.json",
             )
@@ -76,10 +81,18 @@ class ReadingRecommendationsTests(unittest.TestCase):
             active.parent.mkdir(parents=True)
             active.write_text("x", encoding="utf-8")
             other.write_text("x", encoding="utf-8")
+            profiles = json.loads(DEFAULT_PROFILE_PATH.read_text(encoding="utf-8"))
+            for profile in profiles:
+                if profile.get("owner") == "lisa":
+                    profile["current_interests"]["active_source_paths"] = [
+                        "Data/library/novels/pride_and_prejudice_jane_austen.pdf"
+                    ]
+            profile_path = root / "profiles.json"
+            profile_path.write_text(json.dumps(profiles), encoding="utf-8")
             result = build_recommendations(
                 owner="lisa",
                 index_path=root / "index.json",
-                profile_path=PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json",
+                profile_path=profile_path,
                 library_root=library,
                 update_check_path=root / "updates.json",
             )
@@ -167,7 +180,7 @@ class ReadingRecommendationsTests(unittest.TestCase):
             result = build_recommendations(
                 owner="lisa",
                 index_path=root / "index.json",
-                profile_path=PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json",
+                profile_path=DEFAULT_PROFILE_PATH,
                 library_root=library,
                 update_check_path=root / "updates.json",
                 taste_dir=taste_dir,

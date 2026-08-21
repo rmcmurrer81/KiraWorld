@@ -1,0 +1,227 @@
+{
+  "index_id": "portable_media_library_index_v1",
+  "schema_version": 1,
+  "source_manifest": "Data/library/portable_selection/manifest.json",
+  "source_manifest_sha256": "6a8cdc6fe24036710ed7c8fd6a7e90afa8bcd3d3f8ba6ca635c19ccd62ddfcd9",
+  "private_index_path": "Data/indexes/media_library_index.json",
+  "private_index_was_read_or_modified": false,
+  "entry_count": 6,
+  "counts_by_category": {
+    "history": 1,
+    "magazine": 1,
+    "novel": 1,
+    "reference": 1,
+    "science": 1,
+    "script": 1
+  },
+  "usage_policy": {
+    "portable_index_is_fallback_or_additive_only": true,
+    "resident_private_index_remains_primary": true,
+    "slow_reading_only": true,
+    "no_instant_full_ingestion": true,
+    "no_automatic_memory": true,
+    "no_automatic_temporary_ai": true,
+    "no_real_person_avatar_reference_photos": true,
+    "no_robert_real_photos": true
+  },
+  "entries": [
+    {
+      "path": "Data/library/public_domain_selection/novels/historical_romance/samantha_at_saratoga_or_flirtin_with_fashion.pdf",
+      "name": "samantha_at_saratoga_or_flirtin_with_fashion.pdf",
+      "title": "Samantha at Saratoga; or, Flirtin' with Fashion",
+      "extension": ".pdf",
+      "media_type": "document",
+      "category": "novel",
+      "content_rating": "GENERAL",
+      "size_bytes": 15730349,
+      "sha256": "99c87108a5033c804e1aee31e4fd0bb35a056afa99843236c4eeff2e837a9db8",
+      "privacy_default": "general_portable_library",
+      "portable_rights": {
+        "lane": "us_public_domain_or_no_known_restrictions",
+        "note": "Pre-1931 work selected from the already-reviewed public-domain/no-known-restrictions scan lane.",
+        "public_domain_scope_may_differ_outside_united_states": true
+      },
+      "library_use": {
+        "can_be_chosen_for_boredom_relaxation_or_curiosity": true,
+        "can_create_slow_reading_session": true,
+        "must_use_paced_reading": true,
+        "creates_memory_automatically": false,
+        "creates_temporary_ai_automatically": false,
+        "source_material_remains_source": true,
+        "media_surface_eligible": true
+      },
+      "world_display": {
+        "can_appear_as_3d_object": true,
+        "home_shelf_eligible": true,
+        "virtual_screen_playback_eligible": true,
+        "preferred_home_object": "magazine_or_document",
+        "notes": "Presentation metadata only; opening a file does not prove attention, understanding, enjoyment, or completion."
+      }
+    },
+    {
+      "path": "Data/library/public_domain_selection/history/chicago/chicago_1917.pdf",
+      "name": "chicago_1917.pdf",
+      "title": "Chicago, 1917",
+      "extension": ".pdf",
+      "media_type": "document",
+      "category": "history",
+      "content_rating": "GENERAL",
+      "size_bytes": 7111507,
+      "sha256": "f000c2128e31f48902d21b193d555ba01470c9f61b72a8be82666a195f889eb3",
+      "privacy_default": "general_portable_library",
+      "portable_rights": {
+        "lane": "us_public_domain_or_no_known_restrictions",
+        "note": "Pre-1931 work selected from the already-reviewed public-domain/no-known-restrictions scan lane.",
+        "public_domain_scope_may_differ_outside_united_states": true
+      },
+      "library_use": {
+        "can_be_chosen_for_boredom_relaxation_or_curiosity": true,
+        "can_create_slow_reading_session": true,
+        "must_use_paced_reading": true,
+        "creates_memory_automatically": false,
+        "creates_temporary_ai_automatically": false,
+        "source_material_remains_source": true,
+        "media_surface_eligible": true
+      },
+      "world_display": {
+        "can_appear_as_3d_object": true,
+        "home_shelf_eligible": true,
+        "virtual_screen_playback_eligible": true,
+        "preferred_home_object": "magazine_or_document",
+        "notes": "Presentation metadata only; opening a file does not prove attention, understanding, enjoyment, or completion."
+      }
+    },
+    {
+      "path": "Data/library/public_domain_selection/reference/life_skills/lifehowtoenjoyit00fowl.pdf",
+      "name": "lifehowtoenjoyit00fowl.pdf",
+      "title": "Life: How to Enjoy It",
+      "extension": ".pdf",
+      "media_type": "document",
+      "category": "reference",
+      "content_rating": "GENERAL",
+      "size_bytes": 14380669,
+      "sha256": "60536e36dd09cf82816cd0899c39a7eb9e25df19a0127fcdd7aa9bedace22f1c",
+      "privacy_default": "general_portable_library",
+      "portable_rights": {
+        "lane": "us_public_domain_or_no_known_restrictions",
+        "note": "Pre-1931 work selected from the already-reviewed public-domain/no-known-restrictions scan lane.",
+        "public_domain_scope_may_differ_outside_united_states": true
+      },
+      "library_use": {
+        "can_be_chosen_for_boredom_relaxation_or_curiosity": true,
+        "can_create_slow_reading_session": true,
+        "must_use_paced_reading": true,
+        "creates_memory_automatically": false,
+        "creates_temporary_ai_automatically": false,
+        "source_material_remains_source": true,
+        "media_surface_eligible": true
+      },
+      "world_display": {
+        "can_appear_as_3d_object": true,
+        "home_shelf_eligible": true,
+        "virtual_screen_playback_eligible": true,
+        "preferred_home_object": "magazine_or_document",
+        "notes": "Presentation metadata only; opening a file does not prove attention, understanding, enjoyment, or completion."
+      }
+    },
+    {
+      "path": "Data/library/public_domain_selection/science/biology_and_chemistry/naturalhistoryf00smitgoog.pdf",
+      "name": "naturalhistoryf00smitgoog.pdf",
+      "title": "Forms of Animal Life",
+      "extension": ".pdf",
+      "media_type": "document",
+      "category": "science",
+      "content_rating": "GENERAL",
+      "size_bytes": 2405448,
+      "sha256": "e3022dd94ca826c4fd56e3ac4d94be9f8fd11e21aa983858266ea11ab247c93b",
+      "privacy_default": "general_portable_library",
+      "portable_rights": {
+        "lane": "us_public_domain_or_no_known_restrictions",
+        "note": "Pre-1931 work selected from the already-reviewed public-domain/no-known-restrictions scan lane.",
+        "public_domain_scope_may_differ_outside_united_states": true
+      },
+      "library_use": {
+        "can_be_chosen_for_boredom_relaxation_or_curiosity": true,
+        "can_create_slow_reading_session": true,
+        "must_use_paced_reading": true,
+        "creates_memory_automatically": false,
+        "creates_temporary_ai_automatically": false,
+        "source_material_remains_source": true,
+        "media_surface_eligible": true
+      },
+      "world_display": {
+        "can_appear_as_3d_object": true,
+        "home_shelf_eligible": true,
+        "virtual_screen_playback_eligible": true,
+        "preferred_home_object": "magazine_or_document",
+        "notes": "Presentation metadata only; opening a file does not prove attention, understanding, enjoyment, or completion."
+      }
+    },
+    {
+      "path": "Data/library/portable_selection/scripts/the_reading_room_after_rain.md",
+      "name": "the_reading_room_after_rain.md",
+      "title": "The Reading Room After Rain",
+      "extension": ".md",
+      "media_type": "document",
+      "category": "script",
+      "content_rating": "GENERAL",
+      "size_bytes": 1152,
+      "sha256": "b73644473b0a61b7233121f042929f2b88d8f0f16541b5bc7e98ad3edc1ec02f",
+      "privacy_default": "general_portable_library",
+      "portable_rights": {
+        "lane": "project_original",
+        "note": "Project-original short fiction with no copied characters, photographs, or third-party script text.",
+        "public_domain_scope_may_differ_outside_united_states": false
+      },
+      "library_use": {
+        "can_be_chosen_for_boredom_relaxation_or_curiosity": true,
+        "can_create_slow_reading_session": true,
+        "must_use_paced_reading": true,
+        "creates_memory_automatically": false,
+        "creates_temporary_ai_automatically": false,
+        "source_material_remains_source": true,
+        "media_surface_eligible": false
+      },
+      "world_display": {
+        "can_appear_as_3d_object": false,
+        "home_shelf_eligible": false,
+        "virtual_screen_playback_eligible": false,
+        "preferred_home_object": "text_script",
+        "notes": "Presentation metadata only; opening a file does not prove attention, understanding, enjoyment, or completion."
+      }
+    },
+    {
+      "path": "Data/library/portable_selection/magazines/reading_room_issue_001.pdf",
+      "name": "reading_room_issue_001.pdf",
+      "title": "Reading Room - Issue 001",
+      "extension": ".pdf",
+      "media_type": "document",
+      "category": "magazine",
+      "content_rating": "GENERAL",
+      "size_bytes": 11255,
+      "sha256": "1871a777bb47c365e8d24fa8902c2a73b8c0d7c148ba65b6d9b08f9e17e1e994",
+      "privacy_default": "general_portable_library",
+      "portable_rights": {
+        "lane": "project_original",
+        "note": "Project-original text and vector artwork; contains no real-person photographs or copied magazine pages.",
+        "public_domain_scope_may_differ_outside_united_states": false
+      },
+      "library_use": {
+        "can_be_chosen_for_boredom_relaxation_or_curiosity": true,
+        "can_create_slow_reading_session": true,
+        "must_use_paced_reading": true,
+        "creates_memory_automatically": false,
+        "creates_temporary_ai_automatically": false,
+        "source_material_remains_source": true,
+        "media_surface_eligible": true
+      },
+      "world_display": {
+        "can_appear_as_3d_object": true,
+        "home_shelf_eligible": true,
+        "virtual_screen_playback_eligible": true,
+        "preferred_home_object": "magazine_or_document",
+        "notes": "Presentation metadata only; opening a file does not prove attention, understanding, enjoyment, or completion."
+      }
+    }
+  ]
+}

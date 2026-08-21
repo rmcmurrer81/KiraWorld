@@ -323,13 +323,14 @@ SHELL_LAUNCH_ID = _launch_id()
 
 
 class _LazyOptionalMediaAccessPolicy:
-    """Load the private media index only when a media surface is used.
+    """Load resident and/or portable media indexes only when media is used.
 
-    The downloadable handoff intentionally does not contain Robert's private
-    library index.  Shared media is optional to conversation startup, so a
-    missing or invalid local index must disable only media rather than make the
-    World Shell module impossible to import.  Every media operation still
-    fails closed through ``SharedPersonMediaAccessError``.
+    A portable checkout intentionally does not contain Robert's full private
+    library index.  When the private index exists it stays primary and exact
+    portable paths are additive in memory only.  Shared media is optional to
+    conversation startup, so a missing or invalid local index disables only
+    media rather than making the World Shell impossible to import.  Every
+    media operation still fails closed through ``SharedPersonMediaAccessError``.
     """
 
     def __init__(self, project_root: Path) -> None:
@@ -356,7 +357,7 @@ class _LazyOptionalMediaAccessPolicy:
         if required:
             raise SharedPersonMediaAccessError(
                 "shared media is unavailable because its optional local index "
-                "is absent or invalid"
+                "is absent or invalid (checked resident and portable indexes)"
             )
         return None
 

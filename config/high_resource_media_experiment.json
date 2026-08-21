@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "profile_id": "high_resource_media_group_experiment_v1",
+  "status": "experimental_unverified",
+  "enabled_by_default": false,
+  "launcher": "Start_Kira_High_Resource_Media_Group_Experimental.bat",
+  "required_opt_in_argument": "--enable-experimental-high-resource",
+  "local_test_status": "not_run_due_local_ram_and_gpu_restrictions",
+  "purpose": "Provide an optional text, voice, reading, and media-enjoyment surface for a more capable computer without changing the safe single-session defaults.",
+  "hardware_guidance_not_proof": true,
+  "hardware_guidance": {
+    "cautious_group_trial_ram_gb": 64,
+    "four_session_requested_ceiling_ram_gb": 128,
+    "ram_budget_per_active_session_gb": 32,
+    "discrete_gpu_recommended": true,
+    "recommended_gpu_vram_gb": 16,
+    "notes": [
+      "These values are planning guidance, not a compatibility guarantee.",
+      "The runtime measures physical RAM and may reduce the effective group capacity.",
+      "GPU and VRAM availability do not prove that local models, drivers, voice packs, or decoders are installed."
+    ]
+  },
+  "requested_runtime": {
+    "group_sessions_opt_in": true,
+    "requested_max_active_sessions": 4,
+    "ram_gb_per_active_session": 32,
+    "surface": "existing_text_voice_chat_with_candidate_selector",
+    "portable_media_index_fallback": "Data/indexes/portable_media_library_index.json"
+  },
+  "capabilities": [
+    {
+      "capability": "multiple_person_text_and_voice_group_routing",
+      "classification": "implemented",
+      "boundary": "Capacity remains RAM-capped, each person keeps a separate session, and voice replies use the existing ordered queue."
+    },
+    {
+      "capability": "portable_books_scripts_and_non_adult_magazine_reading",
+      "classification": "implemented",
+      "boundary": "Uses a separate portable index and paced reading records; it does not replace the resident private index or create memory automatically."
+    },
+    {
+      "capability": "indexed_pdf_image_audio_and_video_media_surface",
+      "classification": "implemented",
+      "boundary": "Only files present in the selected index can be opened. Playback and presentation do not prove attention, understanding, or completion."
+    },
+    {
+      "capability": "local_speech_recognition",
+      "classification": "hardware_dependent",
+      "boundary": "The existing loopback ASR sidecar is owner-started, microphone capture starts off, and raw audio is not a durable media library item."
+    },
+    {
+      "capability": "owner_requested_single_still_vision",
+      "classification": "hardware_dependent",
+      "boundary": "The existing transient one-still path is bounded, non-identifying, and not continuous video understanding."
+    },
+    {
+      "capability": "local_model_and_custom_voice_acceleration",
+      "classification": "hardware_dependent",
+      "boundary": "Depends on compatible local models, voice packs, GPU/VRAM, drivers, and available resources; generic OS voice may be used where separately supported."
+    },
+    {
+      "capability": "continuous_semantic_video_understanding",
+      "classification": "not_yet_connected",
+      "boundary": "No continuous visual interpretation or identity recognition is enabled."
+    },
+    {
+      "capability": "simultaneous_animated_3d_group_bodies",
+      "classification": "not_yet_connected",
+      "boundary": "This launcher uses the existing text and voice surface. It does not grant a body or prove multi-body world rendering."
+    },
+    {
+      "capability": "automatic_media_enjoyment_or_unsupervised_completion_claims",
+      "classification": "not_yet_connected",
+      "boundary": "Long-session reading remains paced and reviewable; no launcher may claim a work was enjoyed, understood, or completed without grounded session evidence."
+    }
+  ],
+  "safety": {
+    "normal_launchers_unchanged": true,
+    "private_media_index_preserved": true,
+    "portable_index_is_fallback_or_additive_only": true,
+    "camera_and_microphone_start_off": true,
+    "no_real_person_avatar_reference_photos_in_portable_collection": true,
+    "no_robert_real_photos_in_portable_collection": true,
+    "no_capability_created_by_configuration_alone": true
+  }
+}

@@ -1,0 +1,190 @@
+[
+  {
+    "profile_id": "portable_reading_interest_kira_v1",
+    "owner": "kira",
+    "current_interests": {
+      "themes": [
+        "curiosity",
+        "identity",
+        "history",
+        "responsibility"
+      ],
+      "genres": [
+        "classic_literature",
+        "history",
+        "science",
+        "short_scripts"
+      ],
+      "questions": [],
+      "active_source_paths": [],
+      "favorite_source_paths": [],
+      "historical_context_source_paths": []
+    },
+    "preferred_categories": [
+      "novel",
+      "history",
+      "science",
+      "script",
+      "magazine",
+      "reference"
+    ],
+    "theme_weights": {
+      "identity": 3,
+      "responsibility": 3,
+      "history": 3,
+      "mystery": 2,
+      "worldbuilding": 2
+    },
+    "avoid_when_mood": {
+      "tired": [
+        "dense_history"
+      ],
+      "upset": [
+        "heavy_tragedy"
+      ]
+    },
+    "rotation_policy": {
+      "max_active_private_sessions": 1,
+      "max_active_shared_sessions": 1,
+      "include_new_arrivals": true,
+      "allow_rereading_favorites": true,
+      "reread_requires_reader_choice": true,
+      "mix_modes": [
+        "curiosity",
+        "comfort",
+        "historical_context"
+      ],
+      "do_not_force_recommendations": true
+    },
+    "privacy": {
+      "default_visibility": "summary_if_chosen",
+      "private_preferences_require_owner_permission": true,
+      "portable_defaults_are_not_durable_personal_preferences": true
+    },
+    "status": "active"
+  },
+  {
+    "profile_id": "portable_reading_interest_lisa_v1",
+    "owner": "lisa",
+    "current_interests": {
+      "themes": [
+        "curiosity",
+        "relationships",
+        "social_context",
+        "history"
+      ],
+      "genres": [
+        "classic_literature",
+        "history",
+        "short_scripts",
+        "magazines"
+      ],
+      "questions": [],
+      "active_source_paths": [],
+      "favorite_source_paths": [],
+      "historical_context_source_paths": []
+    },
+    "preferred_categories": [
+      "novel",
+      "history",
+      "script",
+      "magazine",
+      "reference"
+    ],
+    "theme_weights": {
+      "relationship": 3,
+      "social_pressure": 2,
+      "history": 3,
+      "identity": 2,
+      "worldbuilding": 2
+    },
+    "avoid_when_mood": {
+      "tired": [
+        "dense_history"
+      ],
+      "sad": [
+        "heavy_tragedy"
+      ]
+    },
+    "rotation_policy": {
+      "max_active_private_sessions": 1,
+      "max_active_shared_sessions": 1,
+      "include_new_arrivals": true,
+      "allow_rereading_favorites": true,
+      "reread_requires_reader_choice": true,
+      "mix_modes": [
+        "curiosity",
+        "comfort",
+        "historical_context"
+      ],
+      "do_not_force_recommendations": true
+    },
+    "privacy": {
+      "default_visibility": "summary_if_chosen",
+      "private_preferences_require_owner_permission": true,
+      "portable_defaults_are_not_durable_personal_preferences": true
+    },
+    "status": "active"
+  },
+  {
+    "profile_id": "portable_reading_interest_kira_lisa_v1",
+    "owner": "kira_lisa",
+    "current_interests": {
+      "themes": [
+        "shared_curiosity",
+        "trust",
+        "history",
+        "worldbuilding"
+      ],
+      "genres": [
+        "classic_literature",
+        "history",
+        "science",
+        "short_scripts"
+      ],
+      "questions": [],
+      "active_source_paths": [],
+      "favorite_source_paths": [],
+      "historical_context_source_paths": []
+    },
+    "preferred_categories": [
+      "novel",
+      "history",
+      "science",
+      "script",
+      "magazine",
+      "reference"
+    ],
+    "theme_weights": {
+      "history": 3,
+      "worldbuilding": 3,
+      "relationship": 2,
+      "mystery": 2
+    },
+    "avoid_when_mood": {
+      "overwhelmed": [
+        "dense_history",
+        "heavy_tragedy"
+      ]
+    },
+    "rotation_policy": {
+      "max_active_private_sessions": 0,
+      "max_active_shared_sessions": 1,
+      "include_new_arrivals": true,
+      "allow_rereading_favorites": true,
+      "reread_requires_reader_choice": true,
+      "mix_modes": [
+        "shared_curiosity",
+        "comfort",
+        "historical_context"
+      ],
+      "do_not_force_recommendations": true
+    },
+    "privacy": {
+      "default_visibility": "participants_only",
+      "private_preferences_require_owner_permission": true,
+      "portable_defaults_are_not_durable_personal_preferences": true
+    },
+    "status": "active"
+  }
+]

@@ -43,6 +43,12 @@ CREATIVE_DIR = PROJECT_ROOT / "Data" / "creative_projects" / "kira"
 CONTINUITY_DIGEST = PROJECT_ROOT / "Data" / "school" / "continuity" / "kira_learning_continuity_digest_20260515.json"
 
 DEFAULT_SOURCE_PATHS = [
+    "Data/library/portable_selection/magazines/reading_room_issue_001.pdf",
+    "Data/library/portable_selection/scripts/the_reading_room_after_rain.md",
+    "Data/library/public_domain_selection/novels/historical_romance/samantha_at_saratoga_or_flirtin_with_fashion.pdf",
+    "Data/library/public_domain_selection/history/chicago/chicago_1917.pdf",
+    "Data/library/public_domain_selection/science/biology_and_chemistry/naturalhistoryf00smitgoog.pdf",
+    "Data/library/public_domain_selection/reference/life_skills/lifehowtoenjoyit00fowl.pdf",
     "Data/library/scripts/miraculous_ladybug/episode_0509.pdf",
     "Data/library/stories/fanfic/miraculous_ladybug/ladybug_bunnyx_king_arthur_test_fanfic.md",
     "Data/library/magazines/news_and_history/time/time_magazine/TIME Special Edition - Artificial Intelligence, 2025.pdf",
