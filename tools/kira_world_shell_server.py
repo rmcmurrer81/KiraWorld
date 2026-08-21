@@ -320,7 +320,68 @@ QWEN_ONE_STILL_REQUEST_MAX_BYTES = 1_500_000
 TRANSIENT_QWEN_VISION = TransientQwenVisionBridge()
 SHELL_API_TOKEN = _launch_secret("KIRA_SHELL_API_TOKEN")
 SHELL_LAUNCH_ID = _launch_id()
-MEDIA_ACCESS_POLICY = SharedPersonMediaAccessPolicy(ROOT)
+
+
+class _LazyOptionalMediaAccessPolicy:
+    """Load the private media index only when a media surface is used.
+
+    The downloadable handoff intentionally does not contain Robert's private
+    library index.  Shared media is optional to conversation startup, so a
+    missing or invalid local index must disable only media rather than make the
+    World Shell module impossible to import.  Every media operation still
+    fails closed through ``SharedPersonMediaAccessError``.
+    """
+
+    def __init__(self, project_root: Path) -> None:
+        self._project_root = Path(project_root)
+        self._lock = threading.RLock()
+        self._attempted = False
+        self._policy: SharedPersonMediaAccessPolicy | None = None
+        self._error = ""
+
+    def _load(self, *, required: bool) -> SharedPersonMediaAccessPolicy | None:
+        with self._lock:
+            if self._policy is not None:
+                return self._policy
+            if not self._attempted:
+                self._attempted = True
+                try:
+                    self._policy = SharedPersonMediaAccessPolicy(
+                        self._project_root
+                    )
+                except (OSError, SharedPersonMediaAccessError, ValueError) as exc:
+                    self._error = f"{type(exc).__name__}: {exc}"
+            if self._policy is not None:
+                return self._policy
+        if required:
+            raise SharedPersonMediaAccessError(
+                "shared media is unavailable because its optional local index "
+                "is absent or invalid"
+            )
+        return None
+
+    def available(self) -> bool:
+        return self._load(required=False) is not None
+
+    @property
+    def unavailable_reason(self) -> str:
+        self._load(required=False)
+        return self._error
+
+    def maturity_lane(self, person_id: str) -> str:
+        policy = self._load(required=False)
+        if policy is None:
+            return "unavailable"
+        return policy.maturity_lane(person_id)
+
+    def __getattr__(self, name: str):
+        policy = self._load(required=True)
+        if policy is None:  # pragma: no cover - required=True always raises.
+            raise SharedPersonMediaAccessError("shared media is unavailable")
+        return getattr(policy, name)
+
+
+MEDIA_ACCESS_POLICY = _LazyOptionalMediaAccessPolicy(ROOT)
 MEDIA_CLASSIFICATION_CORRECTION_LOCK = threading.RLock()
 MEDIA_CLASSIFICATION_CORRECTION_LEDGER = (
     ROOT
@@ -12418,7 +12479,13 @@ class Handler(BaseHTTPRequestHandler):
                         **sensory_stats,
                     },
                     "shared_media": {
-                        "available": bool(active),
+                        "available": bool(active and MEDIA_ACCESS_POLICY.available()),
+                        "optional_index_ready": MEDIA_ACCESS_POLICY.available(),
+                        "unavailable_reason": (
+                            ""
+                            if MEDIA_ACCESS_POLICY.available()
+                            else "optional_local_media_index_absent_or_invalid"
+                        ),
                         "maturity_lane": MEDIA_ACCESS_POLICY.maturity_lane(active) if active else "none",
                         "adult_folder_access": bool(active and MEDIA_ACCESS_POLICY.maturity_lane(active) == "adult"),
                         "active_grant_count": MEDIA_GRANT_MANAGER.active_count,
