@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "policy_id": "kiraworld_repository_real_person_media_boundary_v1",
+  "status": "ACTIVE_PRIVATE_REPOSITORY_INTAKE_BOUNDARY",
+  "repository_scope": {
+    "repository_name": "KiraWorld",
+    "required_visibility": "private",
+    "real_person_photographs_allowed": false,
+    "real_person_photo_derivatives_containing_source_pixels_allowed": false,
+    "real_person_photo_contact_sheets_allowed": false,
+    "real_person_photo_textures_allowed": false,
+    "real_person_photos_may_remain_local_until_replacements_pass": true,
+    "local_photo_deletion_authorized": false
+  },
+  "forbidden_content_classes": [
+    "real_person_photograph",
+    "cropped_real_person_photograph",
+    "annotated_real_person_photograph",
+    "real_person_photograph_contact_sheet",
+    "real_person_photograph_texture",
+    "real_person_photograph_embedded_in_document",
+    "real_person_photograph_embedded_in_model"
+  ],
+  "allowed_content_classes": [
+    "synthetic_avatar_geometry",
+    "synthetic_avatar_render",
+    "neutral_nonperson_design_chart",
+    "licensed_nonphotographic_medical_illustration",
+    "licensed_medical_geometry",
+    "procedural_nonperson_texture",
+    "manifest_or_test_evidence"
+  ],
+  "synthetic_body_rule": {
+    "synthetic_unclothed_adult_body_geometry_allowed": true,
+    "confirmed_adult_required_for_unclothed_body": true,
+    "private_review_only": true,
+    "public_export_allowed": false,
+    "runtime_activation_implied": false,
+    "owner_acceptance_implied": false,
+    "embedded_real_person_photograph_allowed": false,
+    "source_photographs_may_be_copied_to_repository": false,
+    "robert_target_ids": [
+      "BIOLOGICAL_ROBERT_AVATAR",
+      "SYNTHETIC_ROBERT_TWIN_BODY"
+    ]
+  },
+  "replacement_library": {
+    "required_machine_utility_evidence": [
+      "exact_chart_identity_and_hash",
+      "machine_readable_selector_ids",
+      "avatar_builder_selection_receipt",
+      "synthetic_test_body_before_and_after_hashes",
+      "repeatable_geometry_or_material_change",
+      "visual_and_structural_review",
+      "photo_to_replacement_coverage_map"
+    ],
+    "planned_neutral_roles": [
+      "skin_tone_and_regional_material",
+      "body_shape_and_proportion",
+      "adult_chest_and_breast_form",
+      "eyes_eyelids_eyebrows_lips_nose_ears_and_jaw",
+      "hands_feet_and_nails",
+      "hair_style_and_physics",
+      "clothing_fit_and_deformation",
+      "pose_contact_and_movement",
+      "licensed_external_and_internal_anatomy"
+    ],
+    "decorative_chart_alone_counts_as_replacement": false,
+    "automatic_photo_deletion_after_test": false,
+    "owner_approval_required_before_any_photo_deletion": true
+  }
+}
