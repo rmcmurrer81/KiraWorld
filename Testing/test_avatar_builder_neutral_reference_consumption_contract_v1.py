@@ -12,7 +12,7 @@ CONTRACT_PATH = (
     / "Avatar/avatar_builder/body_systems/neutral_reference_consumption_contract_v1.json"
 )
 MANIFEST_PATH = (
-    ROOT / "Avatar/library/neutral_generated_reference_charts_v1/REFERENCE_ASSET_MANIFEST.json"
+    ROOT / "Avatar/library/neutral_nonperson_reference_charts_v2/REFERENCE_ASSET_MANIFEST.json"
 )
 
 
@@ -58,7 +58,7 @@ class AvatarBuilderNeutralReferenceConsumptionContractV1Test(unittest.TestCase):
         self.assertEqual(binding["sha256"], sha256(MANIFEST_PATH))
 
     def test_every_role_resolves_to_one_exact_manifest_asset(self) -> None:
-        assets = self.manifest["generated_assets"] + self.manifest["medical_assets"]
+        assets = self.manifest["assets"]
         by_name = {Path(asset["path"]).name: asset for asset in assets}
         seen: set[str] = set()
         for role, names in self.contract["roles"].items():
@@ -75,6 +75,8 @@ class AvatarBuilderNeutralReferenceConsumptionContractV1Test(unittest.TestCase):
 
     def test_generated_and_medical_authority_remain_separate(self) -> None:
         authority = self.contract["authority"]
+        self.assertIs(authority["real_person_photographs_allowed_in_repository"], False)
+        self.assertIs(authority["real_person_photo_pixels_allowed_in_repository"], False)
         self.assertIs(authority["generated_chart_is_medical_authority"], False)
         self.assertIs(authority["generated_chart_is_identity_or_likeness_evidence"], False)
         self.assertIs(authority["medical_diagram_is_identity_or_likeness_evidence"], False)

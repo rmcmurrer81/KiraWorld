@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE = ROOT / "Avatar/library/neutral_generated_reference_charts_v1"
+PACKAGE = ROOT / "Avatar/library/neutral_nonperson_reference_charts_v2"
 MANIFEST = PACKAGE / "REFERENCE_ASSET_MANIFEST.json"
 
 
@@ -25,8 +25,8 @@ class NeutralReferenceLibraryV1Tests(unittest.TestCase):
         cls.manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
 
     def test_all_stored_assets_match_exact_size_and_hash(self) -> None:
-        assets = self.manifest["generated_assets"] + self.manifest["medical_assets"]
-        self.assertEqual(len(assets), 15)
+        assets = self.manifest["assets"]
+        self.assertEqual(len(assets), 14)
         for asset in assets:
             with self.subTest(path=asset["path"]):
                 path = ROOT / asset["path"]
@@ -35,33 +35,36 @@ class NeutralReferenceLibraryV1Tests(unittest.TestCase):
                 self.assertEqual(sha256(path), asset["sha256"])
 
     def test_generated_assets_cannot_claim_medical_or_identity_authority(self) -> None:
-        for asset in self.manifest["generated_assets"]:
-            self.assertIs(asset["medical_authority"], False)
-            self.assertIs(asset["identity_binding"], False)
+        for asset in self.manifest["assets"]:
+            if asset["content_class"] == "neutral_nonperson_design_chart":
+                self.assertEqual(asset["utility_status"], "UNPROVEN_SELECTOR_ONLY")
 
     def test_maturity_and_activation_fail_closed(self) -> None:
-        boundary = self.manifest["authoritative_boundaries"]
-        self.assertIs(boundary["adult_classification_from_appearance_allowed"], False)
-        self.assertIs(boundary["automatic_body_activation_allowed"], False)
-        self.assertIs(boundary["existing_reference_deletion_authorized"], False)
-        self.assertIs(boundary["owner_visual_review_required"], True)
+        boundary = self.manifest["boundaries"]
+        self.assertIs(boundary["contains_real_person_photographs"], False)
+        self.assertIs(boundary["automatic_body_authoring_authorized"], False)
+        self.assertIs(boundary["photo_deletion_authorized"], False)
+        self.assertIs(boundary["machine_utility_proven"], False)
 
     def test_medical_assets_have_reuse_and_attribution_records(self) -> None:
-        for asset in self.manifest["medical_assets"]:
+        for asset in self.manifest["assets"]:
+            if asset["content_class"] != "licensed_nonphotographic_medical_illustration":
+                continue
             self.assertTrue(asset["source_url"].startswith("https://"))
-            self.assertTrue(asset["download_url"].startswith("https://"))
-            self.assertTrue(asset["license_or_reuse_status"])
+            self.assertTrue(asset["reuse"])
             self.assertTrue(asset["required_credit"])
 
     def test_linked_candidate_is_not_misrepresented_as_stored(self) -> None:
-        candidates = self.manifest["linked_not_stored_candidates"]
-        self.assertEqual(len(candidates), 1)
-        self.assertIs(candidates[0]["stored"], False)
+        excluded = self.manifest["excluded_from_repository"]
+        self.assertEqual(len(excluded), 1)
+        self.assertIs(excluded[0]["copied"], False)
+        self.assertIn("real_photograph", excluded[0]["reason"])
 
     def test_male_medical_overviews_are_exact_and_non_identity_evidence(self) -> None:
         assets = {
             Path(asset["path"]).name: asset
-            for asset in self.manifest["medical_assets"]
+            for asset in self.manifest["assets"]
+            if asset["content_class"] == "licensed_nonphotographic_medical_illustration"
         }
         expected = {
             "niddk_male_reproductive_tract_side_labeled.jpg",
@@ -70,8 +73,8 @@ class NeutralReferenceLibraryV1Tests(unittest.TestCase):
         self.assertTrue(expected.issubset(assets))
         for name in expected:
             asset = assets[name]
-            self.assertIn("NIDDK", asset["license_or_reuse_status"])
-            self.assertIn("not_robert_likeness", asset["truth_boundary"])
+            self.assertEqual(asset["source"], "NIDDK, National Institutes of Health")
+            self.assertEqual(asset["utility_status"], "GENERAL_STRUCTURE_ONLY")
 
 
 if __name__ == "__main__":

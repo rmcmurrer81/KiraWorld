@@ -1,13 +1,15 @@
 {
   "schema_version": 1,
   "contract_id": "avatar_builder_neutral_reference_consumption_v1",
-  "status": "STATIC_REFERENCE_ROLE_BINDING_UNREVIEWED_NO_AUTHORING_AUTHORITY",
+  "status": "STATIC_SANITIZED_REFERENCE_ROLE_BINDING_UNREVIEWED_NO_AUTHORING_AUTHORITY",
   "reference_manifest": {
-    "path": "Avatar/library/neutral_generated_reference_charts_v1/REFERENCE_ASSET_MANIFEST.json",
-    "bytes": 13710,
-    "sha256": "61a9912eade5d26766509318258640f532c98c9a370543f022bbb8f97f215ad2"
+    "path": "Avatar/library/neutral_nonperson_reference_charts_v2/REFERENCE_ASSET_MANIFEST.json",
+    "bytes": 8253,
+    "sha256": "0d0359761399e3449b42641ef85a8d6be19628b1ac7cffbe255c52880a1104a7"
   },
   "authority": {
+    "real_person_photographs_allowed_in_repository": false,
+    "real_person_photo_pixels_allowed_in_repository": false,
     "generated_chart_is_medical_authority": false,
     "generated_chart_is_identity_or_likeness_evidence": false,
     "medical_diagram_is_identity_or_likeness_evidence": false,
@@ -52,9 +54,6 @@
       "niddk_female_urinary_tract_front_labeled.jpg",
       "niddk_female_lower_abdomen_side_labeled.jpg"
     ],
-    "adult_female_external_medical_structure": [
-      "wikimedia_female_external_anatomy_cc_by_sa_4.svg"
-    ],
     "adult_male_urinary_and_reproductive_medical_structure": [
       "niddk_male_reproductive_tract_side_labeled.jpg",
       "niddk_male_urinary_tract_front_labeled.jpg"
@@ -85,6 +84,7 @@
     "no_calibrated_color_or_shader_measurements",
     "no_medically_calibrated_soft_tissue_or_joint_deformation atlas",
     "no_complete_external_chest_variation reference",
+    "no_nonphotographic_external_female_anatomy_diagram_after_photo_embedded_svg_exclusion",
     "no_complete_male_external_anatomy or pelvic_floor image set",
     "no_proof_that_each_old_reference_photo_has_a_consumed_replacement",
     "no_body_or_function_acceptance"

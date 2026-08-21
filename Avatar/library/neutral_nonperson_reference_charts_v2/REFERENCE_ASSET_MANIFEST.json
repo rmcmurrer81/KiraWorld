@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "package_id": "neutral_nonperson_reference_charts_v2",
+  "status": "SANITIZED_NO_REAL_PERSON_PHOTOS_MACHINE_UTILITY_PENDING",
+  "repository_visibility": "private",
+  "boundaries": {
+    "contains_real_person_photographs": false,
+    "contains_real_person_photo_pixels": false,
+    "generated_charts_are_medical_authority": false,
+    "medical_drawings_are_identity_evidence": false,
+    "machine_utility_proven": false,
+    "body_function_proven": false,
+    "photo_deletion_authorized": false,
+    "automatic_body_authoring_authorized": false
+  },
+  "assets": [
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/skin_regional_color_material_atlas_v1.png",
+      "bytes": 1957016,
+      "sha256": "6fecccf3af2165a73b130ed21b81fb8a3a0c2fb93d7caa3b44724949321243e6",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "skin_tone_and_regional_material",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/eye_eyebrow_lip_morphology_atlas_v1.png",
+      "bytes": 2533841,
+      "sha256": "ec988f71562dfbb4fd3fc72e0652ce256237c96aefbd673cf130e11f4a29f334",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "eyes_eyelids_eyebrows_and_lips",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/hair_style_and_physics_atlas_v1.png",
+      "bytes": 2491504,
+      "sha256": "2c00f35fd8aafca70e02ea328b2135a22109146627080b9050dfdc838a0de309",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "detachable_hair_style_and_physics",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/torso_chest_silhouette_atlas_v1.png",
+      "bytes": 1502476,
+      "sha256": "02a7dfd0f90b2a2fac12586fb3fb7d8b64b92d7e5021a539a38e6c84b02fb12b",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "adult_torso_chest_and_breast_form",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/hands_feet_nails_contact_atlas_v1.png",
+      "bytes": 2295135,
+      "sha256": "b20b6c453bea020c5c661a308ccabb9c657eb9969b2f6a543f07a8311ae0f054",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "hands_feet_nails_and_contact",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/adult_female_head_ear_nose_jaw_morphology_atlas_v1.png",
+      "bytes": 1945776,
+      "sha256": "66872c622344f45b40612cc2be472627f3d238cfbc36514fa1ebba1debd4c599",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "adult_female_head_ear_nose_and_jaw",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/adult_male_head_ear_nose_jaw_morphology_atlas_v1.png",
+      "bytes": 2263433,
+      "sha256": "33d4e28154ec5b31bac22a7b6df05aa19c469d92b56147650fa4995aa2f00d9b",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "adult_male_head_ear_nose_and_jaw",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/human_pose_deformation_contact_atlas_v1.png",
+      "bytes": 1853707,
+      "sha256": "3d36985e084d36f89c07f7db9d0a1bf9b0a2662b49e30392d7ac44624712c630",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "pose_deformation_contact_and_movement",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/adult_female_full_body_proportion_silhouette_atlas_v1.png",
+      "bytes": 1722401,
+      "sha256": "27167818c5878e98c144ea1ce8e34b3ea842d5699ee522dadaabf04998d5bc85",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "adult_female_body_shape_and_proportion",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/adult_male_full_body_proportion_silhouette_atlas_v1.png",
+      "bytes": 1672943,
+      "sha256": "02ff8c06bb028793d27fe87cdc3a9039187cd243f91845c98da09401a3d2ee6f",
+      "content_class": "neutral_nonperson_design_chart",
+      "role": "adult_male_body_shape_and_proportion",
+      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/medical_open_reference_v1/niddk_female_urinary_tract_front_labeled.jpg",
+      "bytes": 643093,
+      "sha256": "3d63e6ab2a912fb02f5e43561707e0c6f4e3c9793371d9c6f433be8fda08714a",
+      "content_class": "licensed_nonphotographic_medical_illustration",
+      "role": "adult_female_urinary_structure",
+      "source": "NIDDK, National Institutes of Health",
+      "source_url": "https://www.niddk.nih.gov/news/media-library/18038",
+      "reuse": "copyright_free_to_public_credit_required",
+      "required_credit": "National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health",
+      "utility_status": "GENERAL_STRUCTURE_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/medical_open_reference_v1/niddk_female_lower_abdomen_side_labeled.jpg",
+      "bytes": 1112943,
+      "sha256": "91210530b4eac8ef1b8d27afd767a560a68a4b84085d49ef371d59d1a45bd12d",
+      "content_class": "licensed_nonphotographic_medical_illustration",
+      "role": "adult_female_lower_abdomen_structure",
+      "source": "NIDDK, National Institutes of Health",
+      "source_url": "https://www.niddk.nih.gov/news/media-library/23071",
+      "reuse": "copyright_free_to_public_credit_required",
+      "required_credit": "National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health",
+      "utility_status": "GENERAL_STRUCTURE_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/medical_open_reference_v1/niddk_male_reproductive_tract_side_labeled.jpg",
+      "bytes": 1120290,
+      "sha256": "3488337919b8cc5163ef2f4fd9788a92f79737e855cd5ac6aa97e1551b0d62eb",
+      "content_class": "licensed_nonphotographic_medical_illustration",
+      "role": "adult_male_reproductive_structure",
+      "source": "NIDDK, National Institutes of Health",
+      "source_url": "https://www.niddk.nih.gov/news/media-library/23070",
+      "reuse": "copyright_free_to_public_credit_required",
+      "required_credit": "National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health",
+      "utility_status": "GENERAL_STRUCTURE_ONLY"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/medical_open_reference_v1/niddk_male_urinary_tract_front_labeled.jpg",
+      "bytes": 499439,
+      "sha256": "380e29f9dcfed5c62e9ccea8859e8d4e7fb5bb92185ca65ad4537f0d1c74a9ee",
+      "content_class": "licensed_nonphotographic_medical_illustration",
+      "role": "adult_male_urinary_structure",
+      "source": "NIDDK, National Institutes of Health",
+      "source_url": "https://www.niddk.nih.gov/news/media-library/17544",
+      "reuse": "copyright_free_to_public_credit_required",
+      "required_credit": "National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health",
+      "utility_status": "GENERAL_STRUCTURE_ONLY"
+    }
+  ],
+  "excluded_from_repository": [
+    {
+      "source_name": "wikimedia_female_external_anatomy_cc_by_sa_4.svg",
+      "source_sha256": "37f2ac684392c133a284ebe47adae5d8e69e22cf8b77d113a111157bb96dc9ec",
+      "reason": "embeds_base64_raster_pixels_derived_from_a_real_photograph",
+      "copied": false,
+      "replacement_required": "nonphotographic_licensed_diagram_or_source_bound_geometry"
+    }
+  ],
+  "next_gate": {
+    "required": "avatar_builder_machine_utility_receipt",
+    "must_prove": [
+      "machine_readable_selector_ids",
+      "one_synthetic_test_body_before_and_after_hashes",
+      "repeatable_geometry_or_material_change",
+      "visual_and_structural_review",
+      "photo_to_replacement_coverage_mapping"
+    ]
+  }
+}
