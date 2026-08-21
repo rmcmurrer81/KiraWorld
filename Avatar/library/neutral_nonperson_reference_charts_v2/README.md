@@ -8,11 +8,15 @@ The older external-anatomy SVG is deliberately absent because inspection found
 that it embeds a base64 raster image derived from a real photograph. The
 manifest records its excluded identity so it cannot be silently reintroduced.
 
-The synthetic charts currently provide visual direction only. They are not yet
-accepted replacements for the local photo library. A chart becomes a useful
-replacement only after Avatar Builder can select a stable chart ID, apply it to
-a synthetic test body, reproduce a geometry or material change, and emit exact
-before/after hashes plus visual and structural review evidence.
+The skin-material chart now has an exact-hash-bound map with six stable selector
+IDs. Avatar Builder can apply each one deterministically to a synthetic
+non-person material record while proving the body geometry hash is unchanged.
+The loader decodes the PNG and verifies all 30 declared sample pixels. This is
+a machine selector and material-direction pass, not a render-quality pass.
+
+The other synthetic charts currently provide visual direction only. None of
+the charts is yet an accepted replacement for the local photo library. That
+requires exact before/after evidence plus visual and structural review.
 
 No local reference photo may be deleted automatically. An exact coverage map,
 successful machine-utility evidence, and owner approval are required first.

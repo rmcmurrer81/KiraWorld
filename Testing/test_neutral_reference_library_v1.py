@@ -26,7 +26,7 @@ class NeutralReferenceLibraryV1Tests(unittest.TestCase):
 
     def test_all_stored_assets_match_exact_size_and_hash(self) -> None:
         assets = self.manifest["assets"]
-        self.assertEqual(len(assets), 14)
+        self.assertEqual(len(assets), 15)
         for asset in assets:
             with self.subTest(path=asset["path"]):
                 path = ROOT / asset["path"]
@@ -37,7 +37,12 @@ class NeutralReferenceLibraryV1Tests(unittest.TestCase):
     def test_generated_assets_cannot_claim_medical_or_identity_authority(self) -> None:
         for asset in self.manifest["assets"]:
             if asset["content_class"] == "neutral_nonperson_design_chart":
-                self.assertEqual(asset["utility_status"], "UNPROVEN_SELECTOR_ONLY")
+                expected = (
+                    "MACHINE_SELECTOR_AND_MATERIAL_DIRECTION_PASS_PENDING_RENDER"
+                    if asset["role"] == "skin_tone_and_regional_material"
+                    else "UNPROVEN_SELECTOR_ONLY"
+                )
+                self.assertEqual(asset["utility_status"], expected)
 
     def test_maturity_and_activation_fail_closed(self) -> None:
         boundary = self.manifest["boundaries"]

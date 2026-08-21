@@ -1,0 +1,77 @@
+{
+  "schema": "kira.avatar.neutral_skin_material_selector_map.v1",
+  "schema_version": 1,
+  "status": "MACHINE_SELECTOR_AND_MATERIAL_DIRECTION_READY_PENDING_RENDER",
+  "chart": {
+    "path": "Avatar/library/neutral_nonperson_reference_charts_v2/skin_regional_color_material_atlas_v1.png",
+    "bytes": 1957016,
+    "sha256": "6fecccf3af2165a73b130ed21b81fb8a3a0c2fb93d7caa3b44724949321243e6",
+    "content_class": "neutral_nonperson_design_chart"
+  },
+  "sampling": {
+    "image_width": 1536,
+    "image_height": 1024,
+    "method": "exact_hash_bound_srgb_swatch_points",
+    "swatch_names": [
+      "swatch_a",
+      "swatch_b",
+      "swatch_c",
+      "swatch_d",
+      "swatch_e"
+    ]
+  },
+  "selectors": [
+    {
+      "selector_id": "skin_row_01",
+      "chart_label": "01",
+      "sample_y": 153,
+      "sample_x": [88, 121, 154, 187, 220],
+      "regional_srgb": [[251, 228, 214], [250, 218, 216], [251, 230, 222], [250, 233, 218], [167, 99, 61]]
+    },
+    {
+      "selector_id": "skin_row_02",
+      "chart_label": "02",
+      "sample_y": 323,
+      "sample_x": [88, 121, 154, 187, 220],
+      "regional_srgb": [[246, 219, 197], [250, 213, 202], [249, 221, 205], [244, 214, 191], [211, 152, 101]]
+    },
+    {
+      "selector_id": "skin_row_03",
+      "chart_label": "03",
+      "sample_y": 493,
+      "sample_x": [88, 121, 154, 187, 220],
+      "regional_srgb": [[244, 214, 190], [247, 207, 195], [250, 222, 203], [240, 208, 183], [184, 122, 81]]
+    },
+    {
+      "selector_id": "skin_row_04",
+      "chart_label": "04",
+      "sample_y": 664,
+      "sample_x": [88, 121, 154, 187, 220],
+      "regional_srgb": [[237, 200, 170], [244, 203, 188], [245, 215, 194], [240, 204, 175], [206, 145, 97]]
+    },
+    {
+      "selector_id": "skin_row_05",
+      "chart_label": "05",
+      "sample_y": 834,
+      "sample_x": [88, 121, 154, 187, 220],
+      "regional_srgb": [[229, 190, 159], [238, 195, 179], [239, 206, 184], [229, 192, 162], [205, 142, 91]]
+    },
+    {
+      "selector_id": "skin_row_06",
+      "chart_label": "06",
+      "sample_y": 1004,
+      "sample_x": [88, 121, 154, 187, 220],
+      "regional_srgb": [[216, 176, 147], [217, 169, 149], [230, 197, 173], [217, 179, 152], [173, 114, 72]]
+    }
+  ],
+  "truth": {
+    "real_person_photograph": false,
+    "identity_or_likeness_evidence": false,
+    "medical_or_colorimetric_authority": false,
+    "maturity_classification_allowed": false,
+    "body_geometry_changed": false,
+    "render_review_passed": false,
+    "photo_replacement_accepted": false,
+    "photo_deletion_authorized": false
+  }
+}

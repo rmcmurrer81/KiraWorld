@@ -63,6 +63,7 @@ class NeutralNonpersonReferenceChartsV2Tests(unittest.TestCase):
         allowed = {
             "neutral_nonperson_design_chart",
             "licensed_nonphotographic_medical_illustration",
+            "machine_selector_map",
         }
         self.assertEqual({asset["content_class"] for asset in self.manifest["assets"]}, allowed)
         self.assertFalse(any(asset["path"].lower().endswith(".svg") for asset in self.manifest["assets"]))
@@ -74,12 +75,23 @@ class NeutralNonpersonReferenceChartsV2Tests(unittest.TestCase):
     def test_machine_utility_and_photo_deletion_remain_blocked(self):
         boundaries = self.manifest["boundaries"]
         self.assertIs(boundaries["machine_utility_proven"], False)
+        self.assertIs(
+            boundaries["skin_material_selector_and_direction_repeatable"], True
+        )
+        self.assertIs(boundaries["skin_material_render_review_passed"], False)
         self.assertIs(boundaries["photo_deletion_authorized"], False)
-        for asset in self.manifest["assets"][:10]:
+        skin_assets = {
+            asset["role"]: asset for asset in self.manifest["assets"][:2]
+        }
+        self.assertEqual(
+            {asset["utility_status"] for asset in skin_assets.values()},
+            {"MACHINE_SELECTOR_AND_MATERIAL_DIRECTION_PASS_PENDING_RENDER"},
+        )
+        for asset in self.manifest["assets"][2:11]:
             self.assertEqual(asset["utility_status"], "UNPROVEN_SELECTOR_ONLY")
         self.assertEqual(
             self.manifest["next_gate"]["required"],
-            "avatar_builder_machine_utility_receipt",
+            "skin_material_render_and_structural_review_then_remaining_chart_selectors",
         )
 
     def test_medical_drawings_retain_source_and_credit(self):

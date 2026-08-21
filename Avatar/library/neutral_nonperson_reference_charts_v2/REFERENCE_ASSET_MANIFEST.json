@@ -9,6 +9,8 @@
     "generated_charts_are_medical_authority": false,
     "medical_drawings_are_identity_evidence": false,
     "machine_utility_proven": false,
+    "skin_material_selector_and_direction_repeatable": true,
+    "skin_material_render_review_passed": false,
     "body_function_proven": false,
     "photo_deletion_authorized": false,
     "automatic_body_authoring_authorized": false
@@ -20,7 +22,15 @@
       "sha256": "6fecccf3af2165a73b130ed21b81fb8a3a0c2fb93d7caa3b44724949321243e6",
       "content_class": "neutral_nonperson_design_chart",
       "role": "skin_tone_and_regional_material",
-      "utility_status": "UNPROVEN_SELECTOR_ONLY"
+      "utility_status": "MACHINE_SELECTOR_AND_MATERIAL_DIRECTION_PASS_PENDING_RENDER"
+    },
+    {
+      "path": "Avatar/library/neutral_nonperson_reference_charts_v2/skin_material_selector_map_v1.json",
+      "bytes": 2567,
+      "sha256": "3b23e93f8979a497fd3846a5dc813ff18439349e4b0c2ddf6b3ce2ffca0483e5",
+      "content_class": "machine_selector_map",
+      "role": "skin_material_machine_selector",
+      "utility_status": "MACHINE_SELECTOR_AND_MATERIAL_DIRECTION_PASS_PENDING_RENDER"
     },
     {
       "path": "Avatar/library/neutral_nonperson_reference_charts_v2/eye_eyebrow_lip_morphology_atlas_v1.png",
@@ -153,7 +163,7 @@
     }
   ],
   "next_gate": {
-    "required": "avatar_builder_machine_utility_receipt",
+    "required": "skin_material_render_and_structural_review_then_remaining_chart_selectors",
     "must_prove": [
       "machine_readable_selector_ids",
       "one_synthetic_test_body_before_and_after_hashes",
