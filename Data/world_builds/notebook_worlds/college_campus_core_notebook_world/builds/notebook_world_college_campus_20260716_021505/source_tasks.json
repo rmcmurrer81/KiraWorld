@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_college_campus_20260716_021505",
+  "place": {
+    "name": "College Campus",
+    "category": "original_idea",
+    "city": "Standalone Learning Campus",
+    "region": "Education Notebook Collection",
+    "country": "Virtual",
+    "era": "current_or_best_sourced",
+    "notebook_world_id": "college_campus_core_notebook_world",
+    "notebook_title": "College Campus Core Notebook World",
+    "latitude": null,
+    "longitude": null,
+    "starting_area": "campus arrival court, Memorial Union student-center public route, and library approach",
+    "initial_scope": "campus_core_prototype",
+    "collection_id": "education_notebook_collection"
+  },
+  "tasks": [
+    {
+      "task_id": "official_overview",
+      "goal": "Find official or high-trust overview pages for names, dates, access points, and landmark descriptions.",
+      "preferred_sources": [
+        "official_site",
+        "institutional_archive"
+      ],
+      "output": "source_notes.md",
+      "truth_labels_created": [
+        "manual_note_confirmed"
+      ]
+    },
+    {
+      "task_id": "measurements_and_scale",
+      "goal": "Collect dimensions for courtyards, facades, rooms, major structures, or known footprints.",
+      "preferred_sources": [
+        "official_site",
+        "architecture_archive",
+        "blueprints",
+        "maps"
+      ],
+      "output": "measurements.json",
+      "truth_labels_created": [
+        "blueprint_confirmed",
+        "map_confirmed",
+        "inferred_from_sources"
+      ]
+    },
+    {
+      "task_id": "exterior_reference_board",
+      "goal": "Collect exterior reference images from multiple angles without treating a single photo as complete truth.",
+      "preferred_sources": [
+        "official_site",
+        "public_photos",
+        "street_level_photos"
+      ],
+      "output": "asset_manifest.json",
+      "truth_labels_created": [
+        "photo_confirmed"
+      ]
+    },
+    {
+      "task_id": "community_photo_intake",
+      "goal": "Find crowd-posted and third-party location photos from galleries, travel sites, blogs, archives, and map/street-level sources; review license, date, angle, and reliability before local download or texture use.",
+      "preferred_sources": [
+        "public_photo_gallery",
+        "travel_blog",
+        "architecture_site",
+        "map_or_satellite_view",
+        "street_level_photos",
+        "public_video"
+      ],
+      "output": "public_photo_reference_board.json",
+      "truth_labels_created": [
+        "photo_confirmed",
+        "video_confirmed",
+        "inferred_from_sources"
+      ]
+    },
+    {
+      "task_id": "interior_or_hidden_area_boundaries",
+      "goal": "Mark interiors, service corridors, restricted areas, or missing views as unknown unless sourced.",
+      "preferred_sources": [
+        "floor_plans",
+        "public_video",
+        "manual_notes"
+      ],
+      "output": "scene_plan.json",
+      "truth_labels_created": [
+        "unknown",
+        "blocked_private"
+      ]
+    },
+    {
+      "task_id": "era_and_style_context",
+      "goal": "Capture material, signage, lighting, clothing, vehicles, street furniture, and atmosphere appropriate to the requested era.",
+      "preferred_sources": [
+        "style_or_era_references",
+        "local_library",
+        "public_photos"
+      ],
+      "output": "builder_notes.md",
+      "truth_labels_created": [
+        "style_fill",
+        "inferred_from_sources"
+      ]
+    },
+    {
+      "task_id": "memorial_union_public_student_center_precedents",
+      "goal": "Build a reviewed public-reference board for student-center arrival, information, food, retail, lounge, meeting, event, and student-service functions without importing private college memories or assuming a real Memorial Union layout.",
+      "preferred_sources": [
+        "official_site",
+        "public_floor_plans",
+        "architecture_archive",
+        "public_photos",
+        "public_video"
+      ],
+      "output": "memorial_union_public_reference_board.json",
+      "truth_labels_created": [
+        "blueprint_confirmed",
+        "photo_confirmed",
+        "video_confirmed",
+        "inferred_from_sources",
+        "unknown"
+      ],
+      "status": "not_started_no_live_research_claimed"
+    },
+    {
+      "task_id": "student_center_food_and_operations_program",
+      "goal": "Review generic college food-hall operations and plan receiving, cold/dry storage, prep, cooking, dishwashing, grease, waste, staff, custodial, and secure service circulation before any room layout is approved.",
+      "preferred_sources": [
+        "official_facilities_guidance",
+        "public_health_guidance",
+        "commercial_kitchen_planning_references",
+        "public_floor_plans"
+      ],
+      "output": "memorial_union_operations_review.json",
+      "truth_labels_created": [
+        "inferred_from_sources",
+        "unknown"
+      ],
+      "status": "not_started_no_live_research_claimed"
+    },
+    {
+      "task_id": "student_center_accessibility_egress_and_event_support",
+      "goal": "Have a future qualified review establish accessible routes, restroom mix, vertical circulation, occupant loads, exits, fire separation, kitchen exhaust, event loading, audiovisual support, and emergency access for the proposed program.",
+      "preferred_sources": [
+        "official_code_sources",
+        "accessibility_guidance",
+        "fire_and_life_safety_guidance",
+        "event_facility_planning_references"
+      ],
+      "output": "memorial_union_access_life_safety_review.json",
+      "truth_labels_created": [
+        "manual_note_confirmed",
+        "unknown"
+      ],
+      "status": "not_started_requires_qualified_review"
+    }
+  ],
+  "source_leads": []
+}

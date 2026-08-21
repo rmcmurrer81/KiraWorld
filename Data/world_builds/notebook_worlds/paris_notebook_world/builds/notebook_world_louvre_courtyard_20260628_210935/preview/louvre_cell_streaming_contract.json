@@ -1,0 +1,264 @@
+{
+  "schema_version": 2,
+  "contract_kind": "notebook_world_proximity_cell_streaming_contract",
+  "world_id": "paris_notebook_world",
+  "location_id": "louvre_museum_owner_review_expansion",
+  "status": "streaming_scaffold_only_not_complete",
+  "truth": {
+    "current_runtime_scope": "Cour Napoleon exterior plus a photo-supported, explicitly approximate Pyramid door and under-Pyramid circulation owner-review slice",
+    "interior_complete": false,
+    "working_doors_proven": false,
+    "stairs_proven": false,
+    "escalators_proven": false,
+    "elevators_proven": false,
+    "gallery_rooms_proven": false,
+    "artwork_inventory_or_placement_proven": false,
+    "bounded_circulation_slice_available_for_owner_review": true,
+    "bounded_circulation_slice_approved_or_complete": false,
+    "note": "The entrance and circulation cells are low-detail owner-review prototypes supported by Robert-supplied photos. Their operation tests the builder/runtime architecture; it does not prove exact Louvre dimensions, routing, accessibility, or completion."
+  },
+  "streaming_policy": {
+    "distance_units": "meters",
+    "position_source": "physical_body_or_owner_camera_in_same_notebook_world",
+    "load_radius_m": 12,
+    "retain_radius_m": 20,
+    "blocked_cell_notice_radius_m": 14,
+    "max_active_cells_per_presence": 3,
+    "per_presence_interest_sets": true,
+    "union_interest_sets_for_shared_world": true,
+    "unload_hysteresis_required": true,
+    "never_load_build_states": [
+      "locked_unbuilt",
+      "source_research_required_unbuilt",
+      "owner_review_blocked"
+    ],
+    "asset_loading": "cell modules and their assets load on demand; artwork is a gallery-cell child asset and never a global eager asset",
+    "failure_policy": "stage and validate every destination cell before unloading any source cell; on any failure keep the last proven cell set loaded, preserve its state, and show the exact blocked transition",
+    "transaction_order": [
+      "plan interest set",
+      "reject any desired cell without a registered module",
+      "stage destination geometry and collision together",
+      "validate per-cell and active-set budgets",
+      "commit all destination cells",
+      "capture persistent state and only then unload cells outside the retained set"
+    ]
+  },
+  "resource_budgets": {
+    "measurement_basis": "conservative declared procedural estimates checked during staging; browser smoke separately records renderer triangles and draw calls",
+    "active_set": {
+      "max_asset_bytes": 16777216,
+      "max_triangles": 150000,
+      "max_texture_bytes": 8388608,
+      "max_draw_calls": 1000,
+      "max_transaction_latency_ms": 400
+    },
+    "per_cell": {
+      "cour_napoleon_exterior": {
+        "max_asset_bytes": 8388608,
+        "max_triangles": 90000,
+        "max_texture_bytes": 4194304,
+        "max_draw_calls": 900,
+        "max_stage_latency_ms": 100
+      },
+      "pyramid_entrance_transition": {
+        "max_asset_bytes": 1048576,
+        "max_triangles": 6000,
+        "max_texture_bytes": 0,
+        "max_draw_calls": 48,
+        "max_stage_latency_ms": 150
+      },
+      "under_pyramid_level_minus_2_circulation": {
+        "max_asset_bytes": 3145728,
+        "max_triangles": 28000,
+        "max_texture_bytes": 0,
+        "max_draw_calls": 130,
+        "max_stage_latency_ms": 200
+      }
+    }
+  },
+  "cells": [
+    {
+      "id": "cour_napoleon_exterior",
+      "label": "Cour Napoleon exterior and Pyramid approach",
+      "kind": "exterior",
+      "build_state": "prototype_owner_review_not_approved",
+      "runtime_loadable": true,
+      "bounds_m": {
+        "min": [-115, -2, -90],
+        "max": [115, 24, 90],
+        "truth": "current prototype review boundary, not surveyed Louvre property bounds"
+      },
+      "runtime_binding": {
+        "kind": "current_eager_entry_cell_registered_as_managed_baseline",
+        "source": "src/main.js",
+        "contract": "louvre_exterior_contract.json"
+      },
+      "completion": {
+        "complete": false,
+        "scope": "exterior orientation, scale, collision, and landmark review only"
+      },
+      "adjacent_cells": ["pyramid_entrance_transition"]
+    },
+    {
+      "id": "pyramid_entrance_transition",
+      "label": "Pyramid entrance doors and descent transition",
+      "kind": "portal_and_vertical_transition",
+      "build_state": "prototype_owner_review_not_approved",
+      "runtime_loadable": true,
+      "bounds_m": {
+        "min": [-8, -1, 12.5],
+        "max": [8, 4, 25],
+        "truth": "bounded owner-review load volume around approximate entrance geometry, not surveyed Louvre bounds"
+      },
+      "proximity_anchor_m": {
+        "position": [0, 1.68, 18.5],
+        "truth": "approximate current exterior door-wall anchor only"
+      },
+      "runtime_binding": {
+        "kind": "procedural_transactional_cell_module",
+        "source": "src/main.js#createApproximatePyramidEntranceCell",
+        "contract": "louvre_cell_streaming_contract.json"
+      },
+      "completion": {
+        "complete": false,
+        "owner_review_door_animation_and_collision_test_available": true,
+        "exact_working_doors_proven": false,
+        "exact_collision_transition_proven": false,
+        "accessibility_route_proven": false
+      },
+      "evidence": {
+        "supported": [
+          "The Pyramid is the main entrance for individual visitors."
+        ],
+        "supported_by_robert_supplied_photos": [
+          "a glass entrance wall and visitor door opening exist beneath the Pyramid edge",
+          "human scale and queue context around the exterior threshold"
+        ],
+        "still_unknown_and_not_claimed": [
+          "exact door count, dimensions, mechanism, swing/slide direction, automation, and operating rules",
+          "exact exterior-to-level-minus-2 walking route",
+          "security, ticketing, accessibility, and queue transitions"
+        ]
+      },
+      "adjacent_cells": ["cour_napoleon_exterior", "under_pyramid_level_minus_2_circulation"]
+    },
+    {
+      "id": "under_pyramid_level_minus_2_circulation",
+      "label": "Under-Pyramid reception and level -2 circulation",
+      "kind": "interior_circulation",
+      "build_state": "prototype_owner_review_not_approved",
+      "runtime_loadable": true,
+      "bounds_m": {
+        "min": [-20, -11, -12],
+        "max": [20, 3, 15],
+        "truth": "bounded blockout load volume chosen for owner review, not measured Louvre room bounds"
+      },
+      "runtime_binding": {
+        "kind": "procedural_transactional_cell_module",
+        "source": "src/main.js#createApproximateUnderPyramidCirculationCell",
+        "contract": "louvre_cell_streaming_contract.json"
+      },
+      "activation_gate": {
+        "kind": "explicit_portal_authorization",
+        "portal_cell": "pyramid_entrance_transition",
+        "authorization_expires_on_unload": true,
+        "truth": "the descent cell is not selected by distance alone; the owner must operate the approximate entrance, which authorizes staging so collision readiness can be proven before the threshold opens"
+      },
+      "completion": {
+        "complete": false,
+        "owner_review_walkable_spiral_stair_blockout_available": true,
+        "owner_review_visible_escalator_blockout_available": true,
+        "exact_stairs_proven": false,
+        "working_escalators_proven": false,
+        "elevators_present_or_working_proven": false,
+        "full_lobby_or_wing_doors_proven": false
+      },
+      "evidence": {
+        "supported": [
+          "The official visitor map places reception under the Pyramid at level -2.",
+          "The central underground lobby serves the Richelieu, Sully, and Denon wings.",
+          "The official physical-accessibility page confirms a central tube lift reaches reception under the Pyramid."
+        ],
+        "supported_by_robert_supplied_photos": [
+          "under-Pyramid concrete decks, columns, and a spiral stair are visible",
+          "escalator forms are visible behind the spiral stair"
+        ],
+        "research_required_and_locked": [
+          "measured floor and ceiling geometry",
+          "exact stairs and escalator locations, dimensions, directions, landings, mechanics, and operational state",
+          "the central tube lift's exact location, dimensions, mechanics, controls, timing, collision, and operating state",
+          "doors, accessibility routes, barriers, collision, and operating states"
+        ]
+      },
+      "adjacent_cells": [
+        "pyramid_entrance_transition",
+        "richelieu_gallery_zone",
+        "sully_gallery_zone",
+        "denon_gallery_zone"
+      ]
+    },
+    {
+      "id": "richelieu_gallery_zone",
+      "label": "Richelieu wing gallery cells",
+      "kind": "gallery_zone",
+      "build_state": "locked_unbuilt",
+      "runtime_loadable": false,
+      "bounds_m": null,
+      "runtime_binding": null,
+      "completion": {
+        "complete": false,
+        "rooms_built": false,
+        "artwork_loaded": false
+      },
+      "artwork_policy": "Load only a reviewed room inventory with exact room/cell placement and rights/provenance; never preload the museum collection globally.",
+      "adjacent_cells": ["under_pyramid_level_minus_2_circulation"]
+    },
+    {
+      "id": "sully_gallery_zone",
+      "label": "Sully wing gallery cells",
+      "kind": "gallery_zone",
+      "build_state": "locked_unbuilt",
+      "runtime_loadable": false,
+      "bounds_m": null,
+      "runtime_binding": null,
+      "completion": {
+        "complete": false,
+        "rooms_built": false,
+        "artwork_loaded": false
+      },
+      "artwork_policy": "Load only a reviewed room inventory with exact room/cell placement and rights/provenance; never preload the museum collection globally.",
+      "adjacent_cells": ["under_pyramid_level_minus_2_circulation"]
+    },
+    {
+      "id": "denon_gallery_zone",
+      "label": "Denon wing gallery cells",
+      "kind": "gallery_zone",
+      "build_state": "locked_unbuilt",
+      "runtime_loadable": false,
+      "bounds_m": null,
+      "runtime_binding": null,
+      "completion": {
+        "complete": false,
+        "rooms_built": false,
+        "artwork_loaded": false
+      },
+      "artwork_policy": "Load only a reviewed room inventory with exact room/cell placement and rights/provenance; never preload the museum collection globally.",
+      "adjacent_cells": ["under_pyramid_level_minus_2_circulation"]
+    }
+  ],
+  "portal_rules": {
+    "closed_or_unbuilt_portal_is_solid": true,
+    "door_animation_does_not_prove_route_completion": true,
+    "destination_cell_must_be_loaded_and_collision_ready_before_opening": true,
+    "vertical_transport_requires_motion_collision_arrival_and_return_tests": true,
+    "unsupported_transition_behavior": "remain in the current proven cell and display the exact blocker"
+  },
+  "promotion_gates": [
+    "source pack identifies the exact area and current visitor route",
+    "geometry and scale pass owner review",
+    "doors, collision, and two-way transition pass",
+    "stairs/escalators/elevators are tested only when their presence and placement are sourced",
+    "each gallery room has a separate artwork and rights/provenance inventory",
+    "streaming load/unload test shows bounded active cells without losing persistent state"
+  ]
+}

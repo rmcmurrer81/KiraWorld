@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_legal_day_spa_staged_20260715",
+  "stage_name": "Separate Legal Day Spa Notebook World",
+  "status": "standalone_preview_registered_not_approved",
+  "purpose": "Let Robert inspect the pinned registered spa build without loading Kira, the Kira World Shell, or Home World or exposing unrelated workspace files.",
+  "launcher": "Start_Legal_Day_Spa_Notebook_World.bat",
+  "allowed_preview_types": [
+    "standalone_browser_walkthrough",
+    "contact_sheet_review"
+  ],
+  "commit_rule": "Never import into Home World or delete the strip mall until the hardware, runtime, visual, prefab, and Robert-approval gates all pass."
+}

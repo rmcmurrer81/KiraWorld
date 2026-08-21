@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "project_id": "legal_day_spa_avatar_builder_spa_20260714",
+  "build_id": "spa_preview_20260715_221820",
+  "created_at": "2026-07-15T22:29:54.265224+00:00",
+  "status": "not_approved",
+  "world_builder_may_commit_to_home_world": false,
+  "not_placed_in_home_world": true,
+  "structural_static_validation": "passed",
+  "runtime_kira_route_test": "not_run",
+  "visual_realism_review": "failed_prior_review_unresolved",
+  "robert_approval": "not_granted",
+  "required_artifacts": [
+    {
+      "artifact": "blueprint.md",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/blueprint.md"
+    },
+    {
+      "artifact": "blueprint.json",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/blueprint.json"
+    },
+    {
+      "artifact": "source_notes.md",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/source_notes.md"
+    },
+    {
+      "artifact": "standalone_preview_url_or_folder",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/index.html"
+    },
+    {
+      "artifact": "exterior_contact_sheet.png",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/exterior_contact_sheet.png"
+    },
+    {
+      "artifact": "interior_contact_sheet.png",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/interior_contact_sheet.png"
+    },
+    {
+      "artifact": "door_threshold_contact_sheet.png",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/door_threshold_contact_sheet.png"
+    },
+    {
+      "artifact": "nav_collision_report.json",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/nav_collision_report.json"
+    },
+    {
+      "artifact": "ai_route_test_report.json",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/ai_route_test_report.json"
+    },
+    {
+      "artifact": "approval_gate.json",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/approval_gate.json"
+    },
+    {
+      "artifact": "asset_selection_report.json",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/asset_selection_report.json"
+    },
+    {
+      "artifact": "asset_credits.json",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/asset_credits.json"
+    },
+    {
+      "artifact": "missing_asset_report.json",
+      "status": "present",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/missing_asset_report.json"
+    }
+  ],
+  "failures": [
+    {
+      "kind": "missing_required_real_prefabs",
+      "roles": [
+        "front_storefront_door",
+        "reception_counter",
+        "consultation_desk_tablet",
+        "treatment_table_a",
+        "treatment_table_b",
+        "treatment_room_stools",
+        "treatment_side_counters_and_sinks",
+        "styling_salon_chair",
+        "styling_shampoo_basin",
+        "styling_mirror",
+        "relaxation_lounges",
+        "clean_towel_storage",
+        "dirty_linen_hamper",
+        "laundry_machines",
+        "staff_utility_sink",
+        "accessible_grab_rails",
+        "spa_ceiling_light_fixtures"
+      ],
+      "fallback_visuals_created": false
+    },
+    {
+      "kind": "prior_failed_visual_realism_review_unresolved",
+      "review": {
+        "build_id": "spa_preview_20260714_160143",
+        "status": "staged_preview_failed_robert_realism_review",
+        "robert_review": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260714_160143/robert_review_20260714_failed_realism.json",
+        "resolution": "unresolved_visual_realism_failure; structural repair does not erase this review"
+      }
+    }
+  ],
+  "requirements": {
+    "requires_robert_approval": true,
+    "requires_runtime_kira_route_test": true,
+    "requires_visual_contact_sheets": true,
+    "requires_all_semantic_real_prefabs": true
+  },
+  "important_truth": "A static pass cannot override a not-run runtime Kira route test, missing visual evidence, or Robert's unresolved failed realism review.",
+  "prior_failed_review": {
+    "build_id": "spa_preview_20260714_160143",
+    "status": "staged_preview_failed_robert_realism_review",
+    "robert_review": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260714_160143/robert_review_20260714_failed_realism.json",
+    "resolution": "unresolved_visual_realism_failure; structural repair does not erase this review"
+  }
+}

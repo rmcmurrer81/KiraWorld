@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "manifest_kind": "code_pinned_notebook_world_build",
+  "world_id": "synthetic_people_filming_backlot_notebook_world",
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "build_id": "filming_preview_20260716",
+  "build_status": "prototype_draft_not_final_not_approved",
+  "backend": "strict_v2_procedural_preview_lane_v1",
+  "registration": {
+    "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/registration.json",
+    "sha256": "e075b7e97ecea265ecd7bca39685d51d21356303ae8bcb1fc47022b4e0a3adf0",
+    "bytes": 2511
+  },
+  "entrypoint": {
+    "url": "/index.html",
+    "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/preview/index.html",
+    "sha256": "5920786f5ebbe41fc97231ec3da82cb92af17c8d360af40637487f5ed93610c1",
+    "bytes": 3023
+  },
+  "index_registration": {
+    "path": "Data/world_builds/notebook_world_index.json",
+    "scene_folder": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216",
+    "anchor_sha256": "5696730327b99a2912acfb1cc8cf956ca46e71e244d7989730c7a72ee555ce73"
+  },
+  "input_bindings": {
+    "request_sha256": "403b28a743d9470d621b0104e7c4c4c2aa463a3a5e1fc705def50ac8d8474c38",
+    "program_sha256": "1ac3dd39adc4a060d06b733787249284f5426c24cfc3c3a2fa29633f095c0aef",
+    "authorization_sha256": "a8b9347ed203b9db3e594e61feea090b54b15bb4b31f99bc11c3de884cc2647e"
+  },
+  "protected_world_policy": {
+    "home_world_mutation_allowed": false,
+    "strip_mall_mutation_allowed": false,
+    "runtime_registered": false,
+    "people_loaded": false,
+    "minds_loaded": false,
+    "voice_loaded": false
+  },
+  "files": [
+    {
+      "role": "registration",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/registration.json",
+      "sha256": "e075b7e97ecea265ecd7bca39685d51d21356303ae8bcb1fc47022b4e0a3adf0",
+      "bytes": 2511
+    },
+    {
+      "role": "entry_html",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/preview/index.html",
+      "sha256": "5920786f5ebbe41fc97231ec3da82cb92af17c8d360af40637487f5ed93610c1",
+      "bytes": 3023,
+      "url": "/index.html"
+    },
+    {
+      "role": "entry_javascript",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/preview/main.js",
+      "sha256": "742e839a1c1f232ea73021b365f681897e1438a8c9b09c1b41e8b86976beb52c",
+      "bytes": 15787,
+      "url": "/main.js"
+    },
+    {
+      "role": "entry_stylesheet",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/preview/styles.css",
+      "sha256": "4f653bef7afe5457b2c00fd07974f80ee85d883ce03f8e30ce5763a3f73d52b2",
+      "bytes": 4726,
+      "url": "/styles.css"
+    },
+    {
+      "role": "scene_metadata",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/scene_manifest.json",
+      "sha256": "2a4ad997218587835a2e34fbd74b93626263031a8200a6e1165332c0d337e4c3",
+      "bytes": 39548,
+      "url": "/data/scene_manifest.json"
+    },
+    {
+      "role": "collision_nav_metadata",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/collision_nav.json",
+      "sha256": "170df1264d5b781291136d106aa8e26fcb7218ca13047b0abcdaffdb896a9334",
+      "bytes": 17018,
+      "url": "/data/collision_nav.json"
+    },
+    {
+      "role": "source_truth_metadata",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/source_truth.json",
+      "sha256": "07ecfbf467a6f3587b6a26459ba0a8d6645c2dbfecb3b16e088e6df0462836af",
+      "bytes": 1828,
+      "url": "/data/source_truth.json"
+    },
+    {
+      "role": "resource_budget_metadata",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/resource_budget.json",
+      "sha256": "6b39d3b53a3f3d12092cd43084a8892c6187d5bc7366b383bbc96c476d40eff4",
+      "bytes": 2057,
+      "url": "/data/resource_budget.json"
+    },
+    {
+      "role": "build_status_metadata",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_builds/filming_preview_20260716/build_status.json",
+      "sha256": "48ae096305c161b1ec15357004f9ce504c14fd1df397b6a4b1572dd208c39561",
+      "bytes": 1633,
+      "url": "/data/build_status.json"
+    },
+    {
+      "role": "notebook_request",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/notebook_world_request.json",
+      "sha256": "403b28a743d9470d621b0104e7c4c4c2aa463a3a5e1fc705def50ac8d8474c38",
+      "bytes": 5904
+    },
+    {
+      "role": "preview_scope_authorization",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/preview_scope_authorization.json",
+      "sha256": "a8b9347ed203b9db3e594e61feea090b54b15bb4b31f99bc11c3de884cc2647e",
+      "bytes": 2197
+    },
+    {
+      "role": "procedural_scene_program",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/procedural_scene_program.json",
+      "sha256": "1ac3dd39adc4a060d06b733787249284f5426c24cfc3c3a2fa29633f095c0aef",
+      "bytes": 34377
+    },
+    {
+      "role": "notebook_approval_gate",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/approval_gate.json",
+      "sha256": "9ece471f4b914f211bd45c5b3808658c96b0044a694f785048f8dc0b85d743b5",
+      "bytes": 461
+    },
+    {
+      "role": "notebook_quality_gate",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/quality_gate.json",
+      "sha256": "7a7a8176d46374ceb68879e84a4c617ba2cc23eb2e274b76d87a963b26880397",
+      "bytes": 589
+    },
+    {
+      "role": "notebook_resource_gate",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/resource_isolation_gate.json",
+      "sha256": "be0e61026cd922f78043d5e74896a416379937ef1d4b2610664abd8acb6b6d39",
+      "bytes": 816
+    },
+    {
+      "role": "tardis_review_metadata",
+      "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/tardis_review_stage.json",
+      "sha256": "a1ed23396041d8e8b0d360eb4163a6d9be0aa68ed1c4cd0468e6cc77cf5f70a0",
+      "bytes": 605
+    },
+    {
+      "role": "three_runtime",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/build/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113,
+      "url": "/vendor/three/three.module.js"
+    }
+  ]
+}

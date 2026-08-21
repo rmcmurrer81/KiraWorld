@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "manifest_kind": "code_pinned_notebook_world_build",
+  "world_id": "legal_day_spa_notebook_world",
+  "request_id": "notebook_world_legal_day_spa_staged_20260715",
+  "build_id": "spa_preview_20260715_221820",
+  "registration": {
+    "path": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/preview_registration.json",
+    "sha256": "6073a442cb9058739aa8cace0969cc5d7e92488b37053deb045eb6ae08aa34a6",
+    "bytes": 1529
+  },
+  "entrypoint": {
+    "url": "/index.html",
+    "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/index.html",
+    "sha256": "80e71f94fbb759620eb14d3377717cade8f776333a643e3186898fb9f09683af",
+    "bytes": 72698
+  },
+  "index_registration": {
+    "path": "Data/world_builds/notebook_world_index.json",
+    "scene_folder": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715",
+    "anchor_sha256": "f40768bcd4f9c5ac9a728c6fd1654170787804076d39bfe9eb3fe33d8cd31267"
+  },
+  "files": [
+    {
+      "role": "registration",
+      "path": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/preview_registration.json",
+      "sha256": "6073a442cb9058739aa8cace0969cc5d7e92488b37053deb045eb6ae08aa34a6",
+      "bytes": 1529
+    },
+    {
+      "role": "notebook_request",
+      "path": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/notebook_world_request.json",
+      "sha256": "1403000c21e8a759a867f747a578c63fb094b4e68d7d702987ca7f443834c999",
+      "bytes": 3245
+    },
+    {
+      "role": "placement_metadata",
+      "path": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/placement.json",
+      "sha256": "616c62b9ce2c477b6727db2a1fae14a9b3f57277bce018be1f61e2035a602f1f",
+      "bytes": 522
+    },
+    {
+      "role": "scene_plan_metadata",
+      "path": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/scene_plan.json",
+      "sha256": "05f16a5f103281f4c2d739aa92e94a70b856d627750fa566a9c336a3b45033b2",
+      "bytes": 1432
+    },
+    {
+      "role": "tardis_review_metadata",
+      "path": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/tardis_review_stage.json",
+      "sha256": "77f714d2d3649c9c5d483d8dcb28c5912c8b41165685d1a8a85f016f2d0a3d83",
+      "bytes": 679
+    },
+    {
+      "role": "notebook_approval_gate",
+      "path": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/approval_gate.json",
+      "sha256": "56759e6036d1a97201f7e8148f45be01a18a64eeec0137ae1db6079efc6cf8a6",
+      "bytes": 902
+    },
+    {
+      "role": "entry_html",
+      "url": "/index.html",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/index.html",
+      "sha256": "80e71f94fbb759620eb14d3377717cade8f776333a643e3186898fb9f09683af",
+      "bytes": 72698
+    },
+    {
+      "role": "scene_metadata",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/scene_data.json",
+      "sha256": "1ee1f60d93c99279bf7067d222d80a7db9fc40081206470161f801c6508f5998",
+      "bytes": 59767
+    },
+    {
+      "role": "preview_approval_gate",
+      "path": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/approval_gate.json",
+      "sha256": "3a25ad7d287de31cfa4755baad322f729ea2528c86d2823b66bd4b55ec4c480b",
+      "bytes": 5547
+    },
+    {
+      "role": "model_asset",
+      "url": "/Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/some more 3d/modern_sofa (1).glb",
+      "path": "Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/some more 3d/modern_sofa (1).glb",
+      "sha256": "6e83a399496811d0da3e07afe4ef67881e25e153fcc5a7b60729f3ae2a9a73e0",
+      "bytes": 11580664
+    },
+    {
+      "role": "model_asset",
+      "url": "/Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb",
+      "path": "Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb",
+      "sha256": "e8693801cb6b3ee33b3a547003c845876a73c1b85fb6f53a7c953fb6c3f77447",
+      "bytes": 2047128
+    },
+    {
+      "role": "model_asset",
+      "url": "/Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb",
+      "path": "Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb",
+      "sha256": "402dd56ee1cc0d976ba8af5e648c0a6da20cf47cf423a71afffbce38dde97989",
+      "bytes": 1401920
+    },
+    {
+      "role": "model_asset",
+      "url": "/Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/bathroom_sink_cabinet (1).glb",
+      "path": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/bathroom_sink_cabinet (1).glb",
+      "sha256": "b86e54e60e392ff7b268f891829080d7e791be7c382e3f5746a9f5c289affed3",
+      "bytes": 5057748
+    },
+    {
+      "role": "model_asset",
+      "url": "/Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/low_height_coffee_table (1).glb",
+      "path": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/low_height_coffee_table (1).glb",
+      "sha256": "b35b7d91f37d43f7e9edabb7556dd066a01915e12314f0598e6e0c7cc119d611",
+      "bytes": 3165568
+    },
+    {
+      "role": "three_runtime",
+      "url": "/Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/build/three.module.js",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/build/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    {
+      "role": "three_runtime",
+      "url": "/Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "bytes": 114739
+    },
+    {
+      "role": "three_runtime",
+      "url": "/Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "bytes": 35539
+    }
+  ]
+}

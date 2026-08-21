@@ -1,0 +1,79 @@
+{
+  "request_id": "notebook_world_kira_wardrobe_lab_staged_20260715",
+  "request_type": "notebook_world",
+  "title": "Kira Robe Dressing Lab - Separate Notebook World",
+  "requested_by": "robert",
+  "trigger": {
+    "source": "robert_robe_vertical_slice_direction",
+    "summary": "Build an isolated Kira-only lab with one hook, one robe, and one bed so Avatar Builder and World Builder can develop a real evidence-gated dressing round trip without changing Home World.",
+    "created_at": "2026-07-15T20:33:08-04:00"
+  },
+  "subject": {
+    "name": "Kira Robe Dressing Lab",
+    "category": "fictional_or_original_place",
+    "city": "Standalone Wardrobe Lab",
+    "region": "Builder Test Space",
+    "country": "Virtual",
+    "era": "current_or_best_sourced",
+    "private_use_allowed": true,
+    "public_export_requires_review": true
+  },
+  "source_collection_plan": {
+    "allowed_source_types": [
+      "local_library",
+      "measurements",
+      "manual_notes",
+      "style_or_era_references"
+    ],
+    "requires_robert_approval_now": true,
+    "auto_collection_allowed_later": false,
+    "download_policy": "No network collection is required for this staged lab; reuse only the two exact local SHA-pinned GLBs."
+  },
+  "world_plan": {
+    "notebook_world_id": "kira_wardrobe_lab_notebook_world",
+    "notebook_world_title": "Kira Wardrobe Lab Notebook World",
+    "starting_area": "single procedural wardrobe practice room",
+    "initial_scope": "lightweight_static_contract_preview",
+    "confirmed_zones": [
+      "one procedural wall hook and approach area",
+      "one procedural bed and soft-goods placement surface",
+      "one marked walk and turn inspection lane"
+    ],
+    "inferred_zones": [
+      "future Kira-fitted robe dressing path"
+    ],
+    "unknown_zones": [
+      "real hand contact and item ownership transfer",
+      "real sleeve portal crossings",
+      "real cloth skinning, collision, and belt sequence",
+      "real locomotion, sitting, removal, rehang, and bed placement"
+    ],
+    "npc_policy": "none",
+    "ride_or_attraction_policy": "none",
+    "truth_labels": [
+      "procedural_preview_confirmed",
+      "pinned_local_asset_confirmed",
+      "staged_reference_only",
+      "blocked_missing_runtime_evidence"
+    ],
+    "placement_path": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/placement.json",
+    "state_machine_path": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/wardrobe_state_machine.json",
+    "builder_contract_path": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/builder_contract.json"
+  },
+  "approval_workflow": {
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "current_stage": "standalone_contract_preview_blocked",
+    "review_location": "separate notebook-world browser preview",
+    "required_previews_before_approval": [
+      "real anchor and compatible-rig manifest",
+      "recorded hook-to-worn-open evidence",
+      "recorded belt and worn-movement evidence",
+      "recorded removal and both return branches",
+      "explicit Robert visual approval"
+    ]
+  },
+  "visibility_scope": "share_with_robert",
+  "autonomy_level_required": "request_mode",
+  "status": "draft"
+}

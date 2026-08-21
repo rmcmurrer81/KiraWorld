@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "placement_status": "separate_notebook_world_origin",
+  "notebook_world_id": "kira_wardrobe_lab_notebook_world",
+  "local_scene_offset_meters": {
+    "x": 0,
+    "z": 0
+  },
+  "home_world_import_requested": false,
+  "home_world_modified": false,
+  "live_kira_body_modified": false,
+  "world_contains_one_visual_body": true,
+  "world_loads_any_autonomous_person": false,
+  "truth_label": "staged_reference_only",
+  "reconsider_home_world_after": [
+    "exact Kira-compatible robe body and rig hashes are approved",
+    "required anchors, skinning, collision, and animations exist",
+    "shared garment evidence gates pass from recorded physical traces",
+    "Kira agrees to the supervised test",
+    "Robert approves the complete visual round trip"
+  ]
+}

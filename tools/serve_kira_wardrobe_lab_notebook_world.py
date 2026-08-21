@@ -28,7 +28,7 @@ BUILD = (
 )
 REGISTRATION = BUILD / "registration.json"
 BUILD_MANIFEST = BUILD / "pinned_build_manifest.json"
-BUILD_MANIFEST_SHA256 = "855220a6ed2580ba725b071e7ea8577b8ae83958cf0c42a781e2fb4cc7ce3426"
+BUILD_MANIFEST_SHA256 = "392c28f874efff4e68f7f4770f152d8fadac525e960969162466103fac575135"
 WORLD_ID = "kira_wardrobe_lab_notebook_world"
 REQUEST_ID = "notebook_world_kira_wardrobe_lab_staged_20260715"
 REGISTRATION_RELATIVE_PATH = REGISTRATION.relative_to(ROOT).as_posix()

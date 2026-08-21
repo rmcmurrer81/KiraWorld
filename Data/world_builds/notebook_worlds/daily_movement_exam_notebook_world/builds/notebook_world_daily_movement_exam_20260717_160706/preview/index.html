@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Daily Movement Exam — Isolated Review</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three/build/three.module.js",
+          "three/addons/": "/vendor/three/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main id="app">
+      <section class="stage">
+        <canvas id="world" aria-label="Daily movement exam three-dimensional preview"></canvas>
+        <div class="title-card">
+          <p class="eyebrow">Separate lightweight notebook world</p>
+          <h1>Daily Movement Exam</h1>
+          <p>Door, corner, couch, bed, chair, table, tablet, cup, robe hook, and clear exercise floor.</p>
+        </div>
+        <div id="walk-hint" class="walk-hint">Orbit review is active. Use the right panel to enter owner walk review.</div>
+        <div class="truth-banner">
+          <strong>ZERO PEOPLE LOADED</strong>
+          The moving capsule is a clearance probe, not Kira. Props are static; no body skill, choice, contact, or natural movement is claimed.
+        </div>
+      </section>
+      <aside class="panel">
+        <header>
+          <p class="eyebrow">Geometry and route exam</p>
+          <h2>Review controls</h2>
+          <p class="muted">This preview cannot activate Kira, voice, a mind, Home World, or a second person.</p>
+        </header>
+
+        <section class="status-grid" aria-label="Isolation status">
+          <span>People</span><strong>0</strong>
+          <span>Runtime action</span><strong>Blocked</strong>
+          <span>Subject choice</span><strong>Required later</strong>
+        </section>
+
+        <section>
+          <h3>Owner review</h3>
+          <button id="walk-mode" type="button">Enter owner walk review</button>
+          <p class="fine-print">WASD moves, Shift walks faster, mouse looks, Esc exits. Collision is checked against the declared static envelopes.</p>
+        </section>
+
+        <section>
+          <h3>Route clearance probe</h3>
+          <select id="route-select" aria-label="Select a route"></select>
+          <button id="run-route" type="button">Run non-person route probe</button>
+          <p id="route-result" class="result">No route checked yet.</p>
+        </section>
+
+        <section>
+          <h3>Review camera</h3>
+          <select id="camera-select" aria-label="Select a camera"></select>
+          <button id="set-camera" type="button">Go to camera</button>
+        </section>
+
+        <section>
+          <h3>Subject-choice-only stations</h3>
+          <div id="station-list" class="station-list"></div>
+        </section>
+
+        <details open>
+          <summary>Truth and limits</summary>
+          <ul id="truth-list"></ul>
+        </details>
+
+        <p id="load-status" class="fine-print">Loading pinned scene contract…</p>
+      </aside>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "request_id": "notebook_world_louvre_courtyard_20260628_210935",
+  "request_type": "notebook_world",
+  "title": "Louvre Courtyard - Paris Notebook World",
+  "requested_by": "robert",
+  "trigger": {
+    "source": "world_generator_request",
+    "summary": "Robert suggested the Louvre courtyard as a first Paris notebook world test case for measurements, pictures, blueprints, and later relative placement.",
+    "created_at": "2026-06-28T21:09:35.433160+00:00"
+  },
+  "subject": {
+    "name": "Louvre Courtyard",
+    "category": "real_place",
+    "city": "Paris",
+    "region": "Ile-de-France",
+    "country": "France",
+    "era": "current_or_best_sourced",
+    "private_use_allowed": true,
+    "public_export_requires_review": true
+  },
+  "source_collection_plan": {
+    "allowed_source_types": [
+      "official_site",
+      "local_library",
+      "web_search",
+      "map_or_satellite_view",
+      "street_level_photos",
+      "public_photos",
+      "public_video",
+      "floor_plans",
+      "blueprints",
+      "measurements",
+      "manual_notes",
+      "style_or_era_references"
+    ],
+    "requires_robert_approval_now": true,
+    "auto_collection_allowed_later": false,
+    "download_policy": "record_source_leads_first_download_only_after_review",
+    "source_tasks_path": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/source_tasks.json"
+  },
+  "world_plan": {
+    "notebook_world_id": "paris_notebook_world",
+    "notebook_world_title": "Paris Notebook World",
+    "starting_area": "Cour Napoleon and Louvre Pyramid exterior prototype",
+    "initial_scope": "courtyard_prototype",
+    "confirmed_zones": [],
+    "inferred_zones": [
+      "approach paths and surrounding scene massing after maps/photos are reviewed"
+    ],
+    "unknown_zones": [
+      "interiors, service spaces, rear elevations, and any area not visible in approved references"
+    ],
+    "npc_policy": "generic",
+    "ride_or_attraction_policy": "none",
+    "truth_labels": [
+      "blueprint_confirmed",
+      "photo_confirmed",
+      "video_confirmed",
+      "map_confirmed",
+      "manual_note_confirmed",
+      "inferred_from_sources",
+      "style_fill",
+      "unknown",
+      "blocked_private"
+    ],
+    "placement_path": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/placement.json",
+    "scene_plan_path": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/scene_plan.json"
+  },
+  "visibility_scope": "private_only",
+  "autonomy_level_required": "request_mode",
+  "status": "draft"
+}

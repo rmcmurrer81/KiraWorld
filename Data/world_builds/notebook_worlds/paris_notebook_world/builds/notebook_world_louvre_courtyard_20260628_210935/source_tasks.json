@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_louvre_courtyard_20260628_210935",
+  "place": {
+    "name": "Louvre Courtyard",
+    "category": "real_place",
+    "city": "Paris",
+    "region": "Ile-de-France",
+    "country": "France",
+    "era": "current_or_best_sourced",
+    "notebook_world_id": "paris_notebook_world",
+    "notebook_title": "Paris Notebook World",
+    "latitude": 48.8606,
+    "longitude": 2.3376,
+    "starting_area": "Cour Napoleon and Louvre Pyramid exterior prototype",
+    "initial_scope": "courtyard_prototype"
+  },
+  "tasks": [
+    {
+      "task_id": "official_overview",
+      "goal": "Find official or high-trust overview pages for names, dates, access points, and landmark descriptions.",
+      "preferred_sources": [
+        "official_site",
+        "institutional_archive"
+      ],
+      "output": "source_notes.md",
+      "truth_labels_created": [
+        "manual_note_confirmed"
+      ]
+    },
+    {
+      "task_id": "measurements_and_scale",
+      "goal": "Collect dimensions for courtyards, facades, rooms, major structures, or known footprints.",
+      "preferred_sources": [
+        "official_site",
+        "architecture_archive",
+        "blueprints",
+        "maps"
+      ],
+      "output": "measurements.json",
+      "truth_labels_created": [
+        "blueprint_confirmed",
+        "map_confirmed",
+        "inferred_from_sources"
+      ]
+    },
+    {
+      "task_id": "exterior_reference_board",
+      "goal": "Collect exterior reference images from multiple angles without treating a single photo as complete truth.",
+      "preferred_sources": [
+        "official_site",
+        "public_photos",
+        "street_level_photos"
+      ],
+      "output": "asset_manifest.json",
+      "truth_labels_created": [
+        "photo_confirmed"
+      ]
+    },
+    {
+      "task_id": "interior_or_hidden_area_boundaries",
+      "goal": "Mark interiors, service corridors, restricted areas, or missing views as unknown unless sourced.",
+      "preferred_sources": [
+        "floor_plans",
+        "public_video",
+        "manual_notes"
+      ],
+      "output": "scene_plan.json",
+      "truth_labels_created": [
+        "unknown",
+        "blocked_private"
+      ]
+    },
+    {
+      "task_id": "era_and_style_context",
+      "goal": "Capture material, signage, lighting, clothing, vehicles, street furniture, and atmosphere appropriate to the requested era.",
+      "preferred_sources": [
+        "style_or_era_references",
+        "local_library",
+        "public_photos"
+      ],
+      "output": "builder_notes.md",
+      "truth_labels_created": [
+        "style_fill",
+        "inferred_from_sources"
+      ]
+    }
+  ],
+  "source_leads": [
+    {
+      "source_id": "louvre_official_pyramid_symbol",
+      "title": "A pyramid for a symbol - Cour Napoleon & Pyramid",
+      "url": "https://www.louvre.fr/en/explore/the-palace/a-pyramid-for-a-symbol",
+      "source_type": "official_site",
+      "use_for": [
+        "pyramid history",
+        "official key figures",
+        "glass, metal, paving, and pool context"
+      ],
+      "captured_facts": [
+        "Pyramid inaugurated on 29 March 1989.",
+        "Official key figures include height 21 m, base width 35 m, base area 1,000 m2, 675 diamond-shaped glass panes, and 118 triangular glass panes.",
+        "The courtyard design repeats square and triangle modules in the pyramid, pools, and paving."
+      ],
+      "truth_labels": [
+        "manual_note_confirmed",
+        "official_site"
+      ]
+    },
+    {
+      "source_id": "louvre_official_map_entrances",
+      "title": "Map, entrances & directions - All roads lead to the Louvre",
+      "url": "https://www.louvre.fr/en/visit/map-entrances-directions",
+      "source_type": "official_site",
+      "use_for": [
+        "entrance list",
+        "visitor approach points",
+        "museum map lead"
+      ],
+      "captured_facts": [
+        "The Louvre lists four entrances: Pyramid, Carrousel, Richelieu, and Porte des Lions.",
+        "The official page links a downloadable museum map and an interactive floor plan."
+      ],
+      "truth_labels": [
+        "manual_note_confirmed",
+        "map_confirmed"
+      ]
+    },
+    {
+      "source_id": "getty_cona_louvre_pyramid",
+      "title": "Getty CONA Full Record - Louvre Pyramid",
+      "url": "https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700008629",
+      "source_type": "institutional_archive",
+      "use_for": [
+        "coordinates",
+        "dimensions cross-check",
+        "architect and date metadata"
+      ],
+      "captured_facts": [
+        "Record lists the Louvre Pyramid as a glass and metal entrance in Cour Napoleon.",
+        "Address note gives coordinates 48.860854 N, 2.335812 E.",
+        "Dimensions listed include height 21.6 m, base sides 34 m, footprint 1,000 m2, 603 rhombus-shaped and 70 triangular glass segments."
+      ],
+      "truth_labels": [
+        "manual_note_confirmed",
+        "map_confirmed"
+      ]
+    },
+    {
+      "source_id": "wikimedia_commons_louvre_pyramid_category",
+      "title": "Wikimedia Commons - Category:Louvre Pyramid",
+      "url": "https://commons.wikimedia.org/wiki/Category:Louvre_Pyramid",
+      "source_type": "public_photo_gallery",
+      "use_for": [
+        "crowd/photo angle variety",
+        "facade and courtyard reference leads",
+        "day/night lighting comparison"
+      ],
+      "captured_facts": [
+        "Gallery contains many public/crowd-contributed images of Cour Napoleon and the Louvre Pyramid.",
+        "Each image must be reviewed individually for license, date, camera angle, and Freedom of Panorama notes before local download or texture use."
+      ],
+      "truth_labels": [
+        "photo_confirmed"
+      ]
+    },
+    {
+      "source_id": "wikimedia_commons_louvre_museum_file",
+      "title": "Wikimedia Commons - Louvre Museum Wikimedia Commons.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg",
+      "source_type": "public_photo_file",
+      "use_for": [
+        "wide courtyard composition reference",
+        "night lighting reference",
+        "camera-coordinate lead"
+      ],
+      "captured_facts": [
+        "Image description identifies the Napoleon courtyard of the Louvre museum at night with I. M. Pei's pyramid in the middle.",
+        "The file page lists CC-BY-SA 4.0 and camera location metadata."
+      ],
+      "truth_labels": [
+        "photo_confirmed",
+        "map_confirmed"
+      ]
+    },
+    {
+      "source_id": "wikimedia_commons_cour_napoleon_photo",
+      "title": "Wikimedia Commons - Cour Napoleon du Louvre (228021559).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Cour_Napol%C3%A9on_du_Louvre_(228021559).jpg",
+      "source_type": "public_photo_file",
+      "use_for": [
+        "courtyard viewing angle",
+        "camera-coordinate lead",
+        "facade spacing reference"
+      ],
+      "captured_facts": [
+        "File page includes camera location around 48.860611, 2.337644.",
+        "Use only after license/Freedom-of-Panorama review."
+      ],
+      "truth_labels": [
+        "photo_confirmed",
+        "map_confirmed"
+      ]
+    },
+    {
+      "source_id": "robert_supplied_louvre_reference_pack_20260628",
+      "title": "Robert supplied local Louvre courtyard and pyramid images",
+      "url": "local:Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_images/robert_supplied_reference_manifest.json",
+      "source_type": "local_private_reference_pack",
+      "use_for": [
+        "exterior realism pass",
+        "under-pyramid interior planning",
+        "site orientation",
+        "visitor scale",
+        "queue stanchions",
+        "water/reflection pool placement"
+      ],
+      "captured_facts": [
+        "Robert supplied six local reference images on 2026-06-28.",
+        "Images are indexed for private notebook world visual reference only unless later rights/reuse review permits more.",
+        "Visible details include pyramid glass grid density, entrance vestibule, queue rails, reflecting pools, pavilion roof silhouettes, under-pyramid central hall, spiral stair, and site orientation."
+      ],
+      "truth_labels": [
+        "photo_confirmed",
+        "manual_note_confirmed"
+      ]
+    },
+    {
+      "source_id": "robert_supplied_ladybug_bakery_reference_pack_20260628",
+      "title": "Robert supplied local Ladybug bakery comfort-node references",
+      "url": "local:Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_bakery_images/robert_supplied_bakery_reference_manifest.json",
+      "source_type": "local_private_reference_pack",
+      "use_for": [
+        "hybrid Montmartre bakery comfort node",
+        "Ladybug life-loop familiar place",
+        "black and gold boulangerie-patisserie storefront",
+        "fictional comfort-world facade cues"
+      ],
+      "captured_facts": [
+        "Robert supplied two local bakery-style reference images on 2026-06-28.",
+        "The bakery node is intentionally hybrid: a real Paris/Montmartre address seed plus fictional Ladybug comfort styling.",
+        "The current teleport between Louvre and bakery is temporary. It should be replaced only after the route/gap between the real-world anchors is sourced and built."
+      ],
+      "truth_labels": [
+        "fictional_show_style_reference",
+        "manual_note_confirmed",
+        "real_address_seed_plus_fictional_comfort_style"
+      ]
+    },
+    {
+      "source_id": "boris_lume_address_seed_20260628",
+      "title": "Boris Lume / 48 Rue Caulaincourt address seed",
+      "url": "https://www.pagesjaunes.fr/pros/52334696",
+      "source_type": "public_directory_lead",
+      "use_for": [
+        "real Montmartre bakery address seed",
+        "future route/gap-fill task from Louvre to Montmartre"
+      ],
+      "captured_facts": [
+        "Public directory/search leads list Boris Lume at 48 rue Caulaincourt, 75018 Paris.",
+        "This source is not enough for exact facade geometry; use it only as an address/location seed until reviewed map/street-level references are collected."
+      ],
+      "truth_labels": [
+        "manual_note_confirmed",
+        "map_lead_needs_review"
+      ]
+    },
+    {
+      "source_id": "robert_supplied_marinette_bedroom_reference_pack_20260629",
+      "title": "Robert supplied Marinette bedroom reference folder",
+      "url": "local:Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_marinette_bedroom_images/robert_supplied_marinette_bedroom_reference_manifest.json",
+      "source_type": "local_private_reference_pack",
+      "use_for": [
+        "future upstairs bedroom pass",
+        "room layout review",
+        "furniture and fashion-workspace cues",
+        "transition from bakery interior to family living area"
+      ],
+      "captured_facts": [
+        "Robert supplied a Desktop folder named Marinette's Bedroom with local image references.",
+        "The files have been copied into the Paris notebook-world source tree and indexed.",
+        "Bedroom construction should wait until the bakery exterior and shop interior pass have enough reviewed structure."
+      ],
+      "truth_labels": [
+        "fictional_show_style_reference",
+        "manual_note_confirmed"
+      ]
+    },
+    {
+      "source_id": "ladybug_life_loop_paris_walkabout_option_20260629",
+      "title": "Ladybug TemporaryAI Paris bakery walkabout option",
+      "url": "local:TemporaryAI/candidates/ladybug_marinette_expanded_smoke/workbench/inputs/world_visit_options/paris_bakery_walkabout.json",
+      "source_type": "candidate_life_loop_affordance",
+      "use_for": [
+        "letting Ladybug choose a familiar Paris walkabout when world walking is available",
+        "grounding life-loop mentions of the bakery exterior",
+        "preventing unsupported claims about unbuilt interiors/routes"
+      ],
+      "captured_facts": [
+        "Ladybug's candidate profile now points to a world-visit option manifest for the Paris bakery/Louvre preview.",
+        "The manifest states that the bakery exterior is rough, the interior and bedroom are not built yet, and teleport travel is temporary."
+      ],
+      "truth_labels": [
+        "manual_note_confirmed",
+        "runtime_affordance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_legal_day_spa_staged_20260715",
+  "scene_id": "scene_legal_day_spa_standalone",
+  "renderer_target": "threejs_notebook_world",
+  "units": "meters",
+  "source_project": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714",
+  "latest_preview_pointer": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/latest_preview_build.json",
+  "registered_preview": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/index.html",
+  "runtime_mode": "standalone_without_kira",
+  "build_layers": [
+    {
+      "layer": "architectural_structure",
+      "status": "static_validation_passed",
+      "truth_label": "blueprint_confirmed"
+    },
+    {
+      "layer": "real_prefabs",
+      "status": "six_instances_loaded_seventeen_roles_missing",
+      "truth_label": "manual_note_confirmed"
+    },
+    {
+      "layer": "kira_runtime_route",
+      "status": "not_run",
+      "truth_label": "unknown"
+    }
+  ],
+  "do_not_claim": [
+    "Do not call the spa visually approved.",
+    "Do not call the short resource smoke a several-hour stability certification.",
+    "Do not import this scene into Home World or delete the strip mall."
+  ],
+  "approval_gate": {
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "preview_before_commit": true
+  }
+}

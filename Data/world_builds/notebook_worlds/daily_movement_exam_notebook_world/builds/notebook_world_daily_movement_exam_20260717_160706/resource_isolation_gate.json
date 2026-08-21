@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_daily_movement_exam_20260717_160706",
+  "status": "zero_person_isolated_preview_allowed",
+  "hardware_profile": "Data/launch/hardware_capability_profile.json",
+  "observed_ram_gb": 32,
+  "hardware_stage": "stage_16gb_gpu_bridge",
+  "max_concurrent_notebook_worlds": 1,
+  "notebook_world_runtime_started": false,
+  "loads_home_world": false,
+  "loads_kira_mind": false,
+  "loads_kira_body": false,
+  "loads_voice": false,
+  "loads_ollama": false,
+  "loads_second_person": false,
+  "co_load_collection_members": false,
+  "home_world_merge_allowed": false,
+  "strip_mall_mutation_allowed": false,
+  "next_runtime_gate": "The pinned zero-person preview may run alone. Loading Kira, a mind, voice, Ollama, Home World, or another notebook world requires a separate supervised resource and consent gate."
+}

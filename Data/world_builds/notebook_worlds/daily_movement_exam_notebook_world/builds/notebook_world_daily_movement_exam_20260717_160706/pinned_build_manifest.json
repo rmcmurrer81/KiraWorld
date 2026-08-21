@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "manifest_kind": "code_pinned_notebook_world_build",
+  "world_id": "daily_movement_exam_notebook_world",
+  "request_id": "notebook_world_daily_movement_exam_20260717_160706",
+  "build_id": "notebook_world_daily_movement_exam_20260717_160706",
+  "registration": {
+    "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/registration.json",
+    "sha256": "dbdb14361b34303fed8e1d45d517ab236fe827c3960d1b6de0501a9dd67e4402",
+    "bytes": 2576
+  },
+  "entrypoint": {
+    "url": "/index.html",
+    "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/preview/index.html",
+    "sha256": "746387b8ab6c4778e07e9a3a4cac92b876785c8c96903bd961421200298625ba",
+    "bytes": 3125
+  },
+  "index_registration": {
+    "path": "Data/world_builds/notebook_world_index.json",
+    "scene_folder": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706",
+    "anchor_sha256": "46d05096cb391ebc66abd17e9accf774727ba5f464eafcd51b11ff747f22c187"
+  },
+  "files": [
+    {
+      "role": "registration",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/registration.json",
+      "sha256": "dbdb14361b34303fed8e1d45d517ab236fe827c3960d1b6de0501a9dd67e4402",
+      "bytes": 2576
+    },
+    {
+      "role": "notebook_request",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/notebook_world_request.json",
+      "sha256": "3e642d63f88f93f05a721d6801da14b4d61690f7fd32d44e2ff2ca986c94a682",
+      "bytes": 5663
+    },
+    {
+      "role": "placement_metadata",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/placement.json",
+      "sha256": "0f98c244003c7bc2f6c31cd0856815460bb43bfa7260e21455b63bb3f210b0ce",
+      "bytes": 632
+    },
+    {
+      "role": "scene_program_metadata",
+      "url": "/data/scene_program.json",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/procedural_scene_program.json",
+      "sha256": "f6f19b2e11852dd33c3899aa04a77ee94bad5419581d0a1dd85a377238201d41",
+      "bytes": 35124
+    },
+    {
+      "role": "approval_gate_metadata",
+      "url": "/data/approval_gate.json",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/approval_gate.json",
+      "sha256": "eaa4f4ba2d0cf8d5bdabf0d14a10e6bb43e342f12dfea51bf22de2cd191d5527",
+      "bytes": 661
+    },
+    {
+      "role": "resource_isolation_metadata",
+      "url": "/data/resource_isolation_gate.json",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/resource_isolation_gate.json",
+      "sha256": "c2daf2206760ef6512be8934d80aa5960bb286f23f61d64710c1f9164677b1c7",
+      "bytes": 874
+    },
+    {
+      "role": "quality_gate_metadata",
+      "url": "/data/quality_gate.json",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/quality_gate.json",
+      "sha256": "86de8eed570373a1f09af2100b4a2a3e5790fbfa9529059028c5fe61b2635716",
+      "bytes": 758
+    },
+    {
+      "role": "entry_html",
+      "url": "/index.html",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/preview/index.html",
+      "sha256": "746387b8ab6c4778e07e9a3a4cac92b876785c8c96903bd961421200298625ba",
+      "bytes": 3125
+    },
+    {
+      "role": "entry_javascript",
+      "url": "/main.js",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/preview/main.js",
+      "sha256": "6a6af636060da08d819dfaa306db35734f1056ead7e8827f3c922801622715b8",
+      "bytes": 13482
+    },
+    {
+      "role": "entry_stylesheet",
+      "url": "/styles.css",
+      "path": "Data/world_builds/notebook_worlds/daily_movement_exam_notebook_world/builds/notebook_world_daily_movement_exam_20260717_160706/preview/styles.css",
+      "sha256": "72f56a1995a48d2f182f008f4114206980020f3df98ca532cce0230540034106",
+      "bytes": 3197
+    },
+    {
+      "role": "three_runtime",
+      "url": "/vendor/three/build/three.module.js",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/build/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    {
+      "role": "three_runtime",
+      "url": "/vendor/three/build/three.core.js",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/build/three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    {
+      "role": "three_runtime",
+      "url": "/vendor/three/examples/jsm/controls/OrbitControls.js",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/examples/jsm/controls/OrbitControls.js",
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "bytes": 38703
+    },
+    {
+      "role": "three_runtime",
+      "url": "/vendor/three/examples/jsm/controls/PointerLockControls.js",
+      "path": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/examples/jsm/controls/PointerLockControls.js",
+      "sha256": "aad3f59b92727fc9741b8e4ccdc9d2290bb5ca05562baaa3eff78d1dd92b18b7",
+      "bytes": 5899
+    }
+  ]
+}

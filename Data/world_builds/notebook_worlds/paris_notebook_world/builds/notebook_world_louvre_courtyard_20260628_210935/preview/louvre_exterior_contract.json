@@ -1,0 +1,425 @@
+{
+  "schema_version": 3,
+  "world_id": "paris_notebook_world",
+  "location_id": "louvre_cour_napoleon_exterior_solo_test",
+  "build_id": "louvre_owner_review_20260716_r4_bounded_circulation",
+  "status": "prototype_draft_not_final_not_approved",
+  "scope": "Cour Napoleon exterior plus a photo-supported, explicitly approximate Pyramid entrance and under-Pyramid circulation owner-review slice; not a complete or exact Louvre interior",
+  "runtime_isolation": {
+    "solo_review_only": true,
+    "temporary_ai_activation_allowed": false,
+    "people_loaded": 0,
+    "minds_loaded": 0,
+    "voice_loaded": false,
+    "ollama_loaded": false,
+    "home_world_loaded": false,
+    "home_world_mutation_allowed": false,
+    "strip_mall_mutation_allowed": false,
+    "runtime_registered": false,
+    "interior_enabled": false,
+    "bounded_approximate_circulation_owner_review_enabled": true,
+    "full_louvre_interior_enabled": false,
+    "elevators_enabled": false,
+    "artwork_enabled": false,
+    "gallery_enabled": false,
+    "tardis_present_by_default": false
+  },
+  "scale": {
+    "world_units": "meters",
+    "eye_height_m": 1.68,
+    "avatar_clearance_radius_m": 0.45,
+    "walking_speed_mps": 1.65,
+    "fast_review_speed_mps": 4.2,
+    "main_pyramid": {
+      "height_m": 21,
+      "base_width_m": 35,
+      "base_area_m2": 1000,
+      "truth": "official_site"
+    }
+  },
+  "official_sources": [
+    {
+      "id": "louvre_pyramid_symbol_page",
+      "url": "https://www.louvre.fr/en/explore/the-palace/a-pyramid-for-a-symbol",
+      "publisher": "Musee du Louvre",
+      "accessed": "2026-07-16",
+      "supports": [
+        "Pyramid in the centre of Cour Napoleon",
+        "Pyramid height 21 m",
+        "Pyramid base width 35 m",
+        "Pyramid base area 1000 m2",
+        "675 diamond panes and 118 triangular panes",
+        "two smaller Cour Napoleon pyramids",
+        "pools echo square and triangular forms",
+        "central underground lobby serves the three wings"
+      ]
+    },
+    {
+      "id": "louvre_map_entrances_page",
+      "url": "https://www.louvre.fr/en/visit/map-entrances-directions",
+      "publisher": "Musee du Louvre",
+      "accessed": "2026-07-16",
+      "supports": [
+        "Pyramid is the main entrance for individual visitors",
+        "three Pyramid queue categories",
+        "Pyramid, Carrousel, Richelieu, and Porte des Lions entrances"
+      ]
+    },
+    {
+      "id": "louvre_official_map_2026_05",
+      "url": "https://api-www.louvre.fr/sites/default/files/2026-05/2026-05_Plan_Louvre_EN.pdf",
+      "publisher": "Musee du Louvre",
+      "published": "2026-05",
+      "accessed": "2026-07-16",
+      "supports": [
+        "Pyramid main entrance orientation context",
+        "Richelieu, Sully, and Denon wing organization",
+        "reception area under the Pyramid at level -2"
+      ]
+    },
+    {
+      "id": "louvre_official_physical_accessibility",
+      "url": "https://www.louvre.fr/en/visit/accessibility/visitors-with-physical-disabilities",
+      "publisher": "Musee du Louvre",
+      "accessed": "2026-07-16",
+      "supports": [
+        "a central tube lift provides access to reception under the Pyramid",
+        "the Carrousel entrance route includes escalators and two lifts"
+      ],
+      "does_not_support": [
+        "exact lift/escalator geometry, dimensions, coordinates, mechanics, timing, or collision volumes in this owner-review slice"
+      ]
+    }
+  ],
+  "officially_supported_facts": [
+    "The large Pyramid is 21 m high and 35 m wide at its base.",
+    "The official Louvre page gives a base area of about 1000 m2.",
+    "The large Pyramid stands in the centre of Cour Napoleon and is the main entrance for individual visitors.",
+    "There are two smaller pyramids in Cour Napoleon.",
+    "The entrance page describes three queues: ticket or Paris Museum Pass, no ticket, and priority access.",
+    "The central underground lobby connects the museum's three wings.",
+    "The official accessibility page confirms a central tube lift to reception under the Pyramid; this build does not infer or render its exact geometry."
+  ],
+  "robert_supplied_visual_evidence": [
+    {
+      "path": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_images/IM-Pei-designed-pyramid-Louvre-Paris-France.webp",
+      "sha256": "4db0ae50dd2c2b7224f0fcf35a26c5bf1c9f3fd8eb9ce63a261f317aa14445d8",
+      "supports": ["exterior glass entrance wall", "visitor and queue scale"],
+      "does_not_support": ["door mechanism", "door dimensions", "interior route"]
+    },
+    {
+      "path": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_images/d672e10204e3f70ceb3a9d080d421e93.jpg",
+      "sha256": "bf0d4e855f1af34ad8121ca6733882b26a551a4e051da7c107beecf4db0a21e9",
+      "supports": ["under-Pyramid lattice and decks", "columns", "partial spiral stair", "lower-floor crowd scale"],
+      "does_not_support": ["exact dimensions", "complete floor plan", "elevators", "gallery rooms"]
+    },
+    {
+      "path": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_images/e6a59f09a26358fcb1a65b56644c51b7.jpg",
+      "sha256": "8466f214eae959f9174d24c5e5d61ce6b0878646e251c08c13d5cfdf0969c0f0",
+      "supports": ["central pier", "upper decks", "coffered underside", "spiral stair glimpses"],
+      "does_not_support": ["exact circulation route", "exact dimensions", "gallery layout"]
+    },
+    {
+      "path": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_images/Louvre-Museum---Rost-Architects.webp",
+      "sha256": "54ddfe474bfa1f9203e17364550d2876afc3ba80409a076fbbf325f4fbef8c9a",
+      "supports": ["spiral stair form", "visible escalator forms behind the stair", "coffered deck and columns"],
+      "does_not_support": ["escalator operation", "elevator presence", "exact placements or dimensions"]
+    }
+  ],
+  "approximations": [
+    "All palace facade, pavilion, roof, arcade, window, cornice, and statue geometry.",
+    "The exact footprint and placement of pools, fountain jets, the two smaller pyramids, and queue stanchions.",
+    "The visible Pyramid entrance wall, doors, handles, sign rail, apron, and lane convergence.",
+    "Courtyard extents, paving pattern, lighting, sky color, materials, and review-camera positions.",
+    "The main Pyramid pane lattice is a calmer visual approximation, not a pane-by-pane engineering model.",
+    "The two-leaf entrance-door motion and threshold collision are a functional interaction prototype; the real mechanism, dimensions, and operating rules are unknown.",
+    "The under-Pyramid landing, 270-degree walkable spiral-stair blockout, lower circulation floor, columns, coffers, and visible-only escalator blockout are composed from photo evidence but are not a measured reconstruction."
+  ],
+  "locked_unknowns": [
+    "The exact exterior-to-level-minus-2 route, dimensions, door mechanism, security flow, accessibility route, and operating rules.",
+    "All under-Pyramid areas outside the bounded circulation blockout, including exact lobby dimensions and complete vertical-circulation geometry.",
+    "The central tube lift's exact placement, service geometry, dimensions, controls, mechanics, timing, collision, and operation; only its existence and destination are officially supported.",
+    "All Richelieu, Sully, and Denon gallery rooms, artwork placement, service rooms, and closed areas."
+  ],
+  "in_world_truth_markers": [
+    {
+      "id": "main_pyramid_scale_truth",
+      "label": "MIXED: main Pyramid official 21 m x 35 m scale; lattice approximate",
+      "position": [22, 5.2, 10],
+      "truth": "mixed_official_scale_approximate_geometry"
+    },
+    {
+      "id": "two_small_pyramids_truth",
+      "label": "MIXED: two small pyramids official count; size and placement approximate",
+      "position": [45, 3.2, 21],
+      "truth": "mixed_official_count_approximate_geometry"
+    },
+    {
+      "id": "pool_truth",
+      "label": "APPROXIMATE POOL: footprint, placement, material, fountain detail",
+      "position": [-45, 2.6, -2],
+      "truth": "approximate"
+    },
+    {
+      "id": "palace_truth",
+      "label": "APPROXIMATE PALACE: massing, windows, roofs, ornament",
+      "position": [-48, 5.4, -68],
+      "truth": "approximate"
+    },
+    {
+      "id": "circulation_scope_truth",
+      "label": "APPROXIMATE REVIEW SLICE: door and spiral descent are functional tests; exact/full interior stays locked",
+      "position": [0, 4.0, 20.5],
+      "truth": "approximate"
+    },
+    {
+      "id": "gallery_elevator_lock_truth",
+      "label": "LOCKED: elevators, galleries, rooms, and artwork are not built or loaded",
+      "position": [9, 3.8, 20.5],
+      "truth": "locked"
+    }
+  ],
+  "review_bookmarks": [
+    {
+      "id": "arrival_scale",
+      "label": "Arrival / full Pyramid scale",
+      "position": [0, 1.68, 62],
+      "target": [0, 6.5, 0],
+      "route_id": "south_to_locked_entrance",
+      "truth_scope": "official_pyramid_scale_with_approximate_surroundings"
+    },
+    {
+      "id": "entrance_human",
+      "label": "Human-height approximate entrance",
+      "position": [0, 1.68, 34],
+      "target": [0, 2.2, 18.5],
+      "route_id": "south_to_locked_entrance",
+      "truth_scope": "official_entrance_role_with_approximate_functional_door_geometry"
+    },
+    {
+      "id": "two_small_pyramids",
+      "label": "Two-small-Pyramid count overview",
+      "position": [0, 5.5, 54],
+      "target": [0, 2.8, 14],
+      "route_id": "south_to_locked_entrance",
+      "truth_scope": "official_count_with_approximate_size_and_placement"
+    },
+    {
+      "id": "west_pool",
+      "label": "West pool approximation review",
+      "position": [-24, 1.68, 11],
+      "target": [-45, 0.2, -2],
+      "route_id": "south_to_west_pool",
+      "truth_scope": "approximate_pool_geometry"
+    },
+    {
+      "id": "palace_massing",
+      "label": "Palace massing approximation review",
+      "position": [-58, 3.2, 48],
+      "target": [-18, 11, -74],
+      "route_id": "south_to_north_facade_west_gap",
+      "truth_scope": "approximate_palace_massing"
+    }
+  ],
+  "review_measurements": {
+    "route_progress_method": "nearest point projected onto the active route polyline",
+    "route_sample_spacing_m": 0.25,
+    "collision_event_debounce_ms": 750,
+    "distance_precision_m": 0.01,
+    "limitations": [
+      "Route progress is a review measurement, not autonomous path following.",
+      "Collision events describe declared review colliders, not mesh-precise contact physics."
+    ]
+  },
+  "review_package": {
+    "schema_version": 1,
+    "kind": "louvre_solo_owner_review_package",
+    "client_side_only": true,
+    "server_write_enabled": false,
+    "format": "self_contained_json_with_embedded_png_capture",
+    "includes": [
+      "source and isolation contract",
+      "active bookmark and reproducible URL",
+      "camera and nearest landmark",
+      "static route checks and active route measurement",
+      "session distance and collision measurements",
+      "browser-local feedback",
+      "embedded PNG capture and SHA-256"
+    ]
+  },
+  "landmarks": [
+    {
+      "id": "south_arrival",
+      "label": "South review arrival",
+      "position": [0, 1.68, 62],
+      "truth": "review_marker"
+    },
+    {
+      "id": "pyramid_scale_view",
+      "label": "Human-height Pyramid scale view",
+      "position": [0, 1.68, 34],
+      "truth": "official_scale_approximate_camera"
+    },
+    {
+      "id": "pyramid_entrance_apron",
+      "label": "Approximate Pyramid entrance apron",
+      "position": [0, 1.68, 22.5],
+      "truth": "official_entrance_approximate_geometry"
+    },
+    {
+      "id": "west_pool_overlook",
+      "label": "West pool overlook",
+      "position": [-24, 1.68, 11],
+      "truth": "approximate"
+    },
+    {
+      "id": "east_pool_overlook",
+      "label": "East pool overlook",
+      "position": [24, 1.68, 11],
+      "truth": "approximate"
+    },
+    {
+      "id": "north_facade_view",
+      "label": "Palace massing review",
+      "position": [0, 1.68, -58],
+      "truth": "approximate"
+    }
+  ],
+  "colliders": [
+    {
+      "id": "main_pyramid_glass",
+      "kind": "rect",
+      "center": [0, 0],
+      "half_extents": [17.5, 17.5],
+        "message": "The measured Pyramid footprint is solid outside the bounded approximate south entrance/circulation review path.",
+      "truth": "official_scale"
+    },
+    {
+      "id": "west_reflecting_pool",
+      "kind": "rect",
+      "center": [-45, -2],
+      "half_extents": [23, 5.5],
+      "message": "The approximate west reflecting-pool basin blocks this route.",
+      "truth": "approximate"
+    },
+    {
+      "id": "east_reflecting_pool",
+      "kind": "rect",
+      "center": [45, -2],
+      "half_extents": [23, 5.5],
+      "message": "The approximate east reflecting-pool basin blocks this route.",
+      "truth": "approximate"
+    },
+    {
+      "id": "west_small_pyramid_pool",
+      "kind": "rect",
+      "center": [-38, 18],
+      "half_extents": [8, 4.5],
+      "message": "The approximate west small-pyramid pool blocks this route.",
+      "truth": "official_count_approximate_placement"
+    },
+    {
+      "id": "east_small_pyramid_pool",
+      "kind": "rect",
+      "center": [38, 18],
+      "half_extents": [8, 4.5],
+      "message": "The approximate east small-pyramid pool blocks this route.",
+      "truth": "official_count_approximate_placement"
+    },
+    {
+      "id": "north_palace_massing",
+      "kind": "rect",
+      "center": [0, -83],
+      "half_extents": [108, 3.5],
+      "message": "The approximate north palace facade blocks this route.",
+      "truth": "approximate"
+    },
+    {
+      "id": "west_palace_massing",
+      "kind": "rect",
+      "center": [-108, -16],
+      "half_extents": [3.5, 62.5],
+      "message": "The approximate west palace wing blocks this route.",
+      "truth": "approximate"
+    },
+    {
+      "id": "east_palace_massing",
+      "kind": "rect",
+      "center": [108, -16],
+      "half_extents": [3.5, 62.5],
+      "message": "The approximate east palace wing blocks this route.",
+      "truth": "approximate"
+    },
+    {
+      "id": "queue_boundary_west_outer",
+      "kind": "rect",
+      "center": [-8, 35],
+      "half_extents": [0.08, 9],
+      "message": "The approximate queue rope blocks this route; enter through an open lane.",
+      "truth": "official_three_queues_approximate_layout"
+    },
+    {
+      "id": "queue_boundary_west_inner",
+      "kind": "rect",
+      "center": [-2.7, 35],
+      "half_extents": [0.08, 9],
+      "message": "The approximate queue rope blocks this route; enter through an open lane.",
+      "truth": "official_three_queues_approximate_layout"
+    },
+    {
+      "id": "queue_boundary_east_inner",
+      "kind": "rect",
+      "center": [2.7, 35],
+      "half_extents": [0.08, 9],
+      "message": "The approximate queue rope blocks this route; enter through an open lane.",
+      "truth": "official_three_queues_approximate_layout"
+    },
+    {
+      "id": "queue_boundary_east_outer",
+      "kind": "rect",
+      "center": [8, 35],
+      "half_extents": [0.08, 9],
+      "message": "The approximate queue rope blocks this route; enter through an open lane.",
+      "truth": "official_three_queues_approximate_layout"
+    }
+  ],
+  "routes": [
+    {
+      "id": "south_to_locked_entrance",
+      "label": "Arrival to locked Pyramid entrance",
+      "truth": "static_collision_checked_review_route",
+      "points": [[0, 62], [0, 50], [0, 45], [0, 35], [0, 26], [0, 22.5]]
+    },
+    {
+      "id": "south_to_west_pool",
+      "label": "Arrival to west pool overlook",
+      "truth": "static_collision_checked_approximate_route",
+      "points": [[0, 62], [-18, 52], [-26, 40], [-24, 30], [-24, 20], [-24, 11]]
+    },
+    {
+      "id": "south_to_east_pool",
+      "label": "Arrival to east pool overlook",
+      "truth": "static_collision_checked_approximate_route",
+      "points": [[0, 62], [18, 52], [26, 40], [24, 30], [24, 20], [24, 11]]
+    },
+    {
+      "id": "south_to_north_facade_east_gap",
+      "label": "Arrival to palace massing via east gap",
+      "truth": "static_collision_checked_approximate_route",
+      "points": [[0, 62], [12, 52], [19.5, 42], [19.5, 25], [19.5, 10], [19.5, -14], [19.5, -32], [0, -58]]
+    },
+    {
+      "id": "south_to_north_facade_west_gap",
+      "label": "Arrival to palace massing via west gap",
+      "truth": "static_collision_checked_approximate_route",
+      "points": [[0, 62], [-12, 52], [-19.5, 42], [-19.5, 25], [-19.5, 10], [-19.5, -14], [-19.5, -32], [0, -58]]
+    }
+  ],
+  "feedback": {
+    "storage_key": "kira_louvre_solo_review_feedback_v1",
+    "categories": ["scale", "navigation", "collision", "landmarks", "visual_readability", "source_truth", "other"],
+    "verdicts": ["works", "needs_improvement", "blocked", "not_tested"],
+    "export_format": "local_json_download",
+    "server_write_enabled": false
+  }
+}

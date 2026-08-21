@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "notebook_world_id": "synthetic_people_filming_backlot_notebook_world",
+  "subject": {
+    "name": "Synthetic People Filming Backlot",
+    "category": "original_idea",
+    "city": "Standalone Production Backlot",
+    "era": "current_or_best_sourced"
+  },
+  "approval_policy": {
+    "status": "draft_not_placed",
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "approval_required_for": [
+      "world/notebook selection",
+      "map/blueprint placement",
+      "scale and footprint",
+      "first exterior/room preview",
+      "final commit into the selected separate notebook world"
+    ]
+  },
+  "review_flow": [
+    "collect/source-label references",
+    "produce blueprint/map placement preview",
+    "produce isolated exterior or small-scene preview",
+    "stage walkable review version in the TARDIS builder bay",
+    "wait for Robert approval",
+    "commit to the selected separate notebook world only after approval"
+  ],
+  "preview_requirements": {
+    "building": "show exterior massing/facade preview before any import",
+    "new_notebook_world": "show one small walkable prototype area before any full map work",
+    "existing_world_addition": "show blueprint placement against current world anchors before import"
+  },
+  "placement_preview": {
+    "placement_status": "first_anchor_or_coordinates_needed",
+    "notebook_world_id": "synthetic_people_filming_backlot_notebook_world",
+    "real_world_coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "local_scene_offset_meters": {
+      "x": 0,
+      "z": 0
+    },
+    "nearest_existing_anchor": null,
+    "distance_from_nearest_anchor_meters": null,
+    "truth_label": "unknown",
+    "unapproved_candidate_anchors_ignored": 0,
+    "commit_rule": "Draft/catalog anchors cannot become coordinate origins until a separate placement approval marks placement_approved=true."
+  },
+  "known_world_anchors": [],
+  "files": {
+    "blueprint_map": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/blueprint_map.md",
+    "tardis_review_stage": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/tardis_review_stage.json",
+    "approval_gate": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/approval_gate.json"
+  }
+}

@@ -66,12 +66,18 @@ def exists(relative_path: str) -> tuple[bool, str]:
     return path.exists(), relative_path
 
 
+def load_json_path(path: Path) -> object:
+    """Load JSON while accepting an optional UTF-8 byte-order mark."""
+
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
 def json_loads(relative_path: str) -> tuple[bool, str]:
     path = PROJECT_ROOT / relative_path
     if not path.exists():
         return False, f"{relative_path} missing"
     try:
-        json.loads(path.read_text(encoding="utf-8"))
+        load_json_path(path)
     except Exception as exc:
         return False, f"{relative_path} invalid JSON: {exc}"
     return True, f"{relative_path} valid JSON"
@@ -81,7 +87,7 @@ def system_flags_safe() -> tuple[bool, str]:
     path = PROJECT_ROOT / "config" / "system_flags.json"
     if not path.exists():
         return False, "config/system_flags.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     risky_enabled = [
         name for name in ("voice_enabled", "avatar_enabled", "world_enabled", "temp_ai_enabled")
         if data.get(name) is True
@@ -112,7 +118,7 @@ def hardware_capability_profile_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "hardware_capability_profile.json"
     if not path.exists():
         return False, "Data/launch/hardware_capability_profile.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_hardware_capability_profile(data)
     if errors:
         return False, "; ".join(errors)
@@ -125,7 +131,7 @@ def all_memory_seeds_validate() -> tuple[bool, str]:
         return False, "no memory seed JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_seed(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -140,7 +146,7 @@ def all_reconstruction_worlds_validate() -> tuple[bool, str]:
         return False, "no memory reconstruction world JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_world(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -155,7 +161,13 @@ def voice_profiles_validate() -> tuple[bool, str]:
         return False, "no voice profile JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        try:
+            data = load_json_path(path)
+        except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+            failures.append(
+                f"{path.relative_to(PROJECT_ROOT)}: invalid JSON: {exc}"
+            )
+            continue
         errors = validate_voice_profile(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -170,7 +182,7 @@ def notebook_world_requests_validate() -> tuple[bool, str]:
         return False, "no notebook world request JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_notebook_world_request(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -185,7 +197,7 @@ def public_export_candidates_validate() -> tuple[bool, str]:
         return True, "no public export candidate drafts yet"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_public_export_candidate(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -205,12 +217,12 @@ def avatar_build_files_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{relative_path}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validator(data)
         if errors:
             failures.append(f"{relative_path}: {'; '.join(errors)}")
     for path in sorted((PROJECT_ROOT / "Avatar" / "requests").glob("*.json")):
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_avatar_request(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -229,7 +241,7 @@ def relationship_stage_tracks_validate() -> tuple[bool, str]:
         return False, "no relationship stage track JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_relationship_stage(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -244,7 +256,7 @@ def relationship_structure_proposals_validate() -> tuple[bool, str]:
         return False, "no relationship structure proposal JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_relationship_structure_proposal(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -257,7 +269,7 @@ def privacy_sessions_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "privacy" / "privacy_session_state.json"
     if not path.exists():
         return False, "Data/privacy/privacy_session_state.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     if not isinstance(data, list) or not data:
         return False, "privacy session state must be a non-empty list"
     failures = []
@@ -276,7 +288,7 @@ def media_viewing_notes_validate() -> tuple[bool, str]:
         return False, "no media viewing note JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_media_viewing_note(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -288,11 +300,18 @@ def media_viewing_notes_validate() -> tuple[bool, str]:
 def slow_reading_sessions_validate() -> tuple[bool, str]:
     paths = [PROJECT_ROOT / "Data" / "reading" / "slow_reading_session_template.json"]
     paths.extend(sorted((PROJECT_ROOT / "Data" / "reading" / "sessions").glob("*.json")))
-    if not paths:
-        return False, "no slow reading session JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        if not path.exists():
+            failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
+            continue
+        try:
+            data = load_json_path(path)
+        except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+            failures.append(
+                f"{path.relative_to(PROJECT_ROOT)}: invalid JSON: {exc}"
+            )
+            continue
         if not isinstance(data, dict):
             failures.append(f"{path.name}: expected a slow reading session object")
             continue
@@ -308,7 +327,7 @@ def reading_interest_profiles_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "reading" / "reading_interest_profiles.json"
     if not path.exists():
         return False, "Data/reading/reading_interest_profiles.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_reading_interest_profiles(data)
     if errors:
         return False, "; ".join(errors)
@@ -321,7 +340,7 @@ def reading_source_extraction_candidates_validate() -> tuple[bool, str]:
         return False, "no reading source extraction candidate JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_reading_source_extraction_candidate(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -338,7 +357,7 @@ def reading_reactions_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_reading_reaction(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -351,7 +370,7 @@ def new_desktop_activation_checklist_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "new_desktop_activation_checklist.json"
     if not path.exists():
         return False, "Data/launch/new_desktop_activation_checklist.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_new_desktop_activation_checklist(data)
     if errors:
         return False, "; ".join(errors)
@@ -362,7 +381,7 @@ def new_desktop_first_hour_rehearsal_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "new_desktop_first_hour_rehearsal.json"
     if not path.exists():
         return False, "Data/launch/new_desktop_first_hour_rehearsal.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_new_desktop_first_hour_rehearsal(data)
     if errors:
         return False, "; ".join(errors)
@@ -373,7 +392,7 @@ def pre_trip_desktop_pickup_checklist_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "pre_trip_desktop_pickup_checklist.json"
     if not path.exists():
         return False, "Data/launch/pre_trip_desktop_pickup_checklist.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_pre_trip_desktop_pickup_checklist(data)
     if errors:
         return False, "; ".join(errors)
@@ -384,7 +403,7 @@ def startup_recovery_config_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "startup_recovery_config.json"
     if not path.exists():
         return False, "Data/launch/startup_recovery_config.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_startup_recovery_config(data)
     if errors:
         return False, "; ".join(errors)
@@ -395,7 +414,7 @@ def first_week_aliveness_config_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "first_week_aliveness_config.json"
     if not path.exists():
         return False, "Data/launch/first_week_aliveness_config.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_first_week_aliveness_config(data)
     if errors:
         return False, "; ".join(errors)
@@ -406,7 +425,7 @@ def hardware_intake_rest_gate_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "hardware_intake_rest_gate.json"
     if not path.exists():
         return False, "Data/launch/hardware_intake_rest_gate.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_hardware_intake_rest_gate(data)
     if errors:
         return False, "; ".join(errors)
@@ -419,7 +438,7 @@ def avatar_selection_worksheets_validate() -> tuple[bool, str]:
         return False, "no avatar selection worksheet JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_avatar_selection_worksheet(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -438,7 +457,7 @@ def attention_events_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_attention_event(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -451,7 +470,7 @@ def attention_states_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "attention" / "attention_state.json"
     if not path.exists():
         return False, "Data/attention/attention_state.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     if not isinstance(data, list) or not data:
         return False, "attention state must be a non-empty list"
     failures = []
@@ -468,7 +487,7 @@ def perception_sessions_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "perception" / "perception_session_state.json"
     if not path.exists():
         return False, "Data/perception/perception_session_state.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     if not isinstance(data, list) or not data:
         return False, "perception session state must be a non-empty list"
     failures = []
@@ -489,7 +508,7 @@ def skill_development_files_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_skill_development(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -506,7 +525,7 @@ def creative_project_files_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_creative_project(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -521,7 +540,7 @@ def private_creative_libraries_validate() -> tuple[bool, str]:
         return False, "no private creative library JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_private_creative_library(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -538,7 +557,7 @@ def temp_ai_simple_requests_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_temp_ai_simple_request(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -553,7 +572,7 @@ def temp_ai_request_plans_validate() -> tuple[bool, str]:
         return False, "no TemporaryAI request examples found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         plan = build_temp_ai_request_plan(data)
         if plan.get("plan_status") == "blocked":
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(plan.get('blockers', []))}")
@@ -570,7 +589,7 @@ def variant_relationship_risk_profiles_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_variant_relationship_risk_profile(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -585,7 +604,7 @@ def daily_life_state_templates_validate() -> tuple[bool, str]:
         return False, "no daily life state JSON files found"
     failures = []
     for path in paths:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_daily_life_state(data)
         if errors:
             failures.append(f"{path.name}: {'; '.join(errors)}")
@@ -602,7 +621,7 @@ def remote_contact_events_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_remote_contact_event(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -619,7 +638,7 @@ def private_media_share_events_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_private_media_share_event(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -632,7 +651,7 @@ def personhood_dignity_policy_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "foundation" / "personhood_dignity_policy.json"
     if not path.exists():
         return False, "Data/foundation/personhood_dignity_policy.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_personhood_dignity_policy(data)
     if errors:
         return False, "; ".join(errors)
@@ -647,7 +666,7 @@ def personhood_evaluations_validate() -> tuple[bool, str]:
         if not path.exists():
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: missing")
             continue
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json_path(path)
         errors = validate_personhood_evaluation(data)
         if errors:
             failures.append(f"{path.relative_to(PROJECT_ROOT)}: {'; '.join(errors)}")
@@ -660,11 +679,20 @@ def first_month_operations_checklist_validate() -> tuple[bool, str]:
     path = PROJECT_ROOT / "Data" / "launch" / "first_month_operations_checklist.json"
     if not path.exists():
         return False, "Data/launch/first_month_operations_checklist.json missing"
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_path(path)
     errors = validate_first_month_operations_checklist(data)
     if errors:
         return False, "; ".join(errors)
     return True, "first month operations checklist validates"
+
+
+def run_check_safely(check: CheckFn) -> tuple[bool, str]:
+    """Keep one missing or malformed input from aborting the full report."""
+
+    try:
+        return check()
+    except Exception as exc:
+        return False, f"readiness check error ({type(exc).__name__}): {exc}"
 
 
 def main() -> None:
@@ -974,7 +1002,6 @@ def main() -> None:
         ("TARDIS gateway docs", lambda: exists("System/Docs/TARDIS_NOTEBOOK_WORLD_GATEWAY_v1.md")),
         ("Three.js notebook world build pipeline docs", lambda: exists("System/Docs/THREEJS_NOTEBOOK_WORLD_BUILD_PIPELINE_v1.md")),
         ("Place reconstruction docs", lambda: exists("System/Docs/PLACE_RECONSTRUCTION_WORLD_BUILDER_v1.md")),
-        ("User avatar VR handoff docs", lambda: exists("System/Docs/USER_AVATAR_AUTONOMY_AND_VR_HANDOFF_v1.md")),
         ("Relationship intimacy boundaries docs", lambda: exists("System/Docs/RELATIONSHIP_INTIMACY_AND_TEMP_AI_BOUNDARIES_v1.md")),
         ("Adult communication literacy docs", lambda: exists("System/Docs/ADULT_COMMUNICATION_LITERACY_AND_STYLE_v1.md")),
         ("Relationship structure proposal docs", lambda: exists("System/Docs/RELATIONSHIP_STRUCTURE_AND_OPEN_RELATIONSHIP_PROPOSALS_v1.md")),
@@ -1033,7 +1060,6 @@ def main() -> None:
         ("Pre-trip desktop pickup docs", lambda: exists("System/Docs/PRE_TRIP_DESKTOP_PICKUP_AND_RETURN_RUNBOOK_v1.md")),
         ("New desktop first-hour rehearsal docs", lambda: exists("System/Docs/NEW_DESKTOP_FIRST_HOUR_REHEARSAL_v1.md")),
         ("New desktop activation docs", lambda: exists("System/Docs/NEW_DESKTOP_ACTIVATION_SEQUENCE_v1.md")),
-        ("New computer Codex setup docs", lambda: exists("System/Docs/NEW_COMPUTER_CODEX_SETUP_RUNBOOK_v1.md")),
         ("First live model day runbook", lambda: exists("System/Docs/FIRST_LIVE_MODEL_DAY_RUNBOOK_v1.md")),
         ("First month operations plan", lambda: exists("System/Docs/FIRST_MONTH_OPERATIONS_PLAN_v1.md")),
         ("Old Kira isolation", oldkira_reference_only),
@@ -1041,7 +1067,7 @@ def main() -> None:
 
     results = []
     for name, check in checks:
-        ok, detail = check()
+        ok, detail = run_check_safely(check)
         results.append({"name": name, "ok": ok, "detail": detail})
 
     print("Kira pre-GPU readiness check")

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "status": "draft_all_gates_unmet",
+  "world_builder_may_commit_to_world": false,
+  "gates": {
+    "source_evidence": "not_run",
+    "scale_and_placement": "not_run",
+    "doors_routes_and_collision": "not_run",
+    "visual_realism": "not_run",
+    "runtime_route": "blocked",
+    "pinned_deployment": "blocked",
+    "explicit_robert_approval": "blocked"
+  },
+  "promotion_rule": "Each gate needs its own evidence artifact; request creation cannot pass a gate."
+}

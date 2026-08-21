@@ -1,0 +1,74 @@
+{
+  "request_id": "kira_lisa_home_candidate_001",
+  "place_name": "Kira and Lisa Home Candidate 001",
+  "place_type": "home",
+  "requested_by": "robert",
+  "purpose": "Use a reference house with photos and blueprints as the source base for Kira and Lisa's main persistent 3D home world.",
+  "source_root": "Data/world_reconstruction/sources/homes/kira_lisa_home_candidate_001",
+  "source_inventory": {
+    "blueprints": [],
+    "floor_plans": [],
+    "exterior_photos": [],
+    "interior_photos": [],
+    "room_photos": [],
+    "videos": [],
+    "maps": [],
+    "manual_notes": [],
+    "style_refs": []
+  },
+  "world_role": {
+    "is_main_world": true,
+    "notebook_worlds_are_destinations": true,
+    "gateway_to_notebook_worlds": "TARDIS outside the home"
+  },
+  "reconstruction_plan": {
+    "starting_area": "front exterior and main entry",
+    "initial_scope": "small_house",
+    "confirmed_zones": [],
+    "inferred_zones": [],
+    "unknown_zones": [],
+    "original_extensions": [
+      "TARDIS outside the home using Doctor Who reference pictures",
+      "shared library and music area",
+      "virtual screen room",
+      "private bedrooms for Kira and Lisa"
+    ]
+  },
+  "home_design_autonomy": {
+    "policy_path": "Data/world_design/home_design_autonomy_policy.json",
+    "kira_and_lisa_may_design_home": true,
+    "furniture_and_decor_are_editable": true,
+    "example_allowed_change": "If Kira or Lisa does not like the couch, she may propose deleting or archiving it and designing a new couch to sit on.",
+    "shared_rooms_need_affected_resident_awareness": true,
+    "private_rooms_are_controlled_by_room_owner": true,
+    "structural_and_privacy_sensitive_changes_require_review": true,
+    "major_changes_require_version_save": true
+  },
+  "confidence_policy": {
+    "allowed_labels": [
+      "blueprint_confirmed",
+      "photo_confirmed",
+      "video_confirmed",
+      "map_confirmed",
+      "manual_note_confirmed",
+      "inferred_from_sources",
+      "style_fill",
+      "unknown",
+      "blocked_private"
+    ],
+    "unknowns_must_remain_labeled": true
+  },
+  "privacy_policy": {
+    "private_rooms_allowed": true,
+    "locked_private_rooms_allowed": true,
+    "layout_known_does_not_override_privacy": true,
+    "robert_visibility": "plan_only"
+  },
+  "world_links": {
+    "notebook_world_request_id": "",
+    "tardis_gateway_enabled": true,
+    "tardis_reference_root": "Data/world_reconstruction/sources/tardis/doctor_who_reference",
+    "home_world_enabled": true
+  },
+  "status": "sources_needed"
+}

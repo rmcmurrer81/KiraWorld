@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "collection_id": "education_notebook_collection",
+  "notebook_world_id": "college_campus_core_notebook_world",
+  "plan_id": "memorial_union_student_center_program_v1",
+  "title": "Memorial Union Student Center Program Plan",
+  "status": "planning_only_no_scene_built",
+  "design_mode": "original_campus_program_informed_only_by_future_public_sources",
+  "truth_boundary": {
+    "real_memorial_union_geometry_claimed": false,
+    "private_memory_geometry_allowed": false,
+    "kira_or_lisa_college_memory_used": false,
+    "current_dimensions_confirmed": false,
+    "current_room_adjacencies_confirmed": false,
+    "current_3d_assets_exist": false,
+    "note": "Memorial Union is the requested student-center role and working name. Until public references and a reviewed blueprint exist, every room, route, dimension, facade, and adjacency below is an original planning proposal rather than a reconstruction claim."
+  },
+  "public_program": [
+    {
+      "zone": "arrival_information_and_wayfinding",
+      "spaces": [
+        "weather-protected entry",
+        "main lobby",
+        "information and ticket desk",
+        "digital and physical wayfinding",
+        "visitor seating",
+        "security and lost-and-found desk"
+      ],
+      "truth_label": "style_fill"
+    },
+    {
+      "zone": "food_hall",
+      "spaces": [
+        "general food-hall seating",
+        "coffee and bakery counter",
+        "hot grill and comfort-food counter",
+        "sandwich and salad counter",
+        "international rotating-food counter",
+        "grab-and-go market",
+        "water and beverage refill point",
+        "dish return and waste sorting"
+      ],
+      "brand_policy": "generic_original_venues_only_until_separate_trademark_and_source_review",
+      "truth_label": "style_fill"
+    },
+    {
+      "zone": "college_store",
+      "spaces": [
+        "books and course materials",
+        "school supplies",
+        "original campus apparel and gifts",
+        "technology accessories",
+        "checkout and customer service",
+        "secure stockroom",
+        "online-order pickup"
+      ],
+      "truth_label": "style_fill"
+    },
+    {
+      "zone": "lounges_and_study",
+      "spaces": [
+        "active social lounge",
+        "quiet study lounge",
+        "commuter lounge",
+        "fireplace-style gathering lounge without copying a real private layout",
+        "small group booths",
+        "device charging tables",
+        "accessible mixed-height seating"
+      ],
+      "truth_label": "style_fill"
+    },
+    {
+      "zone": "meetings_events_and_student_organizations",
+      "spaces": [
+        "reservable small meeting rooms",
+        "medium conference rooms",
+        "divisible multipurpose ballroom or event hall",
+        "pre-function gallery",
+        "student-organization offices and shared project room",
+        "event registration and coat-check position",
+        "backstage green room",
+        "control booth and audiovisual support"
+      ],
+      "truth_label": "style_fill"
+    },
+    {
+      "zone": "student_services",
+      "spaces": [
+        "student activities desk",
+        "commuter and accessibility support point",
+        "basic wellness and quiet room",
+        "printing and package pickup",
+        "public lockers",
+        "family and all-gender restroom access"
+      ],
+      "truth_label": "style_fill"
+    }
+  ],
+  "operational_support_program": {
+    "food_service_back_of_house": [
+      "receiving and loading",
+      "dry storage",
+      "walk-in cold and frozen storage",
+      "shared prep kitchen",
+      "venue-specific finishing lines",
+      "dishwashing and pot wash",
+      "staff handwash and hygiene stations",
+      "grease handling",
+      "recycling, compost, and refuse holding",
+      "pest-resistant service route"
+    ],
+    "building_operations": [
+      "facilities office",
+      "staff offices",
+      "staff lockers and break room",
+      "custodial closets on each public level",
+      "event furniture storage",
+      "audiovisual and equipment storage",
+      "mail and package room",
+      "electrical rooms",
+      "mechanical rooms",
+      "IT and telecom rooms",
+      "fire and life-safety rooms"
+    ],
+    "public_health_access_and_safety": [
+      "accessible step-free primary route",
+      "elevator and protected stairs if more than one level is approved",
+      "public multi-stall restrooms",
+      "all-gender single-user restrooms",
+      "family or companion-care restroom",
+      "lactation and wellness room",
+      "code-reviewed exits and occupant loads",
+      "fire separation and kitchen exhaust review",
+      "clear emergency access and assembly point"
+    ],
+    "truth_label": "unknown_until_code_and_operations_review"
+  },
+  "proposed_adjacency_rules": [
+    "arrival lobby connects visibly to information, food hall, main lounge, and a vertical-circulation decision point",
+    "college store is visible from the main public path but has a secure stock route separate from customer flow",
+    "food venues share a screened service spine to receiving, storage, prep, dishwashing, and waste without crossing the main public route",
+    "quiet study and commuter lounges are acoustically buffered from the food hall and event hall",
+    "event hall has pre-function space, nearby restrooms, controlled after-hours access, storage, loading access, and an independent egress review",
+    "student-organization and meeting rooms remain findable from the public circulation spine without exposing operational back-of-house areas"
+  ],
+  "first_review_route": [
+    "campus arrival court",
+    "Memorial Union main entry",
+    "information and wayfinding lobby",
+    "food hall threshold and one representative generic venue",
+    "social lounge",
+    "college store threshold",
+    "meeting-room corridor",
+    "multipurpose event-hall pre-function area",
+    "return to campus path toward the library entrance"
+  ],
+  "truth_zones": {
+    "confirmed": [],
+    "inferred": [
+      "A believable student center needs public gathering, food, retail, meeting, event, student-service, and operational support functions.",
+      "Public and back-of-house circulation should separate where food handling, loading, waste, stock, and event operations require it."
+    ],
+    "unknown": [
+      "site placement and exterior architecture",
+      "floor count, footprint, dimensions, and structural grid",
+      "exact venue count and menus",
+      "room capacities and occupant loads",
+      "code-required exits, fire separations, kitchen exhaust, plumbing counts, and accessibility details",
+      "materials, signage, furniture, acoustics, lighting, and landscape",
+      "all final adjacencies and service routes"
+    ]
+  },
+  "resource_and_build_policy": {
+    "member_load_mode": "sequential_only",
+    "co_load_with_home_world": false,
+    "co_load_with_kira_mind_or_body": false,
+    "co_load_with_spa": false,
+    "co_load_with_other_collection_members": false,
+    "planning_artifact_starts_runtime": false,
+    "preview_allowed_now": false,
+    "future_preview_requirement": "fresh isolated resource gate followed by one deliberately bounded route slice"
+  },
+  "quality_gates": {
+    "public_source_board": "not_run",
+    "program_and_adjacency_review": "not_run",
+    "scale_and_footprint": "not_run",
+    "accessibility_life_safety_and_operations": "not_run",
+    "representative_materials": "not_run",
+    "isolated_runtime_route": "blocked",
+    "pinned_deployment": "blocked",
+    "explicit_robert_approval": "blocked"
+  }
+}

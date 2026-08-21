@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "scene_id": "scene_synthetic_people_filming_backlot",
+  "renderer_target": "threejs_notebook_world",
+  "units": "meters",
+  "coordinate_policy": "local_scene_offsets_are_derived_from_real_world_coordinates_when_available",
+  "placement": {
+    "placement_status": "first_anchor_or_coordinates_needed",
+    "notebook_world_id": "synthetic_people_filming_backlot_notebook_world",
+    "real_world_coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "local_scene_offset_meters": {
+      "x": 0,
+      "z": 0
+    },
+    "nearest_existing_anchor": null,
+    "distance_from_nearest_anchor_meters": null,
+    "truth_label": "unknown",
+    "unapproved_candidate_anchors_ignored": 0,
+    "commit_rule": "Draft/catalog anchors cannot become coordinate origins until a separate placement approval marks placement_approved=true."
+  },
+  "build_layers": [
+    {
+      "layer": "terrain_or_ground_plane",
+      "status": "placeholder",
+      "truth_label": "style_fill"
+    },
+    {
+      "layer": "primary_exterior_mass",
+      "status": "waiting_for_sources",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "major_landmarks",
+      "status": "waiting_for_sources",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "walkable_paths",
+      "status": "waiting_for_maps",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "lighting_and_atmosphere",
+      "status": "draft_after_reference_review",
+      "truth_label": "style_fill"
+    }
+  ],
+  "do_not_claim": [
+    "Do not claim exact dimensions unless the measurement source is recorded.",
+    "Do not fill hidden interiors as source-confirmed.",
+    "Do not import into the protected home world without review.",
+    "Do not treat a draft index anchor as an approved coordinate origin."
+  ],
+  "approval_gate": {
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "preview_before_commit": true
+  }
+}

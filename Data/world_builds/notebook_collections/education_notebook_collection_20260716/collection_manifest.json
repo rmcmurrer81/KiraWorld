@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "collection_id": "education_notebook_collection",
+  "collection_kind": "logical_notebook_collection",
+  "title": "Education Notebook Collection",
+  "status": "planned_request_only",
+  "created_at": "2026-07-16T02:15:05+00:00",
+  "purpose": "Keep the planned college areas logically grouped while every member remains a separate, sequentially loaded notebook world.",
+  "runtime_policy": {
+    "load_mode": "sequential_members_only",
+    "max_concurrent_notebook_worlds": 1,
+    "co_load_members_allowed": false,
+    "loads_home_world": false,
+    "loads_resident_minds": false,
+    "loads_voice": false,
+    "loads_ollama": false,
+    "memory_reconstruction_members_allowed": false,
+    "hardware_profile": "Data/launch/hardware_capability_profile.json",
+    "resource_gate_path": "Data/world_builds/notebook_collections/education_notebook_collection_20260716/resource_isolation_gate.json"
+  },
+  "protected_world_policy": {
+    "merge_into_home_world_allowed": false,
+    "strip_mall_mutation_allowed": false,
+    "strip_mall_state": "source_preserved_runtime_empty_by_default_restore_with_query_switch"
+  },
+  "planning_artifacts": [
+    {
+      "id": "memorial_union_student_center_program_v1",
+      "path": "Data/world_builds/notebook_collections/education_notebook_collection_20260716/memorial_union_student_center_plan.json",
+      "status": "planning_only_no_scene_built",
+      "private_memory_geometry_used": false
+    }
+  ],
+  "members": [
+    {
+      "notebook_world_id": "college_campus_core_notebook_world",
+      "title": "College Campus Core Notebook World",
+      "member_type": "place_notebook_world",
+      "status": "request_prepared",
+      "prepared_request_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/notebook_world_request.json",
+      "scope": "arrival court, Memorial Union student center with food venues, college store, lounges, meetings/events/services/support rooms, library approach, administration, and general classrooms"
+    },
+    {
+      "notebook_world_id": "college_campus_labs_notebook_world",
+      "title": "College Campus Labs Notebook World",
+      "member_type": "place_notebook_world",
+      "status": "queued_not_requested",
+      "prepared_request_path": null,
+      "scope": "science, computing, avatar-builder, and world-builder teaching labs"
+    },
+    {
+      "notebook_world_id": "college_campus_living_notebook_world",
+      "title": "College Campus Living Notebook World",
+      "member_type": "place_notebook_world",
+      "status": "queued_not_requested",
+      "prepared_request_path": null,
+      "scope": "dorms, residential dining, resident lounges, and outdoor social space"
+    }
+  ],
+  "explicit_non_members": [
+    {
+      "id": "legal_day_spa_notebook_world",
+      "reason": "The spa remains its own separately loaded review world and is not part of the education collection."
+    },
+    {
+      "id": "shared_kira_lisa_college_memory_reconstructions",
+      "reason": "Private consent-gated memory drafts are not public campus geometry and cannot be collection members."
+    },
+    {
+      "id": "home_world",
+      "reason": "Home World is protected and is neither a member nor a collection runtime dependency."
+    }
+  ]
+}

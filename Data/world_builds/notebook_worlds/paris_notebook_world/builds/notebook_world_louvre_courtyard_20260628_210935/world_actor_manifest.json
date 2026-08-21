@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_louvre_courtyard_20260628_210935",
+  "status": "preview_actor_slots_ready",
+  "rules": {
+    "real_robert_avatar_truth": "Robert's accurate avatar is not built yet; current preview uses a clothed placeholder/controller body.",
+    "ai_body_truth": "AI entries may use existing generated body/GLB assets when present, otherwise a labeled placeholder is used.",
+    "private_world_only": true,
+    "opinions_are_notes_not_memories": true
+  },
+  "actors": [
+    {
+      "actor_id": "robert_user_avatar",
+      "display_name": "Robert",
+      "actor_type": "user_avatar_placeholder",
+      "body_status": "placeholder_until_reviewed_robert_avatar_exists",
+      "spawn": {
+        "x": -8,
+        "y": 0,
+        "z": 38,
+        "heading_degrees": 20
+      },
+      "spawn_by_area": {
+        "bakery": {
+          "x": -7,
+          "y": 0,
+          "z": 4536,
+          "heading_degrees": 8
+        }
+      },
+      "photo_mode_default": true,
+      "appearance": {
+        "jacket": "#2f4a5d",
+        "shirt": "#d9e2e7",
+        "pants": "#22262c"
+      }
+    },
+    {
+      "actor_id": "kira",
+      "display_name": "Kira",
+      "actor_type": "core_ai_placeholder",
+      "body_status": "reserved_for_future_body_or_selected_avatar",
+      "spawn": {
+        "x": -5,
+        "y": 0,
+        "z": 40,
+        "heading_degrees": 10
+      },
+      "spawn_by_area": {
+        "bakery": {
+          "x": -12,
+          "y": 0,
+          "z": 4538,
+          "heading_degrees": 15
+        }
+      },
+      "appearance": {
+        "jacket": "#514f86",
+        "shirt": "#e7e3f7",
+        "pants": "#2f334d"
+      }
+    },
+    {
+      "actor_id": "lisa",
+      "display_name": "Lisa",
+      "actor_type": "core_ai_placeholder",
+      "body_status": "reserved_for_future_body_or_selected_avatar",
+      "spawn": {
+        "x": 5,
+        "y": 0,
+        "z": 40,
+        "heading_degrees": -10
+      },
+      "spawn_by_area": {
+        "bakery": {
+          "x": 12,
+          "y": 0,
+          "z": 4538,
+          "heading_degrees": -15
+        }
+      },
+      "appearance": {
+        "jacket": "#406d57",
+        "shirt": "#edf2e8",
+        "pants": "#26352c"
+      }
+    },
+    {
+      "actor_id": "ladybug_marinette_expanded_smoke",
+      "display_name": "Marinette / Ladybug",
+      "actor_type": "temporary_ai",
+      "body_status": "generated_body_manifest_available",
+      "body_manifest": "Avatar/temp_ai/ladybug_marinette_expanded_smoke/generated_body/avatar_body_manifest.json",
+      "spawn": {
+        "x": 8,
+        "y": 0,
+        "z": 38,
+        "heading_degrees": -20
+      },
+      "spawn_by_area": {
+        "bakery": {
+          "x": 7,
+          "y": 0,
+          "z": 4532,
+          "heading_degrees": -8
+        }
+      },
+      "appearance": {
+        "jacket": "#233148",
+        "shirt": "#f4f4f2",
+        "pants": "#b24563"
+      }
+    }
+  ],
+  "opinion_prompts": [
+    "What looks wrong or too fake from your current viewpoint?",
+    "Which source photo should guide the next pass?",
+    "What would make this feel walkable and real at body scale?",
+    "What should stay unknown until better sources exist?"
+  ]
+}

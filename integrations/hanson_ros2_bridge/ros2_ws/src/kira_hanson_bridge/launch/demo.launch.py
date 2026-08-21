@@ -14,6 +14,7 @@ def generate_launch_description() -> LaunchDescription:
     policy_file = LaunchConfiguration("policy_file")
     evidence_file = LaunchConfiguration("evidence_file")
     topic_prefix = LaunchConfiguration("topic_prefix")
+    source_identity = LaunchConfiguration("source_identity")
 
     arguments = [
         DeclareLaunchArgument("namespace", default_value="little_sophia_sim"),
@@ -22,6 +23,7 @@ def generate_launch_description() -> LaunchDescription:
             "evidence_file", default_value="/tmp/kira_hanson_bridge_evidence_v2.jsonl"
         ),
         DeclareLaunchArgument("topic_prefix", default_value="kira"),
+        DeclareLaunchArgument("source_identity", default_value="kira"),
     ]
 
     authority = Node(
@@ -57,7 +59,12 @@ def generate_launch_description() -> LaunchDescription:
                 name="kira_demo_intent_source",
                 namespace=namespace,
                 output="screen",
-                parameters=[{"topic_prefix": topic_prefix}],
+                parameters=[
+                    {
+                        "topic_prefix": topic_prefix,
+                        "source_identity": source_identity,
+                    }
+                ],
             )
         ],
     )

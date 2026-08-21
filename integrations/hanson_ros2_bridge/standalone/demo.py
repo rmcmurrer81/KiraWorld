@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Sequence
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PACKAGE_ROOT = PROJECT_ROOT / "ros2_ws" / "src" / "kira_hanson_bridge"
@@ -14,8 +16,8 @@ from kira_hanson_bridge.policy import SafetyPolicy, ValidationResult  # noqa: E4
 from kira_hanson_bridge.request_guard import RequestGuard  # noqa: E402
 
 
-def main() -> int:
-    policy_path = (
+def main(argv: Sequence[str] | None = None) -> int:
+    default_policy_path = (
         PROJECT_ROOT
         / "ros2_ws"
         / "src"
@@ -23,10 +25,20 @@ def main() -> int:
         / "config"
         / "safety_policy.yaml"
     )
+    parser = argparse.ArgumentParser(
+        description="Run the bounded policy demo for one exact mock source identity."
+    )
+    parser.add_argument("--source-identity", default="kira")
+    parser.add_argument("--policy-file", type=Path, default=default_policy_path)
+    args = parser.parse_args(argv)
     sequence_path = Path(__file__).with_name("sample_sequence.json")
     evidence_path = Path(__file__).with_name("evidence.jsonl")
 
-    policy = SafetyPolicy.from_yaml(policy_path)
+    policy = SafetyPolicy.from_yaml(args.policy_file)
+    if policy.common.get("allowed_source_identities") != [args.source_identity]:
+        raise ValueError(
+            "Demo policy must allow exactly the selected source identity."
+        )
     request_guard = RequestGuard(int(policy.common.get("replay_cache_entries", 2048)))
     sequence = json.loads(sequence_path.read_text(encoding="utf-8"))
 
@@ -40,6 +52,12 @@ def main() -> int:
     for item in sequence:
         payload = dict(item)
         category = payload.pop("category")
+        payload["source_identity"] = args.source_identity
+        if category == "speech" and args.source_identity != "kira":
+            payload["text"] = (
+                "Hello. This is a bounded simulator-first intention test; "
+                "no running person session is attached."
+            )
         result = policy.validate(category, payload)
         request_digest = ""
         if result.accepted:
@@ -69,7 +87,8 @@ def main() -> int:
         accepted += int(result.accepted)
         rejected += int(not result.accepted)
 
-    print(f"\nSummary: accepted={accepted}, rejected={rejected}")
+    print(f"\nSelected source identity: {args.source_identity}")
+    print(f"Summary: accepted={accepted}, rejected={rejected}")
     valid, record_count, final_hash = EvidenceChain.verify(evidence_path)
     print(f"Evidence records: {record_count}")
     print(f"Evidence chain valid: {valid}")

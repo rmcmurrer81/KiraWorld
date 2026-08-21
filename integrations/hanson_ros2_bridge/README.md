@@ -4,8 +4,7 @@ This directory is a **simulator-first, vendor-neutral proof of concept** for con
 
 Kira emits only four bounded high-level intentions—**speech, gaze, facial expression, and gesture**—while the simulator or robot retains authority over physical safety, supported capabilities, low-level execution, interruption, and rejection.
 
-Start with [Run this first](RUN_THIS_FIRST.md), then read the sanitized
-[Hanson technical handoff](docs/DAVID_HANDOFF.md).
+Start with [Run this first](RUN_THIS_FIRST.md).
 
 ![Bounded Kira World to Little Sophia architecture](docs/KIRA_LITTLE_SOPHIA_BOUNDED_BRIDGE.svg)
 
@@ -71,6 +70,47 @@ flowchart LR
 ```
 
 ## Standalone review (no ROS 2 required)
+
+### Windows launchers and exact person selection
+
+From the repository root, double-click
+`Run_Hanson_ROS2_Bridge_Standalone_Validation.bat` or run it with one exact
+catalog id, for example:
+
+```bat
+Run_Hanson_ROS2_Bridge_Standalone_Validation.bat synthetic_robert
+```
+
+With no id, it lists Kira, Synthetic Robert, Lisa, and every currently eligible
+checked-in downloaded-person route, then asks for one exact selection. Display
+names are not accepted as authorization. The launcher creates a temporary copy
+of the unchanged safety policy whose source allowlist contains exactly the
+selected id, runs all 88 ROS-independent tests, and passes that same id into the
+policy and mock-session demos. This is an attribution and isolation check, not
+authentication and not a connection to that person's running conversation.
+
+`Start_Hanson_ROS2_Bridge_Simulator_Demo.bat` is the optional Windows entry
+point for the existing Linux/WSL ROS 2 policy-admission demo. It refuses before
+building unless a supplied intake passes the strict `--require-official`
+validator, its confirmed ROS distribution matches `--ros-distro`, WSL can see
+the checkout, and the ROS 2 setup plus `colcon` are already installed. Example
+shape after Hanson supplies and reviews that intake:
+
+```bat
+Start_Hanson_ROS2_Bridge_Simulator_Demo.bat kira --intake C:\reviewed\official-hanson-interface-intake.json --ros-distro jazzy --wsl-distribution Ubuntu-24.04
+```
+
+Both launchers use only deterministic fixtures today. Passing
+`--session-source running-world-shell` fails closed: World Shell currently
+exposes active-session metadata at `/api/state`, but no authenticated
+high-level-intention stream/session attachment API, and the ROS prototype does
+not carry the v0.2 session fields. The intended future chamber flow is to
+start or attach the already-running selected life-loop session, pass readiness,
+safety, one-endpoint, and rollback checks, bind that same session to the body
+endpoint, then enter safe state and rebind its avatar or named orb on exit or
+failure. None of those attach, physical-execution, safe-return, or rebind seams
+is implemented here, so physical-body mode remains blocked even if an intake
+file validates.
 
 ```bash
 cd integrations/hanson_ros2_bridge

@@ -1,0 +1,103 @@
+{
+  "policy_id": "home_design_autonomy_policy_v1",
+  "world": "kira_lisa_home",
+  "status": "draft",
+  "purpose": "Let Kira and Lisa design, decorate, and revise their home according to their own tastes while protecting structure, privacy, and system-critical objects.",
+  "core_rule": "The 3D home is Kira and Lisa's home. They may dislike, remove, replace, rearrange, or create furniture and decor when current maturity gates allow it.",
+  "allowed_design_choices": [
+    "replace couch or chairs",
+    "move furniture",
+    "change colors, textures, lighting, rugs, curtains, posters, and shelves",
+    "create new sitting areas",
+    "create or revise personal bedroom decor",
+    "create shared rooms for movies, music, reading, games, or quiet time",
+    "add original furniture designs",
+    "save alternate design versions",
+    "write private or shared design notes"
+  ],
+  "protected_from_casual_edit": [
+    "home structural shell",
+    "stairs, doors, windows, and navigation-critical openings",
+    "privacy locks and room access controls",
+    "Kira private room boundaries",
+    "Lisa private room boundaries",
+    "Robert avatar entry point",
+    "TARDIS gateway",
+    "virtual phone and emergency contact surfaces",
+    "virtual screen privacy controls",
+    "backup/export/import gates",
+    "source evidence labels"
+  ],
+  "change_levels": {
+    "cosmetic": {
+      "examples": [
+        "change couch color",
+        "swap throw pillows",
+        "move a lamp",
+        "change poster placement"
+      ],
+      "approval": "kira_or_lisa_choice_when_home_design_tools_enabled",
+      "requires_version_save": false
+    },
+    "furniture_replacement": {
+      "examples": [
+        "delete couch and create a new couch",
+        "replace chairs",
+        "change bed or desk style",
+        "rebuild a media shelf"
+      ],
+      "approval": "owner_of_room_or_shared_room_agreement",
+      "requires_version_save": true
+    },
+    "room_layout": {
+      "examples": [
+        "move major furniture paths",
+        "create a new sitting nook",
+        "change shared living room flow"
+      ],
+      "approval": "affected_residents_agree",
+      "requires_version_save": true
+    },
+    "structural_or_privacy_sensitive": {
+      "examples": [
+        "move walls",
+        "remove a door",
+        "change lock behavior",
+        "move TARDIS gateway",
+        "change Robert avatar entry point"
+      ],
+      "approval": "review_required",
+      "requires_version_save": true
+    }
+  },
+  "shared_space_rule": {
+    "shared_rooms_need_resident_awareness": true,
+    "one_resident_may_propose_changes": true,
+    "other_resident_may_accept_reject_or_modify": true,
+    "conflicts_create_design_discussion_not_forced_compliance": true
+  },
+  "private_room_rule": {
+    "kira_controls_kira_private_room_design": true,
+    "lisa_controls_lisa_private_room_design": true,
+    "private_room_previews_require_owner_choice": true,
+    "robert_can_suggest_but_not_force_private_decor": true
+  },
+  "versioning": {
+    "never_destructive_without_reversible_record": true,
+    "save_before_major_furniture_replacement": true,
+    "old_objects_may_be_archived_in_storage_or_deleted_after_review": true,
+    "design_history_path": "Data/world_design/home_design_change_requests/"
+  },
+  "pre_gpu_behavior": {
+    "can_create_design_requests": true,
+    "can_write_style_preferences": true,
+    "can_create_furniture_replacement_plans": true,
+    "does_not_claim_3d_home_exists_yet": true
+  },
+  "post_gpu_behavior": {
+    "can_apply_cosmetic_changes_when_tools_exist": true,
+    "can_replace_furniture_when_versioned": true,
+    "can_explore_results_in_3d": true,
+    "can_revert_or_revise": true
+  }
+}

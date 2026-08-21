@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_kira_wardrobe_lab_staged_20260715",
+  "created_at": "2026-07-15T20:33:08-04:00",
+  "status": "staged_blocked_not_runtime_approved",
+  "build_id": "notebook_world_kira_wardrobe_lab_staged_20260715",
+  "pinned_build_manifest": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/pinned_build_manifest.json",
+  "launcher_requires_code_pinned_manifest": true,
+  "launcher_verifies_all_manifest_bytes_before_bind": true,
+  "notebook_world_request": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/notebook_world_request.json",
+  "placement": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/placement.json",
+  "preview": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/preview/index.html",
+  "state_machine": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/wardrobe_state_machine.json",
+  "builder_contract": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/builder_contract.json",
+  "core_garment_bridge": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/core_garment_bridge.json",
+  "approval_gate": "Data/world_builds/notebook_worlds/kira_wardrobe_lab_notebook_world/builds/notebook_world_kira_wardrobe_lab_staged_20260715/approval_gate.json",
+  "subject": "kira",
+  "single_3d_person_only": true,
+  "loads_kira_body": true,
+  "loads_kira_mind": false,
+  "loads_voice": false,
+  "loads_ollama": false,
+  "loads_second_person": false,
+  "modifies_live_kira_body": false,
+  "modifies_home_world": false,
+  "assets": [
+    {
+      "id": "kira_current_body",
+      "url": "/assets/kira-current-body.glb",
+      "source": "Avatar/models/temp_ai/kira/avatar.glb",
+      "sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+      "bytes": 4559016,
+      "role": "read_only_current_body"
+    },
+    {
+      "id": "shared_white_bath_robe_v1_draft_mesh_proof",
+      "url": "/assets/robe-draft-proof.glb",
+      "source": "Avatar/avatar_builder/wardrobe_training/proof_runs/robe_towel_soft_goods_proof_20260714_170000/robe_towel_soft_goods_states.glb",
+      "sha256": "d99b7d5ae75325a4d47f50d86c7fa9791ec351e0145dfc2a25eeb287ab863279",
+      "bytes": 435708,
+      "role": "read_only_static_reference_not_wearable"
+    }
+  ],
+  "server_scope": {
+    "preview_files": false,
+    "exact_manifest_bound_preview_files_only": true,
+    "exact_sha_pinned_assets": true,
+    "required_sha_pinned_three_js_modules_only": true,
+    "entire_workspace_served": false,
+    "directory_listing": false
+  }
+}

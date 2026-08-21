@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "authorization_kind": "notebook_world_preview_scope_authorization",
+  "status": "authorized_for_isolated_prototype_preview_only",
+  "authorized_by": "robert_current_request_20260716",
+  "authorized_at": "2026-07-16T14:49:46.9732372Z",
+  "scope_statement": "Build and serve one isolated lightweight procedural draft preview of the two-room synthetic-people filming backlot with an intentionally unfinished facade. Preserve empty future Kira, Robert, and guest marks only; do not load people, minds, voice, avatar assets, Home World, or mutate the strip mall.",
+  "world_id": "synthetic_people_filming_backlot_notebook_world",
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "request_binding": {
+    "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/notebook_world_request.json",
+    "sha256": "403b28a743d9470d621b0104e7c4c4c2aa463a3a5e1fc705def50ac8d8474c38",
+    "bytes": 5904
+  },
+  "program_binding": {
+    "path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/procedural_scene_program.json",
+    "sha256": "1ac3dd39adc4a060d06b733787249284f5426c24cfc3c3a2fa29633f095c0aef",
+    "bytes": 34377
+  },
+  "builder_backend": "strict_v2_procedural_preview_lane_v1",
+  "allowed_build_id": "filming_preview_20260716_r3",
+  "authorized_actions": {
+    "build_isolated_procedural_preview": true,
+    "serve_scoped_preview": true,
+    "approve_world": false,
+    "register_runtime": false,
+    "place_in_home_world": false,
+    "mutate_home_world": false,
+    "mutate_strip_mall": false,
+    "load_people": false,
+    "load_minds": false,
+    "load_voice": false
+  },
+  "limits": {
+    "max_meshes": 160,
+    "max_materials": 32,
+    "max_lights": 5,
+    "max_triangles": 50000,
+    "max_colliders": 128,
+    "max_routes": 24,
+    "max_route_points": 320,
+    "max_rooms": 12,
+    "max_spawns": 16,
+    "max_cameras": 20,
+    "max_filming_marks": 32,
+    "max_overlays": 12,
+    "max_generated_payload_bytes": 2500000
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "audit_id": "world_generation_status_audit_20260716",
+  "audited_at": "2026-07-16T02:15:05+00:00",
+  "method": "local_artifact_and_document_audit_only",
+  "runtime_actions_performed": [],
+  "hardware_context": {
+    "profile": "Data/launch/hardware_capability_profile.json",
+    "observed_ram_gb": 32,
+    "observed_ram_speed_mt_s": 6000,
+    "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB",
+    "current_policy": "one isolated notebook preview at a time; Kira-only live 3D until later 64GB and soak gates"
+  },
+  "worlds": {
+    "paris_louvre": {
+      "build": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935",
+      "request_status": "draft",
+      "artifact_class": "legacy_rough_walkable_prototype",
+      "approval_ready": false,
+      "complete": false,
+      "quality_findings": [
+        "The request is legacy schema-v1/draft and the index anchor is draft with no placement_approved=true evidence.",
+        "No approval_gate.json exists in the build root.",
+        "No code-pinned build manifest or manifest-bound standalone launcher exists for this Paris build.",
+        "scene_plan.json recommends serving from project_root, which is broader exposure than a manifest-bound preview server.",
+        "The blueprint calls the live scene a rough Cour Napoleon/Pyramid exterior placeholder, not final or photoreal.",
+        "Most non-pyramid geometry lacks full collision; facade, Pyramid rib spacing, entrance, pools, and queue areas remain approximate.",
+        "The under-pyramid interior and failed bakery are disabled; Marinette bedroom references are indexed but the room is not built.",
+        "Kira and Lisa entries are reserved future body-review spawn points, not runtime route evidence."
+      ],
+      "required_next_gates": [
+        "migrate or regenerate strict-v2 request paperwork without treating the current draft anchor as placement truth",
+        "source-backed exterior scale and facade review",
+        "complete collision and entrance-route validation",
+        "human-scale visual contact-sheet review",
+        "isolated runtime walkthrough",
+        "code-pinned deployment manifest",
+        "explicit Robert approval"
+      ]
+    },
+    "legal_day_spa": {
+      "source_preview": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820",
+      "registered_build": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715",
+      "artifact_class": "integrity_pinned_standalone_static_preview",
+      "approval_status": "not_approved",
+      "complete": false,
+      "passed_evidence": [
+        "structural static validation",
+        "static capsule round-trip routes and door-state checks",
+        "browser loader for 6 expected instances from 5 source GLBs",
+        "nonblank 1280x720 canvas smoke",
+        "bounded 12-second combined resource smoke",
+        "code-pinned manifest and manifest-bound localhost serving"
+      ],
+      "blocking_gates": {
+        "missing_required_real_prefab_count": 17,
+        "missing_required_real_prefab_roles": [
+          "front_storefront_door",
+          "reception_counter",
+          "consultation_desk_tablet",
+          "treatment_table_a",
+          "treatment_table_b",
+          "treatment_room_stools",
+          "treatment_side_counters_and_sinks",
+          "styling_salon_chair",
+          "styling_shampoo_basin",
+          "styling_mirror",
+          "relaxation_lounges",
+          "clean_towel_storage",
+          "dirty_linen_hamper",
+          "laundry_machines",
+          "staff_utility_sink",
+          "accessible_grab_rails",
+          "spa_ceiling_light_fixtures"
+        ],
+        "runtime_kira_route_test": "not_run",
+        "visual_realism_review": "failed_prior_review_unresolved",
+        "robert_approval": "not_granted",
+        "long_duration_combined_soak": "not_run",
+        "home_world_import": "blocked",
+        "strip_mall_replacement": "blocked"
+      },
+      "important_truth": "Integrity-pinned and statically walkable does not mean visually complete, Kira-tested, approved, or safe for Home World."
+    },
+    "college_campus": {
+      "pre_audit_state": "no college or campus notebook-world 3D build found",
+      "existing_related_material": [
+        "Data/world_builder/roadmap/world_builder_roadmap_20260714_spa_campus_notebook_worlds.json",
+        "Data/memory_reconstruction_worlds/shared_kira_lisa_college_phase_001.draft.json"
+      ],
+      "memory_boundary": "Private consent-gated college memory drafts are not campus geometry and are excluded from the collection.",
+      "prepared_request": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/notebook_world_request.json",
+      "prepared_collection": "Data/world_builds/notebook_collections/education_notebook_collection_20260716/collection_manifest.json",
+      "placement_decision": "separate logical education collection; core/labs/living are separate notebook-world shards and may load only one at a time",
+      "runtime_started": false,
+      "home_world_modified": false,
+      "strip_mall_modified": false,
+      "spa_combined_with_collection": false
+    }
+  },
+  "world_builder_generator": {
+    "pre_audit_gaps": [
+      "legacy output omitted schema_version and explicit resource, isolation, and quality gates",
+      "the CLI could self-declare approved, building, active, or approved_public state",
+      "draft anchors could be used as placement origins",
+      "the shared index was not validated before mutation",
+      "writes were not atomic",
+      "there was no validator for logical sequential notebook collections"
+    ],
+    "implemented_improvements": [
+      "strict schema-v2 draft generation",
+      "input and pre-mutation index validation",
+      "atomic file replacement and index-last update",
+      "approval, quality, resource, and isolation artifacts",
+      "draft anchors marked placement_approved=false and runtime_registered=false",
+      "approved-placement-only coordinate origin selection",
+      "sequential logical collection validator with Home World, strip-mall, memory, co-load, and pinning checks"
+    ]
+  }
+}

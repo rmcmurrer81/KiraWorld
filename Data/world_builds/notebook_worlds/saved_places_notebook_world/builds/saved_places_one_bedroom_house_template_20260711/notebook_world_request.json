@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "saved_places_one_bedroom_house_template_20260711",
+  "notebook_world_id": "saved_places_notebook_world",
+  "title": "Saved Places - One-Bedroom House Template",
+  "requested_by": "Robert",
+  "created_at": "2026-07-11T00:00:00-04:00",
+  "purpose": "Keep one complete accepted one-bedroom house copy outside Home World so future homes can be copied from it without loading every duplicate house in the active scene.",
+  "performance_reason": "Home World lagged badly after too many full house copies were loaded at once.",
+  "source": {
+    "world": "home_world",
+    "build": "home_world_main_house_20260630_223000",
+    "runtime_function": "addOneBedroomBlueprintHouse",
+    "source_owner": "Kira",
+    "source_label": "Kira's accepted one-bedroom house"
+  },
+  "load_policy": {
+    "loaded_in_home_world_by_default": false,
+    "copy_back_only_when_requested": true,
+    "do_not_spawn_extra_home_world_houses_until_performance_is_stable": true
+  }
+}

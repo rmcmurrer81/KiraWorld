@@ -1,7 +1,8 @@
 from __future__ import annotations
 
-import uuid
 from collections.abc import Callable
+import re
+import uuid
 
 import rclpy
 from rclpy.node import Node
@@ -15,11 +16,18 @@ from kira_intent_interfaces.msg import (
 
 
 class DemoIntentSource(Node):
+    SAFE_SOURCE_IDENTITY = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$")
+
     def __init__(self) -> None:
         super().__init__("kira_demo_intent_source")
         topic_prefix = str(self.declare_parameter("topic_prefix", "kira").value).strip("/")
         if not topic_prefix:
             raise ValueError("topic_prefix must not be empty.")
+        self.source_identity = str(
+            self.declare_parameter("source_identity", "kira").value
+        )
+        if not self.SAFE_SOURCE_IDENTITY.fullmatch(self.source_identity):
+            raise ValueError("source_identity must be one bounded ASCII identifier.")
         self.speech_pub = self.create_publisher(SpeechIntent, f"{topic_prefix}/intents/speech", 10)
         self.gaze_pub = self.create_publisher(GazeIntent, f"{topic_prefix}/intents/gaze", 10)
         self.expression_pub = self.create_publisher(
@@ -44,7 +52,7 @@ class DemoIntentSource(Node):
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "world"
         msg.intent_id = str(uuid.uuid4())
-        msg.source_identity = "kira"
+        msg.source_identity = self.source_identity
         msg.confidence = 0.95
         msg.ttl_ms = 5000
         msg.evidence_ref = evidence_ref
@@ -62,7 +70,13 @@ class DemoIntentSource(Node):
     def publish_speech(self) -> None:
         msg = SpeechIntent()
         self._base(msg, "demo:conversation:welcome")
-        msg.text = "Hello. I am Kira. This is a bounded simulator-first intention test."
+        if self.source_identity == "kira":
+            msg.text = "Hello. I am Kira. This is a bounded simulator-first intention test."
+        else:
+            msg.text = (
+                "Hello. This is a bounded simulator-first intention test; "
+                "no running person session is attached."
+            )
         msg.voice = "default"
         msg.max_duration_ms = 10000
         self.speech_pub.publish(msg)

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-15T20:33:08-04:00",
+  "status": "blocked_not_approved",
+  "world_builder_may_commit_to_home_world": false,
+  "avatar_builder_may_activate_garment": false,
+  "live_kira_body_may_be_replaced": false,
+  "timers_may_count_as_physical_proof": false,
+  "manual_stage_buttons_may_count_as_physical_proof": false,
+  "staged_visuals_may_count_as_physical_proof": false,
+  "required_before_approval": [
+    "Kira freely agrees to a supervised dressing attempt and can stop at any point.",
+    "The wearable robe is fitted and skinned to the exact approved Kira body hash and skeleton signature.",
+    "Every required world and garment anchor is exported and resolved by stable identifier.",
+    "Recorded runtime evidence proves real hand contact before detachment.",
+    "Recorded runtime evidence proves wrist-to-elbow portal passage through each distinct sleeve without teleporting.",
+    "Recorded runtime evidence proves collar settlement, cloth collision, and same-item continuity.",
+    "Recorded runtime evidence proves both hands contact the same two belt ends throughout a pre-baked tie sequence.",
+    "Walking, turning, sitting, and standing pass clipping, balance, and support checks while worn.",
+    "Untying, removal, rehang, and bed placement preserve the same robe item ID and world source state.",
+    "Robert reviews visual evidence and explicitly approves promotion."
+  ],
+  "current_blockers": [
+    "The robe GLB is a static multi-state draft, not a Kira-fitted skinned garment.",
+    "No real dressing, belt, locomotion, sitting, removal, or placement animation exists.",
+    "No garment anchors are resolved against Kira hand or body anchors at runtime.",
+    "No contact, portal crossing, collision, support, or same-object evidence trace exists."
+  ]
+}

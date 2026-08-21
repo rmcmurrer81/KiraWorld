@@ -1,0 +1,1782 @@
+{
+  "schema_version": 1,
+  "metadata_kind": "generated_procedural_notebook_world_scene",
+  "backend": "strict_v2_procedural_preview_lane_v1",
+  "world_id": "synthetic_people_filming_backlot_notebook_world",
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "build_id": "filming_preview_20260716_r2",
+  "status": "prototype_draft_not_final_not_approved",
+  "title": "Synthetic People Filming Backlot",
+  "subtitle": "Isolated two-room procedural prototype with an intentionally unfinished facade",
+  "units": "meters",
+  "world_bounds": {
+    "min": [
+      -15,
+      -1,
+      -12
+    ],
+    "max": [
+      15,
+      9,
+      15
+    ]
+  },
+  "environment": {
+    "background_color": "#8fa7b8",
+    "fog_color": "#8fa7b8",
+    "fog_near": 34,
+    "fog_far": 90
+  },
+  "materials": [
+    {
+      "id": "mat_backlot_ground",
+      "color": "#656b70",
+      "roughness": 0.96,
+      "metalness": 0.02,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Neutral asphalt-like ground is an original review aid, not a sourced real location."
+    },
+    {
+      "id": "mat_soundstage_floor",
+      "color": "#292d31",
+      "roughness": 0.82,
+      "metalness": 0.05,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Dark soundstage floor is a lightweight original-design convention."
+    },
+    {
+      "id": "mat_review_floor",
+      "color": "#59636b",
+      "roughness": 0.84,
+      "metalness": 0.02,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Review-room floor is original prototype styling."
+    },
+    {
+      "id": "mat_wall_shell",
+      "color": "#c6c0b4",
+      "roughness": 0.9,
+      "metalness": 0,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Wall color and finish are unsourced original scene fill."
+    },
+    {
+      "id": "mat_divider",
+      "color": "#78838b",
+      "roughness": 0.86,
+      "metalness": 0.04,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Room divider is original prototype geometry."
+    },
+    {
+      "id": "mat_unfinished_facade",
+      "color": "#b68a63",
+      "roughness": 0.92,
+      "metalness": 0,
+      "opacity": 1,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Robert explicitly requested an intentionally unfinished exterior or facade."
+    },
+    {
+      "id": "mat_exposed_frame",
+      "color": "#4d555b",
+      "roughness": 0.55,
+      "metalness": 0.72,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Exposed frame styling communicates unfinished prototype status; dimensions are original."
+    },
+    {
+      "id": "mat_stage",
+      "color": "#3c4146",
+      "roughness": 0.8,
+      "metalness": 0.1,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Stage platform is an original procedural prop."
+    },
+    {
+      "id": "mat_backdrop",
+      "color": "#d8dee2",
+      "roughness": 0.95,
+      "metalness": 0,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Neutral filming backdrop is an original procedural prop."
+    },
+    {
+      "id": "mat_furniture",
+      "color": "#765841",
+      "roughness": 0.75,
+      "metalness": 0.05,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Furniture uses low-detail original prototype styling."
+    },
+    {
+      "id": "mat_equipment",
+      "color": "#202529",
+      "roughness": 0.52,
+      "metalness": 0.58,
+      "opacity": 1,
+      "truth_label": "style_fill",
+      "source_note": "Filming equipment is symbolic original prototype geometry."
+    },
+    {
+      "id": "mat_screen",
+      "color": "#87c8e8",
+      "roughness": 0.25,
+      "metalness": 0.05,
+      "opacity": 0.9,
+      "truth_label": "style_fill",
+      "source_note": "Review screens are inactive visual placeholders with no live builder connection."
+    },
+    {
+      "id": "mat_spawn_kira",
+      "color": "#9b72d0",
+      "roughness": 0.5,
+      "metalness": 0.12,
+      "opacity": 0.82,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Kira was named by Robert only as a future filming participant; no person is loaded."
+    },
+    {
+      "id": "mat_spawn_robert",
+      "color": "#3fa7d6",
+      "roughness": 0.5,
+      "metalness": 0.12,
+      "opacity": 0.82,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Robert was named as a future filming participant; this is an empty mark."
+    },
+    {
+      "id": "mat_spawn_guest",
+      "color": "#e3b341",
+      "roughness": 0.5,
+      "metalness": 0.12,
+      "opacity": 0.82,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Guest use was named as a future possibility; this is an empty mark."
+    },
+    {
+      "id": "mat_camera_mark",
+      "color": "#f2f4f5",
+      "roughness": 0.35,
+      "metalness": 0.25,
+      "opacity": 0.72,
+      "truth_label": "style_fill",
+      "source_note": "Camera markers are review-only original placement guides."
+    },
+    {
+      "id": "mat_filming_mark",
+      "color": "#71d69b",
+      "roughness": 0.48,
+      "metalness": 0.08,
+      "opacity": 0.74,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Filming marks implement Robert's future-use request without loading performers."
+    },
+    {
+      "id": "mat_unknown_zone",
+      "color": "#9b6f79",
+      "roughness": 0.9,
+      "metalness": 0,
+      "opacity": 0.42,
+      "truth_label": "unknown",
+      "source_note": "Translucent boundary marks deliberately unbuilt exterior space."
+    }
+  ],
+  "lights": [
+    {
+      "id": "light_ambient_review",
+      "type": "hemisphere",
+      "intensity": 1.35,
+      "sky_color": "#d8efff",
+      "ground_color": "#3e454a",
+      "truth_label": "style_fill",
+      "source_note": "Efficient ambient light is original prototype lighting."
+    },
+    {
+      "id": "light_key_stage",
+      "type": "directional",
+      "intensity": 1.6,
+      "color": "#fff1d6",
+      "position": [
+        -5,
+        8,
+        5
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Key light is a low-cost preview light, not a final lighting plan."
+    },
+    {
+      "id": "light_fill_review",
+      "type": "directional",
+      "intensity": 0.75,
+      "color": "#b9ddff",
+      "position": [
+        8,
+        6,
+        3
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review-room fill light is original prototype lighting."
+    }
+  ],
+  "primitives": [
+    {
+      "id": "shape_backlot_ground",
+      "primitive": "plane",
+      "material_id": "mat_backlot_ground",
+      "position": [
+        0,
+        0,
+        1.5
+      ],
+      "rotation": [
+        -1.5707963268,
+        0,
+        0
+      ],
+      "category": "landscape",
+      "size": [
+        30,
+        27
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original neutral ground plane for isolated review."
+    },
+    {
+      "id": "shape_soundstage_floor",
+      "primitive": "box",
+      "material_id": "mat_soundstage_floor",
+      "position": [
+        -4.5,
+        0.04,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "architecture",
+      "size": [
+        9,
+        0.08,
+        10
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "One of exactly two requested simple rooms: the soundstage."
+    },
+    {
+      "id": "shape_review_floor",
+      "primitive": "box",
+      "material_id": "mat_review_floor",
+      "position": [
+        4.5,
+        0.04,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "architecture",
+      "size": [
+        9,
+        0.08,
+        10
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "One of exactly two requested simple rooms: the builder review room."
+    },
+    {
+      "id": "shape_back_wall",
+      "primitive": "box",
+      "material_id": "mat_wall_shell",
+      "position": [
+        0,
+        2.25,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "architecture",
+      "size": [
+        18,
+        4.5,
+        0.3
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original wall shell for the two-room prototype."
+    },
+    {
+      "id": "shape_left_wall",
+      "primitive": "box",
+      "material_id": "mat_wall_shell",
+      "position": [
+        -9,
+        2.25,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "architecture",
+      "size": [
+        0.3,
+        4.5,
+        10
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original wall shell for the two-room prototype."
+    },
+    {
+      "id": "shape_right_wall",
+      "primitive": "box",
+      "material_id": "mat_wall_shell",
+      "position": [
+        9,
+        2.25,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "architecture",
+      "size": [
+        0.3,
+        4.5,
+        10
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original wall shell for the two-room prototype."
+    },
+    {
+      "id": "shape_divider_rear",
+      "primitive": "box",
+      "material_id": "mat_divider",
+      "position": [
+        0,
+        2.25,
+        -2.3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "architecture",
+      "size": [
+        0.3,
+        4.5,
+        5.4
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original divider segment leaves a wide interior route opening."
+    },
+    {
+      "id": "shape_divider_front",
+      "primitive": "box",
+      "material_id": "mat_divider",
+      "position": [
+        0,
+        2.25,
+        3.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "architecture",
+      "size": [
+        0.3,
+        4.5,
+        2.2
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original divider segment leaves a wide interior route opening."
+    },
+    {
+      "id": "shape_front_stage_left",
+      "primitive": "box",
+      "material_id": "mat_unfinished_facade",
+      "position": [
+        -6.5,
+        2.25,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        5,
+        4.5,
+        0.3
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial facade remains intentionally unfinished around the soundstage opening."
+    },
+    {
+      "id": "shape_front_stage_right",
+      "primitive": "box",
+      "material_id": "mat_unfinished_facade",
+      "position": [
+        -1,
+        2.25,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        2,
+        4.5,
+        0.3
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial facade remains intentionally unfinished around the soundstage opening."
+    },
+    {
+      "id": "shape_front_review_left",
+      "primitive": "box",
+      "material_id": "mat_unfinished_facade",
+      "position": [
+        2.35,
+        2.25,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        4.7,
+        4.5,
+        0.3
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial facade remains intentionally unfinished around the review-room opening."
+    },
+    {
+      "id": "shape_front_review_right",
+      "primitive": "box",
+      "material_id": "mat_unfinished_facade",
+      "position": [
+        7.85,
+        2.25,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        2.3,
+        4.5,
+        0.3
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial facade remains intentionally unfinished around the review-room opening."
+    },
+    {
+      "id": "shape_frame_stage_left",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        -4,
+        2.5,
+        5.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        0.16,
+        5,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Exposed frame visually declares the facade unfinished."
+    },
+    {
+      "id": "shape_frame_stage_right",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        -2,
+        2.5,
+        5.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        0.16,
+        5,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Exposed frame visually declares the facade unfinished."
+    },
+    {
+      "id": "shape_frame_review_left",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        4.7,
+        2.5,
+        5.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        0.16,
+        5,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Exposed frame visually declares the facade unfinished."
+    },
+    {
+      "id": "shape_frame_review_right",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        6.7,
+        2.5,
+        5.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        0.16,
+        5,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Exposed frame visually declares the facade unfinished."
+    },
+    {
+      "id": "shape_frame_stage_header",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        -3,
+        4.65,
+        5.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        2.2,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Exposed header is a symbolic unfinished construction cue."
+    },
+    {
+      "id": "shape_frame_review_header",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        5.7,
+        4.65,
+        5.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "facade",
+      "size": [
+        2.2,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Exposed header is a symbolic unfinished construction cue."
+    },
+    {
+      "id": "shape_unbuilt_left_boundary",
+      "primitive": "box",
+      "material_id": "mat_unknown_zone",
+      "position": [
+        -12,
+        0.8,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "safety",
+      "size": [
+        0.08,
+        1.6,
+        17
+      ],
+      "truth_label": "unknown",
+      "source_note": "Boundary indicates exterior content intentionally not designed in this prototype."
+    },
+    {
+      "id": "shape_unbuilt_right_boundary",
+      "primitive": "box",
+      "material_id": "mat_unknown_zone",
+      "position": [
+        12,
+        0.8,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "safety",
+      "size": [
+        0.08,
+        1.6,
+        17
+      ],
+      "truth_label": "unknown",
+      "source_note": "Boundary indicates exterior content intentionally not designed in this prototype."
+    },
+    {
+      "id": "shape_stage_platform",
+      "primitive": "box",
+      "material_id": "mat_stage",
+      "position": [
+        -4.9,
+        0.18,
+        -3.55
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        5.4,
+        0.36,
+        1.9
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Low-detail original filming platform."
+    },
+    {
+      "id": "shape_stage_backdrop",
+      "primitive": "box",
+      "material_id": "mat_backdrop",
+      "position": [
+        -4.9,
+        2.15,
+        -4.62
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        5.4,
+        3.7,
+        0.08
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Low-detail neutral filming backdrop."
+    },
+    {
+      "id": "shape_prop_table",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        -6.35,
+        0.48,
+        -0.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        1.4,
+        0.12,
+        0.8
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Symbolic prop table for future filming setup review."
+    },
+    {
+      "id": "shape_prop_table_leg_a",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        -6.85,
+        0.24,
+        -0.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.1,
+        0.48,
+        0.55
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Low-detail table support."
+    },
+    {
+      "id": "shape_prop_table_leg_b",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        -5.85,
+        0.24,
+        -0.45
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.1,
+        0.48,
+        0.55
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Low-detail table support."
+    },
+    {
+      "id": "shape_stage_crate_a",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        -8.1,
+        0.4,
+        -1.65
+      ],
+      "rotation": [
+        0,
+        0.2,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Symbolic movable set crate; interaction is not implemented."
+    },
+    {
+      "id": "shape_stage_crate_b",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        -7.35,
+        0.28,
+        -1.8
+      ],
+      "rotation": [
+        0,
+        -0.25,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Symbolic movable set crate; interaction is not implemented."
+    },
+    {
+      "id": "shape_camera_dolly_base",
+      "primitive": "box",
+      "material_id": "mat_equipment",
+      "position": [
+        -2.75,
+        0.16,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.9,
+        0.2,
+        0.7
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Symbolic filming dolly; it has no active camera or controller."
+    },
+    {
+      "id": "shape_camera_dolly_post",
+      "primitive": "cylinder",
+      "material_id": "mat_equipment",
+      "position": [
+        -2.75,
+        0.85,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "radius": 0.08,
+      "height": 1.3,
+      "segments": 12,
+      "truth_label": "style_fill",
+      "source_note": "Symbolic filming dolly support."
+    },
+    {
+      "id": "shape_camera_dolly_body",
+      "primitive": "box",
+      "material_id": "mat_equipment",
+      "position": [
+        -2.75,
+        1.5,
+        -1.4
+      ],
+      "rotation": [
+        0,
+        0.2,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.55,
+        0.35,
+        0.4
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Inactive symbolic camera body; it records nothing."
+    },
+    {
+      "id": "shape_review_table",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        4.25,
+        0.52,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        4.5,
+        0.14,
+        1.6
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original review table for builder discussions."
+    },
+    {
+      "id": "shape_review_table_base",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        4.25,
+        0.25,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        2.4,
+        0.5,
+        0.7
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Low-detail review-table support."
+    },
+    {
+      "id": "shape_review_screen_a",
+      "primitive": "box",
+      "material_id": "mat_screen",
+      "position": [
+        3.25,
+        1.35,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        1.4,
+        0.8,
+        0.08
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Inactive placeholder screen for future Avatar Builder review output."
+    },
+    {
+      "id": "shape_review_screen_b",
+      "primitive": "box",
+      "material_id": "mat_screen",
+      "position": [
+        5.25,
+        1.35,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        1.4,
+        0.8,
+        0.08
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Inactive placeholder screen for future World Builder review output."
+    },
+    {
+      "id": "shape_review_bench_a",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        2.2,
+        0.35,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        2.2,
+        0.7,
+        0.7
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Simple original waiting bench."
+    },
+    {
+      "id": "shape_review_bench_b",
+      "primitive": "box",
+      "material_id": "mat_furniture",
+      "position": [
+        7.1,
+        0.35,
+        2.9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        1.5,
+        0.7,
+        0.7
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Simple original waiting bench, placed clear of the review-room entry route."
+    },
+    {
+      "id": "shape_prop_rack_left",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        7.65,
+        1.2,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.12,
+        2.4,
+        2.8
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Symbolic prop-rack frame."
+    },
+    {
+      "id": "shape_prop_rack_right",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        8.35,
+        1.2,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.12,
+        2.4,
+        2.8
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Symbolic prop-rack frame."
+    },
+    {
+      "id": "shape_prop_rack_top",
+      "primitive": "box",
+      "material_id": "mat_exposed_frame",
+      "position": [
+        8,
+        2.35,
+        0.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.82,
+        0.12,
+        2.8
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Symbolic prop-rack frame."
+    },
+    {
+      "id": "shape_tablet_prop",
+      "primitive": "box",
+      "material_id": "mat_screen",
+      "position": [
+        4.25,
+        0.63,
+        -1.9
+      ],
+      "rotation": [
+        -0.15,
+        0.1,
+        0
+      ],
+      "category": "furniture",
+      "size": [
+        0.42,
+        0.04,
+        0.28
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Inactive tablet-shaped prop for future interaction staging; no tablet service is connected."
+    },
+    {
+      "id": "shape_spawn_kira",
+      "primitive": "cylinder",
+      "material_id": "mat_spawn_kira",
+      "position": [
+        -6,
+        0.09,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.32,
+      "height": 0.02,
+      "segments": 24,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future Kira floor mark only."
+    },
+    {
+      "id": "shape_spawn_robert",
+      "primitive": "cylinder",
+      "material_id": "mat_spawn_robert",
+      "position": [
+        -4.5,
+        0.09,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.32,
+      "height": 0.02,
+      "segments": 24,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future Robert floor mark only."
+    },
+    {
+      "id": "shape_spawn_guest",
+      "primitive": "cylinder",
+      "material_id": "mat_spawn_guest",
+      "position": [
+        -3,
+        0.09,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.32,
+      "height": 0.02,
+      "segments": 24,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future guest floor mark only."
+    },
+    {
+      "id": "shape_camera_arrival",
+      "primitive": "box",
+      "material_id": "mat_camera_mark",
+      "position": [
+        0,
+        2.6,
+        12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "camera_mark",
+      "size": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review-only arrival camera marker."
+    },
+    {
+      "id": "shape_camera_stage_wide",
+      "primitive": "box",
+      "material_id": "mat_camera_mark",
+      "position": [
+        -7,
+        2.8,
+        3.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "camera_mark",
+      "size": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review-only soundstage camera marker."
+    },
+    {
+      "id": "shape_camera_stage_reverse",
+      "primitive": "box",
+      "material_id": "mat_camera_mark",
+      "position": [
+        -2.2,
+        2.2,
+        -1.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "camera_mark",
+      "size": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review-only reverse camera marker."
+    },
+    {
+      "id": "shape_camera_review",
+      "primitive": "box",
+      "material_id": "mat_camera_mark",
+      "position": [
+        7.3,
+        2.5,
+        3.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "camera_mark",
+      "size": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review-only builder-room camera marker."
+    },
+    {
+      "id": "shape_camera_facade",
+      "primitive": "box",
+      "material_id": "mat_camera_mark",
+      "position": [
+        11,
+        3.2,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "camera_mark",
+      "size": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review-only facade camera marker."
+    },
+    {
+      "id": "shape_camera_overhead",
+      "primitive": "box",
+      "material_id": "mat_camera_mark",
+      "position": [
+        0,
+        7.5,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "camera_mark",
+      "size": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review-only overhead camera marker."
+    },
+    {
+      "id": "shape_mark_interview_a",
+      "primitive": "cylinder",
+      "material_id": "mat_filming_mark",
+      "position": [
+        -6,
+        0.075,
+        -1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.24,
+      "height": 0.015,
+      "segments": 20,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty interview position for future filming."
+    },
+    {
+      "id": "shape_mark_interview_b",
+      "primitive": "cylinder",
+      "material_id": "mat_filming_mark",
+      "position": [
+        -4.5,
+        0.075,
+        -1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.24,
+      "height": 0.015,
+      "segments": 20,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty interview position for future filming."
+    },
+    {
+      "id": "shape_mark_demo",
+      "primitive": "cylinder",
+      "material_id": "mat_filming_mark",
+      "position": [
+        -3,
+        0.075,
+        -2.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.24,
+      "height": 0.015,
+      "segments": 20,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty demonstration position for future filming."
+    },
+    {
+      "id": "shape_mark_review_presenter",
+      "primitive": "cylinder",
+      "material_id": "mat_filming_mark",
+      "position": [
+        2.5,
+        0.075,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.24,
+      "height": 0.015,
+      "segments": 20,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty builder-review presenter mark."
+    },
+    {
+      "id": "shape_mark_review_guest",
+      "primitive": "cylinder",
+      "material_id": "mat_filming_mark",
+      "position": [
+        4.2,
+        0.075,
+        1.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.24,
+      "height": 0.015,
+      "segments": 20,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty builder-review guest mark."
+    },
+    {
+      "id": "shape_mark_exterior",
+      "primitive": "cylinder",
+      "material_id": "mat_filming_mark",
+      "position": [
+        0,
+        0.025,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "category": "floor_mark",
+      "radius": 0.3,
+      "height": 0.015,
+      "segments": 20,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty exterior establishing-shot mark."
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room_soundstage",
+      "name": "Soundstage Room",
+      "purpose": "Simple future filming, blocking, and interaction-staging room; no performer is loaded.",
+      "bounds": {
+        "min": [
+          -8.8,
+          0,
+          -4.8
+        ],
+        "max": [
+          -0.2,
+          4.5,
+          4.8
+        ]
+      },
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Robert authorized a lightweight future filming prototype; exact layout is original."
+    },
+    {
+      "id": "room_builder_review",
+      "name": "Builder Review Room",
+      "purpose": "Simple inactive review space for future Avatar Builder and World Builder visual comparisons.",
+      "bounds": {
+        "min": [
+          0.2,
+          0,
+          -4.8
+        ],
+        "max": [
+          8.8,
+          4.5,
+          4.8
+        ]
+      },
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Robert requested future builder-review use; exact layout is original."
+    }
+  ],
+  "spawns": [
+    {
+      "id": "spawn_future_kira",
+      "label": "Future Kira mark",
+      "position": [
+        -6,
+        0.1,
+        1
+      ],
+      "primitive_id": "shape_spawn_kira",
+      "intended_role": "future filming participant only",
+      "occupant_policy": "mark_only_no_person_loaded",
+      "yaw": 3.1415926536,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty marker only; Kira's body, mind, and voice are not loaded."
+    },
+    {
+      "id": "spawn_future_robert",
+      "label": "Future Robert mark",
+      "position": [
+        -4.5,
+        0.1,
+        1
+      ],
+      "primitive_id": "shape_spawn_robert",
+      "intended_role": "future filming participant only",
+      "occupant_policy": "mark_only_no_person_loaded",
+      "yaw": 3.1415926536,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty marker only; no Robert avatar or mind is loaded."
+    },
+    {
+      "id": "spawn_future_guest",
+      "label": "Future guest mark",
+      "position": [
+        -3,
+        0.1,
+        1
+      ],
+      "primitive_id": "shape_spawn_guest",
+      "intended_role": "future optional filming participant only",
+      "occupant_policy": "mark_only_no_person_loaded",
+      "yaw": 3.1415926536,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty marker only; no guest person is loaded."
+    }
+  ],
+  "cameras": [
+    {
+      "id": "camera_arrival",
+      "label": "Backlot arrival",
+      "position": [
+        0,
+        2.6,
+        12
+      ],
+      "target": [
+        0,
+        1.3,
+        3.8
+      ],
+      "fov": 55,
+      "primitive_id": "shape_camera_arrival",
+      "truth_label": "style_fill",
+      "source_note": "Original review camera for exterior orientation."
+    },
+    {
+      "id": "camera_stage_wide",
+      "label": "Soundstage wide",
+      "position": [
+        -7,
+        2.8,
+        3.8
+      ],
+      "target": [
+        -4.9,
+        1.1,
+        -2.7
+      ],
+      "fov": 58,
+      "primitive_id": "shape_camera_stage_wide",
+      "truth_label": "style_fill",
+      "source_note": "Original review camera for stage blocking."
+    },
+    {
+      "id": "camera_stage_reverse",
+      "label": "Soundstage reverse",
+      "position": [
+        -2.2,
+        2.2,
+        -1.1
+      ],
+      "target": [
+        -5.4,
+        1.15,
+        -3.2
+      ],
+      "fov": 52,
+      "primitive_id": "shape_camera_stage_reverse",
+      "truth_label": "style_fill",
+      "source_note": "Original reverse review camera."
+    },
+    {
+      "id": "camera_builder_review",
+      "label": "Builder review room",
+      "position": [
+        7.3,
+        2.5,
+        3.6
+      ],
+      "target": [
+        4.1,
+        1.05,
+        -1.5
+      ],
+      "fov": 55,
+      "primitive_id": "shape_camera_review",
+      "truth_label": "style_fill",
+      "source_note": "Original review camera for inactive builder screens and table."
+    },
+    {
+      "id": "camera_unfinished_facade",
+      "label": "Unfinished facade",
+      "position": [
+        11,
+        3.2,
+        10
+      ],
+      "target": [
+        0,
+        2.1,
+        5
+      ],
+      "fov": 50,
+      "primitive_id": "shape_camera_facade",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Camera deliberately shows the unfinished facade requested by Robert."
+    },
+    {
+      "id": "camera_overhead_plan",
+      "label": "Overhead route review",
+      "position": [
+        0,
+        7.5,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "fov": 62,
+      "primitive_id": "shape_camera_overhead",
+      "truth_label": "style_fill",
+      "source_note": "Original overhead camera for collider and route review."
+    }
+  ],
+  "filming_marks": [
+    {
+      "id": "mark_interview_a",
+      "label": "Interview position A",
+      "position": [
+        -6,
+        0.08,
+        -1
+      ],
+      "primitive_id": "shape_mark_interview_a",
+      "mark_type": "interview_subject",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future filming mark only."
+    },
+    {
+      "id": "mark_interview_b",
+      "label": "Interview position B",
+      "position": [
+        -4.5,
+        0.08,
+        -1
+      ],
+      "primitive_id": "shape_mark_interview_b",
+      "mark_type": "interview_subject",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future filming mark only."
+    },
+    {
+      "id": "mark_stage_demo",
+      "label": "Stage demonstration",
+      "position": [
+        -3,
+        0.08,
+        -2.2
+      ],
+      "primitive_id": "shape_mark_demo",
+      "mark_type": "demonstration_subject",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future filming mark only."
+    },
+    {
+      "id": "mark_builder_presenter",
+      "label": "Builder review presenter",
+      "position": [
+        2.5,
+        0.08,
+        1.6
+      ],
+      "primitive_id": "shape_mark_review_presenter",
+      "mark_type": "builder_presenter",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future builder-review mark only."
+    },
+    {
+      "id": "mark_builder_guest",
+      "label": "Builder review guest",
+      "position": [
+        4.2,
+        0.08,
+        1.6
+      ],
+      "primitive_id": "shape_mark_review_guest",
+      "mark_type": "builder_guest",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future builder-review mark only."
+    },
+    {
+      "id": "mark_exterior_establishing",
+      "label": "Exterior establishing position",
+      "position": [
+        0,
+        0.03,
+        8
+      ],
+      "primitive_id": "shape_mark_exterior",
+      "mark_type": "exterior_establishing",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty exterior filming mark only."
+    }
+  ],
+  "overlays": [
+    {
+      "id": "overlay_avatar_builder_future",
+      "title": "Avatar Builder Review",
+      "body": "Future visual comparison area for avatar shape, rig, clothing, and motion reviews. This prototype does not load or build an avatar.",
+      "mode": "informational_future_hook_only",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Robert requested future Avatar Builder use; the hook is informational and inactive."
+    },
+    {
+      "id": "overlay_world_builder_future",
+      "title": "World Builder Review",
+      "body": "Future visual comparison area for procedural room, facade, route, and collision reviews. This prototype exposes metadata only.",
+      "mode": "informational_future_hook_only",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Robert requested World Builder improvement; the hook is informational and inactive."
+    }
+  ],
+  "isolation": {
+    "world_class": "separate_notebook_world",
+    "home_world_mutation_allowed": false,
+    "strip_mall_mutation_allowed": false,
+    "runtime_registered": false,
+    "person_assets_loaded": false,
+    "resident_minds_loaded": false,
+    "voice_loaded": false,
+    "ollama_loaded": false
+  }
+}

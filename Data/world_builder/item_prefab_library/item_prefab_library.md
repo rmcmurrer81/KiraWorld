@@ -1,0 +1,1279 @@
+# World Generator Item Prefab Library
+
+Generated: 2026-07-08T00:03:21.592877+00:00
+Scanned source models: 193
+Tagged prefab records: 2874
+Parse errors: 0
+
+## Generator Rules
+
+- Use tagged node/source prefabs before making procedural boxes.
+- Break house/apartment/hallway/bridge packs into node-level component prefabs; do not place a whole bundled model when a tagged door, window, chair, table, TV, appliance, wall, or floor node can be cloned.
+- Doors must come from `door` prefabs unless a real imported door fails collision/swing testing; do not place decorative bars over walkable entries.
+- Beds must come from `bed` or `bed_frame` prefabs paired with `mattress` and `pillow`/`blanket` evidence when available; otherwise reject them for finished homes.
+- Bookshelves must come from `bookshelf` prefabs; books/notebooks use `book` prefabs or separate book props.
+- Kitchen objects must use specific tags (`refrigerator`, `stove`, `microwave`, `sink`, `cabinet`) before falling back to the broad `appliance` tag.
+- Room layouts must keep bedrooms out of front living/dining rooms, preserve a clear entry path, and pass a walk-in collision probe.
+- The generator should read `component_library.json` for recommended reusable parts before scanning the full prefab list.
+
+## Tag Counts
+
+- bathroom_fixture: 80
+- bed: 266
+- bed_frame: 91
+- book: 48
+- bookshelf: 30
+- bridge: 699
+- chair: 254
+- computer: 22
+- corridor: 92
+- couch: 288
+- desk: 14
+- door: 271
+- floor: 96
+- house_shell: 870
+- light: 98
+- mattress: 31
+- pillow: 6
+- plant: 1
+- roof: 10
+- shower: 13
+- sink: 4
+- stairs: 4
+- table: 207
+- toilet: 63
+- tv: 30
+- vehicle: 806
+- wall: 154
+- window: 19
+
+## door
+
+- `38e15ade1489_0152_door_panel_1_1` (high) Door_Panel_1_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0178_door_panel_1_2` (high) Door_Panel_1_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0457_door_panel_1_3` (high) Door_Panel_1_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0153_handle_2_1` (low) Handle_2_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0154_mesh39` (low) Mesh39 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0155_mesh39_color_m08_0` (low) Mesh39_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0156_handle_2_2` (low) Handle_2_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0157_mesh40` (low) Mesh40 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0158_mesh40_color_m08_0` (low) Mesh40_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0159_panel1` (low) Panel1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0160_mesh41` (low) Mesh41 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0161_mesh41_carrera_marble_0` (low) Mesh41_Carrera_Marble_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 30.0, 'y': 2010.0, 'z': 600.0}
+- `38e15ade1489_0179_handle_2_3` (low) Handle_2_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0180_mesh47` (low) Mesh47 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0181_mesh47_color_m08_0` (low) Mesh47_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0182_handle_2_4` (low) Handle_2_4 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0183_mesh48` (low) Mesh48 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0184_mesh48_color_m08_0` (low) Mesh48_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0185_panel2` (low) Panel2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0186_mesh49` (low) Mesh49 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0187_mesh49_carrera_marble_0` (low) Mesh49_Carrera_Marble_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 30.0, 'y': 2010.0, 'z': 600.0}
+- `38e15ade1489_0458_handle_2_5` (low) Handle_2_5 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0459_mesh123` (low) Mesh123 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0460_mesh123_color_m08_0` (low) Mesh123_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0461_handle_2_6` (low) Handle_2_6 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0462_mesh124` (low) Mesh124 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0463_mesh124_color_m08_0` (low) Mesh124_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0464_panel3` (low) Panel3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0465_mesh125` (low) Mesh125 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0466_mesh125_carrera_marble_0` (low) Mesh125_Carrera_Marble_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 30.0, 'y': 2010.0, 'z': 600.0}
+- `8de49fe8582b_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`
+- `8de49fe8582b_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`
+- `8de49fe8582b_0001_collada_visual_scene_group` (medium) Collada visual scene group from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`
+- `8de49fe8582b_0002_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 74.8942, 'y': 648.7376, 'z': 2.8044}
+- `8de49fe8582b_0003_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 312.9922, 'y': 595.0984, 'z': 1.0928}
+- `8de49fe8582b_0004_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 71.1288, 'y': 708.8211, 'z': 97.3622}
+- `8de49fe8582b_0005_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 301.345, 'y': 596.1754, 'z': 13.1449}
+- `8de49fe8582b_0006_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 320.5909, 'y': 478.3466, 'z': 13.1449}
+- `8de49fe8582b_0007_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 298.4096, 'y': 521.8736, 'z': 13.1449}
+- `8de49fe8582b_0008_material3` (low) Material3 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 312.9922, 'y': 595.162, 'z': 2.1101}
+- `8de49fe8582b_0009_material3` (low) Material3 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 1113.6644, 'y': 593.4622, 'z': 3.3781}
+- `8de49fe8582b_0010_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 32.5198, 'y': 387.3224, 'z': 70.9988}
+- `8de49fe8582b_0011_material3` (low) Material3 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 312.9922, 'y': 593.5523, 'z': 0.7571}
+- `8de49fe8582b_0012_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 1113.105, 'y': 593.6072, 'z': 9.0362}
+- `8de49fe8582b_0013_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 3.5039, 'y': 406.0336, 'z': 82.1654}
+- `8de49fe8582b_0014_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 0.0, 'y': 406.0336, 'z': 82.1654}
+- `8de49fe8582b_0015_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 33.4778, 'y': 411.5748, 'z': 71.378}
+- `8de49fe8582b_0016_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 34.5013, 'y': 411.5748, 'z': 71.378}
+- `8de49fe8582b_0017_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 47.9921, 'y': 561.063, 'z': 79.7244}
+- `8de49fe8582b_0018_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 347.9274, 'y': 666.6339, 'z': 79.7244}
+- `8de49fe8582b_0019_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 613.4823, 'y': 702.8149, 'z': 79.7244}
+- `8de49fe8582b_0020_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 320.8373, 'y': 536.6521, 'z': 79.7244}
+- `8de49fe8582b_0021_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 541.5531, 'y': 637.6698, 'z': 79.7244}
+- `8de49fe8582b_0022_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 310.9583, 'y': 694.0402, 'z': 79.7244}
+- `8de49fe8582b_0023_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 38.5037, 'y': 384.7375, 'z': 9.1201}
+- `8de49fe8582b_0024_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 38.74, 'y': 380.0787, 'z': 5.4963}
+- `8de49fe8582b_0025_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 282.9907, 'y': 641.9732, 'z': 83.5039}
+- `8de49fe8582b_0026_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 72.4193, 'y': 648.0315, 'z': 13.3858}
+- `8de49fe8582b_0027_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 73.7579, 'y': 650.2413, 'z': 25.9055}
+- `8de49fe8582b_0028_material2` (low) Material2 from `staged_assets_for_world_builder/desktop_3d_models_2/door (1).glb`, bounds={'x': 3.3071, 'y': 13.3782, 'z': 25.9055}
+- ... 211 more `door` prefabs in JSON.
+
+## pillow
+
+- `bab83e9be5d2_0008_pollows_bed_pillow_material_0` (high) pollows_bed_pillow_material_0 from `staged_assets_for_world_builder/desktop_beds_models/victorian_bed (1).glb`, bounds={'x': 1.9262, 'y': 0.7445, 'z': 0.4972}
+- `32bfffc74ed9_0008_pollows_bed_pillow_material_0` (high) pollows_bed_pillow_material_0 from `staged_assets_for_world_builder/desktop_beds_models/victorian_bed.glb`, bounds={'x': 1.9262, 'y': 0.7445, 'z': 0.4972}
+- `721f93b7eaac_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_beds_models/bed_pillow.glb`
+- `721f93b7eaac_0000_sketchfab_model` (low) Sketchfab_model from `staged_assets_for_world_builder/desktop_beds_models/bed_pillow.glb`
+- `721f93b7eaac_0001_biggerpillow_obj_cleaner_materialmerger_gles` (low) biggerpillow.obj.cleaner.materialmerger.gles from `staged_assets_for_world_builder/desktop_beds_models/bed_pillow.glb`
+- `721f93b7eaac_0002_object_2` (low) Object_2 from `staged_assets_for_world_builder/desktop_beds_models/bed_pillow.glb`, bounds={'x': 17.0695, 'y': 31.2317, 'z': 6.0179}
+
+## mattress
+
+- `45837ad91bc6_0075_matress_41` (medium) Matress_41 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0076_cube_36` (low) cube_36 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0077_object_77` (low) Object_77 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 5.625, 'y': 0.125, 'z': 12.5}
+- `45837ad91bc6_0078_cube_37` (low) cube_37 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0079_object_79` (low) Object_79 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 5.625, 'y': 0.125, 'z': 12.5}
+- `45837ad91bc6_0080_cube_38` (low) cube_38 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0081_object_81` (low) Object_81 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 5.5, 'y': 0.125, 'z': 12.375}
+- `45837ad91bc6_0082_cube_39` (low) cube_39 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0083_object_83` (low) Object_83 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 5.625, 'y': 0.125, 'z': 12.5}
+- `45837ad91bc6_0084_cube_40` (low) cube_40 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0085_object_85` (low) Object_85 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 5.5, 'y': 0.125, 'z': 12.375}
+- `9813236c54b9_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`
+- `9813236c54b9_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`
+- `9813236c54b9_0001_f39cb8ed0336494a84176650a506dd4f_fbx` (medium) f39cb8ed0336494a84176650a506dd4f.fbx from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`
+- `9813236c54b9_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`
+- `9813236c54b9_0005_01` (low) 01 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`
+- `9813236c54b9_0006_01_01_0` (low) 01_01_0 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`, bounds={'x': 210.3071, 'y': 6.5003, 'z': 19.8856}
+- `9813236c54b9_0007_02` (low) 02 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`
+- `9813236c54b9_0008_02_02_0` (low) 02_02_0 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`, bounds={'x': 156.0509, 'y': 17.3129, 'z': 96.1864}
+- `9813236c54b9_0009_03` (low) 03 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`
+- `9813236c54b9_0010_03_03_0` (low) 03_03_0 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb (1).glb`, bounds={'x': 210.0, 'y': 16.1, 'z': 90.0}
+- `ded85d154df6_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`
+- `ded85d154df6_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`
+- `ded85d154df6_0001_f39cb8ed0336494a84176650a506dd4f_fbx` (medium) f39cb8ed0336494a84176650a506dd4f.fbx from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`
+- `ded85d154df6_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`
+- `ded85d154df6_0005_01` (low) 01 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`
+- `ded85d154df6_0006_01_01_0` (low) 01_01_0 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`, bounds={'x': 210.3071, 'y': 6.5003, 'z': 19.8856}
+- `ded85d154df6_0007_02` (low) 02 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`
+- `ded85d154df6_0008_02_02_0` (low) 02_02_0 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`, bounds={'x': 156.0509, 'y': 17.3129, 'z': 96.1864}
+- `ded85d154df6_0009_03` (low) 03 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`
+- `ded85d154df6_0010_03_03_0` (low) 03_03_0 from `staged_assets_for_world_builder/desktop_beds_models/bed_mattress_20_mb.glb`, bounds={'x': 210.0, 'y': 16.1, 'z': 90.0}
+
+## bed_frame
+
+- `fb494d269996_0007_bed_post_2` (high) BED_Post_2 from `staged_assets_for_world_builder/desktop_beds_models/black_wooden_bed_frames (1).glb`
+- `09273b35f740_0007_bed_post_2` (high) BED_Post_2 from `staged_assets_for_world_builder/desktop_beds_models/black_wooden_bed_frames.glb`
+- `45837ad91bc6_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0003_43` (medium) _43 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0004_root_42` (medium) root_42 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0005_bed_base_11` (medium) bed_base_11 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0006_cube_0` (low) cube_0 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0007_object_7` (low) Object_7 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0008_cube_1` (low) cube_1 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0009_object_9` (low) Object_9 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0010_cube_2` (low) cube_2 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0011_object_11` (low) Object_11 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0012_cube_3` (low) cube_3 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0013_object_13` (low) Object_13 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0014_cube_4` (low) cube_4 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0015_object_15` (low) Object_15 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0016_cube_5` (low) cube_5 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0017_object_17` (low) Object_17 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0018_cube_6` (low) cube_6 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0019_object_19` (low) Object_19 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0020_cube_7` (low) cube_7 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0021_object_21` (low) Object_21 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0022_cube_8` (low) cube_8 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0023_object_23` (low) Object_23 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0024_cube_9` (low) cube_9 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0025_object_25` (low) Object_25 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0026_cube_10` (low) cube_10 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0027_object_27` (low) Object_27 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.125, 'z': 0.5}
+- `45837ad91bc6_0028_frame_35` (medium) Frame_35 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0029_cube_12` (low) cube_12 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0030_object_30` (low) Object_30 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.4375, 'y': 1.875, 'z': 0.5}
+- `45837ad91bc6_0031_cube_13` (low) cube_13 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0032_object_32` (low) Object_32 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.4375, 'y': 1.875, 'z': 0.5}
+- `45837ad91bc6_0033_cube_14` (low) cube_14 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0034_object_34` (low) Object_34 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.5, 'z': 0.5}
+- `45837ad91bc6_0035_cube_15` (low) cube_15 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0036_object_36` (low) Object_36 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.5, 'z': 0.25}
+- `45837ad91bc6_0037_cube_16` (low) cube_16 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0038_object_38` (low) Object_38 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.4375, 'y': 0.5, 'z': 11.8125}
+- `45837ad91bc6_0039_cube_17` (low) cube_17 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0040_object_40` (low) Object_40 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.4375, 'y': 1.875, 'z': 0.5625}
+- `45837ad91bc6_0041_cube_18` (low) cube_18 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0042_object_42` (low) Object_42 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.5, 'z': 0.5625}
+- `45837ad91bc6_0043_cube_19` (low) cube_19 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0044_object_44` (low) Object_44 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 4.875, 'y': 0.5, 'z': 0.25}
+- `45837ad91bc6_0045_cube_20` (low) cube_20 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0046_object_46` (low) Object_46 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.4375, 'y': 1.875, 'z': 0.5625}
+- `45837ad91bc6_0047_cube_21` (low) cube_21 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0048_object_48` (low) Object_48 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.4375, 'y': 0.5, 'z': 11.8125}
+- `45837ad91bc6_0049_cube_22` (low) cube_22 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0050_object_50` (low) Object_50 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.25, 'y': 0.5, 'z': 11.8125}
+- `45837ad91bc6_0051_cube_23` (low) cube_23 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0052_object_52` (low) Object_52 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.25, 'y': 0.5, 'z': 11.8125}
+- `45837ad91bc6_0053_cube_24` (low) cube_24 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0054_object_54` (low) Object_54 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.25, 'y': 0.5, 'z': 11.8125}
+- `45837ad91bc6_0055_cube_25` (low) cube_25 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`
+- `45837ad91bc6_0056_object_56` (low) Object_56 from `staged_assets_for_world_builder/desktop_beds_models/bed_frame_low_poly__blockbench.glb`, bounds={'x': 0.25, 'y': 0.5, 'z': 11.8125}
+- ... 31 more `bed_frame` prefabs in JSON.
+
+## bed
+
+- `fb494d269996_0007_bed_post_2` (high) BED_Post_2 from `staged_assets_for_world_builder/desktop_beds_models/black_wooden_bed_frames (1).glb`
+- `09273b35f740_0007_bed_post_2` (high) BED_Post_2 from `staged_assets_for_world_builder/desktop_beds_models/black_wooden_bed_frames.glb`
+- `bab83e9be5d2_0008_pollows_bed_pillow_material_0` (high) pollows_bed_pillow_material_0 from `staged_assets_for_world_builder/desktop_beds_models/victorian_bed (1).glb`, bounds={'x': 1.9262, 'y': 0.7445, 'z': 0.4972}
+- `32bfffc74ed9_0008_pollows_bed_pillow_material_0` (high) pollows_bed_pillow_material_0 from `staged_assets_for_world_builder/desktop_beds_models/victorian_bed.glb`, bounds={'x': 1.9262, 'y': 0.7445, 'z': 0.4972}
+- `38e15ade1489_0407_bed_022_1` (medium) BED_022_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0408_component_34_1` (medium) Component_34_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0409_component_32_1` (medium) Component_32_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0410_component_27_1` (medium) Component_27_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0411_component_29_1` (low) Component_29_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0412_mesh109` (low) Mesh109 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0413_mesh109_generic_4_0` (low) Mesh109_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 50.7588, 'y': 1458.5785, 'z': 50.7178}
+- `38e15ade1489_0414_component_25_1` (low) Component_25_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0415_mesh110` (low) Mesh110 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0416_mesh110_generic_4_0` (low) Mesh110_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 38.1006, 'y': 76.2, 'z': 25.3994}
+- `38e15ade1489_0417_component_27_2` (medium) Component_27_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0418_component_29_2` (low) Component_29_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0419_mesh111` (low) Mesh111 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0420_mesh111_generic_4_0` (low) Mesh111_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 50.7588, 'y': 1458.5785, 'z': 50.7178}
+- `38e15ade1489_0421_component_25_2` (low) Component_25_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0422_mesh112` (low) Mesh112 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0423_mesh112_generic_4_0` (low) Mesh112_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 38.1006, 'y': 76.2, 'z': 25.3994}
+- `38e15ade1489_0424_component_27_3` (medium) Component_27_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0425_component_29_3` (low) Component_29_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0426_mesh113` (low) Mesh113 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0427_mesh113_generic_4_0` (low) Mesh113_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 50.7588, 'y': 1458.5785, 'z': 50.7178}
+- `38e15ade1489_0428_component_25_3` (low) Component_25_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0429_mesh114` (low) Mesh114 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0430_mesh114_generic_4_0` (low) Mesh114_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 38.1001, 'y': 76.2, 'z': 25.3994}
+- `38e15ade1489_0431_component_27_4` (medium) Component_27_4 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0432_component_29_4` (low) Component_29_4 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0433_mesh115` (low) Mesh115 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0434_mesh115_generic_4_0` (low) Mesh115_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 50.7588, 'y': 1458.5785, 'z': 50.7178}
+- `38e15ade1489_0435_component_25_4` (low) Component_25_4 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0436_mesh116` (low) Mesh116 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0437_mesh116_generic_4_0` (low) Mesh116_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 38.1001, 'y': 76.2, 'z': 25.3994}
+- `38e15ade1489_0438_component_31_1` (low) Component_31_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0439_mesh117` (low) Mesh117 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0440_mesh117_generic_4_0` (low) Mesh117_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1904.9995, 'y': 723.9, 'z': 114.3008}
+- `38e15ade1489_0441_component_26_1` (low) Component_26_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0442_mesh118` (low) Mesh118 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0443_mesh118_generic_4_0` (low) Mesh118_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1904.9995, 'y': 304.8, 'z': 2057.4004}
+- `38e15ade1489_0444_component_30_1` (low) Component_30_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0445_mesh119` (low) Mesh119 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0446_mesh119_fabric_a04_brown_20cm_0` (low) Mesh119_Fabric_A04_Brown_20cm_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1904.9995, 'y': 914.4, 'z': 76.2002}
+- `38e15ade1489_0447_component_33_1` (low) Component_33_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0448_mesh120` (low) Mesh120 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0449_mesh120_generic_4_0` (low) Mesh120_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 609.6001, 'y': 304.8, 'z': 330.2002}
+- `38e15ade1489_0450_component_33_2` (low) Component_33_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0451_mesh121` (low) Mesh121 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0452_mesh121_generic_4_0` (low) Mesh121_Generic_4_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 609.6006, 'y': 304.8, 'z': 330.2002}
+- `93bec6dff391_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_beds_models/bed (1).glb`
+- `93bec6dff391_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_beds_models/bed (1).glb`
+- `93bec6dff391_0001_cama_fbx` (medium) Cama.fbx from `staged_assets_for_world_builder/desktop_beds_models/bed (1).glb`
+- `93bec6dff391_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_beds_models/bed (1).glb`
+- `93bec6dff391_0003_plane_001` (medium) Plane.001 from `staged_assets_for_world_builder/desktop_beds_models/bed (1).glb`
+- `93bec6dff391_0004_plane_001_material_0` (low) Plane.001_Material_0 from `staged_assets_for_world_builder/desktop_beds_models/bed (1).glb`, bounds={'x': 5.314, 'y': 10.8976, 'z': 6.6888}
+- `93bec6dff391_0005_plane_001_material_0` (low) Plane.001_Material_0 from `staged_assets_for_world_builder/desktop_beds_models/bed (1).glb`, bounds={'x': 5.4197, 'y': 9.2277, 'z': 6.4992}
+- `5dfb0c7fab2a_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_beds_models/bed (2).glb`
+- `5dfb0c7fab2a_0000_sketchfab_model` (low) Sketchfab_model from `staged_assets_for_world_builder/desktop_beds_models/bed (2).glb`
+- `5dfb0c7fab2a_0001_asset_fbx` (low) ASSET.fbx from `staged_assets_for_world_builder/desktop_beds_models/bed (2).glb`
+- ... 206 more `bed` prefabs in JSON.
+
+## couch
+
+- `96790c397aa4_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`
+- `96790c397aa4_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`
+- `96790c397aa4_0001_props_chair_sofa_obj_cleaner_materialmerger_gles` (medium) Props - Chair & Sofa.obj.cleaner.materialmerger.gles from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`
+- `96790c397aa4_0002_object_2` (low) Object_2 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 16.7141, 'y': 69.278, 'z': 24.7036}
+- `96790c397aa4_0003_object_3` (low) Object_3 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 36.0514, 'y': 36.0514, 'z': 25.7977}
+- `96790c397aa4_0004_object_4` (medium) Object_4 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 43.2711, 'y': 52.3413, 'z': 32.3874}
+- `96790c397aa4_0005_object_5` (low) Object_5 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 51.1843, 'y': 54.052, 'z': 28.1709}
+- `96790c397aa4_0006_object_6` (low) Object_6 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 6.3149, 'y': 6.3149, 'z': 9.2968}
+- `96790c397aa4_0007_object_7` (low) Object_7 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 29.2833, 'y': 35.5255, 'z': 7.7818}
+- `96790c397aa4_0008_object_8` (low) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 61.7303, 'y': 49.4585, 'z': 44.6487}
+- `96790c397aa4_0009_object_9` (low) Object_9 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 23.5418, 'y': 26.9449, 'z': 7.1463}
+- `96790c397aa4_0010_object_10` (low) Object_10 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 193.4378, 'y': 367.5367, 'z': 96.4624}
+- `96790c397aa4_0011_object_11` (low) Object_11 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 191.6041, 'y': 338.4897, 'z': 110.967}
+- `96790c397aa4_0012_object_12` (low) Object_12 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 208.3672, 'y': 390.5859, 'z': 29.2077}
+- `96790c397aa4_0013_object_13` (medium) Object_13 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 27.6629, 'y': 31.1483, 'z': 8.6252}
+- `96790c397aa4_0014_object_14` (medium) Object_14 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 34.0934, 'y': 87.0575, 'z': 12.2398}
+- `96790c397aa4_0015_object_15` (low) Object_15 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 222.5386, 'y': 537.7723, 'z': 145.7814}
+- `96790c397aa4_0016_object_16` (low) Object_16 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 212.1245, 'y': 203.0766, 'z': 91.1989}
+- `96790c397aa4_0017_object_17` (low) Object_17 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 106.9994, 'y': 7.5, 'z': 70.9994}
+- `96790c397aa4_0018_object_18` (low) Object_18 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 7.5, 'y': 24.9994, 'z': 74.9994}
+- `96790c397aa4_0019_object_19` (low) Object_19 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 195.5732, 'y': 175.6498, 'z': 70.9994}
+- `96790c397aa4_0020_object_20` (low) Object_20 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 146.1525, 'y': 451.4516, 'z': 44.2292}
+- `96790c397aa4_0021_object_21` (low) Object_21 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 44.4797, 'y': 44.4797, 'z': 80.8583}
+- `96790c397aa4_0022_object_22` (low) Object_22 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 35.0177, 'y': 39.4062, 'z': 50.0857}
+- `96790c397aa4_0023_object_23` (low) Object_23 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 1.9614, 'y': 29.3537, 'z': 2.6925}
+- `96790c397aa4_0024_object_24` (low) Object_24 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 49.3495, 'y': 49.3674, 'z': 32.8841}
+- `96790c397aa4_0025_object_25` (low) Object_25 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 51.1843, 'y': 54.052, 'z': 28.1709}
+- `96790c397aa4_0026_object_26` (low) Object_26 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 38.3333, 'y': 41.0926, 'z': 25.612}
+- `96790c397aa4_0027_object_27` (low) Object_27 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 100.7504, 'y': 65.2766, 'z': 70.4091}
+- `96790c397aa4_0028_object_28` (low) Object_28 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 99.0745, 'y': 102.7334, 'z': 48.4463}
+- `96790c397aa4_0029_object_29` (low) Object_29 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 67.8933, 'y': 65.2766, 'z': 19.4222}
+- `96790c397aa4_0030_object_30` (low) Object_30 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 38.7803, 'y': 52.1142, 'z': 26.8402}
+- `96790c397aa4_0031_object_31` (low) Object_31 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 43.1922, 'y': 49.324, 'z': 26.3741}
+- `96790c397aa4_0032_object_32` (low) Object_32 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 140.9115, 'y': 366.4484, 'z': 132.0159}
+- `96790c397aa4_0033_object_33` (low) Object_33 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 71.9997, 'y': 90.5, 'z': 40.9997}
+- `96790c397aa4_0034_object_34` (low) Object_34 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 44.0826, 'y': 43.9455, 'z': 27.8551}
+- `96790c397aa4_0035_object_35` (low) Object_35 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 41.6024, 'y': 44.3013, 'z': 27.2015}
+- `96790c397aa4_0036_object_36` (low) Object_36 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 50.4989, 'y': 49.7766, 'z': 32.1729}
+- `96790c397aa4_0037_object_37` (low) Object_37 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 45.715, 'y': 47.0994, 'z': 22.4775}
+- `96790c397aa4_0038_object_38` (low) Object_38 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 215.0733, 'y': 200.0, 'z': 45.3243}
+- `96790c397aa4_0039_object_39` (low) Object_39 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0040_object_40` (low) Object_40 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0041_object_41` (low) Object_41 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0042_object_42` (low) Object_42 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0043_object_43` (low) Object_43 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0044_object_44` (low) Object_44 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0045_object_45` (low) Object_45 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 45.9997, 'y': 50.5, 'z': 40.9997}
+- `96790c397aa4_0046_object_46` (low) Object_46 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 9.1066, 'y': 5.8414, 'z': 3.4795}
+- `96790c397aa4_0047_object_47` (low) Object_47 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 8.3268, 'y': 7.1934, 'z': 3.6723}
+- `96790c397aa4_0048_object_48` (low) Object_48 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 23.5965, 'y': 15.2404, 'z': 7.9328}
+- `96790c397aa4_0049_object_49` (low) Object_49 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 16.8658, 'y': 12.8786, 'z': 6.7899}
+- `96790c397aa4_0050_object_50` (low) Object_50 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 7.8898, 'y': 14.3438, 'z': 6.9163}
+- `96790c397aa4_0051_object_51` (low) Object_51 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 21.482, 'y': 32.1143, 'z': 8.9538}
+- `96790c397aa4_0052_object_52` (low) Object_52 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 38.2561, 'y': 175.0028, 'z': 54.3672}
+- `96790c397aa4_0053_object_53` (low) Object_53 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 38.2561, 'y': 118.7346, 'z': 7.3406}
+- `96790c397aa4_0054_object_54` (low) Object_54 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 72.9994, 'y': 418.3463, 'z': 74.742}
+- `96790c397aa4_0055_object_55` (low) Object_55 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 46.9994, 'y': 9.5, 'z': 41.9994}
+- `96790c397aa4_0056_object_56` (low) Object_56 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 46.9994, 'y': 9.5, 'z': 41.9994}
+- `96790c397aa4_0057_object_57` (low) Object_57 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 72.9994, 'y': 9.5, 'z': 41.9994}
+- `96790c397aa4_0058_object_58` (low) Object_58 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 46.9994, 'y': 9.5, 'z': 41.9994}
+- ... 228 more `couch` prefabs in JSON.
+
+## chair
+
+- `6ec16398846f_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`
+- `6ec16398846f_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`
+- `6ec16398846f_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`
+- `6ec16398846f_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`
+- `6ec16398846f_0003_sm_sandalye_2_0` (low) SM_Sandalye_2_0 from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`
+- `6ec16398846f_0004_object_4` (low) Object_4 from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`, bounds={'x': 0.8729, 'y': 0.781, 'z': 1.324}
+- `6ec16398846f_0005_sm_sandalye_2_001_1` (low) SM_Sandalye_2.001_1 from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`
+- `6ec16398846f_0006_object_6` (low) Object_6 from `staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb`, bounds={'x': 0.8729, 'y': 0.781, 'z': 1.324}
+- `96790c397aa4_0001_props_chair_sofa_obj_cleaner_materialmerger_gles` (medium) Props - Chair & Sofa.obj.cleaner.materialmerger.gles from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`
+- `96790c397aa4_0002_object_2` (low) Object_2 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 16.7141, 'y': 69.278, 'z': 24.7036}
+- `96790c397aa4_0003_object_3` (low) Object_3 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 36.0514, 'y': 36.0514, 'z': 25.7977}
+- `96790c397aa4_0004_object_4` (medium) Object_4 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 43.2711, 'y': 52.3413, 'z': 32.3874}
+- `96790c397aa4_0005_object_5` (low) Object_5 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 51.1843, 'y': 54.052, 'z': 28.1709}
+- `96790c397aa4_0006_object_6` (low) Object_6 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 6.3149, 'y': 6.3149, 'z': 9.2968}
+- `96790c397aa4_0007_object_7` (low) Object_7 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 29.2833, 'y': 35.5255, 'z': 7.7818}
+- `96790c397aa4_0008_object_8` (low) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 61.7303, 'y': 49.4585, 'z': 44.6487}
+- `96790c397aa4_0009_object_9` (low) Object_9 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 23.5418, 'y': 26.9449, 'z': 7.1463}
+- `96790c397aa4_0010_object_10` (low) Object_10 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 193.4378, 'y': 367.5367, 'z': 96.4624}
+- `96790c397aa4_0011_object_11` (low) Object_11 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 191.6041, 'y': 338.4897, 'z': 110.967}
+- `96790c397aa4_0012_object_12` (low) Object_12 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 208.3672, 'y': 390.5859, 'z': 29.2077}
+- `96790c397aa4_0013_object_13` (medium) Object_13 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 27.6629, 'y': 31.1483, 'z': 8.6252}
+- `96790c397aa4_0014_object_14` (medium) Object_14 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 34.0934, 'y': 87.0575, 'z': 12.2398}
+- `96790c397aa4_0015_object_15` (low) Object_15 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 222.5386, 'y': 537.7723, 'z': 145.7814}
+- `96790c397aa4_0016_object_16` (low) Object_16 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 212.1245, 'y': 203.0766, 'z': 91.1989}
+- `96790c397aa4_0017_object_17` (low) Object_17 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 106.9994, 'y': 7.5, 'z': 70.9994}
+- `96790c397aa4_0018_object_18` (low) Object_18 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 7.5, 'y': 24.9994, 'z': 74.9994}
+- `96790c397aa4_0019_object_19` (low) Object_19 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 195.5732, 'y': 175.6498, 'z': 70.9994}
+- `96790c397aa4_0020_object_20` (low) Object_20 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 146.1525, 'y': 451.4516, 'z': 44.2292}
+- `96790c397aa4_0021_object_21` (low) Object_21 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 44.4797, 'y': 44.4797, 'z': 80.8583}
+- `96790c397aa4_0022_object_22` (low) Object_22 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 35.0177, 'y': 39.4062, 'z': 50.0857}
+- `96790c397aa4_0023_object_23` (low) Object_23 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 1.9614, 'y': 29.3537, 'z': 2.6925}
+- `96790c397aa4_0024_object_24` (low) Object_24 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 49.3495, 'y': 49.3674, 'z': 32.8841}
+- `96790c397aa4_0025_object_25` (low) Object_25 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 51.1843, 'y': 54.052, 'z': 28.1709}
+- `96790c397aa4_0026_object_26` (low) Object_26 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 38.3333, 'y': 41.0926, 'z': 25.612}
+- `96790c397aa4_0027_object_27` (low) Object_27 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 100.7504, 'y': 65.2766, 'z': 70.4091}
+- `96790c397aa4_0028_object_28` (low) Object_28 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 99.0745, 'y': 102.7334, 'z': 48.4463}
+- `96790c397aa4_0029_object_29` (low) Object_29 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 67.8933, 'y': 65.2766, 'z': 19.4222}
+- `96790c397aa4_0030_object_30` (low) Object_30 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 38.7803, 'y': 52.1142, 'z': 26.8402}
+- `96790c397aa4_0031_object_31` (low) Object_31 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 43.1922, 'y': 49.324, 'z': 26.3741}
+- `96790c397aa4_0032_object_32` (low) Object_32 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 140.9115, 'y': 366.4484, 'z': 132.0159}
+- `96790c397aa4_0033_object_33` (low) Object_33 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 71.9997, 'y': 90.5, 'z': 40.9997}
+- `96790c397aa4_0034_object_34` (low) Object_34 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 44.0826, 'y': 43.9455, 'z': 27.8551}
+- `96790c397aa4_0035_object_35` (low) Object_35 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 41.6024, 'y': 44.3013, 'z': 27.2015}
+- `96790c397aa4_0036_object_36` (low) Object_36 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 50.4989, 'y': 49.7766, 'z': 32.1729}
+- `96790c397aa4_0037_object_37` (low) Object_37 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 45.715, 'y': 47.0994, 'z': 22.4775}
+- `96790c397aa4_0038_object_38` (low) Object_38 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 215.0733, 'y': 200.0, 'z': 45.3243}
+- `96790c397aa4_0039_object_39` (low) Object_39 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0040_object_40` (low) Object_40 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0041_object_41` (low) Object_41 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0042_object_42` (low) Object_42 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0043_object_43` (low) Object_43 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0044_object_44` (low) Object_44 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 82.9994, 'y': 7.5, 'z': 9.9994}
+- `96790c397aa4_0045_object_45` (low) Object_45 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 45.9997, 'y': 50.5, 'z': 40.9997}
+- `96790c397aa4_0046_object_46` (low) Object_46 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 9.1066, 'y': 5.8414, 'z': 3.4795}
+- `96790c397aa4_0047_object_47` (low) Object_47 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 8.3268, 'y': 7.1934, 'z': 3.6723}
+- `96790c397aa4_0048_object_48` (low) Object_48 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 23.5965, 'y': 15.2404, 'z': 7.9328}
+- `96790c397aa4_0049_object_49` (low) Object_49 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 16.8658, 'y': 12.8786, 'z': 6.7899}
+- `96790c397aa4_0050_object_50` (low) Object_50 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 7.8898, 'y': 14.3438, 'z': 6.9163}
+- `96790c397aa4_0051_object_51` (low) Object_51 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 21.482, 'y': 32.1143, 'z': 8.9538}
+- `96790c397aa4_0052_object_52` (low) Object_52 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 38.2561, 'y': 175.0028, 'z': 54.3672}
+- ... 194 more `chair` prefabs in JSON.
+
+## bookshelf
+
+- `20e64ea7e322_0003_rak_buku_handle` (high) Rak_Buku_Handle from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0004_rak_buku_handle_rak_buku_handle_0` (high) Rak_Buku_Handle_Rak_Buku_Handle_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`, bounds={'x': 0.0217, 'y': 0.0463, 'z': 0.9979}
+- `20e64ea7e322_0005_rak_buku_atas` (high) Rak_Buku_Atas from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0006_rak_buku_atas_rak_buku_atas_0` (high) Rak_Buku_Atas_Rak_Buku_Atas_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`, bounds={'x': 2.0, 'y': 0.42, 'z': 1.8}
+- `20e64ea7e322_0007_rak_buku_bawah` (high) Rak_Buku_Bawah from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0008_rak_buku_bawah_rak_buku_bawah_0` (high) Rak_Buku_Bawah_Rak_Buku_Bawah_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`, bounds={'x': 0.57, 'y': 0.38, 'z': 1.757}
+- `4cd9700123a4_0003_rak_buku_handle` (high) Rak_Buku_Handle from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0004_rak_buku_handle_rak_buku_handle_0` (high) Rak_Buku_Handle_Rak_Buku_Handle_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`, bounds={'x': 0.0217, 'y': 0.0463, 'z': 0.9979}
+- `4cd9700123a4_0005_rak_buku_atas` (high) Rak_Buku_Atas from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0006_rak_buku_atas_rak_buku_atas_0` (high) Rak_Buku_Atas_Rak_Buku_Atas_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`, bounds={'x': 2.0, 'y': 0.42, 'z': 1.8}
+- `4cd9700123a4_0007_rak_buku_bawah` (high) Rak_Buku_Bawah from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0008_rak_buku_bawah_rak_buku_bawah_0` (high) Rak_Buku_Bawah_Rak_Buku_Bawah_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`, bounds={'x': 0.57, 'y': 0.38, 'z': 1.757}
+- `20e64ea7e322_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0001_0bfba994779f40eabce06e51be72178d_fbx` (medium) 0bfba994779f40eabce06e51be72178d.fbx from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `4cd9700123a4_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0001_0bfba994779f40eabce06e51be72178d_fbx` (medium) 0bfba994779f40eabce06e51be72178d.fbx from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `450c95266c78_0004_shelf` (medium) Shelf from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`
+- `450c95266c78_0005_shelf_0` (medium) Shelf_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 0.6413, 'y': 0.0508, 'z': 0.0361}
+- `450c95266c78_0012_shelf_support_002` (medium) shelf support.002 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`
+- `450c95266c78_0013_shelf_support_002_0` (medium) shelf support.002_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 0.085, 'y': 0.0508, 'z': 0.0346}
+- `450c95266c78_0014_shelf_support_000` (medium) shelf support.000 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`
+- `450c95266c78_0015_shelf_support_000_0` (medium) shelf support.000_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 0.085, 'y': 0.0508, 'z': 0.0346}
+- `450c95266c78_0016_shelf_support_001` (medium) shelf support.001 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`
+- `450c95266c78_0017_shelf_support_001_0` (medium) shelf support.001_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 0.085, 'y': 0.0508, 'z': 0.0346}
+- `450c95266c78_0018_shelf_support_003` (medium) shelf support.003 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`
+- `450c95266c78_0019_shelf_support_003_0` (medium) shelf support.003_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 0.085, 'y': 0.0508, 'z': 0.0346}
+
+## book
+
+- `20e64ea7e322_0003_rak_buku_handle` (high) Rak_Buku_Handle from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0004_rak_buku_handle_rak_buku_handle_0` (high) Rak_Buku_Handle_Rak_Buku_Handle_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`, bounds={'x': 0.0217, 'y': 0.0463, 'z': 0.9979}
+- `20e64ea7e322_0005_rak_buku_atas` (high) Rak_Buku_Atas from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0006_rak_buku_atas_rak_buku_atas_0` (high) Rak_Buku_Atas_Rak_Buku_Atas_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`, bounds={'x': 2.0, 'y': 0.42, 'z': 1.8}
+- `20e64ea7e322_0007_rak_buku_bawah` (high) Rak_Buku_Bawah from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0008_rak_buku_bawah_rak_buku_bawah_0` (high) Rak_Buku_Bawah_Rak_Buku_Bawah_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`, bounds={'x': 0.57, 'y': 0.38, 'z': 1.757}
+- `4cd9700123a4_0003_rak_buku_handle` (high) Rak_Buku_Handle from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0004_rak_buku_handle_rak_buku_handle_0` (high) Rak_Buku_Handle_Rak_Buku_Handle_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`, bounds={'x': 0.0217, 'y': 0.0463, 'z': 0.9979}
+- `4cd9700123a4_0005_rak_buku_atas` (high) Rak_Buku_Atas from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0006_rak_buku_atas_rak_buku_atas_0` (high) Rak_Buku_Atas_Rak_Buku_Atas_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`, bounds={'x': 2.0, 'y': 0.42, 'z': 1.8}
+- `4cd9700123a4_0007_rak_buku_bawah` (high) Rak_Buku_Bawah from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0008_rak_buku_bawah_rak_buku_bawah_0` (high) Rak_Buku_Bawah_Rak_Buku_Bawah_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`, bounds={'x': 0.57, 'y': 0.38, 'z': 1.757}
+- `e0b30503faeb_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`
+- `e0b30503faeb_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`
+- `e0b30503faeb_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`
+- `e0b30503faeb_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`
+- `e0b30503faeb_0003_armature_32` (medium) Armature_32 from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`
+- `e0b30503faeb_0004_gltf_created_0` (medium) GLTF_created_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`
+- `e0b30503faeb_0038_object_38` (medium) Object_38 from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`, bounds={'x': 2.8731, 'y': 0.3235, 'z': 1.8}
+- `e0b30503faeb_0039_object_39` (low) Object_39 from `staged_assets_for_world_builder/desktop_3d_model_4/book (1).glb`, bounds={'x': 2.9978, 'y': 0.0819, 'z': 1.8545}
+- `d07bf7a8cfb5_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`
+- `d07bf7a8cfb5_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`
+- `d07bf7a8cfb5_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`
+- `d07bf7a8cfb5_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`
+- `d07bf7a8cfb5_0003_armature_32` (medium) Armature_32 from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`
+- `d07bf7a8cfb5_0004_gltf_created_0` (medium) GLTF_created_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`
+- `d07bf7a8cfb5_0038_object_38` (medium) Object_38 from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`, bounds={'x': 2.8731, 'y': 0.3235, 'z': 1.8}
+- `d07bf7a8cfb5_0039_object_39` (low) Object_39 from `staged_assets_for_world_builder/desktop_3d_model_4/book (2).glb`, bounds={'x': 2.9978, 'y': 0.0819, 'z': 1.8545}
+- `7c3019d77875_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/book.glb`
+- `7c3019d77875_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/book.glb`
+- `7c3019d77875_0001_root` (medium) Root from `staged_assets_for_world_builder/desktop_3d_model_4/book.glb`
+- `7c3019d77875_0002_architexture` (medium) Architexture from `staged_assets_for_world_builder/desktop_3d_model_4/book.glb`
+- `7c3019d77875_0003_architexture_0` (low) Architexture_0 from `staged_assets_for_world_builder/desktop_3d_model_4/book.glb`, bounds={'x': 0.7338, 'y': 1.0, 'z': 0.0904}
+- `7c3019d77875_0004_architexture_1` (low) Architexture_1 from `staged_assets_for_world_builder/desktop_3d_model_4/book.glb`, bounds={'x': 0.7082, 'y': 1.0, 'z': 0.0674}
+- `20e64ea7e322_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0001_0bfba994779f40eabce06e51be72178d_fbx` (medium) 0bfba994779f40eabce06e51be72178d.fbx from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `20e64ea7e322_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf (1).glb`
+- `4cd9700123a4_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0001_0bfba994779f40eabce06e51be72178d_fbx` (medium) 0bfba994779f40eabce06e51be72178d.fbx from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `4cd9700123a4_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_model_4/book_shelf.glb`
+- `96790c397aa4_0013_object_13` (medium) Object_13 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 27.6629, 'y': 31.1483, 'z': 8.6252}
+- `96790c397aa4_0014_object_14` (medium) Object_14 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (1).glb`, bounds={'x': 34.0934, 'y': 87.0575, 'z': 12.2398}
+- `2faf56e3eb49_0013_object_13` (medium) Object_13 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (2).glb`, bounds={'x': 27.6629, 'y': 31.1483, 'z': 8.6252}
+- `2faf56e3eb49_0014_object_14` (medium) Object_14 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props (2).glb`, bounds={'x': 34.0934, 'y': 87.0575, 'z': 12.2398}
+- `f97bf672a7c6_0013_object_13` (medium) Object_13 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props.glb`, bounds={'x': 27.6629, 'y': 31.1483, 'z': 8.6252}
+- `f97bf672a7c6_0014_object_14` (medium) Object_14 from `staged_assets_for_world_builder/desktop_3d_model_3/living_room_-_furniture_chairs_sofa_and_props.glb`, bounds={'x': 34.0934, 'y': 87.0575, 'z': 12.2398}
+
+## table
+
+- `38e15ade1489_0200_outdoor_table_and_chairs_2_1` (medium) outdoor_table_and_chairs_2_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0201_component_1_1` (low) Component_1_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0202_mesh54` (low) Mesh54 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0203_mesh54_gatm28_0` (low) Mesh54_GATM28_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1534.0, 'y': 729.9999, 'z': 1482.0}
+- `38e15ade1489_0204_g_22366t1` (medium) G_22366T1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0205_skp879c1` (medium) skp879C1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0206_obj_000001_1` (low) Obj_000001_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0207_mesh55` (low) Mesh55 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0208_mesh55_5_0` (low) Mesh55__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.5576, 'y': 6.2843, 'z': 18.5581}
+- `38e15ade1489_0209_obj_000002_1` (low) Obj_000002_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0210_mesh56` (low) Mesh56 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0211_mesh56_gatm28_0` (low) Mesh56_GATM28_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 721.7402, 'y': 1000.6398, 'z': 693.7104}
+- `38e15ade1489_0212_obj_000003_1` (low) Obj_000003_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0213_mesh57` (low) Mesh57 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0214_mesh57_gatm28_0` (low) Mesh57_GATM28_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 714.4453, 'y': 632.8472, 'z': 694.0747}
+- `38e15ade1489_0215_obj_000004_1` (low) Obj_000004_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0216_mesh58` (low) Mesh58 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0217_mesh58_5_0` (low) Mesh58__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.5576, 'y': 6.3359, 'z': 18.5581}
+- `38e15ade1489_0218_obj_000005_1` (low) Obj_000005_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0219_mesh59` (low) Mesh59 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0220_mesh59_5_0` (low) Mesh59__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.5576, 'y': 6.2533, 'z': 18.5576}
+- `38e15ade1489_0221_obj_000006_1` (low) Obj_000006_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0222_mesh60` (low) Mesh60 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0223_mesh60_5_0` (low) Mesh60__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.5576, 'y': 6.2838, 'z': 18.5581}
+- `38e15ade1489_0224_obj_000007_1` (low) Obj_000007_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0225_mesh61` (low) Mesh61 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0226_mesh61_5_0` (low) Mesh61__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 8.4746, 'y': 19.1917, 'z': 17.2544}
+- `38e15ade1489_0227_obj_000008_1` (low) Obj_000008_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0228_mesh62` (low) Mesh62 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0229_mesh62_5_0` (low) Mesh62__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 7.8809, 'y': 20.2021, 'z': 17.083}
+- `38e15ade1489_0230_obj_000009_1` (low) Obj_000009_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0231_mesh63` (low) Mesh63 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0232_mesh63_5_0` (low) Mesh63__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 7.6006, 'y': 20.202, 'z': 17.2246}
+- `38e15ade1489_0233_obj_000010_1` (low) Obj_000010_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0234_mesh64` (low) Mesh64 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0235_mesh64_5_0` (low) Mesh64__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 8.6113, 'y': 19.1922, 'z': 17.1143}
+- `38e15ade1489_0236_obj_000011_1` (low) Obj_000011_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0237_mesh65` (low) Mesh65 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0238_mesh65_5_0` (low) Mesh65__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 242.791, 'y': 558.6474, 'z': 463.7915}
+- `38e15ade1489_0239_obj_000012_1` (low) Obj_000012_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0240_mesh66` (low) Mesh66 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0241_mesh66_5_0` (low) Mesh66__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 552.4072, 'y': 63.9515, 'z': 568.3608}
+- `38e15ade1489_0242_g_22366t2` (medium) G_22366T2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0243_skp879c2` (medium) skp879C2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0244_obj_000001_2` (low) Obj_000001_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0245_mesh67` (low) Mesh67 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0246_mesh67_5_0` (low) Mesh67__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.5986, 'y': 6.2843, 'z': 18.5986}
+- `38e15ade1489_0247_obj_000002_2` (low) Obj_000002_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0248_mesh68` (low) Mesh68 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0249_mesh68_gatm28_0` (low) Mesh68_GATM28_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 584.0391, 'y': 1000.6398, 'z': 564.1665}
+- `38e15ade1489_0250_obj_000003_2` (low) Obj_000003_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0251_mesh69` (low) Mesh69 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0252_mesh69_gatm28_0` (low) Mesh69_GATM28_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 590.9258, 'y': 632.8472, 'z': 606.5425}
+- `38e15ade1489_0253_obj_000004_2` (low) Obj_000004_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0254_mesh70` (low) Mesh70 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0255_mesh70_5_0` (low) Mesh70__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.5986, 'y': 6.3359, 'z': 18.5986}
+- `38e15ade1489_0256_obj_000005_2` (low) Obj_000005_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0257_mesh71` (low) Mesh71 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0258_mesh71_5_0` (low) Mesh71__5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.5986, 'y': 6.2534, 'z': 18.5986}
+- `38e15ade1489_0259_obj_000006_2` (low) Obj_000006_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- ... 147 more `table` prefabs in JSON.
+
+## desk
+
+- `4759e96a17a9_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0001_383fb428c876414d8cf34d68befd0f27_fbx` (medium) 383fb428c876414d8cf34d68befd0f27.fbx from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0003_voyager_desk_computer` (medium) Voyager Desk Computer from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0004_voyager_desk_computer_computer_0` (medium) Voyager Desk Computer_computer_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`, bounds={'x': 0.3458, 'y': 0.3175, 'z': 0.2773}
+- `4759e96a17a9_0005_voyager_desk_computer_screen_0` (medium) Voyager Desk Computer_screen_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`, bounds={'x': 0.0322, 'y': 0.2784, 'z': 0.1364}
+- `d6f726d67e16_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0001_383fb428c876414d8cf34d68befd0f27_fbx` (medium) 383fb428c876414d8cf34d68befd0f27.fbx from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0003_voyager_desk_computer` (medium) Voyager Desk Computer from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0004_voyager_desk_computer_computer_0` (medium) Voyager Desk Computer_computer_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`, bounds={'x': 0.3458, 'y': 0.3175, 'z': 0.2773}
+- `d6f726d67e16_0005_voyager_desk_computer_screen_0` (medium) Voyager Desk Computer_screen_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`, bounds={'x': 0.0322, 'y': 0.2784, 'z': 0.1364}
+
+## sink
+
+- `bbc5101ee44c_0061_plug_sink_a_28` (medium) Plug_Sink_A_28 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils (1).glb`
+- `bbc5101ee44c_0062_object_62` (low) Object_62 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils (1).glb`, bounds={'x': 0.0682, 'y': 0.0285, 'z': 0.0718}
+- `b96272c80fb1_0061_plug_sink_a_28` (medium) Plug_Sink_A_28 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils.glb`
+- `b96272c80fb1_0062_object_62` (low) Object_62 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils.glb`, bounds={'x': 0.0682, 'y': 0.0285, 'z': 0.0718}
+
+## toilet
+
+- `38e15ade1489_0624_toilet_1_1` (medium) toilet_1_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0625_group43` (low) Group43 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0626_mesh159` (low) Mesh159 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0627_mesh159_color_i01_0` (low) Mesh159_Color_I01_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 485.3628, 'y': 593.9163, 'z': 16.1289}
+- `38e15ade1489_0628_group44` (low) Group44 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0629_mesh160` (low) Mesh160 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0630_mesh160_frontcolor_0` (low) Mesh160_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 238.1465, 'y': 185.4835, 'z': 344.0322}
+- `38e15ade1489_0631_mesh161` (low) Mesh161 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0632_mesh161_frontcolor_0` (low) Mesh161_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 640.4155, 'y': 777.1653, 'z': 893.9971}
+- `38e15ade1489_0633_toilet_2_1` (medium) toilet_2_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0634_group45` (low) Group45 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0635_mesh162` (low) Mesh162 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0636_mesh162_frontcolor_0` (low) Mesh162_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 299.0723, 'y': 100.0, 'z': 387.5869}
+- `38e15ade1489_0637_group46` (medium) Group46 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0638_group47` (low) Group47 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0639_mesh163` (low) Mesh163 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0640_mesh163_color_003_2_0` (low) Mesh163__Color_003_2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 161.6001, 'y': 241.9999, 'z': 31.2002}
+- `38e15ade1489_0641_group48` (low) Group48 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0642_mesh164` (low) Mesh164 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0643_mesh164_color_003_2_0` (low) Mesh164__Color_003_2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 40.5098, 'y': 33.951, 'z': 20.7998}
+- `38e15ade1489_0644_group49` (medium) Group49 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0645_group50` (medium) Group50 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0646_group51` (medium) Group51 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0647_group52` (medium) Group52 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0648_group53` (medium) Group53 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0649_group54` (low) Group54 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0650_mesh165` (low) Mesh165 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0651_mesh165_color_007_0` (low) Mesh165_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 5.0, 'y': 66.0, 'z': 171.5996}
+- `38e15ade1489_0652_171_1` (low) _____171_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0653_mesh166` (low) Mesh166 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0654_mesh166_color_007_0` (low) Mesh166_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 84.9893, 'y': 66.2382, 'z': 2.5996}
+- `38e15ade1489_0655_171_2` (low) _____171_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0656_mesh167` (low) Mesh167 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0657_mesh167_color_007_0` (low) Mesh167_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 84.9893, 'y': 66.2382, 'z': 2.5996}
+- `38e15ade1489_0658_group55` (low) Group55 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0659_mesh168` (low) Mesh168 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0660_mesh168_color_007_0` (low) Mesh168_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 13.8848, 'y': 13.8849, 'z': 166.4004}
+- `38e15ade1489_0661_group56` (low) Group56 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0662_mesh169` (low) Mesh169 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0663_mesh169_color_007_0` (low) Mesh169_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 125.0562, 'y': 27.1336, 'z': 166.4004}
+- `38e15ade1489_0664_group57` (low) Group57 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0665_mesh170` (low) Mesh170 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0666_mesh170_frontcolor_0` (low) Mesh170_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 120.0, 'y': 120.0, 'z': 149.5}
+- `fca3ad56d799_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`
+- `fca3ad56d799_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`
+- `bd8c2e258b7a_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`
+- `bd8c2e258b7a_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`
+- `fca3ad56d799_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`
+- `bd8c2e258b7a_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`
+- `fca3ad56d799_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`
+- `bd8c2e258b7a_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`
+- `fca3ad56d799_0003_armature_9` (medium) Armature_9 from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`
+- `bd8c2e258b7a_0003_armature_9` (medium) Armature_9 from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`
+- `fca3ad56d799_0004_gltf_created_0` (medium) GLTF_created_0 from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`
+- `bd8c2e258b7a_0004_gltf_created_0` (medium) GLTF_created_0 from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`
+- `fca3ad56d799_0007_object_7` (medium) Object_7 from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`, bounds={'x': 0.2803, 'y': 0.5931, 'z': 0.458}
+- `bd8c2e258b7a_0007_object_7` (medium) Object_7 from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`, bounds={'x': 0.2803, 'y': 0.5931, 'z': 0.458}
+- `fca3ad56d799_0009_object_9` (medium) Object_9 from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`, bounds={'x': 0.2803, 'y': 0.0164, 'z': 0.3252}
+- `bd8c2e258b7a_0009_object_9` (medium) Object_9 from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Rigged Toilet/toilet_002_rigged.glb`, bounds={'x': 0.2803, 'y': 0.0164, 'z': 0.3252}
+- `fca3ad56d799_0011_object_11` (medium) Object_11 from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb`, bounds={'x': 0.028, 'y': 0.0677, 'z': 0.028}
+- ... 3 more `toilet` prefabs in JSON.
+
+## shower
+
+- `38e15ade1489_0597_element_t_built_in_shower_mixer_w_handshower_sprinkler_head1` (medium) Element_T_Built_in_Shower_Mixer_w_Handshower___Sprinkler_Head1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0598_g_5a2962_dwg1` (medium) G_5a2962_dwg1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0599_mesh153` (medium) Mesh153 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0600_mesh153_frontcolor_0` (low) Mesh153_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 460.8013, 'y': 1352.9323, 'z': 489.4133}
+- `38e15ade1489_0601_mesh153_color_003_1_0` (low) Mesh153__Color_003_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 451.5161, 'y': 123.047, 'z': 116.25}
+- `38e15ade1489_0602_shower_drain1` (medium) Shower_Drain1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0603_ske10_1` (medium) ske10_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0604_group38` (medium) Group38 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0605_mesh154` (medium) Mesh154 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0606_mesh154_color_009_1_0` (low) Mesh154__Color_009_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 95.25, 'y': 3.175, 'z': 82.55}
+- `38e15ade1489_0607_mesh154_frontcolor_0` (low) Mesh154_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 6.0137, 'y': 0.0, 'z': 6.0139}
+- `38e15ade1489_0608_mesh154_metal_corrogated_shiny_0` (low) Mesh154_Metal_Corrogated_Shiny_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 101.5996, 'y': 3.175, 'z': 101.5999}
+- `38e15ade1489_0609_mesh154_metal_brushed_0` (low) Mesh154_Metal_Brushed_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 94.8174, 'y': 3.175, 'z': 5.9172}
+
+## bathroom_fixture
+
+- `38e15ade1489_0597_element_t_built_in_shower_mixer_w_handshower_sprinkler_head1` (medium) Element_T_Built_in_Shower_Mixer_w_Handshower___Sprinkler_Head1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0598_g_5a2962_dwg1` (medium) G_5a2962_dwg1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0599_mesh153` (medium) Mesh153 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0600_mesh153_frontcolor_0` (low) Mesh153_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 460.8013, 'y': 1352.9323, 'z': 489.4133}
+- `38e15ade1489_0601_mesh153_color_003_1_0` (low) Mesh153__Color_003_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 451.5161, 'y': 123.047, 'z': 116.25}
+- `38e15ade1489_0602_shower_drain1` (medium) Shower_Drain1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0603_ske10_1` (medium) ske10_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0604_group38` (medium) Group38 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0605_mesh154` (medium) Mesh154 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0606_mesh154_color_009_1_0` (low) Mesh154__Color_009_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 95.25, 'y': 3.175, 'z': 82.55}
+- `38e15ade1489_0607_mesh154_frontcolor_0` (low) Mesh154_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 6.0137, 'y': 0.0, 'z': 6.0139}
+- `38e15ade1489_0608_mesh154_metal_corrogated_shiny_0` (low) Mesh154_Metal_Corrogated_Shiny_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 101.5996, 'y': 3.175, 'z': 101.5999}
+- `38e15ade1489_0609_mesh154_metal_brushed_0` (low) Mesh154_Metal_Brushed_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 94.8174, 'y': 3.175, 'z': 5.9172}
+- `38e15ade1489_0624_toilet_1_1` (medium) toilet_1_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0625_group43` (low) Group43 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0626_mesh159` (low) Mesh159 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0627_mesh159_color_i01_0` (low) Mesh159_Color_I01_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 485.3628, 'y': 593.9163, 'z': 16.1289}
+- `38e15ade1489_0628_group44` (low) Group44 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0629_mesh160` (low) Mesh160 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0630_mesh160_frontcolor_0` (low) Mesh160_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 238.1465, 'y': 185.4835, 'z': 344.0322}
+- `38e15ade1489_0631_mesh161` (low) Mesh161 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0632_mesh161_frontcolor_0` (low) Mesh161_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 640.4155, 'y': 777.1653, 'z': 893.9971}
+- `38e15ade1489_0633_toilet_2_1` (medium) toilet_2_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0634_group45` (low) Group45 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0635_mesh162` (low) Mesh162 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0636_mesh162_frontcolor_0` (low) Mesh162_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 299.0723, 'y': 100.0, 'z': 387.5869}
+- `38e15ade1489_0637_group46` (medium) Group46 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0638_group47` (low) Group47 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0639_mesh163` (low) Mesh163 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0640_mesh163_color_003_2_0` (low) Mesh163__Color_003_2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 161.6001, 'y': 241.9999, 'z': 31.2002}
+- `38e15ade1489_0641_group48` (low) Group48 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0642_mesh164` (low) Mesh164 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0643_mesh164_color_003_2_0` (low) Mesh164__Color_003_2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 40.5098, 'y': 33.951, 'z': 20.7998}
+- `38e15ade1489_0644_group49` (medium) Group49 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0645_group50` (medium) Group50 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0646_group51` (medium) Group51 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0647_group52` (medium) Group52 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0648_group53` (medium) Group53 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0649_group54` (low) Group54 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0650_mesh165` (low) Mesh165 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0651_mesh165_color_007_0` (low) Mesh165_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 5.0, 'y': 66.0, 'z': 171.5996}
+- `38e15ade1489_0652_171_1` (low) _____171_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0653_mesh166` (low) Mesh166 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0654_mesh166_color_007_0` (low) Mesh166_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 84.9893, 'y': 66.2382, 'z': 2.5996}
+- `38e15ade1489_0655_171_2` (low) _____171_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0656_mesh167` (low) Mesh167 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0657_mesh167_color_007_0` (low) Mesh167_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 84.9893, 'y': 66.2382, 'z': 2.5996}
+- `38e15ade1489_0658_group55` (low) Group55 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0659_mesh168` (low) Mesh168 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0660_mesh168_color_007_0` (low) Mesh168_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 13.8848, 'y': 13.8849, 'z': 166.4004}
+- `38e15ade1489_0661_group56` (low) Group56 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0662_mesh169` (low) Mesh169 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0663_mesh169_color_007_0` (low) Mesh169_Color_007_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 125.0562, 'y': 27.1336, 'z': 166.4004}
+- `38e15ade1489_0664_group57` (low) Group57 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0665_mesh170` (low) Mesh170 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0666_mesh170_frontcolor_0` (low) Mesh170_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 120.0, 'y': 120.0, 'z': 149.5}
+- `bbc5101ee44c_0061_plug_sink_a_28` (medium) Plug_Sink_A_28 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils (1).glb`
+- `bbc5101ee44c_0062_object_62` (low) Object_62 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils (1).glb`, bounds={'x': 0.0682, 'y': 0.0285, 'z': 0.0718}
+- `b96272c80fb1_0061_plug_sink_a_28` (medium) Plug_Sink_A_28 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils.glb`
+- `b96272c80fb1_0062_object_62` (low) Object_62 from `staged_assets_for_world_builder/desktop_3d_model_3/kitchen_utensils.glb`, bounds={'x': 0.0682, 'y': 0.0285, 'z': 0.0718}
+- ... 20 more `bathroom_fixture` prefabs in JSON.
+
+## tv
+
+- `38e15ade1489_0559_decoder_tv_cabo_net_digital_hd1` (medium) DECODER_TV___CABO_NET_DIGITAL_HD1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0560_smartcard1` (medium) SMARTCARD1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0561_group33` (medium) Group33 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0562_mesh147` (medium) Mesh147 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0563_mesh147_color_h16_0` (low) Mesh147_Color_H16_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 51.9766, 'y': 0.0161, 'z': 62.3345}
+- `38e15ade1489_0564_mesh147_frontcolor_0` (low) Mesh147_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 51.9766, 'y': 0.4051, 'z': 62.3345}
+- `38e15ade1489_0565_mesh147_color_002_2_0` (low) Mesh147__Color_002_2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 3.0576, 'y': 0.0, 'z': 21.2671}
+- `38e15ade1489_0566_mesh147_color_000_7_0` (low) Mesh147__Color_000_7_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 44.4707, 'y': 0.0161, 'z': 49.8506}
+- `38e15ade1489_0567_mesh147_color_001_1_0` (low) Mesh147__Color_001_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 3.7314, 'y': 0.0, 'z': 21.2671}
+- `38e15ade1489_0568_mesh147_color_g15_0` (low) Mesh147_Color_G15_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 18.4336, 'y': 0.0, 'z': 31.1675}
+- `38e15ade1489_0569_mesh148` (medium) Mesh148 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0570_mesh148_frontcolor_0` (low) Mesh148_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 175.2705, 'y': 25.7184, 'z': 181.3604}
+- `38e15ade1489_0571_mesh148_color_008_5_0` (low) Mesh148__Color_008_5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 175.3311, 'y': 26.0399, 'z': 181.4507}
+- `38e15ade1489_0572_mesh148_color_006_0` (low) Mesh148_Color_006_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 175.2705, 'y': 26.0399, 'z': 181.3374}
+- `38e15ade1489_0573_mesh148_color_007_1_0` (low) Mesh148__Color_007_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 160.1611, 'y': 19.2888, 'z': 170.0044}
+- `38e15ade1489_0574_mesh148_color_003_2_0` (low) Mesh148__Color_003_2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 2.417, 'y': 9.0014, 'z': 7.9336}
+- `38e15ade1489_0575_mesh148_color_002_2_0` (low) Mesh148__Color_002_2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 2.417, 'y': 5.7465, 'z': 0.1133}
+- `38e15ade1489_0576_mesh148_color_f01_0` (low) Mesh148_Color_F01_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 77.8672, 'y': 6.6049, 'z': 5.6665}
+- `38e15ade1489_0577_mesh148_black_1_0` (low) Mesh148__Black_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 2.4775, 'y': 2.6241, 'z': 0.0}
+- `38e15ade1489_0578_mesh148_color_g01_0` (low) Mesh148_Color_G01_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 0.626, 'y': 0.6649, 'z': 0.0}
+- `38e15ade1489_0588_tv_lcd_hitachi1` (medium) TV_Lcd_Hitachi1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0589_group37` (medium) Group37 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0590_mesh152` (medium) Mesh152 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0591_mesh152_gray6_0` (low) Mesh152__Gray6__0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1068.5488, 'y': 678.5905, 'z': 33.0396}
+- `38e15ade1489_0592_mesh152_color_008_1_0` (low) Mesh152__Color_008_1_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1068.5488, 'y': 678.5905, 'z': 24.1753}
+- `38e15ade1489_0593_mesh152_34_0` (low) Mesh152__34_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 949.4717, 'y': 496.5021, 'z': 0.8057}
+- `38e15ade1489_0594_mesh152_44_0` (low) Mesh152__44_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1047.5469, 'y': 662.5131, 'z': 0.0}
+- `38e15ade1489_0595_mesh152_color_m08_0` (low) Mesh152_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 949.4717, 'y': 496.5021, 'z': 0.0}
+- `4759e96a17a9_0005_voyager_desk_computer_screen_0` (medium) Voyager Desk Computer_screen_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`, bounds={'x': 0.0322, 'y': 0.2784, 'z': 0.1364}
+- `d6f726d67e16_0005_voyager_desk_computer_screen_0` (medium) Voyager Desk Computer_screen_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`, bounds={'x': 0.0322, 'y': 0.2784, 'z': 0.1364}
+
+## computer
+
+- `76a69186bd26_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`
+- `76a69186bd26_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`
+- `76a69186bd26_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`
+- `76a69186bd26_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`
+- `76a69186bd26_0003_cube_003_0` (medium) Cube.003_0 from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`
+- `76a69186bd26_0004_object_4` (medium) Object_4 from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`, bounds={'x': 1.0671, 'y': 0.0313, 'z': 0.7589}
+- `76a69186bd26_0005_object_5` (low) Object_5 from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`, bounds={'x': 1.0634, 'y': 0.7581, 'z': 0.0232}
+- `76a69186bd26_0006_object_6` (medium) Object_6 from `staged_assets_for_world_builder/desktop_3d_model_4/3d_laptop_-_lowpoly_model_-_free.glb`, bounds={'x': 0.8515, 'y': 0.0115, 'z': 0.0203}
+- `4759e96a17a9_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0001_383fb428c876414d8cf34d68befd0f27_fbx` (medium) 383fb428c876414d8cf34d68befd0f27.fbx from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0003_voyager_desk_computer` (medium) Voyager Desk Computer from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`
+- `4759e96a17a9_0004_voyager_desk_computer_computer_0` (medium) Voyager Desk Computer_computer_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`, bounds={'x': 0.3458, 'y': 0.3175, 'z': 0.2773}
+- `4759e96a17a9_0005_voyager_desk_computer_screen_0` (medium) Voyager Desk Computer_screen_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer (1).glb`, bounds={'x': 0.0322, 'y': 0.2784, 'z': 0.1364}
+- `d6f726d67e16_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0001_383fb428c876414d8cf34d68befd0f27_fbx` (medium) 383fb428c876414d8cf34d68befd0f27.fbx from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0003_voyager_desk_computer` (medium) Voyager Desk Computer from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`
+- `d6f726d67e16_0004_voyager_desk_computer_computer_0` (medium) Voyager Desk Computer_computer_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`, bounds={'x': 0.3458, 'y': 0.3175, 'z': 0.2773}
+- `d6f726d67e16_0005_voyager_desk_computer_screen_0` (medium) Voyager Desk Computer_screen_0 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_desk_computer.glb`, bounds={'x': 0.0322, 'y': 0.2784, 'z': 0.1364}
+
+## window
+
+- `38e15ade1489_0319_window_frame1` (medium) Window_Frame1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0320_mesh91` (low) Mesh91 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0321_mesh91_frontcolor_0` (low) Mesh91_FrontColor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 676.9102, 'y': 1051.814, 'z': 72.8979}
+- `450c95266c78_0006_window_frame` (medium) Window Frame from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`
+- `450c95266c78_0007_window_frame_0` (medium) Window Frame_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 0.6407, 'y': 0.0444, 'z': 0.4695}
+- `450c95266c78_0008_window_glass` (medium) Window Glass from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`
+- `450c95266c78_0009_window_glass_0` (medium) Window Glass_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 0.567, 'y': 0.0064, 'z': 0.3367}
+- `7255de9828b7_0009_wall_window` (medium) wall_window from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets (1).glb`
+- `7255de9828b7_0010_wall_window_mat2_0` (medium) wall_window_mat2_0 from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets (1).glb`, bounds={'x': 8.4426, 'y': 300.0, 'z': 199.9999}
+- `8c78ad25fc8d_0009_wall_window` (medium) wall_window from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets.glb`
+- `8c78ad25fc8d_0010_wall_window_mat2_0` (medium) wall_window_mat2_0 from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets.glb`, bounds={'x': 8.4426, 'y': 300.0, 'z': 199.9999}
+- `d52d7c3fe266_0007_object_7` (medium) Object_7 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/tardis (1).glb`, bounds={'x': 2.4662, 'y': 2.4526, 'z': 0.8506}
+- `d676355e0752_0007_object_7` (medium) Object_7 from `staged_assets_for_world_builder/desktop_more_3d_models/tardis (1).glb`, bounds={'x': 2.4662, 'y': 2.4526, 'z': 0.8506}
+- `d52d7c3fe266_0008_object_8` (medium) Object_8 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/tardis (1).glb`, bounds={'x': 1.8379, 'y': 0.0169, 'z': 1.7624}
+- `d676355e0752_0008_object_8` (medium) Object_8 from `staged_assets_for_world_builder/desktop_more_3d_models/tardis (1).glb`, bounds={'x': 1.8379, 'y': 0.0169, 'z': 1.7624}
+- `e308845a6f01_0007_object_7` (medium) Object_7 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/tardis.glb`, bounds={'x': 2.4662, 'y': 2.4526, 'z': 0.8506}
+- `90343956f0c4_0007_object_7` (medium) Object_7 from `staged_assets_for_world_builder/desktop_more_3d_models/tardis.glb`, bounds={'x': 2.4662, 'y': 2.4526, 'z': 0.8506}
+- `e308845a6f01_0008_object_8` (medium) Object_8 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/tardis.glb`, bounds={'x': 1.8379, 'y': 0.0169, 'z': 1.7624}
+- `90343956f0c4_0008_object_8` (medium) Object_8 from `staged_assets_for_world_builder/desktop_more_3d_models/tardis.glb`, bounds={'x': 1.8379, 'y': 0.0169, 'z': 1.7624}
+
+## light
+
+- `38e15ade1489_0009_mesh1_wood_floor_light_0` (high) Mesh1_Wood_Floor_Light_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 7970.0, 'y': 0.0, 'z': 8365.9998}
+- `3b469e53865c_0160_object_160` (medium) Object_160 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 31480.644, 'y': 10553.2422, 'z': 2609.1589}
+- `38e15ade1489_0007_mesh1_slate_light_tile_0` (medium) Mesh1_Slate_Light_Tile_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1900.0, 'y': 0.0, 'z': 8333.9998}
+- `38e15ade1489_0014_mesh2_slate_light_tile_0` (medium) Mesh2_Slate_Light_Tile_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1900.0, 'y': 2700.0, 'z': 8333.9998}
+- `75a32bd9a269_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Dalek/bronze_new_series_dalek_-_rigged.glb`, bounds={'x': 0.5283, 'y': 0.098, 'z': 0.0485}
+- `1bfda489485c_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_3d_models_kira_world/Dalek/bronze_new_series_dalek_-_rigged.glb`, bounds={'x': 0.5283, 'y': 0.098, 'z': 0.0485}
+- `835ef00be61e_0017_object_17` (medium) Object_17 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `1c87e6961530_0017_object_17` (medium) Object_17 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `835ef00be61e_0020_object_20` (medium) Object_20 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `1c87e6961530_0020_object_20` (medium) Object_20 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `835ef00be61e_0023_object_23` (medium) Object_23 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `1c87e6961530_0023_object_23` (medium) Object_23 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `835ef00be61e_0026_object_26` (medium) Object_26 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `1c87e6961530_0026_object_26` (medium) Object_26 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `835ef00be61e_0029_object_29` (medium) Object_29 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `1c87e6961530_0029_object_29` (medium) Object_29 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `835ef00be61e_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `1c87e6961530_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `835ef00be61e_0049_object_49` (medium) Object_49 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `1c87e6961530_0049_object_49` (medium) Object_49 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `835ef00be61e_0052_object_52` (medium) Object_52 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `1c87e6961530_0052_object_52` (medium) Object_52 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `835ef00be61e_0055_object_55` (medium) Object_55 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `1c87e6961530_0055_object_55` (medium) Object_55 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `9b86a157edb8_0017_object_17` (medium) Object_17 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `5b3c5b6e05a4_0017_object_17` (medium) Object_17 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `9b86a157edb8_0020_object_20` (medium) Object_20 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `5b3c5b6e05a4_0020_object_20` (medium) Object_20 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `9b86a157edb8_0023_object_23` (medium) Object_23 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `5b3c5b6e05a4_0023_object_23` (medium) Object_23 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `9b86a157edb8_0026_object_26` (medium) Object_26 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `5b3c5b6e05a4_0026_object_26` (medium) Object_26 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `9b86a157edb8_0029_object_29` (medium) Object_29 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `5b3c5b6e05a4_0029_object_29` (medium) Object_29 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `9b86a157edb8_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `5b3c5b6e05a4_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 1.6157, 'y': 0.4367, 'z': 0.2557}
+- `9b86a157edb8_0049_object_49` (medium) Object_49 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `5b3c5b6e05a4_0049_object_49` (medium) Object_49 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `9b86a157edb8_0052_object_52` (medium) Object_52 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `5b3c5b6e05a4_0052_object_52` (medium) Object_52 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `9b86a157edb8_0055_object_55` (medium) Object_55 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `5b3c5b6e05a4_0055_object_55` (medium) Object_55 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 0.5253, 'y': 0.01, 'z': 0.1064}
+- `7255de9828b7_0022_light_fixture` (medium) light_fixture from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets (1).glb`
+- `7255de9828b7_0023_light_fixture_mat1_0` (medium) light_fixture_mat1_0 from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets (1).glb`, bounds={'x': 18.823, 'y': 51.5297, 'z': 44.1241}
+- `8c78ad25fc8d_0022_light_fixture` (medium) light_fixture from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets.glb`
+- `8c78ad25fc8d_0023_light_fixture_mat1_0` (medium) light_fixture_mat1_0 from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets.glb`, bounds={'x': 18.823, 'y': 51.5297, 'z': 44.1241}
+- `bb6077b9ca60_0102_material3` (medium) Material3 from `staged_assets_for_world_builder/desktop_3d_model_5/restaurant_fully_furnished.glb`, bounds={'x': 1141.5518, 'y': 1952.256, 'z': 21.4458}
+- `a59956cada9c_0017_object_17` (medium) Object_17 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 259.2573, 'y': 319.2061, 'z': 41.3201}
+- `a59956cada9c_0024_object_24` (medium) Object_24 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 319.2065, 'y': 259.2568, 'z': 41.3201}
+- `a59956cada9c_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 227.8975, 'y': 259.2573, 'z': 41.3201}
+- `a59956cada9c_0039_object_39` (medium) Object_39 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 259.8188, 'y': 230.6392, 'z': 75.2729}
+- `a59956cada9c_0046_object_46` (medium) Object_46 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 259.8188, 'y': 230.6392, 'z': 75.2729}
+- `a59956cada9c_0083_object_83` (medium) Object_83 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 49.3779, 'y': 124.3799, 'z': 45.0358}
+- `a59956cada9c_0170_object_170` (medium) Object_170 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 523.792, 'y': 0.0, 'z': 26.9987}
+- `a59956cada9c_0178_object_178` (medium) Object_178 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 523.792, 'y': 0.0, 'z': 26.9987}
+- `a59956cada9c_0284_object_284` (medium) Object_284 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 302.1753, 'y': 302.1753, 'z': 211.0628}
+- `a59956cada9c_0292_object_292` (medium) Object_292 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 302.1758, 'y': 302.1748, 'z': 211.0628}
+- `a59956cada9c_0301_object_301` (medium) Object_301 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 243.8193, 'y': 233.916, 'z': 211.1113}
+- `a59956cada9c_0309_object_309` (medium) Object_309 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 233.916, 'y': 243.8198, 'z': 211.1113}
+- `a59956cada9c_0317_object_317` (medium) Object_317 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 233.9155, 'y': 594.0288, 'z': 211.1113}
+- ... 38 more `light` prefabs in JSON.
+
+## stairs
+
+- `184b43c1cdd4_0103_glass_railing` (medium) Glass_Railing from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper (1).glb`
+- `184b43c1cdd4_0104_glass_railing_glass_railing_0` (medium) Glass_Railing_Glass_Railing_0 from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper (1).glb`, bounds={'x': 12.3156, 'y': 19.7402, 'z': 4.8045}
+- `9e2802a3f4d8_0103_glass_railing` (medium) Glass_Railing from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper.glb`
+- `9e2802a3f4d8_0104_glass_railing_glass_railing_0` (medium) Glass_Railing_Glass_Railing_0 from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper.glb`, bounds={'x': 12.3156, 'y': 19.7402, 'z': 4.8045}
+
+## wall
+
+- `38e15ade1489_0152_door_panel_1_1` (high) Door_Panel_1_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0178_door_panel_1_2` (high) Door_Panel_1_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0457_door_panel_1_3` (high) Door_Panel_1_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `d38d578d7370_0008_object_8` (high) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_5/star_trek_ds9_danube_runabout_rio_grande_cockpit (1).glb`, bounds={'x': 1.3949, 'y': 0.045, 'z': 6.2547}
+- `6b5288dec983_0008_object_8` (high) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_5/star_trek_ds9_danube_runabout_rio_grande_cockpit.glb`, bounds={'x': 1.3949, 'y': 0.045, 'z': 6.2547}
+- `38e15ade1489_0153_handle_2_1` (low) Handle_2_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0154_mesh39` (low) Mesh39 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0155_mesh39_color_m08_0` (low) Mesh39_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0156_handle_2_2` (low) Handle_2_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0157_mesh40` (low) Mesh40 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0158_mesh40_color_m08_0` (low) Mesh40_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0159_panel1` (low) Panel1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0160_mesh41` (low) Mesh41 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0161_mesh41_carrera_marble_0` (low) Mesh41_Carrera_Marble_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 30.0, 'y': 2010.0, 'z': 600.0}
+- `38e15ade1489_0179_handle_2_3` (low) Handle_2_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0180_mesh47` (low) Mesh47 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0181_mesh47_color_m08_0` (low) Mesh47_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0182_handle_2_4` (low) Handle_2_4 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0183_mesh48` (low) Mesh48 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0184_mesh48_color_m08_0` (low) Mesh48_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0185_panel2` (low) Panel2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0186_mesh49` (low) Mesh49 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0187_mesh49_carrera_marble_0` (low) Mesh49_Carrera_Marble_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 30.0, 'y': 2010.0, 'z': 600.0}
+- `38e15ade1489_0458_handle_2_5` (low) Handle_2_5 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0459_mesh123` (low) Mesh123 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0460_mesh123_color_m08_0` (low) Mesh123_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0461_handle_2_6` (low) Handle_2_6 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0462_mesh124` (low) Mesh124 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0463_mesh124_color_m08_0` (low) Mesh124_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0464_panel3` (low) Panel3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0465_mesh125` (low) Mesh125 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0466_mesh125_carrera_marble_0` (low) Mesh125_Carrera_Marble_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 30.0, 'y': 2010.0, 'z': 600.0}
+- `a375382e40c9_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection (1).glb`
+- `a375382e40c9_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection (1).glb`
+- `a375382e40c9_0001_3cf40f0a11014b3e803a721195dcdafb_fbx` (medium) 3cf40f0a11014b3e803a721195dcdafb.fbx from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection (1).glb`
+- `a375382e40c9_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection (1).glb`
+- `a375382e40c9_0005_01` (medium) 01 from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection (1).glb`
+- `db5b038bf31c_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection.glb`
+- `db5b038bf31c_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection.glb`
+- `db5b038bf31c_0001_3cf40f0a11014b3e803a721195dcdafb_fbx` (medium) 3cf40f0a11014b3e803a721195dcdafb.fbx from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection.glb`
+- `db5b038bf31c_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection.glb`
+- `db5b038bf31c_0005_01` (medium) 01 from `staged_assets_for_world_builder/desktop_3d_models_2/concrete_wall_protection.glb`
+- `835ef00be61e_0122_inner_wall_58` (medium) Inner Wall_58 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0122_inner_wall_58` (medium) Inner Wall_58 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0123_object_123` (low) Object_123 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 14.5688, 'y': 5.7237, 'z': 14.1078}
+- `1c87e6961530_0123_object_123` (low) Object_123 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 14.5688, 'y': 5.7237, 'z': 14.1078}
+- `835ef00be61e_0124_wall_a_59` (medium) Wall A_59 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0124_wall_a_59` (medium) Wall A_59 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0125_object_125` (low) Object_125 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 8.0108, 'y': 6.6277, 'z': 4.5115}
+- `1c87e6961530_0125_object_125` (low) Object_125 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 8.0108, 'y': 6.6277, 'z': 4.5115}
+- `835ef00be61e_0126_wall_b_60` (medium) Wall B_60 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0126_wall_b_60` (medium) Wall B_60 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0127_object_127` (low) Object_127 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 8.0108, 'y': 6.6277, 'z': 4.5115}
+- `1c87e6961530_0127_object_127` (low) Object_127 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 8.0108, 'y': 6.6277, 'z': 4.5115}
+- `9b86a157edb8_0122_inner_wall_58` (medium) Inner Wall_58 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0122_inner_wall_58` (medium) Inner Wall_58 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- `9b86a157edb8_0123_object_123` (low) Object_123 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 14.5688, 'y': 5.7237, 'z': 14.1078}
+- `5b3c5b6e05a4_0123_object_123` (low) Object_123 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 14.5688, 'y': 5.7237, 'z': 14.1078}
+- `9b86a157edb8_0124_wall_a_59` (medium) Wall A_59 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0124_wall_a_59` (medium) Wall A_59 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- ... 94 more `wall` prefabs in JSON.
+
+## floor
+
+- `38e15ade1489_0009_mesh1_wood_floor_light_0` (high) Mesh1_Wood_Floor_Light_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 7970.0, 'y': 0.0, 'z': 8365.9998}
+- `3b469e53865c_0011_object_11` (medium) Object_11 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 15.6543, 'y': 198.0332, 'z': 1666.8726}
+- `3b469e53865c_0021_object_21` (medium) Object_21 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 2250.0, 'y': 1949.999, 'z': 18.75}
+- `3b469e53865c_0023_object_23` (medium) Object_23 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 785.709, 'y': 760.0, 'z': 20.0}
+- `3b469e53865c_0181_object_181` (medium) Object_181 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 2014.0, 'y': 3262.0996, 'z': 2394.0}
+- `38e15ade1489_0007_mesh1_slate_light_tile_0` (medium) Mesh1_Slate_Light_Tile_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1900.0, 'y': 0.0, 'z': 8333.9998}
+- `38e15ade1489_0014_mesh2_slate_light_tile_0` (medium) Mesh2_Slate_Light_Tile_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1900.0, 'y': 2700.0, 'z': 8333.9998}
+- `835ef00be61e_0110_floor_1_52` (medium) Floor 1_52 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0110_floor_1_52` (medium) Floor 1_52 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0111_object_111` (low) Object_111 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `1c87e6961530_0111_object_111` (low) Object_111 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `835ef00be61e_0112_floor_2_53` (medium) Floor 2_53 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0112_floor_2_53` (medium) Floor 2_53 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0113_object_113` (low) Object_113 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `1c87e6961530_0113_object_113` (low) Object_113 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `835ef00be61e_0114_floor_3_54` (medium) Floor 3_54 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0114_floor_3_54` (medium) Floor 3_54 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0115_object_115` (low) Object_115 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `1c87e6961530_0115_object_115` (low) Object_115 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `835ef00be61e_0116_floor_4_55` (medium) Floor 4_55 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0116_floor_4_55` (medium) Floor 4_55 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0117_object_117` (low) Object_117 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `1c87e6961530_0117_object_117` (low) Object_117 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `835ef00be61e_0118_floor_5_56` (medium) Floor 5_56 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0118_floor_5_56` (medium) Floor 5_56 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0119_object_119` (low) Object_119 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `1c87e6961530_0119_object_119` (low) Object_119 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `835ef00be61e_0120_floor_6_57` (medium) Floor 6_57 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `1c87e6961530_0120_floor_6_57` (medium) Floor 6_57 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`
+- `835ef00be61e_0121_object_121` (low) Object_121 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `1c87e6961530_0121_object_121` (low) Object_121 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior (1).glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `9b86a157edb8_0110_floor_1_52` (medium) Floor 1_52 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0110_floor_1_52` (medium) Floor 1_52 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- `9b86a157edb8_0111_object_111` (low) Object_111 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `5b3c5b6e05a4_0111_object_111` (low) Object_111 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `9b86a157edb8_0112_floor_2_53` (medium) Floor 2_53 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0112_floor_2_53` (medium) Floor 2_53 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- `9b86a157edb8_0113_object_113` (low) Object_113 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `5b3c5b6e05a4_0113_object_113` (low) Object_113 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `9b86a157edb8_0114_floor_3_54` (medium) Floor 3_54 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0114_floor_3_54` (medium) Floor 3_54 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- `9b86a157edb8_0115_object_115` (low) Object_115 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `5b3c5b6e05a4_0115_object_115` (low) Object_115 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `9b86a157edb8_0116_floor_4_55` (medium) Floor 4_55 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0116_floor_4_55` (medium) Floor 4_55 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- `9b86a157edb8_0117_object_117` (low) Object_117 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `5b3c5b6e05a4_0117_object_117` (low) Object_117 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `9b86a157edb8_0118_floor_5_56` (medium) Floor 5_56 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0118_floor_5_56` (medium) Floor 5_56 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- `9b86a157edb8_0119_object_119` (low) Object_119 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `5b3c5b6e05a4_0119_object_119` (low) Object_119 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `9b86a157edb8_0120_floor_6_57` (medium) Floor 6_57 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`
+- `5b3c5b6e05a4_0120_floor_6_57` (medium) Floor 6_57 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`
+- `9b86a157edb8_0121_object_121` (low) Object_121 from `staged_assets_for_world_builder/desktop_3d_models/more 3d models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `5b3c5b6e05a4_0121_object_121` (low) Object_121 from `staged_assets_for_world_builder/desktop_more_3d_models/doctor_who__13th_doctor_tardis_interior.glb`, bounds={'x': 5.023, 'y': 0.6, 'z': 5.8001}
+- `450c95266c78_0011_ground_plane_0` (medium) Ground Plane_0 from `staged_assets_for_world_builder/desktop_3d_models_2/entry-door_with-sidelights.glb`, bounds={'x': 3.8028, 'y': 1.9864, 'z': 0.0063}
+- `184b43c1cdd4_0111_lobby_floor` (medium) Lobby_Floor from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper (1).glb`
+- `184b43c1cdd4_0112_lobby_floor_lobby_floor_0` (medium) Lobby_Floor_Lobby_Floor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper (1).glb`, bounds={'x': 19.3051, 'y': 28.6476, 'z': 4.0073}
+- `9e2802a3f4d8_0111_lobby_floor` (medium) Lobby_Floor from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper.glb`
+- `9e2802a3f4d8_0112_lobby_floor_lobby_floor_0` (medium) Lobby_Floor_Lobby_Floor_0 from `staged_assets_for_world_builder/desktop_3d_models_2/free_london_skyscraper.glb`, bounds={'x': 19.3051, 'y': 28.6476, 'z': 4.0073}
+- ... 36 more `floor` prefabs in JSON.
+
+## roof
+
+- `7f0e9f41d56e_0047_roof` (medium) Roof from `staged_assets_for_world_builder/desktop_3d_models_2/house (1).glb`
+- `7f0e9f41d56e_0048_roof_material_2_0` (medium) Roof_Material #2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/house (1).glb`, bounds={'x': 300.0, 'y': 310.0, 'z': 3.0831}
+- `7f0e9f41d56e_0049_top_ceiling` (medium) Top_Ceiling from `staged_assets_for_world_builder/desktop_3d_models_2/house (1).glb`
+- `7f0e9f41d56e_0050_top_ceiling_material_5_0` (medium) Top_Ceiling_Material #5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/house (1).glb`, bounds={'x': 279.4537, 'y': 290.1435, 'z': 3.4854}
+- `687e5f1ec5a8_0047_roof` (medium) Roof from `staged_assets_for_world_builder/desktop_3d_models_2/house.glb`
+- `687e5f1ec5a8_0048_roof_material_2_0` (medium) Roof_Material #2_0 from `staged_assets_for_world_builder/desktop_3d_models_2/house.glb`, bounds={'x': 300.0, 'y': 310.0, 'z': 3.0831}
+- `687e5f1ec5a8_0049_top_ceiling` (medium) Top_Ceiling from `staged_assets_for_world_builder/desktop_3d_models_2/house.glb`
+- `687e5f1ec5a8_0050_top_ceiling_material_5_0` (medium) Top_Ceiling_Material #5_0 from `staged_assets_for_world_builder/desktop_3d_models_2/house.glb`, bounds={'x': 279.4537, 'y': 290.1435, 'z': 3.4854}
+- `bb6077b9ca60_0035_material3` (medium) Material3 from `staged_assets_for_world_builder/desktop_3d_model_5/restaurant_fully_furnished.glb`, bounds={'x': 1168.6941, 'y': 958.3689, 'z': 5.0}
+- `bb6077b9ca60_0038_material3` (medium) Material3 from `staged_assets_for_world_builder/desktop_3d_model_5/restaurant_fully_furnished.glb`, bounds={'x': 1190.3999, 'y': 1330.833, 'z': 47.7225}
+
+## house_shell
+
+- `38e15ade1489_0009_mesh1_wood_floor_light_0` (high) Mesh1_Wood_Floor_Light_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 7970.0, 'y': 0.0, 'z': 8365.9998}
+- `38e15ade1489_0152_door_panel_1_1` (high) Door_Panel_1_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0178_door_panel_1_2` (high) Door_Panel_1_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0457_door_panel_1_3` (high) Door_Panel_1_3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `3b469e53865c_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`
+- `3b469e53865c_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`
+- `3b469e53865c_0001_skfb_offset` (medium) skfb_offset from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`
+- `3b469e53865c_0002_sketchfab_data_processing_models_ad18f0c041a344f7a3add59ac5bd4115_5fc43cc0dfbe498a8d728c4a9a772e` (medium) /sketchfab-data/processing/models/ad18f0c041a344f7a3add59ac5bd4115/5fc43cc0dfbe498a8d728c4a9a772ebb/4ccc290fcb1d4e33a6544afab9ff26b4/preprocess/56 Harbour.3ds from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`
+- `3b469e53865c_0011_object_11` (medium) Object_11 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 15.6543, 'y': 198.0332, 'z': 1666.8726}
+- `3b469e53865c_0021_object_21` (medium) Object_21 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 2250.0, 'y': 1949.999, 'z': 18.75}
+- `3b469e53865c_0023_object_23` (medium) Object_23 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 785.709, 'y': 760.0, 'z': 20.0}
+- `3b469e53865c_0160_object_160` (medium) Object_160 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 31480.644, 'y': 10553.2422, 'z': 2609.1589}
+- `3b469e53865c_0181_object_181` (medium) Object_181 from `staged_assets_for_world_builder/desktop_3d_models/56_harbour_terrace.glb`, bounds={'x': 2014.0, 'y': 3262.0996, 'z': 2394.0}
+- `38e15ade1489_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0001_8383d6bfb11a4225b6efd07ac6e763f0_fbx` (medium) 8383d6bfb11a4225b6efd07ac6e763f0.fbx from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0002_rootnode` (medium) RootNode from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0003_model` (medium) Model from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0004_item` (medium) ___ from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0005_mesh1` (medium) Mesh1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0007_mesh1_slate_light_tile_0` (medium) Mesh1_Slate_Light_Tile_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1900.0, 'y': 0.0, 'z': 8333.9998}
+- `38e15ade1489_0010_item` (medium) _____ from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0011_mesh2` (medium) Mesh2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0014_mesh2_slate_light_tile_0` (medium) Mesh2_Slate_Light_Tile_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 1900.0, 'y': 2700.0, 'z': 8333.9998}
+- `38e15ade1489_0015_laura1` (medium) Laura1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0016_mesh3` (medium) Mesh3 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0025_1` (medium) ______________1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0053_1` (medium) _______________1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0054_group7` (medium) Group7 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0061_1` (medium) _________1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0062_1_1` (medium) __________1_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0075_window1` (medium) Window1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0076_mesh19` (medium) Mesh19 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0079_sliding_door1` (medium) SLIDING_DOOR1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0080_group13` (medium) Group13 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0081_mesh20` (medium) Mesh20 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0084_group14` (medium) Group14 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0085_mesh21` (medium) Mesh21 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0088_group15` (medium) Group15 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0089_mesh22` (medium) Mesh22 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0094_porta_frisada1` (medium) porta_frisada1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0095_porta_pivotante_de_madeira1` (medium) Porta_pivotante_de_madeira1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0096_component_9_1` (medium) Component_9_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0108_ma_aneta_linha_conceito_dudu_lockwell1` (medium) Ma_aneta_Linha_Conceito_Dudu___LOCKWELL1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0109_component_20_1` (medium) Component_20_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0110_component_13_1` (medium) Component_13_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0111_component_12_1` (medium) Component_12_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0112_mesh28` (medium) Mesh28 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0118_component_19_1` (medium) Component_19_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0128_ma_aneta_linha_conceito_dudu_lockwell2` (medium) Ma_aneta_Linha_Conceito_Dudu___LOCKWELL2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0129_component_20_2` (medium) Component_20_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0130_component_13_2` (medium) Component_13_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0131_component_12_2` (medium) Component_12_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0132_mesh33` (medium) Mesh33 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0138_component_19_2` (medium) Component_19_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0148_simplydoordc_3_1` (medium) SimplyDoorDC_3_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0153_handle_2_1` (low) Handle_2_1 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0154_mesh39` (low) Mesh39 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- `38e15ade1489_0155_mesh39_color_m08_0` (low) Mesh39_Color_M08_0 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`, bounds={'x': 35.0, 'y': 180.0, 'z': 140.0}
+- `38e15ade1489_0156_handle_2_2` (low) Handle_2_2 from `staged_assets_for_world_builder/desktop_3d_models_2/apartment_layout_of_a_dream_house.glb`
+- ... 810 more `house_shell` prefabs in JSON.
+
+## corridor
+
+- `f0b277709e49_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0001_root` (medium) root from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0002_gltf_scenerootnode` (medium) GLTF_SceneRootNode from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0003_modulo_corridio_008_1` (medium) Modulo_Corridio.008_1 from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0011_modulo_corridio_009_47` (medium) Modulo_Corridio.009_47 from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0014_modulo_corridio_010_48` (medium) Modulo_Corridio.010_48 from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0017_modulo_corridio_011_49` (medium) Modulo_Corridio.011_49 from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `f0b277709e49_0020_modulo_corridio_012_50` (medium) Modulo_Corridio.012_50 from `staged_assets_for_world_builder/desktop_3d_model_5/enterprise_corridor.glb`
+- `a08d8e9b2322_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`
+- `a08d8e9b2322_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`
+- `a08d8e9b2322_0001_root` (medium) Root from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`
+- `a08d8e9b2322_0003_plants_0` (medium) Plants_0 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 94.7767, 'y': 99.8285, 'z': 2.9986}
+- `a08d8e9b2322_0010_hall` (medium) HALL from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`
+- `a08d8e9b2322_0011_hall_0` (medium) HALL_0 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 34.2677, 'y': 17.863, 'z': 3.7472}
+- `a08d8e9b2322_0012_hall_1` (medium) HALL_1 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 34.1669, 'y': 16.9273, 'z': 3.0108}
+- `a08d8e9b2322_0013_hall_2` (medium) HALL_2 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 34.213, 'y': 16.909, 'z': 2.533}
+- `a08d8e9b2322_0014_hall_3` (medium) HALL_3 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 33.4921, 'y': 13.4646, 'z': 2.5207}
+- `a08d8e9b2322_0015_hall_4` (medium) HALL_4 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 33.2572, 'y': 16.4357, 'z': 3.2546}
+- `a08d8e9b2322_0016_hall_5` (medium) HALL_5 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 33.4787, 'y': 14.4596, 'z': 0.7334}
+- `a08d8e9b2322_0017_hall_6` (medium) HALL_6 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 32.9594, 'y': 0.754, 'z': 1.6}
+- `a08d8e9b2322_0018_hall_7` (medium) HALL_7 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 34.2677, 'y': 6.3168, 'z': 0.9993}
+- `7255de9828b7_0018_floor_hall` (medium) floor_hall from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets (1).glb`
+- `7255de9828b7_0019_floor_hall_mat3_0` (medium) floor_hall_mat3_0 from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets (1).glb`, bounds={'x': 200.0, 'y': 0.0, 'z': 200.0}
+- `8c78ad25fc8d_0018_floor_hall` (medium) floor_hall from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets.glb`
+- `8c78ad25fc8d_0019_floor_hall_mat3_0` (medium) floor_hall_mat3_0 from `staged_assets_for_world_builder/desktop_3d_model_3/moit_modular_assets.glb`, bounds={'x': 200.0, 'y': 0.0, 'z': 200.0}
+- `a59956cada9c_0010_corridor_jt_access_large1_5` (medium) Corridor___JT_Access___Large1_5 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0011_mesh94_4` (medium) Mesh94_4 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0017_object_17` (medium) Object_17 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 259.2573, 'y': 319.2061, 'z': 41.3201}
+- `a59956cada9c_0019_corridor_turbolift_access_large1_7` (medium) Corridor___Turbolift_access___Large1_7 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0020_mesh37_6` (medium) Mesh37_6 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0024_object_24` (medium) Object_24 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 319.2065, 'y': 259.2568, 'z': 41.3201}
+- `a59956cada9c_0027_corridor_turbolift_access_small1_9` (medium) Corridor___Turbolift_access___Small1_9 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0028_mesh42_8` (medium) Mesh42_8 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0032_object_32` (medium) Object_32 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 227.8975, 'y': 259.2573, 'z': 41.3201}
+- `a59956cada9c_0042_g_4_way_up_dn_lt_rt_junction_with_hallway_access1_13` (medium) G_4_Way_Up_Dn_Lt_Rt_Junction___With_Hallway_access1_13 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0043_mesh16_12` (medium) Mesh16_12 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0046_object_46` (medium) Object_46 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 259.8188, 'y': 230.6392, 'z': 75.2729}
+- `a59956cada9c_0109_hallway_4_degree_circlar_large1_53` (medium) Hallway_4__Degree_Circlar_Large1_53 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0110_mesh45_52` (medium) Mesh45_52 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0115_hallway_4_degree_circlar_medium1_57` (medium) Hallway_4__Degree_Circlar_Medium1_57 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0116_mesh24_56` (medium) Mesh24_56 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0121_hallway_4_degree_circlar_small1_61` (medium) Hallway_4__Degree_Circlar_Small1_61 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0122_mesh62_60` (medium) Mesh62_60 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0127_hallway_4_way_junction1_63` (medium) Hallway_4_Way_Junction1_63 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0128_mesh38_62` (medium) Mesh38_62 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0133_hallway_90_degree_turn1_65` (medium) Hallway_90__Degree_Turn1_65 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0134_mesh41_64` (medium) Mesh41_64 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0139_hallway_j_tube_access_singlec1_67` (medium) Hallway_J_tube_Access_Singlec1_67 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0140_mesh29_66` (medium) Mesh29_66 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0145_hallway_medium_door_double1_69` (medium) Hallway_Medium_Door_Double1_69 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0146_mesh14_68` (medium) Mesh14_68 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0147_object_147` (low) Object_147 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 354.6562, 'y': 219.4561, 'z': 307.6956}
+- `a59956cada9c_0148_object_148` (low) Object_148 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 354.6562, 'y': 219.4561, 'z': 259.6896}
+- `a59956cada9c_0149_object_149` (low) Object_149 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 354.6562, 'y': 196.4673, 'z': 290.5635}
+- `a59956cada9c_0150_object_150` (low) Object_150 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 354.6562, 'y': 219.4561, 'z': 281.6352}
+- `a59956cada9c_0151_hallway_medium_door_single1_71` (medium) Hallway_Medium_Door_Single1_71 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0152_mesh25_70` (medium) Mesh25_70 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`
+- `a59956cada9c_0153_object_153` (low) Object_153 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 361.9714, 'y': 219.4561, 'z': 259.6896}
+- `a59956cada9c_0154_object_154` (low) Object_154 from `staged_assets_for_world_builder/desktop_3d_models_2/star_trek_voyager_collection.glb`, bounds={'x': 361.9714, 'y': 219.4561, 'z': 307.6956}
+- ... 32 more `corridor` prefabs in JSON.
+
+## bridge
+
+- `18253f2f9816_0001_delta_flyer_clean_obj_cleaner_materialmerger_gles` (high) Delta_Flyer_Clean.obj.cleaner.materialmerger.gles from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`
+- `d38d578d7370_0008_object_8` (high) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_5/star_trek_ds9_danube_runabout_rio_grande_cockpit (1).glb`, bounds={'x': 1.3949, 'y': 0.045, 'z': 6.2547}
+- `6b5288dec983_0008_object_8` (high) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_5/star_trek_ds9_danube_runabout_rio_grande_cockpit.glb`, bounds={'x': 1.3949, 'y': 0.045, 'z': 6.2547}
+- `18253f2f9816_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`
+- `18253f2f9816_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`
+- `18253f2f9816_0002_object_2` (low) Object_2 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 13.0, 'z': 1.0}
+- `18253f2f9816_0003_object_3` (low) Object_3 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.5, 'y': 8.0, 'z': 3.0}
+- `18253f2f9816_0004_object_4` (low) Object_4 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 0.3615, 'y': 0.1615, 'z': 0.1212}
+- `18253f2f9816_0005_object_5` (low) Object_5 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.5, 'y': 9.5, 'z': 3.0}
+- `18253f2f9816_0006_object_6` (low) Object_6 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.0, 'y': 1.0, 'z': 0.5}
+- `18253f2f9816_0007_object_7` (low) Object_7 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 1.5, 'z': 1.0}
+- `18253f2f9816_0008_object_8` (low) Object_8 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 2.0, 'z': 1.0}
+- `18253f2f9816_0009_object_9` (low) Object_9 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.5, 'y': 1.5, 'z': 0.5}
+- `18253f2f9816_0010_object_10` (low) Object_10 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 10.0, 'z': 3.75}
+- `18253f2f9816_0011_object_11` (low) Object_11 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.5, 'y': 1.5, 'z': 0.5}
+- `18253f2f9816_0012_object_12` (low) Object_12 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 7.5, 'z': 2.0}
+- `18253f2f9816_0013_object_13` (low) Object_13 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.0, 'y': 0.0, 'z': 0.5}
+- `18253f2f9816_0014_object_14` (low) Object_14 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.54, 'y': 17.25, 'z': 4.52}
+- `18253f2f9816_0015_object_15` (low) Object_15 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 7.0, 'z': 2.75}
+- `18253f2f9816_0016_object_16` (low) Object_16 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 5.0, 'z': 1.75}
+- `18253f2f9816_0017_object_17` (low) Object_17 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 3.0, 'z': 0.5}
+- `18253f2f9816_0018_object_18` (low) Object_18 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 1.0, 'z': 1.25}
+- `18253f2f9816_0019_object_19` (low) Object_19 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 6.0, 'z': 1.75}
+- `18253f2f9816_0020_object_20` (low) Object_20 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.5, 'y': 0.5, 'z': 1.0}
+- `18253f2f9816_0021_object_21` (low) Object_21 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 0.5, 'z': 0.5}
+- `18253f2f9816_0022_object_22` (low) Object_22 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 7.0, 'z': 2.75}
+- `18253f2f9816_0023_object_23` (low) Object_23 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 0.5, 'z': 0.75}
+- `18253f2f9816_0024_object_24` (low) Object_24 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.5, 'y': 6.5, 'z': 2.75}
+- `18253f2f9816_0025_object_25` (low) Object_25 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 17.75, 'z': 4.5}
+- `18253f2f9816_0026_object_26` (low) Object_26 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 6.0, 'z': 1.5}
+- `18253f2f9816_0027_object_27` (low) Object_27 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.5, 'y': 1.0, 'z': 0.75}
+- `18253f2f9816_0028_object_28` (low) Object_28 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 1.0, 'z': 1.25}
+- `18253f2f9816_0029_object_29` (low) Object_29 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 1.5, 'y': 1.5, 'z': 0.5}
+- `18253f2f9816_0030_object_30` (low) Object_30 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.5, 'y': 12.0, 'z': 1.52}
+- `18253f2f9816_0031_object_31` (low) Object_31 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 1.0, 'z': 0.75}
+- `18253f2f9816_0032_object_32` (low) Object_32 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 3.0, 'z': 1.75}
+- `18253f2f9816_0033_object_33` (low) Object_33 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 0.5, 'z': 0.75}
+- `18253f2f9816_0034_object_34` (low) Object_34 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 0.5, 'z': 0.5}
+- `18253f2f9816_0035_object_35` (low) Object_35 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 1.5, 'y': 0.5, 'z': 0.25}
+- `18253f2f9816_0036_object_36` (low) Object_36 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 13.5, 'z': 2.02}
+- `18253f2f9816_0037_object_37` (low) Object_37 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 6.0, 'z': 1.02}
+- `18253f2f9816_0038_object_38` (low) Object_38 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 14.5, 'z': 2.5}
+- `18253f2f9816_0039_object_39` (low) Object_39 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.1162, 'y': 14.3866, 'z': 2.21}
+- `18253f2f9816_0040_object_40` (low) Object_40 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.5, 'y': 10.999, 'z': 2.4984}
+- `18253f2f9816_0041_object_41` (low) Object_41 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.4731, 'y': 1.9856, 'z': 0.9955}
+- `18253f2f9816_0042_object_42` (low) Object_42 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.472, 'y': 1.9851, 'z': 0.9944}
+- `18253f2f9816_0043_object_43` (low) Object_43 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.2209, 'y': 8.9036, 'z': 3.0313}
+- `18253f2f9816_0044_object_44` (low) Object_44 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.4731, 'y': 3.4724, 'z': 1.0052}
+- `18253f2f9816_0045_object_45` (low) Object_45 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.472, 'y': 3.4719, 'z': 1.0045}
+- `18253f2f9816_0046_object_46` (low) Object_46 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 7.0, 'z': 0.02}
+- `18253f2f9816_0047_object_47` (low) Object_47 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 8.5, 'z': 1.5}
+- `18253f2f9816_0048_object_48` (low) Object_48 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.0953, 'y': 0.7635, 'z': 0.8159}
+- `18253f2f9816_0049_object_49` (low) Object_49 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 7.0, 'z': 0.02}
+- `18253f2f9816_0050_object_50` (low) Object_50 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 3.0, 'z': 0.5}
+- `18253f2f9816_0051_object_51` (low) Object_51 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 7.0034, 'z': 1.9702}
+- `18253f2f9816_0052_object_52` (low) Object_52 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.502, 'y': 6.7771, 'z': 1.9014}
+- `18253f2f9816_0053_object_53` (low) Object_53 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 6.9995, 'z': 1.9697}
+- `18253f2f9816_0054_object_54` (low) Object_54 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.502, 'y': 6.9861, 'z': 2.0244}
+- `18253f2f9816_0055_object_55` (low) Object_55 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.4902, 'y': 6.9927, 'z': 1.9292}
+- `18253f2f9816_0056_object_56` (low) Object_56 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.481, 'y': 6.9319, 'z': 0.7324}
+- ... 639 more `bridge` prefabs in JSON.
+
+## vehicle
+
+- `18253f2f9816_0001_delta_flyer_clean_obj_cleaner_materialmerger_gles` (high) Delta_Flyer_Clean.obj.cleaner.materialmerger.gles from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`
+- `d38d578d7370_0008_object_8` (high) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_5/star_trek_ds9_danube_runabout_rio_grande_cockpit (1).glb`, bounds={'x': 1.3949, 'y': 0.045, 'z': 6.2547}
+- `6b5288dec983_0008_object_8` (high) Object_8 from `staged_assets_for_world_builder/desktop_3d_model_5/star_trek_ds9_danube_runabout_rio_grande_cockpit.glb`, bounds={'x': 1.3949, 'y': 0.045, 'z': 6.2547}
+- `18253f2f9816_source_bundle` (medium) whole source from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`
+- `18253f2f9816_0000_sketchfab_model` (medium) Sketchfab_model from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`
+- `18253f2f9816_0002_object_2` (low) Object_2 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 13.0, 'z': 1.0}
+- `18253f2f9816_0003_object_3` (low) Object_3 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.5, 'y': 8.0, 'z': 3.0}
+- `18253f2f9816_0004_object_4` (low) Object_4 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 0.3615, 'y': 0.1615, 'z': 0.1212}
+- `18253f2f9816_0005_object_5` (low) Object_5 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.5, 'y': 9.5, 'z': 3.0}
+- `18253f2f9816_0006_object_6` (low) Object_6 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.0, 'y': 1.0, 'z': 0.5}
+- `18253f2f9816_0007_object_7` (low) Object_7 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 1.5, 'z': 1.0}
+- `18253f2f9816_0008_object_8` (low) Object_8 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 2.0, 'z': 1.0}
+- `18253f2f9816_0009_object_9` (low) Object_9 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.5, 'y': 1.5, 'z': 0.5}
+- `18253f2f9816_0010_object_10` (low) Object_10 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 10.0, 'z': 3.75}
+- `18253f2f9816_0011_object_11` (low) Object_11 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.5, 'y': 1.5, 'z': 0.5}
+- `18253f2f9816_0012_object_12` (low) Object_12 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 7.5, 'z': 2.0}
+- `18253f2f9816_0013_object_13` (low) Object_13 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.0, 'y': 0.0, 'z': 0.5}
+- `18253f2f9816_0014_object_14` (low) Object_14 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.54, 'y': 17.25, 'z': 4.52}
+- `18253f2f9816_0015_object_15` (low) Object_15 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 7.0, 'z': 2.75}
+- `18253f2f9816_0016_object_16` (low) Object_16 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 5.0, 'z': 1.75}
+- `18253f2f9816_0017_object_17` (low) Object_17 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 3.0, 'z': 0.5}
+- `18253f2f9816_0018_object_18` (low) Object_18 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 1.0, 'z': 1.25}
+- `18253f2f9816_0019_object_19` (low) Object_19 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 6.0, 'z': 1.75}
+- `18253f2f9816_0020_object_20` (low) Object_20 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.5, 'y': 0.5, 'z': 1.0}
+- `18253f2f9816_0021_object_21` (low) Object_21 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 0.5, 'z': 0.5}
+- `18253f2f9816_0022_object_22` (low) Object_22 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 7.0, 'z': 2.75}
+- `18253f2f9816_0023_object_23` (low) Object_23 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 0.5, 'z': 0.75}
+- `18253f2f9816_0024_object_24` (low) Object_24 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 6.5, 'y': 6.5, 'z': 2.75}
+- `18253f2f9816_0025_object_25` (low) Object_25 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 17.75, 'z': 4.5}
+- `18253f2f9816_0026_object_26` (low) Object_26 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 6.0, 'z': 1.5}
+- `18253f2f9816_0027_object_27` (low) Object_27 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.5, 'y': 1.0, 'z': 0.75}
+- `18253f2f9816_0028_object_28` (low) Object_28 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 1.0, 'z': 1.25}
+- `18253f2f9816_0029_object_29` (low) Object_29 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 1.5, 'y': 1.5, 'z': 0.5}
+- `18253f2f9816_0030_object_30` (low) Object_30 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.5, 'y': 12.0, 'z': 1.52}
+- `18253f2f9816_0031_object_31` (low) Object_31 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 1.0, 'z': 0.75}
+- `18253f2f9816_0032_object_32` (low) Object_32 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 3.0, 'z': 1.75}
+- `18253f2f9816_0033_object_33` (low) Object_33 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 0.5, 'z': 0.75}
+- `18253f2f9816_0034_object_34` (low) Object_34 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 0.5, 'z': 0.5}
+- `18253f2f9816_0035_object_35` (low) Object_35 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 1.5, 'y': 0.5, 'z': 0.25}
+- `18253f2f9816_0036_object_36` (low) Object_36 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 7.5, 'y': 13.5, 'z': 2.02}
+- `18253f2f9816_0037_object_37` (low) Object_37 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 6.0, 'z': 1.02}
+- `18253f2f9816_0038_object_38` (low) Object_38 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.5, 'y': 14.5, 'z': 2.5}
+- `18253f2f9816_0039_object_39` (low) Object_39 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.1162, 'y': 14.3866, 'z': 2.21}
+- `18253f2f9816_0040_object_40` (low) Object_40 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.5, 'y': 10.999, 'z': 2.4984}
+- `18253f2f9816_0041_object_41` (low) Object_41 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.4731, 'y': 1.9856, 'z': 0.9955}
+- `18253f2f9816_0042_object_42` (low) Object_42 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 3.472, 'y': 1.9851, 'z': 0.9944}
+- `18253f2f9816_0043_object_43` (low) Object_43 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.2209, 'y': 8.9036, 'z': 3.0313}
+- `18253f2f9816_0044_object_44` (low) Object_44 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.4731, 'y': 3.4724, 'z': 1.0052}
+- `18253f2f9816_0045_object_45` (low) Object_45 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 4.472, 'y': 3.4719, 'z': 1.0045}
+- `18253f2f9816_0046_object_46` (low) Object_46 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 7.0, 'z': 0.02}
+- `18253f2f9816_0047_object_47` (low) Object_47 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 8.5, 'z': 1.5}
+- `18253f2f9816_0048_object_48` (low) Object_48 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 8.0953, 'y': 0.7635, 'z': 0.8159}
+- `18253f2f9816_0049_object_49` (low) Object_49 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 5.0, 'y': 7.0, 'z': 0.02}
+- `18253f2f9816_0050_object_50` (low) Object_50 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 9.5, 'y': 3.0, 'z': 0.5}
+- `18253f2f9816_0051_object_51` (low) Object_51 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 7.0034, 'z': 1.9702}
+- `18253f2f9816_0052_object_52` (low) Object_52 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.502, 'y': 6.7771, 'z': 1.9014}
+- `18253f2f9816_0053_object_53` (low) Object_53 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.5, 'y': 6.9995, 'z': 1.9697}
+- `18253f2f9816_0054_object_54` (low) Object_54 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.502, 'y': 6.9861, 'z': 2.0244}
+- `18253f2f9816_0055_object_55` (low) Object_55 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.4902, 'y': 6.9927, 'z': 1.9292}
+- `18253f2f9816_0056_object_56` (low) Object_56 from `staged_assets_for_world_builder/desktop_3d_models_2/delta_flyer_star_trek_zeo.glb`, bounds={'x': 2.481, 'y': 6.9319, 'z': 0.7324}
+- ... 746 more `vehicle` prefabs in JSON.
+
+## plant
+
+- `a08d8e9b2322_0003_plants_0` (medium) Plants_0 from `staged_assets_for_world_builder/desktop_3d_model_5/low_poly_corridor_-_star_trek.glb`, bounds={'x': 94.7767, 'y': 99.8285, 'z': 2.9986}

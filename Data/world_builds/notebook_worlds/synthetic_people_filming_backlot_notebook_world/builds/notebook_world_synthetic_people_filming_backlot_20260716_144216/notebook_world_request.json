@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "request_type": "notebook_world",
+  "title": "Synthetic People Filming Backlot - Synthetic People Filming Backlot Notebook World",
+  "requested_by": "robert",
+  "trigger": {
+    "source": "world_generator_request",
+    "summary": "Robert authorized improving World Builder and a lightweight future filming world for Kira, Robert, and guests, without Home World placement or people activation.",
+    "created_at": "2026-07-16T14:42:16.349290+00:00"
+  },
+  "subject": {
+    "name": "Synthetic People Filming Backlot",
+    "category": "original_idea",
+    "city": "Standalone Production Backlot",
+    "region": "Production Notebook Worlds",
+    "country": "Virtual",
+    "era": "current_or_best_sourced",
+    "private_use_allowed": true,
+    "public_export_requires_review": true
+  },
+  "source_collection_plan": {
+    "allowed_source_types": [
+      "official_site",
+      "local_library",
+      "web_search",
+      "map_or_satellite_view",
+      "street_level_photos",
+      "public_photos",
+      "public_video",
+      "floor_plans",
+      "blueprints",
+      "measurements",
+      "manual_notes",
+      "style_or_era_references"
+    ],
+    "requires_robert_approval_now": true,
+    "auto_collection_allowed_later": false,
+    "download_policy": "record_source_leads_first_download_only_after_review",
+    "source_tasks_path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/source_tasks.json"
+  },
+  "creation_mode": {
+    "mode": "original_creation",
+    "starts_from_blank": true,
+    "description": "Build an original environment from a blank notebook-world scene."
+  },
+  "access_gateway": {
+    "gateway_id": "tardis_notebook_world_gateway",
+    "entry_location": "outside_protected_home_world",
+    "selection_method": "interior_console"
+  },
+  "world_plan": {
+    "notebook_world_id": "synthetic_people_filming_backlot_notebook_world",
+    "notebook_world_title": "Synthetic People Filming Backlot Notebook World",
+    "starting_area": "two-room soundstage, builder review room, and intentionally unfinished exterior facade",
+    "initial_scope": "two_room_filming_backlot_prototype",
+    "confirmed_zones": [],
+    "inferred_zones": [
+      "approach paths and surrounding scene massing after maps/photos are reviewed"
+    ],
+    "unknown_zones": [
+      "interiors, service spaces, rear elevations, and any area not visible in approved references"
+    ],
+    "npc_policy": "generic",
+    "ride_or_attraction_policy": "none",
+    "truth_labels": [
+      "blueprint_confirmed",
+      "photo_confirmed",
+      "video_confirmed",
+      "map_confirmed",
+      "manual_note_confirmed",
+      "inferred_from_sources",
+      "style_fill",
+      "unknown",
+      "blocked_private"
+    ],
+    "placement_path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/placement.json",
+    "scene_plan_path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/scene_plan.json",
+    "blueprint_preview_path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/blueprint_preview.json",
+    "tardis_review_stage_path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/tardis_review_stage.json",
+    "quality_gate_path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/quality_gate.json",
+    "resource_isolation_gate_path": "Data/world_builds/notebook_worlds/synthetic_people_filming_backlot_notebook_world/builds/notebook_world_synthetic_people_filming_backlot_20260716_144216/resource_isolation_gate.json",
+    "collection_id": null
+  },
+  "approval_workflow": {
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "current_stage": "draft_request_only",
+    "review_location": "TARDIS builder review bay",
+    "required_previews_before_approval": [
+      "blueprint/map placement",
+      "isolated exterior or representative room preview",
+      "walkable TARDIS review stage"
+    ]
+  },
+  "isolation_policy": {
+    "world_class": "separate_notebook_world",
+    "home_world_import_requested": false,
+    "home_world_mutation_allowed": false,
+    "strip_mall_mutation_allowed": false,
+    "co_load_with_home_world": false,
+    "co_load_with_other_notebook_worlds": false,
+    "runtime_load_policy": "one_notebook_world_at_a_time",
+    "collection_id": null,
+    "collection_members_are_logical_not_co_loaded": true
+  },
+  "resource_policy": {
+    "hardware_profile": "Data/launch/hardware_capability_profile.json",
+    "current_decision": "request_paperwork_only_no_runtime",
+    "loads_kira_mind": false,
+    "loads_kira_body": false,
+    "loads_voice": false,
+    "loads_ollama": false,
+    "loads_second_person": false,
+    "future_preview_policy": "isolated_preview_only_one_heavy_workload_at_a_time"
+  },
+  "quality_gates": {
+    "source_evidence": "not_run",
+    "scale_and_placement": "not_run",
+    "doors_routes_and_collision": "not_run",
+    "visual_realism": "not_run",
+    "runtime_route": "blocked",
+    "pinned_deployment": "blocked",
+    "explicit_robert_approval": "blocked"
+  },
+  "visibility_scope": "private_only",
+  "autonomy_level_required": "request_mode",
+  "status": "draft"
+}

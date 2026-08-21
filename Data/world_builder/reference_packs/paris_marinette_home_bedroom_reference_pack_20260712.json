@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-12T21:00:00Z",
+  "status": "world_builder_reference_pack_note",
+  "world_target": "paris_notebook_world/marinette_home_and_bedroom",
+  "source_context": "Robert clarified that most Marinette bedroom/background shots were intended for World Builder so her home and bedroom can later be recreated in the Paris notebook world.",
+  "primary_existing_source_folder": "Data/world_builder/staged_assets_for_world_builder/desktop_Marinette_Bedroom",
+  "related_avatar_pack_contact_sheet": "Avatar/avatar_builder/school/assignments/photo_head_reconstruction_packs/ladybug_marinette_expanded_smoke_20260712_162124/reference_contact_sheet.jpg",
+  "route_override_file": "Avatar/avatar_builder/reference_routing/ladybug_marinette_expanded_smoke_photo_route_overrides_20260712.json",
+  "world_builder_should_extract": [
+    "bedroom layout",
+    "bed position and loft/room scale",
+    "desk/computer area",
+    "windows and wall shapes",
+    "stairs/loft relationships where visible",
+    "pink/soft room palette as source evidence, not final material until reviewed",
+    "furniture types: bed, desk, chair, shelves, pillows, wall decor, lights"
+  ],
+  "avatar_builder_should_ignore_for_likeness": [
+    "empty room shots",
+    "bedroom/background shots where Marinette is tiny or absent",
+    "logos",
+    "wide interior screenshots meant to reconstruct place layout"
+  ],
+  "do_not_build_yet": "Do not add this room to Home World while Robert is in pre-RAM mode. It belongs later in the Paris notebook world."
+}

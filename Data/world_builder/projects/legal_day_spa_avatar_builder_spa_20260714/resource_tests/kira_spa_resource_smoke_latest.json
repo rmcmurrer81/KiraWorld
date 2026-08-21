@@ -1,0 +1,1412 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-15T22:58:27.630050+00:00",
+  "status": "passed_bounded_combined_smoke",
+  "scope": {
+    "included": [
+      "current Home World Three.js source runtime",
+      "Kira's current 3D body loaded through the Home World debug injection path",
+      "latest legal-spa preview and all five unique real-prefab sources",
+      "one tiny llama3.1:8b inference"
+    ],
+    "excluded": [
+      "voice synthesis and microphone input",
+      "hours-long autonomous movement",
+      "spa Kira-route correctness",
+      "multiple synthetic people",
+      "proof against slow memory leaks, thermal throttling, or long-session crashes"
+    ],
+    "truth_note": "A short pass can reject an unsafe combination, but cannot certify a several-hour lived-world session."
+  },
+  "inputs": {
+    "hardware_profile": "Data/launch/hardware_capability_profile.json",
+    "home_preview": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview",
+    "spa_preview": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820",
+    "spa_gate": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/approval_gate.json",
+    "model": "llama3.1:8b"
+  },
+  "baseline": {
+    "at": "2026-07-15T22:58:03.626944+00:00",
+    "system_memory": {
+      "total_gb": 31.41,
+      "used_gb": 10.707,
+      "available_gb": 20.703,
+      "load_percent": 34.0
+    },
+    "gpu": {
+      "available": true,
+      "name": "NVIDIA GeForce RTX 5060 Ti",
+      "total_mb": 16311,
+      "used_mb": 1188,
+      "free_mb": 14863,
+      "utilization_percent": 1
+    }
+  },
+  "model": {
+    "requested": true,
+    "already_loaded": false,
+    "loaded": true,
+    "load_and_tiny_inference_seconds": 2.703,
+    "response_received": true
+  },
+  "browser": {
+    "schema_version": 1,
+    "status": "ready",
+    "home": {
+      "url": "http://127.0.0.1:60603/?area=home&resourceSmoke=1",
+      "active_avatar": {
+        "activeLabel": "Kira",
+        "activeCandidate": "kira",
+        "markerPresent": true,
+        "rootPresent": true,
+        "modelUrl": "/models/temp_ai/kira/avatar.glb",
+        "action": "idle",
+        "skillInteraction": null,
+        "gaitMode": null,
+        "roamZone": "kira_home_world",
+        "garment": null,
+        "moving": false,
+        "position": {
+          "x": -19.15,
+          "y": 0.05,
+          "z": 5.05
+        },
+        "proceduralRig": {
+          "id": "generic_humanoid_v1",
+          "usable": true,
+          "hasWalkClip": false,
+          "activeLabel": "Kira",
+          "spiderLike": false,
+          "driving": true,
+          "gaitMode": "walk",
+          "boneNames": {
+            "hips": "mixamorigHips_01",
+            "spine": "mixamorigSpine2_04",
+            "neck": "mixamorigNeck_05",
+            "head": "mixamorigHead_06",
+            "leftUpperArm": "mixamorigLeftArm_09",
+            "leftForearm": "mixamorigLeftForeArm_010",
+            "leftHand": "mixamorigLeftHand_011",
+            "rightUpperArm": "mixamorigRightArm_033",
+            "rightForearm": "mixamorigRightForeArm_034",
+            "rightHand": "mixamorigRightHand_035",
+            "leftThigh": "mixamorigLeftUpLeg_055",
+            "leftShin": "mixamorigLeftLeg_056",
+            "leftFoot": "mixamorigLeftFoot_057",
+            "rightThigh": "mixamorigRightUpLeg_060",
+            "rightShin": "mixamorigRightLeg_061",
+            "rightFoot": "mixamorigRightFoot_062"
+          },
+          "missing": []
+        }
+      },
+      "frame_sample": {
+        "frames": 125,
+        "elapsed_seconds": 3.021,
+        "frames_per_second": 41.38,
+        "canvas": {
+          "width": 1280,
+          "height": 720
+        },
+        "js_heap": {
+          "used_mb": 87.45,
+          "total_mb": 117.3
+        }
+      }
+    },
+    "spa": {
+      "url": "http://127.0.0.1:60604/Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/index.html",
+      "snapshot": {
+        "ready": true,
+        "status": "loaded",
+        "expectedInstances": 6,
+        "expectedUniqueSources": 5,
+        "uniqueSourcesRequested": 5,
+        "loaded": [
+          {
+            "id": "consultation_chair_left_real",
+            "role": "consultation_chair",
+            "sourceUrl": "/Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb"
+          },
+          {
+            "id": "consultation_chair_right_real",
+            "role": "consultation_chair",
+            "sourceUrl": "/Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb"
+          },
+          {
+            "id": "restroom_toilet_real",
+            "role": "restroom_toilet",
+            "sourceUrl": "/Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb"
+          },
+          {
+            "id": "waiting_coffee_table_real",
+            "role": "waiting_coffee_table",
+            "sourceUrl": "/Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/low_height_coffee_table (1).glb"
+          },
+          {
+            "id": "restroom_sink_cabinet_real",
+            "role": "restroom_sink_cabinet",
+            "sourceUrl": "/Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/bathroom_sink_cabinet (1).glb"
+          },
+          {
+            "id": "waiting_sofa_real",
+            "role": "waiting_sofa",
+            "sourceUrl": "/Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/some more 3d/modern_sofa (1).glb"
+          }
+        ],
+        "failures": []
+      },
+      "frame_sample": {
+        "frames": 181,
+        "elapsed_seconds": 3.014,
+        "frames_per_second": 60.05,
+        "canvas": {
+          "width": 1280,
+          "height": 720
+        },
+        "js_heap": {
+          "used_mb": 24.8,
+          "total_mb": 31.57
+        }
+      }
+    },
+    "diagnostics": {
+      "pageErrors": [],
+      "consoleErrors": [],
+      "requestFailures": [],
+      "httpErrors": []
+    }
+  },
+  "measurements": {
+    "sample_count": 9,
+    "duration_seconds": 12,
+    "minimum_available_ram_gb": 18.779,
+    "peak_additional_system_ram_used_from_baseline_gb": 1.924,
+    "peak_system_memory_load_percent": 40.0,
+    "peak_controlled_working_set_mb": 1660.68,
+    "peak_controlled_private_mb": 2463.47,
+    "peak_gpu_memory_used_mb_whole_system": 7288,
+    "peak_additional_gpu_memory_used_from_baseline_mb": 6100
+  },
+  "decision": {
+    "choice": "separate_notebook_world",
+    "home_world_mutation_allowed": false,
+    "strip_mall_deletion_allowed": false,
+    "reasons": [
+      "Observed RAM is 32GB; the established heavy world/runtime gate is 64GB.",
+      "Current hardware stage stage_16gb_gpu_bridge blocks 3D Home World as a lived world.",
+      "Spa approval status is not_approved, not approved.",
+      "The runtime Kira route test has not passed.",
+      "The visual-realism gate has not passed.",
+      "Robert's explicit visual approval is not recorded.",
+      "A bounded resource smoke cannot certify Robert's several-hour lived-world sessions or rule out a slow leak."
+    ],
+    "reconsider_after": [
+      "64GB RAM is installed and verified",
+      "a supervised multi-hour Kira plus spa soak passes without lag, crash, or memory pressure",
+      "the spa runtime Kira-route test passes",
+      "the visual-realism and missing-prefab gates pass",
+      "Robert explicitly approves the spa and its Home World placement"
+    ]
+  },
+  "strip_mall": {
+    "deleted": false,
+    "modified": false
+  },
+  "home_world": {
+    "modified": false
+  },
+  "raw_samples": [
+    {
+      "at": "2026-07-15T22:58:15.744905+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.631,
+        "available_gb": 18.779,
+        "load_percent": 40.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7284,
+        "free_mb": 8767,
+        "utilization_percent": 40
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1660.68,
+        "private_mb": 2463.47,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 624.53,
+            "private_mb": 560.42
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 367.62,
+            "private_mb": 1295.15
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 234.01,
+            "private_mb": 163.02
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.26,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 54.62,
+            "private_mb": 20.59
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:17.103097+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.569,
+        "available_gb": 18.84,
+        "load_percent": 40.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7288,
+        "free_mb": 8763,
+        "utilization_percent": 11
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1646.02,
+        "private_mb": 2448.07,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 625.39,
+            "private_mb": 560.67
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 351.79,
+            "private_mb": 1279.29
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 234.3,
+            "private_mb": 163.23
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.27,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 54.62,
+            "private_mb": 20.59
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:18.467265+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.572,
+        "available_gb": 18.837,
+        "load_percent": 40.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7288,
+        "free_mb": 8763,
+        "utilization_percent": 10
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1647.52,
+        "private_mb": 2449.97,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 626.38,
+            "private_mb": 561.95
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 351.79,
+            "private_mb": 1279.29
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 234.8,
+            "private_mb": 163.85
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.27,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 54.62,
+            "private_mb": 20.59
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:19.821759+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.572,
+        "available_gb": 18.838,
+        "load_percent": 40.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7284,
+        "free_mb": 8767,
+        "utilization_percent": 11
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1648.42,
+        "private_mb": 2450.34,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 627.02,
+            "private_mb": 562.27
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 351.79,
+            "private_mb": 1279.3
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 235.06,
+            "private_mb": 163.89
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.28,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 54.62,
+            "private_mb": 20.59
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:21.187980+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.569,
+        "available_gb": 18.841,
+        "load_percent": 40.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7288,
+        "free_mb": 8763,
+        "utilization_percent": 12
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1648.93,
+        "private_mb": 2450.59,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 626.94,
+            "private_mb": 562.09
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 351.79,
+            "private_mb": 1279.3
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 235.43,
+            "private_mb": 164.11
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.29,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 54.83,
+            "private_mb": 20.79
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:22.517878+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.561,
+        "available_gb": 18.848,
+        "load_percent": 39.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7284,
+        "free_mb": 8767,
+        "utilization_percent": 12
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1638.07,
+        "private_mb": 2439.67,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 627.15,
+            "private_mb": 562.41
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 340.38,
+            "private_mb": 1267.88
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 235.51,
+            "private_mb": 164.04
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.29,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 55.1,
+            "private_mb": 21.06
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:23.872224+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.561,
+        "available_gb": 18.848,
+        "load_percent": 39.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7284,
+        "free_mb": 8767,
+        "utilization_percent": 12
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1638.37,
+        "private_mb": 2440.2,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 627.21,
+            "private_mb": 562.47
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 340.38,
+            "private_mb": 1267.88
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 235.73,
+            "private_mb": 164.5
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.29,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 55.1,
+            "private_mb": 21.06
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:25.233673+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.561,
+        "available_gb": 18.849,
+        "load_percent": 39.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7288,
+        "free_mb": 8763,
+        "utilization_percent": 13
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1638.64,
+        "private_mb": 2440.22,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 627.41,
+            "private_mb": 562.64
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 340.38,
+            "private_mb": 1267.88
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 235.96,
+            "private_mb": 164.51
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.3,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 54.94,
+            "private_mb": 20.9
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    },
+    {
+      "at": "2026-07-15T22:58:26.564458+00:00",
+      "system_memory": {
+        "total_gb": 31.41,
+        "used_gb": 12.564,
+        "available_gb": 18.845,
+        "load_percent": 40.0
+      },
+      "gpu": {
+        "available": true,
+        "name": "NVIDIA GeForce RTX 5060 Ti",
+        "total_mb": 16311,
+        "used_mb": 7283,
+        "free_mb": 8768,
+        "utilization_percent": 12
+      },
+      "controlled_processes": {
+        "process_count": 15,
+        "working_set_mb": 1639.31,
+        "private_mb": 2441.4,
+        "processes": [
+          {
+            "pid": 27936,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 627.61,
+            "private_mb": 562.76
+          },
+          {
+            "pid": 28120,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 340.38,
+            "private_mb": 1267.88
+          },
+          {
+            "pid": 11092,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 236.16,
+            "private_mb": 165.27
+          },
+          {
+            "pid": 6880,
+            "parent_pid": 10552,
+            "name": "node.exe",
+            "working_set_mb": 99.95,
+            "private_mb": 106.8
+          },
+          {
+            "pid": 4248,
+            "parent_pid": 17152,
+            "name": "node.exe",
+            "working_set_mb": 76.3,
+            "private_mb": 116.73
+          },
+          {
+            "pid": 30224,
+            "parent_pid": 24692,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 73.14,
+            "private_mb": 53.43
+          },
+          {
+            "pid": 24692,
+            "parent_pid": 6880,
+            "name": "chrome-headless-shell.exe",
+            "working_set_mb": 55.21,
+            "private_mb": 21.2
+          },
+          {
+            "pid": 23256,
+            "parent_pid": 3224,
+            "name": "node.exe",
+            "working_set_mb": 48.04,
+            "private_mb": 58.84
+          },
+          {
+            "pid": 30604,
+            "parent_pid": 10552,
+            "name": "python.exe",
+            "working_set_mb": 24.94,
+            "private_mb": 16.82
+          },
+          {
+            "pid": 25988,
+            "parent_pid": 4248,
+            "name": "esbuild.exe",
+            "working_set_mb": 14.96,
+            "private_mb": 52.2
+          },
+          {
+            "pid": 3224,
+            "parent_pid": 10552,
+            "name": "cmd.exe",
+            "working_set_mb": 10.68,
+            "private_mb": 7.96
+          },
+          {
+            "pid": 17152,
+            "parent_pid": 23256,
+            "name": "cmd.exe",
+            "working_set_mb": 10.61,
+            "private_mb": 7.86
+          },
+          {
+            "pid": 9968,
+            "parent_pid": 6880,
+            "name": "conhost.exe",
+            "working_set_mb": 7.14,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 24904,
+            "parent_pid": 3224,
+            "name": "conhost.exe",
+            "working_set_mb": 7.12,
+            "private_mb": 1.23
+          },
+          {
+            "pid": 29864,
+            "parent_pid": 30604,
+            "name": "conhost.exe",
+            "working_set_mb": 7.05,
+            "private_mb": 1.21
+          }
+        ]
+      },
+      "ollama_loaded_models": [
+        "llama3.1:8b"
+      ]
+    }
+  ],
+  "run_artifacts": {
+    "folder": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/resource_tests/run_20260715_185803"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_college_campus_20260716_021505",
+  "scene_id": "scene_college_campus",
+  "renderer_target": "threejs_notebook_world",
+  "units": "meters",
+  "coordinate_policy": "local_scene_offsets_are_derived_from_real_world_coordinates_when_available",
+  "placement": {
+    "placement_status": "first_anchor_or_coordinates_needed",
+    "notebook_world_id": "college_campus_core_notebook_world",
+    "real_world_coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "local_scene_offset_meters": {
+      "x": 0,
+      "z": 0
+    },
+    "nearest_existing_anchor": null,
+    "distance_from_nearest_anchor_meters": null,
+    "truth_label": "unknown",
+    "unapproved_candidate_anchors_ignored": 0,
+    "commit_rule": "Draft/catalog anchors cannot become coordinate origins until a separate placement approval marks placement_approved=true."
+  },
+  "build_layers": [
+    {
+      "layer": "terrain_or_ground_plane",
+      "status": "placeholder",
+      "truth_label": "style_fill"
+    },
+    {
+      "layer": "primary_exterior_mass",
+      "status": "waiting_for_sources",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "major_landmarks",
+      "status": "waiting_for_sources",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "walkable_paths",
+      "status": "waiting_for_maps",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "memorial_union_student_center_program",
+      "status": "planning_only_waiting_for_public_sources_program_review_and_blueprint",
+      "truth_label": "style_fill",
+      "program_plan_path": "Data/world_builds/notebook_collections/education_notebook_collection_20260716/memorial_union_student_center_plan.json",
+      "first_route_slice": "arrival -> information -> representative generic food venue -> social lounge -> college-store threshold -> meeting/event pre-function -> library approach",
+      "private_memory_geometry_used": false
+    },
+    {
+      "layer": "lighting_and_atmosphere",
+      "status": "draft_after_reference_review",
+      "truth_label": "style_fill"
+    }
+  ],
+  "do_not_claim": [
+    "Do not claim exact dimensions unless the measurement source is recorded.",
+    "Do not fill hidden interiors as source-confirmed.",
+    "Do not claim the Memorial Union program is a measured or reconstructed real-building layout.",
+    "Do not omit food-service, loading, waste, storage, accessibility, restroom, egress, and life-safety support from later blueprint review.",
+    "Do not use private Kira or Lisa college memories as public campus geometry.",
+    "Do not import into the protected home world without review.",
+    "Do not treat a draft index anchor as an approved coordinate origin."
+  ],
+  "approval_gate": {
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "preview_before_commit": true
+  }
+}

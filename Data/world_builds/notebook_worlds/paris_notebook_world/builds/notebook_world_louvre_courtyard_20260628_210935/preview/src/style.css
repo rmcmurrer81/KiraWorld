@@ -1,0 +1,458 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #101217;
+  color: #f3efe5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#world {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#hud {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  max-width: 430px;
+  padding: 12px 14px;
+  background: rgba(15, 18, 22, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f8f0dd;
+  pointer-events: none;
+}
+
+.landmark-status {
+  margin-top: 8px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f0d89b;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.review-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  margin-top: 7px;
+  color: #b9e3ef;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.meta,
+.controls {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #cfd7df;
+}
+
+#status {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  max-width: 420px;
+  padding: 10px 12px;
+  background: rgba(15, 18, 22, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #d6e6f5;
+  font-size: 12px;
+  line-height: 1.35;
+  pointer-events: none;
+}
+
+#truthPanel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: min(390px, calc(100vw - 32px));
+  padding: 12px 14px;
+  box-sizing: border-box;
+  background: rgba(15, 18, 22, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #f5efe3;
+  font-size: 12px;
+  line-height: 1.38;
+  pointer-events: auto;
+}
+
+#bookmarkPanel {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 11;
+  width: min(430px, calc(100vw - 32px));
+  padding: 11px 12px;
+  box-sizing: border-box;
+  background: rgba(10, 22, 29, 0.9);
+  border: 1px solid rgba(101, 183, 202, 0.6);
+  color: #eff8f8;
+  font-size: 11px;
+  line-height: 1.3;
+  pointer-events: auto;
+}
+
+.bookmark-heading,
+.bookmark-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.bookmark-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.bookmark-link-label {
+  display: grid;
+  gap: 4px;
+  margin-top: 8px;
+  color: #b8dbe3;
+}
+
+#bookmarkPanel button,
+#bookmarkPanel select,
+#bookmarkPanel input {
+  min-width: 0;
+  padding: 6px 8px;
+  box-sizing: border-box;
+  border: 1px solid rgba(164, 216, 228, 0.42);
+  border-radius: 3px;
+  background: rgba(25, 46, 57, 0.96);
+  color: #f1f8fa;
+  font: inherit;
+}
+
+#bookmarkPanel button {
+  cursor: pointer;
+}
+
+#bookmarkPanel input {
+  flex: 1;
+  color: #b9d7de;
+}
+
+#truthMarkersToggle[aria-pressed="false"] {
+  opacity: 0.68;
+}
+
+#bookmarkStatus {
+  margin-top: 7px;
+  color: #8fd0df;
+}
+
+.truth-panel-heading,
+.feedback-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#truthPanel p {
+  margin: 6px 0 10px;
+}
+
+#truthPanel button,
+#feedbackToggle,
+#feedbackPanel button,
+#feedbackPanel select,
+#feedbackPanel textarea {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 3px;
+  background: rgba(31, 42, 52, 0.96);
+  color: #f5f7f8;
+  font: inherit;
+}
+
+#truthPanel button,
+#feedbackToggle,
+#feedbackPanel button {
+  padding: 6px 9px;
+  cursor: pointer;
+}
+
+.truth-chip {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.truth-chip.official {
+  background: rgba(29, 108, 75, 0.86);
+  color: #dff7e8;
+}
+
+.truth-chip.approximate {
+  background: rgba(154, 104, 24, 0.88);
+  color: #fff0c9;
+}
+
+.truth-chip.locked {
+  background: rgba(121, 54, 54, 0.9);
+  color: #ffe1e1;
+}
+
+#feedbackToggle {
+  position: fixed;
+  right: 16px;
+  bottom: 82px;
+  z-index: 12;
+  background: rgba(25, 77, 108, 0.96);
+}
+
+#feedbackPanel {
+  position: fixed;
+  right: 16px;
+  bottom: 126px;
+  z-index: 13;
+  width: min(390px, calc(100vw - 32px));
+  max-height: calc(100vh - 158px);
+  overflow: auto;
+  padding: 13px;
+  box-sizing: border-box;
+  background: rgba(7, 18, 27, 0.96);
+  border: 1px solid rgba(91, 180, 226, 0.72);
+  color: #eff8fc;
+  font-size: 12px;
+  pointer-events: auto;
+}
+
+#feedbackPanel[hidden] {
+  display: none;
+}
+
+#feedbackPanel label {
+  display: grid;
+  gap: 5px;
+  margin-top: 10px;
+  color: #cce7f5;
+}
+
+#feedbackPanel select,
+#feedbackPanel textarea {
+  width: 100%;
+  padding: 7px 8px;
+  box-sizing: border-box;
+}
+
+#feedbackPanel textarea {
+  resize: vertical;
+}
+
+.feedback-help {
+  margin: 7px 0 0;
+  color: #a8c4d2;
+}
+
+.feedback-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+#reviewPackageExport {
+  grid-column: 1 / -1;
+  background: rgba(113, 76, 24, 0.96) !important;
+}
+
+#feedbackSave {
+  background: rgba(29, 108, 75, 0.96) !important;
+}
+
+#feedbackStatus {
+  margin-top: 10px;
+  color: #b7d8e8;
+}
+
+#packageStatus {
+  margin-top: 7px;
+  color: #d7c28e;
+}
+
+#tardisConsoleControls {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: min(430px, calc(100vw - 32px));
+  max-height: calc(100vh - 120px);
+  display: none;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: auto;
+  background: rgba(4, 13, 25, 0.9);
+  border: 1px solid rgba(65, 196, 255, 0.72);
+  color: #e8f8ff;
+  pointer-events: auto;
+}
+
+#tardisConsoleControls.visible {
+  display: block;
+}
+
+.tardis-console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #bcecff;
+  font-size: 13px;
+}
+
+.tardis-destination-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.tardis-area-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tardis-area-buttons[hidden] {
+  display: none;
+}
+
+#tardisConsoleControls button {
+  min-height: 34px;
+  padding: 7px 9px;
+  border: 1px solid rgba(77, 188, 255, 0.7);
+  border-radius: 3px;
+  background: rgba(15, 55, 94, 0.92);
+  color: #ecfbff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+#tardisConsoleControls button:hover,
+#tardisConsoleControls button.selected {
+  background: rgba(18, 103, 160, 0.96);
+  border-color: rgba(188, 238, 255, 0.95);
+}
+
+#tardisConsoleControls button.locked {
+  opacity: 0.62;
+}
+
+.tardis-selected-details {
+  min-height: 36px;
+  margin: 10px 0;
+  padding: 8px;
+  background: rgba(2, 27, 52, 0.9);
+  border: 1px solid rgba(54, 148, 210, 0.65);
+  color: #c9eafb;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.tardis-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.tardis-actions button {
+  text-align: center;
+}
+
+.tardis-talk-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+}
+
+.tardis-talk-form input {
+  min-width: 0;
+  padding: 8px 9px;
+  border: 1px solid rgba(54, 148, 210, 0.75);
+  border-radius: 3px;
+  background: rgba(2, 18, 35, 0.95);
+  color: #ecfbff;
+  font: inherit;
+}
+
+.tardis-talk-form input:focus {
+  outline: 1px solid rgba(188, 238, 255, 0.95);
+}
+
+.tardis-talk-form button {
+  text-align: center;
+}
+
+#crosshair {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+body.photo-mode #hud,
+body.photo-mode #status,
+body.photo-mode #crosshair,
+body.photo-mode #tardisConsoleControls,
+body.photo-mode #truthPanel,
+body.photo-mode #feedbackToggle,
+body.photo-mode #feedbackPanel,
+body.photo-mode #bookmarkPanel {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  #truthPanel {
+    top: auto;
+    right: 12px;
+    bottom: 124px;
+    width: min(360px, calc(100vw - 24px));
+    max-height: 38vh;
+    overflow: auto;
+  }
+
+  #feedbackToggle {
+    right: 12px;
+  }
+
+  #status {
+    right: 12px;
+    left: 12px;
+    max-width: none;
+  }
+
+  #bookmarkPanel {
+    left: 12px;
+    bottom: 82px;
+    width: min(430px, calc(100vw - 24px));
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "collection_id": "education_notebook_collection",
+  "status": "planning_only_no_scene_built",
+  "design_goal": "A small but believable learning campus whose areas can mature independently without exceeding the current one-world resource envelope.",
+  "member_order": [
+    {
+      "sequence": 1,
+      "notebook_world_id": "college_campus_core_notebook_world",
+      "state": "strict_v2_request_prepared",
+      "zones": [
+        "arrival and transit court",
+        "Memorial Union arrival and information lobby",
+        "Memorial Union food hall with generic coffee/bakery, hot food, sandwich/salad, rotating international food, and grab-and-go venues",
+        "Memorial Union college store",
+        "Memorial Union social, quiet-study, and commuter lounges",
+        "Memorial Union meeting rooms, student-organization rooms, multipurpose event hall, and student-service desks",
+        "Memorial Union food-service back of house, receiving, loading, storage, staff, custodial, IT, mechanical, restroom, accessibility, and life-safety support rooms",
+        "library and study commons",
+        "administration and faculty offices",
+        "general classrooms"
+      ],
+      "first_preview_slice": "arrival court through Memorial Union information, one representative food venue, social lounge, college-store threshold, and event pre-function area to the library entrance",
+      "program_plan_path": "Data/world_builds/notebook_collections/education_notebook_collection_20260716/memorial_union_student_center_plan.json"
+    },
+    {
+      "sequence": 2,
+      "notebook_world_id": "college_campus_labs_notebook_world",
+      "state": "queued_until_core_scale_and_route_review",
+      "zones": [
+        "science lab",
+        "computing lab",
+        "avatar-builder teaching studio",
+        "world-builder teaching studio"
+      ]
+    },
+    {
+      "sequence": 3,
+      "notebook_world_id": "college_campus_living_notebook_world",
+      "state": "queued_until_core_and_labs_resource_review",
+      "zones": [
+        "dormitory",
+        "residential dining",
+        "resident lounges",
+        "outdoor social green"
+      ]
+    }
+  ],
+  "travel_model": {
+    "gateway": "TARDIS notebook-world interior console",
+    "switch_sequence": [
+      "save and close the current member",
+      "verify its renderer and asset server stopped",
+      "return to the lightweight gateway",
+      "select one next member",
+      "run that member's current resource and integrity gates before preview"
+    ],
+    "continuous_cross_member_walk": false,
+    "shared_live_scene": false
+  },
+  "quality_order": [
+    "source or original-design evidence board",
+    "human-scale blueprint and footprint review",
+    "door, stairs, route, and collision proof",
+    "representative materials and visual-realism review",
+    "isolated browser/runtime route test",
+    "pinned deployment manifest",
+    "explicit Robert approval"
+  ],
+  "truth_boundaries": {
+    "private_college_memory_drafts_are_geometry_sources": false,
+    "memorial_union_program_is_real_building_geometry": false,
+    "memorial_union_program_status": "original_planning_only_until_public_sources_and_blueprint_review",
+    "queued_members_exist_as_3d_worlds": false,
+    "core_request_means_core_preview_exists": false,
+    "collection_registration_means_runtime_registration": false
+  }
+}

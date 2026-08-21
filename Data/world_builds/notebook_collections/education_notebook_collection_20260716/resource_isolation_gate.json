@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "collection_id": "education_notebook_collection",
+  "status": "active_planning_gate_no_runtime",
+  "checked_against": "Data/launch/hardware_capability_profile.json",
+  "checked_at": "2026-07-16T02:15:05+00:00",
+  "observed_hardware": {
+    "ram_gb": 32,
+    "ram_configuration": "2x16GB",
+    "ram_speed_mt_s": 6000,
+    "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB",
+    "hardware_stage": "stage_16gb_gpu_bridge"
+  },
+  "current_decision": "paperwork_and_static_validation_only",
+  "max_concurrent_notebook_worlds": 1,
+  "allowed_now": [
+    "request paperwork",
+    "source and asset planning",
+    "static schema validation",
+    "isolated lightweight preview only after a fresh per-build resource gate"
+  ],
+  "blocked_now": [
+    "starting any campus world from this planning artifact",
+    "co-loading campus collection members",
+    "loading a campus member with Home World",
+    "loading a campus member with Kira mind or body",
+    "loading voice or Ollama for a campus preview",
+    "loading a second synthetic person",
+    "merging the campus or spa into Home World",
+    "deleting or replacing the strip mall"
+  ],
+  "isolation_assertions": {
+    "loads_home_world": false,
+    "loads_kira_mind": false,
+    "loads_kira_body": false,
+    "loads_voice": false,
+    "loads_ollama": false,
+    "loads_second_person": false,
+    "co_load_collection_members": false,
+    "memory_reconstruction_members_allowed": false,
+    "home_world_merge_allowed": false,
+    "strip_mall_mutation_allowed": false
+  },
+  "transition_rule": "A future isolated preview needs a new resource observation immediately before launch. A collection member must unload fully before another member is selected.",
+  "ram_upgrade_note": "Reaching 64GB permits new testing; it does not automatically approve co-loading, Home World import, or multiple live people. Those still require measured soak and explicit gates."
+}

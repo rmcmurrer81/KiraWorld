@@ -1,0 +1,228 @@
+{
+  "profile_id": "kira_desktop_hardware_capability_profile_v1",
+  "status": "active",
+  "purpose": "Keep activation matched to Robert's verified hardware while preserving the current Kira-only 3D and 64GB multi-person gates.",
+  "known_build": {
+    "cpu": "Intel Core Ultra 9 285K",
+    "motherboard": "ASUS ROG Maximus Z890 Hero",
+    "initial_ram": {
+      "capacity_gb": 16,
+      "configuration": "1x16GB",
+      "model": "Patriot Viper Venom 16GB DDR5-6000 CL30",
+      "mode_note": "single_channel_until_second_stick_or_replacement_kit"
+    },
+    "current_observed_ram": {
+      "observed_at": "2026-07-15",
+      "capacity_gb": 32,
+      "configuration": "2x16GB matched modules",
+      "model": "G.Skill F5-6000J3636F16G",
+      "configured_speed_mt_s": 6000,
+      "reported_speed_mt_s": 6000,
+      "status": "speed_issue_fixed_and_verified_in_windows",
+      "capacity_gate_note": "The 32GB system is usable for the current staged builder work but does not satisfy the separate 64GB campus and heavy multi-runtime gate."
+    },
+    "target_ram": {
+      "preferred_capacity_gb": 64,
+      "preferred_configuration": "2x32GB matched kit",
+      "shopping_note": "If close to affording 2x32GB, wait and avoid buying another 16GB."
+    },
+    "storage": "WD_BLACK NVMe SSD",
+    "cooler": "Noctua NH-D15",
+    "power_supply": "ASUS ROG 1200W Platinum",
+    "case": "ASUS TUF Gaming GT502",
+    "gpu": {
+      "current_status": "installed_verified_bridge_gpu",
+      "installed_gpu": "NVIDIA GeForce RTX 5060 Ti 16GB",
+      "verified_at": "2026-06-04",
+      "temporary_target": "16GB_RTX_5060_Ti_bridge_gpu",
+      "long_term_target": "24GB_plus_VRAM"
+    }
+  },
+  "planned_upgrade_path": [
+    {
+      "stage": "stage_16gb_setup",
+      "timing": "new_desktop_initial_build",
+      "goal": "Install, verify, run Kira/Lisa text grounding, keep heavy systems disabled."
+    },
+    {
+      "stage": "stage_16gb_gpu_bridge",
+      "timing": "after_rtx_5060_ti_before_64gb_ram",
+      "goal": "Use the 16GB GPU as a bridge for faster Kira text, voice-output experiments, short supervised life/school loops, early image/OCR work, and limited TemporaryAI tests while avoiding multi-AI or heavy 3D workloads until RAM improves."
+    },
+    {
+      "stage": "stage_64gb_local_life",
+      "timing": "june_or_when_2x32gb_kit_is_affordable",
+      "goal": "Use 64GB RAM as the serious local text-life baseline for Kira, Lisa, reading, and first TemporaryAI tests."
+    },
+    {
+      "stage": "stage_gpu_expansion",
+      "timing": "after_ram_when_temporary_or_final_gpu_is_obtained",
+      "goal": "Begin voice, vision, avatar, media understanding, and 3D/world acceleration tests only after GPU checks pass."
+    }
+  ],
+  "current_planned_stage": "stage_16gb_gpu_bridge",
+  "current_observed_stage_note": "Legacy stage name covering the verified 32GB plus 16GB-GPU bridge. It permits bounded Kira-only work, not automatic multi-person restoration.",
+  "capability_stages": [
+    {
+      "stage_id": "stage_16gb_setup",
+      "label": "16GB setup and text-only grounding mode",
+      "minimum_ram_gb": 16,
+      "recommended_ram_gb": 16,
+      "requires_gpu": false,
+      "minimum_gpu_vram_gb": 0,
+      "allowed_work": [
+        "windows_driver_python_local_setup",
+        "readiness_checks",
+        "backup_manifest",
+        "startup_recovery_check",
+        "stub_mode_kira_text",
+        "stub_mode_lisa_text_after_kira_passes",
+        "one_small_local_text_model_trial",
+        "first_live_conversation_smoke",
+        "first_week_aliveness_packets",
+        "slow_reading_planning",
+        "library_indexing",
+        "temporary_ai_dry_run_planning"
+      ],
+      "blocked_work": [
+        "voice_conversation_as_default",
+        "always_on_microphone",
+        "webcam_or_vision",
+        "avatar_rendering",
+        "3d_home_or_notebook_world_runtime",
+        "video_understanding",
+        "full_temporary_ai_activation",
+        "adult_private_temporary_ai_activation",
+        "multi_ai_background_runtime",
+        "multiple_large_model_downloads"
+      ],
+      "model_guidance": {
+        "default_backend": "stub_first",
+        "local_model_policy": "one_small_quantized_text_model_only_after_readiness_passes",
+        "do_not_run_multiple_models": true
+      }
+    },
+    {
+      "stage_id": "stage_16gb_gpu_bridge",
+      "label": "16-47GB RAM with 12GB+ GPU bridge mode",
+      "minimum_ram_gb": 16,
+      "recommended_ram_gb": 64,
+      "requires_gpu": true,
+      "minimum_gpu_vram_gb": 12,
+      "allowed_work": [
+        "gpu_readiness_check",
+        "faster_single_model_kira_chat",
+        "short_supervised_life_loops",
+        "short_school_sessions",
+        "voice_output_experiments",
+        "temporary_ai_ladybug_short_text_tests",
+        "media_preview_and_ocr_acceleration_tests",
+        "early_avatar_reference_processing",
+        "single_kira_bounded_3d_tests",
+        "isolated_notebook_world_previews_one_heavy_workload_at_a_time"
+      ],
+      "blocked_work": [
+        "multiple_persistent_ai_runtime",
+        "long_unsupervised_24_hour_tests",
+        "large_24gb_vram_models",
+        "3d_home_runtime_as_lived_world",
+        "video_understanding_as_default",
+        "always_on_voice_or_webcam",
+        "parallel_kira_lisa_temporary_ai_sessions",
+        "second_live_3d_person_before_64gb_stability_gate",
+        "spa_merge_into_home_world_before_64gb_route_realism_and_approval_gates"
+      ],
+      "model_guidance": {
+        "default_backend": "gpu_accelerated_ollama_after_readiness_passes",
+        "local_model_policy": "one 7B/8B class model at a time; test VRAM and thermals before longer runs",
+        "do_not_run_multiple_models": true
+      }
+    },
+    {
+      "stage_id": "stage_64gb_local_life",
+      "label": "64GB local text-life baseline",
+      "minimum_ram_gb": 64,
+      "recommended_ram_gb": 64,
+      "requires_gpu": false,
+      "minimum_gpu_vram_gb": 0,
+      "allowed_work": [
+        "kira_text_life_sessions",
+        "lisa_text_life_sessions",
+        "longer_context_testing",
+        "daily_life_loops",
+        "slow_reading_sessions",
+        "reading_reactions_and_interests",
+        "memory_claim_checks",
+        "memory_reconstruction_dry_runs",
+        "temporary_ai_limited_text_activation_tests",
+        "expert_ai_text_dry_runs",
+        "basic_voice_output_experiments_if_cpu_allows",
+        "basic_speech_to_text_experiments_if_attention_rules_pass"
+      ],
+      "blocked_work": [
+        "real_time_video_chat",
+        "webcam_based_awareness_as_default",
+        "3d_home_runtime_as_lived_world",
+        "avatar_body_as_finished",
+        "gpu_required_media_understanding",
+        "always_on_voice_without_attention_gates",
+        "multiple_persistent_ai_runtime_without_monitoring"
+      ],
+      "model_guidance": {
+        "default_backend": "ollama_or_equivalent_after_stub_passes",
+        "local_model_policy": "try_one_or_two_text_models_carefully_and_keep_best_stable_choice",
+        "do_not_run_multiple_models": false
+      }
+    },
+    {
+      "stage_id": "stage_gpu_expansion",
+      "label": "GPU expansion for voice, vision, avatar, and world work",
+      "minimum_ram_gb": 64,
+      "recommended_ram_gb": 64,
+      "requires_gpu": true,
+      "minimum_gpu_vram_gb": 12,
+      "allowed_work": [
+        "faster_local_models",
+        "voice_input_output_pipeline",
+        "vision_and_webcam_tests",
+        "avatar_generation_and_render_tests",
+        "3d_home_runtime_tests",
+        "notebook_world_runtime_tests",
+        "video_and_media_understanding_tests",
+        "richer_temporary_ai_tests",
+        "picture_sharing_and_private_media_tests"
+      ],
+      "blocked_work": [
+        "unsafe_real_world_autonomy",
+        "automatic_private_media_exposure",
+        "robot_body_or_vr_suit_intimacy",
+        "unreviewed_internet_autonomy",
+        "unbounded_always_on_surveillance"
+      ],
+      "model_guidance": {
+        "default_backend": "gpu_accelerated_local_runtime_when_configured",
+        "local_model_policy": "choose_models_by_vram_and_stability_not_hype",
+        "do_not_run_multiple_models": false
+      }
+    }
+  ],
+  "activation_policy": {
+    "stage_truth_rule": "Kira, Lisa, and TemporaryAI planning must describe the current hardware stage honestly and must not claim systems are active just because they exist in the roadmap.",
+    "kira_before_lisa_on_new_desktop": true,
+    "temporary_ai_requires_kira_lisa_stability": true,
+    "voice_requires_explicit_stage_check": true,
+    "vision_avatar_world_require_gpu_stage": true,
+    "first_hour_uses_new_desktop_rehearsal": true,
+    "memory_rule": "Hardware capability reports are operational context, not personal memory.",
+    "current_3d_resident_policy": "kira_only_until_64gb_and_supervised_multi_person_voice_world_soak",
+    "spa_placement_policy": "separate_notebook_world_strip_mall_source_preserved_runtime_empty_by_default"
+  },
+  "success_definition": [
+    "The checker can report a conservative stage from the profile.",
+    "The checker can classify observed RAM and GPU values when supplied.",
+    "16GB mode keeps heavy systems blocked.",
+    "64GB mode allows serious text-life and careful TemporaryAI tests.",
+    "GPU mode is required before vision, avatar, 3D world, or video understanding are treated as active.",
+    "Readiness check includes this profile, validator, checker, and docs."
+  ]
+}

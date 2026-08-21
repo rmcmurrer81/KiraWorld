@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "metadata_kind": "procedural_preview_source_truth_labels",
+  "world_id": "synthetic_people_filming_backlot_notebook_world",
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "build_id": "filming_preview_20260716_r3",
+  "status": "truth_labels_present_prototype_not_source_reconstruction",
+  "allowed_labels": [
+    "blocked_private",
+    "blueprint_confirmed",
+    "inferred_from_sources",
+    "manual_note_confirmed",
+    "map_confirmed",
+    "photo_confirmed",
+    "style_fill",
+    "unknown",
+    "video_confirmed"
+  ],
+  "label_counts": {
+    "blocked_private": 0,
+    "blueprint_confirmed": 0,
+    "inferred_from_sources": 0,
+    "manual_note_confirmed": 40,
+    "map_confirmed": 0,
+    "photo_confirmed": 0,
+    "style_fill": 78,
+    "unknown": 3,
+    "video_confirmed": 0
+  },
+  "source_notes": [
+    "Robert explicitly authorized an isolated lightweight future filming world for Kira, Robert, and guests.",
+    "Robert explicitly limited the first prototype to two simple rooms and an intentionally unfinished exterior or facade.",
+    "All exact dimensions, colors, furniture, routes, and camera positions are original style_fill unless labeled otherwise.",
+    "Kira, Robert, and guest declarations are unoccupied marks only; this build has zero people, minds, voices, or avatar assets.",
+    "The Avatar Builder and World Builder panels are inactive informational future hooks.",
+    "Unknown exterior space is deliberately left unbuilt instead of guessed.",
+    "This artifact is a prototype draft, not a final or approved world, and it does not mutate or register Home World."
+  ],
+  "truth_rule": "Original procedural choices remain style_fill or inferred; manual_note_confirmed identifies the requested program, not real-world factual reconstruction."
+}

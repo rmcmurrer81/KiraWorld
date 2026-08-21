@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "audit_id": "home_world_strip_mall_cost_audit_20260716",
+  "status": "static_audit_complete_live_ab_not_run",
+  "audited_source": "Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/src/main.js",
+  "decision": {
+    "default_site": "empty former strip-mall lot",
+    "legacy_source_deleted": false,
+    "restore_switch": "?stripMall=1",
+    "spa_placed_here": false,
+    "spa_remains_separate_notebook_world": true
+  },
+  "static_source_expansion_estimate": {
+    "procedural_mesh_objects": 128,
+    "geometry_objects": 128,
+    "canvas_sign_textures": 5,
+    "canvas_texture_base_rgba_bytes": 2949120,
+    "canvas_texture_estimated_mipmapped_bytes": 3932160,
+    "static_colliders": 37,
+    "door_colliders": 5,
+    "interaction_zones": 6,
+    "imported_glb_requests": 0
+  },
+  "interpretation": {
+    "ram_vram": "Likely a modest reduction because the site is procedural and has no imported model payload; exact RAM and VRAM delta is unknown without a controlled live A/B.",
+    "rendering": "Potentially useful draw-call and shadow-work reduction whenever the former mall would be in or near the camera frustum; exact calls vary by view and renderer state.",
+    "dominant_runtime_cost": "Kira's active avatar/model, mind services, browser, and other world systems are expected to dominate over this legacy procedural block, but that expectation was not promoted to a measured result."
+  },
+  "method": {
+    "browser_started": false,
+    "3d_world_started": false,
+    "voice_started": false,
+    "ollama_started": false,
+    "kira_world_shell_observed_inactive_before_edits": true,
+    "live_process_ram_measured": false,
+    "live_gpu_vram_measured": false,
+    "live_draw_calls_measured": false,
+    "reason_live_ab_not_run": "The requested work was safe static planning and code verification while the shell was inactive; unrelated existing browser processes would also prevent a clean process-memory comparison."
+  },
+  "runtime_instrumentation": {
+    "debug_api": "window.kiraHomeWorldDebug.resourceSnapshot()",
+    "reports": [
+      "renderer calls, triangles, lines, points, geometries, and textures",
+      "scene mesh, collider, door-collider, and interaction-zone counts",
+      "legacy strip-mall enabled/loaded state"
+    ],
+    "limitation": "Three.js renderer counters are not whole-process RAM or complete GPU VRAM measurements."
+  },
+  "policy_path": "Data/world_builds/notebook_worlds/home_world/config/legacy_strip_mall_runtime_policy_20260716.json"
+}

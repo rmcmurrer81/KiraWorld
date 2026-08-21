@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "request_id": "notebook_world_college_campus_20260716_021505",
+  "request_type": "notebook_world",
+  "title": "College Campus - College Campus Core Notebook World",
+  "requested_by": "robert",
+  "trigger": {
+    "source": "world_generator_request",
+    "summary": "Robert requested the next separate college notebook-world arrangement while 32GB isolation limits remain active.",
+    "created_at": "2026-07-16T02:15:05.506659+00:00"
+  },
+  "subject": {
+    "name": "College Campus",
+    "category": "original_idea",
+    "city": "Standalone Learning Campus",
+    "region": "Education Notebook Collection",
+    "country": "Virtual",
+    "era": "current_or_best_sourced",
+    "private_use_allowed": true,
+    "public_export_requires_review": true
+  },
+  "source_collection_plan": {
+    "allowed_source_types": [
+      "official_site",
+      "local_library",
+      "web_search",
+      "map_or_satellite_view",
+      "street_level_photos",
+      "public_photos",
+      "public_video",
+      "floor_plans",
+      "blueprints",
+      "measurements",
+      "manual_notes",
+      "style_or_era_references"
+    ],
+    "requires_robert_approval_now": true,
+    "auto_collection_allowed_later": false,
+    "download_policy": "record_source_leads_first_download_only_after_review",
+    "source_tasks_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/source_tasks.json"
+  },
+  "creation_mode": {
+    "mode": "original_creation",
+    "starts_from_blank": true,
+    "description": "Build an original environment from a blank notebook-world scene."
+  },
+  "access_gateway": {
+    "gateway_id": "tardis_notebook_world_gateway",
+    "entry_location": "outside_protected_home_world",
+    "selection_method": "interior_console"
+  },
+  "world_plan": {
+    "notebook_world_id": "college_campus_core_notebook_world",
+    "notebook_world_title": "College Campus Core Notebook World",
+    "starting_area": "campus arrival court, Memorial Union student-center lobby and representative public route, and library approach",
+    "initial_scope": "campus_core_prototype",
+    "confirmed_zones": [],
+    "inferred_zones": [
+      "approach paths and surrounding scene massing after maps/photos are reviewed",
+      "planning-only Memorial Union student-center program with arrival/information, generic food venues, college store, social/quiet/commuter lounges, meeting and student-organization rooms, multipurpose event hall, student services, and operational support spaces"
+    ],
+    "unknown_zones": [
+      "interiors, rear elevations, and any area not visible in approved references",
+      "Memorial Union footprint, floors, facade, dimensions, capacities, final adjacencies, food-service back of house, loading, waste, storage, staff rooms, custodial rooms, IT/mechanical/electrical rooms, restrooms, accessible routes, elevators/stairs, egress, fire separation, kitchen exhaust, and life-safety details"
+    ],
+    "npc_policy": "generic",
+    "ride_or_attraction_policy": "none",
+    "truth_labels": [
+      "blueprint_confirmed",
+      "photo_confirmed",
+      "video_confirmed",
+      "map_confirmed",
+      "manual_note_confirmed",
+      "inferred_from_sources",
+      "style_fill",
+      "unknown",
+      "blocked_private"
+    ],
+    "placement_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/placement.json",
+    "scene_plan_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/scene_plan.json",
+    "blueprint_preview_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/blueprint_preview.json",
+    "tardis_review_stage_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/tardis_review_stage.json",
+    "quality_gate_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/quality_gate.json",
+    "resource_isolation_gate_path": "Data/world_builds/notebook_worlds/college_campus_core_notebook_world/builds/notebook_world_college_campus_20260716_021505/resource_isolation_gate.json",
+    "memorial_union_program_plan_path": "Data/world_builds/notebook_collections/education_notebook_collection_20260716/memorial_union_student_center_plan.json",
+    "collection_id": "education_notebook_collection"
+  },
+  "approval_workflow": {
+    "auto_place_in_existing_world": false,
+    "robert_approval_required_before_commit": true,
+    "current_stage": "draft_request_only",
+    "review_location": "TARDIS builder review bay",
+    "required_previews_before_approval": [
+      "blueprint/map placement",
+      "isolated exterior or representative room preview",
+      "walkable TARDIS review stage"
+    ]
+  },
+  "isolation_policy": {
+    "world_class": "separate_notebook_world",
+    "home_world_import_requested": false,
+    "home_world_mutation_allowed": false,
+    "strip_mall_mutation_allowed": false,
+    "co_load_with_home_world": false,
+    "co_load_with_other_notebook_worlds": false,
+    "runtime_load_policy": "one_notebook_world_at_a_time",
+    "collection_id": "education_notebook_collection",
+    "collection_members_are_logical_not_co_loaded": true
+  },
+  "resource_policy": {
+    "hardware_profile": "Data/launch/hardware_capability_profile.json",
+    "current_decision": "request_paperwork_only_no_runtime",
+    "loads_kira_mind": false,
+    "loads_kira_body": false,
+    "loads_voice": false,
+    "loads_ollama": false,
+    "loads_second_person": false,
+    "future_preview_policy": "isolated_preview_only_one_heavy_workload_at_a_time"
+  },
+  "quality_gates": {
+    "source_evidence": "not_run",
+    "scale_and_placement": "not_run",
+    "doors_routes_and_collision": "not_run",
+    "visual_realism": "not_run",
+    "runtime_route": "blocked",
+    "pinned_deployment": "blocked",
+    "explicit_robert_approval": "blocked"
+  },
+  "visibility_scope": "private_only",
+  "autonomy_level_required": "request_mode",
+  "status": "draft"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "project_id": "legal_day_spa_avatar_builder_spa_20260714",
+  "status": "draft_rubric",
+  "automatic_fail_conditions": [
+    "no standalone preview artifact",
+    "no blueprint before build",
+    "front door blocked by collider, counter, wall, or furniture",
+    "door opens but no inside follow-through target exists",
+    "any public room lacks a walkable floor",
+    "outer walls do not connect",
+    "door frame is visibly misaligned with wall opening",
+    "avatar can only enter by teleporting",
+    "visual result reads as a blocky placeholder strip-mall unit",
+    "building, rooms, or props require floating labels to be recognizable",
+    "unlabeled review contact sheet cannot identify the spa, room purpose, doors, furniture, or key props",
+    "spa cues imply illegal services instead of licensed public wellness services",
+    "Avatar Builder changes live runtime body without preview and approval"
+  ],
+  "required_artifacts": [
+    "blueprint.md",
+    "blueprint.json",
+    "source_notes.md",
+    "standalone_preview_url_or_folder",
+    "exterior_contact_sheet.png",
+    "interior_contact_sheet.png",
+    "door_threshold_contact_sheet.png",
+    "nav_collision_report.json",
+    "ai_route_test_report.json",
+    "approval_gate.json"
+  ],
+  "ai_route_tests": [
+    {
+      "id": "outside_to_reception",
+      "start": "spa_front_door_outside",
+      "end": "spa_reception_counter",
+      "must_open_doors": [
+        "front_door"
+      ]
+    },
+    {
+      "id": "reception_to_avatar_builder",
+      "start": "spa_reception_counter",
+      "end": "spa_avatar_builder_talk_button"
+    },
+    {
+      "id": "avatar_builder_to_treatment_room",
+      "start": "spa_avatar_builder_talk_button",
+      "end": "spa_treatment_table_a"
+    },
+    {
+      "id": "treatment_room_to_exit",
+      "start": "spa_treatment_table_a",
+      "end": "spa_exit",
+      "must_exit_building": true
+    }
+  ],
+  "grade_scale": {
+    "A": "realistic, walkable, approved, ready for Home World placement",
+    "B": "minor cosmetic problems only; all navigation and approvals pass",
+    "C": "walkable but visually unfinished or missing several details",
+    "D": "partial structure with major visual or room-layout problems",
+    "F": "blocked doors, bad collisions, missing rooms, blocky fake result, unsafe legal cues, or no real preview"
+  }
+}

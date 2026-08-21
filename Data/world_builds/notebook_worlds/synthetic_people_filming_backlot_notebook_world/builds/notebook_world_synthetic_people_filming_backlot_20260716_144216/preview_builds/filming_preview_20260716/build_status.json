@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "metadata_kind": "procedural_notebook_world_preview_status",
+  "world_id": "synthetic_people_filming_backlot_notebook_world",
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "build_id": "filming_preview_20260716",
+  "created_at": "2026-07-16T14:50:23.152507+00:00",
+  "backend": "strict_v2_procedural_preview_lane_v1",
+  "status": "prototype_draft_not_final_not_approved",
+  "prototype": true,
+  "draft": true,
+  "final": false,
+  "approved": false,
+  "runtime_registered": false,
+  "home_world_mutation": false,
+  "strip_mall_mutation": false,
+  "people_loaded": false,
+  "minds_loaded": false,
+  "voice_loaded": false,
+  "ollama_loaded": false,
+  "request_sha256": "403b28a743d9470d621b0104e7c4c4c2aa463a3a5e1fc705def50ac8d8474c38",
+  "program_sha256": "1ac3dd39adc4a060d06b733787249284f5426c24cfc3c3a2fa29633f095c0aef",
+  "authorization_sha256": "a8b9347ed203b9db3e594e61feea090b54b15bb4b31f99bc11c3de884cc2647e",
+  "template_sha256": {
+    "entry_html": "5920786f5ebbe41fc97231ec3da82cb92af17c8d360af40637487f5ed93610c1",
+    "entry_javascript": "742e839a1c1f232ea73021b365f681897e1438a8c9b09c1b41e8b86976beb52c",
+    "entry_stylesheet": "4f653bef7afe5457b2c00fd07974f80ee85d883ce03f8e30ce5763a3f73d52b2"
+  },
+  "limitations": [
+    "Procedural geometry and static metadata only.",
+    "No person, avatar, mind, voice, or autonomy runtime is present.",
+    "Static route clearance is not a live embodied route test.",
+    "Exterior/facade may be intentionally incomplete when the program labels it so.",
+    "No Home World placement or import is authorized."
+  ]
+}

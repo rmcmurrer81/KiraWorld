@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "project_id": "legal_day_spa_avatar_builder_spa_20260714",
+  "created": "2026-07-14",
+  "target_world": "home_world",
+  "target_build_status": "draft_staged_only_not_placed",
+  "intent": "Create a legal day-spa building prototype for Home World where residents can talk with the Avatar Builder, preview approved appearance changes, and use ordinary spa spaces without blocked doors, disconnected walls, or blocky placeholder construction.",
+  "source_inputs": [
+    {
+      "id": "nj_massage_board",
+      "kind": "official_site",
+      "url": "https://www.njconsumeraffairs.gov/mbt",
+      "use_for": [
+        "legal licensed-service context",
+        "avoid illegal or unlicensed spa framing"
+      ]
+    },
+    {
+      "id": "nj_massage_employer_registration",
+      "kind": "official_site",
+      "url": "https://www.njconsumeraffairs.gov/mbt/Pages/business.aspx",
+      "use_for": [
+        "legitimate business registration and liability-insurance context",
+        "front-office license/registration wall"
+      ]
+    },
+    {
+      "id": "ada_title_iii_businesses",
+      "kind": "official_site",
+      "url": "https://www.ada.gov/topics/title-iii/",
+      "use_for": [
+        "public accommodation accessibility requirement",
+        "accessible route, entry, restroom, and service counter expectations"
+      ]
+    },
+    {
+      "id": "ada_small_business_primer",
+      "kind": "official_site",
+      "url": "https://www.ada.gov/resources/title-iii-primer/",
+      "use_for": [
+        "small-business accessibility design intent",
+        "barrier removal and accessible service policies"
+      ]
+    },
+    {
+      "id": "spa_layout_reference",
+      "kind": "web_search",
+      "url": "https://www.dermascope.com/spectacular-spa-structure-how-to-maximize-space-layout-and-design/",
+      "use_for": [
+        "general day-spa layout inspiration",
+        "public, semi-private, and treatment-room traffic flow"
+      ]
+    },
+    {
+      "id": "robert_spa_avatar_builder_redesign",
+      "kind": "local_note",
+      "path": "Data/avatar_builder/spa_avatar_builder_redesign_20260713.md",
+      "use_for": [
+        "Avatar Builder talk/preview/approval rules",
+        "adult and non-adult maturity gates"
+      ]
+    }
+  ],
+  "approval_policy": {
+    "auto_place_in_home_world": false,
+    "requires_robert_approval_before_home_world_import": true,
+    "requires_walkable_preview_before_import": true,
+    "requires_door_and_collision_test_before_import": true
+  },
+  "first_build_scope": {
+    "kind": "single_building_standalone_preview",
+    "footprint_meters": {
+      "width": 24,
+      "depth": 18
+    },
+    "style": "warm modern legal day spa with glass storefront, clear reception, realistic rooms, and non-blocky materials",
+    "do_not_include": [
+      "strip-mall shared wall dependency",
+      "hidden blocked corridor behind the front door",
+      "secret rooms",
+      "sexualized illegal-spa signals",
+      "unapproved live avatar body mutation"
+    ]
+  },
+  "relationship_to_home_world": {
+    "current_strip_mall": "Do not keep patching the current strip mall if doors/interiors remain blocked.",
+    "future_home_world_plan": "Replace or remove current strip-mall spa after this standalone spa passes blueprint, visual, door, and AI navigation gates.",
+    "school_plan": "Move robotics and programming/AI lab into a future small college campus instead of keeping them in the strip mall."
+  },
+  "future_sequence": {
+    "roadmap": "Data/world_builder/roadmap/world_builder_roadmap_20260714_spa_campus_notebook_worlds.json",
+    "after_spa_approval": [
+      "Use the approved spa to replace the current strip mall spa/Avatar Builder area.",
+      "Remove strip mall pieces that are only placeholders or keep them staged outside the live world until rebuilt."
+    ],
+    "after_64gb_ram": [
+      "Build and review a small college campus notebook world before any Home World placement.",
+      "Move robotics, programming/AI, expert offices, labs, and learning spaces into the campus plan."
+    ]
+  }
+}

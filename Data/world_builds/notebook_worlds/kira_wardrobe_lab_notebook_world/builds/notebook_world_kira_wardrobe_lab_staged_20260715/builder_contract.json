@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-15T20:33:08-04:00",
+  "status": "staged_contract_not_runtime_proof",
+  "lab_id": "kira_robe_dressing_lab_v1",
+  "subject_id": "kira",
+  "item": {
+    "item_id": "shared_white_bath_robe_v1",
+    "persistent_instance_id": "kira_wardrobe_lab_shared_white_bath_robe_v1_instance_001",
+    "maturity_policy": "adult_body_fit_only_for_this_instance",
+    "representation_rule": "Only one authoritative representation may be active. A world prop must be removed before the held or worn representation becomes authoritative.",
+    "current_asset_status": "static_reference_only_not_wearable"
+  },
+  "world_builder_owns": {
+    "room": "isolated_notebook_lab",
+    "objects": [
+      {
+        "id": "wardrobe_lab_wall_hook_001",
+        "kind": "hook",
+        "anchor": "bathroom_wall_hook",
+        "approach_anchor": "bathroom_wall_hook_approach",
+        "collider_required": true
+      },
+      {
+        "id": "wardrobe_lab_bed_001",
+        "kind": "bed",
+        "anchor": "bed_soft_goods_place_anchor",
+        "support_surface": "bed_mattress_support_surface",
+        "settle_volume": "bed_soft_goods_settle_volume",
+        "collider_required": true
+      }
+    ],
+    "required_anchors": [
+      "bathroom_wall_hook",
+      "bathroom_wall_hook_approach",
+      "bed_soft_goods_place_anchor",
+      "bed_mattress_support_surface",
+      "bed_soft_goods_settle_volume",
+      "walk_start",
+      "walk_end",
+      "turn_center",
+      "sit_approach",
+      "sit_support"
+    ],
+    "persistence_fields": [
+      "persistent_instance_id",
+      "authoritative_representation",
+      "world_container_id",
+      "last_verified_transform",
+      "state_revision"
+    ]
+  },
+  "avatar_builder_owns": {
+    "body_id": "kira_current_body",
+    "body_sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "body_mode": "read_only",
+    "required_body_anchors": [
+      "right_hand_grip",
+      "left_hand_grip",
+      "right_wrist",
+      "right_elbow",
+      "left_wrist",
+      "left_elbow",
+      "left_shoulder",
+      "right_shoulder",
+      "spine_chest",
+      "waist_front",
+      "pelvis",
+      "left_knee",
+      "right_knee",
+      "left_foot",
+      "right_foot"
+    ],
+    "required_garment_anchors": [
+      "robe_hook_loop",
+      "robe_collar_grip_left",
+      "robe_collar_grip_right",
+      "right_sleeve_portal",
+      "left_sleeve_portal",
+      "robe_shoulder_left",
+      "robe_shoulder_right",
+      "belt_left_end",
+      "belt_right_end",
+      "belt_loop_left",
+      "belt_loop_right",
+      "belt_knot_target",
+      "robe_hem_collision"
+    ],
+    "required_exports": [
+      "kira_fitted_robe_open.glb",
+      "kira_fitted_robe_tied.glb",
+      "kira_robe_skeleton_signature.json",
+      "kira_robe_anchor_manifest.json",
+      "kira_robe_collision_profile.json",
+      "kira_robe_animation_manifest.json"
+    ]
+  },
+  "shared_runtime_contract": {
+    "ownership_transfer": [
+      "world_prop_authoritative",
+      "contact_verified",
+      "world_prop_detached_and_source_removed",
+      "held_representation_authoritative",
+      "worn_representation_authoritative",
+      "held_representation_authoritative_after_removal",
+      "world_prop_authoritative_after_verified_placement"
+    ],
+    "no_duplication": true,
+    "no_teleport": true,
+    "no_timer_only_completion": true,
+    "no_manual_button_only_completion": true,
+    "minimum_contact_frames": 3,
+    "maximum_hand_anchor_distance_m": 0.04,
+    "maximum_visible_body_clip_depth_m": 0.025,
+    "minimum_bed_settle_seconds": 1.0,
+    "evidence_clock": "monotonic_runtime_timestamp",
+    "privacy_rule": "The first lab uses a fitted shirt and leggings under the robe; no anatomy exposure is required."
+  },
+  "autonomy_contract": {
+    "participation_is_optional": true,
+    "kira_can_refuse": true,
+    "kira_can_pause_or_stop": true,
+    "kira_can_choose_rehang_or_bed": true,
+    "refusal_is_not_a_mechanical_failure": true,
+    "this_static_preview_does_not_load_kira_mind": true
+  }
+}

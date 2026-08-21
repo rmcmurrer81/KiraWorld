@@ -8,7 +8,7 @@ Current pinned manifest hashes:
 
 ```text
 legal day spa: 4b5d17bb842bdb66c3d3682dff321fa08d24cc2ff645d1b5d471d13e59d7c9f0
-Kira wardrobe lab: 855220a6ed2580ba725b071e7ea8577b8ae83958cf0c42a781e2fb4cc7ce3426
+Kira wardrobe lab: 392c28f874efff4e68f7f4770f152d8fadac525e960969162466103fac575135
 ```
 
 ## Purpose

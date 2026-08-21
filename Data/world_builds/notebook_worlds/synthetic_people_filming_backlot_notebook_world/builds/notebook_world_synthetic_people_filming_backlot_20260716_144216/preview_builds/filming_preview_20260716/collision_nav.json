@@ -1,0 +1,799 @@
+{
+  "schema_version": 1,
+  "metadata_kind": "procedural_collision_navigation_contract",
+  "world_id": "synthetic_people_filming_backlot_notebook_world",
+  "request_id": "notebook_world_synthetic_people_filming_backlot_20260716_144216",
+  "build_id": "filming_preview_20260716",
+  "status": "static_validation_passed_runtime_walk_not_claimed",
+  "collision_model": "axis_aligned_boxes_with_0_34m_default_walker_radius",
+  "colliders": [
+    {
+      "id": "collider_back_wall",
+      "kind": "solid_aabb",
+      "min": [
+        -9,
+        -0.1,
+        -5.15
+      ],
+      "max": [
+        9,
+        4.5,
+        -4.85
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Wall-shell collision approximation."
+    },
+    {
+      "id": "collider_left_wall",
+      "kind": "solid_aabb",
+      "min": [
+        -9.15,
+        -0.1,
+        -5
+      ],
+      "max": [
+        -8.85,
+        4.5,
+        5
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Wall-shell collision approximation."
+    },
+    {
+      "id": "collider_right_wall",
+      "kind": "solid_aabb",
+      "min": [
+        8.85,
+        -0.1,
+        -5
+      ],
+      "max": [
+        9.15,
+        4.5,
+        5
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Wall-shell collision approximation."
+    },
+    {
+      "id": "collider_divider_rear",
+      "kind": "solid_aabb",
+      "min": [
+        -0.15,
+        -0.1,
+        -5
+      ],
+      "max": [
+        0.15,
+        4.5,
+        0.4
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Divider collision leaves a clearance-tested opening."
+    },
+    {
+      "id": "collider_divider_front",
+      "kind": "solid_aabb",
+      "min": [
+        -0.15,
+        -0.1,
+        2.8
+      ],
+      "max": [
+        0.15,
+        4.5,
+        5
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Divider collision leaves a clearance-tested opening."
+    },
+    {
+      "id": "collider_front_stage_left",
+      "kind": "solid_aabb",
+      "min": [
+        -9,
+        -0.1,
+        4.85
+      ],
+      "max": [
+        -4,
+        4.5,
+        5.15
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial unfinished facade collision."
+    },
+    {
+      "id": "collider_front_stage_right",
+      "kind": "solid_aabb",
+      "min": [
+        -2,
+        -0.1,
+        4.85
+      ],
+      "max": [
+        0,
+        4.5,
+        5.15
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial unfinished facade collision."
+    },
+    {
+      "id": "collider_front_review_left",
+      "kind": "solid_aabb",
+      "min": [
+        0,
+        -0.1,
+        4.85
+      ],
+      "max": [
+        4.7,
+        4.5,
+        5.15
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial unfinished facade collision."
+    },
+    {
+      "id": "collider_front_review_right",
+      "kind": "solid_aabb",
+      "min": [
+        6.7,
+        -0.1,
+        4.85
+      ],
+      "max": [
+        9,
+        4.5,
+        5.15
+      ],
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Partial unfinished facade collision."
+    },
+    {
+      "id": "collider_stage_platform",
+      "kind": "solid_aabb",
+      "min": [
+        -7.6,
+        0,
+        -4.5
+      ],
+      "max": [
+        -2.2,
+        0.36,
+        -2.6
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Stage platform collision approximation."
+    },
+    {
+      "id": "collider_prop_table",
+      "kind": "solid_aabb",
+      "min": [
+        -7.05,
+        0,
+        -0.85
+      ],
+      "max": [
+        -5.65,
+        0.55,
+        -0.05
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Prop table collision approximation."
+    },
+    {
+      "id": "collider_crates",
+      "kind": "solid_aabb",
+      "min": [
+        -8.55,
+        0,
+        -2.25
+      ],
+      "max": [
+        -7.05,
+        0.85,
+        -1.2
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Combined crate collision approximation."
+    },
+    {
+      "id": "collider_camera_dolly",
+      "kind": "solid_aabb",
+      "min": [
+        -3.2,
+        0,
+        -1.75
+      ],
+      "max": [
+        -2.3,
+        1.7,
+        -1.05
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Inactive dolly collision approximation."
+    },
+    {
+      "id": "collider_review_table",
+      "kind": "solid_aabb",
+      "min": [
+        2,
+        0,
+        -2.8
+      ],
+      "max": [
+        6.5,
+        1.8,
+        -1.2
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Review table and screens collision approximation."
+    },
+    {
+      "id": "collider_review_bench_a",
+      "kind": "solid_aabb",
+      "min": [
+        1.1,
+        0,
+        2.55
+      ],
+      "max": [
+        3.3,
+        0.7,
+        3.25
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Bench collision approximation."
+    },
+    {
+      "id": "collider_review_bench_b",
+      "kind": "solid_aabb",
+      "min": [
+        6.35,
+        0,
+        2.55
+      ],
+      "max": [
+        7.85,
+        0.7,
+        3.25
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Bench collision approximation kept clear of the review-room entry route."
+    },
+    {
+      "id": "collider_prop_rack",
+      "kind": "solid_aabb",
+      "min": [
+        7.55,
+        0,
+        -0.6
+      ],
+      "max": [
+        8.45,
+        2.4,
+        2.2
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Prop-rack collision approximation."
+    }
+  ],
+  "support_surfaces": [
+    {
+      "id": "support_backlot",
+      "min_x": -15,
+      "max_x": 15,
+      "min_z": -12,
+      "max_z": 15,
+      "y": 0,
+      "truth_label": "style_fill",
+      "source_note": "Flat lightweight review support surface."
+    },
+    {
+      "id": "support_soundstage",
+      "min_x": -8.85,
+      "max_x": -0.15,
+      "min_z": -4.85,
+      "max_z": 4.85,
+      "y": 0.08,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Walk support for the simple soundstage room."
+    },
+    {
+      "id": "support_builder_review",
+      "min_x": 0.15,
+      "max_x": 8.85,
+      "min_z": -4.85,
+      "max_z": 4.85,
+      "y": 0.08,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Walk support for the simple builder review room."
+    }
+  ],
+  "routes": [
+    {
+      "id": "route_arrival_to_soundstage",
+      "label": "Exterior arrival to soundstage",
+      "avatar_radius": 0.34,
+      "points": [
+        [
+          0,
+          0.08,
+          11
+        ],
+        [
+          -3,
+          0.08,
+          8
+        ],
+        [
+          -3,
+          0.08,
+          5.7
+        ],
+        [
+          -3,
+          0.08,
+          4.2
+        ],
+        [
+          -4.8,
+          0.08,
+          2
+        ]
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original clearance-tested preview route through the open unfinished facade."
+    },
+    {
+      "id": "route_arrival_to_review",
+      "label": "Exterior arrival to builder review",
+      "avatar_radius": 0.34,
+      "points": [
+        [
+          2,
+          0.08,
+          10
+        ],
+        [
+          5.7,
+          0.08,
+          7
+        ],
+        [
+          5.7,
+          0.08,
+          5.7
+        ],
+        [
+          5.7,
+          0.08,
+          4.2
+        ],
+        [
+          4,
+          0.08,
+          1.6
+        ]
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original clearance-tested preview route through the review-room opening."
+    },
+    {
+      "id": "route_room_connection",
+      "label": "Soundstage to builder review room",
+      "avatar_radius": 0.34,
+      "points": [
+        [
+          -5,
+          0.08,
+          1.6
+        ],
+        [
+          -0.7,
+          0.08,
+          1.6
+        ],
+        [
+          0.7,
+          0.08,
+          1.6
+        ],
+        [
+          4,
+          0.08,
+          1.6
+        ]
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original clearance-tested connection between exactly two rooms."
+    },
+    {
+      "id": "route_soundstage_blocking",
+      "label": "Soundstage blocking loop",
+      "avatar_radius": 0.34,
+      "points": [
+        [
+          -7,
+          0.08,
+          1
+        ],
+        [
+          -4.5,
+          0.08,
+          1
+        ],
+        [
+          -3,
+          0.08,
+          1
+        ],
+        [
+          -2.2,
+          0.08,
+          2
+        ],
+        [
+          -5,
+          0.08,
+          2
+        ],
+        [
+          -7,
+          0.08,
+          1
+        ]
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original route for reviewing future empty participant marks."
+    },
+    {
+      "id": "route_review_room",
+      "label": "Builder review circulation",
+      "avatar_radius": 0.34,
+      "points": [
+        [
+          0.8,
+          0.08,
+          1.6
+        ],
+        [
+          2.5,
+          0.08,
+          1.6
+        ],
+        [
+          4.2,
+          0.08,
+          1.6
+        ],
+        [
+          6.8,
+          0.08,
+          1.6
+        ],
+        [
+          6.8,
+          0.08,
+          0
+        ]
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original route around the review furniture and prop rack."
+    },
+    {
+      "id": "route_exterior_facade_review",
+      "label": "Exterior facade review line",
+      "avatar_radius": 0.34,
+      "points": [
+        [
+          -8,
+          0.08,
+          8
+        ],
+        [
+          0,
+          0.08,
+          8
+        ],
+        [
+          8,
+          0.08,
+          8
+        ]
+      ],
+      "truth_label": "style_fill",
+      "source_note": "Original exterior review route kept outside the unfinished facade."
+    }
+  ],
+  "route_checks": [
+    {
+      "route_id": "route_arrival_to_soundstage",
+      "avatar_radius": 0.34,
+      "point_count": 5,
+      "segment_count": 4,
+      "status": "clear",
+      "obstructions": []
+    },
+    {
+      "route_id": "route_arrival_to_review",
+      "avatar_radius": 0.34,
+      "point_count": 5,
+      "segment_count": 4,
+      "status": "clear",
+      "obstructions": []
+    },
+    {
+      "route_id": "route_room_connection",
+      "avatar_radius": 0.34,
+      "point_count": 4,
+      "segment_count": 3,
+      "status": "clear",
+      "obstructions": []
+    },
+    {
+      "route_id": "route_soundstage_blocking",
+      "avatar_radius": 0.34,
+      "point_count": 6,
+      "segment_count": 5,
+      "status": "clear",
+      "obstructions": []
+    },
+    {
+      "route_id": "route_review_room",
+      "avatar_radius": 0.34,
+      "point_count": 5,
+      "segment_count": 4,
+      "status": "clear",
+      "obstructions": []
+    },
+    {
+      "route_id": "route_exterior_facade_review",
+      "avatar_radius": 0.34,
+      "point_count": 3,
+      "segment_count": 2,
+      "status": "clear",
+      "obstructions": []
+    }
+  ],
+  "spawn_marks": [
+    {
+      "id": "spawn_future_kira",
+      "label": "Future Kira mark",
+      "position": [
+        -6,
+        0.1,
+        1
+      ],
+      "primitive_id": "shape_spawn_kira",
+      "intended_role": "future filming participant only",
+      "occupant_policy": "mark_only_no_person_loaded",
+      "yaw": 3.1415926536,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty marker only; Kira's body, mind, and voice are not loaded."
+    },
+    {
+      "id": "spawn_future_robert",
+      "label": "Future Robert mark",
+      "position": [
+        -4.5,
+        0.1,
+        1
+      ],
+      "primitive_id": "shape_spawn_robert",
+      "intended_role": "future filming participant only",
+      "occupant_policy": "mark_only_no_person_loaded",
+      "yaw": 3.1415926536,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty marker only; no Robert avatar or mind is loaded."
+    },
+    {
+      "id": "spawn_future_guest",
+      "label": "Future guest mark",
+      "position": [
+        -3,
+        0.1,
+        1
+      ],
+      "primitive_id": "shape_spawn_guest",
+      "intended_role": "future optional filming participant only",
+      "occupant_policy": "mark_only_no_person_loaded",
+      "yaw": 3.1415926536,
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty marker only; no guest person is loaded."
+    }
+  ],
+  "camera_marks": [
+    {
+      "id": "camera_arrival",
+      "label": "Backlot arrival",
+      "position": [
+        0,
+        2.6,
+        12
+      ],
+      "target": [
+        0,
+        1.3,
+        3.8
+      ],
+      "fov": 55,
+      "primitive_id": "shape_camera_arrival",
+      "truth_label": "style_fill",
+      "source_note": "Original review camera for exterior orientation."
+    },
+    {
+      "id": "camera_stage_wide",
+      "label": "Soundstage wide",
+      "position": [
+        -7,
+        2.8,
+        3.8
+      ],
+      "target": [
+        -4.9,
+        1.1,
+        -2.7
+      ],
+      "fov": 58,
+      "primitive_id": "shape_camera_stage_wide",
+      "truth_label": "style_fill",
+      "source_note": "Original review camera for stage blocking."
+    },
+    {
+      "id": "camera_stage_reverse",
+      "label": "Soundstage reverse",
+      "position": [
+        -2.2,
+        2.2,
+        -1.1
+      ],
+      "target": [
+        -5.4,
+        1.15,
+        -3.2
+      ],
+      "fov": 52,
+      "primitive_id": "shape_camera_stage_reverse",
+      "truth_label": "style_fill",
+      "source_note": "Original reverse review camera."
+    },
+    {
+      "id": "camera_builder_review",
+      "label": "Builder review room",
+      "position": [
+        7.3,
+        2.5,
+        3.6
+      ],
+      "target": [
+        4.1,
+        1.05,
+        -1.5
+      ],
+      "fov": 55,
+      "primitive_id": "shape_camera_review",
+      "truth_label": "style_fill",
+      "source_note": "Original review camera for inactive builder screens and table."
+    },
+    {
+      "id": "camera_unfinished_facade",
+      "label": "Unfinished facade",
+      "position": [
+        11,
+        3.2,
+        10
+      ],
+      "target": [
+        0,
+        2.1,
+        5
+      ],
+      "fov": 50,
+      "primitive_id": "shape_camera_facade",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Camera deliberately shows the unfinished facade requested by Robert."
+    },
+    {
+      "id": "camera_overhead_plan",
+      "label": "Overhead route review",
+      "position": [
+        0,
+        7.5,
+        8
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "fov": 62,
+      "primitive_id": "shape_camera_overhead",
+      "truth_label": "style_fill",
+      "source_note": "Original overhead camera for collider and route review."
+    }
+  ],
+  "filming_marks": [
+    {
+      "id": "mark_interview_a",
+      "label": "Interview position A",
+      "position": [
+        -6,
+        0.08,
+        -1
+      ],
+      "primitive_id": "shape_mark_interview_a",
+      "mark_type": "interview_subject",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future filming mark only."
+    },
+    {
+      "id": "mark_interview_b",
+      "label": "Interview position B",
+      "position": [
+        -4.5,
+        0.08,
+        -1
+      ],
+      "primitive_id": "shape_mark_interview_b",
+      "mark_type": "interview_subject",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future filming mark only."
+    },
+    {
+      "id": "mark_stage_demo",
+      "label": "Stage demonstration",
+      "position": [
+        -3,
+        0.08,
+        -2.2
+      ],
+      "primitive_id": "shape_mark_demo",
+      "mark_type": "demonstration_subject",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future filming mark only."
+    },
+    {
+      "id": "mark_builder_presenter",
+      "label": "Builder review presenter",
+      "position": [
+        2.5,
+        0.08,
+        1.6
+      ],
+      "primitive_id": "shape_mark_review_presenter",
+      "mark_type": "builder_presenter",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future builder-review mark only."
+    },
+    {
+      "id": "mark_builder_guest",
+      "label": "Builder review guest",
+      "position": [
+        4.2,
+        0.08,
+        1.6
+      ],
+      "primitive_id": "shape_mark_review_guest",
+      "mark_type": "builder_guest",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty future builder-review mark only."
+    },
+    {
+      "id": "mark_exterior_establishing",
+      "label": "Exterior establishing position",
+      "position": [
+        0,
+        0.03,
+        8
+      ],
+      "primitive_id": "shape_mark_exterior",
+      "mark_type": "exterior_establishing",
+      "truth_label": "manual_note_confirmed",
+      "source_note": "Empty exterior filming mark only."
+    }
+  ],
+  "runtime_route_claim_allowed": false
+}

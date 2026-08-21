@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Sequence
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PACKAGE_ROOT = PROJECT_ROOT / "ros2_ws" / "src" / "kira_hanson_bridge"
@@ -25,8 +27,8 @@ class DemoClock:
         self.value += milliseconds
 
 
-def main() -> int:
-    policy_path = (
+def main(argv: Sequence[str] | None = None) -> int:
+    default_policy_path = (
         PROJECT_ROOT
         / "ros2_ws"
         / "src"
@@ -34,19 +36,29 @@ def main() -> int:
         / "config"
         / "safety_policy.yaml"
     )
+    parser = argparse.ArgumentParser(
+        description="Run one deterministic mock embodiment session."
+    )
+    parser.add_argument("--source-identity", default="kira")
+    parser.add_argument("--policy-file", type=Path, default=default_policy_path)
+    args = parser.parse_args(argv)
     sequence_path = Path(__file__).with_name("sample_sequence.json")
     evidence_path = Path(__file__).with_name("session_evidence.jsonl")
     if evidence_path.exists():
         evidence_path.unlink()
 
-    policy = SafetyPolicy.from_yaml(policy_path)
+    policy = SafetyPolicy.from_yaml(args.policy_file)
+    if policy.common.get("allowed_source_identities") != [args.source_identity]:
+        raise ValueError(
+            "Demo policy must allow exactly the selected source identity."
+        )
     evidence = EvidenceChain(evidence_path)
     sequence = json.loads(sequence_path.read_text(encoding="utf-8"))
     clock = DemoClock()
     session = EmbodimentSession(
-        session_id="demo-session-001",
+        session_id=f"demo-session:{args.source_identity}",
         body_id="little-sophia-simulator",
-        source_identity="kira",
+        source_identity=args.source_identity,
         capabilities=("speech", "gaze", "expression", "gesture"),
         session_ttl_ms=60_000,
         heartbeat_timeout_ms=5_000,
@@ -60,6 +72,12 @@ def main() -> int:
     for sequence_number, item in enumerate(sequence, start=1):
         payload = dict(item)
         category = payload.pop("category")
+        payload["source_identity"] = args.source_identity
+        if category == "speech" and args.source_identity != "kira":
+            payload["text"] = (
+                "Hello. This is a bounded simulator-first intention test; "
+                "no running person session is attached."
+            )
         intent_id = str(payload["intent_id"])
         request = session.request_intent(
             intent_id=intent_id,
@@ -122,7 +140,9 @@ def main() -> int:
             raise RuntimeError("Demo session lost its heartbeat unexpectedly.")
 
     valid, record_count, final_hash = EvidenceChain.verify(evidence_path)
-    print(f"\nSummary: completed={completed}, rejected={rejected}")
+    print(f"\nSelected source identity: {args.source_identity}")
+    print(f"Mock session id: {session.session_id}")
+    print(f"Summary: completed={completed}, rejected={rejected}")
     print(f"Evidence records: {record_count}")
     print(f"Evidence chain valid: {valid}")
     print(f"Evidence final SHA-256: {final_hash}")

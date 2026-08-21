@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kira Wardrobe Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three/build/three.module.js",
+          "three/addons/": "/vendor/three/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main id="app">
+      <section class="stage">
+        <canvas id="world" aria-label="Three dimensional wardrobe lab preview"></canvas>
+        <div class="title-card">
+          <p class="eyebrow">Isolated notebook world</p>
+          <h1>Kira robe dressing lab</h1>
+          <p>One read-only Kira body, one hook, one draft robe reference, and one bed.</p>
+        </div>
+        <div id="asset-status" class="asset-status">Loading pinned read-only models...</div>
+        <div class="truth-banner">
+          <strong>STAGED / BLOCKED</strong>
+          These controls inspect a proposed sequence. They do not move Kira, make a choice for her, or prove a physical skill.
+        </div>
+      </section>
+      <aside class="panel">
+        <header>
+          <p class="eyebrow">Evidence-first vertical slice</p>
+          <h2 id="state-label">Loading state contract...</h2>
+          <p id="state-owner" class="muted"></p>
+        </header>
+        <div class="claim">
+          <span>Physical claim</span>
+          <strong id="claim-status">BLOCKED</strong>
+        </div>
+        <section>
+          <h3>Required evidence</h3>
+          <ul id="required-signals"></ul>
+        </section>
+        <section>
+          <h3>Current blockers</h3>
+          <ul id="blockers"></ul>
+        </section>
+        <section>
+          <h3>Recorded proof</h3>
+          <p id="proof-count">0 of 0 signals</p>
+          <div class="proof-bar"><span id="proof-fill"></span></div>
+        </section>
+        <nav class="controls" aria-label="State inspection">
+          <button id="back" type="button">Back</button>
+          <button id="reset" type="button">Reset</button>
+          <button id="next" type="button">Inspect next</button>
+        </nav>
+        <div id="choices" class="choices" aria-live="polite"></div>
+        <details>
+          <summary>All proposed stages</summary>
+          <ol id="state-list" class="state-list"></ol>
+        </details>
+        <p class="fine-print">
+          The glowing marker shows the area associated with the selected contract stage. It is not contact, animation, cloth simulation, or evidence.
+        </p>
+      </aside>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

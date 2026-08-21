@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-15T20:33:08-04:00",
+  "status": "mapped_to_shared_core_but_definition_activation_blocked",
+  "shared_core": {
+    "definition_module": "Core.garment_contracts",
+    "runtime_module": "Core.garment_runtime",
+    "evidence_module": "Core.garment_evidence",
+    "definition_factory": "build_robe_definition",
+    "runtime_ledger": "GarmentLedger",
+    "evidence_evaluator": "evaluate_garment_transition"
+  },
+  "definition_inputs": {
+    "garment_type_id": "shared_white_bath_robe_v1",
+    "asset_sha256": "d99b7d5ae75325a4d47f50d86c7fa9791ec351e0145dfc2a25eeb287ab863279",
+    "compatible_body_sha256": "3ec62ba8d70a2c8235ef2013ff8183b7b3e9c41ca40c33e8b31d758b4ca3339e",
+    "compatible_rig_sha256": null
+  },
+  "definition_activation": {
+    "ready": false,
+    "ledger_registration_allowed": false,
+    "reason": "The draft robe asset is not fitted or skinned to Kira, its required nodes have not been verified, and no exact compatible rig hash has been approved.",
+    "rule": "Do not invent a rig hash or register this instance in the live garment ledger."
+  },
+  "proposed_initial_instance": {
+    "item_instance_id": "kira_wardrobe_lab_shared_white_bath_robe_v1_instance_001",
+    "garment_type_id": "shared_white_bath_robe_v1",
+    "state": "hanging_on_hook",
+    "owner_scope": "world",
+    "owner_id": "kira_wardrobe_lab_notebook_world",
+    "location_anchor_id": "world_wall_hook",
+    "revision": 0,
+    "status": "proposal_only_not_registered"
+  },
+  "lab_to_core_mapping": [
+    {
+      "lab_state": "hanging_on_hook",
+      "core_state": "hanging_on_hook",
+      "core_affordance_to_next": "take_from_hook"
+    },
+    {
+      "lab_state": "grasp_contact",
+      "core_state": "hanging_on_hook",
+      "core_affordance_to_next": "take_from_hook"
+    },
+    {
+      "lab_state": "detached_held",
+      "core_state": "grasped_from_hook",
+      "core_affordance_to_next": "thread_right_first"
+    },
+    {
+      "lab_state": "right_sleeve_portal",
+      "core_state": "right_sleeve_threaded",
+      "core_affordance_to_next": "thread_left_second"
+    },
+    {
+      "lab_state": "left_sleeve_portal",
+      "core_state": "both_sleeves_threaded",
+      "core_affordance_to_next": "settle_shoulders"
+    },
+    {
+      "lab_state": "settle_shoulders",
+      "core_state": "both_sleeves_threaded",
+      "core_affordance_to_next": "settle_shoulders"
+    },
+    {
+      "lab_state": "worn_open",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "tie_belt"
+    },
+    {
+      "lab_state": "belt_left_grasp",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "tie_belt"
+    },
+    {
+      "lab_state": "belt_right_grasp",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "tie_belt"
+    },
+    {
+      "lab_state": "belt_cross",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "tie_belt"
+    },
+    {
+      "lab_state": "belt_loop",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "tie_belt"
+    },
+    {
+      "lab_state": "belt_tighten",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "tie_belt"
+    },
+    {
+      "lab_state": "worn_tied",
+      "core_state": "worn_tied",
+      "core_affordance_to_next": "move_worn_tied"
+    },
+    {
+      "lab_state": "walk_worn",
+      "core_state": "worn_tied",
+      "core_affordance_to_next": "move_worn_tied"
+    },
+    {
+      "lab_state": "turn_worn",
+      "core_state": "worn_tied",
+      "core_affordance_to_next": "move_worn_tied"
+    },
+    {
+      "lab_state": "sit_worn",
+      "core_state": "worn_tied",
+      "core_affordance_to_next": "move_worn_tied"
+    },
+    {
+      "lab_state": "stand_worn",
+      "core_state": "worn_tied",
+      "core_affordance_to_next": "untie_belt"
+    },
+    {
+      "lab_state": "untie_belt",
+      "core_state": "worn_tied",
+      "core_affordance_to_next": "untie_belt"
+    },
+    {
+      "lab_state": "remove_shoulders",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "remove_robe"
+    },
+    {
+      "lab_state": "right_arm_out",
+      "core_state": "worn_open",
+      "core_affordance_to_next": "remove_robe"
+    },
+    {
+      "lab_state": "left_arm_out",
+      "core_state": "held_after_removal",
+      "core_affordance_to_next": null,
+      "core_branch_affordances": ["rehang", "place_on_bed"]
+    },
+    {
+      "lab_state": "return_choice",
+      "core_state": "held_after_removal",
+      "core_affordance_to_next": null,
+      "core_branch_affordances": ["rehang", "place_on_bed"]
+    },
+    {
+      "lab_state": "rehang_robe",
+      "core_state": "hanging_on_hook",
+      "core_affordance_to_next": null
+    },
+    {
+      "lab_state": "place_on_bed",
+      "core_state": "placed_on_bed",
+      "core_affordance_to_next": null
+    }
+  ],
+  "truth_gate": {
+    "preview_creates_transactions": false,
+    "preview_commits_transactions": false,
+    "preview_submits_evidence": false,
+    "empty_or_timer_evidence_must_fail": true,
+    "manual_stage_navigation_has_no_ledger_effect": true
+  }
+}

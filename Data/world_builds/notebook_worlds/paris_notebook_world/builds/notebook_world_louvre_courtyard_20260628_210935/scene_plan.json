@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_louvre_courtyard_20260628_210935",
+  "scene_id": "scene_louvre_courtyard",
+  "renderer_target": "threejs_notebook_world",
+  "preview": {
+    "status": "vr_scale_walkable_prototype_ready",
+    "entry_file": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/preview/index.html",
+    "actor_manifest": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/world_actor_manifest.json",
+    "local_reference_manifest": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_images/robert_supplied_reference_manifest.json",
+    "local_bakery_reference_manifest": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_bakery_images/robert_supplied_bakery_reference_manifest.json",
+    "local_marinette_bedroom_reference_manifest": "Data/world_builds/notebook_worlds/paris_notebook_world/builds/notebook_world_louvre_courtyard_20260628_210935/sources/robert_supplied_marinette_bedroom_images/robert_supplied_marinette_bedroom_reference_manifest.json",
+    "recommended_server_root": "project_root",
+    "controls": "Click to lock pointer, WASD to move, mouse to look, Shift to move faster, P snapshot, Esc to release pointer. Use ?area=bakery to start at the Montmartre/Ladybug comfort bakery node.",
+    "scale_revision": "Human eye height 1.68 m, normal walking speed 1.65 m/s, main pyramid modeled as 21.6 m high with 35 m square base."
+  },
+  "spawn_points": [
+    {
+      "id": "robert_vr_entry",
+      "intended_for": "robert",
+      "position_meters": {
+        "x": 0,
+        "y": 1.68,
+        "z": 48
+      },
+      "orientation": "facing_main_pyramid",
+      "status": "active_preview_start"
+    },
+    {
+      "id": "kira_body_review_entry",
+      "intended_for": "kira",
+      "position_meters": {
+        "x": -3,
+        "y": 1.68,
+        "z": 50
+      },
+      "orientation": "facing_main_pyramid",
+      "status": "reserved_for_later_avatar_walk_test"
+    },
+    {
+      "id": "lisa_body_review_entry",
+      "intended_for": "lisa",
+      "position_meters": {
+        "x": 3,
+        "y": 1.68,
+        "z": 50
+      },
+      "orientation": "facing_main_pyramid",
+      "status": "reserved_for_later_avatar_walk_test"
+    },
+    {
+      "id": "ladybug_bakery_comfort_entry",
+      "intended_for": "ladybug_marinette_expanded_smoke",
+      "position_meters": {
+        "x": 7,
+        "y": 1.68,
+        "z": 4532
+      },
+      "orientation": "facing_bakery_storefront",
+      "status": "active_hybrid_bakery_preview_start"
+    }
+  ],
+  "units": "meters",
+  "coordinate_policy": "local_scene_offsets_are_derived_from_real_world_coordinates_when_available",
+  "placement": {
+    "placement_status": "first_anchor_or_coordinates_needed",
+    "notebook_world_id": "paris_notebook_world",
+    "real_world_coordinates": {
+      "latitude": 48.8606,
+      "longitude": 2.3376
+    },
+    "local_scene_offset_meters": {
+      "x": 0,
+      "z": 0
+    },
+    "nearest_existing_anchor": null,
+    "distance_from_nearest_anchor_meters": null,
+    "truth_label": "map_confirmed"
+  },
+  "connected_location_nodes": [
+    {
+      "node_id": "louvre_courtyard_anchor",
+      "kind": "real_world_anchor",
+      "local_scene_offset_meters": {
+        "x": 0,
+        "z": 0
+      },
+      "real_world_coordinates": {
+        "latitude": 48.8606,
+        "longitude": 2.3376
+      },
+      "truth_label": "map_confirmed"
+    },
+    {
+      "node_id": "montmartre_bakery_ladybug_comfort_node",
+      "kind": "hybrid_real_fictional_anchor",
+      "address_seed": "48 Rue Caulaincourt, 75018 Paris, France",
+      "local_scene_offset_meters": {
+        "x": 0,
+        "z": 4500
+      },
+      "distance_from_louvre_anchor_note": "Several kilometers in real Paris; preview uses teleport travel until the in-between city blocks are sourced and built.",
+      "truth_label": "real_address_seed_plus_fictional_comfort_style"
+    }
+  ],
+  "bakery_build_order": [
+    {
+      "phase": "outside_bakery",
+      "status": "rough_show_style_exterior_pass_started",
+      "details": "Corner storefront, black/gold signage, white lower panels, side storefront wrap, upper apartment facade, garden/fence, lamps, and street cues are present but still procedural placeholders."
+    },
+    {
+      "phase": "inside_bakery",
+      "status": "planned_next_after_exterior_review",
+      "details": "Public shop floor, pastry cases, counter, ovens/back-of-house boundary, and stairs/upstairs transition need source review."
+    },
+    {
+      "phase": "marinette_bedroom_above_bakery",
+      "status": "references_indexed_not_built",
+      "details": "Robert's Desktop Marinette's Bedroom folder has been copied and indexed for a later upstairs bedroom pass."
+    }
+  ],
+  "build_layers": [
+    {
+      "layer": "terrain_or_ground_plane",
+      "status": "placeholder",
+      "truth_label": "style_fill"
+    },
+    {
+      "layer": "primary_exterior_mass",
+      "status": "waiting_for_sources",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "major_landmarks",
+      "status": "waiting_for_sources",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "walkable_paths",
+      "status": "waiting_for_maps",
+      "truth_label": "unknown"
+    },
+    {
+      "layer": "lighting_and_atmosphere",
+      "status": "draft_after_reference_review",
+      "truth_label": "style_fill"
+    }
+  ],
+  "do_not_claim": [
+    "Do not claim exact dimensions unless the measurement source is recorded.",
+    "Do not fill hidden interiors as source-confirmed.",
+    "Do not import into the protected home world without review."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "scene_id": "saved_places_one_bedroom_house_template_20260711",
+  "scene_title": "Saved Places - One-Bedroom House Template",
+  "world_id": "saved_places_notebook_world",
+  "kind": "template_vault_scene",
+  "template_copy": {
+    "name": "Accepted One-Bedroom House Template",
+    "source_world": "home_world",
+    "source_build": "home_world_main_house_20260630_223000",
+    "source_runtime_function": "addOneBedroomBlueprintHouse",
+    "includes": [
+      "one-bedroom house shell",
+      "living room furniture",
+      "TV, TV stand, remote, and temporary tablet",
+      "kitchen counters, stove, sink, refrigerator, and dining set",
+      "bedroom bed frame, temporary mattress, pillows, closet, dresser, and full-body mirror",
+      "bathroom fixtures, tub/shower, toilet, sink, and mirror",
+      "bookshelf and readable book props",
+      "truth/action metadata for future resident use"
+    ],
+    "not_loaded_in_active_home_world": true
+  },
+  "future_use": [
+    "Copy this accepted house when Robert asks for another resident home.",
+    "Do not add more full copies to Home World while lag is active.",
+    "After Robert adds more RAM, retest whether more active houses can remain loaded."
+  ]
+}

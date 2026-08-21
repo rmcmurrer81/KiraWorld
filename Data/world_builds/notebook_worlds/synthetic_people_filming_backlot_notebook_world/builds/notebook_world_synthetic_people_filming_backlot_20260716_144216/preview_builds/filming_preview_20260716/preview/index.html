@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procedural Notebook World Preview</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section class="viewport-shell">
+        <canvas id="world" aria-label="Procedural notebook world preview"></canvas>
+        <div class="title-card">
+          <p class="eyebrow">Isolated notebook-world preview</p>
+          <h1 id="scene-title">Loading pinned scene…</h1>
+          <p id="scene-subtitle"></p>
+        </div>
+        <div class="truth-banner">
+          <strong>PROTOTYPE / DRAFT</strong>
+          <span>No people, minds, voice, Home World placement, or final approval.</span>
+        </div>
+        <div class="walk-help">
+          <strong>Walk:</strong> WASD · <strong>Look:</strong> drag scene · <strong>Faster:</strong> Shift ·
+          <strong>Review view:</strong> R
+        </div>
+        <div id="runtime-status" class="runtime-status">Verifying pinned scene metadata…</div>
+      </section>
+      <aside class="review-panel">
+        <header>
+          <p class="eyebrow">World Builder evidence</p>
+          <h2>Generated scene contract</h2>
+          <div class="status-grid">
+            <span>Home mutation</span><strong>FALSE</strong>
+            <span>Runtime registered</span><strong>FALSE</strong>
+            <span>People loaded</span><strong>0</strong>
+          </div>
+        </header>
+
+        <section>
+          <div class="section-heading">
+            <h3>Review cameras</h3>
+            <button id="toggle-routes" type="button">Routes: on</button>
+          </div>
+          <div id="camera-buttons" class="button-grid"></div>
+        </section>
+
+        <section>
+          <h3>Rooms and build scope</h3>
+          <ul id="room-list" class="evidence-list"></ul>
+        </section>
+
+        <section>
+          <h3>Future overlay hooks</h3>
+          <div id="overlay-list" class="overlay-list"></div>
+        </section>
+
+        <section>
+          <h3>Source-truth labels</h3>
+          <div id="truth-counts" class="truth-counts"></div>
+          <details>
+            <summary>Show source notes</summary>
+            <ul id="source-notes" class="evidence-list"></ul>
+          </details>
+        </section>
+
+        <section>
+          <h3>Static route / collider result</h3>
+          <p id="route-summary" class="summary-line">Loading…</p>
+          <ul id="route-list" class="evidence-list compact"></ul>
+        </section>
+
+        <section>
+          <h3>Lightweight budget</h3>
+          <div id="budget-grid" class="status-grid budget-grid"></div>
+        </section>
+
+        <p class="fine-print">
+          Marks show possible future filming positions only. They are not avatars, embodied actions, memories, or proof that anyone entered this world.
+        </p>
+      </aside>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+

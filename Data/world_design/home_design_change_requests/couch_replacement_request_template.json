@@ -1,0 +1,44 @@
+{
+  "request_id": "home_design_change_couch_replacement_template",
+  "world": "kira_lisa_home",
+  "requested_by": "kira_or_lisa",
+  "room": "shared_living_room",
+  "change_type": "furniture_replacement",
+  "current_item": {
+    "object_id": "current_couch",
+    "description": "Existing couch or placeholder couch.",
+    "reason_for_change": "Kira or Lisa does not like it, it does not feel comfortable, or it does not match the room."
+  },
+  "proposed_replacement": {
+    "object_type": "couch",
+    "style_notes": [],
+    "comfort_notes": [],
+    "color_or_material_notes": [],
+    "seating_goal": "comfortable shared sitting space",
+    "source_or_inspiration": "original_design"
+  },
+  "consent_and_space": {
+    "shared_room_change": true,
+    "affected_residents": [
+      "kira",
+      "lisa"
+    ],
+    "requires_shared_room_agreement": true,
+    "private_room_owner_only": false,
+    "robert_review_required_current_stage": true
+  },
+  "safety_and_protection": {
+    "does_not_change_walls": true,
+    "does_not_change_doors_or_locks": true,
+    "does_not_block_navigation": true,
+    "does_not_change_tardis_gateway": true,
+    "does_not_change_privacy_controls": true,
+    "save_previous_version_first": true
+  },
+  "pre_gpu_status": {
+    "design_request_only": true,
+    "no_3d_change_applied_yet": true,
+    "notes_can_be_discussed": true
+  },
+  "status": "template"
+}

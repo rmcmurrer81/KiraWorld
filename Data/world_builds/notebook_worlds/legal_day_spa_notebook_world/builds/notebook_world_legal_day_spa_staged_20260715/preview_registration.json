@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "request_id": "notebook_world_legal_day_spa_staged_20260715",
+  "status": "registered_standalone_preview_not_approved",
+  "build_id": "spa_preview_20260715_221820",
+  "preview": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/index.html",
+  "pinned_build_manifest": "Data/world_builds/notebook_worlds/legal_day_spa_notebook_world/builds/notebook_world_legal_day_spa_staged_20260715/pinned_build_manifest.json",
+  "launcher_requires_code_pinned_manifest": true,
+  "launcher_verifies_all_manifest_bytes_before_bind": true,
+  "latest_pointer": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/latest_preview_build.json",
+  "launcher_follows_latest_pointer": false,
+  "launcher_pins_registered_preview": true,
+  "source_approval_gate": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/preview_builds/spa_preview_20260715_221820/approval_gate.json",
+  "resource_report": "Data/world_builder/projects/legal_day_spa_avatar_builder_spa_20260714/resource_tests/kira_spa_resource_smoke_latest.json",
+  "standalone_launcher": "Start_Legal_Day_Spa_Notebook_World.bat",
+  "loads_kira": false,
+  "loads_ollama": false,
+  "modifies_home_world": false,
+  "server_scope": {
+    "entire_workspace_served": false,
+    "preview_folder_served": false,
+    "exact_manifest_bound_preview_files_only": true,
+    "exact_sha_checked_glb_assets_only": true,
+    "required_sha_checked_three_js_modules_only": true
+  }
+}

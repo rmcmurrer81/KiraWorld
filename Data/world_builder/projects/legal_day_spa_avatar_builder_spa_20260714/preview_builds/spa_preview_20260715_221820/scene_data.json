@@ -1,0 +1,2273 @@
+{
+  "schema_version": 1,
+  "project_id": "legal_day_spa_avatar_builder_spa_20260714",
+  "created_at": "2026-07-15T22:29:52.612641+00:00",
+  "status": "staged_preview_not_approved",
+  "units": "meters",
+  "footprint": {
+    "width": 24,
+    "depth": 18
+  },
+  "truth_note": "Draft procedural preview based on Robert-approved blueprint rules, not final Home World placement.",
+  "rooms": [
+    {
+      "id": "vestibule",
+      "label": "Front Vestibule",
+      "x": 0,
+      "z": -7.5,
+      "w": 3.2,
+      "d": 3.0,
+      "color": "#8fb5c8",
+      "public": true
+    },
+    {
+      "id": "reception",
+      "label": "Reception / Waiting",
+      "x": -6.7,
+      "z": -5.6,
+      "w": 9.2,
+      "d": 6.4,
+      "color": "#d7cbb5",
+      "public": true
+    },
+    {
+      "id": "consultation",
+      "label": "Consultation",
+      "x": 4.2,
+      "z": -5.6,
+      "w": 4.6,
+      "d": 4.4,
+      "color": "#c7d6c5",
+      "public": true
+    },
+    {
+      "id": "restroom",
+      "label": "Accessible Restroom",
+      "x": 9.3,
+      "z": -5.8,
+      "w": 3.6,
+      "d": 3.4,
+      "color": "#c8d0db",
+      "public": true
+    },
+    {
+      "id": "avatar_studio",
+      "label": "Avatar Builder Studio",
+      "x": -8.3,
+      "z": 0.9,
+      "w": 6.2,
+      "d": 6.0,
+      "color": "#bccde0",
+      "public": true
+    },
+    {
+      "id": "corridor",
+      "label": "Public Corridor",
+      "x": -1.7,
+      "z": 0.7,
+      "w": 5.0,
+      "d": 12.2,
+      "color": "#e2d8c5",
+      "public": true
+    },
+    {
+      "id": "treatment_a",
+      "label": "Treatment Room A",
+      "x": 3.1,
+      "z": 0.2,
+      "w": 4.2,
+      "d": 4.6,
+      "color": "#d9c9c9",
+      "public": true
+    },
+    {
+      "id": "treatment_b",
+      "label": "Treatment Room B",
+      "x": 7.9,
+      "z": 0.2,
+      "w": 4.2,
+      "d": 4.6,
+      "color": "#d9c9c9",
+      "public": true
+    },
+    {
+      "id": "styling",
+      "label": "Styling Room",
+      "x": -8.9,
+      "z": 6.0,
+      "w": 5.2,
+      "d": 4.8,
+      "color": "#d7d2c0",
+      "public": true
+    },
+    {
+      "id": "relaxation",
+      "label": "Relaxation Room",
+      "x": -2.8,
+      "z": 6.1,
+      "w": 6.0,
+      "d": 4.9,
+      "color": "#cfd9c8",
+      "public": true
+    },
+    {
+      "id": "staff_laundry",
+      "label": "Staff / Laundry / Storage",
+      "x": 4.0,
+      "z": 6.0,
+      "w": 5.1,
+      "d": 4.8,
+      "color": "#c9c4bd",
+      "public": false
+    },
+    {
+      "id": "mechanical",
+      "label": "Mechanical",
+      "x": 9.4,
+      "z": 6.3,
+      "w": 3.2,
+      "d": 3.2,
+      "color": "#b9bec4",
+      "public": false
+    }
+  ],
+  "wall_runs": [
+    {
+      "id": "front_exterior",
+      "orientation": "along_x",
+      "fixed": -9.1,
+      "start": -12.1,
+      "end": 12.1,
+      "openings": [
+        "front_door"
+      ],
+      "height": 3.1,
+      "thickness": 0.24,
+      "color": "#f0f3ee"
+    },
+    {
+      "id": "rear_exterior",
+      "orientation": "along_x",
+      "fixed": 9.1,
+      "start": -12.1,
+      "end": 12.1,
+      "openings": [],
+      "height": 3.1,
+      "thickness": 0.24,
+      "color": "#f0f3ee"
+    },
+    {
+      "id": "left_exterior",
+      "orientation": "along_z",
+      "fixed": -12.1,
+      "start": -9.1,
+      "end": 9.1,
+      "openings": [],
+      "height": 3.1,
+      "thickness": 0.24,
+      "color": "#f0f3ee"
+    },
+    {
+      "id": "right_exterior",
+      "orientation": "along_z",
+      "fixed": 12.1,
+      "start": -9.1,
+      "end": 9.1,
+      "openings": [],
+      "height": 3.1,
+      "thickness": 0.24,
+      "color": "#f0f3ee"
+    },
+    {
+      "id": "reception_vestibule_partition",
+      "orientation": "along_z",
+      "fixed": -2.0,
+      "start": -8.95,
+      "end": -3.2,
+      "openings": [
+        "vestibule_to_reception"
+      ],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "reception_avatar_partition",
+      "orientation": "along_x",
+      "fixed": -2.3,
+      "start": -12.0,
+      "end": -2.1,
+      "openings": [
+        "reception_to_avatar"
+      ],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "consultation_partition",
+      "orientation": "along_x",
+      "fixed": -4.0,
+      "start": 1.8,
+      "end": 6.6,
+      "openings": [
+        "reception_to_consult"
+      ],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "restroom_partition",
+      "orientation": "along_x",
+      "fixed": -4.0,
+      "start": 7.45,
+      "end": 11.15,
+      "openings": [
+        "corridor_to_restroom"
+      ],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "treatment_front_partition",
+      "orientation": "along_x",
+      "fixed": -2.3,
+      "start": 1.0,
+      "end": 10.0,
+      "openings": [
+        "corridor_to_treatment_a",
+        "corridor_to_treatment_b"
+      ],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "avatar_right_partition",
+      "orientation": "along_z",
+      "fixed": -5.1,
+      "start": -2.3,
+      "end": 3.5,
+      "openings": [],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "treatment_divider",
+      "orientation": "along_z",
+      "fixed": 5.5,
+      "start": -2.3,
+      "end": 2.5,
+      "openings": [],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "back_room_front_partition",
+      "orientation": "along_x",
+      "fixed": 3.5,
+      "start": -11.5,
+      "end": 11.0,
+      "openings": [
+        "corridor_to_styling",
+        "corridor_to_relaxation",
+        "corridor_to_staff",
+        "corridor_to_mechanical"
+      ],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    },
+    {
+      "id": "staff_mechanical_partition",
+      "orientation": "along_z",
+      "fixed": 7.2,
+      "start": 3.5,
+      "end": 9.0,
+      "openings": [],
+      "height": 2.9,
+      "thickness": 0.18,
+      "color": "#e8e8df"
+    }
+  ],
+  "walls": [
+    {
+      "name": "front_exterior_segment_0",
+      "kind": "wall",
+      "x": -6.6499999999999995,
+      "y": 1.55,
+      "z": -9.1,
+      "w": 10.9,
+      "h": 3.1,
+      "d": 0.24,
+      "color": "#f0f3ee",
+      "solid": true,
+      "wall_run_id": "front_exterior"
+    },
+    {
+      "name": "front_exterior_segment_1",
+      "kind": "wall",
+      "x": 6.6499999999999995,
+      "y": 1.55,
+      "z": -9.1,
+      "w": 10.9,
+      "h": 3.1,
+      "d": 0.24,
+      "color": "#f0f3ee",
+      "solid": true,
+      "wall_run_id": "front_exterior"
+    },
+    {
+      "name": "rear_exterior_segment_0",
+      "kind": "wall",
+      "x": 0.0,
+      "y": 1.55,
+      "z": 9.1,
+      "w": 24.2,
+      "h": 3.1,
+      "d": 0.24,
+      "color": "#f0f3ee",
+      "solid": true,
+      "wall_run_id": "rear_exterior"
+    },
+    {
+      "name": "left_exterior_segment_0",
+      "kind": "wall",
+      "x": -12.1,
+      "y": 1.55,
+      "z": 0.0,
+      "w": 0.24,
+      "h": 3.1,
+      "d": 18.2,
+      "color": "#f0f3ee",
+      "solid": true,
+      "wall_run_id": "left_exterior"
+    },
+    {
+      "name": "right_exterior_segment_0",
+      "kind": "wall",
+      "x": 12.1,
+      "y": 1.55,
+      "z": 0.0,
+      "w": 0.24,
+      "h": 3.1,
+      "d": 18.2,
+      "color": "#f0f3ee",
+      "solid": true,
+      "wall_run_id": "right_exterior"
+    },
+    {
+      "name": "reception_vestibule_partition_segment_0",
+      "kind": "wall",
+      "x": -2.0,
+      "y": 1.45,
+      "z": -7.85,
+      "w": 0.18,
+      "h": 2.9,
+      "d": 2.1999999999999993,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "reception_vestibule_partition"
+    },
+    {
+      "name": "reception_vestibule_partition_segment_1",
+      "kind": "wall",
+      "x": -2.0,
+      "y": 1.45,
+      "z": -4.225,
+      "w": 0.18,
+      "h": 2.9,
+      "d": 2.05,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "reception_vestibule_partition"
+    },
+    {
+      "name": "reception_avatar_partition_segment_0",
+      "kind": "wall",
+      "x": -9.825,
+      "y": 1.45,
+      "z": -2.3,
+      "w": 4.35,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "reception_avatar_partition"
+    },
+    {
+      "name": "reception_avatar_partition_segment_1",
+      "kind": "wall",
+      "x": -4.125,
+      "y": 1.45,
+      "z": -2.3,
+      "w": 4.050000000000001,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "reception_avatar_partition"
+    },
+    {
+      "name": "consultation_partition_segment_0",
+      "kind": "wall",
+      "x": 2.7,
+      "y": 1.45,
+      "z": -4.0,
+      "w": 1.8,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "consultation_partition"
+    },
+    {
+      "name": "consultation_partition_segment_1",
+      "kind": "wall",
+      "x": 5.699999999999999,
+      "y": 1.45,
+      "z": -4.0,
+      "w": 1.7999999999999998,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "consultation_partition"
+    },
+    {
+      "name": "restroom_partition_segment_0",
+      "kind": "wall",
+      "x": 8.075000000000001,
+      "y": 1.45,
+      "z": -4.0,
+      "w": 1.2500000000000009,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "restroom_partition"
+    },
+    {
+      "name": "restroom_partition_segment_1",
+      "kind": "wall",
+      "x": 10.525,
+      "y": 1.45,
+      "z": -4.0,
+      "w": 1.25,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "restroom_partition"
+    },
+    {
+      "name": "treatment_front_partition_segment_0",
+      "kind": "wall",
+      "x": 1.75,
+      "y": 1.45,
+      "z": -2.3,
+      "w": 1.5,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "treatment_front_partition"
+    },
+    {
+      "name": "treatment_front_partition_segment_1",
+      "kind": "wall",
+      "x": 5.5,
+      "y": 1.45,
+      "z": -2.3,
+      "w": 3.6000000000000005,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "treatment_front_partition"
+    },
+    {
+      "name": "treatment_front_partition_segment_2",
+      "kind": "wall",
+      "x": 9.25,
+      "y": 1.45,
+      "z": -2.3,
+      "w": 1.5,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "treatment_front_partition"
+    },
+    {
+      "name": "avatar_right_partition_segment_0",
+      "kind": "wall",
+      "x": -5.1,
+      "y": 1.45,
+      "z": 0.6000000000000001,
+      "w": 0.18,
+      "h": 2.9,
+      "d": 5.8,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "avatar_right_partition"
+    },
+    {
+      "name": "treatment_divider_segment_0",
+      "kind": "wall",
+      "x": 5.5,
+      "y": 1.45,
+      "z": 0.10000000000000009,
+      "w": 0.18,
+      "h": 2.9,
+      "d": 4.8,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "treatment_divider"
+    },
+    {
+      "name": "back_room_front_partition_segment_0",
+      "kind": "wall",
+      "x": -10.5,
+      "y": 1.45,
+      "z": 3.5,
+      "w": 2.0,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "back_room_front_partition"
+    },
+    {
+      "name": "back_room_front_partition_segment_1",
+      "kind": "wall",
+      "x": -5.8500000000000005,
+      "y": 1.45,
+      "z": 3.5,
+      "w": 4.9,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "back_room_front_partition"
+    },
+    {
+      "name": "back_room_front_partition_segment_2",
+      "kind": "wall",
+      "x": 0.6000000000000001,
+      "y": 1.45,
+      "z": 3.5,
+      "w": 5.6,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "back_room_front_partition"
+    },
+    {
+      "name": "back_room_front_partition_segment_3",
+      "kind": "wall",
+      "x": 6.725,
+      "y": 1.45,
+      "z": 3.5,
+      "w": 4.25,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "back_room_front_partition"
+    },
+    {
+      "name": "back_room_front_partition_segment_4",
+      "kind": "wall",
+      "x": 10.475000000000001,
+      "y": 1.45,
+      "z": 3.5,
+      "w": 1.049999999999999,
+      "h": 2.9,
+      "d": 0.18,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "back_room_front_partition"
+    },
+    {
+      "name": "staff_mechanical_partition_segment_0",
+      "kind": "wall",
+      "x": 7.2,
+      "y": 1.45,
+      "z": 6.25,
+      "w": 0.18,
+      "h": 2.9,
+      "d": 5.5,
+      "color": "#e8e8df",
+      "solid": true,
+      "wall_run_id": "staff_mechanical_partition"
+    }
+  ],
+  "furniture": [],
+  "asset_instances": [
+    {
+      "id": "waiting_sofa_real",
+      "role": "waiting_sofa",
+      "x": -3.5,
+      "y": 0.08,
+      "z": -6.8,
+      "yaw_degrees": 0,
+      "fit": {
+        "max_width": 2.7,
+        "max_height": 0.95,
+        "max_depth": 0.95
+      },
+      "collision_proxy_id": "waiting_sofa_collision",
+      "status": "selected_real_prefab",
+      "render_mode": "real_prefab",
+      "solid": false,
+      "source": "Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/some more 3d/modern_sofa (1).glb",
+      "source_url": "/Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/some more 3d/modern_sofa (1).glb",
+      "source_sha256": "6e83a399496811d0da3e07afe4ef67881e25e153fcc5a7b60729f3ae2a9a73e0",
+      "prefab_id": "f00b1adbfa11_source_bundle",
+      "selector": {
+        "kind": "scene_root"
+      },
+      "uniform_box3_fit": true,
+      "bottom_align": true,
+      "no_block_fallback": true,
+      "load_failure_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "consultation_chair_left_real",
+      "role": "consultation_chair",
+      "x": 3.35,
+      "y": 0.08,
+      "z": -5.85,
+      "yaw_degrees": 90,
+      "fit": {
+        "max_width": 0.78,
+        "max_height": 1.1,
+        "max_depth": 0.78
+      },
+      "collision_proxy_id": "consultation_chair_left_collision",
+      "status": "selected_real_prefab",
+      "render_mode": "real_prefab",
+      "solid": false,
+      "source": "Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb",
+      "source_url": "/Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb",
+      "source_sha256": "e8693801cb6b3ee33b3a547003c845876a73c1b85fb6f53a7c953fb6c3f77447",
+      "prefab_id": "6ec16398846f_source_bundle",
+      "selector": {
+        "kind": "scene_root"
+      },
+      "uniform_box3_fit": true,
+      "bottom_align": true,
+      "no_block_fallback": true,
+      "load_failure_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "consultation_chair_right_real",
+      "role": "consultation_chair",
+      "x": 5.05,
+      "y": 0.08,
+      "z": -5.85,
+      "yaw_degrees": -90,
+      "fit": {
+        "max_width": 0.78,
+        "max_height": 1.1,
+        "max_depth": 0.78
+      },
+      "collision_proxy_id": "consultation_chair_right_collision",
+      "status": "selected_real_prefab",
+      "render_mode": "real_prefab",
+      "solid": false,
+      "source": "Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb",
+      "source_url": "/Data/world_builder/staged_assets_for_world_builder/desktop_beds_models/leather_office_chair_-_low_polygon__game_ready.glb",
+      "source_sha256": "e8693801cb6b3ee33b3a547003c845876a73c1b85fb6f53a7c953fb6c3f77447",
+      "prefab_id": "6ec16398846f_source_bundle",
+      "selector": {
+        "kind": "scene_root"
+      },
+      "uniform_box3_fit": true,
+      "bottom_align": true,
+      "no_block_fallback": true,
+      "load_failure_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "restroom_toilet_real",
+      "role": "restroom_toilet",
+      "x": 10.35,
+      "y": 0.08,
+      "z": -6.65,
+      "yaw_degrees": 180,
+      "fit": {
+        "max_width": 0.78,
+        "max_height": 0.95,
+        "max_depth": 1.0
+      },
+      "collision_proxy_id": "restroom_toilet_collision",
+      "status": "selected_real_prefab",
+      "render_mode": "real_prefab",
+      "solid": false,
+      "source": "Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb",
+      "source_url": "/Data/world_builder/staged_assets_for_world_builder/desktop_3d_models/3D Models Kira World/Rigged Toilet/toilet_002_rigged.glb",
+      "source_sha256": "402dd56ee1cc0d976ba8af5e648c0a6da20cf47cf423a71afffbce38dde97989",
+      "prefab_id": "fca3ad56d799_source_bundle",
+      "selector": {
+        "kind": "scene_root"
+      },
+      "uniform_box3_fit": true,
+      "bottom_align": true,
+      "no_block_fallback": true,
+      "load_failure_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "restroom_sink_cabinet_real",
+      "role": "restroom_sink_cabinet",
+      "x": 8.35,
+      "y": 0.08,
+      "z": -7.1,
+      "yaw_degrees": 0,
+      "fit": {
+        "max_width": 1.15,
+        "max_height": 0.95,
+        "max_depth": 0.58
+      },
+      "collision_proxy_id": "restroom_sink_cabinet_collision",
+      "status": "selected_real_prefab",
+      "render_mode": "real_prefab",
+      "solid": false,
+      "source": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/bathroom_sink_cabinet (1).glb",
+      "source_url": "/Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/bathroom_sink_cabinet (1).glb",
+      "source_sha256": "b86e54e60e392ff7b268f891829080d7e791be7c382e3f5746a9f5c289affed3",
+      "prefab_id": "project_local:bathroom_sink_cabinet_light:b86e54e60e39",
+      "selector": {
+        "kind": "scene_root"
+      },
+      "uniform_box3_fit": true,
+      "bottom_align": true,
+      "no_block_fallback": true,
+      "load_failure_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "waiting_coffee_table_real",
+      "role": "waiting_coffee_table",
+      "x": -5.15,
+      "y": 0.08,
+      "z": -5.15,
+      "yaw_degrees": 0,
+      "fit": {
+        "max_width": 1.2,
+        "max_height": 0.45,
+        "max_depth": 0.72
+      },
+      "collision_proxy_id": "waiting_coffee_table_collision",
+      "status": "selected_real_prefab",
+      "render_mode": "real_prefab",
+      "solid": false,
+      "source": "Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/low_height_coffee_table (1).glb",
+      "source_url": "/Data/world_builder/staged_assets_for_world_builder/desktop_a_bunch_more/low_height_coffee_table (1).glb",
+      "source_sha256": "b35b7d91f37d43f7e9edabb7556dd066a01915e12314f0598e6e0c7cc119d611",
+      "prefab_id": "project_local:low_height_coffee_table_light:b35b7d91f37d",
+      "selector": {
+        "kind": "scene_root"
+      },
+      "uniform_box3_fit": true,
+      "bottom_align": true,
+      "no_block_fallback": true,
+      "load_failure_status": "failed_missing_real_prefab"
+    }
+  ],
+  "collision_proxies": [
+    {
+      "name": "waiting_sofa_collision",
+      "kind": "collision_proxy",
+      "x": -3.5,
+      "y": 0.45,
+      "z": -6.8,
+      "w": 2.7,
+      "h": 0.9,
+      "d": 0.9,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "waiting_sofa",
+      "asset_status": "selected_real_prefab",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "consultation_chair_left_collision",
+      "kind": "collision_proxy",
+      "x": 3.35,
+      "y": 0.55,
+      "z": -5.85,
+      "w": 0.72,
+      "h": 1.1,
+      "d": 0.72,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "consultation_chair",
+      "asset_status": "selected_real_prefab",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "consultation_chair_right_collision",
+      "kind": "collision_proxy",
+      "x": 5.05,
+      "y": 0.55,
+      "z": -5.85,
+      "w": 0.72,
+      "h": 1.1,
+      "d": 0.72,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "consultation_chair",
+      "asset_status": "selected_real_prefab",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "restroom_toilet_collision",
+      "kind": "collision_proxy",
+      "x": 10.35,
+      "y": 0.475,
+      "z": -6.65,
+      "w": 0.72,
+      "h": 0.95,
+      "d": 0.92,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "restroom_toilet",
+      "asset_status": "selected_real_prefab",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "restroom_sink_cabinet_collision",
+      "kind": "collision_proxy",
+      "x": 8.35,
+      "y": 0.475,
+      "z": -7.1,
+      "w": 1.1,
+      "h": 0.95,
+      "d": 0.52,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "restroom_sink_cabinet",
+      "asset_status": "selected_real_prefab",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "waiting_coffee_table_collision",
+      "kind": "collision_proxy",
+      "x": -5.15,
+      "y": 0.225,
+      "z": -5.15,
+      "w": 1.15,
+      "h": 0.45,
+      "d": 0.68,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "waiting_coffee_table",
+      "asset_status": "selected_real_prefab",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "reception_counter_reserved_collision",
+      "kind": "collision_proxy",
+      "x": -7.2,
+      "y": 0.55,
+      "z": -6.6,
+      "w": 3.4,
+      "h": 1.1,
+      "d": 0.8,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "reception_counter",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "consultation_desk_reserved_collision",
+      "kind": "collision_proxy",
+      "x": 4.2,
+      "y": 0.45,
+      "z": -6.0,
+      "w": 1.5,
+      "h": 0.9,
+      "d": 1.1,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "consultation_desk_tablet",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "avatar_scanner_collision",
+      "kind": "collision_proxy",
+      "x": -8.3,
+      "y": 1.35,
+      "z": 0.8,
+      "w": 2.4,
+      "h": 2.7,
+      "d": 0.18,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "avatar_scanner",
+      "asset_status": "purpose_built_code_native",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "avatar_talk_button_collision",
+      "kind": "collision_proxy",
+      "x": -10.4,
+      "y": 0.4,
+      "z": -0.4,
+      "w": 0.45,
+      "h": 0.8,
+      "d": 0.45,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "avatar_talk_button",
+      "asset_status": "purpose_built_code_native",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "treatment_table_a_reserved_collision",
+      "kind": "collision_proxy",
+      "x": 3.1,
+      "y": 0.275,
+      "z": 0.2,
+      "w": 2.2,
+      "h": 0.55,
+      "d": 0.9,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "treatment_table_a",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "treatment_table_b_reserved_collision",
+      "kind": "collision_proxy",
+      "x": 7.9,
+      "y": 0.275,
+      "z": 0.2,
+      "w": 2.2,
+      "h": 0.55,
+      "d": 0.9,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "treatment_table_b",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "styling_chair_reserved_collision",
+      "kind": "collision_proxy",
+      "x": -8.9,
+      "y": 0.45,
+      "z": 6.1,
+      "w": 0.8,
+      "h": 0.9,
+      "d": 0.8,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "styling_salon_chair",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "relax_lounge_1_reserved_collision",
+      "kind": "collision_proxy",
+      "x": -4.0,
+      "y": 0.225,
+      "z": 6.3,
+      "w": 1.7,
+      "h": 0.45,
+      "d": 0.8,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "relaxation_lounges",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "relax_lounge_2_reserved_collision",
+      "kind": "collision_proxy",
+      "x": -1.4,
+      "y": 0.225,
+      "z": 6.3,
+      "w": 1.7,
+      "h": 0.45,
+      "d": 0.8,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "relaxation_lounges",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "clean_towel_storage_reserved_collision",
+      "kind": "collision_proxy",
+      "x": 2.1,
+      "y": 1.0,
+      "z": 8.55,
+      "w": 2.3,
+      "h": 2.0,
+      "d": 0.3,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "clean_towel_storage",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    },
+    {
+      "name": "dirty_linen_hamper_reserved_collision",
+      "kind": "collision_proxy",
+      "x": 5.6,
+      "y": 0.45,
+      "z": 8.0,
+      "w": 0.75,
+      "h": 0.9,
+      "d": 0.75,
+      "color": "#000000",
+      "solid": true,
+      "wall_run_id": "",
+      "asset_role": "dirty_linen_hamper",
+      "asset_status": "failed_missing_real_prefab_reserved_footprint",
+      "visual": false,
+      "render_mode": "never_render_static_validation_only"
+    }
+  ],
+  "code_native_fixtures": [
+    {
+      "id": "license_services_wall",
+      "role": "legal_service_signage",
+      "geometry": "framed_canvas_sign",
+      "x": -9.8,
+      "y": 1.45,
+      "z": -8.94,
+      "yaw_degrees": 0,
+      "title": "LICENSED PUBLIC WELLNESS SERVICES",
+      "lines": [
+        "Massage therapy",
+        "Facial + skin care",
+        "Hair styling",
+        "Avatar consultation"
+      ],
+      "status": "purpose_built_code_native"
+    },
+    {
+      "id": "avatar_scanner_ring",
+      "role": "avatar_scanner",
+      "geometry": "torus_scanner_ring",
+      "x": -8.3,
+      "y": 1.35,
+      "z": 0.8,
+      "radius": 1.15,
+      "tube": 0.08,
+      "status": "purpose_built_code_native"
+    },
+    {
+      "id": "avatar_approval_screen",
+      "role": "avatar_approval_screen",
+      "geometry": "framed_emissive_screen",
+      "x": -10.82,
+      "y": 1.35,
+      "z": 0.9,
+      "width": 2.2,
+      "height": 1.5,
+      "yaw_degrees": 90,
+      "status": "purpose_built_code_native"
+    },
+    {
+      "id": "avatar_talk_button",
+      "role": "avatar_talk_button",
+      "geometry": "pedestal_talk_button",
+      "x": -10.4,
+      "y": 0.0,
+      "z": -0.4,
+      "status": "purpose_built_code_native"
+    }
+  ],
+  "missing_asset_roles": [
+    {
+      "role": "front_storefront_door",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "The indexed single wood door does not satisfy the approved double-glass storefront requirement.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "reception_counter",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No acceptable real reception counter prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "consultation_desk_tablet",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "A coffee table is not a consultation desk and no suitable real desk/tablet set was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "treatment_table_a",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No massage/treatment-table prefab was found; a bed must not be relabelled.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "treatment_table_b",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No massage/treatment-table prefab was found; a bed must not be relabelled.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "treatment_room_stools",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No appropriate treatment stool prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "treatment_side_counters_and_sinks",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No reviewed treatment-room counter/sink set was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "styling_salon_chair",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "An office chair is not a salon chair and no salon-chair prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "styling_shampoo_basin",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No reviewed shampoo-basin prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "styling_mirror",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No reviewed styling-station mirror prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "relaxation_lounges",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "A sofa is not a relaxation chaise and no appropriate lounge prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "clean_towel_storage",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "A bookshelf must not be relabelled as clean-towel storage.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "dirty_linen_hamper",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No appropriate hamper prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "laundry_machines",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No reviewed washer/dryer prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "staff_utility_sink",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "The public restroom vanity must not be duplicated as a utility sink.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "accessible_grab_rails",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "No reviewed accessible grab-rail prefab was found.",
+      "block_fallback_allowed": false
+    },
+    {
+      "role": "spa_ceiling_light_fixtures",
+      "status": "failed_missing_real_prefab",
+      "visual_created": false,
+      "source": null,
+      "prefab_id": null,
+      "reason": "Current light candidates are not appropriate spa ceiling fixtures.",
+      "block_fallback_allowed": false
+    }
+  ],
+  "asset_selection_status": "real_prefabs_selected_with_unresolved_required_assets",
+  "route_targets": [
+    {
+      "id": "spa_front_door_outside",
+      "label": "Outside front door",
+      "x": 0.0,
+      "y": 0.08,
+      "z": -10.7,
+      "room": "exterior",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "spa_front_door_inside",
+      "label": "Inside vestibule",
+      "x": 0.0,
+      "y": 0.08,
+      "z": -8.0,
+      "room": "vestibule",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "spa_corridor_center",
+      "label": "Public corridor clear area",
+      "x": 0.0,
+      "y": 0.08,
+      "z": -1.0,
+      "room": "corridor",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "spa_reception_counter",
+      "label": "Reserved reception-counter approach (asset missing)",
+      "x": -7.2,
+      "y": 0.08,
+      "z": -5.65,
+      "room": "reception",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "reception_counter",
+      "linked_asset_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "spa_waiting_chair",
+      "label": "Waiting sofa approach",
+      "x": -3.5,
+      "y": 0.08,
+      "z": -5.75,
+      "room": "reception",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "waiting_sofa",
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "spa_consultation_chair",
+      "label": "Consultation chair approach",
+      "x": 4.2,
+      "y": 0.08,
+      "z": -4.85,
+      "room": "consultation",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "consultation_chair",
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "spa_avatar_builder_talk_button",
+      "label": "Avatar Builder talk-button approach",
+      "x": -9.5,
+      "y": 0.08,
+      "z": -0.4,
+      "room": "avatar_studio",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "avatar_talk_button",
+      "linked_asset_status": "purpose_built_code_native"
+    },
+    {
+      "id": "spa_avatar_preview_marker",
+      "label": "Avatar scanner approach",
+      "x": -8.3,
+      "y": 0.08,
+      "z": 1.45,
+      "room": "avatar_studio",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "avatar_scanner",
+      "linked_asset_status": "purpose_built_code_native"
+    },
+    {
+      "id": "spa_treatment_table_a",
+      "label": "Reserved Treatment A approach (asset missing)",
+      "x": 3.1,
+      "y": 0.08,
+      "z": 1.2,
+      "room": "treatment_a",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "treatment_table_a",
+      "linked_asset_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "spa_treatment_table_b",
+      "label": "Reserved Treatment B approach (asset missing)",
+      "x": 7.9,
+      "y": 0.08,
+      "z": 1.2,
+      "room": "treatment_b",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "treatment_table_b",
+      "linked_asset_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "spa_styling_chair",
+      "label": "Reserved styling approach (asset missing)",
+      "x": -8.9,
+      "y": 0.08,
+      "z": 5.15,
+      "room": "styling",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "styling_salon_chair",
+      "linked_asset_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "spa_relaxation_lounge",
+      "label": "Reserved relaxation approach (asset missing)",
+      "x": -2.8,
+      "y": 0.08,
+      "z": 5.25,
+      "room": "relaxation",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": "relaxation_lounges",
+      "linked_asset_status": "failed_missing_real_prefab"
+    },
+    {
+      "id": "spa_restroom_inside",
+      "label": "Accessible restroom clear area",
+      "x": 9.3,
+      "y": 0.08,
+      "z": -5.25,
+      "room": "restroom",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "spa_exit",
+      "label": "Exit",
+      "x": 0.0,
+      "y": 0.08,
+      "z": -10.7,
+      "room": "exterior",
+      "kind": "interaction_approach",
+      "requires_clearance": true,
+      "show_label": true,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "front_door_from_approach",
+      "label": "Public front door outside approach",
+      "x": 0.0,
+      "y": 0.08,
+      "z": -10.0,
+      "room": "exterior",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "front_door_to_followthrough",
+      "label": "Public front door inside follow-through",
+      "x": 0.0,
+      "y": 0.08,
+      "z": -8.2,
+      "room": "vestibule",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "vestibule_to_reception_from_approach",
+      "label": "Reception entry outside approach",
+      "x": -1.1,
+      "y": 0.08,
+      "z": -6.0,
+      "room": "vestibule",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "vestibule_to_reception_to_followthrough",
+      "label": "Reception entry inside follow-through",
+      "x": -2.9,
+      "y": 0.08,
+      "z": -6.0,
+      "room": "reception",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "reception_to_avatar_from_approach",
+      "label": "Avatar Studio door outside approach",
+      "x": -6.9,
+      "y": 0.08,
+      "z": -3.1999999999999997,
+      "room": "reception",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "reception_to_avatar_to_followthrough",
+      "label": "Avatar Studio door inside follow-through",
+      "x": -6.9,
+      "y": 0.08,
+      "z": -1.4,
+      "room": "avatar_studio",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "reception_to_consult_from_approach",
+      "label": "Consultation door outside approach",
+      "x": 4.2,
+      "y": 0.08,
+      "z": -3.1,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "reception_to_consult_to_followthrough",
+      "label": "Consultation door inside follow-through",
+      "x": 4.2,
+      "y": 0.08,
+      "z": -4.9,
+      "room": "consultation",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_restroom_from_approach",
+      "label": "Restroom door outside approach",
+      "x": 9.3,
+      "y": 0.08,
+      "z": -3.1,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_restroom_to_followthrough",
+      "label": "Restroom door inside follow-through",
+      "x": 9.3,
+      "y": 0.08,
+      "z": -4.9,
+      "room": "restroom",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_treatment_a_from_approach",
+      "label": "Treatment A door outside approach",
+      "x": 3.1,
+      "y": 0.08,
+      "z": -3.1999999999999997,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_treatment_a_to_followthrough",
+      "label": "Treatment A door inside follow-through",
+      "x": 3.1,
+      "y": 0.08,
+      "z": -1.4,
+      "room": "treatment_a",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_treatment_b_from_approach",
+      "label": "Treatment B door outside approach",
+      "x": 7.9,
+      "y": 0.08,
+      "z": -3.1999999999999997,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_treatment_b_to_followthrough",
+      "label": "Treatment B door inside follow-through",
+      "x": 7.9,
+      "y": 0.08,
+      "z": -1.4,
+      "room": "treatment_b",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_styling_from_approach",
+      "label": "Styling door outside approach",
+      "x": -8.9,
+      "y": 0.08,
+      "z": 2.6,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_styling_to_followthrough",
+      "label": "Styling door inside follow-through",
+      "x": -8.9,
+      "y": 0.08,
+      "z": 4.4,
+      "room": "styling",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_relaxation_from_approach",
+      "label": "Relaxation door outside approach",
+      "x": -2.8,
+      "y": 0.08,
+      "z": 2.6,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_relaxation_to_followthrough",
+      "label": "Relaxation door inside follow-through",
+      "x": -2.8,
+      "y": 0.08,
+      "z": 4.4,
+      "room": "relaxation",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_staff_from_approach",
+      "label": "Staff door outside approach",
+      "x": 4.0,
+      "y": 0.08,
+      "z": 2.6,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_staff_to_followthrough",
+      "label": "Staff door inside follow-through",
+      "x": 4.0,
+      "y": 0.08,
+      "z": 4.4,
+      "room": "staff_laundry",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_mechanical_from_approach",
+      "label": "Mechanical door outside approach",
+      "x": 9.4,
+      "y": 0.08,
+      "z": 2.6,
+      "room": "corridor",
+      "kind": "door_approach",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    },
+    {
+      "id": "corridor_to_mechanical_to_followthrough",
+      "label": "Mechanical door inside follow-through",
+      "x": 9.4,
+      "y": 0.08,
+      "z": 4.4,
+      "room": "mechanical",
+      "kind": "door_followthrough",
+      "requires_clearance": true,
+      "show_label": false,
+      "linked_asset_role": null,
+      "linked_asset_status": "available"
+    }
+  ],
+  "doors": [
+    {
+      "id": "front_door",
+      "label": "Public front door",
+      "x": 0.0,
+      "z": -9.1,
+      "width": 2.4,
+      "orientation": "along_x",
+      "wall_run_id": "front_exterior",
+      "from_room": "exterior",
+      "to_room": "vestibule",
+      "from_normal_sign": -1,
+      "from_target": "front_door_from_approach",
+      "to_target": "front_door_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "vestibule_to_reception",
+      "label": "Reception entry",
+      "x": -2.0,
+      "z": -6.0,
+      "width": 1.5,
+      "orientation": "along_z",
+      "wall_run_id": "reception_vestibule_partition",
+      "from_room": "vestibule",
+      "to_room": "reception",
+      "from_normal_sign": 1,
+      "from_target": "vestibule_to_reception_from_approach",
+      "to_target": "vestibule_to_reception_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "reception_to_avatar",
+      "label": "Avatar Studio door",
+      "x": -6.9,
+      "z": -2.3,
+      "width": 1.5,
+      "orientation": "along_x",
+      "wall_run_id": "reception_avatar_partition",
+      "from_room": "reception",
+      "to_room": "avatar_studio",
+      "from_normal_sign": -1,
+      "from_target": "reception_to_avatar_from_approach",
+      "to_target": "reception_to_avatar_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "reception_to_consult",
+      "label": "Consultation door",
+      "x": 4.2,
+      "z": -4.0,
+      "width": 1.2,
+      "orientation": "along_x",
+      "wall_run_id": "consultation_partition",
+      "from_room": "corridor",
+      "to_room": "consultation",
+      "from_normal_sign": 1,
+      "from_target": "reception_to_consult_from_approach",
+      "to_target": "reception_to_consult_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "corridor_to_restroom",
+      "label": "Restroom door",
+      "x": 9.3,
+      "z": -4.0,
+      "width": 1.2,
+      "orientation": "along_x",
+      "wall_run_id": "restroom_partition",
+      "from_room": "corridor",
+      "to_room": "restroom",
+      "from_normal_sign": 1,
+      "from_target": "corridor_to_restroom_from_approach",
+      "to_target": "corridor_to_restroom_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "corridor_to_treatment_a",
+      "label": "Treatment A door",
+      "x": 3.1,
+      "z": -2.3,
+      "width": 1.2,
+      "orientation": "along_x",
+      "wall_run_id": "treatment_front_partition",
+      "from_room": "corridor",
+      "to_room": "treatment_a",
+      "from_normal_sign": -1,
+      "from_target": "corridor_to_treatment_a_from_approach",
+      "to_target": "corridor_to_treatment_a_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "corridor_to_treatment_b",
+      "label": "Treatment B door",
+      "x": 7.9,
+      "z": -2.3,
+      "width": 1.2,
+      "orientation": "along_x",
+      "wall_run_id": "treatment_front_partition",
+      "from_room": "corridor",
+      "to_room": "treatment_b",
+      "from_normal_sign": -1,
+      "from_target": "corridor_to_treatment_b_from_approach",
+      "to_target": "corridor_to_treatment_b_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "corridor_to_styling",
+      "label": "Styling door",
+      "x": -8.9,
+      "z": 3.5,
+      "width": 1.2,
+      "orientation": "along_x",
+      "wall_run_id": "back_room_front_partition",
+      "from_room": "corridor",
+      "to_room": "styling",
+      "from_normal_sign": -1,
+      "from_target": "corridor_to_styling_from_approach",
+      "to_target": "corridor_to_styling_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "corridor_to_relaxation",
+      "label": "Relaxation door",
+      "x": -2.8,
+      "z": 3.5,
+      "width": 1.2,
+      "orientation": "along_x",
+      "wall_run_id": "back_room_front_partition",
+      "from_room": "corridor",
+      "to_room": "relaxation",
+      "from_normal_sign": -1,
+      "from_target": "corridor_to_relaxation_from_approach",
+      "to_target": "corridor_to_relaxation_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "corridor_to_staff",
+      "label": "Staff door",
+      "x": 4.0,
+      "z": 3.5,
+      "width": 1.2,
+      "orientation": "along_x",
+      "wall_run_id": "back_room_front_partition",
+      "from_room": "corridor",
+      "to_room": "staff_laundry",
+      "from_normal_sign": -1,
+      "from_target": "corridor_to_staff_from_approach",
+      "to_target": "corridor_to_staff_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    },
+    {
+      "id": "corridor_to_mechanical",
+      "label": "Mechanical door",
+      "x": 9.4,
+      "z": 3.5,
+      "width": 1.1,
+      "orientation": "along_x",
+      "wall_run_id": "back_room_front_partition",
+      "from_room": "corridor",
+      "to_room": "mechanical",
+      "from_normal_sign": -1,
+      "from_target": "corridor_to_mechanical_from_approach",
+      "to_target": "corridor_to_mechanical_to_followthrough",
+      "open_angle_degrees": 90.0,
+      "status": "requires_computed_threshold_validation"
+    }
+  ],
+  "public_route_tests": [
+    {
+      "route_id": "outside_to_vestibule",
+      "target": "spa_front_door_inside",
+      "via_doors": [
+        "front_door"
+      ]
+    },
+    {
+      "route_id": "outside_to_corridor",
+      "target": "spa_corridor_center",
+      "via_doors": [
+        "front_door"
+      ]
+    },
+    {
+      "route_id": "outside_to_reception",
+      "target": "spa_reception_counter",
+      "via_doors": [
+        "front_door",
+        "vestibule_to_reception"
+      ]
+    },
+    {
+      "route_id": "outside_to_waiting",
+      "target": "spa_waiting_chair",
+      "via_doors": [
+        "front_door",
+        "vestibule_to_reception"
+      ]
+    },
+    {
+      "route_id": "outside_to_consultation",
+      "target": "spa_consultation_chair",
+      "via_doors": [
+        "front_door",
+        "reception_to_consult"
+      ]
+    },
+    {
+      "route_id": "outside_to_avatar_builder",
+      "target": "spa_avatar_builder_talk_button",
+      "via_doors": [
+        "front_door",
+        "vestibule_to_reception",
+        "reception_to_avatar"
+      ]
+    },
+    {
+      "route_id": "outside_to_avatar_scanner",
+      "target": "spa_avatar_preview_marker",
+      "via_doors": [
+        "front_door",
+        "vestibule_to_reception",
+        "reception_to_avatar"
+      ]
+    },
+    {
+      "route_id": "outside_to_treatment_a",
+      "target": "spa_treatment_table_a",
+      "via_doors": [
+        "front_door",
+        "corridor_to_treatment_a"
+      ]
+    },
+    {
+      "route_id": "outside_to_treatment_b",
+      "target": "spa_treatment_table_b",
+      "via_doors": [
+        "front_door",
+        "corridor_to_treatment_b"
+      ]
+    },
+    {
+      "route_id": "outside_to_styling",
+      "target": "spa_styling_chair",
+      "via_doors": [
+        "front_door",
+        "corridor_to_styling"
+      ]
+    },
+    {
+      "route_id": "outside_to_relaxation",
+      "target": "spa_relaxation_lounge",
+      "via_doors": [
+        "front_door",
+        "corridor_to_relaxation"
+      ]
+    },
+    {
+      "route_id": "outside_to_restroom",
+      "target": "spa_restroom_inside",
+      "via_doors": [
+        "front_door",
+        "corridor_to_restroom"
+      ]
+    }
+  ],
+  "approval_policy": {
+    "auto_place_in_home_world": false,
+    "requires_robert_approval": true,
+    "runtime_kira_test_completed": false
+  },
+  "validated_review_route_points": [
+    {
+      "x": 0.0,
+      "z": -10.7
+    },
+    {
+      "x": 0.0,
+      "z": -8.35
+    },
+    {
+      "x": 0.0,
+      "z": -8.2
+    },
+    {
+      "x": 0.0,
+      "z": -3.5
+    },
+    {
+      "x": -0.1,
+      "z": -3.4
+    },
+    {
+      "x": -0.1,
+      "z": -3.3
+    },
+    {
+      "x": -0.2,
+      "z": -3.2
+    },
+    {
+      "x": -0.2,
+      "z": -3.1
+    },
+    {
+      "x": -0.3,
+      "z": -3.0
+    },
+    {
+      "x": -0.3,
+      "z": -2.8
+    },
+    {
+      "x": -0.4,
+      "z": -2.7
+    },
+    {
+      "x": -0.4,
+      "z": -2.6
+    },
+    {
+      "x": -0.5,
+      "z": -2.5
+    },
+    {
+      "x": -0.5,
+      "z": -2.4
+    },
+    {
+      "x": -0.6,
+      "z": -2.3
+    },
+    {
+      "x": -0.6,
+      "z": -2.2
+    },
+    {
+      "x": -0.7,
+      "z": -2.1
+    },
+    {
+      "x": -0.7,
+      "z": -2.0
+    },
+    {
+      "x": -0.8,
+      "z": -1.9
+    },
+    {
+      "x": -0.8,
+      "z": -1.7
+    },
+    {
+      "x": -0.9,
+      "z": -1.6
+    },
+    {
+      "x": -0.9,
+      "z": -1.5
+    },
+    {
+      "x": -1.0,
+      "z": -1.4
+    },
+    {
+      "x": -1.0,
+      "z": -1.3
+    },
+    {
+      "x": -1.1,
+      "z": -1.2
+    },
+    {
+      "x": -1.1,
+      "z": -1.1
+    },
+    {
+      "x": -1.2,
+      "z": -1.0
+    },
+    {
+      "x": -1.2,
+      "z": -0.9
+    },
+    {
+      "x": -1.3,
+      "z": -0.8
+    },
+    {
+      "x": -1.3,
+      "z": -0.6
+    },
+    {
+      "x": -1.4,
+      "z": -0.5
+    },
+    {
+      "x": -1.4,
+      "z": -0.4
+    },
+    {
+      "x": -1.5,
+      "z": -0.3
+    },
+    {
+      "x": -1.5,
+      "z": -0.2
+    },
+    {
+      "x": -1.6,
+      "z": -0.1
+    },
+    {
+      "x": -1.6,
+      "z": 0.0
+    },
+    {
+      "x": -1.7,
+      "z": 0.1
+    },
+    {
+      "x": -1.7,
+      "z": 0.2
+    },
+    {
+      "x": -1.8,
+      "z": 0.3
+    },
+    {
+      "x": -1.8,
+      "z": 0.5
+    },
+    {
+      "x": -1.9,
+      "z": 0.6
+    },
+    {
+      "x": -1.9,
+      "z": 0.7
+    },
+    {
+      "x": -2.0,
+      "z": 0.8
+    },
+    {
+      "x": -2.0,
+      "z": 0.9
+    },
+    {
+      "x": -2.1,
+      "z": 1.0
+    },
+    {
+      "x": -2.1,
+      "z": 1.1
+    },
+    {
+      "x": -2.2,
+      "z": 1.2
+    },
+    {
+      "x": -2.2,
+      "z": 1.3
+    },
+    {
+      "x": -2.3,
+      "z": 1.4
+    },
+    {
+      "x": -2.3,
+      "z": 1.6
+    },
+    {
+      "x": -2.4,
+      "z": 1.7
+    },
+    {
+      "x": -2.4,
+      "z": 1.8
+    },
+    {
+      "x": -2.5,
+      "z": 1.9
+    },
+    {
+      "x": -2.5,
+      "z": 2.0
+    },
+    {
+      "x": -2.6,
+      "z": 2.1
+    },
+    {
+      "x": -2.6,
+      "z": 2.2
+    },
+    {
+      "x": -2.7,
+      "z": 2.3
+    },
+    {
+      "x": -2.7,
+      "z": 2.5
+    },
+    {
+      "x": -2.8,
+      "z": 2.6
+    },
+    {
+      "x": -2.8,
+      "z": 5.25
+    }
+  ]
+}

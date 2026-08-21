@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louvre Bounded Circulation Solo Owner Review</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2377d5f6' d='M16 3 29 27H3z'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <canvas id="world"></canvas>
+    <div id="hud">
+      <div class="title">Louvre Pyramid Circulation Owner Review</div>
+      <div class="meta">Exterior plus a bounded photo-supported approximate entrance/descent slice. No person, mind, voice, full interior, elevator, gallery, or artwork is loaded.</div>
+      <div class="controls">Click the scene to walk · WASD · E entrance · Shift faster · B bookmark · R route · F feedback · P snapshot · Esc release</div>
+      <div id="landmarkStatus" class="landmark-status">Nearest landmark: loading…</div>
+      <div id="reviewMetrics" class="review-metrics" aria-live="polite">
+        <span id="routeMetric">Route: loading…</span>
+        <span id="walkMetric">Walked: 0.00 m</span>
+        <span id="collisionMetric">Collisions: 0</span>
+      </div>
+    </div>
+    <section id="bookmarkPanel" aria-label="Reproducible Louvre review viewpoints">
+      <div class="bookmark-heading">
+        <strong>Review viewpoint</strong>
+        <button id="truthMarkersToggle" type="button" aria-pressed="true">Markers on</button>
+      </div>
+      <div class="bookmark-controls">
+        <select id="bookmarkSelect" aria-label="Review viewpoint"></select>
+        <button id="bookmarkGo" type="button">Go</button>
+        <button id="bookmarkNext" type="button">Next (B)</button>
+      </div>
+      <label class="bookmark-link-label">
+        Reproducible link
+        <span class="bookmark-link-row">
+          <input id="bookmarkLink" type="text" readonly />
+          <button id="bookmarkCopy" type="button">Copy</button>
+        </span>
+      </label>
+      <div id="bookmarkStatus" role="status">Loading fixed viewpoint…</div>
+    </section>
+    <aside id="truthPanel" aria-label="Louvre source truth">
+      <div class="truth-panel-heading">
+        <strong>Measured vs approximate</strong>
+        <button id="truthToggle" type="button" aria-expanded="true">Hide</button>
+      </div>
+      <div id="truthPanelBody">
+        <div class="truth-chip official">Official Louvre source</div>
+        <p><strong>Measured:</strong> main Pyramid 21 m high, 35 m base width, about 1,000 m² base area.</p>
+        <p><strong>Confirmed context:</strong> main entrance, two smaller Cour Napoléon pyramids, and three visitor queue categories.</p>
+        <div class="truth-chip approximate">Approximate geometry</div>
+        <p>Palace facades, pools, queue layout, door mechanism, bounded spiral stair/landing, visible-only escalator forms, paving, materials, and lighting.</p>
+        <div class="truth-chip locked">Locked / not built</div>
+        <p>Exact/full under-Pyramid layout, central tube-lift geometry/operation, working escalators, accessibility/security routes, galleries, rooms, artwork, and service areas.</p>
+        <p><strong>In-world markers:</strong> blue = mixed official/approximate, amber = approximate, red = locked.</p>
+      </div>
+    </aside>
+    <button id="feedbackToggle" type="button" aria-expanded="false">Review / feedback (F)</button>
+    <section id="feedbackPanel" aria-label="Louvre test feedback" hidden>
+      <div class="feedback-heading">
+        <strong>Leave test feedback</strong>
+        <button id="feedbackClose" type="button" aria-label="Close feedback">×</button>
+      </div>
+      <p class="feedback-help">Saved only in this browser. Each note records its bookmark, route progress, walked distance, and collision count.</p>
+      <label>
+        Area
+        <select id="feedbackCategory">
+          <option value="scale">Scale</option>
+          <option value="navigation">Navigation</option>
+          <option value="collision">Collision</option>
+          <option value="landmarks">Landmarks</option>
+          <option value="visual_readability">Visual readability</option>
+          <option value="source_truth">Measured vs approximate labels</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label>
+        Result
+        <select id="feedbackVerdict">
+          <option value="needs_improvement">Needs improvement</option>
+          <option value="works">Works</option>
+          <option value="blocked">Blocked</option>
+          <option value="not_tested">Not tested</option>
+        </select>
+      </label>
+      <label>
+        What did you notice?
+        <textarea id="feedbackNote" rows="5" maxlength="1200" placeholder="Example: I caught on the west pool corner, or the Pyramid looks too small from the arrival point."></textarea>
+      </label>
+      <div class="feedback-actions">
+        <button id="feedbackSave" type="button">Save locally</button>
+        <button id="feedbackExport" type="button">Export feedback only</button>
+        <button id="reviewPackageExport" type="button">Export full review package + PNG</button>
+      </div>
+      <div id="feedbackStatus" role="status">No feedback saved in this browser yet.</div>
+      <div id="packageStatus" role="status">The full package is generated locally; nothing is uploaded.</div>
+    </section>
+    <div id="crosshair"></div>
+    <div id="status">Loading notebook world...</div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
