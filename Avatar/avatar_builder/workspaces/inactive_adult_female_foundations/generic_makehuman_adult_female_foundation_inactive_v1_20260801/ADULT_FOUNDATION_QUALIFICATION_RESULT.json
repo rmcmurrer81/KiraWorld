@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "artifact_type": "adult_foundation_qualification_result",
+  "foundation_id": "generic_makehuman_adult_female_foundation_v1_20260801",
+  "status": "QUALIFIED_INACTIVE",
+  "qualified_for_adult_foundation": true,
+  "adult_eligible": true,
+  "complete_adult_topology_proven": true,
+  "blockers": [],
+  "source_artifact": {
+    "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+    "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"
+  },
+  "independent_evidence": {
+    "topology": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FOUNDATION_TOPOLOGY_AUDIT_V2.json",
+      "sha256": "de2d1f0a82aa2a0015f7374707b7e12afae830ef5314f518bcb7956adf8180de"
+    },
+    "relationships": {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/INDEPENDENT_ADULT_FEMALE_RELATIONSHIP_REVIEW_V2.json",
+      "sha256": "b321f2d852b2242c462501a396ddb9aca648229187868a158da6571450a1cb88"
+    }
+  },
+  "relationship_results": {
+    "mons_pubis": true,
+    "paired_labia_majora": true,
+    "paired_labia_minora": true,
+    "clitoral_hood": true,
+    "clitoris": true,
+    "vestibule": true,
+    "urethral_opening_anterior_to_vaginal_opening": true,
+    "vaginal_opening": true,
+    "posterior_commissure_fourchette": true,
+    "perineal_transition_to_anus_and_pelvic_floor": true
+  },
+  "build_performed_by_evaluator": false,
+  "render_performed": false,
+  "export_performed": false,
+  "runtime_mutation_performed": false,
+  "runtime_activation_allowed": false,
+  "public_export_allowed": false,
+  "kira_styling_applied": false,
+  "clothing_applied": false,
+  "armature_present": false,
+  "mandatory_downstream_kira_candidate_gate": "Attach the intended armature and independently pass a pose-space pelvic-patch deformation audit before any identity-specific Kira candidate use.",
+  "truth_note": "Qualification covers the exact generic Blend and only the policy-listed connected external-surface relationships. It does not prove visual realism, internal reproductive anatomy, posed behavior, Kira likeness, owner approval, runtime readiness, or public-export readiness."
+}

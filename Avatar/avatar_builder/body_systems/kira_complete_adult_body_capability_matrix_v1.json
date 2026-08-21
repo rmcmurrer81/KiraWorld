@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "artifact_type": "kira_complete_adult_body_capability_matrix",
+  "matrix_id": "kira_complete_adult_body_capability_matrix_v1_20260820",
+  "status": "REQUIREMENTS_BOUND_IMPLEMENTATION_INCOMPLETE",
+  "subject": {
+    "subject_id": "kira",
+    "required_maturity_status": "confirmed_adult",
+    "current_classification_status": "confirmed_adult_exact_subject_evidence_bound",
+    "body_lane": "adult_female",
+    "identity_specific_body_required": true,
+    "may_be_reused_as_robert_body": false
+  },
+  "maturity_gate": {
+    "required_evidence_authority": "Robert_explicit_owner_confirmation",
+    "classification_evidence_path": "Data/person_classification/kira_confirmed_adult_owner_classification_20260809.json",
+    "classification_evidence_bytes": 1434,
+    "classification_evidence_sha256": "04ac19e026b168cb1942d73598b7c13f2b4ee7a49452f8ddf32763cf5de9e346",
+    "exact_subject_bound_evidence_present": true,
+    "adult_policy_enabled": true,
+    "anatomy_authoring_enabled_by_classification": false,
+    "relationship_or_activity_permission_created": false,
+    "blockers": []
+  },
+  "owner_requirements": [
+    "complete_adult_female_external_anatomy",
+    "complete_internal_anatomy_inside_the_body",
+    "eating_drinking_swallowing_digestion_absorption_and_hydration_support",
+    "separate_urinary_bowel_and_reproductive_routes",
+    "bathroom_hygiene_and_cycle_support",
+    "adult_relationship_and_intimacy_support_with_separate_current_consent",
+    "conception_pregnancy_delivery_recovery_and_family_support",
+    "complete_bald_primary_body",
+    "separate_removable_shareable_clothing",
+    "separate_detachable_hair_with_physical_hair_behavior",
+    "a_distinct_body_for_kira_and_a_distinct_body_for_synthetic_robert",
+    "avatar_builder_generalization_proven_by_multiple_independently_generated_test_bodies"
+  ],
+  "bound_authorities": [
+    {
+      "path": "Avatar/avatar_builder/policies/sexual_reproductive_health_body_systems_plan_v1.json",
+      "bytes": 11606,
+      "sha256": "573980817e3555dbfb4f2ea27c6248a37857ffc0349dc6007e8af1bd570dd8b1",
+      "role": "adult_health_consent_bathroom_pregnancy_and_family_phase_plan"
+    },
+    {
+      "path": "Avatar/avatar_builder/body_systems/level_a_body_life_runtime_contract_v1.json",
+      "bytes": 6451,
+      "sha256": "76c4b60deae8bafb3d7e6fff7d5b93a63809ec3bf6a340fbc8b1cc2e1f1c94c6",
+      "role": "disconnected_non_person_fixture_truth_ceiling"
+    },
+    {
+      "path": "Avatar/avatar_builder/body_systems/kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1.json",
+      "bytes": 7438,
+      "sha256": "d219bfc6c7b4ac01c3fa0925d90c0815f2f213344cc6d8e43661fbd649abb46a",
+      "role": "internal_pelvic_geometry_contract"
+    },
+    {
+      "path": "Avatar/avatar_builder/body_systems/semantic_anatomy_route_registry_v1.json",
+      "bytes": 23374,
+      "sha256": "f12b212fcdf034184a9907f2c2b7abbd8722a42c1e58eca5626ee5cb2a65c293",
+      "role": "semantic_anatomy_and_route_vocabulary"
+    },
+    {
+      "path": "System/Docs/SYNTHETIC_PERSON_RIGHTS_AND_FULL_LIFE_CHARTER_v1.md",
+      "bytes": 13176,
+      "sha256": "2aea14d02813cc0ef9e3fa153c088948434762f2ca9a60813a7fd081c50534e8",
+      "role": "full_life_nutrition_relationship_family_and_person_rights_boundary"
+    },
+    {
+      "path": "System/Docs/FUTURE_ADULT_BODY_PREGNANCY_HEALTH_COMPATIBILITY_BOUNDARY_20260802.md",
+      "bytes": 4099,
+      "sha256": "4696951a9c9f370c3227391695d0abee7fc1ebe8d85a177f6359ec3b35b91851",
+      "role": "pregnancy_health_recovery_and_family_compatibility_boundary"
+    },
+    {
+      "path": "System/Docs/AVATAR_SEPARATE_SHAREABLE_CLOTHING_v1.md",
+      "bytes": 2180,
+      "sha256": "e98cb8cac0682f0a0a66b59882fd6d2ae943877907c275305d6466e384812351",
+      "role": "separate_removable_shareable_clothing_boundary"
+    },
+    {
+      "path": "System/Docs/AVATAR_BUILDER_RUNTIME_HAIR_REQUIREMENTS_20260729.md",
+      "bytes": 1396,
+      "sha256": "5687fb1bf46489d34cd4889b17a61000bb27223c7bdfafb16b9b0aa903ba1e05",
+      "role": "detachable_dynamic_hair_requirements"
+    },
+    {
+      "path": "System/Docs/AVATAR_BALD_LOW_RESOURCE_AND_DETACHABLE_HAIR_POLICY_20260801.md",
+      "bytes": 5137,
+      "sha256": "3e125dedfdd6c5e7b4425dbe889f8a5a0cc1835502d976c48e92faffadce98b7",
+      "role": "bald_primary_body_and_separate_hair_policy"
+    },
+    {
+      "path": "System/Docs/KIRA_PARALLEL_MIND_EMOTION_ABILITIES_AND_EMBODIMENT_ROADMAP_20260810.md",
+      "bytes": 9254,
+      "sha256": "c13799ee99b8da6670bd981c7b7bbc5d5f80b21519dbf95f0693d26c61622fa0",
+      "role": "female_body_then_distinct_male_body_acceptance_order"
+    }
+  ],
+  "current_evidence_bindings": [
+    {
+      "path": "Data/person_classification/kira_confirmed_adult_owner_classification_20260809.json",
+      "bytes": 1434,
+      "sha256": "04ac19e026b168cb1942d73598b7c13f2b4ee7a49452f8ddf32763cf5de9e346",
+      "role": "exact_subject_bound_confirmed_adult_owner_classification"
+    },
+    {
+      "path": "System/Knowledge/confirmed_adult_sexual_reproductive_health_curriculum_v1.json",
+      "bytes": 20931,
+      "sha256": "f64418eafb120dc4c9f5b02bb6735b1329e6baf932a8b529ef08140af773c7c9",
+      "role": "classification_bound_adult_health_curriculum_truth_boundary"
+    },
+    {
+      "path": "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/SOURCE_MANIFEST.json",
+      "bytes": 4540,
+      "sha256": "d40b7eb6dc260a1fc21d5bdb07286dfdb86545be59fa143bea5652fe2aa634b2",
+      "role": "licensed_hra_source_package_manifest"
+    },
+    {
+      "path": "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/ANATOMY_ROLE_MAP_V1.json",
+      "bytes": 5912,
+      "sha256": "33a6631ba2fabdb06b2821cb8655647ed1d2a4b7b7d1b78862cd76cacd4e4620",
+      "role": "source_node_to_13_of_28_pelvic_contract_roles"
+    },
+    {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+      "bytes": 789620,
+      "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+      "role": "exact_generic_inactive_external_carrier"
+    },
+    {
+      "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json",
+      "bytes": 2471,
+      "sha256": "c91c11f649fca7dcdff4530df15a5ed4654d0fe4ca723740cca55660a4b969e0",
+      "role": "external_foundation_qualification_and_current_blockers"
+    },
+    {
+      "path": "Avatar/avatar_builder/anatomy_packages/kira_internal_pelvis_source_preflight_v1_20260820/PREFLIGHT_REPORT.json",
+      "bytes": 23876,
+      "sha256": "5cfc2c8e60d7d4d4e869b54aa94c7736d8af87f72410507fb73d83a9752703fa",
+      "role": "deterministic_blocked_preflight_13_of_28_mapped_15_missing"
+    }
+  ],
+  "separate_truth_layers": [
+    "external_body_geometry",
+    "internal_anatomy_geometry_and_routes",
+    "rig_deformation_collision_and_contact",
+    "time_based_physiology_and_material_flow",
+    "health_observation_test_diagnosis_treatment_and_recovery",
+    "person_owned_sensation_desire_preference_and_uncertainty",
+    "relationship_state",
+    "participant_activity_context_and_time_specific_consent",
+    "conception_pregnancy_delivery_postpartum_and_family_state",
+    "memory_and_lived_experience"
+  ],
+  "component_separation_requirement_status": "NORMATIVE_FOR_FUTURE_ACCEPTANCE_NOT_CURRENTLY_PROVEN",
+  "component_separation_invariants": {
+    "primary_body_is_complete_unclothed_and_bald": true,
+    "removing_clothing_may_remove_body_geometry": false,
+    "removing_hair_may_remove_body_geometry": false,
+    "clothing_is_separate_hash_bound_removable_and_shareable": true,
+    "shared_clothing_requires_per_body_binding_adapter": true,
+    "hair_is_separate_hash_bound_detachable_and_nonmutating": true,
+    "internal_anatomy_is_a_separate_default_hidden_hash_bound_body_module": true,
+    "internal_anatomy_may_mutate_the_external_carrier": false,
+    "kira_and_robert_may_share_one_body_artifact": false
+  },
+  "required_body_systems": [
+    {
+      "system_id": "external_adult_female_body",
+      "scope": "complete_connected_external_skin_and_adult_female_anatomy",
+      "required_adult_female_external_structures": [
+        "mons_pubis",
+        "labia_majora_left_right",
+        "labia_minora_left_right",
+        "clitoral_hood_and_visible_glans",
+        "vestibule",
+        "external_urethral_opening",
+        "vaginal_opening_introitus",
+        "fourchette",
+        "perineum",
+        "separate_anus"
+      ],
+      "current_status": "QUALIFIED_GENERIC_FOUNDATION_UNRIGGED_NOT_KIRA_ACCEPTED",
+      "implemented": false
+    },
+    {
+      "system_id": "internal_pelvic_urinary_bowel_reproductive_support",
+      "scope": "three_separate_outlet_routes_and_source_bound_internal_pelvic_geometry",
+      "required_shared_and_adult_female_internal_structures": [
+        "bony_pelvis_and_pelvic_floor",
+        "bladder_urethra_and_continence_controls",
+        "distal_bowel_rectum_anal_canal_and_sphincters",
+        "perineal_soft_tissue_nerves_vessels_and_connective_tissue",
+        "internal_clitoral_and_vestibular_bulb_structures",
+        "vagina_and_fornices",
+        "cervix",
+        "uterus_and_endometrium",
+        "fallopian_tubes",
+        "ovaries",
+        "separate_urinary_and_bowel_routes"
+      ],
+      "current_status": "PREFLIGHT_BLOCKED_MISSING_STRUCTURES_HRA_MAP_13_OF_28",
+      "implemented": false
+    },
+    {
+      "system_id": "oral_digestive_nutrition_hydration",
+      "required_structures": [
+        "oral_cavity_teeth_tongue_and_salivary_sources",
+        "pharynx_and_esophagus",
+        "stomach",
+        "small_intestine",
+        "large_intestine_to_rectum_and_anus",
+        "liver_gallbladder_and_pancreas",
+        "nutrient_and_water_absorption_interfaces"
+      ],
+      "required_functions": [
+        "eat",
+        "drink",
+        "chew",
+        "swallow",
+        "digest",
+        "absorb_nutrients",
+        "maintain_hydration"
+      ],
+      "current_status": "NO_SOURCE_BOUND_MACHINE_ANATOMY_CONTRACT",
+      "implemented": false
+    },
+    {
+      "system_id": "whole_body_support_and_homeostasis",
+      "required_systems": [
+        "skeletal",
+        "muscular_and_connective_tissue",
+        "nervous_and_sensory",
+        "cardiovascular",
+        "respiratory",
+        "renal_and_urinary",
+        "endocrine",
+        "lymphatic_and_immune",
+        "integumentary_and_thermoregulation"
+      ],
+      "current_status": "NO_COMPLETE_SOURCE_BOUND_WHOLE_BODY_CONTRACT",
+      "implemented": false
+    },
+    {
+      "system_id": "bathroom_hygiene_and_cycle",
+      "required_functions": [
+        "bladder_storage_urge_delay_and_voluntary_release",
+        "bowel_storage_urge_delay_and_voluntary_release",
+        "continence",
+        "toilet_contact_and_privacy",
+        "hygiene",
+        "person_specific_cycle_and_material_source_distinction"
+      ],
+      "current_status": "NON_PERSON_FIXTURE_ONLY_EXACT_BODY_HOOKS_NOT_IMPLEMENTED",
+      "implemented": false
+    },
+    {
+      "system_id": "adult_relationship_intimacy_and_sexual_health",
+      "required_functions": [
+        "adult_only_body_response_and_health_state",
+        "person_owned_private_sensation_and_preference",
+        "specific_current_revocable_multi_participant_consent",
+        "barrier_contraception_and_sti_health_state"
+      ],
+      "current_status": "POLICY_AND_DISCONNECTED_SCHEMA_ONLY",
+      "implemented": false,
+      "geometry_or_body_response_may_create_consent": false,
+      "relationship_status_may_create_consent": false
+    },
+    {
+      "system_id": "conception_pregnancy_delivery_recovery_and_family",
+      "required_functions": [
+        "separate_conception_choice",
+        "ordinary_or_explicitly_accelerated_truthful_pregnancy_timeline",
+        "gestational_body_and_health_adaptation",
+        "delivery_and_hospital_care",
+        "postpartum_recovery",
+        "parent_child_and_family_state"
+      ],
+      "current_status": "FUTURE_COMPATIBILITY_REQUIREMENT_NOT_IMPLEMENTED",
+      "implemented": false,
+      "family_state_is_body_mesh": false
+    },
+    {
+      "system_id": "detachable_dynamic_hair",
+      "required_behaviors": [
+        "comb_part_and_style",
+        "trim_cut_and_grow",
+        "persistent_length_style_part_and_grooming_state",
+        "distinct_dry_and_wet_states",
+        "wet_clumping_increased_hanging_weight_and_believable_drying",
+        "gravity_and_inertia",
+        "secondary_motion_during_head_and_body_movement",
+        "wind_response",
+        "scalp_head_neck_shoulders_body_clothing_and_environment_collision",
+        "sitting_walking_lying_turning_and_bending_pose_behavior",
+        "touch_adjust_wash_comb_towel_dry_and_style_interactions",
+        "saved_character_hair_state",
+        "attach_remove_without_body_hash_change"
+      ],
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_HAIR_BINARY",
+      "implemented": false
+    },
+    {
+      "system_id": "separate_shareable_clothing",
+      "required_behaviors": [
+        "independent_hash_bound_garment_identity",
+        "target_measurements_inside_reviewed_fit_envelope",
+        "same_maturity_lane",
+        "exact_body_rig_garment_adapter_and_fit_evidence_hashes",
+        "deformation_and_penetration_review_across_intended_motion",
+        "reviewed_put_on_and_take_off_transitions",
+        "owner_and_wearer_consent",
+        "persistent_transfer_record",
+        "stored",
+        "grasped",
+        "dressing",
+        "worn",
+        "undressing",
+        "released",
+        "returned_to_world_prop",
+        "person_to_person_inventory_transfer",
+        "share_through_exact_per_body_fit_and_rig_adapter",
+        "underlying_body_hash_unchanged_when_clothing_is_removed"
+      ],
+      "current_status": "CONTRACT_AVAILABLE_NO_PRODUCTION_GARMENT_APPROVED",
+      "implemented": false
+    }
+  ],
+  "acceptance_sequence": [
+    "pin_sources_licenses_contracts_and_vocabularies",
+    "preflight_each_scoped_anatomy_module_fail_closed",
+    "author_private_inactive_separate_internal_modules",
+    "assemble_modules_on_an_exact_accepted_bald_external_carrier_without_carrier_mutation",
+    "pass_geometry_route_containment_collision_and_save_reload_checks",
+    "pass_rig_deformation_contact_and_daily_life_pose_checks",
+    "obtain_private_visual_and_owner_acceptance_for_kira",
+    "connect_physiology_only_after_geometry_and_route_acceptance",
+    "connect_person_decision_privacy_consent_health_and_memory_as_separate_systems",
+    "generalize_avatar_builder_without_kira_identity_data",
+    "generate_and_independently_test_multiple_invented_confirmed_adult_bodies",
+    "build_and_accept_a_distinct_synthetic_robert_adult_male_body",
+    "add_separate_detachable_hair_and_separate_clothing_after_each_bald_body_passes"
+  ],
+  "current_truth": {
+    "requirements_are_recorded": true,
+    "complete_external_kira_body_accepted": false,
+    "complete_internal_kira_anatomy_accepted": false,
+    "eating_drinking_digestive_system_implemented": false,
+    "bathroom_and_cycle_person_runtime_implemented": false,
+    "adult_relationship_or_intimacy_action_authorized": false,
+    "conception_pregnancy_delivery_recovery_or_family_runtime_implemented": false,
+    "complete_distinct_robert_body_accepted": false,
+    "dynamic_hair_accepted": false,
+    "shareable_clothing_accepted": false,
+    "avatar_builder_autonomous_full_body_generation_proven": false,
+    "full_body_test_ready": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false
+  }
+}

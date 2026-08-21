@@ -1,0 +1,107 @@
+{
+  "artifact_path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+  "artifact_sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+  "artifact_size_bytes": 789620,
+  "artifact_type": "independent_adult_foundation_topology_audit",
+  "body_class": "adult_female",
+  "candidate_author_id": "avatar_foundation_authoring_pipeline_v1",
+  "complete_scan": true,
+  "exact_artifact_sha256_verified": true,
+  "exact_intersection_scan": {
+    "audit": "exact_nonadjacent_mesh_intersections_v1",
+    "bvh_aabb_false_positive_pair_count": 0,
+    "bvh_nonadjacent_candidate_pair_count": 0,
+    "bvh_nonadjacent_candidate_triangle_pair_count": 0,
+    "exact_genuine_penetration_pair_count": 0,
+    "linear_tolerance_m": 2.0336295751580803e-08,
+    "mesh_bounds": {
+      "diagonal_m": 2.03362957515808,
+      "max": [
+        0.518941522,
+        0.097758844,
+        1.700000048
+      ],
+      "min": [
+        -0.518941522,
+        -0.312665224,
+        0.0
+      ]
+    },
+    "pairs": [],
+    "read_only": true,
+    "schema_version": 1,
+    "touch_or_coplanar_false_positive_pair_count": 0,
+    "triangulation_coverage": "blender_geometry_tessellation_plus_deterministic_polygon_fan"
+  },
+  "export_performed": false,
+  "independent_reviewer": {
+    "id": "adult_foundation_topology_auditor_fresh_process_v1",
+    "process_mode": "fresh_blender_process_read_only",
+    "role": "independent_topology_auditor"
+  },
+  "input_modified": false,
+  "limitations": [
+    "No render or visual appearance review was performed.",
+    "No internal anatomy beyond the policy-listed external relationships was claimed.",
+    "No identity, likeness, hair, skin tone, clothing, or Kira styling was reviewed.",
+    "The mesh has normalized weights but no armature; pose behavior is unproven.",
+    "Owner approval, runtime readiness, and public-export readiness are not implied."
+  ],
+  "mesh": {
+    "armature_object_count": 0,
+    "bounds_max_object_m": [
+      0.518941522,
+      0.097758844,
+      1.700000048
+    ],
+    "bounds_min_object_m": [
+      -0.518941522,
+      -0.312665224,
+      0.0
+    ],
+    "component_sizes": [
+      14658
+    ],
+    "diagonal_m": 2.03362957515808,
+    "edge_count": 30632,
+    "face_count": 15976,
+    "generic_identity_scope_verified": true,
+    "marked_primary_surface_count": 1,
+    "mesh_object_count": 1,
+    "modifier_count": 0,
+    "object_count": 1,
+    "primary_object_name": "generic_makehuman_adult_female_foundation_inactive_v1__primary_surface",
+    "vertex_count": 14658
+  },
+  "metrics": {
+    "boundary_edges": 0,
+    "coincident_duplicate_triangle_pairs": 0,
+    "degenerate_faces": 0,
+    "nonadjacent_self_intersection_pairs": 0,
+    "nonmanifold_edges": 0,
+    "primary_surface_components": 1
+  },
+  "passed": true,
+  "render_performed": false,
+  "required_metrics": {
+    "boundary_edges": 0,
+    "coincident_duplicate_triangle_pairs": 0,
+    "degenerate_faces": 0,
+    "nonadjacent_self_intersection_pairs": 0,
+    "nonmanifold_edges": 0,
+    "primary_surface_components": 1
+  },
+  "reviewed_at": "2026-08-01T11:44:15.681285Z",
+  "runtime_activation_allowed": false,
+  "runtime_mutation_performed": false,
+  "schema_version": 1,
+  "status": "PASSED",
+  "weight_metrics": {
+    "maximum_positive_influence_count": 4,
+    "maximum_weight_sum": 1.0000000447034836,
+    "minimum_weight_sum": 0.9999999552965164,
+    "unweighted_vertex_count": 0,
+    "vertex_count": 14658,
+    "weight_sum_out_of_tolerance_count": 0
+  }
+}

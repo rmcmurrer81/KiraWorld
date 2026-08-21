@@ -1,0 +1,980 @@
+{
+  "anterior_posterior_ordering_passed": true,
+  "artifact_path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+  "artifact_sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+  "artifact_size_bytes": 789620,
+  "artifact_type": "independent_adult_female_relationship_review",
+  "authored_landmark_union_integration": {
+    "connected_to_primary_surface": true,
+    "geometry_present": true,
+    "measurement": {
+      "bounds_max_object_m": [
+        0.053596877,
+        -0.007144271,
+        0.898148775
+      ],
+      "bounds_min_object_m": [
+        -0.053596877,
+        -0.133306563,
+        0.679080844
+      ],
+      "incident_edge_count": 3656,
+      "incident_face_count": 2488,
+      "incident_surface_area_m2": 0.04446707345289269,
+      "induced_landmark_component_count": 1,
+      "internal_edge_count": 3310,
+      "internal_face_count": 2142,
+      "minimum_vertex_count_required": 8,
+      "nonzero_geometric_relief": true,
+      "normalized_lateral_u": {
+        "maximum": 0.8932812760273616,
+        "mean": -8.688825342939197e-10,
+        "median": 0.0,
+        "minimum": -0.8932812760273616
+      },
+      "normalized_longitudinal_v": {
+        "maximum": 0.9048837202566641,
+        "mean": -0.0026927544000518557,
+        "median": -0.052594942368429015,
+        "minimum": -0.8231349151443551
+      },
+      "outward_depth_m": {
+        "maximum": 0.06474102288484573,
+        "mean": 0.01084481892916452,
+        "median": 0.018483460415154696,
+        "minimum": -0.0592668890603818
+      },
+      "outward_depth_span_m": 0.12400791194522753,
+      "paint_channels_absent": true,
+      "primary_component_membership_complete": true,
+      "primary_surface_connection_edge_count": 346,
+      "spatial_extent_m": 0.2745872931603098,
+      "vertex_count": 1169
+    },
+    "not_painted_only": true
+  },
+  "body_class": "adult_female",
+  "candidate_author_id": "avatar_foundation_authoring_pipeline_v1",
+  "complete_primary_surface_scan": true,
+  "exact_artifact_sha256_verified": true,
+  "export_performed": false,
+  "geometry_mode": "continuous_primary_surface_relief",
+  "independent_reviewer": {
+    "id": "adult_female_relationship_auditor_fresh_process_v1",
+    "process_mode": "fresh_blender_process_read_only",
+    "role": "independent_adult_anatomy_reviewer"
+  },
+  "input_modified": false,
+  "left_right_ordering_passed": true,
+  "limitations": [
+    "No render or visual appearance review was performed.",
+    "No internal anatomy beyond the policy-listed external relationships was claimed.",
+    "No identity, likeness, hair, skin tone, clothing, or Kira styling was reviewed.",
+    "The mesh has normalized weights but no armature; pose behavior is unproven.",
+    "Owner approval, runtime readiness, and public-export readiness are not implied."
+  ],
+  "mandatory_downstream_kira_candidate_gate": "Attach the intended armature and independently pass a pose-space pelvic-patch deformation audit before any identity-specific Kira candidate use.",
+  "negative_findings": {
+    "doll_safe_or_incomplete": false,
+    "floating_or_separate_anatomy_component": false,
+    "intersecting_anatomy_component": false,
+    "visible_open_seam_or_bridge_patch": false,
+    "wrong_sex_helper_present": false
+  },
+  "opening_representation": "recessed_capped_continuous_primary_surface",
+  "ordering_checks": {
+    "clitoris_anterior_to_vaginal": {
+      "check": "clitoris_anterior_to_vaginal",
+      "coordinate_convention": "positive v is configured anterior/superior",
+      "first_value": 0.296714857082676,
+      "measured_margin": 0.38944010933240253,
+      "minimum_margin_required": 0.05,
+      "passed": true,
+      "second_value": -0.09272525224972654
+    },
+    "fourchette_anterior_to_anal_recess": {
+      "check": "fourchette_anterior_to_anal_recess",
+      "coordinate_convention": "positive v is configured anterior/superior",
+      "first_value": -0.3917759961310636,
+      "measured_margin": 0.22893638858847587,
+      "minimum_margin_required": 0.05,
+      "passed": true,
+      "second_value": -0.6207123847195395
+    },
+    "labia_majora_left_right": {
+      "check": "labia_majora_left_right",
+      "coordinate_convention": "positive u is configured anatomical left",
+      "first_value": 0.3309764744093021,
+      "measured_margin": 0.6619529643406471,
+      "minimum_margin_required": 0.1,
+      "passed": true,
+      "second_value": -0.330976489931345
+    },
+    "labia_minora_left_right": {
+      "check": "labia_minora_left_right",
+      "coordinate_convention": "positive u is configured anatomical left",
+      "first_value": 0.15274820228417715,
+      "measured_margin": 0.3054964045683543,
+      "minimum_margin_required": 0.1,
+      "passed": true,
+      "second_value": -0.15274820228417715
+    },
+    "perineal_transition_anterior_to_anal_recess": {
+      "check": "perineal_transition_anterior_to_anal_recess",
+      "coordinate_convention": "positive v is configured anterior/superior",
+      "first_value": -0.39320553877149467,
+      "measured_margin": 0.22750684594804482,
+      "minimum_margin_required": 0.05,
+      "passed": true,
+      "second_value": -0.6207123847195395
+    },
+    "urethral_anterior_to_vaginal": {
+      "check": "urethral_anterior_to_vaginal",
+      "coordinate_convention": "positive v is configured anterior/superior",
+      "first_value": 0.14555416311378833,
+      "measured_margin": 0.23827941536351488,
+      "minimum_margin_required": 0.05,
+      "passed": true,
+      "second_value": -0.09272525224972654
+    },
+    "vaginal_anterior_to_fourchette": {
+      "check": "vaginal_anterior_to_fourchette",
+      "coordinate_convention": "positive v is configured anterior/superior",
+      "first_value": -0.09272525224972654,
+      "measured_margin": 0.29905074388133707,
+      "minimum_margin_required": 0.05,
+      "passed": true,
+      "second_value": -0.3917759961310636
+    }
+  },
+  "paint_channel_scan": {
+    "color_attribute_count": 0,
+    "material_slot_count": 0,
+    "mesh_material_count": 0,
+    "uv_layer_count": 0
+  },
+  "passed": true,
+  "relationships": {
+    "clitoral_hood": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__clitoral_hood",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.028331215,
+          -0.092874251,
+          0.854474723
+        ],
+        "bounds_min_object_m": [
+          -0.028331215,
+          -0.121941417,
+          0.802744806
+        ],
+        "incident_edge_count": 367,
+        "incident_face_count": 258,
+        "incident_surface_area_m2": 0.0036489428184722783,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 293,
+        "internal_face_count": 184,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.47218690936764085,
+          "mean": -8.466568860140713e-10,
+          "median": 0.0,
+          "minimum": -0.47218690936764085
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.5701441524757279,
+          "mean": 0.3463790898747516,
+          "median": 0.3490184226797687,
+          "minimum": 0.14555416311378833
+        },
+        "outward_depth_m": {
+          "maximum": 0.030418775975704193,
+          "mean": 0.0241507089569826,
+          "median": 0.024622214725241065,
+          "minimum": 0.015303805470466614
+        },
+        "outward_depth_span_m": 0.01511497050523758,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 74,
+        "spatial_extent_m": 0.08204581281846746,
+        "vertex_count": 110
+      },
+      "not_painted_only": true
+    },
+    "clitoris": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__clitoris",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.008653967,
+          -0.094973542,
+          0.833443403
+        ],
+        "bounds_min_object_m": [
+          -0.008653967,
+          -0.111179613,
+          0.802744806
+        ],
+        "incident_edge_count": 79,
+        "incident_face_count": 60,
+        "incident_surface_area_m2": 0.0008677335408719955,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 41,
+        "internal_face_count": 22,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.14423277849952382,
+          "mean": 3.880510725251529e-10,
+          "median": 0.0,
+          "minimum": -0.14423277849952382
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.39764486805156424,
+          "mean": 0.2859432553803479,
+          "median": 0.296714857082676,
+          "minimum": 0.14555416311378833
+        },
+        "outward_depth_m": {
+          "maximum": 0.026394334621727467,
+          "mean": 0.025234345882199704,
+          "median": 0.0255412133410573,
+          "minimum": 0.019999805372208357
+        },
+        "outward_depth_span_m": 0.00639452924951911,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 38,
+        "spatial_extent_m": 0.03878924001879278,
+        "vertex_count": 20
+      },
+      "not_painted_only": true
+    },
+    "mons_pubis": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__mons_pubis",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.053596877,
+          -0.090714507,
+          0.898148775
+        ],
+        "bounds_min_object_m": [
+          -0.053596877,
+          -0.133306563,
+          0.807272494
+        ],
+        "incident_edge_count": 996,
+        "incident_face_count": 684,
+        "incident_surface_area_m2": 0.011962614005824435,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 870,
+        "internal_face_count": 558,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.8932812760273616,
+          "mean": -3.4713833963911444e-10,
+          "median": 0.0,
+          "minimum": -0.8932812760273616
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.9048837202566641,
+          "mean": 0.5187498006642168,
+          "median": 0.4949151503819006,
+          "minimum": 0.1921382560222237
+        },
+        "outward_depth_m": {
+          "maximum": 0.032293956726789474,
+          "mean": 0.0259149299351314,
+          "median": 0.0270780548453331,
+          "minimum": 0.011934390291571617
+        },
+        "outward_depth_span_m": 0.020359566435217857,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 126,
+        "spatial_extent_m": 0.14684373327487737,
+        "vertex_count": 313
+      },
+      "not_painted_only": true
+    },
+    "paired_labia_majora": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__labia_majora",
+      "left_right_ordering_proven": true,
+      "measurement": {
+        "bounds_max_object_m": [
+          0.041981928,
+          -0.007144271,
+          0.898148775
+        ],
+        "bounds_min_object_m": [
+          -0.041981932,
+          -0.133306563,
+          0.679080844
+        ],
+        "incident_edge_count": 3438,
+        "incident_face_count": 2354,
+        "incident_surface_area_m2": 0.03659377174392375,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 3038,
+        "internal_face_count": 1954,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.6996988008419673,
+          "mean": -1.107823223513998e-09,
+          "median": 0.0,
+          "minimum": -0.6996988629301389
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.9048837202566641,
+          "mean": -0.02285897370362496,
+          "median": -0.06743886473554152,
+          "minimum": -0.8231349151443551
+        },
+        "outward_depth_m": {
+          "maximum": 0.0527409166097641,
+          "mean": 0.008982113549772951,
+          "median": 0.015613146824762225,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.1120078056701459,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 400,
+        "spatial_extent_m": 0.26637869731573843,
+        "vertex_count": 1085
+      },
+      "not_painted_only": true
+    },
+    "paired_labia_minora": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__labia_minora",
+      "left_right_ordering_proven": true,
+      "measurement": {
+        "bounds_max_object_m": [
+          0.017980341,
+          -0.007144271,
+          0.873934209
+        ],
+        "bounds_min_object_m": [
+          -0.017980343,
+          -0.12791346,
+          0.748738348
+        ],
+        "incident_edge_count": 1365,
+        "incident_face_count": 950,
+        "incident_surface_area_m2": 0.010349834106477829,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 1111,
+        "internal_face_count": 696,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.2996723478039106,
+          "mean": 3.1948916459961196e-10,
+          "median": 0.0,
+          "minimum": -0.2996723788479964
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.721793704562717,
+          "mean": 0.010690530240658662,
+          "median": -0.04892994701448414,
+          "minimum": -0.3197989961201394
+        },
+        "outward_depth_m": {
+          "maximum": 0.03014492616057396,
+          "mean": -0.010304132288570581,
+          "median": -0.010685704270144925,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.08941181522095576,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 254,
+        "spatial_extent_m": 0.17762987338345934,
+        "vertex_count": 416
+      },
+      "not_painted_only": true
+    },
+    "perineal_transition_to_anus_and_pelvic_floor": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__perineal_path",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.048212305,
+          -0.007144271,
+          0.787687838
+        ],
+        "bounds_min_object_m": [
+          -0.048212305,
+          -0.108962148,
+          0.679080844
+        ],
+        "incident_edge_count": 1284,
+        "incident_face_count": 906,
+        "incident_surface_area_m2": 0.02291854115821934,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 950,
+        "internal_face_count": 572,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.8035384118556976,
+          "mean": -8.805380540805583e-10,
+          "median": 0.0,
+          "minimum": -0.8035384118556976
+        },
+        "normalized_longitudinal_v": {
+          "maximum": -0.15084588969195328,
+          "mean": -0.41109141839134733,
+          "median": -0.39320553877149467,
+          "minimum": -0.8231349151443551
+        },
+        "outward_depth_m": {
+          "maximum": 0.06474102288484573,
+          "mean": 0.010017284119308504,
+          "median": 0.013357569463551044,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.12400791194522753,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 334,
+        "spatial_extent_m": 0.1773698521827128,
+        "vertex_count": 379
+      },
+      "not_painted_only": true,
+      "transition_anterior_to_anal_recess_proven": true
+    },
+    "posterior_commissure_fourchette": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__fourchette",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.027378194,
+          -0.029251773,
+          0.765213728
+        ],
+        "bounds_min_object_m": [
+          -0.027378194,
+          -0.084666729,
+          0.721816778
+        ],
+        "incident_edge_count": 316,
+        "incident_face_count": 236,
+        "incident_surface_area_m2": 0.004168072305219539,
+        "induced_landmark_component_count": 4,
+        "internal_edge_count": 188,
+        "internal_face_count": 108,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.45630323390165967,
+          "mean": -1.1087173520544065e-09,
+          "median": -7.761021464380846e-09,
+          "minimum": -0.45630323390165967
+        },
+        "normalized_longitudinal_v": {
+          "maximum": -0.26482870733296426,
+          "mean": -0.38946998255238846,
+          "median": -0.3917759961310636,
+          "minimum": -0.503699719491932
+        },
+        "outward_depth_m": {
+          "maximum": 0.0319981025531888,
+          "mean": 0.005290190103031429,
+          "median": 0.0059201891999691725,
+          "minimum": -0.03143544076010585
+        },
+        "outward_depth_span_m": 0.06343354331329465,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 128,
+        "spatial_extent_m": 0.08917608716788512,
+        "vertex_count": 84
+      },
+      "not_painted_only": true
+    },
+    "urethral_opening_anterior_to_vaginal_opening": {
+      "anterior_to_vaginal_opening_proven": true,
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__urethral_opening",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.00407152,
+          -0.083257683,
+          0.813595653
+        ],
+        "bounds_min_object_m": [
+          -0.00407152,
+          -0.104549967,
+          0.793244362
+        ],
+        "incident_edge_count": 52,
+        "incident_face_count": 40,
+        "incident_surface_area_m2": 0.0005719741975553916,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 26,
+        "internal_face_count": 14,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.06785866959641378,
+          "mean": 0.0,
+          "median": 0.0,
+          "minimum": -0.06785866959641378
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.24350954702606906,
+          "mean": 0.13689347171354665,
+          "median": 0.14555416311378833,
+          "minimum": 0.05238672752899152
+        },
+        "outward_depth_m": {
+          "maximum": 0.025879877619445324,
+          "mean": 0.018579016367976483,
+          "median": 0.019999805372208357,
+          "minimum": 0.011388142360374331
+        },
+        "outward_depth_span_m": 0.014491735259070992,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 26,
+        "spatial_extent_m": 0.03055888598948261,
+        "vertex_count": 13
+      },
+      "not_painted_only": true
+    },
+    "vaginal_opening": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__vaginal_opening",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.016349617,
+          -0.007144271,
+          0.808288932
+        ],
+        "bounds_min_object_m": [
+          -0.016349617,
+          -0.101598717,
+          0.754933536
+        ],
+        "incident_edge_count": 970,
+        "incident_face_count": 672,
+        "incident_surface_area_m2": 0.006690345291758604,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 806,
+        "internal_face_count": 508,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.2724936231970787,
+          "mean": 8.111435488590172e-11,
+          "median": 0.0,
+          "minimum": -0.2724936231970787
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.19945277384033908,
+          "mean": -0.08747397547494279,
+          "median": -0.09272525224972654,
+          "minimum": -0.28576265882562707
+        },
+        "outward_depth_m": {
+          "maximum": 0.024904788471758366,
+          "mean": -0.02090437776654878,
+          "median": -0.020500306971371174,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.08417167753214017,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 164,
+        "spatial_extent_m": 0.11330348600231084,
+        "vertex_count": 299
+      },
+      "not_painted_only": true
+    },
+    "vestibule": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__vestibule",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.02388246,
+          -0.007144271,
+          0.859075248
+        ],
+        "bounds_min_object_m": [
+          -0.02388246,
+          -0.123413309,
+          0.73900646
+        ],
+        "incident_edge_count": 1697,
+        "incident_face_count": 1166,
+        "incident_surface_area_m2": 0.013044403442677321,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 1477,
+        "internal_face_count": 946,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.3980409974853198,
+          "mean": -5.379467405352423e-10,
+          "median": 0.0,
+          "minimum": -0.3980409974853198
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.6065093532756523,
+          "mean": -0.015264326724089434,
+          "median": -0.052594942368429015,
+          "minimum": -0.40906902264665673
+        },
+        "outward_depth_m": {
+          "maximum": 0.030418775975704193,
+          "mean": -0.006986731443720416,
+          "median": -0.003020791511517018,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.08968566503608599,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 220,
+        "spatial_extent_m": 0.17382891124376082,
+        "vertex_count": 532
+      },
+      "not_painted_only": true
+    }
+  },
+  "render_performed": false,
+  "required_subgroup_geometry": {
+    "labia_majora_left": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__labia_majora__left",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.041981928,
+          -0.007144271,
+          0.898148775
+        ],
+        "bounds_min_object_m": [
+          -0.001236281,
+          -0.133306563,
+          0.679080844
+        ],
+        "incident_edge_count": 1787,
+        "incident_face_count": 1230,
+        "incident_surface_area_m2": 0.01884088375919646,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 1543,
+        "internal_face_count": 986,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.6996988008419673,
+          "mean": 0.3248835884368024,
+          "median": 0.3309764744093021,
+          "minimum": -0.020604681534071766
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.9048837202566641,
+          "mean": -0.02247206911825942,
+          "median": -0.0675999887149643,
+          "minimum": -0.8231349151443551
+        },
+        "outward_depth_m": {
+          "maximum": 0.0527409166097641,
+          "mean": 0.008227872244701773,
+          "median": 0.015220789471641183,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.1120078056701459,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 244,
+        "spatial_extent_m": 0.25646733669164323,
+        "vertex_count": 558
+      },
+      "not_painted_only": true
+    },
+    "labia_majora_right": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__labia_majora__right",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.001236281,
+          -0.007144271,
+          0.898148775
+        ],
+        "bounds_min_object_m": [
+          -0.041981932,
+          -0.133306563,
+          0.679080844
+        ],
+        "incident_edge_count": 1787,
+        "incident_face_count": 1230,
+        "incident_surface_area_m2": 0.018840886190048423,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 1543,
+        "internal_face_count": 986,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.020604681534071766,
+          "mean": -0.3248835905926417,
+          "median": -0.330976489931345,
+          "minimum": -0.6996988629301389
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.9048837202566641,
+          "mean": -0.022472082336345674,
+          "median": -0.0675999887149643,
+          "minimum": -0.8231349151443551
+        },
+        "outward_depth_m": {
+          "maximum": 0.0527409166097641,
+          "mean": 0.00822787301132268,
+          "median": 0.015220780624076724,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.1120078056701459,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 244,
+        "spatial_extent_m": 0.2564673371455619,
+        "vertex_count": 558
+      },
+      "not_painted_only": true
+    },
+    "labia_minora_left": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__labia_minora__left",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.017980341,
+          -0.007144271,
+          0.873934209
+        ],
+        "bounds_min_object_m": [
+          -0.001028469,
+          -0.12791346,
+          0.748738348
+        ],
+        "incident_edge_count": 742,
+        "incident_face_count": 522,
+        "incident_surface_area_m2": 0.005673094258156652,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 573,
+        "internal_face_count": 353,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.2996723478039106,
+          "mean": 0.14584375290164295,
+          "median": 0.15274820228417715,
+          "minimum": -0.01714115496724844
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.721793704562717,
+          "mean": 0.009359025033642792,
+          "median": -0.04909288965993457,
+          "minimum": -0.3197989961201394
+        },
+        "outward_depth_m": {
+          "maximum": 0.03014492616057396,
+          "mean": -0.010697956481977204,
+          "median": -0.01069110439857468,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.08941181522095576,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 169,
+        "spatial_extent_m": 0.17498724569455304,
+        "vertex_count": 221
+      },
+      "not_painted_only": true
+    },
+    "labia_minora_right": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__labia_minora__right",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.001028469,
+          -0.007144271,
+          0.873934209
+        ],
+        "bounds_min_object_m": [
+          -0.017980343,
+          -0.12791346,
+          0.748738348
+        ],
+        "incident_edge_count": 742,
+        "incident_face_count": 522,
+        "incident_surface_area_m2": 0.005673096276552769,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 573,
+        "internal_face_count": 353,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.01714115496724844,
+          "mean": -0.1458437523046413,
+          "median": -0.15274820228417715,
+          "minimum": -0.2996723788479964
+        },
+        "normalized_longitudinal_v": {
+          "maximum": 0.721793704562717,
+          "mean": 0.009358995538639685,
+          "median": -0.04909288965993457,
+          "minimum": -0.3197989961201394
+        },
+        "outward_depth_m": {
+          "maximum": 0.03014492616057396,
+          "mean": -0.010697954696980679,
+          "median": -0.01069110439857468,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.08941181522095576,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 169,
+        "spatial_extent_m": 0.17498724586087278,
+        "vertex_count": 221
+      },
+      "not_painted_only": true
+    },
+    "perineal_transition": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__perineal_path__transition",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.048212305,
+          -0.007144271,
+          0.787687838
+        ],
+        "bounds_min_object_m": [
+          -0.048212305,
+          -0.108962148,
+          0.679080844
+        ],
+        "incident_edge_count": 1284,
+        "incident_face_count": 906,
+        "incident_surface_area_m2": 0.02291854115821934,
+        "induced_landmark_component_count": 1,
+        "internal_edge_count": 950,
+        "internal_face_count": 572,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.8035384118556976,
+          "mean": -8.805380540805583e-10,
+          "median": 0.0,
+          "minimum": -0.8035384118556976
+        },
+        "normalized_longitudinal_v": {
+          "maximum": -0.15084588969195328,
+          "mean": -0.41109141839134733,
+          "median": -0.39320553877149467,
+          "minimum": -0.8231349151443551
+        },
+        "outward_depth_m": {
+          "maximum": 0.06474102288484573,
+          "mean": 0.010017284119308504,
+          "median": 0.013357569463551044,
+          "minimum": -0.0592668890603818
+        },
+        "outward_depth_span_m": 0.12400791194522753,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 334,
+        "spatial_extent_m": 0.1773698521827128,
+        "vertex_count": 379
+      },
+      "not_painted_only": true
+    },
+    "posterior_anal_recess": {
+      "connected_to_primary_surface": true,
+      "geometry_present": true,
+      "landmark_group": "AFES_LANDMARK__perineal_path__anal_recess",
+      "measurement": {
+        "bounds_max_object_m": [
+          0.028004277,
+          -0.036865376,
+          0.725597262
+        ],
+        "bounds_min_object_m": [
+          -0.028004277,
+          -0.057867143,
+          0.697341502
+        ],
+        "incident_edge_count": 132,
+        "incident_face_count": 100,
+        "incident_surface_area_m2": 0.00202040628028044,
+        "induced_landmark_component_count": 2,
+        "internal_edge_count": 72,
+        "internal_face_count": 40,
+        "minimum_vertex_count_required": 8,
+        "nonzero_geometric_relief": true,
+        "normalized_lateral_u": {
+          "maximum": 0.4667379582921664,
+          "mean": 0.0,
+          "median": 0.0,
+          "minimum": -0.4667379582921664
+        },
+        "normalized_longitudinal_v": {
+          "maximum": -0.5287163373496797,
+          "mean": -0.6185919089011507,
+          "median": -0.6207123847195395,
+          "minimum": -0.7099246054335876
+        },
+        "outward_depth_m": {
+          "maximum": 0.015142341144382954,
+          "mean": 0.0016885151648346115,
+          "median": 0.0020557232201099396,
+          "minimum": -0.01228758879005909
+        },
+        "outward_depth_span_m": 0.027429929934442043,
+        "paint_channels_absent": true,
+        "primary_component_membership_complete": true,
+        "primary_surface_connection_edge_count": 60,
+        "spatial_extent_m": 0.0661545197947922,
+        "vertex_count": 34
+      },
+      "not_painted_only": true
+    }
+  },
+  "reviewed_at": "2026-08-01T11:39:52.815761Z",
+  "runtime_activation_allowed": false,
+  "runtime_mutation_performed": false,
+  "schema_version": 1,
+  "separate_anatomy_mesh_count": 0,
+  "status": "PASSED",
+  "unsupported_claims_refused": [
+    "visual realism or owner acceptance",
+    "internal reproductive anatomy",
+    "posed deformation quality",
+    "Kira identity or likeness",
+    "hair, skin, clothing, or runtime readiness"
+  ],
+  "wrong_sex_tokens_found": []
+}

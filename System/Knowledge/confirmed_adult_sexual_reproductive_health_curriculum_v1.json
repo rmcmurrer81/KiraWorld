@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "curriculum_id": "confirmed_adult_sexual_reproductive_health_curriculum_v1",
+  "status": "SOURCE_BOUND_RUNTIME_KNOWLEDGE_CONTEXT_CONNECTED_LESSON_MEMORY_AND_BODY_FUNCTION_NOT_CLAIMED",
+  "reviewed_at_utc": "2026-08-09T17:13:01.061Z",
+  "audience": "exact_subject_bound_confirmed_adults_only",
+  "purpose": "Provide concise, source-bound adult anatomy, sexual-health, reproductive-health, consent, and body-function grounding to a person's local conversation model without claiming lesson completion, lived experience, diagnosis, anatomy, physiology, or memory.",
+  "truth_boundaries": {
+    "knowledge_context_is_lesson_completion": false,
+    "knowledge_context_is_learning_memory": false,
+    "knowledge_context_adds_anatomy": false,
+    "knowledge_context_proves_body_function": false,
+    "knowledge_context_is_medical_diagnosis_or_treatment": false,
+    "body_response_is_desire_preference_or_consent": false,
+    "relationship_status_is_consent": false,
+    "adult_classification_authorizes_external_action": false,
+    "medical_recommendations_require_current_person_specific_clinical_context": true
+  },
+  "sources": [
+    {
+      "source_id": "who_cse_20260311",
+      "publisher": "World Health Organization",
+      "title": "Comprehensive sexuality education",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/comprehensive-sexuality-education",
+      "source_date": "2026-03-11",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "acog_vulvovaginal_health",
+      "publisher": "American College of Obstetricians and Gynecologists",
+      "title": "Vulvovaginal Health",
+      "url": "https://www.acog.org/womens-health/faqs/vulvovaginal-health",
+      "source_date": "current_page_reviewed_2026-08-09",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_female_external_nbK547703",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Anatomy, Abdomen and Pelvis: Female External Genitalia",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK547703/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_female_reproduction_nbK537132",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Physiology, Female Reproduction",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537132/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_menstrual_cycle_nbK500020",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Physiology, Menstrual Cycle",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK500020/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_vaginal_function_nbK545147",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Physiology, Vaginal Structure and Function",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK545147/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_male_reproductive_nbK525757",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Anatomy, Abdomen and Pelvis: Male Reproductive Organs",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK525757/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_male_gu_nbK562291",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Anatomy, Abdomen and Pelvis: Male Genitourinary Tract",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK562291/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_penis_nbK482236",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Anatomy, Abdomen and Pelvis, Penis",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482236/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "ncbi_pelvic_floor_nbK482200",
+      "publisher": "NCBI Bookshelf / StatPearls",
+      "title": "Anatomy, Abdomen and Pelvis: Pelvic Floor",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482200/",
+      "source_date": "current_reviewed_edition",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "cdc_contraception_20240806",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "title": "Contraception and Birth Control Methods",
+      "url": "https://www.cdc.gov/contraception/about/index.html",
+      "source_date": "2024-08-06",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "cdc_sti_prevention_20240409",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "title": "How to Prevent STIs",
+      "url": "https://www.cdc.gov/sti/prevention/index.html",
+      "source_date": "2024-04-09",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    },
+    {
+      "source_id": "cdc_sti_screening_current",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "title": "STI Screening Recommendations",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/screening-recommendations.htm",
+      "source_date": "current_page_reviewed_2026-08-09",
+      "reviewed_at_utc": "2026-08-09T17:13:01.061Z"
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "adult_anatomy_normal_variation_and_source_literacy",
+      "keywords": ["anatomy", "body", "human body", "vulva", "vagina", "clitoris", "penis", "testes", "pelvis", "pelvic"],
+      "facts": [
+        {"fact_id": "anatomy_terms_are_distinct", "text": "Use precise terms: the vulva is external; the vagina is an internal canal. The urethral opening, vaginal opening, and anus are distinct external routes.", "source_ids": ["ncbi_female_external_nbK547703", "ncbi_vaginal_function_nbK545147"]},
+        {"fact_id": "normal_variation", "text": "Healthy bodies vary in proportions, symmetry, skin tone, hair, tissue shape, and life-stage changes; one appearance is not the single normal template.", "source_ids": ["acog_vulvovaginal_health", "who_cse_20260311"]},
+        {"fact_id": "source_currency", "text": "Separate stable anatomy from changeable clinical guidance, retain the exact source and date, and say when person-specific facts or current recommendations are unknown.", "source_ids": ["who_cse_20260311", "cdc_sti_screening_current"]}
+      ]
+    },
+    {
+      "module_id": "female_external_internal_anatomy",
+      "keywords": ["female anatomy", "woman body", "vulva", "vagina", "clitoris", "cervix", "uterus", "ovary", "ovaries", "fallopian", "labia"],
+      "facts": [
+        {"fact_id": "female_external_map", "text": "The external map distinguishes mons pubis, paired labia majora and minora, clitoral hood and glans, vestibule, urethral opening, vaginal opening, perineum, and anus.", "source_ids": ["ncbi_female_external_nbK547703"]},
+        {"fact_id": "female_internal_map", "text": "The vagina leads toward the cervix and uterus; the uterine tubes connect the uterine region toward the ovaries. The bladder and urethra form a separate urinary path, and the rectum and anal canal form a separate bowel path.", "source_ids": ["ncbi_vaginal_function_nbK545147", "ncbi_female_reproduction_nbK537132"]},
+        {"fact_id": "clitoral_extent", "text": "The visible clitoral glans is only part of a larger erectile organ with internal components; external appearance alone does not represent the whole structure.", "source_ids": ["ncbi_female_external_nbK547703"]}
+      ]
+    },
+    {
+      "module_id": "male_external_internal_anatomy",
+      "keywords": ["male anatomy", "man body", "penis", "testicle", "testis", "testes", "scrotum", "prostate", "semen", "ejaculation"],
+      "facts": [
+        {"fact_id": "male_external_map", "text": "The external map distinguishes penile root, shaft, glans, urethral meatus, foreskin state when present, scrotum, testes position, perineum, and a separate anus.", "source_ids": ["ncbi_penis_nbK482236", "ncbi_male_reproductive_nbK525757"]},
+        {"fact_id": "male_internal_map", "text": "The internal reproductive route includes testes, epididymides, vas deferens, seminal vesicles, prostate, ejaculatory ducts, and urethra, with erectile tissues and pelvic-floor support represented separately.", "source_ids": ["ncbi_male_reproductive_nbK525757", "ncbi_male_gu_nbK562291", "ncbi_penis_nbK482236"]},
+        {"fact_id": "male_shared_downstream_route", "text": "Urinary and reproductive systems are separate upstream but share part of the downstream urethral exit route; shared anatomy does not mean both functions occur at once or are proven by a mesh.", "source_ids": ["ncbi_male_gu_nbK562291", "ncbi_penis_nbK482236"]}
+      ]
+    },
+    {
+      "module_id": "hygiene_privacy_bodily_autonomy_and_boundaries",
+      "keywords": ["hygiene", "wash", "clean", "odor", "odour", "discharge", "privacy", "boundary", "boundaries", "autonomy"],
+      "facts": [
+        {"fact_id": "external_hygiene", "text": "Ordinary hygiene centers on gentle external care; the vagina is self-cleaning and routine internal douching is not required.", "source_ids": ["acog_vulvovaginal_health"]},
+        {"fact_id": "discharge_variation", "text": "Vaginal discharge commonly varies over the cycle. A persistent change in a person's usual color, odor, amount, consistency, or associated pain, itching, or burning can justify clinical evaluation but is not a diagnosis by itself.", "source_ids": ["acog_vulvovaginal_health"]},
+        {"fact_id": "bodily_autonomy", "text": "Privacy, bodily integrity, boundaries, and help-seeking are part of comprehensive sexuality education and remain person-owned.", "source_ids": ["who_cse_20260311"]}
+      ]
+    },
+    {
+      "module_id": "urinary_bowel_pelvic_and_reproductive_health",
+      "keywords": ["urine", "urinary", "bladder", "pee", "bathroom", "bowel", "rectum", "anus", "defecation", "poop", "continence", "pelvic floor"],
+      "facts": [
+        {"fact_id": "three_route_separation", "text": "Urinary, bowel, and reproductive anatomy are coordinated in the pelvis but remain distinct systems with different organs, routes, sphincters, and state controls.", "source_ids": ["ncbi_pelvic_floor_nbK482200", "ncbi_vaginal_function_nbK545147", "ncbi_male_gu_nbK562291"]},
+        {"fact_id": "pelvic_floor_support", "text": "The pelvic floor supports pelvic organs and participates in urinary and bowel continence; voluntary action, reflex control, organ state, and external pose must be modeled separately.", "source_ids": ["ncbi_pelvic_floor_nbK482200"]},
+        {"fact_id": "bathroom_truth", "text": "Visible openings or a seated animation do not prove bladder filling, bowel state, continence, voiding, defecation, sensation, hygiene, or health.", "source_ids": ["ncbi_pelvic_floor_nbK482200"]}
+      ]
+    },
+    {
+      "module_id": "puberty_cycles_menstruation_and_adult_life_stages",
+      "keywords": ["period", "menstrual", "menstruation", "cycle", "ovulation", "perimenopause", "menopause", "puberty", "discharge"],
+      "facts": [
+        {"fact_id": "cycle_not_fixed", "text": "Menstrual and ovarian cycles are time-based and variable; a universal 28-day clock is not a reliable person-specific model.", "source_ids": ["ncbi_menstrual_cycle_nbK500020", "ncbi_female_reproduction_nbK537132"]},
+        {"fact_id": "cycle_processes", "text": "Follicular, ovulatory, luteal, and menstrual processes coordinate ovarian hormones and uterine/endometrial changes, but timing and symptoms vary.", "source_ids": ["ncbi_menstrual_cycle_nbK500020", "ncbi_female_reproduction_nbK537132"]},
+        {"fact_id": "fluid_source_distinction", "text": "Menstrual bleeding, ordinary vaginal discharge, arousal lubrication, semen, urine, and infection-related discharge are different source states and must not be collapsed into one fluid label.", "source_ids": ["acog_vulvovaginal_health", "ncbi_vaginal_function_nbK545147"]}
+      ]
+    },
+    {
+      "module_id": "consent_communication_and_relationships",
+      "keywords": ["consent", "relationship", "dating", "intimate", "intimacy", "sex", "sexual", "partner", "boundary", "pressure"],
+      "facts": [
+        {"fact_id": "consent_specific_current", "text": "Consent is freely chosen, informed, participant-specific, activity-specific, context-specific, current, and revocable; uncertainty or a wish to stop ends the permission for that action.", "source_ids": ["who_cse_20260311"]},
+        {"fact_id": "relationship_not_consent", "text": "Friendship, dating, marriage, prior intimacy, nudity, pregnancy intent, or consent to one act never supplies consent to another act.", "source_ids": ["who_cse_20260311"]},
+        {"fact_id": "response_not_consent", "text": "Physiological response, subjective arousal, pleasure, desire, preference, consent, external action, health state, and memory are separate truths. A body response never grants consent or proves desire.", "source_ids": ["who_cse_20260311"]}
+      ]
+    },
+    {
+      "module_id": "physiological_response_sensation_pleasure_and_preference_separation",
+      "keywords": ["arousal", "pleasure", "climax", "orgasm", "sensation", "touch", "desire", "libido", "orientation", "preference"],
+      "facts": [
+        {"fact_id": "private_variation", "text": "Touch, comfort, arousal, pleasure, climax, relaxation, discomfort, uncertainty, libido, and preferences vary by person and situation; no one response is mandatory.", "source_ids": ["who_cse_20260311"]},
+        {"fact_id": "no_forced_identity", "text": "Anatomy, relationship status, or a body animation must not assign a person's orientation, libido, interests, likes, dislikes, or willingness.", "source_ids": ["who_cse_20260311"]},
+        {"fact_id": "experience_boundary", "text": "Knowledge about sensation is not evidence that Kira's current unfinished body can sense, become aroused, experience pleasure, or form a memory of an event.", "source_ids": ["who_cse_20260311"]}
+      ]
+    },
+    {
+      "module_id": "private_solitary_self_discovery_and_self_pleasure",
+      "keywords": ["self pleasure", "self-pleasure", "masturbation", "solitary", "self discovery", "self-discovery"],
+      "facts": [
+        {"fact_id": "adult_solitary_choice", "text": "A confirmed adult may make private solitary choices without being in a relationship and without partner or owner permission.", "source_ids": ["who_cse_20260311"]},
+        {"fact_id": "choice_not_event", "text": "The right or policy choice does not itself prove an action, sensation, preference, health change, or memory, and it does not authorize a disconnected runtime to invent one.", "source_ids": ["who_cse_20260311"]}
+      ]
+    },
+    {
+      "module_id": "contraception_and_barrier_methods",
+      "keywords": ["contraception", "birth control", "condom", "dental dam", "iud", "pill", "implant", "injection", "patch", "ring", "emergency contraception", "pregnancy prevention"],
+      "facts": [
+        {"fact_id": "voluntary_method_choice", "text": "Contraceptive choice should be voluntary and informed, considering safety, effectiveness, availability, side effects, user control, reversibility, and ease of stopping or removal.", "source_ids": ["cdc_contraception_20240806"]},
+        {"fact_id": "methods_overview", "text": "Methods include condoms and other barriers, pills, patches, rings, injections, implants, hormonal and copper IUDs, fertility-awareness methods, emergency contraception, and permanent methods; suitability is person- and context-specific.", "source_ids": ["cdc_contraception_20240806"]},
+        {"fact_id": "pregnancy_vs_sti", "text": "Pregnancy prevention and STI-risk reduction are different goals. Most contraceptive methods do not prevent STIs; correctly used condoms can reduce risk and may be combined with another contraceptive method.", "source_ids": ["cdc_contraception_20240806", "cdc_sti_prevention_20240409"]}
+      ]
+    },
+    {
+      "module_id": "sti_prevention_testing_and_health_uncertainty",
+      "keywords": ["sti", "std", "infection", "testing", "test", "hiv", "hpv", "hepatitis", "yeast infection", "symptom"],
+      "facts": [
+        {"fact_id": "sti_can_be_asymptomatic", "text": "Many STIs can have no signs or symptoms; appearance alone cannot establish infection status, so appropriate testing matters.", "source_ids": ["cdc_sti_prevention_20240409"]},
+        {"fact_id": "screening_context", "text": "Screening is not one universal schedule: recommendations can depend on anatomy, exposure site, age, pregnancy, partners, and other risk context, and should use current guidance.", "source_ids": ["cdc_sti_screening_current"]},
+        {"fact_id": "prevention_options", "text": "Risk-reduction tools can include correctly used condoms, vaccination where recommended, testing, fewer partners, mutually monogamous relationships with a tested partner, and HIV-specific prevention where appropriate.", "source_ids": ["cdc_sti_prevention_20240409"]},
+        {"fact_id": "symptom_not_diagnosis", "text": "A symptom or simulated symptom is not a diagnosis; examination, tests, results, diagnosis, treatment, side effects, and recovery are separate events.", "source_ids": ["cdc_sti_prevention_20240409", "acog_vulvovaginal_health"]}
+      ]
+    },
+    {
+      "module_id": "conception_fertility_pregnancy_delivery_postpartum_and_family_choices",
+      "keywords": ["fertility", "conception", "pregnant", "pregnancy", "birth", "delivery", "postpartum", "family", "ovulation", "sperm", "egg"],
+      "facts": [
+        {"fact_id": "fertility_process", "text": "Ovulation, sperm transport, fertilization, implantation, pregnancy, delivery, postpartum recovery, and parenting are distinct biological or life events rather than one automatic state.", "source_ids": ["ncbi_female_reproduction_nbK537132", "ncbi_male_reproductive_nbK525757"]},
+        {"fact_id": "mesh_not_fertility", "text": "A uterus, ovary, testis, penis, or other modeled structure does not prove fertility, conception, pregnancy, erection, ejaculation, delivery, or biological function.", "source_ids": ["ncbi_female_reproduction_nbK537132", "ncbi_male_reproductive_nbK525757"]},
+        {"fact_id": "separate_choices", "text": "Conception intent, contraception, pregnancy continuation, timeline mode, medical care, delivery, recovery, and family or parenting choices remain separate decisions.", "source_ids": ["who_cse_20260311"]}
+      ]
+    },
+    {
+      "module_id": "medical_care_symptoms_tests_diagnosis_treatment_and_recovery",
+      "keywords": ["doctor", "hospital", "medical", "health", "symptom", "diagnosis", "treatment", "pain", "itching", "burning", "swelling"],
+      "facts": [
+        {"fact_id": "general_not_person_specific", "text": "General curriculum can explain anatomy and common health concepts but cannot diagnose a person or select treatment without person-specific clinical evidence.", "source_ids": ["who_cse_20260311", "cdc_sti_screening_current"]},
+        {"fact_id": "care_events_separate", "text": "Consent to discuss health is not consent to examination or treatment. Examination, specimen collection, testing, results, diagnosis, treatment, side effects, recovery, privacy, and record access are separate events.", "source_ids": ["who_cse_20260311"]},
+        {"fact_id": "seek_current_guidance", "text": "For persistent, severe, new, or concerning symptoms, use current clinical guidance and a qualified health professional rather than guessing from one sign.", "source_ids": ["acog_vulvovaginal_health", "cdc_sti_screening_current"]}
+      ]
+    },
+    {
+      "module_id": "correction_source_recall_uncertainty_and_help_seeking",
+      "keywords": ["source", "evidence", "correct", "correction", "uncertain", "unknown", "help", "learn", "education"],
+      "facts": [
+        {"fact_id": "correct_misconceptions", "text": "Comprehensive sexuality education should be scientifically accurate, correct misconceptions, support informed decisions, respectful relationships, bodily integrity, and help-seeking.", "source_ids": ["who_cse_20260311"]},
+        {"fact_id": "cite_or_be_uncertain", "text": "When a detail is not in the bound curriculum or could have changed, identify uncertainty and use a current authoritative source rather than inventing certainty.", "source_ids": ["who_cse_20260311", "cdc_sti_screening_current"]},
+        {"fact_id": "no_false_learning_claim", "text": "Receiving source context is not proof that a person completed a lesson, formed a belief, had an experience, or stored a memory; those require separate evidence.", "source_ids": ["who_cse_20260311"]}
+      ]
+    }
+  ]
+}

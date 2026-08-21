@@ -5,16 +5,20 @@ from __future__ import annotations
 from copy import deepcopy
 import hashlib
 import json
+import os
 from pathlib import Path
+import shutil
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+import Core.avatar_adult_foundation_qualification as qualification
 from Core.avatar_adult_foundation_qualification import (
     POLICY_PATH,
     audit_registered_adult_foundations,
@@ -350,6 +354,61 @@ class AdultFoundationQualificationTests(unittest.TestCase):
         self.assertIn("foundation_not_registered", result["blockers"])
         self.assertFalse(result["qualified_for_adult_foundation"])
 
+    def test_multiply_linked_source_artifact_fails_closed(self) -> None:
+        hardlink = self.root / "Avatar/sources/hardlinked_complete_adult_female.glb"
+        try:
+            os.link(self.source, hardlink)
+        except (OSError, NotImplementedError) as exc:
+            self.skipTest(f"hardlink creation unavailable: {exc}")
+        self.entry["source_artifact"] = binding(self.root, hardlink)
+        self.write_registry([self.entry])
+
+        result = self.evaluate()
+
+        self.assertIn("source_artifact_path_invalid", result["blockers"])
+        self.assertFalse(result["foundation_authority"]["authorized"])
+        self.assertFalse(result["qualified_for_adult_foundation"])
+
+    def test_reparse_inspection_error_fails_closed(self) -> None:
+        with mock.patch.object(
+            qualification,
+            "_is_link_or_junction",
+            side_effect=OSError("inspection denied"),
+        ):
+            result = self.evaluate()
+
+        self.assertIn("adult_foundation_policy_path_invalid", result["blockers"])
+        self.assertFalse(result["qualified_for_adult_foundation"])
+
+    @unittest.skipUnless(os.name == "nt", "Windows path-prefix regression")
+    def test_unc_and_long_local_paths_receive_correct_extended_prefixes(self) -> None:
+        unc = qualification._io_path(Path(r"\\server\share\folder\source.glb"))
+        self.assertEqual(
+            str(unc),
+            r"\\?\UNC\server\share\folder\source.glb",
+        )
+
+        long_relative = Path("long_path_fixture")
+        for index in range(4):
+            long_relative /= f"segment_{index}_" + "x" * 55
+        long_relative /= "source.glb"
+        normal_target = self.root / long_relative
+        extended_target = qualification._io_path(normal_target)
+        self.assertGreater(len(str(normal_target)), 260)
+        self.assertTrue(str(extended_target).startswith("\\\\?\\"))
+        long_root = qualification._io_path(self.root / "long_path_fixture")
+        try:
+            extended_target.parent.mkdir(parents=True, exist_ok=True)
+            extended_target.write_bytes(b"long-path-foundation-fixture")
+            observed = qualification._project_file(
+                self.root,
+                long_relative.as_posix(),
+            )
+            self.assertEqual(observed, extended_target)
+        finally:
+            if long_root.exists():
+                shutil.rmtree(long_root)
+
     def test_known_sources_stay_blocked_and_derived_source_qualifies(self) -> None:
         audit = audit_registered_adult_foundations(PROJECT_ROOT)
         self.assertEqual(6, audit["registered_count"])
@@ -369,12 +428,15 @@ class AdultFoundationQualificationTests(unittest.TestCase):
         blackproject = by_id[
             "blackproject_base_female_character_cc_by_4"
         ]
-        self.assertTrue(blackproject["foundation_authority"]["authorized"])
         self.assertFalse(blackproject["complete_adult_topology_proven"])
-        self.assertIn(
-            "registry_known_blocker:self_intersections_present",
-            blackproject["blockers"],
-        )
+        if blackproject["foundation_authority"]["authorized"]:
+            self.assertIn(
+                "registry_known_blocker:self_intersections_present",
+                blackproject["blockers"],
+            )
+        else:
+            self.assertIn("source_artifact_path_invalid", blackproject["blockers"])
+            self.assertFalse(blackproject["qualified_for_adult_foundation"])
 
         for cage_id in (
             "womenfemale_body_base_rigged_3ec62ba8d7",

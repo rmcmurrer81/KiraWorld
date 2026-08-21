@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "role_map_id": "hra_female_pelvis_cc_by_4_v1_2_to_kira_internal_pelvic_contract_v1",
+  "status": "SOURCE_ROLE_MAP_INCOMPLETE_NORMALIZATION_NOT_RUN",
+  "source_manifest": {
+    "path": "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/SOURCE_MANIFEST.json",
+    "bytes": 4540,
+    "sha256": "d40b7eb6dc260a1fc21d5bdb07286dfdb86545be59fa143bea5652fe2aa634b2"
+  },
+  "anatomy_contract": {
+    "path": "Avatar/avatar_builder/body_systems/kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1.json",
+    "bytes": 7438,
+    "sha256": "d219bfc6c7b4ac01c3fa0925d90c0815f2f213344cc6d8e43661fbd649abb46a"
+  },
+  "license": {
+    "id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Human Reference Atlas / HuBMAP CCF 3D Reference Object Library; source anatomy derived from the NLM Visible Human Dataset.",
+    "adaptation_notice_required": true,
+    "private_clinical_review_derivatives_only": true
+  },
+  "normalization": {
+    "source_format": "glTF-2.0-binary",
+    "source_units": "meters",
+    "source_axes": "gltf_right_handed_y_up",
+    "target_units": "meters",
+    "target_axes": "blender_right_handed_z_up",
+    "per_source_transform": null,
+    "transform_sha256": null,
+    "status": "REQUIRED_NOT_RUN"
+  },
+  "source_roles": [
+    {
+      "source_file": "SBU_F_Intestine_Large.glb",
+      "anatomy_id": "distal_bowel_stub",
+      "system": "posterior_bowel",
+      "laterality": "midline",
+      "source_nodes": ["VH_F_sigmoid_colon"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "SBU_F_Intestine_Large.glb",
+      "anatomy_id": "rectum",
+      "system": "posterior_bowel",
+      "laterality": "midline",
+      "source_nodes": ["VH_F_rectum"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Fallopian_Tube_L.glb",
+      "anatomy_id": "uterine_tube_left",
+      "system": "reproductive",
+      "laterality": "left",
+      "source_nodes": ["VH_F_ampulla_of_uterine_tube_L", "VH_F_isthmus_of_fallopian_tube_L", "VH_F_fibria_of_uterine_tube_L", "VH_F_uterine_tube_infundibulum_L"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Fallopian_Tube_R.glb",
+      "anatomy_id": "uterine_tube_right",
+      "system": "reproductive",
+      "laterality": "right",
+      "source_nodes": ["VH_F_ampulla_of_uterine_tube_R", "VH_F_isthmus_of_fallopian_tube_R", "VH_F_fibria_of_uterine_tube_R", "VH_F_uterine_tube_infundibulum_R"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Ovary_L.glb",
+      "anatomy_id": "ovary_left",
+      "system": "reproductive",
+      "laterality": "left",
+      "source_nodes": ["VH_F_left_ovary"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Ovary_R.glb",
+      "anatomy_id": "ovary_right",
+      "system": "reproductive",
+      "laterality": "right",
+      "source_nodes": ["VH_F_right_ovary"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Pelvis.glb",
+      "anatomy_id": "bony_pelvis_proxy",
+      "system": "orientation",
+      "laterality": "bilateral",
+      "source_nodes": ["VH_F_sacrum", "VH_F_coccyx", "VH_F_pubis_spongy_bone_L", "VH_F_pubis_spongy_bone_R", "VH_F_pubis_compact_bone_L", "VH_F_pubis_compact_bone_R", "VH_F_ilium_compact_bone_L", "VH_F_ilium_compact_bone_R", "VH_F_ilium_spongy_bone_L", "VH_F_ilium_spongy_bone_R", "VH_F_ischium_compact_bone_L", "VH_F_ischium_compact_bone_R", "VH_F_ischium_spongy_bone_L", "VH_F_ischium_spongy_bone_R"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Ureter_L.glb",
+      "anatomy_id": "ureter_stub_left",
+      "system": "urinary",
+      "laterality": "left",
+      "source_nodes": ["VH_F_left_ureter"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Ureter_R.glb",
+      "anatomy_id": "ureter_stub_right",
+      "system": "urinary",
+      "laterality": "right",
+      "source_nodes": ["VH_F_right_ureter"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Urinary_Bladder.glb",
+      "anatomy_id": "bladder_shell",
+      "system": "urinary",
+      "laterality": "midline",
+      "source_nodes": ["VH_F_fundus_of_urinary_bladder_dome", "VH_F_fundus_of_urinary_bladder_base"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Urinary_Bladder.glb",
+      "anatomy_id": "bladder_neck_trigone_marker",
+      "system": "urinary",
+      "laterality": "midline",
+      "source_nodes": ["VH_F_urinary_bladder_neck_smooth_muscle", "VH_F_trigone_of_urinary_bladder"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Uterus.glb",
+      "anatomy_id": "cervix",
+      "system": "reproductive",
+      "laterality": "midline",
+      "source_nodes": ["VH_F_cervix", "VH_F_internal_cervical_os", "VH_F_external_cervical_os"],
+      "function_implemented": false
+    },
+    {
+      "source_file": "VH_F_Uterus.glb",
+      "anatomy_id": "uterine_body_fundus",
+      "system": "reproductive",
+      "laterality": "midline",
+      "source_nodes": ["VH_F_body_of_uterus", "VH_F_fundus_of_uterus"],
+      "function_implemented": false
+    }
+  ],
+  "external_anchor_references": {
+    "female_external_urethral_opening": null,
+    "vaginal_opening_introitus": null,
+    "anal_opening": null,
+    "pubic_reference": "VH_F_pubis",
+    "sacral_reference": "VH_F_sacrum",
+    "pelvic_side_left": "VH_F_ilium_compact_bone_L",
+    "pelvic_side_right": "VH_F_ilium_compact_bone_R",
+    "perineal_body": null
+  },
+  "truth_limits": {
+    "source_role_is_authored_component": false,
+    "normalization_or_carrier_fit_completed": false,
+    "external_anatomy_complete": false,
+    "internal_anatomy_complete": false,
+    "function_implemented": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false
+  }
+}

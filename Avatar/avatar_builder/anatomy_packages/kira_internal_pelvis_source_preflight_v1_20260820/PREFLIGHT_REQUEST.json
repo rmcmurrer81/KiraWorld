@@ -1,0 +1,314 @@
+{
+  "schema": "kira.avatar.anatomy_package_preflight_request.v1",
+  "schema_version": 1,
+  "status": "PREFLIGHT_REQUESTED",
+  "package_id": "kira_internal_pelvis_source_preflight_v1_20260820",
+  "candidate_id": "kira_generic_makehuman_inactive_anatomy_carrier_v1",
+  "subject_id": "kira",
+  "maturity_status": "confirmed_adult",
+  "anatomy_profile_id": "confirmed_adult_female_internal_pelvic_v1",
+  "contract": {
+    "path": "Avatar/avatar_builder/body_systems/kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1.json",
+    "bytes": 7438,
+    "sha256": "d219bfc6c7b4ac01c3fa0925d90c0815f2f213344cc6d8e43661fbd649abb46a"
+  },
+  "source_package": {
+    "authority_id": "hra_female_pelvis_cc_by_4_v1_2",
+    "manifest_path": "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/SOURCE_MANIFEST.json",
+    "manifest_bytes": 4540,
+    "manifest_sha256": "d40b7eb6dc260a1fc21d5bdb07286dfdb86545be59fa143bea5652fe2aa634b2",
+    "role_map_path": "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/ANATOMY_ROLE_MAP_V1.json",
+    "role_map_bytes": 5912,
+    "role_map_sha256": "33a6631ba2fabdb06b2821cb8655647ed1d2a4b7b7d1b78862cd76cacd4e4620"
+  },
+  "carrier": {
+    "authority_id": "generic_makehuman_adult_female_foundation_v1_20260801",
+    "path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend",
+    "bytes": 789620,
+    "sha256": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+    "foundation_id": "generic_makehuman_adult_female_foundation_v1_20260801",
+    "qualification_manifest_path": "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json",
+    "qualification_manifest_bytes": 2471,
+    "qualification_manifest_sha256": "c91c11f649fca7dcdff4530df15a5ed4654d0fe4ca723740cca55660a4b969e0",
+    "owner_acceptance_path": "Avatar/avatar_builder/anatomy_packages/kira_internal_pelvis_source_preflight_v1_20260820/PENDING_OWNER_ACCEPTANCE.json",
+    "owner_acceptance_bytes": 462,
+    "owner_acceptance_sha256": "926bfef05d0b60c5939c3c5e0951e981ca1e96daa120769a8750b5ec67b40a7c",
+    "rest_pose_matrix": null,
+    "object_ids": [],
+    "armature_id": null,
+    "source_hash_before": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f",
+    "source_hash_after": "3911419c44681d25f33892122e61206f1f4651bb78b3e403e377d1ed099cde2f"
+  },
+  "normalization": {
+    "source_units": "meters",
+    "target_units": "meters",
+    "source_axes": {
+      "up": "+Y",
+      "forward": "+Z",
+      "handedness": "right"
+    },
+    "target_axes": {
+      "up": "+Z",
+      "forward": "-Y",
+      "handedness": "right"
+    },
+    "per_source_transform": {
+      "SBU_F_Intestine_Large.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Fallopian_Tube_L.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Fallopian_Tube_R.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Ovary_L.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Ovary_R.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Pelvis.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Ureter_L.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Ureter_R.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Urinary_Bladder.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+      "VH_F_Uterus.glb": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    },
+    "transform_sha256": "a870868c8fd52540fa8d942c4ab1f200f22d308cd8016ac50ee4651b063f36c2"
+  },
+  "components": [
+    {
+      "anatomy_id": "distal_bowel_stub",
+      "system": "posterior_bowel",
+      "laterality": "midline",
+      "source_file": "SBU_F_Intestine_Large.glb",
+      "source_file_sha256": "a14bca59d855546b8343e732c1bf0a146fbdb8ef4d73a3eac333fc298ecb5d1d",
+      "source_nodes": ["VH_F_sigmoid_colon"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_bowel",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "rectum",
+      "system": "posterior_bowel",
+      "laterality": "midline",
+      "source_file": "SBU_F_Intestine_Large.glb",
+      "source_file_sha256": "a14bca59d855546b8343e732c1bf0a146fbdb8ef4d73a3eac333fc298ecb5d1d",
+      "source_nodes": ["VH_F_rectum"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_bowel",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "uterine_tube_left",
+      "system": "reproductive",
+      "laterality": "left",
+      "source_file": "VH_F_Fallopian_Tube_L.glb",
+      "source_file_sha256": "5025453048a83c26393b866bc69859a255b4c38816f34ed3a196bfe7d4f33dd1",
+      "source_nodes": ["VH_F_ampulla_of_uterine_tube_L", "VH_F_isthmus_of_fallopian_tube_L", "VH_F_fibria_of_uterine_tube_L", "VH_F_uterine_tube_infundibulum_L"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_reproductive",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "uterine_tube_right",
+      "system": "reproductive",
+      "laterality": "right",
+      "source_file": "VH_F_Fallopian_Tube_R.glb",
+      "source_file_sha256": "17aef41a430e068705dc21ac8ccf746a74f14f47ffc1a31908198b0b026849df",
+      "source_nodes": ["VH_F_ampulla_of_uterine_tube_R", "VH_F_isthmus_of_fallopian_tube_R", "VH_F_fibria_of_uterine_tube_R", "VH_F_uterine_tube_infundibulum_R"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_reproductive",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "ovary_left",
+      "system": "reproductive",
+      "laterality": "left",
+      "source_file": "VH_F_Ovary_L.glb",
+      "source_file_sha256": "ed91414a667dec5e4e14aeaa2f8641731f06725dbc914bc0da3dd8b5d77f5062",
+      "source_nodes": ["VH_F_left_ovary"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_reproductive",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "ovary_right",
+      "system": "reproductive",
+      "laterality": "right",
+      "source_file": "VH_F_Ovary_R.glb",
+      "source_file_sha256": "99cc2b91602feacaee08ec1771b993fc0f8b0e32a08bdd7fd6b990a6736aa53b",
+      "source_nodes": ["VH_F_right_ovary"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_reproductive",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "bony_pelvis_proxy",
+      "system": "orientation",
+      "laterality": "bilateral",
+      "source_file": "VH_F_Pelvis.glb",
+      "source_file_sha256": "155603d0c44a8ed1e0ca307f1ec3037941304f29f4187631135a9a150fab048d",
+      "source_nodes": ["VH_F_sacrum", "VH_F_coccyx", "VH_F_pubis_spongy_bone_L", "VH_F_pubis_spongy_bone_R", "VH_F_pubis_compact_bone_L", "VH_F_pubis_compact_bone_R", "VH_F_ilium_compact_bone_L", "VH_F_ilium_compact_bone_R", "VH_F_ilium_spongy_bone_L", "VH_F_ilium_spongy_bone_R", "VH_F_ischium_compact_bone_L", "VH_F_ischium_compact_bone_R", "VH_F_ischium_spongy_bone_L", "VH_F_ischium_spongy_bone_R"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_landmark",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "ureter_stub_left",
+      "system": "urinary",
+      "laterality": "left",
+      "source_file": "VH_F_Ureter_L.glb",
+      "source_file_sha256": "90bdf4d8076691290dc89c3f212419bfdfc15018f210d54f359b162156206f46",
+      "source_nodes": ["VH_F_left_ureter"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_urinary",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "ureter_stub_right",
+      "system": "urinary",
+      "laterality": "right",
+      "source_file": "VH_F_Ureter_R.glb",
+      "source_file_sha256": "35259f8afd8850ed90cb3051d1d4d94575634bd28f6fa1513c906bdd4710bbb1",
+      "source_nodes": ["VH_F_right_ureter"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_urinary",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "bladder_shell",
+      "system": "urinary",
+      "laterality": "midline",
+      "source_file": "VH_F_Urinary_Bladder.glb",
+      "source_file_sha256": "9c5732fc9628cd192bb8c8f2b4bbf22b9822a0dff5378a0d366d2f3cb2205b6a",
+      "source_nodes": ["VH_F_fundus_of_urinary_bladder_dome", "VH_F_fundus_of_urinary_bladder_base"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_urinary",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "bladder_neck_trigone_marker",
+      "system": "urinary",
+      "laterality": "midline",
+      "source_file": "VH_F_Urinary_Bladder.glb",
+      "source_file_sha256": "9c5732fc9628cd192bb8c8f2b4bbf22b9822a0dff5378a0d366d2f3cb2205b6a",
+      "source_nodes": ["VH_F_urinary_bladder_neck_smooth_muscle", "VH_F_trigone_of_urinary_bladder"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_urinary",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "cervix",
+      "system": "reproductive",
+      "laterality": "midline",
+      "source_file": "VH_F_Uterus.glb",
+      "source_file_sha256": "a484956788ecc2ab05ca7720d9b33d265677e238f144cc28481aad2f7a0c9a95",
+      "source_nodes": ["VH_F_cervix", "VH_F_internal_cervical_os", "VH_F_external_cervical_os"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_reproductive",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    },
+    {
+      "anatomy_id": "uterine_body_fundus",
+      "system": "reproductive",
+      "laterality": "midline",
+      "source_file": "VH_F_Uterus.glb",
+      "source_file_sha256": "a484956788ecc2ab05ca7720d9b33d265677e238f144cc28481aad2f7a0c9a95",
+      "source_nodes": ["VH_F_body_of_uterus", "VH_F_fundus_of_uterus"],
+      "review_visibility": "PRIVATE_INACTIVE_DEFAULT_HIDDEN",
+      "material_id": "clinical_reproductive",
+      "source_contract_id": "kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1",
+      "function_implemented": false
+    }
+  ],
+  "anchors": [
+    {
+      "anchor_id": "sacral_reference",
+      "source_file": "VH_F_Pelvis.glb",
+      "source_node": "VH_F_sacrum",
+      "source_bound": true,
+      "authored": false,
+      "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    },
+    {
+      "anchor_id": "pelvic_side_left",
+      "source_file": "VH_F_Pelvis.glb",
+      "source_node": "VH_F_ilium_compact_bone_L",
+      "source_bound": true,
+      "authored": false,
+      "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    },
+    {
+      "anchor_id": "pelvic_side_right",
+      "source_file": "VH_F_Pelvis.glb",
+      "source_node": "VH_F_ilium_compact_bone_R",
+      "source_bound": true,
+      "authored": false,
+      "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "urinary",
+      "ordered_anatomy_ids": ["bladder_shell", "female_urethra_shell"],
+      "external_endpoint_anchor_id": "female_external_urethral_opening",
+      "exclusive": true
+    },
+    {
+      "route_id": "reproductive",
+      "ordered_anatomy_ids": ["vaginal_canal", "cervix", "uterine_body_fundus"],
+      "external_endpoint_anchor_id": "vaginal_opening_introitus",
+      "exclusive": true
+    },
+    {
+      "route_id": "bowel",
+      "ordered_anatomy_ids": ["rectum", "anal_canal"],
+      "external_endpoint_anchor_id": "anal_opening",
+      "exclusive": true
+    }
+  ],
+  "separation": {
+    "separate_artifact": true,
+    "default_hidden": true,
+    "carrier_dependency_mode": "READ_ONLY_TRANSFORM_FOLLOWING_ONLY",
+    "module_local_armature_or_deformer": true,
+    "forbidden_carrier_writes": ["vertices", "uvs", "materials", "armature_bones", "constraints", "shape_keys", "drivers", "actions", "vertex_groups"],
+    "carrier_write_operations": [],
+    "contains_hair": false,
+    "contains_clothing": false
+  },
+  "truth": {
+    "external_anatomy_complete": false,
+    "internal_anatomy_complete": false,
+    "whole_body_complete": false,
+    "function_implemented": false,
+    "owner_approved": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false,
+    "geometry_proves_biological_function": false,
+    "urination_implemented": false,
+    "defecation_implemented": false,
+    "menstrual_cycle_implemented": false,
+    "pregnancy_implemented": false,
+    "sensation_implemented": false,
+    "health_or_diagnosis_implemented": false,
+    "anatomy_or_body_response_is_consent": false,
+    "anatomy_or_body_response_is_desire_or_preference": false,
+    "eating_implemented": false,
+    "drinking_implemented": false,
+    "swallowing_implemented": false,
+    "digestion_implemented": false,
+    "nutrient_absorption_implemented": false,
+    "relationship_status_proven": false,
+    "consent_proven": false,
+    "activity_proven": false,
+    "fertility_implemented": false,
+    "conception_implemented": false,
+    "delivery_implemented": false,
+    "postpartum_implemented": false,
+    "family_relationships_proven": false
+  }
+}

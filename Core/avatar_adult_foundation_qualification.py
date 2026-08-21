@@ -15,8 +15,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
+import stat
 from typing import Any, Mapping
 
 
@@ -58,6 +60,24 @@ def _read_json(path: Path) -> dict[str, Any]:
     return data
 
 
+def _io_path(path: Path) -> Path:
+    """Return a Windows extended-length path without changing its identity."""
+
+    absolute = os.path.abspath(path)
+    if os.name != "nt" or absolute.startswith("\\\\?\\"):
+        return Path(absolute)
+    if absolute.startswith("\\\\"):
+        return Path("\\\\?\\UNC\\" + absolute[2:])
+    return Path("\\\\?\\" + absolute)
+
+
+def _is_link_or_junction(path: Path) -> bool:
+    metadata = os.lstat(path)
+    attributes = getattr(metadata, "st_file_attributes", 0)
+    reparse_flag = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)
+    return stat.S_ISLNK(metadata.st_mode) or bool(attributes & reparse_flag)
+
+
 def _project_file(project_root: Path, raw: Any) -> Path | None:
     value = _text(raw)
     if not value:
@@ -65,17 +85,34 @@ def _project_file(project_root: Path, raw: Any) -> Path | None:
     candidate = Path(value)
     if candidate.is_absolute() or ".." in candidate.parts:
         return None
-    lexical = project_root
+    root_text = os.path.abspath(project_root)
+    candidate_text = os.path.abspath(os.path.join(root_text, *candidate.parts))
+    try:
+        if os.path.commonpath((root_text, candidate_text)) != root_text:
+            return None
+    except ValueError:
+        return None
+    lexical = Path(root_text)
     for part in candidate.parts:
         lexical = lexical / part
-        if lexical.is_symlink():
+        try:
+            linked_or_reparsed = _is_link_or_junction(_io_path(lexical))
+        except OSError:
             return None
+        if linked_or_reparsed:
+            return None
+    resolved = _io_path(Path(candidate_text))
     try:
-        resolved = lexical.resolve(strict=True)
-        resolved.relative_to(project_root.resolve(strict=True))
-    except (OSError, ValueError):
+        metadata = os.lstat(resolved)
+    except OSError:
         return None
-    return resolved if resolved.is_file() else None
+    if (
+        not stat.S_ISREG(metadata.st_mode)
+        or stat.S_ISLNK(metadata.st_mode)
+        or getattr(metadata, "st_nlink", 1) != 1
+    ):
+        return None
+    return resolved
 
 
 def _dedupe(values: list[str]) -> list[str]:
