@@ -110,7 +110,7 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
         authorities = self.matrix["bound_authorities"]
         self.assertEqual(10, len(authorities))
         evidence = self.matrix["current_evidence_bindings"]
-        self.assertEqual(7, len(evidence))
+        self.assertEqual(8, len(evidence))
         expected_roles = {
             "Avatar/avatar_builder/policies/sexual_reproductive_health_body_systems_plan_v1.json": "adult_health_consent_bathroom_pregnancy_and_family_phase_plan",
             "Avatar/avatar_builder/body_systems/level_a_body_life_runtime_contract_v1.json": "disconnected_non_person_fixture_truth_ceiling",
@@ -126,6 +126,7 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
             "System/Knowledge/confirmed_adult_sexual_reproductive_health_curriculum_v1.json": "classification_bound_adult_health_curriculum_truth_boundary",
             "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/SOURCE_MANIFEST.json": "licensed_hra_source_package_manifest",
             "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/ANATOMY_ROLE_MAP_V1.json": "source_node_to_13_of_28_pelvic_contract_roles",
+            "Avatar/avatar_builder/asset_library/medical_reference/hra_female_whole_body_cc_by_4_v1_2/SOURCE_MANIFEST.json": "licensed_hra_partial_whole_body_reference_geometry_manifest",
             "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend": "exact_generic_inactive_external_carrier",
             "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json": "external_foundation_qualification_and_current_blockers",
             "Avatar/avatar_builder/anatomy_packages/kira_internal_pelvis_source_preflight_v1_20260820/PREFLIGHT_REPORT.json": "deterministic_blocked_preflight_13_of_28_mapped_15_missing",
@@ -249,8 +250,8 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
             {
                 "external_adult_female_body": "QUALIFIED_GENERIC_FOUNDATION_UNRIGGED_NOT_KIRA_ACCEPTED",
                 "internal_pelvic_urinary_bowel_reproductive_support": "PREFLIGHT_BLOCKED_MISSING_STRUCTURES_HRA_MAP_13_OF_28",
-                "oral_digestive_nutrition_hydration": "NO_SOURCE_BOUND_MACHINE_ANATOMY_CONTRACT",
-                "whole_body_support_and_homeostasis": "NO_COMPLETE_SOURCE_BOUND_WHOLE_BODY_CONTRACT",
+                "oral_digestive_nutrition_hydration": "LICENSED_HRA_PARTIAL_GEOMETRY_SMALL_INTESTINE_LIVER_PANCREAS_ONLY_ROUTES_AND_FUNCTIONS_OPEN",
+                "whole_body_support_and_homeostasis": "LICENSED_HRA_PARTIAL_KIDNEY_HEART_VASCULATURE_LUNG_AND_GI_GEOMETRY_NO_COMPLETE_CONTRACT",
                 "bathroom_hygiene_and_cycle": "NON_PERSON_FIXTURE_ONLY_EXACT_BODY_HOOKS_NOT_IMPLEMENTED",
                 "adult_relationship_intimacy_and_sexual_health": "POLICY_AND_DISCONNECTED_SCHEMA_ONLY",
                 "conception_pregnancy_delivery_recovery_and_family": "FUTURE_COMPATIBILITY_REQUIREMENT_NOT_IMPLEMENTED",
