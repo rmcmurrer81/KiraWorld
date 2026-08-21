@@ -166,6 +166,7 @@ from Core.supervised_person_decision import (
     SupervisedPersonDecisionEngine,
 )
 from Core.identity_profiles import KIRA_PROFILE, LISA_PROFILE
+from Core.world_shell_session_policy import resolve_world_shell_session_policy
 from Core.model_request_policy import (
     QWEN_TEXT_VOICE_DIGEST,
     QWEN_TEXT_VOICE_MODEL,
@@ -266,6 +267,8 @@ KIRA_CORE_LOCK = threading.Lock()
 LISA_CORE_LOCK = threading.Lock()
 LOG_WRITE_LOCK = threading.Lock()
 STATE_WRITE_LOCK = threading.RLock()
+PERSON_STATE_LOCKS_GUARD = threading.Lock()
+PERSON_STATE_LOCKS: dict[str, threading.RLock] = {}
 VOICE_OUTPUT_STATE: dict[str, object] = {
     "revision": 0,
     "active": False,
@@ -2321,7 +2324,12 @@ try:
     )
 except ValueError:
     LIVE_WORLD_FIRST_VOICE_CHUNK_MAX_CHARS = 72
-PRE_RAM_KIRA_ONLY_MODE = str(os.environ.get("KIRA_PRE_RAM_KIRA_ONLY", "1")).strip().lower() in {"1", "true", "yes", "on"}
+WORLD_SHELL_SESSION_POLICY = resolve_world_shell_session_policy()
+PRE_RAM_KIRA_ONLY_MODE = (
+    str(os.environ.get("KIRA_PRE_RAM_KIRA_ONLY", "1")).strip().lower()
+    in {"1", "true", "yes", "on"}
+    and not WORLD_SHELL_SESSION_POLICY.group_sessions_enabled
+)
 TEXT_ONLY_CHAT_MODE = _TEXT_ONLY_ENV
 
 
@@ -2433,6 +2441,8 @@ def _kira_fallback_candidate(active_label: str = "") -> dict:
 
 DEFAULT_STATE = {
     "active_candidate": "",
+    "active_sessions": {},
+    "active_sessions_revision": 0,
     "active_conversation_mode": "",
     "last_active_candidate": "",
     "last_activation_at": "",
@@ -2787,6 +2797,19 @@ def save_state(state: dict) -> None:
         merged = DEFAULT_STATE.copy()
         merged.update(latest)
         merged.update(state)
+        try:
+            latest_sessions_revision = int(latest.get("active_sessions_revision") or 0)
+            incoming_sessions_revision = int(state.get("active_sessions_revision") or 0)
+        except (TypeError, ValueError):
+            latest_sessions_revision = 0
+            incoming_sessions_revision = 0
+        if latest_sessions_revision > incoming_sessions_revision:
+            merged["active_sessions"] = latest.get("active_sessions", {})
+            merged["active_sessions_revision"] = latest_sessions_revision
+            merged["active_candidate"] = latest.get("active_candidate", "")
+            merged["active_conversation_mode"] = latest.get(
+                "active_conversation_mode", ""
+            )
         merged["last_avatar_positions"] = _merge_avatar_position_maps(
             latest.get("last_avatar_positions"),
             state.get("last_avatar_positions"),
@@ -2806,6 +2829,163 @@ def save_state(state: dict) -> None:
         write_json(STATE_PATH, merged)
         state.clear()
         state.update(merged)
+
+
+def candidate_state_lock(candidate_id: str) -> threading.RLock:
+    """Return the in-process write lock for one exact person's state file."""
+
+    key = str(candidate_id or "").strip()
+    if not key:
+        raise ValueError("candidate state lock requires one exact candidate id")
+    with PERSON_STATE_LOCKS_GUARD:
+        return PERSON_STATE_LOCKS.setdefault(key, threading.RLock())
+
+
+def _stored_active_sessions(state: dict) -> dict[str, dict]:
+    raw = state.get("active_sessions")
+    if not isinstance(raw, dict):
+        return {}
+    result: dict[str, dict] = {}
+    for candidate_id, record in raw.items():
+        candidate = str(candidate_id or "").strip()
+        if not candidate or not isinstance(record, dict):
+            continue
+        if str(record.get("candidate_id") or candidate).strip() != candidate:
+            continue
+        result[candidate] = dict(record)
+        result[candidate]["candidate_id"] = candidate
+    return result
+
+
+def active_session_records(state: dict) -> list[dict]:
+    """Return ordered per-person records, including a legacy scalar session."""
+
+    records = _stored_active_sessions(state)
+    focused = str(state.get("active_candidate") or "").strip()
+    if focused and focused not in records:
+        info = candidate_info(focused) or {}
+        mode = str(state.get("active_conversation_mode") or "normal")
+        records[focused] = build_active_session_record(
+            focused,
+            info,
+            conversation_mode=mode,
+            activated_at=str(state.get("last_activation_at") or ""),
+            focused=True,
+        )
+    ordered: list[dict] = []
+    if focused in records:
+        primary = dict(records.pop(focused))
+        primary["focused"] = True
+        ordered.append(primary)
+    for record in records.values():
+        item = dict(record)
+        item["focused"] = False
+        ordered.append(item)
+    return ordered
+
+
+def active_session_candidate_ids(state: dict) -> list[str]:
+    return [str(record["candidate_id"]) for record in active_session_records(state)]
+
+
+def build_active_session_record(
+    candidate_id: str,
+    info: dict,
+    *,
+    conversation_mode: str,
+    activated_at: str,
+    focused: bool,
+) -> dict[str, object]:
+    """Build one isolated routing record without activating anything."""
+
+    candidate = str(candidate_id or "").strip()
+    label = str(info.get("label") or candidate).strip() or candidate
+    has_body = bool(info.get("has_body")) and conversation_mode == "normal"
+    if conversation_mode != "normal":
+        presentation = "conversation_only_no_world"
+    elif has_body and focused:
+        presentation = "body"
+    elif has_body:
+        presentation = "named_moving_orb_group_proxy"
+    else:
+        presentation = "named_moving_orb_fallback"
+    return {
+        "session_id": f"{SHELL_LAUNCH_ID}:{candidate}:{activated_at or 'active'}",
+        "candidate_id": candidate,
+        "label": label,
+        "activated_at": str(activated_at or ""),
+        "conversation_mode": str(conversation_mode or "normal"),
+        "has_body": has_body,
+        "model_status": str(info.get("model_status") or ""),
+        "presentation": presentation,
+        "named_orb_fallback": presentation.startswith("named_moving_orb"),
+        "focused": bool(focused),
+        "state_namespace": candidate,
+        "state_path": str(TEMP_AI_DIR / f"{candidate}.json"),
+        "router": "sequential_group_router_v1",
+        "write_serialization": "per_candidate_lock_plus_shell_state_revision",
+        "sensory_initiative_owner": bool(focused),
+        "activation_performed_by_record_builder": False,
+    }
+
+
+def register_active_session(
+    state: dict,
+    candidate_id: str,
+    info: dict,
+    *,
+    conversation_mode: str,
+    replace_existing: bool,
+) -> dict[str, object]:
+    """Persist one already-authorized activation in the group routing map."""
+
+    candidate = str(candidate_id or "").strip()
+    activated_at = now_iso()
+    sessions = {} if replace_existing else _stored_active_sessions(state)
+    focused = replace_existing or not str(state.get("active_candidate") or "").strip()
+    if focused:
+        state["active_candidate"] = candidate
+        state["active_conversation_mode"] = conversation_mode
+        state["last_activation_at"] = activated_at
+        for prior in sessions.values():
+            prior["focused"] = False
+            prior["sensory_initiative_owner"] = False
+    record = build_active_session_record(
+        candidate,
+        info,
+        conversation_mode=conversation_mode,
+        activated_at=activated_at,
+        focused=focused,
+    )
+    sessions[candidate] = record
+    state["active_sessions"] = sessions
+    state["active_sessions_revision"] = int(state.get("active_sessions_revision") or 0) + 1
+    return record
+
+
+def clear_active_sessions(state: dict) -> list[dict]:
+    previous = active_session_records(state)
+    state["active_sessions"] = {}
+    state["active_sessions_revision"] = int(state.get("active_sessions_revision") or 0) + 1
+    return previous
+
+
+def world_shell_session_capacity(state: dict) -> dict[str, object]:
+    records = active_session_records(state)
+    policy = WORLD_SHELL_SESSION_POLICY
+    return {
+        **policy.as_dict(),
+        "active_session_count": len(records),
+        "available_session_slots": max(
+            0, policy.effective_max_active_sessions - len(records)
+        ),
+        "group_router_active": len(records) > 1,
+        "per_person_state_isolation_contract": True,
+        "per_person_state_lock_connected": False,
+        "group_chat_and_voice_serialization_contract": True,
+        "secondary_full_body_rendering": False,
+        "secondary_named_orb_rendering": False,
+    }
 
 
 def candidate_label(candidate: dict, path: Path) -> str:
@@ -3222,6 +3402,12 @@ def list_candidates() -> list[dict]:
     permanent = candidates[: len(PERMANENT_CANDIDATES)]
     temporary = sorted(candidates[len(PERMANENT_CANDIDATES) :], key=lambda item: item["label"])
     result = permanent + temporary
+    for item in result:
+        item["fallback_presentation"] = (
+            "body" if item.get("has_body") else "named_moving_orb_fallback"
+        )
+        item["orb_identity_label"] = str(item.get("label") or item.get("id") or "")
+        item["orb_movement_contract"] = "gentle_bob_and_bounded_roam"
     if PRE_RAM_KIRA_ONLY_MODE:
         kira_only = [item for item in result if item["id"] == "kira"]
         return kira_only if kira_only else result[:1]
@@ -9182,7 +9368,7 @@ def html_shell() -> bytes:
       const bodyLine = state.text_voice_mode
         ? "3D world/avatar disabled in this launcher"
         : (kiraBodyBindingBlocked
-          ? `BODY LOAD BLOCKED (fail closed): ${{esc(state.active_body_selection?.reason || "exact body binding unavailable")}}; no substitute body or orb is rendered`
+          ? `BODY LOAD BLOCKED (fail closed): ${{esc(state.active_body_selection?.reason || "exact body binding unavailable")}}; named moving orb fallback only`
           : (state.active_has_body ? "3D avatar linked" : "presence only until a body is ready"));
       const bodyReviewLine = state.active_candidate === "kira" && state.kira_body_review_status?.summary
         ? `<div><strong>Body review:</strong> ${{esc(state.kira_body_review_status.summary)}}</div>`
@@ -11703,6 +11889,8 @@ class Handler(BaseHTTPRequestHandler):
                 else (active_info.get("model_status", "") if active_info else "")
             )
             active_body_selection = avatar_state.get("active_body_selection")
+            session_records = active_session_records(state)
+            session_capacity = world_shell_session_capacity(state)
             sensory_lease = browser_sensory_lease(state) if active else ""
             sensory_session = ensure_sensory_session(state) if active else None
             sensory_stats = (
@@ -11722,7 +11910,7 @@ class Handler(BaseHTTPRequestHandler):
                 else:
                     active_has_body = False
                     active_model_status = (
-                        "body selection invalid; fail closed (no substitute body or orb): "
+                        "body selection invalid; exact body blocked; named moving orb fallback only: "
                         + str(active_body_selection.get("reason") or "exact selected model unavailable")
                     )
             self._json(
@@ -11732,6 +11920,28 @@ class Handler(BaseHTTPRequestHandler):
                     "shell_pid": os.getpid(),
                     "shell_launch_id": SHELL_LAUNCH_ID,
                     "candidates": candidates,
+                    "active_sessions": session_records,
+                    "active_session_candidate_ids": [
+                        str(record.get("candidate_id") or "")
+                        for record in session_records
+                    ],
+                    "session_capacity": session_capacity,
+                    "group_conversation_runtime": {
+                        "activation_limit_configured": True,
+                        "multi_person_chat_router_connected": False,
+                        "multi_person_voice_router_connected": False,
+                        "secondary_full_body_renderer_connected": False,
+                        "secondary_named_orb_renderer_connected": False,
+                        "single_person_compatibility_preserved": True,
+                    },
+                    "orb_fallback_contract": {
+                        "eligible_when_downloaded_person_has_no_usable_body": True,
+                        "presentation": "named_moving_orb_fallback",
+                        "identity_label_required": True,
+                        "movement_required": True,
+                        "body_or_person_identity_substitution_allowed": False,
+                        "activation_bypass_allowed": False,
+                    },
                     "active_label": active_info["label"] if active_info else "",
                     "active_conversation_mode": active_conversation_mode,
                     "active_has_body": active_has_body,

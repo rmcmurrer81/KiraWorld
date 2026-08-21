@@ -12461,9 +12461,44 @@ function makeOrbMarker(label) {
   glow.position.y = 1.05;
   glow.scale.set(1.0, 0.9, 1.0);
   group.add(glow);
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = 128;
+  const context = canvas.getContext("2d");
+  context.fillStyle = "rgba(4, 13, 26, 0.82)";
+  context.fillRect(0, 18, canvas.width, 92);
+  context.strokeStyle = "rgba(155, 231, 255, 0.95)";
+  context.lineWidth = 5;
+  context.strokeRect(3, 21, canvas.width - 6, 86);
+  context.fillStyle = "#eefaff";
+  context.font = "600 48px Segoe UI, sans-serif";
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText(String(label || "Active person").slice(0, 28), canvas.width / 2, canvas.height / 2);
+  const nameTexture = new THREE.CanvasTexture(canvas);
+  nameTexture.colorSpace = THREE.SRGBColorSpace;
+  const nameSprite = new THREE.Sprite(new THREE.SpriteMaterial({
+    map: nameTexture,
+    transparent: true,
+    depthWrite: false,
+  }));
+  nameSprite.position.y = 1.82;
+  nameSprite.scale.set(2.8, 0.7, 1);
+  nameSprite.userData.kind = "orb_identity_label";
+  group.add(nameSprite);
   group.userData.label = label;
   group.userData.kind = "orb";
+  group.userData.movementContract = "gentle_bob_and_bounded_roam";
+  group.userData.identityLabelVisible = true;
   return group;
+}
+
+function updateActiveOrbFallback(t) {
+  const orb = activeMarker?.children?.find?.((child) => child.userData?.kind === "orb");
+  if (!orb) return;
+  orb.position.y = Math.sin(t * 1.35) * 0.075;
+  orb.rotation.y = Math.sin(t * 0.42) * 0.08;
+  orb.userData.lastMovementAt = t;
 }
 
 function safeActiveClips(clips) {
@@ -20173,6 +20208,7 @@ function animate() {
     setActiveAvatarAction("idle");
   }
   updateActiveAvatarMovement(clock.elapsedTime);
+  updateActiveOrbFallback(clock.elapsedTime);
   updateActiveAvatarLocomotionTransition(dt);
   updateCaptureFlagWorld(clock.elapsedTime, dt);
   if (observeFollowEnabled) updateObserveFollowCamera();
