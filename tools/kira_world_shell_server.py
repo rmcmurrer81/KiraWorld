@@ -5,6 +5,7 @@ import datetime as dt
 import difflib
 import hashlib
 import json
+import math
 import mimetypes
 import os
 import queue
@@ -167,6 +168,10 @@ from Core.supervised_person_decision import (
 )
 from Core.identity_profiles import KIRA_PROFILE, LISA_PROFILE
 from Core.world_shell_session_policy import resolve_world_shell_session_policy
+from Core.world_shell_group_router import (
+    GroupTurnValidationError,
+    run_sequential_group_turn,
+)
 from Core.model_request_policy import (
     QWEN_TEXT_VOICE_DIGEST,
     QWEN_TEXT_VOICE_MODEL,
@@ -267,6 +272,7 @@ KIRA_CORE_LOCK = threading.Lock()
 LISA_CORE_LOCK = threading.Lock()
 LOG_WRITE_LOCK = threading.Lock()
 STATE_WRITE_LOCK = threading.RLock()
+SESSION_ADMISSION_LOCK = threading.RLock()
 PERSON_STATE_LOCKS_GUARD = threading.Lock()
 PERSON_STATE_LOCKS: dict[str, threading.RLock] = {}
 VOICE_OUTPUT_STATE: dict[str, object] = {
@@ -2981,11 +2987,112 @@ def world_shell_session_capacity(state: dict) -> dict[str, object]:
         ),
         "group_router_active": len(records) > 1,
         "per_person_state_isolation_contract": True,
-        "per_person_state_lock_connected": False,
+        "per_person_state_lock_connected": True,
         "group_chat_and_voice_serialization_contract": True,
         "secondary_full_body_rendering": False,
-        "secondary_named_orb_rendering": False,
+        "secondary_named_orb_rendering": True,
     }
+
+
+def active_session_activation_plan(
+    state: dict,
+    candidate_id: str,
+    *,
+    join_group: bool,
+) -> dict[str, object]:
+    """Resolve whether activation replaces the focus or adds one participant.
+
+    Group admission is always explicit.  The legacy activation request keeps
+    its one-focused-person replacement behavior, including on high-RAM hosts.
+    """
+
+    candidate = str(candidate_id or "").strip()
+    active_ids = active_session_candidate_ids(state)
+    capacity = WORLD_SHELL_SESSION_POLICY.effective_max_active_sessions
+    if not join_group:
+        return {
+            "allowed": True,
+            "replace_existing": True,
+            "secondary": False,
+            "already_active": candidate in active_ids,
+            "reason": "legacy_focus_replacement",
+        }
+    if candidate in active_ids:
+        return {
+            "allowed": True,
+            "replace_existing": False,
+            "secondary": candidate != str(state.get("active_candidate") or ""),
+            "already_active": True,
+            "reason": "already_active",
+        }
+    if not active_ids:
+        return {
+            "allowed": True,
+            "replace_existing": True,
+            "secondary": False,
+            "already_active": False,
+            "reason": "first_group_participant_becomes_focus",
+        }
+    if not WORLD_SHELL_SESSION_POLICY.group_sessions_enabled:
+        return {
+            "allowed": False,
+            "replace_existing": False,
+            "secondary": True,
+            "already_active": False,
+            "reason": WORLD_SHELL_SESSION_POLICY.reason,
+        }
+    if len(active_ids) >= capacity:
+        return {
+            "allowed": False,
+            "replace_existing": False,
+            "secondary": True,
+            "already_active": False,
+            "reason": "active_session_capacity_reached",
+        }
+    return {
+        "allowed": True,
+        "replace_existing": False,
+        "secondary": True,
+        "already_active": False,
+        "reason": "group_participant_slot_available",
+    }
+
+
+def active_presence_payloads(state: dict) -> list[dict[str, object]]:
+    """Return render-only presence data without granting body ownership."""
+
+    payloads: list[dict[str, object]] = []
+    for index, record in enumerate(active_session_records(state)):
+        candidate = str(record.get("candidate_id") or "").strip()
+        focused = bool(record.get("focused"))
+        saved = saved_avatar_position(state, candidate) or {}
+        saved_position = saved.get("position") if isinstance(saved, dict) else None
+        if not isinstance(saved_position, dict):
+            # Stable offsets keep multiple labels from occupying one point;
+            # Home World may animate only these render proxies.
+            angle = (index * 2.399963229728653) % (2 * math.pi)
+            saved_position = {
+                "x": round(5.7 + math.sin(angle) * (1.2 + index * 0.18), 3),
+                "y": 3.32,
+                "z": round(-4.65 + math.cos(angle) * (1.2 + index * 0.18), 3),
+            }
+        presentation = str(record.get("presentation") or "")
+        if not focused and presentation == "body":
+            presentation = "named_moving_orb_group_proxy"
+        payloads.append(
+            {
+                "candidate_id": candidate,
+                "label": str(record.get("label") or candidate),
+                "focused": focused,
+                "presentation": presentation,
+                "has_body": bool(record.get("has_body")),
+                "position": saved_position,
+                "movement_contract": "gentle_bob_and_bounded_roam",
+                "sensory_initiative_owner": focused,
+                "body_telemetry_owner": focused,
+            }
+        )
+    return payloads
 
 
 def candidate_label(candidate: dict, path: Path) -> str:
@@ -7956,27 +8063,39 @@ def recover_active_candidate_for_chat(state: dict) -> str:
 
 def safe_stop_active_ai(state: dict, reason: str, source: str) -> dict:
     previous = state.get("active_candidate") or ""
+    previous_sessions = active_session_records(state)
     purge_media_runtime()
     initiative_purge = purge_person_initiative_runtime()
     previous_mode = str(state.get("active_conversation_mode") or "")
-    bounded_conversation = previous_mode in {"bounded_text_only", "bounded_text_voice"}
-    if previous and not bounded_conversation and not TEXT_ONLY_CHAT_MODE:
-        update_candidate(
-            previous,
-            action="idle",
-            activity=f"safely paused because {reason}",
-            source=source,
-        )
-        append_jsonl(
-            LIFE_LOOP_LOG,
-            {
-                "at": now_iso(),
-                "event": "safe_stop_active_ai",
-                "candidate": previous,
-                "reason": reason,
-                "location": state.get("location", ""),
-            },
-        )
+    for record in previous_sessions:
+        participant = str(record.get("candidate_id") or "").strip()
+        participant_mode = str(record.get("conversation_mode") or "normal")
+        bounded_conversation = participant_mode in {
+            "bounded_text_only",
+            "bounded_text_voice",
+        }
+        if not participant:
+            continue
+        with candidate_state_lock(participant):
+            if not bounded_conversation and not TEXT_ONLY_CHAT_MODE:
+                update_candidate(
+                    participant,
+                    action="idle",
+                    activity=f"safely paused because {reason}",
+                    source=source,
+                )
+            append_jsonl(
+                LIFE_LOOP_LOG,
+                {
+                    "at": now_iso(),
+                    "event": "safe_stop_active_ai",
+                    "candidate": participant,
+                    "reason": reason,
+                    "location": state.get("location", ""),
+                    "was_focused": bool(record.get("focused")),
+                    "sensory_initiative_owner": bool(record.get("focused")),
+                },
+            )
     if previous:
         state["last_active_candidate"] = previous
     current_sensory_lease = SENSORY_BUFFER.current_lease
@@ -7989,13 +8108,21 @@ def safe_stop_active_ai(state: dict, reason: str, source: str) -> dict:
     state["active_candidate"] = ""
     state["active_conversation_mode"] = ""
     state["browser_lease"] = {}
+    clear_active_sessions(state)
     save_state(state)
-    if previous and previous_mode != "bounded_text_only":
+    if previous_sessions and any(
+        str(record.get("conversation_mode") or "normal") != "bounded_text_only"
+        for record in previous_sessions
+    ):
         end_voice_session(f"voice session ended: {reason}")
     return {
         "previous": previous,
         "previous_mode": previous_mode,
-        "stopped": bool(previous),
+        "previous_candidates": [
+            str(record.get("candidate_id") or "") for record in previous_sessions
+        ],
+        "previous_sessions": previous_sessions,
+        "stopped": bool(previous_sessions),
         **initiative_purge,
     }
 
@@ -8371,6 +8498,7 @@ def html_shell() -> bytes:
         <div class="row" id="aiControls">
           <select id="candidate"></select>
           <button id="activate" type="button">Start conversation</button>
+          <button id="addToGroup" type="button" title="Explicitly add this person without changing the focused sensory/initiative owner">Add to group</button>
           <button id="deactivate" type="button" class="warn" title="End the active conversation and release its voice resources">End conversation now</button>
           <button id="messageButton" type="button">Messages <span id="messageBadge" class="badge" hidden>0</span></button>
           <button id="openVideoStudio" type="button">Open Video Studio</button>
@@ -9339,6 +9467,7 @@ def html_shell() -> bytes:
       }}
       state = nextState;
       const previousWorldUrl = worldEl.src;
+      const previouslySelectedCandidate = candidateEl.value;
       candidateEl.innerHTML = "";
       state.candidates.forEach(c => {{
         const opt = document.createElement("option");
@@ -9354,14 +9483,20 @@ def html_shell() -> bytes:
         opt.textContent = `${{c.label}}${{blocked ? " (review required — select for reason)" : modeSuffix}}`;
         candidateEl.appendChild(opt);
       }});
-      if (state.active_candidate) candidateEl.value = state.active_candidate;
+      if ((state.candidates || []).some(c => c.id === previouslySelectedCandidate)) {{
+        candidateEl.value = previouslySelectedCandidate;
+      }} else if (state.active_candidate) candidateEl.value = state.active_candidate;
       updateCandidateReviewReason();
       if (!state.text_voice_mode && state.world_url && new URL(previousWorldUrl || "about:blank", window.location.href).href !== new URL(state.world_url, window.location.href).href) {{
         worldEl.src = state.world_url;
       }}
+      const activeSessionLabels = (state.active_sessions || []).map(item => item.label).filter(Boolean);
+      const groupStatus = activeSessionLabels.length > 1
+        ? ` | Group (${{activeSessionLabels.length}}): ${{activeSessionLabels.join(", ")}}`
+        : "";
       statusEl.textContent = state.text_voice_mode
-        ? `${{state.active_conversation_mode === "bounded_text_only" ? "Text-only conversation" : "Text/voice chat"}} | Active: ${{state.active_label || "none"}}`
-        : `Active: ${{state.active_label || "none"}} | Location: ${{state.location}}`;
+        ? `${{state.active_conversation_mode === "bounded_text_only" ? "Text-only conversation" : "Text/voice chat"}} | Focused: ${{state.active_label || "none"}}${{groupStatus}}`
+        : `Focused: ${{state.active_label || "none"}} | Location: ${{state.location}}${{groupStatus}}`;
       const kiraBodyBindingBlocked = state.active_candidate === "kira"
         && state.active_body_selection?.enforced === true
         && state.active_body_selection?.valid !== true;
@@ -9387,6 +9522,8 @@ def html_shell() -> bytes:
       videoStudioButton.title = "Robert decides whether to open the protected standalone Video Studio. Opening it does not inspect or change any person or life loop.";
       activeDetailsEl.innerHTML = `
         <div><strong>Active person:</strong> ${{esc(state.active_label || "none")}}</div>
+        <div><strong>Conversation participants:</strong> ${{esc(activeSessionLabels.join(", ") || "none")}}</div>
+        <div><strong>Session capacity:</strong> ${{esc(String(state.session_capacity?.active_session_count || 0))}} / ${{esc(String(state.session_capacity?.effective_max_active_sessions || 1))}} (explicit group opt-in: ${{state.session_capacity?.group_sessions_enabled ? "on" : "off"}})</div>
         <div><strong>Mode:</strong> ${{state.active_conversation_mode === "bounded_text_voice" ? "bounded text + approved self-voice; separate synthetic person; no body/world" : (state.active_conversation_mode === "bounded_text_only" ? "bounded text only; separate synthetic person" : (state.text_voice_mode ? "text + voice only" : "3D world shell"))}}</div>
         <div><strong>Location:</strong> ${{state.text_voice_mode ? "not loaded" : esc(state.location)}}</div>
         <div><strong>Body:</strong> ${{bodyLine}}</div>
@@ -9421,6 +9558,21 @@ def html_shell() -> bytes:
       if (activateButton) {{
         activateButton.textContent = selected?.conversation_mode === "bounded_text_voice" ? "Start text + voice chat" : (selected?.conversation_mode === "bounded_text_only" ? "Start text conversation" : "Start person");
         activateButton.disabled = selected?.activatable === false;
+      }}
+      const addToGroupButton = document.querySelector("#addToGroup");
+      if (addToGroupButton) {{
+        const activeIds = new Set((state.active_sessions || []).map(item => item.candidate_id));
+        const hasFocusedParticipant = activeIds.size > 0;
+        const groupEnabled = state.session_capacity?.group_sessions_enabled === true;
+        const slotAvailable = Number(state.session_capacity?.available_session_slots || 0) > 0;
+        const alreadyActive = activeIds.has(selected?.id);
+        addToGroupButton.disabled = !selected || selected.activatable === false || !hasFocusedParticipant || !groupEnabled || !slotAvailable || alreadyActive;
+        addToGroupButton.textContent = alreadyActive ? "Already in group" : "Add to group";
+        addToGroupButton.title = !hasFocusedParticipant
+          ? "Start one focused person before adding group participants."
+          : !groupEnabled
+          ? "Group sessions require explicit configuration and sufficient detected RAM."
+          : (!slotAvailable ? "The configured group capacity is full." : "Add without transferring the focused sensory/initiative lease.");
       }}
     }}
 
@@ -9475,6 +9627,36 @@ def html_shell() -> bytes:
     // guard guarantees that one physical click produces one POST.
     activateButton.addEventListener("pointerup", activateSelectedCandidate);
     activateButton.addEventListener("click", activateSelectedCandidate);
+    async function addSelectedCandidateToGroup(event) {{
+      if (event?.type === "pointerup" && Number(event.button) !== 0) return;
+      event?.preventDefault();
+      if (activationInFlight) return;
+      const selected = (state.candidates || []).find(c => c.id === candidateEl.value);
+      const addButton = document.querySelector("#addToGroup");
+      if (!selected || addButton.disabled) {{
+        log(addButton.title || "A group slot is not available.");
+        return;
+      }}
+      activationInFlight = true;
+      addButton.disabled = true;
+      addButton.textContent = "Adding...";
+      try {{
+        const result = await api("/api/activate", {{
+          candidate: selected.id,
+          source: "shell_add_group_button",
+          join_group: true,
+        }});
+        log(`Added ${{result.label}} to the sequential group conversation. The focused person's sensory and initiative lease did not change.`);
+      }} catch (err) {{
+        log(`Group activation blocked: ${{err.message}}`);
+      }} finally {{
+        activationInFlight = false;
+        await refresh();
+      }}
+    }}
+    const addToGroupButton = document.querySelector("#addToGroup");
+    addToGroupButton.addEventListener("pointerup", addSelectedCandidateToGroup);
+    addToGroupButton.addEventListener("click", addSelectedCandidateToGroup);
     async function deactivateActiveCandidate(event) {{
       if (event?.type === "pointerup" && Number(event.button) !== 0) return;
       if (deactivationInFlight || !state.active_candidate) return;
@@ -9582,18 +9764,33 @@ def html_shell() -> bytes:
           return;
         }}
         let benchmarkCaptureId = "";
-        try {{
-          const benchmark = await api("/api/voice-benchmark/submit", {{}});
-          benchmarkCaptureId = benchmark.benchmark_capture_id || "";
-        }} catch (_benchmarkError) {{
-          // Optional evidence capture must never block ordinary chat.
+        const groupChatActive = (state.active_sessions || []).length > 1;
+        if (!groupChatActive) {{
+          try {{
+            const benchmark = await api("/api/voice-benchmark/submit", {{}});
+            benchmarkCaptureId = benchmark.benchmark_capture_id || "";
+          }} catch (_benchmarkError) {{
+            // Optional evidence capture must never block ordinary chat.
+          }}
         }}
         const bodySnapshotFresh = await persistAvatarSnapshotBeforeChat();
         if (!bodySnapshotFresh) log("Fresh body snapshot timed out; chat will use the last acknowledged body truth and must abstain if it is stale.");
-        const result = await api("/api/chat", {{ text, benchmark_request_id: benchmarkCaptureId }});
-        if (result.ai_line) log(`${{result.active_label}}: ${{result.ai_line}}`);
-        if (result.voice_result && result.voice_result.reason && result.voice_result.reason !== "ok") {{
-          log(`Voice: ${{result.voice_result.reason}}`);
+        const result = await api(groupChatActive ? "/api/group-chat" : "/api/chat", {{ text, benchmark_request_id: benchmarkCaptureId }});
+        if (groupChatActive) {{
+          (result.group_replies || []).forEach(reply => {{
+            if (reply.ai_line) log(`${{reply.label}}: ${{reply.ai_line}}`);
+          }});
+          (result.voice_results || []).forEach((voice, index) => {{
+            if (voice.reason && !["ok", "queued_async_voice", "queued_behind_previous_voice"].includes(voice.reason)) {{
+              const label = result.group_replies?.[index]?.label || `Participant ${{index + 1}}`;
+              log(`${{label}} voice: ${{voice.reason}}`);
+            }}
+          }});
+        }} else {{
+          if (result.ai_line) log(`${{result.active_label}}: ${{result.ai_line}}`);
+          if (result.voice_result && result.voice_result.reason && result.voice_result.reason !== "ok") {{
+            log(`Voice: ${{result.voice_result.reason}}`);
+          }}
         }}
       }} catch (err) {{
         log(`Chat failed: ${{err.message}}`);
@@ -10944,6 +11141,8 @@ def speak_active_reply(
 def _voice_reply_queue_worker() -> None:
     while True:
         item = VOICE_REPLY_QUEUE.get()
+        completion_event = item.get("completion_event")
+        completion_result = item.get("completion_result")
         try:
             if item.get("_voice_queue_control") == "stop":
                 return
@@ -10959,6 +11158,12 @@ def _voice_reply_queue_worker() -> None:
                     },
                 )
                 _cancel_queued_voice_benchmark(item, "voice_session_ended_before_playback")
+                if isinstance(completion_result, dict):
+                    completion_result["result"] = {
+                        "spoken": False,
+                        "complete": False,
+                        "reason": "voice_session_ended_before_playback",
+                    }
                 continue
             active = str(item.get("active") or "")
             active_label = str(item.get("active_label") or "")
@@ -10968,6 +11173,12 @@ def _voice_reply_queue_worker() -> None:
             with VOICE_OUTPUT_LOCK:
                 if token != VOICE_SESSION_TOKEN:
                     _cancel_queued_voice_benchmark(item, "voice_session_ended_before_voice_lock")
+                    if isinstance(completion_result, dict):
+                        completion_result["result"] = {
+                            "spoken": False,
+                            "complete": False,
+                            "reason": "voice_session_ended_before_voice_lock",
+                        }
                     continue
                 update_voice_output_state(
                     active=True,
@@ -10982,27 +11193,33 @@ def _voice_reply_queue_worker() -> None:
                     benchmark_request_id=benchmark_request_id,
                     queued_replies=VOICE_REPLY_QUEUE.qsize(),
                 )
-                speak_active_reply(
+                spoken_result = speak_active_reply(
                     active,
                     active_label,
                     text,
                     queue_wait_seconds=max(0.0, time.monotonic() - queued_at),
                     benchmark_request_id=benchmark_request_id,
                 )
+                if isinstance(completion_result, dict):
+                    completion_result["result"] = spoken_result
         finally:
-            update_voice_output_state(
-                active=False,
-                playing=False,
-                phase="idle",
-                started_at=0.0,
-                playback_started_at=0.0,
-                chunk_index=None,
-                candidate="",
-                label="",
-                benchmark_request_id="",
-                queued_replies=VOICE_REPLY_QUEUE.qsize(),
-            )
-            VOICE_REPLY_QUEUE.task_done()
+            try:
+                update_voice_output_state(
+                    active=False,
+                    playing=False,
+                    phase="idle",
+                    started_at=0.0,
+                    playback_started_at=0.0,
+                    chunk_index=None,
+                    candidate="",
+                    label="",
+                    benchmark_request_id="",
+                    queued_replies=VOICE_REPLY_QUEUE.qsize(),
+                )
+            finally:
+                if isinstance(completion_event, threading.Event):
+                    completion_event.set()
+                VOICE_REPLY_QUEUE.task_done()
 
 
 def _ensure_voice_queue_worker() -> threading.Thread:
@@ -11075,6 +11292,16 @@ def _cancel_pending_voice_replies(reason: str) -> int:
             },
         )
         _cancel_queued_voice_benchmark(item, reason)
+        completion_result = item.get("completion_result")
+        if isinstance(completion_result, dict):
+            completion_result["result"] = {
+                "spoken": False,
+                "complete": False,
+                "reason": reason,
+            }
+        completion_event = item.get("completion_event")
+        if isinstance(completion_event, threading.Event):
+            completion_event.set()
         VOICE_REPLY_QUEUE.task_done()
     return cancelled
 
@@ -11359,6 +11586,8 @@ def queue_active_reply_voice(
     text: str,
     *,
     benchmark_request_id: str = "",
+    wait_for_completion: bool = False,
+    completion_timeout_seconds: float = 180.0,
 ) -> dict:
     if not active or not text:
         return {"spoken": False, "reason": "no_active_reply"}
@@ -11487,6 +11716,8 @@ def queue_active_reply_voice(
                 "queue_position": queued_ahead + 1,
             },
         )
+    completion_event = threading.Event() if wait_for_completion else None
+    completion_result: dict[str, object] | None = {} if wait_for_completion else None
     VOICE_REPLY_QUEUE.put(
         {
             "active": active,
@@ -11496,6 +11727,8 @@ def queue_active_reply_voice(
             "session_token": VOICE_SESSION_TOKEN,
             "benchmark_request_id": benchmark_request_id,
             "benchmark_expected_public_words": expected_public_words,
+            "completion_event": completion_event,
+            "completion_result": completion_result,
         }
     )
     _ensure_voice_queue_worker()
@@ -11510,7 +11743,7 @@ def queue_active_reply_voice(
         and getattr(cfg, "engine", "") == "chatterbox_tts"
         and not persistent_session_owned
     )
-    return {
+    queued_result = {
         "spoken": False,
         "reason": "queued_behind_previous_voice" if queued_ahead else "queued_async_voice",
         "queue_position": queued_ahead + 1,
@@ -11539,6 +11772,219 @@ def queue_active_reply_voice(
         ),
         "benchmark_capture_id": benchmark_request_id,
     }
+    if completion_event is None or completion_result is None:
+        return queued_result
+    try:
+        bounded_timeout = max(5.0, min(600.0, float(completion_timeout_seconds)))
+    except (TypeError, ValueError):
+        bounded_timeout = 180.0
+    if not completion_event.wait(timeout=bounded_timeout):
+        return {
+            **queued_result,
+            "reason": "serialized_voice_completion_timeout",
+            "playback_serialized_and_awaited": False,
+            "playback_may_still_be_running": True,
+            "completion_timeout_seconds": bounded_timeout,
+        }
+    actual_result = completion_result.get("result")
+    if not isinstance(actual_result, dict):
+        actual_result = {
+            "spoken": False,
+            "complete": False,
+            "reason": "serialized_voice_completion_result_missing",
+        }
+    return {
+        **queued_result,
+        **actual_result,
+        "queue_admission_reason": queued_result["reason"],
+        "playback_serialized_and_awaited": True,
+        "playback_may_still_be_running": False,
+    }
+
+
+def group_participant_reply(
+    participant: dict,
+    text: str,
+    *,
+    state: dict,
+    group_turn_id: str,
+) -> dict[str, object]:
+    """Produce one participant's public group reply under their state lock."""
+
+    candidate = str(participant.get("candidate_id") or "").strip()
+    label = str(participant.get("label") or candidate).strip() or candidate
+    surface_policy = candidate_surface_policy(candidate)
+    bounded = bool(surface_policy.get("bounded_text_only"))
+    no_world = bool(TEXT_ONLY_CHAT_MODE)
+    if not bounded and not no_world:
+        if candidate not in {"kira", "lisa"}:
+            try:
+                write_avatar_activity_state(
+                    candidate,
+                    f"replying in Robert's group conversation: {text[:120]}",
+                    suggested_form="civilian",
+                    source="kira_world_shell_group_chat",
+                    mood="engaged",
+                    metadata={
+                        "world": "home",
+                        "location": state.get("location", ""),
+                        "group_turn_id": group_turn_id,
+                        "body_telemetry_owner": bool(participant.get("focused")),
+                    },
+                )
+            except Exception as exc:
+                append_jsonl(
+                    CHAT_LOG,
+                    {
+                        "at": now_iso(),
+                        "speaker": "system",
+                        "event": "group_avatar_state_write_failed",
+                        "candidate": candidate,
+                        "group_turn_id": group_turn_id,
+                        "error": str(exc),
+                    },
+                )
+        update_candidate(
+            candidate,
+            action="talking",
+            activity=f"replying sequentially in Robert's group conversation: {text[:90]}",
+            source="kira_world_shell_group_chat",
+        )
+
+    raw_reply = temporary_ai_reply(
+        candidate,
+        label,
+        text,
+        "" if (bounded or no_world) else str(state.get("location") or ""),
+        state,
+    )
+    private_channel_separated = False
+    if candidate == "robert_mcmurrer_presence_ai":
+        parsed = parse_robert_three_channels(raw_reply)
+        if parsed.get("valid"):
+            public_reply = str(parsed.get("spoken") or "")
+            private_channel_separated = True
+        else:
+            public_reply = (
+                "I need a moment to separate what I want to say from my "
+                "private thoughts and the factual record."
+            )
+        record_path = persist_robert_turn(
+            workbench=ROOT
+            / "TemporaryAI"
+            / "candidates"
+            / "robert_mcmurrer_presence_ai"
+            / "workbench",
+            source_turn_id=f"{group_turn_id}:{candidate}",
+            user_text=text,
+            raw_reply=raw_reply,
+            parsed=parsed,
+        )
+        append_jsonl(
+            CHAT_LOG,
+            {
+                "at": now_iso(),
+                "speaker": "system",
+                "event": "synthetic_robert_group_three_channel_recorded",
+                "candidate": candidate,
+                "group_turn_id": group_turn_id,
+                "valid": bool(parsed.get("valid")),
+                "evidence_path": str(record_path),
+                "private_mind_exposed": False,
+            },
+        )
+    else:
+        public_reply = raw_reply
+
+    movement_split = candidate_chat_movement_split(candidate, public_reply)
+    ai_line = str(movement_split.get("spoken_text") or "").strip()
+    if candidate == "kira" and KIRA_CORE_LOOP is not None:
+        _replace_last_kira_public_history(KIRA_CORE_LOOP, ai_line)
+    if candidate == "lisa" and LISA_CORE_LOOP is not None:
+        _replace_last_lisa_public_history(LISA_CORE_LOOP, ai_line)
+    movement_intents: list[dict[str, object]] = []
+    parsed_movements = list(movement_split.get("movement_intents") or [])
+    if parsed_movements:
+        try:
+            record_candidate_owned_movement_intents(
+                candidate,
+                label,
+                parsed_movements,
+                source_turn_id=f"{group_turn_id}:{candidate}",
+            )
+            status = "recorded_for_future_body"
+        except Exception as exc:
+            status = "record_failed_not_dispatched"
+            append_jsonl(
+                CHAT_LOG,
+                {
+                    "at": now_iso(),
+                    "speaker": "system",
+                    "event": "group_movement_intent_record_failed",
+                    "candidate": candidate,
+                    "group_turn_id": group_turn_id,
+                    "error": str(exc),
+                    "dispatched_to_live_body": False,
+                },
+            )
+        movement_intents = [
+            {
+                "action": str(item.get("action") or ""),
+                "category": str(item.get("category") or ""),
+                "status": status,
+                "dispatched_to_live_body": False,
+                "physical_completion_claimed": False,
+            }
+            for item in parsed_movements
+            if isinstance(item, dict)
+        ]
+
+    append_jsonl(
+        CHAT_LOG,
+        {
+            "at": now_iso(),
+            "speaker": label,
+            "speaker_id": candidate,
+            "to": "Robert and active group",
+            "text": ai_line,
+            "group_turn_id": group_turn_id,
+            "sequence_router": "strictly_sequential_per_participant",
+            "location": "" if (bounded or no_world) else state.get("location", ""),
+            "conversation_mode": surface_policy.get("conversation_mode", "normal"),
+            "sensory_initiative_owner": bool(participant.get("focused")),
+        },
+    )
+    return {
+        "candidate_id": candidate,
+        "label": label,
+        "ai_line": ai_line,
+        "movement_intents": movement_intents,
+        "conversation_mode": surface_policy.get("conversation_mode", "normal"),
+        "sensory_initiative_owner": bool(participant.get("focused")),
+        "private_channel_separated": private_channel_separated,
+    }
+
+
+def group_participant_voice(participant: dict, reply: object) -> dict[str, object]:
+    """Queue one public reply onto the process-wide single FIFO voice worker."""
+
+    result = reply if isinstance(reply, dict) else {}
+    candidate = str(participant.get("candidate_id") or "").strip()
+    label = str(participant.get("label") or candidate).strip() or candidate
+    surface_policy = candidate_surface_policy(candidate)
+    if surface_policy.get("bounded_text_only") and not surface_policy.get("voice_allowed"):
+        return {
+            "spoken": False,
+            "reason": "bounded_text_only_voice_blocked",
+            "generated_audio": False,
+            "playback": False,
+        }
+    return queue_active_reply_voice(
+        candidate,
+        label,
+        str(result.get("ai_line") or ""),
+        wait_for_completion=True,
+    )
 
 
 def locked_page() -> bytes:
@@ -11925,13 +12371,18 @@ class Handler(BaseHTTPRequestHandler):
                         str(record.get("candidate_id") or "")
                         for record in session_records
                     ],
+                    "active_presence_payloads": active_presence_payloads(state),
                     "session_capacity": session_capacity,
                     "group_conversation_runtime": {
                         "activation_limit_configured": True,
-                        "multi_person_chat_router_connected": False,
-                        "multi_person_voice_router_connected": False,
+                        "multi_person_chat_router_connected": True,
+                        "multi_person_voice_router_connected": True,
+                        "reply_generation_order": "strictly_sequential",
+                        "voice_playback_order": "single_fifo_output_worker",
+                        "group_voice_callback_waits_for_completion": True,
+                        "secondary_sensory_initiative_ownership": False,
                         "secondary_full_body_renderer_connected": False,
-                        "secondary_named_orb_renderer_connected": False,
+                        "secondary_named_orb_renderer_connected": True,
                         "single_person_compatibility_preserved": True,
                     },
                     "orb_fallback_contract": {
@@ -12489,23 +12940,165 @@ class Handler(BaseHTTPRequestHandler):
                     )
                     self._json(409, {"ok": False, "candidate": candidate, "message": activation_block["message"]})
                     return
+                join_group = body.get("join_group") is True
+                activation_plan = active_session_activation_plan(
+                    state,
+                    candidate,
+                    join_group=join_group,
+                )
+                if not activation_plan["allowed"]:
+                    capacity = world_shell_session_capacity(state)
+                    self._json(
+                        409,
+                        {
+                            "ok": False,
+                            "candidate": candidate,
+                            "message": (
+                                "A group slot is not available. Existing single-person "
+                                "activation is still available, or group capacity can be "
+                                "explicitly enabled on a machine with enough RAM."
+                            ),
+                            "reason": activation_plan["reason"],
+                            "session_capacity": capacity,
+                        },
+                    )
+                    return
+                if join_group and activation_plan["already_active"]:
+                    self._json(
+                        200,
+                        {
+                            "ok": True,
+                            "label": active_label,
+                            "already_active": True,
+                            "joined_group": bool(activation_plan["secondary"]),
+                            "active_sessions": active_session_records(state),
+                            "session_capacity": world_shell_session_capacity(state),
+                            "sensory_initiative_owner": candidate
+                            == str(state.get("active_candidate") or ""),
+                            "voice_prewarm_started": False,
+                        },
+                    )
+                    return
+                if surface_policy["bounded_text_only"] and not TEXT_ONLY_CHAT_MODE:
+                    self._json(
+                        409,
+                        {
+                            "ok": False,
+                            "candidate": candidate,
+                            "message": (
+                                f"{active_label} is available only in the private text/voice launcher. "
+                                "Body, world, and life-loop activation remain blocked."
+                            ),
+                        },
+                    )
+                    return
+                if activation_plan["secondary"]:
+                    with candidate_state_lock(candidate):
+                        if not surface_policy["bounded_text_only"] and not TEXT_ONLY_CHAT_MODE:
+                            try:
+                                write_avatar_activity_state(
+                                    candidate,
+                                    "participating in a capacity-limited group conversation",
+                                    suggested_form="civilian",
+                                    source="kira_world_shell_group_activate",
+                                    mood="engaged",
+                                    metadata={
+                                        "world": "home",
+                                        "location": state.get("location", ""),
+                                        "presentation": "named_moving_orb_group_proxy",
+                                        "body_telemetry_owner": False,
+                                    },
+                                )
+                            except Exception as exc:
+                                append_jsonl(
+                                    LIFE_LOOP_LOG,
+                                    {
+                                        "at": now_iso(),
+                                        "event": "avatar_state_write_failed",
+                                        "candidate": candidate,
+                                        "error": str(exc),
+                                    },
+                                )
+                            update_candidate(
+                                candidate,
+                                action="idle",
+                                activity="active in a sequential group conversation near Robert",
+                                source="kira_world_shell_group_activate",
+                            )
+                    with SESSION_ADMISSION_LOCK:
+                        latest_state = load_state()
+                        refreshed_plan = active_session_activation_plan(
+                            latest_state,
+                            candidate,
+                            join_group=True,
+                        )
+                        if not refreshed_plan["allowed"]:
+                            self._json(
+                                409,
+                                {
+                                    "ok": False,
+                                    "candidate": candidate,
+                                    "message": "The last available group slot was just taken.",
+                                    "reason": refreshed_plan["reason"],
+                                    "session_capacity": world_shell_session_capacity(latest_state),
+                                },
+                            )
+                            return
+                        state.clear()
+                        state.update(latest_state)
+                        session_record = register_active_session(
+                            state,
+                            candidate,
+                            active_info,
+                            conversation_mode=surface_policy["conversation_mode"],
+                            replace_existing=False,
+                        )
+                        save_state(state)
+                    append_jsonl(
+                        LIFE_LOOP_LOG,
+                        {
+                            "at": now_iso(),
+                            "event": "group_session_participant_added",
+                            "candidate": candidate,
+                            "label": active_label,
+                            "source": source,
+                            "sensory_initiative_owner": False,
+                            "sensory_lease_started": False,
+                            "initiative_transport_started": False,
+                            "voice_session_started": False,
+                            "presentation": session_record["presentation"],
+                            "location": state.get("location", ""),
+                        },
+                    )
+                    self._json(
+                        200,
+                        {
+                            "ok": True,
+                            "label": active_label,
+                            "joined_group": True,
+                            "conversation_mode": surface_policy["conversation_mode"],
+                            "voice_prewarm_started": False,
+                            "sensory_initiative_owner": False,
+                            "active_sessions": active_session_records(state),
+                            "active_presence_payloads": active_presence_payloads(state),
+                            "session_capacity": world_shell_session_capacity(state),
+                        },
+                    )
+                    return
+                existing_session_ids = active_session_candidate_ids(state)
+                if existing_session_ids and (
+                    len(existing_session_ids) > 1
+                    or existing_session_ids[0] != candidate
+                ):
+                    safe_stop_active_ai(
+                        state,
+                        reason=f"Robert selected {active_label} as the focused person",
+                        source="kira_world_shell_focus_replacement",
+                    )
                 if surface_policy["bounded_text_only"]:
                     # This is intentionally a conversation selection, not a
                     # person/body/world activation.  An independently bound
                     # approved self-voice may be used by the non-3D launcher.
-                    if not TEXT_ONLY_CHAT_MODE:
-                        self._json(
-                            409,
-                            {
-                                "ok": False,
-                                "candidate": candidate,
-                                "message": (
-                                    f"{active_label} is available only in the private text/voice launcher. "
-                                    "Body, world, and life-loop activation remain blocked."
-                                ),
-                            },
-                        )
-                        return
                     previous_candidate = str(state.get("active_candidate") or "")
                     if previous_candidate and previous_candidate != candidate:
                         safe_stop_active_ai(
@@ -12513,11 +13106,16 @@ class Handler(BaseHTTPRequestHandler):
                             reason=f"Robert selected {active_label} for a bounded text conversation",
                             source="kira_text_only_conversation_switch",
                         )
-                    state["active_candidate"] = candidate
-                    state["last_active_candidate"] = candidate
-                    state["active_conversation_mode"] = surface_policy["conversation_mode"]
-                    state["last_activation_at"] = now_iso()
-                    save_state(state)
+                    with candidate_state_lock(candidate):
+                        state["last_active_candidate"] = candidate
+                        register_active_session(
+                            state,
+                            candidate,
+                            active_info,
+                            conversation_mode=surface_policy["conversation_mode"],
+                            replace_existing=True,
+                        )
+                        save_state(state)
                     strict_text_review = is_strict_marinette_v3_candidate(candidate)
                     if strict_text_review:
                         # A future separately audited text gate must replace,
@@ -12584,6 +13182,8 @@ class Handler(BaseHTTPRequestHandler):
                             "body_activated": False,
                             "world_activated": False,
                             "initiative_transport": initiative_status,
+                            "active_sessions": active_session_records(state),
+                            "session_capacity": world_shell_session_capacity(state),
                         },
                     )
                     return
@@ -12591,54 +13191,60 @@ class Handler(BaseHTTPRequestHandler):
                 if resume_position:
                     state["location"] = resume_position.get("location", state.get("location", "home"))
                 if not TEXT_ONLY_CHAT_MODE and candidate not in {"kira", "lisa"}:
-                    try:
-                        write_avatar_activity_state(
+                    with candidate_state_lock(candidate):
+                        try:
+                            write_avatar_activity_state(
+                                candidate,
+                                "standing naturally in the Home World temporary room",
+                                suggested_form="civilian",
+                                source="kira_world_shell_activate",
+                                mood="calm",
+                                metadata={
+                                    "world": "home",
+                                    "known_home_world_motions": [
+                                        "idle",
+                                        "look_left",
+                                        "look_right",
+                                        "talking",
+                                        "wave",
+                                        "small_room_walk",
+                                        "jog",
+                                        "run",
+                                        "swim_pool",
+                                        "read_book",
+                                        "duck",
+                                        "dodge",
+                                        "jump",
+                                        "capture_flag_game",
+                                    ],
+                                    "motion_learning_state": f"Data/runtime/temporary_ai_motion_learning/{candidate}.json",
+                                    "body_clothing_policy": "Data/runtime/avatar_body_clothing_policy.json",
+                                },
+                            )
+                        except Exception as exc:
+                            append_jsonl(LIFE_LOOP_LOG, {"at": now_iso(), "event": "avatar_state_write_failed", "candidate": candidate, "error": str(exc)})
+                with candidate_state_lock(candidate):
+                    if TEXT_ONLY_CHAT_MODE:
+                        # Selecting a person in this launcher starts only a private
+                        # text/voice conversation.  Do not create body activity or
+                        # a fictional Home World location as a side effect.
+                        data = active_avatar_state(candidate)
+                    else:
+                        data = update_candidate(
                             candidate,
-                            "standing naturally in the Home World temporary room",
-                            suggested_form="civilian",
+                            action="idle",
+                            activity="active near Robert in the notebook world shell",
                             source="kira_world_shell_activate",
-                            mood="calm",
-                            metadata={
-                                "world": "home",
-                                "known_home_world_motions": [
-                                    "idle",
-                                    "look_left",
-                                    "look_right",
-                                    "talking",
-                                    "wave",
-                                    "small_room_walk",
-                                    "jog",
-                                    "run",
-                                    "swim_pool",
-                                    "read_book",
-                                    "duck",
-                                    "dodge",
-                                    "jump",
-                                    "capture_flag_game",
-                                ],
-                                "motion_learning_state": f"Data/runtime/temporary_ai_motion_learning/{candidate}.json",
-                                "body_clothing_policy": "Data/runtime/avatar_body_clothing_policy.json",
-                            },
                         )
-                    except Exception as exc:
-                        append_jsonl(LIFE_LOOP_LOG, {"at": now_iso(), "event": "avatar_state_write_failed", "candidate": candidate, "error": str(exc)})
-                if TEXT_ONLY_CHAT_MODE:
-                    # Selecting a person in this launcher starts only a private
-                    # text/voice conversation.  Do not create body activity or
-                    # a fictional Home World location as a side effect.
-                    data = active_avatar_state(candidate)
-                else:
-                    data = update_candidate(
+                    state["last_active_candidate"] = candidate
+                    register_active_session(
+                        state,
                         candidate,
-                        action="idle",
-                        activity="active near Robert in the notebook world shell",
-                        source="kira_world_shell_activate",
+                        active_info,
+                        conversation_mode="normal",
+                        replace_existing=True,
                     )
-                state["active_candidate"] = candidate
-                state["last_active_candidate"] = candidate
-                state["active_conversation_mode"] = "normal"
-                state["last_activation_at"] = now_iso()
-                save_state(state)
+                    save_state(state)
                 sensory_lease = browser_sensory_lease(state)
                 try:
                     initiative_status = activate_person_initiative_runtime(
@@ -12671,7 +13277,7 @@ class Handler(BaseHTTPRequestHandler):
                     },
                 )
                 begin_voice_session(candidate, active_label)
-                self._json(200, {"ok": True, "label": active_label, "voice_prewarm_started": _activation_voice_prewarm_enabled(), "sensory_lease": sensory_lease, "initiative_transport": initiative_status})
+                self._json(200, {"ok": True, "label": active_label, "voice_prewarm_started": _activation_voice_prewarm_enabled(), "sensory_lease": sensory_lease, "initiative_transport": initiative_status, "active_sessions": active_session_records(state), "session_capacity": world_shell_session_capacity(state)})
                 return
             if path == "/api/deactivate":
                 result = safe_stop_active_ai(
@@ -12849,6 +13455,165 @@ class Handler(BaseHTTPRequestHandler):
                 maybe_log_avatar_runtime_snapshot(state, candidate, entry)
                 save_state(state)
                 self._json(200, {"ok": True, "saved": True, "request_id": snapshot_request_id})
+                return
+            if path == "/api/group-chat":
+                text = str(body.get("text") or body.get("message") or "").strip()
+                participants = active_session_records(state)
+                capacity = WORLD_SHELL_SESSION_POLICY.effective_max_active_sessions
+                if len(participants) < 2:
+                    self._json(
+                        409,
+                        {
+                            "ok": False,
+                            "message": (
+                                "Group chat requires at least two active participants; "
+                                "the existing /api/chat route remains the single-person route."
+                            ),
+                            "reason": "group_requires_two_active_sessions",
+                        },
+                    )
+                    return
+                if not WORLD_SHELL_SESSION_POLICY.group_sessions_enabled:
+                    self._json(
+                        409,
+                        {
+                            "ok": False,
+                            "message": "Persisted group state exceeds the current fail-closed session policy.",
+                            "reason": "group_session_policy_not_enabled",
+                            "session_capacity": world_shell_session_capacity(state),
+                        },
+                    )
+                    return
+                if not text:
+                    self._json(400, {"ok": False, "message": "Group chat text must not be empty."})
+                    return
+                for participant in participants:
+                    candidate = str(participant.get("candidate_id") or "")
+                    activation_block = candidate_activation_block(candidate)
+                    strict_diagnostic = marinette_v4_owner_text_gate(candidate)
+                    if activation_block or strict_diagnostic is not None:
+                        diagnostic = activation_block or strict_diagnostic or {}
+                        self._json(
+                            409,
+                            {
+                                "ok": False,
+                                "candidate": candidate,
+                                "message": str(
+                                    diagnostic.get("message")
+                                    or "One group participant is not currently authorized to reply."
+                                ),
+                                "reason": str(
+                                    diagnostic.get("reason")
+                                    or "group_participant_activation_gate_closed"
+                                ),
+                                "no_partial_group_turn_started": True,
+                            },
+                        )
+                        return
+                if not CHAT_REPLY_LOCK.acquire(blocking=False):
+                    self._json(
+                        409,
+                        {
+                            "ok": False,
+                            "message": "A reply is already in progress.",
+                            "reason": "reply_in_progress",
+                        },
+                    )
+                    return
+                group_turn_id = f"owner_group_chat_{uuid.uuid4().hex}"
+                try:
+                    append_jsonl(
+                        CHAT_LOG,
+                        {
+                            "at": now_iso(),
+                            "speaker": "Robert",
+                            "turn_id": group_turn_id,
+                            "to": [
+                                str(participant.get("candidate_id") or "")
+                                for participant in participants
+                            ],
+                            "text": text,
+                            "location": "" if TEXT_ONLY_CHAT_MODE else state.get("location", ""),
+                            "conversation_mode": "capacity_limited_group",
+                            "reply_order": "strictly_sequential",
+                        },
+                    )
+                    focused = str(state.get("active_candidate") or "")
+                    if focused and not is_strict_marinette_v3_candidate(focused):
+                        # The lease belongs only to the focused participant.
+                        # Register the owner's turn exactly once and never for
+                        # any secondary participant.
+                        note_supervised_person_external_turn(
+                            state,
+                            group_turn_id,
+                            accepted=True,
+                        )
+
+                    routed = run_sequential_group_turn(
+                        participants,
+                        text,
+                        max_participants=capacity,
+                        lock_for=candidate_state_lock,
+                        reply_callback=lambda participant, owner_text: group_participant_reply(
+                            dict(participant),
+                            owner_text,
+                            state=state,
+                            group_turn_id=group_turn_id,
+                        ),
+                        voice_callback=lambda participant, reply: group_participant_voice(
+                            dict(participant),
+                            reply,
+                        ),
+                    )
+                    group_replies = [
+                        dict(entry.get("result") or {})
+                        for entry in routed.get("replies", [])
+                        if isinstance(entry, dict)
+                    ]
+                    voice_results = [
+                        dict(entry.get("result") or {})
+                        for entry in (routed.get("voice") or {}).get("items", [])
+                        if isinstance(entry, dict)
+                    ]
+                    state["last_message"] = text
+                    save_state(state)
+                    append_jsonl(
+                        LIFE_LOOP_LOG,
+                        {
+                            "at": now_iso(),
+                            "event": "group_chat_routed",
+                            "group_turn_id": group_turn_id,
+                            "participant_order": routed.get("participant_order", []),
+                            "parallel_reply_generation": False,
+                            "parallel_voice_playback": False,
+                            "voice_worker": "single_fifo_output_worker",
+                            "secondary_sensory_initiative_ownership": False,
+                        },
+                    )
+                    self._json(
+                        200,
+                        {
+                            "ok": True,
+                            "group_turn_id": group_turn_id,
+                            "group_replies": group_replies,
+                            "voice_results": voice_results,
+                            "ai_line": "\n".join(
+                                f"{reply.get('label')}: {reply.get('ai_line')}"
+                                for reply in group_replies
+                            ),
+                            "routing": routed.get("routing", {}),
+                            "voice_serialization": routed.get("voice", {}),
+                            "session_capacity": world_shell_session_capacity(state),
+                            "sensory_lease": browser_sensory_lease(state),
+                        },
+                    )
+                except GroupTurnValidationError as exc:
+                    self._json(
+                        400,
+                        {"ok": False, "message": str(exc), "reason": exc.code},
+                    )
+                finally:
+                    CHAT_REPLY_LOCK.release()
                 return
             if path == "/api/chat":
                 text = str(body.get("text") or body.get("message") or "").strip()

@@ -156,6 +156,7 @@ let libraryCatalogCursor = 0;
 const stripMallDoorOpen = new Map();
 const stripMallDoorLeaves = new Map();
 let activeMarker = null;
+const groupPresenceOrbs = new Map();
 const gltfLoader = new GLTFLoader();
 const textureLoader = new THREE.TextureLoader();
 let activeAvatarMixer = null;
@@ -12501,6 +12502,78 @@ function updateActiveOrbFallback(t) {
   orb.userData.lastMovementAt = t;
 }
 
+function removeGroupPresenceOrb(candidateId) {
+  const item = groupPresenceOrbs.get(candidateId);
+  if (!item) return;
+  scene.remove(item.marker);
+  item.marker.traverse((child) => {
+    child.geometry?.dispose?.();
+    if (child.userData?.kind === "orb_identity_label") {
+      child.material?.map?.dispose?.();
+      child.material?.dispose?.();
+    }
+  });
+  groupPresenceOrbs.delete(candidateId);
+}
+
+function syncGroupPresenceOrbs(shellState) {
+  const payloads = Array.isArray(shellState?.active_presence_payloads)
+    ? shellState.active_presence_payloads
+    : [];
+  const desired = new Map(
+    payloads
+      .filter((item) => !item?.focused && String(item?.presentation || "").startsWith("named_moving_orb"))
+      .map((item) => [String(item.candidate_id || ""), item])
+      .filter(([candidateId]) => candidateId),
+  );
+  for (const candidateId of groupPresenceOrbs.keys()) {
+    if (!desired.has(candidateId)) removeGroupPresenceOrb(candidateId);
+  }
+  let index = 0;
+  for (const [candidateId, payload] of desired.entries()) {
+    const label = String(payload.label || candidateId);
+    const position = payload.position || {};
+    const base = new THREE.Vector3(
+      Number.isFinite(Number(position.x)) ? Number(position.x) : 5.7 + index * 0.85,
+      Number.isFinite(Number(position.y)) ? Number(position.y) : 3.32,
+      Number.isFinite(Number(position.z)) ? Number(position.z) : -4.65 - index * 0.65,
+    );
+    let item = groupPresenceOrbs.get(candidateId);
+    if (!item || item.label !== label) {
+      if (item) removeGroupPresenceOrb(candidateId);
+      const marker = makeOrbMarker(label);
+      marker.userData.kind = "secondary_group_presence_orb";
+      marker.userData.candidateId = candidateId;
+      marker.userData.sensoryInitiativeOwner = false;
+      marker.userData.bodyTelemetryOwner = false;
+      marker.position.copy(base);
+      scene.add(marker);
+      item = {
+        marker,
+        label,
+        base,
+        phase: index * 1.61803398875,
+      };
+      groupPresenceOrbs.set(candidateId, item);
+    } else {
+      item.base.copy(base);
+    }
+    index += 1;
+  }
+}
+
+function updateGroupPresenceOrbs(t) {
+  for (const item of groupPresenceOrbs.values()) {
+    item.marker.position.set(
+      item.base.x + Math.sin(t * 0.27 + item.phase) * 0.16,
+      item.base.y + Math.sin(t * 1.2 + item.phase) * 0.075,
+      item.base.z + Math.cos(t * 0.23 + item.phase) * 0.16,
+    );
+    item.marker.rotation.y = Math.sin(t * 0.38 + item.phase) * 0.1;
+    item.marker.userData.lastMovementAt = t;
+  }
+}
+
 function safeActiveClips(clips) {
   return (clips || []).filter((clip) => {
     const name = (clip.name || "").toLowerCase();
@@ -15400,12 +15473,11 @@ function setActiveMarker(shellState) {
   else if (displayModelUrl) loadActiveModel(displayState, position);
   else if (shellState.active_pose_manifest_url) loadActivePoseManifest(shellState, position);
   else if (activeAvatarIsKiraLike()) {
-    // Kira's exact body selection is fail-closed. A translucent sphere looked
-    // like a collapsed body and concealed the binding failure; leave the
-    // presence group intentionally empty and let the shell's Body review line
-    // report the exact reason instead of rendering a stand-in.
-    activeMarker.userData.kind = "body_load_blocked_fail_closed";
+    // Kira's exact body selection remains fail-closed: the orb is an explicit,
+    // named presence marker and never a substitute body or identity claim.
+    activeMarker.userData.kind = "body_load_blocked_named_orb_presence";
     activeMarker.userData.bodyLoadBlockedReason = shellState?.active_body_selection?.reason || "model_url_unavailable";
+    activeMarker.add(makeOrbMarker(label));
   } else activeMarker.add(makeOrbMarker(label));
   maybeStartBodyPracticeFromShellAction(shellState.active_action);
 }
@@ -18973,6 +19045,7 @@ window.kiraHomeWorldDebug = {
   },
   injectShellState(shellState = {}) {
     setActiveMarker(shellState);
+    syncGroupPresenceOrbs(shellState);
     return window.__kiraHomeWorldRuntime || {
       activeLabel: activeMarker?.userData?.label || null,
       activeModelLoaded: !!activeAvatarRoot,
@@ -20209,6 +20282,7 @@ function animate() {
   }
   updateActiveAvatarMovement(clock.elapsedTime);
   updateActiveOrbFallback(clock.elapsedTime);
+  updateGroupPresenceOrbs(clock.elapsedTime);
   updateActiveAvatarLocomotionTransition(dt);
   updateCaptureFlagWorld(clock.elapsedTime, dt);
   if (observeFollowEnabled) updateObserveFollowCamera();
@@ -21772,6 +21846,7 @@ window.addEventListener("message", (event) => {
   // untrusted state message establish or change a sensory/media person lease.
   if (embodiedScreenMessageIsTrusted(event)) syncEmbodiedScreenPersonBinding(shellState);
   setActiveMarker(shellState);
+  syncGroupPresenceOrbs(shellState);
 });
 
 animate();
