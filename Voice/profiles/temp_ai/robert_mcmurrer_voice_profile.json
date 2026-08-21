@@ -2,7 +2,7 @@
   "voice_id": "robert_mcmurrer_authorized_self_voice_v1",
   "name": "Robert McMurrer",
   "target_name": "Robert McMurrer",
-  "target_type": "owner_presence_ai",
+  "target_type": "synthetic_robert_persistent_runtime",
   "voice_mode": "authorized_self_voice_reference",
   "source_type": "self_voice_authorized_by_robert",
   "source_description": "Robert-provided video of Robert speaking, extracted into a reviewed local Chatterbox reference pack and explicitly reconfirmed by Robert on 2026-07-17.",
@@ -12,7 +12,7 @@
     "status": "owner_approved_reviewed_reference_prepared",
     "source_leads": [
       "Voice/reference_sources/robert_mcmurrer/source_leads_20260712.md",
-      "TemporaryAI/candidates/robert_mcmurrer_presence_ai/workbench/inputs/video_references/20260712_173909_robert_mcmurrer_authorized_speaking_video/VIDEO_REFERENCE_READ_FIRST.md"
+      "Voice/reference_packs/robert_mcmurrer/robert_mcmurrer_online_source_20260714_230541/README.md"
     ],
     "approved_reference_wav": "Voice/reference_packs/robert_mcmurrer/robert_mcmurrer_online_source_20260714_230541/model_input/approved_reference.wav",
     "candidate_clip_count": 24,
@@ -56,6 +56,6 @@
     "voice_model_backend_ready": true,
     "reference_model_input_ready": true,
     "readiness_label": "owner_approved_self_voice_ready_with_chatterbox_tts",
-    "note": "Prepared from Robert-authorized self-voice video and explicitly reconfirmed by Robert for private testing on 2026-07-17. Robert may still request later refinements."
+    "note": "Prepared from Robert-authorized self-voice material for the separate Synthetic Robert persistent runtime. This profile does not classify Synthetic Robert as a TemporaryAI and does not authorize taking over biological Robert's identity or body. Robert may still request later refinements."
   }
 }

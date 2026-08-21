@@ -92,9 +92,18 @@ def validate_private_self_voice_authorization(
         reasons.append("self_voice_subject_approval_missing")
     if allowed.get("private_local_text_voice_chat") is not True:
         reasons.append("private_text_voice_scope_missing")
-    for key in ("body_activation", "world_presence", "life_loop", "microphone", "webcam", "public_release"):
+    for key in (
+        "body_activation",
+        "world_presence",
+        "life_loop",
+        "microphone",
+        "webcam",
+        "unrestricted_public_voice_runtime",
+    ):
         if prohibited.get(key) is not True:
             reasons.append(f"required_scope_boundary_missing:{key}")
+    if allowed.get("kira_world_repository_distribution_of_reviewed_reference_files") is not True:
+        reasons.append("reviewed_reference_repository_distribution_missing")
 
     voice_id = str(voice_profile.get("voice_id") or "").strip()
     if not voice_id or binding.get("voice_profile_id") != voice_id:
@@ -152,4 +161,3 @@ def validate_private_self_voice_authorization(
         "reasons": reasons,
         "scope": "private_local_text_voice_chat_only",
     }
-

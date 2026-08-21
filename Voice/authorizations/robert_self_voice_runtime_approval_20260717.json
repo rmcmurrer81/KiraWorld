@@ -8,7 +8,8 @@
     "project_owner": true,
     "self_voice_subject": true,
     "instruction_date": "2026-07-17",
-    "instruction_context": "Robert confirmed that he already approved his own voice, supplied the sample, and used it previously, then asked Codex to test it."
+    "instruction_context": "Robert confirmed that he approved his own voice, supplied the sample, used it previously, and authorized the reviewed files for KiraWorld.",
+    "repository_distribution_instruction_date": "2026-08-21"
   },
   "scope": {
     "candidate_id": "robert_mcmurrer_presence_ai",
@@ -29,7 +30,8 @@
   "allowed": {
     "private_local_text_voice_chat": true,
     "offline_nonplaying_owner_review_wav": true,
-    "reuse_same_bound_voice_across_private_sessions": true
+    "reuse_same_bound_voice_across_private_sessions": true,
+    "kira_world_repository_distribution_of_reviewed_reference_files": true
   },
   "not_authorized": {
     "body_activation": true,
@@ -37,9 +39,9 @@
     "life_loop": true,
     "microphone": true,
     "webcam": true,
-    "public_release": true,
+    "unrestricted_public_voice_runtime": true,
     "official_voice_claim": true,
     "real_world_proxy_authority": true
   },
-  "review_note": "This is Robert's own expressly approved self-voice. Runtime resolution must fail closed if the bound WAV path, hash, reviewed duration, candidate id, or voice-profile id changes."
+  "review_note": "This is Robert's expressly approved self-voice reference for Synthetic Robert. Repository distribution of the reviewed files is authorized; unrestricted public voice runtime, identity authentication, and biological-Robert impersonation remain prohibited. Runtime resolution must fail closed if the bound WAV path, hash, reviewed duration, candidate id, or voice-profile id changes."
 }
