@@ -1,0 +1,61 @@
+{
+  "voice_id": "robert_mcmurrer_authorized_self_voice_v1",
+  "name": "Robert McMurrer",
+  "target_name": "Robert McMurrer",
+  "target_type": "owner_presence_ai",
+  "voice_mode": "authorized_self_voice_reference",
+  "source_type": "self_voice_authorized_by_robert",
+  "source_description": "Robert-provided video of Robert speaking, extracted into a reviewed local Chatterbox reference pack and explicitly reconfirmed by Robert on 2026-07-17.",
+  "runtime_authorization": "Voice/authorizations/robert_self_voice_runtime_approval_20260717.json",
+  "source_audio": {
+    "required": true,
+    "status": "owner_approved_reviewed_reference_prepared",
+    "source_leads": [
+      "Voice/reference_sources/robert_mcmurrer/source_leads_20260712.md",
+      "TemporaryAI/candidates/robert_mcmurrer_presence_ai/workbench/inputs/video_references/20260712_173909_robert_mcmurrer_authorized_speaking_video/VIDEO_REFERENCE_READ_FIRST.md"
+    ],
+    "approved_reference_wav": "Voice/reference_packs/robert_mcmurrer/robert_mcmurrer_online_source_20260714_230541/model_input/approved_reference.wav",
+    "candidate_clip_count": 24,
+    "reviewed_target_clip_count": 11,
+    "reviewed_target_seconds": 36.57,
+    "reference_pack": "Voice/reference_packs/robert_mcmurrer/robert_mcmurrer_online_source_20260714_230541",
+    "model_input_request": "Voice/reference_packs/robert_mcmurrer/robert_mcmurrer_online_source_20260714_230541/model_input/voice_model_request.json"
+  },
+  "sapi_approximation": {
+    "voice_name": "Microsoft David Desktop",
+    "rate": 0,
+    "volume": 95,
+    "max_chars": 1600,
+    "note": "Fallback only; Robert self-voice Chatterbox reference is now prepared."
+  },
+  "runtime_audio_postprocess": {
+    "scope": "synthetic_robert_private_runtime_only",
+    "gain_db": -9.5,
+    "proximity_cut_hz": 95.0,
+    "proximity_cut_mix": 0.3,
+    "calibration_basis": "Robert approved the perceived level of the two finalized Kira World video narrations, which use this exact one-pass gain and proximity correction.",
+    "application_stage": "written_chatterbox_pcm_before_playback",
+    "application_count": 1,
+    "pitch_changed": false,
+    "other_people_unchanged": true,
+    "finalized_video_files_unchanged": true
+  },
+  "reconstruction_rules": {
+    "must_use_only_reviewed_robert_only_clips": true,
+    "must_not_use_mixed_audio_directly": true,
+    "must_remain_labeled_until_robert_reviews": false,
+    "authorization_basis": "Robert explicitly provided the source as his own voice for this purpose and reconfirmed approval for testing/private text-voice chat on 2026-07-17."
+  },
+  "status": {
+    "approval_state": "owner_approved_self_voice_reference",
+    "ready_for_use": true,
+    "ready_for_text_tts": true,
+    "ready_for_clone": false,
+    "source_audio_collected": true,
+    "current_playback_engine": "chatterbox_tts",
+    "voice_model_backend_ready": true,
+    "reference_model_input_ready": true,
+    "readiness_label": "owner_approved_self_voice_ready_with_chatterbox_tts",
+    "note": "Prepared from Robert-authorized self-voice video and explicitly reconfirmed by Robert for private testing on 2026-07-17. Robert may still request later refinements."
+  }
+}

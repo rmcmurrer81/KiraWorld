@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "target": {
+    "name": "Peter Parker",
+    "id": "peter_parker",
+    "form_or_version": "Robert supplied Spider-Man/Peter conversation source lead 2026-07-06"
+  },
+  "reference_audio": "Voice/reference_packs/peter_parker/peter_parker_online_source_20260706_035930/model_input/approved_reference.wav",
+  "approved_clip_count": 15,
+  "approved_seconds": 28.83,
+  "language": "en",
+  "model_backend": "chatterbox_tts",
+  "status": "local_synthesizer_configured",
+  "note": "Uses Robert-reviewed Peter target clips with local Chatterbox TTS when available. Raw mixed source audio is never passed through.",
+  "generated_output_dir": "Voice/generated/temp_ai/peter_parker"
+}

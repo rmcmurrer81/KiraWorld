@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "target": {
+    "name": "Ladybug",
+    "id": "ladybug",
+    "form_or_version": "English dub / Ladybug form"
+  },
+  "reference_audio": "Voice/reference_packs/ladybug/ladybug_miraculous_ladybug_s01e05_mr_pigeon_20260619_184235/model_input/approved_reference.wav",
+  "approved_clip_count": 28,
+  "approved_seconds": 88.44,
+  "language": "en",
+  "model_backend": "chatterbox_tts",
+  "status": "local_synthesizer_configured",
+  "generated_output_dir": "Voice/generated/temp_ai/ladybug",
+  "last_test_output": "Voice/generated/temp_ai/ladybug/tts_20260628_165825.wav",
+  "last_test_device": "cuda",
+  "note": "Uses the reviewed reference WAV with local Chatterbox TTS on CUDA when available. Raw source audio is never passed through."
+}

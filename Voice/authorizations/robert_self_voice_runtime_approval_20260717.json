@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authorization_id": "robert_self_voice_runtime_approval_20260717",
+  "recorded_at": "2026-07-17T03:05:00-04:00",
+  "status": "approved_for_private_local_text_voice_chat",
+  "authorized_by": {
+    "name": "Robert McMurrer",
+    "project_owner": true,
+    "self_voice_subject": true,
+    "instruction_date": "2026-07-17",
+    "instruction_context": "Robert confirmed that he already approved his own voice, supplied the sample, and used it previously, then asked Codex to test it."
+  },
+  "scope": {
+    "candidate_id": "robert_mcmurrer_presence_ai",
+    "person": "synthetic_robert_variant",
+    "surface": "private_local_text_voice_chat",
+    "biological_robert_and_synthetic_robert_remain_distinct": true
+  },
+  "binding": {
+    "voice_profile_id": "robert_mcmurrer_authorized_self_voice_v1",
+    "voice_profile": "Voice/profiles/temp_ai/robert_mcmurrer_voice_profile.json",
+    "approved_reference_wav": "Voice/reference_packs/robert_mcmurrer/robert_mcmurrer_online_source_20260714_230541/model_input/approved_reference.wav",
+    "approved_reference_sha256": "761458a0fe9c5da1c2671faa738c1e329336630cd47138a4e738f7de2030542b",
+    "review_manifest": "Voice/reference_packs/robert_mcmurrer/robert_mcmurrer_online_source_20260714_230541/clip_review.json",
+    "reviewed_target_clip_count": 11,
+    "reviewed_target_seconds": 36.57,
+    "model_backend": "chatterbox_tts"
+  },
+  "allowed": {
+    "private_local_text_voice_chat": true,
+    "offline_nonplaying_owner_review_wav": true,
+    "reuse_same_bound_voice_across_private_sessions": true
+  },
+  "not_authorized": {
+    "body_activation": true,
+    "world_presence": true,
+    "life_loop": true,
+    "microphone": true,
+    "webcam": true,
+    "public_release": true,
+    "official_voice_claim": true,
+    "real_world_proxy_authority": true
+  },
+  "review_note": "This is Robert's own expressly approved self-voice. Runtime resolution must fail closed if the bound WAV path, hash, reviewed duration, candidate id, or voice-profile id changes."
+}
