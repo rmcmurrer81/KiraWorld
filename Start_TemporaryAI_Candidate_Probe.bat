@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "C:\Users\robmc\Kira"
+cd /d "%~dp0"
 set "KIRA_MODEL_BACKEND=ollama"
 set "KIRA_MODEL_NAME=qwen3.5:9b"
 set "KIRA_MODEL_DIGEST=6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7"

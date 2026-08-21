@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "CURRENT_OWNER_EXACT_GENERATED_EXPERT_ADULT_CURRICULUM_EXTENSION",
+  "evidence_id": "generated_expert_adult_curriculum_owner_extension_20260809_d2c32a5b4eed8ef2",
+  "recorded_at_utc": "2026-08-09T21:27:27.117Z",
+  "authority": "Robert_explicit_owner_confirmation",
+  "source_text": "All experts are adults and adults have sex education knowledge that you already gave to kira.",
+  "source_text_sha256": "d2c32a5b4eed8ef21c7744544fe1929e73d4aa219bf8f5714e7d01df69d752d9",
+  "existing_exact_adulthood_directive": {
+    "path": "Avatar/avatar_builder/policies/evidence/generated_experts_adult_owner_directive_20260716.json",
+    "sha256": "ea7218ece3c5e187020e53ba77bfa11dcfacdb344c8714f17d38f2a02e56386b",
+    "evidence_id": "generated_experts_adult_owner_directive_20260716",
+    "directive": "All generated expert TemporaryAI profiles are adults.",
+    "directive_sha256": "f534181f2fb58bb04ada09659d6e0dd32f8611e24b0a87d01b20a66461441f71"
+  },
+  "exact_candidate_ids": [
+    "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+    "jessica_hale_robotics_engineer_20260611_041314",
+    "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+    "ryan_hale_quantum_mechanics_expert_20260608_200749",
+    "sarah_bennett_entertainment_pr_agent_expert_20260606_171637"
+  ],
+  "scope": {
+    "exact_list_only": true,
+    "future_or_unlisted_experts_auto_classified": false,
+    "occupation_name_gender_or_ui_label_is_maturity_evidence": false,
+    "maturity_status": "confirmed_adult",
+    "curriculum_assignment": "IMMEDIATE_COMPLETE_SOURCE_BACKED_ADULT_CURRICULUM"
+  },
+  "truth_boundaries": {
+    "source_context_eligibility_is_lesson_completion": false,
+    "source_context_eligibility_is_learning_memory": false,
+    "confirmed_adult_classification_adds_anatomy": false,
+    "confirmed_adult_classification_proves_body_function": false,
+    "confirmed_adult_classification_creates_consent": false,
+    "confirmed_adult_classification_authorizes_external_action": false,
+    "body_response_is_desire_preference_or_consent": false,
+    "relationship_status_is_consent": false,
+    "runtime_activation_allowed": false
+  }
+}

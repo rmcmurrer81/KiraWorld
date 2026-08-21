@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "CURRENT_OWNER_CONFIRMED_ADULT_CLASSIFICATION",
+  "classification_id": "lisa_confirmed_adult_owner_20260809_cb6430bda0f7d41e",
+  "subject_id": "lisa",
+  "maturity_status": "confirmed_adult",
+  "authority": "Robert_explicit_owner_confirmation",
+  "offline_confirmation_allowed": true,
+  "network_lookup_required": false,
+  "recorded_at_utc": "2026-08-09T22:00:22.590Z",
+  "source_text": "everyone except for marinette should be adult",
+  "source_text_sha256": "cb6430bda0f7d41eddf10b82676daa1913e52c39a51e0fb2cba2cf437ed35233",
+  "source_scope": {
+    "exact_subject_application": "Lisa is not Marinette; this record applies the owner's stated all-except-Marinette adult classification to exact subject_id lisa.",
+    "classification_by_name_role_or_model_output": false,
+    "future_people_auto_classified": false
+  },
+  "curriculum_binding": {
+    "path": "System/Knowledge/confirmed_adult_sexual_reproductive_health_curriculum_v1.json",
+    "sha256": "f64418eafb120dc4c9f5b02bb6735b1329e6baf932a8b529ef08140af773c7c9",
+    "curriculum_id": "confirmed_adult_sexual_reproductive_health_curriculum_v1",
+    "assignment": "IMMEDIATE_COMPLETE_SOURCE_BACKED_ADULT_CURRICULUM"
+  },
+  "effects": {
+    "knowledge_context_eligible": true,
+    "lesson_completion_claimed": false,
+    "learning_memory_created": false,
+    "adult_anatomy_auto_added": false,
+    "body_function_claimed": false,
+    "relationship_or_activity_permission_created": false,
+    "external_action_authorized": false
+  }
+}

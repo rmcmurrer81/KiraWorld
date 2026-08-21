@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "C:\Users\robmc\Kira"
+cd /d "%~dp0"
 set "Path=%LOCALAPPDATA%\Programs\Ollama;%Path%"
 set "KIRA_MODEL_BACKEND=ollama"
 set "KIRA_MODEL_NAME=qwen3.5:9b"

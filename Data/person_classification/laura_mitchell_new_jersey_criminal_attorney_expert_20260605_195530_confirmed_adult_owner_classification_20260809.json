@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "CURRENT_OWNER_CONFIRMED_ADULT_CLASSIFICATION",
+  "classification_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530_confirmed_adult_owner_20260809_d2c32a5b4eed8ef2",
+  "subject_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+  "maturity_status": "confirmed_adult",
+  "authority": "Robert_explicit_owner_confirmation",
+  "offline_confirmation_allowed": true,
+  "network_lookup_required": false,
+  "recorded_at_utc": "2026-08-09T21:27:27.117Z",
+  "source_text": "All experts are adults and adults have sex education knowledge that you already gave to kira.",
+  "source_text_sha256": "d2c32a5b4eed8ef21c7744544fe1929e73d4aa219bf8f5714e7d01df69d752d9",
+  "owner_directive_binding": {
+    "candidate_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+    "adult_directive_path": "Avatar/avatar_builder/policies/evidence/generated_experts_adult_owner_directive_20260716.json",
+    "adult_directive_sha256": "ea7218ece3c5e187020e53ba77bfa11dcfacdb344c8714f17d38f2a02e56386b",
+    "adult_directive_evidence_id": "generated_experts_adult_owner_directive_20260716",
+    "curriculum_extension_path": "Data/person_classification/generated_expert_adult_curriculum_owner_extension_20260809.json",
+    "curriculum_extension_sha256": "e1a09a41314380328db79a7335607350feff8d9876b30d78a8fe9352b6452ea1",
+    "curriculum_extension_evidence_id": "generated_expert_adult_curriculum_owner_extension_20260809_d2c32a5b4eed8ef2"
+  },
+  "curriculum_binding": {
+    "path": "System/Knowledge/confirmed_adult_sexual_reproductive_health_curriculum_v1.json",
+    "sha256": "f64418eafb120dc4c9f5b02bb6735b1329e6baf932a8b529ef08140af773c7c9",
+    "curriculum_id": "confirmed_adult_sexual_reproductive_health_curriculum_v1",
+    "assignment": "IMMEDIATE_COMPLETE_SOURCE_BACKED_ADULT_CURRICULUM"
+  },
+  "effects": {
+    "knowledge_context_eligible": true,
+    "lesson_completion_claimed": false,
+    "learning_memory_created": false,
+    "adult_anatomy_auto_added": false,
+    "body_function_claimed": false,
+    "relationship_or_activity_permission_created": false,
+    "external_action_authorized": false,
+    "runtime_activation_allowed": false
+  }
+}
