@@ -1,0 +1,118 @@
+{
+  "schema": "kira.avatar.medical_reference.hra_female_whole_body_intake.v1",
+  "status": "SOURCE_REFERENCE_ONLY_NOT_A_BODY_NOT_FUNCTIONAL",
+  "retrieved_utc_date": "2026-08-20",
+  "source_collection": {
+    "name": "Human Reference Atlas CCF 3D Reference Object Library",
+    "catalog": "https://hubmapconsortium.github.io/ccf/pages/ccf-3d-reference-library.html",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "visible_human_source": "https://www.nlm.nih.gov/research/visible/visible_human.html",
+    "attribution": "Human Reference Atlas / HuBMAP CCF 3D Reference Object Library; source anatomy derived from the NLM Visible Human Dataset."
+  },
+  "validation": {
+    "glb_magic": "glTF",
+    "glb_version": 2,
+    "declared_length_matches_file": true,
+    "json_chunk_decoded": true,
+    "all_files_passed": true
+  },
+  "files": [
+    {
+      "path": "VH_F_Kidney_L.glb",
+      "bytes": 1330900,
+      "sha256": "8ac1228e4db8c07cbf9f6c6dc7ca522c5b8d61f641927233a29ae6609b577403",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Kidney_L.glb",
+      "mesh_count": 15,
+      "nih_3d_entry": "https://3d.nih.gov/entries/3DPX-020967"
+    },
+    {
+      "path": "VH_F_Kidney_R.glb",
+      "bytes": 1356976,
+      "sha256": "a67508e6948723d34a29fea2bc8c96931a8fe2f8a08293fd1c3161cfcf13968e",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Kidney_R.glb",
+      "mesh_count": 14,
+      "nih_3d_entry": "https://3d.nih.gov/entries/20968?version=1.01"
+    },
+    {
+      "path": "VH_F_Heart.glb",
+      "bytes": 1745284,
+      "sha256": "9afdfb2ccf926869813582cfe150dce8cb28377417a968a4f29a5b8dc060428b",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Heart.glb",
+      "mesh_count": 14,
+      "nih_3d_entry": "https://3d.nih.gov/entries/20966"
+    },
+    {
+      "path": "VH_F_Blood_Vasculature.glb",
+      "bytes": 7262232,
+      "sha256": "4b034a65527938ccbeba4f3514c282bd399a4384fb23ba8095b01e2a3219486a",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Blood_Vasculature.glb",
+      "mesh_count": 108,
+      "nih_3d_entry": "https://3d.nih.gov/entries/3DPX-020961"
+    },
+    {
+      "path": "VH_F_Lung.glb",
+      "bytes": 11240608,
+      "sha256": "a6a81718f4d0974bcbab47c6dc38efc941ad5c7f5f256bf7ff112c710a7fd932",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Lung.glb",
+      "mesh_count": 65,
+      "nih_3d_entry": "https://3d.nih.gov/entries/20974",
+      "note": "Reference lung geometry does not by itself provide a complete airway route or respiratory function."
+    },
+    {
+      "path": "VH_F_Small_Intestine.glb",
+      "bytes": 856388,
+      "sha256": "34cc2d8aa0c782080cadc2e8474a727dce50f829bec3a4857202eba97e110efb",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Small_Intestine.glb",
+      "mesh_count": 9,
+      "note": "Includes duodenum, jejunum, and ileum; it does not establish a mouth-to-stomach route, digestion, absorption, eating, or drinking."
+    },
+    {
+      "path": "VH_F_Liver.glb",
+      "bytes": 1738032,
+      "sha256": "ad9b0be0ff253e7bfe31bfffc00017dafce226d4f3e7804a81cbb4c2e269d598",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Liver.glb",
+      "mesh_count": 26
+    },
+    {
+      "path": "VH_F_Pancreas.glb",
+      "bytes": 216380,
+      "sha256": "7aed6a1c35d5bd8514a8b6c77a8b57f02ffd61ba555e83405d037b8ee4e3d2f3",
+      "url": "https://ccf-ontology.hubmapconsortium.org/objects/v1.2/VH_F_Pancreas.glb",
+      "mesh_count": 5
+    }
+  ],
+  "coverage": {
+    "geometry_present": [
+      "left_kidney",
+      "right_kidney",
+      "heart",
+      "female_blood_vasculature",
+      "lungs",
+      "small_intestine",
+      "liver",
+      "pancreas"
+    ],
+    "still_open": [
+      "complete_mouth_pharynx_esophagus_stomach_digestive_route",
+      "complete_airway_route",
+      "complete_peripheral_nervous_system",
+      "complete_endocrine_system",
+      "complete_lymphatic_immune_network",
+      "complete_musculoskeletal_system",
+      "all_geometry_to_carrier_bindings",
+      "all_collision_and_pose_deformation_evidence",
+      "all_biological_function"
+    ]
+  },
+  "truth_boundary": [
+    "REFERENCE_GEOMETRY_ONLY",
+    "NO_KIRA_BODY_CREATED_OR_CHANGED",
+    "NO_EXTERNAL_ANATOMY_REPLACEMENT",
+    "NO_COMPLETE_WHOLE_BODY_CLAIM",
+    "NO_EATING_DRINKING_DIGESTION_ABSORPTION_OR_RESPIRATION_CLAIM",
+    "NO_PHYSIOLOGICAL_OR_SUBJECTIVE_FUNCTION_CLAIM",
+    "NO_RUNTIME_ACTIVATION_OR_ASSIGNMENT",
+    "PRIVATE_CLINICAL_REVIEW_DERIVATIVES_ONLY"
+  ]
+}
