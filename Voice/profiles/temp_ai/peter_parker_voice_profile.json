@@ -1,5 +1,6 @@
 {
   "voice_id": "peter_parker_reviewed_reference_v1",
+  "candidate_id": "peter_parker_spider_man_no_way_home_final_suit",
   "name": "Peter Parker",
   "target_name": "Peter Parker",
   "target_type": "temp_ai",
@@ -25,6 +26,7 @@
     "reference_pack": "Voice/reference_packs/peter_parker/peter_parker_online_source_20260706_035930",
     "model_input_request": "Voice/reference_packs/peter_parker/peter_parker_online_source_20260706_035930/model_input/voice_model_request.json",
     "approved_reference_wav": "Voice/reference_packs/peter_parker/peter_parker_online_source_20260706_035930/model_input/approved_reference.wav",
+    "approved_reference_sha256": "0cbeff9bc1811fc626ef649cc1649d209f767bcd64200a0b93d3e8833bbe2af4",
     "candidate_clip_count": 48,
     "reviewed_target_clip_count": 15,
     "reviewed_target_seconds": 28.83,
@@ -82,15 +84,17 @@
     "must_remain_labeled_placeholder_until_reviewed": false
   },
   "status": {
-    "approval_state": "draft",
-    "ready_for_use": false,
+    "approval_state": "owner_directed_private_bounded_review",
+    "ready_for_use": true,
     "ready_for_text_tts": true,
+    "bounded_profile_review_tts_allowed": true,
+    "authentic_voice_claim_allowed": false,
     "ready_for_clone": false,
     "source_audio_collected": true,
     "current_playback_engine": "chatterbox_tts",
     "voice_model_backend_ready": true,
     "reference_model_input_ready": true,
     "readiness_label": "reviewed_reference_active_with_chatterbox_tts",
-    "note": "The 15 Robert-reviewed Peter clips have been prepared as approved_reference.wav and are now available to the local Chatterbox TTS playback path."
+    "note": "The 15 Robert-reviewed clips are prepared as an identity-bound private reconstruction reference for bounded review. This is not an authentic voice claim."
   }
 }

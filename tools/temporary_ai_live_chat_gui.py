@@ -6,6 +6,7 @@ can choose a candidate by clicking its name instead of typing an id.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import os
@@ -40,11 +41,22 @@ from temporary_ai_live_chat import (
     refresh_candidate_sources,
     safe_output_name,
     save_reply_artifacts,
+    source_grounded_text_route_readiness,
+    source_readiness,
     source_readiness_label,
     slug,
     write_json,
 )
+from Core.downloaded_person_chat_catalog import (
+    bind_review_and_voice_route,
+    exact_candidate_voice_binding,
+)
 from Core.person_mind_runtime import finalize_person_turn
+from Core.profile_bounded_candidate_review import (
+    load_profile_bounded_candidate,
+    profile_bounded_review_readiness,
+)
+from profile_bounded_candidate_chat import ask_profile_bounded_model
 
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
@@ -62,7 +74,13 @@ from Core.avatar_living_portrait import (
 )
 from Core.avatar_activity_state import discover_pose_manifest, discover_rigged_model, write_avatar_activity_state
 from Core.embedded_edge_avatar import EmbeddedEdgeAvatar
+from Core.portable_os_voice import (
+    OSVoiceRoute,
+    cached_candidate_os_voice_route,
+    speak_with_os_voice,
+)
 from Core.private_self_voice_authorization import validate_private_self_voice_authorization
+from Core.synthetic_robert_voice_route import is_synthetic_robert_persistent_identity
 from tools.import_avatar_pose_sheet import import_pose_sheet
 
 TEMP_AI_LOOP_ROOT = PROJECT_ROOT / "Data" / "personhood_evaluations" / "temporary_ai_project_loops"
@@ -90,13 +108,151 @@ def _explicit_boolean(value: object) -> bool | None:
     return None
 
 
+def _voice_profile_binding_reason(
+    candidate: dict[str, Any],
+    voice_profile: dict[str, Any],
+) -> str:
+    """Require exact candidate binding plus exact voice/target profile identity."""
+
+    profile = candidate.get("profile") if isinstance(candidate.get("profile"), dict) else {}
+    candidate_id = str(candidate.get("candidate_id") or "").strip()
+    declared_candidate_id = str(profile.get("candidate_id") or "").strip()
+    if not candidate_id:
+        return "candidate_id_missing"
+    if not declared_candidate_id:
+        return "candidate_profile_candidate_id_missing"
+    if declared_candidate_id != candidate_id:
+        return "candidate_profile_candidate_id_mismatch"
+
+    binding = exact_candidate_voice_binding(candidate_id)
+    if not isinstance(binding, dict):
+        return "exact_candidate_voice_binding_missing"
+    if str(binding.get("candidate_id") or "").strip() != candidate_id:
+        return "exact_candidate_voice_binding_id_mismatch"
+    if str(voice_profile.get("voice_id") or "").strip() != str(
+        binding.get("expected_voice_id") or ""
+    ).strip():
+        return "voice_profile_voice_id_mismatch"
+    if str(voice_profile.get("target_name") or "").strip() != str(
+        binding.get("expected_target_name") or ""
+    ).strip():
+        return "voice_profile_target_name_mismatch"
+    if str(voice_profile.get("target_type") or "").strip() != str(
+        binding.get("expected_target_type") or ""
+    ).strip():
+        return "voice_profile_target_type_mismatch"
+    if binding.get("profile_bounded_custom_voice_allowed") is True:
+        if str(voice_profile.get("candidate_id") or "").strip() != candidate_id:
+            return "voice_profile_candidate_id_mismatch"
+    return ""
+
+
+def _read_bound_voice_profile(
+    path: Path,
+    candidate: dict[str, Any],
+) -> tuple[dict[str, Any], str]:
+    try:
+        raw = path.read_bytes()
+        binding = exact_candidate_voice_binding(str(candidate.get("candidate_id") or ""))
+        expected_hash = (
+            str(binding.get("expected_profile_sha256") or "").strip().lower()
+            if isinstance(binding, dict)
+            else ""
+        )
+        if not expected_hash or hashlib.sha256(raw).hexdigest() != expected_hash:
+            return {}, "voice_profile_sha256_mismatch"
+        payload = json.loads(raw.decode("utf-8-sig"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        return {}, f"voice_profile_invalid_json:{type(exc).__name__}"
+    if not isinstance(payload, dict):
+        return {}, "voice_profile_root_not_object"
+    reason = _voice_profile_binding_reason(candidate, payload)
+    return (payload, "") if not reason else ({}, reason)
+
+
+def _file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _bound_custom_voice_readiness(
+    candidate: dict[str, Any],
+    voice_profile: dict[str, Any],
+    project_root: Path,
+) -> tuple[bool, str]:
+    """Validate exact private reconstruction profile status and WAV bytes."""
+
+    candidate_id = str(candidate.get("candidate_id") or "").strip()
+    binding = exact_candidate_voice_binding(candidate_id)
+    if not isinstance(binding, dict):
+        return False, "exact candidate voice binding is missing"
+    if binding.get("profile_bounded_custom_voice_allowed") is not True:
+        return False, "candidate-specific custom voice is not authorized for bounded review"
+    if binding.get("authentic_voice_claim_allowed") is not False:
+        return False, "custom voice binding lacks the required non-authentic boundary"
+
+    status = voice_profile.get("status")
+    status = status if isinstance(status, dict) else {}
+    if status.get("ready_for_use") is not True:
+        return False, "candidate-specific voice profile is not ready for use"
+    if status.get("ready_for_text_tts") is not True:
+        return False, "candidate-specific voice profile is not ready for text-to-speech"
+    if status.get("bounded_profile_review_tts_allowed") is not True:
+        return False, "candidate-specific voice profile is not approved for bounded review TTS"
+    if status.get("authentic_voice_claim_allowed") is not False:
+        return False, "candidate-specific voice profile lacks the non-authentic boundary"
+
+    source_audio = voice_profile.get("source_audio")
+    source_audio = source_audio if isinstance(source_audio, dict) else {}
+    expected_path = str(binding.get("approved_reference_path") or "").replace("\\", "/")
+    declared_path = str(source_audio.get("approved_reference_wav") or "").replace("\\", "/")
+    expected_hash = str(binding.get("approved_reference_sha256") or "").strip().lower()
+    declared_hash = str(source_audio.get("approved_reference_sha256") or "").strip().lower()
+    if not expected_path or declared_path != expected_path:
+        return False, "approved reference path does not match the exact candidate binding"
+    if not expected_hash or declared_hash != expected_hash:
+        return False, "approved reference hash declaration does not match the exact candidate binding"
+    raw_path = Path(expected_path)
+    if raw_path.is_absolute():
+        return False, "approved reference path must be project-relative"
+    try:
+        root = project_root.resolve()
+        reference_path = (root / raw_path).resolve()
+        reference_path.relative_to(root)
+    except (OSError, ValueError):
+        return False, "approved reference path points outside this project"
+    if not reference_path.is_file():
+        return False, "approved reference WAV is absent from this checkout"
+    try:
+        if _file_sha256(reference_path) != expected_hash:
+            return False, "approved reference WAV SHA-256 mismatch"
+    except OSError:
+        return False, "approved reference WAV could not be read"
+    return True, ""
+
+
 def _project_voice_profile_path(candidate: dict[str, Any], project_root: Path = PROJECT_ROOT) -> tuple[Path | None, str]:
-    """Resolve one candidate-specific profile without borrowing a global voice."""
+    """Resolve only the profile declared by the exact candidate-id catalog row."""
 
     profile = candidate.get("profile") if isinstance(candidate.get("profile"), dict) else {}
     voice = profile.get("voice_and_behavior") if isinstance(profile.get("voice_and_behavior"), dict) else {}
     explicit_path = str(voice.get("voice_profile") or "").strip().replace("\\", "/")
     root = project_root.resolve()
+    candidate_id = str(candidate.get("candidate_id") or "").strip()
+    binding = exact_candidate_voice_binding(candidate_id)
+    if not isinstance(binding, dict):
+        return None, "No exact candidate-id voice binding is declared."
+    expected_relative = str(binding.get("voice_profile_path") or "").strip().replace("\\", "/")
+    if not expected_relative or Path(expected_relative).is_absolute():
+        return None, "The exact candidate voice binding has an invalid profile path."
+    try:
+        expected_path = (root / expected_relative).resolve()
+        expected_path.relative_to(root)
+    except (OSError, ValueError):
+        return None, "The exact candidate voice binding points outside this project."
     if explicit_path:
         raw = Path(explicit_path)
         if raw.is_absolute():
@@ -106,38 +262,93 @@ def _project_voice_profile_path(candidate: dict[str, Any], project_root: Path = 
             resolved.relative_to(root)
         except (OSError, ValueError):
             return None, "The configured voice profile points outside this Kira project."
+        if resolved != expected_path:
+            return None, "The configured voice profile does not match the exact candidate-id binding."
         if not resolved.is_file():
             return None, f"The configured candidate voice profile is missing: {explicit_path}"
+        _payload, binding_reason = _read_bound_voice_profile(resolved, candidate)
+        if binding_reason:
+            return None, f"Configured voice profile identity binding failed: {binding_reason}"
         return resolved, ""
 
-    display = str(profile.get("display_name") or "").strip().lower()
-    candidate_id = str(candidate.get("candidate_id") or profile.get("candidate_id") or "").strip().lower()
-    identity = f"{display} {candidate_id}"
-    aliases: list[str] = []
-    if "ladybug" in identity or "marinette" in identity:
-        aliases.append("ladybug")
-    if "kira" in identity:
-        aliases.append("kira")
-    if "peter parker" in identity or "peter_parker" in identity or "spider man" in identity or "spider_man" in identity:
-        aliases.append("peter_parker")
-    if "robert_mcmurrer" in identity or "robert presence" in identity or "synthetic robert" in identity:
-        aliases.append("robert_mcmurrer")
-    if "kara zor" in identity or "kara_zor" in identity:
-        aliases.append("kara_zor_el")
-    if "h. h. holmes" in identity or "h h holmes" in identity or "h_h_holmes" in identity:
-        aliases.append("h_h_holmes")
-    slugged = slug(display)
-    if slugged:
-        aliases.append(slugged)
-    for alias in dict.fromkeys(aliases):
-        path = root / "Voice" / "profiles" / "temp_ai" / f"{alias}_voice_profile.json"
-        if path.is_file():
-            return path, ""
-    return None, "No candidate-specific voice profile is configured. Global Kira/Windows voice fallback is disabled."
+    if not expected_path.is_file():
+        return None, f"The exactly bound candidate voice profile is missing: {expected_relative}"
+    _payload, binding_reason = _read_bound_voice_profile(expected_path, candidate)
+    if binding_reason:
+        return None, f"Mapped voice profile identity binding failed: {binding_reason}"
+    return expected_path, ""
+
+
+_RUNTIME_ERROR_REPLY_PREFIXES = (
+    "[TemporaryAI - model offline]",
+    "[TemporaryAI - error]",
+    "[Draft review - profile-bounded] The local model is offline.",
+    "[Draft review - profile-bounded] The bounded review could not answer",
+)
+
+
+def _runtime_error_reply_reason(answer: object) -> str:
+    text = str(answer or "").strip()
+    for prefix in _RUNTIME_ERROR_REPLY_PREFIXES:
+        if text.startswith(prefix):
+            return "runtime_source_or_model_error_text"
+    return ""
+
+
+def _voice_text_route_readiness(
+    candidate: dict[str, Any],
+) -> tuple[bool, str, list[str]]:
+    """Revalidate the text route appropriate to this exact review mode."""
+
+    review_mode = str(candidate.get("review_mode") or "").strip()
+    if review_mode == "profile_bounded_draft":
+        try:
+            ready, reasons = profile_bounded_review_readiness(candidate)
+        except Exception as exc:
+            return False, f"profile_bounded_text_route_check_error:{type(exc).__name__}", []
+        if ready is not True:
+            return False, "profile_bounded_text_route_denied", [str(item) for item in (reasons or [])]
+        decision = candidate.get("text_route_decision")
+        decision = decision if isinstance(decision, dict) else {}
+        candidate_id = str(candidate.get("candidate_id") or "").strip()
+        exact_binding = exact_candidate_voice_binding(candidate_id)
+        bounded_custom_voice = bool(
+            isinstance(exact_binding, dict)
+            and exact_binding.get("profile_bounded_custom_voice_allowed") is True
+            and exact_binding.get("authentic_voice_claim_allowed") is False
+        )
+        required = {
+            "allowed": True,
+            "review_mode": "profile_bounded_draft",
+            "full_source_grounding_complete": False,
+            "profile_bounded_label_required": True,
+            "voice_output_allowed": True,
+            "custom_voice_output_allowed": bounded_custom_voice,
+            "generic_os_voice_output_allowed": True,
+            "error_or_exception_text_may_reach_tts": False,
+        }
+        if any(decision.get(key) != value for key, value in required.items()):
+            return False, "profile_bounded_text_route_binding_invalid", []
+        if exact_binding is not None and candidate.get("voice_route_binding") != exact_binding:
+            return False, "profile_bounded_voice_binding_invalid", []
+        return True, "", []
+
+    try:
+        ready, reasons = source_grounded_text_route_readiness(candidate)
+    except Exception as exc:
+        return False, f"source_grounded_text_route_check_error:{type(exc).__name__}", []
+    if ready is not True:
+        return False, "source_grounded_text_route_denied", [str(item) for item in (reasons or [])]
+    return True, "", []
 
 
 def candidate_voice_output_decision(candidate: dict[str, Any], project_root: Path = PROJECT_ROOT) -> dict[str, Any]:
-    """Fail closed unless both candidate policy and a specific voice route are ready."""
+    """Prefer a ready custom pack, then discover a labeled local OS voice.
+
+    Conversation authorization remains fail-closed.  An OS voice is only an
+    output fallback for a character that is otherwise allowed to speak; it
+    does not bypass a text-only activation plan or claim an authentic voice.
+    """
 
     profile = candidate.get("profile") if isinstance(candidate.get("profile"), dict) else {}
     activation = profile.get("activation_policy") if isinstance(profile.get("activation_policy"), dict) else {}
@@ -145,11 +356,99 @@ def candidate_voice_output_decision(candidate: dict[str, Any], project_root: Pat
     plan = candidate.get("activation_plan") if isinstance(candidate.get("activation_plan"), dict) else {}
     mode_readiness = plan.get("mode_readiness") if isinstance(plan.get("mode_readiness"), dict) else {}
     plan_voice = mode_readiness.get("voice_chat") if isinstance(mode_readiness.get("voice_chat"), dict) else {}
+    plan_text = mode_readiness.get("text_chat") if isinstance(mode_readiness.get("text_chat"), dict) else {}
     display = str(profile.get("display_name") or candidate.get("candidate_id") or "This candidate")
+    candidate_id = str(candidate.get("candidate_id") or profile.get("candidate_id") or "").strip()
+    if is_synthetic_robert_persistent_identity(candidate):
+        return {
+            "allowed": False,
+            "reason": (
+                "Synthetic Robert is a persistent-runtime person, not a TemporaryAI; "
+                "use his separate portable persistent runtime and approved self-voice route."
+            ),
+            "route_kind": "persistent_runtime_route_required",
+            "profile_path": None,
+            "display": display,
+        }
 
-    if _explicit_boolean(plan_voice.get("ready")) is False:
-        reason = str(plan_voice.get("reason") or "The candidate activation plan has not approved voice chat.").strip()
+    text_route_ready, text_route_reason, text_route_reasons = _voice_text_route_readiness(candidate)
+    if not text_route_ready:
+        reasons = ", ".join(str(item) for item in text_route_reasons[:4])
+        if text_route_reason.endswith("_check_error:RuntimeError"):
+            public_reason = "The text-route readiness check failed closed (RuntimeError)."
+        elif "_check_error:" in text_route_reason:
+            public_reason = (
+                "The text-route readiness check failed closed "
+                f"({text_route_reason.rsplit(':', 1)[-1]})."
+            )
+        else:
+            public_reason = "The text route denied voice output" + (f" ({reasons})." if reasons else ".")
+        return {
+            "allowed": False,
+            "reason": public_reason,
+            "route_kind": text_route_reason.split(":", 1)[0],
+            "profile_path": None,
+            "display": display,
+        }
+    text_route_decision = candidate.get("text_route_decision")
+    text_route_decision = text_route_decision if isinstance(text_route_decision, dict) else {}
+    profile_bounded_generic_route = (
+        str(candidate.get("review_mode") or "").strip() == "profile_bounded_draft"
+    )
+    if text_route_decision and (
+        text_route_decision.get("allowed") is not True
+        or text_route_decision.get("voice_output_allowed") is not True
+        or text_route_decision.get("error_or_exception_text_may_reach_tts") is not False
+    ):
+        return {
+            "allowed": False,
+            "reason": "The bound text route does not authorize voice output.",
+            "route_kind": "bound_text_route_denied",
+            "profile_path": None,
+            "display": display,
+        }
+
+    if (
+        not profile_bounded_generic_route
+        and _explicit_boolean(plan_text.get("ready")) is False
+    ):
+        reason = str(plan_text.get("reason") or "The candidate activation plan has not approved text conversation.").strip()
         return {"allowed": False, "reason": reason, "profile_path": None, "display": display}
+
+    text_permissions: list[bool] = []
+    for source in (activation, profile):
+        for key in (
+            "bounded_text_only_conversation_allowed",
+            "bounded_text_conversation_allowed",
+            "bounded_owner_text_probe_allowed",
+            "owner_probe_allowed",
+            "text_chat_allowed",
+            "text_voice_chat_allowed",
+        ):
+            if key in source:
+                value = _explicit_boolean(source.get(key))
+                if value is not None:
+                    text_permissions.append(value)
+    text_explicitly_allowed = any(text_permissions)
+    text_explicitly_blocked = bool(text_permissions) and not text_explicitly_allowed
+    if profile_bounded_generic_route:
+        # The profile-bounded readiness check and exact bound route decision
+        # above are the authorization for this visibly labelled draft route.
+        # A production activation-plan voice denial still blocks custom voice,
+        # but must not erase the separately authorized generic OS fallback.
+        text_explicitly_allowed = True
+        text_explicitly_blocked = False
+    if text_explicitly_blocked:
+        return {
+            "allowed": False,
+            "reason": str(
+                plan_text.get("reason")
+                or activation.get("block_reason")
+                or "This candidate is not approved for bounded text conversation."
+            ).strip(),
+            "profile_path": None,
+            "display": display,
+        }
 
     bounded_voice = None
     for source in (activation, voice, profile):
@@ -161,80 +460,261 @@ def candidate_voice_output_decision(candidate: dict[str, Any], project_root: Pat
         if "text_voice_chat_allowed" in source:
             text_voice = _explicit_boolean(source.get("text_voice_chat_allowed"))
             break
-    if bounded_voice is False or (bounded_voice is None and text_voice is False):
+    exact_binding = exact_candidate_voice_binding(candidate_id)
+    bounded_custom_voice_authorized = bool(
+        profile_bounded_generic_route
+        and isinstance(exact_binding, dict)
+        and exact_binding.get("profile_bounded_custom_voice_allowed") is True
+        and exact_binding.get("authentic_voice_claim_allowed") is False
+        and text_route_decision.get("custom_voice_output_allowed") is True
+    )
+    custom_voice_plan_blocked = False if bounded_custom_voice_authorized else bool(
+        _explicit_boolean(plan_voice.get("ready")) is False
+        or bounded_voice is False
+        or (bounded_voice is None and text_voice is False)
+        or _explicit_boolean(voice.get("voice_assignment_allowed")) is False
+        or (
+            text_route_decision
+            and text_route_decision.get("custom_voice_output_allowed") is not True
+        )
+    )
+    if custom_voice_plan_blocked and not text_explicitly_allowed:
         reason = str(
             plan_voice.get("reason")
             or activation.get("block_reason")
-            or "This candidate is approved for text only; voice output has not been authorized."
+            or "This candidate has no approved text conversation route."
         ).strip()
         return {"allowed": False, "reason": reason, "profile_path": None, "display": display}
-    if _explicit_boolean(voice.get("voice_assignment_allowed")) is False:
-        return {
-            "allowed": False,
-            "reason": "No reviewed voice has been assigned to this candidate.",
-            "profile_path": None,
-            "display": display,
-        }
-
     voice_profile_path, path_reason = _project_voice_profile_path(candidate, project_root)
-    if voice_profile_path is None:
-        return {"allowed": False, "reason": path_reason, "profile_path": None, "display": display}
-    voice_profile = read_json(voice_profile_path, {})
+    voice_profile: dict[str, Any] = {}
+    if voice_profile_path:
+        voice_profile, rebound_reason = _read_bound_voice_profile(voice_profile_path, candidate)
+        if rebound_reason:
+            path_reason = f"Voice profile identity binding changed during read: {rebound_reason}"
+            voice_profile_path = None
     status = voice_profile.get("status") if isinstance(voice_profile.get("status"), dict) else {}
-    if status.get("ready_for_use") is False:
-        return {
-            "allowed": False,
-            "reason": "The candidate-specific voice profile is still marked not ready for use.",
-            "profile_path": voice_profile_path,
-            "display": display,
-        }
-    if status.get("ready_for_text_tts") is not True:
-        return {
-            "allowed": False,
-            "reason": "The candidate-specific voice profile is not ready for text-to-speech.",
-            "profile_path": voice_profile_path,
-            "display": display,
-        }
-    if bounded_voice is not True and text_voice is not True and status.get("ready_for_use") is not True:
-        return {
-            "allowed": False,
-            "reason": "The candidate profile does not explicitly authorize voice output.",
-            "profile_path": voice_profile_path,
-            "display": display,
-        }
-
     source_audio = voice_profile.get("source_audio") if isinstance(voice_profile.get("source_audio"), dict) else {}
     reference = str(source_audio.get("approved_reference_wav") or "").strip().replace("\\", "/")
     sapi = voice_profile.get("sapi_approximation") if isinstance(voice_profile.get("sapi_approximation"), dict) else {}
-    reference_exists = bool(reference and (project_root / reference).is_file())
-    sapi_configured = bool(str(sapi.get("voice_name") or "").strip())
-    if not reference_exists and not sapi_configured:
-        return {
-            "allowed": False,
-            "reason": "The candidate-specific voice profile has no available approved reference or explicit synthetic voice route.",
-            "profile_path": voice_profile_path,
-            "display": display,
-        }
-
-    candidate_id = str(candidate.get("candidate_id") or profile.get("candidate_id") or "").strip()
-    if voice.get("voice_authorization"):
+    custom_integrity_ready, custom_integrity_reason = _bound_custom_voice_readiness(
+        candidate,
+        voice_profile,
+        project_root,
+    )
+    custom_authorization_allowed = True
+    custom_authorization_reason = ""
+    if voice.get("voice_authorization") and voice_profile_path:
         authorization = validate_private_self_voice_authorization(candidate_id, profile, project_root=project_root)
         if not authorization.get("allowed"):
             details = ", ".join(str(item) for item in authorization.get("reasons", [])[:3])
-            return {
-                "allowed": False,
-                "reason": "The bound private voice authorization did not validate" + (f" ({details})." if details else "."),
-                "profile_path": voice_profile_path,
-                "display": display,
-            }
+            custom_authorization_allowed = False
+            custom_authorization_reason = (
+                "The bound private voice authorization did not validate"
+                + (f" ({details})." if details else ".")
+            )
 
-    label = str(voice_profile.get("target_name") or voice_profile.get("name") or display).strip()
+    custom_ready = bool(
+        voice_profile_path
+        and custom_integrity_ready
+        and status.get("ready_for_use") is True
+        and status.get("ready_for_text_tts") is True
+        and custom_authorization_allowed
+        and not custom_voice_plan_blocked
+    )
+
+    generic_os_voice_allowed = bool(
+        not text_route_decision
+        or text_route_decision.get("generic_os_voice_output_allowed") is True
+    )
+
+    preferred_windows_voice = str(sapi.get("voice_name") or "").strip()
+    os_route = (
+        cached_candidate_os_voice_route(
+            candidate_id,
+            display,
+            str(profile.get("gender_preference") or ""),
+            preferred_windows_voice,
+        )
+        if generic_os_voice_allowed
+        else OSVoiceRoute(
+            False,
+            sys.platform,
+            reason="bound_text_route_denies_generic_os_voice",
+        )
+    )
+    fallback_payload = os_route.to_dict()
+    if custom_ready:
+        label = str(
+            (exact_binding or {}).get("review_label")
+            or voice_profile.get("target_name")
+            or voice_profile.get("name")
+            or display
+        ).strip()
+        return {
+            "allowed": True,
+            "reason": "",
+            "route_kind": "custom_voice_pack",
+            "profile_path": voice_profile_path,
+            "profile_label": label,
+            "authentic_voice_claim": False,
+            "review_mode_label_required": profile_bounded_generic_route,
+            "display": display,
+            "os_fallback_route": fallback_payload if os_route.available else None,
+            "os_fallback_reason": "" if os_route.available else os_route.reason,
+        }
+
+    # Preserve an exact configured-path/profile binding failure as the primary
+    # reason; a later generic readiness result must not hide a cross-person or
+    # byte-tampering attempt.  A candidate with no custom binding at all may
+    # still report its more useful plan/status reason before falling back.
+    binding_failure_primary = (
+        path_reason
+        if any(
+            marker in path_reason
+            for marker in (
+                "does not match the exact candidate-id binding",
+                "identity binding failed",
+                "points outside this project",
+                "must be a file inside this Kira project",
+            )
+        )
+        else ""
+    )
+    custom_reason = binding_failure_primary or custom_authorization_reason
+    if not custom_reason and custom_voice_plan_blocked:
+        custom_reason = str(
+            plan_voice.get("reason")
+            or "candidate-specific/custom voice route is not approved"
+        ).strip()
+    if not custom_reason and voice_profile_path and status.get("ready_for_use") is False:
+        custom_reason = "candidate-specific voice profile is not ready for use"
+    if not custom_reason and voice_profile_path and status.get("ready_for_text_tts") is not True:
+        custom_reason = "candidate-specific voice profile is not ready for text-to-speech"
+    if not custom_reason and not custom_integrity_ready:
+        custom_reason = custom_integrity_reason
+    if not custom_reason and voice_profile_path and not reference:
+        custom_reason = "candidate has no approved custom reference audio"
+    if not custom_reason:
+        custom_reason = path_reason or "candidate has no valid custom voice pack"
+
+    if not os_route.available:
+        return {
+            "allowed": False,
+            "reason": (
+                f"{custom_reason}; installed operating-system voice unavailable "
+                f"({os_route.reason})."
+            ),
+            "route_kind": "none",
+            "profile_path": voice_profile_path,
+            "display": display,
+            "os_fallback_route": None,
+        }
     return {
         "allowed": True,
         "reason": "",
+        "route_kind": "os_voice_fallback",
         "profile_path": voice_profile_path,
-        "profile_label": label,
+        "profile_label": f"{os_route.voice_name} (generic {os_route.platform} OS voice)",
         "display": display,
+        "os_fallback_route": fallback_payload,
+        "custom_voice_unavailable_reason": custom_reason,
+    }
+
+
+def speak_candidate_reply(
+    answer: str,
+    candidate: dict[str, Any],
+    decision: dict[str, Any],
+    *,
+    project_root: Path = PROJECT_ROOT,
+) -> dict[str, Any]:
+    """Revalidate identity/source/route, then try custom before generic OS."""
+
+    if not decision.get("allowed"):
+        return {"spoken": False, "reason": str(decision.get("reason") or "voice_not_allowed")}
+    if is_synthetic_robert_persistent_identity(candidate):
+        return {
+            "spoken": False,
+            "reason": "synthetic_robert_persistent_runtime_voice_route_required",
+            "route_kind": "persistent_runtime_route_required",
+        }
+    runtime_error_reason = _runtime_error_reply_reason(answer)
+    if runtime_error_reason:
+        return {
+            "spoken": False,
+            "reason": runtime_error_reason,
+            "route_kind": "none",
+        }
+    text_route_ready, text_route_reason, text_route_reasons = _voice_text_route_readiness(candidate)
+    if not text_route_ready:
+        return {
+            "spoken": False,
+            "reason": text_route_reason,
+            "text_route_reasons": text_route_reasons,
+            "route_kind": "none",
+        }
+
+    # A decision crosses a thread boundary and is therefore only a hint.  The
+    # exact candidate/source/profile/installed-OS route is rebuilt here so a
+    # stale or crafted dictionary cannot select another person's voice.
+    fresh_decision = candidate_voice_output_decision(candidate, project_root)
+    if not fresh_decision.get("allowed"):
+        return {
+            "spoken": False,
+            "reason": str(fresh_decision.get("reason") or "voice_revalidation_failed"),
+            "route_kind": str(fresh_decision.get("route_kind") or "none"),
+        }
+    decision = fresh_decision
+    fallback_data = decision.get("os_fallback_route")
+    fallback_route = OSVoiceRoute(**fallback_data) if isinstance(fallback_data, dict) else None
+    if decision.get("route_kind") == "custom_voice_pack":
+        if speak_text is not None and load_candidate_voice_config is not None:
+            try:
+                profile = deepcopy(candidate.get("profile", {}) or {})
+                voice = profile.get("voice_and_behavior") if isinstance(profile.get("voice_and_behavior"), dict) else {}
+                voice = dict(voice)
+                resolved_profile_path = Path(decision["profile_path"]).resolve()
+                voice["voice_profile"] = resolved_profile_path.relative_to(
+                    project_root.resolve()
+                ).as_posix()
+                profile["voice_and_behavior"] = voice
+                primary = speak_text(answer, load_candidate_voice_config(profile))
+                if isinstance(primary, dict) and primary.get("spoken") is True:
+                    return {
+                        **primary,
+                        "route_kind": "custom_voice_pack",
+                        "fallback_attempted": False,
+                        "profile_label": decision.get("profile_label"),
+                        "authentic_voice_claim": False,
+                        "review_mode_label_required": decision.get(
+                            "review_mode_label_required", False
+                        ),
+                    }
+                if not isinstance(primary, dict):
+                    primary = {"spoken": False, "reason": "custom_voice_backend_invalid_result"}
+            except Exception as exc:
+                primary = {
+                    "spoken": False,
+                    "reason": "custom_voice_backend_error",
+                    "error": f"{type(exc).__name__}: {exc}",
+                }
+        else:
+            primary = {"spoken": False, "reason": "custom_voice_backend_not_loaded"}
+        if fallback_route is None:
+            return {**primary, "route_kind": "custom_voice_pack", "fallback_attempted": False}
+        fallback = speak_with_os_voice(answer, fallback_route)
+        return {
+            **fallback,
+            "route_kind": "os_voice_fallback",
+            "fallback_attempted": True,
+            "custom_voice_result": primary,
+        }
+    if fallback_route is None:
+        return {"spoken": False, "reason": "os_voice_route_missing", "route_kind": "none"}
+    return {
+        **speak_with_os_voice(answer, fallback_route),
+        "route_kind": "os_voice_fallback",
+        "fallback_attempted": False,
     }
 
 
@@ -282,6 +762,59 @@ def ensure_ollama_running(timeout: float = 15.0) -> tuple[bool, str]:
             return True, "Ollama was started."
         time.sleep(1)
     return False, "Ollama was started, but the local model endpoint did not answer yet."
+
+
+def load_candidate_for_review_chat(candidate_id: str) -> dict[str, Any]:
+    """Prefer the full source-grounded route, then a labelled draft review.
+
+    A clean checkout may intentionally omit unfinished/private source-pack
+    inputs.  That must not weaken the strict loader.  Incomplete candidates
+    instead receive a separate profile-only review context whose replies are
+    visibly labelled and cannot claim activation, memories, voice identity,
+    body, or world presence.
+    """
+
+    full_failure = ""
+    try:
+        candidate = load_candidate(candidate_id)
+        route_ready, route_reasons = source_grounded_text_route_readiness(candidate)
+        readiness = source_readiness(candidate)
+        if route_ready and readiness.get("status") in {
+            "ready",
+            "source_grounding_reviewed",
+        }:
+            return bind_review_and_voice_route(
+                candidate,
+                review_mode="full_source_grounded_review",
+            )
+        full_failure = ",".join(
+            [str(readiness.get("status") or "source_readiness_incomplete")]
+            + [str(reason) for reason in route_reasons]
+        )
+    except Exception as exc:
+        full_failure = f"{type(exc).__name__}:{exc}"
+
+    candidate = load_profile_bounded_candidate(PROJECT_ROOT, candidate_id)
+    return bind_review_and_voice_route(
+        candidate,
+        review_mode="profile_bounded_draft",
+        full_source_reason=full_failure,
+    )
+
+
+def initial_candidate_index(
+    candidate_paths: list[Path],
+    requested_candidate_id: object,
+) -> int | None:
+    """Resolve only an exact checked-in candidate id from launcher input."""
+
+    requested = str(requested_candidate_id or "").strip()
+    if not requested:
+        return None
+    for index, path in enumerate(candidate_paths):
+        if path.name == requested:
+            return index
+    return None
 
 
 class TemporaryAILiveChatGUI:
@@ -332,6 +865,7 @@ class TemporaryAILiveChatGUI:
         self.embedded_avatar = EmbeddedEdgeAvatar(self.avatar_host, PROJECT_ROOT)
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.reload_candidates()
+        self.apply_initial_candidate_selection_from_environment()
         self.root.after(200, self.drain_worker_queue)
         self.root.after(2000, self.poll_life_loop)
         self.root.after(120, self.animate_visual)
@@ -458,9 +992,13 @@ class TemporaryAILiveChatGUI:
         self.candidate_list.delete(0, END)
         for path in self.candidate_paths:
             try:
-                candidate = load_candidate(path.name)
+                candidate = load_candidate_for_review_chat(path.name)
                 profile = candidate.get("profile", {})
-                readiness = source_readiness_label(candidate)
+                readiness = (
+                    "profile-bounded draft"
+                    if candidate.get("review_mode") == "profile_bounded_draft"
+                    else source_readiness_label(candidate)
+                )
             except Exception:
                 profile = read_json(path / "temporary_ai_profile.json", {})
                 readiness = "load error"
@@ -473,6 +1011,32 @@ class TemporaryAILiveChatGUI:
             self.candidate_list.selection_set(0)
             self.update_candidate_preview()
         self.status.config(text=f"Loaded {len(self.candidate_paths)} candidate(s).")
+
+    def apply_initial_candidate_selection_from_environment(self) -> bool:
+        """Open the exact candidate selected by the unified local launcher."""
+
+        requested = os.getenv("TEMP_AI_INITIAL_CANDIDATE_ID", "").strip()
+        if not requested:
+            return False
+        index = initial_candidate_index(self.candidate_paths, requested)
+        if index is None:
+            self.status.config(
+                text=(
+                    "The requested candidate is not present in this checkout; "
+                    "select an available candidate."
+                )
+            )
+            return False
+        self.candidate_list.selection_clear(0, END)
+        self.candidate_list.selection_set(index)
+        self.candidate_list.see(index)
+        self.update_candidate_preview()
+        self.status.config(text=f"Opening exact candidate: {requested}")
+        # Starting the review does not call the model or enable voice.  It only
+        # prepares the selected text session; the first user message remains
+        # the first generation request and voice stays an explicit checkbox.
+        self.root.after(0, self.start_selected_chat)
+        return True
 
     def candidate_avatar_manifest_path(self, candidate_id: str) -> Path:
         return PROJECT_ROOT / "Avatar" / "temp_ai" / candidate_id / "references" / "avatar_reference_manifest.json"
@@ -702,15 +1266,20 @@ class TemporaryAILiveChatGUI:
 
     def candidate_voice_status_text(self, candidate_id: str) -> str:
         try:
-            candidate = load_candidate(candidate_id)
+            candidate = load_candidate_for_review_chat(candidate_id)
         except Exception as exc:
             return f"Voice unavailable: candidate policy could not be loaded ({exc})."
         decision = candidate_voice_output_decision(candidate)
         if not decision["allowed"]:
             return f"Voice unavailable (text only): {decision['reason']}"
         state = "on" if self.voice_enabled.get() else "off"
+        route_label = (
+            "candidate-specific voice pack"
+            if decision.get("route_kind") == "custom_voice_pack"
+            else "generic installed OS voice fallback"
+        )
         return (
-            f"Voice available but {state}: candidate-specific profile "
+            f"Voice available but {state}: {route_label} "
             f"{decision.get('profile_label') or candidate_id}. Check Voice output to enable it."
         )
 
@@ -731,8 +1300,13 @@ class TemporaryAILiveChatGUI:
         self.voice_toggle.config(state="normal" if decision["allowed"] else "disabled")
         if decision["allowed"]:
             state = "on" if self.voice_enabled.get() else "off"
+            route_label = (
+                "candidate-specific voice pack"
+                if decision.get("route_kind") == "custom_voice_pack"
+                else "generic installed OS voice fallback"
+            )
             text = (
-                f"Voice available but {state}: candidate-specific profile "
+                f"Voice available but {state}: {route_label} "
                 f"{decision.get('profile_label') or candidate.get('candidate_id', '')}. "
                 "Check Voice output to enable it."
             )
@@ -747,11 +1321,13 @@ class TemporaryAILiveChatGUI:
             return
         decision = self.apply_voice_controls(self.candidate)
         if decision["allowed"]:
+            route_text = (
+                "the ready candidate-specific pack; an installed OS voice is only its runtime fallback"
+                if decision.get("route_kind") == "custom_voice_pack"
+                else "a generic installed operating-system voice, not an authentic or cloned character voice"
+            )
             self.voice_status.config(
-                text=(
-                    "Voice on: only the configured candidate-specific profile will be used. "
-                    "Global Kira/Windows fallback is disabled."
-                )
+                text=f"Voice on: using {route_text}."
             )
             return
         messagebox.showwarning("Voice remains off", decision["reason"])
@@ -759,24 +1335,24 @@ class TemporaryAILiveChatGUI:
     def queue_reply_voice(self, answer: str) -> bool:
         if not self.voice_enabled.get():
             return False
-        decision = self.apply_voice_controls(self.candidate)
-        if not decision["allowed"] or speak_text is None or load_candidate_voice_config is None:
-            self.voice_enabled.set(0)
-            if decision["allowed"]:
-                self.voice_status.config(text="Voice unavailable (text only): the local speech backend could not be loaded.")
+        error_reason = _runtime_error_reply_reason(answer)
+        if error_reason:
+            self.voice_status.config(text="Voice not queued: runtime source/model error text is never spoken.")
             return False
-        profile = deepcopy(self.candidate.get("profile", {}) or {})
-        voice = profile.get("voice_and_behavior") if isinstance(profile.get("voice_and_behavior"), dict) else {}
-        voice = dict(voice)
-        voice["voice_profile"] = rel(decision["profile_path"])
-        profile["voice_and_behavior"] = voice
-        config = load_candidate_voice_config(profile)
-        threading.Thread(target=speak_text, args=(answer, config), daemon=True).start()
+        decision = self.apply_voice_controls(self.candidate)
+        if not decision["allowed"]:
+            self.voice_enabled.set(0)
+            return False
+        threading.Thread(
+            target=speak_candidate_reply,
+            args=(answer, deepcopy(self.candidate), deepcopy(decision)),
+            daemon=True,
+        ).start()
         return True
 
     def update_large_visual(self, candidate_id: str) -> None:
         try:
-            candidate = load_candidate(candidate_id)
+            candidate = load_candidate_for_review_chat(candidate_id)
             profile = candidate.get("profile", {}) or {}
         except Exception:
             candidate = {}
@@ -1103,7 +1679,7 @@ class TemporaryAILiveChatGUI:
             messagebox.showinfo("Pick a candidate", "Click a candidate name first.")
             return
         try:
-            self.candidate = load_candidate(candidate_id)
+            self.candidate = load_candidate_for_review_chat(candidate_id)
         except Exception as exc:
             messagebox.showerror("Candidate load failed", str(exc))
             return
@@ -1118,11 +1694,29 @@ class TemporaryAILiveChatGUI:
         self.last_answer = ""
         self.apply_voice_controls(self.candidate, reset=True)
         self.chat.delete("1.0", END)
-        self.status.config(text=f"Talking with {self.display}" + (f" ({self.role})" if self.role else ""))
+        bounded = self.candidate.get("review_mode") == "profile_bounded_draft"
+        self.status.config(
+            text=(
+                f"Profile-bounded draft review with {self.display}"
+                if bounded
+                else f"Talking with {self.display}" + (f" ({self.role})" if self.role else "")
+            )
+        )
         self.write_transcript()
-        self.log_chat("System", f"You are now talking with {self.display}. Ask the question directly; you do not need to type her name.")
-        self.schedule_embedded_avatar(candidate_id)
-        self.publish_avatar_state("standing naturally", source="chat_started")
+        if bounded:
+            self.log_chat(
+                "System",
+                (
+                    f"You are reviewing the checked-in draft profile for {self.display}. "
+                    "Every reply is labelled profile-bounded. This is not verified canon, "
+                    "activation, memory proof, an authentic voice, a body, or world presence."
+                ),
+            )
+            self.show_2d_avatar_fallback()
+        else:
+            self.log_chat("System", f"You are now talking with {self.display}. Ask the question directly; you do not need to type her name.")
+            self.schedule_embedded_avatar(candidate_id)
+            self.publish_avatar_state("standing naturally", source="chat_started")
 
     def start_life_loop(self) -> None:
         candidate_id = self.selected_candidate_id()
@@ -1131,6 +1725,18 @@ class TemporaryAILiveChatGUI:
             return
         if self.loop_process and self.loop_process.poll() is None:
             messagebox.showinfo("Life loop already running", "End the current TemporaryAI life loop safely before starting another.")
+            return
+        try:
+            review_candidate = load_candidate_for_review_chat(candidate_id)
+        except Exception as exc:
+            messagebox.showerror("Candidate load failed", str(exc))
+            return
+        if review_candidate.get("review_mode") == "profile_bounded_draft":
+            messagebox.showinfo(
+                "Life loop unavailable",
+                "This candidate is available only for labelled profile-bounded draft review. "
+                "That route cannot start a life loop, body, or world presence.",
+            )
             return
         ok, wake_note = ensure_ollama_running(timeout=20.0)
         if not ok:
@@ -1273,10 +1879,13 @@ class TemporaryAILiveChatGUI:
         try:
             candidate_id = str((self.candidate or {}).get("candidate_id", ""))
             if candidate_id:
-                candidate_context = load_candidate(candidate_id)
+                candidate_context = load_candidate_for_review_chat(candidate_id)
             ok, wake_note = ensure_ollama_running(timeout=20.0)
             if not ok:
                 answer = f"[TemporaryAI - model offline] {wake_note}"
+                generated_files = []
+            elif candidate_context.get("review_mode") == "profile_bounded_draft":
+                answer = ask_profile_bounded_model(candidate_context, self.history, message)
                 generated_files = []
             else:
                 answer = ask_model(candidate_context, self.history, message)

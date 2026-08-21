@@ -1,5 +1,6 @@
 ﻿{
     "voice_id":  "ladybug_voice_canon_v1",
+    "candidate_id":  "ladybug_marinette_expanded_smoke",
     "name":  "Ladybug",
     "target_name":  "Ladybug",
     "target_type":  "temp_ai",
@@ -34,6 +35,7 @@
                          "reference_pack":  "Voice/reference_packs/ladybug/ladybug_miraculous_ladybug_s01e05_mr_pigeon_20260619_184235",
                          "model_input_request":  "Voice/reference_packs/ladybug/ladybug_miraculous_ladybug_s01e05_mr_pigeon_20260619_184235/model_input/voice_model_request.json",
                          "approved_reference_wav":  "Voice/reference_packs/ladybug/ladybug_miraculous_ladybug_s01e05_mr_pigeon_20260619_184235/model_input/approved_reference.wav",
+                         "approved_reference_sha256":  "9bfce1b418d0366bff446a60893513563c4987ec2e7db483b9cfddbbfeed0f2a",
                          "candidate_clip_count":  223,
                          "reviewed_target_clip_count":  28,
                          "reviewed_target_seconds":  88.44
@@ -100,9 +102,11 @@
                        "must_not_sound_monotone":  true
                    },
     "status":  {
-                   "approval_state":  "draft",
-                   "ready_for_use":  false,
+                   "approval_state":  "owner_directed_private_bounded_review",
+                   "ready_for_use":  true,
                    "ready_for_text_tts":  true,
+                   "bounded_profile_review_tts_allowed":  true,
+                   "authentic_voice_claim_allowed":  false,
                    "ready_for_clone":  false,
                    "source_audio_collected":  true,
                    "current_playback_engine":  "chatterbox_tts",
@@ -113,6 +117,6 @@
                    "torch_runtime":  "2.12.1+cu130",
                    "cuda_runtime":  "13.0",
                    "readiness_label":  "reviewed_reference_active_with_chatterbox_tts",
-                   "note":  "The 28 reviewed clips have been prepared as approved_reference.wav and are now used by the local Chatterbox TTS playback path. PyTorch CUDA 13.0 is active on the RTX 5060 Ti."
+                   "note":  "The 28 reviewed clips are prepared as an identity-bound private reconstruction reference for bounded review. This is not an authentic voice claim."
                }
 }

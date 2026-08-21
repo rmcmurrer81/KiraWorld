@@ -1,33 +1,36 @@
 from __future__ import annotations
 
 import copy
-import json
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from Core.private_self_voice_authorization import validate_private_self_voice_authorization
+from Core.synthetic_robert_voice_route import (
+    AUTHORIZATION_BINDING_ID,
+    SYNTHETIC_ROBERT_PERSON_ID,
+    build_synthetic_robert_voice_validator_profile,
+    validate_synthetic_robert_voice_route,
+)
 from Core.voice_output import load_candidate_voice_config
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ROBERT_ID = "robert_mcmurrer_presence_ai"
-PROFILE_PATH = ROOT / "TemporaryAI" / "candidates" / ROBERT_ID / "temporary_ai_profile.json"
+ROBERT_ID = SYNTHETIC_ROBERT_PERSON_ID
 
 
 class RobertSelfVoiceAuthorizationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.profile = json.loads(PROFILE_PATH.read_text(encoding="utf-8-sig"))
+        cls.profile = build_synthetic_robert_voice_validator_profile()
 
     def test_real_owner_approved_binding_passes_without_generating_or_playing_audio(self) -> None:
-        result = validate_private_self_voice_authorization(
-            ROBERT_ID,
-            self.profile,
-            project_root=ROOT,
-        )
+        result = validate_synthetic_robert_voice_route(project_root=ROOT)
 
         self.assertTrue(result["allowed"], result["reasons"])
+        self.assertEqual(result["person_id"], "synthetic_robert")
+        self.assertEqual(result["identity_route"], "portable_persistent_synthetic_robert")
+        self.assertFalse(result["temporary_ai_profile_used"])
         self.assertEqual(result["voice_profile_id"], "robert_mcmurrer_authorized_self_voice_v1")
         self.assertEqual(result["engine"], "chatterbox_tts")
         self.assertEqual(result["reviewed_target_clip_count"], 11)
@@ -43,7 +46,7 @@ class RobertSelfVoiceAuthorizationTests(unittest.TestCase):
         profile["voice_and_behavior"].pop("voice_authorization", None)
 
         result = validate_private_self_voice_authorization(
-            ROBERT_ID,
+            AUTHORIZATION_BINDING_ID,
             profile,
             project_root=ROOT,
         )
@@ -53,7 +56,7 @@ class RobertSelfVoiceAuthorizationTests(unittest.TestCase):
 
     def test_candidate_mismatch_fails_closed(self) -> None:
         result = validate_private_self_voice_authorization(
-            "another_candidate",
+            "another_voice_authorization_binding",
             self.profile,
             project_root=ROOT,
         )
@@ -67,7 +70,7 @@ class RobertSelfVoiceAuthorizationTests(unittest.TestCase):
             return_value="0" * 64,
         ):
             result = validate_private_self_voice_authorization(
-                ROBERT_ID,
+                AUTHORIZATION_BINDING_ID,
                 self.profile,
                 project_root=ROOT,
             )

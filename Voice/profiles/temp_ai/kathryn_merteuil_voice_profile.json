@@ -1,5 +1,6 @@
 {
   "voice_id": "kathryn_merteuil_owner_attested_reference_v1",
+  "candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
   "name": "Kathryn Merteuil",
   "target_name": "Kathryn Merteuil",
   "target_type": "temp_ai",
@@ -10,6 +11,7 @@
     "status": "owner_attested_target_only_range_cleaned_for_private_runtime_test",
     "reference_pack": "Voice/reference_packs/kathryn_merteuil/owner_attested_youtube_20260717",
     "approved_reference_wav": "Voice/reference_packs/kathryn_merteuil/owner_attested_youtube_20260717/model_input/approved_reference.wav",
+    "approved_reference_sha256": "d0bcfdb7cde7a1c28dcf33c346e1c6a92b3b8cfd7db64e559ff866202b092916",
     "reviewed_target_clip_count": 1,
     "reviewed_target_seconds": 33.85,
     "source_range_seconds": [4.15, 38.0],
@@ -26,6 +28,8 @@
     "approval_state": "owner_attested_private_test",
     "ready_for_text_tts": true,
     "ready_for_use": true,
+    "bounded_profile_review_tts_allowed": true,
+    "authentic_voice_claim_allowed": false,
     "current_playback_engine": "chatterbox_tts",
     "readiness_label": "owner_attested_cleaned_reference_active_for_private_chat"
   }
