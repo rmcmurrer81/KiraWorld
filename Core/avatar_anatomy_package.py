@@ -19,6 +19,11 @@ import stat
 import struct
 from typing import Any, Iterable, Mapping, Sequence
 
+from Core.avatar_source_landmark_anchors import (
+    SourceLandmarkAnchorError,
+    derive_pelvic_landmark_anchor_receipt,
+)
+
 
 REQUEST_SCHEMA = "kira.avatar.anatomy_package_preflight_request.v1"
 REPORT_SCHEMA = "kira.avatar.anatomy_package_preflight_report.v1"
@@ -1583,6 +1588,7 @@ def _validate_anchors_routes(
     source_files: Mapping[str, Mapping[str, Any]],
     normalization: Mapping[str, Any],
     anchor_references: Mapping[str, Any],
+    source_derived_landmark_receipt: Mapping[str, Any] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[str]]:
     interface = _mapping(contract.get("attachment_interface"), "contract.attachment_interface")
     required_anchor_ids = {
@@ -1595,6 +1601,48 @@ def _validate_anchors_routes(
     for source_file, evidence in source_files.items():
         for source_name in evidence["source_name_geometry"]:
             source_name_locations.setdefault(source_name, []).append(source_file)
+    derived_anchor_sources: dict[str, tuple[str, str]] = {}
+    if source_derived_landmark_receipt is not None:
+        for raw_landmark in _list(
+            source_derived_landmark_receipt.get("landmarks"),
+            "source-derived orientation landmarks",
+        ):
+            landmark = _mapping(raw_landmark, "source-derived orientation landmark")
+            anchor_id = _safe_id(
+                landmark.get("anchor_id"),
+                "source-derived orientation landmark.anchor_id",
+            )
+            if anchor_id in derived_anchor_sources or anchor_id not in required_anchor_ids:
+                raise AvatarAnatomyPackageError(
+                    f"unexpected or duplicate source-derived anchor: {anchor_id}"
+                )
+            source_file = _text(
+                landmark.get("source_file"),
+                f"source-derived orientation landmark {anchor_id}.source_file",
+            )
+            source_node = _text(
+                landmark.get("source_node"),
+                f"source-derived orientation landmark {anchor_id}.source_node",
+            )
+            if source_file not in source_files:
+                raise AvatarAnatomyPackageError(
+                    f"source-derived anchor file is not manifest-bound: {anchor_id}"
+                )
+            if landmark.get("source_file_sha256") != source_files[source_file]["sha256"]:
+                raise AvatarAnatomyPackageError(
+                    f"source-derived anchor SHA-256 mismatch: {anchor_id}"
+                )
+            if (
+                landmark.get("source_bound") is not True
+                or landmark.get("authored") is not False
+                or landmark.get("counts_as_anatomy_component") is not False
+                or landmark.get("tissue_or_organ_claim") is not False
+                or landmark.get("function_implemented") is not False
+            ):
+                raise AvatarAnatomyPackageError(
+                    f"source-derived anchor truth boundary failed: {anchor_id}"
+                )
+            derived_anchor_sources[anchor_id] = (source_file, source_node)
     expected_anchor_sources: dict[str, tuple[str, str]] = {}
     unavailable_anchor_ids: set[str] = set()
     for anchor_id in sorted(required_anchor_ids):
@@ -1605,9 +1653,18 @@ def _validate_anchors_routes(
         source_node = _text(reference, f"role map anchor {anchor_id}")
         locations = source_name_locations.get(source_node, [])
         if len(locations) != 1:
-            unavailable_anchor_ids.add(anchor_id)
+            derived_source = derived_anchor_sources.get(anchor_id)
+            if derived_source is None or derived_source[1] != source_node:
+                unavailable_anchor_ids.add(anchor_id)
+                continue
+            expected_anchor_sources[anchor_id] = derived_source
             continue
         expected_anchor_sources[anchor_id] = (locations[0], source_node)
+        derived_source = derived_anchor_sources.get(anchor_id)
+        if derived_source is not None and derived_source != expected_anchor_sources[anchor_id]:
+            raise AvatarAnatomyPackageError(
+                f"source-derived anchor differs from direct source binding: {anchor_id}"
+            )
     anchors: list[dict[str, Any]] = []
     seen_anchors: set[str] = set()
     for index, raw in enumerate(_list(raw_anchors, "anchors")):
@@ -1653,7 +1710,10 @@ def _validate_anchors_routes(
         )
     blockers = [
         f"missing_source_anchor:{item}"
-        for item in sorted(unavailable_anchor_ids | (required_anchor_ids - seen_anchors))
+        for item in sorted(
+            unavailable_anchor_ids
+            | (required_anchor_ids - seen_anchors - set(derived_anchor_sources))
+        )
     ]
     bindings = _list(contract.get("external_outlet_bindings"), "contract.external_outlet_bindings")
     expected_routes: dict[str, dict[str, Any]] = {}
@@ -1876,6 +1936,31 @@ def evaluate_avatar_anatomy_package_preflight(
         source_files,
         role_map,
     )
+    source_derived_landmark_receipt: dict[str, Any] | None = None
+    if source_package_binding["authority_id"] == "hra_female_pelvis_cc_by_4_v1_2":
+        pelvis_source = source_files.get("VH_F_Pelvis.glb")
+        if pelvis_source is None:
+            raise AvatarAnatomyPackageError(
+                "canonical HRA pelvis source is unavailable for orientation landmarks"
+            )
+        try:
+            source_derived_landmark_receipt = derive_pelvic_landmark_anchor_receipt(
+                pelvis_source["path"],
+                expected_source_file="VH_F_Pelvis.glb",
+                expected_bytes=pelvis_source["bytes"],
+                expected_sha256=pelvis_source["sha256"],
+                source_units=normalization["source_units"],
+                source_axes=normalization["source_axes"],
+                target_units=normalization["target_units"],
+                target_axes=normalization["target_axes"],
+                normalization_transform=normalization["per_source_transform"][
+                    "VH_F_Pelvis.glb"
+                ],
+            )
+        except (OSError, SourceLandmarkAnchorError) as exc:
+            raise AvatarAnatomyPackageError(
+                f"source-derived pelvic orientation landmarks failed closed: {exc}"
+            ) from exc
     carrier, carrier_blockers = _validate_carrier(
         root,
         ledger,
@@ -1898,6 +1983,7 @@ def evaluate_avatar_anatomy_package_preflight(
         source_files,
         normalization,
         anchor_references,
+        source_derived_landmark_receipt,
     )
     invariant_blockers = _validate_separation_truth(
         _mapping(request.get("separation"), "separation"),
@@ -1999,6 +2085,7 @@ def evaluate_avatar_anatomy_package_preflight(
             for anatomy_id in sorted(inventory)
         ],
         "source_roles": [source_roles[key] for key in sorted(source_roles)],
+        "source_derived_orientation_landmarks": source_derived_landmark_receipt,
         "components": components,
         "anchors": anchors,
         "routes": routes,

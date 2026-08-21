@@ -163,11 +163,16 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
         self.assertEqual(13, report["mapped_structure_count"])
         self.assertEqual(28, report["required_structure_count"])
         self.assertEqual(15, len(report["missing_required_structures"]))
-        self.assertEqual(32, len(report["blockers"]))
+        self.assertEqual(31, len(report["blockers"]))
         self.assertEqual(
-            "cb2e15c79e9ed6eafbf8cc863cb1734bec20b31de6829cdd12b63e351ae5d506",
+            "3135a16c46bf1bf741d04d41d82ea95f5cf87638593e402d722b796e02fe2adb",
             report["preflight_receipt_sha256"],
         )
+        self.assertEqual(
+            "3c7448b8e3ad21d81dea231f8ed53e9d6d2d7830dad02622687d2c2071dac077",
+            report["source_derived_orientation_landmarks"]["receipt_sha256"],
+        )
+        self.assertNotIn("missing_source_anchor:pubic_reference", report["blockers"])
         self.assertIs(report["blender_invoked"], False)
         self.assertIs(report["build_performed"], False)
         self.assertIs(report["scope"]["whole_body_complete"], False)
