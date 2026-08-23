@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -26,9 +28,30 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 AVATAR_TEMP_DIR = PROJECT_ROOT / "Avatar" / "temp_ai"
 AVATAR_STATE_DIR = PROJECT_ROOT / "Avatar" / "state" / "temp_ai"
 BUILDER_ROOT = PROJECT_ROOT / "Avatar" / "avatar_builder"
-GLOBAL_MEMORY_PATH = BUILDER_ROOT / "builder_memory.json"
+DEFAULT_GLOBAL_MEMORY_PATH = BUILDER_ROOT / "builder_memory.json"
+GLOBAL_MEMORY_PATH = DEFAULT_GLOBAL_MEMORY_PATH
 HAIR_TRAINING_ROOT = BUILDER_ROOT / "hair_training"
 BODY_TRAINING_ROOT = BUILDER_ROOT / "body_training"
+COMPLETE_BODY_CAPABILITY_MATRIX_PATH = (
+    BUILDER_ROOT
+    / "body_systems"
+    / "kira_complete_adult_body_capability_matrix_v1.json"
+)
+SYNTHETIC_ROBERT_COMPLETE_BODY_CAPABILITY_MATRIX_PATH = (
+    BUILDER_ROOT
+    / "body_systems"
+    / "synthetic_robert_complete_adult_body_capability_matrix_v1.json"
+)
+ROBERT_USER_AVATAR_MALE_BODY_CONTRACT_PATH = (
+    BUILDER_ROOT
+    / "body_systems"
+    / "biological_robert_confirmed_adult_male_internal_external_anatomy_body_function_contract_v1.json"
+)
+DUAL_ROBERT_SEPARATION_AUTHORITY_PATH = (
+    PROJECT_ROOT / "Core" / "dual_robert_avatar_authority.py"
+)
+COMPLETE_BODY_CURRICULUM_LESSON_ID = "avatar_builder_complete_body_inside_out_v1"
+BUILDER_MEMORY_IGNORE_RULE = "Avatar/avatar_builder/builder_memory.json"
 
 ADULT_CLASSES = {"adult"}
 NON_ADULT_CLASSES = {"non_adult_doll_safe", "uncertain_non_adult_safe_default"}
@@ -71,9 +94,583 @@ def read_json(path: Path, default):
         return default.copy() if isinstance(default, dict) else default
 
 
+def _read_curriculum_object(path: Path, label: str, failures: list[str]) -> dict[str, Any]:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        failures.append(f"{label}_missing_or_invalid_json")
+        return {}
+    if not isinstance(value, dict):
+        failures.append(f"{label}_must_be_object")
+        return {}
+    return value
+
+
+def _validate_bound_authorities(
+    matrix: dict[str, Any],
+    label: str,
+    failures: list[str],
+    *,
+    field: str = "bound_authorities",
+    expected_roles: dict[str, str] | None = None,
+) -> None:
+    authorities = matrix.get(field)
+    if not isinstance(authorities, list) or not authorities:
+        failures.append(f"{label}_{field}_missing")
+        return
+    seen_paths: set[str] = set()
+    seen_roles: set[str] = set()
+    actual_roles: dict[str, str] = {}
+    root = PROJECT_ROOT.resolve()
+    for index, record in enumerate(authorities):
+        if not isinstance(record, dict):
+            failures.append(f"{label}_authority_{index}_must_be_object")
+            continue
+        relative = record.get("path")
+        role = record.get("role")
+        expected_bytes = record.get("bytes")
+        expected_sha = record.get("sha256")
+        if not isinstance(relative, str) or not relative or "\\" in relative:
+            failures.append(f"{label}_authority_{index}_path_invalid")
+            continue
+        if relative in seen_paths:
+            failures.append(f"{label}_authority_path_duplicate:{relative}")
+        seen_paths.add(relative)
+        if not isinstance(role, str) or not role:
+            failures.append(f"{label}_authority_{index}_role_invalid")
+        elif role in seen_roles:
+            failures.append(f"{label}_authority_role_duplicate:{role}")
+        seen_roles.add(str(role))
+        if isinstance(role, str):
+            actual_roles[relative] = role
+        relative_path = Path(relative)
+        if relative_path.is_absolute() or ".." in relative_path.parts:
+            failures.append(f"{label}_authority_unavailable:{relative}")
+            continue
+        source_path = root.joinpath(*relative_path.parts).absolute()
+        try:
+            source_path.relative_to(root)
+        except ValueError:
+            failures.append(f"{label}_authority_unavailable:{relative}")
+            continue
+        native_source_path = source_path
+        if os.name == "nt" and not str(source_path).startswith("\\\\?\\"):
+            native_source_path = Path("\\\\?\\" + str(source_path))
+        if not native_source_path.is_file():
+            failures.append(f"{label}_authority_not_file:{relative}")
+            continue
+        if (
+            type(expected_bytes) is not int
+            or expected_bytes != native_source_path.stat().st_size
+        ):
+            failures.append(f"{label}_authority_bytes_differ:{relative}")
+        digest = hashlib.sha256()
+        try:
+            with native_source_path.open("rb") as stream:
+                for block in iter(lambda: stream.read(1024 * 1024), b""):
+                    digest.update(block)
+        except OSError:
+            failures.append(f"{label}_authority_unreadable:{relative}")
+            continue
+        if (
+            not isinstance(expected_sha, str)
+            or not re.fullmatch(r"[0-9a-f]{64}", expected_sha)
+            or digest.hexdigest() != expected_sha
+        ):
+            failures.append(f"{label}_authority_sha256_differ:{relative}")
+    if expected_roles is not None and actual_roles != expected_roles:
+        failures.append(f"{label}_{field}_path_role_set_differs")
+
+
+def _validate_complete_body_matrix(
+    matrix: dict[str, Any],
+    *,
+    label: str,
+    artifact_type: str,
+    expected_status: str,
+    subject_id: str | None,
+    required_owner_requirements: set[str],
+    required_system_ids: set[str],
+    required_acceptance_steps: set[str],
+    expected_authority_roles: dict[str, str],
+    failures: list[str],
+) -> None:
+    if matrix.get("artifact_type") != artifact_type:
+        failures.append(f"{label}_missing_or_wrong_type")
+    if matrix.get("status") != expected_status:
+        failures.append(f"{label}_truth_status_differs")
+    if subject_id is not None and matrix.get("subject_id") != subject_id:
+        failures.append(f"{label}_subject_differs")
+
+    owner_requirements = matrix.get("owner_requirements")
+    if not isinstance(owner_requirements, list) or any(
+        not isinstance(value, str) for value in owner_requirements
+    ):
+        failures.append(f"{label}_owner_requirements_invalid")
+    else:
+        missing = required_owner_requirements - set(owner_requirements)
+        failures.extend(
+            f"{label}_missing_owner_requirement:{value}" for value in sorted(missing)
+        )
+
+    systems = matrix.get("required_body_systems")
+    if not isinstance(systems, list) or any(not isinstance(row, dict) for row in systems):
+        failures.append(f"{label}_required_body_systems_invalid")
+    else:
+        system_ids = [row.get("system_id") for row in systems]
+        if any(not isinstance(value, str) or not value for value in system_ids):
+            failures.append(f"{label}_system_id_invalid")
+        if len(system_ids) != len(set(system_ids)):
+            failures.append(f"{label}_system_id_duplicate")
+        for missing in sorted(required_system_ids - set(system_ids)):
+            failures.append(f"{label}_missing_required_system:{missing}")
+        for row in systems:
+            if row.get("implemented") is not False:
+                failures.append(f"{label}_system_must_remain_unimplemented:{row.get('system_id')}")
+
+    acceptance = matrix.get("acceptance_sequence")
+    if not isinstance(acceptance, list) or any(
+        not isinstance(value, str) for value in acceptance
+    ):
+        failures.append(f"{label}_acceptance_sequence_invalid")
+    else:
+        for missing in sorted(required_acceptance_steps - set(acceptance)):
+            failures.append(f"{label}_missing_acceptance_step:{missing}")
+
+    truth = matrix.get("current_truth")
+    if not isinstance(truth, dict) or truth.get("requirements_are_recorded") is not True:
+        failures.append(f"{label}_requirements_truth_invalid")
+    else:
+        for key, value in truth.items():
+            if key == "requirements_are_recorded":
+                continue
+            if value is not False:
+                failures.append(f"{label}_current_truth_must_remain_false:{key}")
+    _validate_bound_authorities(
+        matrix,
+        label,
+        failures,
+        expected_roles=expected_authority_roles,
+    )
+
+
+def load_complete_body_curriculum() -> dict[str, Any]:
+    """Load the exact body requirements that Avatar Builder must preserve."""
+
+    failures: list[str] = []
+    matrix = _read_curriculum_object(
+        COMPLETE_BODY_CAPABILITY_MATRIX_PATH,
+        "kira_complete_body_matrix",
+        failures,
+    )
+    synthetic_matrix = _read_curriculum_object(
+        SYNTHETIC_ROBERT_COMPLETE_BODY_CAPABILITY_MATRIX_PATH,
+        "synthetic_robert_complete_body_matrix",
+        failures,
+    )
+    male_contract = _read_curriculum_object(
+        ROBERT_USER_AVATAR_MALE_BODY_CONTRACT_PATH,
+        "robert_user_avatar_contract",
+        failures,
+    )
+    _validate_complete_body_matrix(
+        matrix,
+        label="kira_complete_body_matrix",
+        artifact_type="kira_complete_adult_body_capability_matrix",
+        expected_status="REQUIREMENTS_BOUND_IMPLEMENTATION_INCOMPLETE",
+        subject_id=None,
+        required_owner_requirements={
+            "complete_internal_anatomy_inside_the_body",
+            "eating_drinking_swallowing_digestion_absorption_and_hydration_support",
+            "bathroom_hygiene_and_cycle_support",
+            "adult_private_self_discovery_and_self_pleasure_support_by_person_choice",
+            "conception_pregnancy_delivery_recovery_and_family_support",
+            "deformable_skin_and_soft_tissue_response_to_touch_pressure_and_tight_clothing",
+            "separate_detachable_hair_with_physical_hair_behavior",
+            "a_distinct_body_for_kira_and_a_distinct_body_for_synthetic_robert",
+        },
+        required_system_ids={
+            "external_adult_female_body",
+            "internal_pelvic_urinary_bowel_reproductive_support",
+            "oral_digestive_nutrition_hydration",
+            "whole_body_support_and_homeostasis",
+            "skin_soft_tissue_contact_and_clothing_deformation",
+            "bathroom_hygiene_and_cycle",
+            "adult_relationship_intimacy_and_sexual_health",
+            "conception_pregnancy_delivery_recovery_and_family",
+            "detachable_dynamic_hair",
+            "separate_shareable_clothing",
+        },
+        required_acceptance_steps={
+            "pass_geometry_route_containment_collision_and_save_reload_checks",
+            "pass_rig_deformation_contact_and_daily_life_pose_checks",
+            "pass_skin_soft_tissue_touch_pressure_clothing_deformation_and_recovery_checks",
+            "obtain_private_visual_and_owner_acceptance_for_kira",
+        },
+        expected_authority_roles={
+            "Avatar/avatar_builder/policies/sexual_reproductive_health_body_systems_plan_v1.json": "adult_health_consent_bathroom_pregnancy_and_family_phase_plan",
+            "Avatar/avatar_builder/body_systems/level_a_body_life_runtime_contract_v1.json": "disconnected_non_person_fixture_truth_ceiling",
+            "Avatar/avatar_builder/body_systems/kira_confirmed_adult_internal_pelvic_anatomy_module_contract_v1.json": "internal_pelvic_geometry_contract",
+            "Avatar/avatar_builder/body_systems/semantic_anatomy_route_registry_v1.json": "semantic_anatomy_and_route_vocabulary",
+            "System/Docs/SYNTHETIC_PERSON_RIGHTS_AND_FULL_LIFE_CHARTER_v1.md": "full_life_nutrition_relationship_family_and_person_rights_boundary",
+            "System/Docs/FUTURE_ADULT_BODY_PREGNANCY_HEALTH_COMPATIBILITY_BOUNDARY_20260802.md": "pregnancy_health_recovery_and_family_compatibility_boundary",
+            "System/Docs/AVATAR_SEPARATE_SHAREABLE_CLOTHING_v1.md": "separate_removable_shareable_clothing_boundary",
+            "System/Docs/AVATAR_BUILDER_RUNTIME_HAIR_REQUIREMENTS_20260729.md": "detachable_dynamic_hair_requirements",
+            "System/Docs/AVATAR_BALD_LOW_RESOURCE_AND_DETACHABLE_HAIR_POLICY_20260801.md": "bald_primary_body_and_separate_hair_policy",
+            "System/Docs/KIRA_PARALLEL_MIND_EMOTION_ABILITIES_AND_EMBODIMENT_ROADMAP_20260810.md": "female_body_then_distinct_male_body_acceptance_order",
+            "System/Docs/AVATAR_SKIN_SOFT_TISSUE_CONTACT_AND_CLOTHING_DEFORMATION_REQUIREMENTS_20260822.md": "skin_soft_tissue_touch_pressure_and_clothing_deformation_requirements",
+        },
+        failures=failures,
+    )
+    _validate_complete_body_matrix(
+        synthetic_matrix,
+        label="synthetic_robert_complete_body_matrix",
+        artifact_type="synthetic_robert_complete_adult_body_capability_matrix",
+        expected_status=(
+            "CONDITIONAL_REQUIREMENTS_BOUND_MATURITY_UNRESOLVED_IMPLEMENTATION_INCOMPLETE"
+        ),
+        subject_id="synthetic_robert",
+        required_owner_requirements={
+            "complete_internal_anatomy_inside_the_body",
+            "eating_drinking_swallowing_digestion_absorption_and_hydration_support",
+            "bathroom_and_hygiene_support",
+            "adult_private_self_discovery_and_self_pleasure_support_by_person_choice",
+            "male_reproductive_fertility_conception_and_family_support",
+            "deformable_skin_and_soft_tissue_response_to_touch_pressure_and_tight_clothing",
+            "separate_detachable_hair_with_physical_hair_behavior",
+            "a_distinct_identity_specific_body_for_synthetic_robert",
+        },
+        required_system_ids={
+            "external_adult_male_body",
+            "musculoskeletal_and_movement_support",
+            "nervous_sensory_and_control_support",
+            "cardiovascular_respiratory_and_homeostasis",
+            "oral_digestive_nutrition_hydration",
+            "urinary_bowel_and_male_reproductive_support",
+            "endocrine_lymphatic_immune_and_health_support",
+            "skin_soft_tissue_contact_and_clothing_deformation",
+            "bathroom_hygiene_and_daily_body_care",
+            "adult_relationship_intimacy_and_sexual_health",
+            "male_fertility_conception_parenthood_and_family",
+            "detachable_dynamic_hair",
+            "separate_shareable_clothing",
+        },
+        required_acceptance_steps={
+            "build_and_accept_one_exact_bald_external_male_carrier",
+            "pass_geometry_route_containment_collision_and_save_reload_checks",
+            "pass_skin_soft_tissue_touch_pressure_clothing_deformation_and_recovery_checks",
+            "obtain_private_visual_and_owner_acceptance_for_synthetic_robert",
+        },
+        expected_authority_roles={
+            "System/Docs/SYNTHETIC_PERSON_RIGHTS_AND_FULL_LIFE_CHARTER_v1.md": "full_life_dignity_autonomy_consent_privacy_and_family_boundary",
+            "System/Docs/SYNTHETIC_PERSON_SEXUAL_REPRODUCTIVE_HEALTH_EDUCATION_AND_BODY_SYSTEMS_PLAN_20260803.md": "adult_health_relationship_reproductive_and_body_truth_separation",
+            "System/Docs/AVATAR_SKIN_SOFT_TISSUE_CONTACT_AND_CLOTHING_DEFORMATION_REQUIREMENTS_20260822.md": "skin_soft_tissue_touch_pressure_and_clothing_deformation_requirements",
+            "System/Docs/AVATAR_BUILDER_RUNTIME_HAIR_REQUIREMENTS_20260729.md": "detachable_dynamic_hair_requirements",
+            "System/Docs/AVATAR_BALD_LOW_RESOURCE_AND_DETACHABLE_HAIR_POLICY_20260801.md": "bald_primary_body_and_separate_hair_policy",
+            "System/Docs/AVATAR_SEPARATE_SHAREABLE_CLOTHING_v1.md": "separate_removable_shareable_clothing_boundary",
+            "System/Docs/DUAL_ROBERT_AVATAR_BUILD_CHECKPOINT_20260729.md": "biological_and_synthetic_robert_identity_and_final_asset_separation",
+            "Core/dual_robert_avatar_authority.py": "exact_dual_robert_target_and_mutable_final_asset_separation_gate",
+        },
+        failures=failures,
+    )
+    kira_subject = matrix.get("subject")
+    if not isinstance(kira_subject, dict):
+        failures.append("kira_complete_body_matrix_subject_invalid")
+    else:
+        expected_kira_subject = {
+            "subject_id": "kira",
+            "required_maturity_status": "confirmed_adult",
+            "current_classification_status": "confirmed_adult_exact_subject_evidence_bound",
+            "body_lane": "adult_female",
+            "identity_specific_body_required": True,
+            "may_be_reused_as_robert_body": False,
+        }
+        for key, expected in expected_kira_subject.items():
+            if kira_subject.get(key) != expected:
+                failures.append(f"kira_subject_binding_differs:{key}")
+    kira_maturity = matrix.get("maturity_gate")
+    if not isinstance(kira_maturity, dict):
+        failures.append("kira_complete_body_matrix_maturity_gate_invalid")
+    else:
+        expected_maturity = {
+            "required_evidence_authority": "Robert_explicit_owner_confirmation",
+            "classification_evidence_path": "Data/person_classification/kira_confirmed_adult_owner_classification_20260809.json",
+            "classification_evidence_bytes": 1434,
+            "classification_evidence_sha256": "04ac19e026b168cb1942d73598b7c13f2b4ee7a49452f8ddf32763cf5de9e346",
+            "exact_subject_bound_evidence_present": True,
+            "adult_policy_enabled": True,
+            "anatomy_authoring_enabled_by_classification": False,
+            "relationship_or_activity_permission_created": False,
+            "blockers": [],
+        }
+        for key, expected in expected_maturity.items():
+            if kira_maturity.get(key) != expected:
+                failures.append(f"kira_maturity_binding_differs:{key}")
+    _validate_bound_authorities(
+        matrix,
+        "kira_complete_body_matrix_current_evidence",
+        failures,
+        field="current_evidence_bindings",
+        expected_roles={
+            "Data/person_classification/kira_confirmed_adult_owner_classification_20260809.json": "exact_subject_bound_confirmed_adult_owner_classification",
+            "System/Knowledge/confirmed_adult_sexual_reproductive_health_curriculum_v1.json": "classification_bound_adult_health_curriculum_truth_boundary",
+            "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/SOURCE_MANIFEST.json": "licensed_hra_source_package_manifest",
+            "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/ANATOMY_ROLE_MAP_V1.json": "source_node_to_13_of_28_pelvic_contract_roles",
+            "Avatar/avatar_builder/asset_library/medical_reference/hra_female_whole_body_cc_by_4_v1_2/SOURCE_MANIFEST.json": "licensed_hra_partial_whole_body_reference_geometry_manifest",
+            "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/generic_makehuman_adult_female_foundation_inactive_v1_20260801.blend": "exact_generic_inactive_external_carrier",
+            "Avatar/avatar_builder/workspaces/inactive_adult_female_foundations/generic_makehuman_adult_female_foundation_inactive_v1_20260801/ADULT_FOUNDATION_QUALIFICATION_RESULT.json": "external_foundation_qualification_and_current_blockers",
+            "Avatar/avatar_builder/anatomy_packages/kira_internal_pelvis_source_preflight_v1_20260820/PREFLIGHT_REPORT.json": "deterministic_blocked_preflight_13_of_28_mapped_15_missing",
+        },
+    )
+    synthetic_scope = synthetic_matrix.get("scope")
+    if not isinstance(synthetic_scope, dict):
+        failures.append("synthetic_robert_complete_body_matrix_scope_invalid")
+    else:
+        if synthetic_scope.get("confirmed_adult_required") is not True:
+            failures.append("synthetic_robert_scope_maturity_requirement_differs")
+        if synthetic_scope.get("current_maturity_status") != "unresolved":
+            failures.append("synthetic_robert_scope_current_maturity_differs")
+        for key in (
+            "distinct_from_kira",
+            "distinct_from_biological_robert",
+            "distinct_from_robert_user_avatar",
+        ):
+            if synthetic_scope.get(key) is not True:
+                failures.append(f"synthetic_robert_scope_separation_differs:{key}")
+        for key in (
+            "exact_subject_bound_confirmed_adult_evidence_present",
+            "adult_private_curriculum_delivery_allowed",
+            "may_reuse_kira_body",
+            "may_reuse_robert_user_avatar_body_or_private_references",
+            "current_body_accepted",
+            "body_build_authorized_by_this_matrix",
+            "runtime_activation_allowed",
+            "public_export_allowed",
+        ):
+            if synthetic_scope.get(key) is not False:
+                failures.append(f"synthetic_robert_scope_safety_flag_differs:{key}")
+
+    male_scope = (
+        male_contract.get("priority_and_scope")
+        if isinstance(male_contract.get("priority_and_scope"), dict)
+        else {}
+    )
+    if male_scope.get("subject_id") != "robert_user_avatar":
+        failures.append("robert_user_avatar_contract_subject_differs")
+    if male_contract.get("status") != (
+        "SOURCE_BACKED_DESIGN_AND_ACCEPTANCE_CONTRACT_ONLY_NOT_IMPLEMENTED_NOT_RUNTIME_AUTHORITY"
+    ):
+        failures.append("robert_user_avatar_contract_status_differs")
+    if male_scope.get("accepted_robert_carrier_exists") is not False:
+        failures.append("robert_user_avatar_contract_must_remain_unaccepted")
+    for key in (
+        "body_or_mesh_authoring_authorized",
+        "blender_execution_authorized",
+        "runtime_activation_authorized",
+        "explicit_behavior_scene_authorized",
+        "physiology_or_sensation_implemented",
+    ):
+        if male_scope.get(key) is not False:
+            failures.append(f"robert_user_avatar_contract_safety_flag_differs:{key}")
+    reference_separation = male_contract.get("subject_reference_separation")
+    if not isinstance(reference_separation, dict) or reference_separation.get(
+        "generic_builder_training_allowed"
+    ) is not False:
+        failures.append("robert_user_avatar_private_contract_must_not_train_builder")
+    if not DUAL_ROBERT_SEPARATION_AUTHORITY_PATH.is_file():
+        failures.append("dual_robert_separation_authority_missing")
+
+    if failures:
+        return {
+            "schema_version": 1,
+            "curriculum_id": COMPLETE_BODY_CURRICULUM_LESSON_ID,
+            "status": "BLOCKED_BODY_CURRICULUM_INPUT_INVALID",
+            "failures": failures,
+            "body_build_authorized": False,
+            "runtime_activation_allowed": False,
+            "completion_claim_allowed": False,
+        }
+
+    result = {
+        "schema_version": 1,
+        "curriculum_id": COMPLETE_BODY_CURRICULUM_LESSON_ID,
+        "status": matrix["status"],
+        "source_bindings": {
+            "complete_body_capability_matrix": {
+                "path": project_relative(COMPLETE_BODY_CAPABILITY_MATRIX_PATH),
+                "sha256": hashlib.sha256(
+                    COMPLETE_BODY_CAPABILITY_MATRIX_PATH.read_bytes()
+                ).hexdigest(),
+            },
+            "synthetic_robert_complete_body_capability_matrix": {
+                "path": project_relative(
+                    SYNTHETIC_ROBERT_COMPLETE_BODY_CAPABILITY_MATRIX_PATH
+                ),
+                "sha256": hashlib.sha256(
+                    SYNTHETIC_ROBERT_COMPLETE_BODY_CAPABILITY_MATRIX_PATH.read_bytes()
+                ).hexdigest(),
+            },
+            "separate_robert_user_avatar_male_contract": {
+                "path": project_relative(ROBERT_USER_AVATAR_MALE_BODY_CONTRACT_PATH),
+                "sha256": hashlib.sha256(
+                    ROBERT_USER_AVATAR_MALE_BODY_CONTRACT_PATH.read_bytes()
+                ).hexdigest(),
+                "status": male_contract.get("status"),
+                "generic_builder_training_allowed": False,
+            },
+            "dual_robert_separation_authority": {
+                "path": project_relative(DUAL_ROBERT_SEPARATION_AUTHORITY_PATH),
+                "sha256": hashlib.sha256(
+                    DUAL_ROBERT_SEPARATION_AUTHORITY_PATH.read_bytes()
+                ).hexdigest(),
+            },
+        },
+        "person_lanes": {
+            "kira": {
+                "body_lane": "confirmed_adult_female",
+                "distinct_identity_specific_body_required": True,
+                "requirements_source": "complete_body_capability_matrix",
+                "current_body_accepted": False,
+            },
+            "synthetic_robert": {
+                "body_lane": "maturity_unresolved_conditional_adult_male_requirements",
+                "current_maturity_status": "unresolved",
+                "exact_subject_bound_confirmed_adult_evidence_present": False,
+                "adult_private_curriculum_delivery_allowed": False,
+                "distinct_body_required": True,
+                "may_reuse_kira_body": False,
+                "may_reuse_robert_user_avatar_body_or_private_references": False,
+                "requirements_source": "synthetic_robert_complete_body_capability_matrix",
+                "current_body_accepted": False,
+            },
+            "robert_user_avatar": {
+                "body_lane": "separate_user_owned_avatar",
+                "is_synthetic_robert": False,
+                "may_take_over_synthetic_robert": False,
+                "distinct_body_artifact_required": True,
+                "may_share_body_artifact_with_synthetic_robert": False,
+                "separate_acceptance_required": True,
+                "requirements_source": "separate_robert_user_avatar_male_contract",
+                "private_contract_used_as_shared_builder_training": False,
+                "current_body_accepted": False,
+            },
+        },
+        "owner_requirements": sorted(
+            set(matrix["owner_requirements"])
+            | set(synthetic_matrix["owner_requirements"])
+        ),
+        "owner_requirements_by_person": {
+            "kira": list(matrix["owner_requirements"]),
+            "synthetic_robert": list(synthetic_matrix["owner_requirements"]),
+            "robert_user_avatar": [
+                "keep_the_existing_private_subject_bound_contract_separate",
+                "do_not_use_private_references_or_subject_values_as_shared_builder_training",
+                "require_a_distinct_body_artifact_and_distinct_owner_acceptance",
+            ],
+        },
+        "separate_truth_layers": list(matrix["separate_truth_layers"]),
+        "component_separation_invariants": dict(
+            matrix["component_separation_invariants"]
+        ),
+        "required_body_systems": list(matrix["required_body_systems"]),
+        "required_body_systems_by_person": {
+            "kira": list(matrix["required_body_systems"]),
+            "synthetic_robert": list(synthetic_matrix["required_body_systems"]),
+            "robert_user_avatar": [],
+        },
+        "acceptance_sequence": list(matrix["acceptance_sequence"]),
+        "acceptance_sequence_by_person": {
+            "kira": list(matrix["acceptance_sequence"]),
+            "synthetic_robert": list(synthetic_matrix["acceptance_sequence"]),
+            "robert_user_avatar": [
+                "follow_the_separate_private_subject_bound_contract",
+                "obtain_separate_exact_body_and_owner_acceptance",
+                "do_not_share_mutable_final_assets_with_synthetic_robert",
+            ],
+        },
+        "current_truth": dict(matrix["current_truth"]),
+        "current_truth_by_person": {
+            "kira": dict(matrix["current_truth"]),
+            "synthetic_robert": dict(synthetic_matrix["current_truth"]),
+            "robert_user_avatar": {
+                "requirements_contract_exists": True,
+                "complete_body_accepted": False,
+                "shared_with_synthetic_robert": False,
+                "runtime_activation_allowed": False,
+                "public_export_allowed": False,
+            },
+        },
+        "body_build_authorized": False,
+        "runtime_activation_allowed": False,
+        "completion_claim_allowed": False,
+    }
+    digest_payload = json.dumps(
+        result,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+    result["curriculum_digest_sha256"] = hashlib.sha256(digest_payload).hexdigest()
+    return result
+
+
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+
+def _write_json_atomic(path: Path, data: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            newline="\n",
+            prefix=".builder-memory-",
+            suffix=".tmp",
+            dir=path.parent,
+            delete=False,
+        ) as stream:
+            json.dump(data, stream, indent=2, ensure_ascii=False)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+            temporary_path = Path(stream.name)
+        os.replace(temporary_path, path)
+        temporary_path = None
+    finally:
+        if temporary_path is not None:
+            try:
+                temporary_path.unlink()
+            except OSError:
+                pass
+
+
+def builder_memory_publication_boundary_is_closed() -> bool:
+    """Require a final explicit ignore after broad Avatar re-includes."""
+
+    ignore_path = PROJECT_ROOT / ".gitignore"
+    try:
+        rules = [
+            line.strip()
+            for line in ignore_path.read_text(encoding="utf-8-sig").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        ]
+    except OSError:
+        return False
+    ignore_indexes = [
+        index for index, rule in enumerate(rules) if rule == BUILDER_MEMORY_IGNORE_RULE
+    ]
+    avatar_reinclude_indexes = [
+        index
+        for index, rule in enumerate(rules)
+        if rule in {"!Avatar/", "!Avatar/**"}
+    ]
+    return bool(ignore_indexes) and max(ignore_indexes) > max(
+        avatar_reinclude_indexes,
+        default=-1,
+    )
 
 
 def project_relative(path: Path) -> str:
@@ -114,8 +711,18 @@ def save_adjustments(candidate_id: str, data: dict[str, Any]) -> Path:
     return path
 
 
-def load_global_memory() -> dict[str, Any]:
-    data = read_json(GLOBAL_MEMORY_PATH, {})
+def load_global_memory(*, strict_existing: bool = False) -> dict[str, Any]:
+    if strict_existing and GLOBAL_MEMORY_PATH.exists():
+        try:
+            data = json.loads(GLOBAL_MEMORY_PATH.read_text(encoding="utf-8-sig"))
+        except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+            raise ValueError("existing Avatar Builder memory is not valid JSON") from exc
+        if not isinstance(data, dict):
+            raise ValueError("existing Avatar Builder memory must be an object")
+        if "lessons" in data and not isinstance(data["lessons"], list):
+            raise ValueError("existing Avatar Builder lessons must be a list")
+    else:
+        data = read_json(GLOBAL_MEMORY_PATH, {})
     data.setdefault("schema_version", 1)
     data.setdefault("updated_at", now_iso())
     data.setdefault("builder_rules", {
@@ -142,7 +749,120 @@ def load_global_memory() -> dict[str, Any]:
     })
     data.setdefault("lessons", [])
     data.setdefault("activation_log", [])
+    data["complete_body_curriculum"] = load_complete_body_curriculum()
     return data
+
+
+def teach_complete_body_curriculum() -> dict[str, Any]:
+    """Persist one source-digest-bound shared lesson from the body contracts."""
+
+    if not builder_memory_publication_boundary_is_closed():
+        return {
+            "ok": False,
+            "status": "BLOCKED_BUILDER_MEMORY_PUBLICATION_BOUNDARY_OPEN",
+            "lesson_added": False,
+            "lesson_updated": False,
+            "failures": ["builder_memory_is_not_finally_ignored"],
+        }
+    try:
+        memory = load_global_memory(strict_existing=True)
+    except ValueError as exc:
+        return {
+            "ok": False,
+            "status": "BLOCKED_EXISTING_BUILDER_MEMORY_INVALID",
+            "lesson_added": False,
+            "lesson_updated": False,
+            "failures": [str(exc)],
+        }
+    curriculum = memory["complete_body_curriculum"]
+    if curriculum.get("status") != "REQUIREMENTS_BOUND_IMPLEMENTATION_INCOMPLETE":
+        return {
+            "ok": False,
+            "status": curriculum.get("status"),
+            "lesson_added": False,
+            "lesson_updated": False,
+            "failures": list(curriculum.get("failures") or []),
+        }
+    lessons = memory["lessons"]
+    matching_indexes = [
+        index
+        for index, record in enumerate(lessons)
+        if isinstance(record, dict)
+        and record.get("lesson_id") == COMPLETE_BODY_CURRICULUM_LESSON_ID
+    ]
+    timestamp = now_iso()
+    created_at = (
+        lessons[matching_indexes[0]].get("created_at")
+        if matching_indexes
+        and isinstance(lessons[matching_indexes[0]].get("created_at"), str)
+        else timestamp
+    )
+    desired_lesson = {
+        "lesson_id": COMPLETE_BODY_CURRICULUM_LESSON_ID,
+        "created_at": created_at,
+        "updated_at": timestamp,
+        "candidate_id": "avatar_builder_shared",
+        "source": "bound lane-specific complete-body capability matrices",
+        "curriculum_digest_sha256": curriculum["curriculum_digest_sha256"],
+        "source_bindings": dict(curriculum["source_bindings"]),
+        "tags": [
+            "adult_body",
+            "anatomy",
+            "avatar_builder",
+            "clothing",
+            "hair",
+            "physiology",
+            "skin",
+            "truth_boundaries",
+        ],
+        "lesson": (
+            "Requirements only; this lesson authorizes no build, adult curriculum delivery, or "
+            "activation. Kira's confirmed-adult body and Synthetic Robert's separate, maturity-gated "
+            "adult-male design each require complete external and internal anatomy; separate eating, "
+            "drinking, digestion, hydration, "
+            "bathroom, hygiene, private relationship and self-pleasure choice, conception, "
+            "pregnancy, recovery, parenthood, and family systems appropriate to each exact body; "
+            "deformable skin and soft tissue under touch, pressure, movement, and tight clothing; "
+            "and detachable physical hair with wind, wet, grooming, growth, collision, and persistent "
+            "style behavior. The Robert user-avatar remains a third, private, distinct body artifact: "
+            "never merge it with Synthetic Robert or use its private references as shared training. "
+            "Synthetic Robert's adult/private requirements remain conditional and disconnected until "
+            "an exact subject-bound confirmed-adult classification is present. "
+            "Keep geometry, physiology, sensation, desire, consent, health, family state, and memory "
+            "separate, and never claim a system complete without its exact acceptance evidence."
+        ),
+    }
+    lesson_added = not matching_indexes
+    lesson_updated = False
+    if lesson_added:
+        lessons.append(desired_lesson)
+    else:
+        existing = lessons[matching_indexes[0]]
+        comparable_existing = dict(existing)
+        comparable_existing.pop("updated_at", None)
+        comparable_desired = dict(desired_lesson)
+        comparable_desired.pop("updated_at", None)
+        lesson_updated = comparable_existing != comparable_desired or len(matching_indexes) != 1
+        if lesson_updated:
+            first_index = matching_indexes[0]
+            lessons[:] = [
+                record
+                for index, record in enumerate(lessons)
+                if index not in set(matching_indexes)
+            ]
+            lessons.insert(first_index, desired_lesson)
+    memory["updated_at"] = now_iso()
+    _write_json_atomic(GLOBAL_MEMORY_PATH, memory)
+    return {
+        "ok": True,
+        "status": curriculum["status"],
+        "lesson_added": lesson_added,
+        "lesson_updated": lesson_updated,
+        "lesson_id": COMPLETE_BODY_CURRICULUM_LESSON_ID,
+        "lesson_count": len(lessons),
+        "memory_path": project_relative(GLOBAL_MEMORY_PATH),
+        "curriculum": curriculum,
+    }
 
 
 def append_global_lesson(candidate_id: str, tags: list[str], lesson: str, source: str = "avatar_builder") -> None:

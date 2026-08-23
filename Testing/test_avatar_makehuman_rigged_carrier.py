@@ -26,6 +26,7 @@ CONFIG_PATH = (
     / "tooling"
     / "makehuman_adult_female_rigged_carrier_v1.json"
 )
+CONTROLLER_PATH = PROJECT_ROOT / "Core" / "avatar_makehuman_rigged_carrier.py"
 BUILDER_PATH = (
     PROJECT_ROOT
     / "tools"
@@ -43,8 +44,26 @@ class RiggedCarrierPreflightTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.config = carrier.read_json(CONFIG_PATH, "test config")
 
+    def _fresh_config_path(self) -> Path:
+        temporary = tempfile.TemporaryDirectory(dir=PROJECT_ROOT / "Testing")
+        self.addCleanup(temporary.cleanup)
+        directory = Path(temporary.name)
+        relative_directory = directory.relative_to(PROJECT_ROOT).as_posix()
+        config = deepcopy(self.config)
+        config["output"] = {
+            "allowed_root": relative_directory,
+            "candidate_blend": f"{relative_directory}/candidate.blend",
+            "build_report": f"{relative_directory}/build.json",
+            "audit_report": f"{relative_directory}/audit.json",
+            "one_run_authorization": f"{relative_directory}/authorization.json",
+        }
+        config_path = directory / "config.json"
+        config_path.write_text(json.dumps(config), encoding="utf-8")
+        return config_path
+
     def test_01_exact_real_inputs_are_ready_without_execution_authority(self) -> None:
-        report = carrier.prepare_preflight(PROJECT_ROOT, CONFIG_PATH)
+        config_path = self._fresh_config_path()
+        report = carrier.prepare_preflight(PROJECT_ROOT, config_path)
         self.assertEqual(
             report["status"],
             "PREFLIGHT_READY_AWAITING_EXACT_ONE_RUN_AUTHORIZATION",
@@ -85,7 +104,7 @@ class RiggedCarrierPreflightTests(unittest.TestCase):
         )
         binding_receipt, code_bindings = carrier.preflight_binding_receipt(
             PROJECT_ROOT,
-            CONFIG_PATH,
+            config_path,
         )
         self.assertEqual(report["preflight_receipt_sha256"], binding_receipt)
         self.assertEqual(report["bound_code"], code_bindings)
@@ -238,6 +257,21 @@ class RiggedCarrierPreflightTests(unittest.TestCase):
                 operation="build",
             )
             self.assertEqual(accepted["one_run_id"], "unit-test-only")
+            authorized_preflight = carrier.prepare_preflight(
+                PROJECT_ROOT,
+                config_path,
+                blender_executable=Path(sys.executable),
+                authorization_path=authorization_path,
+                verify_decompressed_container=False,
+            )
+            self.assertEqual(
+                "PREFLIGHT_BINDINGS_VALID_STATIC_ONLY_EXECUTION_TRUST_BOUNDARY_OPEN",
+                authorized_preflight["status"],
+            )
+            self.assertIs(
+                authorized_preflight["authority"]["blender_execution_authorized"],
+                False,
+            )
             for key in (
                 "overwrite_allowed",
                 "source_mutation_allowed",
@@ -270,10 +304,56 @@ class RiggedCarrierPreflightTests(unittest.TestCase):
                     Path(sys.executable),
                     operation="audit",
                 )
+            alternate_path.unlink()
             changed_code = dict(authorization)
             changed_code["builder_sha256"] = "0" * 64
             authorization_path.write_text(json.dumps(changed_code), encoding="utf-8")
             with self.assertRaisesRegex(carrier.RiggedCarrierError, "builder_sha256"):
+                carrier.validate_one_run_authorization(
+                    PROJECT_ROOT,
+                    config_path,
+                    authorization_path,
+                    Path(sys.executable),
+                    operation="build",
+                )
+
+            changed_blender = dict(authorization)
+            changed_blender["blender_executable_sha256"] = "0" * 64
+            authorization_path.write_text(json.dumps(changed_blender), encoding="utf-8")
+            with self.assertRaisesRegex(
+                carrier.RiggedCarrierError,
+                "blender_executable_sha256",
+            ):
+                carrier.validate_one_run_authorization(
+                    PROJECT_ROOT,
+                    config_path,
+                    authorization_path,
+                    Path(sys.executable),
+                    operation="build",
+                )
+
+            stale_config = dict(authorization)
+            stale_config["config_sha256"] = "0" * 64
+            authorization_path.write_text(json.dumps(stale_config), encoding="utf-8")
+            with self.assertRaisesRegex(carrier.RiggedCarrierError, "config_sha256"):
+                carrier.validate_one_run_authorization(
+                    PROJECT_ROOT,
+                    config_path,
+                    authorization_path,
+                    Path(sys.executable),
+                    operation="build",
+                )
+
+            authorization_path.write_text(json.dumps(authorization), encoding="utf-8")
+            rejection_path = directory / "BUILD_REJECTION.json"
+            rejection_path.write_text(
+                json.dumps({"status": "BUILD_REJECTED", "one_run_id": "unit-test-only"}),
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(
+                carrier.RiggedCarrierError,
+                "prior or unbound artifacts",
+            ):
                 carrier.validate_one_run_authorization(
                     PROJECT_ROOT,
                     config_path,
@@ -291,9 +371,10 @@ class RiggedCarrierPreflightTests(unittest.TestCase):
             return original_import(name, *args, **kwargs)
 
         with mock.patch("builtins.__import__", side_effect=guarded_import):
+            config_path = self._fresh_config_path()
             report = carrier.prepare_preflight(
                 PROJECT_ROOT,
-                CONFIG_PATH,
+                config_path,
                 verify_decompressed_container=False,
             )
         self.assertFalse(report["source"]["decompressed_container_verified"])
@@ -375,18 +456,185 @@ class RiggedCarrierPreflightTests(unittest.TestCase):
         )
 
 
+class RiggedCarrierWorkerInvocationTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temporary = tempfile.TemporaryDirectory(dir=PROJECT_ROOT / "Testing")
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name)
+        self.install = self.root / "Blender 5.1"
+        self.blender = self.install / "blender.exe"
+        self.python = self.install / "5.1" / "python" / "bin" / "python.exe"
+        self.python.parent.mkdir(parents=True)
+        self.blender.write_bytes(b"synthetic-blender-binary")
+        self.python.write_bytes(b"synthetic-bundled-python")
+        self.argv = [
+            str(self.blender),
+            "--background",
+            "--factory-startup",
+            "--disable-autoexec",
+            "--python",
+            str(BUILDER_PATH),
+            "--",
+            "--config",
+            str(CONFIG_PATH),
+            "--authorization",
+            str(CONFIG_PATH.parent / "ONE_RUN_AUTHORIZATION.json"),
+        ]
+
+    def _validate(self, **changes: object) -> Path:
+        values: dict[str, object] = {
+            "sys_executable": self.python,
+            "blender_binary_path": self.blender,
+            "argv": self.argv,
+            "background": True,
+            "autoexec_enabled": False,
+            "operation": "build",
+        }
+        values.update(changes)
+        return carrier.validate_blender_worker_invocation(**values)
+
+    def test_10_blender_51_bundled_python_semantics_bind_the_real_binary(self) -> None:
+        self.assertEqual(self._validate(), self.blender.resolve(strict=True))
+        self.assertEqual(
+            self._validate(sys_executable=self.blender),
+            self.blender.resolve(strict=True),
+        )
+        self.assertIs(carrier.EXECUTION_TRUST_BOUNDARY_CLOSED, False)
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "execution remains blocked"):
+            carrier.require_carrier_execution_trust_boundary()
+
+    def test_11_ordinary_python_and_renamed_blender_fail_closed(self) -> None:
+        ordinary_argv = [
+            sys.executable,
+            "--background",
+            "--factory-startup",
+            "--disable-autoexec",
+            "--",
+        ]
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "not named Blender"):
+            self._validate(
+                sys_executable=sys.executable,
+                blender_binary_path=sys.executable,
+                argv=ordinary_argv,
+            )
+
+        renamed = self.install / "renamed_blender.exe"
+        renamed.write_bytes(self.blender.read_bytes())
+        renamed_argv = [str(renamed), *self.argv[1:]]
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "not named Blender"):
+            self._validate(blender_binary_path=renamed, argv=renamed_argv)
+
+    def test_12_wrong_flags_separator_background_and_autoexec_fail_closed(self) -> None:
+        for flag in carrier.REQUIRED_BLENDER_FLAGS:
+            with self.subTest(missing=flag):
+                with self.assertRaisesRegex(carrier.RiggedCarrierError, "exact Blender worker prefix|exact order"):
+                    self._validate(argv=[value for value in self.argv if value != flag])
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "argument separator"):
+            self._validate(argv=[value for value in self.argv if value != "--"])
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "background mode"):
+            self._validate(background=False)
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "must be disabled"):
+            self._validate(autoexec_enabled=True)
+
+    def test_13_mismatched_launch_path_and_external_python_fail_closed(self) -> None:
+        other_install = self.root / "Other"
+        other_install.mkdir()
+        other_blender = other_install / "blender.exe"
+        other_blender.write_bytes(b"other-blender")
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, r"argv\[0\] differs"):
+            self._validate(argv=[str(other_blender), *self.argv[1:]])
+
+        outside_python = self.root / "python.exe"
+        outside_python.write_bytes(b"outside-python")
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "not contained"):
+            self._validate(sys_executable=outside_python)
+
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "filesystem path"):
+            self._validate(blender_binary_path=None)
+
+    def test_14_extra_script_flags_order_and_worker_substitution_fail_closed(self) -> None:
+        injected_expr = [
+            *self.argv[:4],
+            "--python-expr",
+            "raise SystemExit(0)",
+            *self.argv[4:],
+        ]
+        attacker = self.root / "attacker.py"
+        attacker.write_text("raise SystemExit(0)", encoding="utf-8")
+        injected_worker = [
+            *self.argv[:4],
+            "--python",
+            str(attacker),
+            *self.argv[4:],
+        ]
+        reordered = list(self.argv)
+        reordered[1], reordered[2] = reordered[2], reordered[1]
+        wrong_worker = list(self.argv)
+        wrong_worker[5] = str(AUDITOR_PATH)
+        for name, values in (
+            ("python_expr", injected_expr),
+            ("second_python", injected_worker),
+            ("reordered_flags", reordered),
+            ("wrong_worker", wrong_worker),
+        ):
+            with self.subTest(name=name):
+                with self.assertRaises(carrier.RiggedCarrierError):
+                    self._validate(argv=values)
+
+    def test_15_worker_arguments_and_bundled_python_layout_fail_closed(self) -> None:
+        extra_worker_argument = [*self.argv, "--unexpected"]
+        reversed_worker_arguments = [
+            *self.argv[:7],
+            "--authorization",
+            self.argv[10],
+            "--config",
+            self.argv[8],
+        ]
+        for values in (extra_worker_argument, reversed_worker_arguments):
+            with self.assertRaisesRegex(
+                carrier.RiggedCarrierError,
+                "exact config and authorization",
+            ):
+                self._validate(argv=values)
+
+        arbitrary_python = self.install / "5.1" / "other" / "bin" / "python.exe"
+        arbitrary_python.parent.mkdir(parents=True)
+        arbitrary_python.write_bytes(b"arbitrary-python")
+        with self.assertRaisesRegex(carrier.RiggedCarrierError, "bundled Python layout"):
+            self._validate(sys_executable=arbitrary_python)
+
+
 class RiggedCarrierWorkerStaticTests(unittest.TestCase):
     def test_10_workers_parse_and_preserve_the_exact_cli_boundary(self) -> None:
+        controller_source = CONTROLLER_PATH.read_text(encoding="utf-8")
+        self.assertIn("REQUIRED_BLENDER_FLAGS", controller_source)
+        self.assertIn("requires the exact Blender worker prefix", controller_source)
+        self.assertIn("worker_relative", controller_source)
+        self.assertIn(
+            "PREFLIGHT_BINDINGS_VALID_STATIC_ONLY_EXECUTION_TRUST_BOUNDARY_OPEN",
+            controller_source,
+        )
+        self.assertNotIn(
+            '"PREFLIGHT_AUTHORIZED_EXACT_INACTIVE_RUN_READY"',
+            controller_source,
+        )
         for path in (BUILDER_PATH, AUDITOR_PATH):
             source = path.read_text(encoding="utf-8")
             ast.parse(source, filename=str(path))
             self.assertIn("validate_one_run_authorization", source)
-            self.assertIn("REQUIRED_BLENDER_FLAGS", source)
-            self.assertIn("sys.argv[:separator]", source)
+            self.assertIn("validate_blender_worker_invocation", source)
+            self.assertIn("require_carrier_execution_trust_boundary()", source)
+            self.assertIn("bpy.app.binary_path", source)
+            self.assertNotIn("Path(sys.executable)", source)
             self.assertIn("use_scripts=False", source)
             self.assertNotIn("subprocess", source)
             self.assertNotIn("socket", source)
             self.assertNotIn("requests", source)
+            if path == BUILDER_PATH:
+                self.assertIn(
+                    "PREFLIGHT_AUTHORIZED_EXACT_INACTIVE_RUN_READY",
+                    source,
+                )
 
     def test_11_auditor_has_no_save_render_or_export_operation(self) -> None:
         source = AUDITOR_PATH.read_text(encoding="utf-8")

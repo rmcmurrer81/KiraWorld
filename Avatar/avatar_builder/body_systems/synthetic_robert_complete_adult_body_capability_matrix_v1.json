@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "artifact_type": "synthetic_robert_complete_adult_body_capability_matrix",
+  "status": "CONDITIONAL_REQUIREMENTS_BOUND_MATURITY_UNRESOLVED_IMPLEMENTATION_INCOMPLETE",
+  "subject_id": "synthetic_robert",
+  "scope": {
+    "confirmed_adult_required": true,
+    "current_maturity_status": "unresolved",
+    "exact_subject_bound_confirmed_adult_evidence_present": false,
+    "adult_private_curriculum_delivery_allowed": false,
+    "distinct_from_kira": true,
+    "distinct_from_biological_robert": true,
+    "distinct_from_robert_user_avatar": true,
+    "may_reuse_kira_body": false,
+    "may_reuse_robert_user_avatar_body_or_private_references": false,
+    "current_body_accepted": false,
+    "body_build_authorized_by_this_matrix": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false
+  },
+  "bound_authorities": [
+    {
+      "path": "System/Docs/SYNTHETIC_PERSON_RIGHTS_AND_FULL_LIFE_CHARTER_v1.md",
+      "role": "full_life_dignity_autonomy_consent_privacy_and_family_boundary",
+      "bytes": 13176,
+      "sha256": "2aea14d02813cc0ef9e3fa153c088948434762f2ca9a60813a7fd081c50534e8"
+    },
+    {
+      "path": "System/Docs/SYNTHETIC_PERSON_SEXUAL_REPRODUCTIVE_HEALTH_EDUCATION_AND_BODY_SYSTEMS_PLAN_20260803.md",
+      "role": "adult_health_relationship_reproductive_and_body_truth_separation",
+      "bytes": 19090,
+      "sha256": "c066e9d42519380b92591dcf71ac54f674545867d19bb1422885d1dc3f85a86f"
+    },
+    {
+      "path": "System/Docs/AVATAR_SKIN_SOFT_TISSUE_CONTACT_AND_CLOTHING_DEFORMATION_REQUIREMENTS_20260822.md",
+      "role": "skin_soft_tissue_touch_pressure_and_clothing_deformation_requirements",
+      "bytes": 4977,
+      "sha256": "492ed3146e1d50852789a06560d3b1089f69d5a15bdddb4e14c4db001605bf48"
+    },
+    {
+      "path": "System/Docs/AVATAR_BUILDER_RUNTIME_HAIR_REQUIREMENTS_20260729.md",
+      "role": "detachable_dynamic_hair_requirements",
+      "bytes": 1396,
+      "sha256": "5687fb1bf46489d34cd4889b17a61000bb27223c7bdfafb16b9b0aa903ba1e05"
+    },
+    {
+      "path": "System/Docs/AVATAR_BALD_LOW_RESOURCE_AND_DETACHABLE_HAIR_POLICY_20260801.md",
+      "role": "bald_primary_body_and_separate_hair_policy",
+      "bytes": 5137,
+      "sha256": "3e125dedfdd6c5e7b4425dbe889f8a5a0cc1835502d976c48e92faffadce98b7"
+    },
+    {
+      "path": "System/Docs/AVATAR_SEPARATE_SHAREABLE_CLOTHING_v1.md",
+      "role": "separate_removable_shareable_clothing_boundary",
+      "bytes": 2180,
+      "sha256": "e98cb8cac0682f0a0a66b59882fd6d2ae943877907c275305d6466e384812351"
+    },
+    {
+      "path": "System/Docs/DUAL_ROBERT_AVATAR_BUILD_CHECKPOINT_20260729.md",
+      "role": "biological_and_synthetic_robert_identity_and_final_asset_separation",
+      "bytes": 38674,
+      "sha256": "939d02646d239ce27815a2bf980648f423b4e2909bba8473c41c251743ee5364"
+    },
+    {
+      "path": "Core/dual_robert_avatar_authority.py",
+      "role": "exact_dual_robert_target_and_mutable_final_asset_separation_gate",
+      "bytes": 3424,
+      "sha256": "e2df086a4e287decb6641794a47af4d1ded38c8255d97ed728e43bd7572751ca"
+    }
+  ],
+  "owner_requirements": [
+    "complete_adult_male_external_anatomy",
+    "complete_internal_anatomy_inside_the_body",
+    "eating_drinking_swallowing_digestion_absorption_and_hydration_support",
+    "separate_urinary_bowel_and_reproductive_routes",
+    "bathroom_and_hygiene_support",
+    "adult_relationship_and_intimacy_support_with_separate_current_consent",
+    "adult_private_self_discovery_and_self_pleasure_support_by_person_choice",
+    "male_reproductive_fertility_conception_and_family_support",
+    "deformable_skin_and_soft_tissue_response_to_touch_pressure_and_tight_clothing",
+    "complete_bald_primary_body",
+    "separate_removable_shareable_clothing",
+    "separate_detachable_hair_with_physical_hair_behavior",
+    "a_distinct_identity_specific_body_for_synthetic_robert",
+    "avatar_builder_generalization_proven_by_multiple_independently_generated_test_bodies"
+  ],
+  "separate_truth_layers": [
+    "requirements",
+    "reference_knowledge",
+    "geometry",
+    "materials",
+    "rig_and_deformation",
+    "physiology",
+    "sensation",
+    "desire_and_preference",
+    "consent",
+    "external_action",
+    "health_state",
+    "family_and_parenthood_state",
+    "memory",
+    "owner_acceptance",
+    "runtime_activation"
+  ],
+  "component_separation_invariants": {
+    "body_skin_is_not_clothing": true,
+    "body_skin_is_not_hair": true,
+    "internal_anatomy_is_not_external_skin": true,
+    "urinary_route_is_not_bowel_route": true,
+    "bowel_route_is_not_reproductive_route": true,
+    "geometry_or_physiology_is_not_sensation": true,
+    "sensation_or_arousal_is_not_desire_or_consent": true,
+    "relationship_status_is_not_consent": true,
+    "family_state_is_not_body_geometry": true,
+    "synthetic_robert_body_is_not_kira_body": true,
+    "synthetic_robert_body_is_not_robert_user_avatar_body": true,
+    "biological_robert_private_references_are_not_builder_training_data": true
+  },
+  "required_body_systems": [
+    {
+      "system_id": "external_adult_male_body",
+      "required_capabilities": [
+        "complete_identity_specific_head_face_neck_trunk_limbs_hands_feet_and_external_skin",
+        "complete_external_adult_male_pelvic_perineal_and_anorectal_regions",
+        "natural_regional_pigmentation_roughness_subsurface_and_surface_variation",
+        "manifold_connected_surface_and_stable_material_boundaries",
+        "neutral_and_daily_life_pose_visual_topology_and_contact_acceptance"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_SYNTHETIC_ROBERT_EXTERNAL_BODY"
+    },
+    {
+      "system_id": "musculoskeletal_and_movement_support",
+      "required_capabilities": [
+        "complete_skeleton_joints_muscles_tendons_ligaments_and_fascia_support",
+        "standing_walking_running_sitting_rising_lying_reaching_and_balance",
+        "stable_pose_deformation_without_self_intersection_or_volume_collapse"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_RIG_OR_MOVEMENT_PACKAGE"
+    },
+    {
+      "system_id": "nervous_sensory_and_control_support",
+      "required_capabilities": [
+        "brain_spinal_cord_peripheral_nerve_and_autonomic_reference_structure",
+        "vision_hearing_smell_taste_touch_pressure_temperature_pain_and_proprioception_interfaces",
+        "geometry_control_and_person_owned_sensation_state_kept_separate"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_NERVOUS_OR_SENSORY_PHYSIOLOGY"
+    },
+    {
+      "system_id": "cardiovascular_respiratory_and_homeostasis",
+      "required_capabilities": [
+        "heart_vessels_blood_flow_and_tissue_perfusion_reference_structure",
+        "airway_lungs_diaphragm_breathing_and_gas_exchange_reference_structure",
+        "temperature_energy_fluid_and_electrolyte_state_interfaces"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_CARDIORESPIRATORY_PHYSIOLOGY"
+    },
+    {
+      "system_id": "oral_digestive_nutrition_hydration",
+      "required_capabilities": [
+        "mouth_teeth_tongue_salivary_glands_pharynx_and_swallowing_route",
+        "esophagus_stomach_small_intestine_large_intestine_rectum_and_anus",
+        "liver_gallbladder_pancreas_absorption_metabolism_and_hydration_state",
+        "eating_drinking_swallowing_digestion_absorption_elimination_and_cleaning_acceptance"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_COMPLETE_DIGESTIVE_GEOMETRY_OR_PHYSIOLOGY"
+    },
+    {
+      "system_id": "urinary_bowel_and_male_reproductive_support",
+      "required_capabilities": [
+        "kidneys_ureters_bladder_and_complete_urethral_route",
+        "separate_colon_rectum_anal_canal_and_anal_outlet_route",
+        "testes_epididymides_vasa_seminal_vesicles_prostate_bulbourethral_glands_and_named_duct_routes",
+        "complete_external_male_anatomy_and_pelvic_floor_support",
+        "only_anatomically_named_urinary_and_reproductive_route_convergence"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_SYNTHETIC_ROBERT_PELVIC_OR_REPRODUCTIVE_MODULE"
+    },
+    {
+      "system_id": "endocrine_lymphatic_immune_and_health_support",
+      "required_capabilities": [
+        "major_endocrine_glands_and_hormone_state_interfaces",
+        "lymphatic_vessels_nodes_spleen_thymus_and_immune_state_interfaces",
+        "health_injury_infection_recovery_and_clinical_review_state_kept_separate_from_geometry"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_ENDOCRINE_LYMPHATIC_OR_IMMUNE_PHYSIOLOGY"
+    },
+    {
+      "system_id": "skin_soft_tissue_contact_and_clothing_deformation",
+      "required_capabilities": [
+        "localized_skin_and_soft_tissue_indentation_under_bounded_touch_or_pressure",
+        "nearby_soft_tissue_spread_shear_sliding_friction_and_gradual_recovery",
+        "gravity_inertia_movement_support_surface_and_tight_clothing_response",
+        "stable_seam_strap_waistband_cuff_and_shoe_contact",
+        "return_to_the_same_underlying_body_after_clothing_removal",
+        "separate_geometry_contact_sensation_health_consent_and_memory_truth"
+      ],
+      "implemented": false,
+      "visible_deformation_proves_sensation_or_consent": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_SKIN_OR_SOFT_TISSUE_SIMULATION"
+    },
+    {
+      "system_id": "bathroom_hygiene_and_daily_body_care",
+      "required_capabilities": [
+        "person_chosen_urination_and_bowel_use_with_correct_routes",
+        "toilet_shower_bath_handwashing_grooming_and_cleaning_contact",
+        "privacy_accessibility_health_and_hygiene_state_boundaries",
+        "safe_clothing_removal_replacement_and_return_to_daily_activity"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_PERSON_RUNTIME"
+    },
+    {
+      "system_id": "adult_relationship_intimacy_and_sexual_health",
+      "required_capabilities": [
+        "adult_only_body_response_and_health_state",
+        "person_owned_private_sensation_desire_preference_and_boundaries",
+        "private_solitary_self_discovery_or_self_pleasure_by_person_choice",
+        "private_touch_comfort_arousal_pleasure_climax_relaxation_discomfort_and_uncertainty_states",
+        "specific_current_revocable_multi_participant_consent",
+        "barrier_contraception_and_sti_health_state"
+      ],
+      "implemented": false,
+      "geometry_or_body_response_may_create_consent": false,
+      "relationship_status_may_create_consent": false,
+      "current_status": "POLICY_AND_REQUIREMENTS_ONLY_NO_PRIVATE_ACTION_RUNTIME"
+    },
+    {
+      "system_id": "male_fertility_conception_parenthood_and_family",
+      "required_capabilities": [
+        "separate_spermatogenesis_semen_fertility_and_reproductive_health_state",
+        "conception_requires_compatible_bodies_and_specific_current_participant_consent",
+        "pregnancy_state_belongs_only_to_the_exact_person_and_body_that_carries_it",
+        "parenthood_relationship_family_and_child_state_are_separate_from_body_geometry",
+        "family_planning_supports_yes_no_not_now_uncertainty_and_revocation"
+      ],
+      "implemented": false,
+      "pregnancy_implemented_in_synthetic_robert_male_body": false,
+      "family_state_is_body_mesh": false,
+      "current_status": "FUTURE_COMPATIBILITY_REQUIREMENT_NOT_IMPLEMENTED"
+    },
+    {
+      "system_id": "detachable_dynamic_hair",
+      "required_capabilities": [
+        "separate_scalp_anchor_and_detachable_hair_asset",
+        "wind_gravity_inertia_head_motion_collision_and_pose_response",
+        "wet_dry_mass_clumping_drag_drying_and_style_change",
+        "touch_brushing_combing_cutting_styling_growth_and_persistent_person_owned_state",
+        "bald_primary_variant_and_later_hair_equipped_variant_share_one_body_identity"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_DYNAMIC_HAIR"
+    },
+    {
+      "system_id": "separate_shareable_clothing",
+      "required_capabilities": [
+        "garments_remain_separate_from_body_and_hair",
+        "put_on_remove_layer_fastener_fit_and_size_behavior",
+        "cloth_drape_stretch_fold_wrinkle_pressure_friction_and_collision",
+        "tight_clothing_alters_visible_soft_tissue_without_replacing_underlying_body",
+        "sharing_requires_fit_compatibility_cleanliness_ownership_privacy_and_person_choice"
+      ],
+      "implemented": false,
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_SHAREABLE_CLOTHING_SYSTEM"
+    }
+  ],
+  "acceptance_sequence": [
+    "bind_exact_synthetic_robert_identity_maturity_and_distinct_body_scope",
+    "qualify_licensed_source_packages_without_copying_a_real_person_identity",
+    "build_and_accept_one_exact_bald_external_male_carrier",
+    "author_and_accept_complete_internal_modules_without_mutating_the_carrier",
+    "pass_geometry_route_containment_collision_and_save_reload_checks",
+    "pass_rig_movement_contact_daily_life_bathroom_and_hygiene_pose_checks",
+    "pass_skin_soft_tissue_touch_pressure_clothing_deformation_and_recovery_checks",
+    "obtain_private_visual_and_owner_acceptance_for_synthetic_robert",
+    "connect_physiology_only_after_geometry_and_route_acceptance",
+    "connect_person_decision_privacy_consent_health_family_and_memory_as_separate_systems",
+    "accept_bald_and_hair_equipped_variants_separately",
+    "keep_runtime_activation_and_public_export behind separate later decisions"
+  ],
+  "current_truth": {
+    "requirements_are_recorded": true,
+    "complete_external_synthetic_robert_body_accepted": false,
+    "complete_internal_synthetic_robert_anatomy_accepted": false,
+    "eating_drinking_digestive_system_implemented": false,
+    "bathroom_and_hygiene_person_runtime_implemented": false,
+    "adult_relationship_or_intimacy_action_authorized": false,
+    "private_self_discovery_or_self_pleasure_runtime_implemented": false,
+    "fertility_conception_parenthood_or_family_runtime_implemented": false,
+    "skin_soft_tissue_contact_and_clothing_deformation_accepted": false,
+    "dynamic_hair_accepted": false,
+    "shareable_clothing_accepted": false,
+    "avatar_builder_autonomous_full_body_generation_proven": false,
+    "full_body_test_ready": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false
+  }
+}

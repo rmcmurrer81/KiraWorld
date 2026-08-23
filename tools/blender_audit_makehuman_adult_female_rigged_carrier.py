@@ -32,15 +32,16 @@ if str(PROJECT_ROOT) not in sys.path:
 from Core.avatar_makehuman_rigged_carrier import (  # noqa: E402
     EXPECTED_PELVIC_GROUPS,
     EXPECTED_POSE_IDS,
-    REQUIRED_BLENDER_FLAGS,
     RiggedCarrierError,
     canonical_sha256,
     evaluate_pose_gate,
     native_filesystem_path,
     project_path,
     read_json,
+    require_carrier_execution_trust_boundary,
     same_filesystem_path,
     sha256_file,
+    validate_blender_worker_invocation,
     validate_one_run_authorization,
 )
 from tools.blender_exact_mesh_intersections import (  # noqa: E402
@@ -62,20 +63,18 @@ def _project_argument(value: str) -> Path:
 
 
 def require_safe_blender_invocation() -> Path:
-    if not bpy.app.background:
-        raise RiggedCarrierError("carrier audit requires Blender background mode")
-    separator = sys.argv.index("--") if "--" in sys.argv else len(sys.argv)
-    blender_arguments = sys.argv[:separator]
-    for flag in REQUIRED_BLENDER_FLAGS:
-        if blender_arguments.count(flag) != 1:
-            raise RiggedCarrierError(f"carrier audit requires Blender flag {flag}")
-    autoexec = getattr(bpy.context.preferences.filepaths, "use_scripts_auto_execute", None)
-    if autoexec is not False:
-        raise RiggedCarrierError("automatic script execution must be disabled")
-    executable = Path(sys.executable).resolve(strict=True)
-    if executable.name.lower() not in {"blender", "blender.exe"}:
-        raise RiggedCarrierError("worker executable is not Blender")
-    return executable
+    return validate_blender_worker_invocation(
+        sys_executable=sys.executable,
+        blender_binary_path=bpy.app.binary_path,
+        argv=sys.argv,
+        background=bpy.app.background,
+        autoexec_enabled=getattr(
+            bpy.context.preferences.filepaths,
+            "use_scripts_auto_execute",
+            None,
+        ),
+        operation="audit",
+    )
 
 
 def _matrix_values(matrix: Any) -> list[float]:
@@ -613,6 +612,7 @@ def _pose_record(
 
 
 def main() -> int:
+    require_carrier_execution_trust_boundary()
     args = parse_args()
     blender_executable = require_safe_blender_invocation()
     config_path = _project_argument(args.config).resolve(strict=True)

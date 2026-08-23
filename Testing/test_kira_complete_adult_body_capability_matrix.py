@@ -108,7 +108,7 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
 
     def test_every_bound_authority_matches_exact_repository_bytes(self) -> None:
         authorities = self.matrix["bound_authorities"]
-        self.assertEqual(10, len(authorities))
+        self.assertEqual(11, len(authorities))
         evidence = self.matrix["current_evidence_bindings"]
         self.assertEqual(8, len(evidence))
         expected_roles = {
@@ -122,6 +122,7 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
             "System/Docs/AVATAR_BUILDER_RUNTIME_HAIR_REQUIREMENTS_20260729.md": "detachable_dynamic_hair_requirements",
             "System/Docs/AVATAR_BALD_LOW_RESOURCE_AND_DETACHABLE_HAIR_POLICY_20260801.md": "bald_primary_body_and_separate_hair_policy",
             "System/Docs/KIRA_PARALLEL_MIND_EMOTION_ABILITIES_AND_EMBODIMENT_ROADMAP_20260810.md": "female_body_then_distinct_male_body_acceptance_order",
+            "System/Docs/AVATAR_SKIN_SOFT_TISSUE_CONTACT_AND_CLOTHING_DEFORMATION_REQUIREMENTS_20260822.md": "skin_soft_tissue_touch_pressure_and_clothing_deformation_requirements",
             "Data/person_classification/kira_confirmed_adult_owner_classification_20260809.json": "exact_subject_bound_confirmed_adult_owner_classification",
             "System/Knowledge/confirmed_adult_sexual_reproductive_health_curriculum_v1.json": "classification_bound_adult_health_curriculum_truth_boundary",
             "Avatar/avatar_builder/asset_library/medical_reference/hra_female_pelvis_cc_by_4_v1_2/SOURCE_MANIFEST.json": "licensed_hra_source_package_manifest",
@@ -190,7 +191,9 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
             "separate_urinary_bowel_and_reproductive_routes",
             "bathroom_hygiene_and_cycle_support",
             "adult_relationship_and_intimacy_support_with_separate_current_consent",
+            "adult_private_self_discovery_and_self_pleasure_support_by_person_choice",
             "conception_pregnancy_delivery_recovery_and_family_support",
+            "deformable_skin_and_soft_tissue_response_to_touch_pressure_and_tight_clothing",
             "complete_bald_primary_body",
             "separate_removable_shareable_clothing",
             "separate_detachable_hair_with_physical_hair_behavior",
@@ -234,6 +237,7 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
                 "internal_pelvic_urinary_bowel_reproductive_support",
                 "oral_digestive_nutrition_hydration",
                 "whole_body_support_and_homeostasis",
+                "skin_soft_tissue_contact_and_clothing_deformation",
                 "bathroom_hygiene_and_cycle",
                 "adult_relationship_intimacy_and_sexual_health",
                 "conception_pregnancy_delivery_recovery_and_family",
@@ -257,6 +261,7 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
                 "internal_pelvic_urinary_bowel_reproductive_support": "PREFLIGHT_BLOCKED_MISSING_STRUCTURES_HRA_MAP_13_OF_28",
                 "oral_digestive_nutrition_hydration": "LICENSED_HRA_PARTIAL_GEOMETRY_SMALL_INTESTINE_LIVER_PANCREAS_ONLY_ROUTES_AND_FUNCTIONS_OPEN",
                 "whole_body_support_and_homeostasis": "LICENSED_HRA_PARTIAL_KIDNEY_HEART_VASCULATURE_LUNG_AND_GI_GEOMETRY_NO_COMPLETE_CONTRACT",
+                "skin_soft_tissue_contact_and_clothing_deformation": "REQUIREMENTS_ONLY_NO_ACCEPTED_SKIN_OR_SOFT_TISSUE_SIMULATION",
                 "bathroom_hygiene_and_cycle": "NON_PERSON_FIXTURE_ONLY_EXACT_BODY_HOOKS_NOT_IMPLEMENTED",
                 "adult_relationship_intimacy_and_sexual_health": "POLICY_AND_DISCONNECTED_SCHEMA_ONLY",
                 "conception_pregnancy_delivery_recovery_and_family": "FUTURE_COMPATIBILITY_REQUIREMENT_NOT_IMPLEMENTED",
@@ -360,6 +365,8 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
             {
                 "adult_only_body_response_and_health_state",
                 "person_owned_private_sensation_and_preference",
+                "private_solitary_self_discovery_or_self_pleasure_by_person_choice",
+                "private_touch_comfort_arousal_pleasure_climax_relaxation_discomfort_and_uncertainty_states",
                 "specific_current_revocable_multi_participant_consent",
                 "barrier_contraception_and_sti_health_state",
             },
@@ -367,6 +374,24 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
         )
         self.assertIs(relationship["geometry_or_body_response_may_create_consent"], False)
         self.assertIs(relationship["relationship_status_may_create_consent"], False)
+
+        skin = systems["skin_soft_tissue_contact_and_clothing_deformation"]
+        self.assertEqual(
+            {
+                "localized_skin_and_soft_tissue_indentation_under_bounded_touch_or_pressure",
+                "nearby_soft_tissue_spread_shear_sliding_and_friction",
+                "gradual_release_and_recovery_without_destructive_mesh_edits",
+                "gravity_inertia_movement_and_support_surface_response",
+                "tight_clothing_pressure_compression_and_soft_tissue_redistribution",
+                "stable_seam_strap_waistband_cuff_and_shoe_contact",
+                "separate_body_garment_hair_and_environment_collision_surfaces",
+                "bounded_volume_stretch_compression_and_solver_energy",
+                "return_to_the_same_underlying_body_after_clothing_removal",
+                "separate_geometry_contact_sensation_health_consent_and_memory_truth",
+            },
+            set(skin["required_behaviors"]),
+        )
+        self.assertIs(skin["visible_deformation_proves_sensation_or_consent"], False)
         pregnancy = systems["conception_pregnancy_delivery_recovery_and_family"]
         self.assertEqual(
             {
@@ -435,14 +460,19 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
             if name == "requirements_are_recorded":
                 continue
             self.assertIs(value, False, name)
+        systems = {
+            row["system_id"]: row for row in self.matrix["required_body_systems"]
+        }
         self.assertIs(
-            self.matrix["required_body_systems"][5][
+            systems["adult_relationship_intimacy_and_sexual_health"][
                 "geometry_or_body_response_may_create_consent"
             ],
             False,
         )
         self.assertIs(
-            self.matrix["required_body_systems"][6]["family_state_is_body_mesh"],
+            systems["conception_pregnancy_delivery_recovery_and_family"][
+                "family_state_is_body_mesh"
+            ],
             False,
         )
 
@@ -456,6 +486,7 @@ class KiraCompleteAdultBodyCapabilityMatrixTests(unittest.TestCase):
                 "assemble_modules_on_an_exact_accepted_bald_external_carrier_without_carrier_mutation",
                 "pass_geometry_route_containment_collision_and_save_reload_checks",
                 "pass_rig_deformation_contact_and_daily_life_pose_checks",
+                "pass_skin_soft_tissue_touch_pressure_clothing_deformation_and_recovery_checks",
                 "obtain_private_visual_and_owner_acceptance_for_kira",
                 "connect_physiology_only_after_geometry_and_route_acceptance",
                 "connect_person_decision_privacy_consent_health_and_memory_as_separate_systems",

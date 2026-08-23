@@ -29,7 +29,9 @@
     "separate_urinary_bowel_and_reproductive_routes",
     "bathroom_hygiene_and_cycle_support",
     "adult_relationship_and_intimacy_support_with_separate_current_consent",
+    "adult_private_self_discovery_and_self_pleasure_support_by_person_choice",
     "conception_pregnancy_delivery_recovery_and_family_support",
+    "deformable_skin_and_soft_tissue_response_to_touch_pressure_and_tight_clothing",
     "complete_bald_primary_body",
     "separate_removable_shareable_clothing",
     "separate_detachable_hair_with_physical_hair_behavior",
@@ -96,6 +98,12 @@
       "bytes": 9254,
       "sha256": "c13799ee99b8da6670bd981c7b7bbc5d5f80b21519dbf95f0693d26c61622fa0",
       "role": "female_body_then_distinct_male_body_acceptance_order"
+    },
+    {
+      "path": "System/Docs/AVATAR_SKIN_SOFT_TISSUE_CONTACT_AND_CLOTHING_DEFORMATION_REQUIREMENTS_20260822.md",
+      "bytes": 4977,
+      "sha256": "492ed3146e1d50852789a06560d3b1089f69d5a15bdddb4e14c4db001605bf48",
+      "role": "skin_soft_tissue_touch_pressure_and_clothing_deformation_requirements"
     }
   ],
   "current_evidence_bindings": [
@@ -250,6 +258,24 @@
       "implemented": false
     },
     {
+      "system_id": "skin_soft_tissue_contact_and_clothing_deformation",
+      "required_behaviors": [
+        "localized_skin_and_soft_tissue_indentation_under_bounded_touch_or_pressure",
+        "nearby_soft_tissue_spread_shear_sliding_and_friction",
+        "gradual_release_and_recovery_without_destructive_mesh_edits",
+        "gravity_inertia_movement_and_support_surface_response",
+        "tight_clothing_pressure_compression_and_soft_tissue_redistribution",
+        "stable_seam_strap_waistband_cuff_and_shoe_contact",
+        "separate_body_garment_hair_and_environment_collision_surfaces",
+        "bounded_volume_stretch_compression_and_solver_energy",
+        "return_to_the_same_underlying_body_after_clothing_removal",
+        "separate_geometry_contact_sensation_health_consent_and_memory_truth"
+      ],
+      "current_status": "REQUIREMENTS_ONLY_NO_ACCEPTED_SKIN_OR_SOFT_TISSUE_SIMULATION",
+      "implemented": false,
+      "visible_deformation_proves_sensation_or_consent": false
+    },
+    {
       "system_id": "bathroom_hygiene_and_cycle",
       "required_functions": [
         "bladder_storage_urge_delay_and_voluntary_release",
@@ -267,6 +293,8 @@
       "required_functions": [
         "adult_only_body_response_and_health_state",
         "person_owned_private_sensation_and_preference",
+        "private_solitary_self_discovery_or_self_pleasure_by_person_choice",
+        "private_touch_comfort_arousal_pleasure_climax_relaxation_discomfort_and_uncertainty_states",
         "specific_current_revocable_multi_participant_consent",
         "barrier_contraception_and_sti_health_state"
       ],
@@ -342,6 +370,7 @@
     "assemble_modules_on_an_exact_accepted_bald_external_carrier_without_carrier_mutation",
     "pass_geometry_route_containment_collision_and_save_reload_checks",
     "pass_rig_deformation_contact_and_daily_life_pose_checks",
+    "pass_skin_soft_tissue_touch_pressure_clothing_deformation_and_recovery_checks",
     "obtain_private_visual_and_owner_acceptance_for_kira",
     "connect_physiology_only_after_geometry_and_route_acceptance",
     "connect_person_decision_privacy_consent_health_and_memory_as_separate_systems",
@@ -357,7 +386,9 @@
     "eating_drinking_digestive_system_implemented": false,
     "bathroom_and_cycle_person_runtime_implemented": false,
     "adult_relationship_or_intimacy_action_authorized": false,
+    "private_self_discovery_or_self_pleasure_runtime_implemented": false,
     "conception_pregnancy_delivery_recovery_or_family_runtime_implemented": false,
+    "skin_soft_tissue_contact_and_clothing_deformation_accepted": false,
     "complete_distinct_robert_body_accepted": false,
     "dynamic_hair_accepted": false,
     "shareable_clothing_accepted": false,

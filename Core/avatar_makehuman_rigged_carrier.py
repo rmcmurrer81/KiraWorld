@@ -40,6 +40,7 @@ RFC3339_UTC_RE = re.compile(
 ZSTD_MAGIC = b"\x28\xb5\x2f\xfd"
 MAX_COMPRESSED_BLEND_BYTES = 16 * 1024 * 1024
 MAX_DECOMPRESSED_BLEND_BYTES = 64 * 1024 * 1024
+EXECUTION_TRUST_BOUNDARY_CLOSED = False
 
 EXPECTED_POSE_IDS = (
     "neutral_standing",
@@ -188,6 +189,135 @@ def same_filesystem_path(first: Path, second: Path) -> bool:
         return os.path.normcase(os.path.normpath(value))
 
     return identity(first) == identity(second)
+
+
+def validate_blender_worker_invocation(
+    *,
+    sys_executable: str | os.PathLike[str],
+    blender_binary_path: str | os.PathLike[str],
+    argv: Iterable[str],
+    background: bool,
+    autoexec_enabled: Any,
+    operation: str,
+) -> Path:
+    """Bind a Blender worker to the real Blender binary and safe CLI boundary.
+
+    Blender 5.1 exposes its bundled Python interpreter through
+    ``sys.executable``. The launched Blender binary is instead exposed through
+    ``bpy.app.binary_path`` and repeated as ``sys.argv[0]``. This Blender-free
+    helper validates those supplied values without importing ``bpy`` so the
+    identity boundary can be tested hostilely under ordinary Python.
+    """
+
+    if operation not in {"build", "audit"}:
+        raise RiggedCarrierError("operation must be build or audit")
+    label = f"carrier {operation}"
+    if background is not True:
+        raise RiggedCarrierError(f"{label} requires Blender background mode")
+
+    try:
+        arguments = list(argv)
+    except TypeError as exc:
+        raise RiggedCarrierError(f"{label} arguments must be iterable text") from exc
+    if not arguments or any(not isinstance(value, str) for value in arguments):
+        raise RiggedCarrierError(f"{label} arguments must be nonempty text")
+    def resolved_file(raw: str | os.PathLike[str], path_label: str) -> Path:
+        if not isinstance(raw, (str, os.PathLike)):
+            raise RiggedCarrierError(f"{path_label} must be a filesystem path")
+        if not str(raw).strip():
+            raise RiggedCarrierError(f"{path_label} is absent")
+        try:
+            path = Path(raw).resolve(strict=True)
+        except (OSError, RuntimeError) as exc:
+            raise RiggedCarrierError(f"cannot resolve {path_label}") from exc
+        if not path.is_file():
+            raise RiggedCarrierError(f"{path_label} is not a file")
+        return path
+
+    blender_path = resolved_file(blender_binary_path, "bpy.app.binary_path")
+    if blender_path.name.lower() not in {"blender", "blender.exe"}:
+        raise RiggedCarrierError("bpy.app.binary_path is not named Blender")
+    if _is_reparse(blender_path):
+        raise RiggedCarrierError("Blender executable must not be a reparse point")
+    if int(getattr(blender_path.stat(), "st_nlink", 1)) != 1:
+        raise RiggedCarrierError("Blender executable must not be multiply linked")
+
+    launched_path = resolved_file(arguments[0], "Blender argv[0]")
+    if not same_filesystem_path(launched_path, blender_path):
+        raise RiggedCarrierError("Blender argv[0] differs from bpy.app.binary_path")
+
+    if arguments.count("--") != 1:
+        raise RiggedCarrierError(f"{label} requires one Blender argument separator")
+    separator = arguments.index("--")
+    if separator != 6:
+        raise RiggedCarrierError(f"{label} requires the exact Blender worker prefix")
+    if arguments[1:4] != list(REQUIRED_BLENDER_FLAGS):
+        raise RiggedCarrierError(
+            f"{label} requires Blender safety flags once in the exact order"
+        )
+    if arguments[4] != "--python":
+        raise RiggedCarrierError(f"{label} requires exactly one --python worker")
+    worker_relative = (
+        BUILDER_RELATIVE_PATH if operation == "build" else AUDITOR_RELATIVE_PATH
+    )
+    worker_path = resolved_file(
+        Path(__file__).resolve().parents[1] / Path(worker_relative),
+        "bound worker script",
+    )
+    launched_worker_path = resolved_file(arguments[5], "Blender worker argument")
+    if not same_filesystem_path(launched_worker_path, worker_path):
+        raise RiggedCarrierError("Blender worker argument differs from bound worker")
+    worker_arguments = arguments[separator + 1 :]
+    if (
+        len(worker_arguments) != 4
+        or worker_arguments[0] != "--config"
+        or worker_arguments[2] != "--authorization"
+        or not worker_arguments[1].strip()
+        or not worker_arguments[3].strip()
+    ):
+        raise RiggedCarrierError(
+            f"{label} requires exact config and authorization worker arguments"
+        )
+    if autoexec_enabled is not False:
+        raise RiggedCarrierError("automatic script execution must be disabled")
+
+    python_path = resolved_file(sys_executable, "sys.executable")
+    if same_filesystem_path(python_path, blender_path):
+        return blender_path
+    if not re.fullmatch(r"python(?:3(?:\.\d+)?)?(?:\.exe)?", python_path.name.lower()):
+        raise RiggedCarrierError("sys.executable is neither Blender nor bundled Python")
+    try:
+        bundled_relative = python_path.relative_to(blender_path.parent)
+    except ValueError as exc:
+        raise RiggedCarrierError(
+            "sys.executable is not contained by the Blender installation"
+        ) from exc
+    bundled_parts = bundled_relative.parts
+    if (
+        len(bundled_parts) != 4
+        or re.fullmatch(r"\d+\.\d+(?:\.\d+)?", bundled_parts[0]) is None
+        or bundled_parts[1].lower() != "python"
+        or bundled_parts[2].lower() != "bin"
+    ):
+        raise RiggedCarrierError(
+            "sys.executable does not match Blender's bundled Python layout"
+        )
+    if _is_reparse(python_path):
+        raise RiggedCarrierError("Blender bundled Python must not be a reparse point")
+    if int(getattr(python_path.stat(), "st_nlink", 1)) != 1:
+        raise RiggedCarrierError("Blender bundled Python must not be multiply linked")
+    return blender_path
+
+
+def require_carrier_execution_trust_boundary() -> None:
+    """Keep both Blender workers non-executable until external trust is closed."""
+
+    if EXECUTION_TRUST_BOUNDARY_CLOSED is not True:
+        raise RiggedCarrierError(
+            "carrier execution remains blocked: trusted pre-import launcher, "
+            "process identity, bundled interpreter binding, and atomic one-run "
+            "claim are not implemented"
+        )
 
 
 def promote_file_no_replace(staging_path: Path, destination_path: Path) -> dict[str, Any]:
@@ -1203,6 +1333,38 @@ def _output_paths(project_root: Path, output: Mapping[str, Any]) -> dict[str, Pa
     return paths
 
 
+def _validate_attempt_directory_entries(
+    outputs: Mapping[str, Path],
+    config_path: Path,
+    *,
+    operation: str,
+    authorization_present: bool,
+) -> None:
+    """Reject replay residue or any unbound artifact in one attempt directory."""
+
+    parent = outputs["candidate_blend"].parent
+    native_parent = native_filesystem_path(parent)
+    if not native_parent.is_dir():
+        raise RiggedCarrierError("authorized output directory does not exist")
+    allowed: list[Path] = []
+    if same_filesystem_path(config_path.parent, parent):
+        allowed.append(config_path)
+    if authorization_present:
+        allowed.append(outputs["one_run_authorization"])
+    if operation == "audit":
+        allowed.extend((outputs["candidate_blend"], outputs["build_report"]))
+    unexpected = [
+        entry.name
+        for entry in native_parent.iterdir()
+        if not any(same_filesystem_path(entry, expected) for expected in allowed)
+    ]
+    if unexpected:
+        raise RiggedCarrierError(
+            "attempt directory contains prior or unbound artifacts: "
+            + ", ".join(sorted(unexpected))
+        )
+
+
 def _input_snapshot(paths: Mapping[str, Path]) -> dict[str, dict[str, Any]]:
     result: dict[str, dict[str, Any]] = {}
     for label, path in sorted(paths.items()):
@@ -1421,6 +1583,12 @@ def prepare_preflight(
             raise RiggedCarrierError("authorization path differs from config")
         if not existing_outputs["one_run_authorization"]:
             raise RiggedCarrierError("one-run authorization is absent")
+    _validate_attempt_directory_entries(
+        outputs,
+        config_absolute,
+        operation="build",
+        authorization_present=authorization_path is not None,
+    )
 
     blender_record: dict[str, Any] | None = None
     if blender_executable is not None:
@@ -1493,7 +1661,7 @@ def prepare_preflight(
         "schema_version": 1,
         "artifact_type": "makehuman_adult_female_rigged_carrier_preflight",
         "status": (
-            "PREFLIGHT_AUTHORIZED_EXACT_INACTIVE_RUN_READY"
+            "PREFLIGHT_BINDINGS_VALID_STATIC_ONLY_EXECUTION_TRUST_BOUNDARY_OPEN"
             if authorization is not None
             else "PREFLIGHT_READY_AWAITING_EXACT_ONE_RUN_AUTHORIZATION"
         ),
@@ -1581,6 +1749,12 @@ def validate_one_run_authorization(
         "one-run authorization",
         must_exist=True,
     )
+    _validate_attempt_directory_entries(
+        output_paths,
+        config_absolute,
+        operation=operation,
+        authorization_present=True,
+    )
     authorization = read_json(authorization_absolute, "one-run authorization")
     _exact_keys(authorization, AUTHORIZATION_KEYS, "one-run authorization")
     if authorization.get("schema") != ONE_RUN_AUTHORIZATION_SCHEMA:
@@ -1646,6 +1820,7 @@ __all__ = [
     "CONTROLLER_ID",
     "EXPECTED_PELVIC_GROUPS",
     "EXPECTED_POSE_IDS",
+    "EXECUTION_TRUST_BOUNDARY_CLOSED",
     "ONE_RUN_AUTHORIZATION_SCHEMA",
     "ONE_RUN_AUTHORIZATION_STATUS",
     "REQUIRED_BLENDER_FLAGS",
@@ -1659,9 +1834,11 @@ __all__ = [
     "promote_file_no_replace",
     "project_path",
     "read_json",
+    "require_carrier_execution_trust_boundary",
     "resolve_makehuman_skeleton_geometry",
     "same_filesystem_path",
     "sha256_file",
+    "validate_blender_worker_invocation",
     "validate_one_run_authorization",
     "validate_source_definition",
 ]
