@@ -441,6 +441,53 @@ class KokoroAdapterTests(unittest.TestCase):
         ):
             self.assertFalse(_release_provider_matches(injected, self.config, bundle))
 
+    def test_direct_mxc_run_cannot_bypass_release_review(self):
+        readonly = self.root / "readonly-direct-run"
+        readonly.mkdir()
+        executor = readonly / "wxc-exec.exe"
+        executor.write_bytes(b"MZ" + b"x" * 128)
+        executor_hash = hashlib.sha256(executor.read_bytes()).hexdigest()
+        output = self.staging / "direct-run.partial"
+        runner_called = False
+
+        def injected_runner(*_args, **_kwargs):
+            nonlocal runner_called
+            runner_called = True
+            return ProcessResult(0, b"", b"")
+
+        provider = MxcIsolationProvider(
+            MxcIsolationConfig(executor, executor_hash, self.staging, (readonly,)),
+            runner=injected_runner,
+        )
+        with (
+            patch.object(
+                provider,
+                "attest",
+                return_value=kokoro_module.IsolationAttestation(
+                    MXC_PROVIDER_ID, True, True, True, "future canaries passed"
+                ),
+            ),
+            patch.object(
+                kokoro_module,
+                "REVIEWED_ISOLATION_PROVIDER_IDS",
+                frozenset({MXC_PROVIDER_ID}),
+            ),
+            self.assertRaisesRegex(BackendUnavailableError, "not release reviewed"),
+        ):
+            provider.run(
+                [str(executor)],
+                b"",
+                {},
+                CancellationToken(threading.Event()),
+                1.0,
+                32,
+                32,
+                output,
+                1024,
+            )
+        self.assertFalse(runner_called)
+        self.assertFalse(output.exists())
+
     def test_mxc_provider_fails_closed_when_launch_canary_fails(self):
         readonly=self.root/"readonly"; readonly.mkdir()
         executor=readonly/"wxc-exec.exe"; executor.write_bytes(b"MZ"+b"x"*128)

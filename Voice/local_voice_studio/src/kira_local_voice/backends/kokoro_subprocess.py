@@ -835,6 +835,17 @@ class MxcIsolationProvider:
         output_path: Path,
         output_limit: int,
     ) -> ProcessResult:
+        # Keep the provider boundary fail-closed even when it is called outside
+        # ``KokoroSubprocessBackend``.  Backend readiness already requires the
+        # exact concrete provider, a release-reviewed ID, and the production
+        # runner, but a future hostile-canary implementation must not make this
+        # lower-level method independently usable before release review.
+        if (
+            type(self) is not MxcIsolationProvider
+            or self.provider_id not in REVIEWED_ISOLATION_PROVIDER_IDS
+            or self._runner is not _bounded_process
+        ):
+            raise BackendUnavailableError("MXC isolation provider is not release reviewed")
         attestation = self.attest()
         if not (
             attestation.process_tree_contained
