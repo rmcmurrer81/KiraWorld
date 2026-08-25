@@ -33,6 +33,59 @@ canonical WAV and hash-bound receipt, and exits. It never plays, routes,
 binds, publishes, or replaces a voice. Named-person imitation language is
 rejected.
 
+## Read-only profile audition planner
+
+`profile_audition_planner.py` is a separate planning boundary. It reads only
+the trusted current Temporary Creator integration plan at
+`Voice/local_voice_studio/evidence/avatar_temporary_creator_voice_integration.json`,
+binds that file's byte count and SHA-256, and prepares request JSON without
+loading a model or generating audio.
+
+The planner is intentionally narrow:
+
+- only the six current `prepare_nonbinding_*audition_brief` records with all
+  three source records present are eligible;
+- missing-source identities and `preserve_*` records are excluded;
+- an existing voice is never copied into a request bundle, including the
+  preserved legacy H. H. Holmes baseline;
+- authored `female` and `male` values map exactly to Qwen's `adult_woman` and
+  `adult_man` presentations;
+- every eligible identity receives the same three generic audition palettes;
+  no body, personality, era, or confirmed-locale traits are invented;
+- `en-US` is retained only as the plan's explicit application audition default,
+  while `source_locale_confirmation_required_before_binding` remains a blocker;
+- all 18 deterministic request IDs are at most 64 characters, and every request
+  conforms to `feasibility_worker.load_request`;
+- the H. H. Holmes bundle and test text retain the exact disclosure:
+  `Speculative historical reconstruction; not an authentic recording, verified
+  voice match, or identity clone.` No authenticity or identity-clone claim is
+  made.
+
+Input JSON is size-bounded, duplicate-key rejecting, non-finite-number
+rejecting, exact-schema checked, and recursively checked for unsafe attestation
+paths and hashes. The output root must be a new absolute directory outside the
+KiraWorld repository. Immediately before writing, the planner rebuilds the
+entire plan from the trusted source and requires exact equality, preventing a
+caller from injecting a request or traversal path.
+
+Example planning command (no synthesis occurs):
+
+```powershell
+python profile_audition_planner.py `
+  --output-root C:\new-private-audition-request-bundles
+```
+
+The new directory contains `audition-request-plan.json` and 18 individual
+request files. It remains nonbinding planning material: no profile, route,
+binding, activation, pilot evidence, or audio is changed.
+
+Planner regression tests, including validation of every emitted request through
+the current feasibility worker, run with:
+
+```powershell
+python -B -m unittest tests.test_profile_audition_planner -v
+```
+
 The worker sets Hugging Face and Transformers offline flags and was exercised
 inside the development tool's restricted-network sandbox. That is useful
 feasibility evidence, but it is not the reviewed OS-enforced production
