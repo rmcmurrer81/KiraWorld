@@ -75,3 +75,4 @@ node_modules/
 # Resident Avatar Builder memory is mutable/private runtime state, not source.
 # Keep this final rule after the curated Avatar re-includes above.
 Avatar/avatar_builder/builder_memory.json
+Avatar/avatar_builder/.builder_memory.json.lock

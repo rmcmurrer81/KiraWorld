@@ -22,6 +22,11 @@ from Core.avatar_builder_correction_memory import (
     evaluate_age_progression_stage_two_gate,
     route_next_private_build,
 )
+from Core.avatar_builder_memory_lock import (
+    AvatarBuilderMemoryLockError,
+    is_canonical_utc_timestamp,
+    locked_memory_write,
+)
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -754,6 +759,22 @@ def load_global_memory(*, strict_existing: bool = False) -> dict[str, Any]:
 
 
 def teach_complete_body_curriculum() -> dict[str, Any]:
+    """Serialize publication of the complete-body requirements lesson."""
+
+    try:
+        with locked_memory_write(GLOBAL_MEMORY_PATH):
+            return _teach_complete_body_curriculum_locked()
+    except AvatarBuilderMemoryLockError as exc:
+        return {
+            "ok": False,
+            "status": "BLOCKED_BUILDER_MEMORY_WRITE_LOCK_UNAVAILABLE",
+            "lesson_added": False,
+            "lesson_updated": False,
+            "failures": [str(exc)],
+        }
+
+
+def _teach_complete_body_curriculum_locked() -> dict[str, Any]:
     """Persist one source-digest-bound shared lesson from the body contracts."""
 
     if not builder_memory_publication_boundary_is_closed():
@@ -774,6 +795,7 @@ def teach_complete_body_curriculum() -> dict[str, Any]:
             "lesson_updated": False,
             "failures": [str(exc)],
         }
+    memory_updated_at_valid = is_canonical_utc_timestamp(memory.get("updated_at"))
     curriculum = memory["complete_body_curriculum"]
     if curriculum.get("status") != "REQUIREMENTS_BOUND_IMPLEMENTATION_INCOMPLETE":
         return {
@@ -791,10 +813,12 @@ def teach_complete_body_curriculum() -> dict[str, Any]:
         and record.get("lesson_id") == COMPLETE_BODY_CURRICULUM_LESSON_ID
     ]
     timestamp = now_iso()
+    existing_created_at = (
+        lessons[matching_indexes[0]].get("created_at") if matching_indexes else None
+    )
     created_at = (
-        lessons[matching_indexes[0]].get("created_at")
-        if matching_indexes
-        and isinstance(lessons[matching_indexes[0]].get("created_at"), str)
+        existing_created_at
+        if is_canonical_utc_timestamp(existing_created_at)
         else timestamp
     )
     desired_lesson = {
@@ -839,10 +863,16 @@ def teach_complete_body_curriculum() -> dict[str, Any]:
     else:
         existing = lessons[matching_indexes[0]]
         comparable_existing = dict(existing)
+        existing_updated_at = comparable_existing.get("updated_at")
         comparable_existing.pop("updated_at", None)
         comparable_desired = dict(desired_lesson)
         comparable_desired.pop("updated_at", None)
-        lesson_updated = comparable_existing != comparable_desired or len(matching_indexes) != 1
+        lesson_updated = (
+            not memory_updated_at_valid
+            or not is_canonical_utc_timestamp(existing_updated_at)
+            or comparable_existing != comparable_desired
+            or len(matching_indexes) != 1
+        )
         if lesson_updated:
             first_index = matching_indexes[0]
             lessons[:] = [
@@ -851,6 +881,17 @@ def teach_complete_body_curriculum() -> dict[str, Any]:
                 if index not in set(matching_indexes)
             ]
             lessons.insert(first_index, desired_lesson)
+        else:
+            return {
+                "ok": True,
+                "status": curriculum["status"],
+                "lesson_added": False,
+                "lesson_updated": False,
+                "lesson_id": COMPLETE_BODY_CURRICULUM_LESSON_ID,
+                "lesson_count": len(lessons),
+                "memory_path": project_relative(GLOBAL_MEMORY_PATH),
+                "curriculum": curriculum,
+            }
     memory["updated_at"] = now_iso()
     _write_json_atomic(GLOBAL_MEMORY_PATH, memory)
     return {
@@ -866,28 +907,30 @@ def teach_complete_body_curriculum() -> dict[str, Any]:
 
 
 def append_global_lesson(candidate_id: str, tags: list[str], lesson: str, source: str = "avatar_builder") -> None:
-    memory = load_global_memory()
-    memory["lessons"].append({
-        "created_at": now_iso(),
-        "candidate_id": candidate_id,
-        "source": source,
-        "tags": sorted(set(tags)),
-        "lesson": lesson,
-    })
-    memory["updated_at"] = now_iso()
-    write_json(GLOBAL_MEMORY_PATH, memory)
+    with locked_memory_write(GLOBAL_MEMORY_PATH):
+        memory = load_global_memory(strict_existing=True)
+        memory["lessons"].append({
+            "created_at": now_iso(),
+            "candidate_id": candidate_id,
+            "source": source,
+            "tags": sorted(set(tags)),
+            "lesson": lesson,
+        })
+        memory["updated_at"] = now_iso()
+        _write_json_atomic(GLOBAL_MEMORY_PATH, memory)
 
 
 def log_activation(candidate_id: str, action: str) -> None:
-    memory = load_global_memory()
-    memory["activation_log"].append({
-        "created_at": now_iso(),
-        "builder": "avatar_builder",
-        "candidate_id": candidate_id,
-        "action": action,
-    })
-    memory["updated_at"] = now_iso()
-    write_json(GLOBAL_MEMORY_PATH, memory)
+    with locked_memory_write(GLOBAL_MEMORY_PATH):
+        memory = load_global_memory(strict_existing=True)
+        memory["activation_log"].append({
+            "created_at": now_iso(),
+            "builder": "avatar_builder",
+            "candidate_id": candidate_id,
+            "action": action,
+        })
+        memory["updated_at"] = now_iso()
+        _write_json_atomic(GLOBAL_MEMORY_PATH, memory)
 
 
 def candidate_state(candidate_id: str) -> dict[str, Any]:

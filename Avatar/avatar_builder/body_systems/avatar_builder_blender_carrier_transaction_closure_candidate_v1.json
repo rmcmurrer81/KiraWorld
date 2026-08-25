@@ -1,0 +1,71 @@
+{
+  "schema": "kira.avatar_builder.reusable_lesson_candidate.v1",
+  "lesson_id": "avatar_builder_blender_carrier_transaction_closure_v1",
+  "status": "STATIC_AUTHOR_CANDIDATE_NOT_TAUGHT_AWAITING_DIFFERENT_REVIEW",
+  "source_bindings": [
+    {
+      "role": "transaction_closure_controller",
+      "path": "Core/avatar_blender_carrier_transaction_closure.py",
+      "bytes": 31794,
+      "sha256": "408a9d82d16173ca2849a7a14db7e69468c607640eefe6f4e986a5d97448c9d3"
+    },
+    {
+      "role": "transaction_closure_tests",
+      "path": "Testing/test_avatar_blender_carrier_transaction_closure.py",
+      "bytes": 5822,
+      "sha256": "0bb49fd092759d03b5e7564b7740bf7fc169a4f921d512e64f418a2215101856"
+    },
+    {
+      "role": "transaction_closure_authority",
+      "path": "System/Docs/AVATAR_BUILDER_BLENDER_CARRIER_TRANSACTION_CLOSURE_20260825.md",
+      "bytes": 5657,
+      "sha256": "067602374a2cde5e60cbe7c99514940c105fa35e9c3ce3cd56a7e24f7aca0133"
+    }
+  ],
+  "current_truth": {
+    "installed_blender_and_interpreter_hashes_match": true,
+    "static_complete_input_output_closure_verified": true,
+    "static_two_stage_transaction_closure_verified": true,
+    "native_provider_reviewed": false,
+    "native_transaction_interface_available": false,
+    "authorization_present": false,
+    "native_claim_root_selected": false,
+    "native_claim_created": false,
+    "operating_system_evidence_verified": false,
+    "blender_execution_authorized": false,
+    "body_build_authorized": false,
+    "body_created": false,
+    "candidate_assignment_authorized": false,
+    "anatomy_authoring_authorized": false,
+    "runtime_activation_authorized": false,
+    "public_export_authorized": false
+  },
+  "verified_static_scope": {
+    "input_count": 18,
+    "output_count": 4,
+    "commands": [
+      "build",
+      "audit"
+    ],
+    "transaction_stage_count": 7,
+    "long_path_input_bound": true,
+    "machine_private_paths_published": false,
+    "process_started": false
+  },
+  "lesson": "A carrier build and its pose audit are one transaction, not two independent successes. Bind and retain the complete source, code, and tool closure; reserve every output create-new; keep the build result held through the audit; and terminalize exactly once. If a native provider cannot prove that whole chain, create no body and start no process.",
+  "receiver_integration": {
+    "different_review_required": true,
+    "teaching_allowed": false,
+    "resident_memory_write_allowed": false,
+    "selectable_method_allowed": false,
+    "default_enabled": false
+  },
+  "prohibited_claims": [
+    "native provider implemented or reviewed",
+    "Blender execution authorized",
+    "body or anatomy created",
+    "carrier accepted or assigned",
+    "runtime activation authorized",
+    "public export authorized"
+  ]
+}

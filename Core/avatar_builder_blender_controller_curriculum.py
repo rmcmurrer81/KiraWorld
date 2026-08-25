@@ -12,6 +12,11 @@ from typing import Any
 
 from Core import avatar_blender_preimport_controller as controller
 from Core import avatar_builder_ai
+from Core.avatar_builder_memory_lock import (
+    AvatarBuilderMemoryLockError,
+    is_canonical_utc_timestamp,
+    locked_memory_write,
+)
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -204,9 +209,104 @@ def teach_verified_lesson(*, memory_path: Path = DEFAULT_MEMORY_PATH) -> dict[st
         }
     try:
         lesson = load_verified_lesson()
-        memory = _load_memory(memory_path)
         memory_relative = _relative(memory_path)
-    except ValueError as exc:
+        with locked_memory_write(memory_path):
+            memory = _load_memory(memory_path)
+            memory_updated_at_valid = is_canonical_utc_timestamp(memory.get("updated_at"))
+            matching = [
+                index
+                for index, record in enumerate(memory["lessons"])
+                if isinstance(record, dict) and record.get("lesson_id") == LESSON_ID
+            ]
+            timestamp = _utc_now()
+            existing_created_at = (
+                memory["lessons"][matching[0]].get("created_at") if matching else None
+            )
+            created_at = (
+                existing_created_at
+                if is_canonical_utc_timestamp(existing_created_at)
+                else timestamp
+            )
+            desired = {
+                "lesson_id": LESSON_ID,
+                "created_at": created_at,
+                "updated_at": timestamp,
+                "candidate_id": "avatar_builder_shared",
+                "source": "verified fail-closed Blender pre-import controller boundary",
+                "lesson_digest_sha256": lesson["lesson_digest_sha256"],
+                "lesson_source": lesson["lesson_source"],
+                "source_bindings": lesson["source_bindings"],
+                "tags": [
+                    "avatar_builder",
+                    "blender",
+                    "concurrency",
+                    "fail_closed",
+                    "handle_lifetime",
+                    "process_identity",
+                    "replay_defense",
+                    "record_durability",
+                ],
+                "lesson": lesson["lesson"],
+                "verified_reusable_lessons": lesson["verified_reusable_lessons"],
+                "current_truth": lesson["current_truth"],
+            }
+            added = not matching
+            updated = False
+            if not added:
+                existing = dict(memory["lessons"][matching[0]])
+                existing_updated_at = existing.get("updated_at")
+                existing.pop("updated_at", None)
+                comparable = dict(desired)
+                comparable.pop("updated_at", None)
+                updated = (
+                    not memory_updated_at_valid
+                    or not is_canonical_utc_timestamp(existing_updated_at)
+                    or existing != comparable
+                    or len(matching) != 1
+                )
+                if not updated:
+                    return {
+                        "ok": True,
+                        "status": lesson["status"],
+                        "lesson_id": LESSON_ID,
+                        "lesson_added": False,
+                        "lesson_updated": False,
+                        "lesson_count": len(memory["lessons"]),
+                        "memory_path": memory_relative,
+                        "execution_trust_boundary_closed": False,
+                        "operating_system_evidence_verified": False,
+                        "resume_authorized": False,
+                        "blender_execution_authorized": False,
+                        "body_created": False,
+                    }
+            if added:
+                memory["lessons"].append(desired)
+            else:
+                first = matching[0]
+                matching_set = set(matching)
+                memory["lessons"][:] = [
+                    record
+                    for index, record in enumerate(memory["lessons"])
+                    if index not in matching_set
+                ]
+                memory["lessons"].insert(first, desired)
+            memory["updated_at"] = timestamp
+            _atomic_write_json(memory_path, memory)
+            return {
+                "ok": True,
+                "status": lesson["status"],
+                "lesson_id": LESSON_ID,
+                "lesson_added": added,
+                "lesson_updated": updated,
+                "lesson_count": len(memory["lessons"]),
+                "memory_path": memory_relative,
+                "execution_trust_boundary_closed": False,
+                "operating_system_evidence_verified": False,
+                "resume_authorized": False,
+                "blender_execution_authorized": False,
+                "body_created": False,
+            }
+    except (ValueError, AvatarBuilderMemoryLockError) as exc:
         return {
             "ok": False,
             "status": "BLOCKED_VERIFIED_LESSON_OR_MEMORY_INVALID",
@@ -214,72 +314,6 @@ def teach_verified_lesson(*, memory_path: Path = DEFAULT_MEMORY_PATH) -> dict[st
             "lesson_updated": False,
             "failures": [str(exc)],
         }
-    matching = [
-        index
-        for index, record in enumerate(memory["lessons"])
-        if isinstance(record, dict) and record.get("lesson_id") == LESSON_ID
-    ]
-    timestamp = _utc_now()
-    created_at = (
-        memory["lessons"][matching[0]].get("created_at")
-        if matching and isinstance(memory["lessons"][matching[0]].get("created_at"), str)
-        else timestamp
-    )
-    desired = {
-        "lesson_id": LESSON_ID,
-        "created_at": created_at,
-        "updated_at": timestamp,
-        "candidate_id": "avatar_builder_shared",
-        "source": "verified fail-closed Blender pre-import controller boundary",
-        "lesson_digest_sha256": lesson["lesson_digest_sha256"],
-        "lesson_source": lesson["lesson_source"],
-        "source_bindings": lesson["source_bindings"],
-        "tags": [
-            "avatar_builder",
-            "blender",
-            "concurrency",
-            "fail_closed",
-            "handle_lifetime",
-            "process_identity",
-            "replay_defense",
-            "record_durability",
-        ],
-        "lesson": lesson["lesson"],
-        "verified_reusable_lessons": lesson["verified_reusable_lessons"],
-        "current_truth": lesson["current_truth"],
-    }
-    added = not matching
-    updated = False
-    if added:
-        memory["lessons"].append(desired)
-    else:
-        existing = dict(memory["lessons"][matching[0]])
-        existing.pop("updated_at", None)
-        comparable = dict(desired)
-        comparable.pop("updated_at", None)
-        updated = existing != comparable or len(matching) != 1
-        if updated:
-            first = matching[0]
-            memory["lessons"][:] = [
-                record for index, record in enumerate(memory["lessons"]) if index not in set(matching)
-            ]
-            memory["lessons"].insert(first, desired)
-    memory["updated_at"] = timestamp
-    _atomic_write_json(memory_path, memory)
-    return {
-        "ok": True,
-        "status": lesson["status"],
-        "lesson_id": LESSON_ID,
-        "lesson_added": added,
-        "lesson_updated": updated,
-        "lesson_count": len(memory["lessons"]),
-        "memory_path": memory_relative,
-        "execution_trust_boundary_closed": False,
-        "operating_system_evidence_verified": False,
-        "resume_authorized": False,
-        "blender_execution_authorized": False,
-        "body_created": False,
-    }
 
 
 __all__ = [

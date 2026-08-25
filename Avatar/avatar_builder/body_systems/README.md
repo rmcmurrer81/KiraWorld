@@ -28,6 +28,13 @@ making a body-status claim:
 7. `../../../System/Docs/AVATAR_BUILDER_BLENDER_5_1_WORKER_IDENTITY_BINDING_20260822.md`
    — the current static CLI compatibility repair and the explicit reason the
    carrier workers remain non-executable.
+8. `avatar_builder_blender_carrier_transaction_closure_candidate_v1.json` —
+   the exact, immutable 18-input/four-output/two-command author candidate. Its
+   single lesson string is taught unchanged only after the source hashes and
+   live read-only static closure both validate.
+9. `../../../System/Docs/AVATAR_BUILDER_BLENDER_CARRIER_TRANSACTION_CURRICULUM_REVIEW_20260825.md`
+   — the independent receiver review, exact-text publication boundary, and
+   remaining native provider blockers.
 
 `Core/avatar_builder_ai.py` validates the exact lane-specific sources and
 `tools/sync_avatar_builder_complete_body_curriculum.py` writes one digest-bound
@@ -35,5 +42,12 @@ requirements lesson into ignored resident memory. That lesson creates no body,
 adult classification, consent, private action, physiology, acceptance,
 activation, or public-export authority.
 
+`tools/sync_avatar_builder_blender_carrier_transaction_curriculum.py` validates
+the independently reviewed carrier lesson and idempotently teaches that exact
+fail-closed transaction rule into the same ignored local memory.
+
 Current truth: no complete Kira body, complete Synthetic Robert body, or
-complete Robert user-avatar body is accepted by this index.
+complete Robert user-avatar body is accepted by this index. Avatar Builder has
+learned that carrier build and pose audit must remain one durable transaction,
+but that lesson created no body and grants no Blender, provider, anatomy,
+assignment, activation, render, save, or export authority.
