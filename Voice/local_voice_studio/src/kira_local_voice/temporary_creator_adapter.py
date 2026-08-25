@@ -292,6 +292,82 @@ class TemporaryCreatorVoiceAdapter:
         alias_used = requested if requested != canonical_id else None
         return canonical_id, self._records[canonical_id], alias_used
 
+    def registered_candidates(
+        self,
+        *,
+        inventory_scope: str = "current_temporary_ai_profile",
+    ) -> tuple[dict[str, Any], ...]:
+        """Return the exact bounded registry inventory without profile inference.
+
+        Presence flags describe only exact registry-derived paths.  They are
+        intentionally not a substitute for :meth:`adapt`, which performs the
+        full profile, request, and preflight attestation before emitting a
+        voice-design brief.
+        """
+
+        scope = safe_component(inventory_scope, field="inventory_scope")
+        self._assert_sources()
+        records = [
+            (candidate_id, record)
+            for candidate_id, record in self._records.items()
+            if _text(record.get("inventory_scope")) == scope
+        ]
+        if not 1 <= len(records) <= MAX_COVERAGE_CANDIDATES:
+            raise ValidationError("registry inventory scope must contain 1-32 candidates")
+
+        result: list[dict[str, Any]] = []
+        for candidate_id, record in records:
+            storage_id = safe_component(
+                _text(record.get("profile_directory")) or candidate_id,
+                field="profile_directory",
+            )
+            subject_id = safe_component(record.get("subject_id"), field="subject_id")
+            identity_class = safe_component(record.get("identity_class"), field="identity_class")
+            raw_aliases = record.get("aliases", [])
+            if not isinstance(raw_aliases, list):
+                raise ValidationError("avatar registry aliases must be a list")
+            aliases = tuple(safe_component(value, field="candidate alias") for value in raw_aliases)
+            profile_relative = Path("TemporaryAI/candidates") / storage_id / "temporary_ai_profile.json"
+            request_relative = Path("TemporaryAI/candidates") / storage_id / "voice_discovery_request.json"
+            creation_relative = Path("TemporaryAI/candidates") / storage_id / "creation_request.json"
+            result.append(
+                {
+                    "canonical_candidate_id": candidate_id,
+                    "storage_id": storage_id,
+                    "subject_id": subject_id,
+                    "identity_class": identity_class,
+                    "inventory_scope": scope,
+                    "aliases": list(aliases),
+                    "profile_relative_path": profile_relative.as_posix(),
+                    "profile_present": _regular_file_below(
+                        self.project_root, profile_relative, required=False
+                    )
+                    is not None,
+                    "voice_discovery_request_relative_path": request_relative.as_posix(),
+                    "voice_discovery_request_present": _regular_file_below(
+                        self.project_root, request_relative, required=False
+                    )
+                    is not None,
+                    "creation_request_relative_path": creation_relative.as_posix(),
+                    "creation_request_present": _regular_file_below(
+                        self.project_root, creation_relative, required=False
+                    )
+                    is not None,
+                }
+            )
+        return tuple(result)
+
+    def source_authority(self) -> dict[str, str]:
+        """Return the pinned registry and executable-preflight digests."""
+
+        self._assert_sources()
+        return {
+            "registry_relative_path": REGISTRY_RELATIVE_PATH.as_posix(),
+            "registry_sha256": self._registry_sha256,
+            "trusted_preflight_relative_path": "Core/avatar_profile_preflight.py",
+            "trusted_preflight_sha256": self._preflight_sha256,
+        }
+
     @staticmethod
     def _gender(values: list[str], missing: list[str], conflicts: list[str]) -> Gender | None:
         normalized: list[Gender] = []

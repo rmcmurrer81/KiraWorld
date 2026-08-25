@@ -1,0 +1,51 @@
+{
+  "schema": "kira.local-voice.windows-mxc-attestation.v1",
+  "observed_at": "2026-08-25T03:05:12-04:00",
+  "status": "FAIL_CLOSED_NOT_READY",
+  "host": {
+    "platform": "windows",
+    "display_version": "25H2",
+    "build": "26200.8973"
+  },
+  "executor": {
+    "product": "Microsoft MXC wxc-exec",
+    "file_version": "0.6.1",
+    "sha256": "6d2e7ee8f22e0508dc95412d4128985c1dbe29fc2688317d7cef38ee17c71504",
+    "authenticode_status": "Valid",
+    "authenticode_signer": "Microsoft Corporation"
+  },
+  "capability_probe": {
+    "exit_code": 0,
+    "tier": "base-container",
+    "needs_dacl_augmentation": false,
+    "warnings": [],
+    "base_container_api_present": true,
+    "bfscfg_present": false,
+    "bfs_compiled_in": false
+  },
+  "live_launch_canary": {
+    "schema": "0.6.0-alpha",
+    "containment": "processcontainer",
+    "default_network_policy": "block",
+    "network_capabilities": [],
+    "allow_dacl_mutation": false,
+    "exit_code": 4294967295,
+    "result": "E_NOTIMPL",
+    "win32_error": 120,
+    "reason": "Experimental_CreateProcessInSandbox is not enabled for this host; the reviewed ProcessContainer launch did not start."
+  },
+  "provider_attestation": {
+    "provider_id": "microsoft-mxc-processcontainer-v1",
+    "process_tree_contained": false,
+    "network_denied_by_os": false,
+    "filesystem_confined_by_os": false
+  },
+  "activity": {
+    "synthesis_attempted": false,
+    "model_or_gpu_executed": false,
+    "network_used": false,
+    "host_security_changed": false,
+    "dacl_fallback_attempted": false
+  },
+  "release_decision": "The Kokoro subprocess adapter remains unavailable. Do not enable undocumented velocity keys, weaken Windows security, or use the DACL-mutating fallback to manufacture readiness. Re-review a future Microsoft-supported isolation route before enabling synthesis."
+}

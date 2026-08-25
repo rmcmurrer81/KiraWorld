@@ -1,9 +1,10 @@
 """Exact, fail-closed bridge from voice-design candidates to local synthesis.
 
 The audited nine-voice catalog is a design and audition catalog.  It is not an
-implicit runtime allowlist.  Resolution succeeds only when the local service
-advertises the exact voice, model source, model revision, license, language,
-and an explicit evidence-to-runtime grant matching the immutable candidate.
+implicit runtime allowlist.  A separately sealed evidence bridge grants only
+``af_heart`` and ``am_fenrir`` at the exact f3ff revision and asset hashes.
+Resolution succeeds only when the local service advertises that exact voice,
+model source, model revision, license, language, and evidence-to-runtime grant.
 """
 
 from __future__ import annotations
@@ -18,8 +19,9 @@ from .models import ConsentBasis, SourceBasis
 from .voice_design import KOKORO_MODEL_REPO, VoiceDesignEngine
 
 RESOLUTION_SCHEMA = "kira.local-voice.runtime-resolution.v1"
-CURRENT_RUNTIME_MODEL_REVISION = "fbba31e67ad83eb66394c926627e99d35abeb087"
+CURRENT_RUNTIME_MODEL_REVISION = "f3ff3571791e39611d31c381e3a41a3af07b4987"
 CURRENT_RUNTIME_VOICE_IDS = frozenset({"af_heart", "am_fenrir"})
+CURRENT_RUNTIME_PROVENANCE_SCOPE = "two_voice_generic_bootstrap_only"
 
 
 def _canonical_digest(value: object) -> str:
@@ -74,13 +76,13 @@ class ExactRuntimeVoiceResolver:
             blockers.append("language_not_advertised_by_runtime")
         if backend.get("model_source") != attestation.get("model_repo") or backend.get("model_source") != KOKORO_MODEL_REPO:
             blockers.append("runtime_model_source_mismatch")
-        if backend.get("model_revision") != attestation.get("model_revision"):
+        if (
+            backend.get("model_revision") != attestation.get("model_revision")
+            or backend.get("model_revision") != CURRENT_RUNTIME_MODEL_REVISION
+        ):
             blockers.append("runtime_model_revision_mismatch")
-        if backend.get("model_revision") == CURRENT_RUNTIME_MODEL_REVISION:
-            # This is the current two-voice runtime revision, not the nine-voice
-            # catalog audit revision.  It remains blocked until an exact bridge
-            # is separately reviewed and grants runtime access.
-            blockers.append("current_runtime_revision_has_no_catalog_binding")
+        if backend.get("provenance_scope") != CURRENT_RUNTIME_PROVENANCE_SCOPE:
+            blockers.append("runtime_provenance_scope_mismatch")
         if backend.get("license_id") != candidate.get("license_id"):
             blockers.append("runtime_license_mismatch")
         if backend.get("audition_evidence_revision") != attestation.get("model_revision"):

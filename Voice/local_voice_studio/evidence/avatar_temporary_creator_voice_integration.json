@@ -1,0 +1,963 @@
+{
+  "audition_locale": {
+    "provenance": "application_audition_default",
+    "sufficient_for_binding": false,
+    "value": "en-US",
+    "written_to_source_profiles": false
+  },
+  "candidates": [
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "beth_smith_ordinary_temp_20260716",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "beth_smith_ordinary_temp_20260716",
+      "subject_id": "beth_smith",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "blue_played_by_julia_stiles_blue_20260605_220748",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "blue_played_by_julia_stiles_blue_20260605_220748",
+      "subject_id": "blue_wigs_series",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "cameron_terminator_cameron_terminator_20260605_225316",
+      "existing_voice": null,
+      "identity_class": "fictional_android",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "cameron_terminator_cameron_terminator_20260605_225316",
+      "subject_id": "cameron_terminator",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "charlie_bradbury_charlie_bradbury_20260605_223959",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "charlie_bradbury_charlie_bradbury_20260605_223959",
+      "subject_id": "charlie_bradbury",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "edgar_cayce_edgar_cayce_20260608_200254",
+      "existing_voice": null,
+      "identity_class": "historical_person",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "edgar_cayce_edgar_cayce_20260608_200254",
+      "subject_id": "edgar_cayce",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "prepare_nonbinding_audition_brief",
+      "adapter_status": "ready_for_nonbinding_audition",
+      "audition_brief": {
+        "age_band": "adult",
+        "assignment_mode": "assign_if_missing",
+        "body_presence": "not_authored",
+        "candidate_count": 3,
+        "display_name": "Emily Carter",
+        "era": "unspecified",
+        "existing_voice_id": null,
+        "gender": "female",
+        "identity_kind": "original",
+        "language": "en-US",
+        "language_provenance": "application_audition_default",
+        "personality_traits": [],
+        "role": "AI and Computer Programming expert",
+        "schema": "kira.local-voice.design-brief.v1",
+        "source_attestation": {
+          "candidate_id": "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+          "profile_sha256": "a4454852e84b8f9267eb4322c73fe2269d34e50655e94c0c6e7f7f6e5898ae98",
+          "registry_alias": null,
+          "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+          "request_sha256": "87b31c7210dd4174f4f43c13b5353be43b46c2fc960385f160d3c5f0c349f8b9",
+          "storage_id": "emily_carter_ai_and_computer_programming_expert_20260605_220651"
+        },
+        "subject_id": "emily_carter_generated_expert"
+      },
+      "binding_status": "needs_review",
+      "canonical_candidate_id": "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+      "creator_source_attestation": {
+        "activation_plan_relative_path": "TemporaryAI/candidates/emily_carter_ai_and_computer_programming_expert_20260605_220651/activation_plan.json",
+        "activation_plan_sha256": "73db1156131004a4e6dac4babc5600ea00878805009ff9ccd520cd563ec6f6ba",
+        "activation_status": "pending_review",
+        "creation_request_relative_path": "TemporaryAI/candidates/emily_carter_ai_and_computer_programming_expert_20260605_220651/creation_request.json",
+        "creation_request_sha256": "9aaf1ce7dcf79dc12cb7a143e138ff3ca08a9f8991bb187601330b6348d1d365",
+        "creation_status": "draft_pending_review",
+        "voice_discovery_request_relative_path": "TemporaryAI/candidates/emily_carter_ai_and_computer_programming_expert_20260605_220651/voice_discovery_request.json",
+        "voice_discovery_request_sha256": "87b31c7210dd4174f4f43c13b5353be43b46c2fc960385f160d3c5f0c349f8b9",
+        "voice_discovery_status": "metadata_discovery_request_not_run"
+      },
+      "existing_voice": null,
+      "fit_limitations": [
+        "body_not_authored_zero_affinity",
+        "era_not_authored_zero_affinity",
+        "locale_confirmation_required_before_binding",
+        "personality_tags_not_authored_zero_affinity"
+      ],
+      "identity_class": "generated_expert",
+      "mutation_performed": false,
+      "required_disclosure": null,
+      "review_blockers": [
+        "locale"
+      ],
+      "review_gates": {
+        "distinctness_review_required": true,
+        "exact_candidate_shared_spec_hash_required": true,
+        "human_audition_required": true,
+        "owner_approval_can_activate": false,
+        "provenance_review_required": true,
+        "source_locale_confirmation_required_before_binding": true,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+      "subject_id": "emily_carter_generated_expert",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "hannah_baxter_belle_hannah_baxter_20260605_214834",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "hannah_baxter_belle_hannah_baxter_20260605_214834",
+      "subject_id": "hannah_baxter_belle",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "prepare_nonbinding_speculative_historical_audition_brief",
+      "adapter_status": "ready_for_nonbinding_audition",
+      "audition_brief": {
+        "age_band": "adult",
+        "assignment_mode": "assign_if_missing",
+        "body_presence": "not_authored",
+        "candidate_count": 3,
+        "display_name": "H. H. Holmes",
+        "era": "historical",
+        "existing_voice_id": null,
+        "gender": "male",
+        "identity_kind": "historical",
+        "language": "en-US",
+        "language_provenance": "application_audition_default",
+        "personality_traits": [],
+        "role": "H. H. Holmes",
+        "schema": "kira.local-voice.design-brief.v1",
+        "source_attestation": {
+          "candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+          "profile_sha256": "c7db16d23b5f4534cb6628bac017742e901aa538a05080b6267b2f85ba26e008",
+          "registry_alias": null,
+          "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+          "request_sha256": "220c539381ac5b742a474bd7f16734fa246c0482354ab7c34af37f70e63adcfa",
+          "storage_id": "h_h_holmes_h_h_holmes_20260605_221432"
+        },
+        "subject_id": "h_h_holmes"
+      },
+      "binding_status": "needs_review",
+      "canonical_candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+      "creator_source_attestation": {
+        "activation_plan_relative_path": "TemporaryAI/candidates/h_h_holmes_h_h_holmes_20260605_221432/activation_plan.json",
+        "activation_plan_sha256": "0f5401ca1ead0ded18cd4433d6c60cd66deb99ca88dc8043d7af991fc6bd59ac",
+        "activation_status": "pending_review",
+        "creation_request_relative_path": "TemporaryAI/candidates/h_h_holmes_h_h_holmes_20260605_221432/creation_request.json",
+        "creation_request_sha256": "91bac299dc327a88c9b0555ffec108cfe4a22ada6f6f4c9096de2787ca0b8775",
+        "creation_status": "needs_clarification",
+        "voice_discovery_request_relative_path": "TemporaryAI/candidates/h_h_holmes_h_h_holmes_20260605_221432/voice_discovery_request.json",
+        "voice_discovery_request_sha256": "220c539381ac5b742a474bd7f16734fa246c0482354ab7c34af37f70e63adcfa",
+        "voice_discovery_status": "metadata_discovery_request_ready"
+      },
+      "existing_voice": {
+        "policy": "legacy_generic_baseline_preserved_not_an_authentic_voice",
+        "voice_id": "h_h_holmes_estimated_voice_v1",
+        "voice_profile_relative_path": "Voice/profiles/temp_ai/h_h_holmes_voice_profile.json",
+        "voice_profile_sha256": "3c6178fd003d93719591636391c30d18758870d0c825fbdf79c17bc5fc2ddc0d",
+        "voice_status": "estimated_reconstruction_only"
+      },
+      "fit_limitations": [
+        "body_not_authored_zero_affinity",
+        "locale_confirmation_required_before_binding",
+        "personality_tags_not_authored_zero_affinity"
+      ],
+      "identity_class": "historical_person",
+      "mutation_performed": false,
+      "required_disclosure": "Speculative historical reconstruction; not an authentic recording, verified voice match, or identity clone.",
+      "review_blockers": [
+        "locale"
+      ],
+      "review_gates": {
+        "distinctness_review_required": true,
+        "exact_candidate_shared_spec_hash_required": true,
+        "human_audition_required": true,
+        "owner_approval_can_activate": false,
+        "provenance_review_required": true,
+        "source_locale_confirmation_required_before_binding": true,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "h_h_holmes_h_h_holmes_20260605_221432",
+      "subject_id": "h_h_holmes",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "prepare_nonbinding_audition_brief",
+      "adapter_status": "ready_for_nonbinding_audition",
+      "audition_brief": {
+        "age_band": "adult",
+        "assignment_mode": "assign_if_missing",
+        "body_presence": "not_authored",
+        "candidate_count": 3,
+        "display_name": "Jessica Hale",
+        "era": "unspecified",
+        "existing_voice_id": null,
+        "gender": "female",
+        "identity_kind": "original",
+        "language": "en-US",
+        "language_provenance": "application_audition_default",
+        "personality_traits": [],
+        "role": "Robotics Engineer",
+        "schema": "kira.local-voice.design-brief.v1",
+        "source_attestation": {
+          "candidate_id": "jessica_hale_robotics_engineer_20260611_041314",
+          "profile_sha256": "ec9085023eddb4d06e63948e61c07786652969a2d703d6061b583b4f20996528",
+          "registry_alias": null,
+          "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+          "request_sha256": "8780b111faa17fd4ac8588e9f36125236dcedd12f7debc40fa25f6def6f00850",
+          "storage_id": "jessica_hale_robotics_engineer_20260611_041314"
+        },
+        "subject_id": "jessica_hale_generated_expert"
+      },
+      "binding_status": "needs_review",
+      "canonical_candidate_id": "jessica_hale_robotics_engineer_20260611_041314",
+      "creator_source_attestation": {
+        "activation_plan_relative_path": "TemporaryAI/candidates/jessica_hale_robotics_engineer_20260611_041314/activation_plan.json",
+        "activation_plan_sha256": "e1b5944630e31140f54589ab4f0ea31c1fb8824521e06f9565bb48b63b743841",
+        "activation_status": "pending_review",
+        "creation_request_relative_path": "TemporaryAI/candidates/jessica_hale_robotics_engineer_20260611_041314/creation_request.json",
+        "creation_request_sha256": "d65071ef3b8147c74afbced01dd7d8508dd733463220c9ad45dd9df62e7104ce",
+        "creation_status": "draft_pending_review",
+        "voice_discovery_request_relative_path": "TemporaryAI/candidates/jessica_hale_robotics_engineer_20260611_041314/voice_discovery_request.json",
+        "voice_discovery_request_sha256": "8780b111faa17fd4ac8588e9f36125236dcedd12f7debc40fa25f6def6f00850",
+        "voice_discovery_status": "metadata_discovery_request_not_run"
+      },
+      "existing_voice": null,
+      "fit_limitations": [
+        "body_not_authored_zero_affinity",
+        "era_not_authored_zero_affinity",
+        "locale_confirmation_required_before_binding",
+        "personality_tags_not_authored_zero_affinity"
+      ],
+      "identity_class": "generated_expert",
+      "mutation_performed": false,
+      "required_disclosure": null,
+      "review_blockers": [
+        "locale"
+      ],
+      "review_gates": {
+        "distinctness_review_required": true,
+        "exact_candidate_shared_spec_hash_required": true,
+        "human_audition_required": true,
+        "owner_approval_can_activate": false,
+        "provenance_review_required": true,
+        "source_locale_confirmation_required_before_binding": true,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "jessica_hale_robotics_engineer_20260611_041314",
+      "subject_id": "jessica_hale_generated_expert",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "kara_zor_el_my_adventures_with_superman_kara_zor_el_20260606_181026",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "kara_zor_el_my_adventures_with_superman_kara_zor_el_20260606_181026",
+      "subject_id": "kara_zor_el_maws",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "preserve_existing_voice_profile",
+      "audition_brief": null,
+      "canonical_candidate_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+      "existing_voice": {
+        "voice_id": "kathryn_merteuil_owner_attested_reference_v1",
+        "voice_profile_relative_path": "Voice/profiles/temp_ai/kathryn_merteuil_voice_profile.json",
+        "voice_profile_sha256": "fd6c1ebc7a8f8199737653b90d92cf53056e2652d1e337729378311a14d1c896",
+        "voice_status": "owner_attested_cleaned_reference_active_for_private_chat"
+      },
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "kathryn_merteuil_kathryn_merteuil_20260605_213017",
+      "subject_id": "kathryn_merteuil_adult_continuation",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "preserve_current_kira_route",
+      "audition_brief": null,
+      "canonical_candidate_id": "kira",
+      "existing_voice": {
+        "automatic_fallback_routes": [
+          "sealed_cpu"
+        ],
+        "policy": "current_route_and_rollback_preserved_subject_selection_required",
+        "preferred_route": "blackwell_gpu",
+        "route_relative_path": "Voice/sidecars/kira_approved_voice_routing.json",
+        "route_sha256": "a343572b25937926ea0181274976b53f57ca219ce1e4d3e1780343994aea7b81",
+        "voice_id": "kira_temporary_reference_20260706_v1",
+        "voice_profile_relative_path": "Voice/profiles/temp_ai/kira_voice_profile.json",
+        "voice_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116"
+      },
+      "identity_class": "original_person",
+      "mutation_performed": false,
+      "review_blockers": [],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": true
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "kira",
+      "subject_id": "kira",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "preserve_existing_voice_profile",
+      "audition_brief": null,
+      "canonical_candidate_id": "ladybug_marinette_expanded_smoke",
+      "existing_voice": {
+        "voice_id": "ladybug_voice_canon_v1",
+        "voice_profile_relative_path": "Voice/profiles/temp_ai/ladybug_voice_profile.json",
+        "voice_profile_sha256": "22abeadcf9821234b35bf48c6338cbdc89738b2285ef2514b423240f4133b998",
+        "voice_status": "reviewed_reference_active_with_chatterbox_tts"
+      },
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "ladybug_marinette_expanded_smoke",
+      "subject_id": "marinette_dupain_cheng",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "prepare_nonbinding_audition_brief",
+      "adapter_status": "ready_for_nonbinding_audition",
+      "audition_brief": {
+        "age_band": "adult",
+        "assignment_mode": "assign_if_missing",
+        "body_presence": "not_authored",
+        "candidate_count": 3,
+        "display_name": "Laura Mitchell",
+        "era": "unspecified",
+        "existing_voice_id": null,
+        "gender": "female",
+        "identity_kind": "original",
+        "language": "en-US",
+        "language_provenance": "application_audition_default",
+        "personality_traits": [],
+        "role": "new jersey criminal attorney expert",
+        "schema": "kira.local-voice.design-brief.v1",
+        "source_attestation": {
+          "candidate_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+          "profile_sha256": "a6216ea358e6230c71a3f59211c92d9a8ea1e89a8d33860db0e90d1bb45bc48e",
+          "registry_alias": null,
+          "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+          "request_sha256": "86c945df1dd856acdb75c0fa0d0fc746394c164cd7f2e39b9766283ff439f89d",
+          "storage_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530"
+        },
+        "subject_id": "laura_mitchell_generated_expert"
+      },
+      "binding_status": "needs_review",
+      "canonical_candidate_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+      "creator_source_attestation": {
+        "activation_plan_relative_path": "TemporaryAI/candidates/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530/activation_plan.json",
+        "activation_plan_sha256": "4370c5a2553ece3aa2c85fb409ec3bcf9bd12eb679df472acd35952099aff1f0",
+        "activation_status": "pending_review",
+        "creation_request_relative_path": "TemporaryAI/candidates/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530/creation_request.json",
+        "creation_request_sha256": "8f4d4a33f9756695ec3ea4ec6ed0df9593ba8191835328afed988d0df3f62cf5",
+        "creation_status": "draft_pending_review",
+        "voice_discovery_request_relative_path": "TemporaryAI/candidates/laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530/voice_discovery_request.json",
+        "voice_discovery_request_sha256": "86c945df1dd856acdb75c0fa0d0fc746394c164cd7f2e39b9766283ff439f89d",
+        "voice_discovery_status": "metadata_discovery_request_not_run"
+      },
+      "existing_voice": null,
+      "fit_limitations": [
+        "body_not_authored_zero_affinity",
+        "era_not_authored_zero_affinity",
+        "locale_confirmation_required_before_binding",
+        "personality_tags_not_authored_zero_affinity"
+      ],
+      "identity_class": "generated_expert",
+      "mutation_performed": false,
+      "required_disclosure": null,
+      "review_blockers": [
+        "locale"
+      ],
+      "review_gates": {
+        "distinctness_review_required": true,
+        "exact_candidate_shared_spec_hash_required": true,
+        "human_audition_required": true,
+        "owner_approval_can_activate": false,
+        "provenance_review_required": true,
+        "source_locale_confirmation_required_before_binding": true,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+      "subject_id": "laura_mitchell_generated_expert",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "mary_campbell_mary_campbell_20260605_224544",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "mary_campbell_mary_campbell_20260605_224544",
+      "subject_id": "mary_campbell",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "preserve_existing_voice_profile",
+      "audition_brief": null,
+      "canonical_candidate_id": "peter_parker_spider_man_no_way_home_final_suit",
+      "existing_voice": {
+        "voice_id": "peter_parker_reviewed_reference_v1",
+        "voice_profile_relative_path": "Voice/profiles/temp_ai/peter_parker_voice_profile.json",
+        "voice_profile_sha256": "04f604b69d13fbfb1ad3b9e27797177bf39e45d1eeb6ed8d0567d9b633b861c1",
+        "voice_status": "reviewed_reference_active_with_chatterbox_tts"
+      },
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "peter_parker_spider_man_no_way_home_final_suit",
+      "subject_id": "peter_parker_nwh",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "preserve_authorized_self_voice",
+      "audition_brief": null,
+      "canonical_candidate_id": "robert_mcmurrer_presence_ai",
+      "existing_voice": {
+        "policy": "authorized_self_voice_preserved",
+        "voice_id": "robert_mcmurrer_authorized_self_voice_v1",
+        "voice_profile_relative_path": "Voice/profiles/temp_ai/robert_mcmurrer_voice_profile.json",
+        "voice_profile_sha256": "b29f63713032d61b181fac0a9d72c6a2056e12a384c90d0381ee6095013379f5",
+        "voice_status": "owner_approved_self_voice_ready_with_chatterbox_tts"
+      },
+      "identity_class": "real_owner_variant",
+      "mutation_performed": false,
+      "review_blockers": [],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "robert_mcmurrer_presence_ai",
+      "subject_id": "robert_mcmurrer",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "ruby_supernatural_ruby_supernatural_20260605_223416",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "ruby_supernatural_ruby_supernatural_20260605_223416",
+      "subject_id": "ruby_supernatural",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "prepare_nonbinding_audition_brief",
+      "adapter_status": "ready_for_nonbinding_audition",
+      "audition_brief": {
+        "age_band": "adult",
+        "assignment_mode": "assign_if_missing",
+        "body_presence": "not_authored",
+        "candidate_count": 3,
+        "display_name": "Ryan Hale",
+        "era": "unspecified",
+        "existing_voice_id": null,
+        "gender": "male",
+        "identity_kind": "original",
+        "language": "en-US",
+        "language_provenance": "application_audition_default",
+        "personality_traits": [],
+        "role": "Quantum Mechanics expert",
+        "schema": "kira.local-voice.design-brief.v1",
+        "source_attestation": {
+          "candidate_id": "ryan_hale_quantum_mechanics_expert_20260608_200749",
+          "profile_sha256": "68e5abe0b7b8c45b469c3293a3a4b8f4ee4197e59eeca3d0d5b78b197cf9ebcb",
+          "registry_alias": null,
+          "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+          "request_sha256": "f1751995c5efdbf13fc7ef06682fa6d6038e5f7441f45c78b081b820930df733",
+          "storage_id": "ryan_hale_quantum_mechanics_expert_20260608_200749"
+        },
+        "subject_id": "ryan_hale_generated_expert"
+      },
+      "binding_status": "needs_review",
+      "canonical_candidate_id": "ryan_hale_quantum_mechanics_expert_20260608_200749",
+      "creator_source_attestation": {
+        "activation_plan_relative_path": "TemporaryAI/candidates/ryan_hale_quantum_mechanics_expert_20260608_200749/activation_plan.json",
+        "activation_plan_sha256": "2c21f39749eb0f6da49d573ad4d0d02bace3d27e9e2070380afca77621bcccad",
+        "activation_status": "pending_review",
+        "creation_request_relative_path": "TemporaryAI/candidates/ryan_hale_quantum_mechanics_expert_20260608_200749/creation_request.json",
+        "creation_request_sha256": "f2c2f353c0b54d59aeb8d508c7b950542227087d5c693154774e56c46aaaf21c",
+        "creation_status": "draft_pending_review",
+        "voice_discovery_request_relative_path": "TemporaryAI/candidates/ryan_hale_quantum_mechanics_expert_20260608_200749/voice_discovery_request.json",
+        "voice_discovery_request_sha256": "f1751995c5efdbf13fc7ef06682fa6d6038e5f7441f45c78b081b820930df733",
+        "voice_discovery_status": "metadata_discovery_request_not_run"
+      },
+      "existing_voice": null,
+      "fit_limitations": [
+        "body_not_authored_zero_affinity",
+        "era_not_authored_zero_affinity",
+        "locale_confirmation_required_before_binding",
+        "personality_tags_not_authored_zero_affinity"
+      ],
+      "identity_class": "generated_expert",
+      "mutation_performed": false,
+      "required_disclosure": null,
+      "review_blockers": [
+        "locale"
+      ],
+      "review_gates": {
+        "distinctness_review_required": true,
+        "exact_candidate_shared_spec_hash_required": true,
+        "human_audition_required": true,
+        "owner_approval_can_activate": false,
+        "provenance_review_required": true,
+        "source_locale_confirmation_required_before_binding": true,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "ryan_hale_quantum_mechanics_expert_20260608_200749",
+      "subject_id": "ryan_hale_generated_expert",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "prepare_nonbinding_audition_brief",
+      "adapter_status": "ready_for_nonbinding_audition",
+      "audition_brief": {
+        "age_band": "adult",
+        "assignment_mode": "assign_if_missing",
+        "body_presence": "not_authored",
+        "candidate_count": 3,
+        "display_name": "Sarah Bennett",
+        "era": "unspecified",
+        "existing_voice_id": null,
+        "gender": "female",
+        "identity_kind": "original",
+        "language": "en-US",
+        "language_provenance": "application_audition_default",
+        "personality_traits": [],
+        "role": "Entertainment PR Agent expert",
+        "schema": "kira.local-voice.design-brief.v1",
+        "source_attestation": {
+          "candidate_id": "sarah_bennett_entertainment_pr_agent_expert_20260606_171637",
+          "profile_sha256": "e24645e287df345c469b4d623992799d39173e458bc2e6682b2b61f09143dc1c",
+          "registry_alias": null,
+          "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+          "request_sha256": "aa6949e839ba08ae0a0d67d4276ccc057857983ee03dfaf682dd07dbfa255ae8",
+          "storage_id": "sarah_bennett_enterainment_pr_agent_expert_20260606_171637"
+        },
+        "subject_id": "sarah_bennett_generated_expert"
+      },
+      "binding_status": "needs_review",
+      "canonical_candidate_id": "sarah_bennett_entertainment_pr_agent_expert_20260606_171637",
+      "creator_source_attestation": {
+        "activation_plan_relative_path": "TemporaryAI/candidates/sarah_bennett_enterainment_pr_agent_expert_20260606_171637/activation_plan.json",
+        "activation_plan_sha256": "b59bfeb25e86d44d40d09cdd38f2038a53b65069d8aa0107d66344a388f23cce",
+        "activation_status": "pending_review",
+        "creation_request_relative_path": "TemporaryAI/candidates/sarah_bennett_enterainment_pr_agent_expert_20260606_171637/creation_request.json",
+        "creation_request_sha256": "3bf03c80e470104d433d9a449e3ea2c0afdb5fdb8355ed599c573c0c41de886d",
+        "creation_status": "draft_pending_review",
+        "voice_discovery_request_relative_path": "TemporaryAI/candidates/sarah_bennett_enterainment_pr_agent_expert_20260606_171637/voice_discovery_request.json",
+        "voice_discovery_request_sha256": "aa6949e839ba08ae0a0d67d4276ccc057857983ee03dfaf682dd07dbfa255ae8",
+        "voice_discovery_status": "metadata_discovery_request_not_run"
+      },
+      "existing_voice": null,
+      "fit_limitations": [
+        "body_not_authored_zero_affinity",
+        "era_not_authored_zero_affinity",
+        "locale_confirmation_required_before_binding",
+        "personality_tags_not_authored_zero_affinity"
+      ],
+      "identity_class": "generated_expert",
+      "mutation_performed": false,
+      "required_disclosure": null,
+      "review_blockers": [
+        "locale"
+      ],
+      "review_gates": {
+        "distinctness_review_required": true,
+        "exact_candidate_shared_spec_hash_required": true,
+        "human_audition_required": true,
+        "owner_approval_can_activate": false,
+        "provenance_review_required": true,
+        "source_locale_confirmation_required_before_binding": true,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": true,
+        "profile": true,
+        "voice_discovery_request": true
+      },
+      "storage_id": "sarah_bennett_enterainment_pr_agent_expert_20260606_171637",
+      "subject_id": "sarah_bennett_generated_expert",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "skynet_skynet_20260605_224820",
+      "existing_voice": null,
+      "identity_class": "fictional_nonhuman",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "skynet_skynet_20260605_224820",
+      "subject_id": "skynet",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    },
+    {
+      "action": "needs_review_source_records_missing",
+      "audition_brief": null,
+      "canonical_candidate_id": "spider_gwen_spider_gwen_20260606_013325",
+      "existing_voice": null,
+      "identity_class": "fictional_character",
+      "mutation_performed": false,
+      "review_blockers": [
+        "temporary_ai_profile",
+        "voice_discovery_request",
+        "creation_request"
+      ],
+      "review_gates": {
+        "human_audition_required": false,
+        "owner_approval_can_activate": false,
+        "subject_comparative_selection_required": false
+      },
+      "source_presence": {
+        "creation_request": false,
+        "profile": false,
+        "voice_discovery_request": false
+      },
+      "storage_id": "spider_gwen_spider_gwen_20260606_013325",
+      "subject_id": "gwen_stacy_earth_65",
+      "temporary_ai_activation_allowed": false,
+      "voice_binding_created": false
+    }
+  ],
+  "integration_boundary": {
+    "audition_audio_generated": false,
+    "next_stage": "immutable audition bundles and audio only after runtime evidence and human review",
+    "runtime_route_changed": false,
+    "shared_person_spec_promotion_claimed": false,
+    "source_profiles_modified": false,
+    "temporary_ai_activated": false,
+    "voice_binding_created": false,
+    "voice_profiles_overwritten": false
+  },
+  "inventory_scope": "current_temporary_ai_profile",
+  "schema": "kira.local-voice.avatar-temporary-creator-audition-plan.v1",
+  "selection_policy": {
+    "generated_or_historical_candidate_human_audition_required": true,
+    "kira_and_lisa_owner_approval_only_makes_candidates_eligible": true,
+    "kira_and_lisa_subject_comparative_selection_required": true,
+    "kira_current_route_remains_rollback_until_kira_selects": true,
+    "peter_and_marinette_existing_voices_remain_unchanged": true
+  },
+  "source_authority": {
+    "registry_relative_path": "Avatar/avatar_builder/policies/candidate_identity_variant_registry.json",
+    "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+    "trusted_preflight_relative_path": "Core/avatar_profile_preflight.py",
+    "trusted_preflight_sha256": "780bbe678d15ca6107186c1655cfc7c2b741acd36354b087fc8857c71221dcf8"
+  },
+  "summary": {
+    "activation_allowed_count": 0,
+    "binding_ready_count": 0,
+    "needs_review_count": 11,
+    "nonbinding_audition_brief_count": 6,
+    "preserved_voice_or_route_count": 5,
+    "registered_candidate_count": 22,
+    "source_profile_present_count": 9
+  },
+  "unbound_legacy_voice_profiles": [
+    {
+      "explicit_authority_candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+      "explicit_candidate_id_absent": true,
+      "filename": "h_h_holmes_voice_profile.json",
+      "resolution": "preserved_by_explicit_legacy_authority",
+      "voice_id": "h_h_holmes_estimated_voice_v1",
+      "voice_profile_relative_path": "Voice/profiles/temp_ai/h_h_holmes_voice_profile.json",
+      "voice_profile_sha256": "3c6178fd003d93719591636391c30d18758870d0c825fbdf79c17bc5fc2ddc0d",
+      "voice_status": "estimated_reconstruction_only"
+    },
+    {
+      "explicit_authority_candidate_id": "kira",
+      "explicit_candidate_id_absent": true,
+      "filename": "kira_voice_profile.json",
+      "resolution": "preserved_by_explicit_legacy_authority",
+      "voice_id": "kira_temporary_reference_20260706_v1",
+      "voice_profile_relative_path": "Voice/profiles/temp_ai/kira_voice_profile.json",
+      "voice_profile_sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116",
+      "voice_status": "reviewed_reference_active_with_chatterbox_tts"
+    },
+    {
+      "explicit_authority_candidate_id": "robert_mcmurrer_presence_ai",
+      "explicit_candidate_id_absent": true,
+      "filename": "robert_mcmurrer_voice_profile.json",
+      "resolution": "preserved_by_explicit_legacy_authority",
+      "voice_id": "robert_mcmurrer_authorized_self_voice_v1",
+      "voice_profile_relative_path": "Voice/profiles/temp_ai/robert_mcmurrer_voice_profile.json",
+      "voice_profile_sha256": "b29f63713032d61b181fac0a9d72c6a2056e12a384c90d0381ee6095013379f5",
+      "voice_status": "owner_approved_self_voice_ready_with_chatterbox_tts"
+    }
+  ]
+}

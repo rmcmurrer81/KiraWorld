@@ -20,7 +20,7 @@ MAX_TEXT_UTF8_BYTES = 16_000
 MAX_OUTPUT_BYTES = 64 * 1024 * 1024
 ALLOWLIST = frozenset({"af_heart", "am_fenrir"})
 MODEL_REPO = "hexgrad/Kokoro-82M"
-MODEL_REVISION = "fbba31e67ad83eb66394c926627e99d35abeb087"
+MODEL_REVISION = "f3ff3571791e39611d31c381e3a41a3af07b4987"
 MODEL_FILES = {
     "config.json": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f",
     "kokoro-v1_0.pth": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4",
@@ -38,14 +38,37 @@ def _is_unc(value: str) -> bool:
     return value.startswith("\\\\") or value.startswith("//")
 
 
+def _resolved_local_nonreparse(path: Path, code: str) -> Path:
+    if _is_unc(str(path)):
+        fail(code)
+    absolute = Path(os.path.abspath(path))
+    try:
+        resolved = absolute.resolve(strict=True)
+    except OSError:
+        fail(code)
+    if _is_unc(str(resolved)) or os.path.normcase(str(resolved)) != os.path.normcase(str(absolute)):
+        fail(code)
+    for ancestor in (absolute, *absolute.parents):
+        try:
+            info = ancestor.lstat()
+        except OSError:
+            fail(code)
+        attributes = getattr(info, "st_file_attributes", 0)
+        if (
+            ancestor.is_symlink()
+            or (hasattr(os.path, "isjunction") and os.path.isjunction(ancestor))
+            or attributes & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)
+        ):
+            fail(code)
+    return resolved
+
+
 def _regular_contained(root: Path, relative: str, expected_sha256: str) -> Path:
     path = root.joinpath(*relative.split("/"))
-    if path.is_symlink() or (hasattr(os.path, "isjunction") and os.path.isjunction(path)):
-        fail("bundle_link_rejected")
     try:
-        resolved = path.resolve(strict=True)
+        resolved = _resolved_local_nonreparse(path, "bundle_link_rejected")
         resolved.relative_to(root)
-    except (OSError, ValueError):
+    except ValueError:
         fail("bundle_path_invalid")
     flags = os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NOFOLLOW", 0)
     try:
@@ -79,24 +102,70 @@ def main() -> None:
     parser.add_argument("--one-shot", action="store_true", required=True)
     parser.add_argument("--bundle-root", type=Path, required=True)
     parser.add_argument("--staging-root", type=Path, required=True)
+    parser.add_argument("--runtime-root", type=Path, required=True)
+    parser.add_argument("--runtime-site-packages", type=Path, required=True)
+    parser.add_argument("--base-runtime-root", type=Path, required=True)
     parser.add_argument("--device", choices=("cpu", "cuda"), required=True)
     args = parser.parse_args()
-    for raw_path in (str(args.bundle_root), str(args.staging_root)):
+    for raw_path in (
+        str(args.bundle_root), str(args.staging_root), str(args.runtime_root),
+        str(args.runtime_site_packages),
+        str(args.base_runtime_root),
+    ):
         if _is_unc(raw_path):
             fail("unc_path_rejected")
-    for configured in (args.bundle_root,args.staging_root):
+    for configured in (
+        args.bundle_root, args.staging_root, args.runtime_root, args.runtime_site_packages,
+        args.base_runtime_root,
+    ):
         if configured.is_symlink() or (hasattr(os.path,"isjunction") and os.path.isjunction(configured)):
             fail("configured_root_link_rejected")
     try:
-        bundle_root = args.bundle_root.resolve(strict=True)
-        staging_root = args.staging_root.resolve(strict=True)
+        bundle_root = _resolved_local_nonreparse(args.bundle_root, "configured_root_link_rejected")
+        staging_root = _resolved_local_nonreparse(args.staging_root, "configured_root_link_rejected")
+        runtime_root = _resolved_local_nonreparse(args.runtime_root, "configured_root_link_rejected")
+        runtime_site_packages = _resolved_local_nonreparse(
+            args.runtime_site_packages, "configured_root_link_rejected"
+        )
+        base_runtime_root = _resolved_local_nonreparse(
+            args.base_runtime_root, "configured_root_link_rejected"
+        )
+        interpreter = _resolved_local_nonreparse(
+            Path(sys.executable), "runtime_interpreter_escape"
+        )
     except OSError:
         fail("configured_root_missing")
-    for root in (bundle_root, staging_root):
+    for root in (
+        bundle_root, staging_root, runtime_root, runtime_site_packages, base_runtime_root,
+    ):
         if root.is_symlink() or (hasattr(os.path, "isjunction") and os.path.isjunction(root)):
             fail("configured_root_link_rejected")
         if not root.is_dir():
             fail("configured_root_invalid")
+    expected_site_packages = runtime_root / "Lib" / "site-packages"
+    try:
+        interpreter.relative_to(runtime_root)
+    except ValueError:
+        fail("runtime_interpreter_escape")
+    if (
+        runtime_site_packages != expected_site_packages
+        or runtime_site_packages.parent.parent != runtime_root
+        or Path(sys.base_prefix).resolve(strict=True) != base_runtime_root
+        or sys.flags.isolated != 1
+        or sys.flags.no_site != 1
+    ):
+        fail("runtime_import_policy_invalid")
+    for initial_path in sys.path:
+        if not initial_path:
+            fail("base_runtime_path_invalid")
+        candidate = Path(initial_path).resolve(strict=False)
+        try:
+            candidate.relative_to(base_runtime_root)
+        except ValueError:
+            fail("base_runtime_path_invalid")
+    # ``-S`` prevents sitecustomize/usercustomize and .pth execution. Add the
+    # exact, fully tree-attested package directory only after validating it.
+    sys.path.insert(0, str(runtime_site_packages))
     staging_identity = staging_root.stat()
 
     raw = sys.stdin.buffer.read(MAX_INPUT + 1)
@@ -142,7 +211,8 @@ def main() -> None:
     if target.is_symlink() or (hasattr(os.path, "isjunction") and os.path.isjunction(target)):
         fail("invalid_output")
     try:
-        target = target.resolve(strict=False)
+        target_parent = _resolved_local_nonreparse(target.parent, "output_escape")
+        target = target_parent / target.name
         target.relative_to(staging_root)
     except (OSError, ValueError):
         fail("output_escape")
@@ -171,6 +241,10 @@ def main() -> None:
         # which imports KPipeline/spaCy and reaches the Windows-blocked gold_io
         # extension. This does not patch any installed package or security rule.
         package_root=Path(distribution("kokoro").locate_file("kokoro")).resolve(strict=True)
+        try:
+            package_root.relative_to(runtime_site_packages)
+        except ValueError:
+            fail("kokoro_package_escape")
         if package_root.is_symlink() or (hasattr(os.path,"isjunction") and os.path.isjunction(package_root)):
             fail("kokoro_package_link_rejected")
         kokoro_package=types.ModuleType("kokoro"); kokoro_package.__path__=[str(package_root)]
@@ -218,7 +292,7 @@ def main() -> None:
             "voice_id": voice,
             "license_id": "Apache-2.0",
             "offline": True,
-            "provenance_scope": "two_voice_runtime_bundle_only",
+            "provenance_scope": "two_voice_generic_bootstrap_only",
         }
         print(json.dumps(response, sort_keys=True, allow_nan=False), flush=True)
     except SystemExit:

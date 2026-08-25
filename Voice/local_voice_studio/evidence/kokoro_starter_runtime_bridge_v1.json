@@ -1,0 +1,44 @@
+{
+  "schema": "kira.kokoro.starter-runtime-bridge.v1",
+  "status": "EXACT_TWO_VOICE_GENERIC_BOOTSTRAP_BINDING",
+  "model_repo": "hexgrad/Kokoro-82M",
+  "runtime_model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "superseded_unbound_runtime_label": "fbba31e67ad83eb66394c926627e99d35abeb087",
+  "route": "KModel+misaki.espeak.EspeakG2P",
+  "license_id": "Apache-2.0",
+  "provenance_scope": "two_voice_generic_bootstrap_only",
+  "voice_ids": [
+    "af_heart",
+    "am_fenrir"
+  ],
+  "bundle_files": {
+    "config.json": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f",
+    "kokoro-v1_0.pth": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4",
+    "voices/af_heart.pt": "0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff",
+    "voices/am_fenrir.pt": "98e507eca1db08230ae3b6232d59c10aec9630022d19accac4f5d12fcec3c37a"
+  },
+  "evidence_files": {
+    "auditions/catalog_20260825/catalog-audition-report.json": "11a30ef13688d9adbb65cb81cfe5378b7f14235105c6d1b5d580498cf2ca540d",
+    "auditions/catalog_20260825/catalog-audit-report.json": "bb486d49b779916f1a7c01dfa8a6f95fafdb1cea49a8e1118dd3b7d6022e1efd",
+    "auditions/catalog_20260825/starter-owner-approval.json": "b91de4433382af5e1d9b92ed12773707f59624d85ddd735efdb6e15a2d4df175",
+    "auditions/catalog_20260825/calm_female_approved.wav": "c3e3682817476212c990969901028758fbbde1eb4eb8c97153ef878b3939b33a",
+    "auditions/catalog_20260825/warm_male_approved.wav": "0a8cdb8178bf56a6aa2442cca496dcf87a76b52e8eb0743488dc5f0e8c8a8a8e",
+    "auditions/catalog_20260825/af_heart_neutral_audition.wav": "4c32bc7f4da15d5d9173fe6a0e783c557187cb7ff3c5379c5b6d5882e3e48a7b",
+    "auditions/catalog_20260825/am_fenrir_neutral_audition.wav": "0532baf6ad37ef91b487031d5b8eecd4114ebf926d5e01ebc127eaae5da0bf94"
+  },
+  "owner_decision": {
+    "role": "product_owner",
+    "recorded_at": "2026-08-25T01:07:50.7652146-04:00",
+    "scope": "starter voices for hackathon projects",
+    "decision": "approved"
+  },
+  "audition_evidence_grants_runtime_access": true,
+  "activation_performed": false,
+  "constraints": [
+    "This bridge applies only to the exact two built-in voice packs and exact asset hashes above.",
+    "The voices are generic non-identity bootstrap voices; no private or human reference is authorized.",
+    "This bridge does not assign a voice to a KiraWorld resident.",
+    "This bridge does not alter Kira's approved Chatterbox route or the Qwen3-TTS original-voice forge.",
+    "Synthesis still requires an independently ready OS-enforced local isolation provider."
+  ]
+}

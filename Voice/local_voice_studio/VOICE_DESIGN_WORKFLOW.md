@@ -109,6 +109,15 @@ profile has an explicit locale and a new source-attested bundle is created.
 The live source-derived coverage report is stored at
 `evidence/live_temporary_creator_voice_coverage.json`.
 
+The read-only live integration seam is documented in
+`AVATAR_TEMPORARY_CREATOR_VOICE_INTEGRATION.md`. It enumerates all exact current
+registry identities, detects existing voice profiles before creating work,
+attests the creator request and optional activation-plan records, preserves
+Kira/Peter/Marinette/Kathryn/Robert authorities, and emits nonbinding audition
+briefs only for complete source records that still need a voice. The exact
+source-derived evidence is
+`evidence/avatar_temporary_creator_voice_integration.json`.
+
 The source attestation keeps the exact Avatar Builder candidate/storage IDs and
 hashes the source profile, generation request, and registry. An optional exact
 registry alias is descriptive and is never treated as a filesystem instruction;
@@ -179,15 +188,14 @@ GUI can route every new voice.
 
 `ExactRuntimeVoiceResolver` now supplies that fail-closed bridge. The current
 local Kokoro runtime exposes only `af_heart` and `am_fenrir` at model revision
-`fbba31e67ad83eb66394c926627e99d35abeb087`, while the immutable nine-voice
-catalog evidence was audited at revision
-`f3ff3571791e39611d31c381e3a41a3af07b4987`. The runtime also states that its
-audition evidence does not grant catalog runtime access. Consequently, every
-current catalog candidate is truthfully blocked from synthesis: the other
-seven are outside the runtime allowlist, and the two shared IDs have no exact
-revision/evidence bridge. A future bridge must advertise the exact model,
-revision, voice ID, language, license, local-only enforcement, registered
-generic-no-identity voice profile, and an explicit evidence-to-runtime grant.
+`f3ff3571791e39611d31c381e3a41a3af07b4987`, the same exact revision recorded
+by the immutable nine-voice catalog. The sealed starter runtime bridge binds
+the exact configuration, model, two source voice-pack hashes, technical
+evidence, and product-owner audition decision and grants runtime access only to
+those two generic non-identity IDs. The other seven remain outside the runtime
+allowlist. Even an exactly bridged candidate stays blocked until the service is
+ready under OS-enforced local-only isolation and its registered profile remains
+active and generic-no-identity.
 
 `CandidateAudioQueue` is bounded to the immutable bundle's 2–5 candidates and
 three audition passages. It submits only an exact resolver-approved candidate
@@ -196,8 +204,8 @@ approves, selects, binds, or activates a voice. Queue roots reject UNC paths and
 ancestor links/junctions/reparse points. Queue receipts are append-only evidence
 with a strict reader that rejects links, oversized data, duplicate keys,
 non-finite numbers, schema/digest mismatch, non-filename artifact paths, and
-any activation claim. Current runtime mismatch therefore creates a blocked
-queue receipt and makes no synthesis call.
+any activation claim. A runtime or isolation mismatch therefore creates a
+blocked queue receipt and makes no synthesis call.
 
 ## Verification
 

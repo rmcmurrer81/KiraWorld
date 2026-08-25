@@ -41,7 +41,7 @@ class ExactAuditionBackend:
             model_revision=F3FF,
             license_id="Apache-2.0",
             voice_ids=("af_heart",),
-            provenance_scope="test-exact-audition-only",
+            provenance_scope="two_voice_generic_bootstrap_only",
             audition_evidence_revision=F3FF,
             audition_evidence_grants_runtime_access=True,
         )

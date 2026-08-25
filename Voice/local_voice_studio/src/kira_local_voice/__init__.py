@@ -10,6 +10,10 @@ from .models import (
     VoiceProfile,
 )
 from .service import LocalVoiceService
+from .avatar_voice_integration import (
+    AvatarTemporaryCreatorVoiceIntegration,
+    build_live_avatar_voice_plan,
+)
 from .candidate_audio_queue import CandidateAudioQueue
 from .runtime_resolver import ExactRuntimeVoiceResolver
 from .temporary_creator_adapter import TemporaryCreatorVoiceAdapter
@@ -32,6 +36,7 @@ __all__ = [
     "AgeBand",
     "AssignmentMode",
     "AvatarSourceAttestation",
+    "AvatarTemporaryCreatorVoiceIntegration",
     "BodyPresence",
     "CandidateAudioQueue",
     "ConsentBasis",
@@ -50,4 +55,5 @@ __all__ = [
     "VoiceDesignEngine",
     "VoiceDesignStore",
     "VoiceProfile",
+    "build_live_avatar_voice_plan",
 ]

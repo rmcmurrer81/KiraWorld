@@ -8,11 +8,17 @@ from pathlib import Path
 from .support import generic_voice
 from .test_voice_design import brief
 from kira_local_voice.registry import VoiceRegistry
-from kira_local_voice.runtime_resolver import ExactRuntimeVoiceResolver
+from kira_local_voice.runtime_resolver import (
+    CURRENT_RUNTIME_PROVENANCE_SCOPE,
+    ExactRuntimeVoiceResolver,
+)
 from kira_local_voice.voice_design import VoiceDesignEngine, VoiceDesignStore
 
 
-def capabilities(*, revision: str, voices: list[str], grants: bool) -> dict:
+def capabilities(
+    *, revision: str, voices: list[str], grants: bool,
+    provenance_scope: str = CURRENT_RUNTIME_PROVENANCE_SCOPE,
+) -> dict:
     return {
         "schema": "kira.local-voice.capabilities.v1",
         "local_only": True,
@@ -32,7 +38,7 @@ def capabilities(*, revision: str, voices: list[str], grants: bool) -> dict:
             "model_revision": revision,
             "license_id": "Apache-2.0",
             "voice_ids": voices,
-            "provenance_scope": "test-exact-surface",
+            "provenance_scope": provenance_scope,
             "audition_evidence_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
             "audition_evidence_grants_runtime_access": grants,
             "unavailable_reason": None,
@@ -64,7 +70,7 @@ class RuntimeResolverTests(unittest.TestCase):
     def register(self, voice_id: str):
         self.registry.register(replace(generic_voice(voice_id), language="en-US"))
 
-    def test_current_fbba_runtime_is_not_a_binding_for_f3ff_catalog_evidence(self):
+    def test_superseded_fbba_label_is_not_a_binding_for_f3ff_catalog_evidence(self):
         self.register("af_heart")
         service = FakeService(
             self.registry,
@@ -79,7 +85,6 @@ class RuntimeResolverTests(unittest.TestCase):
         )
         self.assertEqual(result["status"], "blocked")
         self.assertIn("runtime_model_revision_mismatch", result["blockers"])
-        self.assertIn("current_runtime_revision_has_no_catalog_binding", result["blockers"])
         self.assertIn("runtime_evidence_does_not_grant_catalog_access", result["blockers"])
         self.assertFalse(result["activation_performed"])
 
@@ -117,6 +122,23 @@ class RuntimeResolverTests(unittest.TestCase):
         self.assertEqual(result["candidate_spec"]["voice_id"], "af_heart")
         self.assertEqual(result["candidate_spec"]["model_revision"], "f3ff3571791e39611d31c381e3a41a3af07b4987")
         self.assertFalse(result["activation_performed"])
+
+    def test_ready_runtime_with_widened_provenance_scope_is_blocked(self):
+        self.register("af_heart")
+        service = FakeService(
+            self.registry,
+            capabilities(
+                revision="f3ff3571791e39611d31c381e3a41a3af07b4987",
+                voices=["af_heart"],
+                grants=True,
+                provenance_scope="all-audition-catalog-voices",
+            ),
+        )
+        result = ExactRuntimeVoiceResolver(self.engine, service).resolve(
+            self.bundle["bundle_id"], self.by_voice["af_heart"]["candidate_id"]
+        )
+        self.assertEqual(result["status"], "blocked")
+        self.assertIn("runtime_provenance_scope_mismatch", result["blockers"])
 
     def test_missing_or_deactivated_registry_profile_blocks_resolution(self):
         service = FakeService(

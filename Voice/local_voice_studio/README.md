@@ -1,13 +1,28 @@
 # Kira Labs Local Voice Studio — Core Contract
 
+The Avatar/Temporary Creator read-only voice-gap planner is documented in
+`AVATAR_TEMPORARY_CREATOR_VOICE_INTEGRATION.md`. It preserves established
+voices and Kira's current route while producing source-attested, nonbinding
+audition briefs for exact profiles that still lack a voice.
+
 This is an additive, privacy-first foundation for a local voice studio. Its
 default backend remains a clearly marked silent-WAV contract mock. An optional
 Kokoro subprocess adapter is now present but remains fail-closed. Exact runtime,
-worker, dependency-lock, model, configuration, and voice-pack identities are
-required, and a reviewed OS isolation provider is also required. No such
-provider is enabled in this release, so the real adapter reports `ready: false`
-even for an otherwise valid bundle. This change does not download or execute a
-model and makes no general production-quality claim.
+worker, dependency-lock, model, configuration, voice-pack, and audition-bridge
+identities are required, and a reviewed OS isolation provider is also required.
+A pinned Microsoft MXC ProcessContainer provider candidate is implemented, but
+no isolation provider is release reviewed in this build. Its positive launch
+canary does not yet prove denied network access, denied writes outside staging,
+or descendant cleanup, and hash-to-launch TOCTOU is not closed. On the inspected
+Windows 25H2 host the capability probe succeeded but even the launch canary
+returned `E_NOTIMPL`. The real adapter therefore reports `ready: false` under
+every configuration. This change does not download or execute a model and makes
+no general production-quality claim.
+
+The privacy-minimized machine-readable observation is preserved in
+`evidence/windows_mxc_attestation_20260825.json`. It records no user path and
+explicitly confirms that no synthesis, model/GPU execution, network use, or
+host-security change occurred during the readiness check.
 
 ## What is real now
 
@@ -138,15 +153,37 @@ America/New_York; this approval does not authorize cloning. See
 licenses.
 
 The broader nine-voice design/audition catalog was measured at revision
-`f3ff3571791e39611d31c381e3a41a3af07b4987`; that is evidence for design review,
-not runtime authorization. This two-voice runtime bundle separately declares
-revision `fbba31e67ad83eb66394c926627e99d35abeb087`. The seven additional catalog
-voices must fail closed at runtime and are a later audited expansion.
+`f3ff3571791e39611d31c381e3a41a3af07b4987`. The exact configuration, model,
+`af_heart`, and `am_fenrir` hashes in that report match this two-voice bundle.
+The product-owner approval record and those exact public-generic assets are now
+sealed together in `evidence/kokoro_starter_runtime_bridge_v1.json`. The bridge
+grants only those two voice IDs at that exact revision; the previous `fbba...`
+runtime label had no evidence binding and is superseded. The other seven catalog
+voices still fail closed and require a separate audited expansion.
 
 Configure `KokoroConfig` with an absolute isolated interpreter and its explicit
-SHA-256, the same staging root used by `LocalVoiceService`, the release runtime
-lock, and a fixed `sealed_bundle`. A v2 marker must exactly repeat every release
-hash and pin; installed distribution metadata must also exactly match the lock.
-Even then capabilities remain unavailable until a reviewed
-`IsolationProvider` supplies OS-enforced process-tree, network, and filesystem
-containment. Environment variables are never treated as that isolation proof.
+SHA-256, its explicit base-Python runtime root, the same staging root used by
+`LocalVoiceService`, the release runtime lock, runtime bridge, and a fixed
+`sealed_bundle`. A v3 marker must exactly
+repeat every release hash and pin. The lock binds the reviewed venv launcher, a
+no-exclusions digest over all 36,060 files in its 3.23 GiB venv tree, and a
+second no-exclusions digest over all 6,265 files in the 148.1 MiB base-Python
+tree that supplies its standard library and DLLs. Any added module, `.pth`,
+bytecode, DLL, or changed package changes one of those digests. The worker is
+launched with `-I -S`, verifies `sys.base_prefix` and every initial `sys.path`
+entry against the attested base tree, then adds only the attested venv
+`site-packages` directory. This prevents automatic `sitecustomize`,
+`usercustomize`, and `.pth` execution. These checks still occur before
+path-based launch, so they do not close TOCTOU and do not enable the adapter.
+
+The experimental `MxcIsolationProvider` accepts only a release-pinned
+`wxc-exec.exe` hash, prohibits DACL fallback, requests deny-by-default networking
+with no capabilities, disables UI, and reruns its launch canary before work.
+However, the release-reviewed provider set is intentionally empty until hostile
+network/filesystem/descendant canaries and a launch-time identity seal exist.
+Environment variables, policy shape, and `--probe` are never isolation proof.
+
+Kokoro is only a bounded generic audition/bootstrap lane. It does not replace
+Kira's accepted Chatterbox routing and is not the original-voice forge. The
+long-term designed-original route remains the separately governed Qwen3-TTS
+VoiceDesign + Base architecture described by KiraWorld's current authority.

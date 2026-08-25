@@ -2,6 +2,43 @@
   "schema": "kira.kokoro.runtime-lock.v1",
   "python": ">=3.10,<3.14",
   "route": "KModel+misaki.espeak.EspeakG2P",
+  "model_repo": "hexgrad/Kokoro-82M",
+  "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "voice_ids": [
+    "af_heart",
+    "am_fenrir"
+  ],
+  "bundle_files": {
+    "config.json": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f",
+    "kokoro-v1_0.pth": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4",
+    "voices/af_heart.pt": "0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff",
+    "voices/am_fenrir.pt": "98e507eca1db08230ae3b6232d59c10aec9630022d19accac4f5d12fcec3c37a"
+  },
+  "runtime_bridge_sha256": "44afec22d334c6ebf04f6584bb4ff61dda44c7e1d26088744d42379ca4c9300c",
+  "reviewed_python_executable_sha256": [
+    "21bb438c0d4a6f1f164b9a646f6ee000340185e5871180aec06db8d3f07c0082"
+  ],
+  "runtime_tree": {
+    "algorithm": "sha256-relative-path-size-content-v1",
+    "file_count": 36060,
+    "total_bytes": 3470040642,
+    "tree_sha256": "eff6f127e3956d4e771690d50a72cc4146627392dc254ff9d806b4bbb3a3b24f"
+  },
+  "base_runtime_tree": {
+    "algorithm": "sha256-relative-path-size-content-v1",
+    "file_count": 6265,
+    "total_bytes": 155302843,
+    "tree_sha256": "5ef513fee88aaac179968c65387a5bf1c47830a0a1e3698785b440d81627440d"
+  },
+  "isolation": {
+    "provider_id": "microsoft-mxc-processcontainer-v1",
+    "deny_network": true,
+    "allow_dacl_fallback": false,
+    "reviewed_executor_sha256": [
+      "6d2e7ee8f22e0508dc95412d4128985c1dbe29fc2688317d7cef38ee17c71504"
+    ],
+    "live_launch_canary_required": true
+  },
   "packages": {
     "espeakng-loader": "0.2.4",
     "huggingface-hub": "1.28.0",
@@ -12,5 +49,5 @@
     "torch": "2.11.0+cu130",
     "transformers": "5.15.1"
   },
-  "note": "Exact versions observed in the isolated proof runtime; an installer must additionally preserve and verify distribution hashes."
+  "note": "The reviewed venv launcher, all 3.23 GiB of its venv tree, and all 148.1 MiB of its external base-Python tree are bound by exact attestations. This still does not close hash-to-launch TOCTOU or prove MXC isolation readiness; the adapter remains disabled."
 }
