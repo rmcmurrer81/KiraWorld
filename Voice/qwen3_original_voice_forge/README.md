@@ -86,6 +86,73 @@ the current feasibility worker, run with:
 python -B -m unittest tests.test_profile_audition_planner -v
 ```
 
+## Read-only profile audition evidence packager
+
+`profile_audition_packager.py` is the next, still nonbinding boundary. It does
+not generate, play, approve, bind, activate, or route audio. It consumes four
+already-completed **external** inputs: the original request plan, its 18 run
+directories, the exact two-entry Emily retry plan, and those two retry run
+directories. It writes only to one caller-supplied, brand-new absolute output
+root outside KiraWorld, and creates nothing until every input has validated in
+memory.
+
+The packager fails closed unless all of these statements are true:
+
+- the original plan exactly rebuilds from the current trusted Temporary Creator
+  integration source, including its source SHA-256, six eligible bundles, and
+  three palettes per bundle;
+- the retry plan byte count and SHA-256 bind that exact original plan and its
+  source-integration SHA-256, and contain only the two declared Emily retry1
+  candidates;
+- every original and retry request passes the current
+  `feasibility_worker.load_request`; retry traits are unchanged, the seed is
+  exactly original plus one, and retry text is the exact reviewed plain-language
+  clarity sentence;
+- input directories have exact contents and every path is absolute, contained,
+  regular, and free of links, junctions, reparse points, traversal, duplicate
+  JSON keys, non-finite values, and over-limit data;
+- every receipt binds its exact request and canonical WAV plus the current
+  worker's exact revision and 13-file model manifest;
+- every selected ASR report binds the request, WAV, and pinned checkpoint, has
+  status `PASS`, and has word error rate at or below `0.25`;
+- the final selection contains exactly 18 unique subject/palette slots: Emily
+  calm-clear from the original run, Emily warm-rounded and grounded-assured from
+  their two retry1 runs, and all 15 other slots from their original runs.
+
+The external package preserves each selected request under its original
+filename alongside `receipt.json`, `asr-audit.json`, and `candidate.wav`. It
+also copies the original and retry plans as provenance. The two failed original
+Emily request/receipt/ASR triplets are retained under `negative-evidence`, but
+their failed WAVs are deliberately **not** copied. The machine manifest records
+each omitted WAV's byte count and SHA-256 and states that it remains a private
+local negative artifact. Its artifact inventory records the byte count and
+SHA-256 of every one of the 80 copied payload files; the manifest cannot include
+its own digest without recursive self-reference and states that limitation
+explicitly.
+
+Example packaging command, run only after the four external roots exist:
+
+```powershell
+python -B profile_audition_packager.py `
+  --original-plan C:\absolute\external\original\audition-request-plan.json `
+  --original-runs-root C:\absolute\external\original-runs `
+  --retry-plan C:\absolute\external\retry\retry-plan.json `
+  --retry-runs-root C:\absolute\external\retry-runs `
+  --output-root C:\absolute\external\new-audition-evidence-package
+```
+
+The output is evidence for later human listening and collision review, not an
+approval or runtime configuration. A failed write may leave a manifest-less
+partial directory; such a directory is invalid and must never be treated as a
+package. Retry only with another brand-new output root.
+
+Packager tests use generated, tiny PCM fixtures and never load the Qwen model or
+play audio:
+
+```powershell
+python -B -m unittest tests.test_profile_audition_packager -v
+```
+
 The worker sets Hugging Face and Transformers offline flags and was exercised
 inside the development tool's restricted-network sandbox. That is useful
 feasibility evidence, but it is not the reviewed OS-enforced production
