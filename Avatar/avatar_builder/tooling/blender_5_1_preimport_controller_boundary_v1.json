@@ -1,0 +1,86 @@
+{
+  "schema": "kira.avatar_builder.blender_preimport_controller.v1",
+  "evidence_id": "blender_5_1_preimport_controller_boundary_v1_20260825",
+  "status": "STATIC_CONTROLLER_VERIFIED_NATIVE_EXECUTION_BOUNDARY_OPEN",
+  "recorded_at_utc": "2026-08-25T00:00:00Z",
+  "platform": {
+    "os": "Windows",
+    "architecture": "x86_64",
+    "blender_release_lane": "5.1",
+    "machine_specific_paths_published": false
+  },
+  "artifact_bindings": {
+    "blender_executable": {
+      "installation_relative_path": "Blender Foundation/Blender 5.1/blender.exe",
+      "bytes": 108687824,
+      "sha256": "1e6624af112b3c936f4b038b025ebd2bf00ae72c4b62881a6787166d71c58fa5"
+    },
+    "bundled_interpreter": {
+      "installation_relative_path": "Blender Foundation/Blender 5.1/5.1/python/bin/python.exe",
+      "bytes": 106456,
+      "sha256": "af4f5e1e3b5efb618fc496ccacb9b527aaa834e6a48e6c17d824f207bbafea7e"
+    },
+    "controller": {
+      "project_relative_path": "Core/avatar_blender_preimport_controller.py",
+      "bytes": 48944,
+      "sha256": "154257fa6ad52b7030830428242dc78226e71ebb829b76be401d5424e4f7df21"
+    },
+    "build_worker": {
+      "project_relative_path": "tools/blender_build_makehuman_adult_female_rigged_carrier_inactive.py",
+      "bytes": 22120,
+      "sha256": "6ce974b846af8201e6ae327dab194f53f95904d0cf3d40c0995934535a2e1807"
+    },
+    "audit_worker": {
+      "project_relative_path": "tools/blender_audit_makehuman_adult_female_rigged_carrier.py",
+      "bytes": 38400,
+      "sha256": "392d940640d66c7ecdcfa5a7109464452f332ee9d5c830c6cd0ec7632298c1bc"
+    },
+    "carrier_config": {
+      "project_relative_path": "Avatar/avatar_builder/tooling/makehuman_adult_female_rigged_carrier_v1.json",
+      "bytes": 7886,
+      "sha256": "7a956e34f665fa6f68782e4c6834ba06aecf537e08c6c458b2bafa1ca4415c8d"
+    },
+    "worker_identity_authority": {
+      "project_relative_path": "System/Docs/AVATAR_BUILDER_BLENDER_5_1_WORKER_IDENTITY_BINDING_20260822.md",
+      "bytes": 6670,
+      "sha256": "8e4d0c670e24a2a34c21d49e709db54c6f1caa1958bec31dd89e9fbca61dcdbc"
+    }
+  },
+  "verified_static_capabilities": {
+    "strict_request_types": true,
+    "exact_argument_grammar": true,
+    "sanitized_environment_grammar": true,
+    "exact_file_hashes": true,
+    "single_open_hash_and_identity": true,
+    "windows_no_write_delete_share_hold": true,
+    "atomic_create_new_claim": true,
+    "durable_claim_flush": true,
+    "create_new_replay_marker_with_claim_hash_revalidation": true,
+    "atomic_terminal_outcome": true,
+    "windows_process_image_query_and_held_identity_helper": true
+  },
+  "native_boundary": {
+    "interface": "kira.blender_native_launch_provider.v1",
+    "reviewed_provider_ids": [],
+    "execution_trust_boundary_closed": false,
+    "process_start_allowed": false,
+    "required_unproven_controls": [
+      "native held-handle launch without pathname replacement window",
+      "held ancestor directory identities and junction defense",
+      "CREATE_SUSPENDED exact lpApplicationName launch",
+      "kill-on-close job and bounded descendant termination",
+      "OS process-image identity comparison before resume",
+      "real hostile hard-link and staging-name race closure",
+      "durable two-phase build-and-audit transaction",
+      "same-principal deletion and rewrite denial for claim and outcome records"
+    ]
+  },
+  "execution_trust_boundary_closed": false,
+  "blender_execution_authorized": false,
+  "body_build_authorized": false,
+  "body_created": false,
+  "candidate_assignment_authorized": false,
+  "anatomy_authoring_authorized": false,
+  "runtime_activation_authorized": false,
+  "public_export_authorized": false
+}
