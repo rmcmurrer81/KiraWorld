@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "lesson_id": "avatar_builder_blender_native_namespace_evidence_candidate_v1",
+  "status": "LOCAL_STATIC_CURRICULUM_CANDIDATE_NO_EXECUTION_AUTHORITY",
+  "source_bindings": [
+    {
+      "path": "Core/avatar_blender_native_namespace_evidence_contract.py",
+      "bytes": 84019,
+      "sha256": "17a82e052ec66c5ba65ccad103fb7a3ca812cfbed88c168a36230732c3d4ea60",
+      "role": "static_retained_handle_namespace_evidence_contract"
+    },
+    {
+      "path": "Testing/test_avatar_blender_native_namespace_evidence_contract.py",
+      "bytes": 66487,
+      "sha256": "97ed5f67f89bf9b03e54fbc8e81ec766ebd4415c152a0948f1c578ebee02f5b8",
+      "role": "hostile_fake_provider_test_suite"
+    }
+  ],
+  "verified_reusable_lessons": [
+    "Require a normalized final DOS path queried from every retained handle; a lexical request digest is not native identity evidence.",
+    "Open and retain the complete drive-root-to-parent chain with reparse-point semantics, and reject missing, reordered, duplicated, or volume-changing ancestors.",
+    "Bind every distinct normalized path to one volume serial and one 128-bit file ID, require exactly one hard link, and reject identity reuse across distinct paths.",
+    "Reuse one evidence object and one opaque retained handle when multiple targets share the same canonical ancestor; retain provider, kind, token, captured close callable, child identity, query-source, and authority snapshots outside the writable response graph; use slotted exact evidence types plus canonical module-level serializers so an injected instance method cannot forge a review record; keep close state monotonic; and reject coherent later substitution.",
+    "Treat every scalar and container in the older non-slotted transaction request, stage, and output graph as hostile after construction: require exact built-in strings, integers, bytes, booleans, and tuples; use an import-time-attested canonical GC builtin to require every immutable mapping proxy to retain exactly one backing object of exact built-in dict type; copy that dict once through the built-in descriptor; and only then perform equality, hashing, membership, serialization, or a clean field-by-field rebuild, so scalar subclasses and a proxy around a hostile Mapping cannot spoof identities or dispatch attacker code.",
+    "Bind the clean request and its canonical digest to an opaque, identity-checked capsule in a closure-owned weak registry. Make the exact-gating binder the only capsule issuer, expose no standalone issuer, resolver, builder factory, or resolved-request validator, and require the public response validator to receive a previously bound capsule rather than a raw request. Response validation consumes only that private clean snapshot, so a caller retaining, mutating, or concurrently flipping the original mapping backings or request fields after binding cannot change the validated request or receipt; direct capsule construction, seal cloning, post-bind seal replacement, raw-request validation, and ordinary module-global factory forgery fail closed.",
+    "Bound the Python claim precisely: closure-owned snapshots and capsules, exact built-in type gates, and non-dispatching serializers resist ordinary and object.__setattr__ mutation of the supplied graphs, including safe_record shadowing and equality/hash-spoofing scalar subclasses; this does not isolate arbitrary code that reflects into closures, monkeypatches this module or its captured globals, controls a debugger, or writes interpreter memory.",
+    "Treat a statically valid response as fakeable provider data until a reviewed native implementation and hostile operating-system tests prove every query source and handle lifetime.",
+    "If normalized path, reparse, link-count, volume, file-ID, handle-retention, or terminal custody evidence is missing, start no process and create no body."
+  ],
+  "lesson": "Before a Blender carrier transaction can be trusted, compare every requested path with the normalized path queried from its retained handle, retain every ancestor from the local drive root, and bind all objects by volume and 128-bit file identity. Keep construction identity, captured close behavior, child identity, query sources, authority, and monotonic lifecycle snapshots outside the provider-writable response graph; serialize exact slotted evidence through canonical module functions that never dispatch an instance safe_record; type-gate and copy every older request value exactly once into a clean request held only by an opaque closure-bound capsule; and reject reparse traversal, short-name drift, hard-link aliases, live caller-backing reuse, coherent substitution, method shadowing, equality/hash spoofing, early close, or incomplete ancestry. This bounded Python defense is not arbitrary in-process isolation, and static evidence shape is not operating-system proof, so keep execution and body authority false until a reviewed native provider passes hostile real-machine tests.",
+  "current_truth": {
+    "static_transaction_request_verified": true,
+    "static_namespace_evidence_shape_verified": true,
+    "bounded_python_object_graph_mutation_tests_passed": true,
+    "opaque_transaction_request_capsule_shape_verified": true,
+    "raw_transaction_request_validation_accepted": false,
+    "capsule_issuer_or_resolver_exposed": false,
+    "captured_canonical_gc_referents_builtin_verified": true,
+    "caller_owned_request_graph_reused_after_binding": false,
+    "caller_owned_mapping_backing_reused_after_binding": false,
+    "arbitrary_in_process_python_isolation_verified": false,
+    "native_provider_implemented": false,
+    "native_provider_reviewed": false,
+    "operating_system_evidence_verified": false,
+    "provider_invocation_authorized": false,
+    "blender_execution_authorized": false,
+    "body_build_authorized": false,
+    "body_created": false,
+    "candidate_assignment_authorized": false,
+    "anatomy_authoring_authorized": false,
+    "runtime_activation_authorized": false,
+    "public_export_authorized": false
+  }
+}
