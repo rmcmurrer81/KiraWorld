@@ -1,0 +1,24 @@
+{
+  "schema": "kira-qwen3-voice-design-asr-audit-v1",
+  "status": "PASS",
+  "auditor": "torchaudio_WAV2VEC2_ASR_BASE_960H_greedy",
+  "torchaudio": "2.11.0+cu130",
+  "asr_checkpoint": {
+    "filename": "wav2vec2_fairseq_base_ls960_asr_ls960.pth",
+    "bytes": 377664473,
+    "sha256": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d"
+  },
+  "input": {
+    "wav_filename": "candidate.wav",
+    "wav_sha256": "c5931ec0d32d756c419851786efdb559cb8c308fed983fb04426d47ce1810ae0",
+    "request_filename": "grounded_assured.json",
+    "request_sha256": "77d59b061012676276533f19d4de6f93ce2643b3d162f78c1be322498dba930f"
+  },
+  "device": "cuda",
+  "model_load_seconds": 0.4785,
+  "asr_seconds": 0.2222,
+  "expected": "This nonbinding audition tests a clear explanation for a New Jersey criminal attorney expert. It distinguishes general information from advice for a specific case.",
+  "transcript": "this non binding adition tests a clear explanation for a new jersey criminal attorney expert it distinguishes general information from advice for a specific case",
+  "word_error_rate": 0.125,
+  "note": "ASR WER is an intelligibility proxy, not a naturalness or identity rating."
+}

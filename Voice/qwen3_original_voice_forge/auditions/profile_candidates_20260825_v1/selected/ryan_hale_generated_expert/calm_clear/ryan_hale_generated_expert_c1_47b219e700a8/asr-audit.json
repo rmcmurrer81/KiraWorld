@@ -1,0 +1,24 @@
+{
+  "schema": "kira-qwen3-voice-design-asr-audit-v1",
+  "status": "PASS",
+  "auditor": "torchaudio_WAV2VEC2_ASR_BASE_960H_greedy",
+  "torchaudio": "2.11.0+cu130",
+  "asr_checkpoint": {
+    "filename": "wav2vec2_fairseq_base_ls960_asr_ls960.pth",
+    "bytes": 377664473,
+    "sha256": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d"
+  },
+  "input": {
+    "wav_filename": "candidate.wav",
+    "wav_sha256": "4a5fccdd516381236b34f70dec8c6faab97a4f533f51cb24b82577619f17a8c5",
+    "request_filename": "calm_clear.json",
+    "request_sha256": "333cc71553dcf91c4d25e0a244a0f07a2fd43a573aa7c334bce739f7093bc0ff"
+  },
+  "device": "cuda",
+  "model_load_seconds": 0.4705,
+  "asr_seconds": 0.2215,
+  "expected": "This nonbinding audition tests a clear explanation for a quantum mechanics expert. It should define the idea before using an example or equation.",
+  "transcript": "this non binding audition tests a clear explanation for a quantum mechanic's expert it should define the idea before using an example or equation",
+  "word_error_rate": 0.087,
+  "note": "ASR WER is an intelligibility proxy, not a naturalness or identity rating."
+}

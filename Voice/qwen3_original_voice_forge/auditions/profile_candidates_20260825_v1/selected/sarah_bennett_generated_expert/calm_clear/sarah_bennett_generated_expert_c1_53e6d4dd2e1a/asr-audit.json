@@ -1,0 +1,24 @@
+{
+  "schema": "kira-qwen3-voice-design-asr-audit-v1",
+  "status": "PASS",
+  "auditor": "torchaudio_WAV2VEC2_ASR_BASE_960H_greedy",
+  "torchaudio": "2.11.0+cu130",
+  "asr_checkpoint": {
+    "filename": "wav2vec2_fairseq_base_ls960_asr_ls960.pth",
+    "bytes": 377664473,
+    "sha256": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d"
+  },
+  "input": {
+    "wav_filename": "candidate.wav",
+    "wav_sha256": "bc4d0a42c5d7c6e3eb110077aa98e2f41c4d980a5e0e5402eb85953ddb3f5295",
+    "request_filename": "calm_clear.json",
+    "request_sha256": "62e391933b30dd6c1f8db0e90d2c61c103364836d2dd569738754b03d2d20edb"
+  },
+  "device": "cuda",
+  "model_load_seconds": 0.4742,
+  "asr_seconds": 0.2226,
+  "expected": "This nonbinding audition tests a clear explanation for an entertainment public relations expert. It should identify the audience, message, and next action.",
+  "transcript": "this non binding edition tests a clear explanation for an entertainment public relation's expert it should identify the audience message and next action",
+  "word_error_rate": 0.1364,
+  "note": "ASR WER is an intelligibility proxy, not a naturalness or identity rating."
+}

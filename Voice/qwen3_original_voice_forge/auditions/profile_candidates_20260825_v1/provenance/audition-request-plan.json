@@ -1,0 +1,724 @@
+{
+  "audition_locale": {
+    "blocker": "source_locale_confirmation_required_before_binding",
+    "provenance": "application_audition_default",
+    "sufficient_for_binding": false,
+    "value": "en-US"
+  },
+  "bundles": [
+    {
+      "authenticity_claimed": false,
+      "bundle_id": "emily_carter_generated_expert",
+      "canonical_candidate_id": "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+      "display_name": "Emily Carter",
+      "existing_voice_carried_forward": false,
+      "identity_class": "generated_expert",
+      "identity_clone_claimed": false,
+      "locale": {
+        "blocker": "source_locale_confirmation_required_before_binding",
+        "provenance": "application_audition_default",
+        "sufficient_for_binding": false,
+        "value": "en-US"
+      },
+      "presentation_mapping": {
+        "qwen_presentation": "adult_woman",
+        "source_gender": "female"
+      },
+      "required_disclosure": null,
+      "role": "AI and Computer Programming expert",
+      "source_attestation": {
+        "candidate_id": "emily_carter_ai_and_computer_programming_expert_20260605_220651",
+        "profile_sha256": "a4454852e84b8f9267eb4322c73fe2269d34e50655e94c0c6e7f7f6e5898ae98",
+        "registry_alias": null,
+        "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+        "request_sha256": "87b31c7210dd4174f4f43c13b5353be43b46c2fc960385f160d3c5f0c349f8b9",
+        "storage_id": "emily_carter_ai_and_computer_programming_expert_20260605_220651"
+      },
+      "subject_id": "emily_carter_generated_expert",
+      "unfilled_dimensions_not_guessed": [
+        "body",
+        "personality",
+        "era",
+        "confirmed_locale"
+      ],
+      "variants": [
+        {
+          "palette_id": "calm_clear",
+          "request": {
+            "candidate_id": "emily_carter_generated_expert_c1_9f70ccc925f2",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 755696453,
+            "text": "This nonbinding audition tests a clear explanation for an AI and computer programming expert. A careful answer separates assumptions, evidence, and practical next steps.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "steady",
+              "energy": "calm",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "clear",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/emily_carter_generated_expert/calm_clear.json",
+          "request_sha256": "f7770800a51c049ac4af4ac4aecf90c31c39289ba5eeb7ce4308d12f902d03c9"
+        },
+        {
+          "palette_id": "warm_rounded",
+          "request": {
+            "candidate_id": "emily_carter_generated_expert_c2_ae20eb201c77",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 758647494,
+            "text": "This nonbinding audition tests a clear explanation for an AI and computer programming expert. A careful answer separates assumptions, evidence, and practical next steps.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "gentle",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "rounded",
+              "warmth": "warm"
+            }
+          },
+          "request_relative_path": "requests/emily_carter_generated_expert/warm_rounded.json",
+          "request_sha256": "dcf49075313051e202cc740390151320a13f64f63d0b83584a2c0fadb2cae5e2"
+        },
+        {
+          "palette_id": "grounded_assured",
+          "request": {
+            "candidate_id": "emily_carter_generated_expert_c3_a8ffe79a1e21",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1316127,
+            "text": "This nonbinding audition tests a clear explanation for an AI and computer programming expert. A careful answer separates assumptions, evidence, and practical next steps.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "assured",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "lower_mid",
+              "presentation": "adult_woman",
+              "timbre": "grounded",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/emily_carter_generated_expert/grounded_assured.json",
+          "request_sha256": "9e03442ef7c00d1cb1514fdf4c010f5a2bd31e916f3be7b1f8223b7deb7931ef"
+        }
+      ]
+    },
+    {
+      "authenticity_claimed": false,
+      "bundle_id": "h_h_holmes",
+      "canonical_candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+      "display_name": "H. H. Holmes",
+      "existing_voice_carried_forward": false,
+      "identity_class": "historical_person",
+      "identity_clone_claimed": false,
+      "locale": {
+        "blocker": "source_locale_confirmation_required_before_binding",
+        "provenance": "application_audition_default",
+        "sufficient_for_binding": false,
+        "value": "en-US"
+      },
+      "presentation_mapping": {
+        "qwen_presentation": "adult_man",
+        "source_gender": "male"
+      },
+      "required_disclosure": "Speculative historical reconstruction; not an authentic recording, verified voice match, or identity clone.",
+      "role": "H. H. Holmes",
+      "source_attestation": {
+        "candidate_id": "h_h_holmes_h_h_holmes_20260605_221432",
+        "profile_sha256": "c7db16d23b5f4534cb6628bac017742e901aa538a05080b6267b2f85ba26e008",
+        "registry_alias": null,
+        "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+        "request_sha256": "220c539381ac5b742a474bd7f16734fa246c0482354ab7c34af37f70e63adcfa",
+        "storage_id": "h_h_holmes_h_h_holmes_20260605_221432"
+      },
+      "subject_id": "h_h_holmes",
+      "unfilled_dimensions_not_guessed": [
+        "body",
+        "personality",
+        "confirmed_locale"
+      ],
+      "variants": [
+        {
+          "palette_id": "calm_clear",
+          "request": {
+            "candidate_id": "h_h_holmes_c1_74b8786eb82a",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1545102504,
+            "text": "Speculative historical reconstruction; not an authentic recording, verified voice match, or identity clone. This nonbinding audition tests clear, neutral narration only.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "steady",
+              "energy": "calm",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_man",
+              "timbre": "clear",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/h_h_holmes/calm_clear.json",
+          "request_sha256": "2b5fb28dd5219ac04a3b9f50627ae5ea8ebbf519aac788798d0bb1f95ffdd86b"
+        },
+        {
+          "palette_id": "warm_rounded",
+          "request": {
+            "candidate_id": "h_h_holmes_c2_5f752e370d0c",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 189925364,
+            "text": "Speculative historical reconstruction; not an authentic recording, verified voice match, or identity clone. This nonbinding audition tests clear, neutral narration only.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "gentle",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_man",
+              "timbre": "rounded",
+              "warmth": "warm"
+            }
+          },
+          "request_relative_path": "requests/h_h_holmes/warm_rounded.json",
+          "request_sha256": "7269f37485f81053d0977f6574096300610f351a4e6a995826ab88c5dfe7662d"
+        },
+        {
+          "palette_id": "grounded_assured",
+          "request": {
+            "candidate_id": "h_h_holmes_c3_3b4e0be536df",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1901230703,
+            "text": "Speculative historical reconstruction; not an authentic recording, verified voice match, or identity clone. This nonbinding audition tests clear, neutral narration only.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "assured",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "lower_mid",
+              "presentation": "adult_man",
+              "timbre": "grounded",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/h_h_holmes/grounded_assured.json",
+          "request_sha256": "8d44123fc777c74c257fcceac896590e8a90a8ecac2d68c9946fab1a13907b5c"
+        }
+      ]
+    },
+    {
+      "authenticity_claimed": false,
+      "bundle_id": "jessica_hale_generated_expert",
+      "canonical_candidate_id": "jessica_hale_robotics_engineer_20260611_041314",
+      "display_name": "Jessica Hale",
+      "existing_voice_carried_forward": false,
+      "identity_class": "generated_expert",
+      "identity_clone_claimed": false,
+      "locale": {
+        "blocker": "source_locale_confirmation_required_before_binding",
+        "provenance": "application_audition_default",
+        "sufficient_for_binding": false,
+        "value": "en-US"
+      },
+      "presentation_mapping": {
+        "qwen_presentation": "adult_woman",
+        "source_gender": "female"
+      },
+      "required_disclosure": null,
+      "role": "Robotics Engineer",
+      "source_attestation": {
+        "candidate_id": "jessica_hale_robotics_engineer_20260611_041314",
+        "profile_sha256": "ec9085023eddb4d06e63948e61c07786652969a2d703d6061b583b4f20996528",
+        "registry_alias": null,
+        "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+        "request_sha256": "8780b111faa17fd4ac8588e9f36125236dcedd12f7debc40fa25f6def6f00850",
+        "storage_id": "jessica_hale_robotics_engineer_20260611_041314"
+      },
+      "subject_id": "jessica_hale_generated_expert",
+      "unfilled_dimensions_not_guessed": [
+        "body",
+        "personality",
+        "era",
+        "confirmed_locale"
+      ],
+      "variants": [
+        {
+          "palette_id": "calm_clear",
+          "request": {
+            "candidate_id": "jessica_hale_generated_expert_c1_e746cca23e50",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1633524585,
+            "text": "This nonbinding audition tests a clear explanation for a robotics engineer. The explanation should separate sensing, planning, and safe physical action.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "steady",
+              "energy": "calm",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "clear",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/jessica_hale_generated_expert/calm_clear.json",
+          "request_sha256": "68ac1fe3e9981620252dbd0bbe949f16c83fed5795f0d2698ffde7ecec15d94d"
+        },
+        {
+          "palette_id": "warm_rounded",
+          "request": {
+            "candidate_id": "jessica_hale_generated_expert_c2_b74d07682e16",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1235845460,
+            "text": "This nonbinding audition tests a clear explanation for a robotics engineer. The explanation should separate sensing, planning, and safe physical action.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "gentle",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "rounded",
+              "warmth": "warm"
+            }
+          },
+          "request_relative_path": "requests/jessica_hale_generated_expert/warm_rounded.json",
+          "request_sha256": "b843e031c8d24791964b7243a9a71dd25bb6776e0ebff9378058a87b41cddcd4"
+        },
+        {
+          "palette_id": "grounded_assured",
+          "request": {
+            "candidate_id": "jessica_hale_generated_expert_c3_5b4571bf410c",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 993107928,
+            "text": "This nonbinding audition tests a clear explanation for a robotics engineer. The explanation should separate sensing, planning, and safe physical action.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "assured",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "lower_mid",
+              "presentation": "adult_woman",
+              "timbre": "grounded",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/jessica_hale_generated_expert/grounded_assured.json",
+          "request_sha256": "8871b44a853acfd3d6cafe094e0c4958f98819e3a92f2268c26283f14e9013a0"
+        }
+      ]
+    },
+    {
+      "authenticity_claimed": false,
+      "bundle_id": "laura_mitchell_generated_expert",
+      "canonical_candidate_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+      "display_name": "Laura Mitchell",
+      "existing_voice_carried_forward": false,
+      "identity_class": "generated_expert",
+      "identity_clone_claimed": false,
+      "locale": {
+        "blocker": "source_locale_confirmation_required_before_binding",
+        "provenance": "application_audition_default",
+        "sufficient_for_binding": false,
+        "value": "en-US"
+      },
+      "presentation_mapping": {
+        "qwen_presentation": "adult_woman",
+        "source_gender": "female"
+      },
+      "required_disclosure": null,
+      "role": "new jersey criminal attorney expert",
+      "source_attestation": {
+        "candidate_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530",
+        "profile_sha256": "a6216ea358e6230c71a3f59211c92d9a8ea1e89a8d33860db0e90d1bb45bc48e",
+        "registry_alias": null,
+        "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+        "request_sha256": "86c945df1dd856acdb75c0fa0d0fc746394c164cd7f2e39b9766283ff439f89d",
+        "storage_id": "laura_mitchell_new_jersey_criminal_attorney_expert_20260605_195530"
+      },
+      "subject_id": "laura_mitchell_generated_expert",
+      "unfilled_dimensions_not_guessed": [
+        "body",
+        "personality",
+        "era",
+        "confirmed_locale"
+      ],
+      "variants": [
+        {
+          "palette_id": "calm_clear",
+          "request": {
+            "candidate_id": "laura_mitchell_generated_expert_c1_46f964af17a6",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1145466301,
+            "text": "This nonbinding audition tests a clear explanation for a New Jersey criminal attorney expert. It distinguishes general information from advice for a specific case.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "steady",
+              "energy": "calm",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "clear",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/laura_mitchell_generated_expert/calm_clear.json",
+          "request_sha256": "fc0687736551e8b1948c4fb01a9219e9fa55183386f0e86f642cee52586247d7"
+        },
+        {
+          "palette_id": "warm_rounded",
+          "request": {
+            "candidate_id": "laura_mitchell_generated_expert_c2_f417ad5effc9",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 438483446,
+            "text": "This nonbinding audition tests a clear explanation for a New Jersey criminal attorney expert. It distinguishes general information from advice for a specific case.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "gentle",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "rounded",
+              "warmth": "warm"
+            }
+          },
+          "request_relative_path": "requests/laura_mitchell_generated_expert/warm_rounded.json",
+          "request_sha256": "1697ab773e3241cff086755b092966f299f996a6354e77d564336984ff270ce6"
+        },
+        {
+          "palette_id": "grounded_assured",
+          "request": {
+            "candidate_id": "laura_mitchell_generated_expert_c3_d822708008cb",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 633395980,
+            "text": "This nonbinding audition tests a clear explanation for a New Jersey criminal attorney expert. It distinguishes general information from advice for a specific case.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "assured",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "lower_mid",
+              "presentation": "adult_woman",
+              "timbre": "grounded",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/laura_mitchell_generated_expert/grounded_assured.json",
+          "request_sha256": "77d59b061012676276533f19d4de6f93ce2643b3d162f78c1be322498dba930f"
+        }
+      ]
+    },
+    {
+      "authenticity_claimed": false,
+      "bundle_id": "ryan_hale_generated_expert",
+      "canonical_candidate_id": "ryan_hale_quantum_mechanics_expert_20260608_200749",
+      "display_name": "Ryan Hale",
+      "existing_voice_carried_forward": false,
+      "identity_class": "generated_expert",
+      "identity_clone_claimed": false,
+      "locale": {
+        "blocker": "source_locale_confirmation_required_before_binding",
+        "provenance": "application_audition_default",
+        "sufficient_for_binding": false,
+        "value": "en-US"
+      },
+      "presentation_mapping": {
+        "qwen_presentation": "adult_man",
+        "source_gender": "male"
+      },
+      "required_disclosure": null,
+      "role": "Quantum Mechanics expert",
+      "source_attestation": {
+        "candidate_id": "ryan_hale_quantum_mechanics_expert_20260608_200749",
+        "profile_sha256": "68e5abe0b7b8c45b469c3293a3a4b8f4ee4197e59eeca3d0d5b78b197cf9ebcb",
+        "registry_alias": null,
+        "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+        "request_sha256": "f1751995c5efdbf13fc7ef06682fa6d6038e5f7441f45c78b081b820930df733",
+        "storage_id": "ryan_hale_quantum_mechanics_expert_20260608_200749"
+      },
+      "subject_id": "ryan_hale_generated_expert",
+      "unfilled_dimensions_not_guessed": [
+        "body",
+        "personality",
+        "era",
+        "confirmed_locale"
+      ],
+      "variants": [
+        {
+          "palette_id": "calm_clear",
+          "request": {
+            "candidate_id": "ryan_hale_generated_expert_c1_47b219e700a8",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 811307241,
+            "text": "This nonbinding audition tests a clear explanation for a quantum mechanics expert. It should define the idea before using an example or equation.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "steady",
+              "energy": "calm",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_man",
+              "timbre": "clear",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/ryan_hale_generated_expert/calm_clear.json",
+          "request_sha256": "333cc71553dcf91c4d25e0a244a0f07a2fd43a573aa7c334bce739f7093bc0ff"
+        },
+        {
+          "palette_id": "warm_rounded",
+          "request": {
+            "candidate_id": "ryan_hale_generated_expert_c2_0ff15864022b",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 441646985,
+            "text": "This nonbinding audition tests a clear explanation for a quantum mechanics expert. It should define the idea before using an example or equation.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "gentle",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_man",
+              "timbre": "rounded",
+              "warmth": "warm"
+            }
+          },
+          "request_relative_path": "requests/ryan_hale_generated_expert/warm_rounded.json",
+          "request_sha256": "8be9d1ac39388928ff3fb0e0131088a245a65ede4c49428a91dfbb3ab3e864fb"
+        },
+        {
+          "palette_id": "grounded_assured",
+          "request": {
+            "candidate_id": "ryan_hale_generated_expert_c3_3ec042c479f8",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1243871649,
+            "text": "This nonbinding audition tests a clear explanation for a quantum mechanics expert. It should define the idea before using an example or equation.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "assured",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "lower_mid",
+              "presentation": "adult_man",
+              "timbre": "grounded",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/ryan_hale_generated_expert/grounded_assured.json",
+          "request_sha256": "35f6c9967f3afe666efd957877e450e11a06b02879812e7377a01dea8b087b77"
+        }
+      ]
+    },
+    {
+      "authenticity_claimed": false,
+      "bundle_id": "sarah_bennett_generated_expert",
+      "canonical_candidate_id": "sarah_bennett_entertainment_pr_agent_expert_20260606_171637",
+      "display_name": "Sarah Bennett",
+      "existing_voice_carried_forward": false,
+      "identity_class": "generated_expert",
+      "identity_clone_claimed": false,
+      "locale": {
+        "blocker": "source_locale_confirmation_required_before_binding",
+        "provenance": "application_audition_default",
+        "sufficient_for_binding": false,
+        "value": "en-US"
+      },
+      "presentation_mapping": {
+        "qwen_presentation": "adult_woman",
+        "source_gender": "female"
+      },
+      "required_disclosure": null,
+      "role": "Entertainment PR Agent expert",
+      "source_attestation": {
+        "candidate_id": "sarah_bennett_entertainment_pr_agent_expert_20260606_171637",
+        "profile_sha256": "e24645e287df345c469b4d623992799d39173e458bc2e6682b2b61f09143dc1c",
+        "registry_alias": null,
+        "registry_sha256": "d2d683676d85c962784fa3bc297e619390a0ddca3030f784d2b3aa76603d5729",
+        "request_sha256": "aa6949e839ba08ae0a0d67d4276ccc057857983ee03dfaf682dd07dbfa255ae8",
+        "storage_id": "sarah_bennett_enterainment_pr_agent_expert_20260606_171637"
+      },
+      "subject_id": "sarah_bennett_generated_expert",
+      "unfilled_dimensions_not_guessed": [
+        "body",
+        "personality",
+        "era",
+        "confirmed_locale"
+      ],
+      "variants": [
+        {
+          "palette_id": "calm_clear",
+          "request": {
+            "candidate_id": "sarah_bennett_generated_expert_c1_53e6d4dd2e1a",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1076777425,
+            "text": "This nonbinding audition tests a clear explanation for an entertainment public relations expert. It should identify the audience, message, and next action.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "steady",
+              "energy": "calm",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "clear",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/sarah_bennett_generated_expert/calm_clear.json",
+          "request_sha256": "62e391933b30dd6c1f8db0e90d2c61c103364836d2dd569738754b03d2d20edb"
+        },
+        {
+          "palette_id": "warm_rounded",
+          "request": {
+            "candidate_id": "sarah_bennett_generated_expert_c2_9f3ca50224a6",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 384973430,
+            "text": "This nonbinding audition tests a clear explanation for an entertainment public relations expert. It should identify the audience, message, and next action.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "gentle",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "mid",
+              "presentation": "adult_woman",
+              "timbre": "rounded",
+              "warmth": "warm"
+            }
+          },
+          "request_relative_path": "requests/sarah_bennett_generated_expert/warm_rounded.json",
+          "request_sha256": "8a62961a2853486284900534af69937a74854c84dc029ed73702b3d124af400f"
+        },
+        {
+          "palette_id": "grounded_assured",
+          "request": {
+            "candidate_id": "sarah_bennett_generated_expert_c3_7756af098d5a",
+            "intent": "generated_original_no_named_person_imitation",
+            "language": "English",
+            "named_person_imitation": false,
+            "nonproduction_feasibility": true,
+            "schema": "kira-qwen3-voice-design-feasibility-v1",
+            "seed": 1700634978,
+            "text": "This nonbinding audition tests a clear explanation for an entertainment public relations expert. It should identify the audience, message, and next action.",
+            "voice_traits": {
+              "accent": "general_american",
+              "breathiness": "low",
+              "confidence": "assured",
+              "energy": "balanced",
+              "pace": "moderate",
+              "pitch": "lower_mid",
+              "presentation": "adult_woman",
+              "timbre": "grounded",
+              "warmth": "neutral"
+            }
+          },
+          "request_relative_path": "requests/sarah_bennett_generated_expert/grounded_assured.json",
+          "request_sha256": "c0809eae68b1f9afda1a0bdc012f239c288cb1fc818aabdd3caea00b4a6c2e46"
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "activation_allowed": false,
+    "binding_created": false,
+    "candidate_count_per_bundle": 3,
+    "generated_audio": false,
+    "missing_source_identity_included": false,
+    "named_person_imitation": false,
+    "preserved_existing_voice_included": false,
+    "profile_mutation_performed": false,
+    "route_changed": false
+  },
+  "schema": "kira.qwen3.profile-audition-request-plan.v1",
+  "source": {
+    "bytes": 41515,
+    "relative_path": "Voice/local_voice_studio/evidence/avatar_temporary_creator_voice_integration.json",
+    "schema": "kira.local-voice.avatar-temporary-creator-audition-plan.v1",
+    "sha256": "13c314425df7b982e7ccece1db11361bf1243a452c12ff235dc286066cdae497"
+  },
+  "status": "NONBINDING_AUDITION_REQUESTS_ONLY_NOT_GENERATED_NOT_APPROVED_NOT_ACTIVE"
+}

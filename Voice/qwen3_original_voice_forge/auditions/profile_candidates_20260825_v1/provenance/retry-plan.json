@@ -1,0 +1,49 @@
+{
+  "schema": "kira-qwen3-profile-audition-retry-plan-v1",
+  "status": "NONBINDING_ASR_REGENERATION_ONLY_NOT_APPROVED_NOT_ACTIVE",
+  "source_integration_sha256": "13c314425df7b982e7ccece1db11361bf1243a452c12ff235dc286066cdae497",
+  "source_audition_plan": {
+    "filename": "audition-request-plan.json",
+    "bytes": 31855,
+    "sha256": "473e1f9d9a165e2861c0addbacbf6d53bfce8de91b76876acfd1d8f436f5b0aa"
+  },
+  "retry_policy": {
+    "reason": "pinned ASR word error rate exceeded 0.25",
+    "attempt": 1,
+    "seed_change": "original seed plus one",
+    "text_change": "replace acronym and audition wording with a plain-language role-specific clarity sentence",
+    "voice_traits_changed": false,
+    "failed_audio_is_preserved_as_negative_evidence": true
+  },
+  "retries": [
+    {
+      "palette_id": "grounded_assured",
+      "failed_candidate_id": "emily_carter_generated_expert_c3_a8ffe79a1e21",
+      "failed_request_sha256": "9e03442ef7c00d1cb1514fdf4c010f5a2bd31e916f3be7b1f8223b7deb7931ef",
+      "failed_wav_sha256": "0c9bd1581a1dd3eb0df635d0b2a2c1d3b8c19b0bad6f75ac759a11949a679834",
+      "failed_asr_report_sha256": "59b536ba8779a3e4c3762392a3068b3e1f508299dc136443f987eb2c936284f4",
+      "failed_word_error_rate": 0.2917,
+      "retry_request_relative_path": "requests/emily_grounded_assured_retry1.json",
+      "retry_request_sha256": "9b97ebcd5630ecb1406735d3ded7ad3e221dec6dbbad61282617e61a37edac67",
+      "retry_candidate_id": "emily_carter_generated_expert_c3r1_2c76f489708a"
+    },
+    {
+      "palette_id": "warm_rounded",
+      "failed_candidate_id": "emily_carter_generated_expert_c2_ae20eb201c77",
+      "failed_request_sha256": "dcf49075313051e202cc740390151320a13f64f63d0b83584a2c0fadb2cae5e2",
+      "failed_wav_sha256": "eb6aa639fb48d3352c5fde4fc5716e887a32c025fe91c347025dde48e3f83eaa",
+      "failed_asr_report_sha256": "84492178a2877fed967d6712d78715584cf8dc41589edf7a0c92bd7240e074de",
+      "failed_word_error_rate": 0.2917,
+      "retry_request_relative_path": "requests/emily_warm_rounded_retry1.json",
+      "retry_request_sha256": "8ca2740a1230420e6e67ba9744802692891481c290515dcd3c4060345a2872e8",
+      "retry_candidate_id": "emily_carter_generated_expert_c2r1_b35a5b3b28e1"
+    }
+  ],
+  "assertions": {
+    "named_person_imitation": false,
+    "source_recording_used": false,
+    "voice_assigned": false,
+    "voice_activated": false,
+    "route_changed": false
+  }
+}

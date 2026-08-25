@@ -1,0 +1,24 @@
+{
+  "schema": "kira-qwen3-voice-design-asr-audit-v1",
+  "status": "PASS",
+  "auditor": "torchaudio_WAV2VEC2_ASR_BASE_960H_greedy",
+  "torchaudio": "2.11.0+cu130",
+  "asr_checkpoint": {
+    "filename": "wav2vec2_fairseq_base_ls960_asr_ls960.pth",
+    "bytes": 377664473,
+    "sha256": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d"
+  },
+  "input": {
+    "wav_filename": "candidate.wav",
+    "wav_sha256": "74a373abe5f004a7ea7eb9df91f0769b3a39d361fb97581dd36448185101c4cd",
+    "request_filename": "calm_clear.json",
+    "request_sha256": "68ac1fe3e9981620252dbd0bbe949f16c83fed5795f0d2698ffde7ecec15d94d"
+  },
+  "device": "cuda",
+  "model_load_seconds": 0.4928,
+  "asr_seconds": 0.2236,
+  "expected": "This nonbinding audition tests a clear explanation for a robotics engineer. The explanation should separate sensing, planning, and safe physical action.",
+  "transcript": "this non binding oddition tests a clear explanation for a rhobotics engineer the explanation should separate sensing planning and safe physical action",
+  "word_error_rate": 0.1905,
+  "note": "ASR WER is an intelligibility proxy, not a naturalness or identity rating."
+}
