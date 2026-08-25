@@ -1,0 +1,16 @@
+{
+  "schema": "kira.kokoro.runtime-lock.v1",
+  "python": ">=3.10,<3.14",
+  "route": "KModel+misaki.espeak.EspeakG2P",
+  "packages": {
+    "espeakng-loader": "0.2.4",
+    "huggingface-hub": "1.28.0",
+    "kokoro": "0.9.4",
+    "misaki": "0.9.4",
+    "phonemizer-fork": "3.3.2",
+    "soundfile": "0.14.0",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.15.1"
+  },
+  "note": "Exact versions observed in the isolated proof runtime; an installer must additionally preserve and verify distribution hashes."
+}

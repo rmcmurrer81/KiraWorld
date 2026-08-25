@@ -1,0 +1,11 @@
+# Install only inside a dedicated Python 3.10-3.13 environment. Kokoro 0.9.4
+# and Misaki 0.9.4 officially declare Python <3.14. This is an input list,
+# not a reproducible lock file; resolve, audit, and lock it before distribution.
+kokoro==0.9.4
+misaki==0.9.4
+huggingface-hub==1.28.0
+phonemizer-fork==3.3.2
+espeakng-loader==0.2.4
+soundfile==0.14.0
+torch==2.11.0+cu130
+transformers==5.15.1

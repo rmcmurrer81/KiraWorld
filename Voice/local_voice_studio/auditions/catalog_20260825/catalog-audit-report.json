@@ -1,0 +1,169 @@
+{
+  "schema": "kira-labs-local-voice-catalog-audit-v1",
+  "status": "TECHNICAL_PASS_HUMAN_REVIEW_REQUIRED",
+  "device": "cuda",
+  "asr_model": "torchaudio_WAV2VEC2_ASR_BASE_960H_greedy",
+  "asr_model_load_seconds": 12.414885,
+  "samples": [
+    {
+      "voice_id": "af_heart",
+      "transcript": "hello this is a voice addition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.04,
+      "asr_seconds": 0.262552,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "af_bella",
+      "transcript": "hullo this is a voice oddition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.08,
+      "asr_seconds": 0.02112,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "af_nicole",
+      "transcript": "hullo this is a voice odition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.08,
+      "asr_seconds": 0.02889,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "af_aoede",
+      "transcript": "hullo this is a voice oddition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.08,
+      "asr_seconds": 0.019009,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "af_kore",
+      "transcript": "hullo this is a voice awdition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.08,
+      "asr_seconds": 0.019636,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "af_sarah",
+      "transcript": "hullo this is a voice awdition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.08,
+      "asr_seconds": 0.019278,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "am_fenrir",
+      "transcript": "hullo this is a voice audition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.04,
+      "asr_seconds": 0.019658,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "am_michael",
+      "transcript": "hullo this is a voice oddition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.08,
+      "asr_seconds": 0.022377,
+      "intelligibility_gate": "PASS"
+    },
+    {
+      "voice_id": "am_puck",
+      "transcript": "hullo this is a voice audition for clarity warmth pacing and natural conversation we can take our time and work through the next step together",
+      "word_error_rate": 0.04,
+      "asr_seconds": 0.019345,
+      "intelligibility_gate": "PASS"
+    }
+  ],
+  "closest_acoustic_pairs": [
+    {
+      "left": "af_bella",
+      "right": "af_heart",
+      "mfcc_signature_cosine": 0.980248,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "am_fenrir",
+      "right": "am_puck",
+      "mfcc_signature_cosine": 0.971531,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "am_michael",
+      "right": "am_puck",
+      "mfcc_signature_cosine": 0.964906,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_aoede",
+      "right": "af_heart",
+      "mfcc_signature_cosine": 0.964717,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_aoede",
+      "right": "af_bella",
+      "mfcc_signature_cosine": 0.963151,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_kore",
+      "right": "af_nicole",
+      "mfcc_signature_cosine": 0.947386,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_kore",
+      "right": "af_sarah",
+      "mfcc_signature_cosine": 0.946594,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "am_fenrir",
+      "right": "am_michael",
+      "mfcc_signature_cosine": 0.938749,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_kore",
+      "right": "am_fenrir",
+      "mfcc_signature_cosine": 0.938513,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_nicole",
+      "right": "am_fenrir",
+      "mfcc_signature_cosine": 0.936112,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_heart",
+      "right": "af_sarah",
+      "mfcc_signature_cosine": 0.935539,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_nicole",
+      "right": "am_puck",
+      "mfcc_signature_cosine": 0.934171,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_kore",
+      "right": "am_puck",
+      "mfcc_signature_cosine": 0.933834,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_nicole",
+      "right": "am_michael",
+      "mfcc_signature_cosine": 0.928078,
+      "automated_collision_gate": "PASS"
+    },
+    {
+      "left": "af_nicole",
+      "right": "af_sarah",
+      "mfcc_signature_cosine": 0.925566,
+      "automated_collision_gate": "PASS"
+    }
+  ],
+  "limitations": [
+    "ASR WER is an intelligibility proxy, not a naturalness rating.",
+    "MFCC similarity is a screening aid, not speaker identity or perceptual proof.",
+    "Every final distinctness and identity-fit decision still requires listening review."
+  ]
+}
