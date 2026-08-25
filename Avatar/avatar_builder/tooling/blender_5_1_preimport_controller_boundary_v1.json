@@ -22,8 +22,8 @@
     },
     "controller": {
       "project_relative_path": "Core/avatar_blender_preimport_controller.py",
-      "bytes": 48944,
-      "sha256": "154257fa6ad52b7030830428242dc78226e71ebb829b76be401d5424e4f7df21"
+      "bytes": 49876,
+      "sha256": "d211c782216f667cb183736ea7da228b9fc77f49b512b1412d8b30eef94c1162"
     },
     "build_worker": {
       "project_relative_path": "tools/blender_build_makehuman_adult_female_rigged_carrier_inactive.py",
@@ -39,6 +39,11 @@
       "project_relative_path": "Avatar/avatar_builder/tooling/makehuman_adult_female_rigged_carrier_v1.json",
       "bytes": 7886,
       "sha256": "7a956e34f665fa6f68782e4c6834ba06aecf537e08c6c458b2bafa1ca4415c8d"
+    },
+    "native_provider_contract": {
+      "project_relative_path": "Core/avatar_blender_native_provider_contract.py",
+      "bytes": 49771,
+      "sha256": "76fbf31e34245756efd008ab96d82cf20e8ee8c388042628d637958434ba43bb"
     },
     "worker_identity_authority": {
       "project_relative_path": "System/Docs/AVATAR_BUILDER_BLENDER_5_1_WORKER_IDENTITY_BINDING_20260822.md",
@@ -57,13 +62,37 @@
     "durable_claim_flush": true,
     "create_new_replay_marker_with_claim_hash_revalidation": true,
     "atomic_terminal_outcome": true,
-    "windows_process_image_query_and_held_identity_helper": true
+    "windows_process_image_query_and_held_identity_helper": true,
+    "retained_process_thread_job_image_claim_directory_handle_abstractions": true,
+    "exact_native_path_identity_attestation_structure": true,
+    "exact_native_process_policy_attestation_structure": true,
+    "directory_claim_durability_requirements_contract": true,
+    "hostile_fake_native_api_structure_validation": true
   },
   "native_boundary": {
-    "interface": "kira.blender_native_launch_provider.v1",
+    "interface": "kira.blender_native_launch_provider.v2",
     "reviewed_provider_ids": [],
     "execution_trust_boundary_closed": false,
     "process_start_allowed": false,
+    "static_contract": {
+      "claim_durability_schema": "kira.blender_native_claim_durability_attestation.v1",
+      "directory_claim_contract_schema": "kira.blender_native_directory_claim_durability_contract.v1",
+      "directory_claim_contract_sha256": "f742197e8cb0374218bbd6bd02adf29ff14c5de4dd85120a566d5f4bfd376abb",
+      "exact_create_process_flags": 1028,
+      "exact_directory_open_flags": 35651584,
+      "exact_durable_record_flags": 2149580928,
+      "native_provider_reviewed": false,
+      "operating_system_evidence_verified": false,
+      "path_identity_schema": "kira.blender_native_path_identity_attestation.v1",
+      "pre_resume_schema": "kira.blender_native_pre_resume_attestation.v1",
+      "process_execution_authorized": false,
+      "process_image_schema": "kira.blender_native_process_image_attestation.v1",
+      "process_policy_schema": "kira.blender_native_process_policy_attestation.v1",
+      "provider_interface": "kira.blender_native_launch_provider.v2",
+      "requirements_schema": "kira.blender_native_launch_requirements.v1",
+      "resume_authorized": false,
+      "review_scope": "STATIC_STRUCTURE_AND_FAKE_API_ONLY"
+    },
     "required_unproven_controls": [
       "native held-handle launch without pathname replacement window",
       "held ancestor directory identities and junction defense",

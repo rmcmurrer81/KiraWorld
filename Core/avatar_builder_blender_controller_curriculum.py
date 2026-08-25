@@ -138,8 +138,11 @@ def load_verified_lesson() -> dict[str, Any]:
     truth = lesson.get("current_truth")
     expected_truth = {
         "static_controller_verified": True,
+        "static_native_contract_verified": True,
         "native_provider_reviewed": False,
+        "operating_system_evidence_verified": False,
         "execution_trust_boundary_closed": False,
+        "resume_authorized": False,
         "blender_execution_authorized": False,
         "body_build_authorized": False,
         "body_created": False,
@@ -153,7 +156,7 @@ def load_verified_lesson() -> dict[str, Any]:
     lessons = lesson.get("verified_reusable_lessons")
     if (
         not isinstance(lessons, list)
-        or len(lessons) != 6
+        or len(lessons) != 9
         or any(not isinstance(item, str) or not item.strip() for item in lessons)
     ):
         raise ValueError("verified reusable lessons differ")
@@ -236,8 +239,10 @@ def teach_verified_lesson(*, memory_path: Path = DEFAULT_MEMORY_PATH) -> dict[st
             "blender",
             "concurrency",
             "fail_closed",
+            "handle_lifetime",
             "process_identity",
             "replay_defense",
+            "record_durability",
         ],
         "lesson": lesson["lesson"],
         "verified_reusable_lessons": lesson["verified_reusable_lessons"],
@@ -270,6 +275,8 @@ def teach_verified_lesson(*, memory_path: Path = DEFAULT_MEMORY_PATH) -> dict[st
         "lesson_count": len(memory["lessons"]),
         "memory_path": memory_relative,
         "execution_trust_boundary_closed": False,
+        "operating_system_evidence_verified": False,
+        "resume_authorized": False,
         "blender_execution_authorized": False,
         "body_created": False,
     }

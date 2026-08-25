@@ -1,6 +1,6 @@
 # Avatar Builder Blender Pre-Import Controller Boundary — 2026-08-25
 
-Status: **STATIC CONTROLLER VERIFIED; NATIVE EXECUTION BOUNDARY OPEN; BLENDER MUST NOT START**
+Status: **STATIC CONTROLLER AND V2 NATIVE CONTRACT VERIFIED; NATIVE EXECUTION BOUNDARY OPEN; BLENDER MUST NOT START**
 
 This record describes a reusable, fail-closed controller boundary. It does not
 authorize Blender, build or accept a body, assign a carrier to a person, author
@@ -47,7 +47,56 @@ carrier, and test-execution gates. In particular:
 9. replay denial across independent processes while the stable claim root and
    records remain untampered; and
 10. a Windows OS process-image query and held-file identity comparison helper
-    for a future native provider.
+    for a future native provider; and
+11. an inert versioned native-provider contract with retained opaque handle
+    leases, exact private path/image identity types, exact process-policy and
+    claim-durability attestations, and a pure hostile-fake validator.
+
+`Core/avatar_blender_native_provider_contract.py` is preparation for
+`kira.blender_native_launch_provider.v2`. It performs no native call. Its
+retained-handle bundle keeps distinct provider-owned process, primary-thread,
+Job, Blender-image-file, claim-file, and ancestor-directory tokens strongly
+referenced. It rejects token aliasing, mixed close APIs, already-closed leases,
+non-exact close success, and early close. That proves only Python lifetime and
+failure handling for opaque fake objects; it does not prove a token is a real
+Windows handle.
+
+The exact in-memory path/image structure binds a private final handle path, its
+non-published raw UTF-16LE digest, a separate canonical-local digest, volume
+serial, 128-bit file ID, byte length, SHA-256, single-link count, regular-file
+type, reparse state, query source, and handle retention. The separate digests
+preserve the raw path while treating local `C:\...` and `\\?\C:\...` forms as
+the same canonical path; UNC remains rejected. The created-process image must
+match the already-held Blender identity and must be queried from the retained
+process handle before resume; a PID lookup is explicitly not identity.
+
+The exact pre-resume process-policy structure binds:
+
+- explicit `CreateProcessW` `lpApplicationName` path digest;
+- exact argv and Windows command-line digests;
+- the exact six-entry Unicode environment-block digest;
+- the exact working-directory digest;
+- creation flags `CREATE_SUSPENDED | CREATE_UNICODE_ENVIRONMENT` (`1028`), no
+  shell, no inherited parent environment, and no inherited handles;
+- kill-on-close Job assignment before image verification;
+- image verification before resume, with `resume_count=0` at this boundary;
+  and
+- an exact bounded timeout with descendant-tree termination required.
+
+The directory/claim durability contract requires all existing local ancestor
+directories to be opened without write/delete sharing and retained; UNC and
+reparse traversal to be rejected; the claim to be share-zero, create-new, and
+write-through; both claim bytes and the parent directory entry to be flushed;
+the claim handle to remain held through terminalization; same-principal rewrite
+and deletion to be denied; an abnormal-death pending claim to remain
+permanently non-replayable; and exactly one equivalently durable create-new
+terminal outcome.
+
+Ten non-process hostile fake-API tests currently cover the valid false-authority
+shape plus aliasing, mixed close APIs, early close, close failure, image/path
+substitution, PID identity, flag/environment/ordering/resume drift, missing
+claim or directory flush, missing same-principal protection, replay drift,
+directory gaps, reparse/UNC input, and cross-structure digest drift.
 
 The exact local Blender 5.1 evidence is recorded without a private machine
 path in
@@ -62,7 +111,9 @@ The Python controller deliberately has:
 
 Even a valid preflight therefore ends as
 `BLOCKED_NATIVE_BOUNDARY_REQUIRED`, with `process_started=false`.
-An unreviewed provider object is never called.
+An unreviewed provider object is never called. Even if both Python trust
+constants are monkey-patched, the controller still reaches the sealed
+`NativeBoundaryRequired` branch before any provider method.
 
 Python can hold final files and produce a normal atomic ledger, but this does
 not prove the entire Windows launch transaction. A pathname or ancestor may
@@ -80,6 +131,15 @@ make the closed records immutable against deletion or rewrite by the same
 account and does not prove the parent directory entry flush. It is not
 execution authority until the root, records, and every ancestor are held and
 protected by the native boundary.
+
+The new v2 structures do not repair those OS facts. A fake provider can fill
+every field with the required value, so pure shape validation always returns
+`STATIC_SHAPE_VALID_ONLY_NO_NATIVE_AUTHORITY`, with operating-system evidence,
+resume, and process-execution authority false. The current `OneRunClaimStore`
+also creates its Python claim before a future provider would run; it cannot be
+layered underneath the durable native contract. A reviewed integration must
+move the create-new claim transaction and retained ancestor/record handles into
+the native provider rather than reinterpret the existing Python claim as proof.
 
 ## Exact native boundary still required
 
@@ -107,6 +167,11 @@ A separately reviewed Windows provider must, before this guard can change:
     flush exactly one terminal result. A pending claim after abnormal death
     must remain permanently non-replayable.
 
+It must also return the v2 structures from facts queried through the exact
+retained handles it created. Echoed requirements, caller-provided booleans,
+raw PIDs, mappings substituted for concrete structures, or fake opaque tokens
+are not native evidence.
+
 The provider must pass real hostile two-process claim, pending-crash,
 hard-link, junction, staging-name, environment-poisoning, argument-mutation,
 process-image-mismatch, timeout, descendant-cleanup, and build-pass/audit-fail
@@ -118,9 +183,11 @@ Avatar Builder may learn only the following verified rule:
 
 > A worker's internal identity check is necessary but not sufficient. Before
 > any Blender import or person/body work, bind exact files, sanitize arguments
-> and environment, consume one durable run claim, hold identities through an
-> OS-verified suspended launch, and write one terminal outcome. If a native
-> link in that chain is unproven, record the block and start no process.
+> and environment, consume one durable run claim, retain the exact process,
+> Job, file, claim, and directory handles through an OS-verified suspended
+> launch, and write one terminal outcome. A shape-valid attestation is not OS
+> proof. If a native link in that chain is unproven, record the block and start
+> no process.
 
 This lesson is a safety method. It is not evidence that a carrier or body was
 built, accepted, assigned, functional, private-ready, or active.

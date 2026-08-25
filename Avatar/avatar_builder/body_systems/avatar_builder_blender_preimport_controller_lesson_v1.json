@@ -5,14 +5,14 @@
   "source_bindings": [
     {
       "path": "Avatar/avatar_builder/tooling/blender_5_1_preimport_controller_boundary_v1.json",
-      "bytes": 3665,
-      "sha256": "9983d1ab1708440edaf7048ea5089035295928b8fcc122e461182a2478a06c39",
+      "bytes": 5388,
+      "sha256": "445617fb901e26dd7786f5d708658db88bf9c83d3685ca1a5ed3681a64cd5c3b",
       "role": "exact_machine_static_boundary_evidence"
     },
     {
       "path": "System/Docs/AVATAR_BUILDER_BLENDER_PREIMPORT_CONTROLLER_BOUNDARY_20260825.md",
-      "bytes": 6576,
-      "sha256": "a9cf0babfb142e575464398d37aa00ba7b73f96218126f2390368455eb934553",
+      "bytes": 10679,
+      "sha256": "83c7f9f29deaaf436d17992f9a9e0d53d165fc9441ea90412533e4b7d80defc9",
       "role": "verified_method_and_native_blocker_boundary"
     },
     {
@@ -28,13 +28,19 @@
     "Hash each file through the held file descriptor and keep write/delete-denying handles alive through the native launch transaction.",
     "Consume one durable create-new claim before process creation and permit no replay after any terminal or pending result.",
     "Treat a worker's internal identity check as necessary but not sufficient; require OS process-image identity proof before resume.",
+    "Retain distinct opaque process, primary-thread, Job, Blender-image, claim, and ancestor-directory leases; reject aliasing, mixed close APIs, early close, and non-exact close success.",
+    "Bind pre-resume identity through private final handle paths, volume and file identity, exact CreateProcessW policy, zero resumes, and a retained-process-handle image query; a PID or shape-valid fake is not OS evidence.",
+    "Require share-zero create-new write-through claims, payload and parent-directory flushes, same-principal rewrite and deletion denial, permanent pending-claim replay denial, and one equally durable terminal outcome.",
     "When the native held-handle, ancestor, hard-link, process, job, staging, or terminal-record boundary is unproven, record the block and start no process."
   ],
-  "lesson": "A worker's internal identity check is necessary but not sufficient. Before any Blender import or person/body work, bind exact files, sanitize arguments and environment, consume one durable run claim, hold identities through an OS-verified suspended launch, and write one terminal outcome. If a native link in that chain is unproven, record the block and start no process.",
+  "lesson": "A worker's internal identity check is necessary but not sufficient. Before any Blender import or person/body work, bind exact files, sanitize arguments and environment, consume one durable run claim, retain the exact process, Job, file, claim, and directory handles through an OS-verified suspended launch, and write one terminal outcome. A shape-valid attestation is not OS proof. If a native link in that chain is unproven, record the block and start no process.",
   "current_truth": {
     "static_controller_verified": true,
+    "static_native_contract_verified": true,
     "native_provider_reviewed": false,
+    "operating_system_evidence_verified": false,
     "execution_trust_boundary_closed": false,
+    "resume_authorized": false,
     "blender_execution_authorized": false,
     "body_build_authorized": false,
     "body_created": false,

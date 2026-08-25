@@ -77,7 +77,7 @@ class _FakeProvider:
     def __init__(self) -> None:
         self.called = False
 
-    def launch_held_suspended_and_verify(self, **kwargs):
+    def create_durable_claim_launch_suspended_and_attest(self, **kwargs):
         self.called = True
         raise AssertionError("unreviewed provider must never be called")
 
@@ -182,6 +182,14 @@ class BlenderPreImportControllerTests(unittest.TestCase):
         evidence = controller.read_strict_json(evidence_path, max_bytes=512 * 1024)
         self.assertIs(evidence["execution_trust_boundary_closed"], False)
         self.assertEqual([], evidence["native_boundary"]["reviewed_provider_ids"])
+        self.assertEqual(
+            dict(controller.native_contract.static_contract_evidence_record()),
+            evidence["native_boundary"]["static_contract"],
+        )
+        self.assertIs(
+            evidence["native_boundary"]["static_contract"]["resume_authorized"],
+            False,
+        )
         self.assertIs(controller.EXECUTION_TRUST_BOUNDARY_CLOSED, False)
         self.assertEqual(frozenset(), controller.REVIEWED_NATIVE_PROVIDER_IDS)
         for operation in ("build", "audit"):
@@ -567,6 +575,12 @@ class BlenderPreImportControllerTests(unittest.TestCase):
         nested_extra = json.loads(json.dumps(evidence))
         nested_extra["native_boundary"]["unexpected_native_authority"] = False
         mutations.append(nested_extra)
+        static_resume = json.loads(json.dumps(evidence))
+        static_resume["native_boundary"]["static_contract"]["resume_authorized"] = True
+        mutations.append(static_resume)
+        contract_binding = json.loads(json.dumps(evidence))
+        contract_binding["artifact_bindings"]["native_provider_contract"]["sha256"] = "0" * 64
+        mutations.append(contract_binding)
         for mutation in mutations:
             with self.subTest(keys=set(mutation)), self.assertRaises(controller.InvalidRequest):
                 controller.validate_machine_evidence(mutation)

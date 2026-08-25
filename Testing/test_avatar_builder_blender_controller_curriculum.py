@@ -27,9 +27,12 @@ class AvatarBuilderBlenderControllerCurriculumTests(unittest.TestCase):
         )
         truth = lesson["current_truth"]
         self.assertIs(truth["static_controller_verified"], True)
+        self.assertIs(truth["static_native_contract_verified"], True)
         for key in (
             "native_provider_reviewed",
+            "operating_system_evidence_verified",
             "execution_trust_boundary_closed",
+            "resume_authorized",
             "blender_execution_authorized",
             "body_build_authorized",
             "body_created",
@@ -40,8 +43,9 @@ class AvatarBuilderBlenderControllerCurriculumTests(unittest.TestCase):
         ):
             self.assertIs(truth[key], False)
         self.assertEqual(3, len(lesson["source_bindings"]))
-        self.assertEqual(6, len(lesson["verified_reusable_lessons"]))
+        self.assertEqual(9, len(lesson["verified_reusable_lessons"]))
         self.assertIn("start no process", lesson["lesson"])
+        self.assertIn("not OS proof", lesson["lesson"])
 
     def test_teaching_is_idempotent_and_repairs_a_tampered_duplicate(self) -> None:
         with tempfile.TemporaryDirectory(dir=PROJECT_ROOT / "Testing") as raw:

@@ -8,7 +8,11 @@ be proven without starting Blender:
   configuration, and per-run authorization;
 * read handles held without write/delete sharing on Windows;
 * an atomic, file-flushed one-run claim and terminal outcome; and
-* a process-image query helper for a future reviewed native launch provider.
+* a process-image query helper for a future reviewed native launch provider;
+* exact inert native-provider requirements and pre-resume attestation types;
+  and
+* retained opaque process/thread/Job/image/claim/directory handle leases for
+  hostile fake-API validation.
 
 No native launch provider is reviewed in this release.  ``submit`` therefore
 always records a terminal blocked outcome after a valid preflight and never
@@ -32,12 +36,14 @@ import stat
 from types import MappingProxyType
 from typing import Any, Mapping, Protocol, Sequence
 
+from Core import avatar_blender_native_provider_contract as native_contract
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 BOUNDARY_SCHEMA = "kira.avatar_builder.blender_preimport_controller.v1"
 CLAIM_SCHEMA = "kira.avatar_builder.blender_one_run_claim.v1"
 OUTCOME_SCHEMA = "kira.avatar_builder.blender_one_run_outcome.v1"
-NATIVE_PROVIDER_INTERFACE = "kira.blender_native_launch_provider.v1"
+NATIVE_PROVIDER_INTERFACE = native_contract.NATIVE_PROVIDER_INTERFACE
 MACHINE_EVIDENCE_RELATIVE_PATH = (
     "Avatar/avatar_builder/tooling/blender_5_1_preimport_controller_boundary_v1.json"
 )
@@ -801,15 +807,17 @@ class NativeLaunchProvider(Protocol):
     provider_id: str
     interface_version: str
 
-    def launch_held_suspended_and_verify(
+    def create_durable_claim_launch_suspended_and_attest(
         self,
         *,
-        command: Sequence[str],
-        environment: Mapping[str, str],
-        held_artifacts: Mapping[str, HeldArtifact],
-        expected_process_image: HeldArtifact,
-    ) -> Mapping[str, Any]:
-        """Launch through an OS-enforced boundary and return exact attestation."""
+        requirements: native_contract.NativeLaunchRequirements,
+    ) -> native_contract.NativePreResumeAttestation:
+        """Return held pre-resume evidence through a future reviewed provider.
+
+        The current controller never calls this method.  A shape-valid return
+        would still keep resume authority false until a separately reviewed
+        native implementation and real hostile tests close the OS boundary.
+        """
 
 
 @dataclass(frozen=True)
@@ -1132,6 +1140,11 @@ def validate_machine_evidence(evidence: Mapping[str, Any]) -> None:
         "create_new_replay_marker_with_claim_hash_revalidation",
         "atomic_terminal_outcome",
         "windows_process_image_query_and_held_identity_helper",
+        "retained_process_thread_job_image_claim_directory_handle_abstractions",
+        "exact_native_path_identity_attestation_structure",
+        "exact_native_process_policy_attestation_structure",
+        "directory_claim_durability_requirements_contract",
+        "hostile_fake_native_api_structure_validation",
     }
     capabilities = evidence.get("verified_static_capabilities")
     if (
@@ -1159,6 +1172,7 @@ def validate_machine_evidence(evidence: Mapping[str, Any]) -> None:
         "reviewed_provider_ids",
         "execution_trust_boundary_closed",
         "process_start_allowed",
+        "static_contract",
         "required_unproven_controls",
     }
     if (
@@ -1168,6 +1182,8 @@ def validate_machine_evidence(evidence: Mapping[str, Any]) -> None:
         or native.get("reviewed_provider_ids") != []
         or native.get("execution_trust_boundary_closed") is not False
         or native.get("process_start_allowed") is not False
+        or native.get("static_contract")
+        != dict(native_contract.static_contract_evidence_record())
     ):
         raise InvalidRequest("machine evidence native boundary differs")
     unproven = native.get("required_unproven_controls")
@@ -1191,6 +1207,7 @@ def validate_machine_evidence(evidence: Mapping[str, Any]) -> None:
         "build_worker",
         "audit_worker",
         "carrier_config",
+        "native_provider_contract",
         "worker_identity_authority",
     }
     if not isinstance(bindings, dict) or set(bindings) != required:
