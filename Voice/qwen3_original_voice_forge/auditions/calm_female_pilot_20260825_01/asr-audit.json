@@ -1,0 +1,24 @@
+{
+  "schema": "kira-qwen3-voice-design-asr-audit-v1",
+  "status": "PASS",
+  "auditor": "torchaudio_WAV2VEC2_ASR_BASE_960H_greedy",
+  "torchaudio": "2.11.0+cu130",
+  "asr_checkpoint": {
+    "filename": "wav2vec2_fairseq_base_ls960_asr_ls960.pth",
+    "bytes": 377664473,
+    "sha256": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d"
+  },
+  "input": {
+    "wav_filename": "candidate.wav",
+    "wav_sha256": "6f92cdf4ee7d2409c08550d6b75553c944ca9180c3f056a462c437177e04a672",
+    "request_filename": "qwen3_voice_design_feasibility_request.json",
+    "request_sha256": "3223485966f29b5fab8f2983960d33d9f4eb751b9fb1a315c5fcde91e4963a7a"
+  },
+  "device": "cuda",
+  "model_load_seconds": 0.5356,
+  "asr_seconds": 0.2369,
+  "expected": "Hello. This is an original local voice design test for clarity, warmth, and natural conversation. We can take our time and work through the next step together.",
+  "transcript": "hello this is an original local voice design test for clarity warmth and natural conversation we can take our time and work through the next step together",
+  "word_error_rate": 0.0,
+  "note": "ASR WER is an intelligibility proxy, not a naturalness or identity rating."
+}

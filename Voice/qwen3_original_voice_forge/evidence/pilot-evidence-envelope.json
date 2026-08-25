@@ -1,0 +1,62 @@
+{
+  "schema": "kira-qwen3-original-voice-pilot-evidence-envelope-v1",
+  "status": "TECHNICAL_FEASIBILITY_SAMPLE_NOT_APPROVED_NOT_ACTIVE",
+  "candidate_id": "calm_female_pilot_20260825_01",
+  "artifacts": [
+    {
+      "path": "feasibility_worker.py",
+      "bytes": 14828,
+      "sha256": "0c60e9613f7bf222a30e83934ed4c74d50442bd8fee00cf198e1444238e09c13"
+    },
+    {
+      "path": "asr_audit.py",
+      "bytes": 4768,
+      "sha256": "631b7ccf64e9aa483daa9db08e1e2422398190e62ccae64c0669ba3d93d11b5c"
+    },
+    {
+      "path": "requirements-feasibility.lock.txt",
+      "bytes": 1513,
+      "sha256": "6840c4adcd9566d2185f4613263c3c32aa6a56e77fed33cd2f20ca4407ebc6d4"
+    },
+    {
+      "path": "evidence/model-manifest.json",
+      "bytes": 2023,
+      "sha256": "35bc9866b9bdfde521df9a857df5b0ff22adb3a3b3b869cb389240ffddf85ba8"
+    },
+    {
+      "path": "auditions/calm_female_pilot_20260825_01/qwen3_voice_design_feasibility_request.json",
+      "bytes": 715,
+      "sha256": "3223485966f29b5fab8f2983960d33d9f4eb751b9fb1a315c5fcde91e4963a7a"
+    },
+    {
+      "path": "auditions/calm_female_pilot_20260825_01/receipt.json",
+      "bytes": 4328,
+      "sha256": "137a83d9018e558f1decfca145621f76cb94e2e194968477ad8c2d88308dd613"
+    },
+    {
+      "path": "auditions/calm_female_pilot_20260825_01/asr-audit.json",
+      "bytes": 1200,
+      "sha256": "e28aaeaac935a4786a53b5f00415bbb75a0b428a5f311a090e2325d7d5a47bb3"
+    },
+    {
+      "path": "auditions/calm_female_pilot_20260825_01/candidate.wav",
+      "bytes": 526124,
+      "sha256": "6f92cdf4ee7d2409c08550d6b75553c944ca9180c3f056a462c437177e04a672"
+    }
+  ],
+  "assertions": {
+    "generated_original": true,
+    "named_person_imitation": false,
+    "source_recording_used": false,
+    "playback_performed": false,
+    "voice_assigned": false,
+    "voice_activated": false,
+    "kira_route_changed": false,
+    "asr_intelligibility_pass": true
+  },
+  "limitations": [
+    "The exact sample still requires human listening and distinctness review.",
+    "The development sandbox and offline flags are not accepted production OS isolation.",
+    "This envelope is evidence binding only; it grants no synthesis or activation authority."
+  ]
+}
