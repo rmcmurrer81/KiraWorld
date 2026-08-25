@@ -1,0 +1,152 @@
+{
+  "blocked_subject_assignments": [
+    {
+      "rule": "speculative_historical_design_and_separate_approval_required",
+      "starter_route_id": null,
+      "status": "not_assigned",
+      "subject_id": "h_h_holmes"
+    },
+    {
+      "rule": "subject_comparative_selection_required_current_route_preserved",
+      "starter_route_id": null,
+      "status": "not_assigned",
+      "subject_id": "kira"
+    },
+    {
+      "rule": "subject_comparative_selection_required_no_owned_profile",
+      "starter_route_id": null,
+      "status": "not_assigned",
+      "subject_id": "lisa"
+    }
+  ],
+  "consumer_defaults": {
+    "avatar_builder.nonbinding_preview.female": "starter.calm_female",
+    "avatar_builder.nonbinding_preview.male": "starter.warm_male",
+    "hackathon.health_companion.voice.female": "starter.calm_female",
+    "hackathon.health_companion.voice.male": "starter.warm_male",
+    "hackathon.setsignal.voice.female": "starter.calm_female",
+    "hackathon.setsignal.voice.male": "starter.warm_male",
+    "hackathon.unitday.voice.female": "starter.calm_female",
+    "hackathon.unitday.voice.male": "starter.warm_male",
+    "hackathon.unitline.voice.female": "starter.calm_female",
+    "hackathon.unitline.voice.male": "starter.warm_male",
+    "temporary_creator.nonbinding_preview.female": "starter.calm_female",
+    "temporary_creator.nonbinding_preview.male": "starter.warm_male"
+  },
+  "owner_approval": {
+    "approver_role": "product_owner",
+    "decision": "approved",
+    "relative_path": "Voice/local_voice_studio/auditions/catalog_20260825/starter-owner-approval.json",
+    "scope": "starter voices for hackathon projects",
+    "sha256": "b91de4433382af5e1d9b92ed12773707f59624d85ddd735efdb6e15a2d4df175"
+  },
+  "preserved_existing_authorities": [
+    {
+      "candidate_id": "ladybug_marinette_expanded_smoke",
+      "policy": "preserve_existing_verified_voice_no_export",
+      "profile_relative_path": "Voice/profiles/temp_ai/ladybug_voice_profile.json",
+      "profile_sha256": "22abeadcf9821234b35bf48c6338cbdc89738b2285ef2514b423240f4133b998",
+      "released_audio_in_this_manifest": false,
+      "voice_id": "ladybug_voice_canon_v1"
+    },
+    {
+      "candidate_id": "peter_parker_spider_man_no_way_home_final_suit",
+      "policy": "preserve_existing_verified_voice_no_export",
+      "profile_relative_path": "Voice/profiles/temp_ai/peter_parker_voice_profile.json",
+      "profile_sha256": "04f604b69d13fbfb1ad3b9e27797177bf39e45d1eeb6ed8d0567d9b633b861c1",
+      "released_audio_in_this_manifest": false,
+      "voice_id": "peter_parker_reviewed_reference_v1"
+    }
+  ],
+  "protected_authority_evidence": {
+    "h_h_holmes": [
+      {
+        "relative_path": "Voice/profiles/temp_ai/h_h_holmes_voice_profile.json",
+        "sha256": "3c6178fd003d93719591636391c30d18758870d0c825fbdf79c17bc5fc2ddc0d"
+      }
+    ],
+    "kira": [
+      {
+        "relative_path": "Voice/profiles/temp_ai/kira_voice_profile.json",
+        "sha256": "102d17f5420a1a16b3a920204ebde0d532c0a9bfd2979dca28048378ecddc116"
+      },
+      {
+        "relative_path": "Voice/sidecars/kira_approved_voice_routing.json",
+        "sha256": "a343572b25937926ea0181274976b53f57ca219ce1e4d3e1780343994aea7b81"
+      }
+    ],
+    "lisa": []
+  },
+  "provider": {
+    "identity_claim": false,
+    "license_id": "Apache-2.0",
+    "model_repo": "hexgrad/Kokoro-82M",
+    "model_revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "provider_id": "kokoro_subprocess_exact_two_voice_v1",
+    "runtime_voice_ids": [
+      "af_heart",
+      "am_fenrir"
+    ],
+    "source_relative_path": "Voice/local_voice_studio/src/kira_local_voice/backends/kokoro_subprocess.py",
+    "source_sha256": "a902e6f589b0694997de8557da151d478d33a59679f8d5291216281f95b2d13d",
+    "synthesis_readiness": "fail_closed_pending_reviewed_os_isolation_provider"
+  },
+  "release_boundary": {
+    "distributable_audio_paths": [
+      "Voice/local_voice_studio/auditions/catalog_20260825/calm_female_approved.wav",
+      "Voice/local_voice_studio/auditions/catalog_20260825/warm_male_approved.wav"
+    ],
+    "distributable_metadata_paths": [
+      "Voice/local_voice_studio/THIRD_PARTY_ATTRIBUTION.md",
+      "Voice/local_voice_studio/auditions/catalog_20260825/starter-owner-approval.json"
+    ],
+    "excluded_categories": [
+      "unapproved_auditions",
+      "private_or_third_party_reference_audio",
+      "model_weights",
+      "model_or_package_caches",
+      "generated_resident_audio"
+    ],
+    "manifest_creates_resident_assignment": false,
+    "model_weights_or_caches_included": false,
+    "raw_or_reference_audio_included": false,
+    "resident_audio_included": false,
+    "unapproved_auditions_included": false
+  },
+  "routes": [
+    {
+      "allowed_use": [
+        "hackathon_app_product_voice",
+        "temporary_creator_nonbinding_audition_preview",
+        "avatar_builder_nonbinding_audition_preview"
+      ],
+      "approved_preview_relative_path": "Voice/local_voice_studio/auditions/catalog_20260825/calm_female_approved.wav",
+      "approved_preview_sha256": "c3e3682817476212c990969901028758fbbde1eb4eb8c97153ef878b3939b33a",
+      "assignment_class": "generic_product_voice",
+      "identity_claim": false,
+      "product_label": "calm female",
+      "resident_assignment_created": false,
+      "route_id": "starter.calm_female",
+      "voice_id": "af_heart",
+      "voice_presentation": "female"
+    },
+    {
+      "allowed_use": [
+        "hackathon_app_product_voice",
+        "temporary_creator_nonbinding_audition_preview",
+        "avatar_builder_nonbinding_audition_preview"
+      ],
+      "approved_preview_relative_path": "Voice/local_voice_studio/auditions/catalog_20260825/warm_male_approved.wav",
+      "approved_preview_sha256": "0a8cdb8178bf56a6aa2442cca496dcf87a76b52e8eb0743488dc5f0e8c8a8a8e",
+      "assignment_class": "generic_product_voice",
+      "identity_claim": false,
+      "product_label": "warm male",
+      "resident_assignment_created": false,
+      "route_id": "starter.warm_male",
+      "voice_id": "am_fenrir",
+      "voice_presentation": "male"
+    }
+  ],
+  "schema": "kira.local-voice.approved-starter-release.v1",
+  "status": "approved_starter_routes_only"
+}

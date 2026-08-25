@@ -10,6 +10,7 @@ from .models import (
     VoiceProfile,
 )
 from .service import LocalVoiceService
+from .approved_starter_release import ApprovedStarterRoute, ApprovedStarterVoiceRelease
 from .avatar_voice_integration import (
     AvatarTemporaryCreatorVoiceIntegration,
     build_live_avatar_voice_plan,
@@ -37,6 +38,8 @@ __all__ = [
     "AssignmentMode",
     "AvatarSourceAttestation",
     "AvatarTemporaryCreatorVoiceIntegration",
+    "ApprovedStarterRoute",
+    "ApprovedStarterVoiceRelease",
     "BodyPresence",
     "CandidateAudioQueue",
     "ConsentBasis",

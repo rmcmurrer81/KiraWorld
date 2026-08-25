@@ -5,6 +5,13 @@ The Avatar/Temporary Creator read-only voice-gap planner is documented in
 voices and Kira's current route while producing source-attested, nonbinding
 audition briefs for exact profiles that still lack a voice.
 
+The approved-only product route resolver is documented in
+`../../System/Docs/APPROVED_STARTER_VOICE_RELEASE_AND_ASSIGNMENT_20260825.md`.
+It exposes only the owner-approved calm female and warm male generic starter
+voices to exact hackathon-app or nonbinding creator-preview selectors. Its
+release inventory excludes unapproved auditions, reference audio, resident
+audio, weights, and caches; Kira, Lisa, and H. H. Holmes remain unassigned.
+
 This is an additive, privacy-first foundation for a local voice studio. Its
 default backend remains a clearly marked silent-WAV contract mock. An optional
 Kokoro subprocess adapter is now present but remains fail-closed. Exact runtime,
