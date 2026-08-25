@@ -153,6 +153,21 @@ play audio:
 python -B -m unittest tests.test_profile_audition_packager -v
 ```
 
+## Published candidate evidence
+
+The first complete six-profile evidence set is published at
+`auditions/profile_candidates_20260825_v1`. It contains 18 generated-original
+WAV candidates, three per source-complete profile, plus their exact requests,
+receipts, ASR audits, plan provenance, and two failed-attempt evidence triplets
+without the failed WAVs. Its manifest SHA-256 is
+`052cadaa45bbbd9fcd7dd626451aa03c3eb94a5db675285d208a7a2d6eb890b9`.
+
+Commit `a3f9aa0db0a34fb477ba3051fd27ee1621aa5944` uploaded all 18 WAVs through
+Git LFS. Package-specific Git attributes preserve the original JSON bytes so
+the manifest's recorded sizes and SHA-256 values remain valid after cloning.
+This publication is still audition evidence only: no voice was approved,
+assigned, activated, or routed by that commit.
+
 The worker sets Hugging Face and Transformers offline flags and was exercised
 inside the development tool's restricted-network sandbox. That is useful
 feasibility evidence, but it is not the reviewed OS-enforced production
