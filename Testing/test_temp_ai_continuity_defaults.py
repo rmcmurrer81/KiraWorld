@@ -40,11 +40,20 @@ class TemporaryAIContinuityDefaultTests(unittest.TestCase):
         )
         self.assertEqual(plan["continuity_scope"]["mode"], "explicit_endpoint")
 
-    def test_blank_version_still_asks_for_adaptation_not_season(self) -> None:
+    def test_blank_version_uses_ranked_primary_continuity_without_routine_question(self) -> None:
         questions = build_ambiguity_questions("Fictional Character", "Spider-Man", "")
-        self.assertTrue(any("adaptation" in item.lower() for item in questions))
-        self.assertTrue(any("endpoint is optional" in item.lower() for item in questions))
-        self.assertFalse(any(item.startswith("Which season") for item in questions))
+        plan = build_knowledge_plan(
+            "Fictional Character",
+            "Spider-Man",
+            "",
+            "Male",
+        )
+        self.assertEqual(questions, [])
+        self.assertEqual(
+            plan["continuity_scope"]["adaptation_identity_resolution_mode"],
+            "automatic_ranked_primary_continuity_resolution",
+        )
+        self.assertFalse(plan["continuity_scope"]["routine_owner_question_required"])
 
 
 if __name__ == "__main__":

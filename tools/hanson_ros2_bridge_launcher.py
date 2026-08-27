@@ -81,33 +81,43 @@ def eligible_person_routes(
     """Return exact catalog routes that are safe for a mock source label.
 
     A catalog display name never authorizes a route.  Every returned route has
-    an exact bounded identifier, a known identity class, and an existing local
-    chat launcher.  The chat launcher is checked as eligibility evidence only;
-    it is not started by this bridge launcher.
+    an exact bounded identifier and a known identity class.  Downloaded
+    candidate routes additionally require their shared local review launcher.
+    Fixed persistent/resident routes are checked-in catalog identities; their
+    separate chat bundle is not required for this deterministic mock label,
+    and no chat launcher is started by this bridge launcher.
     """
 
     root = Path(project_root).resolve()
     routes = discover_downloaded_person_routes(root)
     eligible: list[PersonChatRoute] = []
-    seen: set[str] = set()
+    seen: dict[str, PersonChatRoute] = {}
     for route in routes:
         person_id = str(route.person_id)
-        if person_id in seen:
+        prior = seen.get(person_id)
+        if prior is not None:
+            # Fixed routes are discovered first.  A candidate directory may
+            # reuse one of those ids, but it must not shadow or duplicate the
+            # exact persistent/resident route exposed by this launcher.  Any
+            # other duplicate remains an unexpected fail-closed condition.
+            if not prior.candidate_id and route.candidate_id == person_id:
+                continue
             raise LauncherRefusal("person_catalog_duplicate_id")
-        seen.add(person_id)
+        seen[person_id] = route
         if route.identity_class not in ELIGIBLE_IDENTITY_CLASSES:
             continue
         if not SAFE_PERSON_ID.fullmatch(person_id):
             continue
         if route.candidate_id and route.candidate_id != person_id:
             continue
-        launcher = (root / route.launcher).resolve()
-        try:
-            launcher.relative_to(root)
-        except ValueError:
-            continue
-        if not launcher.is_file():
-            continue
+        if route.candidate_id:
+            launcher = (root / route.launcher).resolve()
+            try:
+                launcher.relative_to(root)
+            except ValueError:
+                continue
+            if not launcher.is_file():
+                continue
         eligible.append(route)
     return tuple(eligible)
 

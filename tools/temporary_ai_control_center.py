@@ -47,6 +47,10 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from Core.temp_ai_avatar_pipeline import prepare_candidate_avatar_pipeline
 from Core.temp_ai_voice_discovery import build_candidate_voice_discovery_request
+from Core.temporary_creator_person_pipeline import (
+    TemporaryCreatorPipelineError,
+    orchestrate_temporary_creator,
+)
 CANDIDATE_ROOT = PROJECT_ROOT / "TemporaryAI" / "candidates"
 AVATAR_ROOT = PROJECT_ROOT / "Avatar" / "temp_ai"
 REQUEST_ROOT = PROJECT_ROOT / "TemporaryAI" / "creation_requests"
@@ -62,6 +66,14 @@ AI_TYPE_LABELS = {
     "Historical Person": "historical_temp_ai",
     "Generated Original": "generated_original_temp_ai",
     "Memory Relative": "memory_relative_temp_ai",
+}
+
+# Keep the established internal labels available for existing records and
+# helper callers, but present only the three creation choices in this window.
+VISIBLE_AI_TYPE_LABELS = {
+    "Expert": "Expert",
+    "Fictional": "Fictional Character",
+    "Historical": "Historical Person",
 }
 
 EXPERT_STYLE_LABELS = {"Expert", "Investigator / Researcher", "Myths & Folklore Expert"}
@@ -108,6 +120,63 @@ def now_stamp() -> str:
 
 def slug(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")[:70] or "temporary_ai"
+
+
+def shared_person_id_for(candidate_id: str, display_name: str) -> str:
+    """Return one stable identity shared by every person-building lane."""
+
+    name_part = slug(display_name)[:45]
+    identity_part = hashlib.sha256(candidate_id.encode("utf-8")).hexdigest()[:12]
+    return f"temporary_{name_part}_{identity_part}"
+
+
+def queue_shared_person_pipeline(
+    *,
+    candidate_id: str,
+    kind_label: str,
+    query: str,
+    version: str,
+    gender: str,
+    personality: str,
+    display_name: str,
+    role_title: str,
+    allow_kira: bool,
+    allow_lisa: bool,
+) -> dict:
+    """Queue mind, avatar, voice, and residency work from one command."""
+
+    creator_type = {
+        "Expert": "expert",
+        "Fictional Character": "fictional",
+        "Historical Person": "historical",
+    }[kind_label]
+    person_id = shared_person_id_for(candidate_id, display_name)
+    command_parts = ["Create", display_name]
+    if version.strip():
+        command_parts.extend(["at", version.strip()])
+    workspace = Path("TemporaryAI") / "creator_work_orders" / person_id
+    return orchestrate_temporary_creator(
+        PROJECT_ROOT,
+        workspace,
+        {
+            "creator_type": creator_type,
+            "person_id": person_id,
+            "subject_or_domain": query,
+            "display_name": display_name,
+            "role_title": role_title,
+            "version_or_timepoint": version,
+            "gender_preference": gender,
+            "personality_notes": personality,
+            "availability": {"kira": allow_kira, "lisa": allow_lisa},
+            "requested_by": {
+                "person_id": "real_robert",
+                "authority_class": "founder",
+                "authenticated": True,
+                "authorized": True,
+                "command_text": " ".join(command_parts),
+            },
+        },
+    )
 
 
 def rel(path: Path) -> str:
@@ -232,14 +301,11 @@ def candidate_display_name(kind_label: str, query: str, version: str, gender: st
 
 
 def build_ambiguity_questions(kind_label: str, query: str, version: str) -> list[str]:
-    if kind_label == "Fictional Character" and not version.strip():
-        return [
-            "Which adaptation, performer, or source continuity should this candidate use?",
-            "Examples: Tom Holland films, Earth-65 comics, a named television series, or a custom continuity.",
-            "A season or episode endpoint is optional: once the source continuity is resolved, leaving the endpoint blank defaults to the whole released continuity through the latest verified released material.",
-        ]
-    if kind_label in EXPERT_STYLE_LABELS and not query.strip():
-        return ["What field should this expert cover?"]
+    # A normal creator command is enough authorization to prepare the draft.
+    # Source/version uncertainty is ranked by the pipeline instead of asking
+    # routine follow-up questions.  A missing subject cannot be resolved.
+    if not query.strip():
+        return ["Who or what should the Temporary Creator make?"]
     return []
 
 
@@ -282,6 +348,12 @@ def build_knowledge_plan(kind_label: str, query: str, version: str, gender: str)
                 "Do not invent announced or unreleased events."
             ),
             "adaptation_identity_must_still_be_resolved": not bool(version_text),
+            "adaptation_identity_resolution_mode": (
+                "user_selected"
+                if version_text
+                else "automatic_ranked_primary_continuity_resolution"
+            ),
+            "routine_owner_question_required": False,
             "fanfic_or_variant_material_included_only_when_explicitly_selected": True,
         }
     if kind_label == "Investigator / Researcher":
@@ -1340,7 +1412,7 @@ def build_source_research_queue(kind_label: str, query: str, version: str, looku
         "source_policy": {
             "preferred_sources": official_hint,
             "wikipedia_is_preview_only": True,
-            "requires_robert_or_codex_review_before_activation": True,
+            "requires_owner_review_before_activation": True,
         },
         "lookup_summary": lookup,
         "suggested_search_urls": [
@@ -1591,7 +1663,7 @@ def infer_capability_profile(kind_label: str, query: str, role_title: str) -> di
                     "Label reference-based likeness or copyrighted character limits clearly.",
                     "Do not claim a finished image exists unless it has actually been generated."
                 ],
-                "future_tool_needs": ["image generation", "reference image viewer", "avatar builder handoff"]
+                "future_tool_needs": ["image generation", "reference image viewer", "avatar builder transfer"]
             }
         ),
     ]
@@ -2006,6 +2078,39 @@ Next steps:
     })
     write_json(ACTIVATION_QUEUE, queue)
 
+    shared_pipeline = {}
+    shared_pipeline_error = ""
+    try:
+        shared_pipeline = queue_shared_person_pipeline(
+            candidate_id=candidate_id,
+            kind_label=kind_label,
+            query=query,
+            version=effective_version,
+            gender=gender,
+            personality=personality,
+            display_name=display_name,
+            role_title=role_title,
+            allow_kira=allow_kira,
+            allow_lisa=allow_lisa,
+        )
+        shared_link = {
+            "person_id": shared_pipeline["person_id"],
+            "bundle_id": shared_pipeline["bundle_id"],
+            "workspace_relative": shared_pipeline["workspace_relative"],
+            "overall_status": shared_pipeline["overall_status"],
+            "result_sha256": shared_pipeline["result_sha256"],
+        }
+        for link_path in (
+            candidate_dir / "creation_request.json",
+            candidate_dir / "temporary_ai_profile.json",
+            candidate_dir / "activation_plan.json",
+        ):
+            linked_record = read_json(link_path, {})
+            linked_record["shared_person_pipeline"] = shared_link
+            write_json(link_path, linked_record)
+    except (TemporaryCreatorPipelineError, KeyError, OSError, ValueError) as exc:
+        shared_pipeline_error = f"{type(exc).__name__}: {exc}"
+
     return {
         "candidate_id": candidate_id,
         "display_name": display_name,
@@ -2027,6 +2132,10 @@ Next steps:
         "desktop_avatar_reference_count": avatar_pipeline.get("desktop_reference_count", 0),
         "avatar_pipeline_status": avatar_pipeline.get("status", ""),
         "ambiguity_questions": ambiguity,
+        "shared_person_id": shared_pipeline.get("person_id", ""),
+        "shared_person_pipeline_status": shared_pipeline.get("overall_status", "draft"),
+        "shared_person_pipeline_workspace": shared_pipeline.get("workspace_relative", ""),
+        "shared_person_pipeline_error": shared_pipeline_error,
     }
 
 
@@ -2071,7 +2180,7 @@ class TemporaryAIControlCenter:
         ).pack(anchor="w", padx=14, pady=(0, 12))
 
         self.form_row(left, "AI type")
-        OptionMenu(left, self.kind_var, *AI_TYPE_LABELS.keys(), command=lambda _=None: self.refresh_preview()).pack(fill=X, padx=14, pady=(0, 8))
+        OptionMenu(left, self.kind_var, *VISIBLE_AI_TYPE_LABELS.keys(), command=lambda _=None: self.refresh_preview()).pack(fill=X, padx=14, pady=(0, 8))
 
         self.form_row(left, "Domain / character / person")
         self.query_entry = Entry(left, textvariable=self.query_var)
@@ -2105,8 +2214,8 @@ class TemporaryAIControlCenter:
 
         quick = Frame(left, bg="#111827")
         quick.pack(fill=X, padx=14, pady=(8, 12))
-        Button(quick, text="Spider-Man example", command=lambda: self.example("Fictional Character", "Spider-Man", "Tom Holland")).pack(side=LEFT, fill=X, expand=True, padx=(0, 4))
-        Button(quick, text="JFK example", command=lambda: self.example("Historical Person", "JFK", "moon speech era")).pack(side=LEFT, fill=X, expand=True, padx=4)
+        Button(quick, text="Spider-Man example", command=lambda: self.example("Fictional", "Spider-Man", "Tom Holland")).pack(side=LEFT, fill=X, expand=True, padx=(0, 4))
+        Button(quick, text="JFK example", command=lambda: self.example("Historical", "JFK", "moon speech era")).pack(side=LEFT, fill=X, expand=True, padx=4)
         Button(quick, text="History expert", command=lambda: self.example("Expert", "American history", "")).pack(side=LEFT, fill=X, expand=True, padx=(4, 0))
 
         Label(right, text="Candidate Plan", fg="#f9fafb", bg="#111827", font=("Segoe UI", 16, "bold")).pack(anchor="w", padx=14, pady=(12, 4))
@@ -2132,7 +2241,7 @@ class TemporaryAIControlCenter:
         self.event_log.see(END)
 
     def refresh_preview(self) -> None:
-        kind = self.kind_var.get()
+        kind = VISIBLE_AI_TYPE_LABELS[self.kind_var.get()]
         query = self.query_var.get()
         version = self.version_var.get()
         gender = self.gender_var.get()
@@ -2153,9 +2262,9 @@ class TemporaryAIControlCenter:
                 "create timestamped candidate files",
                 "try a lightweight online Wikipedia preview lookup",
                 "save source research queue links",
-                "create avatar request/reference folders",
-                "create a metadata-only voice discovery request without running a network search",
-                "add the candidate to the Kira/Lisa activation review queue",
+                "queue mind, avatar, and voice work under one shared identity",
+                "rank routine source/version choices without interrupting for approval",
+                "hold world registration until the complete person passes its gates",
             ],
             "activation": {
                 "kira_after_review": bool(self.kira_var.get()),
@@ -2172,7 +2281,7 @@ class TemporaryAIControlCenter:
         self.refresh_preview()
 
     def create_package(self) -> None:
-        kind = self.kind_var.get()
+        kind = VISIBLE_AI_TYPE_LABELS[self.kind_var.get()]
         query = self.query_var.get().strip()
         if not query:
             messagebox.showwarning("Missing input", "Type a domain, character, person, or role first.")
@@ -2196,6 +2305,16 @@ class TemporaryAIControlCenter:
         self.log(f"Creation estimate: {result['creation_estimate']}")
         self.log(f"Avatar estimate: {result['timeline']}")
         self.log(f"Voice discovery request: {result['voice_discovery_request']} (metadata search not run yet).")
+        if result["shared_person_id"]:
+            self.log(
+                "Shared person pipeline: "
+                f"{result['shared_person_id']} ({result['shared_person_pipeline_status']})."
+            )
+        else:
+            self.log(
+                "Shared person pipeline did not queue: "
+                f"{result['shared_person_pipeline_error'] or 'unknown error'}"
+            )
         if result["ambiguity_questions"]:
             self.log("Needs clarification before activation.")
         self.plan_view.delete("1.0", END)
@@ -2232,12 +2351,25 @@ class TemporaryAIControlCenter:
         self.open_path(self.last_candidate_dir)
 
     def talk_to_last_candidate(self) -> None:
+        if (
+            not self.last_candidate_dir
+            or not self.last_candidate_dir.is_dir()
+            or not (self.last_candidate_dir / "temporary_ai_profile.json").is_file()
+        ):
+            self.last_candidate_dir = latest_candidate_dir()
+        if not self.last_candidate_dir:
+            messagebox.showwarning("No candidate", "Create a TemporaryAI candidate first.")
+            return
+        candidate_id = self.last_candidate_dir.name
+        launch_environment = os.environ.copy()
+        launch_environment["TEMP_AI_INITIAL_CANDIDATE_ID"] = candidate_id
         subprocess.Popen(
             ["cmd", "/c", "start", "", "py", "tools\\temporary_ai_live_chat_gui.py"],
             cwd=str(PROJECT_ROOT),
             shell=False,
+            env=launch_environment,
         )
-        self.log("Opened click-to-select TemporaryAI live chat.")
+        self.log(f"Opened TemporaryAI live chat for {candidate_id}.")
 
     def open_last_avatar(self) -> None:
         if not self.last_avatar_dir:

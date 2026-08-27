@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "record_type": "avatar_foundation_glb_preflight_policy",
+  "status": "ACTUAL_SOURCE_PREFLIGHT_REQUIRED_BODY_ACCEPTANCE_SEPARATE",
+  "subjects": [
+    {
+      "subject_id": "kira",
+      "foundation_role": "female_foundation_source",
+      "project_path": "Avatar/avatar_builder/candidate_sources/kira_provisional_body_r6/r6_20260718_163658/kira_provisional_body_r6.glb",
+      "bytes": 5105808,
+      "sha256": "ccd3b7467452f0fc9b084511e1aa3e4dd234a9ad90ba0b96f13d78ecd6207c77"
+    },
+    {
+      "subject_id": "synthetic_robert",
+      "foundation_role": "male_foundation_source_for_separate_robert_and_owner_derivatives",
+      "project_path": "Avatar/outputs/user/dual_robert_candidates_20260729/synthetic_robert_twin_body/synthetic_robert_twin_body.glb",
+      "bytes": 8645492,
+      "sha256": "bfcdf8ec2a1d8444cfef5f7d1382884cb5f6aff685f04c6e4d000b4de0332370"
+    }
+  ],
+  "requirements": {
+    "distinct_source_artifacts": true,
+    "distinct_final_body_artifacts": true,
+    "cross_identity_final_body_reuse_allowed": false,
+    "glb_version": 2,
+    "triangles_required": true,
+    "skin_required": true,
+    "weighted_geometry_required": true,
+    "animation_structure_required": true
+  },
+  "acceptance_axes": {
+    "external_geometry_accepted": false,
+    "rig_and_movement_accepted": false,
+    "skin_and_hair_behavior_accepted": false,
+    "internal_anatomy_accepted": false,
+    "owner_visual_acceptance": false,
+    "runtime_activation_allowed": false,
+    "public_export_allowed": false
+  }
+}
