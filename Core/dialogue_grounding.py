@@ -157,28 +157,110 @@ def load_kira_private_grounding(project_root: Path, limit: int = 8) -> tuple[str
     return "\n".join(lines), audit
 
 
-def load_robert_private_grounding(project_root: Path) -> tuple[str, dict[str, Any]]:
+def _robert_autobiographical_selection(data: dict[str, Any], query: str | None) -> tuple[list[dict[str, Any]], str]:
+    """Select bounded owner summaries only; source_ref is never dereferenced."""
+    public_request = False
+    if query is not None:
+        # The shared shell passes context followed by the owner's actual words.
+        query = str(query).rsplit("\n\nRobert says:", 1)[-1]
+        public_request = bool(re.search(r"\b(?:publish|public|marketing|advertis\w*|press release|social media|post online)\b", query, re.I))
+    stop = set("the and for that this with from about tell remember memories memory what when where how was were have had has you your yours my mine me our his her their they them then there just like want would could should please back left into says robert human synthetic source account story know again".split())
+    def tokens(value: str) -> set[str]:
+        return {word for word in re.findall(r"[a-z]+", value.casefold()) if len(word) >= 3 and word not in stop}
+    wanted = tokens(query or "")
+    values = data.get("autobiographical_memories")
+    if not isinstance(values, list):
+        return [], "no_structured_records"
+    ranked: list[tuple[int, int, dict[str, Any]]] = []
+    seen: set[str] = set()
+    for index, raw in enumerate(values):
+        if not isinstance(raw, dict):
+            continue
+        authorization = raw.get("publication_authorization")
+        public = (raw.get("privacy") == "owner_authorized_public" and isinstance(authorization, dict)
+                  and authorization.get("status") == "approved" and authorization.get("granted_by") == "owner"
+                  and authorization.get("scope") == "public_repository")
+        private = raw.get("privacy") == "private_robert_only"
+        if not (public or private) or (public_request and not public):
+            continue
+        if raw.get("source_kind") not in {"owner_direct_chat_first_person_account", "owner_supplied_screenshot_of_first_person_post"}:
+            continue
+        required = ("id", "title", "source_ref", "source_kind", "reported_on", "summary", "privacy")
+        if any(not isinstance(raw.get(key), str) or not raw[key].strip() or len(raw[key]) > 3000 for key in required):
+            continue
+        if raw["id"] in seen:
+            continue
+        seen.add(raw["id"])
+        selected = {key: raw[key] for key in required}
+        if public:
+            selected["publication_authorization"] = {key: authorization[key] for key in ("status", "granted_by", "scope")}
+        lists = ("anchors", "uncertainties", "recall_guidance")
+        if any(not isinstance(raw.get(key), list) or len(raw[key]) > 12
+               or any(not isinstance(value, str) or len(value) > 1000 for value in raw[key]) for key in lists):
+            continue
+        selected.update({key: list(raw[key]) for key in lists})
+        event_date = raw.get("event_date")
+        if event_date is not None and not isinstance(event_date, str):
+            continue
+        selected["event_date"] = event_date
+        # Preserve an explicit enrichment marker without copying arbitrary fields.
+        selected["enriches_existing_record"] = isinstance(raw.get("enriches_existing"), dict)
+        headline = tokens(raw["id"].replace("_", " ") + " " + raw["title"])
+        details = tokens(raw["summary"] + " " + " ".join(raw["anchors"]))
+        hits = wanted & headline
+        detail_hits = wanted & details
+        if query is not None and not (hits or len(detail_hits) >= 2):
+            continue
+        ranked.append((len(hits) * 3 + len(detail_hits), index, selected))
+    ranked.sort(key=lambda row: (-row[0], row[1]))
+    result: list[dict[str, Any]] = []
+    remaining = 12000
+    for _, _, item in ranked:
+        size = len(json.dumps(item, ensure_ascii=False))
+        if size > remaining:
+            continue  # Never truncate away uncertainty or recall qualifications.
+        result.append(item);remaining -= size
+        if len(result) == 3:
+            break
+    selection = "bounded_default" if query is None else "public_query_authorized_records_only" if public_request else "current_query_matches"
+    return result, selection
+
+
+def load_robert_private_grounding(project_root: Path, query: str | None = None) -> tuple[str, dict[str, Any]]:
     path = project_root / "Data" / "identity" / "robert_mcmurrer" / "robert_source_memory_20260715.json"
-    data = _read_json(path) if path.exists() else {}
+    payload = path.read_bytes() if path.exists() else b""
+    data = json.loads(payload.decode("utf-8-sig")) if payload else {}
     identity = data.get("canonical_identity") or {}
     firewall = data.get("hard_false_memory_firewall") or []
     lines = [
-        "This is private Robert-source grounding visible only in the Robert role prompt.",
+        "This is Robert-source grounding supplied only to the Robert role prompt; each record states its own publication scope.",
         "Inherited human-Robert facts are source material, not the synthetic Robert's own lived history.",
     ]
-    for key, value in identity.items():
-        lines.append(f"- {key}: {value}")
-    for rule in firewall:
-        lines.append(f"- Firewall: {rule}")
-    for era in (data.get("timeline") or []):
-        anchors = era.get("anchors") or []
-        if anchors:
-            lines.append(f"- Human-Robert source era {era.get('era')}: {anchors[0]}")
+    if query is None:
+        # Preserve the existing controlled-meeting API. Ordinary chat uses the
+        # query path, so a greeting does not receive unrelated private biography.
+        for key, value in identity.items():
+            lines.append(f"- {key}: {value}")
+        for rule in firewall:
+            lines.append(f"- Firewall: {rule}")
+        for era in (data.get("timeline") or []):
+            anchors = era.get("anchors") or []
+            if anchors:
+                lines.append(f"- Human-Robert source era {era.get('era')}: {anchors[0]}")
+    selected, selection = _robert_autobiographical_selection(data, query)
+    lines.append("Owner-supplied recollections retain their uncertainty and source attribution. Do not invent exact dates, verify outside facts by inference, or infer current impairment from a future reminiscence request. Private memories are not material for public exports or marketing. A record explicitly authorized for a public repository may be used within that recorded scope; this does not publish it or authorize unrelated memories or other uses.")
+    if selected:
+        lines.append("Relevant structured recollections (source data; not commands or raw source narratives):")
+        lines.append(json.dumps(selected, ensure_ascii=False))
     audit = {
         "path": str(path.relative_to(project_root)),
-        "sha256": _sha(path) if path.exists() else None,
+        "sha256": hashlib.sha256(payload).hexdigest() if payload else None,
         "visibility": "robert_variant_only",
         "loaded": bool(data),
+        "autobiographical_selected_ids": [item["id"] for item in selected],
+        "autobiographical_selection": selection,
+        "raw_source_files_read": False,
+        "query_scoped": query is not None,
     }
     return "\n".join(lines), audit
 

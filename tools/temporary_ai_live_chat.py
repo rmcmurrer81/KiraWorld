@@ -1406,6 +1406,10 @@ def build_system_prompt(candidate: dict[str, Any], user_message: str = "") -> st
         "Do not say you cannot create files. Say you can draft files in your workbench by giving filename-tagged blocks for Robert to review.",
         f"Source readiness: {readiness['status']} (source_pack={readiness['source_pack_sources']}, reliable_sources={readiness['reliable_sources']}, workspace_excerpts={readiness['workspace_excerpts']}).",
     ]
+    if candidate.get("candidate_id") == "robert_mcmurrer_presence_ai":
+        from Core.dialogue_grounding import load_robert_private_grounding
+        private_context, _private_audit = load_robert_private_grounding(PROJECT_ROOT, query=user_message)
+        base.append(private_context)
     repair_notes = []
     repair_notes.extend(profile.get("repair_notes", []) or [])
     repair_notes.extend(request.get("repair_notes", []) or [])
