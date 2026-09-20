@@ -129,6 +129,7 @@ class MemoryManager:
         query: str,
         owner: Optional[str] = None,
         limit: int = 5,
+        scope: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         """
         Phase 1 retrieval: lightweight keyword overlap + importance weighting.
@@ -143,6 +144,11 @@ class MemoryManager:
         Private memories are excluded unless owner matches.
         """
         memories = self._read_memories()
+
+        if scope is not None:
+            from Core.topic_recall import select_person_context
+            return select_person_context(memories, subject=owner or "", query=query,
+                                         scope=scope, limit=limit)
 
         # Filter by owner and privacy
         if owner:

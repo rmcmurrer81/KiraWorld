@@ -164,9 +164,9 @@ def _robert_autobiographical_selection(data: dict[str, Any], query: str | None) 
         # The shared shell passes context followed by the owner's actual words.
         query = str(query).rsplit("\n\nRobert says:", 1)[-1]
         public_request = bool(re.search(r"\b(?:publish|public|marketing|advertis\w*|press release|social media|post online)\b", query, re.I))
-    stop = set("the and for that this with from about tell remember memories memory what when where how was were have had has you your yours my mine me our his her their they them then there just like want would could should please back left into says robert human synthetic source account story know again".split())
+    from Core.topic_recall import topic_terms
     def tokens(value: str) -> set[str]:
-        return {word for word in re.findall(r"[a-z]+", value.casefold()) if len(word) >= 3 and word not in stop}
+        return topic_terms(value)
     wanted = tokens(query or "")
     values = data.get("autobiographical_memories")
     if not isinstance(values, list):

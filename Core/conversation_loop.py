@@ -2350,11 +2350,11 @@ Ordinary response behavior:
             query=user_message,
             owner=self.profile.name.lower(),
             limit=5,
+            scope="owner_visible",
         )
-        recent = self.memory.get_recent_memories(
-            limit=3,
-            owner=self.profile.name.lower(),
-        )
+        # Topic recall does not append unrelated private history merely because
+        # it was saved recently. Live conversation remains separate context.
+        recent = []
 
         seen_ids: set[str] = set()
         candidates: List[Dict[str, Any]] = []
@@ -2391,6 +2391,9 @@ Ordinary response behavior:
 
         lines = [
             "MEMORIES (use these naturally, do not recite them):",
+            "  ATTRIBUTION: preserve each record's subject, source and qualifications. "
+            "A record about another person is knowledge about them, not your own lived event. "
+            "Owner-visible context is not permission to publish private memories.",
             "  TEMPORAL AUTHORITY: record dates are provenance, not present activity. "
             "Words such as current/recent inside an older record describe that record's "
             "own time. Only DAILY LIFE STATE or an exact current-session fact establishes "
@@ -2427,7 +2430,9 @@ Ordinary response behavior:
             lines.append(
                 f"  [{weight}] record_id={memory_id}; record_date={record_date}; "
                 "temporal_scope=dated_memory_not_current_activity; "
-                f"{memory.get('summary', '')} - {memory.get('detail', '')}"
+                + (json.dumps(memory["_recall_context"], ensure_ascii=False)
+                   if "_recall_context" in memory
+                   else f"{memory.get('summary', '')} - {memory.get('detail', '')}")
             )
         return "\n".join(lines)
 
