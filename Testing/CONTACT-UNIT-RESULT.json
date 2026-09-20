@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Exact chamfer planes retain geometry and reject an AABB-only false collision",
+    "Face penetration resolves by moving the actual same arrays without launch velocity",
+    "Bevel and three-way corner inside points resolve against chamfers",
+    "Rail through triangle interior is detected although every triangle vertex is outside",
+    "Previous outside side keeps a falling cloth contact above a thin rail",
+    "Held point and all-zero masses remain stable with unresolved contacts reported",
+    "Previous side entry wins for a near-horizontal triangle instead of lifting it onto the rail",
+    "Under-frame entry resolves downward and a separated grazing triangle remains unchanged",
+    "Contact velocity removes inward component while preserving outward motion",
+    "Repeated solver history does not multiply contact friction",
+    "A triangle leaving the finite rail face receives no stale infinite-plane impulse",
+    "Coupled frame and mattress projection preserve physical previous positions",
+    "Surface velocity contacts survive a converged solver pass and deduplicate friction"
+  ],
+  "elapsed_ms": 16.056600000000003,
+  "failure": null
+}

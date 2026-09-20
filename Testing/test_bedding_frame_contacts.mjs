@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,writeFileSync} from 'node:fs';
 import {compileFrame,solveFrameContacts,finishFrameContactVelocities,frameContactReport} from '../tools/world_builder_components/bedding/frame_contacts.mjs';
 import {MattressSurface} from '../tools/world_builder_components/bedding/mattress_physics.mjs';
 import {solveSurfaceContacts,finishSurfaceContactVelocities,surfaceContactReport} from '../tools/world_builder_components/bedding/surface_contacts.mjs';
@@ -97,4 +97,4 @@ try{
   assert.deepEqual(Array.from(c.v),Array.from(b.v));assert(c.v[1]>=-1e-10&&c.v[4]>=-1e-10&&c.v[7]>=-1e-10);
  });
 }catch(error){status='FAIL';failure=String(error.stack);process.exitCode=1;}
-const result={status,checks,elapsed_ms:performance.now()-start,failure};console.log(JSON.stringify(result,null,2));
+const result={status,checks,elapsed_ms:performance.now()-start,failure};writeFileSync(new URL('./CONTACT-UNIT-RESULT.json',import.meta.url),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

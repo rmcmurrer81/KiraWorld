@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "contact_smoke_only",
+  "source_pins": {
+    "base": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+    "solver": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+    "contacts": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+    "frame_contacts": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d"
+  },
+  "test_sha256": "8d8d82b4637144c1c09c320a7c80e11e7d0a3248bf824ebcb2e8930f93459214",
+  "fixture_sha256": "e6d31002853edb97c26643a19fb87bb1fdd5350fe5f29c43bea5472f164ccd65",
+  "checks": [
+    "Exact chamfer planes retain geometry and reject an AABB-only false collision",
+    "Face penetration resolves by moving the actual same arrays without launch velocity",
+    "Bevel and three-way corner inside points resolve against chamfers",
+    "Rail through triangle interior is detected although every triangle vertex is outside",
+    "Previous outside side keeps a falling cloth contact above a thin rail",
+    "Held point and all-zero masses remain stable with unresolved contacts reported",
+    "Previous side entry wins for a near-horizontal triangle instead of lifting it onto the rail",
+    "Under-frame entry resolves downward and a separated grazing triangle remains unchanged",
+    "Contact velocity removes inward component while preserving outward motion",
+    "Repeated solver history does not multiply contact friction",
+    "A triangle leaving the finite rail face receives no stale infinite-plane impulse",
+    "Coupled frame and mattress projection preserve physical previous positions",
+    "Surface velocity contacts survive a converged solver pass and deduplicate friction"
+  ],
+  "limits": [
+    "Thirteen finite contact unit checks, not full dynamics, no CCD/self collision or visual acceptance.",
+    "Dense release instability and below-mattress false upper contacts remain known unresolved issues.",
+    "No owner worlds or studies used."
+  ]
+}

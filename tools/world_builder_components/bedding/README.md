@@ -1,15 +1,25 @@
-# Experimental bedding contact components
+# Experimental bedding contacts and portable preview
 
-These four modules are the installed engineering implementation, published as a self-contained CPU component subset. They provide a procedural cloth grid, a fixed-bottom mattress height field, top-surface contact, and discrete triangle-versus-convex bed-frame contact. They do not require model weights, personal data, a browser, or a GPU for the regression checks below.
+The portable authored-component preview includes its Python helpers, native
+controls, local loopback asset servers and pinned Three.js dependency. See
+[the launch and qualification instructions](../PORTABLE_PREVIEW.md).
 
-From the repository root, with Node.js installed:
+This package builds a procedural rigid frame and a saved bedding study. It does
+not generate or place a full world. The four physics modules retain their
+existing engineering implementation: there is no new solver correction here.
+Dense release instability, false upper-surface contacts below the mattress,
+continuous collision and self-collision remain unresolved.
+
+Run the scoped contact checks and disposable portability checks from the repo:
 
 ```text
-node Testing/test_bedding_frame_contacts.mjs
+python -B Testing/qualify_bedding.py
+python -B Testing/test_world_portable_preview.py
 ```
 
-The 13 small regression cases check chamfer geometry, triangle-interior intersection, prior-side selection, pinned points, finite contact boundaries, and velocity/friction bookkeeping. The fixture is procedural geometry. A passing result establishes those isolated cases only.
-
-The full bedding simulation remains experimental. These checks do not establish continuous collision detection, cloth self-collision, arbitrary initial-overlap recovery, calibrated foam behavior, two-way cloth/mattress coupling, full-body behavior, visual realism, or a finished World Builder. Later coupled release tests still have unresolved frame-overlap and stability problems. The unpublished diagnostic response prototypes are not installed here.
-
-The workstation's native preview wrapper depends on additional local services and vendor setup and is deliberately outside this portable component release. No native-preview launch or full-world acceptance is implied. Original source files are preserved unchanged; only the public smoke-test imports and result reporting use repository-relative paths.
+The latter imports Tk but creates no window. It uses temporary generated
+components and local HTTP servers, preserves repository/owner data, and checks
+asset integrity, historical-row holds and cleanup. No browser render, dynamic
+physics, realistic fabric or owner visual approval is established by these CPU
+checks. Source-bound historical studies remain preserved and may be held after
+a source change; build a fresh revision beside them.
