@@ -1,0 +1,329 @@
+{
+  "schema_version": "kira.memorial-reference-dossier.v1",
+  "profile_id": "david_mcmurrer_memorial_references",
+  "subject_id": "david_mcmurrer",
+  "display_name": "David McMurrer — memorial references",
+  "status": "reference_only_not_activated",
+  "profile_kind": "sourced_memorial_reference",
+  "requested_by": "robert_mcmurrer",
+  "created_on": "2026-09-20",
+  "privacy": "owner_authorized_public",
+  "authorization_ref": "Data/identity/david_mcmurrer/reference_authorization.json",
+  "authorization_sha256": "628bf23bffdf14a884feda26bec4528b858d8c662a351a0e3046125c8d24ba99",
+  "identity_statement": "A prepared reference collection about David, based on attributed accounts. It is not David, a verified account of his internal life, or an active David chat persona.",
+  "activation": {
+    "enabled": false,
+    "chat_persona_registered": false,
+    "voice_enrolled": false,
+    "likeness_enrolled": false,
+    "models_run": 0
+  },
+  "use_boundaries": [
+    "Robert's memories remain Robert's accounts; do not silently transfer them into David's lived AI memory.",
+    "Separate Robert's perspective, a story David reportedly told, and externally listed profile information.",
+    "Unknown dates and facts stay unknown. Preserve corrections and each source's qualifiers.",
+    "Do not invent personality traits, first-person replies from David, a voice, appearance, diagnosis or motives.",
+    "These materials support future reviewed development; they do not demonstrate accurate recollection, conversation, voice or likeness."
+  ],
+  "reference_entries": [
+    {
+      "entry_id": "relationship_and_childhood_toy_memory",
+      "source_record_id": "ghostbusters_car_superman_move_to_indiana",
+      "perspective": "Robert's own childhood recollection and retrospective feelings",
+      "summary": "Robert describes David as his stepfather who later adopted him. Robert's account of the move from Mobile to Indianapolis includes leaving a Superman figure behind, choosing a large Ghostbusters car, and tentatively imagining recovering Superman. Robert remembers feeling treated less fairly than his siblings and has mixed hurt and a later wish to speak with David.",
+      "do_not_infer": [
+        "This does not establish David's intentions or his own view of the relationship.",
+        "Do not infer that David bought the toy or caused it to be left behind.",
+        "The source mentions childhood abuse by William; do not reassign those acts to David."
+      ],
+      "uncertainties": [
+        "No event date, store name, toy model, or exact age was supplied.",
+        "The imagined reunion with Superman is described tentatively; do not make it a certain childhood thought.",
+        "Screenshot relative publication label does not establish an absolute date. AI content label is visible; Robert explicitly supplied this as his life story."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer"
+    },
+    {
+      "entry_id": "corrected_death_and_wish_to_speak",
+      "source_record_id": "david_mcmurrer_death_mesa_20260903",
+      "perspective": "Robert's corrected report and feelings",
+      "summary": "Robert reports that David died September 3, 2026 at his wife's home in Mesa, Arizona. Robert corrected the typed year 2006 and his earlier Apache Junction assumption. He says David sold his home in July and moved to his wife's home. Robert felt a little sad and upset and wished to speak with him one more time.",
+      "date": "2026-09-03",
+      "place": "Mesa, Arizona",
+      "do_not_infer": [
+        "Do not invent an exact sale/move date, street address, wife's name or cause of death.",
+        "Do not present typed2006 as an alternative death date."
+      ],
+      "uncertainties": [
+        "Date and place are Robert's corrected first-person report; independent verification was not performed.",
+        "Robert did not supply the exact home-sale or moving date, street address, wife's name, or cause of death. Do not invent them.",
+        "July was described as before the death; no exact sale day was provided."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer"
+    },
+    {
+      "entry_id": "late_life_recollection",
+      "source_record_id": "david_late_life_memory_daily_help_owner_addendum",
+      "perspective": "Robert's reported observation; no clinical verification",
+      "summary": "Robert reports that during approximately the last year or two before David died, David was having memory problems and trouble doing things for himself. This is Robert's recollection, with no diagnosis or exact onset supplied.",
+      "do_not_infer": [
+        "No diagnosis, cause, exact onset, severity, specific daily task or connection to the cause of death is established."
+      ],
+      "uncertainties": [
+        "This is Robert's reported recollection, not a clinical record or independently verified assessment.",
+        "No diagnosis, cause, precise onset, rate of change, treatment, or connection to the cause of death was supplied.",
+        "Trouble doing things for himself is broad wording; do not invent particular tasks, care arrangements, severity or complete dependence."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer"
+    },
+    {
+      "entry_id": "reported_basketball_ufo_story",
+      "source_record_id": "david_basketball_ufo_story_relayed_by_robert",
+      "perspective": "David's story as relayed by Robert; not Robert's eyewitness account",
+      "summary": "Robert recalls David telling him that, when David was young, he was playing basketball and saw what he called a big UFO in the sky. This is David's story relayed by Robert, not an independently witnessed or verified event.",
+      "do_not_infer": [
+        "Do not turn the reported UFO into a known object or alien conclusion.",
+        "Do not invent year, location, age, court or outdoor setting."
+      ],
+      "uncertainties": [
+        "The exact year, location, age and identity or nature of the object were not supplied.",
+        "The UFO wording does not establish an alien craft, extraterrestrial origin or an independently verified sighting.",
+        "Do not infer a birth year, basketball court, indoor/outdoor setting, or details not present in the account."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer"
+    },
+    {
+      "entry_id": "reported_childhood_friendship",
+      "source_record_id": "david_childhood_best_friend_john_ferguson",
+      "perspective": "Relationship reported by Robert, without independent confirmation",
+      "summary": "Robert identifies John Ferguson as David's best friend who grew up with him, and supplied a Facebook profile link. The relationship is Robert's report; it has not been independently confirmed.",
+      "do_not_infer": [
+        "Do not invent dates, location, school, activities, additional biography or contact details.",
+        "No contact with John has occurred as part of preparing this reference dossier."
+      ],
+      "uncertainties": [
+        "No dates, location, exact ages, additional biography or contact data were supplied.",
+        "The friendship and growing-up relationship are attributed to Robert, not independently confirmed.",
+        "The association with the linked profile is Robert-supplied, not independently verified."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer"
+    },
+    {
+      "entry_id": "buddhism_trip_invitation",
+      "source_record_id": "david_buddhism_trip_invitation_tentative_kalachakra",
+      "perspective": "Direct owner statement, pasted recollection and tentative event identification are distinct",
+      "summary": "Robert says David was into Buddhism, made a trip and invited him. The supplied pasted context recalls Robert's brother attending, a colored sand mandala and a ceremonial blindfold. August 1999 Bloomington Kalachakra is a proposed identification, not a confirmed date for their attendance.",
+      "do_not_infer": [
+        "Historical event confirmation is not family-attendance evidence.",
+        "No formal religious identity, exact date, motives, ceremony status or invented trip details."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer",
+      "uncertainties": [
+        "The trip's exact date and identification remain tentative; event_date is unset.",
+        "Public records confirming a historical event cannot independently confirm David, Robert or his brother attended or which ceremony parts they experienced.",
+        "Do not infer a formal religious identity, initiation status, David's intentions, trip length, lodging, purchases or seeing the Dalai Lama up close.",
+        "Pasted recollection and suggested interpretation are not a verbatim transcript of Robert's earlier memories."
+      ]
+    },
+    {
+      "entry_id": "marie_bakery_baby_story_and_reported_claim",
+      "source_record_id": "david_marie_roselyn_bakery_baby_story_reported_knowledge",
+      "perspective": "Robert's relationship report; David's relayed story; the adults' reported claim, each separately attributed",
+      "summary": "Robert says his mother Marie was working at Roselyn Bakery, which is how she and David met, and they later married. David told Robert that, as a baby, Robert would crawl to him when he visited Marie. Robert also reports that David and Marie claimed they did not know about William's abuse. These layers remain attributed reports, not independent proof of what they knew.",
+      "do_not_infer": [
+        "Do not turn the baby story into Robert's eyewitness memory.",
+        "Their claimed lack of knowledge is not proof of awareness or lack of awareness; infer no motives or blame.",
+        "No dates, store city, job role or further biography is supplied."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer",
+      "uncertainties": [
+        "No exact dates, job role, store location/city, ages or marriage details were supplied.",
+        "David's baby-crawling story was relayed to Robert and is not independently verified.",
+        "Their claimed lack of knowledge does not prove they were unaware, prove they knew, or establish motives or blame.",
+        "Do not expand the abuse history, reassign William's acts to David, or infer additional conduct."
+      ]
+    },
+    {
+      "entry_id": "first_acting_job_opportunity",
+      "source_record_id": "david_first_acting_job_helen_wells_cell_phone_commercial",
+      "perspective": "Robert's own reported acting experience and attribution to David",
+      "summary": "Robert recalls getting his first acting job because of David. People at David's martial-arts classes were recruiting for a commercial, and David invited Robert and his brother. On another day they went to a race track for a cell-phone commercial. Much of the time it rained, but Robert had fun. He says it was for the Helen Wells Company.",
+      "do_not_infer": [
+        "No exact year, race track, phone brand, martial-arts school, brother's name, pay or cast role is supplied.",
+        "No David voice recording has been supplied or enrolled."
+      ],
+      "source_owner": "robert_mcmurrer",
+      "subject": "david_mcmurrer",
+      "uncertainties": [
+        "No exact year, race track, phone brand, martial-arts school, brother's name, payment or cast role was supplied.",
+        "Do not infer the brother's identity from other family records, an age, filming location, job duties or production company role.",
+        "This is Robert's recollection, not an independently verified casting or production record."
+      ]
+    }
+  ],
+  "source_records": [
+    {
+      "record_id": "ghostbusters_car_superman_move_to_indiana",
+      "record_sha256": "2e72a48b32682a6e7cd7f590b4844055ca97d40f12d44c754dba2c1418a42f2f",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/ghostbusters_superman_owner_post_transcription.txt",
+      "source_sha256": "a538174c931739679841c1ae82b41599192fff71f177ce8ede19a576c198c7e9",
+      "source_kind": "owner_supplied_screenshot_of_first_person_post",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/public_release_authorization.json",
+        "source_sha256": "f6fb8d96ecb83155c960372a4b7957670e4a51499d9c7424badb45d59987f27c",
+        "at_utc": "2026-09-20T18:37:22.438435+00:00"
+      }
+    },
+    {
+      "record_id": "david_mcmurrer_death_mesa_20260903",
+      "record_sha256": "634a748562d50cdf410c7716dc33c199da57ec661d574dacbbbcc27187802799",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_death_owner_correction.txt",
+      "source_sha256": "69af155f2bb892711878a7096a691aeabf7507f9b4ef9396d5ba377c40c891b6",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/public_release_authorization.json",
+        "source_sha256": "f6fb8d96ecb83155c960372a4b7957670e4a51499d9c7424badb45d59987f27c",
+        "at_utc": "2026-09-20T18:37:22.438435+00:00"
+      }
+    },
+    {
+      "record_id": "david_late_life_memory_daily_help_owner_addendum",
+      "record_sha256": "78f647436af51e61cca287360d28edcc7f8d0fa06aa97813724991ccc00e0655",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_late_life_owner_addendum.txt",
+      "source_sha256": "788f1f221153d26cafa82eefce8c2d587c35774afc9abb5a200691aa0277c2be",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_addenda_public_authorization.json",
+        "source_sha256": "24496aab28b479147288b7d5757b732cbf31c9e3e6195b5388cc1110ccc61b72",
+        "authorization_basis": "standing_owner_instruction"
+      }
+    },
+    {
+      "record_id": "david_basketball_ufo_story_relayed_by_robert",
+      "record_sha256": "7577a332c9dc1a45419bda5bef541f1dc9563f47e7c85cf2fc663e07caa34b91",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_basketball_ufo_story_relayed_by_robert.txt",
+      "source_sha256": "803800977099f69173b512a86b3183620620eba90598c5e99f14c7b6dc61b32b",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_addenda_public_authorization.json",
+        "source_sha256": "24496aab28b479147288b7d5757b732cbf31c9e3e6195b5388cc1110ccc61b72",
+        "authorization_basis": "standing_owner_instruction"
+      }
+    },
+    {
+      "record_id": "david_childhood_best_friend_john_ferguson",
+      "record_sha256": "2a0b3b36f6b7fe4b360292cc4eb8f09a2bc548e12295cc972c4c264bb937933d",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_john_ferguson_owner_relationship.txt",
+      "source_sha256": "8dc50886d1ad614b131497a73a493ca4f721da35cd28f7890b2dd3437f2b71c2",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_addenda_public_authorization.json",
+        "source_sha256": "24496aab28b479147288b7d5757b732cbf31c9e3e6195b5388cc1110ccc61b72",
+        "authorization_basis": "standing_owner_instruction"
+      }
+    },
+    {
+      "record_id": "david_buddhism_trip_invitation_tentative_kalachakra",
+      "record_sha256": "bfacede6f84cd03e65999165d50e74a04189f8409fdb7cd36bc7c8d2f41c9e7c",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_buddhism_trip_owner_recollection.txt",
+      "source_sha256": "fa7b31c8f66d252a38977641c563b7eebe501704fe9e0d882b4dd01aeabe5a7a",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_addenda_public_authorization.json",
+        "source_sha256": "24496aab28b479147288b7d5757b732cbf31c9e3e6195b5388cc1110ccc61b72",
+        "authorization_basis": "standing_owner_instruction"
+      }
+    },
+    {
+      "record_id": "david_marie_roselyn_bakery_baby_story_reported_knowledge",
+      "record_sha256": "2f3b904b3cc240bd05822e8df27b5fd041f9187302c121456737ce85937e1201",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_marie_roselyn_bakery_and_reported_claims.txt",
+      "source_sha256": "b02e94d1a5aa9655867e6a2ec7760a79c424230e4b4e4c9005b8942a7d11c87d",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_addenda_public_authorization.json",
+        "source_sha256": "24496aab28b479147288b7d5757b732cbf31c9e3e6195b5388cc1110ccc61b72",
+        "authorization_basis": "standing_owner_instruction"
+      }
+    },
+    {
+      "record_id": "david_first_acting_job_helen_wells_cell_phone_commercial",
+      "record_sha256": "d593d64f0e3daa80abb2b053e052338168ea8f0b003f6e619205a3fbfdedfeb7",
+      "record_container": "Data/identity/robert_mcmurrer/robert_source_memory_20260715.json",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_first_acting_job_helen_wells_owner_recollection.txt",
+      "source_sha256": "b48f886fdcf162897a40ce3ea9d676455c618cc3eb9ab7913befd91a69bf7b8f",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "privacy": "owner_authorized_public",
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_addenda_public_authorization.json",
+        "source_sha256": "24496aab28b479147288b7d5757b732cbf31c9e3e6195b5388cc1110ccc61b72",
+        "authorization_basis": "standing_owner_instruction"
+      }
+    }
+  ],
+  "unconfirmed_external_research": {
+    "included_in_reference_entries": false,
+    "included_in_public_payload": false,
+    "status": "Separate local Facebook profile note remains unconfirmed and outside memory retrieval."
+  },
+  "next_review_steps": [
+    "Owner can correct or expand the sources and clarify which attributed accounts should guide a future memorial experience.",
+    "Any later persona wiring must retain memorial/source labels, subject attribution, correction handling and uncertainty.",
+    "Voice, photographs, additional biography and behavior have not been supplied or validated by this dossier."
+  ],
+  "historical_context_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_buddhism_historical_context.json",
+  "historical_context_is_attendance_proof": false
+}
