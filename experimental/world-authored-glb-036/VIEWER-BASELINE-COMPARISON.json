@@ -1,0 +1,163 @@
+{
+  "status": "EXACT_PINNED_VIEWER_MESH_BASELINE_PASS",
+  "installed_viewer_sha256": "e6f101d016cd40b923c678f3db39b1ec7ec50b1c44684f255bcd1efb8b9fcfda",
+  "extracted_static_block_sha256": "ae33555b6702cb87e8b171ae69760de5b62c99f4b6e64f50125c8a0cf6caddea",
+  "extracted_pose_block_sha256": "80db42ab3a6b8ffeec0c041f524d76eb390332df8b954d4d282cc34c72bd1619",
+  "authored_renderer_embedded_exact": true,
+  "mesh_count": 557,
+  "distinct_material_parameters": 70,
+  "point_light_count": 7,
+  "room_comparisons": [
+    {
+      "room_id": "equipment_vestibule",
+      "room_bounds": [
+        -0.5,
+        0,
+        -9,
+        3.5,
+        3,
+        -4
+      ],
+      "meshes_with_center_inside": 75,
+      "distinct_material_parameters": 19,
+      "mesh_bounds": [
+        -0.5750000029802322,
+        -5.7220459037665705e-8,
+        -9.075000002980232,
+        3.5750000029802322,
+        3.0000000059604646,
+        -3.8875000029802322
+      ]
+    },
+    {
+      "room_id": "airlock",
+      "room_bounds": [
+        0,
+        0,
+        -4,
+        3,
+        2.8,
+        0
+      ],
+      "meshes_with_center_inside": 68,
+      "distinct_material_parameters": 20,
+      "mesh_bounds": [
+        -0.49999998807907103,
+        -3.33786012163273e-8,
+        -4.112499997019768,
+        3.499999988079071,
+        3.200000023841858,
+        0.11249999701976776
+      ]
+    },
+    {
+      "room_id": "operations",
+      "room_bounds": [
+        -5,
+        0,
+        0,
+        0,
+        3.2,
+        6
+      ],
+      "meshes_with_center_inside": 125,
+      "distinct_material_parameters": 20,
+      "mesh_bounds": [
+        -5.075000002980232,
+        -2.3841857821338408e-8,
+        -0.07500000298023224,
+        0.11249999701976776,
+        3.200000023841858,
+        6.075000002980232
+      ]
+    },
+    {
+      "room_id": "habitat",
+      "room_bounds": [
+        3,
+        0,
+        0,
+        7,
+        2.9,
+        5
+      ],
+      "meshes_with_center_inside": 68,
+      "distinct_material_parameters": 18,
+      "mesh_bounds": [
+        2.8875000029802322,
+        -4.768371586472142e-8,
+        -0.07500000298023224,
+        7.075000002980232,
+        3.200000023841858,
+        5.075000002980232
+      ]
+    },
+    {
+      "room_id": "laboratory",
+      "room_bounds": [
+        -4,
+        0,
+        7,
+        0,
+        3,
+        12
+      ],
+      "meshes_with_center_inside": 80,
+      "distinct_material_parameters": 20,
+      "mesh_bounds": [
+        -4.075000002980232,
+        -5.7220459037665705e-8,
+        6.924999997019768,
+        0.11249999701976776,
+        3.200000023841858,
+        12.075000002980232
+      ]
+    },
+    {
+      "room_id": "observation",
+      "room_bounds": [
+        3,
+        0,
+        7,
+        6,
+        2.7,
+        11
+      ],
+      "meshes_with_center_inside": 89,
+      "distinct_material_parameters": 19,
+      "mesh_bounds": [
+        2.8875000029802322,
+        -2.3841857821338408e-8,
+        6.924999997019768,
+        6.075000002980232,
+        3.200000023841858,
+        12.000000047683717
+      ]
+    },
+    {
+      "room_id": "circulation",
+      "room_bounds": [
+        0,
+        0,
+        0,
+        3,
+        3.2,
+        12
+      ],
+      "meshes_with_center_inside": 100,
+      "distinct_material_parameters": 18,
+      "mesh_bounds": [
+        -0.11249999701976776,
+        -4.768371586472142e-8,
+        -0.11249999701976776,
+        3.1124999970197678,
+        3.200000023841858,
+        12.075000002980232
+      ]
+    }
+  ],
+  "mesh_multiset_sha256": "f3fa6ec2d75f74f8d5901b968a6a1389c35478dd574b3018a4c3f63244e31fbc",
+  "tolerance_world_matrix": 1e-8,
+  "baseline_scope": "Exact installed static assembly and closed-door pose blocks; no WebGL, animation loop or UI. Mesh attribute/index bytes, world matrices, material values and texture pixels compared. Room counts use mesh centers and can include shared boundary meshes.",
+  "appearance_approved": false
+}

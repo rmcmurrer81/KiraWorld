@@ -1,0 +1,19 @@
+{
+  "status": "FOCUSED_FAILURE_AND_DETERMINISM_CHECKS_PASS",
+  "tests": {
+    "status": "CPU_CONTRACT_CHECKS_PASS",
+    "checks": [
+      "required_fonts_explicit",
+      "missing_font_rejected",
+      "missing_canvas_maps_rejected",
+      "external_fetch_rejected",
+      "native_canvas_data_method_hidden",
+      "nontransparent_png_available",
+      "missing_collider_owner_rejected"
+    ]
+  },
+  "identical_glb_sha256": "023aa6bd7a27c02b69032c7bc5d20479c920c4d2e155bdd8b48be7a227754a01",
+  "identical_roundtrip_sha256": "992d9b19d34eaea814cf5f3b059c4e2f8230ec11b82e25eb18a74e717e060151",
+  "repeated_full_cpu_exports": 2,
+  "protected_originals_unchanged": 116
+}

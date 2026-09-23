@@ -1,0 +1,24 @@
+{
+  "status": "IMPORT_PATHS_ONLY_REBASED_FOR_MINIMAL_VENDOR_CLOSURE",
+  "changes": [
+    {
+      "file": "authored_scene.mjs",
+      "validated_local_sha256": "235536584922d1ec0152c1d607601301b59b39ea326d68da040235b3a69e2246",
+      "public_sha256": "a6a8b1633925af963bb77c907a6b5625c7cb94590748484ed5eff63e10a1dd5c",
+      "only_change": "ESM imports rebased to the identical minimal vendor/three source bytes"
+    },
+    {
+      "file": "build_glb.mjs",
+      "validated_local_sha256": "a9e19a131856ad65b76dfdf3dfbeace19dae518eba091185a802bea2b266740a",
+      "public_sha256": "12706743e325e239b42ce953105439c2df0bc7e8b4a2bd494fce34f393579f17",
+      "only_change": "ESM imports rebased to the identical minimal vendor/three source bytes"
+    },
+    {
+      "file": "compare_viewer.mjs",
+      "validated_local_sha256": "9c71e9a8b6958b51c1c4253c7136822f8c0d5336e3bce37437f072421055f38f",
+      "public_sha256": "61023d0c627a95fb34513811a499b4450cd290eb4c4690524c9b859c26d687e8",
+      "only_change": "ESM imports rebased to the identical minimal vendor/three source bytes"
+    }
+  ],
+  "full_export_replay_after_rebase": false
+}
