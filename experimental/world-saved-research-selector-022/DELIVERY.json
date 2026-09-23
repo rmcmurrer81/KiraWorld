@@ -1,0 +1,37 @@
+{
+  "status": "CANDIDATE_READY_FOR_INDEPENDENT_REVIEW_NOT_INSTALLED",
+  "at_utc": "2026-09-23T04:14:30.410738+00:00",
+  "files": [
+    {
+      "source": {
+        "path": "@workspace\\work\\world-saved-research-selector-candidate-022\\candidate\\tools\\world_builder_workspace.py",
+        "sha256": "fb28c7254e74ab8be465448ca640b9423e54cb9bf64b8c2c56e47578cd380459",
+        "bytes": 23860
+      },
+      "target": "@user_home\\Kira\\tools\\world_builder_workspace.py",
+      "before_sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec"
+    },
+    {
+      "source": {
+        "path": "@workspace\\work\\world-saved-research-selector-candidate-022\\candidate\\tools\\world_saved_research.py",
+        "sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d",
+        "bytes": 3636
+      },
+      "target": "@user_home\\Kira\\tools\\world_saved_research.py",
+      "before_sha256": null
+    }
+  ],
+  "scope": "Saved research selection/reopening only; no physics, project creation, model-budget or placement changes",
+  "validation": {
+    "headless_actual_callback_tests": 16,
+    "real_link_tests_skipped": 2,
+    "existing_catalog_jobs_read": 2,
+    "owner_research_component_files_unchanged": 104,
+    "native_window_review": false
+  },
+  "installed": false,
+  "owner_data_writes": false,
+  "model_calls": 0,
+  "gpu_jobs": 0,
+  "note": "Installation would require updating the source closure inventory for the workspace plus its new helper, preserving existing36-file World015 and56 owner inventories as historical receipts."
+}

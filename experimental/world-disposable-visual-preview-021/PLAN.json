@@ -1,0 +1,211 @@
+{
+  "status": "STATIC_READY_NOT_LAUNCHED",
+  "at_utc": "2026-09-23T03:56:56.776882+00:00",
+  "candidate": "019 exact physics modules; display-only pause/recording controls adapted",
+  "max_frames": 120,
+  "frames_per_click": 12,
+  "batch_wall_cap_seconds": 15,
+  "owner_files_before": {
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/.run.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/bedding_base.mjs": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/canvas_recording.mjs": "41302374ca68fee12d8921db68789baab72e2276e2d9fd65a9f1b269782ab385",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/frame_contacts.mjs": "00ca0c0029b1c9153f7e091bfac69308cc74cc47239ee4ed09771fbe023f9226",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/index.html": "cbfff0a65768fdc069aeefff79527651047595c69226a909063d8987a433e72e",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/manifest.json": "21f7bd78869b3e72d45aa1d41dac03c8b1bc56ceeede14898ab42e9a87b1095c",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/mattress_physics.mjs": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/study.json": "f13edac48ec8aeb985ad681f15a5b8c9e55519b8adf6a74894ded62ac495c8fb",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/style.css": "60cdae1d97b1916a7e71f2058cd00e29f64bdd7fbe101adb546de800401e39e0",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/surface_contacts.mjs": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "Data/world_bedding_studies/bedding-0d2754cbb4eb64f50c7a4126/viewer.mjs": "a5c55e25efbb2c12bb6adb3caeb9eebc7cf5517ca49716ac4d1d550cb404b3e0",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/.run.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/bedding_base.mjs": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/canvas_recording.mjs": "41302374ca68fee12d8921db68789baab72e2276e2d9fd65a9f1b269782ab385",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/frame_contacts.mjs": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/index.html": "cbfff0a65768fdc069aeefff79527651047595c69226a909063d8987a433e72e",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/manifest.json": "d265399c5213d2172da7faa030deb36a24fae35394dca110bd7c11633da7791c",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/mattress_physics.mjs": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/study.json": "f13edac48ec8aeb985ad681f15a5b8c9e55519b8adf6a74894ded62ac495c8fb",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/style.css": "60cdae1d97b1916a7e71f2058cd00e29f64bdd7fbe101adb546de800401e39e0",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/surface_contacts.mjs": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "Data/world_bedding_studies/bedding-2a98988111c91b6201326647/viewer.mjs": "a5c55e25efbb2c12bb6adb3caeb9eebc7cf5517ca49716ac4d1d550cb404b3e0",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/.run.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/bedding_base.mjs": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/canvas_recording.mjs": "41302374ca68fee12d8921db68789baab72e2276e2d9fd65a9f1b269782ab385",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/index.html": "26f9942a687452a8016ca990e5f0e5e3908d447ce63981fc9c3d48da858c2698",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/manifest.json": "960adfb61ae2eb6cb98e16cba668246ff53eb53190551915c5fe4dae9706486b",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/mattress_physics.mjs": "692179795061af96b232b8107f1cd5ad3ec2cec88d2b7aa15fd231a1c98afce6",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/study.json": "55aa9e242de04b49b05a0bf47d91cff3fedcfa0ac6feb4a220435da9aab766d4",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/style.css": "60cdae1d97b1916a7e71f2058cd00e29f64bdd7fbe101adb546de800401e39e0",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/surface_contacts.mjs": "66b17f674dcd6ec0daa4a15247d620bf4617d101f58178fa1835c4cebd5c628f",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "Data/world_bedding_studies/bedding-b62761c069adcb41ca7656d6/viewer.mjs": "bb5103170fd2846f1d350526bf25b6f01d779b828a455b277ce729d2cc0bb243",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/.run.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/addons/controls/OrbitControls.js": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/addons/loaders/GLTFLoader.js": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/addons/utils/BufferGeometryUtils.js": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/component.json": "26aa6f0aa0cc8cf7d4a86fe2ece2f88d3bc25db01178d576f2acd7a23a2e10b6",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/frame.glb": "a8184fc7d2f6eda0e275ee03a441f63f18ab5e7976b798f3f63c885f1f025060",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/frame.json": "90d1994b715782b15329af1be843eef6e2b710ed016b42e1a05f17ac00bb49b1",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/frames.json": "bcdc3565ad29198af20ed8f9fc5d23e23d244fa2fb3ea55ecbdf18764776051c",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/index.html": "2734f2020c5e47d23bd2f253b4914ac52acedd405b57d6b317171770cde0a4a8",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/manifest.json": "8362eeb63511ae731dd0b178d64e607f31abb807275168adaa2bdb12d79aeed5",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/request.json": "ef6f6f03150f04c4aaf58a93bf7d760e8187f593ce47c11681670623b2b68ccd",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/style.css": "42844f0601e8cfa6970ae6d197dd84fbc6d5316cb15dd02ae14fbf8eaa464351",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "Data/world_original_components/frame-c9ea454692e988461f2b77c3/viewer.mjs": "23158635d9683bacd7cbfa0ab0a3566d205490be6b90e2da8c640e0002523116"
+  },
+  "inputs": [
+    {
+      "path": "@user_home\\Kira\\tools\\world_builder_components\\bedding\\index.html",
+      "sha256": "cbfff0a65768fdc069aeefff79527651047595c69226a909063d8987a433e72e",
+      "bytes": 4354
+    },
+    {
+      "path": "@user_home\\Kira\\tools\\world_builder_components\\bedding\\style.css",
+      "sha256": "60cdae1d97b1916a7e71f2058cd00e29f64bdd7fbe101adb546de800401e39e0",
+      "bytes": 2117
+    },
+    {
+      "path": "@user_home\\Kira\\tools\\world_builder_components\\bedding\\viewer.mjs",
+      "sha256": "a5c55e25efbb2c12bb6adb3caeb9eebc7cf5517ca49716ac4d1d550cb404b3e0",
+      "bytes": 11166
+    },
+    {
+      "path": "@user_home\\Kira\\Data\\world_bedding_studies\\bedding-2a98988111c91b6201326647\\three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    {
+      "path": "@user_home\\Kira\\Data\\world_bedding_studies\\bedding-2a98988111c91b6201326647\\three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    {
+      "path": "@user_home\\Kira\\Data\\world_bedding_studies\\bedding-2a98988111c91b6201326647\\THREE-LICENSE.txt",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    {
+      "path": "@user_home\\Kira\\Data\\world_bedding_studies\\bedding-2a98988111c91b6201326647\\canvas_recording.mjs",
+      "sha256": "41302374ca68fee12d8921db68789baab72e2276e2d9fd65a9f1b269782ab385",
+      "bytes": 5059
+    },
+    {
+      "path": "@workspace\\work\\world-finite-key-candidate-019\\candidate\\bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "@workspace\\work\\world-finite-key-candidate-019\\candidate\\finite_top_domain.mjs",
+      "sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+      "bytes": 5976
+    },
+    {
+      "path": "@workspace\\work\\world-finite-key-candidate-019\\candidate\\frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "@workspace\\work\\world-finite-key-candidate-019\\candidate\\mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "@workspace\\work\\world-finite-key-candidate-019\\candidate\\surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\fixtures\\wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    }
+  ],
+  "assets": {
+    "bedding_base.mjs": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    "canvas_recording.mjs": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\canvas_recording.mjs",
+      "sha256": "41302374ca68fee12d8921db68789baab72e2276e2d9fd65a9f1b269782ab385",
+      "bytes": 5059
+    },
+    "finite_top_domain.mjs": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\finite_top_domain.mjs",
+      "sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+      "bytes": 5976
+    },
+    "frame_contacts.mjs": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    "index.html": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\index.html",
+      "sha256": "974ad120fbbedbfc76224c5259a43f22a06cab0bf2f8befcd6ae81d5676ee549",
+      "bytes": 4349
+    },
+    "mattress_physics.mjs": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    "study.json": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\study.json",
+      "sha256": "bdefc8e1924b100d730affd8673ad22365219c0020f5bc3ee56864340e2dd3ee",
+      "bytes": 634724
+    },
+    "style.css": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\style.css",
+      "sha256": "60cdae1d97b1916a7e71f2058cd00e29f64bdd7fbe101adb546de800401e39e0",
+      "bytes": 2117
+    },
+    "surface_contacts.mjs": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    "THREE-LICENSE.txt": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\THREE-LICENSE.txt",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    "three.core.js": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    "three.module.js": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    "viewer.mjs": {
+      "path": "@workspace\\work\\world-disposable-visual-preview-021\\assets\\viewer.mjs",
+      "sha256": "73a1b6e666172fbbb037f9467dcc60ee26a9c50824fc6111532938dd61562865",
+      "bytes": 11957
+    }
+  },
+  "no_owner_or_canonical_writes": true,
+  "recording_disabled": true,
+  "server_not_started": true,
+  "browser_not_opened": true,
+  "limits": "Early-state/contact inspection only. No 480-frame settled state, long019 trajectory, complete physics, appearance or installation approval.",
+  "server": {
+    "path": "@workspace\\work\\world-disposable-visual-preview-021\\serve_preview.py",
+    "sha256": "236b99d497ce5f8191d8c98ee2cef6244e9e603bef975f6f2fda1106dda6d29f"
+  },
+  "server_scope": "Read-only 127.0.0.1 only, exact pinned asset allowlist, no POST, expires after 300 seconds, consumed-run guard",
+  "paused_render_behavior": "No physics stepping, contact metric recomputation or rendering between UI and resize events while paused."
+}

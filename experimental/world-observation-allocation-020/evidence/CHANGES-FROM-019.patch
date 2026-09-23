@@ -1,0 +1,20 @@
+--- 019/finite_top_domain.mjs
++++ 020/finite_top_domain.mjs
+@@ -44,7 +44,7 @@
+  hold(reason){this.reason??=reason;}
+  mask(p,k){
+   const x=p[k],y=p[k+1],z=p[k+2],s=this.s,m=this.shape[6]+EPS;
+-  if(![x,y,z].every(Number.isFinite)){this.hold('NONFINITE_CLOTH');return 0;}
++  if(!Number.isFinite(x)||!Number.isFinite(y)||!Number.isFinite(z)){this.hold('NONFINITE_CLOTH');return 0;}
+   return (x< -s.width/2-m?1:0)|(x>s.width/2+m?2:0)|(z< -s.length/2-m?4:0)|(z>s.length/2+m?8:0)|(y<s.base-m?BOTTOM:0)|(y>s.maximumHeight+m?ABOVE:0);
+  }
+  observeVertex(i){
+@@ -52,7 +52,7 @@
+   if(!Number.isInteger(i)||i<0||i>=this.c.count){this.hold('INVALID_VERTEX');return;}
+   const k=3*i;this.masks[i]=this.mask(this.p,k);
+   for(const q of this.adj[i]){
+-   const mask=q.ids.reduce((v,j)=>v&this.masks[j],63);
++   let mask=63;for(const j of q.ids)mask&=this.masks[j];
+    // Never rearm merely because a top-origin primitive emerges below the slab.
+    // A wholly lateral exterior pose is a safe new anchor for subsequent motion.
+    const retained=q.certified&&!!(q.mask&mask);

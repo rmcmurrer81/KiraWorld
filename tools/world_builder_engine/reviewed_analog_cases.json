@@ -1,0 +1,57 @@
+{
+  "contract": "reviewed_analog_case_identity_registry_v1",
+  "reviewed_packet_sha256": "e0cc4cb1cda3c5937ecf28aac9bd9e17f5d9799f279c6a523e63fe08f146d71f",
+  "description": "Three identity mappings reviewed from existing cached public-source bytes; names are not inferred from publisher domains. No measurements or visual coverage are certified.",
+  "entries": [
+    {
+      "canonical_key": "chapea",
+      "case_name": "CHAPEA habitat",
+      "case_kind": "habitat",
+      "aliases": [
+        "CHAPEA",
+        "Crew Health and Performance Exploration Analog"
+      ],
+      "source_id": "source_cc5b732169be02055217",
+      "text_sha256": "1860c4d8e96814f079f7ad8b6f6e5ecff5499581beb7174c10433f381aaf585e",
+      "anchor": {
+        "char_start": 6394,
+        "char_end": 6509,
+        "quote": "Life in the CHAPEA habitat will resemble the expected experience for those living in a future Mars surface habitat."
+      },
+      "resolution_basis": "reviewed_existing_source_identity"
+    },
+    {
+      "canonical_key": "mars500",
+      "case_name": "Mars500 isolation facility",
+      "case_kind": "facility",
+      "aliases": [
+        "Mars500"
+      ],
+      "source_id": "source_58eeb2a8df4bcf07c840",
+      "text_sha256": "86d7352b1088f301093e783afee28c02e65cf2a87d7daf5b61f9cba5dbcb2c5a",
+      "anchor": {
+        "char_start": 163,
+        "char_end": 283,
+        "quote": "The Mars500 isolation facility in which the crew was based was located in a special building on the IBMP site in Moscow."
+      },
+      "resolution_basis": "reviewed_existing_source_identity"
+    },
+    {
+      "canonical_key": "hera",
+      "case_name": "Human Exploration Research Analog (HERA)",
+      "case_kind": "habitat",
+      "aliases": [
+        "HERA",
+        "Human Exploration Research Analog"
+      ],
+      "source_id": "source_30f1b44cd49dcacb95c9",
+      "text_sha256": "17b779a27e2235c2aacdcb2a12354474c153e40a6579bdf3659840e95408b234",
+      "anchor": {
+        "char_start": 7928,
+        "char_end": 7982,
+        "quote": "called, The Human Exploration Research Analog, or HERA"
+      },
+      "resolution_basis": "reviewed_existing_source_identity"
+    }
+  ]
+}

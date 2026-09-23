@@ -1,0 +1,293 @@
+{
+  "status": "PASS",
+  "source_pins": {
+    "base": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+    "solver": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+    "contacts": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+    "frame_contacts": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d"
+  },
+  "checks": [
+    "Exact chamfer planes retain geometry and reject an AABB-only false collision",
+    "Face penetration resolves by moving the actual same arrays without launch velocity",
+    "Bevel and three-way corner inside points resolve against chamfers",
+    "Rail through triangle interior is detected although every triangle vertex is outside",
+    "Previous outside side keeps a falling cloth contact above a thin rail",
+    "Held point and all-zero masses remain stable with unresolved contacts reported",
+    "Previous side entry wins for a near-horizontal triangle instead of lifting it onto the rail",
+    "Under-frame entry resolves downward and a separated grazing triangle remains unchanged",
+    "Contact velocity removes inward component while preserving outward motion",
+    "Repeated solver history does not multiply contact friction",
+    "A triangle leaving the finite rail face receives no stale infinite-plane impulse",
+    "Coupled frame and mattress projection preserve physical previous positions",
+    "Surface velocity contacts survive a converged solver pass and deduplicate friction",
+    "All12 single/wide dynamic scenario rows exactly equal prior accepted baseline.",
+    "Fresh head contact/coverage/release rows exactly equal prior accepted baseline."
+  ],
+  "physical_scenarios": {
+    "status": "COMPLETE",
+    "rows": [
+      {
+        "size": "single",
+        "action": "settle",
+        "time": 7.999999999999866,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.02601986495761155,
+        "maxSpeed": 0.5855434572046946,
+        "restStretch": 0.017957356217165543,
+        "restSpeed": 0.0038934395807275644,
+        "compression": 0
+      },
+      {
+        "size": "single",
+        "action": "load",
+        "time": 10.999999999999696,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.020899012614109314,
+        "maxSpeed": 0.014262649595776753,
+        "restStretch": 0.020899012614109314,
+        "restSpeed": 0.004531222828933206,
+        "compression": 0.042419591300394965
+      },
+      {
+        "size": "single",
+        "action": "unload",
+        "time": 13.999999999999526,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.02245933742310413,
+        "maxSpeed": 0.015188994961568149,
+        "restStretch": 0.02245933742310413,
+        "restSpeed": 0.015188994961568149,
+        "compression": 0
+      },
+      {
+        "size": "single",
+        "action": "grab",
+        "time": 15.999999999999412,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.02398122146161752,
+        "maxSpeed": 0.21502151781705878,
+        "restStretch": 0.014140330588099381,
+        "restSpeed": 0.06701636523304849,
+        "compression": 0
+      },
+      {
+        "size": "single",
+        "action": "across",
+        "time": 17.9999999999993,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.01847461855786059,
+        "maxSpeed": 0.4060546220804769,
+        "restStretch": 0.01847461855786059,
+        "restSpeed": 0.4060546220804769,
+        "compression": 0
+      },
+      {
+        "size": "single",
+        "action": "release",
+        "time": 23.99999999999896,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.02754150912099873,
+        "maxSpeed": 0.4211632684811224,
+        "restStretch": 0.024194237970813992,
+        "restSpeed": 0.0013817882136164213,
+        "compression": 0
+      },
+      {
+        "size": "wide",
+        "action": "settle",
+        "time": 7.999999999999866,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.08718777628539875,
+        "maxSpeed": 2.1485738379511283,
+        "restStretch": 0.037219256072476226,
+        "restSpeed": 0.02096773773908609,
+        "compression": 0
+      },
+      {
+        "size": "wide",
+        "action": "load",
+        "time": 10.999999999999696,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.04485533978167622,
+        "maxSpeed": 0.0390633781276551,
+        "restStretch": 0.04485533978167622,
+        "restSpeed": 0.010681122661126542,
+        "compression": 0.04194270893696084
+      },
+      {
+        "size": "wide",
+        "action": "unload",
+        "time": 13.999999999999526,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.044754214671709036,
+        "maxSpeed": 0.02099664568131567,
+        "restStretch": 0.044754214671709036,
+        "restSpeed": 0.006771718484468834,
+        "compression": 0
+      },
+      {
+        "size": "wide",
+        "action": "grab",
+        "time": 15.999999999999412,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.047634997533609,
+        "maxSpeed": 0.23044427517172242,
+        "restStretch": 0.047634997533609,
+        "restSpeed": 0.02977756057377958,
+        "compression": 0
+      },
+      {
+        "size": "wide",
+        "action": "across",
+        "time": 17.9999999999993,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.06272007709632788,
+        "maxSpeed": 0.6274685292279829,
+        "restStretch": 0.06272007709632788,
+        "restSpeed": 0.6274685292279829,
+        "compression": 0
+      },
+      {
+        "size": "wide",
+        "action": "release",
+        "time": 23.99999999999896,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.10244393545761743,
+        "maxSpeed": 1.357433131903529,
+        "restStretch": 0.05195056029044709,
+        "restSpeed": 0.003818980610062797,
+        "compression": 0
+      }
+    ],
+    "elapsed_ms": 171167.6226
+  },
+  "head_support": {
+    "status": "PASS",
+    "rows": [
+      {
+        "stage": "settled",
+        "time": 5.000000000000036,
+        "headContacts": 0,
+        "headPenetration": 0,
+        "stretch": 0.0177578144290913,
+        "speed": 0.007133665247178619
+      },
+      {
+        "stage": "visible_surface_coverage",
+        "covered": 9,
+        "total": 9
+      },
+      {
+        "stage": "head_contact",
+        "time": 11.99999999999964,
+        "headContacts": 2,
+        "headPenetration": 0,
+        "stretch": 0.02170056410997434,
+        "speed": 0.009096066222594018
+      },
+      {
+        "stage": "head_lifted",
+        "time": 15.999999999999412,
+        "headContacts": 0,
+        "headPenetration": 0,
+        "stretch": 0.023324305378278787,
+        "speed": 0.0061096321476036665
+      }
+    ],
+    "elapsed_ms": 59541.7646,
+    "failure": null
+  },
+  "legacy_failure": {
+    "path": "@workspace\\work\\world-frame-contact-candidate\\BASELINE-INTERACTION.json",
+    "sha256": "0453362435bc11851cf72677d00419d17c94f7b3d3d0859e8f14ade658827e63",
+    "maximum_centroid_penetration_m": 0.02711613444137151
+  },
+  "evidence": {
+    "ROOT-SOURCE-REVIEW.json": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\ROOT-SOURCE-REVIEW.json",
+      "sha256": "0e539f9877417a6543d8352a91bb91444d50d6e04afed697af19b8a38457ca9d",
+      "bytes": 1134
+    },
+    "DELIVERY.json": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\DELIVERY.json",
+      "sha256": "fcfe89682c8b45289acb4811a2837544c354ab5784cb4b2199c5b324faa1ec79",
+      "bytes": 5499
+    },
+    "CONTACT-UNIT-RESULT.json": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\CONTACT-UNIT-RESULT.json",
+      "sha256": "f0b2c5d24b3bd0800c8f57506435b780b39eb8853ff2ff5e7f98c0f53b2c8260",
+      "bytes": 1197
+    },
+    "GATE.json": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\GATE.json",
+      "sha256": "b9844c2b33e45a9ecace0132a236f97f313e55c04ce24a685212800c13922c00",
+      "bytes": 660
+    },
+    "FULL-DYNAMIC.json": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\FULL-DYNAMIC.json",
+      "sha256": "1adb16dc52b786e9607c449d5464d0f96436a2b1a8063c57e04982f4fba049dd",
+      "bytes": 4493
+    },
+    "HEAD-SUPPORT-RESULT.json": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\HEAD-SUPPORT-RESULT.json",
+      "sha256": "257207ba2cf174099634c7654f2075dadfa0baa8b2824a55a9e3d7b329df7f0c",
+      "bytes": 786
+    },
+    "test_frame_contacts.mjs": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\test_frame_contacts.mjs",
+      "sha256": "4e6a048f33e23fa196c05b547def1a0a15b179dd7af32c679cfffc34a8cc9053",
+      "bytes": 8613
+    },
+    "compare_dynamic.mjs": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\compare_dynamic.mjs",
+      "sha256": "392fab30cef6be0065f14818bf8cfa18cb681bfd8dce39592ae246792f6b29c5",
+      "bytes": 2789
+    },
+    "test_head_support.mjs": {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\test_head_support.mjs",
+      "sha256": "047d1b52440b74ee21ca9520177562a296ceb39624ef08534d4de6e09a892be3",
+      "bytes": 2101
+    }
+  },
+  "prior_qualification": {
+    "path": "@workspace\\work\\world-frame-contact-candidate\\PHYSICS-QUALIFICATION-002.json",
+    "sha256": "e67abc01b18b07d75dc0e9006cdbbecb7f10bed29377ad81aaf06458f579a5a5",
+    "bytes": 10222
+  },
+  "limits": [
+    "Discrete contacts, no CCD or self collision.",
+    "Frame is rigid, one-way contact; no cloth-pillow coupling or calibrated body loads.",
+    "Dynamic overlap metrics were sampled every30 fixed frames, not a proof for arbitrary motions.",
+    "CPU physical tests do not establish visual quality. Native inspection remains experimental.",
+    "48 simulation seconds took approximately171CPU seconds; still not a real-time performance guarantee.",
+    "Paired120-frame intervals measured12.1percent lower elapsed time; not a universal speed claim."
+  ],
+  "visual_pass": false,
+  "model_calls": 0,
+  "iterations": 40,
+  "change": "Broad-phase allocation only; all exact convex contacts and projection/velocity rules preserved."
+}

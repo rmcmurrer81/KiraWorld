@@ -28,7 +28,6 @@ import create_world_notebook_request as generator  # noqa: E402
 from validate_notebook_world_request import validate_notebook_world_request  # noqa: E402
 from world_research import DEFAULT_JOB_ROOT, run_job  # noqa: E402
 from world_research_workspace_adapter import submit_research_prompt
-from world_saved_research import list_saved_research, read_saved_research
 from world_builder_engine.workspace_adapter import run_pipeline_after_research, open_preview, close_preview  # noqa: E402
 from world_reference_images_adapter import ReferencePhotosView  # noqa: E402
 from world_builder_components.workspace_adapter import OriginalComponentsView  # noqa: E402
@@ -119,7 +118,6 @@ class WorldBuilderWorkspace(tk.Tk):
         self._research_pending = []
         self._research_worker = None
         self._research_latest = None
-        self._saved_research_items = []
         self._layout_preview = None
         self._reference_photos_view = None
         self._original_components_view = None
@@ -145,7 +143,6 @@ class WorldBuilderWorkspace(tk.Tk):
 
         self._build()
         self.refresh_index()
-        self.refresh_saved_research()
         self.refresh_school_status()
 
     def _build(self) -> None:
@@ -201,14 +198,6 @@ class WorldBuilderWorkspace(tk.Tk):
         ttk.Button(chat_row, text="Research / Resume", command=self.send_world_builder_chat).pack(side="left")
         ttk.Button(chat_row, text="Open Layout Preview", command=self.open_layout_preview).pack(side="left", padx=(6, 0))
         ttk.Button(chat_row, text="Reference Photos", command=self.open_reference_photos).pack(side="left", padx=(6, 0))
-
-        saved = ttk.Frame(chat)
-        saved.pack(fill="x", pady=(7, 0))
-        ttk.Label(saved, text="Saved research / layouts").pack(side="left", padx=(0, 6))
-        self.saved_research_choice = ttk.Combobox(saved, state="readonly")
-        self.saved_research_choice.pack(side="left", fill="x", expand=True)
-        self.saved_research_choice.bind("<<ComboboxSelected>>", self.select_saved_research)
-        ttk.Button(saved, text="Refresh saved", command=self.refresh_saved_research).pack(side="left", padx=(6, 0))
 
         components = ttk.Frame(chat)
         components.pack(fill="x", pady=(7, 0))
@@ -318,53 +307,11 @@ class WorldBuilderWorkspace(tk.Tk):
             return
         self._research_latest = submitted["job_dir"]
         self.latest_folder = submitted["job_dir"]
-        self.refresh_saved_research()
         self.log(f"Research job: {submitted['job_id']} | saved state: {submitted['stage']}")
         self.log(f"Subject: {submitted['subject']} | {submitted['research_mode']} | {submitted['visual_style']['description']}")
         if submitted["job_dir"] not in self._research_pending:
             self._research_pending.append(submitted["job_dir"])
         self._start_next_research()
-
-    def refresh_saved_research(self) -> None:
-        try:
-            self._saved_research_items = list_saved_research(DEFAULT_JOB_ROOT)
-        except (OSError, ValueError) as exc:
-            self._saved_research_items = []
-            self.log(f"Saved research list unavailable: {exc}")
-        self.saved_research_choice.configure(values=[item["label"] for item in self._saved_research_items])
-        selected = next((index for index, item in enumerate(self._saved_research_items)
-                         if item["job_dir"] == self._research_latest), None)
-        if selected is None:
-            self.saved_research_choice.set("Choose a saved research job" if self._saved_research_items else "No saved research jobs yet")
-        else:
-            self.saved_research_choice.current(selected)
-
-    def select_saved_research(self, _event=None) -> None:
-        index = self.saved_research_choice.current()
-        if index < 0 or index >= len(self._saved_research_items):
-            return
-        item = self._saved_research_items[index]
-        try:
-            selected = read_saved_research(item["job_dir"], job_root=DEFAULT_JOB_ROOT)
-        except (OSError, ValueError) as exc:
-            self.set_saved_research_context(None)
-            self.log(f"Saved research could not be opened: {exc}. Its files were preserved.")
-            return
-        self.set_saved_research_context(selected["job_dir"])
-        self.log(f"Opened saved research: {selected['subject']} | {selected['stage']}")
-        self.log("Use Open Layout Preview or Reference Photos to inspect saved results. No research or generation was started.")
-
-    def set_saved_research_context(self, job_dir: Path | None) -> None:
-        close_preview(self._layout_preview)
-        self._layout_preview = None
-        if self._reference_photos_view is not None and self._reference_photos_view.winfo_exists():
-            self._reference_photos_view.destroy()
-        self._reference_photos_view = None
-        if self._original_components_view is not None and self._original_components_view.winfo_exists():
-            self._original_components_view.set_world_job(job_dir)
-        self._research_latest = job_dir
-        self.latest_folder = job_dir
-        self.latest_request = None
 
     def _start_next_research(self) -> None:
         if self._research_worker is not None or not self._research_pending:
@@ -406,7 +353,6 @@ class WorldBuilderWorkspace(tk.Tk):
                 self.log(f"Research stopped with a saved checkpoint: {value}")
                 completed = True
         if completed:
-            self.refresh_saved_research()
             self._research_worker = None
             self._start_next_research()
         elif self._research_worker is not None:
@@ -462,7 +408,6 @@ class WorldBuilderWorkspace(tk.Tk):
 
     def refresh_all(self) -> None:
         self.refresh_index()
-        self.refresh_saved_research()
         self.refresh_school_status()
 
     def refresh_school_status(self) -> None:

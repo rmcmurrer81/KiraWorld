@@ -1,0 +1,107 @@
+{
+  "status": "ISOLATED_SAVED_RESEARCH_SELECTOR_BACKUP_UNINSTALLED",
+  "at_utc": "2026-09-23T04:14:30.423359+00:00",
+  "files": [
+    {
+      "path": "baseline/world_builder_workspace.py",
+      "sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec",
+      "bytes": 21121,
+      "original_sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "candidate/tools/world_builder_workspace.py",
+      "sha256": "fb28c7254e74ab8be465448ca640b9423e54cb9bf64b8c2c56e47578cd380459",
+      "bytes": 23860,
+      "original_sha256": "fb28c7254e74ab8be465448ca640b9423e54cb9bf64b8c2c56e47578cd380459",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "candidate/tools/world_saved_research.py",
+      "sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d",
+      "bytes": 3636,
+      "original_sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "CHANGES.patch",
+      "sha256": "92713383e37a260e39971c86cd895e07d699b5bb1f82bcbc89574ea0e9bd9a03",
+      "bytes": 5409,
+      "original_sha256": "8f535849a5c987b1800f7f16419a13d75bd2bcc42194b164b04056240a30b996",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "check_installed_catalog_readonly.py",
+      "sha256": "b0a23f9500b36738999fe67ef038b594677883359ce5feec0a99d2bd8637323d",
+      "bytes": 1287,
+      "original_sha256": "738fb8ed630b655ed49130016652b521c14ea9923e9448e6fc6b69c713c53c51",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "DELIVERY.json",
+      "sha256": "32bf1663697ea6f05e14284e7aff7fcbcf1c5bcaf751e1c73911842dc4253acd",
+      "bytes": 1573,
+      "original_sha256": "7a8fa5612a158dc75eb20a62fc83e7121ed063c7581446127769397a63e5dc78",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "finalize_delivery.py",
+      "sha256": "7769dfcb6675e3c037ea0028a13044676456e5dbc1b6324ae61a2d3e9ff5a7e3",
+      "bytes": 4989,
+      "original_sha256": "677bada3386bc7224fab16c260d120547a16a376599209b7018b43fa28670bbb",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "prepare_candidate.py",
+      "sha256": "405b488a5c967ac0ac1a2d73822cf23e2fff94dc98c7cc4bec9ecb54f550cb33",
+      "bytes": 4788,
+      "original_sha256": "694361637c6f0130d3759b67fb358884f7d35e25fd9849f33be4d0fed196458c",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "26e5012c92e06a8ea85a787e6fd1bdbc8799fb3fb97d8f77f70ee4f2a915deab",
+      "bytes": 1484,
+      "original_sha256": "410a2e6401af6a98fbb4520c8c593ab0e079ff587ec97a98b615e1675120ec83",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "READONLY-INSTALLED-CATALOG.json",
+      "sha256": "a04420287cdc27477043c613b978e28bbc876011bd5c92853881c4d9e9bc7817",
+      "bytes": 506,
+      "original_sha256": "f5662017afc6010a1716177d84992c38e6fb688b016dd1505a60b1904c0b5c01",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "STAGING.json",
+      "sha256": "33b1d252554ecbda40b72bd4b2732a67a6dac5778312ff424a8324a505ee10d6",
+      "bytes": 588,
+      "original_sha256": "cadebe8d86c002de839bef5297a302ae759f5312db96804067859751b2cd8e56",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "TEST-RESULT-002.json",
+      "sha256": "1b5ed79e9724b7456eceac560837391c8f968832a9b2de864240be8cd846939a",
+      "bytes": 1569,
+      "original_sha256": "16702dcf3ea30cdaf63fc39734ae0c15c66794a832312207489d89211b46663e",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "TEST-RESULT.json",
+      "sha256": "79167e524fa770757f6375669d0a5d7bed77a95157f5a33d0343f3f9735606d3",
+      "bytes": 1569,
+      "original_sha256": "f77fbfe2bbdfeddc927b5f36607dee3eda90b5cb474c9f59871a3096dd234eca",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "test_saved_research.py",
+      "sha256": "1fef63a6d127f9bb90bbc12cee6b54e0cddec2a3f5dcfd3b3881adb0a9e80fdd",
+      "bytes": 11216,
+      "original_sha256": "88584835eadc313fa69db1286111cec0ed259ce8ad11f6c5e99b6178d270d2fc",
+      "identity_paths_redacted": true
+    }
+  ],
+  "identity_paths_redacted": true,
+  "installation_or_portable_test_replay_performed": false,
+  "reproduction_note": "Evidence contains local path placeholders; run tests against an explicitly configured Kira installation with its dependencies. Source behavior and original hashes are preserved; this backup is not a turnkey install."
+}

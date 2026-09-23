@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "tests": 22,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    [
+      "test_directory_link_is_rejected (__main__.Tests.test_directory_link_is_rejected)",
+      "Windows did not allow a disposable symlink: [WinError 1314] A required privilege is not held by the client: '@user_home\\\\Documents\\\\Codex\\\\2026-09-12\\\\continue-my-personal-video-studio-work\\\\work\\\\world-saved-context-candidate-023\\\\world023-3egev1om\\\\outside\\\\world_research_a37aba5bd062f370a78e' -> '@user_home\\\\Documents\\\\Codex\\\\2026-09-12\\\\continue-my-personal-video-studio-work\\\\work\\\\world-saved-context-candidate-023\\\\world023-3egev1om\\\\world_research_jobs\\\\world_research_a37aba5bd062f370a78e'"
+    ],
+    [
+      "test_metadata_link_is_rejected (__main__.Tests.test_metadata_link_is_rejected)",
+      "Windows did not allow a disposable symlink: [WinError 1314] A required privilege is not held by the client: '@user_home\\\\Documents\\\\Codex\\\\2026-09-12\\\\continue-my-personal-video-studio-work\\\\work\\\\world-saved-context-candidate-023\\\\world023-f22vrcsj\\\\external.json' -> '@user_home\\\\Documents\\\\Codex\\\\2026-09-12\\\\continue-my-personal-video-studio-work\\\\work\\\\world-saved-context-candidate-023\\\\world023-f22vrcsj\\\\world_research_jobs\\\\world_research_a37aba5bd062f370a78e\\\\job.json'"
+    ]
+  ],
+  "actual_candidate_callback_execution": true,
+  "real_tk_window_opened": false,
+  "browser_or_model_calls": 0,
+  "owner_data_written": false,
+  "installed": false
+}

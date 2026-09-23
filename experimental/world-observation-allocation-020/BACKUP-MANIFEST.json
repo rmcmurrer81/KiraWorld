@@ -1,0 +1,722 @@
+{
+  "status": "PORTABLE020_BEHAVIOR_EQUIVALENT_PERFORMANCE_REGRESSION_HOLD",
+  "at_utc": "2026-09-23T03:54:37.653932+00:00",
+  "entries": [
+    {
+      "source": "work/world-observation-allocation-candidate-020/candidate/bedding_base.mjs",
+      "original_sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "backup_path": "candidate/bedding_base.mjs",
+      "backup_sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/candidate/finite_top_domain.mjs",
+      "original_sha256": "5434dd1a709d893cc6592e92d9e4b7a350c4932482a5a13bc61be0d3ea53131b",
+      "backup_path": "candidate/finite_top_domain.mjs",
+      "backup_sha256": "5434dd1a709d893cc6592e92d9e4b7a350c4932482a5a13bc61be0d3ea53131b",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/candidate/frame_contacts.mjs",
+      "original_sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "backup_path": "candidate/frame_contacts.mjs",
+      "backup_sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/candidate/mattress_physics.mjs",
+      "original_sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "backup_path": "candidate/mattress_physics.mjs",
+      "backup_sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/candidate/surface_contacts.mjs",
+      "original_sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "backup_path": "candidate/surface_contacts.mjs",
+      "backup_sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/baseline/bedding_base.mjs",
+      "original_sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "backup_path": "baseline/bedding_base.mjs",
+      "backup_sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/baseline/frame_contacts.mjs",
+      "original_sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "backup_path": "baseline/frame_contacts.mjs",
+      "backup_sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/baseline/mattress_physics.mjs",
+      "original_sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "backup_path": "baseline/mattress_physics.mjs",
+      "backup_sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/baseline/surface_contacts.mjs",
+      "original_sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "backup_path": "baseline/surface_contacts.mjs",
+      "backup_sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "transformed": false
+    },
+    {
+      "source": "work/world-finite-key-candidate-019/candidate/bedding_base.mjs",
+      "original_sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "backup_path": "reference019/candidate/bedding_base.mjs",
+      "backup_sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "transformed": false
+    },
+    {
+      "source": "work/world-finite-key-candidate-019/candidate/finite_top_domain.mjs",
+      "original_sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+      "backup_path": "reference019/candidate/finite_top_domain.mjs",
+      "backup_sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+      "transformed": false
+    },
+    {
+      "source": "work/world-finite-key-candidate-019/candidate/frame_contacts.mjs",
+      "original_sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "backup_path": "reference019/candidate/frame_contacts.mjs",
+      "backup_sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "transformed": false
+    },
+    {
+      "source": "work/world-finite-key-candidate-019/candidate/mattress_physics.mjs",
+      "original_sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "backup_path": "reference019/candidate/mattress_physics.mjs",
+      "backup_sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "transformed": false
+    },
+    {
+      "source": "work/world-finite-key-candidate-019/candidate/surface_contacts.mjs",
+      "original_sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "backup_path": "reference019/candidate/surface_contacts.mjs",
+      "backup_sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "transformed": false
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-016/candidate/finite_top_domain.mjs",
+      "original_sha256": "d8ab67bf04a2e6e27658134b935ab12ab81d0749c9f73a9b2bc0879358f8a9fe",
+      "backup_path": "reference016/candidate/finite_top_domain.mjs",
+      "backup_sha256": "d8ab67bf04a2e6e27658134b935ab12ab81d0749c9f73a9b2bc0879358f8a9fe",
+      "transformed": false
+    },
+    {
+      "source": "work/world-frame-contact-perf-candidate/fixtures/wide.json",
+      "original_sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "backup_path": "fixtures/wide.json",
+      "backup_sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "transformed": false
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_domain.mjs",
+      "original_sha256": "d109d5ee0ebb9f8d6530e5c37f7aaef36a4b7737cf197ffaff78181cd9f78901",
+      "backup_path": "check_domain.mjs",
+      "backup_sha256": "3b27889eb60bb84d1425c3ce6dc6b38a15f6d4937ca901f7277d58fc12002f5f",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_mutations.mjs",
+      "original_sha256": "901b19365141bdc3394d1ce905d6f9f5a594e0c36a71b5cb82d11a4c627b705b",
+      "backup_path": "check_mutations.mjs",
+      "backup_sha256": "f7011eedc8ced47b3ccf4802cfa8e5a95e92a2177e8cdde6e1befc4fac2f1b5e",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_paired.mjs",
+      "original_sha256": "139db2e0b23d52f12d874e52afa12da7d79eea41d209ee2ef272656e5f28402d",
+      "backup_path": "check_paired.mjs",
+      "backup_sha256": "5efb134b83c02fa21f1e5f4434e2a0916c942341cc61d338bd0b5af6bfe089ab",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_release.mjs",
+      "original_sha256": "6df29e15d31e03b0c585b8bd34ff645a695d68ac972fd79aa1e5b9f95060fcec",
+      "backup_path": "check_release.mjs",
+      "backup_sha256": "4513d65b73eb5e42ba5dca0daa8e3050dc82c3eabc54dea9a0067088b04d9bd3",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/run_checks.py",
+      "original_sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "backup_path": "run_checks.py",
+      "backup_sha256": "d0601d135e54fd4fb1cfc99155b99749ddaa7125cbac7ad89a0c616ae865b112",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/check_paired.mjs",
+      "original_sha256": "efa6a926df2ee207c5603220760b3943a17e06bdcb704e1b558bd53df0652148",
+      "backup_path": "reversed-pilot-001/check_paired.mjs",
+      "backup_sha256": "ec4a64c9c2744dc404576cef2e6f18475ae3e27cc6f86f3c2e933e81c2ac0423",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/run_checks.py",
+      "original_sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "backup_path": "reversed-pilot-001/run_checks.py",
+      "backup_sha256": "d0601d135e54fd4fb1cfc99155b99749ddaa7125cbac7ad89a0c616ae865b112",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/ASSESSMENT.json",
+      "original_sha256": "10c03c86e193e21273939701b2260cdde679604a3c86de343db0e53933825a04",
+      "backup_path": "evidence/ASSESSMENT.json",
+      "backup_sha256": "10c03c86e193e21273939701b2260cdde679604a3c86de343db0e53933825a04",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/build_assessment_package.py",
+      "original_sha256": "f46b4bccfe6266cceb9e710a1847fa9590a857d0bf1df9cf6e36702de0128514",
+      "backup_path": "evidence/build_assessment_package.py",
+      "backup_sha256": "f46b4bccfe6266cceb9e710a1847fa9590a857d0bf1df9cf6e36702de0128514",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/CHANGES-FROM-019.patch",
+      "original_sha256": "524bed941d019d8e47a83fd46e20f4e7c5183a128b34ada681c1dec85c1a8cea",
+      "backup_path": "evidence/CHANGES-FROM-019.patch",
+      "backup_sha256": "d3f07a1d7e13974aab7c7048b907674eb769a6c6c840f582ae0c45ba5caf71cf",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_domain.mjs",
+      "original_sha256": "d109d5ee0ebb9f8d6530e5c37f7aaef36a4b7737cf197ffaff78181cd9f78901",
+      "backup_path": "evidence/check_domain.mjs",
+      "backup_sha256": "7cc462f1407056b078eba4f64673f030e89e843cf1d413c8a6892da842efd95a",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_mutations.mjs",
+      "original_sha256": "901b19365141bdc3394d1ce905d6f9f5a594e0c36a71b5cb82d11a4c627b705b",
+      "backup_path": "evidence/check_mutations.mjs",
+      "backup_sha256": "901b19365141bdc3394d1ce905d6f9f5a594e0c36a71b5cb82d11a4c627b705b",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_paired.mjs",
+      "original_sha256": "139db2e0b23d52f12d874e52afa12da7d79eea41d209ee2ef272656e5f28402d",
+      "backup_path": "evidence/check_paired.mjs",
+      "backup_sha256": "139db2e0b23d52f12d874e52afa12da7d79eea41d209ee2ef272656e5f28402d",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/check_release.mjs",
+      "original_sha256": "6df29e15d31e03b0c585b8bd34ff645a695d68ac972fd79aa1e5b9f95060fcec",
+      "backup_path": "evidence/check_release.mjs",
+      "backup_sha256": "6df29e15d31e03b0c585b8bd34ff645a695d68ac972fd79aa1e5b9f95060fcec",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/DOMAIN-SUPERVISOR.json",
+      "original_sha256": "0e2c9f9e2c0abf7328099cb534688bbe66e396314c31e53e197887a8b5127d34",
+      "backup_path": "evidence/DOMAIN-SUPERVISOR.json",
+      "backup_sha256": "92ef21847e08176a8b9033e5548a34325a2ba254e5fd7849f138fe1a13338dae",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/DOMAIN-TESTS.json",
+      "original_sha256": "f5a09d155ef003b079d54fd6218c793f71fe9ffbf9a0b93b9475e784ec9530ae",
+      "backup_path": "evidence/DOMAIN-TESTS.json",
+      "backup_sha256": "f5a09d155ef003b079d54fd6218c793f71fe9ffbf9a0b93b9475e784ec9530ae",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/domain.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_path": "evidence/domain.stderr.txt",
+      "backup_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/domain.stdout.txt",
+      "original_sha256": "843bedcce8847fc63f1300e83ee6fb584f726eb9bb72fbfd605222fe0173afeb",
+      "backup_path": "evidence/domain.stdout.txt",
+      "backup_sha256": "843bedcce8847fc63f1300e83ee6fb584f726eb9bb72fbfd605222fe0173afeb",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/freeze_plan.py",
+      "original_sha256": "9df36b6becb1ffeeb288af812292f031286ec9a3d450fa98c54d8a07a25fe23b",
+      "backup_path": "evidence/freeze_plan.py",
+      "backup_sha256": "9df36b6becb1ffeeb288af812292f031286ec9a3d450fa98c54d8a07a25fe23b",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/MUTATION-EQUIVALENCE.json",
+      "original_sha256": "fcfa27bd4b1720894be395925e2563457b804458c51e0cfa98d078eadce8771c",
+      "backup_path": "evidence/MUTATION-EQUIVALENCE.json",
+      "backup_sha256": "fcfa27bd4b1720894be395925e2563457b804458c51e0cfa98d078eadce8771c",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/MUTATIONS-SUPERVISOR.json",
+      "original_sha256": "655326a408491c1724719cabb727704b880c8e832b3fe351ec81207ea878fb92",
+      "backup_path": "evidence/MUTATIONS-SUPERVISOR.json",
+      "backup_sha256": "a33958b2c09e63a9ddfdda17d79b7abb3b934ae8b90411b9de74bd002c871ba5",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/mutations.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_path": "evidence/mutations.stderr.txt",
+      "backup_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/mutations.stdout.txt",
+      "original_sha256": "3e99522e328c00a2bddc1782cb2cef980d2f634d2f1860096d708124a1f61d8a",
+      "backup_path": "evidence/mutations.stdout.txt",
+      "backup_sha256": "3e99522e328c00a2bddc1782cb2cef980d2f634d2f1860096d708124a1f61d8a",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/PAIRED-RESULT.json",
+      "original_sha256": "bec7e9ddf17b3d958224a06505836a500ef81dd40646f3f929987c3d51b054bb",
+      "backup_path": "evidence/PAIRED-RESULT.json",
+      "backup_sha256": "bec7e9ddf17b3d958224a06505836a500ef81dd40646f3f929987c3d51b054bb",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/PAIRED-SUPERVISOR.json",
+      "original_sha256": "3e6ebcc83edce49cf912382b9faf3641af6caf42cd178070dd50834c629894c0",
+      "backup_path": "evidence/PAIRED-SUPERVISOR.json",
+      "backup_sha256": "538fcd8dfbc306e5d943181f8ddf4cffb65ff7d15aaef0d9b22df1caa0d49cf4",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/paired.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_path": "evidence/paired.stderr.txt",
+      "backup_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/paired.stdout.txt",
+      "original_sha256": "32e1d974520f0f66d9f58bfe898072f361625cbac1ab56adf429cbc99ae512cd",
+      "backup_path": "evidence/paired.stdout.txt",
+      "backup_sha256": "32e1d974520f0f66d9f58bfe898072f361625cbac1ab56adf429cbc99ae512cd",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/PLAN.json",
+      "original_sha256": "5cad4c8803217028a316bb51e171be5c25bbcd872f7891f9099524d53308bd04",
+      "backup_path": "evidence/PLAN.json",
+      "backup_sha256": "8057e0a9734999f8b22754cada6a23c0232cd91e888724b6cf82a4260f83f4e2",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/prepare_reverse.py",
+      "original_sha256": "a617601f6cd51d213540025646fed814e7cebc138513f2fcb298f2532e17ef21",
+      "backup_path": "evidence/prepare_reverse.py",
+      "backup_sha256": "a617601f6cd51d213540025646fed814e7cebc138513f2fcb298f2532e17ef21",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/RELEASE-COMPARISON.json",
+      "original_sha256": "48173df818a575599c25569ce8030cdb2ed94b44fdb17da2ad2c8ad7d0355482",
+      "backup_path": "evidence/RELEASE-COMPARISON.json",
+      "backup_sha256": "48173df818a575599c25569ce8030cdb2ed94b44fdb17da2ad2c8ad7d0355482",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/RELEASE-SUPERVISOR.json",
+      "original_sha256": "2893c8aaf6486f43daeb0f306d2734d9887d9edb24467cef1d8ac4d2c1922524",
+      "backup_path": "evidence/RELEASE-SUPERVISOR.json",
+      "backup_sha256": "fa743508fbf6eb9fe6d47e6b0543d30ba3600e60770b0b26c2af46e7109f9ebb",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/release.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_path": "evidence/release.stderr.txt",
+      "backup_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/release.stdout.txt",
+      "original_sha256": "7b8df9449e9eac82bdacab23cb5033fc8ee36f74054edc7f016a8450fe3ba01a",
+      "backup_path": "evidence/release.stdout.txt",
+      "backup_sha256": "7b8df9449e9eac82bdacab23cb5033fc8ee36f74054edc7f016a8450fe3ba01a",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/run_checks.py",
+      "original_sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "backup_path": "evidence/run_checks.py",
+      "backup_sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/STAGING.json",
+      "original_sha256": "96db11a9b70eaee6e69be23f027fc85a492a8e905d34bdec85c7b2a468c9ab00",
+      "backup_path": "evidence/STAGING.json",
+      "backup_sha256": "586deace83f2686e33ae1ef627378cc5ec8fe8c3c88884f24ee4c3e7ce3a686c",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/check_paired.mjs",
+      "original_sha256": "efa6a926df2ee207c5603220760b3943a17e06bdcb704e1b558bd53df0652148",
+      "backup_path": "evidence/reversed-pilot-001/check_paired.mjs",
+      "backup_sha256": "efa6a926df2ee207c5603220760b3943a17e06bdcb704e1b558bd53df0652148",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/PAIRED-RESULT.json",
+      "original_sha256": "b97115d24ffe1c4ebd953aa91c571285aa25ac04378f47bc83c8d567b87103cd",
+      "backup_path": "evidence/reversed-pilot-001/PAIRED-RESULT.json",
+      "backup_sha256": "b97115d24ffe1c4ebd953aa91c571285aa25ac04378f47bc83c8d567b87103cd",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/PAIRED-SUPERVISOR.json",
+      "original_sha256": "27dd3920a54c6dd9ddcc051cdda867f8dc5ad282afd77b3bf165899241c5e2c3",
+      "backup_path": "evidence/reversed-pilot-001/PAIRED-SUPERVISOR.json",
+      "backup_sha256": "0378ceb15ab0b4dcab78ab28751d80dc52da81c9e6e287bc9370d1b96d34f70b",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/paired.stderr.txt",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_path": "evidence/reversed-pilot-001/paired.stderr.txt",
+      "backup_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/paired.stdout.txt",
+      "original_sha256": "0e6441f494212b25fb9aa8aa24c9233ebfc3fc3545bcef2d08614966e63b20f9",
+      "backup_path": "evidence/reversed-pilot-001/paired.stdout.txt",
+      "backup_sha256": "0e6441f494212b25fb9aa8aa24c9233ebfc3fc3545bcef2d08614966e63b20f9",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/PLAN.json",
+      "original_sha256": "c54990e30a009c81b5e55b50be78e8bc0169e1774d107db75693e59fcbac65db",
+      "backup_path": "evidence/reversed-pilot-001/PLAN.json",
+      "backup_sha256": "a09b0259a7c39ef05e990bc96e4f22717953478a8a0c65876424f04d01adbc79",
+      "transformed": true
+    },
+    {
+      "source": "work/world-observation-allocation-candidate-020/reversed-pilot-001/run_checks.py",
+      "original_sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "backup_path": "evidence/reversed-pilot-001/run_checks.py",
+      "backup_sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "transformed": true
+    }
+  ],
+  "files": [
+    {
+      "path": "baseline/bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "baseline/frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "baseline/mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "bytes": 13616
+    },
+    {
+      "path": "baseline/surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    },
+    {
+      "path": "candidate/bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "candidate/finite_top_domain.mjs",
+      "sha256": "5434dd1a709d893cc6592e92d9e4b7a350c4932482a5a13bc61be0d3ea53131b",
+      "bytes": 5919
+    },
+    {
+      "path": "candidate/frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "candidate/mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "candidate/surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "check_domain.mjs",
+      "sha256": "3b27889eb60bb84d1425c3ce6dc6b38a15f6d4937ca901f7277d58fc12002f5f",
+      "bytes": 7323
+    },
+    {
+      "path": "check_mutations.mjs",
+      "sha256": "f7011eedc8ced47b3ccf4802cfa8e5a95e92a2177e8cdde6e1befc4fac2f1b5e",
+      "bytes": 3977
+    },
+    {
+      "path": "check_paired.mjs",
+      "sha256": "5efb134b83c02fa21f1e5f4434e2a0916c942341cc61d338bd0b5af6bfe089ab",
+      "bytes": 3494
+    },
+    {
+      "path": "check_release.mjs",
+      "sha256": "4513d65b73eb5e42ba5dca0daa8e3050dc82c3eabc54dea9a0067088b04d9bd3",
+      "bytes": 5917
+    },
+    {
+      "path": "evidence/ASSESSMENT.json",
+      "sha256": "10c03c86e193e21273939701b2260cdde679604a3c86de343db0e53933825a04",
+      "bytes": 1768
+    },
+    {
+      "path": "evidence/build_assessment_package.py",
+      "sha256": "f46b4bccfe6266cceb9e710a1847fa9590a857d0bf1df9cf6e36702de0128514",
+      "bytes": 7953
+    },
+    {
+      "path": "evidence/CHANGES-FROM-019.patch",
+      "sha256": "d3f07a1d7e13974aab7c7048b907674eb769a6c6c840f582ae0c45ba5caf71cf",
+      "bytes": 1067
+    },
+    {
+      "path": "evidence/check_domain.mjs",
+      "sha256": "7cc462f1407056b078eba4f64673f030e89e843cf1d413c8a6892da842efd95a",
+      "bytes": 7349
+    },
+    {
+      "path": "evidence/check_mutations.mjs",
+      "sha256": "901b19365141bdc3394d1ce905d6f9f5a594e0c36a71b5cb82d11a4c627b705b",
+      "bytes": 3996
+    },
+    {
+      "path": "evidence/check_paired.mjs",
+      "sha256": "139db2e0b23d52f12d874e52afa12da7d79eea41d209ee2ef272656e5f28402d",
+      "bytes": 3513
+    },
+    {
+      "path": "evidence/check_release.mjs",
+      "sha256": "6df29e15d31e03b0c585b8bd34ff645a695d68ac972fd79aa1e5b9f95060fcec",
+      "bytes": 5953
+    },
+    {
+      "path": "evidence/DOMAIN-SUPERVISOR.json",
+      "sha256": "92ef21847e08176a8b9033e5548a34325a2ba254e5fd7849f138fe1a13338dae",
+      "bytes": 404
+    },
+    {
+      "path": "evidence/DOMAIN-TESTS.json",
+      "sha256": "f5a09d155ef003b079d54fd6218c793f71fe9ffbf9a0b93b9475e784ec9530ae",
+      "bytes": 16411
+    },
+    {
+      "path": "evidence/domain.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/domain.stdout.txt",
+      "sha256": "843bedcce8847fc63f1300e83ee6fb584f726eb9bb72fbfd605222fe0173afeb",
+      "bytes": 10712
+    },
+    {
+      "path": "evidence/freeze_plan.py",
+      "sha256": "9df36b6becb1ffeeb288af812292f031286ec9a3d450fa98c54d8a07a25fe23b",
+      "bytes": 1287
+    },
+    {
+      "path": "evidence/MUTATION-EQUIVALENCE.json",
+      "sha256": "fcfa27bd4b1720894be395925e2563457b804458c51e0cfa98d078eadce8771c",
+      "bytes": 491
+    },
+    {
+      "path": "evidence/MUTATIONS-SUPERVISOR.json",
+      "sha256": "a33958b2c09e63a9ddfdda17d79b7abb3b934ae8b90411b9de74bd002c871ba5",
+      "bytes": 407
+    },
+    {
+      "path": "evidence/mutations.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/mutations.stdout.txt",
+      "sha256": "3e99522e328c00a2bddc1782cb2cef980d2f634d2f1860096d708124a1f61d8a",
+      "bytes": 446
+    },
+    {
+      "path": "evidence/PAIRED-RESULT.json",
+      "sha256": "bec7e9ddf17b3d958224a06505836a500ef81dd40646f3f929987c3d51b054bb",
+      "bytes": 10542
+    },
+    {
+      "path": "evidence/PAIRED-SUPERVISOR.json",
+      "sha256": "538fcd8dfbc306e5d943181f8ddf4cffb65ff7d15aaef0d9b22df1caa0d49cf4",
+      "bytes": 402
+    },
+    {
+      "path": "evidence/paired.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/paired.stdout.txt",
+      "sha256": "32e1d974520f0f66d9f58bfe898072f361625cbac1ab56adf429cbc99ae512cd",
+      "bytes": 217
+    },
+    {
+      "path": "evidence/PLAN.json",
+      "sha256": "8057e0a9734999f8b22754cada6a23c0232cd91e888724b6cf82a4260f83f4e2",
+      "bytes": 5307
+    },
+    {
+      "path": "evidence/prepare_reverse.py",
+      "sha256": "a617601f6cd51d213540025646fed814e7cebc138513f2fcb298f2532e17ef21",
+      "bytes": 1653
+    },
+    {
+      "path": "evidence/RELEASE-COMPARISON.json",
+      "sha256": "48173df818a575599c25569ce8030cdb2ed94b44fdb17da2ad2c8ad7d0355482",
+      "bytes": 256707
+    },
+    {
+      "path": "evidence/RELEASE-SUPERVISOR.json",
+      "sha256": "fa743508fbf6eb9fe6d47e6b0543d30ba3600e60770b0b26c2af46e7109f9ebb",
+      "bytes": 405
+    },
+    {
+      "path": "evidence/release.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/release.stdout.txt",
+      "sha256": "7b8df9449e9eac82bdacab23cb5033fc8ee36f74054edc7f016a8450fe3ba01a",
+      "bytes": 1780
+    },
+    {
+      "path": "evidence/reversed-pilot-001/check_paired.mjs",
+      "sha256": "efa6a926df2ee207c5603220760b3943a17e06bdcb704e1b558bd53df0652148",
+      "bytes": 3519
+    },
+    {
+      "path": "evidence/reversed-pilot-001/PAIRED-RESULT.json",
+      "sha256": "b97115d24ffe1c4ebd953aa91c571285aa25ac04378f47bc83c8d567b87103cd",
+      "bytes": 10545
+    },
+    {
+      "path": "evidence/reversed-pilot-001/PAIRED-SUPERVISOR.json",
+      "sha256": "0378ceb15ab0b4dcab78ab28751d80dc52da81c9e6e287bc9370d1b96d34f70b",
+      "bytes": 402
+    },
+    {
+      "path": "evidence/reversed-pilot-001/paired.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/reversed-pilot-001/paired.stdout.txt",
+      "sha256": "0e6441f494212b25fb9aa8aa24c9233ebfc3fc3545bcef2d08614966e63b20f9",
+      "bytes": 218
+    },
+    {
+      "path": "evidence/reversed-pilot-001/PLAN.json",
+      "sha256": "a09b0259a7c39ef05e990bc96e4f22717953478a8a0c65876424f04d01adbc79",
+      "bytes": 5759
+    },
+    {
+      "path": "evidence/reversed-pilot-001/run_checks.py",
+      "sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "bytes": 2454
+    },
+    {
+      "path": "evidence/run_checks.py",
+      "sha256": "dab3086ef40d2f74eb9b8d43a3acda31b2c4a1889e04003124deebf2a6baa96c",
+      "bytes": 2454
+    },
+    {
+      "path": "evidence/STAGING.json",
+      "sha256": "586deace83f2686e33ae1ef627378cc5ec8fe8c3c88884f24ee4c3e7ce3a686c",
+      "bytes": 238
+    },
+    {
+      "path": "fixtures/wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    },
+    {
+      "path": "PLAN.json",
+      "sha256": "06d4933267ecaf31a44bfae28088bfb225412b14872beddc04951a6ab916417f",
+      "bytes": 4090
+    },
+    {
+      "path": "README.md",
+      "sha256": "ff462f9b0d3fc82a70e88666d9150c54796abb14d37c02a13d7bf89eed52e8d1",
+      "bytes": 1248
+    },
+    {
+      "path": "reference016/candidate/finite_top_domain.mjs",
+      "sha256": "d8ab67bf04a2e6e27658134b935ab12ab81d0749c9f73a9b2bc0879358f8a9fe",
+      "bytes": 5210
+    },
+    {
+      "path": "reference019/candidate/bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "reference019/candidate/finite_top_domain.mjs",
+      "sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+      "bytes": 5976
+    },
+    {
+      "path": "reference019/candidate/frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "reference019/candidate/mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "reference019/candidate/surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "reversed-pilot-001/check_paired.mjs",
+      "sha256": "ec4a64c9c2744dc404576cef2e6f18475ae3e27cc6f86f3c2e933e81c2ac0423",
+      "bytes": 3498
+    },
+    {
+      "path": "reversed-pilot-001/PLAN.json",
+      "sha256": "46a94009bcc28f4ca5c29f5495a1ee8de16db867887d50f86da1c12bd049e608",
+      "bytes": 4458
+    },
+    {
+      "path": "reversed-pilot-001/run_checks.py",
+      "sha256": "d0601d135e54fd4fb1cfc99155b99749ddaa7125cbac7ad89a0c616ae865b112",
+      "bytes": 2579
+    },
+    {
+      "path": "run_checks.py",
+      "sha256": "d0601d135e54fd4fb1cfc99155b99749ddaa7125cbac7ad89a0c616ae865b112",
+      "bytes": 2579
+    }
+  ],
+  "identity_paths_redacted": true,
+  "portable_replay_executed": false,
+  "static_plan_hash_and_syntax_checks_passed": true
+}

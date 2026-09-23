@@ -1,6 +1,6 @@
-"""Lightweight World Builder School loop.
+"""World Builder reference assignment scheduler (no training or construction).
 
-This is for later world-builder training. It does not launch Home World and it
+This prepares reference assignments for later review. It does not launch Home World and it
 does not generate a 3D map. It writes lesson assignments that can be reviewed
 before the World Builder is asked to rebuild places.
 
@@ -267,6 +267,10 @@ def source_snapshot(source_dirs: list[str]) -> list[dict[str, Any]]:
 def write_presence(status: str, payload: dict[str, Any]) -> None:
     write_json(CURRENT_RUN_PATH, {
         "schema_version": 1,
+        "activity": "reference_assignment_preparation_only",
+        "model_training_performed": False,
+        "geometry_constructed": False,
+        "construction_skill_validated": False,
         "status": status,
         "updated_at": now_iso(),
         "pid": os.getpid(),
@@ -275,7 +279,7 @@ def write_presence(status: str, payload: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run a lightweight World Builder School loop.")
+    parser = argparse.ArgumentParser(description="Prepare reference assignments; no model training or geometry construction.")
     parser.add_argument("--duration-hours", type=float, default=2.0)
     parser.add_argument("--cycle-minutes", type=float, default=20.0)
     args = parser.parse_args()
@@ -307,10 +311,13 @@ def main() -> int:
             "created_at": now_iso(),
             "lesson_id": lesson["lesson_id"],
             "title": lesson["title"],
-            "status": "submitted_for_later_review",
+            "status": "assignment_prepared_unreviewed",
+            "model_training_performed": False,
+            "geometry_constructed": False,
+            "construction_skill_validated": False,
             "assignment": lesson["assignment"],
             "source_snapshot": source_snapshot(lesson["source_dirs"]),
-            "rule": "World Builder School trains planning/evidence only; it does not load or build a 3D world.",
+            "rule": "Schedules static reference assignments only. No inference, training, construction or grading occurs.",
         }
         write_json(assignment_path, artifact)
         index["updated_at"] = now_iso()
@@ -329,7 +336,7 @@ def main() -> int:
             "assignment_index": rel(index_path),
             "latest_assignment": rel(assignment_path),
         })
-        append_jsonl(log_path, {"time": now_iso(), "type": "lesson_completed", "assignment": rel(assignment_path)})
+        append_jsonl(log_path, {"time": now_iso(), "type": "assignment_prepared", "assignment": rel(assignment_path)})
         cycle_index += 1
         remaining = end_at - time.monotonic()
         if remaining <= 0:
@@ -340,10 +347,14 @@ def main() -> int:
         "schema_version": 1,
         "run_id": run_id,
         "finished_at": now_iso(),
-        "cycles_completed": cycle_index,
+        "cycles_completed": cycle_index,  # Scheduler cycles, not learned skills.
+        "assignments_prepared": cycle_index,
+        "model_training_performed": False,
+        "geometry_constructed": False,
+        "construction_skill_validated": False,
         "assignment_index": rel(index_path),
         "log_path": rel(log_path),
-        "status": "completed" if time.monotonic() >= end_at else "stopped",
+        "status": "assignment_schedule_completed" if time.monotonic() >= end_at else "assignment_schedule_stopped",
     }
     write_json(run_dir / f"{run_id}_summary.json", summary)
     write_presence(summary["status"], summary)

@@ -1,0 +1,18 @@
+{
+  "status": "PASS_INSTALLED_IMPORTS_AND_CONTEXT_CALLBACKS",
+  "checks": [
+    "Installed catalog discovers both existing jobs without queuing work",
+    "Installed selection restores exact job and updates all view contexts: world_research_c391ffbffc7352612392",
+    "Installed selection restores exact job and updates all view contexts: world_research_92a3ca65b9b76e20549f",
+    "Foreign selection clears stale contexts without changing owner files"
+  ],
+  "owner_files_checked": 104,
+  "owner_files_unchanged": true,
+  "installed_source_pins_unchanged": true,
+  "native_window_review": false,
+  "network_models_gpu_or_real_preview_calls": 0,
+  "imported_files": [
+    "@user_home\\Kira\\tools\\world_builder_workspace.py",
+    "@user_home\\Kira\\tools\\world_saved_research.py"
+  ]
+}

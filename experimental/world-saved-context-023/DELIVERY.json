@@ -1,0 +1,47 @@
+{
+  "status": "CANDIDATE023_READY_FOR_REVIEW_NOT_INSTALLED",
+  "at_utc": "2026-09-23T04:18:37.426420+00:00",
+  "files": [
+    {
+      "source": {
+        "path": "@workspace\\work\\world-saved-context-candidate-023\\candidate\\tools\\world_builder_workspace.py",
+        "sha256": "dc338e7349bced74becd606050869a2faa37c1c513058fa24cf84af27b9b9041",
+        "bytes": 24177
+      },
+      "target": "@user_home\\Kira\\tools\\world_builder_workspace.py",
+      "before_sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec"
+    },
+    {
+      "source": {
+        "path": "@workspace\\work\\world-saved-context-candidate-023\\candidate\\tools\\world_saved_research.py",
+        "sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d",
+        "bytes": 3636
+      },
+      "target": "@user_home\\Kira\\tools\\world_saved_research.py",
+      "before_sha256": null
+    }
+  ],
+  "changes": "Adds saved research selector from022; valid or failed selection now closes layout and previous reference photos and updates any open component view to the selected job or None.",
+  "validation": {
+    "actual_callback_checks_passed": 20,
+    "real_symlink_checks_skipped_for_windows_privilege": 2,
+    "native_ui_window_opened": false,
+    "model_or_research_queue_calls": 0
+  },
+  "native_shortcut": {
+    "path": "@user_home\\Desktop\\Kira World Builder Workspace.lnk",
+    "target": "@user_home\\Kira\\Start_Kira_World_Builder_Workspace.bat",
+    "arguments": "",
+    "working_directory": "@user_home\\Kira",
+    "launcher": {
+      "path": "@user_home\\Kira\\Start_Kira_World_Builder_Workspace.bat",
+      "sha256": "e232845d635510fe222a9b0953b97db9ed92b443988ceacb3ff264a9920b1e96",
+      "bytes": 168
+    },
+    "runtime_script": "@user_home\\Kira\\tools\\world_builder_workspace.py",
+    "runtime_selection": "Launcher uses py if present, otherwise python. Root can use C:/Python314/python.exe for an explicitly chosen interpreter."
+  },
+  "owner_or_canonical_writes": false,
+  "installed": false,
+  "predecessor022_preserved": true
+}

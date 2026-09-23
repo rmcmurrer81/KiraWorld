@@ -1,0 +1,7 @@
+# Current World source closure backup supplement
+
+The original023 publication plan added the two updated workspace/helper files. Comparing the67-file current owned World source closure with public main also found26 existing local dependencies or technical proofs missing or stale. This supplement preserves25 exact current code/asset files and one technical proof with its11 local evidence paths redacted at their normal tools/ paths so a checkout contains the imports used by the installed workspace. It changes no canonical file, saved owner job or physics implementation.
+
+The supplement includes25 paths absent from public main and one older school scheduler replaced by its current local version. Python and JavaScript syntax plus JSON decoding were checked without running models, generation, UI or physics. Historical digest occurrences are recorded as provenance, not a claim that tests have been rerun. No literal secret assignments, authenticated URLs or local identity paths remain in the26 public payload files. The original technical-proof hash is recorded; numerical results and source pins are unchanged by redaction.
+
+World015 physics remains installed. The installed023 saved-reopen controls have callback and native saved-reopen checks; new world construction and finished appearance remain incomplete. The020 performance experiment remains rejected, and021 is limited early visual evidence for uninstalled019. Preserve those distinctions when recovering this work.

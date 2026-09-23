@@ -1,0 +1,38 @@
+{
+  "status": "BEHAVIOR_EQUIVALENT_PERFORMANCE_REGRESSION_HOLD",
+  "at_utc": "2026-09-23T03:54:36.771254+00:00",
+  "only_change": "Temporary finite-check array and per-primitive reduce callback replaced by direct finite checks and a loop. All observation calls and certificates retained.",
+  "helper_sha256": "5434dd1a709d893cc6592e92d9e4b7a350c4932482a5a13bc61be0d3ea53131b",
+  "mutation_cases": 140,
+  "mutation_steps": 3917,
+  "query_comparisons": 35235,
+  "domain_groups": 20,
+  "tiny_frames": 33,
+  "paired_frames_each_per_order": 12,
+  "all_state_history_and_certificates_exact_each_frame": true,
+  "physical_observations_exact_across_orders": true,
+  "timings": [
+    {
+      "order": "candidate first",
+      "candidate020_ms": 2215.5852999999997,
+      "predecessor019_ms": 2004.9069999999992,
+      "runtime_increase_percent": 10.508133294960853
+    },
+    {
+      "order": "predecessor first",
+      "candidate020_ms": 2249.6867999999995,
+      "predecessor019_ms": 2063.5936999999994,
+      "runtime_increase_percent": 9.017913749203643
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "installed": false,
+  "gpu_jobs": 0,
+  "decision": "Hold020; keep019 as the better isolated candidate. The slower source is preserved as negative evidence, not installed.",
+  "next": "Obtain actual visual evidence through a disposable copy of the existing local World preview. Investigate remaining observation cost only with measurements; do not weaken finite checks or skip mutations.",
+  "limits": [
+    "Only two short opposite-order mixed runs; no universal benchmark claim.",
+    "No long020 trajectory is justified by this performance regression.",
+    "Numerical equivalence is not complete collision, calibrated material, visual or installation approval."
+  ]
+}

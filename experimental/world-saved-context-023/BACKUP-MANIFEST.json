@@ -1,0 +1,163 @@
+{
+  "status": "WORLD023_INSTALLED_CALLBACK_AND_SAVED_REOPEN_UI_VERIFIED",
+  "at_utc": "2026-09-23T04:27:46.583124+00:00",
+  "files": [
+    {
+      "path": "BASELINE.json",
+      "sha256": "6a222ba6c4dd09ab71ae22dc9784d7b6ae0703e1f6b687fa3fa556049572940f",
+      "bytes": 204,
+      "original_sha256": "146cb2ae58d036b78966a10220d57138f1256ef3f3e432254371e2d366c1fbec",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "CHANGES-FROM-022.patch",
+      "sha256": "7569c9f3a90b5c4b9366382f389ff1cf9c191801f61ea6ef5df99aca3b1808e8",
+      "bytes": 2020,
+      "original_sha256": "7569c9f3a90b5c4b9366382f389ff1cf9c191801f61ea6ef5df99aca3b1808e8",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "CHANGES-FROM-INSTALLED.patch",
+      "sha256": "a78a8d0b80fd77b5811c3b246539ca7817771628f42f609d85be228f0dfe884c",
+      "bytes": 5835,
+      "original_sha256": "a78a8d0b80fd77b5811c3b246539ca7817771628f42f609d85be228f0dfe884c",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "CURRENT-WORLD-SOURCE-CLOSURE.json",
+      "sha256": "6901610b71db60b957797c6ca2665a70ba72c46ae016029590b52016bcebe6ff",
+      "bytes": 21673,
+      "original_sha256": "b7effa68a37485cfd99caea93a2bf81b02117cc034f593a6e199f38adfae001e",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "DELIVERY.json",
+      "sha256": "9f6d70a3ca535e8e59d71e506c54692e6d76cffa4128636544aee4ecd0e577b5",
+      "bytes": 2114,
+      "original_sha256": "acf83d5365195e17acb04065cd7f57c98fbf12c85c773dbea8c97a892fb091c0",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "INSTALLED-CONTEXT-CHECK.json",
+      "sha256": "0f70a069a11f8a52610fbd9216af60e17be4ea5784abcaf678c8099c911ba2f7",
+      "bytes": 805,
+      "original_sha256": "b07dd9b82da003321e93efbd4553fc6df129a39755c5b0a1857d05ac77474b0e",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "INSTALLED.json",
+      "sha256": "0befc2f51a42b35e11864b60b729b0de654c21c1954948e6c786c4cd16496029",
+      "bytes": 1202,
+      "original_sha256": "06e826bb322ad6fb07067509284fec630201ac1cf2ea62f83b0919eaa02f3063",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "30eaab55c0cf78a58a082671cab93ff4fbd4ce5399f6cec300ec6539dda56a84",
+      "bytes": 2401,
+      "original_sha256": null,
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "ROOT-NATIVE-UI-REVIEW.json",
+      "sha256": "3eb2a5c46f353ba51ab5f7bfcec30fdd42b8acb9f5984d986ffb3171bee0c9ce",
+      "bytes": 883,
+      "original_sha256": "3eb2a5c46f353ba51ab5f7bfcec30fdd42b8acb9f5984d986ffb3171bee0c9ce",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "TEST-RESULT.json",
+      "sha256": "577d67c23c8d1c35a050d53e00c3c07908350c91b8e29cde7763d18ac0f58672",
+      "bytes": 1550,
+      "original_sha256": "901e2050a587cf2b164a0b8c315c2a7a4d2b1b9a09ec4b3c8351d0e440838149",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "baseline/world_builder_workspace.py",
+      "sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec",
+      "bytes": 21121,
+      "original_sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "candidate/tools/world_builder_workspace.py",
+      "sha256": "dc338e7349bced74becd606050869a2faa37c1c513058fa24cf84af27b9b9041",
+      "bytes": 24177,
+      "original_sha256": "dc338e7349bced74becd606050869a2faa37c1c513058fa24cf84af27b9b9041",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "candidate/tools/world_saved_research.py",
+      "sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d",
+      "bytes": 3636,
+      "original_sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "check_installed_context.py",
+      "sha256": "df4e1fd5c60811bc4e04fdc6be34dcc1c6194b11c21a11e9b49fe472681bed92",
+      "bytes": 3927,
+      "original_sha256": "8c48da859d7716f330f0b900600214a90d9f23ba5b227deea730f4566d975714",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "evidence/PREINSTALL-BACKUP-MANIFEST.json",
+      "sha256": "b0e5bea94976a9220fb05b9efab226dd8f898333d43a45eb18962a86ace4ca60",
+      "bytes": 3951,
+      "original_sha256": "b0e5bea94976a9220fb05b9efab226dd8f898333d43a45eb18962a86ace4ca60",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "evidence/PREINSTALL-README.md",
+      "sha256": "ec6e66dcf6f33424654ee01baf3dd78355eab398ab3b51ab4eaadf21c1a311b2",
+      "bytes": 1331,
+      "original_sha256": "ec6e66dcf6f33424654ee01baf3dd78355eab398ab3b51ab4eaadf21c1a311b2",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "finalize_delivery.py",
+      "sha256": "fad203ff6454e0357fca6c8d7b25ae7cbc6bfc3d9e289ab1de00fe022918c9e5",
+      "bytes": 4957,
+      "original_sha256": "b3c6caceda73845379f64bbc8a5f6899c0cb3547e0ffe7a32fac33c58bb19e1b",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "installed-preimages/world_builder_workspace.py",
+      "sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec",
+      "bytes": 21121,
+      "original_sha256": "f375ca17d12075e0c0ef191a2ef38fa5ea92feef7093e4fd3fbf51bb49b5afec",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "inventory_current_closure.py",
+      "sha256": "6e8166967804556a304ce958e9f9f5192fd5bf8f5fffebc54286bb55f1dbb04b",
+      "bytes": 3987,
+      "original_sha256": "11960e753ca19ebbf42fc9c79e9d26dd3c2ee43ff4d30e5ee5dc27b231a254a3",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "package_public_delivery.py",
+      "sha256": "40e476c8dd1e492d05b53c7902fc33e25ce0cba84cd3be7d24ff46737b281906",
+      "bytes": 10889,
+      "original_sha256": "40e476c8dd1e492d05b53c7902fc33e25ce0cba84cd3be7d24ff46737b281906",
+      "identity_paths_redacted": false
+    },
+    {
+      "path": "prepare_candidate.py",
+      "sha256": "2303113152e0bbf816a9cf65abef54e6f11d4129b64cae5f9236298e5ea37b3f",
+      "bytes": 3433,
+      "original_sha256": "44ff3e819e08d46e2b36a2cbcab6ec4ca4027acd744b7ed26db4d26bd97190ff",
+      "identity_paths_redacted": true
+    },
+    {
+      "path": "test_saved_research.py",
+      "sha256": "fc39e3274cbc5f4d09d70d40625ad8914844a264615b6f93189864463729de72",
+      "bytes": 14558,
+      "original_sha256": "1095d9330dee1a82072208cc85ad429fd7ed55243aa0b52ec70e2acde9bd6bba",
+      "identity_paths_redacted": true
+    }
+  ],
+  "identity_paths_redacted": true,
+  "owner_data_included": false,
+  "instructions": "Evidence snapshot. Redacted @workspace/@user_home paths require relocation; do not rerun consumed receipts or treat recorded tests as a fresh validation."
+}

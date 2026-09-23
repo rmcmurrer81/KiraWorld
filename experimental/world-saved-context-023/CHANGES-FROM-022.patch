@@ -1,0 +1,36 @@
+--- 022/world_builder_workspace.py
++++ 023/world_builder_workspace.py
+@@ -347,20 +347,24 @@
+         try:
+             selected = read_saved_research(item["job_dir"], job_root=DEFAULT_JOB_ROOT)
+         except (OSError, ValueError) as exc:
+-            self._research_latest = None
+-            self.latest_folder = None
+-            self.latest_request = None
+-            close_preview(self._layout_preview)
+-            self._layout_preview = None
++            self.set_saved_research_context(None)
+             self.log(f"Saved research could not be opened: {exc}. Its files were preserved.")
+             return
++        self.set_saved_research_context(selected["job_dir"])
++        self.log(f"Opened saved research: {selected['subject']} | {selected['stage']}")
++        self.log("Use Open Layout Preview or Reference Photos to inspect saved results. No research or generation was started.")
++
++    def set_saved_research_context(self, job_dir: Path | None) -> None:
+         close_preview(self._layout_preview)
+         self._layout_preview = None
+-        self._research_latest = selected["job_dir"]
+-        self.latest_folder = selected["job_dir"]
++        if self._reference_photos_view is not None and self._reference_photos_view.winfo_exists():
++            self._reference_photos_view.destroy()
++        self._reference_photos_view = None
++        if self._original_components_view is not None and self._original_components_view.winfo_exists():
++            self._original_components_view.set_world_job(job_dir)
++        self._research_latest = job_dir
++        self.latest_folder = job_dir
+         self.latest_request = None
+-        self.log(f"Opened saved research: {selected['subject']} | {selected['stage']}")
+-        self.log("Use Open Layout Preview or Reference Photos to inspect saved results. No research or generation was started.")
+ 
+     def _start_next_research(self) -> None:
+         if self._research_worker is not None or not self._research_pending:

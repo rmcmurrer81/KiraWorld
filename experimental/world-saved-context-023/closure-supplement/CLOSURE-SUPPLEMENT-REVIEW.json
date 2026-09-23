@@ -1,0 +1,1042 @@
+{
+  "status": "CURRENT_WORLD_DEPENDENCY_BACKUP_SUPPLEMENT_REVIEWED_NO_GIT_WRITE",
+  "at_utc": "2026-09-23T04:31:37.134461+00:00",
+  "base_commit": "6e33101be637eed21ef68dde3b750dcdef3c2d06",
+  "additional_files": [
+    {
+      "path": "tools/adaptive_source_selection.py",
+      "sha256": "2737bc3838eb6be75693d677d34ef596a377d6ae7a2d16011d3772b101d31363",
+      "original_sha256": "2737bc3838eb6be75693d677d34ef596a377d6ae7a2d16011d3772b101d31363",
+      "identity_paths_redacted": false,
+      "bytes": 12858,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.existing_dependencies_read_only.adaptive_source_selection.py.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.unchanged_guards[10].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/DELIVERY.json",
+          "receipt_sha256": "aef17f841e93caecb8191e01b5a53054afea744cfe458f2c0a460238843f0c63",
+          "digest_fields": [
+            "$.unchanged_resident_dependencies[1].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "95fcadd6fb35fc9abf98f757287e8dcf306877ddeb9c099fd76a9d748ce9e8d2",
+          "digest_fields": [
+            "$.unchanged_dependencies[1].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[16].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[14].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/run_world_builder_school_loop_20260712.py",
+      "sha256": "cd142af49475b91cb999e49548427df692e156280b84f789505df29bad6f8062",
+      "original_sha256": "cd142af49475b91cb999e49548427df692e156280b84f789505df29bad6f8062",
+      "identity_paths_redacted": false,
+      "bytes": 18144,
+      "before_sha256": "fa39367874d5efc64ee57df7a962fb203afa5da31970148048618c14adbe250f",
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": []
+    },
+    {
+      "path": "tools/world_builder_components/bedding/PHYSICS-TEST-RESULT.json",
+      "sha256": "98dfe64d4a4554929217529cfc8fbe057619de971531d6c9e90812099845a37c",
+      "original_sha256": "3752760b1770befdab706bb52c8bbce0c24a125311f7b6ad198c81e07fa723e1",
+      "identity_paths_redacted": true,
+      "bytes": 10434,
+      "before_sha256": null,
+      "validation": "json_parse",
+      "historical_digest_occurrences": []
+    },
+    {
+      "path": "tools/world_builder_engine/__init__.py",
+      "sha256": "f2f1d72149af8fa9ac5baada8f653657e214420a6ae978cdc227156e99d999f7",
+      "original_sha256": "f2f1d72149af8fa9ac5baada8f653657e214420a6ae978cdc227156e99d999f7",
+      "identity_paths_redacted": false,
+      "bytes": 82,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[0].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/analog_case_index.py",
+      "sha256": "2a00f1d4551c70351b966a10deefd7e336204ea173ef14e1c0762ff64dfc4459",
+      "original_sha256": "2a00f1d4551c70351b966a10deefd7e336204ea173ef14e1c0762ff64dfc4459",
+      "identity_paths_redacted": false,
+      "bytes": 10858,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALLED.json",
+          "receipt_sha256": "bb6bf804556dadb83dfc6810c89f33ab6cd3720fc6ed4a9ee0388866bb757d3d",
+          "digest_fields": [
+            "$.changed[0].payload.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/DELIVERY.json",
+          "receipt_sha256": "be7b020061afc8cacbc30d1d663fc3eef5fc05fca82516ba58da0856e35b6603",
+          "digest_fields": [
+            "$.source_pins[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.targets[0].payload.sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/horizontal_navigation.mjs",
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "original_sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "identity_paths_redacted": false,
+      "bytes": 6406,
+      "before_sha256": null,
+      "validation": "node_syntax_check",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[15].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[1].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[15].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[1].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[1].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/index.html",
+      "sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+      "original_sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+      "identity_paths_redacted": false,
+      "bytes": 1772,
+      "before_sha256": null,
+      "validation": "text_asset",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[14].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[2].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[14].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[2].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[2].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/model_client.py",
+      "sha256": "511c3b6e6460429dc74f37e7fcefc00fbb03e7be722bd3df6d9d06937767a769",
+      "original_sha256": "511c3b6e6460429dc74f37e7fcefc00fbb03e7be722bd3df6d9d06937767a769",
+      "identity_paths_redacted": false,
+      "bytes": 6660,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[3].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALLED.json",
+          "receipt_sha256": "353b16951f943ae267e385522c22be69c7b9354049202c8ad4dbe7223d5c580e",
+          "digest_fields": [
+            "$.changed[1].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.paths[0].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/pipeline.py",
+      "sha256": "d3ce47f3f4c48df746ec8bf9c5efd218fc2453675fc1d81dd7790e287c115a8d",
+      "original_sha256": "d3ce47f3f4c48df746ec8bf9c5efd218fc2453675fc1d81dd7790e287c115a8d",
+      "identity_paths_redacted": false,
+      "bytes": 23955,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALLED.json",
+          "receipt_sha256": "bb6bf804556dadb83dfc6810c89f33ab6cd3720fc6ed4a9ee0388866bb757d3d",
+          "digest_fields": [
+            "$.changed[3].payload.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/DELIVERY.json",
+          "receipt_sha256": "be7b020061afc8cacbc30d1d663fc3eef5fc05fca82516ba58da0856e35b6603",
+          "digest_fields": [
+            "$.source_pins[3].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.targets[3].payload.sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/preflight.mjs",
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "original_sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "identity_paths_redacted": false,
+      "bytes": 1374,
+      "before_sha256": null,
+      "validation": "node_syntax_check",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[11].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[5].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[11].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[4].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[3].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/prepare_repair.py",
+      "sha256": "11b7ce237e1bd724c0e9e650096f059430bb7d0ff7a8bc0b4aa6d0f6ee9a47e5",
+      "original_sha256": "11b7ce237e1bd724c0e9e650096f059430bb7d0ff7a8bc0b4aa6d0f6ee9a47e5",
+      "identity_paths_redacted": false,
+      "bytes": 659,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[5].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALLED.json",
+          "receipt_sha256": "353b16951f943ae267e385522c22be69c7b9354049202c8ad4dbe7223d5c580e",
+          "digest_fields": [
+            "$.changed[4].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.paths[3].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/preview_server.py",
+      "sha256": "8723a1a9bf8bfab3d45e016e9fcb01642d1421b75b24bdf0de1aa7ab966a1a80",
+      "original_sha256": "8723a1a9bf8bfab3d45e016e9fcb01642d1421b75b24bdf0de1aa7ab966a1a80",
+      "identity_paths_redacted": false,
+      "bytes": 848,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[10].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[6].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[10].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[6].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[4].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/reviewed_analog_cases.json",
+      "sha256": "60ea520164cd0bd9e1e308de1c76c1531c95ed154da6edcb1b13476c3b48910d",
+      "original_sha256": "60ea520164cd0bd9e1e308de1c76c1531c95ed154da6edcb1b13476c3b48910d",
+      "identity_paths_redacted": false,
+      "bytes": 2233,
+      "before_sha256": null,
+      "validation": "json_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALLED.json",
+          "receipt_sha256": "bb6bf804556dadb83dfc6810c89f33ab6cd3720fc6ed4a9ee0388866bb757d3d",
+          "digest_fields": [
+            "$.changed[1].payload.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/DELIVERY.json",
+          "receipt_sha256": "be7b020061afc8cacbc30d1d663fc3eef5fc05fca82516ba58da0856e35b6603",
+          "digest_fields": [
+            "$.source_pins[1].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.targets[1].payload.sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/style.css",
+      "sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+      "original_sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+      "identity_paths_redacted": false,
+      "bytes": 2156,
+      "before_sha256": null,
+      "validation": "text_asset",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[9].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[7].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[9].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[7].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[5].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/viewer.mjs",
+      "sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+      "original_sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+      "identity_paths_redacted": false,
+      "bytes": 6004,
+      "before_sha256": null,
+      "validation": "node_syntax_check",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[8].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[8].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[8].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[8].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[6].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/walk_controller.mjs",
+      "sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+      "original_sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+      "identity_paths_redacted": false,
+      "bytes": 2903,
+      "before_sha256": null,
+      "validation": "node_syntax_check",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[7].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[9].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[7].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[9].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[7].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/worker.py",
+      "sha256": "4943bf9f7899159b7dc24c354e9f64952184bf8548c0daf879661e8e7342340f",
+      "original_sha256": "4943bf9f7899159b7dc24c354e9f64952184bf8548c0daf879661e8e7342340f",
+      "identity_paths_redacted": false,
+      "bytes": 865,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[6].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[10].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[6].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[10].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[8].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/workspace_adapter.py",
+      "sha256": "4bfe67343638f3d3bb2dac5eede089dfbea75d5ab8cab1db77f226f31f919139",
+      "original_sha256": "4bfe67343638f3d3bb2dac5eede089dfbea75d5ab8cab1db77f226f31f919139",
+      "identity_paths_redacted": false,
+      "bytes": 6296,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[5].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[11].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[5].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "95fcadd6fb35fc9abf98f757287e8dcf306877ddeb9c099fd76a9d748ce9e8d2",
+          "digest_fields": [
+            "$.unchanged_dependencies[3].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[11].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[9].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/world_blueprint.py",
+      "sha256": "94b175bc95214e3a784ef871a3de46388a3356c5924e0871b7b031834eb6b5bc",
+      "original_sha256": "94b175bc95214e3a784ef871a3de46388a3356c5924e0871b7b031834eb6b5bc",
+      "identity_paths_redacted": false,
+      "bytes": 13649,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[4].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[12].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[4].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[12].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[10].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/world_layout_job.py",
+      "sha256": "a2125076c06068fc7d91919537cdf5bdaa8b8266303b594165a731812fd36283",
+      "original_sha256": "a2125076c06068fc7d91919537cdf5bdaa8b8266303b594165a731812fd36283",
+      "identity_paths_redacted": false,
+      "bytes": 16572,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[3].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[13].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[3].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[13].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[11].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/world_layout_preview.py",
+      "sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+      "original_sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+      "identity_paths_redacted": false,
+      "bytes": 22133,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALLED.json",
+          "receipt_sha256": "3cb40ee862c67f5c52168a94c9384ef740ecc8fe265b31ad952d0c18eff46533",
+          "digest_fields": [
+            "$.changed[2].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.source_files[14].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.paths[2].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[14].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[12].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_builder_engine/world_layout_v2.py",
+      "sha256": "dc5d8de4fee7be746012b88928677bf062e2c4c5109d6b516aaa3eab094ca4f8",
+      "original_sha256": "dc5d8de4fee7be746012b88928677bf062e2c4c5109d6b516aaa3eab094ca4f8",
+      "identity_paths_redacted": false,
+      "bytes": 20753,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALLED.json",
+          "receipt_sha256": "bb6bf804556dadb83dfc6810c89f33ab6cd3720fc6ed4a9ee0388866bb757d3d",
+          "digest_fields": [
+            "$.changed[2].payload.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/DELIVERY.json",
+          "receipt_sha256": "be7b020061afc8cacbc30d1d663fc3eef5fc05fca82516ba58da0856e35b6603",
+          "digest_fields": [
+            "$.source_pins[2].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.targets[2].payload.sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_reference_images.py",
+      "sha256": "b1e66184a7152ac53f920bb578341698473b2dd63fa420a20cc0dbf490f3d28a",
+      "original_sha256": "b1e66184a7152ac53f920bb578341698473b2dd63fa420a20cc0dbf490f3d28a",
+      "identity_paths_redacted": false,
+      "bytes": 26538,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALLED.json",
+          "receipt_sha256": "1045e882e4c94bab63e8a68852597c78cdbf7862271c9171e5a78808f36a4666",
+          "digest_fields": [
+            "$.targets[0].payload.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/DELIVERY.json",
+          "receipt_sha256": "aef17f841e93caecb8191e01b5a53054afea744cfe458f2c0a460238843f0c63",
+          "digest_fields": [
+            "$.payload[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "95fcadd6fb35fc9abf98f757287e8dcf306877ddeb9c099fd76a9d748ce9e8d2",
+          "digest_fields": [
+            "$.targets[0].payload.sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_reference_images_adapter.py",
+      "sha256": "4ccfaf7dd651cfcc866dd09e2f1ba53cc2632c99c811c1d98155b6d0583063fe",
+      "original_sha256": "4ccfaf7dd651cfcc866dd09e2f1ba53cc2632c99c811c1d98155b6d0583063fe",
+      "identity_paths_redacted": false,
+      "bytes": 18321,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALLED.json",
+          "receipt_sha256": "1045e882e4c94bab63e8a68852597c78cdbf7862271c9171e5a78808f36a4666",
+          "digest_fields": [
+            "$.targets[1].payload.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/DELIVERY.json",
+          "receipt_sha256": "aef17f841e93caecb8191e01b5a53054afea744cfe458f2c0a460238843f0c63",
+          "digest_fields": [
+            "$.payload[1].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "95fcadd6fb35fc9abf98f757287e8dcf306877ddeb9c099fd76a9d748ce9e8d2",
+          "digest_fields": [
+            "$.targets[1].payload.sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_research.py",
+      "sha256": "2d967dc31da7ea95a2b5c59ca819967a53ad162c0170ffdcfe86b8103f8fdcfd",
+      "original_sha256": "2d967dc31da7ea95a2b5c59ca819967a53ad162c0170ffdcfe86b8103f8fdcfd",
+      "identity_paths_redacted": false,
+      "bytes": 45392,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-reference-images-candidate/DELIVERY.json",
+          "receipt_sha256": "aef17f841e93caecb8191e01b5a53054afea744cfe458f2c0a460238843f0c63",
+          "digest_fields": [
+            "$.unchanged_resident_dependencies[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "95fcadd6fb35fc9abf98f757287e8dcf306877ddeb9c099fd76a9d748ce9e8d2",
+          "digest_fields": [
+            "$.unchanged_dependencies[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-analog-cases-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "34feb6ecbef4ec9aba58784b8a4c6b2598092bab4db2fcc52d363e2f01133339",
+          "digest_fields": [
+            "$.unchanged_guards[15].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALLED.json",
+          "receipt_sha256": "353b16951f943ae267e385522c22be69c7b9354049202c8ad4dbe7223d5c580e",
+          "digest_fields": [
+            "$.changed[0].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.paths[4].sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tools/world_research_workspace_adapter.py",
+      "sha256": "ebfac020d888d86ee813fbbada4db418399d854e10d114bdcf56156c47566732",
+      "original_sha256": "ebfac020d888d86ee813fbbada4db418399d854e10d114bdcf56156c47566732",
+      "identity_paths_redacted": false,
+      "bytes": 1337,
+      "before_sha256": null,
+      "validation": "python_ast_parse",
+      "historical_digest_occurrences": [
+        {
+          "receipt": "work/world-research-integration/integration-manifest.json",
+          "receipt_sha256": "b661b88810e207d0075d2196d148c64186a42c5b3e73920d4a9ac1d68da94aa4",
+          "digest_fields": [
+            "$.targets[1].new_sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/DELIVERY.json",
+          "receipt_sha256": "8e5474209cbd9ecf3678fc7b33e32442c12582a352488b6ce61921112fa21da4",
+          "digest_fields": [
+            "$.existing_dependencies_read_only.world_research_workspace_adapter.py.sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-builder-pipeline-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "d4a951dbebbe86ea2f46bc6a21a5d198c3d71fd4b4e3a156712f4694f60df9b1",
+          "digest_fields": [
+            "$.unchanged_guards[11].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-reference-images-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "95fcadd6fb35fc9abf98f757287e8dcf306877ddeb9c099fd76a9d748ce9e8d2",
+          "digest_fields": [
+            "$.unchanged_dependencies[2].sha256"
+          ]
+        },
+        {
+          "receipt": "work/world-repair-candidate/INSTALL-PLAN.json",
+          "receipt_sha256": "30cdca00c43be34e0d448cc81104d736834b01987edaa7894c169bc291960293",
+          "digest_fields": [
+            "$.unchanged_guards[15].sha256"
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "25 exact current owned code/assets and1 technical proof with identity paths redacted;25 absent and1 stale on public main, plus the already proposed2 installed023 files. No owner jobs, media or memories added by this supplement.",
+  "privacy_review": "The PHYSICS-TEST-RESULT technical proof contained11 local evidence paths; only those are redacted. No local username/path or literal secret assignment pattern or authenticated URL found in the final26 payload files. Technical JSON includes historical numerical results and reviewed public-source identities, not private owner job contents.",
+  "prior_receipt_interpretation": "Digest occurrences are provenance crossreferences only; prior tests were not rerun and historical proof is not new acceptance.",
+  "canonical_files_changed": false,
+  "gpu_model_ui_started": false,
+  "closure_total": 67,
+  "already_exact_on_base": 39,
+  "actual_canonical_source_changes_in_manifest": 28,
+  "native_ui_review": "ROOT-NATIVE-UI-REVIEW.json validates saved reopening only; world generation/quality remains unfinished."
+}

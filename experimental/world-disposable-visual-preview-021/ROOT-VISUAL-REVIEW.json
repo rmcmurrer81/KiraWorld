@@ -1,0 +1,33 @@
+{
+  "status": "EARLY_VISUAL_INSPECTION_ONLY_NOT_INSTALL_APPROVAL",
+  "frames": 120,
+  "simulated_seconds": 2,
+  "sequence": [
+    "12 initial frames",
+    "to60 settling",
+    "lift corner to96",
+    "release to120",
+    "angle and side views"
+  ],
+  "observations": [
+    "Blue cloth visibly changed from flat elevated sheet to draped sides.",
+    "Corner lift and release changed shape without an observed explosive jump in sampled views.",
+    "Final side and angle views showed no obvious top contact penetration; UI reported zero frame intersections.",
+    "Regular broad square-like surface waves and simplified material still look like an engineering study.",
+    "304px panel crops geometry; tested desktop1280x900 to see contact extent."
+  ],
+  "final_ui": {
+    "cloth_speed_m_s": 0.094,
+    "maximum_stretch_percent": 2.3,
+    "frame_intersections": 0
+  },
+  "limits": [
+    "Early states only, not complete1110frame trajectory",
+    "No mattress/head loading or cross-bed dragging in this sequence",
+    "Closed-side/underside contact, self collision, ownership and full world readiness remain unvalidated"
+  ],
+  "owner_approval": false,
+  "installed": false,
+  "browser_tab_closed": true,
+  "viewport_reset": true
+}
