@@ -1,0 +1,59 @@
+--- installed/walk_controller.mjs
++++ candidate050/walk_controller.mjs
+@@ -104,9 +104,19 @@
+     const p=door.portal;const x=p.axis==='x'?p.coordinate:p.center,z=p.axis==='x'?p.center:p.coordinate;
+     return Math.hypot(feet[0]-x,feet[2]-z)<=REACH;
+   }
+-  function nearest(feet){
++  function nearest(feet,yaw=null){
+     ensure(vector(feet),'Invalid door interaction position');
+-    const candidates=[...doors.values()].filter(d=>near(d,feet));
++    ensure(yaw===null||Number.isFinite(yaw),'Invalid door interaction direction');
++    const candidates=[...doors.values()].filter(d=>{
++      if(!near(d,feet))return false;
++      if(yaw===null)return true; // Explicit low-level callers retain proximity queries.
++      const dx=(d.axis==='x'?d.portal.coordinate:d.portal.center)-feet[0];
++      const dz=(d.axis==='x'?d.portal.center:d.portal.coordinate)-feet[2];
++      const distance=Math.hypot(dx,dz);
++      // The walking camera looks along [sin(yaw),0,-cos(yaw)]. A door behind
++      // the user must not win F/button selection merely because it is closer.
++      return distance<1e-8||(dx*Math.sin(yaw)-dz*Math.cos(yaw))/distance>=.5;
++    });
+     candidates.sort((a,b)=>{
+       const dist=d=>Math.hypot(feet[0]-(d.axis==='x'?d.portal.coordinate:d.portal.center),feet[2]-(d.axis==='x'?d.portal.center:d.portal.coordinate));
+       return dist(a)-dist(b)||a.id.localeCompare(b.id);
+@@ -178,7 +188,7 @@
+     const current = geometry.rooms.find(r => r.access === 'walkable_layout' && r.floor_y === feet[1] &&
+       feet[0] >= r.x && feet[0] <= r.x+r.width && feet[2] >= r.z && feet[2] <= r.z+r.depth);
+     return Object.freeze({feet:Object.freeze([...feet]), yaw, pitch, blocked, distance,
+-      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet)});
++      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet,yaw)});
+   }
+   function look(dx,dy) {
+     if (!Number.isFinite(dx) || !Number.isFinite(dy)) throw new TypeError('Invalid look input');
+@@ -213,6 +223,10 @@
+     return snapshot();
+   }
+   // No direct-position setter, fly mode, level snapping, or teleport route.
+-  function toggleDoor(id){return doors.toggle(id||doors.nearest(feet)?.id,feet);}
++  function toggleDoor(id){
++    const selected=id||doors.nearest(feet,yaw)?.id;
++    if(!selected)return freeze({ok:false,reason:'Face a nearby door to open or close it.'});
++    return doors.toggle(selected,feet);
++  }
+   return Object.freeze({snapshot,step,look,toggleDoor,doorAssemblies:doors.assemblies,doorStates:doors.all});
+ }
+--- installed/viewer.mjs
++++ candidate050/viewer.mjs
+@@ -538,9 +538,9 @@
+     }
+     const nearby=state.nearbyDoor,moving=nearby&&(nearby.state==='opening'||nearby.state==='closing');
+     doorButton.disabled=!nearby||moving;
+-    doorButton.textContent=!nearby?'Approach a door · F':moving?'Door moving…':nearby.state==='closed'?'Open door · F':'Close door · F';
++    doorButton.textContent=!nearby?'Face a nearby door · F':moving?'Door moving…':nearby.state==='closed'?'Open door · F':'Close door · F';
+     doorMessage.textContent=nearby?.motionHeld?'Door paused — step away from its swing.':
+-      now<doorNoticeUntil?doorNotice:nearby?'Door '+nearby.state+'. Leave room for it to swing.':'Framed doors open and close. Press F when nearby.';
++      now<doorNoticeUntil?doorNotice:nearby?'Door '+nearby.state+'. Leave room for it to swing.':'Face a nearby framed door and press F to open or close it.';
+     camera.position.set(state.feet[0],state.feet[1]+AVATAR.eye,state.feet[2]);camera.rotation.set(state.pitch,-state.yaw,0);
+     const status=state.roomName+'|'+state.blocked;
+     if(status!==lastStatus){roomLabel.textContent=state.roomName;movement.textContent=state.blocked==='door_obstruction'?'Door or frame blocks the way — open it with F':state.blocked==='furniture_obstruction'?'Furniture blocks the way — walk around it':state.blocked==='solid_obstruction'?'Wall or low ceiling — turn toward a passage':state.blocked?'No supported floor in that direction':'Walking inside the layout · unfinished materials';lastStatus=status;}

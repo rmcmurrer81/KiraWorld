@@ -1,0 +1,130 @@
+--- installed/walk_controller.mjs
++++ candidate051/walk_controller.mjs
+@@ -104,9 +104,19 @@
+     const p=door.portal;const x=p.axis==='x'?p.coordinate:p.center,z=p.axis==='x'?p.center:p.coordinate;
+     return Math.hypot(feet[0]-x,feet[2]-z)<=REACH;
+   }
+-  function nearest(feet){
++  function nearest(feet,yaw=null){
+     ensure(vector(feet),'Invalid door interaction position');
+-    const candidates=[...doors.values()].filter(d=>near(d,feet));
++    ensure(yaw===null||Number.isFinite(yaw),'Invalid door interaction direction');
++    const candidates=[...doors.values()].filter(d=>{
++      if(!near(d,feet))return false;
++      if(yaw===null)return true; // Explicit low-level callers retain proximity queries.
++      const dx=(d.axis==='x'?d.portal.coordinate:d.portal.center)-feet[0];
++      const dz=(d.axis==='x'?d.portal.center:d.portal.coordinate)-feet[2];
++      const distance=Math.hypot(dx,dz);
++      // The walking camera looks along [sin(yaw),0,-cos(yaw)]. A door behind
++      // the user must not win F/button selection merely because it is closer.
++      return distance<1e-8||(dx*Math.sin(yaw)-dz*Math.cos(yaw))/distance>=.5;
++    });
+     candidates.sort((a,b)=>{
+       const dist=d=>Math.hypot(feet[0]-(d.axis==='x'?d.portal.coordinate:d.portal.center),feet[2]-(d.axis==='x'?d.portal.center:d.portal.coordinate));
+       return dist(a)-dist(b)||a.id.localeCompare(b.id);
+@@ -178,7 +188,7 @@
+     const current = geometry.rooms.find(r => r.access === 'walkable_layout' && r.floor_y === feet[1] &&
+       feet[0] >= r.x && feet[0] <= r.x+r.width && feet[2] >= r.z && feet[2] <= r.z+r.depth);
+     return Object.freeze({feet:Object.freeze([...feet]), yaw, pitch, blocked, distance,
+-      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet)});
++      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet,yaw)});
+   }
+   function look(dx,dy) {
+     if (!Number.isFinite(dx) || !Number.isFinite(dy)) throw new TypeError('Invalid look input');
+@@ -213,6 +223,10 @@
+     return snapshot();
+   }
+   // No direct-position setter, fly mode, level snapping, or teleport route.
+-  function toggleDoor(id){return doors.toggle(id||doors.nearest(feet)?.id,feet);}
++  function toggleDoor(id){
++    const selected=id||doors.nearest(feet,yaw)?.id;
++    if(!selected)return freeze({ok:false,reason:'Face a nearby door to open or close it.'});
++    return doors.toggle(selected,feet);
++  }
+   return Object.freeze({snapshot,step,look,toggleDoor,doorAssemblies:doors.assemblies,doorStates:doors.all});
+ }
+--- installed/viewer.mjs
++++ candidate051/viewer.mjs
+@@ -538,9 +538,9 @@
+     }
+     const nearby=state.nearbyDoor,moving=nearby&&(nearby.state==='opening'||nearby.state==='closing');
+     doorButton.disabled=!nearby||moving;
+-    doorButton.textContent=!nearby?'Approach a door · F':moving?'Door moving…':nearby.state==='closed'?'Open door · F':'Close door · F';
++    doorButton.textContent=!nearby?'Face a nearby door · F':moving?'Door moving…':nearby.state==='closed'?'Open door · F':'Close door · F';
+     doorMessage.textContent=nearby?.motionHeld?'Door paused — step away from its swing.':
+-      now<doorNoticeUntil?doorNotice:nearby?'Door '+nearby.state+'. Leave room for it to swing.':'Framed doors open and close. Press F when nearby.';
++      now<doorNoticeUntil?doorNotice:nearby?'Door '+nearby.state+'. Leave room for it to swing.':'Face a nearby framed door and press F to open or close it.';
+     camera.position.set(state.feet[0],state.feet[1]+AVATAR.eye,state.feet[2]);camera.rotation.set(state.pitch,-state.yaw,0);
+     const status=state.roomName+'|'+state.blocked;
+     if(status!==lastStatus){roomLabel.textContent=state.roomName;movement.textContent=state.blocked==='door_obstruction'?'Door or frame blocks the way — open it with F':state.blocked==='furniture_obstruction'?'Furniture blocks the way — walk around it':state.blocked==='solid_obstruction'?'Wall or low ceiling — turn toward a passage':state.blocked?'No supported floor in that direction':'Walking inside the layout · unfinished materials';lastStatus=status;}
+--- installed/layout_package_export.py
++++ candidate051/layout_package_export.py
+@@ -12,8 +12,8 @@
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+ CONTRACT='authored_saved_layout_package_v2'
+ RENDERER={
+- 'viewer.mjs':'4012cfc0f23857ae6edb8723012a098b68801096fd0ec81bead6d0747980fd96',
+- 'walk_controller.mjs':'0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791',
++ 'viewer.mjs':'719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299',
++ 'walk_controller.mjs':'05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f',
+  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
+  'three.core.js':'eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20'}
+--- installed/layout_package_assets/source/walk_controller.mjs
++++ candidate051/layout_package_assets/source/walk_controller.mjs
+@@ -104,9 +104,19 @@
+     const p=door.portal;const x=p.axis==='x'?p.coordinate:p.center,z=p.axis==='x'?p.center:p.coordinate;
+     return Math.hypot(feet[0]-x,feet[2]-z)<=REACH;
+   }
+-  function nearest(feet){
++  function nearest(feet,yaw=null){
+     ensure(vector(feet),'Invalid door interaction position');
+-    const candidates=[...doors.values()].filter(d=>near(d,feet));
++    ensure(yaw===null||Number.isFinite(yaw),'Invalid door interaction direction');
++    const candidates=[...doors.values()].filter(d=>{
++      if(!near(d,feet))return false;
++      if(yaw===null)return true; // Explicit low-level callers retain proximity queries.
++      const dx=(d.axis==='x'?d.portal.coordinate:d.portal.center)-feet[0];
++      const dz=(d.axis==='x'?d.portal.center:d.portal.coordinate)-feet[2];
++      const distance=Math.hypot(dx,dz);
++      // The walking camera looks along [sin(yaw),0,-cos(yaw)]. A door behind
++      // the user must not win F/button selection merely because it is closer.
++      return distance<1e-8||(dx*Math.sin(yaw)-dz*Math.cos(yaw))/distance>=.5;
++    });
+     candidates.sort((a,b)=>{
+       const dist=d=>Math.hypot(feet[0]-(d.axis==='x'?d.portal.coordinate:d.portal.center),feet[2]-(d.axis==='x'?d.portal.center:d.portal.coordinate));
+       return dist(a)-dist(b)||a.id.localeCompare(b.id);
+@@ -191,7 +201,7 @@
+     const current = geometry.rooms.find(r => r.access === 'walkable_layout' && r.floor_y === feet[1] &&
+       feet[0] >= r.x && feet[0] <= r.x+r.width && feet[2] >= r.z && feet[2] <= r.z+r.depth);
+     return Object.freeze({feet:Object.freeze([...feet]), yaw, pitch, blocked, distance,
+-      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet)});
++      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet,yaw)});
+   }
+   function look(dx,dy) {
+     if (!Number.isFinite(dx) || !Number.isFinite(dy)) throw new TypeError('Invalid look input');
+@@ -226,6 +236,10 @@
+     return snapshot();
+   }
+   // No direct-position setter, fly mode, level snapping, or teleport route.
+-  function toggleDoor(id){return doors.toggle(id||doors.nearest(feet)?.id,feet);}
++  function toggleDoor(id){
++    const selected=id||doors.nearest(feet,yaw)?.id;
++    if(!selected)return freeze({ok:false,reason:'Face a nearby door to open or close it.'});
++    return doors.toggle(selected,feet);
++  }
+   return Object.freeze({snapshot,step,look,toggleDoor,doorAssemblies:doors.assemblies,doorStates:doors.all});
+ }
+--- installed/layout_package_assets/PRODUCER-PINS.json
++++ candidate051/layout_package_assets/PRODUCER-PINS.json
+@@ -34,8 +34,8 @@
+       "bytes": 14706
+     },
+     "source/walk_controller.mjs": {
+-      "sha256": "6939c804849f787b24e69391b7b8f4a33f527502ac7d8806609c46e922a80f89",
+-      "bytes": 16354
++      "sha256": "e7cfe0c2ca7fe8d5de20f88bab07ef27f64c10b4e7d75d436d55e4f207cac612",
++      "bytes": 16899
+     },
+     "source_bindings.py": {
+       "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",

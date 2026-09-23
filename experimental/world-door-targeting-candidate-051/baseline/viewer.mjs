@@ -538,9 +538,9 @@ async function start(){
     }
     const nearby=state.nearbyDoor,moving=nearby&&(nearby.state==='opening'||nearby.state==='closing');
     doorButton.disabled=!nearby||moving;
-    doorButton.textContent=!nearby?'Face a nearby door · F':moving?'Door moving…':nearby.state==='closed'?'Open door · F':'Close door · F';
+    doorButton.textContent=!nearby?'Approach a door · F':moving?'Door moving…':nearby.state==='closed'?'Open door · F':'Close door · F';
     doorMessage.textContent=nearby?.motionHeld?'Door paused — step away from its swing.':
-      now<doorNoticeUntil?doorNotice:nearby?'Door '+nearby.state+'. Leave room for it to swing.':'Face a nearby framed door and press F to open or close it.';
+      now<doorNoticeUntil?doorNotice:nearby?'Door '+nearby.state+'. Leave room for it to swing.':'Framed doors open and close. Press F when nearby.';
     camera.position.set(state.feet[0],state.feet[1]+AVATAR.eye,state.feet[2]);camera.rotation.set(state.pitch,-state.yaw,0);
     const status=state.roomName+'|'+state.blocked;
     if(status!==lastStatus){roomLabel.textContent=state.roomName;movement.textContent=state.blocked==='door_obstruction'?'Door or frame blocks the way — open it with F':state.blocked==='furniture_obstruction'?'Furniture blocks the way — walk around it':state.blocked==='solid_obstruction'?'Wall or low ceiling — turn toward a passage':state.blocked?'No supported floor in that direction':'Walking inside the layout · unfinished materials';lastStatus=status;}

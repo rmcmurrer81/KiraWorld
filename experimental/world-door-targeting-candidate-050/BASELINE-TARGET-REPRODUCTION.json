@@ -1,0 +1,94 @@
+{
+  "status": "BASELINE_ACTUAL_SAVED_AIRLOCK_DIRECTION_IGNORED",
+  "geometry_sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+  "facingExit": {
+    "feet": [
+      1.5,
+      0,
+      -2.099999999999995
+    ],
+    "yaw": 3.141592653589793,
+    "pitch": 0,
+    "blocked": null,
+    "distance": 4.400000000000004,
+    "roomId": "airlock",
+    "roomName": "Primary Airlock",
+    "nearbyDoor": {
+      "id": "opening_1",
+      "axis": "z",
+      "angle": 1.5707963267948966,
+      "center": [
+        0.92,
+        1.1,
+        -4.58
+      ],
+      "size": [
+        1.16,
+        2.1750000000000003,
+        0.065
+      ],
+      "state": "open",
+      "motionHeld": false,
+      "collider": {
+        "id": "door_opening_1_leaf",
+        "min": [
+          0.8875,
+          0.012499999999999956,
+          -5.16
+        ],
+        "max": [
+          0.9525000000000001,
+          2.1875,
+          -4
+        ]
+      }
+    }
+  },
+  "facingEntry": {
+    "feet": [
+      1.5,
+      0,
+      -2.099999999999995
+    ],
+    "yaw": 6.283185307179586,
+    "pitch": 0,
+    "blocked": null,
+    "distance": 4.400000000000004,
+    "roomId": "airlock",
+    "roomName": "Primary Airlock",
+    "nearbyDoor": {
+      "id": "opening_1",
+      "axis": "z",
+      "angle": 1.5707963267948966,
+      "center": [
+        0.92,
+        1.1,
+        -4.58
+      ],
+      "size": [
+        1.16,
+        2.1750000000000003,
+        0.065
+      ],
+      "state": "open",
+      "motionHeld": false,
+      "collider": {
+        "id": "door_opening_1_leaf",
+        "min": [
+          0.8875,
+          0.012499999999999956,
+          -5.16
+        ],
+        "max": [
+          0.9525000000000001,
+          2.1875,
+          -4
+        ]
+      }
+    }
+  },
+  "looking_direction_changed": true,
+  "same_target_after_half_turn": true,
+  "source_unchanged": true,
+  "models_gpu_ui": 0
+}

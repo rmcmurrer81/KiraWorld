@@ -1,0 +1,8 @@
+{
+  "status": "HARNESS_COMBINED_COLLIDER_LIMIT_FAILURE",
+  "error": "TypeError: Invalid navigation geometry",
+  "cause": "The test combined structure, moving doors and furnishings into one collection exceeding the128-item navigation bound. The actual controller validates these three collections separately.",
+  "correction": "Use three independent navigation calls to assess the union of obstructions without changing the installed limit or controller behavior.",
+  "candidate_changes_for_harness_correction": 0,
+  "models_gpu_ui_owner_writes": 0
+}

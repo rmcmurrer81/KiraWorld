@@ -1,0 +1,170 @@
+{
+  "status": "PORTABLE_ACTUAL_SAVED_MARS_FACING_AND_DOOR_MECHANICS_PASS",
+  "checks": [
+    "Actual furnished airlock: F selects the faced exit, not the closer closed door behind",
+    "Actual airlock: looking at exit cannot bypass an open paired entry",
+    "Actual airlock: turning sideways yields no target or hidden door mutation",
+    "Actual furnished corridor: looking west targets Operations and east targets Crew Living",
+    "All six actual doors retain exact poses, frames, collisions and open/closed routes",
+    "Low-level explicit proximity queries and targeted actions remain compatible",
+    "Actual saved geometry and caller object remain unchanged"
+  ],
+  "checks_count": 7,
+  "captures": {
+    "airlock": {
+      "feet": [
+        1.5,
+        0,
+        -2.099999999999995
+      ],
+      "yaw": 3.141592653589793,
+      "baseline_target": "opening_1",
+      "candidate_target": "opening_2"
+    },
+    "interlock": {
+      "ok": false,
+      "reason": "The door to Equipment Vestibule must be fully closed and stopped before opening this airlock door.",
+      "interlock": {
+        "contract": "paired_airlock_door_sequence_v1",
+        "roomId": "airlock",
+        "peerDoorId": "opening_1"
+      }
+    },
+    "corridor": {
+      "baseline": {
+        "feet": [
+          1.5,
+          0,
+          2.7400000000000055
+        ],
+        "west": "opening_4",
+        "east": "opening_4"
+      },
+      "candidate": {
+        "feet": [
+          1.5,
+          0,
+          2.7400000000000055
+        ],
+        "west": "opening_3",
+        "east": "opening_4"
+      }
+    },
+    "routes": [
+      {
+        "id": "opening_1",
+        "closed": "blocked",
+        "open_both_directions": "clear",
+        "reclosed": "blocked"
+      },
+      {
+        "id": "opening_2",
+        "closed": "blocked",
+        "open_both_directions": "clear",
+        "reclosed": "blocked"
+      },
+      {
+        "id": "opening_3",
+        "closed": "blocked",
+        "open_both_directions": "clear",
+        "reclosed": "blocked"
+      },
+      {
+        "id": "opening_4",
+        "closed": "blocked",
+        "open_both_directions": "clear",
+        "reclosed": "blocked"
+      },
+      {
+        "id": "opening_5",
+        "closed": "blocked",
+        "open_both_directions": "clear",
+        "reclosed": "blocked"
+      },
+      {
+        "id": "opening_6",
+        "closed": "blocked",
+        "open_both_directions": "clear",
+        "reclosed": "blocked"
+      }
+    ]
+  },
+  "geometry_sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+  "dressing_source_sha256": "3508293926fd6e9c5e95bef8af0c12c2ec727c02c83fb570f3c88617a1cb42f3",
+  "furniture_colliders": 51,
+  "room_equipment": [
+    {
+      "room_id": "equipment_vestibule",
+      "kind": "eva_lockers"
+    },
+    {
+      "room_id": "equipment_vestibule",
+      "kind": "gear_bench"
+    },
+    {
+      "room_id": "equipment_vestibule",
+      "kind": "hose_station"
+    },
+    {
+      "room_id": "airlock",
+      "kind": "airlock_control"
+    },
+    {
+      "room_id": "airlock",
+      "kind": "filter_cylinders"
+    },
+    {
+      "room_id": "operations",
+      "kind": "operations_console"
+    },
+    {
+      "room_id": "operations",
+      "kind": "server_rack"
+    },
+    {
+      "room_id": "operations",
+      "kind": "operations_console"
+    },
+    {
+      "room_id": "habitat",
+      "kind": "bunk"
+    },
+    {
+      "room_id": "habitat",
+      "kind": "galley"
+    },
+    {
+      "room_id": "habitat",
+      "kind": "personal_storage"
+    },
+    {
+      "room_id": "laboratory",
+      "kind": "glovebox"
+    },
+    {
+      "room_id": "laboratory",
+      "kind": "science_bench"
+    },
+    {
+      "room_id": "laboratory",
+      "kind": "sample_storage"
+    },
+    {
+      "room_id": "observation",
+      "kind": "observation_seat"
+    },
+    {
+      "room_id": "observation",
+      "kind": "growing_rack"
+    }
+  ],
+  "models_gpu_ui": 0,
+  "owner_geometry_copied_or_modified": false,
+  "visual_or_owner_approval": false,
+  "limits": [
+    "Targets use a horizontal60-degree facing cone, not pixel picking or occlusion raycasts.",
+    "Low-level explicit door IDs retain their proximity/sweep/interlock contract.",
+    "Conservative collision, session-local door states, no pressure or exterior EVA simulation remain unchanged.",
+    "No visual review or installation; immutable preview/export checks are recorded separately."
+  ]
+}

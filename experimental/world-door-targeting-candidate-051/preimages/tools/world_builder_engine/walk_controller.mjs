@@ -104,19 +104,9 @@ export function createDoorSystem(geometry){
     const p=door.portal;const x=p.axis==='x'?p.coordinate:p.center,z=p.axis==='x'?p.center:p.coordinate;
     return Math.hypot(feet[0]-x,feet[2]-z)<=REACH;
   }
-  function nearest(feet,yaw=null){
+  function nearest(feet){
     ensure(vector(feet),'Invalid door interaction position');
-    ensure(yaw===null||Number.isFinite(yaw),'Invalid door interaction direction');
-    const candidates=[...doors.values()].filter(d=>{
-      if(!near(d,feet))return false;
-      if(yaw===null)return true; // Explicit low-level callers retain proximity queries.
-      const dx=(d.axis==='x'?d.portal.coordinate:d.portal.center)-feet[0];
-      const dz=(d.axis==='x'?d.portal.center:d.portal.coordinate)-feet[2];
-      const distance=Math.hypot(dx,dz);
-      // The walking camera looks along [sin(yaw),0,-cos(yaw)]. A door behind
-      // the user must not win F/button selection merely because it is closer.
-      return distance<1e-8||(dx*Math.sin(yaw)-dz*Math.cos(yaw))/distance>=.5;
-    });
+    const candidates=[...doors.values()].filter(d=>near(d,feet));
     candidates.sort((a,b)=>{
       const dist=d=>Math.hypot(feet[0]-(d.axis==='x'?d.portal.coordinate:d.portal.center),feet[2]-(d.axis==='x'?d.portal.center:d.portal.coordinate));
       return dist(a)-dist(b)||a.id.localeCompare(b.id);
@@ -152,20 +142,7 @@ export function createDoorSystem(geometry){
     }
     return all();
   }
-  // Authoring metadata only: independent of current session angles/state.
-  // Export the same dimensions/hinges used by pose/collision, not inferred meshes.
-  function definitions(){return freeze([...doors.values()].map(d=>freeze({
-    id:d.id,portalId:d.id,roomAId:d.portal.room_a,roomBId:d.portal.room_b,
-    hinge:freeze([...d.hinge]),rotationAxis:freeze([0,1,0]),closedAngle:0,openAngle:d.targetAngle,
-    leafSize:freeze(d.axis==='x'?[DOOR_THICKNESS,d.height,d.width]:[d.width,d.height,DOOR_THICKNESS]),
-    leafLocalCenter:freeze(d.axis==='x'?[0,.0125+d.height/2,d.width/2]:[d.width/2,.0125+d.height/2,0]),
-    angularSpeed:Math.PI*1.25,maxStepSeconds:.05,interactionReach:REACH,
-    frames:freeze(d.frames.map(f=>freeze({id:f.id,center:freeze([...f.center]),size:freeze([...f.size])}))),
-    swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),
-    collisionPolicy:'conservative_rotated_leaf_aabb_and_quarter_disc_sweep',
-    initialState:'closed',statePersistence:'session_local',pressureSimulation:false
-  })));}
-  return freeze({contract:DOOR_CONTRACT,all,assemblies,definitions,colliders,nearest,toggle,advance,interlocks});
+  return freeze({contract:DOOR_CONTRACT,all,assemblies,colliders,nearest,toggle,advance,interlocks});
 }
 
 export function createWalkController(geometry,{extraColliders=[]}={}) {
@@ -201,7 +178,7 @@ export function createWalkController(geometry,{extraColliders=[]}={}) {
     const current = geometry.rooms.find(r => r.access === 'walkable_layout' && r.floor_y === feet[1] &&
       feet[0] >= r.x && feet[0] <= r.x+r.width && feet[2] >= r.z && feet[2] <= r.z+r.depth);
     return Object.freeze({feet:Object.freeze([...feet]), yaw, pitch, blocked, distance,
-      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet,yaw)});
+      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet)});
   }
   function look(dx,dy) {
     if (!Number.isFinite(dx) || !Number.isFinite(dy)) throw new TypeError('Invalid look input');
@@ -236,10 +213,6 @@ export function createWalkController(geometry,{extraColliders=[]}={}) {
     return snapshot();
   }
   // No direct-position setter, fly mode, level snapping, or teleport route.
-  function toggleDoor(id){
-    const selected=id||doors.nearest(feet,yaw)?.id;
-    if(!selected)return freeze({ok:false,reason:'Face a nearby door to open or close it.'});
-    return doors.toggle(selected,feet);
-  }
+  function toggleDoor(id){return doors.toggle(id||doors.nearest(feet)?.id,feet);}
   return Object.freeze({snapshot,step,look,toggleDoor,doorAssemblies:doors.assemblies,doorStates:doors.all});
 }

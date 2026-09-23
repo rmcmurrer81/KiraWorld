@@ -1,0 +1,82 @@
+{
+  "ACTUAL-DOOR-TEST-RESULT.json": {
+    "sha256": "302936e20a600c7214af7f9081f9dd1f5da80de8a3cda1bbe2cdd04bc716d3c4",
+    "bytes": 4396
+  },
+  "AUDIT.md": {
+    "sha256": "d045a7ec25640ebb179d87f230370b05521885b89a44241400ff8b7cfc5a6885",
+    "bytes": 6144
+  },
+  "baseline/horizontal_navigation.mjs": {
+    "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+    "bytes": 6406
+  },
+  "baseline/viewer.mjs": {
+    "sha256": "4012cfc0f23857ae6edb8723012a098b68801096fd0ec81bead6d0747980fd96",
+    "bytes": 43797
+  },
+  "baseline/walk_controller.mjs": {
+    "sha256": "0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791",
+    "bytes": 15059
+  },
+  "BASELINE-TARGET-REPRODUCTION.json": {
+    "sha256": "696a054456ab1e98cf6d416b07052f489aee22b6b66593f0647249528f97a05c",
+    "bytes": 1886
+  },
+  "candidate/tools/world_builder_engine/horizontal_navigation.mjs": {
+    "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+    "bytes": 6406
+  },
+  "candidate/tools/world_builder_engine/viewer.mjs": {
+    "sha256": "719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299",
+    "bytes": 43809
+  },
+  "candidate/tools/world_builder_engine/walk_controller.mjs": {
+    "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+    "bytes": 15835
+  },
+  "finalize.py": {
+    "sha256": "9d4960a000073825de9513a87b7d9342d4b80fd356dfa0146a12e80b82f219b3",
+    "bytes": 3543
+  },
+  "history/combined-collider-harness-failure/FAILURE.json": {
+    "sha256": "67f962b3259fa424ea7e1c65d5e58905ec241e997d6bcb15d93ded3e4ca7f2d1",
+    "bytes": 550
+  },
+  "history/combined-collider-harness-failure/test_actual_doors.mjs": {
+    "sha256": "cbd09ff3956d04462ebac16158f38857ea9d230c624bd06ebdbb96fb8785b6a9",
+    "bytes": 7058
+  },
+  "PRESERVATION.json": {
+    "sha256": "5325b4b85241ebd63ca9ce3dce8d7089570f9509e068a79515e384fe310be46b",
+    "bytes": 234
+  },
+  "reproduce.mjs": {
+    "sha256": "8a44a130a5c94c5746af8ed8fbececeb0d27df3cae50ab8fbf09b112e6ae2cb2",
+    "bytes": 1287
+  },
+  "REVIEW-PLAN.json": {
+    "sha256": "d3363d1e43fac45655548ee3fed1b6b993f55d293821352b8e01ca08cf351caa",
+    "bytes": 24200
+  },
+  "SOURCE-PINS.json": {
+    "sha256": "5b453252e62b20f9a6ba9a58696f192dfd72bb018aa34593a9811f43316729c9",
+    "bytes": 984
+  },
+  "SOURCE.diff": {
+    "sha256": "31c4209b4794a18b034a4c5f2819c398cfc3c64d0240d783456467c4c3d8394c",
+    "bytes": 4154
+  },
+  "test_actual_doors.mjs": {
+    "sha256": "d637039e3500c91c02fe87e397f6d6d7a97ab7bf221d57053eee6dcbb60daa29",
+    "bytes": 7231
+  },
+  "test_viewer_messages.mjs": {
+    "sha256": "e3cca98cc91f530ba47cb7dcdbda215c0a4944269a89514ca8f126525591fbec",
+    "bytes": 1998
+  },
+  "VIEWER-MESSAGE-RESULT.json": {
+    "sha256": "dbd1a727290bb2e4bf744a31512d98a0fdb86bcf2ccb77e08ef7006278432775",
+    "bytes": 288
+  }
+}

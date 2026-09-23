@@ -12,8 +12,8 @@ PROJECT=Path(__file__).resolve().parents[2]
 ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
 CONTRACT='authored_saved_layout_package_v2'
 RENDERER={
- 'viewer.mjs':'719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299',
- 'walk_controller.mjs':'05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f',
+ 'viewer.mjs':'4012cfc0f23857ae6edb8723012a098b68801096fd0ec81bead6d0747980fd96',
+ 'walk_controller.mjs':'0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791',
  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
  'three.core.js':'eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20'}

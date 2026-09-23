@@ -1,0 +1,37 @@
+{
+  "status": "051_EXACT_PREVIEW_AND_PRODUCER_PINS_PASS",
+  "checks": [
+    {
+      "case": "new051",
+      "held": false
+    },
+    {
+      "case": "old_viewer",
+      "held": true
+    },
+    {
+      "case": "old_controller",
+      "held": true
+    },
+    {
+      "case": "changed_controller",
+      "held": true
+    },
+    {
+      "case": "real_current_producer_and_external_dependency_pins",
+      "held": false
+    },
+    {
+      "case": "modified_portable_controller",
+      "held": true
+    },
+    {
+      "case": "missing_portable_controller",
+      "held": true
+    }
+  ],
+  "check_count": 7,
+  "scope": "Appearance dispatch uses mocked source verification; producer and external dependency hashes are real. Actual preview/export is separate.",
+  "owner_and_installed_writes": 0,
+  "ui_gpu_models": 0
+}

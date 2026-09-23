@@ -1,0 +1,325 @@
+{
+  "status": "PUBLIC_SYNTHETIC_DOOR_AND_RECOVERY_CLOSURE_PASS",
+  "fixture_sha256": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3",
+  "results": [
+    {
+      "package": "world-door-targeting-candidate-050",
+      "test": "test_actual_doors.mjs",
+      "result": {
+        "status": "SYNTHETIC_HABITAT_FACING_AND_DOOR_MECHANICS_PASS",
+        "checks": 7,
+        "captures": {
+          "airlock": {
+            "feet": [
+              1.5,
+              0,
+              -2.099999999999995
+            ],
+            "yaw": 3.141592653589793,
+            "baseline_target": "opening_1",
+            "candidate_target": "opening_2"
+          },
+          "interlock": {
+            "ok": false,
+            "reason": "The door to Equipment Vestibule must be fully closed and stopped before opening this airlock door.",
+            "interlock": {
+              "contract": "paired_airlock_door_sequence_v1",
+              "roomId": "airlock",
+              "peerDoorId": "opening_1"
+            }
+          },
+          "corridor": {
+            "baseline": {
+              "feet": [
+                1.5,
+                0,
+                2.7400000000000055
+              ],
+              "west": "opening_4",
+              "east": "opening_4"
+            },
+            "candidate": {
+              "feet": [
+                1.5,
+                0,
+                2.7400000000000055
+              ],
+              "west": "opening_3",
+              "east": "opening_4"
+            }
+          },
+          "routes": [
+            {
+              "id": "opening_1",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_2",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_3",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_4",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_5",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_6",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            }
+          ]
+        },
+        "extra_colliders": 51
+      }
+    },
+    {
+      "package": "world-door-targeting-candidate-051",
+      "test": "test_frontend_doors.mjs",
+      "result": {
+        "status": "FRONTEND_SYNTHETIC_HABITAT_FACING_AND_DOOR_MECHANICS_PASS",
+        "checks": 7,
+        "captures": {
+          "airlock": {
+            "feet": [
+              1.5,
+              0,
+              -2.099999999999995
+            ],
+            "yaw": 3.141592653589793,
+            "baseline_target": "opening_1",
+            "candidate_target": "opening_2"
+          },
+          "interlock": {
+            "ok": false,
+            "reason": "The door to Equipment Vestibule must be fully closed and stopped before opening this airlock door.",
+            "interlock": {
+              "contract": "paired_airlock_door_sequence_v1",
+              "roomId": "airlock",
+              "peerDoorId": "opening_1"
+            }
+          },
+          "corridor": {
+            "baseline": {
+              "feet": [
+                1.5,
+                0,
+                2.7400000000000055
+              ],
+              "west": "opening_4",
+              "east": "opening_4"
+            },
+            "candidate": {
+              "feet": [
+                1.5,
+                0,
+                2.7400000000000055
+              ],
+              "west": "opening_3",
+              "east": "opening_4"
+            }
+          },
+          "routes": [
+            {
+              "id": "opening_1",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_2",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_3",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_4",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_5",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_6",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            }
+          ]
+        },
+        "extra_colliders": 51
+      }
+    },
+    {
+      "package": "world-door-targeting-candidate-051",
+      "test": "test_portable_doors.mjs",
+      "result": {
+        "status": "PORTABLE_SYNTHETIC_HABITAT_FACING_AND_DOOR_MECHANICS_PASS",
+        "checks": 7,
+        "captures": {
+          "airlock": {
+            "feet": [
+              1.5,
+              0,
+              -2.099999999999995
+            ],
+            "yaw": 3.141592653589793,
+            "baseline_target": "opening_1",
+            "candidate_target": "opening_2"
+          },
+          "interlock": {
+            "ok": false,
+            "reason": "The door to Equipment Vestibule must be fully closed and stopped before opening this airlock door.",
+            "interlock": {
+              "contract": "paired_airlock_door_sequence_v1",
+              "roomId": "airlock",
+              "peerDoorId": "opening_1"
+            }
+          },
+          "corridor": {
+            "baseline": {
+              "feet": [
+                1.5,
+                0,
+                2.7400000000000055
+              ],
+              "west": "opening_4",
+              "east": "opening_4"
+            },
+            "candidate": {
+              "feet": [
+                1.5,
+                0,
+                2.7400000000000055
+              ],
+              "west": "opening_3",
+              "east": "opening_4"
+            }
+          },
+          "routes": [
+            {
+              "id": "opening_1",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_2",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_3",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_4",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_5",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            },
+            {
+              "id": "opening_6",
+              "closed": "blocked",
+              "open_both_directions": "clear",
+              "reclosed": "blocked"
+            }
+          ]
+        },
+        "extra_colliders": 51
+      }
+    },
+    {
+      "package": "world-door-targeting-candidate-051",
+      "test": "test_portable_contract.mjs",
+      "result": {
+        "status": "PORTABLE_DEFINITIONS_POLICY_AND_FRONTEND_PARITY_PASS",
+        "checks": [
+          "All six portable door definitions exactly preserved",
+          "Synthetic two-leaf airlock policy exactly preserved in frontend and portable controller",
+          "Frontend and portable target selection match both corridor directions, both airlock directions and invalid elevation",
+          "200 deterministic input ticks preserve exact portable/frontend motion, obstruction and door state"
+        ],
+        "checks_count": 4,
+        "geometry_sha256": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3",
+        "owner_data_writes": 0,
+        "ui_gpu_models": 0,
+        "native_adapter_claim": false
+      }
+    },
+    {
+      "package": "world-door-targeting-candidate-050",
+      "test": "test_viewer_messages.mjs",
+      "result": {
+        "status": "ACTUAL_VIEWER_CALLBACK_AND_LABEL_CODE_PASS",
+        "state_cases": 4,
+        "callback_invocations": 1,
+        "real_dom_or_ui": false,
+        "limits": "Evaluated trusted own-source callback and message code in a Node context with inert UI objects; no visual or browser behavior approval."
+      }
+    },
+    {
+      "package": "world-door-targeting-candidate-051",
+      "test": "test_viewer_messages.mjs",
+      "result": {
+        "status": "ACTUAL_VIEWER_CALLBACK_AND_LABEL_CODE_PASS",
+        "state_cases": 4,
+        "callback_invocations": 1,
+        "real_dom_or_ui": false,
+        "limits": "Evaluated trusted own-source callback and message code in a Node context with inert UI objects; no visual or browser behavior approval."
+      }
+    },
+    {
+      "package": "world-door-targeting-candidate-051",
+      "test": "test_installer.py",
+      "result": {
+        "status": "PASS",
+        "tests_run": 8,
+        "failures": 0,
+        "errors": 0,
+        "canonical_and_owner_writes": 0,
+        "temporary_fixture_only": true
+      }
+    }
+  ],
+  "original_owner_recheck": false,
+  "owner_data_reads_or_writes": 0,
+  "export_models_gpu_ui": 0
+}

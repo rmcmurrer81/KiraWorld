@@ -1,0 +1,6 @@
+{
+  "status": "FINALIZER_HARNESS_ROOT_BOUNDARY_REJECTION",
+  "cause": "The first finalizer called the installed verifier on a candidate preview belonging to the isolated runtime_context root. The verifier correctly rejected that cross-root path.",
+  "correction": "Old installed previews are checked with the installed backend; the new isolated preview is checked with the byte-identical backend in its own runtime_context root. The product verifier and candidate product bytes are unchanged.",
+  "canonical_or_owner_writes": 0
+}

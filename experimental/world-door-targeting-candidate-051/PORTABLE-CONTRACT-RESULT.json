@@ -1,0 +1,14 @@
+{
+  "status": "PORTABLE_DEFINITIONS_POLICY_AND_FRONTEND_PARITY_PASS",
+  "checks": [
+    "All six portable door definitions exactly preserved",
+    "Actual two-leaf airlock policy exactly preserved in frontend and portable controller",
+    "Frontend and portable target selection match both corridor directions, both airlock directions and invalid elevation",
+    "200 deterministic input ticks preserve exact portable/frontend motion, obstruction and door state"
+  ],
+  "checks_count": 4,
+  "geometry_sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+  "owner_data_writes": 0,
+  "ui_gpu_models": 0,
+  "native_adapter_claim": false
+}

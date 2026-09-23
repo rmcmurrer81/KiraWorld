@@ -1,0 +1,21 @@
+{
+  "status": "050_ACTUAL_MARS_DOOR_TARGET_FIX_READY_NOT_INSTALLED",
+  "created_utc": "2026-09-23T12:56:22.961284+00:00",
+  "proposal_sha256": "d3363d1e43fac45655548ee3fed1b6b993f55d293821352b8e01ca08cf351caa",
+  "source_diff_sha256": "31c4209b4794a18b034a4c5f2819c398cfc3c64d0240d783456467c4c3d8394c",
+  "candidate_files": {
+    "tools/world_builder_engine/walk_controller.mjs": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+    "tools/world_builder_engine/viewer.mjs": "719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299"
+  },
+  "actual_saved_geometry_checks": 7,
+  "actual_viewer_code_state_cases": 4,
+  "all6_actual_door_routes_pass": true,
+  "door_pose_frame_collision_equal_to_installed": true,
+  "dressing_colliders_used": 51,
+  "protected_inputs_unchanged": 116,
+  "geometry_owner_files_copied_or_modified": false,
+  "canonical_edits": 0,
+  "models_ui_gpu": 0,
+  "visual_or_owner_approval": false,
+  "install_hold": "Exporter source/pin compatibility and actual new immutable preview/package checks required; current two-file proposal is not standalone-installable."
+}
