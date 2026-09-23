@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "@workspace\work\world-bunk-detail-042\run_cpu_export.py", line 70, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "@workspace\work\world-bunk-detail-042\run_cpu_export.py", line 41, in main
+    if '--child' in sys.argv:return child()
+                                    ~~~~~^^
+  File "@workspace\work\world-bunk-detail-042\run_cpu_export.py", line 37, in child
+    assert latest_preview(job)==previous
+           ~~~~~~~~~~~~~~^^^^^
+  File "@kira_root\tools\world_builder_engine\pipeline.py", line 368, in latest_preview
+    verify_preview(state['preview']['manifest_path'],state['preview']['manifest_sha256'])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@workspace\work\world-bunk-detail-042\runtime_context\tools\world_builder_engine\world_layout_preview.py", line 329, in verify_preview
+    require(path.parent.parent == ROOT.parents[1]/'Data'/'world_layout_previews' and path.name == 'manifest.json', 'Serve only an isolated candidate build')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "@workspace\work\world-bunk-detail-042\runtime_context\tools\world_builder_engine\world_layout_preview.py", line 42, in require
+    raise PreviewError(message)
+world_builder_engine.world_layout_preview.PreviewError: Serve only an isolated candidate build

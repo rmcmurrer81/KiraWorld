@@ -1,0 +1,25 @@
+{
+  "installed_api_path": "@kira_root\\tools\\world_builder_engine\\layout_package_export.py",
+  "installed_api_sha256": "46733148bb577256e7f6517073efb19aebcc71e7ea81cfd9166db310fc8b5c02",
+  "result": {
+    "status": "created",
+    "output_dir": "@workspace\\work\\world-bunk-detail-042\\installed-mars-001\\package",
+    "manifest_sha256": "9ca7416c9e6b45d23b009cf070964ca56462b60392520370cd525a90df01c40e",
+    "job_id": "world_research_c391ffbffc7352612392",
+    "message": "Your 3D package is ready. It includes meshes, textures and door/collider metadata. Game and VR controls still require an adapter.",
+    "capabilities": {
+      "experimental": true,
+      "authored_meshes": true,
+      "embedded_textures": true,
+      "door_hinge_hierarchy": true,
+      "linked_collider_metadata": true,
+      "airlock_pair_policy_metadata": true,
+      "engine_native_interaction": false,
+      "engine_native_collision": false,
+      "pressure_simulation": false,
+      "vr_runtime": false,
+      "visual_or_owner_approval": false
+    }
+  },
+  "installed": true
+}

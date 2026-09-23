@@ -1,0 +1,21 @@
+{
+  "status": "042_INSTALLED_ACTUAL_EXPORT_AND_ROOT_STATIC_ARTIFACT_REVIEW_PASS",
+  "created_utc": "2026-09-23T09:38:15.725554+00:00",
+  "installed": true,
+  "install_plan_sha256": "5e71e72b2307faab8e3ed606f619c8d07f42105ff7c0cb0d1c05849cae0828f0",
+  "actual_exports": 2,
+  "actual_export_receipt": "ACTUAL-EXPORT-RESULT.json",
+  "render_receipt": "CPU-RENDER-RESULT-2.json",
+  "review_artifact": "cpu-review-002/bunk-review.png",
+  "protected_originals_unchanged": 116,
+  "canonical_unchanged": true,
+  "pending": [
+    "Native UI review when authorized",
+    "Owner review of overall room appearance",
+    "Further room realism and functional interaction work"
+  ],
+  "limits": "Static mesh detail only; existing coarse collider still prevents avatar resting/climbing. No physics, safety-standard, photorealism or owner approval.",
+  "installation_receipt": "INSTALLED.json",
+  "installed_verification_receipt": "ROOT-EXECUTION.json",
+  "root_review": "ROOT-ARTIFACT-REVIEW.json"
+}

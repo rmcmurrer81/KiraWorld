@@ -1,0 +1,260 @@
+{
+  "status": "042_ACTUAL_CPU_GLB_EXPORT_IMPORT_PASS_RECOVERED_POSTCHECK",
+  "created_utc": "2026-09-23T09:31:42.963130+00:00",
+  "installed": false,
+  "actual_exports": 1,
+  "canonical_unchanged": true,
+  "protected_original_files_unchanged": 116,
+  "saved_pointer_unchanged": true,
+  "native_ui_models_gpu": 0,
+  "visual_or_owner_approval": false,
+  "glb_sha256": "718af4ec699d506b5f02a4ad8d73330a8aca7e9ecfd965ed001473c3ccd70296",
+  "glb_bytes": 1106920,
+  "package_manifest_sha256": "11e7b96979bcfcb148fe363cb20dd0321868a17fbacff169cb9117fdd5b73267",
+  "counts": {
+    "objects": 646,
+    "meshes": 565,
+    "materials": 97,
+    "textures": 67,
+    "embedded_pngs": 67,
+    "rooms": 7,
+    "semantic_nodes": 141,
+    "colliders": 134,
+    "doors": 6
+  },
+  "actual_importer_checks": {
+    "geometry_attributes_exact": 1695,
+    "index_arrays_exact": 565,
+    "material_parameter_pairs": 97,
+    "texture_effective_pixels_repeat_wrap_colorspace": 67,
+    "punctual_light_parameters_and_direction": 8,
+    "door_controller_samples": [
+      {
+        "door_id": "opening_1",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              1.5,
+              1.1,
+              -4
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              1.3301219330881975,
+              1.1,
+              -4.410121933088197
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              0.92,
+              1.1,
+              -4.58
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_2",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              1.5,
+              1.1,
+              0
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              1.3301219330881975,
+              1.1,
+              -0.4101219330881975
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              0.92,
+              1.1,
+              -0.58
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_3",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              0,
+              1.1,
+              3
+            ]
+          },
+          {
+            "angle": -0.7853981633974483,
+            "center": [
+              -0.4101219330881975,
+              1.1,
+              2.8301219330881975
+            ]
+          },
+          {
+            "angle": -1.5707963267948966,
+            "center": [
+              -0.58,
+              1.1,
+              2.42
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_4",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              3,
+              1.1,
+              2.5
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              3.4101219330881976,
+              1.1,
+              2.3301219330881975
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              3.58,
+              1.1,
+              1.92
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_5",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              0,
+              1.1,
+              9.5
+            ]
+          },
+          {
+            "angle": -0.7853981633974483,
+            "center": [
+              -0.4101219330881975,
+              1.1,
+              9.330121933088197
+            ]
+          },
+          {
+            "angle": -1.5707963267948966,
+            "center": [
+              -0.58,
+              1.1,
+              8.92
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_6",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              3,
+              1.1,
+              9
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              3.4101219330881976,
+              1.1,
+              8.830121933088197
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              3.58,
+              1.1,
+              8.42
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      }
+    ],
+    "importer_door_poses": 18,
+    "all_collider_links": true,
+    "room_bounds_preserved": true,
+    "airlock_pair_metadata_preserved": true,
+    "airlock_pairs": [
+      {
+        "id": "airlock_pair:airlock",
+        "contract": "paired_airlock_door_sequence_v1",
+        "source_room_id": "airlock",
+        "room_id": "room:airlock",
+        "door_ids": [
+          "door:opening_1",
+          "door:opening_2"
+        ],
+        "portal_ids": [
+          "opening_1",
+          "opening_2"
+        ],
+        "leaf_node_ids": [
+          "node:door_opening_1_leaf",
+          "node:door_opening_2_leaf"
+        ],
+        "opening_policy": {
+          "requires_peer": "closed_and_stopped",
+          "blocked_peer_conditions": [
+            "nonzero_angle",
+            "moving",
+            "nonzero_target",
+            "motion_held"
+          ]
+        },
+        "closing_policy": "existing_reach_motion_and_occupancy_rules",
+        "runtime_implemented_in": "source_preview_controller_only",
+        "engine_runtime_included": false,
+        "pressure_simulation": false,
+        "state_persistence": "session_local"
+      }
+    ]
+  },
+  "sampled_memory_and_elapsed": "Unavailable: supervisor asserted on a post-export module-context check before serializing measured values. No export was repeated.",
+  "harness_postcheck_failure": "The isolated preview module was left in sys.modules for the final canonical latest_preview lookup, so its candidate-only directory check rejected the unchanged installed preview. The export itself returned created, all importer checks passed. A fresh canonical-only process independently verified the old pointer and protected originals."
+}

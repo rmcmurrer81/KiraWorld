@@ -1,0 +1,71 @@
+{
+  "status": "042_EXACT_ROOT_APPROVED_INSTALL_PASS",
+  "created_utc": "2026-09-23T09:36:47.542659+00:00",
+  "authorization": "Parent root explicitly approved exact five-file042 static bunk geometry installation, atomic replacements, protected-original checks and API-only preview/export validation. No UI input authorized.",
+  "install_plan_sha256": "5e71e72b2307faab8e3ed606f619c8d07f42105ff7c0cb0d1c05849cae0828f0",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/viewer.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\viewer.mjs",
+      "before_sha256": "e6f101d016cd40b923c678f3db39b1ec7ec50b1c44684f255bcd1efb8b9fcfda",
+      "preimage": "@workspace\\work\\world-bunk-detail-042\\preimages\\tools\\world_builder_engine\\viewer.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-bunk-detail-042\\candidate\\tools\\world_builder_engine\\viewer.mjs",
+        "sha256": "95828c64947cb97c540ebdeabdc40dea62294f279ecd74d48985883afb269a92",
+        "bytes": 37276
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_export.py",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_export.py",
+      "before_sha256": "515722ee66ecfa6b3398930e812e9a27f04ec9b986f1bb366e23be69b71d3839",
+      "preimage": "@workspace\\work\\world-bunk-detail-042\\preimages\\tools\\world_builder_engine\\layout_package_export.py",
+      "after": {
+        "path": "@workspace\\work\\world-bunk-detail-042\\candidate\\tools\\world_builder_engine\\layout_package_export.py",
+        "sha256": "46733148bb577256e7f6517073efb19aebcc71e7ea81cfd9166db310fc8b5c02",
+        "bytes": 11024
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+      "before_sha256": "30eb927f3f3047a0c9929bf3fc09766396200d9cc158eeb54a173b8dc6e82456",
+      "preimage": "@workspace\\work\\world-bunk-detail-042\\preimages\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-bunk-detail-042\\candidate\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+        "sha256": "a11ae7c68b7ff3fb1e7228b2be827047682a08d879cec9776eb44165a783850e",
+        "bytes": 19028
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "before_sha256": "538850748c99a39f2f929ac4ad77acf6355d892fcfbb54ba11febd57b0989ae8",
+      "preimage": "@workspace\\work\\world-bunk-detail-042\\preimages\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-bunk-detail-042\\candidate\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+        "sha256": "6af13f090e76e9caf1040bf5c46535b35360d67ea4271cee314517cd5540a6f5",
+        "bytes": 6322
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "before_sha256": "f4d8c927dd2030af8ba960bf00f80103a797d81fd732c651e0a12d39527916bd",
+      "preimage": "@workspace\\work\\world-bunk-detail-042\\preimages\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "after": {
+        "path": "@workspace\\work\\world-bunk-detail-042\\candidate\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+        "sha256": "8c80d35a6618d8b58ec52a324796b94988321b54f4a5c453e2612a856f4c5c55",
+        "bytes": 4150
+      }
+    }
+  ],
+  "installed_files": 5,
+  "protected_original_files_unchanged": 116,
+  "atomic_per_file": true,
+  "rollback_needed": false,
+  "saved_previews_modified": false,
+  "native_ui_opened": false,
+  "gpu_model_calls": 0,
+  "next": "Fresh installed API export/importer verification; native UI review remains pending."
+}

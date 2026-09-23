@@ -1,0 +1,96 @@
+{
+  "status": "PUBLIC_GEOMETRY_AND_MOCK_TESTS_PASS",
+  "checks": [
+    {
+      "test": "test_bunk.mjs",
+      "status": "pass",
+      "receipt_summary": {
+        "status": "PASS_BUNK_GEOMETRY_ROUTES_SUPPORT_AND_EXPORT_ASSEMBLY",
+        "shapes": [
+          {
+            "variant": "base",
+            "bunk_meshes": 27,
+            "bunk_vertices": 4574,
+            "bunk_triangles": 6708,
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "front_access_width_metres": 0.523,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          },
+          {
+            "variant": "renamed",
+            "bunk_meshes": 27,
+            "bunk_vertices": 4574,
+            "bunk_triangles": 6708,
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "front_access_width_metres": 0.523,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          },
+          {
+            "variant": "wider",
+            "bunk_meshes": 27,
+            "bunk_vertices": 4574,
+            "bunk_triangles": 6708,
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "front_access_width_metres": 0.523,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          },
+          {
+            "variant": "translated",
+            "bunk_meshes": 27,
+            "bunk_vertices": 4574,
+            "bunk_triangles": 6708,
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "front_access_width_metres": 0.523,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          }
+        ],
+        "native_exporter_source_consistent": true,
+        "unchanged_plan_colliders": true,
+        "models_gpu_ui": 0,
+        "limits": [
+          "Experimental static authored geometry; visual review pending.",
+          "No physics, comfort, structural safety or standard-compliance assertion.",
+          "Exporter comparison assembles actual meshes with inert Canvas placeholders; no GLB/texture roundtrip was performed."
+        ]
+      }
+    },
+    {
+      "test": "test_preview_contract.py",
+      "status": "pass",
+      "receipt_summary": {
+        "status": "NEW_APPEARANCE_PIN_ACCEPTED_OLD_OR_CHANGED_APPEARANCE_HELD",
+        "checks": [
+          {
+            "case": "new042",
+            "appearance_held": false
+          },
+          {
+            "case": "old041",
+            "appearance_held": true
+          },
+          {
+            "case": "changed_viewer",
+            "appearance_held": true
+          }
+        ],
+        "scope": "Mocks saved-job and immutable verification, tests appearance dispatch only; no created preview or real export.",
+        "owner_data_writes": 0,
+        "native_ui_models_gpu": 0
+      }
+    }
+  ],
+  "new_real_exports": 0,
+  "ui_gpu_models": 0
+}

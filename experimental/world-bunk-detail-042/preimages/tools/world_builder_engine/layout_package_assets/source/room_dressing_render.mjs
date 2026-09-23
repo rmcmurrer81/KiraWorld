@@ -67,36 +67,6 @@ export function addRoomDressing(THREE,scene,geometry,plan,materials){
   function torus(group,x,y,z,r,t,material=M.metal,rx=0,ry=0){
     const mesh=new THREE.Mesh(cached('t:'+r+','+t,()=>new THREE.TorusGeometry(r,t,8,18)),material);mesh.position.set(x,y,z);mesh.rotation.set(rx,ry,0);group.add(mesh);return mesh;
   }
-  // Rounded, authored soft forms. Geometry only: no cloth/contact simulation.
-  function softBox(group,name,x,y,z,w,h,d,r,material){
-    const key='soft:'+w+','+h+','+d+','+r;
-    const geo=cached(key,()=>{
-      const g=new THREE.BoxGeometry(w,h,d,14,4,8),p=g.attributes.position,n=g.attributes.normal;
-      const half=[w/2,h/2,d/2],core=half.map(v=>Math.max(0,v-r));
-      for(let i=0;i<p.count;i++){
-        const a=[p.getX(i),p.getY(i),p.getZ(i)],q=a.map((v,j)=>Math.max(-core[j],Math.min(core[j],v))),delta=a.map((v,j)=>v-q[j]);
-        const length=Math.hypot(...delta);for(let j=0;j<3;j++)delta[j]/=length;
-        p.setXYZ(i,...q.map((v,j)=>v+delta[j]*r));n.setXYZ(i,...delta);
-      }
-      g.computeBoundingBox();return g;
-    });
-    const mesh=new THREE.Mesh(geo,material);mesh.name=name;mesh.position.set(x,y,z);mesh.castShadow=mesh.receiveShadow=true;group.add(mesh);return mesh;
-  }
-  function blanket(group,name,x,y,z,w,d){
-    // A real two-sided draped surface with a rolled hem. The folds stay inside
-    // the mattress footprint and existing conservative bunk collision volume.
-    const nx=24,nz=16,positions=[],uv=[],index=[];
-    for(let j=0;j<=nz;j++)for(let i=0;i<=nx;i++){
-      const u=i/nx,v=j/nz,edge=Math.pow(Math.max(0,(Math.abs(2*v-1)-.88)/.12),2);
-      const fold=.010*Math.sin(u*Math.PI*8+v*.6)*Math.sin(v*Math.PI);
-      positions.push((u-.5)*w,fold-.07*edge,(v-.5)*d);uv.push(u,v);
-    }
-    for(let j=0;j<nz;j++)for(let i=0;i<nx;i++){const a=j*(nx+1)+i,b=a+1,c=a+nx+1,e=c+1;index.push(a,c,b,b,c,e);}
-    const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));geo.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));geo.setIndex(index);geo.computeVertexNormals();geo.computeBoundingBox();
-    const material=M.seat.clone();material.side=THREE.DoubleSide;
-    const mesh=new THREE.Mesh(geo,material);mesh.name=name;mesh.position.set(x,y,z);mesh.castShadow=mesh.receiveShadow=true;group.add(mesh);
-    softBox(group,name+'_folded_hem',x-w/2+.018,y+.018,z,.038,.038,d-.035,.017,M.seat);
-  }
   function legs(group,w,d,h,material=M.frame){for(const x of [-w/2+.07,w/2-.07])for(const z of [-d/2+.07,d/2-.07])box(group,x,h/2,z,.055,h,.055,material);}
   function cabinet(group,w,h,d){
     const bodyDepth=d-.08;box(group,0,h/2,0,w,h,bodyDepth,M.frame);
@@ -144,27 +114,9 @@ export function addRoomDressing(THREE,scene,geometry,plan,materials){
       for(let i=0;i<7;i++){const y=.16+i*.275;box(group,0,y,0,w-.1,.225,d-.06,M.dark);for(let v=0;v<4;v++)box(group,-w*.28+v*.035,y,d*.465,.012,.11,.008,M.frame);box(group,w*.27,y,d*.47,.047,.016,.01,i%2?M.indicator:M.amber);}
       box(group,0,h-.025,0,w,.04,d,M.frame);
     }else if(kind==='bunk'){
-      // Dimensions use the existing 2.08m x .90m x 2.12m authored assembly.
-      // These details are not a safety-standard, comfort or structural claim.
       for(const x of [-w/2+.055,w/2-.055])for(const z of [-d/2+.05,d/2-.05])box(group,x,h/2,z,.06,h,.06,M.frame);
-      for(const [berth,y] of [['lower',.34],['upper',1.27]]){
-        const deck=box(group,0,y,0,w-.05,.075,d-.04,M.frame);deck.name='bunk_'+berth+'_deck';
-        const mattressTop=y+.15;
-        softBox(group,'bunk_'+berth+'_mattress',0,y+.095,0,w-.16,.11,d-.12,.032,M.cloth);
-        softBox(group,'bunk_'+berth+'_pillow',-w*.32,mattressTop+.048,0,.42,.096,d-.22,.046,M.ivory);
-        blanket(group,'bunk_'+berth+'_blanket',w*.11,mattressTop+.018,.015,w*.60,d-.06);
-      }
-      // The upper front guard stops before the ladder; its open access bay is
-      // dimensioned separately so decorative rails cannot silently seal it.
-      const guardLeft=-w/2+.11,guardRight=w*.20,guardBottom=1.27,guardTop=1.78;
-      for(const x of [guardLeft,guardRight]){const post=box(group,x,(guardBottom+guardTop)/2,d/2-.055,.03,guardTop-guardBottom,.03,M.metal);post.name='bunk_upper_guard_post';}
-      for(const y of [1.57,guardTop]){const rail=cylinder(group,(guardLeft+guardRight)/2,y,d/2-.055,.016,guardRight-guardLeft,M.metal,0,Math.PI/2);rail.name='bunk_upper_front_guard';}
-      for(const x of [-w/2+.055,w/2-.055]){const rail=cylinder(group,x,guardTop,0,.016,d-.12,M.metal,Math.PI/2);rail.name='bunk_upper_end_guard';}
-      for(const x of [w*.27,w*.43]){const stile=box(group,x,.92,d/2-.025,.032,1.84,.04,M.metal);stile.name='bunk_ladder_stile';}
-      for(let i=0;i<5;i++){const rung=box(group,w*.35,.22+i*.34,d/2-.022,w*.18,.028,.035,M.metal);rung.name='bunk_ladder_rung';}
-      group.userData.bunkGeometry={contract:'authored_bunk_detail_v1',upperMattressTop:1.42,guardTop,
-        frontAccessX:[guardRight+.016,w/2-.085],ladderStileX:[w*.27,w*.43],
-        collision:'unchanged_conservative_assembly_bounds',physicsOrSafetyValidation:false};
+      for(const y of [.34,1.27]){box(group,0,y,0,w-.05,.075,d-.04,M.frame);box(group,0,y+.095,0,w-.16,.11,d-.12,M.cloth);box(group,-w*.32,y+.183,0,.38,.065,d-.19,M.ivory);box(group,w*.11,y+.16,.02,w*.6,.022,d-.18,M.seat);}
+      for(const x of [w*.27,w*.43])box(group,x,.95,d/2-.025,.032,1.75,.04,M.metal);for(let i=0;i<5;i++)box(group,w*.35,.22+i*.34,d/2-.022,w*.18,.028,.035,M.metal);
     }else if(kind==='galley'){
       cabinet(group,w,.79,d-.035);box(group,0,.83,0,w,.055,d,M.metal);box(group,-w*.22,.862,.035,w*.32,.009,d*.52,M.dark);
       cylinder(group,-w*.22,.95,-d*.15,.012,.2,M.metal);torus(group,-w*.22,1.025,-d*.08,.057,.009,M.metal,0,Math.PI/2);

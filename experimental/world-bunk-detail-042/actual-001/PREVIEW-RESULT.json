@@ -1,0 +1,48 @@
+{
+  "status": "ISOLATED_IMMUTABLE042_PREVIEW_CREATED",
+  "current": {
+    "manifest_path": "@workspace\\work\\world-bunk-detail-042\\runtime_context\\Data\\world_layout_previews\\layout-46b7dc590be57b4073c2df8b\\manifest.json",
+    "build_id": "layout-46b7dc590be57b4073c2df8b",
+    "reused": false,
+    "manifest_sha256": "50e0278cd6a91c6fc2c2acd44ba3e6596b2976b98700f5e633b8fb5397575a3b"
+  },
+  "context": {
+    "world_layout_preview.py": {
+      "sha256": "fc9ead65889ea7eb011dc8278047704fa212f4c5536811b9f6971c6078180c21",
+      "source": "@kira_root\\tools\\world_builder_engine\\world_layout_preview.py"
+    },
+    "index.html": {
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+      "source": "@kira_root\\tools\\world_builder_engine\\index.html"
+    },
+    "style.css": {
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "source": "@kira_root\\tools\\world_builder_engine\\style.css"
+    },
+    "viewer.mjs": {
+      "sha256": "95828c64947cb97c540ebdeabdc40dea62294f279ecd74d48985883afb269a92",
+      "source": "@workspace\\work\\world-bunk-detail-042\\candidate\\tools\\world_builder_engine\\viewer.mjs"
+    },
+    "walk_controller.mjs": {
+      "sha256": "0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791",
+      "source": "@kira_root\\tools\\world_builder_engine\\walk_controller.mjs"
+    },
+    "horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "source": "@kira_root\\tools\\world_builder_engine\\horizontal_navigation.mjs"
+    },
+    "preflight.mjs": {
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "source": "@kira_root\\tools\\world_builder_engine\\preflight.mjs"
+    }
+  },
+  "backend_bytes_identical_to_installed": true,
+  "renderer_sha256": "95828c64947cb97c540ebdeabdc40dea62294f279ecd74d48985883afb269a92",
+  "preview_server_or_ui_started": false,
+  "previous_pointer": {
+    "build_id": "layout-a37f864587b3ee075e21ccd1",
+    "manifest_path": "@kira_root\\Data\\world_layout_previews\\layout-a37f864587b3ee075e21ccd1\\manifest.json",
+    "manifest_sha256": "f99bbbe4fde564e1f48814c899b85ca6f78b0ffe9466a4a88ccabd139999313a",
+    "reused": false
+  }
+}
