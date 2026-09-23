@@ -1,0 +1,46 @@
+{
+  "status": "MEASURED_REAL039_API_EXPORT_PASS",
+  "started_utc": "2026-09-23T08:38:14.554712+00:00",
+  "elapsed_seconds": 1.5308735000435263,
+  "returncode": 0,
+  "timed_out": false,
+  "process_family_sampled_peak_rss_bytes": 679043072,
+  "sample_interval_seconds": 0.01,
+  "sample_count": 92,
+  "processes": {
+    "42908": {
+      "name": "python.exe",
+      "max_observed_rss": 123527168,
+      "os_peak_working_set": 123527168
+    },
+    "32600": {
+      "name": "conhost.exe",
+      "max_observed_rss": 7987200,
+      "os_peak_working_set": 7995392
+    },
+    "25268": {
+      "name": "node.exe",
+      "max_observed_rss": 630165504,
+      "os_peak_working_set": 630530048
+    },
+    "34784": {
+      "name": "conhost.exe",
+      "max_observed_rss": 8024064,
+      "os_peak_working_set": 8024064
+    }
+  },
+  "measurement_limits": "Concurrent family RSS is sampled and may miss a brief peak. Per-process OS peak working set was read while each process existed; the sum is not necessarily concurrent.",
+  "available_ram_before_bytes": 18664968192,
+  "available_ram_after_bytes": 18645368832,
+  "runner_sha256": "ca405e4270dcb08a3a89fb4ec8685b9e55ae958229783eb32395dc82a41f09bd",
+  "selected_manifest_sha256": "ef58d7b81e37182f86dd22defea9294ccfa4b1696fb7bb3810ca80069b85fe0a",
+  "api_receipt": "@workspace\\work\\world-package-039\\REAL-API-RESULT-1.json",
+  "api_receipt_sha256": "4da880b0fcd28a66e7bc6b2d0b7734d7a511b563d93c347c1e713bd24e6a0faf",
+  "output": "@workspace\\work\\world-package-real-api-039-001\\actual-package-001",
+  "protected_original_files_unchanged": 116,
+  "canonical_files_unchanged": true,
+  "installed": true,
+  "models_gpu_browser_native_ui": 0,
+  "package_manifest_sha256": "49ccfcdbb92bbff5f63bc02c7a8eb9f2fd69c045c0423f0e2ba12f5a7d6b60cd",
+  "glb_sha256": "3efe2eb63eaf77d37514720040284a9a88eea3360f01a4644aa9777a81135c5e"
+}

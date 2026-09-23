@@ -1,0 +1,280 @@
+{
+  "status": "039_INSTALLED_API_REFRESH_AND_REAL_EXPORT_VERIFIED",
+  "created_utc": "2026-09-23T08:39:33.880243+00:00",
+  "installed": true,
+  "installed_files": 23,
+  "install_plan_sha256": "8c9e9bed1b6d98b0a634384246159571374a4a340922f8d551df0eb24e49527f",
+  "install_receipt_sha256": "f7613991c1bf9452b84ea4db57f8a806a1b3b134a22d34a99d7188eca1deabb1",
+  "preview_verification": [
+    {
+      "build_id": "layout-a37f864587b3ee075e21ccd1",
+      "manifest_sha256": "f99bbbe4fde564e1f48814c899b85ca6f78b0ffe9466a4a88ccabd139999313a",
+      "verified": true
+    },
+    {
+      "build_id": "layout-174d4bddd3f8efcf689c7e40",
+      "manifest_sha256": "ef58d7b81e37182f86dd22defea9294ccfa4b1696fb7bb3810ca80069b85fe0a",
+      "verified": true
+    },
+    {
+      "build_id": "layout-40b38c14f718490a13b88a87",
+      "manifest_sha256": "67a54c4362c46b64d27a5d362defef878796b357adfb092d1827b3d25832a301",
+      "verified": true
+    }
+  ],
+  "current_preview_reused_on_second_refresh": true,
+  "saved_job_pointer_unchanged": true,
+  "real_package_manifest_sha256": "49ccfcdbb92bbff5f63bc02c7a8eb9f2fd69c045c0423f0e2ba12f5a7d6b60cd",
+  "real_glb_sha256": "3efe2eb63eaf77d37514720040284a9a88eea3360f01a4644aa9777a81135c5e",
+  "real_glb_bytes": 996552,
+  "actual_importer_checks": {
+    "geometry_attributes_exact": 1671,
+    "index_arrays_exact": 557,
+    "material_parameter_pairs": 95,
+    "texture_effective_pixels_repeat_wrap_colorspace": 67,
+    "punctual_light_parameters_and_direction": 8,
+    "door_controller_samples": [
+      {
+        "door_id": "opening_1",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              1.5,
+              1.1,
+              -4
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              1.3301219330881975,
+              1.1,
+              -4.410121933088197
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              0.92,
+              1.1,
+              -4.58
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_2",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              1.5,
+              1.1,
+              0
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              1.3301219330881975,
+              1.1,
+              -0.4101219330881975
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              0.92,
+              1.1,
+              -0.58
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_3",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              0,
+              1.1,
+              3
+            ]
+          },
+          {
+            "angle": -0.7853981633974483,
+            "center": [
+              -0.4101219330881975,
+              1.1,
+              2.8301219330881975
+            ]
+          },
+          {
+            "angle": -1.5707963267948966,
+            "center": [
+              -0.58,
+              1.1,
+              2.42
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_4",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              3,
+              1.1,
+              2.5
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              3.4101219330881976,
+              1.1,
+              2.3301219330881975
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              3.58,
+              1.1,
+              1.92
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_5",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              0,
+              1.1,
+              9.5
+            ]
+          },
+          {
+            "angle": -0.7853981633974483,
+            "center": [
+              -0.4101219330881975,
+              1.1,
+              9.330121933088197
+            ]
+          },
+          {
+            "angle": -1.5707963267948966,
+            "center": [
+              -0.58,
+              1.1,
+              8.92
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_6",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              3,
+              1.1,
+              9
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              3.4101219330881976,
+              1.1,
+              8.830121933088197
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              3.58,
+              1.1,
+              8.42
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      }
+    ],
+    "importer_door_poses": 18,
+    "all_collider_links": true,
+    "room_bounds_preserved": true,
+    "airlock_pair_metadata_preserved": true,
+    "airlock_pairs": [
+      {
+        "id": "airlock_pair:airlock",
+        "contract": "paired_airlock_door_sequence_v1",
+        "source_room_id": "airlock",
+        "room_id": "room:airlock",
+        "door_ids": [
+          "door:opening_1",
+          "door:opening_2"
+        ],
+        "portal_ids": [
+          "opening_1",
+          "opening_2"
+        ],
+        "leaf_node_ids": [
+          "node:door_opening_1_leaf",
+          "node:door_opening_2_leaf"
+        ],
+        "opening_policy": {
+          "requires_peer": "closed_and_stopped",
+          "blocked_peer_conditions": [
+            "nonzero_angle",
+            "moving",
+            "nonzero_target",
+            "motion_held"
+          ]
+        },
+        "closing_policy": "existing_reach_motion_and_occupancy_rules",
+        "runtime_implemented_in": "source_preview_controller_only",
+        "engine_runtime_included": false,
+        "pressure_simulation": false,
+        "state_persistence": "session_local"
+      }
+    ]
+  },
+  "counts": {
+    "objects": 638,
+    "meshes": 557,
+    "materials": 95,
+    "textures": 67,
+    "embedded_pngs": 67,
+    "rooms": 7,
+    "semantic_nodes": 141,
+    "colliders": 134,
+    "doors": 6
+  },
+  "protected_original_files_unchanged": 116,
+  "native_ui_review": "PENDING_NO_UI_OPENED",
+  "visual_or_owner_approval": false,
+  "gpu_models_browser_ui": 0,
+  "receipt_correction": "The frozen prepared run_real_api.py labels its local receipt installed:false. That legacy field is superseded here by exact INSTALLED.json and live target hashes. The API export ran after the approved039 installation. No code/plan was rewritten to hide that historical label.",
+  "no_pressure_engine_or_vr_runtime": true
+}

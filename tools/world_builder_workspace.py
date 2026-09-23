@@ -17,7 +17,7 @@ import threading
 import tkinter as tk
 from datetime import datetime, timezone
 from pathlib import Path
-from tkinter import ttk
+from tkinter import ttk, filedialog
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -30,6 +30,7 @@ from world_research import DEFAULT_JOB_ROOT, run_job  # noqa: E402
 from world_research_workspace_adapter import submit_research_prompt
 from world_saved_research import list_saved_research, read_saved_research
 from world_builder_engine.workspace_adapter import run_pipeline_after_research, open_preview, close_preview  # noqa: E402
+from world_builder_engine.layout_package_export import export_saved_layout_package
 from world_reference_images_adapter import ReferencePhotosView  # noqa: E402
 from world_builder_components.workspace_adapter import OriginalComponentsView  # noqa: E402
 
@@ -121,6 +122,9 @@ class WorldBuilderWorkspace(tk.Tk):
         self._research_latest = None
         self._saved_research_items = []
         self._layout_preview = None
+        self._export_messages = queue.Queue()
+        self._export_worker = None
+        self._last_export_folder = None
         self._reference_photos_view = None
         self._original_components_view = None
         self.protocol("WM_DELETE_WINDOW", self._close_world_builder)
@@ -201,6 +205,13 @@ class WorldBuilderWorkspace(tk.Tk):
         ttk.Button(chat_row, text="Research / Resume", command=self.send_world_builder_chat).pack(side="left")
         ttk.Button(chat_row, text="Open current preview", command=self.open_layout_preview).pack(side="left", padx=(6, 0))
         ttk.Button(chat_row, text="Reference Photos", command=self.open_reference_photos).pack(side="left", padx=(6, 0))
+
+        exports = ttk.Frame(chat)
+        exports.pack(fill="x", pady=(7, 0))
+        self._export_button = ttk.Button(exports, text="Export 3D package (experimental)", command=self.export_3d_package)
+        self._export_button.pack(side="left")
+        ttk.Button(exports, text="Open export folder", command=self.open_export_folder).pack(side="left", padx=(6, 0))
+        ttk.Label(exports, text="Export the selected layout as a 3D asset for other tools.").pack(side="left", padx=(8, 0))
 
         saved = ttk.Frame(chat)
         saved.pack(fill="x", pady=(7, 0))
@@ -429,7 +440,60 @@ class WorldBuilderWorkspace(tk.Tk):
             return
         self._original_components_view = OriginalComponentsView(self, selected_job=self._research_latest, on_message=self.log)
 
+    def export_3d_package(self) -> None:
+        if self._export_worker is not None:
+            self.log("A 3D export is already in progress.")
+            return
+        job_dir = self._research_latest
+        if job_dir is None:
+            self.log("Choose a saved layout before exporting a 3D package.")
+            return
+        folder = filedialog.askdirectory(parent=self, title="Choose a folder for your 3D package", mustexist=True)
+        if not folder:
+            return
+        destination = Path(folder) / ("World-3D-" + datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S-%f"))
+        # Capture the current selection before the background job; a later UI
+        # selection must not substitute a different world or preview.
+        current = self._layout_preview
+        preview = dict(current.manifest) if current is not None else None
+        self._export_button.configure(state="disabled")
+        self.log("Exporting the selected layout's meshes and textures…")
+        def worker():
+            try:
+                result = export_saved_layout_package(job_dir, destination, preview_binding=preview)
+            except Exception:
+                result = {"status": "export_failed", "message": "The 3D export stopped unexpectedly. Original files were preserved."}
+            self._export_messages.put(result)
+        self._export_worker = threading.Thread(target=worker, daemon=True, name="world-layout-package-export")
+        self._export_worker.start()
+        self.after(200, self._poll_3d_export)
+
+    def _poll_3d_export(self) -> None:
+        try:
+            result = self._export_messages.get_nowait()
+        except queue.Empty:
+            if self._export_worker is not None:
+                self.after(200, self._poll_3d_export)
+            return
+        self._export_worker = None
+        self._export_button.configure(state="normal")
+        self.log(result["message"])
+        if result.get("status") == "created":
+            self._last_export_folder = Path(result["output_dir"])
+            self.log("3D package saved to: " + str(self._last_export_folder))
+        elif result.get("output_dir"):
+            self.log("Incomplete export retained for inspection: " + result["output_dir"])
+
+    def open_export_folder(self) -> None:
+        if self._last_export_folder is None:
+            self.log("Export a 3D package first; its folder will be available here.")
+            return
+        open_path(self._last_export_folder)
+
     def _close_world_builder(self) -> None:
+        if self._export_worker is not None:
+            self.log("Please wait for the current 3D export to finish before closing this window.")
+            return
         if self._original_components_view is not None and self._original_components_view.winfo_exists():
             self._original_components_view.close()
         close_preview(self._layout_preview)
