@@ -1,0 +1,521 @@
+{
+  "status": "PASS",
+  "tests": 20,
+  "results": [
+    {
+      "name": "below slab has no false position velocity or report contact",
+      "status": "PASS",
+      "detail": {
+        "valid": true,
+        "reason": null,
+        "observations": 0,
+        "queries": 14,
+        "suppressed": 14,
+        "lost": 0,
+        "lateral_reanchors": 0,
+        "unknown": 1,
+        "edge": 6,
+        "triangle": 2,
+        "velocity": 1,
+        "report": 4,
+        "primitive_count": 7,
+        "epsilon_m": 1e-8,
+        "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+      }
+    },
+    {
+      "name": "supported cloth retains exact prior contact corrections",
+      "status": "PASS",
+      "detail": {
+        "contacts": 3
+      }
+    },
+    {
+      "name": "above-to-below crossing never rearms solely below bottom",
+      "status": "PASS",
+      "detail": {
+        "valid": true,
+        "reason": null,
+        "observations": 15,
+        "queries": 10,
+        "suppressed": 0,
+        "lost": 7,
+        "lateral_reanchors": 0,
+        "primitive_count": 7,
+        "epsilon_m": 1e-8,
+        "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+      }
+    },
+    {
+      "name": "uncertified pose can exit side then route beneath and reenter",
+      "status": "PASS",
+      "detail": {
+        "valid": true,
+        "reason": null,
+        "observations": 9,
+        "queries": 10,
+        "suppressed": 10,
+        "lost": 0,
+        "lateral_reanchors": 7,
+        "unknown": 2,
+        "edge": 6,
+        "triangle": 2,
+        "primitive_count": 7,
+        "epsilon_m": 1e-8,
+        "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+      }
+    },
+    {
+      "name": "diagonal side-to-bottom jump without shared separator stays held",
+      "status": "PASS",
+      "detail": {
+        "valid": true,
+        "reason": null,
+        "observations": 3,
+        "queries": 1,
+        "suppressed": 0,
+        "lost": 7,
+        "lateral_reanchors": 0,
+        "primitive_count": 7,
+        "epsilon_m": 1e-8,
+        "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+      }
+    },
+    {
+      "name": "mixed exterior vertices cannot certify a crossing triangle",
+      "status": "PASS"
+    },
+    {
+      "name": "bottom skin and epsilon touching remain held",
+      "status": "PASS"
+    },
+    {
+      "name": "one above vertex blocks whole-triangle exclusion",
+      "status": "PASS"
+    },
+    {
+      "name": "inverted winding gives identical certificate and correction",
+      "status": "PASS"
+    },
+    {
+      "name": "moving top inside fixed box keeps underside certificate",
+      "status": "PASS"
+    },
+    {
+      "name": "moving top through base permanently disables exclusion",
+      "status": "PASS"
+    },
+    {
+      "name": "unobserved position changes disable exclusion",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid geometry and changed base remain held",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid finite dimensions and grid cardinality remain held",
+      "status": "PASS"
+    },
+    {
+      "name": "initial NaN top X reproduces016 false certificate and017 holds",
+      "status": "PASS",
+      "detail": {
+        "axis": "X",
+        "value": "NaN",
+        "when": "initial",
+        "predecessor016": {
+          "invalid": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            true,
+            true,
+            true
+          ],
+          "after_restore": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 3,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "unknown": 3,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": true
+        },
+        "successor017": {
+          "invalid": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            false,
+            false,
+            false
+          ],
+          "after_restore": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": false
+        }
+      }
+    },
+    {
+      "name": "initial NaN top Z reproduces016 false certificate and017 holds",
+      "status": "PASS",
+      "detail": {
+        "axis": "Z",
+        "value": "NaN",
+        "when": "initial",
+        "predecessor016": {
+          "invalid": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            true,
+            true,
+            true
+          ],
+          "after_restore": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 3,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "unknown": 3,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": true
+        },
+        "successor017": {
+          "invalid": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            false,
+            false,
+            false
+          ],
+          "after_restore": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": false
+        }
+      }
+    },
+    {
+      "name": "mutation NaN top X reproduces016 false certificate and017 holds",
+      "status": "PASS",
+      "detail": {
+        "axis": "X",
+        "value": "NaN",
+        "when": "mutation",
+        "predecessor016": {
+          "invalid": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            true,
+            true,
+            true
+          ],
+          "after_restore": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 3,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "unknown": 3,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": true
+        },
+        "successor017": {
+          "invalid": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            false,
+            false,
+            false
+          ],
+          "after_restore": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": false
+        }
+      }
+    },
+    {
+      "name": "mutation NaN top Z reproduces016 false certificate and017 holds",
+      "status": "PASS",
+      "detail": {
+        "axis": "Z",
+        "value": "NaN",
+        "when": "mutation",
+        "predecessor016": {
+          "invalid": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            true,
+            true,
+            true
+          ],
+          "after_restore": {
+            "valid": true,
+            "reason": null,
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 3,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "unknown": 3,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": true
+        },
+        "successor017": {
+          "invalid": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 0,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skips": [
+            false,
+            false,
+            false
+          ],
+          "after_restore": {
+            "valid": false,
+            "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED",
+            "observations": 0,
+            "queries": 3,
+            "suppressed": 0,
+            "lost": 0,
+            "lateral_reanchors": 0,
+            "primitive_count": 7,
+            "epsilon_m": 1e-8,
+            "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+          },
+          "skip_after_restore": false
+        }
+      }
+    },
+    {
+      "name": "initial nonfinite top XYZ always disables exclusion",
+      "status": "PASS",
+      "detail": [
+        {
+          "axis": "X",
+          "value": "NaN",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "X",
+          "value": "Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "X",
+          "value": "-Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Y",
+          "value": "NaN",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Y",
+          "value": "Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Y",
+          "value": "-Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Z",
+          "value": "NaN",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Z",
+          "value": "Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Z",
+          "value": "-Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        }
+      ]
+    },
+    {
+      "name": "mutation nonfinite top XYZ always disables exclusion",
+      "status": "PASS",
+      "detail": [
+        {
+          "axis": "X",
+          "value": "NaN",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "X",
+          "value": "Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "X",
+          "value": "-Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Y",
+          "value": "NaN",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Y",
+          "value": "Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Y",
+          "value": "-Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Z",
+          "value": "NaN",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Z",
+          "value": "Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        },
+        {
+          "axis": "Z",
+          "value": "-Infinity",
+          "reason": "TOP_OUTSIDE_FIXED_BOX_OR_XZ_CHANGED"
+        }
+      ]
+    }
+  ],
+  "elapsed_ms": 5.0838,
+  "scope": "Actual surface solver calls and conservative finite-domain cases; no full coupled replay or installed edit."
+}

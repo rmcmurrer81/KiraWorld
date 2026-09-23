@@ -1,0 +1,400 @@
+{
+  "status": "SINGLE_PROFILE_COMPLETE_MEASURED_HELPER_HOTSPOTS_NO_OPTIMIZATION",
+  "at_utc": "2026-09-23T03:34:20.134978+00:00",
+  "profile": {
+    "path": "@workspace\\work\\world-finite-top-domain-profile-018\\profile\\world017.cpuprofile",
+    "sha256": "77ef650beb13b5e6796c5526f39f83e6f800dc0de35704e64fc7627a598a8c34",
+    "bytes": 85044
+  },
+  "supervisor": {
+    "path": "@workspace\\work\\world-finite-top-domain-profile-018\\PROFILE-SUPERVISOR.json",
+    "sha256": "78d018f0fd0dbfd21b9e4f1083f00c6426b806bb4ec5e389d3d7c14ba98cd1c7",
+    "bytes": 502
+  },
+  "physical_result": {
+    "path": "@workspace\\work\\world-finite-top-domain-profile-018\\FULL-PILOT-RESULT.json",
+    "sha256": "768ee4091c2f19b2d02650a99d48c95b4c82aaf4aa12254149695ac9f1c24c70",
+    "bytes": 25631
+  },
+  "profile_samples": 2125,
+  "sampled_ms": 3257.931,
+  "profile_span_ms": 3258.196,
+  "all_per_frame_observations_exactly_match_prior_unprofiled_pilot": true,
+  "p_prev_v_exact_between_candidate_and_baseline_every_frame": true,
+  "prior017_and_portable003_unchanged": true,
+  "helper_exclusive_sample_ms": 1605.444,
+  "helper_exclusive_sample_percent": 49.27802338355232,
+  "helper_functions": [
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "observeVertex",
+      "line": 35,
+      "self_ms": 743.355,
+      "inclusive_ms": 744.331,
+      "self_percent_of_all_samples": 22.816781570880416,
+      "samples": 481
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "clear",
+      "line": 59,
+      "self_ms": 418.744,
+      "inclusive_ms": 845.02,
+      "self_percent_of_all_samples": 12.853065335023977,
+      "samples": 270
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "key",
+      "line": 5,
+      "self_ms": 418.155,
+      "inclusive_ms": 424.682,
+      "self_percent_of_all_samples": 12.834986376322886,
+      "samples": 266
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "observeTop",
+      "line": 50,
+      "self_ms": 11.137,
+      "inclusive_ms": 11.137,
+      "self_percent_of_all_samples": 0.3418427216537121,
+      "samples": 8
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "",
+      "line": 5,
+      "self_ms": 6.527,
+      "inclusive_ms": 6.527,
+      "self_percent_of_all_samples": 0.2003418734159809,
+      "samples": 4
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "FiniteTopDomain",
+      "line": 7,
+      "self_ms": 1.754,
+      "inclusive_ms": 3.291,
+      "self_percent_of_all_samples": 0.05383784985010425,
+      "samples": 1
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "attachFiniteTopDomain",
+      "line": 71,
+      "self_ms": 1.665,
+      "inclusive_ms": 4.956,
+      "self_percent_of_all_samples": 0.051106054732282545,
+      "samples": 1
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "bindings",
+      "line": 54,
+      "self_ms": 1.594,
+      "inclusive_ms": 1.594,
+      "self_percent_of_all_samples": 0.048926757503458485,
+      "samples": 1
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "add",
+      "line": 16,
+      "self_ms": 1.537,
+      "inclusive_ms": 1.537,
+      "self_percent_of_all_samples": 0.04717718085496593,
+      "samples": 2
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "",
+      "line": 40,
+      "self_ms": 0.976,
+      "inclusive_ms": 0.976,
+      "self_percent_of_all_samples": 0.029957663314539196,
+      "samples": 1
+    }
+  ],
+  "top_functions": [
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "observeVertex",
+      "line": 35,
+      "self_ms": 743.355,
+      "inclusive_ms": 744.331,
+      "self_percent_of_all_samples": 22.816781570880416,
+      "samples": 481
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "clear",
+      "line": 59,
+      "self_ms": 418.744,
+      "inclusive_ms": 845.02,
+      "self_percent_of_all_samples": 12.853065335023977,
+      "samples": 270
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "key",
+      "line": 5,
+      "self_ms": 418.155,
+      "inclusive_ms": 424.682,
+      "self_percent_of_all_samples": 12.834986376322886,
+      "samples": 266
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/bedding_base.mjs",
+      "function": "solve",
+      "line": 60,
+      "self_ms": 284.632,
+      "inclusive_ms": 1021.761,
+      "self_percent_of_all_samples": 8.736587730065493,
+      "samples": 182
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/bedding_base.mjs",
+      "function": "solve",
+      "line": 59,
+      "self_ms": 181.033,
+      "inclusive_ms": 181.033,
+      "self_percent_of_all_samples": 5.556686129939523,
+      "samples": 118
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/surface_contacts.mjs",
+      "function": "inspect",
+      "line": 34,
+      "self_ms": 114.743,
+      "inclusive_ms": 116.734,
+      "self_percent_of_all_samples": 3.5219591820698475,
+      "samples": 75
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/surface_contacts.mjs",
+      "function": "inspect",
+      "line": 35,
+      "self_ms": 107.358,
+      "inclusive_ms": 107.597,
+      "self_percent_of_all_samples": 3.2952815759449785,
+      "samples": 70
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/surface_contacts.mjs",
+      "function": "edgeContact",
+      "line": 30,
+      "self_ms": 103.483,
+      "inclusive_ms": 628.144,
+      "self_percent_of_all_samples": 3.176341058174651,
+      "samples": 67
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/surface_contacts.mjs",
+      "function": "interiorContact",
+      "line": 55,
+      "self_ms": 92.731,
+      "inclusive_ms": 507.145,
+      "self_percent_of_all_samples": 2.8463156524800555,
+      "samples": 61
+    },
+    {
+      "source": "",
+      "function": "(garbage collector)",
+      "line": 0,
+      "self_ms": 87.588,
+      "inclusive_ms": 87.588,
+      "self_percent_of_all_samples": 2.6884547278625606,
+      "samples": 56
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/mattress_physics.mjs",
+      "function": "sampleTop",
+      "line": 94,
+      "self_ms": 76.479,
+      "inclusive_ms": 76.479,
+      "self_percent_of_all_samples": 2.3474714473695113,
+      "samples": 49
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/surface_contacts.mjs",
+      "function": "edgeContact",
+      "line": 30,
+      "self_ms": 59.797,
+      "inclusive_ms": 220.778,
+      "self_percent_of_all_samples": 1.8354286815773568,
+      "samples": 39
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/mattress_physics.mjs",
+      "function": "sampleTop",
+      "line": 93,
+      "self_ms": 56.804,
+      "inclusive_ms": 56.804,
+      "self_percent_of_all_samples": 1.7435605603679145,
+      "samples": 38
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/surface_contacts.mjs",
+      "function": "solveSurfaceContacts",
+      "line": 91,
+      "self_ms": 54.322,
+      "inclusive_ms": 1184.655,
+      "self_percent_of_all_samples": 1.667377240340572,
+      "samples": 40
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/surface_contacts.mjs",
+      "function": "interiorContact",
+      "line": 54,
+      "self_ms": 53.579,
+      "inclusive_ms": 53.579,
+      "self_percent_of_all_samples": 1.6445713552558356,
+      "samples": 34
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/surface_contacts.mjs",
+      "function": "clipInterval",
+      "line": 22,
+      "self_ms": 44.247,
+      "inclusive_ms": 44.247,
+      "self_percent_of_all_samples": 1.3581318941377212,
+      "samples": 28
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/surface_contacts.mjs",
+      "function": "clipInterval",
+      "line": 22,
+      "self_ms": 34.314,
+      "inclusive_ms": 34.314,
+      "self_percent_of_all_samples": 1.0532451423925184,
+      "samples": 22
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/mattress_physics.mjs",
+      "function": "collideCloth",
+      "line": 110,
+      "self_ms": 31.924,
+      "inclusive_ms": 132.841,
+      "self_percent_of_all_samples": 0.9798857004644973,
+      "samples": 22
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/mattress_physics.mjs",
+      "function": "solve",
+      "line": 79,
+      "self_ms": 28.902,
+      "inclusive_ms": 38.43,
+      "self_percent_of_all_samples": 0.8871274437672253,
+      "samples": 18
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/surface_contacts.mjs",
+      "function": "solveSurfaceContacts",
+      "line": 89,
+      "self_ms": 24.628,
+      "inclusive_ms": 292.193,
+      "self_percent_of_all_samples": 0.7559398894574502,
+      "samples": 20
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/mattress_physics.mjs",
+      "function": "collideCloth",
+      "line": 109,
+      "self_ms": 21.664,
+      "inclusive_ms": 55.74,
+      "self_percent_of_all_samples": 0.6649619037358373,
+      "samples": 15
+    },
+    {
+      "source": "",
+      "function": "(program)",
+      "line": 0,
+      "self_ms": 19.811,
+      "inclusive_ms": 19.811,
+      "self_percent_of_all_samples": 0.6080853154962459,
+      "samples": 1
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/frame_contacts.mjs",
+      "function": "solveFrameContacts",
+      "line": 92,
+      "self_ms": 19.741,
+      "inclusive_ms": 20.628,
+      "self_percent_of_all_samples": 0.6059367125945884,
+      "samples": 16
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/frame_contacts.mjs",
+      "function": "solveFrameContacts",
+      "line": 92,
+      "self_ms": 15.46,
+      "inclusive_ms": 15.568,
+      "self_percent_of_all_samples": 0.4745342979946475,
+      "samples": 12
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/mattress_physics.mjs",
+      "function": "step",
+      "line": 170,
+      "self_ms": 12.852,
+      "inclusive_ms": 2476.956,
+      "self_percent_of_all_samples": 0.3944834927443215,
+      "samples": 9
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/mattress_physics.mjs",
+      "function": "solve",
+      "line": 78,
+      "self_ms": 11.178,
+      "inclusive_ms": 11.178,
+      "self_percent_of_all_samples": 0.3431011890675401,
+      "samples": 7
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/finite_top_domain.mjs",
+      "function": "observeTop",
+      "line": 50,
+      "self_ms": 11.137,
+      "inclusive_ms": 11.137,
+      "self_percent_of_all_samples": 0.3418427216537121,
+      "samples": 8
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/candidate/mattress_physics.mjs",
+      "function": "solvePillow",
+      "line": 157,
+      "self_ms": 9.732,
+      "inclusive_ms": 9.732,
+      "self_percent_of_all_samples": 0.29871719198472896,
+      "samples": 6
+    },
+    {
+      "source": "work/world-finite-top-domain-candidate-017/baseline/mattress_physics.mjs",
+      "function": "step",
+      "line": 169,
+      "self_ms": 9.684,
+      "inclusive_ms": 614.564,
+      "self_percent_of_all_samples": 0.29724386428073524,
+      "samples": 8
+    },
+    {
+      "source": "node:internal/bootstrap/realm",
+      "function": "compileForInternalLoader",
+      "line": 383,
+      "self_ms": 9.433,
+      "inclusive_ms": 9.433,
+      "self_percent_of_all_samples": 0.2895395881619347,
+      "samples": 6
+    }
+  ],
+  "profile_run_candidate_ms": 2542.3882,
+  "profile_run_baseline_ms": 633.6304999999998,
+  "limitations": [
+    "One short mixed candidate/baseline process; percentages use all sampled runtime including startup and both implementations.",
+    "CPU sampling assigns time approximately and may fold inlined work into caller frames; it is not a separate allocation profile.",
+    "No optimized code was implemented and no speedup is claimed.",
+    "The exact 12-frame observation match does not establish all longer trajectories under profiling."
+  ],
+  "next": "Consider one isolated019 helper-only change: allocation-free key creation for validated1/2/3-integer IDs with unchanged fallback, or explicit loops in observeVertex. Preserve all observation calls, finiteXYZ checks, EPS, holds and counters; evaluate independently before any installation."
+}

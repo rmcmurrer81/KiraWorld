@@ -1,0 +1,137 @@
+{
+  "status": "PORTABLE_REPRODUCTION_PLAN_NOT_EXECUTED",
+  "at_utc": "2026-09-23T03:41:26.056188+00:00",
+  "sources": [
+    {
+      "path": "../candidate/bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "../candidate/finite_top_domain.mjs",
+      "sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+      "bytes": 5976
+    },
+    {
+      "path": "../candidate/frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "../candidate/mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "../candidate/surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "../baseline/bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "../baseline/frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "../baseline/mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "bytes": 13616
+    },
+    {
+      "path": "../baseline/surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    },
+    {
+      "path": "../reference017/candidate/bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "../reference017/candidate/finite_top_domain.mjs",
+      "sha256": "13120533b0a066c2f86918f72efbebb26fa05c880f03811c5ecc9461ec75eac4",
+      "bytes": 5338
+    },
+    {
+      "path": "../reference017/candidate/frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "../reference017/candidate/mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "../reference017/candidate/surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "../reference016/candidate/finite_top_domain.mjs",
+      "sha256": "d8ab67bf04a2e6e27658134b935ab12ab81d0749c9f73a9b2bc0879358f8a9fe",
+      "bytes": 5210
+    },
+    {
+      "path": "../fixtures/wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    },
+    {
+      "path": "../check_domain.mjs",
+      "sha256": "3b27889eb60bb84d1425c3ce6dc6b38a15f6d4937ca901f7277d58fc12002f5f",
+      "bytes": 7323
+    },
+    {
+      "path": "../check_keys.mjs",
+      "sha256": "1de449aa2a05b2ea6dad5c4dcad63675c9b7332b20f3f699399825f9ffc05744",
+      "bytes": 2101
+    },
+    {
+      "path": "../check_paired.mjs",
+      "sha256": "9f69a19a79128ed20c35298fd1ea3afdf9d70a402f395d0bbf5c5b1eed8efca0",
+      "bytes": 3494
+    },
+    {
+      "path": "../check_release.mjs",
+      "sha256": "4513d65b73eb5e42ba5dca0daa8e3050dc82c3eabc54dea9a0067088b04d9bd3",
+      "bytes": 5917
+    },
+    {
+      "path": "../run_checks.py",
+      "sha256": "5924b1dad88713649faf223cc0c70c141dd546abd4cb49dbec0d21ff75e7de1b",
+      "bytes": 2574
+    },
+    {
+      "path": "check_paired.mjs",
+      "sha256": "23baf1c52a104735c5e661f16eb4ff5a7b97d2af8c0e96c6d033623c89b108f8",
+      "bytes": 3498
+    },
+    {
+      "path": "run_checks.py",
+      "sha256": "5924b1dad88713649faf223cc0c70c141dd546abd4cb49dbec0d21ff75e7de1b",
+      "bytes": 2574
+    }
+  ],
+  "fixture": {
+    "path": "../fixtures/wide.json",
+    "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+    "bytes": 231113
+  },
+  "budget": {
+    "node_processes": 1,
+    "heap_mib": 384,
+    "rss_mib": 512,
+    "wall_seconds_per_check": 30,
+    "minimum_free_gib": 2,
+    "gpu_models": 0
+  },
+  "paired_frames_each": 12,
+  "physics_settings_unchanged": true,
+  "order": "017 predecessor first then 019 candidate each frame; compare with preserved candidate-first pilot."
+}

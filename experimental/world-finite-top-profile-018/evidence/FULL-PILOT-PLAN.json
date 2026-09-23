@@ -1,0 +1,86 @@
+{
+  "status": "AUTHORIZED_SINGLE_CPU_PROFILE_NOT_EXECUTED",
+  "at_utc": "2026-09-23T03:32:53.205063+00:00",
+  "fixture": {
+    "path": "@workspace\\work\\world-frame-contact-perf-candidate\\fixtures\\wide.json",
+    "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+    "bytes": 231113
+  },
+  "sources": [
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\finite_top_domain.mjs",
+      "sha256": "13120533b0a066c2f86918f72efbebb26fa05c880f03811c5ecc9461ec75eac4",
+      "bytes": 5338
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "bytes": 13616
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    },
+    {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\fixtures\\wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\check_full_pilot.mjs",
+      "sha256": "307d614848ce772e977d573394727626fd3a7c43aa5f1906071999e2d6e69696",
+      "bytes": 3974
+    }
+  ],
+  "frames_each": 12,
+  "default_cloth_nodes": 725,
+  "mattress_nodes": 651,
+  "iterations": 40,
+  "substeps": 4,
+  "fixed_dt": 0.016666666666666666,
+  "initial_geometry": "Unchanged default wide constructor; no translation, pin, load or history reset. Save exact initial arrays and require zero frame pairs before stepping.",
+  "protocol": "Candidate and preserved installed baseline each run12 frames serially in one process. Record per-frame finite/domain/contact/strain/speed, Node702 and exact p/prev/v differences; preserve discrepancies without reclassification as physics pass.",
+  "budget": {
+    "heap_mib": 384,
+    "rss_mib": 512,
+    "wall_seconds": 30,
+    "node_processes": 1,
+    "priority": "below_normal",
+    "minimum_free_gib": 2,
+    "gpu_models": 0,
+    "automatic_repeat": false
+  },
+  "next": "Read-only profile analysis and isolated optimization proposal; no source edit/install, broad replay or speedup claim.",
+  "cpu_profile_interval_us": 1000
+}

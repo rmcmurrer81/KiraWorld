@@ -1,0 +1,42 @@
+{
+  "status": "SCOPED_KEY_EQUIVALENCE_AND_PAIRED_TIMING_PASS_UNINSTALLED",
+  "at_utc": "2026-09-23T03:50:25.286418+00:00",
+  "only_physics_source_change": "finite_top_domain.mjs primitive key construction; scalar fast paths for dense one-, two- or three-integer arrays with original fallback",
+  "helper_sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+  "key_cases": 3040,
+  "domain_groups": 20,
+  "tiny_frames": 33,
+  "paired_full_size_frames_each_per_order": 12,
+  "exact_every_frame": [
+    "cloth/mattress/pillow p, prev and v bytes",
+    "domain last-position bytes and masks",
+    "primitive certificates",
+    "all counters, metrics and holds"
+  ],
+  "first_and_reverse_physical_observations_exact": true,
+  "measured_timings": [
+    {
+      "order": "candidate first",
+      "candidate019_ms": 2039.1408,
+      "predecessor017_ms": 2537.4687999999996,
+      "candidate_runtime_reduction_percent": 19.638783341887777
+    },
+    {
+      "order": "predecessor first",
+      "candidate019_ms": 1954.0520999999987,
+      "predecessor017_ms": 2397.7252000000008,
+      "candidate_runtime_reduction_percent": 18.503917796751768
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "installed": false,
+  "gpu_jobs": 0,
+  "limits": [
+    "Two short opposite-order mixed processes; not a statistical benchmark or a general hardware claim.",
+    "Only the first 12 default full-size frames were paired; the 1,110-frame trajectory belongs to predecessor017.",
+    "Candidate019 has no long-run, visual, calibrated material, underside/side response or installation approval.",
+    "Proxy/getter/species side effects are outside the owned dense-array contract; existing fallback is retained for ordinary other values/types.",
+    "World015 and owner worlds were not edited by this isolated work."
+  ],
+  "next": "Isolate allocation removal in observeVertex/mask without changing observation frequency, finite checks, adjacency order, counters, certificates, hold reasons or solver state."
+}

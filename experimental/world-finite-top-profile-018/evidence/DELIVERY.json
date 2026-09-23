@@ -1,0 +1,102 @@
+{
+  "status": "COMPLETED_CPU_PROFILE_NO_SOURCE_OPTIMIZATION_NO_INSTALL",
+  "at_utc": "2026-09-23T03:35:54.599225+00:00",
+  "analysis": {
+    "path": "@workspace\\work\\world-finite-top-domain-profile-018\\PROFILE-ANALYSIS.json",
+    "sha256": "3a53f7bf20c6e7c8dd93855a83d8a30bc01f4ddab4fef4177760ab26bb868ddb",
+    "bytes": 14032
+  },
+  "supervisor": {
+    "path": "@workspace\\work\\world-finite-top-domain-profile-018\\PROFILE-SUPERVISOR.json",
+    "sha256": "78d018f0fd0dbfd21b9e4f1083f00c6426b806bb4ec5e389d3d7c14ba98cd1c7",
+    "bytes": 502
+  },
+  "seconds": 3.3348605999490246,
+  "peak_rss_bytes": 96092160,
+  "profiled_frames_total": 24,
+  "physical_observations_match_prior_exactly": true,
+  "helper_self_sample_percent": 49.27802338355232,
+  "source017_and_portable003_unchanged": true,
+  "optimization_implemented": false,
+  "speedup_claimed": false,
+  "installed": false,
+  "gpu_models": 0,
+  "files": [
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\analyze_profile.py",
+      "sha256": "417a63f63f8f40c6f24b6ca4969f07f87a964a0f621c2a71a4045e08a876db65",
+      "bytes": 3745
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\check_full_pilot.mjs",
+      "sha256": "307d614848ce772e977d573394727626fd3a7c43aa5f1906071999e2d6e69696",
+      "bytes": 3974
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\FULL-PILOT-INITIAL.json",
+      "sha256": "3bdc2c7cde017d2f21f35fa4e46a669a81632828f54b0697454f0acfe0525eab",
+      "bytes": 77971
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\FULL-PILOT-PLAN.json",
+      "sha256": "a2171bd7cdad1ed874f8461f991f74497c9aac0e9d69a9b4ed258074612586d9",
+      "bytes": 4725
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\FULL-PILOT-RESULT.json",
+      "sha256": "768ee4091c2f19b2d02650a99d48c95b4c82aaf4aa12254149695ac9f1c24c70",
+      "bytes": 25631
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\NEXT-OPTIMIZATION.md",
+      "sha256": "866e7c7962050c70eb73df1111f8fa019aa87579b8535fb4480c8e236bd4aa3d",
+      "bytes": 2075
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\PRECONDITIONS.json",
+      "sha256": "cfc1570a074debb646821d25c48d3c91ac50f2358cb9964b54680c844e1ae41a",
+      "bytes": 4276
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\profile\\world017.cpuprofile",
+      "sha256": "77ef650beb13b5e6796c5526f39f83e6f800dc0de35704e64fc7627a598a8c34",
+      "bytes": 85044
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\PROFILE-ANALYSIS.json",
+      "sha256": "3a53f7bf20c6e7c8dd93855a83d8a30bc01f4ddab4fef4177760ab26bb868ddb",
+      "bytes": 14032
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\PROFILE-SUPERVISOR.json",
+      "sha256": "78d018f0fd0dbfd21b9e4f1083f00c6426b806bb4ec5e389d3d7c14ba98cd1c7",
+      "bytes": 502
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\profile.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\profile.stdout.txt",
+      "sha256": "250e3ae1a0b0fd65c2bb8584386840a7968461dbca8cc27f6bb0c16192ce5656",
+      "bytes": 194
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\RESUME.md",
+      "sha256": "a42a8c69c91db352ca64d33c3ae8404e13a2faf4b8080daeacdbce02130bfe80",
+      "bytes": 1231
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\run_profile.py",
+      "sha256": "51eb150a6e9907335c8c6a4062c9417878f328114ba286993a6db8da2e36a5ab",
+      "bytes": 2763
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-profile-018\\WORLD-STATUS-FOR-USER.md",
+      "sha256": "b0b974995b6e4e664a32f6f660850c4e52d59f0ac9e5cbc77c21070d8d7acf7d",
+      "bytes": 1202
+    }
+  ],
+  "next": "Root review of proposed isolated019 key-path optimization; no automatic implementation or long replay."
+}
