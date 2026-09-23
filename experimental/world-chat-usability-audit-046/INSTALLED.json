@@ -1,0 +1,25 @@
+{
+  "status": "INSTALLED046_CHAT_CONTEXT_RESET",
+  "at_utc": "2026-09-23T11:49:39.341808+00:00",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_workspace.py",
+      "target": "@kira_root\\tools\\world_builder_workspace.py",
+      "before_sha256": "c86beb6a97cdd70d7477d9edd2cb680399147da0ef3a87d17c6ab2a6afa79b1b",
+      "preimage": "@workspace\\work\\world-chat-usability-audit-046\\baseline\\world_builder_workspace.py",
+      "after": {
+        "path": "@workspace\\work\\world-chat-usability-audit-046\\candidate\\tools\\world_builder_workspace.py",
+        "sha256": "6f6b8076bca6fe1c1e5c17978bc71c8891f44d025c62222de1f981a7ff80db54",
+        "bytes": 27949
+      }
+    }
+  ],
+  "plan_sha256": "77d2cfd1ba46d64ef2ece0eca54b00356c6b8751f1b07ee108d5c41bf9eca042",
+  "protected_originals_unchanged": 116,
+  "root_review": "Root read exact one-method delta, existing selector/context reset,15 request audit and11 callback/export-boundary tests. Same-job resume preserved; no command dispatcher or generation changes.",
+  "model_calls": 0,
+  "native_UI_actions": 0,
+  "owner_approval": false,
+  "remaining_gaps": "Natural edit/open/preview/export/question/negative requests still create research; separate dispatcher work required.",
+  "rollback_preimage": "@workspace\\work\\world-chat-usability-audit-046\\baseline\\world_builder_workspace.py"
+}

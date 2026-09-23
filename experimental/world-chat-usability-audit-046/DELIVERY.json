@@ -1,0 +1,37 @@
+{
+  "status": "046_ISOLATED_CHAT_SELECTION_FIX_AND_MEASURED_USABILITY_GAPS_READY",
+  "created_utc": "2026-09-23T11:47:43.839368+00:00",
+  "review_plan_sha256": "77d2cfd1ba46d64ef2ece0eca54b00356c6b8751f1b07ee108d5c41bf9eca042",
+  "candidate_sha256": "6f6b8076bca6fe1c1e5c17978bc71c8891f44d025c62222de1f981a7ff80db54",
+  "source_closure_sha256": "cc80ae3307ec3863040b44c358a9920ea27fa42f150f8a9c93d6e92983a01e08",
+  "changed_canonical_files_proposed": 1,
+  "actual_chat_cases": 15,
+  "context_switch_cases": 13,
+  "baseline_stale_previews": 13,
+  "candidate_stale_previews": 0,
+  "focused_tests_pass": 11,
+  "actual_services_executed": [
+    "brief parser",
+    "saved job creation in disposable state",
+    "saved catalog/selection",
+    "export selection guard"
+  ],
+  "inert_boundaries": [
+    "research and model worker",
+    "preview opening",
+    "destination chooser",
+    "export generation"
+  ],
+  "all_other_captured_routing_outcomes_identical": true,
+  "protected_originals_unchanged": 116,
+  "canonical_edits": 0,
+  "git_mutations": 0,
+  "models_gpu_browser_native_ui": 0,
+  "remaining_gaps": [
+    "Chat room/door editing",
+    "Chat open/reopen/preview/export dispatch",
+    "Chat questions and negations submit research",
+    "Original crew-habitat modifier grammar"
+  ],
+  "native_ui_or_owner_approval": false
+}

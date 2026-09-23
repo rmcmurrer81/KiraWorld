@@ -327,11 +327,7 @@ class WorldBuilderWorkspace(tk.Tk):
         except Exception as exc:
             self.log(f"Research request could not start: {exc}")
             return
-        if submitted["job_dir"] != self._research_latest:
-            # Chat submission selects a world just like the saved-job chooser.
-            # Do not let its export capture the previous world's preview, or
-            # leave reference/component windows showing the previous selection.
-            self.set_saved_research_context(submitted["job_dir"])
+        self._research_latest = submitted["job_dir"]
         self.latest_folder = submitted["job_dir"]
         self.refresh_saved_research()
         self.log(f"Research job: {submitted['job_id']} | saved state: {submitted['stage']}")

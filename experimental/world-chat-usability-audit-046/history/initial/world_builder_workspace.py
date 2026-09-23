@@ -332,7 +332,6 @@ class WorldBuilderWorkspace(tk.Tk):
             # Do not let its export capture the previous world's preview, or
             # leave reference/component windows showing the previous selection.
             self.set_saved_research_context(submitted["job_dir"])
-        self.latest_folder = submitted["job_dir"]
         self.refresh_saved_research()
         self.log(f"Research job: {submitted['job_id']} | saved state: {submitted['stage']}")
         self.log(f"Subject: {submitted['subject']} | {submitted['research_mode']} | {submitted['visual_style']['description']}")

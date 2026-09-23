@@ -1,0 +1,16 @@
+--- installed045/world_builder_workspace.py
++++ candidate046/world_builder_workspace.py
+@@ -327,8 +327,11 @@
+         except Exception as exc:
+             self.log(f"Research request could not start: {exc}")
+             return
+-        self._research_latest = submitted["job_dir"]
+-        self.latest_folder = submitted["job_dir"]
++        if submitted["job_dir"] != self._research_latest:
++            # Chat submission selects a world just like the saved-job chooser.
++            # Do not let its export capture the previous world's preview, or
++            # leave reference/component windows showing the previous selection.
++            self.set_saved_research_context(submitted["job_dir"])
+         self.refresh_saved_research()
+         self.log(f"Research job: {submitted['job_id']} | saved state: {submitted['stage']}")
+         self.log(f"Subject: {submitted['subject']} | {submitted['research_mode']} | {submitted['visual_style']['description']}")
