@@ -1,0 +1,110 @@
+from pathlib import Path
+import json,hashlib,shutil,datetime
+H=Path(__file__).resolve().parent
+W=H.parent.parent
+P=H/'portable-backup-003'
+assert (H/'FULL-TRAJECTORY-SUPERVISOR.json').exists(), 'Wait until the owned run closes'
+assert not P.exists(), 'Preserve prior portable backup'
+P.mkdir()
+def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def redact(t):
+    values=[(str(W),'@workspace'),(W.as_posix(),'@workspace'),(str(Path.home()/'Kira'),'@installed_kira'),((Path.home()/'Kira').as_posix(),'@installed_kira'),(str(Path.home()),'@user_home'),(Path.home().as_posix(),'@user_home')]
+    for source,target in values:
+        t=t.replace(json.dumps(source)[1:-1],target).replace(source,target)
+    return t
+entries=[];mapping={}
+def copy(source,relative,transform=None):
+    target=P/relative;target.parent.mkdir(parents=True,exist_ok=True)
+    if transform:target.write_text(transform(source.read_text(encoding='utf-8')),encoding='utf-8',newline='\n')
+    else:shutil.copy2(source,target)
+    mapping[str(source.resolve())]=relative.replace('\\','/')
+    entries.append({'source_workspace_relative':str(source.relative_to(W)).replace('\\','/'),'original_sha256':digest(source),'backup_path':relative.replace('\\','/'),'backup_sha256':digest(target),'transformed':bool(transform)})
+for folder in ['candidate','baseline']:
+    for p in sorted((H/folder).glob('*.mjs')):copy(p,f'{folder}/{p.name}')
+copy(H.parent/'world-finite-top-domain-candidate-016/candidate/finite_top_domain.mjs','reference016/finite_top_domain.mjs')
+copy(H.parent/'world-frame-contact-perf-candidate/fixtures/wide.json','fixtures/wide.json')
+copy(H.parent/'world-contact-transient-validation-proposal/DENSE-FRAMES.jsonl','reference/DENSE-FRAMES.jsonl',redact)
+copy(H.parent/'world-frame-contact-perf-candidate/FULL-DYNAMIC.json','reference/FULL-DYNAMIC.json',redact)
+for name in ['check_domain.mjs','check_release.mjs','check_full_pilot.mjs','check_full_trajectory.mjs']:
+    copy(H/name,name,lambda t:redact(t).replace('../world-finite-top-domain-candidate-016/candidate/finite_top_domain.mjs','./reference016/finite_top_domain.mjs').replace('../world-frame-contact-perf-candidate/fixtures/wide.json','./fixtures/wide.json'))
+for p in sorted(H.iterdir()):
+    if p.is_file() and p.suffix in ['.json','.jsonl','.md','.patch','.txt']:
+        copy(p,'evidence/'+p.name,redact)
+for name in ['run_bounded.py','run_release.py','run_full_trajectory.py','seal.py','build_portable_backup.py']:
+    copy(H/name,'provenance/'+name+'.txt',redact)
+for name in ['FULL-PILOT-PLAN.json','FULL-TRAJECTORY-PLAN.json']:
+    obj=json.loads((H/name).read_text(encoding='utf-8'))
+    for field in ['sources']:
+        for row in obj[field]:
+            original=str(Path(row['path']).resolve())
+            assert original in mapping, original
+            row['path']=mapping[original];row['sha256']=digest(P/row['path']);row['bytes']=(P/row['path']).stat().st_size
+    for field in ['fixture','historical_dense','historical_sampled']:
+        if field in obj:
+            row=obj[field];row['path']=mapping[str(Path(row['path']).resolve())];row['sha256']=digest(P/row['path']);row['bytes']=(P/row['path']).stat().st_size
+    obj['status']='PORTABLE_REPLAY_PLAN_NOT_EXECUTED'
+    (P/name).write_text(json.dumps(obj,indent=2)+'\n',encoding='utf-8')
+# Python supervisors are archived as evidence; this portable runner retains the
+# same node/memory/time limits without machine-specific executable paths.
+(P/'run_checks.py').write_text('''from pathlib import Path
+import sys,shutil,subprocess,time,json
+import psutil
+H=Path(__file__).resolve().parent
+mode=sys.argv[1] if len(sys.argv)>1 else 'domain'
+scripts={'domain':'check_domain.mjs','release':'check_release.mjs','pilot':'check_full_pilot.mjs','trajectory':'check_full_trajectory.mjs'}
+assert mode in scripts
+assert mode!='trajectory' or '--run-long' in sys.argv, 'Long trajectory requires explicit --run-long'
+node=shutil.which('node');assert node, 'Install Node.js and put node on PATH'
+assert psutil.virtual_memory().available>=2*2**30, 'At least2GiB available required'
+limit=420 if mode=='trajectory' else 120
+receipt=H/(mode+'-portable-supervisor.json');assert not receipt.exists(), 'Preserve existing replay; use a fresh backup copy'
+start=time.monotonic();peak=0;reason=None
+p=subprocess.Popen([node,'--max-old-space-size=384',str(H/scripts[mode])],cwd=H,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+try:
+ owned=psutil.Process(p.pid)
+ if hasattr(psutil,'BELOW_NORMAL_PRIORITY_CLASS'):owned.nice(psutil.BELOW_NORMAL_PRIORITY_CLASS)
+ while p.poll() is None:
+  try:peak=max(peak,owned.memory_info().rss)
+  except psutil.NoSuchProcess:pass
+  if peak>512*2**20 or time.monotonic()-start>limit:reason='RESOURCE_LIMIT';p.kill();break
+  time.sleep(.1)
+finally:
+ if p.poll() is None:p.kill()
+ code=p.wait(timeout=5)
+ receipt.write_text(json.dumps({'process_exit_code':code,'reason':reason,'elapsed_seconds':time.monotonic()-start,'peak_rss_bytes':peak,'physics_status':'Read the separate result file; process completion is not physical acceptance.'},indent=2)+'\\n')
+raise SystemExit(code)
+''',encoding='utf-8')
+(P/'README.md').write_text('''# World017 isolated physics candidate — unfinished and uninstalled
+
+This backup preserves the finiteXYZ top-domain guard, its exact candidate and
+baseline source closure, original016 counterexample helper, original frame
+fixture, focused tests and bounded coupled observations. It is an engineering
+candidate, not the installed World Builder physics or a finished furnishing
+simulation. Side/underside fallback, public mutable-array ownership, self
+collision, calibrated dynamics and visual acceptance remain unresolved.
+
+Recorded local receipts are under `evidence/`. Machine identity paths were
+replaced by symbolic roots. Hashes embedded in those historical receipts refer
+to original local files; `BACKUP-MANIFEST.json` records both original and packaged
+hashes. Source modules and the frame fixture are copied byte-for-byte. Test
+imports and replay plans use paths inside this package. Original supervisors are
+archived under `provenance/`; the portable runner locates Node on PATH.
+
+To rerun in a fresh package copy, install Python, psutil and Node.js, then run
+`python run_checks.py domain`, `python run_checks.py release`, or
+`python run_checks.py pilot`. The expensive original1110-frame command sequence
+requires `python run_checks.py trajectory --run-long`; its resource ceiling is
+420 seconds/512MiB RSS, with384MiB Node heap. Other checks have120-second ceilings.
+Existing output files are deliberately preserved rather than overwritten.
+
+The source/test backup and archived receipts do not authorize installation.
+See `evidence/DELIVERY.json`, `CONTRACT.md`, `RESUME.md` and the actual trajectory
+result for completed checks and remaining holds. A successful process exit is
+not physical or visual acceptance.
+''',encoding='utf-8')
+allfiles=[p for p in sorted(P.rglob('*')) if p.is_file()]
+for p in allfiles:
+    assert str(Path.home()).lower() not in p.read_text(encoding='utf-8').lower(),p
+manifest={'status':'PORTABLE_BACKUP_UNINSTALLED_UNFINISHED','at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'identity_paths_redacted':True,'source_entries':entries,'files':[{'path':str(p.relative_to(P)).replace('\\','/'),'sha256':digest(p),'bytes':p.stat().st_size} for p in allfiles],'local_receipt_hashes_are_historical':True,'portable_replay_execution':'Not executed during packaging; source copies and plan hashes checked statically.'}
+(P/'BACKUP-MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'portable_backup_workspace_relative':str(P.relative_to(W)).replace('\\','/'),'manifest_sha256':digest(P/'BACKUP-MANIFEST.json'),'files':len(allfiles)}))

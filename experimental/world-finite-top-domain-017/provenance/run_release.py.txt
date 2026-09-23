@@ -1,0 +1,20 @@
+from pathlib import Path
+import subprocess,time,json,hashlib
+import psutil
+H=Path(__file__).resolve().parent
+def pin(p):return {'path':str(p.resolve()),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+paths=list((H/'candidate').glob('*.mjs'))+list((H/'baseline').glob('*.mjs'))+[H/'check_release.mjs']
+before=[pin(p) for p in paths]
+assert not (H/'RELEASE-SUPERVISOR.json').exists()
+started=time.monotonic();reason=None;peak=0
+with (H/'release.stdout.txt').open('x',encoding='utf-8') as stdout,(H/'release.stderr.txt').open('x',encoding='utf-8') as stderr:
+ p=subprocess.Popen(['C:/Program Files/nodejs/node.exe','--max-old-space-size=384',str(H/'check_release.mjs')],stdout=stdout,stderr=stderr,creationflags=subprocess.CREATE_NO_WINDOW)
+ while p.poll() is None:
+  try:peak=max(peak,psutil.Process(p.pid).memory_info().rss)
+  except psutil.NoSuchProcess:pass
+  if peak>512*2**20 or time.monotonic()-started>120:
+   reason='512_MIB_RSS_OR_120_SECOND_LIMIT';p.kill();break
+  time.sleep(.1)
+ code=p.wait(timeout=5)
+out={'status':'COMPLETED' if code==0 else 'HELD_OR_FAILED','exit_code':code,'reason':reason,'seconds':time.monotonic()-started,'peak_rss_bytes':peak,'heap_cap_mib':384,'rss_cap_mib':512,'deadline_seconds':120,'node_processes':1,'owned_remaining':[],'source_before':before,'source_unchanged':before==[pin(p) for p in paths],'installed_edits':False,'gpu':False}
+(H/'RELEASE-SUPERVISOR.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps({k:v for k,v in out.items() if k!='source_before'}));raise SystemExit(code)

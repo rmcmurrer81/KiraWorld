@@ -1,0 +1,291 @@
+{
+  "status": "RUNNING",
+  "phase": "release",
+  "phase_frame": 31,
+  "global_frames": 1110,
+  "elapsed_ms": 264062.6219,
+  "last": {
+    "action": "release",
+    "stage_frame": 30,
+    "global_frame": 1110,
+    "time_s": 18.49999999999927,
+    "finite": true,
+    "stretch": 0.025912573126218863,
+    "rms_speed_mps": 0.5294465090146019,
+    "frame_pairs": 0,
+    "frame_depth_m": 0,
+    "surface_depth_m": 0,
+    "frame_worst": null,
+    "compression_m": 0,
+    "node702": {
+      "p": [
+        -0.5604429128886222,
+        0.006,
+        1.0718723089760676
+      ],
+      "previous": [
+        -0.5604085555893461,
+        0.006,
+        1.0719470007140395
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ]
+    },
+    "domain": {
+      "valid": true,
+      "reason": null,
+      "observations": 1469820737,
+      "queries": 468866463,
+      "suppressed": 156081866,
+      "lost": 493089,
+      "lateral_reanchors": 490621,
+      "report": 1487659,
+      "edge": 96084290,
+      "triangle": 58500841,
+      "velocity": 196,
+      "particle": 8880,
+      "primitive_count": 4137,
+      "epsilon_m": 1e-8,
+      "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+    },
+    "historical_differences": {
+      "time_s": 0,
+      "stretch": -0.07653136233139857,
+      "rms_speed_mps": -0.8279866228889272,
+      "frame_pairs": 0,
+      "frame_depth_m": 0,
+      "surface_depth_m": 0,
+      "compression_m": 0
+    }
+  },
+  "summaries": [
+    {
+      "action": "settle",
+      "frames": 480,
+      "max_stretch": 0.03859631454134105,
+      "max_rms_speed_mps": 1.3233958270567383,
+      "max_frame_pairs": 0,
+      "max_surface_depth_m": 0,
+      "sampled_at30": {
+        "maxStretch": 0.020341452950689787,
+        "maxSpeed": 0.33091089348485797,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0
+      },
+      "historical30_frame_aggregate": {
+        "size": "wide",
+        "action": "settle",
+        "time": 7.999999999999866,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.08718777628539875,
+        "maxSpeed": 2.1485738379511283,
+        "restStretch": 0.037219256072476226,
+        "restSpeed": 0.02096773773908609,
+        "compression": 0
+      },
+      "actual30_frame_aggregate": {
+        "size": "wide",
+        "action": "settle",
+        "time": 7.999999999999866,
+        "maxStretch": 0.020341452950689787,
+        "maxSpeed": 0.33091089348485797,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "restStretch": 0.012859338375819096,
+        "restSpeed": 0.003298589236762196,
+        "compression": 0
+      },
+      "sampled_exact": false
+    },
+    {
+      "action": "load",
+      "frames": 180,
+      "max_stretch": 0.01458265756579813,
+      "max_rms_speed_mps": 0.00947820435298221,
+      "max_frame_pairs": 0,
+      "max_surface_depth_m": 0,
+      "sampled_at30": {
+        "maxStretch": 0.01458265756579813,
+        "maxSpeed": 0.004969330379838014,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0
+      },
+      "historical30_frame_aggregate": {
+        "size": "wide",
+        "action": "load",
+        "time": 10.999999999999696,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.04485533978167622,
+        "maxSpeed": 0.0390633781276551,
+        "restStretch": 0.04485533978167622,
+        "restSpeed": 0.010681122661126542,
+        "compression": 0.04194270893696084
+      },
+      "actual30_frame_aggregate": {
+        "size": "wide",
+        "action": "load",
+        "time": 10.999999999999696,
+        "maxStretch": 0.01458265756579813,
+        "maxSpeed": 0.004969330379838014,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "restStretch": 0.01458265756579813,
+        "restSpeed": 0.00369653893525238,
+        "compression": 0.04194270893696084
+      },
+      "sampled_exact": false
+    },
+    {
+      "action": "unload",
+      "frames": 180,
+      "max_stretch": 0.01542234264226039,
+      "max_rms_speed_mps": 0.006809671175149009,
+      "max_frame_pairs": 0,
+      "max_surface_depth_m": 0,
+      "sampled_at30": {
+        "maxStretch": 0.01542234264226039,
+        "maxSpeed": 0.006668112230078619,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0
+      },
+      "historical30_frame_aggregate": {
+        "size": "wide",
+        "action": "unload",
+        "time": 13.999999999999526,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.044754214671709036,
+        "maxSpeed": 0.02099664568131567,
+        "restStretch": 0.044754214671709036,
+        "restSpeed": 0.006771718484468834,
+        "compression": 0
+      },
+      "actual30_frame_aggregate": {
+        "size": "wide",
+        "action": "unload",
+        "time": 13.999999999999526,
+        "maxStretch": 0.01542234264226039,
+        "maxSpeed": 0.006668112230078619,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "restStretch": 0.01542234264226039,
+        "restSpeed": 0.0033272859696372972,
+        "compression": 0
+      },
+      "sampled_exact": false
+    },
+    {
+      "action": "grab",
+      "frames": 120,
+      "max_stretch": 0.017891547126924978,
+      "max_rms_speed_mps": 0.2737655946192567,
+      "max_frame_pairs": 0,
+      "max_surface_depth_m": 0,
+      "sampled_at30": {
+        "maxStretch": 0.016123035930592833,
+        "maxSpeed": 0.1853491220059273,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0
+      },
+      "historical30_frame_aggregate": {
+        "size": "wide",
+        "action": "grab",
+        "time": 15.999999999999412,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.047634997533609,
+        "maxSpeed": 0.23044427517172242,
+        "restStretch": 0.047634997533609,
+        "restSpeed": 0.02977756057377958,
+        "compression": 0
+      },
+      "actual30_frame_aggregate": {
+        "size": "wide",
+        "action": "grab",
+        "time": 15.999999999999412,
+        "maxStretch": 0.016123035930592833,
+        "maxSpeed": 0.1853491220059273,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "restStretch": 0.010747672600778246,
+        "restSpeed": 0.02084809895123633,
+        "compression": 0
+      },
+      "sampled_exact": false
+    },
+    {
+      "action": "across",
+      "frames": 120,
+      "max_stretch": 0.021199879101794217,
+      "max_rms_speed_mps": 0.26742295001083655,
+      "max_frame_pairs": 0,
+      "max_surface_depth_m": 0,
+      "sampled_at30": {
+        "maxStretch": 0.017855960674537208,
+        "maxSpeed": 0.25998538121576115,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0
+      },
+      "historical30_frame_aggregate": {
+        "size": "wide",
+        "action": "across",
+        "time": 17.9999999999993,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "maxStretch": 0.06272007709632788,
+        "maxSpeed": 0.6274685292279829,
+        "restStretch": 0.06272007709632788,
+        "restSpeed": 0.6274685292279829,
+        "compression": 0
+      },
+      "actual30_frame_aggregate": {
+        "size": "wide",
+        "action": "across",
+        "time": 17.9999999999993,
+        "maxStretch": 0.017855960674537208,
+        "maxSpeed": 0.25998538121576115,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0,
+        "restStretch": 0.017855960674537208,
+        "restSpeed": 0.25998538121576115,
+        "compression": 0
+      },
+      "sampled_exact": false
+    },
+    {
+      "action": "release",
+      "frames": 30,
+      "max_stretch": 0.03298308316972376,
+      "max_rms_speed_mps": 0.5300752567709136,
+      "max_frame_pairs": 0,
+      "max_surface_depth_m": 0,
+      "sampled_at30": {
+        "maxStretch": 0.025912573126218863,
+        "maxSpeed": 0.5294465090146019,
+        "framePairs": 0,
+        "depth": 0,
+        "surface": 0
+      }
+    }
+  ]
+}

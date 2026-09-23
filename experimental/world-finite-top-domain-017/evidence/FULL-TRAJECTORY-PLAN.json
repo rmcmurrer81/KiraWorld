@@ -1,0 +1,137 @@
+{
+  "status": "PREPARED_PENDING_ROOT_REVIEW_NOT_EXECUTED",
+  "at_utc": "2026-09-23T03:16:39.735621+00:00",
+  "fixture": {
+    "path": "@workspace\\work\\world-frame-contact-perf-candidate\\fixtures\\wide.json",
+    "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+    "bytes": 231113
+  },
+  "historical_dense": {
+    "path": "@workspace\\work\\world-contact-transient-validation-proposal\\DENSE-FRAMES.jsonl",
+    "sha256": "cfc8b925413d50ef8447b844c4766fc3604ddbfbc4a302749056b6a897404dc3",
+    "bytes": 123455
+  },
+  "historical_sampled": {
+    "path": "@workspace\\work\\world-frame-contact-perf-candidate\\FULL-DYNAMIC.json",
+    "sha256": "1adb16dc52b786e9607c449d5464d0f96436a2b1a8063c57e04982f4fba049dd",
+    "bytes": 4493
+  },
+  "sources": [
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\finite_top_domain.mjs",
+      "sha256": "13120533b0a066c2f86918f72efbebb26fa05c880f03811c5ecc9461ec75eac4",
+      "bytes": 5338
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\fixtures\\wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    },
+    {
+      "path": "@workspace\\work\\world-contact-transient-validation-proposal\\DENSE-FRAMES.jsonl",
+      "sha256": "cfc8b925413d50ef8447b844c4766fc3604ddbfbc4a302749056b6a897404dc3",
+      "bytes": 123455
+    },
+    {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\FULL-DYNAMIC.json",
+      "sha256": "1adb16dc52b786e9607c449d5464d0f96436a2b1a8063c57e04982f4fba049dd",
+      "bytes": 4493
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\check_full_trajectory.mjs",
+      "sha256": "0318d4d9a719bd436d98cd6fc6c334367224f2b127cae323f40e27a96a89c10f",
+      "bytes": 8037
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\run_full_trajectory.py",
+      "sha256": "5fff8ce606f0c13edad0548449714c3bf3ad7122bb4d82bd52a6d42548e6d836",
+      "bytes": 2478
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\FULL-PILOT-RESULT.json",
+      "sha256": "e1e157e6fba88a68e228c27bffb103941c940b3ebb0181c3093de6fb8eaa5780",
+      "bytes": 25649
+    }
+  ],
+  "stages": [
+    {
+      "action": "settle",
+      "frames": 480
+    },
+    {
+      "action": "load",
+      "frames": 180
+    },
+    {
+      "action": "unload",
+      "frames": 180
+    },
+    {
+      "action": "grab",
+      "frames": 120
+    },
+    {
+      "action": "across",
+      "frames": 120
+    },
+    {
+      "action": "release",
+      "frames": 30
+    }
+  ],
+  "total_frames": 1110,
+  "runtime_evidence": {
+    "pilot_frames_candidate": 12,
+    "pilot_candidate_ms": 2581.8601000000003,
+    "pilot_baseline_ms": 641.8705000000002,
+    "candidate_over_baseline": 4.022400312835688,
+    "linear_candidate_estimate_seconds": 238.82205925000005,
+    "limitation": "Pilot includes startup and early falling motion; later contact density and continuous observation may change cost. This estimate does not extend the hardcap."
+  },
+  "protocol": [
+    "Construct unchanged default725-node wide cloth,651-node mattress and exact pinned original frame; save full initial arrays; reject nonfinite/frame-overlap/invalid certificate before stepping.",
+    "Maintain continuous candidate history from initial pose through all1110 frames; never attach/reset certificates mid-run and never translate or replace arrays. Keep40 iterations,4substeps,1/60s frame interval and original coefficients.",
+    "Run candidate only; use preserved baseline metric receipts. Record each returned frame metric, node702 p/prev/v, and certificate counters. Compare identical across120/release30 frame indices and earlier30-frame aggregates; earlier divergence means trajectories differ, not that the same physical event is replayed.",
+    "Read-only wrapper forwards each original observeVertex call exactly once, retaining the20 largest positive observed node702 Y mutations during across/release. It writes only recorder-local arrays and supplies no response changes. It does not identify solver stage or certify arbitrary aliases.",
+    "Verify releaseGrab clears only pin and preserves all p/prev/v. Save state before release, first failure and final state. Emit progress every30 frames.",
+    "Stop on nonfinite output, invalid certificate or reported frame overlap; preserve last complete JSONL/progress if wall/RSS cap interrupts. Surface-depth/strain/speed discrepancies remain explicit observations, never automatic physics acceptance.",
+    "Verify exact source pins before and after; no installed/owner-data edits, processes other than owned Node, GPU, models, browser or publication. No automatic repeat."
+  ],
+  "budget": {
+    "heap_mib": 384,
+    "rss_mib": 512,
+    "wall_seconds": 420,
+    "node_processes": 1,
+    "priority": "below_normal",
+    "minimum_free_gib": 2,
+    "automatic_repeat": false,
+    "models_gpu": 0
+  },
+  "interpretation_limits": [
+    "Same authored command sequence, not guaranteed same state or exact Node702 contact after an earlier candidate divergence.",
+    "Per-frame metrics and node-specific mutation observations do not prove continuous collision safety, full cloth mutation-stage behavior or arbitrary public-array ownership.",
+    "Existing internal mattress reporting uses the finite-domain gate and is not an independent finite-volume geometry audit.",
+    "Uncertified side/underside contacts still retain top-only fallback; no new physical response is implemented.",
+    "No visual-quality, calibrated-realism, self-collision, install readiness or product-completion acceptance follows."
+  ]
+}

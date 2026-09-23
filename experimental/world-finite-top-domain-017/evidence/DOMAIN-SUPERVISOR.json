@@ -1,0 +1,73 @@
+{
+  "status": "COMPLETED",
+  "at_utc": "2026-09-23T03:09:22.452711+00:00",
+  "exit_code": 0,
+  "reason": null,
+  "seconds": 0.5842849999899045,
+  "peak_rss_bytes": 33755136,
+  "available_at_start_bytes": 17832402944,
+  "heap_cap_mib": 384,
+  "rss_cap_mib": 512,
+  "deadline_seconds": 120,
+  "source_before": [
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\finite_top_domain.mjs",
+      "sha256": "13120533b0a066c2f86918f72efbebb26fa05c880f03811c5ecc9461ec75eac4",
+      "bytes": 5338
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "bytes": 13616
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\check_domain.mjs",
+      "sha256": "d109d5ee0ebb9f8d6530e5c37f7aaef36a4b7737cf197ffaff78181cd9f78901",
+      "bytes": 7431
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-016\\candidate\\finite_top_domain.mjs",
+      "sha256": "d8ab67bf04a2e6e27658134b935ab12ab81d0749c9f73a9b2bc0879358f8a9fe",
+      "bytes": 5210
+    }
+  ],
+  "source_unchanged": true,
+  "owned_node_exited": true,
+  "installed": false,
+  "gpu_models": 0
+}

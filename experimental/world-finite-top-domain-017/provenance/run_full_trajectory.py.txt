@@ -1,0 +1,31 @@
+from pathlib import Path
+import json,hashlib,subprocess,time,datetime
+import psutil
+H=Path(__file__).resolve().parent
+plan=json.loads((H/'FULL-TRAJECTORY-PLAN.json').read_text())
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+assert all(sha(r['path'])==r['sha256'] for r in plan['sources'])
+assert not any((H/n).exists() for n in ['FULL-TRAJECTORY-SUPERVISOR.json','FULL-TRAJECTORY-RESULT.json','FULL-TRAJECTORY-FRAMES.jsonl'])
+available=psutil.virtual_memory().available
+assert available>=2*2**30,'At least2GiB available required'
+start=time.monotonic();peak=0;reason=None;proc=None;code=None
+try:
+    with (H/'full_trajectory.stdout.txt').open('x',encoding='utf-8') as out,(H/'full_trajectory.stderr.txt').open('x',encoding='utf-8') as err:
+        proc=subprocess.Popen(['C:/Program Files/nodejs/node.exe','--max-old-space-size=384',str(H/'check_full_trajectory.mjs')],stdout=out,stderr=err,creationflags=subprocess.CREATE_NO_WINDOW)
+        owned=psutil.Process(proc.pid);owned.nice(psutil.BELOW_NORMAL_PRIORITY_CLASS)
+        while proc.poll() is None:
+            try:peak=max(peak,owned.memory_info().rss)
+            except psutil.NoSuchProcess:pass
+            if peak>512*2**20 or time.monotonic()-start>420:
+                reason='512_MIB_RSS_OR_420_SECOND_LIMIT';proc.kill();break
+            time.sleep(.1)
+        code=proc.wait(timeout=5)
+except BaseException as e:reason=repr(e)
+finally:
+    if proc is not None and proc.poll() is None:proc.kill();proc.wait(timeout=5)
+    unchanged=all(sha(r['path'])==r['sha256'] for r in plan['sources'])
+    result=json.loads((H/'FULL-TRAJECTORY-RESULT.json').read_text()) if (H/'FULL-TRAJECTORY-RESULT.json').exists() else None
+    data={'status':'PROCESS_COMPLETED' if code==0 and unchanged else 'PROCESS_HELD_OR_FAILED','result_status':result['status'] if result else None,'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'exit_code':code,'reason':reason,'seconds':time.monotonic()-start,'peak_rss_bytes':peak,'available_at_start_bytes':available,'heap_cap_mib':384,'rss_cap_mib':512,'deadline_seconds':420,'owned_node_exited':proc is None or proc.poll() is not None,'source_unchanged':unchanged,'source_pins':plan['sources'],'installed':False,'gpu_models':0}
+    (H/'FULL-TRAJECTORY-SUPERVISOR.json').write_text(json.dumps(data,indent=2)+'\n')
+    print(json.dumps({k:v for k,v in data.items() if k!='source_pins'}))
+raise SystemExit(0 if data['status']=='PROCESS_COMPLETED' else 1)

@@ -1,0 +1,41 @@
+from pathlib import Path
+import sys,subprocess,time,json,hashlib,datetime
+import psutil
+H=Path(__file__).resolve().parent
+mode=sys.argv[1]
+assert mode in ['domain','full_pilot']
+script=H/('check_domain.mjs' if mode=='domain' else 'check_full_pilot.mjs')
+label=mode.upper().replace('_','-')
+def pin(p):
+    b=p.read_bytes()
+    return {'path':str(p.resolve()),'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}
+paths=sorted((H/'candidate').glob('*.mjs'))+sorted((H/'baseline').glob('*.mjs'))+[script]
+if mode=='domain':paths.append(H.parent/'world-finite-top-domain-candidate-016/candidate/finite_top_domain.mjs')
+else:
+    plan=json.loads((H/'FULL-PILOT-PLAN.json').read_text())
+    paths += [H/'FULL-PILOT-PLAN.json',Path(plan['fixture']['path'])]
+before=[pin(p) for p in paths]
+assert not (H/(label+'-SUPERVISOR.json')).exists()
+available=psutil.virtual_memory().available
+assert available>=2*2**30, 'At least 2GiB available required'
+start=time.monotonic();reason=None;peak=0;proc=None;code=None
+try:
+    with (H/(mode+'.stdout.txt')).open('x',encoding='utf-8') as stdout,(H/(mode+'.stderr.txt')).open('x',encoding='utf-8') as stderr:
+        proc=subprocess.Popen(['C:/Program Files/nodejs/node.exe','--max-old-space-size=384',str(script)],stdout=stdout,stderr=stderr,creationflags=subprocess.CREATE_NO_WINDOW)
+        owned=psutil.Process(proc.pid);owned.nice(psutil.BELOW_NORMAL_PRIORITY_CLASS)
+        while proc.poll() is None:
+            try:peak=max(peak,owned.memory_info().rss)
+            except psutil.NoSuchProcess:pass
+            if peak>512*2**20 or time.monotonic()-start>120:
+                reason='512_MIB_RSS_OR_120_SECOND_LIMIT';proc.kill();break
+            time.sleep(.05)
+        code=proc.wait(timeout=5)
+except BaseException as exc:
+    reason=repr(exc)
+finally:
+    if proc is not None and proc.poll() is None:proc.kill();proc.wait(timeout=5)
+    unchanged=before==[pin(p) for p in paths]
+    out={'status':'COMPLETED' if code==0 and unchanged else 'HELD_OR_FAILED','at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'exit_code':code,'reason':reason,'seconds':time.monotonic()-start,'peak_rss_bytes':peak,'available_at_start_bytes':available,'heap_cap_mib':384,'rss_cap_mib':512,'deadline_seconds':120,'source_before':before,'source_unchanged':unchanged,'owned_node_exited':proc is None or proc.poll() is not None,'installed':False,'gpu_models':0}
+    (H/(label+'-SUPERVISOR.json')).write_text(json.dumps(out,indent=2)+'\n')
+    print(json.dumps({k:v for k,v in out.items() if k!='source_before'}))
+raise SystemExit(0 if out['status']=='COMPLETED' else 1)

@@ -1,0 +1,33 @@
+from pathlib import Path
+import hashlib,json,datetime
+H=Path(__file__).resolve().parent
+def pin(p):
+    b=p.read_bytes()
+    return {'path':str(p.resolve()),'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}
+def same(row):return pin(Path(row['path']))['sha256']==row['sha256']
+prior=json.loads((H/'PREDECESSOR-PINS.json').read_text())['files']
+source=json.loads((H/'SOURCE-MANIFEST.json').read_text())
+unchanged=all(same(row) for row in prior)
+canonical=all(same(row) for row in source['installed_baseline'])
+assert unchanged and canonical and all(same(row) for row in source['files'])
+d=json.loads((H/'DOMAIN-TESTS.json').read_text());r=json.loads((H/'RELEASE-COMPARISON.json').read_text())
+assert d['status']=='PASS' and r['status']=='PASS_SCOPED_PATCH_COMPARISONS'
+out={'status':'ISOLATED_FINITE_XYZ_GUARD_PASS_SCOPED_TESTS_NOT_INSTALL_APPROVAL','at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_manifest':pin(H/'SOURCE-MANIFEST.json'),'files':[pin(p) for p in sorted(H.rglob('*')) if p.is_file() and p.name!='DELIVERY.json'],'delta':'Explicit finiteXYZ check in observeTop before fixed-grid comparison; four other candidate modules and response coefficients unchanged.','domain_test_groups':20,'predecessor_false_certificate_counterexamples':4,'additional_nonfinite_combinations':18,'tiny_coupled_frames_total':33,'tiny_coupled_cloth_nodes':9,'full_mattress_and_frame':True,'iterations':40,'substeps':4,'predecessor016_tree_unchanged':unchanged,'canonical_physics_unchanged':canonical,'full725_pilot_executed':(H/'FULL-PILOT-RESULT.json').exists(),'historical_node702_replay_executed':False,'owner_data_writes':0,'gpu_models':0,'installation':False,'publications':0,'limits':['Public mutable arrays are not capability-safe.','Uncertified side/underside contacts retain top-only fallback.','Tiny coupled results do not establish full725 or historical Node702 correctness.','No visual quality, collision safety, physical calibration or product-completion claim.'],'next':'Root independent source and exact full725 pilot fixture/resource review; preserve all old sources/results.'}
+if (H/'FULL-PILOT-RESULT.json').exists():
+    pilot=json.loads((H/'FULL-PILOT-RESULT.json').read_text())
+    out['status']='ISOLATED_FINITE_XYZ_AND_12_FRAME_FULL_CLOTH_PASS_NOT_INSTALL_APPROVAL'
+    out['full725_pilot']={k:pilot[k] for k in ['status','hold','frames_each','candidate_ms','baseline_ms','source_unchanged']}
+    out['full725_pilot']['receipt']=pin(H/'FULL-PILOT-RESULT.json')
+    out['next']='Root review of prepared1110-frame trajectory source/fixture/resource plan; not launched. Preserve all old sources/results.'
+if (H/'FULL-TRAJECTORY-RESULT.json').exists():
+    trajectory=json.loads((H/'FULL-TRAJECTORY-RESULT.json').read_text())
+    out['status']='ISOLATED_FULL_TRAJECTORY_NUMERICAL_OBSERVATION_NOT_INSTALL_APPROVAL'
+    out['historical_node702_replay_executed']=True
+    out['identical_historical_node702_event_replayed']=False
+    out['full_trajectory']={k:trajectory[k] for k in ['status','hold','global_frames','target_frames','elapsed_ms','source_unchanged']}
+    out['full_trajectory']['receipt']=pin(H/'FULL-TRAJECTORY-RESULT.json')
+    out['full_trajectory']['assessment']=pin(H/'FULL-TRAJECTORY-ASSESSMENT.json')
+    out['next']='Root independent source/finite-volume audit, ownership/performance and broader release/visual review before any installation; portable source/test/evidence backup for root GitHub publication.'
+out['files']=[row for row in out['files'] if not any(part.startswith('portable-backup') for part in Path(row['path']).relative_to(H).parts)]
+(H/'DELIVERY.json').write_text(json.dumps(out,indent=2)+'\n')
+print(json.dumps({'delivery':pin(H/'DELIVERY.json'),'predecessor_unchanged':unchanged,'canonical_unchanged':canonical}))

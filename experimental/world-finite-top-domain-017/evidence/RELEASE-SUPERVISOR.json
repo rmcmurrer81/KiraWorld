@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "reason": null,
+  "seconds": 0.40535020001698285,
+  "peak_rss_bytes": 67059712,
+  "heap_cap_mib": 384,
+  "rss_cap_mib": 512,
+  "deadline_seconds": 120,
+  "node_processes": 1,
+  "owned_remaining": [],
+  "source_before": [
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\finite_top_domain.mjs",
+      "sha256": "13120533b0a066c2f86918f72efbebb26fa05c880f03811c5ecc9461ec75eac4"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\baseline\\surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933"
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\check_release.mjs",
+      "sha256": "6df29e15d31e03b0c585b8bd34ff645a695d68ac972fd79aa1e5b9f95060fcec"
+    }
+  ],
+  "source_unchanged": true,
+  "installed_edits": false,
+  "gpu": false
+}

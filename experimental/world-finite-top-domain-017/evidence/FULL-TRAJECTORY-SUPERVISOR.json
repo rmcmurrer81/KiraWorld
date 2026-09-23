@@ -1,0 +1,74 @@
+{
+  "status": "PROCESS_COMPLETED",
+  "result_status": "COMPLETED_NUMERICAL_OBSERVATION_REQUIRES_REVIEW",
+  "at_utc": "2026-09-23T03:22:14.669131+00:00",
+  "exit_code": 0,
+  "reason": null,
+  "seconds": 264.183463399997,
+  "peak_rss_bytes": 267309056,
+  "available_at_start_bytes": 17885892608,
+  "heap_cap_mib": 384,
+  "rss_cap_mib": 512,
+  "deadline_seconds": 420,
+  "owned_node_exited": true,
+  "source_unchanged": true,
+  "source_pins": [
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\finite_top_domain.mjs",
+      "sha256": "13120533b0a066c2f86918f72efbebb26fa05c880f03811c5ecc9461ec75eac4",
+      "bytes": 5338
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\candidate\\surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\fixtures\\wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    },
+    {
+      "path": "@workspace\\work\\world-contact-transient-validation-proposal\\DENSE-FRAMES.jsonl",
+      "sha256": "cfc8b925413d50ef8447b844c4766fc3604ddbfbc4a302749056b6a897404dc3",
+      "bytes": 123455
+    },
+    {
+      "path": "@workspace\\work\\world-frame-contact-perf-candidate\\FULL-DYNAMIC.json",
+      "sha256": "1adb16dc52b786e9607c449d5464d0f96436a2b1a8063c57e04982f4fba049dd",
+      "bytes": 4493
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\check_full_trajectory.mjs",
+      "sha256": "0318d4d9a719bd436d98cd6fc6c334367224f2b127cae323f40e27a96a89c10f",
+      "bytes": 8037
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\run_full_trajectory.py",
+      "sha256": "5fff8ce606f0c13edad0548449714c3bf3ad7122bb4d82bd52a6d42548e6d836",
+      "bytes": 2478
+    },
+    {
+      "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\FULL-PILOT-RESULT.json",
+      "sha256": "e1e157e6fba88a68e228c27bffb103941c940b3ebb0181c3093de6fb8eaa5780",
+      "bytes": 25649
+    }
+  ],
+  "installed": false,
+  "gpu_models": 0
+}

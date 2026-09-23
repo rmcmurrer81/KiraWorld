@@ -1,0 +1,70 @@
+{
+  "status": "SCOPED_NUMERICAL_IMPROVEMENT_UNINSTALLED_UNFINISHED",
+  "at_utc": "2026-09-23T03:23:51.043333+00:00",
+  "trajectory": {
+    "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\FULL-TRAJECTORY-RESULT.json",
+    "sha256": "f66453a1e9ac3ffffe200a4c51079322eb2ccaf8ac6075732b5d61b7b8a2d324",
+    "bytes": 263119
+  },
+  "supervisor": {
+    "path": "@workspace\\work\\world-finite-top-domain-candidate-017\\FULL-TRAJECTORY-SUPERVISOR.json",
+    "sha256": "6dba5854ad56908d7adc8aafb7b4f977fd8efc6a8136faf1cd47fcf988d884ee",
+    "bytes": 3790
+  },
+  "frames": 1110,
+  "all_finite": true,
+  "all_certificates_valid": true,
+  "maximum_frame_pairs": 0,
+  "maximum_reported_surface_depth_m": 0,
+  "matched_command_window_comparisons": [
+    {
+      "phase": "across",
+      "frames_each": 120,
+      "candidate": {
+        "stretch": 0.021199879101794217,
+        "rms_speed_mps": 0.26742295001083655,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0
+      },
+      "historical_baseline": {
+        "stretch": 0.0717164897038336,
+        "rms_speed_mps": 1.4250080918954735,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0
+      }
+    },
+    {
+      "phase": "release",
+      "frames_each": 30,
+      "candidate": {
+        "stretch": 0.03298308316972376,
+        "rms_speed_mps": 0.5300752567709136,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0
+      },
+      "historical_baseline": {
+        "stretch": 0.12138625908936018,
+        "rms_speed_mps": 4.212524033524445,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0
+      }
+    }
+  ],
+  "largest_observed_node702_positive_mutation_m": 0.0005973754442156424,
+  "trajectory_differs_upstream_during_settling": true,
+  "identical_historical_node702_event_replay": false,
+  "release_history_array_preservation_verified": true,
+  "interpretation": "Candidate changes the motion under the original commands; lower peaks do not establish calibrated realism. Largest Node702 upward observation was0.597mm ending at the floor skin, versus the old459mm mattress lift from a different state. No solver-stage attribution is made for the new observations.",
+  "limitations": [
+    "Same authored command sequence, not guaranteed same state or exact Node702 contact after an earlier candidate divergence.",
+    "Per-frame metrics and node-specific mutation observations do not prove continuous collision safety, full cloth mutation-stage behavior or arbitrary public-array ownership.",
+    "Existing internal mattress reporting uses the finite-domain gate and is not an independent finite-volume geometry audit.",
+    "Uncertified side/underside contacts still retain top-only fallback; no new physical response is implemented.",
+    "No visual-quality, calibrated-realism, self-collision, install readiness or product-completion acceptance follows."
+  ],
+  "next": "Independent source and finite-volume contact audit, ownership and performance review, then broader release/visual validation before any install."
+}
