@@ -1,0 +1,18 @@
+{
+  "status": "PUBLIC_MOCK_AND_PURE_CPU_TESTS_PASS",
+  "results": [
+    {
+      "check": "039 public mocked API/cross-language policy",
+      "stdout": "{\"status\": \"PASS\", \"tests\": 34, \"failures\": 0, \"errors\": 0, \"worker_mocked\": true, \"real_glb_exports\": 0, \"gpu_models_browser_native_ui\": 0, \"canonical_unchanged\": true, \"owner_data_writes\": 0}",
+      "returncode": 0,
+      "real_export": false
+    },
+    {
+      "check": "039 public pure policy/controller",
+      "stdout": "{\"status\":\"EXPLICIT_PAIR_METADATA_AND_NATIVE038_EQUIVALENCE_PASS\",\"checks\":13}",
+      "returncode": 0,
+      "real_export": false
+    }
+  ],
+  "native_graphics_export_ui_calls": 0
+}

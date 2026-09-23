@@ -1,0 +1,292 @@
+--- 037/tools/world_builder_engine/layout_package_assets/authored_scene.mjs
++++ 039/tools/world_builder_engine/layout_package_assets/authored_scene.mjs
+@@ -9,7 +9,7 @@
+ import assert from 'node:assert/strict';
+ export function buildAuthoredScene(geometry,metadata,canvasFactory){
+   const doors=createDoorSystem(geometry),plan=buildRoomDressing(geometry,doors.assemblies());
+-  const scene=new THREE.Scene();scene.name='Original_Mars_authored_scene';
++  const scene=new THREE.Scene();scene.name='Original_Mars_authored_scene';scene.userData.airlock_pairs=metadata.airlock_pairs;
+   const groups=new Map(),semantic=new Map(),hinges=new Map(),leafMeshes=new Map();
+   for(const room of metadata.rooms){const g=new THREE.Group();g.name='room_'+room.source_id;g.userData={room_id:room.id,bounds:room.bounds,functional_role:room.functional_role};scene.add(g);groups.set(room.source_id,g);}
+   const materials=createDressingMaterials(THREE,plan,{canvasFactory});
+@@ -36,7 +36,8 @@
+   for(const def of doors.definitions()){
+     const axis=geometry.portals.find(p=>p.id===def.id).axis,normal=axis==='x'?0:2,along=normal===0?2:0;
+     for(const frame of def.frames){const mesh=new THREE.Mesh(new THREE.BoxGeometry(...frame.size),doorMaterials.frame);mesh.name=frame.id;mesh.position.set(...frame.center);scene.add(mesh);bind(mesh,'node:'+frame.id);}
+-    const pivot=new THREE.Group();pivot.name='hinge_'+def.id;pivot.position.set(...def.hinge);pivot.userData={door_id:'door:'+def.id,closed_angle:0,open_angle:def.openAngle};scene.add(pivot);hinges.set(def.id,pivot);
++    const policy=metadata.doors.find(d=>d.portal_id===def.id);assert.ok(policy);
++    const pivot=new THREE.Group();pivot.name='hinge_'+def.id;pivot.position.set(...def.hinge);pivot.userData={door_id:'door:'+def.id,closed_angle:0,open_angle:def.openAngle,airlock_pair_ids:policy.interlock_pair_ids};scene.add(pivot);hinges.set(def.id,pivot);
+     const moving=new THREE.Group();moving.name='moving_'+def.id;moving.position.set(...def.leafLocalCenter);pivot.add(moving);
+     const size=def.leafSize,leaf=new THREE.Mesh(new THREE.BoxGeometry(...size),doorMaterials.leaf);leaf.name='door_'+def.id+'_leaf';moving.add(leaf);leafMeshes.set(def.id,leaf);bind(leaf,'node:'+leaf.name);
+     for(const side of [-1,1]){
+--- 037/tools/world_builder_engine/layout_package_assets/build_glb.mjs
++++ 039/tools/world_builder_engine/layout_package_assets/build_glb.mjs
+@@ -14,14 +14,14 @@
+ const req=JSON.parse(fs.readFileSync(0,'utf8'));
+ assert.ok(req.options&&!req.metadata,'Only source-bound metadata generation is accepted');
+ const definedDoors=createDoorSystem(req.geometry),definedPlan=buildRoomDressing(req.geometry,definedDoors.assemblies());
+-const described=exportSceneMetadata(req.geometry,definedPlan,definedDoors.definitions(),req.options);
++const described=exportSceneMetadata(req.geometry,definedPlan,definedDoors.definitions(),{...req.options,doorInterlocks:definedDoors.interlocks()});
+ req.metadata={...described,provenance:{...described.provenance,binding_verification:'actual_bound_bytes_verified_by_package_writer',
+  source_chain_verification:'geometry_to_blueprint_to_research_packet_and_cache_digests',factual_or_visual_approval:false}};
+ const {canvasFactory}=installCpuCanvas(req.canvasModule,req.fontPaths);
+ assert.equal(THREE.REVISION,'180');
+ const built=buildAuthoredScene(req.geometry,req.metadata,canvasFactory);
+ const {scene,doors,plan}=built;
+-const recreated=exportSceneMetadata(req.geometry,plan,doors.definitions(),{sceneId:req.metadata.scene_id,sourceDigests:req.metadata.provenance.source_digests});
++const recreated=exportSceneMetadata(req.geometry,plan,doors.definitions(),{sceneId:req.metadata.scene_id,sourceDigests:req.metadata.provenance.source_digests,doorInterlocks:doors.interlocks()});
+ assert.equal(canonicalSceneMetadata({...req.metadata,provenance:recreated.provenance}),canonicalSceneMetadata(recreated),'034 sidecar is not this exact authored scene');
+ const close=(a,b,tol=2e-6)=>{assert.equal(a.length,b.length);for(let i=0;i<a.length;i++)assert.ok(Math.abs(a[i]-b[i])<tol,`Numeric mismatch ${a[i]} / ${b[i]}`);};
+ const bounds=obj=>{const b=new THREE.Box3().setFromObject(obj,true);return [...b.min.toArray(),...b.max.toArray()];};
+@@ -50,7 +50,11 @@
+     samples.push({angle:actual.angle,center:actual.center});
+   }
+   close([samples[1].angle],[def.openAngle/2]);close([samples[2].angle],[def.openAngle]);
+-  built.hinges.get(def.id).rotation.y=0;doorEvidence.push({door_id:def.id,samples,frames_static:true});
++  // Close the real controller before sampling the next door. Keeping the prior
++  // leaf open would correctly prevent its airlock peer from opening.
++  assert.ok(doors.toggle(def.id,feet).ok);for(let i=0;i<8;i++)doors.advance(.05,feet);
++  assert.equal(doors.all().find(d=>d.id===def.id).state,'closed');
++  built.hinges.get(def.id).rotation.y=0;doorEvidence.push({door_id:def.id,samples,frames_static:true,closed_after_sample:true});
+ }
+ scene.updateMatrixWorld(true);
+ const before=inventory(scene),beforeBounds=bounds(scene);
+@@ -88,6 +92,15 @@
+   }
+ }
+ const roundtripSemantic=new Map([...after.values()].filter(o=>o.userData.metadata_node_id).map(o=>[o.userData.metadata_node_id,o]));
++const policyObjects=[...after.values()].filter(o=>Array.isArray(o.userData.airlock_pairs));
++assert.equal(policyObjects.length,1);assert.deepEqual(policyObjects[0].userData.airlock_pairs,req.metadata.airlock_pairs);
++for(const pair of req.metadata.airlock_pairs){
++  assert.equal(pair.leaf_node_ids.length,2);assert.equal(new Set(pair.leaf_node_ids).size,2);
++  for(let i=0;i<2;i++){
++    const leaf=roundtripSemantic.get(pair.leaf_node_ids[i]),pivot=leaf?.parent?.parent;
++    assert.ok(leaf&&pivot);assert.equal(pivot.userData.door_id,pair.door_ids[i]);assert.ok(pivot.userData.airlock_pair_ids.includes(pair.id));
++  }
++}
+ for(const c of req.metadata.colliders){assert.ok(roundtripSemantic.get(c.owner_node_id)?.userData.collider_ids.includes(c.id),'Collider link lost');}
+ for(const room of req.metadata.rooms){const restored=[...after.values()].find(o=>o.userData.room_id===room.id);assert.ok(restored);assert.deepEqual(restored.userData.bounds,room.bounds);}
+ for(const d of req.metadata.doors){const pivot=[...after.values()].find(o=>o.userData.door_id===d.id),leaf=roundtripSemantic.get(d.leaf_node_id);assert.ok(pivot&&leaf);assert.equal(leaf.parent.parent,pivot);close(pivot.position.toArray(),d.hinge.position);close(leaf.parent.position.toArray(),d.hinge.leaf_local_center);
+@@ -96,7 +109,7 @@
+ }
+ const report={status:'CPU_AUTHORED_GLB_EXPORT_IMPORT_PASS',three_revision:THREE.REVISION,glb_sha256:digest(binary),glb_bytes:binary.length,
+   counts:{objects:before.size,meshes:meshCount,materials:uniqueMaterials.size,textures:uniqueTextures.size,embedded_pngs:gltf.images.length,rooms:req.metadata.rooms.length,semantic_nodes:roundtripSemantic.size,colliders:req.metadata.colliders.length,doors:doorEvidence.length},
+-  scene_bounds:beforeBounds,checks:{geometry_attributes_exact:attributeComparisons,index_arrays_exact:meshCount,material_parameter_pairs:materialComparisons,texture_effective_pixels_repeat_wrap_colorspace:textureComparisons,punctual_light_parameters_and_direction:lightComparisons,door_controller_samples:doorEvidence,importer_door_poses:18,all_collider_links:true,room_bounds_preserved:true},
++  scene_bounds:beforeBounds,checks:{geometry_attributes_exact:attributeComparisons,index_arrays_exact:meshCount,material_parameter_pairs:materialComparisons,texture_effective_pixels_repeat_wrap_colorspace:textureComparisons,punctual_light_parameters_and_direction:lightComparisons,door_controller_samples:doorEvidence,importer_door_poses:18,all_collider_links:true,room_bounds_preserved:true,airlock_pair_metadata_preserved:true,airlock_pairs:req.metadata.airlock_pairs},
+   extensions:gltf.extensionsUsed,webgl_gpu_browser_calls:0,installed:false,visual_or_owner_approval:false,
+   limits:['No engine-native interaction/collision implementation or VR adapter.','CPU font rasterization is not browser-pixel-identical.','Hemisphere fill, background, ACES tone mapping/exposure, polygon offset, depthWrite and dynamic indicator colors are not glTF appearance guarantees.','Static equipment remains procedural. No pressure, science or medical simulation.']};
+ fs.writeFileSync(path.join(req.output,'scene.json'),canonicalSceneMetadata(req.metadata)+'\n',{flag:'wx'});
+--- 037/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs
++++ 039/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs
+@@ -1,5 +1,6 @@
+ // Pure metadata projection: no files, network, renderer, geometry synthesis or models.
+-export const SCENE_METADATA_CONTRACT='world_scene_metadata_v1';
++import {buildAirlockPolicy} from './airlock_policy.mjs';
++export const SCENE_METADATA_CONTRACT='world_scene_metadata_v2';
+ const ID=/^[a-z][a-z0-9_]{0,95}$/;
+ const HASH=/^[0-9a-f]{64}$/;
+ function require(ok,message){if(!ok)throw new TypeError(message);}
+@@ -24,7 +25,7 @@
+ }
+ 
+ /** Export static authoring metadata. Digests are caller-supplied bindings, not a verification claim. */
+-export function exportSceneMetadata(geometry,dressing,doorDefinitions,{sceneId,sourceDigests}={}){
++export function exportSceneMetadata(geometry,dressing,doorDefinitions,{sceneId,sourceDigests,doorInterlocks}={}){
+  id(sceneId);const provenance=hashBindings(sourceDigests);
+  require(geometry?.contract==='compiled_blueprint_geometry_v1'&&geometry.units==='meters','Unsupported source geometry');
+  require(dressing?.contract==='authored_habitat_equipment_plan_v1','Unsupported dressing plan');
+@@ -123,14 +124,16 @@
+  });
+  const requiredDoors=[...portalMap.values()].filter(p=>p.state==='open_passage'&&roomMap.get(p.room_a).access==='walkable_layout'&&roomMap.get(p.room_b).access==='walkable_layout');
+  require(requiredDoors.length===doors.length&&requiredDoors.every(p=>doors.some(d=>d.portal_id===p.id)),'Door definitions do not cover the source portals');
++ const airlockPairs=buildAirlockPolicy(geometry,doors,nodes,doorInterlocks);
++ for(const door of doors){door.interlock_pair_ids=airlockPairs.filter(p=>p.door_ids.includes(door.id)).map(p=>p.id);if(door.interlock_pair_ids.length)door.interaction.rules.push('paired_airlock_peer_closed_stopped');}
+  const entry=member(geometry.connectivity?.entry_room_id),entryRoom=roomMap.get(geometry.connectivity.entry_room_id);require(entryRoom.access==='walkable_layout','Entry room is locked');
+  const result={contract:SCENE_METADATA_CONTRACT,scene_id:sceneId,coordinate_system:{units:'meters',handedness:'right',up:'+Y',forward:'-Z',rotation_angles:'radians'},
+-  rooms,nodes,colliders,doors,
++  rooms,nodes,colliders,doors,airlock_pairs:airlockPairs,
+   navigation:{kind:'horizontal_supported_walking',entry_room_id:entry,spawn_feet:[(entryRoom.bounds.min[0]+entryRoom.bounds.max[0])/2,entryRoom.bounds.min[1],(entryRoom.bounds.min[2]+entryRoom.bounds.max[2])/2],
+    support_surfaces:list(geometry.support_surfaces,512).map(s=>{require(s.min_x<s.max_x&&s.min_z<s.max_z,'Invalid support extent');return {id:id(s.id),min_x:finite(s.min_x),max_x:finite(s.max_x),min_z:finite(s.min_z),max_z:finite(s.max_z),y:finite(s.y)};}),
+    authored_routes:list(geometry.routes,512).map(r=>{require(r.points?.length>=2,'Route needs endpoints');return {id:id(r.id),avatar_radius:positive(r.avatar_radius),avatar_height:positive(r.avatar_height),points:list(r.points,512).map(vector)};})},
+-  provenance:{source_digests:provenance,binding_verification:'caller_supplied_not_independently_verified',source_geometry_contract:geometry.contract,dressing_contract:dressing.contract,door_contract:'preview_hinged_doors_v1'},
+-  capabilities:{metadata_only:true,structural_box_parameters:true,semantic_equipment:true,equipment_meshes:false,materials_or_textures:false,engine_adapter:false,vr_runtime:false,session_state_export:false},
++  provenance:{source_digests:provenance,binding_verification:'caller_supplied_not_independently_verified',source_geometry_contract:geometry.contract,dressing_contract:dressing.contract,door_contract:'preview_hinged_doors_v2'},
++  capabilities:{metadata_only:true,airlock_pair_policy_metadata:true,structural_box_parameters:true,semantic_equipment:true,equipment_meshes:false,materials_or_textures:false,engine_adapter:false,vr_runtime:false,session_state_export:false},
+   limitations:['Semantic equipment metadata does not contain its multipart meshes or materials.','Door metadata requires an adapter implementing the specified conservative controller policy.','Static equipment has no science, medical or life-support behavior.','No pressure simulation, persisted door state, rigid-body certification or VR support.','Appearance remains a procedural prototype; no owner or realism approval.']};
+  return freeze(result);
+ }
+--- 037/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs
++++ 039/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs
+@@ -5,7 +5,8 @@
+ // Preview-local moving doors. The immutable source geometry is never changed.
+ // Rendering and collision both use pose(); motion uses a conservative sweep
+ // volume so a door cannot close through the walker between animation frames.
+-export const DOOR_CONTRACT = 'preview_hinged_doors_v1';
++export const DOOR_CONTRACT = 'preview_hinged_doors_v2';
++export const AIRLOCK_SEQUENCE_CONTRACT = 'paired_airlock_door_sequence_v1';
+ const DOOR_THICKNESS=.065, FRAME_WIDTH=.07, FRAME_DEPTH=.21, REACH=2.25;
+ const freeze=value=>Object.freeze(value);
+ const vector=(v)=>Array.isArray(v)&&v.length===3&&v.every(n=>Number.isFinite(n)&&Math.abs(n)<1e6);
+@@ -63,6 +64,25 @@
+     if(sign>0)maximum[n]=hinge[n]+extent;else minimum[n]=hinge[n]-extent;
+     door.sweep={min:minimum,max:maximum};doors.set(door.id,door);
+   }
++  // Only an explicit authored role opts in. Names, decorations and room IDs do
++  // not imply an airlock. This is mutual exclusion, not pressure simulation.
++  const airlockPairs=[],interlockedPeers=new Map();
++  const program=geometry.functional_program;
++  if(program!==undefined&&program!==null)ensure(typeof program==='object'&&!Array.isArray(program),'Invalid authored room program');
++  for(const [roomId,role] of Object.entries(program||{})){
++    if(role!=='airlock')continue;
++    const room=rooms.get(roomId);ensure(room&&room.access==='walkable_layout','Authored airlock room is unavailable');
++    const members=[...doors.values()].filter(d=>d.portal.room_a===roomId||d.portal.room_b===roomId);
++    ensure(members.length===2,'Authored airlock must have exactly two supported doors: '+roomId);
++    airlockPairs.push(freeze({roomId,doorIds:freeze(members.map(d=>d.id)),contract:AIRLOCK_SEQUENCE_CONTRACT,
++      pressureSimulation:false,statePersistence:'session_local'}));
++    for(const door of members){
++      const peer=members.find(d=>d!==door),peerRoom=peer.portal.room_a===roomId?peer.roomB:peer.roomA;
++      if(!interlockedPeers.has(door.id))interlockedPeers.set(door.id,[]);
++      interlockedPeers.get(door.id).push({door:peer,roomId,destination:peerRoom.name});
++    }
++  }
++  function interlocks(){return freeze([...airlockPairs]);}
+   function poseOf(door){
+     const c=Math.cos(door.angle),s=Math.sin(door.angle),tx=door.axis==='x'?s:c,tz=door.axis==='x'?c:-s;
+     const nx=door.axis==='x'?c:s,nz=door.axis==='x'?-s:c;
+@@ -99,6 +119,14 @@
+     if(!door||!near(door,feet))return freeze({ok:false,reason:'Move closer to the door.'});
+     if(door.moving)return freeze({ok:false,reason:'Wait for the door to finish moving.'});
+     if(overlapAvatar(door.sweep,feet,radius,height))return freeze({ok:false,reason:'Step back from the door swing before moving it.'});
++    // Only opening is interlocked. Closing retains the original sweep/motion
++    // rules, allowing the user to restore a closed pair. Moving/target/held also
++    // reserve the peer at angle zero, so same-frame requests cannot open both.
++    if(door.angle===0){
++      const blocked=(interlockedPeers.get(id)||[]).find(p=>p.door.angle!==0||p.door.moving||p.door.target!==0||p.door.motionHeld);
++      if(blocked)return freeze({ok:false,reason:'The door to '+blocked.destination+' must be fully closed and stopped before opening this airlock door.',
++        interlock:freeze({contract:AIRLOCK_SEQUENCE_CONTRACT,roomId:blocked.roomId,peerDoorId:blocked.door.id})});
++    }
+     door.target=door.angle===0?door.targetAngle:0;door.moving=true;door.motionHeld=false;
+     return freeze({ok:true,id,state:door.target===0?'closing':'opening'});
+   }
+@@ -127,7 +155,7 @@
+     collisionPolicy:'conservative_rotated_leaf_aabb_and_quarter_disc_sweep',
+     initialState:'closed',statePersistence:'session_local',pressureSimulation:false
+   })));}
+-  return freeze({contract:DOOR_CONTRACT,all,assemblies,definitions,colliders,nearest,toggle,advance});
++  return freeze({contract:DOOR_CONTRACT,all,assemblies,definitions,colliders,nearest,toggle,advance,interlocks});
+ }
+ 
+ export function createWalkController(geometry,{extraColliders=[]}={}) {
+--- 037/tools/world_builder_engine/layout_package_contract.json
++++ 039/tools/world_builder_engine/layout_package_contract.json
+@@ -1,8 +1,8 @@
+ {
+-  "contract": "authored_saved_layout_package_v1",
++  "contract": "authored_saved_layout_package_v2",
+   "status": "experimental",
+   "selection": "An explicit saved job and its own verified preview binding; no globally newest project lookup.",
+-  "supported_recipe": "Pinned current authored_habitat_equipment_plan_v1 renderer, hinged-door controller and Three180 assets.",
++  "supported_recipe": "Pinned authored habitat recipe plus preview_hinged_doors_v2 and explicit paired_airlock_door_sequence_v1 policy; original Mars geometry validation scope remains unchanged.",
+   "validation_scope": "Only source geometry hashes in the service VALIDATED_GEOMETRY set may export. Current evidence covers the saved Original Mars fixture. Recognized but unvalidated layouts return unsupported_layout.",
+   "input": {
+     "job_dir": "Existing immediate saved research job under this installation",
+@@ -10,9 +10,29 @@
+     "preview_binding": "Optional exact manifest_path and manifest_sha256 for the selected job's already-open current preview",
+     "dependencies": "Optional explicit local runtime paths; every dependency must match the tested digest and byte count"
+   },
+-  "output_files": ["scene.glb", "scene.json", "ROUNDTRIP.json", "README.txt", "manifest.json"],
++  "output_files": [
++    "scene.glb",
++    "scene.json",
++    "ROUNDTRIP.json",
++    "README.txt",
++    "manifest.json"
++  ],
+   "ready_status": "created",
+-  "held_statuses": ["invalid_selection", "unsupported_preview", "unsupported_recipe", "unsupported_layout", "dependency_missing", "dependency_changed", "producer_changed", "destination_exists", "invalid_destination", "source_changed", "export_failed", "source_or_export_held"],
++  "held_statuses": [
++    "invalid_selection",
++    "unsupported_preview",
++    "unsupported_recipe",
++    "unsupported_layout",
++    "dependency_missing",
++    "dependency_changed",
++    "producer_changed",
++    "destination_exists",
++    "invalid_destination",
++    "source_changed",
++    "export_failed",
++    "source_or_export_held",
++    "airlock_policy_invalid"
++  ],
+   "failure_after_output_creation": "No ready manifest; EXPORT-INCOMPLETE.json records held status. Partial output is retained. Existing files and source folders are never overwritten or removed.",
+   "capabilities": {
+     "actual_authored_meshes_and_textures": true,
+@@ -25,7 +45,20 @@
+     "pressure_or_airlock_cycle_simulation": false,
+     "persistent_door_session_state": false,
+     "science_medical_or_life_support_equipment_behavior": false,
+-    "photorealism_or_owner_approval": false
++    "photorealism_or_owner_approval": false,
++    "airlock_pair_policy_metadata": true
+   },
+-  "resource_behavior": "CPU Canvas and Three exporter/importer only. No browser, WebGL, GPU/model job, research rerun, network fetch or dependency download. The native button runs the API in an owned background worker and reports the created folder."
++  "resource_behavior": "CPU Canvas and Three exporter/importer only. No browser, WebGL, GPU/model job, research rerun, network fetch or dependency download. The native button runs the API in an owned background worker and reports the created folder.",
++  "scene_metadata_contract": "world_scene_metadata_v2",
++  "airlock_policy": {
++    "contract": "paired_airlock_door_sequence_v1",
++    "source_room_and_portal_ids": true,
++    "exactly_two_distinct_leaf_associations": true,
++    "glb_extras_and_independent_sidecar_verification": true,
++    "peer_must_be_closed_and_stopped": true,
++    "pending_and_held_motion_reserves_peer": true,
++    "closing_keeps_existing_occupancy_rules": true,
++    "engine_runtime_included": false,
++    "pressure_simulation": false
++  }
+ }
+--- 037/tools/world_builder_engine/layout_package_export.py
++++ 039/tools/world_builder_engine/layout_package_export.py
+@@ -5,19 +5,20 @@
+ from .pipeline import latest_preview
+ from .world_layout_preview import verify_preview
+ from .layout_package_assets import source_bindings as bindings
++from .layout_airlock_policy import validate_airlock_metadata
+ 
+ PROJECT=Path(__file__).resolve().parents[2]
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+-CONTRACT='authored_saved_layout_package_v1'
++CONTRACT='authored_saved_layout_package_v2'
+ VALIDATED_GEOMETRY={'1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75'}
+ ROLES={'equipment_vestibule','airlock','operations','habitat','laboratory','observation','circulation'}
+ RENDERER={
+  'viewer.mjs':'e6f101d016cd40b923c678f3db39b1ec7ec50b1c44684f255bcd1efb8b9fcfda',
+- 'walk_controller.mjs':'5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4',
++ 'walk_controller.mjs':'0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791',
+  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
+  'three.core.js':'eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20'}
+-CAPABILITIES={'experimental':True,'authored_meshes':True,'embedded_textures':True,'door_hinge_hierarchy':True,'linked_collider_metadata':True,
++CAPABILITIES={'experimental':True,'authored_meshes':True,'embedded_textures':True,'door_hinge_hierarchy':True,'linked_collider_metadata':True,'airlock_pair_policy_metadata':True,
+  'engine_native_interaction':False,'engine_native_collision':False,'pressure_simulation':False,'vr_runtime':False,'visual_or_owner_approval':False}
+ 
+ class ExportHeld(ValueError):
+@@ -112,10 +113,18 @@
+   report=bindings.parse(bindings.read(target/'ROUNDTRIP.json'))
+   require(report.get('status')=='CPU_AUTHORED_GLB_EXPORT_IMPORT_PASS' and report.get('glb_sha256')==sha(target/'scene.glb'),
+    'export_failed','The exported asset did not pass its importer checks.')
++  scene=bindings.parse(bindings.read(target/'scene.json'))
++  try:
++   pairs=validate_airlock_metadata(scene,prepared['geometry'],opts['sourceDigests'])
++  except (ValueError,KeyError,TypeError) as exc:
++   raise ExportHeld('airlock_policy_invalid','The exported airlock door policy did not match the selected layout. No ready package was issued.') from exc
++  require(report.get('checks',{}).get('airlock_pair_metadata_preserved') is True and report['checks'].get('airlock_pairs')==pairs,
++   'airlock_policy_invalid','The exported door policy did not pass its importer checks. No ready package was issued.')
+   readme='Original authored 3D layout package: scene.glb plus linked collider/door metadata in scene.json. Game-engine interaction/collision and VR runtime are not implemented. Static equipment has no operational science/life-support behavior. No pressure simulation or visual-realism approval. See ROUNDTRIP.json for renderer limitations. Original sources were not changed or bundled.\n'
+   with (target/'README.txt').open('x',encoding='utf-8') as stream:stream.write(readme)
+   result={'contract':CONTRACT,'status':'created','scene_id':opts['sceneId'],'source_bindings_manifest_sha256':prepared['input_pin']['sha256'],
+    'verified_source_digests':bindings.portable_pins(prepared['sources']),'producer_digests':pins,
++   'airlock_pair_policy':pairs,'preview_controller_sha256':RENDERER['walk_controller.mjs'],
+    'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in target.iterdir()},'capabilities':CAPABILITIES,
+    'research_regenerated':False,'model_jobs':0,'sources_modified':False}
+   result['receipt_sha256']=seal(result);write_json(target/'manifest.json',result)

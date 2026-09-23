@@ -1,0 +1,19 @@
+{
+  "status": "PLANNED_ONLY_NO_PREVIEW_OR_INSTALL",
+  "sources": {
+    "api_and_workspace": "frozen037",
+    "preview_controller": "frozen038",
+    "export_controller": "038 behavior plus read-only037 authoring definitions; exact behavioral strip comparison passed"
+  },
+  "native_controller_sha256": "0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791",
+  "export_controller_sha256": "6939c804849f787b24e69391b7b8f4a33f527502ac7d8806609c46e922a80f89",
+  "old_native_controller_sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+  "api_contract": "authored_saved_layout_package_v2",
+  "scene_contract": "world_scene_metadata_v2",
+  "pair_contract": "paired_airlock_door_sequence_v1",
+  "preview_transition": "Use existing selected-job Open current preview refresh after approved install; preserve old immutable copies; pass exact new manifest and digest to039 API. No research regeneration.",
+  "rollback": "For existing targets restore only exact recorded preimages after checking candidate hashes. Added exporter modules can remain unreferenced when the workspace preimage is restored. Never delete owner worlds, previews or export packages.",
+  "frozen037_038_originals_unchanged": true,
+  "no_real_export_run": true,
+  "gpu_browser_models_ui": 0
+}

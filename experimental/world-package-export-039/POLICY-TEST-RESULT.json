@@ -1,0 +1,23 @@
+{
+  "status": "EXPLICIT_PAIR_METADATA_AND_NATIVE038_EQUIVALENCE_PASS",
+  "checks_count": 13,
+  "checks": [
+    "Pair metadata binds the exact source room, portals, door IDs and two distinct leaves",
+    "Door back references and opening rules match membership only",
+    "Rejects missing pair from controller metadata",
+    "Rejects wrong room from controller metadata",
+    "Rejects one door from controller metadata",
+    "Rejects duplicated door from controller metadata",
+    "Rejects unrelated door from controller metadata",
+    "Rejects invented pressure from controller metadata",
+    "Rejects wrong policy from controller metadata",
+    "Rejects wrong leaf type or shared leaf association",
+    "Export controller behavior exactly matches native038 across pending, moving, open, closing and closed states",
+    "Every door pose sample closes before another is sampled, without disabling interlocks",
+    "Canonical roundtrip is deterministic and leaves source inputs unchanged"
+  ],
+  "metadata_sha256": "c7f7e7a970b3b859162c9f5e283953ef71d908ce16c7caa4feb373867e152788",
+  "real_glb_export": false,
+  "canvas_graphics_models_ui": 0,
+  "installed": false
+}
