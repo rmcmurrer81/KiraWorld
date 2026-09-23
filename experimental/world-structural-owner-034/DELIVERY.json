@@ -1,0 +1,198 @@
+{
+  "status": "034_STRUCTURAL_OWNER_FIX_READY_FOR_ROOT_REVIEW",
+  "completed_utc": "2026-09-23T06:36:22.797780+00:00",
+  "installed": false,
+  "metadata_only": true,
+  "core_sha256": "d288e27bc33f9be20fa7372cc7ef1e5c999c66fc85c5764b689ab3687f70b767",
+  "regressions": {
+    "synthetic_ownership_groups": 10,
+    "actual_ownership_groups": 10,
+    "inherited_metadata_groups": 11,
+    "inherited_package_tests": 15,
+    "new_package_gates": 4
+  },
+  "actual_corrected_structural_links": 59,
+  "actual_package_manifest_sha256": "6e985befdbd466aafa3a7cf6a7306a236eefc70b97e0d6d3cd07724145e78e46",
+  "protected_owner_files_unchanged": 116,
+  "historical_code_files_unchanged": 12,
+  "prior031_actual_package_unchanged": true,
+  "canonical_changes": 0,
+  "geometry_response_mesh_visual_engine_or_vr_approval": false,
+  "files": [
+    {
+      "path": "actual-mars-001/manifest.json",
+      "sha256": "6e985befdbd466aafa3a7cf6a7306a236eefc70b97e0d6d3cd07724145e78e46",
+      "bytes": 2985
+    },
+    {
+      "path": "actual-mars-001/README.txt",
+      "sha256": "90f5200424cf34b5732bf799d1c0514b1798bdbfa132abaa87b1f1f135b246d8",
+      "bytes": 549
+    },
+    {
+      "path": "actual-mars-001/scene.json",
+      "sha256": "aff00c2348a0c8a9e711a96a09f7799bd493734df50c0cc472fef36ea526d3bf",
+      "bytes": 82471
+    },
+    {
+      "path": "ACTUAL-OWNERSHIP-RESULT.json",
+      "sha256": "2171c1ce16e4eec39154330f5ce136d69b2115909470ec1d956d6e575fbacf7b",
+      "bytes": 1298
+    },
+    {
+      "path": "ACTUAL-PACKAGE-REVIEW.json",
+      "sha256": "9061a64f856a66f55c7e2bb1cfb8874c315121fa4822d38b80478a3808fb8950",
+      "bytes": 9481
+    },
+    {
+      "path": "baseline/scene_metadata.mjs",
+      "sha256": "b02016fa896f7f3b515d952fa3f8d97666f94d5cb5b47d13ce6df39faf2d55e6",
+      "bytes": 13616
+    },
+    {
+      "path": "CHANGES.patch",
+      "sha256": "2d84508b85b8af5461307ac1b9175e0d2bf735bfec0dc06736c22ebaa4074c6b",
+      "bytes": 3750
+    },
+    {
+      "path": "check_actual.py",
+      "sha256": "dd5259c08ba2fc6bb738a1d21919e440a57856c5ca593fc0dbe1eda08f323e65",
+      "bytes": 3855
+    },
+    {
+      "path": "core/baseline/horizontal_navigation.mjs",
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    {
+      "path": "core/baseline/walk_controller.mjs",
+      "sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+      "bytes": 12959
+    },
+    {
+      "path": "core/candidate/tools/world_builder_engine/horizontal_navigation.mjs",
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    {
+      "path": "core/candidate/tools/world_builder_engine/scene_metadata.mjs",
+      "sha256": "d288e27bc33f9be20fa7372cc7ef1e5c999c66fc85c5764b689ab3687f70b767",
+      "bytes": 14278
+    },
+    {
+      "path": "core/candidate/tools/world_builder_engine/walk_controller.mjs",
+      "sha256": "7909daf10a51e1a7c3bcb6757078213c88a0b4845058ce90cd2c6ba31cf4ced1",
+      "bytes": 14023
+    },
+    {
+      "path": "core/fixtures/synthetic_habitat.json",
+      "sha256": "175af3ead17fe164fe26d4990c6818ec5c780ca256afa20bc22fa06df0fa32b7",
+      "bytes": 37473
+    },
+    {
+      "path": "core/room_dressing_plan.mjs",
+      "sha256": "3508293926fd6e9c5e95bef8af0c12c2ec727c02c83fb570f3c88617a1cb42f3",
+      "bytes": 9104
+    },
+    {
+      "path": "core/SYNTHETIC-METADATA-001.json",
+      "sha256": "82d5fc17676d5c8d411ef2f19903518e49743407b1b912f8a4aedd75a92b2e5a",
+      "bytes": 82227
+    },
+    {
+      "path": "core/TEST-RESULT-001.json",
+      "sha256": "b37269b82add7625b5f3af6199cd6f307d47a553930cd0e809b808160ab2ed37",
+      "bytes": 1220
+    },
+    {
+      "path": "core/test_metadata.mjs",
+      "sha256": "260014aa230a07782d803edd129b8b543faada24f73b4d4136f1e02c9e0394bf",
+      "bytes": 8647
+    },
+    {
+      "path": "example/package/manifest.json",
+      "sha256": "d7391a0944bfef2eafc602af2fb6cb238ba7801f1925e86ce6bbc45a39571fd0",
+      "bytes": 2335
+    },
+    {
+      "path": "example/package/README.txt",
+      "sha256": "90f5200424cf34b5732bf799d1c0514b1798bdbfa132abaa87b1f1f135b246d8",
+      "bytes": 549
+    },
+    {
+      "path": "example/package/scene.json",
+      "sha256": "cd36fa9036cd4596f2a6c598a0c14e404e10c6d147a4ee9b89e14f1a946c9ec8",
+      "bytes": 82354
+    },
+    {
+      "path": "finalize.py",
+      "sha256": "2a8e4920c276f1033cb6fbeaf39050ef8b0046e6606dc0b97835651df344e96a",
+      "bytes": 2014
+    },
+    {
+      "path": "HISTORICAL-SOURCE-PINS.json",
+      "sha256": "2259d8837824f7e5c2d769926f32971b6d970f928ddedf297864ea6121ecd84e",
+      "bytes": 3923
+    },
+    {
+      "path": "OWNERSHIP-RESULT.json",
+      "sha256": "14bc7770e0512992ff62876fdef3430ce8124cb94541f3f4f65b4901dd646252",
+      "bytes": 1298
+    },
+    {
+      "path": "package/CORE-PINS.json",
+      "sha256": "34110dd2f528350ab2a7ad1dd15cefbf0155960155064f432754b6b387caa290",
+      "bytes": 500
+    },
+    {
+      "path": "package/make_example.py",
+      "sha256": "c7bb453a4c9ef127f9fc3abbaccd8fe492ca204338f01bd997f4b9edc225bb24",
+      "bytes": 1791
+    },
+    {
+      "path": "package/OWNER-PACKAGE-RESULT.json",
+      "sha256": "9921307c5a71bfe96e5bb8b8578838f327c949ecf3d3631cbe0aa4ee5f8eba2e",
+      "bytes": 439
+    },
+    {
+      "path": "package/package_writer.py",
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+      "bytes": 12098
+    },
+    {
+      "path": "package/render_metadata.mjs",
+      "sha256": "aab3daad202cbc456e60d836ea19390eb7e5f9db2225f8264479c09aabaf1e9e",
+      "bytes": 1332
+    },
+    {
+      "path": "package/TEST-RESULT-1.json",
+      "sha256": "ee176abf032be0411cf0bda26ea634d488459a81a88f87e062e567243eb1f7f2",
+      "bytes": 2401
+    },
+    {
+      "path": "package/test_owner_package.py",
+      "sha256": "81d361f6cba5079c1b1a78ceacf760faca11ece27847eb95e47191ac50dd1de9",
+      "bytes": 2151
+    },
+    {
+      "path": "package/test_package.py",
+      "sha256": "71797824651c562f0cd26c732b3d06f426ce1eb2a7d3af8c74eeb2748f9fcc04",
+      "bytes": 11376
+    },
+    {
+      "path": "README.md",
+      "sha256": "5cfcd770ed8d0722b996625058df018b45c44d80e6842c1f223c21c4aa67a546",
+      "bytes": 3074
+    },
+    {
+      "path": "stage.py",
+      "sha256": "9cf815df543b433f0b46cb20ba2cf3efccea62079335402bf2eb5e4ed6be2826",
+      "bytes": 4208
+    },
+    {
+      "path": "test_ownership.mjs",
+      "sha256": "ef26cc929be32a7caab74d9c01d5f28e331a6cf6635fac05b7de0406814a12ce",
+      "bytes": 5794
+    }
+  ]
+}

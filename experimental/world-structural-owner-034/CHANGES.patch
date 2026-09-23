@@ -1,0 +1,57 @@
+--- previous/scene_metadata.mjs
++++ 034/scene_metadata.mjs
+@@ -72,8 +72,17 @@
+  }
+  const colliders=[];
+  for(const c of list(geometry.colliders,4096)){
+-  const owner=nodeMap.has('node:'+c.id+'_mesh')?'node:'+c.id+'_mesh':null;
+-  colliders.push({id:addId('collider',c.id),owner_node_id:owner,shape:'axis_aligned_box',bounds:bounds(c),motion:'static',proxy:'source_conservative_bounds'});
++  const exact=nodeMap.get('node:'+c.id),floor=nodeMap.get('node:'+c.id+'_mesh');
++  // Walls/ceilings use their exact source id. The compiler names a floor's
++  // display primitive with _mesh; that alias is valid only for an actual floor.
++  const owners=[exact,floor?.role==='floor'?floor:null].filter(Boolean);
++  require(owners.length===1,'Missing or ambiguous structural collider owner');
++  const owner=owners[0],physical=bounds(c);
++  require(owner.kind==='structural_primitive'&&owner.representation.type==='existing_box_parameters',
++   'Structural collider must belong to a structural primitive');
++  require(sameBox(physical,box(owner.transform.position,owner.representation.size)),
++   'Structural collider owner bounds mismatch');
++  colliders.push({id:addId('collider',c.id),owner_node_id:owner.id,shape:'axis_aligned_box',bounds:physical,motion:'static',proxy:'source_conservative_bounds'});
+  }
+  for(const c of list(dressing.colliders,128)){
+   const owned=extraOwners.get(c.id);require(owned&&sameBox(bounds(c),owned.bounds),'Equipment collider ownership/bounds mismatch');
+--- previous/package_writer.py
++++ 034/package_writer.py
+@@ -142,7 +142,7 @@
+ def main():
+     parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest='mode',required=True)
+     build=sub.add_parser('build');build.add_argument('--bindings',required=True);build.add_argument('--bindings-sha256',required=True);build.add_argument('--output',required=True);build.add_argument('--scene-id',required=True)
+-    build.add_argument('--core-root',default=str(ROOT.parent/'world-scene-metadata-030'));build.add_argument('--node')
++    build.add_argument('--core-root',default=str(ROOT.parent/'core'));build.add_argument('--node')
+     verify=sub.add_parser('verify');verify.add_argument('--package',required=True)
+     args=parser.parse_args()
+     try:
+--- previous/test_package.py
++++ 034/test_package.py
+@@ -4,8 +4,8 @@
+ sys.dont_write_bytecode=True
+ import package_writer as writer
+ H=Path(__file__).resolve().parent
+-CORE=Path(os.environ.get('WORLD_METADATA_CORE') or H.parent/'world-scene-metadata-030')
+-if not CORE.is_dir():CORE=H.parent/'world-scene-metadata-candidate-030'
++CORE=Path(os.environ.get('WORLD_METADATA_CORE') or H.parent/'core')
++assert CORE.is_dir(), 'Explicit reviewed core directory required'
+ NODE=shutil.which('node')
+ class PackageTests(unittest.TestCase):
+  def setUp(self):
+--- previous/make_example.py
++++ 034/make_example.py
+@@ -3,7 +3,7 @@
+ import argparse,json,os
+ import package_writer as w
+ H=Path(__file__).resolve().parent
+-parser=argparse.ArgumentParser();parser.add_argument('--destination',required=True);parser.add_argument('--core-root',default=str(H.parent/'world-scene-metadata-030'));args=parser.parse_args()
++parser=argparse.ArgumentParser();parser.add_argument('--destination',required=True);parser.add_argument('--core-root',default=str(H.parent/'core'));args=parser.parse_args()
+ root=Path(args.destination).absolute();root.mkdir(exist_ok=False);sources=root/'synthetic_sources';sources.mkdir();core=Path(args.core_root).absolute()
+ cache=sources/'source.txt';cache.write_text('Authored synthetic research fixture for metadata-package validation. No owner memories or media.\n',encoding='utf-8')
+ pin=w.binding(cache);pin['path']=cache.name

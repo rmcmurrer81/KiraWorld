@@ -1,0 +1,32 @@
+{
+  "status": "PASS_STRUCTURAL_COLLIDER_OWNERSHIP",
+  "checks": [
+    "Every structural collider has one intended structural owner with equivalent bounds",
+    "Existing geometry, all other fields and input values remain unchanged",
+    "Floor collider resolves the compiler floor_mesh alias and exact dimensions",
+    "Two valid names are ambiguous even if their bounds agree",
+    "Ambiguous names are not silently disambiguated by one different box",
+    "Missing name never falls back to some unrelated same-bounds object",
+    "Exact name with mismatched box is rejected",
+    "Floor alias with mismatched box is rejected",
+    "Non-floor mesh-suffix alias is not accepted",
+    "Matching equipment name cannot own a structural collider"
+  ],
+  "source_sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+  "structural_colliders": 59,
+  "all_structural_owner_ids_nonnull": true,
+  "all_structural_owner_bounds_equivalent": true,
+  "corrected_owner_links": 59,
+  "counts": {
+    "rooms": 7,
+    "nodes": 141,
+    "colliders": 134,
+    "doors": 6
+  },
+  "input_unchanged": true,
+  "scene_sha256": "25ca9d5a451a76f5929d8a301e5651c85cd2449535b41ca98f2e27f66ecdcf8b",
+  "historical_export_changed": false,
+  "installed": false,
+  "metadata_only": true,
+  "gpu_models": 0
+}
