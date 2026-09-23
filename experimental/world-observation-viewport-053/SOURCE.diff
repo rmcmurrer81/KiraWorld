@@ -1,0 +1,300 @@
+--- installed051/viewer.mjs
++++ candidate053/viewer.mjs
+@@ -127,6 +127,87 @@
+   // Bound renderer complexity as well as collision complexity.
+   DR_assert(plan.objects.length<=32&&plan.architecture.length<=96&&plan.lights.length<=12,'Dressing budget exceeded');
+   return DR_freeze(plan);
++}
++
++// Derived architectural detail only. The original wall safety collider remains solid.
++// No pressure rating, exterior traversal, measured Martian terrain or real sky model.
++function planObservationViewport(geometry,plan){
++  if(!plan.enabled)return null;
++  const rooms=geometry.rooms.filter(r=>plan.roomStyles[r.id]?.role==='observation');
++  if(rooms.length!==1)return null;
++  const room=rooms[0],bottom=room.floor_y+.95,top=bottom+1.2;
++  if(room.height<2.45)return null;
++  for(const side of ['east','west','north','south']){
++    const axis=['east','west'].includes(side)?0:2,along=axis===0?2:0,sign=['east','north'].includes(side)?1:-1;
++    const wallCoordinate=axis===0?room.x+(sign>0?room.width:0):room.z+(sign>0?room.depth:0);
++    const start=along===0?room.x:room.z,end=start+(along===0?room.width:room.depth);
++    // Only an intact exterior wall; never erase a doorway or a shared partition.
++    const wall=geometry.primitives.find(p=>p.id===room.id+'_'+side+'_0'&&p.role==='wall'&&Math.abs(p.position[axis]-wallCoordinate)<1e-7&&Math.abs(p.size[along]-(end-start))<1e-7&&Math.abs(p.size[1]-room.height)<1e-7);
++    if(!wall||wall.size[axis]<.12||wall.size[axis]>.3)continue;
++    const outside=wallCoordinate+sign*(wall.size[axis]/2+.02);
++    if(geometry.rooms.some(r=>r!==room&&outside>(axis===0?r.x:r.z)-.01&&outside<(axis===0?r.x+r.width:r.z+r.depth)+.01&&Math.max(start,along===0?r.x:r.z)<Math.min(end,along===0?r.x+r.width:r.z+r.depth)))continue;
++    if(geometry.portals.some(p=>p.axis===(axis===0?'x':'z')&&Math.abs(p.coordinate-wallCoordinate)<.16&&p.center>start&&p.center<end))continue;
++    const collider=geometry.colliders.find(c=>c.id===wall.id&&c.min.every((v,i)=>Math.abs(v-(wall.position[i]-wall.size[i]/2))<1e-7)&&c.max.every((v,i)=>Math.abs(v-(wall.position[i]+wall.size[i]/2))<1e-7));
++    if(!collider)continue;
++    // Fit a real structural bay. Keep existing ribs, equipment and their colliders.
++    let gaps=[[start+.2,end-.2]];
++    for(const c of plan.colliders){
++      if(c.max[1]<=bottom||c.min[1]>=top||c.max[axis]<wallCoordinate-.45||c.min[axis]>wallCoordinate+.45)continue;
++      const lo=c.min[along]-.12,hi=c.max[along]+.12;
++      gaps=gaps.flatMap(([a,b])=>hi<=a||lo>=b?[[a,b]]:[[a,Math.max(a,lo)],[Math.min(b,hi),b]].filter(([x,y])=>y-x>1e-6));
++    }
++    gaps.sort((a,b)=>(b[1]-b[0])-(a[1]-a[0])||a[0]-b[0]);
++    const gap=gaps[0];if(!gap||gap[1]-gap[0]<1.3)continue;
++    const width=Math.min(1.5,gap[1]-gap[0]),center=(gap[0]+gap[1])/2;
++    return {contract:'authored_observation_viewport_v1',room_id:room.id,wall_id:wall.id,safety_collider_id:collider.id,side,axis,along,sign,coordinate:wallCoordinate,center,bottom,top,width,thickness:wall.size[axis],nontraversable:true,pressure_simulation:false};
++  }
++  return null;
++}
++function viewportWallPieces(primitive,viewport){
++  if(!viewport||primitive.id!==viewport.wall_id)return [primitive];
++  const {along,center,width,bottom,top}=viewport,lo=primitive.position[along]-primitive.size[along]/2,hi=primitive.position[along]+primitive.size[along]/2;
++  const floor=primitive.position[1]-primitive.size[1]/2,ceiling=primitive.position[1]+primitive.size[1]/2;
++  return [[lo,center-width/2,floor,ceiling],[center+width/2,hi,floor,ceiling],[center-width/2,center+width/2,floor,bottom],[center-width/2,center+width/2,top,ceiling]].map(([a,b,y,z],i)=>{
++    const position=[...primitive.position],size=[...primitive.size];position[along]=(a+b)/2;size[along]=b-a;position[1]=(y+z)/2;size[1]=z-y;
++    return {...primitive,id:primitive.id+'_surround_'+i,position,size};
++  });
++}
++function createStructuralPrimitive(THREE,primitive,material,viewport,materials){
++  if(!viewport||primitive.id!==viewport.wall_id){const m=new THREE.Mesh(new THREE.BoxGeometry(...primitive.size),material);m.name=primitive.id;m.position.set(...primitive.position);m.receiveShadow=true;return m;}
++  const group=new THREE.Group();group.name=primitive.id;group.position.set(...primitive.position);group.userData.observation_viewport=viewport;
++  function box(name,size,world,mat){const m=new THREE.Mesh(new THREE.BoxGeometry(...size),mat);m.name=name;m.position.set(...world.map((v,i)=>v-primitive.position[i]));m.receiveShadow=true;group.add(m);return m;}
++  for(const p of viewportWallPieces(primitive,viewport))box(p.id,p.size,p.position,material);
++  const {axis,along,sign,coordinate,center,bottom,top,width,thickness}=viewport,height=top-bottom;
++  // Liners run through the wall; a front trim and recessed gasket surround glazing.
++  function ring(label,border,depth,offset,w,h,mat){
++    for(const edge of [-1,1]){
++      const p=[...primitive.position],s=[.01,.01,.01];p[axis]=coordinate+offset;p[along]=center+edge*(w-border)/2;p[1]=(bottom+top)/2;s[axis]=depth;s[along]=border;s[1]=h;box(viewport.wall_id+'_'+label+'_vertical_'+edge,s,p,mat);
++      p[along]=center;p[1]=(bottom+top)/2+edge*(h-border)/2;s[along]=w-2*border;s[1]=border;box(viewport.wall_id+'_'+label+'_horizontal_'+edge,s,p,mat);
++    }
++  }
++  ring('reveal',.036,thickness,0,width,height,materials.basic.metal);
++  ring('inner_frame',.07,.026,-sign*(thickness/2-.013),width,height,materials.basic.ivory);
++  ring('glazing_gasket',.016,.018,sign*(thickness/2-.028),width-.072,height-.072,materials.basic.rubber);
++  const size=[.01,.01,.01],position=[...primitive.position];size[axis]=.008;size[along]=width-.10;size[1]=height-.10;position[axis]=coordinate+sign*(thickness/2-.028);position[along]=center;position[1]=(bottom+top)/2;
++  const glass=new THREE.MeshStandardMaterial({color:0xc0d4d2,roughness:.16,metalness:0,transparent:true,opacity:.12,depthWrite:false,side:THREE.DoubleSide});
++  box(viewport.wall_id+'_glazing',size,position,glass).userData={viewport_glazing:true,nontraversable:true};
++  return group;
++}
++function addObservationExterior(THREE,scene,viewport){
++  if(!viewport)return null;
++  const {axis,along,sign,coordinate,center}=viewport;
++  const positions=[],colors=[],indices=[],nx=32,nz=40;
++  for(let i=0;i<=nx;i++)for(let j=0;j<=nz;j++){
++    const d=.18+i*2,a=(j/nz-.5)*92,p=[0,0,0];p[axis]=coordinate+sign*d;p[along]=center+a;
++    const ridge=Math.exp(-(((d-42)/9)**2))*(2.8+1.1*Math.sin(a*.105)+.45*Math.sin(a*.41));
++    p[1]=-.16+Math.min(1,d/12)*(.09*Math.sin(d*.28+a*.2)+.07*Math.cos(a*.38))+ridge;
++    positions.push(...p);const tone=.88+.07*Math.sin(d*.24+a*.15);colors.push(.38*tone,.235*tone,.16*tone);
++    if(i<nx&&j<nz){const k=i*(nz+1)+j;indices.push(k,k+nz+1,k+1,k+1,k+nz+1,k+nz+2);}
++  }
++  if((axis===0?sign:-sign)>0)for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
++  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.setIndex(indices);g.computeVertexNormals();
++  const mesh=new THREE.Mesh(g,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,side:THREE.DoubleSide}));mesh.name='original_procedural_exterior_'+viewport.room_id;
++  mesh.userData={kind:'procedural_exterior_scenery',room_id:viewport.room_id,nontraversable:true,measured_terrain:false};mesh.receiveShadow=true;scene.add(mesh);return mesh;
+ }
+ 
+ // Original procedural meshes and textures. No external photographs/assets.
+@@ -414,7 +495,9 @@
+   for(const light of plan.lights){const point=new THREE.PointLight(light.color,light.intensity,light.distance,2);point.position.set(...light.position);scene.add(point);}
+   // Apply panels to each room's inward wall face. Shared walls get separate
+   // inner faces, avoiding conflicting materials on duplicate boundary boxes.
+-  for(const primitive of geometry.primitives){
++  const viewport=planObservationViewport(geometry,plan);
++  for(const sourcePrimitive of geometry.primitives){
++   for(const primitive of viewportWallPieces(sourcePrimitive,viewport)){
+     if(primitive.role!=='wall')continue;
+     const room=geometry.rooms.find(r=>plan.roomStyles[r.id]&&primitive.id.startsWith(r.id+'_'));if(!room)continue;
+     const side=primitive.id.slice(room.id.length+1).split('_')[0];
+@@ -423,6 +506,7 @@
+     const panel=new THREE.Mesh(new THREE.PlaneGeometry(w,h),materials.wallPanel(room.id,w,h));
+     panel.position.set(...primitive.position);panel.position.setComponent(axis,panel.position.getComponent(axis)+normal[axis]*(primitive.size[axis]/2+.0008));
+     panel.rotation.y=normal[0]===1?Math.PI/2:normal[0]===-1?-Math.PI/2:normal[2]===-1?Math.PI:0;panel.receiveShadow=true;scene.add(panel);
++   }
+   }
+   for(const sign of plan.signs){
+     const plaque=new THREE.Group();plaque.name=sign.id;plaque.position.set(...sign.position);box(plaque,0,0,0,...sign.size,M.frame);
+@@ -455,14 +539,15 @@
+   scene.add(new THREE.HemisphereLight(0xe3edf2,0x60574b,.62));
+   const fill=new THREE.DirectionalLight(0xfff0d0,.25);fill.position.set(6,12,3);scene.add(fill);
+   const dressingMaterials=createDressingMaterials(THREE,dressing);
++  const viewport=planObservationViewport(geometry,dressing);
+   for(const primitive of geometry.primitives){
+     const room=geometry.rooms.find(r=>primitive.id.startsWith(r.id+'_'));
+     const material=dressingMaterials.surface(primitive.role,room?.id);
+     if(primitive.role==='floor'&&material.map)material.map.repeat.set(Math.max(1,primitive.size[0]),Math.max(1,primitive.size[2]));
+-    const mesh=new THREE.Mesh(new THREE.BoxGeometry(...primitive.size),material);
+-    mesh.position.set(...primitive.position);mesh.receiveShadow=true;scene.add(mesh);
++    scene.add(createStructuralPrimitive(THREE,primitive,material,viewport,dressingMaterials));
+   }
+   addRoomDressing(THREE,scene,geometry,dressing,dressingMaterials);
++  addObservationExterior(THREE,scene,viewport);
+   const doorMeshes=new Map();
+   const frameMaterial=new THREE.MeshStandardMaterial({color:0x344955,roughness:.48,metalness:.65});
+   const leafMaterial=new THREE.MeshStandardMaterial({color:0xa9babc,roughness:.45,metalness:.52});
+--- installed051/layout_package_assets/source/room_dressing_render.mjs
++++ candidate053/layout_package_assets/source/room_dressing_render.mjs
+@@ -1,3 +1,84 @@
++// Derived architectural detail only. The original wall safety collider remains solid.
++// No pressure rating, exterior traversal, measured Martian terrain or real sky model.
++export function planObservationViewport(geometry,plan){
++  if(!plan.enabled)return null;
++  const rooms=geometry.rooms.filter(r=>plan.roomStyles[r.id]?.role==='observation');
++  if(rooms.length!==1)return null;
++  const room=rooms[0],bottom=room.floor_y+.95,top=bottom+1.2;
++  if(room.height<2.45)return null;
++  for(const side of ['east','west','north','south']){
++    const axis=['east','west'].includes(side)?0:2,along=axis===0?2:0,sign=['east','north'].includes(side)?1:-1;
++    const wallCoordinate=axis===0?room.x+(sign>0?room.width:0):room.z+(sign>0?room.depth:0);
++    const start=along===0?room.x:room.z,end=start+(along===0?room.width:room.depth);
++    // Only an intact exterior wall; never erase a doorway or a shared partition.
++    const wall=geometry.primitives.find(p=>p.id===room.id+'_'+side+'_0'&&p.role==='wall'&&Math.abs(p.position[axis]-wallCoordinate)<1e-7&&Math.abs(p.size[along]-(end-start))<1e-7&&Math.abs(p.size[1]-room.height)<1e-7);
++    if(!wall||wall.size[axis]<.12||wall.size[axis]>.3)continue;
++    const outside=wallCoordinate+sign*(wall.size[axis]/2+.02);
++    if(geometry.rooms.some(r=>r!==room&&outside>(axis===0?r.x:r.z)-.01&&outside<(axis===0?r.x+r.width:r.z+r.depth)+.01&&Math.max(start,along===0?r.x:r.z)<Math.min(end,along===0?r.x+r.width:r.z+r.depth)))continue;
++    if(geometry.portals.some(p=>p.axis===(axis===0?'x':'z')&&Math.abs(p.coordinate-wallCoordinate)<.16&&p.center>start&&p.center<end))continue;
++    const collider=geometry.colliders.find(c=>c.id===wall.id&&c.min.every((v,i)=>Math.abs(v-(wall.position[i]-wall.size[i]/2))<1e-7)&&c.max.every((v,i)=>Math.abs(v-(wall.position[i]+wall.size[i]/2))<1e-7));
++    if(!collider)continue;
++    // Fit a real structural bay. Keep existing ribs, equipment and their colliders.
++    let gaps=[[start+.2,end-.2]];
++    for(const c of plan.colliders){
++      if(c.max[1]<=bottom||c.min[1]>=top||c.max[axis]<wallCoordinate-.45||c.min[axis]>wallCoordinate+.45)continue;
++      const lo=c.min[along]-.12,hi=c.max[along]+.12;
++      gaps=gaps.flatMap(([a,b])=>hi<=a||lo>=b?[[a,b]]:[[a,Math.max(a,lo)],[Math.min(b,hi),b]].filter(([x,y])=>y-x>1e-6));
++    }
++    gaps.sort((a,b)=>(b[1]-b[0])-(a[1]-a[0])||a[0]-b[0]);
++    const gap=gaps[0];if(!gap||gap[1]-gap[0]<1.3)continue;
++    const width=Math.min(1.5,gap[1]-gap[0]),center=(gap[0]+gap[1])/2;
++    return {contract:'authored_observation_viewport_v1',room_id:room.id,wall_id:wall.id,safety_collider_id:collider.id,side,axis,along,sign,coordinate:wallCoordinate,center,bottom,top,width,thickness:wall.size[axis],nontraversable:true,pressure_simulation:false};
++  }
++  return null;
++}
++export function viewportWallPieces(primitive,viewport){
++  if(!viewport||primitive.id!==viewport.wall_id)return [primitive];
++  const {along,center,width,bottom,top}=viewport,lo=primitive.position[along]-primitive.size[along]/2,hi=primitive.position[along]+primitive.size[along]/2;
++  const floor=primitive.position[1]-primitive.size[1]/2,ceiling=primitive.position[1]+primitive.size[1]/2;
++  return [[lo,center-width/2,floor,ceiling],[center+width/2,hi,floor,ceiling],[center-width/2,center+width/2,floor,bottom],[center-width/2,center+width/2,top,ceiling]].map(([a,b,y,z],i)=>{
++    const position=[...primitive.position],size=[...primitive.size];position[along]=(a+b)/2;size[along]=b-a;position[1]=(y+z)/2;size[1]=z-y;
++    return {...primitive,id:primitive.id+'_surround_'+i,position,size};
++  });
++}
++export function createStructuralPrimitive(THREE,primitive,material,viewport,materials){
++  if(!viewport||primitive.id!==viewport.wall_id){const m=new THREE.Mesh(new THREE.BoxGeometry(...primitive.size),material);m.name=primitive.id;m.position.set(...primitive.position);m.receiveShadow=true;return m;}
++  const group=new THREE.Group();group.name=primitive.id;group.position.set(...primitive.position);group.userData.observation_viewport=viewport;
++  function box(name,size,world,mat){const m=new THREE.Mesh(new THREE.BoxGeometry(...size),mat);m.name=name;m.position.set(...world.map((v,i)=>v-primitive.position[i]));m.receiveShadow=true;group.add(m);return m;}
++  for(const p of viewportWallPieces(primitive,viewport))box(p.id,p.size,p.position,material);
++  const {axis,along,sign,coordinate,center,bottom,top,width,thickness}=viewport,height=top-bottom;
++  // Liners run through the wall; a front trim and recessed gasket surround glazing.
++  function ring(label,border,depth,offset,w,h,mat){
++    for(const edge of [-1,1]){
++      const p=[...primitive.position],s=[.01,.01,.01];p[axis]=coordinate+offset;p[along]=center+edge*(w-border)/2;p[1]=(bottom+top)/2;s[axis]=depth;s[along]=border;s[1]=h;box(viewport.wall_id+'_'+label+'_vertical_'+edge,s,p,mat);
++      p[along]=center;p[1]=(bottom+top)/2+edge*(h-border)/2;s[along]=w-2*border;s[1]=border;box(viewport.wall_id+'_'+label+'_horizontal_'+edge,s,p,mat);
++    }
++  }
++  ring('reveal',.036,thickness,0,width,height,materials.basic.metal);
++  ring('inner_frame',.07,.026,-sign*(thickness/2-.013),width,height,materials.basic.ivory);
++  ring('glazing_gasket',.016,.018,sign*(thickness/2-.028),width-.072,height-.072,materials.basic.rubber);
++  const size=[.01,.01,.01],position=[...primitive.position];size[axis]=.008;size[along]=width-.10;size[1]=height-.10;position[axis]=coordinate+sign*(thickness/2-.028);position[along]=center;position[1]=(bottom+top)/2;
++  const glass=new THREE.MeshStandardMaterial({color:0xc0d4d2,roughness:.16,metalness:0,transparent:true,opacity:.12,depthWrite:false,side:THREE.DoubleSide});
++  box(viewport.wall_id+'_glazing',size,position,glass).userData={viewport_glazing:true,nontraversable:true};
++  return group;
++}
++export function addObservationExterior(THREE,scene,viewport){
++  if(!viewport)return null;
++  const {axis,along,sign,coordinate,center}=viewport;
++  const positions=[],colors=[],indices=[],nx=32,nz=40;
++  for(let i=0;i<=nx;i++)for(let j=0;j<=nz;j++){
++    const d=.18+i*2,a=(j/nz-.5)*92,p=[0,0,0];p[axis]=coordinate+sign*d;p[along]=center+a;
++    const ridge=Math.exp(-(((d-42)/9)**2))*(2.8+1.1*Math.sin(a*.105)+.45*Math.sin(a*.41));
++    p[1]=-.16+Math.min(1,d/12)*(.09*Math.sin(d*.28+a*.2)+.07*Math.cos(a*.38))+ridge;
++    positions.push(...p);const tone=.88+.07*Math.sin(d*.24+a*.15);colors.push(.38*tone,.235*tone,.16*tone);
++    if(i<nx&&j<nz){const k=i*(nz+1)+j;indices.push(k,k+nz+1,k+1,k+1,k+nz+1,k+nz+2);}
++  }
++  if((axis===0?sign:-sign)>0)for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
++  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.setIndex(indices);g.computeVertexNormals();
++  const mesh=new THREE.Mesh(g,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,side:THREE.DoubleSide}));mesh.name='original_procedural_exterior_'+viewport.room_id;
++  mesh.userData={kind:'procedural_exterior_scenery',room_id:viewport.room_id,nontraversable:true,measured_terrain:false};mesh.receiveShadow=true;scene.add(mesh);return mesh;
++}
++
+ // Original procedural meshes and textures. No external photographs/assets.
+ export function createDressingMaterials(THREE,plan,{canvasFactory=()=>typeof document==='undefined'?null:document.createElement('canvas')}={}){
+   const cache=new Map();
+@@ -283,7 +364,9 @@
+   for(const light of plan.lights){const point=new THREE.PointLight(light.color,light.intensity,light.distance,2);point.position.set(...light.position);scene.add(point);}
+   // Apply panels to each room's inward wall face. Shared walls get separate
+   // inner faces, avoiding conflicting materials on duplicate boundary boxes.
+-  for(const primitive of geometry.primitives){
++  const viewport=planObservationViewport(geometry,plan);
++  for(const sourcePrimitive of geometry.primitives){
++   for(const primitive of viewportWallPieces(sourcePrimitive,viewport)){
+     if(primitive.role!=='wall')continue;
+     const room=geometry.rooms.find(r=>plan.roomStyles[r.id]&&primitive.id.startsWith(r.id+'_'));if(!room)continue;
+     const side=primitive.id.slice(room.id.length+1).split('_')[0];
+@@ -292,6 +375,7 @@
+     const panel=new THREE.Mesh(new THREE.PlaneGeometry(w,h),materials.wallPanel(room.id,w,h));
+     panel.position.set(...primitive.position);panel.position.setComponent(axis,panel.position.getComponent(axis)+normal[axis]*(primitive.size[axis]/2+.0008));
+     panel.rotation.y=normal[0]===1?Math.PI/2:normal[0]===-1?-Math.PI/2:normal[2]===-1?Math.PI:0;panel.receiveShadow=true;scene.add(panel);
++   }
+   }
+   for(const sign of plan.signs){
+     const plaque=new THREE.Group();plaque.name=sign.id;plaque.position.set(...sign.position);box(plaque,0,0,0,...sign.size,M.frame);
+--- installed051/layout_package_assets/authored_scene.mjs
++++ candidate053/layout_package_assets/authored_scene.mjs
+@@ -3,7 +3,7 @@
+ // Extra hierarchy/IDs are export bookkeeping; no geometry is approximated from
+ // equipment metadata boxes. Door pivots preserve the existing controller poses.
+ import * as THREE from './vendor/three/build/three.module.js';
+-import {createDressingMaterials,addRoomDressing} from './source/room_dressing_render.mjs';
++import {createDressingMaterials,addRoomDressing,planObservationViewport,createStructuralPrimitive,addObservationExterior} from './source/room_dressing_render.mjs';
+ import {buildRoomDressing} from './source/room_dressing_plan.mjs';
+ import {createDoorSystem} from './source/walk_controller.mjs';
+ import assert from 'node:assert/strict';
+@@ -13,17 +13,19 @@
+   const groups=new Map(),semantic=new Map(),hinges=new Map(),leafMeshes=new Map();
+   for(const room of metadata.rooms){const g=new THREE.Group();g.name='room_'+room.source_id;g.userData={room_id:room.id,bounds:room.bounds,functional_role:room.functional_role};scene.add(g);groups.set(room.source_id,g);}
+   const materials=createDressingMaterials(THREE,plan,{canvasFactory});
++  const viewport=planObservationViewport(geometry,plan);scene.userData.observation_viewport=viewport;
+   assert.ok(materials.basic.screen.map,'Missing authored screen map');
+   function bind(object,id){assert.ok(!semantic.has(id));object.userData.metadata_node_id=id;semantic.set(id,object);}
+   function roomOf(id){return geometry.rooms.find(r=>id.startsWith(r.id+'_'));}
+   for(const p of geometry.primitives){
+     const room=roomOf(p.id),mat=materials.surface(p.role,room?.id);
+     if(p.role==='floor'){assert.ok(mat.map,'Missing floor map');mat.map.repeat.set(Math.max(1,p.size[0]),Math.max(1,p.size[2]));}
+-    const mesh=new THREE.Mesh(new THREE.BoxGeometry(...p.size),mat);mesh.name=p.id;mesh.position.set(...p.position);mesh.receiveShadow=true;
++    const mesh=createStructuralPrimitive(THREE,p,mat,viewport,materials);
+     (groups.get(room?.id)||scene).add(mesh);bind(mesh,'node:'+p.id);
+   }
+   const dressingRoot=new THREE.Group();dressingRoot.name='authored_dressing';scene.add(dressingRoot);
+   addRoomDressing(THREE,dressingRoot,geometry,plan,materials);
++  addObservationExterior(THREE,scene,viewport);
+   for(const node of metadata.nodes){if(['structural_primitive','door_leaf','door_frame'].includes(node.kind))continue;
+     const object=dressingRoot.getObjectByName(node.id.slice(5));assert.ok(object,'Missing authored assembly '+node.id);bind(object,node.id);
+   }
+--- installed051/layout_package_export.py
++++ candidate053/layout_package_export.py
+@@ -12,7 +12,7 @@
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+ CONTRACT='authored_saved_layout_package_v2'
+ RENDERER={
+- 'viewer.mjs':'719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299',
++ 'viewer.mjs':'09f4d0f8c599b1c8716473622681da86db87ab02a2b6b880e28129d47a0b3fc4',
+  'walk_controller.mjs':'05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f',
+  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
+--- installed051/layout_package_assets/PRODUCER-PINS.json
++++ candidate053/layout_package_assets/PRODUCER-PINS.json
+@@ -2,8 +2,8 @@
+   "contract": "layout_package_producer_pins_v1",
+   "files": {
+     "authored_scene.mjs": {
+-      "sha256": "7aa1758187ece336d064da444cd553281a99573bc7067d5ffd87cd66c1c11c5d",
+-      "bytes": 6329
++      "sha256": "3c63e4a393d488702338393fcb82efdd7022bae2f855a26f26dd6d6f270fa3b6",
++      "bytes": 6485
+     },
+     "build_glb.mjs": {
+       "sha256": "e4657ee4eed51925e2cb1ca4fcb0d4f20c8eb013365e9ed236dbf65c70bd9263",
+@@ -26,8 +26,8 @@
+       "bytes": 9104
+     },
+     "source/room_dressing_render.mjs": {
+-      "sha256": "9ef627b8e4e99bbe09f1a49dcc5470742c4012f1efe1fb280e4001de7b5f37d2",
+-      "bytes": 25549
++      "sha256": "9f89ad8fe54bf40f557db302f1a60cdf88204f525ed906dba37b54213e1c3a1c",
++      "bytes": 32854
+     },
+     "source/scene_metadata.mjs": {
+       "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",

@@ -1,0 +1,135 @@
+{
+  "status": "PUBLIC_PAYLOAD_AND_RECOVERY_PASS_WITH054_GRAMMAR_FINDING",
+  "manifest_sha256": "a060cd5a77bb7cca9c13a810495d9bd8ab16fc5c2fefe022cf687dcc1f0c518d",
+  "files": 169,
+  "bytes": 9409885,
+  "all_hashes_and_sizes_match": true,
+  "canonical_mappings": 0,
+  "raw_private_context_files": 0,
+  "raw_or_decoded_brief_leaks": 0,
+  "credentials_or_model_binaries_found": 0,
+  "exact_source_provenance_rows": 162,
+  "canonical_preimages_verified": 7,
+  "protected_inputs_unchanged": 116,
+  "derived_geometry_notice": "Raw owner source JSON/brief excluded. Public GLB/scene metadata intentionally retains the derived authored layout; this is not a claim that all geometric information is absent.",
+  "glb_files": [
+    {
+      "path": "experimental/world-observation-setting-054/actual-001/package/scene.glb",
+      "sha256": "2e445a685f54374ca17ccf767ef1b02ebf23088550623569b32cee9625c02a47",
+      "json_characters": 498020
+    },
+    {
+      "path": "experimental/world-observation-viewport-053/actual-001/package/scene.glb",
+      "sha256": "97567b738b58b90f6b1232a87981b71489d4519dd0f497d94c67ebc48a40dabb",
+      "json_characters": 497088
+    }
+  ],
+  "suffixes": {
+    ".json": 54,
+    ".mjs": 47,
+    ".md": 4,
+    ".py": 29,
+    ".txt": 4,
+    ".glb": 2,
+    ".log": 8,
+    ".js": 10,
+    "": 2,
+    ".diff": 3,
+    ".html": 2,
+    ".css": 2,
+    ".png": 2
+  },
+  "synthetic_closure": {
+    "status": "PUBLIC_SYNTHETIC_NAVIGATION_VIEWPORT_SETTING_CLOSURE_PASS",
+    "fixture_sha256": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3",
+    "results": [
+      {
+        "package": "world-door-traversal-audit-052",
+        "result": {
+          "status": "BOUNDED_ACTUAL_NAVIGATION_AUDIT_PASS_NO_NEW_DEFECT",
+          "checks": 7,
+          "failures": [],
+          "walk_distances": [
+            87.70853822294035,
+            87.70853822294035
+          ]
+        }
+      },
+      {
+        "package": "world-observation-viewport-053",
+        "result": {
+          "status": "053_CPU_GEOMETRY_CONTRACT_PASS",
+          "checks": 12,
+          "viewport": {
+            "contract": "authored_observation_viewport_v1",
+            "room_id": "observation",
+            "wall_id": "observation_east_0",
+            "safety_collider_id": "observation_east_0",
+            "side": "east",
+            "axis": 0,
+            "along": 2,
+            "sign": 1,
+            "coordinate": 6,
+            "center": 9.97625,
+            "bottom": 0.95,
+            "top": 2.15,
+            "width": 1.5,
+            "thickness": 0.15000000000000036,
+            "nontraversable": true,
+            "pressure_simulation": false
+          }
+        }
+      },
+      {
+        "package": "world-observation-setting-054",
+        "result": {
+          "status": "054_BOUND_SETTING_TESTS_PASS",
+          "cases": 18,
+          "compatible_layouts": 2,
+          "actual_setting": "not_read_in_synthetic_only_test"
+        }
+      },
+      {
+        "package": "world-observation-setting-054",
+        "result": {
+          "status": "054_SHARED_SETTING_GEOMETRY_PASS",
+          "setting_cases": 15,
+          "checks": 8
+        }
+      }
+    ],
+    "owner_source_reads_or_writes": 0,
+    "gpu_models_browser_native_ui": 0,
+    "real_export_rerun": false,
+    "original_owner_recheck": false
+  },
+  "additional_setting_contrasts": [
+    {
+      "case": "literal exterior exclusion",
+      "request": "Build an original Mars base. Do not show exterior terrain.",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "landscape exclusion",
+      "request": "Build an original Mars base. Do not show a landscape beyond the window.",
+      "expected": "unspecified",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "outdoor scenery exclusion",
+      "request": "Build an original Mars base. Do not create outdoor scenery.",
+      "expected": "unspecified",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "quoted source only",
+      "request": "The source says \"Build an original Mars base.\"",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    }
+  ],
+  "finding": "054 rejects literal exterior/terrain negatives but still adds Mars scenery for explicit landscape/outdoor-scenery exclusions. Hold broad setting-negative correctness and native installation approval; backup may preserve the proposal as experimental with this limitation.",
+  "models_GPU_UI_Git_install_actions": 0,
+  "native_visual_or_owner_approval": false
+}

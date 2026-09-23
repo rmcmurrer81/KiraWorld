@@ -1,0 +1,465 @@
+{
+  "status": "BOUNDED_ACTUAL_NAVIGATION_AUDIT_PASS_NO_NEW_DEFECT",
+  "checks": [
+    {
+      "name": "frontend: continuous entry walk, six doors both ways and closed reblocking",
+      "status": "pass",
+      "detail": {
+        "controller": "frontend",
+        "rooms_visited": [
+          "airlock",
+          "circulation",
+          "operations",
+          "habitat",
+          "laboratory",
+          "observation",
+          "equipment_vestibule"
+        ],
+        "distance": 87.70853822294035,
+        "armResults": [
+          {
+            "door": "opening_3",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          },
+          {
+            "door": "opening_4",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          },
+          {
+            "door": "opening_5",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          },
+          {
+            "door": "opening_6",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          }
+        ],
+        "final": {
+          "feet": [
+            1.4999999999999996,
+            0,
+            -6.5
+          ],
+          "yaw": -3.3306690738754696e-15,
+          "pitch": 0,
+          "blocked": null,
+          "distance": 87.70853822294035,
+          "roomId": "equipment_vestibule",
+          "roomName": "Equipment Vestibule",
+          "nearbyDoor": null
+        }
+      }
+    },
+    {
+      "name": "portable: continuous entry walk, six doors both ways and closed reblocking",
+      "status": "pass",
+      "detail": {
+        "controller": "portable",
+        "rooms_visited": [
+          "airlock",
+          "circulation",
+          "operations",
+          "habitat",
+          "laboratory",
+          "observation",
+          "equipment_vestibule"
+        ],
+        "distance": 87.70853822294035,
+        "armResults": [
+          {
+            "door": "opening_3",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          },
+          {
+            "door": "opening_4",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          },
+          {
+            "door": "opening_5",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          },
+          {
+            "door": "opening_6",
+            "entered_and_returned": true,
+            "closed_blocked_both_directions": true
+          }
+        ],
+        "final": {
+          "feet": [
+            1.4999999999999996,
+            0,
+            -6.5
+          ],
+          "yaw": -3.3306690738754696e-15,
+          "pitch": 0,
+          "blocked": null,
+          "distance": 87.70853822294035,
+          "roomId": "equipment_vestibule",
+          "roomName": "Equipment Vestibule",
+          "nearbyDoor": null
+        }
+      }
+    },
+    {
+      "name": "Actual six doorway centre and shallow diagonal paths block closed, pass open, and reblock closed",
+      "status": "pass",
+      "detail": [
+        {
+          "door": "opening_1",
+          "controller": "frontend",
+          "segments": 18
+        },
+        {
+          "door": "opening_1",
+          "controller": "portable",
+          "segments": 18
+        },
+        {
+          "door": "opening_2",
+          "controller": "frontend",
+          "segments": 18
+        },
+        {
+          "door": "opening_2",
+          "controller": "portable",
+          "segments": 18
+        },
+        {
+          "door": "opening_3",
+          "controller": "frontend",
+          "segments": 18
+        },
+        {
+          "door": "opening_3",
+          "controller": "portable",
+          "segments": 18
+        },
+        {
+          "door": "opening_4",
+          "controller": "frontend",
+          "segments": 18
+        },
+        {
+          "door": "opening_4",
+          "controller": "portable",
+          "segments": 18
+        },
+        {
+          "door": "opening_5",
+          "controller": "frontend",
+          "segments": 18
+        },
+        {
+          "door": "opening_5",
+          "controller": "portable",
+          "segments": 18
+        },
+        {
+          "door": "opening_6",
+          "controller": "frontend",
+          "segments": 18
+        },
+        {
+          "door": "opening_6",
+          "controller": "portable",
+          "segments": 18
+        }
+      ]
+    },
+    {
+      "name": "Thin closed-door crossing is blocked despite clear endpoints, including diagonal mid-segment contact",
+      "status": "pass",
+      "detail": [
+        {
+          "door": "opening_1",
+          "endpoints_clear": true,
+          "midsegment_blocked": true
+        },
+        {
+          "door": "opening_2",
+          "endpoints_clear": true,
+          "midsegment_blocked": true
+        },
+        {
+          "door": "opening_3",
+          "endpoints_clear": true,
+          "midsegment_blocked": true
+        },
+        {
+          "door": "opening_4",
+          "endpoints_clear": true,
+          "midsegment_blocked": true
+        },
+        {
+          "door": "opening_5",
+          "endpoints_clear": true,
+          "midsegment_blocked": true
+        },
+        {
+          "door": "opening_6",
+          "endpoints_clear": true,
+          "midsegment_blocked": true
+        }
+      ]
+    },
+    {
+      "name": "Actual wall and closed-leaf corner clipping is blocked within one maximum normal step",
+      "status": "pass",
+      "detail": {
+        "cases": 25,
+        "collider_ids": [
+          "equipment_vestibule_north_2",
+          "airlock_east_0",
+          "airlock_south_2",
+          "airlock_north_2",
+          "operations_east_2",
+          "habitat_west_0",
+          "habitat_west_2",
+          "habitat_north_0",
+          "laboratory_east_2",
+          "observation_west_0",
+          "observation_west_2",
+          "observation_north_0",
+          "circulation_west_2",
+          "circulation_west_4",
+          "circulation_east_0",
+          "circulation_east_2",
+          "circulation_east_4",
+          "circulation_south_2",
+          "circulation_north_0",
+          "door_opening_1_leaf",
+          "door_opening_2_leaf",
+          "door_opening_3_leaf",
+          "door_opening_4_leaf",
+          "door_opening_5_leaf",
+          "door_opening_6_leaf"
+        ],
+        "step_metres": 0.09899494936611666
+      }
+    },
+    {
+      "name": "Actual exterior and solid room partitions block long and oblique segments at normal walker height",
+      "status": "pass",
+      "detail": [
+        {
+          "a": [
+            1.5,
+            0,
+            6
+          ],
+          "b": [
+            1.5,
+            0,
+            13
+          ],
+          "reason": "unsupported_floor"
+        },
+        {
+          "a": [
+            1.5,
+            0,
+            6
+          ],
+          "b": [
+            -1,
+            0,
+            6.5
+          ],
+          "reason": "unsupported_floor"
+        },
+        {
+          "a": [
+            1.5,
+            0,
+            6
+          ],
+          "b": [
+            4,
+            0,
+            6
+          ],
+          "reason": "unsupported_floor"
+        },
+        {
+          "a": [
+            1.5,
+            0,
+            -2
+          ],
+          "b": [
+            4,
+            0,
+            -2
+          ],
+          "reason": "unsupported_floor"
+        },
+        {
+          "a": [
+            1.5,
+            0,
+            1
+          ],
+          "b": [
+            -1,
+            0,
+            1
+          ],
+          "reason": "solid_obstruction",
+          "collider": "operations_east_0"
+        },
+        {
+          "a": [
+            1.5,
+            0,
+            1
+          ],
+          "b": [
+            4,
+            0,
+            1
+          ],
+          "reason": "solid_obstruction",
+          "collider": "habitat_west_0"
+        },
+        {
+          "a": [
+            1.5,
+            0,
+            11.5
+          ],
+          "b": [
+            3.8,
+            0,
+            11.5
+          ],
+          "reason": "unsupported_floor"
+        }
+      ]
+    },
+    {
+      "name": "Paired airlock opening reservations remain exclusive at zero angle, moving, held and open states",
+      "status": "pass",
+      "detail": [
+        "frontend",
+        "portable"
+      ]
+    }
+  ],
+  "failures": [],
+  "geometry_sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+  "furniture_colliders": 51,
+  "walks": [
+    {
+      "controller": "frontend",
+      "rooms_visited": [
+        "airlock",
+        "circulation",
+        "operations",
+        "habitat",
+        "laboratory",
+        "observation",
+        "equipment_vestibule"
+      ],
+      "distance": 87.70853822294035,
+      "armResults": [
+        {
+          "door": "opening_3",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        },
+        {
+          "door": "opening_4",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        },
+        {
+          "door": "opening_5",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        },
+        {
+          "door": "opening_6",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        }
+      ],
+      "final": {
+        "feet": [
+          1.4999999999999996,
+          0,
+          -6.5
+        ],
+        "yaw": -3.3306690738754696e-15,
+        "pitch": 0,
+        "blocked": null,
+        "distance": 87.70853822294035,
+        "roomId": "equipment_vestibule",
+        "roomName": "Equipment Vestibule",
+        "nearbyDoor": null
+      }
+    },
+    {
+      "controller": "portable",
+      "rooms_visited": [
+        "airlock",
+        "circulation",
+        "operations",
+        "habitat",
+        "laboratory",
+        "observation",
+        "equipment_vestibule"
+      ],
+      "distance": 87.70853822294035,
+      "armResults": [
+        {
+          "door": "opening_3",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        },
+        {
+          "door": "opening_4",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        },
+        {
+          "door": "opening_5",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        },
+        {
+          "door": "opening_6",
+          "entered_and_returned": true,
+          "closed_blocked_both_directions": true
+        }
+      ],
+      "final": {
+        "feet": [
+          1.4999999999999996,
+          0,
+          -6.5
+        ],
+        "yaw": -3.3306690738754696e-15,
+        "pitch": 0,
+        "blocked": null,
+        "distance": 87.70853822294035,
+        "roomId": "equipment_vestibule",
+        "roomName": "Equipment Vestibule",
+        "nearbyDoor": null
+      }
+    }
+  ],
+  "owner_geometry_changed": false,
+  "limits": [
+    "Actual saved geometry with authored static furniture and current conservative square avatar/collider model.",
+    "Camera eye1.56m and body1.68m; no head tracking, vertical movement, jumping, body physics or pressure simulation.",
+    "No UI or visual realism review; isolated per-collider corner tests supplement ordinary controller walks."
+  ],
+  "models_gpu_ui": 0
+}

@@ -1,0 +1,50 @@
+{
+  "status": "ISOLATED_IMMUTABLE054_PREVIEW_CREATED",
+  "current": {
+    "manifest_path": "@workspace\\work\\world-observation-setting-054\\runtime_context\\Data\\world_layout_previews\\layout-63466a710d6d24a92b2a921c\\manifest.json",
+    "build_id": "layout-63466a710d6d24a92b2a921c",
+    "reused": false,
+    "manifest_sha256": "812894ef75441490de81f75523d9f5a7768f658ab61af4f18e171116aa71e884"
+  },
+  "context": {
+    "world_layout_preview.py": {
+      "sha256": "ae549222df578a6eb4f0f1752864ee46db2622beeb37d846b67874d318514a37",
+      "source": "@workspace\\work\\world-observation-setting-054\\candidate\\tools\\world_builder_engine\\world_layout_preview.py"
+    },
+    "index.html": {
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+      "source": "@kira_root\\tools\\world_builder_engine\\index.html"
+    },
+    "style.css": {
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "source": "@kira_root\\tools\\world_builder_engine\\style.css"
+    },
+    "viewer.mjs": {
+      "sha256": "f8b14f8cf1fec001541b3719246fa603d5985a5b45c0b86a62e67eb1601c405c",
+      "source": "@workspace\\work\\world-observation-setting-054\\candidate\\tools\\world_builder_engine\\viewer.mjs"
+    },
+    "walk_controller.mjs": {
+      "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+      "source": "@workspace\\work\\world-observation-setting-054\\candidate\\tools\\world_builder_engine\\walk_controller.mjs"
+    },
+    "horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "source": "@kira_root\\tools\\world_builder_engine\\horizontal_navigation.mjs"
+    },
+    "preflight.mjs": {
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "source": "@kira_root\\tools\\world_builder_engine\\preflight.mjs"
+    }
+  },
+  "backend_bytes_identical_to_installed": false,
+  "new_backend_sha256": "ae549222df578a6eb4f0f1752864ee46db2622beeb37d846b67874d318514a37",
+  "renderer_sha256": "f8b14f8cf1fec001541b3719246fa603d5985a5b45c0b86a62e67eb1601c405c",
+  "preview_server_or_ui_started": false,
+  "new_immutable_preview_reused_on_repeat": true,
+  "previous_pointer": {
+    "build_id": "layout-a37f864587b3ee075e21ccd1",
+    "manifest_path": "@kira_root\\Data\\world_layout_previews\\layout-a37f864587b3ee075e21ccd1\\manifest.json",
+    "manifest_sha256": "f99bbbe4fde564e1f48814c899b85ca6f78b0ffe9466a4a88ccabd139999313a",
+    "reused": false
+  }
+}

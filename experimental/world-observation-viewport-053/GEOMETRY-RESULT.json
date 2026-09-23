@@ -1,0 +1,226 @@
+{
+  "status": "053_CPU_GEOMETRY_CONTRACT_PASS",
+  "checks": [
+    {
+      "name": "Saved observation role selects a genuine unshared exterior bay",
+      "status": "pass",
+      "result": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "observation",
+        "wall_id": "observation_east_0",
+        "safety_collider_id": "observation_east_0",
+        "side": "east",
+        "axis": 0,
+        "along": 2,
+        "sign": 1,
+        "coordinate": 6,
+        "center": 9.97625,
+        "bottom": 0.95,
+        "top": 2.15,
+        "width": 1.5,
+        "thickness": 0.15000000000000036,
+        "nontraversable": true,
+        "pressure_simulation": false
+      }
+    },
+    {
+      "name": "Normal eye-height and varied aperture rays reach glazing with no opaque wall/panel/rib occlusion",
+      "status": "pass",
+      "result": [
+        {
+          "origin": [
+            4.9,
+            1.25,
+            9.526250000000001
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.25,
+            9.97625
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.25,
+            10.42625
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.5499999999999998,
+            9.526250000000001
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.5499999999999998,
+            9.97625
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.5499999999999998,
+            10.42625
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.8499999999999999,
+            9.526250000000001
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.8499999999999999,
+            9.97625
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        },
+        {
+          "origin": [
+            4.9,
+            1.8499999999999999,
+            10.42625
+          ],
+          "before": "",
+          "after": "observation_east_0_glazing"
+        }
+      ]
+    },
+    {
+      "name": "Camera through the real aperture sees the same shared original terrain geometry",
+      "status": "pass",
+      "result": {
+        "terrain_hit_distance": 29.121836899408635,
+        "terrain_vertices": 1353,
+        "terrain_triangles": 2560
+      }
+    },
+    {
+      "name": "Structural surround retains exact original full bounds and linked solid safety collider",
+      "status": "pass",
+      "result": {
+        "owner_node_id": "node:observation_east_0",
+        "bounds": {
+          "min": [
+            5.924999997019768,
+            -2.3841857821338408e-8,
+            7.000000033378601
+          ],
+          "max": [
+            6.075000002980232,
+            2.700000023841858,
+            11.000000003576279
+          ]
+        },
+        "collider_unchanged": true
+      }
+    },
+    {
+      "name": "Recess has visible depth and opaque side/header/sill enclosure",
+      "status": "pass",
+      "result": {
+        "recess_depth_metres": 0.12200000000000077,
+        "glass_opacity": 0.12
+      }
+    },
+    {
+      "name": "Normal walker cannot pass through the glass despite the visible opening",
+      "status": "pass",
+      "result": {
+        "route_id": "viewport_block",
+        "status": "blocked",
+        "segment_index": 0,
+        "ok": false,
+        "reason": "unsupported_floor",
+        "t": 0.7911392405063291,
+        "feet": [
+          5.825,
+          0,
+          9.97625
+        ]
+      }
+    },
+    {
+      "name": "All original equipment, door definitions, pairing, plan colliders and scene metadata remain unchanged",
+      "status": "pass",
+      "result": {
+        "equipment": 16,
+        "original_colliders": 59,
+        "extra_colliders": 51,
+        "doors": 6
+      }
+    },
+    {
+      "name": "Viewer uses the exact shared authored builder, not an independent window approximation",
+      "status": "pass",
+      "result": true
+    },
+    {
+      "name": "Window eligibility rejects missing solid collider, unsupported role and enclosed observation room",
+      "status": "pass",
+      "result": true
+    },
+    {
+      "name": "No observation style means byte-identical structural primitive meshes and no exterior",
+      "status": "pass",
+      "result": true
+    },
+    {
+      "name": "Renaming the observation room preserves geometric feature without requiring Mars title or fixed id",
+      "status": "pass",
+      "result": true
+    },
+    {
+      "name": "Every new position/normal/color is finite; external terrain normals face upward",
+      "status": "pass",
+      "result": {
+        "meshes": 643
+      }
+    }
+  ],
+  "source_geometry_sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+  "viewport": {
+    "contract": "authored_observation_viewport_v1",
+    "room_id": "observation",
+    "wall_id": "observation_east_0",
+    "safety_collider_id": "observation_east_0",
+    "side": "east",
+    "axis": 0,
+    "along": 2,
+    "sign": 1,
+    "coordinate": 6,
+    "center": 9.97625,
+    "bottom": 0.95,
+    "top": 2.15,
+    "width": 1.5,
+    "thickness": 0.15000000000000036,
+    "nontraversable": true,
+    "pressure_simulation": false
+  },
+  "world_or_source_modified": false,
+  "visual_review": false
+}

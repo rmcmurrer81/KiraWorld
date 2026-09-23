@@ -1,0 +1,2 @@
+CPU harness only: test omitted required dressing_recipe and door_controller bindings. exportSceneMetadata rejected it before candidate geometry was exercised. Candidate source unchanged; corrected test uses actual file digests.
+Second harness assertion wrongly assumed the lower of two near-equal rib bays would be selected. Replaced it with an independent aperture-vs-existing-rib overlap check; product code unchanged.

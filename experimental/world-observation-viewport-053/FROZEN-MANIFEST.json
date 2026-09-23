@@ -1,0 +1,329 @@
+{
+  "status": "FROZEN_ISOLATED_NOT_INSTALLED",
+  "files": {
+    "actual-001/API-RESULT.json": {
+      "sha256": "4c213aa36f8ab36a21dbb88a67521030bbb84e0c5ace0bd978a210d7e601a956",
+      "bytes": 1071
+    },
+    "actual-001/package/manifest.json": {
+      "sha256": "1c061a56251ce30083fe2cb0199dc0a4a93fbf4dc3b7d3aa4312d2c98fe8656b",
+      "bytes": 6963
+    },
+    "actual-001/package/README.txt": {
+      "sha256": "cd4d71900456ab87d690603a658293c32156776fd3d7d59d534ef1c69e54bfb1",
+      "bytes": 377
+    },
+    "actual-001/package/ROUNDTRIP.json": {
+      "sha256": "c0f2c5e45158703a8e47e59bb8aad7d24d7c033cd60e2d0c7770fa7d17a18a5b",
+      "bytes": 6432
+    },
+    "actual-001/package/scene.glb": {
+      "sha256": "97567b738b58b90f6b1232a87981b71489d4519dd0f497d94c67ebc48a40dabb",
+      "bytes": 1304884
+    },
+    "actual-001/package/scene.json": {
+      "sha256": "0c7bbc148aac33d2c49846a9f8bf4ffa7975f838a53768c89271eb20278b052b",
+      "bytes": 83432
+    },
+    "actual-001/PREVIEW-RESULT.json": {
+      "sha256": "8c2bedbee19f23fcc869f3e469b5e545babee7b6d89523a73ad2a1a5c0753771",
+      "bytes": 2747
+    },
+    "actual-001/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "actual-001/stdout.log": {
+      "sha256": "5669dc4d97cdb760676d8a1084a1e126eb78a23d8a30c5b90cb8dc44cf44b127",
+      "bytes": 147
+    },
+    "ACTUAL-EXPORT-RESULT.json": {
+      "sha256": "36a9001087e28c5cf6e5d096b11d96f0df65549541c9314374a164bfc62bc1be",
+      "bytes": 7241
+    },
+    "ASSESSMENT.json": {
+      "sha256": "f72970935658de9477a892ecbec1dbea0c31c00ee65a2b41592567f6977f3d98",
+      "bytes": 1542
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/authored_scene.mjs": {
+      "sha256": "3c63e4a393d488702338393fcb82efdd7022bae2f855a26f26dd6d6f270fa3b6",
+      "bytes": 6485
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/build_glb.mjs": {
+      "sha256": "e4657ee4eed51925e2cb1ca4fcb0d4f20c8eb013365e9ed236dbf65c70bd9263",
+      "bytes": 12343
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/cpu_canvas.mjs": {
+      "sha256": "71129c539e0b3bb6227aedda5e6434e94b95ba6cc811446c6ed9fb2feaba78bb",
+      "bytes": 2968
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json": {
+      "sha256": "444d3d2d7c75c46cd4b122eb2974d4c8c09dc962ca431beeb9d6e0e6357cbe77",
+      "bytes": 4035
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/airlock_policy.mjs": {
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15",
+      "bytes": 2523
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs": {
+      "sha256": "3508293926fd6e9c5e95bef8af0c12c2ec727c02c83fb570f3c88617a1cb42f3",
+      "bytes": 9104
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs": {
+      "sha256": "9f89ad8fe54bf40f557db302f1a60cdf88204f525ed906dba37b54213e1c3a1c",
+      "bytes": 32854
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs": {
+      "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",
+      "bytes": 14706
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs": {
+      "sha256": "e7cfe0c2ca7fe8d5de20f88bab07ef27f64c10b4e7d75d436d55e4f207cac612",
+      "bytes": 16899
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source_bindings.py": {
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+      "bytes": 12098
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.core.js": {
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.module.js": {
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/exporters/GLTFExporter.js": {
+      "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f",
+      "bytes": 86392
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/loaders/GLTFLoader.js": {
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "bytes": 114739
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/utils/BufferGeometryUtils.js": {
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "bytes": 35539
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/LICENSE": {
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/package.json": {
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+      "bytes": 4635
+    },
+    "candidate/tools/world_builder_engine/layout_package_export.py": {
+      "sha256": "af824286b1a03e6c17d644ac7258695201681314c950059f2afdfada96247c04",
+      "bytes": 11024
+    },
+    "candidate/tools/world_builder_engine/viewer.mjs": {
+      "sha256": "09f4d0f8c599b1c8716473622681da86db87ab02a2b6b880e28129d47a0b3fc4",
+      "bytes": 51122
+    },
+    "candidate/tools/world_builder_engine/walk_controller.mjs": {
+      "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+      "bytes": 15835
+    },
+    "CANDIDATE-CLOSURE.json": {
+      "sha256": "52862f8c0903edfd65acb4ba1fe10581bd5e2f123832d41bcf7a076fc4aee697",
+      "bytes": 3921
+    },
+    "CPU-RENDER-RESULT-002.json": {
+      "sha256": "e25fc4538115e77c73bba14e5e8a9decd20fc669dd359f00cef5733fe7440289",
+      "bytes": 839
+    },
+    "CPU-RENDER-RESULT.json": {
+      "sha256": "76db2de90de34dd87e902a541e7dab4a8ae2aca12b8824e4866561f373f684c2",
+      "bytes": 838
+    },
+    "cpu-review-001/RENDER-DETAILS.json": {
+      "sha256": "38889debaaef86dee05de543fbdfc718b20d8a9d95fdbb7682e4857f7501f152",
+      "bytes": 639
+    },
+    "cpu-review-001/stderr.log": {
+      "sha256": "f720f14c12a34541ba86aa77cdf4239c7af00b27be661a88710d1ba5d22240ef",
+      "bytes": 420
+    },
+    "cpu-review-001/stdout.log": {
+      "sha256": "8ae79d08537877ef06339c88eba0be44e60cf65ab0f69a5af671b747538502b1",
+      "bytes": 18503
+    },
+    "cpu-review-001/viewport-review.png": {
+      "sha256": "c9123baf99327c64e5e3d595a012f197fd342f0246edfbe1973d6030c62a182c",
+      "bytes": 269253
+    },
+    "cpu-review-002/RENDER-DETAILS.json": {
+      "sha256": "64e9863fd49246d32fe695b9cc9624c0c4824d732714f19b4d65dc5aed2eee44",
+      "bytes": 764
+    },
+    "cpu-review-002/stderr.log": {
+      "sha256": "0e83e6777b76b17813061baca4463e87046e04a6f77ec6aa39aa4061aec11004",
+      "bytes": 431
+    },
+    "cpu-review-002/stdout.log": {
+      "sha256": "ef55a2c603df71de30455673a704483deb0d21d135c638aa253b1a5f65d9f8ff",
+      "bytes": 18503
+    },
+    "cpu-review-002/viewport-review.png": {
+      "sha256": "1c4cad68e2218ceccb16b1fd70563e8b55680a41d7973ca014298776f9845ba5",
+      "bytes": 279363
+    },
+    "GEOMETRY-RESULT.json": {
+      "sha256": "20a237d311eb96fbc1ae28767f45347524443e46d0ae58d0e24a49fdaaa84dca",
+      "bytes": 5859
+    },
+    "history/FIRST-TEST-FAILURE.txt": {
+      "sha256": "d6594b70a59fcac42cf2d31623bfc8e44049bc8394ee014248b0e42b29d0bcd9",
+      "bytes": 423
+    },
+    "history/test_viewport-incomplete-test-bindings.mjs": {
+      "sha256": "f319cf7f542521545304669ccdfeb1419fb79f9e970b8c86dc8ef792369b469a",
+      "bytes": 11166
+    },
+    "INSTALL-PLAN.json": {
+      "sha256": "0e9f252ae1d8a0a70290cd750bfd6df8b5f4b5ea7cdf9a009beba83d15243fba",
+      "bytes": 26997
+    },
+    "POST-CPU-PRESERVATION.json": {
+      "sha256": "6954c5ac7182b4d792aa08656d64da10a9f68af055387b5c70e79cf08f5bac5c",
+      "bytes": 480
+    },
+    "preimages/tools/world_builder_engine/layout_package_assets/authored_scene.mjs": {
+      "sha256": "7aa1758187ece336d064da444cd553281a99573bc7067d5ffd87cd66c1c11c5d",
+      "bytes": 6329
+    },
+    "preimages/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json": {
+      "sha256": "5a63e98872aa860cffa8915ec8800edb5e7621a0b675c476e44592a882f50bf5",
+      "bytes": 4035
+    },
+    "preimages/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs": {
+      "sha256": "9ef627b8e4e99bbe09f1a49dcc5470742c4012f1efe1fb280e4001de7b5f37d2",
+      "bytes": 25549
+    },
+    "preimages/tools/world_builder_engine/layout_package_export.py": {
+      "sha256": "893dfe5092efce4b59f401b9e3ae4f92695e858944f7532a8bbcd5723cd838cb",
+      "bytes": 11024
+    },
+    "preimages/tools/world_builder_engine/viewer.mjs": {
+      "sha256": "719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299",
+      "bytes": 43809
+    },
+    "PREVIEW-CONTRACT-RESULT-1.json": {
+      "sha256": "2a1421f4a9a3d532a6f6fa1a009eae03c54feb477930baa5e438b27fa2f2c305",
+      "bytes": 505
+    },
+    "README.md": {
+      "sha256": "339a9a1a33cbdb7ae7b045ca3141945bf7638980f414bbf795c76df05da37667",
+      "bytes": 4630
+    },
+    "render_cpu.py": {
+      "sha256": "2665cf4eb738c2c8f895716d64c73212dc79be5377cc3f7147c67c72967858c4",
+      "bytes": 3290
+    },
+    "render_cpu_diagnostic.py": {
+      "sha256": "cfc2d1d76a9ba1730c084df803291b4b6ac6426ff53ad540dc74c8a344be33d6",
+      "bytes": 3817
+    },
+    "run_cpu_export.py": {
+      "sha256": "c68a63ed2deab8356a0819df31d40126562e89a4766740c47a3bfa84512898a7",
+      "bytes": 7017
+    },
+    "run_render_bounded.py": {
+      "sha256": "ec273cb77e0b20cb83304cfb49c615f0e2adbc17f7a585386bc853066e518793",
+      "bytes": 2625
+    },
+    "run_render_diagnostic_bounded.py": {
+      "sha256": "e37b5bc44ea2687e7150968d17e509c746dad91a6e43bf9cf5422dda17704e83",
+      "bytes": 2640
+    },
+    "runtime_context/Data/world_layout_previews/layout-fe10ba380c98737c3bf3f012/geometry.json": {
+      "sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+      "bytes": 22513
+    },
+    "runtime_context/Data/world_layout_previews/layout-fe10ba380c98737c3bf3f012/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "runtime_context/Data/world_layout_previews/layout-fe10ba380c98737c3bf3f012/index.html": {
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+      "bytes": 2119
+    },
+    "runtime_context/Data/world_layout_previews/layout-fe10ba380c98737c3bf3f012/manifest.json": {
+      "sha256": "57bb8a7b08f0773e35077c41c79015ec69f20c65685987aad61d46a92147aa0d",
+      "bytes": 13150
+    },
+    "runtime_context/Data/world_layout_previews/layout-fe10ba380c98737c3bf3f012/style.css": {
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "bytes": 2451
+    },
+    "runtime_context/Data/world_layout_previews/layout-fe10ba380c98737c3bf3f012/viewer.mjs": {
+      "sha256": "09f4d0f8c599b1c8716473622681da86db87ab02a2b6b880e28129d47a0b3fc4",
+      "bytes": 51122
+    },
+    "runtime_context/Data/world_layout_previews/layout-fe10ba380c98737c3bf3f012/walk_controller.mjs": {
+      "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+      "bytes": 15835
+    },
+    "runtime_context/tools/world_builder_engine/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "runtime_context/tools/world_builder_engine/index.html": {
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+      "bytes": 2119
+    },
+    "runtime_context/tools/world_builder_engine/preflight.mjs": {
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "bytes": 1374
+    },
+    "runtime_context/tools/world_builder_engine/style.css": {
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "bytes": 2451
+    },
+    "runtime_context/tools/world_builder_engine/viewer.mjs": {
+      "sha256": "09f4d0f8c599b1c8716473622681da86db87ab02a2b6b880e28129d47a0b3fc4",
+      "bytes": 51122
+    },
+    "runtime_context/tools/world_builder_engine/walk_controller.mjs": {
+      "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+      "bytes": 15835
+    },
+    "runtime_context/tools/world_builder_engine/world_layout_preview.py": {
+      "sha256": "fc9ead65889ea7eb011dc8278047704fa212f4c5536811b9f6971c6078180c21",
+      "bytes": 24439
+    },
+    "seal.py": {
+      "sha256": "e84910789b3949b8b6934cf98c5377ea99e110fa4e5234a37357e36d5e4bf1f9",
+      "bytes": 3941
+    },
+    "SOURCE-PINS.json": {
+      "sha256": "0d97a4400c272caff57c696f50d7c176756b5e6b8172f4725cea4c7801b6eb52",
+      "bytes": 4447
+    },
+    "SOURCE.diff": {
+      "sha256": "a81b3d8abda798b534be130584bbd75c98ead0feb0556d9ffba5e557790beb5f",
+      "bytes": 23543
+    },
+    "stage.py": {
+      "sha256": "24793fa9f7742f1462e14b387e3c6ec60d7c7c2995f5ec8f5052d27d7f420d40",
+      "bytes": 5966
+    },
+    "test_preview_contract.py": {
+      "sha256": "e2419fe1c28b12fb6b9b232cd231885ecebf41e6b8d3a891b38888b1781ad52e",
+      "bytes": 2247
+    },
+    "test_viewport.mjs": {
+      "sha256": "8eaff3160f4171bd6bc2be9d6e5ddf9bef74f59184c4b5a02848859413edfb86",
+      "bytes": 11615
+    },
+    "viewport.fragment.mjs": {
+      "sha256": "d30eb546b3d5d8dbacffc98c22f3712958db3e8ad1f5bf9173207b9c55e12c20",
+      "bytes": 7163
+    }
+  }
+}

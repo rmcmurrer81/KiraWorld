@@ -1,0 +1,25 @@
+{
+  "status": "054_LEGACY_PREVIEW_AND_EXACT_APPEARANCE_TRANSPORT_PASS",
+  "legacy_manifest_sha256": "f99bbbe4fde564e1f48814c899b85ca6f78b0ffe9466a4a88ccabd139999313a",
+  "legacy_existing_manifest_verified": true,
+  "scope": "Candidate backend code simulated at canonical path using a read-only backend-binding substitution; all real legacy asset/source bindings were checked. No installation.",
+  "tamper_cases": [
+    {
+      "tamper": "setting",
+      "held": true
+    },
+    {
+      "tamper": "brief",
+      "held": true
+    },
+    {
+      "tamper": "drop_binding",
+      "held": true
+    }
+  ],
+  "actual054_glb_binary_payload_identical_to053": true,
+  "json_diff_only_minimal_presentation_provenance": true,
+  "no_raw_brief_in_glb": true,
+  "053_render_artifact_relevance": "Same exact geometry/material/texture/light payload;053 images remain diagnostic file renders, not054 native visual approval.",
+  "canonical_or_owner_writes": false
+}

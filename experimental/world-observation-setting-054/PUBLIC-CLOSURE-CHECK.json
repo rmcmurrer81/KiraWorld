@@ -1,0 +1,64 @@
+{
+  "status": "PUBLIC_SYNTHETIC_NAVIGATION_VIEWPORT_SETTING_CLOSURE_PASS",
+  "fixture_sha256": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3",
+  "results": [
+    {
+      "package": "world-door-traversal-audit-052",
+      "result": {
+        "status": "BOUNDED_ACTUAL_NAVIGATION_AUDIT_PASS_NO_NEW_DEFECT",
+        "checks": 7,
+        "failures": [],
+        "walk_distances": [
+          87.70853822294035,
+          87.70853822294035
+        ]
+      }
+    },
+    {
+      "package": "world-observation-viewport-053",
+      "result": {
+        "status": "053_CPU_GEOMETRY_CONTRACT_PASS",
+        "checks": 12,
+        "viewport": {
+          "contract": "authored_observation_viewport_v1",
+          "room_id": "observation",
+          "wall_id": "observation_east_0",
+          "safety_collider_id": "observation_east_0",
+          "side": "east",
+          "axis": 0,
+          "along": 2,
+          "sign": 1,
+          "coordinate": 6,
+          "center": 9.97625,
+          "bottom": 0.95,
+          "top": 2.15,
+          "width": 1.5,
+          "thickness": 0.15000000000000036,
+          "nontraversable": true,
+          "pressure_simulation": false
+        }
+      }
+    },
+    {
+      "package": "world-observation-setting-054",
+      "result": {
+        "status": "054_BOUND_SETTING_TESTS_PASS",
+        "cases": 18,
+        "compatible_layouts": 2,
+        "actual_setting": "not_read_in_synthetic_only_test"
+      }
+    },
+    {
+      "package": "world-observation-setting-054",
+      "result": {
+        "status": "054_SHARED_SETTING_GEOMETRY_PASS",
+        "setting_cases": 15,
+        "checks": 8
+      }
+    }
+  ],
+  "owner_source_reads_or_writes": 0,
+  "gpu_models_browser_native_ui": 0,
+  "real_export_rerun": false,
+  "original_owner_recheck": false
+}

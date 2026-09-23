@@ -1,0 +1,317 @@
+{
+  "status": "FROZEN_ISOLATED_NOT_INSTALLED",
+  "files": {
+    "actual-001/API-RESULT.json": {
+      "sha256": "eb4cfd266d52bbea98d54a6a6fad28e0e67aa1b4276d91ffa97d721934d6f4ad",
+      "bytes": 1070
+    },
+    "actual-001/package/manifest.json": {
+      "sha256": "066be2cc7d3c18fd7e61ccacbc99706814a02b818b3d0aa6e27cda16a603def7",
+      "bytes": 7429
+    },
+    "actual-001/package/README.txt": {
+      "sha256": "cd4d71900456ab87d690603a658293c32156776fd3d7d59d534ef1c69e54bfb1",
+      "bytes": 377
+    },
+    "actual-001/package/ROUNDTRIP.json": {
+      "sha256": "09efcd53e46edc58cfd52cbda7315fd6e88bda7d5a28ac006ce5573861d22129",
+      "bytes": 6966
+    },
+    "actual-001/package/scene.glb": {
+      "sha256": "2e445a685f54374ca17ccf767ef1b02ebf23088550623569b32cee9625c02a47",
+      "bytes": 1305816
+    },
+    "actual-001/package/scene.json": {
+      "sha256": "0c7bbc148aac33d2c49846a9f8bf4ffa7975f838a53768c89271eb20278b052b",
+      "bytes": 83432
+    },
+    "actual-001/PRESENTATION-HTTP-RESULT.json": {
+      "sha256": "94b41368ad92cd3b215eef45e1ef154b1b82455d253fe6d9525bbc722fa0c084",
+      "bytes": 660
+    },
+    "actual-001/PREVIEW-RESULT.json": {
+      "sha256": "1081dd1f4df48a68d32a4030bcac3080f9c8699850cf65f7b33db5134c06439b",
+      "bytes": 2950
+    },
+    "actual-001/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "actual-001/stdout.log": {
+      "sha256": "6e7196a389e549af0f51fb38e0a69450269a21e1175ecb536dff315209f0285f",
+      "bytes": 147
+    },
+    "ACTUAL-EXPORT-RESULT.json": {
+      "sha256": "2f316085c536fd9da07f07c6faf7e768b08be760a2bf84e349bd94b635fa1756",
+      "bytes": 7240
+    },
+    "ACTUAL-PRESENTATION.json": {
+      "sha256": "6f63a0b29a5e0f864b146a223e747a9a53b9ff640f83c8f814cbb7cae340e6e7",
+      "bytes": 487
+    },
+    "ASSESSMENT.json": {
+      "sha256": "a869b87ed0ba3fa34c032bf9108f63bd1273069ee3f535308efc53e6b45a01dd",
+      "bytes": 397
+    },
+    "baseline/engine/layout_recipe_profile.py": {
+      "sha256": "c7de67d95da9a8f0d1652a10ba1f56b644438f3c10df03b1a27c24177ec6ecc8",
+      "bytes": 5276
+    },
+    "baseline/engine/world_blueprint.py": {
+      "sha256": "94b175bc95214e3a784ef871a3de46388a3356c5924e0871b7b031834eb6b5bc",
+      "bytes": 13649
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/authored_scene.mjs": {
+      "sha256": "538e46e1468a5cba1855c018a463dbc1a342b7f84367e160fa8a0ff1def1e997",
+      "bytes": 6574
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/build_glb.mjs": {
+      "sha256": "7ce5c81917ff9dc3cd51a038144e2fe33f5cf693720de1ad30bb220567c6a588",
+      "bytes": 12413
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/cpu_canvas.mjs": {
+      "sha256": "71129c539e0b3bb6227aedda5e6434e94b95ba6cc811446c6ed9fb2feaba78bb",
+      "bytes": 2968
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json": {
+      "sha256": "0055d6ea37a8fa6ba1cf5a2ca84d0990fb292800277913003956ac6bd2eb73b1",
+      "bytes": 4035
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/airlock_policy.mjs": {
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15",
+      "bytes": 2523
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs": {
+      "sha256": "3508293926fd6e9c5e95bef8af0c12c2ec727c02c83fb570f3c88617a1cb42f3",
+      "bytes": 9104
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs": {
+      "sha256": "890a2dc1952ee6fd3306c84f5b147b6889f94789f13a50f09d800f5bf9fc2d08",
+      "bytes": 33433
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs": {
+      "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",
+      "bytes": 14706
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs": {
+      "sha256": "e7cfe0c2ca7fe8d5de20f88bab07ef27f64c10b4e7d75d436d55e4f207cac612",
+      "bytes": 16899
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/source_bindings.py": {
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+      "bytes": 12098
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.core.js": {
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.module.js": {
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/exporters/GLTFExporter.js": {
+      "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f",
+      "bytes": 86392
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/loaders/GLTFLoader.js": {
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "bytes": 114739
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/utils/BufferGeometryUtils.js": {
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "bytes": 35539
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/LICENSE": {
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/package.json": {
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+      "bytes": 4635
+    },
+    "candidate/tools/world_builder_engine/layout_package_export.py": {
+      "sha256": "3d0e902eb1b52bc124a2af2a91fad27711d1bf3f2de6c1600283b6eee94dd5f0",
+      "bytes": 11334
+    },
+    "candidate/tools/world_builder_engine/viewer.mjs": {
+      "sha256": "f8b14f8cf1fec001541b3719246fa603d5985a5b45c0b86a62e67eb1601c405c",
+      "bytes": 51949
+    },
+    "candidate/tools/world_builder_engine/walk_controller.mjs": {
+      "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+      "bytes": 15835
+    },
+    "candidate/tools/world_builder_engine/world_layout_preview.py": {
+      "sha256": "ae549222df578a6eb4f0f1752864ee46db2622beeb37d846b67874d318514a37",
+      "bytes": 29221
+    },
+    "CANDIDATE-CLOSURE.json": {
+      "sha256": "c5267cb1955f4ef1e24e09a636e74b0f5ce17cf6fa3c4269a7e56ae206414eac",
+      "bytes": 4085
+    },
+    "fixtures/setting-cases.json": {
+      "sha256": "519226b9f5725ef26f20ca124e084a34c2cb7a32ea514b812938fece987ab6a8",
+      "bytes": 10112
+    },
+    "fixtures/supported-layouts.json": {
+      "sha256": "00ce2226e19dc0d0543d059b6f21fddbc3cbcf4ae4ebc4c6e5fcdc88f20cc8e2",
+      "bytes": 90934
+    },
+    "fixtures/synthetic-habitat.json": {
+      "sha256": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3",
+      "bytes": 37544
+    },
+    "FROM053.diff": {
+      "sha256": "d739af29518d3507c652a0a0181d7a6488e0aeafcb28fedf3b620dc95064fe17",
+      "bytes": 23946
+    },
+    "GEOMETRY-SETTING-RESULT.json": {
+      "sha256": "601e0ada4f8ab4004a96146b246ce4cde79921fdbf511392009192ed1bcfa610",
+      "bytes": 1080
+    },
+    "history/TEST-HARNESS-FAILURE.txt": {
+      "sha256": "05218493c25fb863932eca281f2b53211e033e74aef05125e35a384d12b70b97",
+      "bytes": 206
+    },
+    "history/test_legacy-missing-runtime-root.py": {
+      "sha256": "88336bc256e45a41e3382c6381394b93c52917549e76f6ef92e1d52ac840233b",
+      "bytes": 3570
+    },
+    "INSTALL-PLAN.json": {
+      "sha256": "c46a93b7d75a5c524c310d2bc6627f6b53030624b29331f24646f04f534c5f9d",
+      "bytes": 28594
+    },
+    "LEGACY-TRANSPORT-RESULT.json": {
+      "sha256": "e2f4de3fb586df03914a0f21a5a6344fef5f1f189c3388d8d24d3fc63a8415de",
+      "bytes": 971
+    },
+    "preimages/tools/world_builder_engine/layout_package_assets/authored_scene.mjs": {
+      "sha256": "7aa1758187ece336d064da444cd553281a99573bc7067d5ffd87cd66c1c11c5d",
+      "bytes": 6329
+    },
+    "preimages/tools/world_builder_engine/layout_package_assets/build_glb.mjs": {
+      "sha256": "e4657ee4eed51925e2cb1ca4fcb0d4f20c8eb013365e9ed236dbf65c70bd9263",
+      "bytes": 12343
+    },
+    "preimages/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json": {
+      "sha256": "5a63e98872aa860cffa8915ec8800edb5e7621a0b675c476e44592a882f50bf5",
+      "bytes": 4035
+    },
+    "preimages/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs": {
+      "sha256": "9ef627b8e4e99bbe09f1a49dcc5470742c4012f1efe1fb280e4001de7b5f37d2",
+      "bytes": 25549
+    },
+    "preimages/tools/world_builder_engine/layout_package_export.py": {
+      "sha256": "893dfe5092efce4b59f401b9e3ae4f92695e858944f7532a8bbcd5723cd838cb",
+      "bytes": 11024
+    },
+    "preimages/tools/world_builder_engine/viewer.mjs": {
+      "sha256": "719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299",
+      "bytes": 43809
+    },
+    "preimages/tools/world_builder_engine/world_layout_preview.py": {
+      "sha256": "fc9ead65889ea7eb011dc8278047704fa212f4c5536811b9f6971c6078180c21",
+      "bytes": 24439
+    },
+    "presentation.fragment.py": {
+      "sha256": "e0b4c06e4cce6b053af480fc773fe5d2e16913c4d8cb483c48f4d9b24dbc45d9",
+      "bytes": 3942
+    },
+    "README.md": {
+      "sha256": "52427fdb50bc864ce9bed24c5ada159c49cd773084bed44caa75f0ca7043066a",
+      "bytes": 3670
+    },
+    "run_cpu_export.py": {
+      "sha256": "3715b9520a9f0a58c914b694e1534580387d513fe7c531c5f3100a55fd59294a",
+      "bytes": 8663
+    },
+    "runtime_context/Data/world_layout_previews/layout-63466a710d6d24a92b2a921c/geometry.json": {
+      "sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+      "bytes": 22513
+    },
+    "runtime_context/Data/world_layout_previews/layout-63466a710d6d24a92b2a921c/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "runtime_context/Data/world_layout_previews/layout-63466a710d6d24a92b2a921c/index.html": {
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+      "bytes": 2119
+    },
+    "runtime_context/Data/world_layout_previews/layout-63466a710d6d24a92b2a921c/manifest.json": {
+      "sha256": "812894ef75441490de81f75523d9f5a7768f658ab61af4f18e171116aa71e884",
+      "bytes": 15291
+    },
+    "runtime_context/Data/world_layout_previews/layout-63466a710d6d24a92b2a921c/style.css": {
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "bytes": 2451
+    },
+    "runtime_context/Data/world_layout_previews/layout-63466a710d6d24a92b2a921c/viewer.mjs": {
+      "sha256": "f8b14f8cf1fec001541b3719246fa603d5985a5b45c0b86a62e67eb1601c405c",
+      "bytes": 51949
+    },
+    "runtime_context/Data/world_layout_previews/layout-63466a710d6d24a92b2a921c/walk_controller.mjs": {
+      "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+      "bytes": 15835
+    },
+    "runtime_context/tools/world_builder_engine/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "runtime_context/tools/world_builder_engine/index.html": {
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+      "bytes": 2119
+    },
+    "runtime_context/tools/world_builder_engine/preflight.mjs": {
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "bytes": 1374
+    },
+    "runtime_context/tools/world_builder_engine/style.css": {
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "bytes": 2451
+    },
+    "runtime_context/tools/world_builder_engine/viewer.mjs": {
+      "sha256": "f8b14f8cf1fec001541b3719246fa603d5985a5b45c0b86a62e67eb1601c405c",
+      "bytes": 51949
+    },
+    "runtime_context/tools/world_builder_engine/walk_controller.mjs": {
+      "sha256": "05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f",
+      "bytes": 15835
+    },
+    "runtime_context/tools/world_builder_engine/world_layout_preview.py": {
+      "sha256": "ae549222df578a6eb4f0f1752864ee46db2622beeb37d846b67874d318514a37",
+      "bytes": 29221
+    },
+    "SETTING-TEST-RESULT.json": {
+      "sha256": "c4cc4399e7605dfb188d392c61db4950c98cfa9a9c7b43f0f2d34f8586af645f",
+      "bytes": 2562
+    },
+    "SOURCE-PINS.json": {
+      "sha256": "0d97a4400c272caff57c696f50d7c176756b5e6b8172f4725cea4c7801b6eb52",
+      "bytes": 4447
+    },
+    "SOURCE.diff": {
+      "sha256": "72880143199a9fefd8b9e0d5212c0803151a97d6b1302a8a8a8b650046620e76",
+      "bytes": 40911
+    },
+    "stage.py": {
+      "sha256": "38bd6308dfe5bce2a8cc06fee0e20df728acb423d6ca1f4bbde708441e0b5b0f",
+      "bytes": 9676
+    },
+    "test_geometry_setting.mjs": {
+      "sha256": "d3f67eda1b7f21c9c6fbf9209fb965b3c346765db0422955c505a39410d62426",
+      "bytes": 4740
+    },
+    "test_legacy_and_transport.py": {
+      "sha256": "b33036ea7982a94b82a8ee08bd453b33ed83d1ec6ff811c73990612a08b8ca57",
+      "bytes": 3722
+    },
+    "test_setting.py": {
+      "sha256": "9d5cf5a87c9ea2b89afea02b7350b94ada4e36e578588edce67bfb27e28fd16f",
+      "bytes": 6259
+    }
+  }
+}

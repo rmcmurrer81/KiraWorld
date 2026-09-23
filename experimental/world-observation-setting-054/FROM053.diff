@@ -1,0 +1,335 @@
+--- candidate053/viewer.mjs
++++ candidate054/viewer.mjs
+@@ -193,8 +193,13 @@
+   box(viewport.wall_id+'_glazing',size,position,glass).userData={viewport_glazing:true,nontraversable:true};
+   return group;
+ }
+-function addObservationExterior(THREE,scene,viewport){
+-  if(!viewport)return null;
++function addObservationExterior(THREE,scene,viewport,presentation=null,geometry=null){
++  const source=presentation?.source;
++  if(!viewport||presentation?.contract!=='bound_original_exterior_presentation_v1'||presentation.setting!=='mars_surface'||
++     presentation.reason!=='explicit_original_mars_base_request'||!source||!geometry||
++     source.research_packet_sha256!==geometry.research_packet_sha256||
++     ![source.brief_sha256,source.request_sha256,source.research_packet_sha256].every(h=>typeof h==='string'&&/^[0-9a-f]{64}$/.test(h))||
++     source.job_id!=='world_research_'+source.brief_sha256.slice(0,20))return null;
+   const {axis,along,sign,coordinate,center}=viewport;
+   const positions=[],colors=[],indices=[],nx=32,nz=40;
+   for(let i=0;i<=nx;i++)for(let j=0;j<=nz;j++){
+@@ -207,7 +212,7 @@
+   if((axis===0?sign:-sign)>0)for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
+   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.setIndex(indices);g.computeVertexNormals();
+   const mesh=new THREE.Mesh(g,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,side:THREE.DoubleSide}));mesh.name='original_procedural_exterior_'+viewport.room_id;
+-  mesh.userData={kind:'procedural_exterior_scenery',room_id:viewport.room_id,nontraversable:true,measured_terrain:false};mesh.receiveShadow=true;scene.add(mesh);return mesh;
++  mesh.userData={kind:'procedural_exterior_scenery',room_id:viewport.room_id,nontraversable:true,measured_terrain:false,presentation_setting:presentation};mesh.receiveShadow=true;scene.add(mesh);return mesh;
+ }
+ 
+ // Original procedural meshes and textures. No external photographs/assets.
+@@ -525,6 +530,9 @@
+   const response=await fetch('/geometry.json',{cache:'no-store'});
+   if(!response.ok) throw new Error('The pinned layout could not be loaded.');
+   const geometry=await response.json();
++  const settingResponse=await fetch('/presentation.json',{cache:'no-store'});
++  if(!settingResponse.ok)throw new Error('The bound presentation setting could not be loaded.');
++  const presentation=await settingResponse.json();
+   const dressing=buildRoomDressing(geometry,createDoorSystem(geometry).assemblies());
+   const controller=createWalkController(geometry,{extraColliders:dressing.colliders});
+   document.querySelector('#title').textContent=geometry.title;
+@@ -547,7 +555,7 @@
+     scene.add(createStructuralPrimitive(THREE,primitive,material,viewport,dressingMaterials));
+   }
+   addRoomDressing(THREE,scene,geometry,dressing,dressingMaterials);
+-  addObservationExterior(THREE,scene,viewport);
++  addObservationExterior(THREE,scene,viewport,presentation,geometry);
+   const doorMeshes=new Map();
+   const frameMaterial=new THREE.MeshStandardMaterial({color:0x344955,roughness:.48,metalness:.65});
+   const leafMaterial=new THREE.MeshStandardMaterial({color:0xa9babc,roughness:.45,metalness:.52});
+--- candidate053/world_layout_preview.py
++++ candidate054/world_layout_preview.py
+@@ -23,6 +23,7 @@
+ # backend must add a reviewed prior revision here; unknown creators fail closed.
+ COMPATIBLE_CREATOR_BACKENDS = {
+     CONTRACT: {
++        'fc9ead65889ea7eb011dc8278047704fa212f4c5536811b9f6971c6078180c21': 24439,
+         '2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9': 22133,
+         'fe8cfb9ca9754f71dd223b16ec941753b368b48ded9a5fa0cbe82c83503bec28': 24195,
+     },
+@@ -245,6 +246,64 @@
+             'Unsupported preview creator revision')
+ 
+ 
++def presentation_setting(brief, packet, packet_sha256):
++    """Derive a presentation location from the hash-bound original brief only."""
++    result = {'contract':'bound_original_exterior_presentation_v1','setting':'unspecified',
++              'reason':'verified_original_brief_unavailable','source':None}
++    if brief is None:
++        return result
++    require(isinstance(brief,dict) and isinstance(packet,dict), 'Malformed presentation brief binding')
++    # Saved research briefs use the original indented canonical format, not the
++    # compact geometry canonicalization. Keep the existing identity exact.
++    digest = sha((json.dumps(brief,ensure_ascii=False,sort_keys=True,indent=2)+'\n').encode('utf-8'))
++    require(digest == packet.get('brief_sha256') and packet.get('job_id') == 'world_research_'+digest[:20],
++            'Presentation brief differs from the bound research packet')
++    prompt = brief.get('prompt')
++    require(isinstance(prompt,str) and len(prompt)<=20000, 'Invalid original presentation request')
++    result['source'] = {'job_id':packet['job_id'],'brief_sha256':digest,
++                        'request_sha256':sha(prompt.encode('utf-8')),'research_packet_sha256':packet_sha256}
++    result['reason'] = 'no_explicit_supported_surface_setting'
++    if brief.get('research_mode') != 'analog_to_original' or packet.get('research_mode') != 'analog_to_original':
++        return result
++    # Quoted source text is data. Unknown/conflicting/orbital settings get no
++    # invented exterior; this intentionally bounded grammar is not an LLM guess.
++    clean = re.sub(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\'[^\'\n]*\'(?!\w)', ' ', prompt).strip().lower()
++    conflict = re.search(r'\b(?:orbit(?:al|ing)?|spacecraft|spaceship|space\s+station|lunar|moon|earth)\b',clean)
++    denied = re.search(r"\b(?:don't|do not|not|no|without)\b[^.!?]*\b(?:mars|ground|terrain|surface|exterior)\b",clean)
++    direct = re.match(r'^(?:please\s+)?(?:build|create|make|design)\s+(?:(?:an?|original|photorealistic|realistic|science-fiction|sci-fi|new)\s+){1,8}(?:mars(?:\s+surface)?\s+(?:base|habitat)|(?:base|habitat)\s+on\s+mars)\b',clean)
++    if direct and not conflict and not denied:
++        result.update(setting='mars_surface',reason='explicit_original_mars_base_request')
++    return result
++
++
++def capture_presentation_brief(research_packet_path):
++    if research_packet_path is None:
++        return None
++    folder=Path(research_packet_path).absolute().parent;path=folder/'job.json'
++    if not path.exists():
++        return None
++    packet=load_json(read_exact(research_packet_path));job=load_json(read_exact(path))
++    require(job.get('job_kind')=='isolated_world_research_job' and job.get('schema_version')==1 and
++            job.get('job_id')==folder.name==packet.get('job_id') and job.get('brief_sha256')==packet.get('brief_sha256'),
++            'Presentation source is not the selected saved research job')
++    brief=job.get('brief');require(isinstance(brief,dict), 'Saved presentation brief missing')
++    presentation_setting(brief,packet,sha(read_exact(research_packet_path)))
++    return brief
++
++
++def verify_presentation(manifest):
++    has_presentation='presentation_setting' in manifest or 'presentation_source_brief' in manifest
++    if not has_presentation:
++        require(manifest['inputs']['backend']['sha256'] != binding(__file__)['sha256'], 'New preview is missing its presentation binding')
++        return presentation_setting(None,None,None)
++    require('presentation_setting' in manifest and 'presentation_source_brief' in manifest, 'Incomplete presentation binding')
++    row=manifest['inputs'].get('research_packet')
++    packet=load_json(verify_binding(row)) if row else None
++    expected=presentation_setting(manifest['presentation_source_brief'],packet,row['sha256'] if row else None)
++    require(manifest['presentation_setting']==expected, 'Presentation setting differs from its exact source brief')
++    return expected
++
++
+ def verify_source(manifest):
+     verify_creator(manifest)
+     require(set(manifest['source_pins']) == set(ASSETS)-{'geometry.json'}, 'Preview source allowlist changed')
+@@ -266,6 +325,7 @@
+     require(mode == manifest.get('source_mode'), 'Preview source mode changed')
+     saved={k:v for k,v in manifest['inputs'].items() if k in ('research_packet','blueprint') or k.startswith('research_cache_')}
+     require(saved == pins, 'Frozen research provenance changed')
++    verify_presentation(manifest)
+ 
+ 
+ def create_preview(geometry_path, research_packet_path=None, blueprint_path=None):
+@@ -275,6 +335,9 @@
+     geometry = load_json(raw)
+     validate_geometry(geometry)
+     source_mode,provenance = source_bindings(geometry,research_packet_path,blueprint_path)
++    presentation_brief=capture_presentation_brief(research_packet_path)
++    packet=load_json(read_exact(research_packet_path)) if research_packet_path else None
++    presentation=presentation_setting(presentation_brief,packet,provenance.get('research_packet',{}).get('sha256'))
+     inputs = {'geometry_source': binding(geometry_path), 'navigation_source': binding(NAVIGATION),
+               'backend': binding(__file__), 'preflight': binding(ROOT/'preflight.mjs'),
+               'node': binding(NODE),**provenance}
+@@ -290,7 +353,7 @@
+     require(evidence.get('status') == 'PASS', 'Navigation preflight did not pass')
+     for row in [*inputs.values(), *source_pins.values()]:
+         verify_binding(row)
+-    build_id = 'layout-' + sha(canonical({'inputs':inputs,'sources':source_pins}))[:24]
++    build_id = 'layout-' + sha(canonical({'inputs':inputs,'sources':source_pins,'presentation':presentation}))[:24]
+     build_dir = ROOT.parents[1]/'Data'/'world_layout_previews'/build_id
+     manifest_path = build_dir/'manifest.json'
+     if build_dir.exists():
+@@ -311,6 +374,7 @@
+     assets['/geometry.json'] = {**binding(build_dir/'geometry.json'),'mime':ASSETS['geometry.json']}
+     manifest = {'contract':CONTRACT,'build_id':build_id,'status':'layout_prototype_not_visual_acceptance','source_mode':source_mode,
+                 'inputs':inputs,'source_pins':source_pins,'assets':assets,'preflight':evidence,
++                'presentation_setting':presentation,'presentation_source_brief':presentation_brief,
+                 'draft_preview_artifacts_created':True,'resident_worlds_modified':False,'owner_originals_modified':False,
+                 'model_jobs':0,'network_fetches':0,
+                 'limitations':['Horizontal supported walking only; no stairs, fly mode or teleport.',
+@@ -333,7 +397,9 @@
+     manifest = load_json(raw)
+     body = {k:v for k,v in manifest.items() if k != 'receipt_sha256'}
+     require(manifest.get('contract') == CONTRACT and manifest.get('build_id') == path.parent.name and sha(canonical(body)) == manifest.get('receipt_sha256'), 'Preview manifest seal changed')
+-    expected_id = 'layout-' + sha(canonical({'inputs':manifest['inputs'],'sources':manifest['source_pins']}))[:24]
++    identity={'inputs':manifest['inputs'],'sources':manifest['source_pins']}
++    if 'presentation_setting' in manifest:identity['presentation']=manifest['presentation_setting']
++    expected_id = 'layout-' + sha(canonical(identity))[:24]
+     require(manifest['build_id'] == expected_id, 'Preview input binding changed')
+     require(set(manifest.get('assets', {})) == {'/'+name for name in ASSETS}, 'Preview file allowlist changed')
+     verify_source(manifest)
+@@ -351,6 +417,7 @@
+     """Return an unstarted loopback HTTP server; caller owns lifetime and close."""
+     manifest = verify_preview(manifest_path, expected_manifest_sha256)
+     manifest_bytes = read_exact(manifest_path)
++    presentation_bytes=canonical(verify_presentation(manifest))
+     class Handler(BaseHTTPRequestHandler):
+         def log_message(self, *_):
+             pass
+@@ -369,12 +436,12 @@
+             if parsed.scheme or parsed.netloc or parsed.query or parsed.fragment or '%' in self.path or '\\' in self.path:
+                 self.send_error(404); return
+             name = '/index.html' if parsed.path == '/' else parsed.path
+-            row = manifest['assets'].get(name)
++            row = {'mime':'application/json; charset=utf-8'} if name=='/presentation.json' else manifest['assets'].get(name)
+             if row is None:
+                 self.send_error(404); return
+             try:
+                 require(read_exact(manifest_path) == manifest_bytes, 'Manifest changed during serving')
+-                payload = verify_binding(row)
++                payload = presentation_bytes if name=='/presentation.json' else verify_binding(row)
+             except (ValueError, OSError):
+                 self.send_error(409, 'Pinned preview bytes changed'); return
+             self.send_response(200)
+--- candidate053/layout_package_assets/source/room_dressing_render.mjs
++++ candidate054/layout_package_assets/source/room_dressing_render.mjs
+@@ -62,8 +62,13 @@
+   box(viewport.wall_id+'_glazing',size,position,glass).userData={viewport_glazing:true,nontraversable:true};
+   return group;
+ }
+-export function addObservationExterior(THREE,scene,viewport){
+-  if(!viewport)return null;
++export function addObservationExterior(THREE,scene,viewport,presentation=null,geometry=null){
++  const source=presentation?.source;
++  if(!viewport||presentation?.contract!=='bound_original_exterior_presentation_v1'||presentation.setting!=='mars_surface'||
++     presentation.reason!=='explicit_original_mars_base_request'||!source||!geometry||
++     source.research_packet_sha256!==geometry.research_packet_sha256||
++     ![source.brief_sha256,source.request_sha256,source.research_packet_sha256].every(h=>typeof h==='string'&&/^[0-9a-f]{64}$/.test(h))||
++     source.job_id!=='world_research_'+source.brief_sha256.slice(0,20))return null;
+   const {axis,along,sign,coordinate,center}=viewport;
+   const positions=[],colors=[],indices=[],nx=32,nz=40;
+   for(let i=0;i<=nx;i++)for(let j=0;j<=nz;j++){
+@@ -76,7 +81,7 @@
+   if((axis===0?sign:-sign)>0)for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
+   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.setIndex(indices);g.computeVertexNormals();
+   const mesh=new THREE.Mesh(g,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,side:THREE.DoubleSide}));mesh.name='original_procedural_exterior_'+viewport.room_id;
+-  mesh.userData={kind:'procedural_exterior_scenery',room_id:viewport.room_id,nontraversable:true,measured_terrain:false};mesh.receiveShadow=true;scene.add(mesh);return mesh;
++  mesh.userData={kind:'procedural_exterior_scenery',room_id:viewport.room_id,nontraversable:true,measured_terrain:false,presentation_setting:presentation};mesh.receiveShadow=true;scene.add(mesh);return mesh;
+ }
+ 
+ // Original procedural meshes and textures. No external photographs/assets.
+--- candidate053/layout_package_assets/authored_scene.mjs
++++ candidate054/layout_package_assets/authored_scene.mjs
+@@ -7,9 +7,9 @@
+ import {buildRoomDressing} from './source/room_dressing_plan.mjs';
+ import {createDoorSystem} from './source/walk_controller.mjs';
+ import assert from 'node:assert/strict';
+-export function buildAuthoredScene(geometry,metadata,canvasFactory){
++export function buildAuthoredScene(geometry,metadata,canvasFactory,presentation=null){
+   const doors=createDoorSystem(geometry),plan=buildRoomDressing(geometry,doors.assemblies());
+-  const scene=new THREE.Scene();scene.name='Authored_habitat_scene';scene.userData.airlock_pairs=metadata.airlock_pairs;
++  const scene=new THREE.Scene();scene.name='Authored_habitat_scene';scene.userData.airlock_pairs=metadata.airlock_pairs;scene.userData.presentation_setting=presentation;
+   const groups=new Map(),semantic=new Map(),hinges=new Map(),leafMeshes=new Map();
+   for(const room of metadata.rooms){const g=new THREE.Group();g.name='room_'+room.source_id;g.userData={room_id:room.id,bounds:room.bounds,functional_role:room.functional_role};scene.add(g);groups.set(room.source_id,g);}
+   const materials=createDressingMaterials(THREE,plan,{canvasFactory});
+@@ -25,7 +25,7 @@
+   }
+   const dressingRoot=new THREE.Group();dressingRoot.name='authored_dressing';scene.add(dressingRoot);
+   addRoomDressing(THREE,dressingRoot,geometry,plan,materials);
+-  addObservationExterior(THREE,scene,viewport);
++  addObservationExterior(THREE,scene,viewport,presentation,geometry);
+   for(const node of metadata.nodes){if(['structural_primitive','door_leaf','door_frame'].includes(node.kind))continue;
+     const object=dressingRoot.getObjectByName(node.id.slice(5));assert.ok(object,'Missing authored assembly '+node.id);bind(object,node.id);
+   }
+--- candidate053/layout_package_assets/build_glb.mjs
++++ candidate054/layout_package_assets/build_glb.mjs
+@@ -19,7 +19,7 @@
+  source_chain_verification:'geometry_to_blueprint_to_research_packet_and_cache_digests',factual_or_visual_approval:false}};
+ const {canvasFactory}=installCpuCanvas(req.canvasModule,req.fontPaths);
+ assert.equal(THREE.REVISION,'180');
+-const built=buildAuthoredScene(req.geometry,req.metadata,canvasFactory);
++const built=buildAuthoredScene(req.geometry,req.metadata,canvasFactory,req.presentation??null);
+ const {scene,doors,plan}=built;
+ const recreated=exportSceneMetadata(req.geometry,plan,doors.definitions(),{sceneId:req.metadata.scene_id,sourceDigests:req.metadata.provenance.source_digests,doorInterlocks:doors.interlocks()});
+ assert.equal(canonicalSceneMetadata({...req.metadata,provenance:recreated.provenance}),canonicalSceneMetadata(recreated),'034 sidecar is not this exact authored scene');
+@@ -110,6 +110,7 @@
+ const report={status:'CPU_AUTHORED_GLB_EXPORT_IMPORT_PASS',three_revision:THREE.REVISION,glb_sha256:digest(binary),glb_bytes:binary.length,
+   counts:{objects:before.size,meshes:meshCount,materials:uniqueMaterials.size,textures:uniqueTextures.size,embedded_pngs:gltf.images.length,rooms:req.metadata.rooms.length,semantic_nodes:roundtripSemantic.size,colliders:req.metadata.colliders.length,doors:doorEvidence.length},
+   scene_bounds:beforeBounds,checks:{geometry_attributes_exact:attributeComparisons,index_arrays_exact:meshCount,material_parameter_pairs:materialComparisons,texture_effective_pixels_repeat_wrap_colorspace:textureComparisons,punctual_light_parameters_and_direction:lightComparisons,door_controller_samples:doorEvidence,importer_door_poses:18,all_collider_links:true,room_bounds_preserved:true,airlock_pair_metadata_preserved:true,airlock_pairs:req.metadata.airlock_pairs},
++  presentation_setting:req.presentation??null,
+   extensions:gltf.extensionsUsed,webgl_gpu_browser_calls:0,installed:false,visual_or_owner_approval:false,
+   limits:['No engine-native interaction/collision implementation or VR adapter.','CPU font rasterization is not browser-pixel-identical.','Hemisphere fill, background, ACES tone mapping/exposure, polygon offset, depthWrite and dynamic indicator colors are not glTF appearance guarantees.','Static equipment remains procedural. No pressure, science or medical simulation.']};
+ fs.writeFileSync(path.join(req.output,'scene.json'),canonicalSceneMetadata(req.metadata)+'\n',{flag:'wx'});
+--- candidate053/layout_package_export.py
++++ candidate054/layout_package_export.py
+@@ -12,7 +12,7 @@
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+ CONTRACT='authored_saved_layout_package_v2'
+ RENDERER={
+- 'viewer.mjs':'09f4d0f8c599b1c8716473622681da86db87ab02a2b6b880e28129d47a0b3fc4',
++ 'viewer.mjs':'f8b14f8cf1fec001541b3719246fa603d5985a5b45c0b86a62e67eb1601c405c',
+  'walk_controller.mjs':'05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f',
+  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
+@@ -49,7 +49,7 @@
+  try:
+   eligibility=validate_recipe_profile(geometry,bindings.parse(bindings.exact(sources['blueprint'])),sources['research_packet']['sha256'])
+  except RecipeUnsupported as exc:raise ExportHeld(exc.status,str(exc)) from exc
+- return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin,'eligibility':eligibility}
++ return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin,'eligibility':eligibility,'presentation':manifest.get('presentation_setting')}
+ 
+ def default_dependencies():
+  canvas=Path(os.environ.get('KIRA_CPU_CANVAS_MODULE') or Path.home()/'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas')
+@@ -91,7 +91,7 @@
+    'sourceDigests':{'geometry':prepared['sources']['geometry_source']['sha256'],
+     'dressing_recipe':pins['files']['source/room_dressing_plan.mjs']['sha256'],
+     'door_controller':pins['files']['source/walk_controller.mjs']['sha256']}}
+-  request={'geometry':prepared['geometry'],'options':opts,'output':str(target),
++  request={'geometry':prepared['geometry'],'presentation':prepared['presentation'],'options':opts,'output':str(target),
+    'canvasModule':str(Path(loc['canvas-package']).parent),
+    'fontPaths':[[str(loc['font-segoe-regular']),'Segoe UI'],[str(loc['font-segoe-semibold']),'Segoe UI'],[str(loc['font-monospace']),'Consolas']]}
+   target.mkdir(exist_ok=False);output=target
+@@ -109,6 +109,7 @@
+   report=bindings.parse(bindings.read(target/'ROUNDTRIP.json'))
+   require(report.get('status')=='CPU_AUTHORED_GLB_EXPORT_IMPORT_PASS' and report.get('glb_sha256')==sha(target/'scene.glb'),
+    'export_failed','The exported asset did not pass its importer checks.')
++  require(report.get('presentation_setting')==prepared['presentation'],'presentation_changed','The exported presentation does not match the selected immutable preview.')
+   scene=bindings.parse(bindings.read(target/'scene.json'))
+   try:
+    pairs=validate_airlock_metadata(scene,prepared['geometry'],opts['sourceDigests'])
+@@ -121,7 +122,7 @@
+   result={'contract':CONTRACT,'status':'created','scene_id':opts['sceneId'],'source_bindings_manifest_sha256':prepared['input_pin']['sha256'],
+    'verified_source_digests':bindings.portable_pins(prepared['sources']),'producer_digests':pins,
+    'airlock_pair_policy':pairs,'preview_controller_sha256':RENDERER['walk_controller.mjs'],
+-   'recipe_eligibility':prepared['eligibility'],
++   'recipe_eligibility':prepared['eligibility'],'presentation_setting':prepared['presentation'],
+    'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in target.iterdir()},'capabilities':CAPABILITIES,
+    'research_regenerated':False,'model_jobs':0,'sources_modified':False}
+   result['receipt_sha256']=seal(result);write_json(target/'manifest.json',result)
+--- candidate053/layout_package_assets/PRODUCER-PINS.json
++++ candidate054/layout_package_assets/PRODUCER-PINS.json
+@@ -2,12 +2,12 @@
+   "contract": "layout_package_producer_pins_v1",
+   "files": {
+     "authored_scene.mjs": {
+-      "sha256": "3c63e4a393d488702338393fcb82efdd7022bae2f855a26f26dd6d6f270fa3b6",
+-      "bytes": 6485
++      "sha256": "538e46e1468a5cba1855c018a463dbc1a342b7f84367e160fa8a0ff1def1e997",
++      "bytes": 6574
+     },
+     "build_glb.mjs": {
+-      "sha256": "e4657ee4eed51925e2cb1ca4fcb0d4f20c8eb013365e9ed236dbf65c70bd9263",
+-      "bytes": 12343
++      "sha256": "7ce5c81917ff9dc3cd51a038144e2fe33f5cf693720de1ad30bb220567c6a588",
++      "bytes": 12413
+     },
+     "cpu_canvas.mjs": {
+       "sha256": "71129c539e0b3bb6227aedda5e6434e94b95ba6cc811446c6ed9fb2feaba78bb",
+@@ -26,8 +26,8 @@
+       "bytes": 9104
+     },
+     "source/room_dressing_render.mjs": {
+-      "sha256": "9f89ad8fe54bf40f557db302f1a60cdf88204f525ed906dba37b54213e1c3a1c",
+-      "bytes": 32854
++      "sha256": "890a2dc1952ee6fd3306c84f5b147b6889f94789f13a50f09d800f5bf9fc2d08",
++      "bytes": 33433
+     },
+     "source/scene_metadata.mjs": {
+       "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",

@@ -1,0 +1,24 @@
+{
+  "result": {
+    "status": "created",
+    "output_dir": "@workspace\\work\\world-observation-setting-054\\actual-001\\package",
+    "manifest_sha256": "066be2cc7d3c18fd7e61ccacbc99706814a02b818b3d0aa6e27cda16a603def7",
+    "job_id": "world_research_c391ffbffc7352612392",
+    "message": "Your 3D package is ready. It includes meshes, textures and door/collider metadata. Game and VR controls still require an adapter.",
+    "capabilities": {
+      "experimental": true,
+      "authored_meshes": true,
+      "embedded_textures": true,
+      "door_hinge_hierarchy": true,
+      "linked_collider_metadata": true,
+      "airlock_pair_policy_metadata": true,
+      "engine_native_interaction": false,
+      "engine_native_collision": false,
+      "pressure_simulation": false,
+      "vr_runtime": false,
+      "visual_or_owner_approval": false
+    }
+  },
+  "installed": false,
+  "candidate_api_sha256": "3d0e902eb1b52bc124a2af2a91fad27711d1bf3f2de6c1600283b6eee94dd5f0"
+}

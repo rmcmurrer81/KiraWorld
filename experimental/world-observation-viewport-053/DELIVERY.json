@@ -1,0 +1,15 @@
+{
+  "status": "053_READY_FOR_ROOT_REVIEW_NOT_INSTALLED",
+  "files": 81,
+  "manifest_sha256": "4339ac98dc54d70a0ceab6406feb1534adbbd59e5eaf9de930a441b92c23c7c8",
+  "install_plan_sha256": "0e9f252ae1d8a0a70290cd750bfd6df8b5f4b5ea7cdf9a009beba83d15243fba",
+  "changed_canonical_files_if_later_approved": 5,
+  "source_diff_sha256": "a81b3d8abda798b534be130584bbd75c98ead0feb0556d9ffba5e557790beb5f",
+  "protected_originals_unchanged": 116,
+  "first_artifact": "@workspace\\work\\world-observation-viewport-053\\cpu-review-001\\viewport-review.png",
+  "diagnostic_artifact": "@workspace\\work\\world-observation-viewport-053\\cpu-review-002\\viewport-review.png",
+  "actual_glb": "@workspace\\work\\world-observation-viewport-053\\actual-001\\package\\scene.glb",
+  "source_glb_sha256": "97567b738b58b90f6b1232a87981b71489d4519dd0f497d94c67ebc48a40dabb",
+  "important_limit": "Native preview illumination/view has not been reviewed. Diagnostic lighting is not a product change or owner approval. Root requires native review before visual acceptance/installation.",
+  "public_backup_omissions": "A later portable backup must omit original-source geometry copies inside runtime_context and redact machine paths in technical receipts. Preserve authored modules, exact pins/diff, tests, derived fictional GLB and both render artifacts."
+}

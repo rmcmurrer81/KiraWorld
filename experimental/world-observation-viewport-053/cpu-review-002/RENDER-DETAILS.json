@@ -1,0 +1,32 @@
+{
+  "engine": "CYCLES",
+  "device": "CPU",
+  "samples": 16,
+  "denoiser": "CPU_OPENIMAGEDENOISE",
+  "threads": 4,
+  "resolution": [
+    640,
+    480
+  ],
+  "imported_glb": "scene.glb",
+  "room_id": "observation",
+  "viewport_wall_id": "observation_east_0",
+  "camera_eye_height_metres": 1.56,
+  "camera_location": [
+    4.199999809265137,
+    -9.396249771118164,
+    1.559999942779541
+  ],
+  "camera_target": [
+    6.699999809265137,
+    -9.976249694824219,
+    1.5
+  ],
+  "review_area_fill_watts": 12,
+  "diagnostic_sun_strength": 1.2,
+  "diagnostic_world_strength": 0.35,
+  "diagnostic_camera_widened": true,
+  "native_preview_lighting_equivalent": false,
+  "source_mesh_or_texture_modified": false,
+  "native_ui_opened": false
+}
