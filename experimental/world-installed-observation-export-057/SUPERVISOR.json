@@ -1,0 +1,37 @@
+{
+  "status": "INSTALLED056_CPU_EXPORT_PASS",
+  "created_utc": "2026-09-23T16:00:00.428221+00:00",
+  "elapsed_seconds": 2.563493900001049,
+  "exit_code": 0,
+  "sampled_family_peak_rss_bytes": 666378240,
+  "samples": 99,
+  "rss_cap_bytes": 858993459,
+  "ram_reserve_bytes": 3221225472,
+  "deadline_seconds": 180,
+  "owned_identities": [
+    {
+      "pid": 39848,
+      "create_time": 1790179197.8660378
+    },
+    {
+      "pid": 22852,
+      "create_time": 1790179197.8730247
+    },
+    {
+      "pid": 26500,
+      "create_time": 1790179198.8509612
+    },
+    {
+      "pid": 29640,
+      "create_time": 1790179198.8572576
+    }
+  ],
+  "remaining_owned_pids": [],
+  "failure": null,
+  "protected_originals_unchanged": 116,
+  "previous_derived_files_unchanged": 29,
+  "canonical_unchanged": true,
+  "native_UI_GPU_models": 0,
+  "visual_or_owner_approval": false,
+  "sampling_limit": "Supervisor excluded;10ms sampling can miss transient peaks."
+}

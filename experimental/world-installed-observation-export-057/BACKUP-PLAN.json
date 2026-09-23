@@ -1,0 +1,39 @@
+{
+  "status": "PUBLIC_BACKUP_PROPOSAL_NOT_PUBLISHED",
+  "prefix": "experimental/world-installed-observation-export-057/",
+  "include_frozen_files": [
+    "actual-001/API-RESULT.json",
+    "actual-001/package/manifest.json",
+    "actual-001/package/README.txt",
+    "actual-001/package/ROUNDTRIP.json",
+    "actual-001/package/scene.glb",
+    "actual-001/package/scene.json",
+    "actual-001/PROTECTED-DERIVED-FILES.json",
+    "actual-001/RESOURCES.jsonl",
+    "actual-001/SOURCE-CONSISTENCY.json",
+    "actual-001/stderr.log",
+    "actual-001/stdout.log",
+    "assess_export.py",
+    "ASSESSMENT.json",
+    "DEPENDENCIES.json",
+    "freeze.py",
+    "INSTALLED-SOURCE-CLOSURE.json",
+    "README.md",
+    "run_cpu_export.py",
+    "SUPERVISOR.json"
+  ],
+  "include_receipts": [
+    "FROZEN-MANIFEST.json",
+    "DELIVERY.json",
+    "BACKUP-PLAN.json"
+  ],
+  "binary_allowlist": [
+    "actual-001/package/scene.glb"
+  ],
+  "glb_sha256": "6c5bbd9910e0d82134a3700beb335f59a97db6338ee20a185be5d53ed0d401bf",
+  "raw_brief_original_geometry_or_research_included": false,
+  "derived_geometry_metadata_included": true,
+  "text_identity_paths": "Redact local workspace and user-home paths, retain exact binary/code/preimage bytes where appropriate and record original/public digests.",
+  "canonical_source_promotion": false,
+  "requires_root_payload_review": true
+}
