@@ -183,8 +183,21 @@ def _robert_autobiographical_selection(data: dict[str, Any], query: str | None) 
         private = raw.get("privacy") == "private_robert_only"
         if not (public or private) or (public_request and not public):
             continue
-        if raw.get("source_kind") not in {"owner_direct_chat_first_person_account", "owner_supplied_screenshot_of_first_person_post"}:
+        source_kind = raw.get("source_kind")
+        if source_kind not in {"owner_direct_chat_first_person_account", "owner_supplied_screenshot_of_first_person_post", "owner_authored_autobiography_excerpt"}:
             continue
+        if source_kind == "owner_authored_autobiography_excerpt":
+            provenance = raw.get("source_verification")
+            if (not isinstance(provenance, dict)
+                    or provenance.get("status") != "local_owner_excerpt_inspected"
+                    or provenance.get("owner_id") != "robert_mcmurrer"
+                    or provenance.get("source_is_instruction") is not False
+                    or not isinstance(provenance.get("source_extract_sha256"), str)
+                    or not re.fullmatch(r"[0-9a-f]{64}", provenance["source_extract_sha256"])
+                    or not isinstance(raw.get("source_sha256"), str)
+                    or not re.fullmatch(r"[0-9a-f]{64}", raw["source_sha256"])
+                    or provenance.get("excerpt_sha256") != raw["source_sha256"]):
+                continue
         required = ("id", "title", "source_ref", "source_kind", "reported_on", "summary", "privacy")
         if any(not isinstance(raw.get(key), str) or not raw[key].strip() or len(raw[key]) > 3000 for key in required):
             continue

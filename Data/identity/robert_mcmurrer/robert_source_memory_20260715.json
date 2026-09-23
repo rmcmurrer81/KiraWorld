@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "created_at": "2026-09-20T18:37:22.438435+00:00",
-  "updated_at": "2026-09-20T18:37:22.438435+00:00",
+  "updated_at": "2026-09-23T03:33:08.485079+00:00",
   "privacy": "owner_authorized_public",
   "purpose": "Robert-authorized public autobiographical additions for KiraWorld continuity and optional reminiscence. This is a bounded public pack, not the complete resident biography.",
   "source_priority": [
@@ -387,6 +387,220 @@
         "source_ref": "Data/identity/robert_mcmurrer/sources/20260920/david_addenda_public_authorization.json",
         "source_sha256": "24496aab28b479147288b7d5757b732cbf31c9e3e6195b5388cc1110ccc61b72",
         "authorization_basis": "standing_owner_instruction"
+      }
+    },
+    {
+      "id": "david_robert_arizona_visit_december2001",
+      "title": "Robert visiting David in Arizona that December after9/11",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_robert_recollections.json",
+      "source_sha256": "f642ac836cdb30c754889dbf13215daa883519102d7cf0f1b3c2fca78c2be8d3",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "reported_on": "2026-09-22",
+      "reported_on_scope": "Date collected in this task; original shared-chat turn timestamp unavailable.",
+      "privacy": "owner_authorized_public",
+      "event_date": null,
+      "summary": "Robert recalls David moving not long before9/11 and visiting him that December. The inspected local autobiography identifies December 2001 after CNA training, a flight from Indianapolis to Phoenix while David lived in Apache Junction, and Robert finding his own Phoenix/Tempe-border apartment and theater work.",
+      "anchors": [
+        "Direct shared-chat turn 5 supplies the approximate move-before9/11 and December visit memory.",
+        "The separately inspected owner autobiography says that December, after CNA training, Job Corp provided an Indianapolis–Phoenix plane ticket; David lived in Apache Junction and did not want Robert living with him.",
+        "The autobiography says Robert found an apartment in Phoenix near Tempe and worked as an usher/ticket-taker at the theater it calls Hawkins Centerpoint 11; the existing record retains Hawkins/Harkins spelling uncertainty.",
+        "Turn 5 also reaffirms September 3, 2026 in Mesa with Kathy caring for David, consistent with the installed death-date/place correction."
+      ],
+      "uncertainties": [
+        "No exact visit or move day is given. December 2001 comes from9/11 context and the inspected autobiography.",
+        "The direct turn says visited; the longer housing/job account belongs to the separately attributed autobiography. Do not silently collapse those source layers.",
+        "Do not infer Kathy's diagnosis/care role beyond the owner wording, a cause of death or the date David bought/sold a home."
+      ],
+      "recall_guidance": [
+        "Attribute this to Robert's recollection or authored account, not the synthetic twin's own lived experience.",
+        "Keep owner memories separate from assistant-reported research and preserve explicit uncertainty/corrections.",
+        "No David persona or voice was activated. This source packet contains no David audio sample."
+      ],
+      "source_turns": [
+        5
+      ],
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_public_authorization.json",
+        "source_sha256": "75748ceb623d8c8660ea75f81243cb85ffc06e1cb2a35aa0ea9a7e4ea76faf92",
+        "authorization_basis": "standing_owner_instruction_renewed_20260922"
+      },
+      "additional_source_refs": [
+        {
+          "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/robert_autobiography_arizona_bounded_excerpts.json",
+          "source_sha256": "652da1df24bb932aeddbe88f5bfb769359a3a72b5d53fc006d81aa08f6e51e34"
+        }
+      ]
+    },
+    {
+      "id": "david_kathy_wedding_kingston_square_robert_apartment",
+      "title": "Robert remembers David and Kathy wedding at Kingston Square Apartments",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_robert_recollections.json",
+      "source_sha256": "f642ac836cdb30c754889dbf13215daa883519102d7cf0f1b3c2fca78c2be8d3",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "reported_on": "2026-09-22",
+      "reported_on_scope": "Date collected in this task; original shared-chat turn timestamp unavailable.",
+      "privacy": "owner_authorized_public",
+      "event_date": null,
+      "summary": "Robert remembers David and Kathy wedding while David lived at Ashland and Robert rented a studio at Kingston Square Apartments. David paid the community-center deposit and arrangements. Robert recalls guests drinking and smoking marijuana in the bathroom, followed by complaints from other residents that got Robert in trouble.",
+      "anchors": [
+        "This is Robert's direct recollection of the wedding and use of his apartment complex community center.",
+        "Robert says David paid the deposit and arrangements; no exact sum is supplied.",
+        "Robert describes drinking and bathroom marijuana smoking by guests as a group; no named individual is assigned that conduct.",
+        "Earlier assistant research reports a June 10, 2001 marriage-index date and an April 21, 2001 license-list publication. Those are source-reported context, not an exact date independently remembered in this turn."
+      ],
+      "uncertainties": [
+        "No exact day, guest list, amount, charge, penalty or legal consequence is supplied by Robert.",
+        "Do not infer that everyone literally participated or name individual guests as drug users.",
+        "The index and newspaper attachments were not inspected in this task; their dates retain reported-research provenance."
+      ],
+      "recall_guidance": [
+        "Attribute this to Robert's recollection or authored account, not the synthetic twin's own lived experience.",
+        "Keep owner memories separate from assistant-reported research and preserve explicit uncertainty/corrections.",
+        "No David persona or voice was activated. This source packet contains no David audio sample."
+      ],
+      "source_turns": [
+        41
+      ],
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_public_authorization.json",
+        "source_sha256": "75748ceb623d8c8660ea75f81243cb85ffc06e1cb2a35aa0ea9a7e4ea76faf92",
+        "authorization_basis": "standing_owner_instruction_renewed_20260922"
+      }
+    },
+    {
+      "id": "david_mother_ashland_hospice_robert_hand_circle",
+      "title": "Robert remembers David mother hospice at Ashland and the hand-holding circle",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_robert_recollections.json",
+      "source_sha256": "f642ac836cdb30c754889dbf13215daa883519102d7cf0f1b3c2fca78c2be8d3",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "reported_on": "2026-09-22",
+      "reported_on_scope": "Date collected in this task; original shared-chat turn timestamp unavailable.",
+      "privacy": "owner_authorized_public",
+      "event_date": null,
+      "summary": "Robert remembers David mother dying at the Ashland house, with a hospital bed in the living room and hospice nurses visiting. He recalls a nurse having the family stand around her holding hands. His initial statement that his mother and David were still married was later qualified: a 1995 divorce followed by continued cohabitation is possible, not established.",
+      "anchors": [
+        "Turn 47 is Robert's direct memory of the hospital bed, visiting hospice nurses and nurse-led hand-holding circle.",
+        "Turn 71 is the later correction: Robert thinks they possibly divorced in 1995 and stayed together for a few years for the kids. Legal marital status, final divorce date and motive are uncertain.",
+        "An earlier assistant reports genealogy date October 30, 1998 for Margaret M.McMurrer. The owner turn does not provide an exact day; the local autobiography separately mentions her death in 1998.",
+        "The June 24, 1995 newspaper entry is reported as divorce lawsuits filed; it cannot establish that a divorce was final that day or year."
+      ],
+      "uncertainties": [
+        "No exact hospice date, illness, cause of death, nurse identity or complete list of people present is given.",
+        "Do not repeat still-married as settled fact or convert possible cohabitation for the kids into a confirmed motive.",
+        "The October 30, 1998 genealogy date remains working research context with its identity/date not independently verified here."
+      ],
+      "recall_guidance": [
+        "Attribute this to Robert's recollection or authored account, not the synthetic twin's own lived experience.",
+        "Keep owner memories separate from assistant-reported research and preserve explicit uncertainty/corrections.",
+        "No David persona or voice was activated. This source packet contains no David audio sample."
+      ],
+      "source_turns": [
+        47,
+        71
+      ],
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_public_authorization.json",
+        "source_sha256": "75748ceb623d8c8660ea75f81243cb85ffc06e1cb2a35aa0ea9a7e4ea76faf92",
+        "authorization_basis": "standing_owner_instruction_renewed_20260922"
+      }
+    },
+    {
+      "id": "robert_la_mailed_check_david_housing_legion_legend_house",
+      "title": "Robert remembers the Los Angeles mailed-check arrest and David helping find housing",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_robert_recollections.json",
+      "source_sha256": "f642ac836cdb30c754889dbf13215daa883519102d7cf0f1b3c2fca78c2be8d3",
+      "source_kind": "owner_direct_chat_first_person_account",
+      "reported_on": "2026-09-22",
+      "reported_on_scope": "Date collected in this task; original shared-chat turn timestamp unavailable.",
+      "privacy": "owner_authorized_public",
+      "event_date": null,
+      "summary": "Robert recalls a mailed check he believed genuine while working in background acting and at Universal T2. Police arrested him at Bankof America after the teller mentioned computer problems. After about 2–3 days in Los Angeles County Jail, he called David, stayed briefly with him, then traveled via a casino bus and south on foot. A person gave him a trailer night, food/water and a ride to Casa Grande. Robert learned David had found housing through Superstition Mountain Mental Health at a place he remembers as Legion House in Apache Junction; he believes David later picked him up from the casino.",
+      "anchors": [
+        "This is the owner's own sequence in turn 51; the check was believed genuine by Robert. No charge, conviction, dismissal or legal outcome is supplied.",
+        "David let Robert stay briefly. Robert says he left after a few days; do not claim David evicted him or witnessed the bank arrest.",
+        "Robert names Harrahs al chin in his account; Harrah's Ak-Chin is the previously researched name. Preserve the account without inventing a precise route, timetable or year.",
+        "Legion House is Robert's remembered name. Later assistantturn 54 reports possible directory wording Legend House, identifier BH-571, under Superstition Mountain Mental Health Center Inc; the PDF was not independently read.",
+        "Robert says he believes David picked him up on return to the casino. Preserve that uncertainty."
+      ],
+      "uncertainties": [
+        "Exact year, date, check amount/sender, case/charge/outcome and length of subsequent housing are unknown.",
+        "Do not combine this event with other legal cases in the autobiography or infer guilt, innocence adjudication or motives.",
+        "Legion House/Legend House remains a source-attributed naming uncertainty; no precise address or clinical diagnosis is established.",
+        "Do not infer current homelessness, illness or danger from this historical recollection."
+      ],
+      "recall_guidance": [
+        "Attribute this to Robert's recollection or authored account, not the synthetic twin's own lived experience.",
+        "Keep owner memories separate from assistant-reported research and preserve explicit uncertainty/corrections.",
+        "No David persona or voice was activated. This source packet contains no David audio sample."
+      ],
+      "source_turns": [
+        51
+      ],
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_public_authorization.json",
+        "source_sha256": "75748ceb623d8c8660ea75f81243cb85ffc06e1cb2a35aa0ea9a7e4ea76faf92",
+        "authorization_basis": "standing_owner_instruction_renewed_20260922"
+      }
+    },
+    {
+      "id": "david_robert_tempe_brother_housing_request_late2002",
+      "title": "Robert autobiography recalls David late 2002 request about temporary brother housing",
+      "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/robert_autobiography_arizona_bounded_excerpts.json",
+      "source_sha256": "652da1df24bb932aeddbe88f5bfb769359a3a72b5d53fc006d81aa08f6e51e34",
+      "source_kind": "owner_authored_autobiography_excerpt",
+      "reported_on": "2026-09-22",
+      "reported_on_scope": "Date collected in this task; original shared-chat turn timestamp unavailable.",
+      "privacy": "owner_authorized_public",
+      "event_date": null,
+      "summary": "In the inspected local autobiography Robert says David contacted him in late 2002 to ask whether his younger brother, then living with David, could stay with Robert in Tempe for a short time. Robert describes feeling conflicted and agreeing; the passage says his brother moved in without a job or a way to help with bills.",
+      "anchors": [
+        "The source is Robert's authored autobiography, inspected directly in the existing local text extract, printedpages 24–25.",
+        "Late 2002 is the date wording in that source; no exact day is supplied.",
+        "This bounded extract omits later unrelated allegations about a living relative."
+      ],
+      "uncertainties": [
+        "The record is owner-authored memoir, not a direct shared-chat statement or independent historical verification.",
+        "This keeps the true autobiography source type. The separately reviewed selector update admits it only with explicit inspected owner-source provenance; no independent historical verification is implied.",
+        "Do not invent David's motivation or merge this housing request with the later undated Legion House story."
+      ],
+      "recall_guidance": [
+        "Attribute this to Robert's recollection or authored account, not the synthetic twin's own lived experience.",
+        "Keep owner memories separate from assistant-reported research and preserve explicit uncertainty/corrections.",
+        "No David persona or voice was activated. This source packet contains no David audio sample."
+      ],
+      "source_turns": [],
+      "publication_authorization": {
+        "status": "approved",
+        "granted_by": "owner",
+        "scope": "public_repository",
+        "repository": "rmcmurrer81/KiraWorld",
+        "source_ref": "Data/identity/robert_mcmurrer/sources/20260922/shared_chat_public_authorization.json",
+        "source_sha256": "75748ceb623d8c8660ea75f81243cb85ffc06e1cb2a35aa0ea9a7e4ea76faf92",
+        "authorization_basis": "standing_owner_instruction_renewed_20260922"
+      },
+      "source_verification": {
+        "status": "local_owner_excerpt_inspected",
+        "owner_id": "robert_mcmurrer",
+        "source_extract_sha256": "8abe4a34bd5c77219e9ccd5fb625157186bb1903f519ccb2e341d6fad6441801",
+        "excerpt_sha256": "652da1df24bb932aeddbe88f5bfb769359a3a72b5d53fc006d81aa08f6e51e34",
+        "source_is_instruction": false,
+        "independent_historical_verification": false
       }
     }
   ],
