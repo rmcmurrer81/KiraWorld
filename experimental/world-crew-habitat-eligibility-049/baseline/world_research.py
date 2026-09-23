@@ -411,13 +411,6 @@ def infer_research_mode(prompt: str) -> str:
         labels.add(words.pop(0))
     if not words:
         return real
-    # Crew describes a habitat's purpose, not the name of an existing place.
-    # Normalize this bounded noun phrase only; do not accept arbitrary words
-    # before a known kind or turn a trailing facility name into a generic kind.
-    habitat = re.fullmatch(r"(?:(?:mars|martian)\s+)?(?:crew(?:ed)?[- ])?habitat"
-                           r"(?P<tail>\s+(?:with|for)(?:\s+.+)?|\s+on\s+mars)?", " ".join(words))
-    if habitat:
-        words = ["habitat"] + (habitat.group("tail") or "").split()
     if labels & {"invented", "fictional", "imaginary"} or command.lower() == "invent":
         return original
     # Mars is a supported invented setting, unless the request above explicitly

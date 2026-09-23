@@ -1,0 +1,1122 @@
+{
+  "which": "candidate",
+  "research_source_sha256": "3d543aec1b4e973e33dfbad5dbe59651ad0c16f5a44e09785a42f3fe041566f1",
+  "installed_workspace_sha256": "86320278736c881b3ebecb6da568ac322d9c4cb31285e3c7eb5edd4925568bcc",
+  "installed_dispatcher_sha256": "717ad961fd8ece464aec27a4a4775cdf9a4b090209873909fa0b05ad13aa53a3",
+  "cases": [
+    {
+      "case": "original_crew",
+      "prompt": "Build an original crew habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_223b5853bc75a7d5d606 | saved state: queued",
+        "Subject: original crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original crew habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "scifi_crew",
+      "prompt": "Build a sci-fi crew habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_f4e2ec928de64f61fc58 | saved state: queued",
+        "Subject: sci-fi crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a sci-fi crew habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "hyphen_crew",
+      "prompt": "Build a crew-habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_483da3ebf7bf7d72c518 | saved state: queued",
+        "Subject: crew-habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a crew-habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "crewed",
+      "prompt": "Create a crewed habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_c3dcbb99ea3f70df62c4 | saved state: queued",
+        "Subject: crewed habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Create a crewed habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "mars_habitat",
+      "prompt": "Build a Mars habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_7d9af9db944e19d76049 | saved state: queued",
+        "Subject: Mars habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a Mars habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "mars_crew",
+      "prompt": "Build a Mars crew habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_7385eac64ba2ec0b159a | saved state: queued",
+        "Subject: Mars crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a Mars crew habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "martian_crew",
+      "prompt": "Build a Martian crew habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_1f8e62e720d6773e3b5e | saved state: queued",
+        "Subject: Martian crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a Martian crew habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "mars_hyphen",
+      "prompt": "Build an original Mars crew-habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_0c2ae23f5ee8d8631b75 | saved state: queued",
+        "Subject: original Mars crew-habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original Mars crew-habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "polite",
+      "prompt": "Can you build an original crew habitat?",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_ca52c342b4bf2b25fbfa | saved state: queued",
+        "Subject: Can you build an original crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Can you build an original crew habitat?",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "please",
+      "prompt": "Please make a crew habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_7be37dd443c1791f517d | saved state: queued",
+        "Subject: crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Please make a crew habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "scifi_mars",
+      "prompt": "Build a sci-fi Mars crew habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_4b9afe15de23a45ed7ff | saved state: queued",
+        "Subject: sci-fi Mars crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a sci-fi Mars crew habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "lunar",
+      "prompt": "Build an original lunar crew habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_5b20fb641081f4a13717 | saved state: queued",
+        "Subject: original lunar crew habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original lunar crew habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "on_mars",
+      "prompt": "Build an original crew habitat on Mars.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_e04849d2c96379bbcce0 | saved state: queued",
+        "Subject: original crew habitat on Mars | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original crew habitat on Mars.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "functional_rooms",
+      "prompt": "Build an original crew habitat with a galley and laboratory.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_57ce71b2eb71df162402 | saved state: queued",
+        "Subject: original crew habitat with a galley and laboratory | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original crew habitat with a galley and laboratory.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "six_people",
+      "prompt": "Build a crew habitat for six people.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_2c9045e326a5d4c3179f | saved state: queued",
+        "Subject: crew habitat for six people | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a crew habitat for six people.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "no_weapons",
+      "prompt": "Build a crew habitat with no weapons.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_4cd7a4522f6244747559 | saved state: queued",
+        "Subject: crew habitat with no weapons | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a crew habitat with no weapons.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "analogy",
+      "prompt": "Build an original crew habitat inspired by CHAPEA.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_f33efd59c578a9f409cc | saved state: queued",
+        "Subject: original crew habitat inspired by CHAPEA | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original crew habitat inspired by CHAPEA.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "excluded_replica",
+      "prompt": "Build a crew habitat, not a replica of CHAPEA.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_6d1404b0de17c68afeea | saved state: queued",
+        "Subject: crew habitat, not a replica of CHAPEA | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build a crew habitat, not a replica of CHAPEA.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "generic_prior",
+      "prompt": "Build an original habitat.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_ed4c1b2137d9cd9a9f2d | saved state: queued",
+        "Subject: original habitat | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original habitat.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "mars_prior",
+      "prompt": "Build an original Mars base.",
+      "expected": "analog_to_original",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_a23c410db5a0abbe7d47 | saved state: queued",
+        "Subject: original Mars base | analog_to_original | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "analog_to_original",
+      "original_generation_allowed": true,
+      "brief_prompt": "Build an original Mars base.",
+      "research_task_ids": [
+        "analog_cases",
+        "analog_layouts",
+        "analog_functions",
+        "analog_circulation",
+        "analog_scale_materials"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "'list' object has no attribute 'values'",
+        "type": "AttributeError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "named_article",
+      "prompt": "Build the CHAPEA crew habitat.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_fd425a455ea178b20883 | saved state: queued",
+        "Subject: the CHAPEA crew habitat | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build the CHAPEA crew habitat.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "named_first",
+      "prompt": "Build a CHAPEA crew habitat.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_c8c5c52669a801bb93af | saved state: queued",
+        "Subject: CHAPEA crew habitat | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build a CHAPEA crew habitat.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "named_trailing",
+      "prompt": "Build an original crew habitat CHAPEA.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_04e7170517a1c7687130 | saved state: queued",
+        "Subject: original crew habitat CHAPEA | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build an original crew habitat CHAPEA.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "named_called",
+      "prompt": "Build a Mars crew habitat called CHAPEA.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_686adf526362c4cd1e24 | saved state: queued",
+        "Subject: Mars crew habitat called CHAPEA | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build a Mars crew habitat called CHAPEA.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "named_of",
+      "prompt": "Build an original crew habitat of CHAPEA.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_099394cf7d2ff49ca9ff | saved state: queued",
+        "Subject: original crew habitat of CHAPEA | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build an original crew habitat of CHAPEA.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "actual",
+      "prompt": "Build the actual crew habitat.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_7fd78653f5db68d81ac1 | saved state: queued",
+        "Subject: the actual crew habitat | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build the actual crew habitat.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "at_location",
+      "prompt": "Build an original crew habitat at Johnson Space Center.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_261f784a93274b3c8495 | saved state: queued",
+        "Subject: original crew habitat at Johnson Space Center | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build an original crew habitat at Johnson Space Center.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "inside_location",
+      "prompt": "Build an original crew habitat inside the NASA facility.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_6c37d2bee5926192f4b8 | saved state: queued",
+        "Subject: original crew habitat inside the NASA facility | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build an original crew habitat inside the NASA facility.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "recreate",
+      "prompt": "Build a crew habitat; recreate the CHAPEA layout.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_b0f3042390ac22cacb73 | saved state: queued",
+        "Subject: crew habitat; recreate the CHAPEA layout | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build a crew habitat; recreate the CHAPEA layout.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "copy",
+      "prompt": "Create a crew habitat as an exact copy of CHAPEA.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_145ef0b631a6df219fae | saved state: queued",
+        "Subject: crew habitat as an exact copy of CHAPEA | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Create a crew habitat as an exact copy of CHAPEA.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "retain",
+      "prompt": "Build a crew habitat but retain the actual dimensions.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_417a8d65b35da127321a | saved state: queued",
+        "Subject: crew habitat but retain the actual dimensions | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build a crew habitat but retain the actual dimensions.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "negated_original",
+      "prompt": "Build a crew habitat, not an original design.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_7dc15aee6be0bc88cf82 | saved state: queued",
+        "Subject: crew habitat, not an original design | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build a crew habitat, not an original design.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "research_crew",
+      "prompt": "Research a crew habitat.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_c40e4083162df63ed175 | saved state: queued",
+        "Subject: crew habitat | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Research a crew habitat.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "research_actual",
+      "prompt": "Research NASA CHAPEA crew habitat floor plans.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_045e35b7d5211b4cd744 | saved state: queued",
+        "Subject: NASA CHAPEA crew habitat floor plans | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Research NASA CHAPEA crew habitat floor plans.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "named_reference_first",
+      "prompt": "Build the Louvre, inspired by an original crew habitat.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_0b77c11e5897a0eed095 | saved state: queued",
+        "Subject: the Louvre, inspired by an original crew habitat | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build the Louvre, inspired by an original crew habitat.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "unknown_prefix",
+      "prompt": "Build an original premium crew habitat.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_6c446fb37d228130849f | saved state: queued",
+        "Subject: original premium crew habitat | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build an original premium crew habitat.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "unrelated_crew_kind",
+      "prompt": "Build an original crew museum.",
+      "expected": "real_place_reconstruction",
+      "queued_worker_boundary": true,
+      "messages": [
+        "Research job: world_research_b87a1115a363a52aaec1 | saved state: queued",
+        "Subject: original crew museum | real_place_reconstruction | Photorealistic by default"
+      ],
+      "geometry_generated": false,
+      "mode": "real_place_reconstruction",
+      "original_generation_allowed": false,
+      "brief_prompt": "Build an original crew museum.",
+      "research_task_ids": [
+        "maps_plans",
+        "dimensions_scale",
+        "exterior_viewpoints",
+        "interior_viewpoints",
+        "video_walkthroughs",
+        "materials_connections"
+      ],
+      "planner": {
+        "status": "held",
+        "error": "Real places require verified visual evidence and remain blocked in this planner",
+        "type": "BlueprintError"
+      },
+      "preserved_inputs_unchanged": true
+    },
+    {
+      "case": "negated_request",
+      "prompt": "Do not build an original crew habitat.",
+      "expected": null,
+      "queued_worker_boundary": false,
+      "messages": [
+        "No new research or generation was started. Existing jobs and saved worlds were preserved. This message does not cancel a worker that is already running."
+      ],
+      "geometry_generated": false,
+      "mode": null,
+      "planner": {
+        "status": "not_called"
+      },
+      "saved_directory_empty": true
+    },
+    {
+      "case": "deferred_request",
+      "prompt": "Build an original crew habitat after I get home.",
+      "expected": null,
+      "queued_worker_boundary": false,
+      "messages": [
+        "No job was started. Send a direct build or research request when you want work to begin."
+      ],
+      "geometry_generated": false,
+      "mode": null,
+      "planner": {
+        "status": "not_called"
+      },
+      "saved_directory_empty": true
+    },
+    {
+      "case": "planning_request",
+      "prompt": "Plan an original crew habitat.",
+      "expected": null,
+      "queued_worker_boundary": false,
+      "messages": [
+        "No job was started. Interactive planning is not implemented in this chat yet. A useful brief includes the setting, rooms, approximate size and purpose; send it with Build or Research when you are ready."
+      ],
+      "geometry_generated": false,
+      "mode": null,
+      "planner": {
+        "status": "not_called"
+      },
+      "saved_directory_empty": true
+    },
+    {
+      "case": "question",
+      "prompt": "Can this build a Mars crew habitat?",
+      "expected": null,
+      "queued_worker_boundary": false,
+      "messages": [
+        "You can ask me to build an original world or research a place, resume research, show status, open the latest saved world, open the current preview, or export a 3D package. Existing-world edits and detailed conversational answers are not implemented yet."
+      ],
+      "geometry_generated": false,
+      "mode": null,
+      "planner": {
+        "status": "not_called"
+      },
+      "saved_directory_empty": true
+    },
+    {
+      "case": "quoted_command",
+      "prompt": "The note says \"Build an original crew habitat.\"",
+      "expected": null,
+      "queued_worker_boundary": false,
+      "messages": [
+        "No job was started. Use a direct request such as Build a Mars base, Research the Louvre courtyard, Show status, Open latest saved world, Open current preview, or Export this world. Existing-world edits are not implemented yet."
+      ],
+      "geometry_generated": false,
+      "mode": null,
+      "planner": {
+        "status": "not_called"
+      },
+      "saved_directory_empty": true
+    },
+    {
+      "case": "edit_request",
+      "prompt": "Create a new crew habitat in my current world.",
+      "expected": null,
+      "queued_worker_boundary": false,
+      "messages": [
+        "Changing existing rooms, doors or furniture through chat is not implemented yet. Your selected world was preserved and no replacement research job was created."
+      ],
+      "geometry_generated": false,
+      "mode": null,
+      "planner": {
+        "status": "not_called"
+      },
+      "saved_directory_empty": true
+    }
+  ],
+  "saved_real_mode_preserved": {
+    "brief_mode": "real_place_reconstruction",
+    "current_original_gate": false,
+    "planner_outcome": "Real places require verified visual evidence and remain blocked in this planner",
+    "saved_bytes_unchanged": true
+  },
+  "models_workers_ui_network": 0,
+  "source_documents": "Authored synthetic fixture documents; no real facility facts or visual approval."
+}

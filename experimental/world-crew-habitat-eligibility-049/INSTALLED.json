@@ -1,0 +1,25 @@
+{
+  "status": "049_EXACT_ONE_FILE_INSTALL_PASS",
+  "installed_files": 1,
+  "atomic_per_file": true,
+  "protected_inputs_unchanged": 116,
+  "created_utc": "2026-09-23T12:45:03.796037+00:00",
+  "plan_sha256": "c873f387989cdd7347f310194cfea1c3c475bc704db6694e86ccd8001bfe0696",
+  "files": [
+    {
+      "relative_path": "tools/world_research.py",
+      "target": "@kira_root\\tools\\world_research.py",
+      "before_sha256": "2d967dc31da7ea95a2b5c59ca819967a53ad162c0170ffdcfe86b8103f8fdcfd",
+      "preimage": "@workspace\\work\\world-crew-habitat-eligibility-049\\baseline\\world_research.py",
+      "after": {
+        "path": "@workspace\\work\\world-crew-habitat-eligibility-049\\candidate\\tools\\world_research.py",
+        "sha256": "3d543aec1b4e973e33dfbad5dbe59651ad0c16f5a44e09785a42f3fe041566f1",
+        "bytes": 45890
+      }
+    }
+  ],
+  "operation": "apply",
+  "models_ui_network": 0,
+  "visual_or_owner_approval": false,
+  "authorization": "Explicit root authorization must precede the exact-hash operation; the hash is only an execution guard."
+}

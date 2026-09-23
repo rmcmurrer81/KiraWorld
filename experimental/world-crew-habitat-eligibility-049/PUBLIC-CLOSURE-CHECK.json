@@ -1,0 +1,59 @@
+{
+  "status": "PUBLIC_CALLBACK_PLANNER_AND_RECOVERY_CLOSURE_PASS",
+  "results": [
+    {
+      "command": [
+        "capture.py",
+        "baseline"
+      ],
+      "result": {
+        "which": "baseline",
+        "cases": 43,
+        "planner_prepared": 2
+      }
+    },
+    {
+      "command": [
+        "capture.py",
+        "candidate"
+      ],
+      "result": {
+        "which": "candidate",
+        "cases": 43,
+        "planner_prepared": 20
+      }
+    },
+    {
+      "command": [
+        "test_evidence.py"
+      ],
+      "result": {
+        "status": "PASS",
+        "tests_run": 7,
+        "callback_cases": 43,
+        "baseline_failures_corrected": 18,
+        "original_plans_prepared": 20,
+        "real_place_plans_held": 17,
+        "nonexecuting_chat_requests": 6,
+        "models_workers_ui_network": 0,
+        "visual_or_owner_approval": false
+      }
+    },
+    {
+      "command": [
+        "test_installer.py"
+      ],
+      "result": {
+        "status": "PASS",
+        "tests_run": 10,
+        "temporary_fixtures_only": true,
+        "canonical_writes": 0
+      }
+    }
+  ],
+  "owner_original_recheck": false,
+  "models_workers_ui_network": 0,
+  "dependency_path": "experimental/world-chat-delay-candidate-048/harness.py",
+  "dependency_sha256": "ffe36ef4227f3887a4d5e74d054f767f0f7e5fa5d8da6443d217294fb785314b",
+  "dependency_base_commit": "6b2f43ae42d8b72e06767edb20aa1bebb19e10ce"
+}
