@@ -9,7 +9,7 @@ import {createDoorSystem} from './source/walk_controller.mjs';
 import assert from 'node:assert/strict';
 export function buildAuthoredScene(geometry,metadata,canvasFactory){
   const doors=createDoorSystem(geometry),plan=buildRoomDressing(geometry,doors.assemblies());
-  const scene=new THREE.Scene();scene.name='Authored_habitat_scene';scene.userData.airlock_pairs=metadata.airlock_pairs;
+  const scene=new THREE.Scene();scene.name='Original_Mars_authored_scene';scene.userData.airlock_pairs=metadata.airlock_pairs;
   const groups=new Map(),semantic=new Map(),hinges=new Map(),leafMeshes=new Map();
   for(const room of metadata.rooms){const g=new THREE.Group();g.name='room_'+room.source_id;g.userData={room_id:room.id,bounds:room.bounds,functional_role:room.functional_role};scene.add(g);groups.set(room.source_id,g);}
   const materials=createDressingMaterials(THREE,plan,{canvasFactory});

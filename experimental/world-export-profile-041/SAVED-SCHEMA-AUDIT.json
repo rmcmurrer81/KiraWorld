@@ -1,0 +1,106 @@
+{
+  "read_only": true,
+  "job_count": 2,
+  "jobs": [
+    {
+      "job_id": "world_research_92a3ca65b9b76e20549f",
+      "job_sha256": "bcb4e34baf063b7b26b651f8cc738cc7bcbf8b8adec26d8d765199698f067431",
+      "metadata_fields": [
+        "brief",
+        "brief_sha256",
+        "created_at",
+        "events",
+        "job_id",
+        "job_kind",
+        "last_error",
+        "revision",
+        "schema_version",
+        "sources",
+        "stage",
+        "tasks",
+        "updated_at"
+      ],
+      "blueprints": []
+    },
+    {
+      "job_id": "world_research_c391ffbffc7352612392",
+      "job_sha256": "2a246438fa300c172c62570942bb8da3b16933d1a3e9babbdf4458873a259e30",
+      "metadata_fields": [
+        "brief",
+        "brief_sha256",
+        "created_at",
+        "events",
+        "job_id",
+        "job_kind",
+        "last_error",
+        "revision",
+        "schema_version",
+        "sources",
+        "stage",
+        "tasks",
+        "updated_at"
+      ],
+      "blueprints": [
+        {
+          "file": "layout_pipeline_e0cc4cb1cda3c5937ecf\\r1\\blueprint.json",
+          "sha256": "1af78d67d9146b81feab01720e800208e1c01a4daf16974672af4d530715c53c",
+          "contract": "dimensioned_world_blueprint_v1",
+          "top_fields": [
+            "contract",
+            "entry_room_id",
+            "openings",
+            "research_packet_sha256",
+            "rooms",
+            "title",
+            "units"
+          ],
+          "room_count": 7,
+          "room_fields": [
+            "depth",
+            "dimension_basis",
+            "floor_y",
+            "height",
+            "id",
+            "name",
+            "purpose",
+            "source_ids",
+            "width",
+            "x",
+            "z"
+          ],
+          "opening_count": 6
+        },
+        {
+          "file": "layout_pipeline_e0cc4cb1cda3c5937ecf\\r2\\blueprint.json",
+          "sha256": "1af78d67d9146b81feab01720e800208e1c01a4daf16974672af4d530715c53c",
+          "contract": "dimensioned_world_blueprint_v1",
+          "top_fields": [
+            "contract",
+            "entry_room_id",
+            "openings",
+            "research_packet_sha256",
+            "rooms",
+            "title",
+            "units"
+          ],
+          "room_count": 7,
+          "room_fields": [
+            "depth",
+            "dimension_basis",
+            "floor_y",
+            "height",
+            "id",
+            "name",
+            "purpose",
+            "source_ids",
+            "width",
+            "x",
+            "z"
+          ],
+          "opening_count": 6
+        }
+      ]
+    }
+  ],
+  "personal_brief_or_research_contents_copied": false
+}

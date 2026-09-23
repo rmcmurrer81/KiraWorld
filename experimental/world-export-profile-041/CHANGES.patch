@@ -1,0 +1,137 @@
+--- installed039/tools/world_builder_engine/layout_package_assets/authored_scene.mjs
++++ candidate041/tools/world_builder_engine/layout_package_assets/authored_scene.mjs
+@@ -9,7 +9,7 @@
+ import assert from 'node:assert/strict';
+ export function buildAuthoredScene(geometry,metadata,canvasFactory){
+   const doors=createDoorSystem(geometry),plan=buildRoomDressing(geometry,doors.assemblies());
+-  const scene=new THREE.Scene();scene.name='Original_Mars_authored_scene';scene.userData.airlock_pairs=metadata.airlock_pairs;
++  const scene=new THREE.Scene();scene.name='Authored_habitat_scene';scene.userData.airlock_pairs=metadata.airlock_pairs;
+   const groups=new Map(),semantic=new Map(),hinges=new Map(),leafMeshes=new Map();
+   for(const room of metadata.rooms){const g=new THREE.Group();g.name='room_'+room.source_id;g.userData={room_id:room.id,bounds:room.bounds,functional_role:room.functional_role};scene.add(g);groups.set(room.source_id,g);}
+   const materials=createDressingMaterials(THREE,plan,{canvasFactory});
+--- installed039/tools/world_builder_engine/layout_package_contract.json
++++ candidate041/tools/world_builder_engine/layout_package_contract.json
+@@ -3,7 +3,7 @@
+   "status": "experimental",
+   "selection": "An explicit saved job and its own verified preview binding; no globally newest project lookup.",
+   "supported_recipe": "Pinned authored habitat recipe plus preview_hinged_doors_v2 and explicit paired_airlock_door_sequence_v1 policy; original Mars geometry validation scope remains unchanged.",
+-  "validation_scope": "Only source geometry hashes in the service VALIDATED_GEOMETRY set may export. Current evidence covers the saved Original Mars fixture. Recognized but unvalidated layouts return unsupported_layout.",
++  "validation_scope": "No exact geometry allowlist. A bounded authored habitat profile independently recompiles the bound blueprint, verifies supported roles/topology/dimensions and unambiguous structural room ownership. Eligibility is only permission to attempt the pinned builder/importer; readiness requires all actual checks.",
+   "input": {
+     "job_dir": "Existing immediate saved research job under this installation",
+     "destination": "New export directory outside protected saved world/research/preview directories",
+@@ -60,5 +60,7 @@
+     "closing_keeps_existing_occupancy_rules": true,
+     "engine_runtime_included": false,
+     "pressure_simulation": false
+-  }
++  },
++  "eligibility_profile": "bounded_authored_habitat_export_v1",
++  "candidate_status": "isolated_not_installed_pending_new_shape_actual_exports"
+ }
+--- installed039/tools/world_builder_engine/layout_package_export.py
++++ candidate041/tools/world_builder_engine/layout_package_export.py
+@@ -6,12 +6,11 @@
+ from .world_layout_preview import verify_preview
+ from .layout_package_assets import source_bindings as bindings
+ from .layout_airlock_policy import validate_airlock_metadata
++from .layout_recipe_profile import validate_recipe_profile,RecipeUnsupported
+ 
+ PROJECT=Path(__file__).resolve().parents[2]
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+ CONTRACT='authored_saved_layout_package_v2'
+-VALIDATED_GEOMETRY={'1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75'}
+-ROLES={'equipment_vestibule','airlock','operations','habitat','laboratory','observation','circulation'}
+ RENDERER={
+  'viewer.mjs':'e6f101d016cd40b923c678f3db39b1ec7ec50b1c44684f255bcd1efb8b9fcfda',
+  'walk_controller.mjs':'0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791',
+@@ -47,13 +46,10 @@
+  require(all(manifest['source_pins'].get(k,{}).get('sha256')==v for k,v in RENDERER.items()),
+   'unsupported_preview','This saved preview uses an unsupported appearance version. Open current preview, then export again.')
+  geometry,sources,input_pin=bindings.source_chain(selected['manifest_path'],selected['manifest_sha256'])
+- program=geometry.get('functional_program',{})
+- # Match the authored recipe's sole fixed fallback: its circulation room.
+- require(bool(program) and all((program.get(r['id']) or ('circulation' if r['id']=='circulation' else None)) in ROLES for r in geometry['rooms'] if r['access']=='walkable_layout'),
+-  'unsupported_recipe','3D export currently supports the authored habitat room recipe. This layout uses another room program.')
+- require(sources['geometry_source']['sha256'] in VALIDATED_GEOMETRY,'unsupported_layout',
+-  'This habitat recipe is recognized, but experimental mesh export has not been validated for this saved layout yet. Its files were preserved.')
+- return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin}
++ try:
++  eligibility=validate_recipe_profile(geometry,bindings.parse(bindings.exact(sources['blueprint'])),sources['research_packet']['sha256'])
++ except RecipeUnsupported as exc:raise ExportHeld(exc.status,str(exc)) from exc
++ return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin,'eligibility':eligibility}
+ 
+ def default_dependencies():
+  canvas=Path(os.environ.get('KIRA_CPU_CANVAS_MODULE') or Path.home()/'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas')
+@@ -125,6 +121,7 @@
+   result={'contract':CONTRACT,'status':'created','scene_id':opts['sceneId'],'source_bindings_manifest_sha256':prepared['input_pin']['sha256'],
+    'verified_source_digests':bindings.portable_pins(prepared['sources']),'producer_digests':pins,
+    'airlock_pair_policy':pairs,'preview_controller_sha256':RENDERER['walk_controller.mjs'],
++   'recipe_eligibility':prepared['eligibility'],
+    'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in target.iterdir()},'capabilities':CAPABILITIES,
+    'research_regenerated':False,'model_jobs':0,'sources_modified':False}
+   result['receipt_sha256']=seal(result);write_json(target/'manifest.json',result)
+--- installed039/tools/world_builder_engine/layout_recipe_profile.py
++++ candidate041/tools/world_builder_engine/layout_recipe_profile.py
+@@ -0,0 +1,61 @@
++"""Narrow eligibility to attempt the exact authored habitat export recipe.
++
++This replaces fixture identity with independently recompiled structural data.
++Eligibility is not export success; the pinned builder/importer must still pass.
++"""
++from pathlib import Path
++import hashlib
++from .world_blueprint import compile_blueprint
++PROFILE='bounded_authored_habitat_export_v1'
++ROLES={'equipment_vestibule','airlock','operations','habitat','laboratory','observation','circulation'}
++STRUCTURE=('contract','units','title','research_packet_sha256','blueprint_sha256','rooms','primitives','colliders','support_surfaces','portals','routes','connectivity',
++ 'quality_status','photorealism_verified','world_ready','source_facts_validated')
++
++class RecipeUnsupported(ValueError):
++ def __init__(self,status,message):super().__init__(message);self.status=status
++
++def validate_recipe_profile(geometry,blueprint,packet_sha256):
++ def need(ok,status,message):
++  if not ok:raise RecipeUnsupported(status,message)
++ need(geometry.get('layout_template')=='single_level_entry_chain_and_corridor_branches_v2','unsupported_layout','Export supports only the authored single-level habitat layout template.')
++ rooms=geometry.get('rooms',[]);program=geometry.get('functional_program')
++ need(isinstance(program,dict) and bool(program) and 5<=len(rooms)<=9,'unsupported_recipe','Export needs5..9 declared rooms and an explicit supported habitat room program.')
++ ids={r['id'] for r in rooms}
++ need(set(program)<=ids and all((program.get(r['id']) or ('circulation' if r['id']=='circulation' else None)) in ROLES for r in rooms),
++  'unsupported_recipe','Every room must explicitly use a supported habitat role. Unknown or unrelated room programs are preserved but not exported.')
++ need(all(r['access']=='walkable_layout' and r['floor_y']==0 and 2.5<=r['height']<=4 for r in rooms),
++  'unsupported_layout','Export supports fully authored walkable rooms on one ground level,2.5..4m high. Locked or vertical layouts are unsupported.')
++ for room in rooms:
++  corridor=(program.get(room['id']) or ('circulation' if room['id']=='circulation' else None))=='circulation'
++  need(3<=room['width']<=12 and 3<=room['depth']<=(80 if corridor else 12),'unsupported_layout','Room dimensions exceed the bounded authored habitat recipe.')
++ try:rebuilt=compile_blueprint(blueprint,packet_sha256,'analog_to_original')
++ except (ValueError,KeyError,TypeError) as exc:raise RecipeUnsupported('unsupported_layout','The bound blueprint could not be independently recompiled.') from exc
++ need(all(geometry.get(key)==rebuilt.get(key) for key in STRUCTURE),'unsupported_layout','The saved geometry differs from its bound blueprint. It was preserved; export was not started.')
++ corridors=[r['id'] for r in rooms if (program.get(r['id']) or ('circulation' if r['id']=='circulation' else None))=='circulation']
++ need(corridors==['circulation'],'unsupported_layout','The supported branch template needs one explicit circulation corridor.')
++ graph={rid:set() for rid in ids};edges=set()
++ for p in geometry['portals']:
++  graph[p['room_a']].add(p['room_b']);graph[p['room_b']].add(p['room_a']);edges.add(frozenset((p['room_a'],p['room_b'])))
++ entry=geometry['connectivity']['entry_room_id'];chain=[];previous=None;cursor=entry
++ while cursor!='circulation':
++  need(cursor not in chain and len(chain)<2,'unsupported_layout','Entry chain exceeds the supported two-room sequence.')
++  chain.append(cursor);forward=graph[cursor]-({previous} if previous else set())
++  need(len(forward)==1,'unsupported_layout','Entry sequence branches before its circulation corridor.')
++  previous,cursor=cursor,next(iter(forward))
++ expected={frozenset((a,b)) for a,b in zip(chain+['circulation'],(chain+['circulation'])[1:])}
++ expected.update(frozenset((rid,'circulation')) for rid in ids-set(chain)-{'circulation'})
++ need(edges==expected and len(edges)==len(geometry['portals']),'unsupported_layout','Openings differ from the supported entry-chain and corridor-branch topology.')
++ # The installed renderer finds room ownership by prefix. Reject ambiguity,
++ # rather than assigning another room's style/group by list order.
++ for primitive in geometry['primitives']:
++  owners=[r['id'] for r in rooms if primitive['id'].startswith(r['id']+'_')]
++  need(len(owners)==1,'unsupported_layout','Structural room identity is ambiguous for this renderer. Use an explicitly supported room naming scheme.')
++ airlocks=[r for r in rooms if program.get(r['id'])=='airlock']
++ for room in airlocks:
++  attached=[p for p in geometry['portals'] if room['id'] in (p['room_a'],p['room_b'])]
++  need(len(attached)==2 and all(p['state']=='open_passage' for p in attached),'unsupported_layout','Each authored airlock must have exactly two open source portals.')
++ return {'contract':PROFILE,'room_count':len(rooms),'source_structure_recompiled':True,'explicit_supported_roles':True,
++  'validator_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
++  'blueprint_compiler_sha256':hashlib.sha256(Path(compile_blueprint.__code__.co_filename).read_bytes()).hexdigest(),
++  'unambiguous_structural_room_ownership':True,'airlock_count':len(airlocks),'eligibility_only':True,
++  'export_requires_pinned_builder_and_importer_pass':True,'visual_or_owner_approval':False,'engine_or_vr_runtime':False}

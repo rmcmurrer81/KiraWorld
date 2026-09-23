@@ -6,11 +6,12 @@ from .pipeline import latest_preview
 from .world_layout_preview import verify_preview
 from .layout_package_assets import source_bindings as bindings
 from .layout_airlock_policy import validate_airlock_metadata
-from .layout_recipe_profile import validate_recipe_profile,RecipeUnsupported
 
 PROJECT=Path(__file__).resolve().parents[2]
 ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
 CONTRACT='authored_saved_layout_package_v2'
+VALIDATED_GEOMETRY={'1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75'}
+ROLES={'equipment_vestibule','airlock','operations','habitat','laboratory','observation','circulation'}
 RENDERER={
  'viewer.mjs':'e6f101d016cd40b923c678f3db39b1ec7ec50b1c44684f255bcd1efb8b9fcfda',
  'walk_controller.mjs':'0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791',
@@ -46,10 +47,13 @@ def inspect_selected_layout(job_dir,preview_binding=None):
  require(all(manifest['source_pins'].get(k,{}).get('sha256')==v for k,v in RENDERER.items()),
   'unsupported_preview','This saved preview uses an unsupported appearance version. Open current preview, then export again.')
  geometry,sources,input_pin=bindings.source_chain(selected['manifest_path'],selected['manifest_sha256'])
- try:
-  eligibility=validate_recipe_profile(geometry,bindings.parse(bindings.exact(sources['blueprint'])),sources['research_packet']['sha256'])
- except RecipeUnsupported as exc:raise ExportHeld(exc.status,str(exc)) from exc
- return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin,'eligibility':eligibility}
+ program=geometry.get('functional_program',{})
+ # Match the authored recipe's sole fixed fallback: its circulation room.
+ require(bool(program) and all((program.get(r['id']) or ('circulation' if r['id']=='circulation' else None)) in ROLES for r in geometry['rooms'] if r['access']=='walkable_layout'),
+  'unsupported_recipe','3D export currently supports the authored habitat room recipe. This layout uses another room program.')
+ require(sources['geometry_source']['sha256'] in VALIDATED_GEOMETRY,'unsupported_layout',
+  'This habitat recipe is recognized, but experimental mesh export has not been validated for this saved layout yet. Its files were preserved.')
+ return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin}
 
 def default_dependencies():
  canvas=Path(os.environ.get('KIRA_CPU_CANVAS_MODULE') or Path.home()/'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas')
@@ -121,7 +125,6 @@ def export_saved_layout_package(job_dir,destination,*,preview_binding=None,depen
   result={'contract':CONTRACT,'status':'created','scene_id':opts['sceneId'],'source_bindings_manifest_sha256':prepared['input_pin']['sha256'],
    'verified_source_digests':bindings.portable_pins(prepared['sources']),'producer_digests':pins,
    'airlock_pair_policy':pairs,'preview_controller_sha256':RENDERER['walk_controller.mjs'],
-   'recipe_eligibility':prepared['eligibility'],
    'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in target.iterdir()},'capabilities':CAPABILITIES,
    'research_regenerated':False,'model_jobs':0,'sources_modified':False}
   result['receipt_sha256']=seal(result);write_json(target/'manifest.json',result)

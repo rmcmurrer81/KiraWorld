@@ -1,0 +1,36 @@
+{
+  "status": "PUBLIC_PURE_AND_MOCK_TESTS_PASS",
+  "checks": [
+    {
+      "test": "test_profile.py",
+      "result": "{\"status\": \"PROFILE_PURE_TESTS_PASS\", \"tests\": 15, \"failures\": 0, \"errors\": 0, \"models_exports_ui\": 0, \"original_data_writes\": 0}",
+      "real_export_ui_model": false
+    },
+    {
+      "test": "test_api.py",
+      "result": "{\"status\": \"PASS\", \"tests\": 35, \"failures\": 0, \"errors\": 0, \"worker_mocked\": true, \"real_glb_exports\": 0, \"gpu_models_browser_native_ui\": 0, \"canonical_unchanged\": true, \"owner_data_writes\": 0}",
+      "real_export_ui_model": false
+    },
+    {
+      "test": "test_recipe_shapes.mjs",
+      "result": "{\"status\":\"FOUR_RECOMPILED_SHAPES_PASS_AUTHORED_RECIPE_AND_METADATA_CHECKS\",\"shapes\":[{\"variant\":\"base\",\"rooms\":7,\"objects\":16,\"architecture\":28,\"omitted_equipment\":0,\"metadata_nodes\":141,\"colliders\":134,\"door_pairs\":1,\"real_glb_export\":false,\"source_mutated\":false,\"spawn_and_authored_clearance_checks\":true},{\"variant\":\"renamed\",\"rooms\":7,\"objects\":16,\"architecture\":28,\"omitted_equipment\":0,\"metadata_nodes\":141,\"colliders\":134,\"door_pairs\":1,\"real_glb_export\":false,\"source_mutated\":false,\"spawn_and_authored_clearance_checks\":true},{\"variant\":\"wider\",\"rooms\":7,\"objects\":16,\"architecture\":28,\"omitted_equipment\":0,\"metadata_nodes\":141,\"colliders\":134,\"door_pairs\":1,\"real_glb_export\":false,\"source_mutated\":false,\"spawn_and_authored_clearance_checks\":true},{\"variant\":\"translated\",\"rooms\":7,\"objects\":16,\"architecture\":28,\"omitted_equipment\":0,\"metadata_nodes\":141,\"colliders\":134,\"door_pairs\":1,\"real_glb_export\":false,\"source_mutated\":false,\"spawn_and_authored_clearance_checks\":true}],\"negative_cases\":2,\"real_glb_exports\":0,\"canvas_gpu_ui_models\":0,\"limitations\":[\"Pure recipe, spawn, collider ownership and metadata checks only.\",\"Texture/GLB importer execution for these new shapes remains pending.\",\"Omitted equipment is explicitly counted; no visual or owner approval.\"]}",
+      "real_export_ui_model": false
+    }
+  ],
+  "compiler_matches_base": true,
+  "actual_trial_receipt": "ACTUAL-TRIAL-RESULT.json",
+  "revision3_check": {
+    "status": "EXACT_METADATA_ONLY_REMOVAL_PASS",
+    "removed_keys": [
+      "candidate_status"
+    ],
+    "other_contract_fields_equal": true,
+    "implementation_bytes_unchanged": true,
+    "protected_originals_unchanged": 116,
+    "canonical_unchanged": true,
+    "installed": false,
+    "no_repeated_export_needed": true
+  },
+  "prior_public_closure_check_sha256": "d544b5ca251d361400419a2187a3faa5369722fe702de7e6a4f51d5efca66d3f",
+  "repeat_tests": "Not repeated: only descriptive candidate_status removed; implementation and portable test wrappers unchanged."
+}

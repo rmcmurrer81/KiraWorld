@@ -1,0 +1,65 @@
+{
+  "status": "FOUR_RECOMPILED_SHAPES_PASS_AUTHORED_RECIPE_AND_METADATA_CHECKS",
+  "shapes": [
+    {
+      "variant": "base",
+      "rooms": 7,
+      "objects": 16,
+      "architecture": 28,
+      "omitted_equipment": 0,
+      "metadata_nodes": 141,
+      "colliders": 134,
+      "door_pairs": 1,
+      "real_glb_export": false,
+      "source_mutated": false,
+      "spawn_and_authored_clearance_checks": true
+    },
+    {
+      "variant": "renamed",
+      "rooms": 7,
+      "objects": 16,
+      "architecture": 28,
+      "omitted_equipment": 0,
+      "metadata_nodes": 141,
+      "colliders": 134,
+      "door_pairs": 1,
+      "real_glb_export": false,
+      "source_mutated": false,
+      "spawn_and_authored_clearance_checks": true
+    },
+    {
+      "variant": "wider",
+      "rooms": 7,
+      "objects": 16,
+      "architecture": 28,
+      "omitted_equipment": 0,
+      "metadata_nodes": 141,
+      "colliders": 134,
+      "door_pairs": 1,
+      "real_glb_export": false,
+      "source_mutated": false,
+      "spawn_and_authored_clearance_checks": true
+    },
+    {
+      "variant": "translated",
+      "rooms": 7,
+      "objects": 16,
+      "architecture": 28,
+      "omitted_equipment": 0,
+      "metadata_nodes": 141,
+      "colliders": 134,
+      "door_pairs": 1,
+      "real_glb_export": false,
+      "source_mutated": false,
+      "spawn_and_authored_clearance_checks": true
+    }
+  ],
+  "negative_cases": 2,
+  "real_glb_exports": 0,
+  "canvas_gpu_ui_models": 0,
+  "limitations": [
+    "Pure recipe, spawn, collider ownership and metadata checks only.",
+    "Texture/GLB importer execution for these new shapes remains pending.",
+    "Omitted equipment is explicitly counted; no visual or owner approval."
+  ]
+}

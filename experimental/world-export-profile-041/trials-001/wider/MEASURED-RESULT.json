@@ -1,0 +1,47 @@
+{
+  "variant": "wider",
+  "returncode": 0,
+  "elapsed_seconds": 1.2571657999651507,
+  "sampled_family_peak_rss_bytes": 668196864,
+  "samples": 76,
+  "processes": {
+    "42184": {
+      "name": "python.exe",
+      "observed_rss": 35614720,
+      "os_peak_working_set": 35614720
+    },
+    "30956": {
+      "name": "conhost.exe",
+      "observed_rss": 7962624,
+      "os_peak_working_set": 7970816
+    },
+    "20768": {
+      "name": "node.exe",
+      "observed_rss": 618663936,
+      "os_peak_working_set": 631336960
+    },
+    "34044": {
+      "name": "conhost.exe",
+      "observed_rss": 8019968,
+      "os_peak_working_set": 8019968
+    }
+  },
+  "export": {
+    "variant": "wider",
+    "status": "ACTUAL041_CPU_EXPORT_IMPORT_PASS",
+    "package_manifest_sha256": "7da7c2ca1bc4cf2a58613cb4a70152b298e64920d570029636b1e9029c243339",
+    "glb_sha256": "eaddade7029871f2967f3ee08368749f4ec9784d316071f5d853a8d31f109b70",
+    "glb_bytes": 979068,
+    "counts": {
+      "objects": 638,
+      "meshes": 557,
+      "materials": 95,
+      "textures": 67,
+      "embedded_pngs": 67,
+      "rooms": 7,
+      "semantic_nodes": 141,
+      "colliders": 134,
+      "doors": 6
+    }
+  }
+}

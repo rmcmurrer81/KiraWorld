@@ -1,0 +1,199 @@
+{
+  "contract": "synthetic_authored_export_validation_trial_v1",
+  "status": "passed",
+  "synthetic_fixture": "wider",
+  "verified_input_digests": {
+    "geometry_source": {
+      "bytes": 37545,
+      "sha256": "b2039dc616ebe6021bc96435b83ab181578ba3defef08ec8f704cb11affc576e"
+    },
+    "blueprint": {
+      "bytes": 3947,
+      "sha256": "0c69d07dcc1caec08880ca42a252391447e5d5ebca58e72b50598bcae718072b"
+    },
+    "research_packet": {
+      "bytes": 232,
+      "sha256": "b2ca8bffc35666d5c1b40d7fc8ca37956a166dea9ef3a014b2782ca295dd2807"
+    }
+  },
+  "producer_digests": {
+    "contract": "layout_package_producer_pins_v1",
+    "files": {
+      "authored_scene.mjs": {
+        "sha256": "538850748c99a39f2f929ac4ad77acf6355d892fcfbb54ba11febd57b0989ae8",
+        "bytes": 6303
+      },
+      "build_glb.mjs": {
+        "sha256": "e4657ee4eed51925e2cb1ca4fcb0d4f20c8eb013365e9ed236dbf65c70bd9263",
+        "bytes": 12343
+      },
+      "cpu_canvas.mjs": {
+        "sha256": "71129c539e0b3bb6227aedda5e6434e94b95ba6cc811446c6ed9fb2feaba78bb",
+        "bytes": 2968
+      },
+      "source/airlock_policy.mjs": {
+        "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15",
+        "bytes": 2523
+      },
+      "source/horizontal_navigation.mjs": {
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406
+      },
+      "source/room_dressing_plan.mjs": {
+        "sha256": "3508293926fd6e9c5e95bef8af0c12c2ec727c02c83fb570f3c88617a1cb42f3",
+        "bytes": 9104
+      },
+      "source/room_dressing_render.mjs": {
+        "sha256": "30eb927f3f3047a0c9929bf3fc09766396200d9cc158eeb54a173b8dc6e82456",
+        "bytes": 15418
+      },
+      "source/scene_metadata.mjs": {
+        "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",
+        "bytes": 14706
+      },
+      "source/walk_controller.mjs": {
+        "sha256": "6939c804849f787b24e69391b7b8f4a33f527502ac7d8806609c46e922a80f89",
+        "bytes": 16354
+      },
+      "source_bindings.py": {
+        "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+        "bytes": 12098
+      },
+      "vendor/three/build/three.core.js": {
+        "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+        "bytes": 1403455
+      },
+      "vendor/three/build/three.module.js": {
+        "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+        "bytes": 603113
+      },
+      "vendor/three/examples/jsm/exporters/GLTFExporter.js": {
+        "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f",
+        "bytes": 86392
+      },
+      "vendor/three/examples/jsm/loaders/GLTFLoader.js": {
+        "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+        "bytes": 114739
+      },
+      "vendor/three/examples/jsm/utils/BufferGeometryUtils.js": {
+        "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+        "bytes": 35539
+      },
+      "vendor/three/LICENSE": {
+        "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+        "bytes": 1081
+      },
+      "vendor/three/package.json": {
+        "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+        "bytes": 4635
+      }
+    },
+    "external": {
+      "canvas-package": {
+        "sha256": "8379e15beeaecdedc863f8ff0e2548935eed4fb7505b93a207600a212d7bc2c5",
+        "bytes": 4651
+      },
+      "canvas-native": {
+        "sha256": "15ef069adcadd217e8fcc7512c1a3ffe98ddc8c9a4ea83ed92bd6810fa215151",
+        "bytes": 27310384
+      },
+      "font-segoe-regular": {
+        "sha256": "8134dbcd09e7b123c9a7f229d49cffbcb01352cc72ea5e1076b65d0dca9f73cd",
+        "bytes": 959752
+      },
+      "font-segoe-semibold": {
+        "sha256": "2d9b22d71f72de2823fee5d9c8bc1b0fc32b2577c4c27b9ec6abdbb8df0e1731",
+        "bytes": 974500
+      },
+      "font-monospace": {
+        "sha256": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179",
+        "bytes": 453088
+      },
+      "canvas/index.js": {
+        "sha256": "bbdad32cab670261983ea56d4625fc7d07b1382f8bb7d6d31232bb2834861597",
+        "bytes": 5808
+      },
+      "canvas/js-binding.js": {
+        "sha256": "be59c8d4888630cf88656f65b63dd150e60bdb1d5eab0ba5b47c0a6cb389533e",
+        "bytes": 12799
+      },
+      "canvas/geometry.js": {
+        "sha256": "2e0ae365059fdb0424ddd2da8401e240a250c52b7efca68680996a99e804c1a1",
+        "bytes": 19312
+      },
+      "canvas/load-image.js": {
+        "sha256": "b4527335ec1d0505daf51be5ef919a8f951fc8296d88f4c5016e6ce772971570",
+        "bytes": 5736
+      },
+      "node": {
+        "sha256": "3331e1ffe19874215472217c5e94f5a0c6d8e18c4ac7111d3937aa0ad5e9b4a5",
+        "bytes": 91694408
+      }
+    }
+  },
+  "recipe_eligibility": {
+    "contract": "bounded_authored_habitat_export_v1",
+    "room_count": 7,
+    "source_structure_recompiled": true,
+    "explicit_supported_roles": true,
+    "validator_sha256": "c7de67d95da9a8f0d1652a10ba1f56b644438f3c10df03b1a27c24177ec6ecc8",
+    "blueprint_compiler_sha256": "94b175bc95214e3a784ef871a3de46388a3356c5924e0871b7b031834eb6b5bc",
+    "unambiguous_structural_room_ownership": true,
+    "airlock_count": 1,
+    "eligibility_only": true,
+    "export_requires_pinned_builder_and_importer_pass": true,
+    "visual_or_owner_approval": false,
+    "engine_or_vr_runtime": false
+  },
+  "airlock_pairs": [
+    {
+      "id": "airlock_pair:airlock",
+      "contract": "paired_airlock_door_sequence_v1",
+      "source_room_id": "airlock",
+      "room_id": "room:airlock",
+      "door_ids": [
+        "door:opening_1",
+        "door:opening_2"
+      ],
+      "portal_ids": [
+        "opening_1",
+        "opening_2"
+      ],
+      "leaf_node_ids": [
+        "node:door_opening_1_leaf",
+        "node:door_opening_2_leaf"
+      ],
+      "opening_policy": {
+        "requires_peer": "closed_and_stopped",
+        "blocked_peer_conditions": [
+          "nonzero_angle",
+          "moving",
+          "nonzero_target",
+          "motion_held"
+        ]
+      },
+      "closing_policy": "existing_reach_motion_and_occupancy_rules",
+      "runtime_implemented_in": "source_preview_controller_only",
+      "engine_runtime_included": false,
+      "pressure_simulation": false,
+      "state_persistence": "session_local"
+    }
+  ],
+  "files": {
+    "ROUNDTRIP.json": {
+      "sha256": "538193a34bfbf2ec6c7a4167e30039ea95349cc6323df0e3e7335ee2e9ed892e",
+      "bytes": 6431
+    },
+    "scene.glb": {
+      "sha256": "eaddade7029871f2967f3ee08368749f4ec9784d316071f5d853a8d31f109b70",
+      "bytes": 979068
+    },
+    "scene.json": {
+      "sha256": "8b7ebff07f0b2f2914b388856b44875c247eae8434790ce63a8532ce6e43ddf2",
+      "bytes": 83335
+    }
+  },
+  "ui_models_gpu": 0,
+  "installed": false,
+  "visual_approval": false
+}

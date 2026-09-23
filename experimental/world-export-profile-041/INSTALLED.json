@@ -1,0 +1,71 @@
+{
+  "status": "041_EXACT_ROOT_APPROVED_INSTALL_PASS",
+  "created_utc": "2026-09-23T09:16:30.544526+00:00",
+  "authorization": "Parent root explicitly approved exact five-file041 REV3 installation, atomic replacements, protected-original checks and API-only preview/export validation. No UI input authorized.",
+  "install_plan_sha256": "954b2ca088c46987ad6bb7963c97afff79664ad1f0680ca6d9d7dd5882f9636a",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "before_sha256": "57f540edc9178b42d810ceac813afcdd360e30af4d71fc39aaf1b5690d9e5bf7",
+      "preimage": "@workspace\\work\\world-export-profile-041\\preimages\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-export-profile-041\\candidate\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+        "sha256": "538850748c99a39f2f929ac4ad77acf6355d892fcfbb54ba11febd57b0989ae8",
+        "bytes": 6303
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "before_sha256": "ef22e9c5dc2f1667118ae0b8002cf95e1b90b5e239977eefc4cc77a890dae192",
+      "preimage": "@workspace\\work\\world-export-profile-041\\preimages\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "after": {
+        "path": "@workspace\\work\\world-export-profile-041\\candidate\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+        "sha256": "f4d8c927dd2030af8ba960bf00f80103a797d81fd732c651e0a12d39527916bd",
+        "bytes": 4150
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_contract.json",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_contract.json",
+      "before_sha256": "82cc2623592200eddef309a37dde1f10aa7047e7d805af68e62952a44ca38635",
+      "preimage": "@workspace\\work\\world-export-profile-041\\preimages\\tools\\world_builder_engine\\layout_package_contract.json",
+      "after": {
+        "path": "@workspace\\work\\world-export-profile-041\\candidate\\tools\\world_builder_engine\\layout_package_contract.json",
+        "sha256": "fc59e92a8b5b2168b95ce3afbe45e9db2ca29cd146e6acb6f8826191e571eeb7",
+        "bytes": 3409
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_export.py",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_export.py",
+      "before_sha256": "3537f649b3f7754d85ff8169971d632e645352da605b38ae49b3389916e31df3",
+      "preimage": "@workspace\\work\\world-export-profile-041\\preimages\\tools\\world_builder_engine\\layout_package_export.py",
+      "after": {
+        "path": "@workspace\\work\\world-export-profile-041\\candidate\\tools\\world_builder_engine\\layout_package_export.py",
+        "sha256": "515722ee66ecfa6b3398930e812e9a27f04ec9b986f1bb366e23be69b71d3839",
+        "bytes": 11139
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_recipe_profile.py",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_recipe_profile.py",
+      "before_sha256": null,
+      "preimage": null,
+      "after": {
+        "path": "@workspace\\work\\world-export-profile-041\\candidate\\tools\\world_builder_engine\\layout_recipe_profile.py",
+        "sha256": "c7de67d95da9a8f0d1652a10ba1f56b644438f3c10df03b1a27c24177ec6ecc8",
+        "bytes": 5276
+      }
+    }
+  ],
+  "installed_files": 5,
+  "protected_original_files_unchanged": 116,
+  "atomic_per_file": true,
+  "rollback_needed": false,
+  "saved_previews_modified": false,
+  "native_ui_opened": false,
+  "gpu_model_calls": 0,
+  "next": "Fresh installed API export/importer verification; native UI review remains pending."
+}

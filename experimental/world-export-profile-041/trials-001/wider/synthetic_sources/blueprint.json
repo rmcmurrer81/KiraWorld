@@ -1,0 +1,162 @@
+{
+  "contract": "dimensioned_world_blueprint_v1",
+  "research_packet_sha256": "b2ca8bffc35666d5c1b40d7fc8ca37956a166dea9ef3a014b2782ca295dd2807",
+  "units": "meters",
+  "title": "Synthetic authored habitat wider",
+  "entry_room_id": "equipment_vestibule",
+  "rooms": [
+    {
+      "id": "equipment_vestibule",
+      "name": "Equipment Vestibule",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": -0.5,
+      "z": -9,
+      "width": 4,
+      "depth": 5,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": []
+    },
+    {
+      "id": "airlock",
+      "name": "Airlock",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 0,
+      "z": -4,
+      "width": 3,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 2.8,
+      "dimension_basis": "original_design",
+      "source_ids": []
+    },
+    {
+      "id": "operations",
+      "name": "Operations",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": -6,
+      "z": 0,
+      "width": 6,
+      "depth": 6,
+      "floor_y": 0,
+      "height": 3.2,
+      "dimension_basis": "original_design",
+      "source_ids": []
+    },
+    {
+      "id": "habitat",
+      "name": "Habitat",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 3,
+      "z": 0,
+      "width": 4,
+      "depth": 5,
+      "floor_y": 0,
+      "height": 2.9,
+      "dimension_basis": "original_design",
+      "source_ids": []
+    },
+    {
+      "id": "laboratory",
+      "name": "Laboratory",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": -4,
+      "z": 7,
+      "width": 4,
+      "depth": 5,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": []
+    },
+    {
+      "id": "observation",
+      "name": "Observation",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 3,
+      "z": 7,
+      "width": 3,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 2.7,
+      "dimension_basis": "original_design",
+      "source_ids": []
+    },
+    {
+      "id": "circulation",
+      "name": "Circulation",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 0,
+      "z": 0,
+      "width": 3,
+      "depth": 12,
+      "floor_y": 0,
+      "height": 3.2,
+      "dimension_basis": "original_design",
+      "source_ids": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "opening_1",
+      "room_a": "equipment_vestibule",
+      "room_b": "airlock",
+      "axis": "z",
+      "coordinate": -4,
+      "center": 1.5,
+      "width": 1.2,
+      "height": 2.2
+    },
+    {
+      "id": "opening_2",
+      "room_a": "airlock",
+      "room_b": "circulation",
+      "axis": "z",
+      "coordinate": 0,
+      "center": 1.5,
+      "width": 1.2,
+      "height": 2.2
+    },
+    {
+      "id": "opening_3",
+      "room_a": "operations",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 0,
+      "center": 3,
+      "width": 1.2,
+      "height": 2.2
+    },
+    {
+      "id": "opening_4",
+      "room_a": "habitat",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 3,
+      "center": 2.5,
+      "width": 1.2,
+      "height": 2.2
+    },
+    {
+      "id": "opening_5",
+      "room_a": "laboratory",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 0,
+      "center": 9.5,
+      "width": 1.2,
+      "height": 2.2
+    },
+    {
+      "id": "opening_6",
+      "room_a": "observation",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 3,
+      "center": 9,
+      "width": 1.2,
+      "height": 2.2
+    }
+  ]
+}

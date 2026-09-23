@@ -2,7 +2,7 @@
   "contract": "authored_saved_layout_package_v2",
   "status": "experimental",
   "selection": "An explicit saved job and its own verified preview binding; no globally newest project lookup.",
-  "supported_recipe": "Pinned authored_habitat_equipment_plan_v1 meshes/materials, preview_hinged_doors_v2 and explicit paired_airlock_door_sequence_v1 policy, with bounded authored geometry eligibility rather than a single Mars fixture digest.",
+  "supported_recipe": "Pinned authored habitat recipe plus preview_hinged_doors_v2 and explicit paired_airlock_door_sequence_v1 policy; original Mars geometry validation scope remains unchanged.",
   "validation_scope": "No exact geometry allowlist. A bounded authored habitat profile independently recompiles the bound blueprint, verifies supported roles/topology/dimensions and unambiguous structural room ownership. Eligibility is only permission to attempt the pinned builder/importer; readiness requires all actual checks.",
   "input": {
     "job_dir": "Existing immediate saved research job under this installation",
@@ -61,5 +61,6 @@
     "engine_runtime_included": false,
     "pressure_simulation": false
   },
-  "eligibility_profile": "bounded_authored_habitat_export_v1"
+  "eligibility_profile": "bounded_authored_habitat_export_v1",
+  "candidate_status": "isolated_not_installed_pending_new_shape_actual_exports"
 }
