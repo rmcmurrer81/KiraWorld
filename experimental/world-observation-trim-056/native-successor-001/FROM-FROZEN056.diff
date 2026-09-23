@@ -1,0 +1,11 @@
+--- frozen056/tools/world_builder_engine/layout_package_export.py
++++ successor056/tools/world_builder_engine/layout_package_export.py
+@@ -12,7 +12,7 @@
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+ CONTRACT='authored_saved_layout_package_v2'
+ RENDERER={
+- 'viewer.mjs':'f8b14f8cf1fec001541b3719246fa603d5985a5b45c0b86a62e67eb1601c405c',
++ 'viewer.mjs':'0b6988db28bd16d1388c1cd54d004cc07ef0dfd86fc9b44c8c6f4cff833de07b',
+  'walk_controller.mjs':'05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f',
+  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',

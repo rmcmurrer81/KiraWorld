@@ -1,0 +1,34 @@
+{
+  "status": "HELD_NATIVE_TRIM_ARTIFACT_NOT_INSTALL_APPROVAL",
+  "install_plan_sha256": "5e6384c3d1bb3d617d1f10e4bb71359e7ee1e50021654bf8096850145dcf7f43",
+  "source_diff_sha256": "4e2d4a7d2bfdb8c3c7a47f5e13cd5080ce10712210cd094d18a8dadad0cf530a",
+  "candidate_backend_sha256": "2eb2084f43c9fd33d2af90010bab3669d4320a34eee395e8305d60c645fe93d7",
+  "preview_manifest_path": "@workspace\\work\\world-observation-exclusion-055\\runtime_context\\Data\\world_layout_previews\\layout-2d67f8a030778e0923b2ab1f\\manifest.json",
+  "preview_manifest_sha256": "030630f58adc362cb62253d17f912f1196349412f4023877fa8dfb15dce3dc20",
+  "job_id": "world_research_c391ffbffc7352612392",
+  "presentation_setting": {
+    "contract": "bound_original_exterior_presentation_v1",
+    "setting": "mars_surface",
+    "reason": "explicit_original_mars_base_request",
+    "source": {
+      "job_id": "world_research_c391ffbffc7352612392",
+      "brief_sha256": "c391ffbffc7352612392f65bbf3a004429c1e6bcb2ec1aa125ad0a2da289527d",
+      "request_sha256": "599a0d554ce58e9d3ea02f2d3e99e927b7059fbf5e880a8db339032ba9b63d41",
+      "research_packet_sha256": "e0cc4cb1cda3c5937ecf28aac9bd9e17f5d9799f279c6a523e63fe08f146d71f"
+    }
+  },
+  "reviewed_at": "2026-09-23T15:17:06.009442+00:00",
+  "native_browser_review": true,
+  "source_review": true,
+  "installed": false,
+  "observations": [
+    "Ordinary step/turn/door buttons only; no injected camera or controller. Equipment Vestibule -> Primary Airlock, rear door closed, inner door opened, corridor -> Science Lab detour -> Viewport Deck -> corridor.",
+    "Actual window is transparent to simple brown procedural terrain with grey sky; frame/gasket/reveal and adjacent nonintersecting rib visible.",
+    "Forward movement stopped at window at22.8m total distance with Wall or low ceiling status; second forward attempt retained22.8m; backing out through deck door worked.",
+    "White top and bottom frame trim exhibits striped/flickering lines at middle distance varying with camera: suspected coplanar geometry; hold pending056 correction.",
+    "Preview retains simple materials/lighting and repetitive panels; not photorealistic or owner-approved.",
+    "Paired airlock opening after rear closure worked; explicit simultaneous-opening rejection not separately exercised in this native run.",
+    "Loopback server closed at600.28sec without source/owner changes. Loaded browser scene continued locally; no second server launched. Tab closed and temporary1280x800 viewport reset."
+  ],
+  "root014_and015_sessions_closed": true
+}

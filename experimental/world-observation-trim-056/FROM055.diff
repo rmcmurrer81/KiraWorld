@@ -1,0 +1,39 @@
+--- 055/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs
++++ 056/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs
+@@ -54,7 +54,9 @@
+       p[along]=center;p[1]=(bottom+top)/2+edge*(h-border)/2;s[along]=w-2*border;s[1]=border;box(viewport.wall_id+'_'+label+'_horizontal_'+edge,s,p,mat);
+     }
+   }
+-  ring('reveal',.036,thickness,0,width,height,materials.basic.metal);
++  // The reveal starts at the frame's back, not at its coplanar front.
++  // Both parts stay within the original wall bounds and meet without overlap.
++  ring('reveal',.036,thickness-.026,sign*.013,width,height,materials.basic.metal);
+   ring('inner_frame',.07,.026,-sign*(thickness/2-.013),width,height,materials.basic.ivory);
+   ring('glazing_gasket',.016,.018,sign*(thickness/2-.028),width-.072,height-.072,materials.basic.rubber);
+   const size=[.01,.01,.01],position=[...primitive.position];size[axis]=.008;size[along]=width-.10;size[1]=height-.10;position[axis]=coordinate+sign*(thickness/2-.028);position[along]=center;position[1]=(bottom+top)/2;
+--- 055/tools/world_builder_engine/viewer.mjs
++++ 056/tools/world_builder_engine/viewer.mjs
+@@ -185,7 +185,9 @@
+       p[along]=center;p[1]=(bottom+top)/2+edge*(h-border)/2;s[along]=w-2*border;s[1]=border;box(viewport.wall_id+'_'+label+'_horizontal_'+edge,s,p,mat);
+     }
+   }
+-  ring('reveal',.036,thickness,0,width,height,materials.basic.metal);
++  // The reveal starts at the frame's back, not at its coplanar front.
++  // Both parts stay within the original wall bounds and meet without overlap.
++  ring('reveal',.036,thickness-.026,sign*.013,width,height,materials.basic.metal);
+   ring('inner_frame',.07,.026,-sign*(thickness/2-.013),width,height,materials.basic.ivory);
+   ring('glazing_gasket',.016,.018,sign*(thickness/2-.028),width-.072,height-.072,materials.basic.rubber);
+   const size=[.01,.01,.01],position=[...primitive.position];size[axis]=.008;size[along]=width-.10;size[1]=height-.10;position[axis]=coordinate+sign*(thickness/2-.028);position[along]=center;position[1]=(bottom+top)/2;
+--- 055/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json
++++ 056/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json
+@@ -26,8 +26,8 @@
+       "bytes": 9104
+     },
+     "source/room_dressing_render.mjs": {
+-      "sha256": "890a2dc1952ee6fd3306c84f5b147b6889f94789f13a50f09d800f5bf9fc2d08",
+-      "bytes": 33433
++      "sha256": "5b88a9f32f5de5ca5efe95d5c6b125e9cd512bc27e416eb833934c2b97ca9a48",
++      "bytes": 33596
+     },
+     "source/scene_metadata.mjs": {
+       "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",

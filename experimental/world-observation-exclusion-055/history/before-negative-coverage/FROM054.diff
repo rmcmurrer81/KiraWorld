@@ -1,0 +1,15 @@
+--- candidate054/world_layout_preview.py
++++ candidate055/world_layout_preview.py
+@@ -269,7 +269,11 @@
+     # invented exterior; this intentionally bounded grammar is not an LLM guess.
+     clean = re.sub(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\'[^\'\n]*\'(?!\w)', ' ', prompt).strip().lower()
+     conflict = re.search(r'\b(?:orbit(?:al|ing)?|spacecraft|spaceship|space\s+station|lunar|moon|earth)\b',clean)
+-    denied = re.search(r"\b(?:don't|do not|not|no|without)\b[^.!?]*\b(?:mars|ground|terrain|surface|exterior)\b",clean)
++    exterior_object = r'(?:(?:a|an|any|the|realistic|procedural|new)\s+){0,3}(?:(?:outdoor|outside|exterior)\s+)?(?:landscapes?|scenery|terrain|ground|surface|exterior|view|mars(?:\s+surface)?(?:\s+(?:base|habitat))?)\b'
++    negative_action = r"\b(?:don't|do not|never)\s+(?:(?:ever|automatically)\s+)?(?:show|create|add|generate|include|draw|render|put|make|build)\s+"
++    denied = (re.search(negative_action+exterior_object,clean) or
++              re.search(r'\b(?:no|without)\s+'+exterior_object,clean) or
++              re.search(r'\bnot\s+(?:on\s+)?(?:the\s+)?(?:ground|surface|mars)\b',clean))
+     direct = re.match(r'^(?:please\s+)?(?:build|create|make|design)\s+(?:(?:an?|original|photorealistic|realistic|science-fiction|sci-fi|new)\s+){1,8}(?:mars(?:\s+surface)?\s+(?:base|habitat)|(?:base|habitat)\s+on\s+mars)\b',clean)
+     if direct and not conflict and not denied:
+         result.update(setting='mars_surface',reason='explicit_original_mars_base_request')

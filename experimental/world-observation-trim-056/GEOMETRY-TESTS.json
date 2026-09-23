@@ -1,0 +1,1564 @@
+{
+  "status": "PASS",
+  "cases": 14,
+  "rays": 630,
+  "checks": [
+    {
+      "title": "Original Mars habitat",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "observation",
+        "wall_id": "observation_east_0",
+        "safety_collider_id": "observation_east_0",
+        "side": "east",
+        "axis": 0,
+        "along": 2,
+        "sign": 1,
+        "coordinate": 6,
+        "center": 9.97625,
+        "bottom": 0.95,
+        "top": 2.15,
+        "width": 1.5,
+        "thickness": 0.15000000000000036,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.1843199965286253,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04319999985694878
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.0312000018835068
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04319999985694878
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.0312000018835068
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "Orbital spacecraft habitat",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "observation",
+        "wall_id": "observation_east_0",
+        "safety_collider_id": "observation_east_0",
+        "side": "east",
+        "axis": 0,
+        "along": 2,
+        "sign": 1,
+        "coordinate": 6,
+        "center": 9.97625,
+        "bottom": 0.95,
+        "top": 2.15,
+        "width": 1.5,
+        "thickness": 0.15000000000000036,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.1843199965286253,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04319999985694878
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.0312000018835068
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04319999985694878
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.0312000018835068
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "east 0.12m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_east_0",
+        "safety_collider_id": "lookout_east_0",
+        "side": "east",
+        "axis": 0,
+        "along": 2,
+        "sign": 1,
+        "coordinate": 9,
+        "center": -3,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.12,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834305
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834305
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.031199999952315507
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834305
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834305
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.031199999952315507
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03535999891281045
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03535999891281045
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "east 0.15m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_east_0",
+        "safety_collider_id": "lookout_east_0",
+        "side": "east",
+        "axis": 0,
+        "along": 2,
+        "sign": 1,
+        "coordinate": 9,
+        "center": -3,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.15,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "east 0.3m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_east_0",
+        "safety_collider_id": "lookout_east_0",
+        "side": "east",
+        "axis": 0,
+        "along": 2,
+        "sign": 1,
+        "coordinate": 9,
+        "center": -3,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.3,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "west 0.12m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_west_0",
+        "safety_collider_id": "lookout_west_0",
+        "side": "west",
+        "axis": 0,
+        "along": 2,
+        "sign": -1,
+        "coordinate": 3,
+        "center": -3,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.12,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834465
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834465
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.031199999952316038
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834465
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834465
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.031199999952316038
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03535999891281106
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03535999891281106
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "west 0.15m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_west_0",
+        "safety_collider_id": "lookout_west_0",
+        "side": "west",
+        "axis": 0,
+        "along": 2,
+        "sign": -1,
+        "coordinate": 3,
+        "center": -3,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.15,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "west 0.3m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_west_0",
+        "safety_collider_id": "lookout_west_0",
+        "side": "west",
+        "axis": 0,
+        "along": 2,
+        "sign": -1,
+        "coordinate": 3,
+        "center": -3,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.3,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.043199999856948765
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.03120000188350679
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.04895999840736387
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "north 0.12m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_north_0",
+        "safety_collider_id": "lookout_north_0",
+        "side": "north",
+        "axis": 2,
+        "along": 0,
+        "sign": 1,
+        "coordinate": 1,
+        "center": 6,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.12,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.031199999952316173
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834505
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834505
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.031199999952316173
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834505
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834505
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.035359998912811205
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.035359998912811205
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "north 0.15m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_north_0",
+        "safety_collider_id": "lookout_north_0",
+        "side": "north",
+        "axis": 2,
+        "along": 0,
+        "sign": 1,
+        "coordinate": 1,
+        "center": 6,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.15,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "north 0.3m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_north_0",
+        "safety_collider_id": "lookout_north_0",
+        "side": "north",
+        "axis": 2,
+        "along": 0,
+        "sign": 1,
+        "coordinate": 1,
+        "center": 6,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.3,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": -1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "south 0.12m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_south_0",
+        "safety_collider_id": "lookout_south_0",
+        "side": "south",
+        "axis": 2,
+        "along": 0,
+        "sign": -1,
+        "coordinate": -7,
+        "center": 6,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.12,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.031199999952316572
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834625
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834625
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.031199999952316572
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999210834625
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999210834625
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03535999891281166
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03535999891281166
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "south 0.15m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_south_0",
+        "safety_collider_id": "lookout_south_0",
+        "side": "south",
+        "axis": 2,
+        "along": 0,
+        "sign": -1,
+        "coordinate": -7,
+        "center": 6,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.15,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    },
+    {
+      "title": "south 0.3m wall shifted floor",
+      "viewport": {
+        "contract": "authored_observation_viewport_v1",
+        "room_id": "lookout",
+        "wall_id": "lookout_south_0",
+        "safety_collider_id": "lookout_south_0",
+        "side": "south",
+        "axis": 2,
+        "along": 0,
+        "sign": -1,
+        "coordinate": -7,
+        "center": 6,
+        "bottom": 3.25,
+        "top": 4.45,
+        "width": 1.5,
+        "thickness": 0.3,
+        "nontraversable": true,
+        "pressure_simulation": false
+      },
+      "front_overlap_area_before": 0.18431999652862527,
+      "after": 0,
+      "paired_faces": [
+        {
+          "member": "vertical_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": -1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "vertical_1",
+          "before_coincident_faces": [
+            {
+              "axis": 0,
+              "sign": 1,
+              "area": 0.03120000188350679
+            },
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.0009359999790191642
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.043199999856948765
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_-1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": -1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        },
+        {
+          "member": "horizontal_1",
+          "before_coincident_faces": [
+            {
+              "axis": 1,
+              "sign": 1,
+              "area": 0.03536000110149384
+            },
+            {
+              "axis": 2,
+              "sign": 1,
+              "area": 0.04895999840736387
+            }
+          ],
+          "after_coincident_faces": []
+        }
+      ],
+      "bounds_and_collider_unchanged": true,
+      "unchanged_nonreveal_meshes": 13
+    }
+  ],
+  "preview_export_share_exact_module": true,
+  "models_GPU_UI": 0,
+  "visual_flicker_resolution_claim": false
+}

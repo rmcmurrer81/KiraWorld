@@ -1,0 +1,166 @@
+{
+  "status": "055_BOUND_SETTING_TESTS_PASS",
+  "cases": [
+    {
+      "case": "direct Mars base",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "polite Mars habitat",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "content negative",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "on Mars",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "orbital",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "Mars orbit",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "Earth analog",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "quoted source",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "quoted full command",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "quoted title",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "negated",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "ground denied",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "unknown",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "research request",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "landscape exclusion",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "outdoor scenery exclusion",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "scenery without",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "no landscape",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "positive landforms",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "unrelated negative then landscape",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "unrelated negative then scenery",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "quoted exclusion is data",
+      "expected": "mars_surface",
+      "actual": "mars_surface"
+    },
+    {
+      "case": "use excluded",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "want excluded",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "not terrain",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "negative view",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "near Mars",
+      "expected": "unspecified",
+      "actual": "unspecified"
+    },
+    {
+      "case": "tampered hash-bound brief",
+      "held": true
+    },
+    {
+      "case": "absent brief",
+      "setting": "unspecified"
+    },
+    {
+      "case": "claimed Mars without immutable source snapshot",
+      "held": true
+    }
+  ],
+  "synthetic_compatible_layouts": 2,
+  "actual_saved_brief_setting": {
+    "contract": "bound_original_exterior_presentation_v1",
+    "setting": "mars_surface",
+    "reason": "explicit_original_mars_base_request",
+    "source": {
+      "job_id": "world_research_c391ffbffc7352612392",
+      "brief_sha256": "c391ffbffc7352612392f65bbf3a004429c1e6bcb2ec1aa125ad0a2da289527d",
+      "request_sha256": "599a0d554ce58e9d3ea02f2d3e99e927b7059fbf5e880a8db339032ba9b63d41",
+      "research_packet_sha256": "e0cc4cb1cda3c5937ecf28aac9bd9e17f5d9799f279c6a523e63fe08f146d71f"
+    }
+  },
+  "original_brief_exported": false,
+  "source_or_canonical_writes": false
+}

@@ -1,0 +1,104 @@
+{
+  "status": "056_EXACT_SEVEN_FILE_INSTALL_PASS",
+  "installed_files": 7,
+  "atomic_per_file": true,
+  "rollback_needed": false,
+  "protected_original_files_unchanged": 116,
+  "created_utc": "2026-09-23T15:49:40.652430+00:00",
+  "install_plan_sha256": "aac304b936d23771afd8f41e39660b04808b3317d75b12e8c638febcff61ce2c",
+  "explicit_operation": "apply",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/viewer.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\viewer.mjs",
+      "before_sha256": "719bf5dab61b9a3cda78d5805f77a1cf507b819b9bdaf5b16a0d6e0b9b24a299",
+      "preimage": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\canonical-preimages\\tools\\world_builder_engine\\viewer.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\candidate\\tools\\world_builder_engine\\viewer.mjs",
+        "sha256": "0b6988db28bd16d1388c1cd54d004cc07ef0dfd86fc9b44c8c6f4cff833de07b",
+        "bytes": 52112
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/world_layout_preview.py",
+      "target": "@kira_root\\tools\\world_builder_engine\\world_layout_preview.py",
+      "before_sha256": "fc9ead65889ea7eb011dc8278047704fa212f4c5536811b9f6971c6078180c21",
+      "preimage": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\canonical-preimages\\tools\\world_builder_engine\\world_layout_preview.py",
+      "after": {
+        "path": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\candidate\\tools\\world_builder_engine\\world_layout_preview.py",
+        "sha256": "2eb2084f43c9fd33d2af90010bab3669d4320a34eee395e8305d60c645fe93d7",
+        "bytes": 29719
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+      "before_sha256": "9ef627b8e4e99bbe09f1a49dcc5470742c4012f1efe1fb280e4001de7b5f37d2",
+      "preimage": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\canonical-preimages\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\candidate\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+        "sha256": "5b88a9f32f5de5ca5efe95d5c6b125e9cd512bc27e416eb833934c2b97ca9a48",
+        "bytes": 33596
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "before_sha256": "7aa1758187ece336d064da444cd553281a99573bc7067d5ffd87cd66c1c11c5d",
+      "preimage": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\canonical-preimages\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\candidate\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+        "sha256": "538e46e1468a5cba1855c018a463dbc1a342b7f84367e160fa8a0ff1def1e997",
+        "bytes": 6574
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/build_glb.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\build_glb.mjs",
+      "before_sha256": "e4657ee4eed51925e2cb1ca4fcb0d4f20c8eb013365e9ed236dbf65c70bd9263",
+      "preimage": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\canonical-preimages\\tools\\world_builder_engine\\layout_package_assets\\build_glb.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\candidate\\tools\\world_builder_engine\\layout_package_assets\\build_glb.mjs",
+        "sha256": "7ce5c81917ff9dc3cd51a038144e2fe33f5cf693720de1ad30bb220567c6a588",
+        "bytes": 12413
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_export.py",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_export.py",
+      "before_sha256": "893dfe5092efce4b59f401b9e3ae4f92695e858944f7532a8bbcd5723cd838cb",
+      "preimage": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\canonical-preimages\\tools\\world_builder_engine\\layout_package_export.py",
+      "after": {
+        "path": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\candidate\\tools\\world_builder_engine\\layout_package_export.py",
+        "sha256": "0d1ad489d88f488bb852dc1ac8a744b078487d27fed85efba2b0c74a336cba76",
+        "bytes": 11334
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "before_sha256": "5a63e98872aa860cffa8915ec8800edb5e7621a0b675c476e44592a882f50bf5",
+      "preimage": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\canonical-preimages\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "after": {
+        "path": "@workspace\\work\\world-observation-trim-056\\native-successor-001\\candidate\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+        "sha256": "372cb7769f4f5f9e5c13b57f4de569e37c8adb7eadae209586bb3b721b1888f1",
+        "bytes": 4150
+      }
+    }
+  ],
+  "saved_previews_modified": false,
+  "native_ui_models_gpu": 0,
+  "root_review": {
+    "path": "work\\world-observation-trim-056\\native-successor-001\\installation\\ROOT-INSTALL-REVIEW.json",
+    "sha256": "4466c0ba1638dfb10378a272ecd54460b4b6c237dcb44e8cb26a528a3a7ee24a",
+    "status": "ROOT_APPROVED_056_INSTALL"
+  },
+  "presentation_provenance": {
+    "preview_manifest_sha256": "ace98920465cbd662e5b60d372f2941f59963f555625bad22b5b045e149a32b4",
+    "job_id": "world_research_c391ffbffc7352612392",
+    "brief_sha256": "c391ffbffc7352612392f65bbf3a004429c1e6bcb2ec1aa125ad0a2da289527d",
+    "setting": "mars_surface",
+    "raw_brief_returned": false
+  },
+  "authorization": "Explicit root authorization must precede invoking the exact-hash apply or rollback command; matching arguments and receipts are guards, not independent authorization."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PUBLIC056_SYNTHETIC_CLOSURE_PASS",
+  "results": [
+    {
+      "package": "world-observation-exclusion-055",
+      "result": {
+        "status": "055_BOUND_SETTING_TESTS_PASS",
+        "cases": 30,
+        "compatible_layouts": 2,
+        "actual_setting": "not_read_in_synthetic_only_test"
+      }
+    },
+    {
+      "package": "world-observation-trim-056",
+      "result": {
+        "status": "PASS",
+        "cases": 14,
+        "rays": 630
+      }
+    },
+    {
+      "package": "world-observation-trim-056/native-successor-001",
+      "result": {
+        "status": "056_INSTALLER_TEMP_FIXTURES_PASS",
+        "test_methods": 14,
+        "failures": 0,
+        "errors": 0,
+        "canonical_or_owner_writes": 0,
+        "real_installation": false
+      }
+    }
+  ],
+  "synthetic_fixture_sha256": "00ce2226e19dc0d0543d059b6f21fddbc3cbcf4ae4ebc4c6e5fcdc88f20cc8e2",
+  "owner_data_reads_writes": 0,
+  "models_GPU_UI_servers_exports": 0,
+  "native_visual_or_owner_approval": false
+}

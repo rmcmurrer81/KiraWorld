@@ -1,0 +1,51 @@
+{
+  "files": {
+    "@workspace\\work\\world-observation-trim-056\\DELIVERY.json": {
+      "sha256": "9825ad3663c88b51f3cfa9a0bacad50b8b0c27d7527510952d57c115c8cfd844",
+      "bytes": 916
+    },
+    "@workspace\\work\\world-observation-trim-056\\FROZEN-MANIFEST.json": {
+      "sha256": "a2cb34d33ca6f55141c0d38716aceab7f76d70be3d54c55bc32bc5ccf6179a33",
+      "bytes": 6754
+    },
+    "@workspace\\work\\world-observation-trim-056\\GEOMETRY-TESTS.json": {
+      "sha256": "59060b191916a5237b07369730859a6af465aefe1170b78598f509c94343469f",
+      "bytes": 39416
+    },
+    "@workspace\\work\\world-observation-trim-056\\prepare_native.py": {
+      "sha256": "3f2a85b200ba493b65c08fa7320e17a09f428154b259e5ae4567ed7bc045cb73",
+      "bytes": 5991
+    },
+    "@workspace\\work\\world-observation-trim-056\\prepare_successor.py": {
+      "sha256": "cf6bfae4a0dea357af1e65a9558313f703886c77e245a64420e817af96ff9947",
+      "bytes": 3468
+    },
+    "@workspace\\work\\world-observation-trim-056\\prepare_review.py": {
+      "sha256": "358069c189a528c26c0638f9c4aa733bee5ea67ef325a0cb7d26031ae1a206c6",
+      "bytes": 6219
+    },
+    "@workspace\\work\\world-observation-trim-056\\installation\\install_exact.py": {
+      "sha256": "936a833215adfdca8d4ac0797e634d6b5862344360328303f61f9b5e7c39cfd6",
+      "bytes": 11907
+    },
+    "@workspace\\work\\world-observation-trim-056\\installation\\test_installer.py": {
+      "sha256": "9966e1e46545cd22aace5ddf48ace9c859ee79e249d4cc67566317875e3178fd",
+      "bytes": 8133
+    },
+    "@workspace\\work\\world-observation-trim-056\\installation\\INSTALLER-TEST-RESULT.json": {
+      "sha256": "265fc509357b70ec00d2ebc0ec3b42c1e2c375865c25371171b1c1835f28f989",
+      "bytes": 177
+    },
+    "@workspace\\work\\world-observation-exclusion-055\\DELIVERY.json": {
+      "sha256": "249a5ab94721a70551b9d57052ffb4d7479dd26d9e9bdd58c60bf0908d22fa83",
+      "bytes": 784
+    },
+    "@workspace\\work\\world-observation-exclusion-055\\FROZEN-MANIFEST.json": {
+      "sha256": "e6ac137a69c56819b93eb7afe1c788261ecb1f651cb33e1b99bfea29fb515981",
+      "bytes": 12566
+    }
+  },
+  "private_runtime_context_excluded_from_public_backup": true,
+  "recovery": "Frozen055 plus frozen056 geometry overlay and this successor export pin; includes full22 source inventory and seven canonical051 preimages.",
+  "geometry_tests_reused": "The source export pin is the sole difference from the tested056 geometry;14 cases630 rays were not relabeled as a second run."
+}

@@ -1,0 +1,35 @@
+{
+  "status": "055_EXCLUSION_FIX_PREPARED_UNINSTALLED_NATIVE_REVIEW_PENDING",
+  "created_utc": "2026-09-23T14:44:55.602511+00:00",
+  "root_finding_source": {
+    "path": "@workspace\\work\\world-public025-independent-review-001\\REVIEW.json",
+    "sha256": "556d5ea41553f5348e0be5f17da251db99148f5313a88aa17543154466352d5c"
+  },
+  "reproduced_before_after": [
+    {
+      "synthetic_request": "Build an original Mars base. Do not show a landscape beyond the window.",
+      "054": "mars_surface",
+      "055": "unspecified"
+    },
+    {
+      "synthetic_request": "Build an original Mars base. Do not create outdoor scenery.",
+      "054": "mars_surface",
+      "055": "unspecified"
+    }
+  ],
+  "only_production_delta_from054": [
+    "tools/world_builder_engine/world_layout_preview.py"
+  ],
+  "all_other_six_files_exact054": true,
+  "plan_sha256": "5e6384c3d1bb3d617d1f10e4bb71359e7ee1e50021654bf8096850145dcf7f43",
+  "python_binding_checks": 30,
+  "js_setting_cases": 27,
+  "temporary_installer_test_methods": 12,
+  "actual_preview_manifest_sha256": "030630f58adc362cb62253d17f912f1196349412f4023877fa8dfb15dce3dc20",
+  "actual_export_repeated": false,
+  "native_visual_review_pending": true,
+  "owner_visual_approval": false,
+  "canonical_or_original_writes": 0,
+  "protected_originals": 116,
+  "gpu_models_ui_server_launches": 0
+}

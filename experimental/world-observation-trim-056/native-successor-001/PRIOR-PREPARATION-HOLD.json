@@ -1,0 +1,11 @@
+{
+  "status": "FROZEN056_NATIVE_PREPARATION_HELD",
+  "original_delivery_sha256": "9825ad3663c88b51f3cfa9a0bacad50b8b0c27d7527510952d57c115c8cfd844",
+  "command": "C:/Python314/python.exe -X utf8 -B work/world-observation-trim-056/prepare_review.py",
+  "exit_code": 1,
+  "observed_error": "ExportHeld: This saved preview uses an unsupported appearance version. Open current preview, then export again.",
+  "cause": "layout_package_export.RENDERER retained the old viewer digest while056 changed the copied viewer. No guard was bypassed; the successor refreshes only that constant.",
+  "original_candidate_modified": false,
+  "server_started": false,
+  "installed": false
+}

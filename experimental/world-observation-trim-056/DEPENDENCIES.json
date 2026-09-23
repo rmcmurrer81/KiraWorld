@@ -1,0 +1,36 @@
+{
+  "base": "../world-observation-exclusion-055",
+  "files": {
+    "DELIVERY.json": {
+      "sha256": "249a5ab94721a70551b9d57052ffb4d7479dd26d9e9bdd58c60bf0908d22fa83",
+      "bytes": 784
+    },
+    "FROZEN-MANIFEST.json": {
+      "sha256": "e6ac137a69c56819b93eb7afe1c788261ecb1f651cb33e1b99bfea29fb515981",
+      "bytes": 12566
+    },
+    "CANDIDATE-CLOSURE.json": {
+      "sha256": "fe8ccc9932891e0fe9fd8c1b9ad64a6802332b7b1fec8ce3b8b2fc40f65e9cb7",
+      "bytes": 4175
+    },
+    "INSTALL-PLAN.json": {
+      "sha256": "5e6384c3d1bb3d617d1f10e4bb71359e7ee1e50021654bf8096850145dcf7f43",
+      "bytes": 28828
+    },
+    "SOURCE-PINS.json": {
+      "sha256": "0d97a4400c272caff57c696f50d7c176756b5e6b8172f4725cea4c7801b6eb52",
+      "bytes": 4447
+    }
+  },
+  "baseline_module": {
+    "path": "../world-observation-exclusion-055/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+    "sha256": "890a2dc1952ee6fd3306c84f5b147b6889f94789f13a50f09d800f5bf9fc2d08",
+    "bytes": 33433
+  },
+  "node": {
+    "path": "C:/Program Files/nodejs/node.exe",
+    "sha256": "3331e1ffe19874215472217c5e94f5a0c6d8e18c4ac7111d3937aa0ad5e9b4a5",
+    "bytes": 91694408
+  },
+  "recovery": "Frozen055 full 22-file candidate plus the three056 overlay files recreates this candidate; no runtime_context, private brief, owner geometry or copied preview is required for CPU tests."
+}

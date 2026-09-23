@@ -1,0 +1,407 @@
+[
+  {
+    "case": "direct Mars base",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_605a0fc9244c0ce9dfcb",
+        "brief_sha256": "605a0fc9244c0ce9dfcbd0b456c94349eee60646002c393a27c254c200a1cbd1",
+        "request_sha256": "fbbc8307b1ea3b51ead81637408c1fdafd05e7f617bca1e80a9c2c9929cd8b74",
+        "research_packet_sha256": "d5221267c37bf09be69fcbb01aba4edc3f390fb4260df915b615c4c04f58feb2"
+      }
+    },
+    "packet_sha256": "d5221267c37bf09be69fcbb01aba4edc3f390fb4260df915b615c4c04f58feb2"
+  },
+  {
+    "case": "polite Mars habitat",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_41fa982a5f3d53ea8627",
+        "brief_sha256": "41fa982a5f3d53ea86271bfa26eb996d5350824246d37ef03e55ab8f06e908fc",
+        "request_sha256": "f94c75cf41c70f8e8e8e0598953ba6f20de9c5520ebf046fd3872779b251c806",
+        "research_packet_sha256": "6fc1dd28b20dba95bd206ad565e78e9b9882d8a9c44443d195873c5acbff0956"
+      }
+    },
+    "packet_sha256": "6fc1dd28b20dba95bd206ad565e78e9b9882d8a9c44443d195873c5acbff0956"
+  },
+  {
+    "case": "content negative",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_9a5238bdd536cd5fa3da",
+        "brief_sha256": "9a5238bdd536cd5fa3da663cdf435367b4a2eeec1f5e99e4354beb001765581e",
+        "request_sha256": "c6b52f48a2b5e0ffd58e3a0e020e8be526c3c962835b548e6459e27ddab37353",
+        "research_packet_sha256": "93aa3638341cc60d8bdb4c220eac111151fc416fc1e2cedf8d7d7a1c1f596882"
+      }
+    },
+    "packet_sha256": "93aa3638341cc60d8bdb4c220eac111151fc416fc1e2cedf8d7d7a1c1f596882"
+  },
+  {
+    "case": "on Mars",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_57bcce9c13d382fd87bb",
+        "brief_sha256": "57bcce9c13d382fd87bb3183741df91e885d7914778df7994a246414bc904eb5",
+        "request_sha256": "b10b6bd836e965f7d021ed1b5038c130139292304c1b8d15cac5ec3f378e949f",
+        "research_packet_sha256": "c6899adec39da1bc79651717a8232778b077b3bcc4fb2ac9abd1bf7e291cb452"
+      }
+    },
+    "packet_sha256": "c6899adec39da1bc79651717a8232778b077b3bcc4fb2ac9abd1bf7e291cb452"
+  },
+  {
+    "case": "orbital",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_f5e1f3a419306e78b66f",
+        "brief_sha256": "f5e1f3a419306e78b66f589100502d993d4777457706d7491c6057e2db4d4912",
+        "request_sha256": "05ba8cd856dd9551affa9e28e1e0d45fa54bd144d7a571fffcb4d912e3aae72c",
+        "research_packet_sha256": "ebeb474edb0abb5586b96caedcbc5fa2b515b7f7680996e583bb952735578b08"
+      }
+    },
+    "packet_sha256": "ebeb474edb0abb5586b96caedcbc5fa2b515b7f7680996e583bb952735578b08"
+  },
+  {
+    "case": "Mars orbit",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_bb8c38bb870b9a98e919",
+        "brief_sha256": "bb8c38bb870b9a98e91948a2450d12633efb10cee828373796db82ead2986c45",
+        "request_sha256": "eac4c47e0ed6dc929f4520f113599f910add1db1ab7521091ad0e5c14e363f26",
+        "research_packet_sha256": "10584027589e2783fb8fabefa8bfa56c4c69d640c9f2809fbbce472fc6139719"
+      }
+    },
+    "packet_sha256": "10584027589e2783fb8fabefa8bfa56c4c69d640c9f2809fbbce472fc6139719"
+  },
+  {
+    "case": "Earth analog",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_3578ac64f5e119ebd254",
+        "brief_sha256": "3578ac64f5e119ebd2541f29bf1d8913fa7adf50bb85dcb9a199a67dc8141613",
+        "request_sha256": "e43e8066f54786d7da3ddec59d3dc4962fcf140416a673d6baa453f70edc324c",
+        "research_packet_sha256": "8ed83647d2d9aa5bd8eb29baaccdf8bbdd52a3d302a5b7e1972f749f7ab8f8be"
+      }
+    },
+    "packet_sha256": "8ed83647d2d9aa5bd8eb29baaccdf8bbdd52a3d302a5b7e1972f749f7ab8f8be"
+  },
+  {
+    "case": "quoted source",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_1e6c8bee519e68992ce9",
+        "brief_sha256": "1e6c8bee519e68992ce93432de248d3d19db561bef8cb5749c24107361b9727a",
+        "request_sha256": "6a1c002252801a82ba32d4071a94b6faf5316ce245ded4ae9a84e95dfc917cf6",
+        "research_packet_sha256": "982533843cf38b70de0bcc0842175b48ef005e5aad2af55eee50d072afc4b6e6"
+      }
+    },
+    "packet_sha256": "982533843cf38b70de0bcc0842175b48ef005e5aad2af55eee50d072afc4b6e6"
+  },
+  {
+    "case": "quoted full command",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_7e2392422579e4dcfd39",
+        "brief_sha256": "7e2392422579e4dcfd397d2e7fff6144bf0ef3332a54ec612435a7c19e584293",
+        "request_sha256": "dafd53e5bec18b72e6f8e6883899ea404a8faf9a83b32ac6c2079a9a9c1fd3fb",
+        "research_packet_sha256": "9c28553e2ff903a05bbf97744e0ac292399f75fcc65e5896faa9e4f0c0cc7628"
+      }
+    },
+    "packet_sha256": "9c28553e2ff903a05bbf97744e0ac292399f75fcc65e5896faa9e4f0c0cc7628"
+  },
+  {
+    "case": "quoted title",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_7c249da3c18a96d3bf79",
+        "brief_sha256": "7c249da3c18a96d3bf79b17f1b12d40f1783df425898ea2278ac2960ac4e8c35",
+        "request_sha256": "a975e2d8a053351429bbc489b62575b94e8f1d5aea9d338399a3aa0f2193daa9",
+        "research_packet_sha256": "42404c8b7f56296f4234cf26e0a1ebfafc7fe8201794eef023a7c2140c614b98"
+      }
+    },
+    "packet_sha256": "42404c8b7f56296f4234cf26e0a1ebfafc7fe8201794eef023a7c2140c614b98"
+  },
+  {
+    "case": "negated",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_3c2a89c1547304bd4bb8",
+        "brief_sha256": "3c2a89c1547304bd4bb8e9a9a5b9296c2f3f652d8ebb041d43b1bf6d08c9fbf0",
+        "request_sha256": "477c68dfdc6c7d367850e46ddabd6f054228a545c67e2c1ba59849cf3ee36302",
+        "research_packet_sha256": "e859245d52b8d6704b949824079f579017be9a3327bbc50503e49d2b24d29420"
+      }
+    },
+    "packet_sha256": "e859245d52b8d6704b949824079f579017be9a3327bbc50503e49d2b24d29420"
+  },
+  {
+    "case": "ground denied",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_d06f88f8ba25c982f5c0",
+        "brief_sha256": "d06f88f8ba25c982f5c0f564e5b5b55ca838745334bcf49e31aae4dc06043286",
+        "request_sha256": "8e55a02a26fbad7b166a177ae11931d844c34f5b23939d4cc0ade8b5cb6bc5ae",
+        "research_packet_sha256": "998cc9f00bcf264144f43e2c276bb34d56d94c6593459c18438c70c1056b9636"
+      }
+    },
+    "packet_sha256": "998cc9f00bcf264144f43e2c276bb34d56d94c6593459c18438c70c1056b9636"
+  },
+  {
+    "case": "unknown",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_d808cdb8fb9929e6cc33",
+        "brief_sha256": "d808cdb8fb9929e6cc33d396a5782b9803028cee009605e5e4871882d4910fcc",
+        "request_sha256": "de1af6ae728c91eb230ccf9acae6a7ac53a2efacb49305e691aa5796de7ad8b8",
+        "research_packet_sha256": "290cc71d15315ca4ea53180dbccff9fbb837e3e1c2381a86c75c6a5b04f5bb6e"
+      }
+    },
+    "packet_sha256": "290cc71d15315ca4ea53180dbccff9fbb837e3e1c2381a86c75c6a5b04f5bb6e"
+  },
+  {
+    "case": "research request",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_ca17513dbb8cb063a91b",
+        "brief_sha256": "ca17513dbb8cb063a91b13a18f318176aa60caa4a2c1f627ba6f8baad9775573",
+        "request_sha256": "9e0882d32ad2891fe86d1281aaed2150bcb7768c069962f122f6b959d9fef59f",
+        "research_packet_sha256": "da50ce267d5f15585a36333a031c47759da6ab748b49889a9377844e53a99f21"
+      }
+    },
+    "packet_sha256": "da50ce267d5f15585a36333a031c47759da6ab748b49889a9377844e53a99f21"
+  },
+  {
+    "case": "landscape exclusion",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_6ab828c70bd99111425b",
+        "brief_sha256": "6ab828c70bd99111425ba293a1f35e403cfc066aacc22b4404ee59eddac7173b",
+        "request_sha256": "e415ba7155ad48d2158f26ae74da0fda3dce436b72f605a3c7a9a0e55881f900",
+        "research_packet_sha256": "7af941abcb23d6675fd11d8030a2edcc1c3fbb17d84e6671788dafe6e04d3ffb"
+      }
+    },
+    "packet_sha256": "7af941abcb23d6675fd11d8030a2edcc1c3fbb17d84e6671788dafe6e04d3ffb"
+  },
+  {
+    "case": "outdoor scenery exclusion",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_2ad6bf3ab9139d68f481",
+        "brief_sha256": "2ad6bf3ab9139d68f481cac64595202af1a0dbfccd4300f0f3a7760fcf4721e2",
+        "request_sha256": "1d1128924c90fd675db794253054fcb74936a7ab58b7e894025b1aa28b08ee3d",
+        "research_packet_sha256": "d2f62bc07560c3fc9023a6b74e63a363c121f9f77a754174520921b0b6faba8d"
+      }
+    },
+    "packet_sha256": "d2f62bc07560c3fc9023a6b74e63a363c121f9f77a754174520921b0b6faba8d"
+  },
+  {
+    "case": "scenery without",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_6499ef093c6bf2d0307c",
+        "brief_sha256": "6499ef093c6bf2d0307ce8fb05874d7be8f3f3b460d822596f453f45869a480b",
+        "request_sha256": "b63f54901ea881e49cee32f218a3c95e8f066d4ad0c916554431a7319c16958c",
+        "research_packet_sha256": "ed3e4677b49ca9152c869529ca3097e6ddd7cd0297dff5571ec7c52a0cbe7ca4"
+      }
+    },
+    "packet_sha256": "ed3e4677b49ca9152c869529ca3097e6ddd7cd0297dff5571ec7c52a0cbe7ca4"
+  },
+  {
+    "case": "no landscape",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_eab0032650cd68d87cda",
+        "brief_sha256": "eab0032650cd68d87cda19ce56bfe5b362ca81fb2e601257e0f4bb34a7f495e6",
+        "request_sha256": "e0a17872201e14c617b31a6c27786bef0788d315557115312cd9fc7320340ad3",
+        "research_packet_sha256": "c0a9ca7013fe9e1655fec4b9d0c6f67a0c4b98192bbcfedb12bb3bbe665396d4"
+      }
+    },
+    "packet_sha256": "c0a9ca7013fe9e1655fec4b9d0c6f67a0c4b98192bbcfedb12bb3bbe665396d4"
+  },
+  {
+    "case": "positive landforms",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_2ddc099f3f99148d369d",
+        "brief_sha256": "2ddc099f3f99148d369de38564efb7089deaf2037dbb613076e8a146abd681f0",
+        "request_sha256": "d48d600f89a812869d9a6f730e1d80e14bf77cbfa5fd75a4fb5ea06f1d134981",
+        "research_packet_sha256": "3ce5897cc2b23d08b2df6747e19db1b5d228cea648a9068d3a24ccb5acb7984b"
+      }
+    },
+    "packet_sha256": "3ce5897cc2b23d08b2df6747e19db1b5d228cea648a9068d3a24ccb5acb7984b"
+  },
+  {
+    "case": "unrelated negative then landscape",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_a7079190ca7483a4e906",
+        "brief_sha256": "a7079190ca7483a4e906ee7603c0b6cbd1776ee7613991e3fe1ee162f35e3b1d",
+        "request_sha256": "32ccc8ab53251f46027f380080a268d3882031d256407d76c1e3f6e8881f846c",
+        "research_packet_sha256": "9e6a55f2274f66137ed70088f3a175b9bc71dc0f17ba6897768696a65b31cd51"
+      }
+    },
+    "packet_sha256": "9e6a55f2274f66137ed70088f3a175b9bc71dc0f17ba6897768696a65b31cd51"
+  },
+  {
+    "case": "unrelated negative then scenery",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_c3bc8f83dc01cc194712",
+        "brief_sha256": "c3bc8f83dc01cc194712a1c0b0abde9580b28fa58a1b8446d74be84ba9d7e497",
+        "request_sha256": "471d2e8c7b3629ee2e379fd22dea0f02f2b2d04d2a17e0b2abee764b08f7db3e",
+        "research_packet_sha256": "7a009da3cb18cfad3be6fc00ad0d906b21205cd3a4c475ff651301aa9525b9d8"
+      }
+    },
+    "packet_sha256": "7a009da3cb18cfad3be6fc00ad0d906b21205cd3a4c475ff651301aa9525b9d8"
+  },
+  {
+    "case": "quoted exclusion is data",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "mars_surface",
+      "reason": "explicit_original_mars_base_request",
+      "source": {
+        "job_id": "world_research_f15c3106019f21536819",
+        "brief_sha256": "f15c3106019f215368199bbf7456ad9565c715d92d8eb5068b83f1d9c83ae674",
+        "request_sha256": "f3e75be1caf8552e28c6d7fed8661af22a00cfaaf8e023b8e11502a59e2b1e6f",
+        "research_packet_sha256": "a9a7922fb3bf2a89b89b55f725ccad2b88574dd379e8dda3dab999d7988611ce"
+      }
+    },
+    "packet_sha256": "a9a7922fb3bf2a89b89b55f725ccad2b88574dd379e8dda3dab999d7988611ce"
+  },
+  {
+    "case": "use excluded",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_cd1fd992f462acc2b928",
+        "brief_sha256": "cd1fd992f462acc2b928d0fc7f7f582d5cb747da2034520fc8f10b7710af4ec3",
+        "request_sha256": "41701b425e904989d0d2cf654659b5f880e1f41c749c9152502a8ba2e48c8e7e",
+        "research_packet_sha256": "a2ea4f2f6f18399e567bfdee91041a22847742b834547e1e53d04dfe67d81db0"
+      }
+    },
+    "packet_sha256": "a2ea4f2f6f18399e567bfdee91041a22847742b834547e1e53d04dfe67d81db0"
+  },
+  {
+    "case": "want excluded",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_cb78a63016132ac31f22",
+        "brief_sha256": "cb78a63016132ac31f221ccf83408dcc3e619e9f5997e40ac378a4ec0288a041",
+        "request_sha256": "1430eca4b24d419642628327a281452f167c639d409d0136b5d26eaaf0b00e4f",
+        "research_packet_sha256": "f2f6e960628dd500cd2cadea0d496b4608f3a4320287e4e8abf9b85dcbf2565b"
+      }
+    },
+    "packet_sha256": "f2f6e960628dd500cd2cadea0d496b4608f3a4320287e4e8abf9b85dcbf2565b"
+  },
+  {
+    "case": "not terrain",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_9f76678b9b9543d2f687",
+        "brief_sha256": "9f76678b9b9543d2f6873d232cd172c3b2e261d9ece84e535e52aa6cce96809c",
+        "request_sha256": "2d8b2f49c6c018edee23b7cc3415ae61e52a89b64a5e64973e4b2d8a0fb8e4c5",
+        "research_packet_sha256": "45444f01a67aed25821eca7b6e8f120f9c212efeafcab1c49ac219d406c69a69"
+      }
+    },
+    "packet_sha256": "45444f01a67aed25821eca7b6e8f120f9c212efeafcab1c49ac219d406c69a69"
+  },
+  {
+    "case": "negative view",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_2b2dd51e38bfd3657e37",
+        "brief_sha256": "2b2dd51e38bfd3657e374d458ffa2798297ca062175a781de0cb8f7344847489",
+        "request_sha256": "773e2ca4cf5436d79ab4dc601f9434c8533fa6171757b48cb80d0b9447e09486",
+        "research_packet_sha256": "9bfe0bb6427cdadeb027e4489280420386cdefcffb526c6f961dea9a9bafa076"
+      }
+    },
+    "packet_sha256": "9bfe0bb6427cdadeb027e4489280420386cdefcffb526c6f961dea9a9bafa076"
+  },
+  {
+    "case": "near Mars",
+    "presentation": {
+      "contract": "bound_original_exterior_presentation_v1",
+      "setting": "unspecified",
+      "reason": "no_explicit_supported_surface_setting",
+      "source": {
+        "job_id": "world_research_14e1dd8ad63c162d6b3f",
+        "brief_sha256": "14e1dd8ad63c162d6b3f979c343fd031ef4025795a26780e95e1ea22acada06b",
+        "request_sha256": "e9445df3c81726ab67dccf1f9818cb20bb4bf44c442cbdd36ccf87c140b955ce",
+        "research_packet_sha256": "8611297d7dff1ba81cfa651421768942d82439af865f3e8296aa1347864b6cee"
+      }
+    },
+    "packet_sha256": "8611297d7dff1ba81cfa651421768942d82439af865f3e8296aa1347864b6cee"
+  }
+]

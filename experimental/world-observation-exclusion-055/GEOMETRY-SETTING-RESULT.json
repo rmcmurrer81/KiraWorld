@@ -1,0 +1,47 @@
+{
+  "status": "055_SHARED_SETTING_GEOMETRY_PASS",
+  "reproduced053_orbital_misapplication": true,
+  "setting_cases": 27,
+  "checks": [
+    {
+      "case": "Original Mars habitat",
+      "export_profile_eligible": true,
+      "before_rusty_exterior": true,
+      "after_rusty_exterior": true,
+      "aperture_and_safety_unchanged": true
+    },
+    {
+      "case": "Orbital spacecraft habitat",
+      "export_profile_eligible": true,
+      "before_rusty_exterior": true,
+      "after_rusty_exterior": false,
+      "aperture_and_safety_unchanged": true
+    },
+    {
+      "case": "missing",
+      "exterior_absent": true
+    },
+    {
+      "case": "wrong_packet",
+      "exterior_absent": true
+    },
+    {
+      "case": "wrong_job",
+      "exterior_absent": true
+    },
+    {
+      "case": "wrong_brief_digest",
+      "exterior_absent": true
+    },
+    {
+      "case": "wrong_contract",
+      "exterior_absent": true
+    },
+    {
+      "case": "claimed_without_authority",
+      "exterior_absent": true
+    }
+  ],
+  "preview_export_shared_source": true,
+  "no_model_ui_gpu": true
+}

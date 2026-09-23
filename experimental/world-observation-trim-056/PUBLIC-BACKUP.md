@@ -1,0 +1,9 @@
+# Observation window056 installed;055 and early056 held history
+
+The seven canonical files are root-installed056.055 corrected explicit scenery exclusions, but native review found striped/flickering trim.056 shortens the metal reveal so it meets the ivory frame's back without coplanar front faces. The frame, glazing, wall bounds and full safety collision remain unchanged. The successor refreshes the export's exact viewer digest; its first preparation correctly held an outdated pin. Frozen proposals and that failure are retained as history, not alternative install recommendations.
+
+The exact native result and limits are in native-successor-001/ROOT-NATIVE-INSTALL-REVIEW.json. Installation and root visual review do not imply Robert's realism approval. Appearance remains procedural. This increment does not claim a new GLB export, physics/pressure simulation, VR or engine-native controls.
+
+test_public_closure.py replays30 synthetic setting checks,14 geometry cases/630 rays and14 installer fixtures in temporary folders. It reads no owner's world data and launches no server, UI, model or exporter. Candidate/source/preimages remain exact; local identity paths in operational receipts/helpers are redacted and paired original/public digests are recorded. Rebind local operational scripts before use; do not execute redacted install commands blindly.
+
+Both immutable preview Data directories, raw brief, original geometry/research caches, screenshots, weights and native dependencies are excluded. No model media is required by this source backup. Three's source and license are included. Historical051 sources map to exact preimages or the immutable public base; installed056 source/producer closure is explicit. Earlier experimental snapshots and commit-bound recovery references remain unchanged.

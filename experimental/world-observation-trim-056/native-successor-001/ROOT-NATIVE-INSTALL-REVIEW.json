@@ -1,0 +1,20 @@
+{
+  "install_plan_sha256": "aac304b936d23771afd8f41e39660b04808b3317d75b12e8c638febcff61ce2c",
+  "source_diff_sha256": "f7aa9e11c4a527148947d9d7bfc7c5344784e7a8702cd3303e5139d378cce0dd",
+  "candidate_backend_sha256": "2eb2084f43c9fd33d2af90010bab3669d4320a34eee395e8305d60c645fe93d7",
+  "preview_manifest_sha256": "ace98920465cbd662e5b60d372f2941f59963f555625bad22b5b045e149a32b4",
+  "status": "ROOT_APPROVED_056_INSTALL",
+  "source_review_complete": true,
+  "gpu014_closed_and_cleanup_confirmed": true,
+  "native_preview_review_complete": true,
+  "created_utc": "2026-09-23T15:49:20.785652+00:00",
+  "review_notes": "Root read source diff and complete installer; independent agent verified closure and preflight. Native ordinary controls traversed vestibule, airlock, corridor and Viewport Deck, entered and exited deck at25.0m. Corrected white window trim stayed stable across frontal/oblique and near/far views; previous055 stripe flicker absent. Transparent brown procedural terrain and gray sky, structural rib, gasket and frame remained. Repeated forward movement at21.7m stopped with Wall or low ceiling message; backing away recovered. Furniture and doorway collision also held until alignment. Narrow technical/visual correction approved, not owner realism approval, measured terrain, pressure simulation, new GLB roundtrip or finished VR. Browser tab5 closed; server PID16948 closed at600.414s and shell85985 exited0. Previous014,015,048 model families closed; no duplicate GPU job launched.",
+  "native_review": {
+    "preview_url": "http://127.0.0.1:51562/",
+    "tab_closed": true,
+    "window_trim": "no_stripe_flicker_observed",
+    "wall_collision_stopped_distance_m": 21.7,
+    "returned_to_corridor_distance_m": 25.0,
+    "owner_approval": false
+  }
+}
