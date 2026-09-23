@@ -1,0 +1,34 @@
+{
+  "status": "030_ISOLATED_METADATA_PROTOTYPE_READY_NOT_INSTALLED",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/walk_controller.mjs",
+      "before_sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+      "after_sha256": "7909daf10a51e1a7c3bcb6757078213c88a0b4845058ce90cd2c6ba31cf4ced1",
+      "after_bytes": 14023
+    },
+    {
+      "relative_path": "tools/world_builder_engine/scene_metadata.mjs",
+      "before_sha256": null,
+      "after_sha256": "b02016fa896f7f3b515d952fa3f8d97666f94d5cb5b47d13ce6df39faf2d55e6",
+      "after_bytes": 13616
+    }
+  ],
+  "test_groups": 11,
+  "latest_test_receipt": "TEST-RESULT-002.json",
+  "latest_test_sha256": "f891d2d1a8e42e80370a9e1dc8123765211fb81e7659a8906f09d9d1174468d1",
+  "latest_synthetic_export": "SYNTHETIC-METADATA-002.json",
+  "latest_synthetic_export_sha256": "8a610826a7723bd08cfc318b36c1c8a10f5b2d8f72f8b3ee362ec395b22d2c5c",
+  "metadata_counts": {
+    "rooms": 7,
+    "nodes": 141,
+    "colliders": 134,
+    "doors": 6
+  },
+  "canonical_files_changed": false,
+  "owner_files_changed": false,
+  "network_models_gpu_browser_started": false,
+  "exported_mesh_files": 0,
+  "engine_or_vr_adapter": false,
+  "next_requirement": "Root code review; production wiring/package writer and verified digest computation remain absent. Do not present as a usable game/VR exporter."
+}

@@ -1,0 +1,63 @@
+{
+  "status": "031_METADATA_PACKAGE_PROTOTYPE_READY_NOT_INSTALLED",
+  "tests_passed": 15,
+  "test_receipt_sha256": "557b677b706e067eead79d7bb41bf417814ac57bc8c0ef8b6562f2c51060c265",
+  "files": [
+    {
+      "path": "package_writer.py",
+      "sha256": "95e219639ea608d3a25da4eae26a21853f1b723e27724368ac61f6f587af07cb",
+      "bytes": 12118
+    },
+    {
+      "path": "render_metadata.mjs",
+      "sha256": "aab3daad202cbc456e60d836ea19390eb7e5f9db2225f8264479c09aabaf1e9e",
+      "bytes": 1332
+    },
+    {
+      "path": "CORE-PINS.json",
+      "sha256": "c9624b90763bd6924ae73e9cb62b5ecb69ad014443667f0abf0a5c3b46fec7de",
+      "bytes": 500
+    },
+    {
+      "path": "test_package.py",
+      "sha256": "4aeb4b475d9ad3bb4eba1a612fc2f6527a544e1f24a976f0d1cc8318d217bf8e",
+      "bytes": 11402
+    },
+    {
+      "path": "make_example.py",
+      "sha256": "a96059d107c5683efd4eba4fc583511110806ca2164eee5213d7c84f820d123d",
+      "bytes": 1811
+    },
+    {
+      "path": "README.md",
+      "sha256": "59480385a7c2a7436c405418aab1be98ec4330fb1d54a5ffdffe054d52715e8b",
+      "bytes": 3071
+    }
+  ],
+  "synthetic_package": [
+    {
+      "path": "example/package/manifest.json",
+      "sha256": "f5a27601f408e0ee5a39a6e013300b2d1ec8956434682663eb3db604a4b56de3",
+      "bytes": 2335
+    },
+    {
+      "path": "example/package/README.txt",
+      "sha256": "90f5200424cf34b5732bf799d1c0514b1798bdbfa132abaa87b1f1f135b246d8",
+      "bytes": 549
+    },
+    {
+      "path": "example/package/scene.json",
+      "sha256": "0d8078f6d83c32bad9d9e0e3285a7dbd429de5f22e3ebbeda09dea955950d876",
+      "bytes": 81108
+    }
+  ],
+  "source_binding_verification": "Actual SHA256 bytes plus geometry-blueprint-research/cache chain, before and after CPU projection.",
+  "portable_without_original_files": true,
+  "owner_data_used_or_changed": false,
+  "canonical_files_changed": false,
+  "model_network_gpu_visual_calls": 0,
+  "limitations": [
+    "Metadata only: no equipment meshes/materials, engine adapter, VR runtime or native export control.",
+    "Digests verify bytes, not source truth or visual/owner approval."
+  ]
+}

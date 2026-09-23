@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PURE_SCENE_METADATA_PROTOTYPE",
+  "checks": [
+    "Pure deterministic projection and JSON round trip preserve inputs",
+    "All source rooms, structural boxes, equipment and colliders remain represented",
+    "Equipment uses actual renderer base-centre transform and exact physical bounds",
+    "Door metadata comes from core definitions and matches initial pose/colliders",
+    "Definition extension does not alter live door or walker behavior",
+    "Mesh materials, VR, pressure and persistence claims remain explicitly unsupported",
+    "Only projected source fields cross the export boundary",
+    "Duplicate ids and bad room/collider ownership are rejected",
+    "Altered hinges, pivots, portal associations and missing definitions fail",
+    "Nonfinite, sparse and oversized source data and unknown contracts fail",
+    "Equipment transform mismatches and invalid navigation extents fail"
+  ],
+  "rooms": 7,
+  "nodes": 141,
+  "colliders": 134,
+  "doors": 6,
+  "exported_mesh_files": 0,
+  "renderer_engine_vr_adapter": false,
+  "canonical_owner_files_changed": false,
+  "model_gpu_network_browser_calls": 0,
+  "scene_sha256": "c8f88d65e5052ec9680591191dd8f388e94d22b12831271fb2ae54667abd7e0d"
+}
