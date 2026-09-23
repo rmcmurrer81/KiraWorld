@@ -1,0 +1,53 @@
+{
+  "status": "INSTALLED_FOUR_FILES",
+  "at_utc": "2026-09-23T05:30:35.034907+00:00",
+  "plan_sha256": "1187b934e02b7f58e47b04667372878708f675247c65aade715403ad80b3fa59",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/preview_server.py",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\preview_server.py",
+      "before_sha256": "8723a1a9bf8bfab3d45e016e9fcb01642d1421b75b24bdf0de1aa7ab966a1a80",
+      "preimage": "@workspace\\work\\world-preview-refresh-candidate-028\\baseline\\tools\\world_builder_engine\\preview_server.py",
+      "after": {
+        "path": "@workspace\\work\\world-preview-refresh-candidate-028\\candidate\\tools\\world_builder_engine\\preview_server.py",
+        "sha256": "b076e1219caa3b5c273a57f61079cd4630028cb042515f8bd117d514d21113f8",
+        "bytes": 869
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/workspace_adapter.py",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\workspace_adapter.py",
+      "before_sha256": "4bfe67343638f3d3bb2dac5eede089dfbea75d5ab8cab1db77f226f31f919139",
+      "preimage": "@workspace\\work\\world-preview-refresh-candidate-028\\baseline\\tools\\world_builder_engine\\workspace_adapter.py",
+      "after": {
+        "path": "@workspace\\work\\world-preview-refresh-candidate-028\\candidate\\tools\\world_builder_engine\\workspace_adapter.py",
+        "sha256": "9a00a1ea296d6b7728f9a24bb0e74b365c8ca22ee19263f6bacfd7be0f9c0859",
+        "bytes": 6296
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_workspace.py",
+      "target": "@user_home\\Kira\\tools\\world_builder_workspace.py",
+      "before_sha256": "dc338e7349bced74becd606050869a2faa37c1c513058fa24cf84af27b9b9041",
+      "preimage": "@workspace\\work\\world-preview-refresh-candidate-028\\baseline\\tools\\world_builder_workspace.py",
+      "after": {
+        "path": "@workspace\\work\\world-preview-refresh-candidate-028\\candidate\\tools\\world_builder_workspace.py",
+        "sha256": "11bf8242b878e6bf2999f5c172e2fa3fe2d4b6b4e268ed2560216b49e195fcc9",
+        "bytes": 24303
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/preview_refresh.py",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\preview_refresh.py",
+      "before_sha256": null,
+      "preimage": null,
+      "after": {
+        "path": "@workspace\\work\\world-preview-refresh-candidate-028\\candidate\\tools\\world_builder_engine\\preview_refresh.py",
+        "sha256": "a8023bc13ecebd41223bc0a5692eb553713aa1491a819e37ec3b9d1d607159d5",
+        "bytes": 2315
+      }
+    }
+  ],
+  "protected_files_unchanged": 116,
+  "root_review": "Reviewed complete38-line helper and focused server/UI patch;14 CPU tests passed. No research/models rerun. Native installed review pending."
+}

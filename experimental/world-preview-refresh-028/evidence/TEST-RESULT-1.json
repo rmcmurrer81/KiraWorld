@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "tests": 14,
+  "failures": 0,
+  "errors": 0,
+  "output": "test_builder_failure_preserves_old_data (__main__.RefreshTests.test_builder_failure_preserves_old_data) ... ok\ntest_changed_geometry_and_research_are_not_reinterpreted (__main__.RefreshTests.test_changed_geometry_and_research_are_not_reinterpreted) ... ok\ntest_concurrent_metadata_change_is_held (__main__.RefreshTests.test_concurrent_metadata_change_is_held) ... ok\ntest_concurrent_pointer_change_is_held_without_repair (__main__.RefreshTests.test_concurrent_pointer_change_is_held_without_repair) ... ok\ntest_current_assets_create_distinct_preserved_preview_without_models (__main__.RefreshTests.test_current_assets_create_distinct_preserved_preview_without_models) ... ok\ntest_damaged_job_metadata_rejected (__main__.RefreshTests.test_damaged_job_metadata_rejected) ... ok\ntest_invalid_or_external_job_rejected_before_builder (__main__.RefreshTests.test_invalid_or_external_job_rejected_before_builder) ... ok\ntest_mismatched_research_job_rejected (__main__.RefreshTests.test_mismatched_research_job_rejected) ... ok\ntest_new_result_cannot_substitute_different_source (__main__.RefreshTests.test_new_result_cannot_substitute_different_source) ... ok\ntest_repeated_open_reuses_stable_build_and_no_new_job_state (__main__.RefreshTests.test_repeated_open_reuses_stable_build_and_no_new_job_state) ... ok\ntest_saved_manifest_tamper_rejected_before_build (__main__.RefreshTests.test_saved_manifest_tamper_rejected_before_build) ... ok\ntest_actual_workspace_callback_reports_current_presentation (__main__.CallbackTests.test_actual_workspace_callback_reports_current_presentation) ... ok\ntest_adapter_allows_real_preflight_bound_without_other_changes (__main__.CallbackTests.test_adapter_allows_real_preflight_bound_without_other_changes) ... ok\ntest_owned_server_calls_refresh_then_serves_exact_result (__main__.CallbackTests.test_owned_server_calls_refresh_then_serves_exact_result) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 5.151s\n\nOK\n",
+  "canonical_unchanged": true,
+  "owner_data_writes": 0,
+  "gpu_model_network_browser_calls": 0,
+  "synthetic_preview_builds_only": true,
+  "native_callbacks_executed_headless": true
+}

@@ -1,0 +1,109 @@
+--- a/tools/world_builder_engine/preview_server.py
++++ b/tools/world_builder_engine/preview_server.py
+@@ -3,14 +3,14 @@
+ import argparse,json,sys
+ if __package__ in (None,''):sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+ from world_builder_engine.world_layout_preview import make_server
+-from world_builder_engine.pipeline import latest_preview
++from world_builder_engine.preview_refresh import refresh_saved_preview
+ 
+ 
+ def main():
+     parser=argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--job',required=True)
+     args=parser.parse_args()
+-    manifest=latest_preview(args.job)
++    manifest=refresh_saved_preview(args.job)
+     server=make_server(manifest['manifest_path'],0,manifest['manifest_sha256'])
+     print(json.dumps({'url':'http://127.0.0.1:'+str(server.server_port)+'/','manifest':manifest}),flush=True)
+     try:server.serve_forever()
+--- a/tools/world_builder_engine/workspace_adapter.py
++++ b/tools/world_builder_engine/workspace_adapter.py
+@@ -106,7 +106,7 @@
+     threading.Thread(target=lambda:ready.put(process.stdout.readline()),daemon=True).start()
+     session=PreviewSession(process,None,None)
+     try:
+-        line=ready.get(timeout=12);value=json.loads(line)
++        line=ready.get(timeout=32);value=json.loads(line)
+         url=value['url']
+         if not isinstance(url,str) or not url.startswith('http://127.0.0.1:'):raise ValueError('Unexpected preview URL')
+         session.url=url;session.manifest=value['manifest'];webbrowser.open(url);return session
+--- a/tools/world_builder_workspace.py
++++ b/tools/world_builder_workspace.py
+@@ -199,7 +199,7 @@
+         self.chat_entry.pack(side="left", fill="x", expand=True, padx=(0, 6))
+         self.chat_entry.bind("<Return>", lambda _event: self.send_world_builder_chat())
+         ttk.Button(chat_row, text="Research / Resume", command=self.send_world_builder_chat).pack(side="left")
+-        ttk.Button(chat_row, text="Open Layout Preview", command=self.open_layout_preview).pack(side="left", padx=(6, 0))
++        ttk.Button(chat_row, text="Open current preview", command=self.open_layout_preview).pack(side="left", padx=(6, 0))
+         ttk.Button(chat_row, text="Reference Photos", command=self.open_reference_photos).pack(side="left", padx=(6, 0))
+ 
+         saved = ttk.Frame(chat)
+@@ -352,7 +352,7 @@
+             return
+         self.set_saved_research_context(selected["job_dir"])
+         self.log(f"Opened saved research: {selected['subject']} | {selected['stage']}")
+-        self.log("Use Open Layout Preview or Reference Photos to inspect saved results. No research or generation was started.")
++        self.log("Use Open current preview to view the saved layout with current appearance and controls, or Reference Photos. Original layout files are preserved.")
+ 
+     def set_saved_research_context(self, job_dir: Path | None) -> None:
+         close_preview(self._layout_preview)
+@@ -398,7 +398,7 @@
+                 pipeline = value.get("layout_pipeline", {})
+                 self.log(f"Layout: {pipeline.get('stage', 'not_started')} | {pipeline.get('message', '')}")
+                 if pipeline.get("geometry_generated"):
+-                    self.log("Original layout only: materials and visual detail remain unfinished. Use Open Layout Preview to explore.")
++                    self.log("Original layout only: materials and visual detail remain unfinished. Use Open current preview to explore.")
+                 else:
+                     self.log("Photos, videos and plan layouts still require inspection. No accessible world was generated.")
+                 completed = True
+@@ -418,7 +418,7 @@
+             return
+         try:
+             self._layout_preview = open_preview(self._research_latest, self._layout_preview)
+-            self.log("Opened the original layout prototype. This is not a finished world.")
++            self.log("Opened the current presentation of your saved layout. Earlier previews are preserved; no research or model generation was rerun. This remains a prototype.")
+         except Exception as exc:
+             self.log(f"Layout preview unavailable: {exc}")
+ 
+--- a/tools/world_builder_engine/preview_refresh.py
++++ b/tools/world_builder_engine/preview_refresh.py
+@@ -0,0 +1,38 @@
++"""Refresh only presentation on explicit Open current preview; no model/research work.
++
++Pipeline states and historical preview files remain untouched. The immutable
++preview builder reuses a matching build or creates a separately pinned revision.
++"""
++from pathlib import Path
++from world_saved_research import read_saved_research
++from .pipeline import latest_preview
++from .world_layout_preview import create_preview, verify_preview
++
++PROJECT = Path(__file__).resolve().parents[2]
++
++
++def refresh_saved_preview(job_dir):
++    job = read_saved_research(Path(job_dir), job_root=PROJECT/'Data/world_research_jobs')
++    previous = latest_preview(job['job_dir'])
++    frozen = verify_preview(previous['manifest_path'], previous['manifest_sha256'])
++    if frozen['source_mode'] != 'source_bound_original_layout':
++        raise ValueError('Only a verified original layout can refresh its presentation')
++    inputs = frozen['inputs']
++    if Path(inputs['research_packet']['path']).parent != job['job_dir']:
++        raise ValueError('Saved layout belongs to a different research job')
++    refreshed = create_preview(inputs['geometry_source']['path'],
++                               inputs['research_packet']['path'], inputs['blueprint']['path'])
++    current = verify_preview(refreshed['manifest_path'], refreshed['manifest_sha256'])
++    for key, row in inputs.items():
++        if key in ('geometry_source', 'research_packet', 'blueprint') or key.startswith('research_cache_'):
++            if current['inputs'].get(key) != row:
++                raise ValueError('Preview refresh changed a saved layout source')
++    # Detect a concurrent job change without writing or repairing its pointer.
++    if read_saved_research(job['job_dir'], job_root=PROJECT/'Data/world_research_jobs') != job:
++        raise ValueError('Saved research changed during preview refresh')
++    if latest_preview(job['job_dir']) != previous:
++        raise ValueError('Saved layout selection changed during preview refresh')
++    verify_preview(previous['manifest_path'], previous['manifest_sha256'])
++    return {**refreshed, 'previous_manifest_path':previous['manifest_path'],
++            'presentation_refreshed':refreshed['manifest_path'] != previous['manifest_path'],
++            'research_regenerated':False, 'model_jobs':0, 'saved_layout_state_modified':False}

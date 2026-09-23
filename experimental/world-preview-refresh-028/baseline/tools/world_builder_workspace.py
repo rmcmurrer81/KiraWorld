@@ -199,7 +199,7 @@ class WorldBuilderWorkspace(tk.Tk):
         self.chat_entry.pack(side="left", fill="x", expand=True, padx=(0, 6))
         self.chat_entry.bind("<Return>", lambda _event: self.send_world_builder_chat())
         ttk.Button(chat_row, text="Research / Resume", command=self.send_world_builder_chat).pack(side="left")
-        ttk.Button(chat_row, text="Open current preview", command=self.open_layout_preview).pack(side="left", padx=(6, 0))
+        ttk.Button(chat_row, text="Open Layout Preview", command=self.open_layout_preview).pack(side="left", padx=(6, 0))
         ttk.Button(chat_row, text="Reference Photos", command=self.open_reference_photos).pack(side="left", padx=(6, 0))
 
         saved = ttk.Frame(chat)
@@ -352,7 +352,7 @@ class WorldBuilderWorkspace(tk.Tk):
             return
         self.set_saved_research_context(selected["job_dir"])
         self.log(f"Opened saved research: {selected['subject']} | {selected['stage']}")
-        self.log("Use Open current preview to view the saved layout with current appearance and controls, or Reference Photos. Original layout files are preserved.")
+        self.log("Use Open Layout Preview or Reference Photos to inspect saved results. No research or generation was started.")
 
     def set_saved_research_context(self, job_dir: Path | None) -> None:
         close_preview(self._layout_preview)
@@ -398,7 +398,7 @@ class WorldBuilderWorkspace(tk.Tk):
                 pipeline = value.get("layout_pipeline", {})
                 self.log(f"Layout: {pipeline.get('stage', 'not_started')} | {pipeline.get('message', '')}")
                 if pipeline.get("geometry_generated"):
-                    self.log("Original layout only: materials and visual detail remain unfinished. Use Open current preview to explore.")
+                    self.log("Original layout only: materials and visual detail remain unfinished. Use Open Layout Preview to explore.")
                 else:
                     self.log("Photos, videos and plan layouts still require inspection. No accessible world was generated.")
                 completed = True
@@ -418,7 +418,7 @@ class WorldBuilderWorkspace(tk.Tk):
             return
         try:
             self._layout_preview = open_preview(self._research_latest, self._layout_preview)
-            self.log("Opened the current presentation of your saved layout. Earlier previews are preserved; no research or model generation was rerun. This remains a prototype.")
+            self.log("Opened the original layout prototype. This is not a finished world.")
         except Exception as exc:
             self.log(f"Layout preview unavailable: {exc}")
 

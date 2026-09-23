@@ -106,7 +106,7 @@ def open_preview(job_dir,current=None):
     threading.Thread(target=lambda:ready.put(process.stdout.readline()),daemon=True).start()
     session=PreviewSession(process,None,None)
     try:
-        line=ready.get(timeout=32);value=json.loads(line)
+        line=ready.get(timeout=12);value=json.loads(line)
         url=value['url']
         if not isinstance(url,str) or not url.startswith('http://127.0.0.1:'):raise ValueError('Unexpected preview URL')
         session.url=url;session.manifest=value['manifest'];webbrowser.open(url);return session

@@ -1,0 +1,7 @@
+# Installed current-preview reopening028
+
+The native **Open current preview** button verifies saved research and sources, then creates/reuses a separate immutable presentation using installed assets. It preserves the old preview and pipeline selection; it never reruns research or models. Repeated opening reuses the exact current build. Root installed the four files; receipt is in `evidence/INSTALLED.json`.
+
+Run `python -B test_refresh.py` here.14 tests exercise real immutable-preview creation/verification, real Node navigation preflight, stable reuse, invalid metadata/changed sources, builder failures, concurrent selection changes, actual server main and an extracted native button callback. Set `WORLD_PREVIEW_NODE` if Node is not on PATH. The package uses test-only pipeline-selection spies and inert Three identity files because it never renders graphics. It depends on the previously published sibling027 preimages and025 synthetic geometry fixture. The source lookup defaults to packaged `support/`, never the owner's installation. No network/model/browser/GPU calls occur; temporary synthetic preview files are removed after each case.
+
+`candidate/` contains exact installed files; `baseline/` preserves preimages. Support files are test dependencies, not a replacement application. Historical evidence has identity paths redacted and is not a public installer. Owner geometry, worlds, pipeline pointers, caches and reference images are absent. Technical success does not certify visual quality. The latest root review status is recorded separately.
