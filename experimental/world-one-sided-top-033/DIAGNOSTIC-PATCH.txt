@@ -1,0 +1,20 @@
+--- baseline/mattress_physics.mjs
++++ diagnostic/baseline/mattress_physics.mjs
+@@ -114,6 +114,7 @@
+     if(inside){
+       const sample=surface.sampleTop(clamp(x,-bed.width/2,bed.width/2),clamp(z,-bed.length/2,bed.length/2));
+       if(y<sample.height+m){
++        globalThis.captureTopDiagnostic?.('baseline','particle_before_top_projection',c,surface,[i],{sampleHeight:sample.height,destinationY:sample.height+m});
+         // This top-drape fixture is an upper height-field barrier. Choosing a
+         // nearest underside face could tunnel vertices below the mattress.
+         c.p[k+1]=sample.height+m;
+--- candidate/surface_contacts.mjs
++++ diagnostic/candidate/surface_contacts.mjs
+@@ -20,6 +20,7 @@
+   for(let axis=0;axis<3;axis++)if(!Number.isFinite(current[k+axis])||!Number.isFinite(previous[k+axis]))return false;
+   if(current[k+1]>=boundary||previous[k+1]>=boundary)return false;
+  }
++ globalThis.captureTopDiagnostic?.('candidate','eligible_whole_primitive',cloth,surface,ids,{});
+  return true;
+ }
+ 

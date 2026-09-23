@@ -1,0 +1,124 @@
+{
+  "status": "HOLD_TEST_FAILURE",
+  "results": [
+    {
+      "name": "current and previous primitive entirely below finite bottom is excluded",
+      "status": "PASS"
+    },
+    {
+      "name": "top-to-bottom crossing retains original edge and triangle corrections",
+      "status": "PASS",
+      "count": 8
+    },
+    {
+      "name": "long edge crosses finite footprint while both endpoints lie outside",
+      "status": "PASS",
+      "count": 6
+    },
+    {
+      "name": "triangle interior spans mattress although all vertices are outside footprint",
+      "status": "PASS",
+      "count": 6
+    },
+    {
+      "name": "primitive outside footprint does not gain contacts",
+      "status": "PASS",
+      "count": 0
+    },
+    {
+      "name": "bottom skin and uncertain or nonfinite histories retain eligibility",
+      "status": "PASS"
+    },
+    {
+      "name": "rising underside into mattress still uses original fallback; bottom response unsupported",
+      "status": "PASS",
+      "count": 8
+    },
+    {
+      "name": "stale below-bottom surface contact adds no new velocity impulse",
+      "status": "PASS"
+    },
+    {
+      "name": "coupled supported top drop stays exact for six frames",
+      "status": "PASS",
+      "frames_each": 6
+    },
+    {
+      "name": "coupled underside pin/release removes old upward teleport",
+      "status": "PASS",
+      "rows": [
+        {
+          "frame": 1,
+          "max_y_m": 0.2,
+          "speed_mps": 0.15181495689178573
+        },
+        {
+          "frame": 2,
+          "max_y_m": 0.2,
+          "speed_mps": 0.29655198986026393
+        },
+        {
+          "frame": 3,
+          "max_y_m": 0.1976216410489665,
+          "speed_mps": 0.4430057414841934
+        },
+        {
+          "frame": 4,
+          "max_y_m": 0.19197605494048436,
+          "speed_mps": 0.5891888639966508
+        },
+        {
+          "frame": 5,
+          "max_y_m": 0.18280832697449034,
+          "speed_mps": 0.7357181625543631
+        },
+        {
+          "frame": 6,
+          "max_y_m": 0.17029923286710116,
+          "speed_mps": 0.8794346149173627
+        },
+        {
+          "frame": 7,
+          "max_y_m": 0.15512705881779176,
+          "speed_mps": 1.019276725882418
+        },
+        {
+          "frame": 8,
+          "max_y_m": 0.13761427573360518,
+          "speed_mps": 1.1566143019324027
+        },
+        {
+          "frame": 9,
+          "max_y_m": 0.11783610600858445,
+          "speed_mps": 1.2911257686142183
+        },
+        {
+          "frame": 10,
+          "max_y_m": 0.09583405140971271,
+          "speed_mps": 1.4224157102924564
+        }
+      ],
+      "baseline_one_frame_max_y": 0.7873741923382076
+    },
+    {
+      "name": "coupled below-bottom lateral entry remains below mattress",
+      "status": "PASS",
+      "frames": 10
+    },
+    {
+      "name": "counterexample: intermediate upward-and-return excursion is not observed",
+      "status": "PASS",
+      "known_limitation": true,
+      "requires_review": true,
+      "claim": "This endpoint predicate is not an intermediate-history certificate."
+    }
+  ],
+  "failures": [
+    {
+      "name": "mixed below and above-base vertices never exclude entire triangle",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   count: 6,\n-   count: 8,\n    max_correction_depth_m: 0.37099999999999994\n  }\n\n    at sameSurface (file:///@workspace/work/world-one-sided-top-candidate-033/check_contact.mjs:14:9)\n    at file:///@workspace/work/world-one-sided-top-candidate-033/check_contact.mjs:34:83\n    at test (file:///@workspace/work/world-one-sided-top-candidate-033/check_contact.mjs:17:66)\n    at file:///@workspace/work/world-one-sided-top-candidate-033/check_contact.mjs:32:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async node:internal/modules/esm/loader:639:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+    }
+  ],
+  "installed": false,
+  "gpu": false
+}

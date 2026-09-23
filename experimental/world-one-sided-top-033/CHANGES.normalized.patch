@@ -1,0 +1,80 @@
+--- installed015/mattress_physics.mjs
++++ candidate033/mattress_physics.mjs
+@@ -1,6 +1,6 @@
+ // Original supported mattress study. The reviewed bedding base remains byte-identical.
+ import {BeddingSimulation as BaseSimulation,LIMITATIONS as BASE_LIMITS} from './bedding_base.mjs';
+-import {solveSurfaceContacts,surfaceContactReport,finishSurfaceContactVelocities} from './surface_contacts.mjs';
++import {solveSurfaceContacts,surfaceContactReport,finishSurfaceContactVelocities,belowFixedBottomAtBothEndpoints} from './surface_contacts.mjs';
+ import {compileFrame,solveFrameContacts,finishFrameContactVelocities,frameContactReport} from './frame_contacts.mjs';
+ export const VERSION='original_supported_mattress_frame_contact_v3';
+ export const LIMITATIONS=Object.freeze({...BASE_LIMITS,mattress_is_rigid_support:false,bed_frame_included:true,native_integration:true,
+@@ -10,7 +10,7 @@
+   frame_contact:'discrete triangle/convex chamfered-mesh contacts, one-way rigid response; no CCD or frame load deformation',
+   pillow:'dynamic height field supported by the current mattress; no lateral or volumetric foam response',
+   collision_mesh:'discrete particle and barycentric edge/triangle upper-surface contact with the same piecewise-planar mattress; no CCD or self-collision',
+-  mattress_contact_direction:'upper-surface height-field barrier extends down to the floor within its footprint; under-mattress cloth routing is not supported',
++  mattress_contact_direction:'one-sided upper barrier excludes primitives below fixed bottom at both physical-step endpoints; intermediate constraint paths and underside/side response remain unsupported',
+ });
+ const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+ function need(ok,message){if(!ok)throw Error(message);}
+@@ -111,7 +111,7 @@
+     const k=3*i,m=c.margin,dx=c.p[k]-head.x,dy=c.p[k+1]-head.y,dz=c.p[k+2]-head.z,d=Math.hypot(dx,dy,dz),r=head.radius+m;
+     if(d<r){const t=r/(d||1);c.p[k]=head.x+dx*t;c.p[k+1]=head.y+(d?dy*t:r);c.p[k+2]=head.z+dz*t;}
+     const x=c.p[k],y=c.p[k+1],z=c.p[k+2],inside=Math.abs(x)<bed.width/2+m&&Math.abs(z)<bed.length/2+m;
+-    if(inside){
++    if(inside&&!belowFixedBottomAtBothEndpoints(c,surface,[i],m)){
+       const sample=surface.sampleTop(clamp(x,-bed.width/2,bed.width/2),clamp(z,-bed.length/2,bed.length/2));
+       if(y<sample.height+m){
+         // This top-drape fixture is an upper height-field barrier. Choosing a
+--- installed015/surface_contacts.mjs
++++ candidate033/surface_contacts.mjs
+@@ -4,6 +4,25 @@
+ // Nothing here clips, offsets, hides, or replaces the rendered cloth geometry.
+ const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+ const caches=new WeakMap();
++// A one-sided top surface cannot support an entire primitive that is below
++// the fixed mattress bottom at both physical-step endpoints. A top-to-bottom
++// crossing or a mixed edge/triangle remains eligible for the original response.
++// This does not certify unobserved intermediate constraint paths or provide a
++// bottom/side collision response. The mattress solver owns a fixed bottom and
++// clamps its top above that bottom before these contact queries.
++export function belowFixedBottomAtBothEndpoints(cloth,surface,ids,margin){
++ const skin=cloth.margin,base=surface.base,previous=cloth.prev,current=cloth.p;
++ if(!Number.isFinite(base)||!Number.isFinite(skin)||skin<0||!Number.isFinite(margin)||margin<0||margin>skin||!previous||previous.length!==current.length||!ids.length)return false;
++ const boundary=base-skin-1e-8;
++ for(const id of ids){
++  if(!Number.isInteger(id)||id<0||id>=cloth.count)return false;
++  const k=3*id;
++  for(let axis=0;axis<3;axis++)if(!Number.isFinite(current[k+axis])||!Number.isFinite(previous[k+axis]))return false;
++  if(current[k+1]>=boundary||previous[k+1]>=boundary)return false;
++ }
++ return true;
++}
++
+ function topology(cloth){
+  let value=caches.get(cloth);if(value)return value;
+  const seen=new Set(),edges=[];
+@@ -28,6 +47,7 @@
+  return [lo,hi];
+ }
+ function edgeContact(cloth,surface,a,b,margin){
++ if(belowFixedBottomAtBothEndpoints(cloth,surface,[a,b],margin))return null;
+  const p=cloth.p,ax=p[3*a],ay=p[3*a+1],az=p[3*a+2],dx=p[3*b]-ax,dy=p[3*b+1]-ay,dz=p[3*b+2]-az;
+  const range=clipInterval(ax,az,dx,dz,surface.width/2+margin,surface.length/2+margin);if(!range)return null;
+  let worst=null;
+@@ -52,6 +72,7 @@
+  return worst;
+ }
+ function interiorContact(cloth,surface,ids,margin){
++ if(belowFixedBottomAtBothEndpoints(cloth,surface,ids,margin))return null;
+  const p=cloth.p,[a,b,c]=ids,ax=p[3*a],az=p[3*a+2],bx=p[3*b],bz=p[3*b+2],cx=p[3*c],cz=p[3*c+2];
+  const det=(bz-cz)*(ax-cx)+(cx-bx)*(az-cz);if(Math.abs(det)<1e-14)return null;
+  const xmin=Math.max(-surface.width/2,Math.min(ax,bx,cx)),xmax=Math.min(surface.width/2,Math.max(ax,bx,cx));
+@@ -98,6 +119,7 @@
+ export function finishSurfaceContactVelocities(cloth,surface,dt){
+  const current=new Map();for(const c of cloth.surfaceActiveContacts??[])current.set(c.ids.join(','),c);
+  for(const c of current.values()){
++  if(belowFixedBottomAtBothEndpoints(cloth,surface,c.ids,cloth.margin))continue;
+   const point=[0,1,2].map(a=>c.ids.reduce((sum,id,i)=>sum+c.weights[i]*cloth.p[3*id+a],0));
+   if(Math.abs(point[0])>surface.width/2+cloth.margin||Math.abs(point[2])>surface.length/2+cloth.margin)continue;
+   const sampled=surface.sampleTop(clamp(point[0],-surface.width/2,surface.width/2),clamp(point[2],-surface.length/2,surface.length/2));

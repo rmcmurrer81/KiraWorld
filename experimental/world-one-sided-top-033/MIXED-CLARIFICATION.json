@@ -1,0 +1,42 @@
+{
+  "status": "EXPECTED_ASSERTION_CORRECTED_NO_SOURCE_CHANGE",
+  "initial_exclusions": {
+    "triangle": false,
+    "edge01": false,
+    "edge12": false,
+    "edge02": true
+  },
+  "candidate": {
+    "count": 6,
+    "max_correction_depth_m": 0.37099999999999994
+  },
+  "baseline": {
+    "count": 8,
+    "max_correction_depth_m": 0.37099999999999994
+  },
+  "candidate_positions": [
+    0.1,
+    0.29500000000000004,
+    -0.1,
+    0.3,
+    0.315,
+    -0.1,
+    0.2,
+    0.30000000000000004,
+    0.1
+  ],
+  "baseline_positions": [
+    0.1,
+    0.32000000000000006,
+    -0.1,
+    0.3,
+    0.315,
+    -0.1,
+    0.2,
+    0.32500000000000007,
+    0.1
+  ],
+  "explanation": "The initial triangle is not excluded. Its separate edge02 is wholly below bottom, so a whole-solve byte-equality assertion was invalid. The original12/13 receipt remains preserved; this clarification does not turn it into an untouched13/13 run.",
+  "installed": false,
+  "gpu": false
+}

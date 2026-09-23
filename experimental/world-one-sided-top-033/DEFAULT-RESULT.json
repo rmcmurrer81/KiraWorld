@@ -1,0 +1,896 @@
+{
+  "status": "HOLD_DEFAULT_TRAJECTORY_CHANGED",
+  "difference": {
+    "order": "candidate_first",
+    "frame": 26,
+    "candidate": {
+      "cloth": {
+        "p": "c3b34154a6ad8fa65a99251480315a83eb9c23f1b20591c1bbf5541c27e90f78",
+        "prev": "2a489766e446144d127cdffdccdcae70391b745379e5906a76ad08d80e2f825e",
+        "v": "5659a023492787dcc0db72aebec733b61814164b07bfe18c92d1e9d42bc162b2"
+      },
+      "mattress": {
+        "p": "4410af5fc7360b9f851e4886a26c73c7cdff064387439400580dc0476c0de3e5",
+        "prev": "9537db431123f518499637d1ad38496e675d444b101300022831a7601b8a5202",
+        "v": "db3f9955152352191a503736e1d22b1bd75d0462ecee877a3d273c33afb42a00"
+      },
+      "pillow": {
+        "p": "18278e1dc8c93564e94bd4bfc6f00beffa6443a4d80229b39fc34365c47d3534",
+        "prev": "d36a3e8bc44c4a070473d0ef7cd096511644368e455474539e5f855375effea4",
+        "v": "7520fb9fe0cad6b5cf8dc13382f64fa9290be36f0562e8034cf1deba895ff366"
+      }
+    },
+    "baseline": {
+      "cloth": {
+        "p": "083fb99eada45ff570a0a421446b87ba0e64191f6680e88db4a113c3a72d5cb3",
+        "prev": "75015c563da1edce82c6b239ec79eb5d1095338c48e47b5d98e702b08d2b91f7",
+        "v": "f56f557e03d6a10dfd8c1a479d3585eb573908fb6b0e11dcd97bc3443d8ae6ce"
+      },
+      "mattress": {
+        "p": "4410af5fc7360b9f851e4886a26c73c7cdff064387439400580dc0476c0de3e5",
+        "prev": "9537db431123f518499637d1ad38496e675d444b101300022831a7601b8a5202",
+        "v": "db3f9955152352191a503736e1d22b1bd75d0462ecee877a3d273c33afb42a00"
+      },
+      "pillow": {
+        "p": "18278e1dc8c93564e94bd4bfc6f00beffa6443a4d80229b39fc34365c47d3534",
+        "prev": "d36a3e8bc44c4a070473d0ef7cd096511644368e455474539e5f855375effea4",
+        "v": "7520fb9fe0cad6b5cf8dc13382f64fa9290be36f0562e8034cf1deba895ff366"
+      }
+    },
+    "candidate_metrics": {
+      "version": "original_supported_mattress_frame_contact_v3",
+      "time_s": 0.433333333333333,
+      "finite": true,
+      "cloth_nodes": 725,
+      "cloth_rms_speed_mps": 0.4794452958327307,
+      "cloth_min_y_m": 0.11503145462666417,
+      "cloth_max_y_m": 0.6123901807434788,
+      "cloth_height_span_m": 0.49735872611681464,
+      "maximum_stretch_fraction": 0.018766815155575767,
+      "mattress_penetration_m": 0,
+      "head_penetration_m": 0,
+      "head_contact_nodes": 0,
+      "pillow_center_height_m": 0.699750404363879,
+      "pillow_center_indentation_m": 0.00039558545849460724,
+      "pillow_max_indentation_m": 0.00039558545849471827,
+      "pillow_min_y_m": 0.609750404363879,
+      "grab_active": false,
+      "head": {
+        "x": 0,
+        "y": 1.02,
+        "z": -0.73,
+        "radius": 0.12
+      },
+      "limitations": {
+        "material_calibrated": false,
+        "cloth_self_collision": false,
+        "continuous_collision": false,
+        "pillow_volumetric_foam": false,
+        "pillow_bottom_fixed": false,
+        "head_is_kinematic_proxy": true,
+        "mattress_is_rigid_support": false,
+        "bed_frame_included": true,
+        "native_integration": true,
+        "cloth_pillow_coupling": false,
+        "body_proxy_beyond_spherical_head": false,
+        "collision_mesh": "discrete particle and barycentric edge/triangle upper-surface contact with the same piecewise-planar mattress; no CCD or self-collision",
+        "bending": "compliant second-neighbour distance approximation, not dihedral bending",
+        "pillow": "dynamic height field supported by the current mattress; no lateral or volumetric foam response",
+        "mattress": "original dynamic height field; fixed supported bottom, no lateral or volumetric foam response",
+        "mattress_load": "authored smoothly applied distributed force; not a calibrated person or measured pressure map",
+        "mattress_two_way_bedding_forces": false,
+        "frame_contact": "discrete triangle/convex chamfered-mesh contacts, one-way rigid response; no CCD or frame load deformation",
+        "mattress_contact_direction": "one-sided upper barrier excludes primitives below fixed bottom at both physical-step endpoints; intermediate constraint paths and underside/side response remain unsupported"
+      },
+      "mattress_center_compression_m": 0,
+      "mattress_max_compression_m": 0,
+      "mattress_min_thickness_m": 0.18014598982237362,
+      "mattress_load_newtons": 0,
+      "mattress_load_site": "center",
+      "mattress_nodes": 651,
+      "frame_contact": {
+        "intersecting_triangle_part_pairs": 0,
+        "max_centroid_penetration_m": 0,
+        "worst": null
+      },
+      "frame_parts": 28,
+      "surface_mesh_contact": {
+        "max_penetration_m": 0,
+        "edge_penetration_m": 0,
+        "triangle_interior_penetration_m": 0,
+        "contact_count": 0,
+        "worst": null
+      },
+      "last_surface_constraints": {
+        "count": 0,
+        "max_correction_depth_m": 0
+      }
+    },
+    "baseline_metrics": {
+      "version": "original_supported_mattress_frame_contact_v3",
+      "time_s": 0.433333333333333,
+      "finite": true,
+      "cloth_nodes": 725,
+      "cloth_rms_speed_mps": 3.730506988427281,
+      "cloth_min_y_m": 0.08484358304004283,
+      "cloth_max_y_m": 0.6125735932061631,
+      "cloth_height_span_m": 0.5277300101661203,
+      "maximum_stretch_fraction": 0.05437866815898773,
+      "mattress_penetration_m": 0,
+      "head_penetration_m": 0,
+      "head_contact_nodes": 0,
+      "pillow_center_height_m": 0.699750404363879,
+      "pillow_center_indentation_m": 0.00039558545849460724,
+      "pillow_max_indentation_m": 0.00039558545849471827,
+      "pillow_min_y_m": 0.609750404363879,
+      "grab_active": false,
+      "head": {
+        "x": 0,
+        "y": 1.02,
+        "z": -0.73,
+        "radius": 0.12
+      },
+      "limitations": {
+        "material_calibrated": false,
+        "cloth_self_collision": false,
+        "continuous_collision": false,
+        "pillow_volumetric_foam": false,
+        "pillow_bottom_fixed": false,
+        "head_is_kinematic_proxy": true,
+        "mattress_is_rigid_support": false,
+        "bed_frame_included": true,
+        "native_integration": true,
+        "cloth_pillow_coupling": false,
+        "body_proxy_beyond_spherical_head": false,
+        "collision_mesh": "discrete particle and barycentric edge/triangle upper-surface contact with the same piecewise-planar mattress; no CCD or self-collision",
+        "bending": "compliant second-neighbour distance approximation, not dihedral bending",
+        "pillow": "dynamic height field supported by the current mattress; no lateral or volumetric foam response",
+        "mattress": "original dynamic height field; fixed supported bottom, no lateral or volumetric foam response",
+        "mattress_load": "authored smoothly applied distributed force; not a calibrated person or measured pressure map",
+        "mattress_two_way_bedding_forces": false,
+        "frame_contact": "discrete triangle/convex chamfered-mesh contacts, one-way rigid response; no CCD or frame load deformation",
+        "mattress_contact_direction": "upper-surface height-field barrier extends down to the floor within its footprint; under-mattress cloth routing is not supported"
+      },
+      "mattress_center_compression_m": 0,
+      "mattress_max_compression_m": 0,
+      "mattress_min_thickness_m": 0.18014598982237362,
+      "mattress_load_newtons": 0,
+      "mattress_load_site": "center",
+      "mattress_nodes": 651,
+      "frame_contact": {
+        "intersecting_triangle_part_pairs": 0,
+        "max_centroid_penetration_m": 0,
+        "worst": null
+      },
+      "frame_parts": 28,
+      "surface_mesh_contact": {
+        "max_penetration_m": 0,
+        "edge_penetration_m": 0,
+        "triangle_interior_penetration_m": 0,
+        "contact_count": 0,
+        "worst": null
+      },
+      "last_surface_constraints": {
+        "count": 0,
+        "max_correction_depth_m": 0
+      }
+    }
+  },
+  "records": [
+    {
+      "order": "candidate_first",
+      "candidate_ms": 1578.2216000000017,
+      "baseline_ms": 1543.9673000000005,
+      "candidate_worst_frame_ms": 78.8448000000003,
+      "baseline_worst_frame_ms": 87.80560000000014,
+      "rows": [
+        {
+          "frame": 1,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "bef1eda0f590fd95926166bf6ffadab51b1e4551a74a38b3487a8b3655e269c6",
+              "prev": "2d7eb4a5b3fca657bd26efb2584dfc21d5dbc6f17d3aaa9f892455281eb1dc6e",
+              "v": "21dc03621e07f7ab280121619eb16549c9cb7c9d6a6675aad5924693d9d0de00"
+            },
+            "mattress": {
+              "p": "a3c26955640ca8e1475a60d331f1a744eaea85c8789e44945d06b3200514287e",
+              "prev": "3d6abae6f48d4b11f0c7ea4ba49dd003ec9a3e4276ab33d77c0b4a3086836e53",
+              "v": "7732f41e2a1a4f6955fdfa102e05eafe7f55a5c0174eb89a2fdac6ac8c85a029"
+            },
+            "pillow": {
+              "p": "d866ba4854318703f4f4cdd5d682b45e39b25f964074ed21ae4a37376aa8d17b",
+              "prev": "694af4ea8f3d846bc73c9a6456de932b4bdc345aa5db4e2b110b7b991dcfadb9",
+              "v": "bc0fba7a6a489d1edfc400929ced28f9581a9ee87aff10054b297b2dacd16ba0"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 0.16113635375139815,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 2,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "5c3be76342bffc87888942d8fa49def10d5bebe2bdae49625cb94b1012279180",
+              "prev": "fd657023416020397dda43fa13ce5529c2d8df3721124a347e4636a7d2e0f43b",
+              "v": "55e7c0b90928249dc37197bace7c891d82e7e40c78be791eda9b0ad3cf72f53c"
+            },
+            "mattress": {
+              "p": "1af2cb37311d843f3d9355108a2ec58ac4ff57e7f34a9e8760fd0483ef0cee44",
+              "prev": "6fcbf733504f6f9745b2c8899a4596e47f8ad6c252aa0ebecdaae41eff94ce8d",
+              "v": "d62dd1c055fc2ddb7d4f4391de8823b39b48387ab2943ae6e403453cb11cdeb7"
+            },
+            "pillow": {
+              "p": "761a0cd564e7dd885f3fd679dd8f96413d36b67d8a2002021c1e6160d088a7b2",
+              "prev": "1abd36d6b8ce637c845de573ebee37812c8c2ff9f6339c45ed2fdaae8551f2e4",
+              "v": "00f66a1f6815f17168f60831abbb655194d7eec976ec4c9e347ab9677dea448f"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 0.3185563849544069,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 3,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "78d547edfea19698fab3fd72401c16758fd4d083948d76a37b7a87fb3d1d9d0d",
+              "prev": "096365380faf5702f6d5177d7f66b923e2d2bdb3225c8c85b20fe244084cc23d",
+              "v": "0ad5fbb2783d2e8273df155882396cf7b7a2b5e3e9b2f692933fd627e5349c2f"
+            },
+            "mattress": {
+              "p": "5dbe50ccf440f6211a83b390c0bb802e415d39651417e8eea52aaca25a8435f1",
+              "prev": "991c7871b5e82ac46ba3b0cd25f406190b144ed6db21ce088da37f090ce72368",
+              "v": "cc4d4b687e6ad48ead30f3b5bde0a7119d90a38381a0bdb31d208006918b27d5"
+            },
+            "pillow": {
+              "p": "240dc15438be8e83932842a37aa6f13250646182070e6de5f1140e00884a2cf1",
+              "prev": "af061918c75ad08421557a400bc87943ef20c588c2309f84392ea09853f71376",
+              "v": "0d2b2e9d02cce4c27dfb90329e8218c317f761015c4661f9a4e0c4a1fb2b78d2"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 0.47234580395901277,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 4,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "8a306ef6df74ac0722bf2f40ca9ab1e4fd517b6ef74a2594636fd9122bf2e0d7",
+              "prev": "d99b211134de508c8ff67fee7f5f4f4f1043ff37bbc0731b4bd3e57f33d9aa9c",
+              "v": "55b865d460a0f8bb8f16240dc9d688330bdce1089f3c4aabe3aa68aa5200abbf"
+            },
+            "mattress": {
+              "p": "17b6479fa2d8041efbde1e5e4048169d1d30a8ab2be060f5f0e302d4296c9abc",
+              "prev": "29e9c5f5d307f36976aa5bea814e097003d846492c4ba5b23a4391103338eb09",
+              "v": "f4e0713e5ee689bbce364b2345e97263e2f8c58047f814cead5001c2929bef1c"
+            },
+            "pillow": {
+              "p": "53be8e67ccb560f54793c357dcf3c34f626b704b2009823d93c953c91a03c0a5",
+              "prev": "699df2650bb2d69cc58678323764db109f6980ddf9b100745e861b018afd5e8f",
+              "v": "66b785db81770646779ce42b000ae437c3c41eeefcf6e006135bb9d7542149c4"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 0.6225883443589916,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 5,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "843f2f25ee41b3ca9f1df4adb0b733e6c121a3a1b62878ee4173efa7a7d622fa",
+              "prev": "c533cf02d4428b63a686d5d955bf7d536212ddde9630d8e1532e0f5ffd8d0737",
+              "v": "94ec486462058b61bbb0fd73fe7be5a1186739162ab721bb4aef5a38b4d8cfbd"
+            },
+            "mattress": {
+              "p": "503461dff6bcca636517afa7498fa280f94ffaca5028e09479fc3636dbae800d",
+              "prev": "45154ea3f11655a722f9c90d594a31ad9041c08d26e13f8307e7687da1b841c3",
+              "v": "a96ac4a270f2ff07edd23e88f3e30cb1ed3d88595e94db8d5ab1a441c23bc212"
+            },
+            "pillow": {
+              "p": "9cef8fc74dc859a431844e753761aaeb72987e41dfd81f6c338ba9df3dcfe80b",
+              "prev": "09d8133736f4034ca8f4c361b0b8caba62fcfe1f78a08be399311e95ca63d929",
+              "v": "e61deb97f61eab355579819ce83bb19418c02038e4861266c3dbfcf0122591eb"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 0.7693658085820382,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 6,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "2df99feebe1a9e086eadddc7013d31160fc496c2e9fa6f765c3c5133603360f5",
+              "prev": "b85ef2beb2bfb758af9119a8cf59820571283c0a778bc1733b550aab3e502fbd",
+              "v": "4b7b89e451b64cb2e22300f225bb6aead89bea17bf76d44dfbc36f11b84bcd71"
+            },
+            "mattress": {
+              "p": "130a32c631468da21ef50826e0b42e56e50ee2e531dce4a2a8e4a2ee7f3d1182",
+              "prev": "90144745d529406cbef3420e2a06797a4ec194ba63c0e6972b8a1476b91cf6b3",
+              "v": "345136100f4a766bd1f5acd1d2d64dbddfe034680beccadfdf675203e1eef7dd"
+            },
+            "pillow": {
+              "p": "1c6e46e8e08c55e112310ec119bff60f0aa0b1b6039ad4a11ead015907567aad",
+              "prev": "be695923348ca7050b77b2dd2754f82791374b75d763b48f96b1ad1084ff0464",
+              "v": "58b19dbfafe265a901875dfea4a92b24e78aa0a83e668ae813779f04eb53810a"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 0.9127581124288693,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 7,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "c770c91ab9407eb19d8ef446cc799fa1d35c65f9e06e529ebd2428536e48e020",
+              "prev": "ddb8c86b1b4fcfbc3f5ec4e09dc443d77ef6e8b2dcd930abcbafe0a8f0549424",
+              "v": "d8229243fa87f06dbf9a9164a824ecc922ec69414b9c9a94d4125648afd32e26"
+            },
+            "mattress": {
+              "p": "473a75f9a6cdf155e3a63d70c602fefde81a41e9bf888ce7b4262917668cb7b2",
+              "prev": "43ebc9af31a90058d36c6ef5c705fb0ec1961fdfb1e8718301f31872fefa17c0",
+              "v": "d43cb771604dceb5c597efe04f4d40867f47b99a6e77687f6e4d89c0c831277b"
+            },
+            "pillow": {
+              "p": "46038c98b3f5b72dd7401c63d44ac9866cdc767256405902e1ca23484ddd9937",
+              "prev": "0f10cc25b02f03122ed52bacae49c31a3cba7130e94de889aace87122415a57b",
+              "v": "612bde08fbb4f0e3b4773ee64e73a7c8f36bd1636f8a7ce208d2edb46e1573c7"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 1.052843328584773,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 8,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "d516b2341dccadfcc93af976f98af83e95216fd12e64e5f94c12a98c2d54b405",
+              "prev": "7d1ce42c71c92fd1ed8e3664885ae33748278fe50a14d559620b486cc9de9273",
+              "v": "90bb6d7db21ed2729e3c645771f98c40e26cfb58cefd52539e3977fe5040ba9b"
+            },
+            "mattress": {
+              "p": "5ea34148b6a6d320737367c05f829b6926467b3245c9a91d0706068bebddd42b",
+              "prev": "75976c1d4bd2e9055af7d9d07e8bb4f9e8316c6a1e21e81042f56c640f7c771a",
+              "v": "ca19864a7af3baf185fcb8d0f7cf001e0e5c4cb6e1c80fcdaa2199f514730051"
+            },
+            "pillow": {
+              "p": "160055446d6f300d6fda7d43c5b2551671f427a867e17eb1ff40716a489989ae",
+              "prev": "2d4d222934d282e885be0e113fe13e9124b4f6d4954ca7e36312d33090d11393",
+              "v": "208c02bf4bc066974be02aef46ae5550ab34c2917a225a59b4a23b669391efaf"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 1.1896977291278432,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 9,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "aec6f7a9a8abd6f48828bebe53d5ffe75648df5f649676e619cbc17b6d12209a",
+              "prev": "aeb6c36546515efca7742ffba3c890ff886d1ef8b71d5019cec55313bcada921",
+              "v": "48a85a5b7f2bbb98111b3acfc887695cc950c69be9e5a61babc821868b8a07d0"
+            },
+            "mattress": {
+              "p": "8606f6f0186c71ec39da83b7a565e7209f03a373b76b39e85e280152f7ecfa1c",
+              "prev": "85fae733713d6879f74e1ecac132bcf806f9b57a35a8ecaf21d5228a693a0538",
+              "v": "cb03f6e6b54672b9b6a4f68702f50e92ba799a8820dd6a168d655611f1308a04"
+            },
+            "pillow": {
+              "p": "4fc74fcf515c9bb52454874dd6b5b26484e7844ec4fc873f50e3ab8d3810f8ae",
+              "prev": "fb6cfa9809ed15d210896bd935d9d4e9b34c8746538fc129e3cb5c05cbf8396a",
+              "v": "afd9d9a41f8ba08c1a2d6fe6157f50e7922ede0b95bb9e6c0a4f64faa4d5053f"
+            }
+          },
+          "candidate": {
+            "stretch": 0,
+            "rms_speed_mps": 1.3233958270567383,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 10,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "5f0039be62983d7422f4c53315ff200f7e5d285e25cd4cc1e91e66ec3715ebe5",
+              "prev": "992aaeff58374d7937b930e52b9b57a2dfe1ab5c6d25185dbd8fcc059b880066",
+              "v": "4b58943ec42bbf1f35e89a744d5d4c7a3a6c4edeb228cf1bba74a8442377e416"
+            },
+            "mattress": {
+              "p": "e2203d92f57472f3a4832748d1b23a2ff2ec41182b1efd51b96c33a7242c4253",
+              "prev": "506fbf337edcdf8173c6d289e67faaf368edd660ed424866d76b0f7406bd0116",
+              "v": "2eb989b769b1507b7b5617521d7a1ba58ddc2ff2c94793b2b57a3a4692df5345"
+            },
+            "pillow": {
+              "p": "536676b567870647ce19fba2e93b15520f68687a913d9542c813c0727179b79f",
+              "prev": "8ff4ee6c309daeaf2d4ae2dbc689e86dbbc7e66fe0f5f8212c9e0c0e0a96882b",
+              "v": "f60cb6b16e7221b79f0bfa701d5d3de7f409de50f865d2bdefdf4364f5ec09aa"
+            }
+          },
+          "candidate": {
+            "stretch": 0.0005508834403151752,
+            "rms_speed_mps": 0.9603018541353794,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 11,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "6398fe92efe16cf46a56bb98ba334de4ed485fdb59df46d050d24f42576ec508",
+              "prev": "ebe455858e21fcec24bc2c8f4cae04f030de518e5799496abe232246fde1d8f9",
+              "v": "39f31f61d63f2095870e49aa1c822c11f256f17bb7809086d104a278495e9eff"
+            },
+            "mattress": {
+              "p": "26246169cfb863dde2f2094535bf77ae5e0157fe4ed9b682a844bca5d1fc7dd4",
+              "prev": "233e0ec0608c64689b3bef595aa572c08f94fb0220c48a6e55648431b9290f59",
+              "v": "1e645f847b1b276fde56c6f647df9eb2857ab688aebf3d0f657b5a1d2a0efb29"
+            },
+            "pillow": {
+              "p": "bec6fc9880c83f2f35d5d0b5c526ff8278ef792a7963ac76561b73dc64dd2a54",
+              "prev": "e81b988ee5c9fe2ea97614c6bef11df4cc6ed5259ecedfabba44013b1380185b",
+              "v": "5bee30a8915887b0e4749c3dd05f263cf5da171e134f015f8483aeba4ec374f1"
+            }
+          },
+          "candidate": {
+            "stretch": 0.005823734561113625,
+            "rms_speed_mps": 0.9858149034121276,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 12,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "268976fd8289214cad8382b54387d2b85c7ca37a9405644c102424f2bc8902cf",
+              "prev": "683143bc074153f1fde45cd874e3315a521d64a81f79f66a5e5e72e4849d5854",
+              "v": "70d73c789d3ca41503881326d8f984e5d39c27d8c98cac714d6e2930df976405"
+            },
+            "mattress": {
+              "p": "a0e336f4b49db9e584a1ed3ea1d117ed36271e18305b998160f412fd3cf4961f",
+              "prev": "dadf0321aa5681f9726d36bd55225ef706db86152793e5e10055608335dfd58f",
+              "v": "df377d3f101dcd026378a0f6ef0a354739792c2ccc0cce2917397f49251e85cc"
+            },
+            "pillow": {
+              "p": "852cdd8eecbd69df03d2f9673def02a023515d7dbd398e20f6c7d545a81605c3",
+              "prev": "f45dc60fea94953ef04fcdf486914707b0356a52a26e33aa55617eb0c5c012db",
+              "v": "63c3f7de9102ee80727436e1eec57649f8d68137d18edb635939410abd22e581"
+            }
+          },
+          "candidate": {
+            "stretch": 0.0073206245651145085,
+            "rms_speed_mps": 1.0101928147189072,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 13,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "a187c476541a1595bcec8f75e2d049fc87900fed91f4fa589d8b224b952e6e7e",
+              "prev": "5919d3ed4a63291718de3cf550919ddab07ac8e0464cb19f502e02bb763fb18d",
+              "v": "f289e8a2926a3b26b7ec509c0e1f06d78c1d56bafc0f1ef3f49cafa3500915d5"
+            },
+            "mattress": {
+              "p": "a9be9a987e77877458160971a1886e5d10e17cc1a1960c2efea6680bd7726e66",
+              "prev": "c99c03b679ca92929926a71b2880bc8a6dc5614d18dee82effbc6f9ab46baef0",
+              "v": "101954eec561d9b9ca1679bd53a9daea2d80cdb32622ce05922ff98d99903cc4"
+            },
+            "pillow": {
+              "p": "aeaf222220611e20a1045f86cd5ef64888fa11df4c0b4756d2149ed6562866f5",
+              "prev": "576d2310025de62b4c9269c57f96dfe45f423095ac48748267705caea7b025db",
+              "v": "57ff0df433f2082e8e40ba8d38c603c187fe6b53d7e6b419c1cfd090b7f15c29"
+            }
+          },
+          "candidate": {
+            "stretch": 0.009320111348442683,
+            "rms_speed_mps": 1.0464919998672866,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 14,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "2ca3e7360497655e157cb435e2d33e0adccd8d7c3018273c9555f7d1a1f345db",
+              "prev": "f8174646907d400d926af61610e48ecd2c792801bced07ea48df0df9aa315026",
+              "v": "66918f55c837cb79f54e2517be3852f66ba9261f3383e09d94696e46afe6fcf3"
+            },
+            "mattress": {
+              "p": "5c96d95c1e58902fedc6193a948799acd1cd984aafb68f3b97f80b8da3220217",
+              "prev": "5af31ca87af9ef75982d86d47d891ebc346e9d694aad4f65612c52559edec388",
+              "v": "eccb139877b6cb13356c05ce8f1cbebf21f8c6245e0906b629f018700727ebd2"
+            },
+            "pillow": {
+              "p": "087cbea2e96f3b24e7012c64c3f4946de8d1af93ff96db64c0e4553f1afa8532",
+              "prev": "3b0798f2d08775d6962fa42937ba1dd9713620a44ed9a1527a70be7ede1fb153",
+              "v": "fb5f6eb8a29c4db087acb594189414e38c1f52ab81552d07f3cee6a729bb7a0c"
+            }
+          },
+          "candidate": {
+            "stretch": 0.012467187290838178,
+            "rms_speed_mps": 1.0810198719160475,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 15,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "072fbdb784e637c9c947ff88273523b9c8a6ee7956b62ad33f64e3879878e8cb",
+              "prev": "22178d431aac6209210cbb7bac74e891ade50e8de4d9a50d4cd635d296af9618",
+              "v": "ef448f29fac846fde3a0968ad29dfe4017433df961f27262f81aca366302b653"
+            },
+            "mattress": {
+              "p": "df7f7e3e16b38398a1c7ee4c14267ea23750ee2b204496f3bab3599611ee82e6",
+              "prev": "9cb4b4514b73461b3106dd6b736ee948e6259fc08a4f24c539be101c7a59c3dc",
+              "v": "6308c4746bbcdca2c48e96c962fe1be9be9b3819fa21132d710832ff00faaf06"
+            },
+            "pillow": {
+              "p": "bc83593d29c1e8d8b09b4144f60758428538f3e9946e5da34a98dfc4a207c155",
+              "prev": "b43ad6fc436b03e6d80911ae3d90d6b321a331c7e265c1de0f1f019e9dd8de14",
+              "v": "a84552d33abea92547dfa0bf87e8c1735ec3e094897b1804eee0eb0ee7219f78"
+            }
+          },
+          "candidate": {
+            "stretch": 0.017300099727334706,
+            "rms_speed_mps": 1.1101733782410075,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 16,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "cd072231239ac1948ffc79e495cc9636dd6cb8bc6810a0d9329f56ab3e43a272",
+              "prev": "4f3407b400a934cfaea93fbd7cdf6a207d9b85ea277e5c56bd7b9e866de44d6f",
+              "v": "71c9a7c4475c79f96bd868069d21cb7b35e2c3b315b9c20ef23704827b48e0b3"
+            },
+            "mattress": {
+              "p": "d4f6d5b02f8cf05353283a57d11340eef18047ec298db68931806bae4d715665",
+              "prev": "eb81467389e60a69096ae17865d5dcc597359383e21b5fd8b3b8c9ecb8df997d",
+              "v": "99523069707dd6a624c16c0306bf15b5363b827067eb8ec4b695f0f49fd48150"
+            },
+            "pillow": {
+              "p": "6203a3a5eaf21c6b9eea9b4d310bb04cc23d295ec3e16812b63cf21d25637de9",
+              "prev": "0b434f4c036853cb68e91e18b04283553ef54398579f41d0a3b9fc683663f338",
+              "v": "bb394b06ea087950a47ef48452ea7e85eac865875f15d5a47612880d0489edc0"
+            }
+          },
+          "candidate": {
+            "stretch": 0.022007803672385418,
+            "rms_speed_mps": 1.118935300696328,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 17,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "1883506f8b6ce035e0c155358102f395d72797f5b9c72eed6b76c4a9d59d7d87",
+              "prev": "fe0c772cfba288f77b06834b1ab104a71545b213c873af1b033ab1b7c6c0b3f2",
+              "v": "3fe275a4be5fc5f9767f122dffc647e95d20925f79e727697af66657b1c4d19b"
+            },
+            "mattress": {
+              "p": "654521aa6ad39af7cc8b899077cd84dc492db7d8982e25ea19e776b710517eef",
+              "prev": "1c68bdb59117ea58a2885aa8183571c7f06e1e1b43c604f735b489694bf6f717",
+              "v": "5ff75ce1361d791a5390b874dfb3c79e4854b574d67b4fa34263b6be788fc0f9"
+            },
+            "pillow": {
+              "p": "d49c830b2b3a632984e1423b81924c9e2d2f375499c6438b0ca7dd3165bf9a3f",
+              "prev": "2ccf2dadc97a10869fec2f57453190116803794ef7b46e5a23d479d60b3dcca6",
+              "v": "16bae43b77a182fbe7bdced4d95e6a75cd55bb5bce5b1dd151525f638e3bd579"
+            }
+          },
+          "candidate": {
+            "stretch": 0.02595398293116724,
+            "rms_speed_mps": 1.112892763082074,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 18,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "c4b953b10f8862289c4378208db2a8ad2b939bc95b7820f78abf9608e3491cdc",
+              "prev": "5ba3ea1ff2f8cadee340f9a6d544d7d86c9c9252d254b22a503ee7dfc833f83a",
+              "v": "44e220c3b459a8b98c03c561963614f507754acabc2afaef078a693ef1b94749"
+            },
+            "mattress": {
+              "p": "413d97c4facd500a0f6f9f2f021b4c0d86f7759c00a382792280aaf8575c42a8",
+              "prev": "2664980d95eecb5377a9f713b76fa67554e6953d41c6922dcb72039b96dfaf0c",
+              "v": "450e7fde82730d87878782e67d03910656c05bc0f25b405d7e15085c8e1e1bb5"
+            },
+            "pillow": {
+              "p": "a31bccfeb9690ba3b33b273b705c9b9eb6002f71f5e79729a570946f2c15b95a",
+              "prev": "03fca839c332f8986d2e8bad0f160155834d06523f035a1020911b34b6465435",
+              "v": "7f6880dfcf57cb93d70a1e9d1c842f5ad583b9e94720aa00e823e0322ce03e16"
+            }
+          },
+          "candidate": {
+            "stretch": 0.027951621658251158,
+            "rms_speed_mps": 1.0953921047138322,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 19,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "fb6d4e1d4388c277720774859ec65aa423b7a7a855430cafb064993b0fb9b120",
+              "prev": "03b0f513a30b0b3c67b5a236c3931dab3c3c4a75df4b426615665eda27571563",
+              "v": "2d6cbed2515cb4d38e4652fdf8d26e9b4895f5eb084f54a30e6a2b37c69f4891"
+            },
+            "mattress": {
+              "p": "4232d7096b012be1bb8e72c3efb3e12c2481a2ba41f5eff6a9c395579d39491d",
+              "prev": "eec53c3820f34cd6360509cb3cf6b4277ef00eb0501d8b8bc249d62f966a7d4f",
+              "v": "6c7f20c01e9c6925a9dc5b630daed282b8e0762044f2bdc72bcb7243b0b1e006"
+            },
+            "pillow": {
+              "p": "e893c777f5a40f69df45826801fe663f2d1fdd7991314dcd89ea72af318a64f8",
+              "prev": "8af72548efd12456bab44459cc0ac6cd6a85f8120468e1e53ab69998c52f6b7b",
+              "v": "ec0e32460162953e57a41e99f97e9e21c86805f83d6ae28705b864940cd447f2"
+            }
+          },
+          "candidate": {
+            "stretch": 0.02820826158957712,
+            "rms_speed_mps": 0.9523403697720645,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 20,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "2b838532d57fe891aac37f1a538f901550463f6ca02269f0923f545cdd9e6ef2",
+              "prev": "0a8379415332fe1ec3b32d8a3af76c6b5c378205a48936164bc7016b220e9df7",
+              "v": "f63c384806b69f26136a08f2ffae3715353771dc175c384858518d3929b67456"
+            },
+            "mattress": {
+              "p": "faa8f2e09104e8b26dca5cceece6e1985d25c98a8f68394feff54ddf0280f33d",
+              "prev": "861a38cd2487608fee2a9a3e6682eb58f4964301b00288c268d7ee6ef1fa3cf0",
+              "v": "0d6a72f17224c3a4458cb9ec9f26e06975ac248ceec375854a3fceb9780e4e50"
+            },
+            "pillow": {
+              "p": "fa1bd1a666682b85fd71aec11fea53a6b52aeaa578fae43919622057dbc312d4",
+              "prev": "f45067b4004aa4f3b687da1242c362f4b7b4cb11160d2d56ef4a1e96c52d256c",
+              "v": "2bb02118b9050e7d432f25325c22b7071a4f9dcca84ae991a3c67674602bc7bf"
+            }
+          },
+          "candidate": {
+            "stretch": 0.028505264976242728,
+            "rms_speed_mps": 0.9525933735643272,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 21,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "d400e59fcb08d840a36ec9d736810cc41be88c7e7c946151ea5c95ec6c7d620e",
+              "prev": "9e5edefca0b0d8368f2e260e751b9597ed7c22d8178bc84634b9d669d808b136",
+              "v": "69cbb60e3cfbd9cf3e0cb7dd87e76fe7e2dbb409642925797b986e542e6bf8ed"
+            },
+            "mattress": {
+              "p": "9eec9ffe3a5797b1c8d9ef9b9cde3d66bdd459091797b96955e63ceba18ee24b",
+              "prev": "d3921214b53e52eb4bb61b4869dbfe222369b9b79424b3acc6f9cf93cec6da3e",
+              "v": "ee517af6d9fb1c4d7d31ce2277761c988b38b91412e8793641535f6c3821c341"
+            },
+            "pillow": {
+              "p": "daad7537438aad417470328488bb3a83bc13d2d0b3b93b76665b1503fb068ef7",
+              "prev": "28b9e73d21bf7b8ed69743fd3e23a110d494a294947e30596a992a82651ce88f",
+              "v": "25e2b9216b17fdd9ccf686b5f819c2ebf1a29d8df76fcbc99c09ec197efcd3b5"
+            }
+          },
+          "candidate": {
+            "stretch": 0.030870466617905823,
+            "rms_speed_mps": 0.9523964776731002,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 22,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "5ae4380622796d42391af126d5c1810534396340528ff0268c96d8e19550e3f0",
+              "prev": "ccb10a92db345d4ec9a822be5d6697e07a874df0a4399e2d3d65805a5e181ce6",
+              "v": "e78d676e2901975e9bad17ab0ffe1cec88563d2ec0183f34d85b6b7184c32a55"
+            },
+            "mattress": {
+              "p": "3ae4a134d2198045979acbf296024144cf9f1917951be039c47ac5e14c88ef2d",
+              "prev": "ed9142988f8e578c272c71b9d954b57c14a670c1707ada419217a8e3a11ba4df",
+              "v": "7937ea42186e3b3c9f94998a5cb0ec7810ec751851f3bab26113bd040d1acc9c"
+            },
+            "pillow": {
+              "p": "734eefa83f8d9fe81bbddbf91601b13c5f22d1d5020852b3214f71138598e658",
+              "prev": "5205cb7948b40f5804ba342daa2c2526ee5a759e037a929db59e4fc91456accc",
+              "v": "6ce7ff304a21a08f5c3350a3ca48b269b4237cb5d6afbeadb18fc1bbf4216cac"
+            }
+          },
+          "candidate": {
+            "stretch": 0.03680359800448829,
+            "rms_speed_mps": 0.9215377687432762,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 23,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "423e739afe44a9ebfd8ebb86dca7dddef72bcadae53b54e390a9ba0a765e7108",
+              "prev": "5cd39b3762c30d9fbd569e707611723f00cfce5df156163f5995990b6563db7e",
+              "v": "17af9bfd82b8bc80166d045393ab111571dcdcdd6467449477118b09864f20c4"
+            },
+            "mattress": {
+              "p": "494d1e50468303fbc225a835d8142969ac0c90e583f8668486ba51b8537bba45",
+              "prev": "6d7cd045329b299f2f9c53c282faddf83ab300eb71de599274826951dca66d24",
+              "v": "f135cb753c3484c7d95dbb327411cc148b4ce96259581cec53615c0c7b838bd2"
+            },
+            "pillow": {
+              "p": "32a8d6c591330d02132316ca4f792b831daed41acc3098b8f1d6e410b113b954",
+              "prev": "41268fd189175029d82c3cccd3fc877941ba960ff3aedbaa10588e3b9ef3b0c8",
+              "v": "37d855039d360153766ac33d8de843e3d3fcd9f4c4b2bbfa2671df84dd377f2d"
+            }
+          },
+          "candidate": {
+            "stretch": 0.03859631454134105,
+            "rms_speed_mps": 0.8824332249799146,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 24,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "770233389a140b11d08d0bd239b3a1c82a115c7a75dcf2e347a5d07bee996144",
+              "prev": "5d09a6276e88c560e6e2ca70912bbf1cd30a43a754c0ff86119388af3f6d931e",
+              "v": "826b69739afbcc93175f487c6436e77772d995afbd8aaa6e187fe5ee1d0b435f"
+            },
+            "mattress": {
+              "p": "b0380075c22b066a088eb5ab513f89d47145f291ee8f8b517fc952f182790d64",
+              "prev": "f38ad3a649e30a2b8326887c4c8938123c4c9a913a676775f3edfa27f4363abf",
+              "v": "cedafb130ba40dd1ee60402ae2a837806d7a5f31804667afab47665d91b83311"
+            },
+            "pillow": {
+              "p": "726b1c5926b4e7cf104714bcc94d4956d5fe1194e796980ae661a06bb51c879c",
+              "prev": "da80606cc4bce23624f2c2a8a2789a770b26cb27c53df68457ac271d56fae059",
+              "v": "ea89733c18959dea1913b91406d4675dd8f0eec8d2fc731b396792aba5ad8e72"
+            }
+          },
+          "candidate": {
+            "stretch": 0.02673350879475689,
+            "rms_speed_mps": 0.7526395637194504,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 25,
+          "exact": true,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "8a013f4e100530858b3f8a0a2227bacb9ed8601b45f82f2fc2bc8abdf8e44305",
+              "prev": "066115f7af51487805530916acc040d968b0ce361217cdabe6a54be56af2abd2",
+              "v": "4fc1764a6a6ed6a2b90e1d3608a0b33b385df2e3601f37a3473144900e1ac0c9"
+            },
+            "mattress": {
+              "p": "e2a96feab3fb09f87e9e037f3c79a3da136e11ad8fdfc060d5cae678eb9718b7",
+              "prev": "7513b054a732a4e1b418a5f0757d152d1fc1d9a41209c8fa871c3e729757467d",
+              "v": "33216c409a3d78f70c366a0bc68349f9e54a123832012537f021f217c8cbdc06"
+            },
+            "pillow": {
+              "p": "d44f1376f814fb66203620670387389488f0f7dfb104095d95011a3e93cada05",
+              "prev": "fa75c7df2de979739500f2246e6aedfaa2f50b01457a9429df8a870a4ea4df2b",
+              "v": "312bd03aeca2893f58d5e0e230de3295cab6923a114f56dc18d81b69c3d9d576"
+            }
+          },
+          "candidate": {
+            "stretch": 0.021930887418705636,
+            "rms_speed_mps": 0.5948836116356814,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        },
+        {
+          "frame": 26,
+          "exact": false,
+          "body_state_sha256": {
+            "cloth": {
+              "p": "c3b34154a6ad8fa65a99251480315a83eb9c23f1b20591c1bbf5541c27e90f78",
+              "prev": "2a489766e446144d127cdffdccdcae70391b745379e5906a76ad08d80e2f825e",
+              "v": "5659a023492787dcc0db72aebec733b61814164b07bfe18c92d1e9d42bc162b2"
+            },
+            "mattress": {
+              "p": "4410af5fc7360b9f851e4886a26c73c7cdff064387439400580dc0476c0de3e5",
+              "prev": "9537db431123f518499637d1ad38496e675d444b101300022831a7601b8a5202",
+              "v": "db3f9955152352191a503736e1d22b1bd75d0462ecee877a3d273c33afb42a00"
+            },
+            "pillow": {
+              "p": "18278e1dc8c93564e94bd4bfc6f00beffa6443a4d80229b39fc34365c47d3534",
+              "prev": "d36a3e8bc44c4a070473d0ef7cd096511644368e455474539e5f855375effea4",
+              "v": "7520fb9fe0cad6b5cf8dc13382f64fa9290be36f0562e8034cf1deba895ff366"
+            }
+          },
+          "candidate": {
+            "stretch": 0.018766815155575767,
+            "rms_speed_mps": 0.4794452958327307,
+            "frame_pairs": 0,
+            "surface_depth_m": 0
+          }
+        }
+      ]
+    }
+  ],
+  "source_unchanged": true,
+  "installed": false,
+  "gpu": false,
+  "limits": "Short default settle comparison only, not full1110-frame trajectory, statistical speed guarantee or visual/physical approval. Maximum recorded CPU frame time is an observation, not a mathematical worst-case bound."
+}

@@ -1,0 +1,1015 @@
+{
+  "status": "PASS_DEPENDENCY_AUDIT_DO_NOT_INSTALL019_AS015_OPTIMIZATION",
+  "supported_frames_each": 12,
+  "rows": [
+    {
+      "frame": 1,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "bef1eda0f590fd95926166bf6ffadab51b1e4551a74a38b3487a8b3655e269c6",
+          "prev": "2d7eb4a5b3fca657bd26efb2584dfc21d5dbc6f17d3aaa9f892455281eb1dc6e",
+          "v": "21dc03621e07f7ab280121619eb16549c9cb7c9d6a6675aad5924693d9d0de00"
+        },
+        "mattress": {
+          "p": "a3c26955640ca8e1475a60d331f1a744eaea85c8789e44945d06b3200514287e",
+          "prev": "3d6abae6f48d4b11f0c7ea4ba49dd003ec9a3e4276ab33d77c0b4a3086836e53",
+          "v": "7732f41e2a1a4f6955fdfa102e05eafe7f55a5c0174eb89a2fdac6ac8c85a029"
+        },
+        "pillow": {
+          "p": "d866ba4854318703f4f4cdd5d682b45e39b25f964074ed21ae4a37376aa8d17b",
+          "prev": "694af4ea8f3d846bc73c9a6456de932b4bdc345aa5db4e2b110b7b991dcfadb9",
+          "v": "bc0fba7a6a489d1edfc400929ced28f9581a9ee87aff10054b297b2dacd16ba0"
+        }
+      },
+      "observed": {
+        "time_s": 0.016666666666666666,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 0.16113635375139815,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6933166007265411,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.6939880022005053,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -0.1611363537513988,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 2,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "5c3be76342bffc87888942d8fa49def10d5bebe2bdae49625cb94b1012279180",
+          "prev": "fd657023416020397dda43fa13ce5529c2d8df3721124a347e4636a7d2e0f43b",
+          "v": "55e7c0b90928249dc37197bace7c891d82e7e40c78be791eda9b0ad3cf72f53c"
+        },
+        "mattress": {
+          "p": "1af2cb37311d843f3d9355108a2ec58ac4ff57e7f34a9e8760fd0483ef0cee44",
+          "prev": "6fcbf733504f6f9745b2c8899a4596e47f8ad6c252aa0ebecdaae41eff94ce8d",
+          "v": "d62dd1c055fc2ddb7d4f4391de8823b39b48387ab2943ae6e403453cb11cdeb7"
+        },
+        "pillow": {
+          "p": "761a0cd564e7dd885f3fd679dd8f96413d36b67d8a2002021c1e6160d088a7b2",
+          "prev": "1abd36d6b8ce637c845de573ebee37812c8c2ff9f6339c45ed2fdaae8551f2e4",
+          "v": "00f66a1f6815f17168f60831abbb655194d7eec976ec4c9e347ab9677dea448f"
+        }
+      },
+      "observed": {
+        "time_s": 0.03333333333333333,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 0.3185563849544069,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6889864201584547,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.690313738429098,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -0.3185563849544071,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 3,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "78d547edfea19698fab3fd72401c16758fd4d083948d76a37b7a87fb3d1d9d0d",
+          "prev": "096365380faf5702f6d5177d7f66b923e2d2bdb3225c8c85b20fe244084cc23d",
+          "v": "0ad5fbb2783d2e8273df155882396cf7b7a2b5e3e9b2f692933fd627e5349c2f"
+        },
+        "mattress": {
+          "p": "5dbe50ccf440f6211a83b390c0bb802e415d39651417e8eea52aaca25a8435f1",
+          "prev": "991c7871b5e82ac46ba3b0cd25f406190b144ed6db21ce088da37f090ce72368",
+          "v": "cc4d4b687e6ad48ead30f3b5bde0a7119d90a38381a0bdb31d208006918b27d5"
+        },
+        "pillow": {
+          "p": "240dc15438be8e83932842a37aa6f13250646182070e6de5f1140e00884a2cf1",
+          "prev": "af061918c75ad08421557a400bc87943ef20c588c2309f84392ea09853f71376",
+          "v": "0d2b2e9d02cce4c27dfb90329e8218c317f761015c4661f9a4e0c4a1fb2b78d2"
+        }
+      },
+      "observed": {
+        "time_s": 0.049999999999999996,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 0.47234580395901277,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6820705015847127,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.6840386091012086,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -0.4723458039590156,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 4,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "8a306ef6df74ac0722bf2f40ca9ab1e4fd517b6ef74a2594636fd9122bf2e0d7",
+          "prev": "d99b211134de508c8ff67fee7f5f4f4f1043ff37bbc0731b4bd3e57f33d9aa9c",
+          "v": "55b865d460a0f8bb8f16240dc9d688330bdce1089f3c4aabe3aa68aa5200abbf"
+        },
+        "mattress": {
+          "p": "17b6479fa2d8041efbde1e5e4048169d1d30a8ab2be060f5f0e302d4296c9abc",
+          "prev": "29e9c5f5d307f36976aa5bea814e097003d846492c4ba5b23a4391103338eb09",
+          "v": "f4e0713e5ee689bbce364b2345e97263e2f8c58047f814cead5001c2929bef1c"
+        },
+        "pillow": {
+          "p": "53be8e67ccb560f54793c357dcf3c34f626b704b2009823d93c953c91a03c0a5",
+          "prev": "699df2650bb2d69cc58678323764db109f6980ddf9b100745e861b018afd5e8f",
+          "v": "66b785db81770646779ce42b000ae437c3c41eeefcf6e006135bb9d7542149c4"
+        }
+      },
+      "observed": {
+        "time_s": 0.06666666666666667,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 0.6225883443589916,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6726284804397221,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.6752225985412179,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -0.6225883443589897,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 5,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "843f2f25ee41b3ca9f1df4adb0b733e6c121a3a1b62878ee4173efa7a7d622fa",
+          "prev": "c533cf02d4428b63a686d5d955bf7d536212ddde9630d8e1532e0f5ffd8d0737",
+          "v": "94ec486462058b61bbb0fd73fe7be5a1186739162ab721bb4aef5a38b4d8cfbd"
+        },
+        "mattress": {
+          "p": "503461dff6bcca636517afa7498fa280f94ffaca5028e09479fc3636dbae800d",
+          "prev": "45154ea3f11655a722f9c90d594a31ad9041c08d26e13f8307e7687da1b841c3",
+          "v": "a96ac4a270f2ff07edd23e88f3e30cb1ed3d88595e94db8d5ab1a441c23bc212"
+        },
+        "pillow": {
+          "p": "9cef8fc74dc859a431844e753761aaeb72987e41dfd81f6c338ba9df3dcfe80b",
+          "prev": "09d8133736f4034ca8f4c361b0b8caba62fcfe1f78a08be399311e95ca63d929",
+          "v": "e61deb97f61eab355579819ce83bb19418c02038e4861266c3dbfcf0122591eb"
+        }
+      },
+      "observed": {
+        "time_s": 0.08333333333333333,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 0.7693658085820382,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6607186167729784,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.6639243076420702,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -0.769365808582041,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 6,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "2df99feebe1a9e086eadddc7013d31160fc496c2e9fa6f765c3c5133603360f5",
+          "prev": "b85ef2beb2bfb758af9119a8cf59820571283c0a778bc1733b550aab3e502fbd",
+          "v": "4b7b89e451b64cb2e22300f225bb6aead89bea17bf76d44dfbc36f11b84bcd71"
+        },
+        "mattress": {
+          "p": "130a32c631468da21ef50826e0b42e56e50ee2e531dce4a2a8e4a2ee7f3d1182",
+          "prev": "90144745d529406cbef3420e2a06797a4ec194ba63c0e6972b8a1476b91cf6b3",
+          "v": "345136100f4a766bd1f5acd1d2d64dbddfe034680beccadfdf675203e1eef7dd"
+        },
+        "pillow": {
+          "p": "1c6e46e8e08c55e112310ec119bff60f0aa0b1b6039ad4a11ead015907567aad",
+          "prev": "be695923348ca7050b77b2dd2754f82791374b75d763b48f96b1ad1084ff0464",
+          "v": "58b19dbfafe265a901875dfea4a92b24e78aa0a83e668ae813779f04eb53810a"
+        }
+      },
+      "observed": {
+        "time_s": 0.09999999999999999,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 0.9127581124288693,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6463978269698657,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.6502009857716526,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -0.9127581124288664,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "c770c91ab9407eb19d8ef446cc799fa1d35c65f9e06e529ebd2428536e48e020",
+          "prev": "ddb8c86b1b4fcfbc3f5ec4e09dc443d77ef6e8b2dcd930abcbafe0a8f0549424",
+          "v": "d8229243fa87f06dbf9a9164a824ecc922ec69414b9c9a94d4125648afd32e26"
+        },
+        "mattress": {
+          "p": "473a75f9a6cdf155e3a63d70c602fefde81a41e9bf888ce7b4262917668cb7b2",
+          "prev": "43ebc9af31a90058d36c6ef5c705fb0ec1961fdfb1e8718301f31872fefa17c0",
+          "v": "d43cb771604dceb5c597efe04f4d40867f47b99a6e77687f6e4d89c0c831277b"
+        },
+        "pillow": {
+          "p": "46038c98b3f5b72dd7401c63d44ac9866cdc767256405902e1ca23484ddd9937",
+          "prev": "0f10cc25b02f03122ed52bacae49c31a3cba7130e94de889aace87122415a57b",
+          "v": "612bde08fbb4f0e3b4773ee64e73a7c8f36bd1636f8a7ce208d2edb46e1573c7"
+        }
+      },
+      "observed": {
+        "time_s": 0.11666666666666665,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 1.052843328584773,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6297217147408722,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.6341085619433088,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -1.0528433285847694,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 8,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "d516b2341dccadfcc93af976f98af83e95216fd12e64e5f94c12a98c2d54b405",
+          "prev": "7d1ce42c71c92fd1ed8e3664885ae33748278fe50a14d559620b486cc9de9273",
+          "v": "90bb6d7db21ed2729e3c645771f98c40e26cfb58cefd52539e3977fe5040ba9b"
+        },
+        "mattress": {
+          "p": "5ea34148b6a6d320737367c05f829b6926467b3245c9a91d0706068bebddd42b",
+          "prev": "75976c1d4bd2e9055af7d9d07e8bb4f9e8316c6a1e21e81042f56c640f7c771a",
+          "v": "ca19864a7af3baf185fcb8d0f7cf001e0e5c4cb6e1c80fcdaa2199f514730051"
+        },
+        "pillow": {
+          "p": "160055446d6f300d6fda7d43c5b2551671f427a867e17eb1ff40716a489989ae",
+          "prev": "2d4d222934d282e885be0e113fe13e9124b4f6d4954ca7e36312d33090d11393",
+          "v": "208c02bf4bc066974be02aef46ae5550ab34c2917a225a59b4a23b669391efaf"
+        }
+      },
+      "observed": {
+        "time_s": 0.13333333333333333,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 1.1896977291278432,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.6107446013960948,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.6157016752674608,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -1.1896977291278432,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 9,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "aec6f7a9a8abd6f48828bebe53d5ffe75648df5f649676e619cbc17b6d12209a",
+          "prev": "aeb6c36546515efca7742ffba3c890ff886d1ef8b71d5019cec55313bcada921",
+          "v": "48a85a5b7f2bbb98111b3acfc887695cc950c69be9e5a61babc821868b8a07d0"
+        },
+        "mattress": {
+          "p": "8606f6f0186c71ec39da83b7a565e7209f03a373b76b39e85e280152f7ecfa1c",
+          "prev": "85fae733713d6879f74e1ecac132bcf806f9b57a35a8ecaf21d5228a693a0538",
+          "v": "cb03f6e6b54672b9b6a4f68702f50e92ba799a8820dd6a168d655611f1308a04"
+        },
+        "pillow": {
+          "p": "4fc74fcf515c9bb52454874dd6b5b26484e7844ec4fc873f50e3ab8d3810f8ae",
+          "prev": "fb6cfa9809ed15d210896bd935d9d4e9b34c8746538fc129e3cb5c05cbf8396a",
+          "v": "afd9d9a41f8ba08c1a2d6fe6157f50e7922ede0b95bb9e6c0a4f64faa4d5053f"
+        }
+      },
+      "observed": {
+        "time_s": 0.15000000000000005,
+        "finite": true,
+        "stretch": 0,
+        "rms_speed_mps": 1.3233958270567383,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8973333333333334,
+            0.5895195554215166,
+            1.5255
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.5950337047009197,
+            1.5255
+          ],
+          "velocity": [
+            0,
+            -1.3233958270567392,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "frame": 10,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "5f0039be62983d7422f4c53315ff200f7e5d285e25cd4cc1e91e66ec3715ebe5",
+          "prev": "992aaeff58374d7937b930e52b9b57a2dfe1ab5c6d25185dbd8fcc059b880066",
+          "v": "4b58943ec42bbf1f35e89a744d5d4c7a3a6c4edeb228cf1bba74a8442377e416"
+        },
+        "mattress": {
+          "p": "e2203d92f57472f3a4832748d1b23a2ff2ec41182b1efd51b96c33a7242c4253",
+          "prev": "506fbf337edcdf8173c6d289e67faaf368edd660ed424866d76b0f7406bd0116",
+          "v": "2eb989b769b1507b7b5617521d7a1ba58ddc2ff2c94793b2b57a3a4692df5345"
+        },
+        "pillow": {
+          "p": "536676b567870647ce19fba2e93b15520f68687a913d9542c813c0727179b79f",
+          "prev": "8ff4ee6c309daeaf2d4ae2dbc689e86dbbc7e66fe0f5f8212c9e0c0e0a96882b",
+          "v": "f60cb6b16e7221b79f0bfa701d5d3de7f409de50f865d2bdefdf4364f5ec09aa"
+        }
+      },
+      "observed": {
+        "time_s": 0.16666666666666677,
+        "finite": true,
+        "stretch": 0.0005508834403151752,
+        "rms_speed_mps": 0.9603018541353794,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8972978006511882,
+            0.5660984213731609,
+            1.5254589411824486
+          ],
+          "previous": [
+            -0.8973333333333334,
+            0.5721567981100805,
+            1.5255
+          ],
+          "velocity": [
+            0.008527843714842831,
+            -1.4540104168606938,
+            -0.009854116212348885
+          ]
+        }
+      }
+    },
+    {
+      "frame": 11,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "6398fe92efe16cf46a56bb98ba334de4ed485fdb59df46d050d24f42576ec508",
+          "prev": "ebe455858e21fcec24bc2c8f4cae04f030de518e5799496abe232246fde1d8f9",
+          "v": "39f31f61d63f2095870e49aa1c822c11f256f17bb7809086d104a278495e9eff"
+        },
+        "mattress": {
+          "p": "26246169cfb863dde2f2094535bf77ae5e0157fe4ed9b682a844bca5d1fc7dd4",
+          "prev": "233e0ec0608c64689b3bef595aa572c08f94fb0220c48a6e55648431b9290f59",
+          "v": "1e645f847b1b276fde56c6f647df9eb2857ab688aebf3d0f657b5a1d2a0efb29"
+        },
+        "pillow": {
+          "p": "bec6fc9880c83f2f35d5d0b5c526ff8278ef792a7963ac76561b73dc64dd2a54",
+          "prev": "e81b988ee5c9fe2ea97614c6bef11df4cc6ed5259ecedfabba44013b1380185b",
+          "v": "5bee30a8915887b0e4749c3dd05f263cf5da171e134f015f8483aeba4ec374f1"
+        }
+      },
+      "observed": {
+        "time_s": 0.1833333333333335,
+        "finite": true,
+        "stretch": 0.005823734561113625,
+        "rms_speed_mps": 0.9858149034121276,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8962927928841916,
+            0.5405318481049787,
+            1.5237660083108169
+          ],
+          "previous": [
+            -0.8965960814862921,
+            0.5471219006638371,
+            1.5244134906088196
+          ],
+          "velocity": [
+            0.07278926450411838,
+            -1.5816126141260334,
+            -0.15539575152065055
+          ]
+        }
+      }
+    },
+    {
+      "frame": 12,
+      "all_four_body_states_byte_exact": true,
+      "installed_matches_saved015_metrics": true,
+      "domain017_and019_exact": true,
+      "state_sha256": {
+        "cloth": {
+          "p": "268976fd8289214cad8382b54387d2b85c7ca37a9405644c102424f2bc8902cf",
+          "prev": "683143bc074153f1fde45cd874e3315a521d64a81f79f66a5e5e72e4849d5854",
+          "v": "70d73c789d3ca41503881326d8f984e5d39c27d8c98cac714d6e2930df976405"
+        },
+        "mattress": {
+          "p": "a0e336f4b49db9e584a1ed3ea1d117ed36271e18305b998160f412fd3cf4961f",
+          "prev": "dadf0321aa5681f9726d36bd55225ef706db86152793e5e10055608335dfd58f",
+          "v": "df377d3f101dcd026378a0f6ef0a354739792c2ccc0cce2917397f49251e85cc"
+        },
+        "pillow": {
+          "p": "852cdd8eecbd69df03d2f9673def02a023515d7dbd398e20f6c7d545a81605c3",
+          "prev": "f45dc60fea94953ef04fcdf486914707b0356a52a26e33aa55617eb0c5c012db",
+          "v": "63c3f7de9102ee80727436e1eec57649f8d68137d18edb635939410abd22e581"
+        }
+      },
+      "observed": {
+        "time_s": 0.2000000000000002,
+        "finite": true,
+        "stretch": 0.0073206245651145085,
+        "rms_speed_mps": 1.0101928147189072,
+        "frame_pairs": 0,
+        "frame_depth_m": 0,
+        "surface_depth_m": 0,
+        "node702": {
+          "p": [
+            -0.8956122556827484,
+            0.5128693171840553,
+            1.5191378529114383
+          ],
+          "previous": [
+            -0.8955644562726968,
+            0.519978782762995,
+            1.5208132102418863
+          ],
+          "velocity": [
+            -0.011471858412388514,
+            -1.706271738945544,
+            -0.4020857593075178
+          ]
+        }
+      }
+    }
+  ],
+  "step_ms": {
+    "actual_installed015": 621.8024000000014,
+    "frozen015": 627.4302000000023,
+    "predecessor017": 2554.6597,
+    "candidate019": 2064.932799999999
+  },
+  "counterexample": {
+    "initial_all_body_state_sha256": {
+      "cloth": {
+        "p": "8d5d1c551666aed0b4fabcaa95577d39d870abfddec46bce6d91bbba42dc1fcb",
+        "prev": "8d5d1c551666aed0b4fabcaa95577d39d870abfddec46bce6d91bbba42dc1fcb",
+        "v": "a5645e7a3fa0866cde8842c4dab96567507c3d1a3c028b816bc63f6966367b70"
+      },
+      "mattress": {
+        "p": "7e6bad645f22f5cb5679f42cd4a0f7237232d5b56f13d4629bf60a5d598be675",
+        "prev": "f5fa73f1b94eeebe3680ef5350fc04be35d651a56d44e294121451f1ca21ebdf",
+        "v": "54283689f12e08fd8576bf68c2201a2d4b525931a64da3f0956c69c7d9d7602e"
+      },
+      "pillow": {
+        "p": "f8baee7061c184b13f61064556d4d6854a29844022d46ac7f16530786905fc88",
+        "prev": "2010b55891b05a55428204b4cc0e2d03cd13f0727289c1bda6dc6d8935538218",
+        "v": "2010b55891b05a55428204b4cc0e2d03cd13f0727289c1bda6dc6d8935538218"
+      }
+    },
+    "installed015_max_y_after_one_frame": 0.7873741923382076,
+    "installed015_state_sha256": {
+      "cloth": {
+        "p": "e8a5e68ee4e971da375c455ee941b694607b249d5b678575b94241697482fe74",
+        "prev": "ad2b210a2da7eee98546f4c60c5ce657c4b038ac37d3e8d34015ebd8dea1f996",
+        "v": "920291261619049e94db305274117d5c96a2336564904fc4e9a107ffa5d88b72"
+      },
+      "mattress": {
+        "p": "a3c26955640ca8e1475a60d331f1a744eaea85c8789e44945d06b3200514287e",
+        "prev": "3d6abae6f48d4b11f0c7ea4ba49dd003ec9a3e4276ab33d77c0b4a3086836e53",
+        "v": "7732f41e2a1a4f6955fdfa102e05eafe7f55a5c0174eb89a2fdac6ac8c85a029"
+      },
+      "pillow": {
+        "p": "d866ba4854318703f4f4cdd5d682b45e39b25f964074ed21ae4a37376aa8d17b",
+        "prev": "694af4ea8f3d846bc73c9a6456de932b4bdc345aa5db4e2b110b7b991dcfadb9",
+        "v": "bc0fba7a6a489d1edfc400929ced28f9581a9ee87aff10054b297b2dacd16ba0"
+      }
+    },
+    "candidate017_019_frames": [
+      {
+        "frame": 1,
+        "max_y_m": 0.2,
+        "state_sha256": {
+          "cloth": {
+            "p": "2e86fe70267d6af74060d5c8becd44bd298f7278949157f7ca19b543b2f142b6",
+            "prev": "f9959a7219ef0ca44bb6f1ab7c12116bdc99503945dac7331a46d92fd67192dc",
+            "v": "29deea94189b5520c0951866f3a25dbef7e0357deb4eba58af99d95ab85957a3"
+          },
+          "mattress": {
+            "p": "a3c26955640ca8e1475a60d331f1a744eaea85c8789e44945d06b3200514287e",
+            "prev": "3d6abae6f48d4b11f0c7ea4ba49dd003ec9a3e4276ab33d77c0b4a3086836e53",
+            "v": "7732f41e2a1a4f6955fdfa102e05eafe7f55a5c0174eb89a2fdac6ac8c85a029"
+          },
+          "pillow": {
+            "p": "d866ba4854318703f4f4cdd5d682b45e39b25f964074ed21ae4a37376aa8d17b",
+            "prev": "694af4ea8f3d846bc73c9a6456de932b4bdc345aa5db4e2b110b7b991dcfadb9",
+            "v": "bc0fba7a6a489d1edfc400929ced28f9581a9ee87aff10054b297b2dacd16ba0"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 8516,
+          "queries": 3960,
+          "suppressed": 3960,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 24,
+          "particle": 1440,
+          "edge": 1664,
+          "triangle": 832,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 2,
+        "max_y_m": 0.2,
+        "state_sha256": {
+          "cloth": {
+            "p": "1437654a3c744dd6aca81e9416913dbb68a5f91e7198ffed068a6b88c130e1a0",
+            "prev": "654a197a78ee59d04a6d134c8b8a7453f9e8c7605a4bddac28bac4c78cee1e9e",
+            "v": "fdbbdc2cb185606e4b27b31d399f0e16887466d5ae5b0579c368f37bd3497c60"
+          },
+          "mattress": {
+            "p": "1af2cb37311d843f3d9355108a2ec58ac4ff57e7f34a9e8760fd0483ef0cee44",
+            "prev": "6fcbf733504f6f9745b2c8899a4596e47f8ad6c252aa0ebecdaae41eff94ce8d",
+            "v": "d62dd1c055fc2ddb7d4f4391de8823b39b48387ab2943ae6e403453cb11cdeb7"
+          },
+          "pillow": {
+            "p": "761a0cd564e7dd885f3fd679dd8f96413d36b67d8a2002021c1e6160d088a7b2",
+            "prev": "1abd36d6b8ce637c845de573ebee37812c8c2ff9f6339c45ed2fdaae8551f2e4",
+            "v": "00f66a1f6815f17168f60831abbb655194d7eec976ec4c9e347ab9677dea448f"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 17032,
+          "queries": 7920,
+          "suppressed": 7920,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 48,
+          "particle": 2880,
+          "edge": 3328,
+          "triangle": 1664,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 3,
+        "max_y_m": 0.1976216410489665,
+        "state_sha256": {
+          "cloth": {
+            "p": "c423066334f45bd1826fec4f97106c9cfbf1d4ab66701f369bfaf9cb54b67ad1",
+            "prev": "f4a0ae186e4b4954c138338e297713bc2142e645aced08bfba80d5a052cd3cb0",
+            "v": "db7cbc3ab98757eba56619f49dcc0c6f5771f6036d6182b7cc03e7e69f917b38"
+          },
+          "mattress": {
+            "p": "5dbe50ccf440f6211a83b390c0bb802e415d39651417e8eea52aaca25a8435f1",
+            "prev": "991c7871b5e82ac46ba3b0cd25f406190b144ed6db21ce088da37f090ce72368",
+            "v": "cc4d4b687e6ad48ead30f3b5bde0a7119d90a38381a0bdb31d208006918b27d5"
+          },
+          "pillow": {
+            "p": "240dc15438be8e83932842a37aa6f13250646182070e6de5f1140e00884a2cf1",
+            "prev": "af061918c75ad08421557a400bc87943ef20c588c2309f84392ea09853f71376",
+            "v": "0d2b2e9d02cce4c27dfb90329e8218c317f761015c4661f9a4e0c4a1fb2b78d2"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 25388,
+          "queries": 11880,
+          "suppressed": 11880,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 72,
+          "particle": 4320,
+          "edge": 4992,
+          "triangle": 2496,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 4,
+        "max_y_m": 0.19197605494048436,
+        "state_sha256": {
+          "cloth": {
+            "p": "2e4ed4d44c414e8dd723a2d04910f6ef24f4dd0f996d2f7b5b6e0dce61e7ad60",
+            "prev": "1ecb84fe4c87ba8233648aadf38a6ba114b4491d11df6c3d333d404f1cc9ae0e",
+            "v": "d36d6404704faea6011e6ce47097ad3d52a1bea4a9a4c797dca7f887a615cdbe"
+          },
+          "mattress": {
+            "p": "17b6479fa2d8041efbde1e5e4048169d1d30a8ab2be060f5f0e302d4296c9abc",
+            "prev": "29e9c5f5d307f36976aa5bea814e097003d846492c4ba5b23a4391103338eb09",
+            "v": "f4e0713e5ee689bbce364b2345e97263e2f8c58047f814cead5001c2929bef1c"
+          },
+          "pillow": {
+            "p": "53be8e67ccb560f54793c357dcf3c34f626b704b2009823d93c953c91a03c0a5",
+            "prev": "699df2650bb2d69cc58678323764db109f6980ddf9b100745e861b018afd5e8f",
+            "v": "66b785db81770646779ce42b000ae437c3c41eeefcf6e006135bb9d7542149c4"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 33744,
+          "queries": 15840,
+          "suppressed": 15840,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 96,
+          "particle": 5760,
+          "edge": 6656,
+          "triangle": 3328,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 5,
+        "max_y_m": 0.18280832697449034,
+        "state_sha256": {
+          "cloth": {
+            "p": "94a483660f107f5c1ffc2cf9e39b0dfc53d1816aad8c2fe15c5b10f2114d7bf4",
+            "prev": "97ec85f5662ad7db9990a0f54b137869edca1c8d5e6775984893da4b3d9d63ed",
+            "v": "e4c09c82fed3e1aebfebfb6ca846ca43a4902c7f536ed54bcbba2ad60bce2b87"
+          },
+          "mattress": {
+            "p": "503461dff6bcca636517afa7498fa280f94ffaca5028e09479fc3636dbae800d",
+            "prev": "45154ea3f11655a722f9c90d594a31ad9041c08d26e13f8307e7687da1b841c3",
+            "v": "a96ac4a270f2ff07edd23e88f3e30cb1ed3d88595e94db8d5ab1a441c23bc212"
+          },
+          "pillow": {
+            "p": "9cef8fc74dc859a431844e753761aaeb72987e41dfd81f6c338ba9df3dcfe80b",
+            "prev": "09d8133736f4034ca8f4c361b0b8caba62fcfe1f78a08be399311e95ca63d929",
+            "v": "e61deb97f61eab355579819ce83bb19418c02038e4861266c3dbfcf0122591eb"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 42100,
+          "queries": 19800,
+          "suppressed": 19800,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 120,
+          "particle": 7200,
+          "edge": 8320,
+          "triangle": 4160,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 6,
+        "max_y_m": 0.17029923286710116,
+        "state_sha256": {
+          "cloth": {
+            "p": "6624fd74e3a7eef8a62cfdb7b88adf2da627ad852e1a700bd914472e701dde92",
+            "prev": "7737f2baedc4b3fd8c554095e0f416268bcc125dcab3e9bc9491ffc2fea83f6f",
+            "v": "35a1db66e55a4db3eababf8c130ef34605de1dcdb07860613b7c019e1d1bdff3"
+          },
+          "mattress": {
+            "p": "130a32c631468da21ef50826e0b42e56e50ee2e531dce4a2a8e4a2ee7f3d1182",
+            "prev": "90144745d529406cbef3420e2a06797a4ec194ba63c0e6972b8a1476b91cf6b3",
+            "v": "345136100f4a766bd1f5acd1d2d64dbddfe034680beccadfdf675203e1eef7dd"
+          },
+          "pillow": {
+            "p": "1c6e46e8e08c55e112310ec119bff60f0aa0b1b6039ad4a11ead015907567aad",
+            "prev": "be695923348ca7050b77b2dd2754f82791374b75d763b48f96b1ad1084ff0464",
+            "v": "58b19dbfafe265a901875dfea4a92b24e78aa0a83e668ae813779f04eb53810a"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 50456,
+          "queries": 23760,
+          "suppressed": 23760,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 144,
+          "particle": 8640,
+          "edge": 9984,
+          "triangle": 4992,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 7,
+        "max_y_m": 0.15512705881779176,
+        "state_sha256": {
+          "cloth": {
+            "p": "c10f723031418c2c8f3b1d2c2e0c9c006e537c3f7f652de82f051d71426e2d8d",
+            "prev": "eea57e749e875e3a66f0e68be3e09786862b96be27f515da85672029fa711aac",
+            "v": "71758b5dec7ff1521862691745bfa4a1146b775c36dc44847879b5690dbded1e"
+          },
+          "mattress": {
+            "p": "473a75f9a6cdf155e3a63d70c602fefde81a41e9bf888ce7b4262917668cb7b2",
+            "prev": "43ebc9af31a90058d36c6ef5c705fb0ec1961fdfb1e8718301f31872fefa17c0",
+            "v": "d43cb771604dceb5c597efe04f4d40867f47b99a6e77687f6e4d89c0c831277b"
+          },
+          "pillow": {
+            "p": "46038c98b3f5b72dd7401c63d44ac9866cdc767256405902e1ca23484ddd9937",
+            "prev": "0f10cc25b02f03122ed52bacae49c31a3cba7130e94de889aace87122415a57b",
+            "v": "612bde08fbb4f0e3b4773ee64e73a7c8f36bd1636f8a7ce208d2edb46e1573c7"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 58812,
+          "queries": 27720,
+          "suppressed": 27720,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 168,
+          "particle": 10080,
+          "edge": 11648,
+          "triangle": 5824,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 8,
+        "max_y_m": 0.13761427573360518,
+        "state_sha256": {
+          "cloth": {
+            "p": "2b7d47d8d138419f66967430f505196ff26f29cff9d046e16070585bf53cea56",
+            "prev": "4f5e16b32cfba69da82516f422cea45a2a63763aebe6e05b7c37af465773f9ef",
+            "v": "d9439d2624c10822815bc4849df94111cb4a01365c41be754d412f8e4a9251db"
+          },
+          "mattress": {
+            "p": "5ea34148b6a6d320737367c05f829b6926467b3245c9a91d0706068bebddd42b",
+            "prev": "75976c1d4bd2e9055af7d9d07e8bb4f9e8316c6a1e21e81042f56c640f7c771a",
+            "v": "ca19864a7af3baf185fcb8d0f7cf001e0e5c4cb6e1c80fcdaa2199f514730051"
+          },
+          "pillow": {
+            "p": "160055446d6f300d6fda7d43c5b2551671f427a867e17eb1ff40716a489989ae",
+            "prev": "2d4d222934d282e885be0e113fe13e9124b4f6d4954ca7e36312d33090d11393",
+            "v": "208c02bf4bc066974be02aef46ae5550ab34c2917a225a59b4a23b669391efaf"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 67168,
+          "queries": 31680,
+          "suppressed": 31680,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 192,
+          "particle": 11520,
+          "edge": 13312,
+          "triangle": 6656,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 9,
+        "max_y_m": 0.11783610600858445,
+        "state_sha256": {
+          "cloth": {
+            "p": "f976afe7332c99e26f936e30b45201b30ba509d045646d67eea7f3247bdb88e0",
+            "prev": "b0be7c44878f91fad7a45dc5a60909146a511acefce346ef6c0db7f39fe5b7a6",
+            "v": "5b94ddfeaec4a34d5de8cf1424de3b4f9f7abb8fc1afea3eb092b5ddac08e7f2"
+          },
+          "mattress": {
+            "p": "8606f6f0186c71ec39da83b7a565e7209f03a373b76b39e85e280152f7ecfa1c",
+            "prev": "85fae733713d6879f74e1ecac132bcf806f9b57a35a8ecaf21d5228a693a0538",
+            "v": "cb03f6e6b54672b9b6a4f68702f50e92ba799a8820dd6a168d655611f1308a04"
+          },
+          "pillow": {
+            "p": "4fc74fcf515c9bb52454874dd6b5b26484e7844ec4fc873f50e3ab8d3810f8ae",
+            "prev": "fb6cfa9809ed15d210896bd935d9d4e9b34c8746538fc129e3cb5c05cbf8396a",
+            "v": "afd9d9a41f8ba08c1a2d6fe6157f50e7922ede0b95bb9e6c0a4f64faa4d5053f"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 75524,
+          "queries": 35640,
+          "suppressed": 35640,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 216,
+          "particle": 12960,
+          "edge": 14976,
+          "triangle": 7488,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      },
+      {
+        "frame": 10,
+        "max_y_m": 0.09583405140971271,
+        "state_sha256": {
+          "cloth": {
+            "p": "cc0fb432aa724b7ac9f18cdd1679e77eb3bf1c1252116b0079d7ed0ab349de3c",
+            "prev": "f17cebadd1ae9c05c49e2ce5ac22d44986d619368ccaae4c6476fe69beba07fa",
+            "v": "801976dd1f17b84e51beafe29c2c9db01fa4a809ccd9b0039d24850da350a84c"
+          },
+          "mattress": {
+            "p": "e2203d92f57472f3a4832748d1b23a2ff2ec41182b1efd51b96c33a7242c4253",
+            "prev": "506fbf337edcdf8173c6d289e67faaf368edd660ed424866d76b0f7406bd0116",
+            "v": "2eb989b769b1507b7b5617521d7a1ba58ddc2ff2c94793b2b57a3a4692df5345"
+          },
+          "pillow": {
+            "p": "536676b567870647ce19fba2e93b15520f68687a913d9542c813c0727179b79f",
+            "prev": "8ff4ee6c309daeaf2d4ae2dbc689e86dbbc7e66fe0f5f8212c9e0c0e0a96882b",
+            "v": "f60cb6b16e7221b79f0bfa701d5d3de7f409de50f865d2bdefdf4364f5ec09aa"
+          }
+        },
+        "domain": {
+          "valid": true,
+          "reason": null,
+          "observations": 83880,
+          "queries": 39600,
+          "suppressed": 39600,
+          "lost": 0,
+          "lateral_reanchors": 0,
+          "report": 240,
+          "particle": 14400,
+          "edge": 16640,
+          "triangle": 8320,
+          "primitive_count": 33,
+          "epsilon_m": 1e-8,
+          "scope": "Owned discrete solver mutations; no arbitrary external array aliases, general CCD, underside/side collision response or physical quality approval."
+        }
+      }
+    ]
+  },
+  "elapsed_ms": 6066.469,
+  "source_unchanged": true,
+  "installed": false,
+  "gpu_models": 0,
+  "conclusion": "019 only improves017 key construction.015 has no such module or call;019 cannot be transplanted as a performance-only patch. Under-mattress response differs after one frame.",
+  "limits": "12 default frames and10 tiny patch frames; not a full saved trajectory replay, ownership proof, general collision safety, benchmark or visual/material approval."
+}

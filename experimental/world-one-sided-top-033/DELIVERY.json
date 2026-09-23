@@ -1,0 +1,190 @@
+{
+  "status": "EXPERIMENTAL_HOLD_WITH_CONFIRMED015_SPURIOUS_LIFT",
+  "completed_utc": "2026-09-23T06:27:00.749341+00:00",
+  "installed": false,
+  "canonical_changed": false,
+  "default_first_exact_frames": 25,
+  "first_difference_frame": 26,
+  "focused_initial_passed": 12,
+  "focused_initial_failed": 1,
+  "mixed_failure_expectation_clarified": true,
+  "intermediate_history_certificate": false,
+  "under_bottom_or_side_response": false,
+  "files": [
+    {
+      "path": "ASSESSMENT.md",
+      "sha256": "dd24d6f34e3fdc5115d9dbe43f3be90909db281181977cb017c75341c226f0c5",
+      "bytes": 4887
+    },
+    {
+      "path": "baseline/bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "baseline/frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "baseline/mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "bytes": 13616
+    },
+    {
+      "path": "baseline/surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    },
+    {
+      "path": "candidate/bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "candidate/frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "candidate/mattress_physics.mjs",
+      "sha256": "0b4b3f917386e7adb08c8071cfde3a20a68f9ba289bcf37f970fc5d89b64ce0e",
+      "bytes": 13550
+    },
+    {
+      "path": "candidate/surface_contacts.mjs",
+      "sha256": "008e9d68456db69c2cb1a5438bdd83e34ea263b2fd34eb04ed94a1dae57217d0",
+      "bytes": 9147
+    },
+    {
+      "path": "CHANGES.normalized.patch",
+      "sha256": "4f740d6e0749b3214ca713d1b7d57ed20ec37e819a49e1fc3e57830c7451485e",
+      "bytes": 5501
+    },
+    {
+      "path": "check_contact.mjs",
+      "sha256": "44c166544d16f2530e182d2aab4f8e4890ba759970d80527fe4a8c3a8a28d643",
+      "bytes": 7332
+    },
+    {
+      "path": "check_default.mjs",
+      "sha256": "48480993eaa8a9b8ab51f1303560479acdee757364d874e64aa67016d590f14e",
+      "bytes": 3032
+    },
+    {
+      "path": "check_default_geometry.mjs",
+      "sha256": "7579fa6f84dc6ea49560120f71c631afb94bfefc40ca082cba69c16e7dad4fbb",
+      "bytes": 5555
+    },
+    {
+      "path": "check_mixed_clarification.mjs",
+      "sha256": "d6c61e64e033b20155d1861500f84bb15b31884bb720fba861c90f7b94051a54",
+      "bytes": 1923
+    },
+    {
+      "path": "CONTACT-RESULT.json",
+      "sha256": "1f1e407775fe11fa21aa4d964024f6e27d22d760bd0e453a48b2ec2635094f14",
+      "bytes": 4319
+    },
+    {
+      "path": "DEFAULT-GEOMETRY-DIAGNOSIS.json",
+      "sha256": "f5af1c199017350600db431b80b2969466a59349453114d408c69b50491d1602",
+      "bytes": 1326896
+    },
+    {
+      "path": "DEFAULT-RESULT.json",
+      "sha256": "964ee7c86a767730f925715c48ec328ee00e981e080ee61829be82399aa72c7f",
+      "bytes": 39854
+    },
+    {
+      "path": "DEFAULT-RUN.json",
+      "sha256": "72d5e501a7342a34eed4866bfb7591ac15da976887fefaa30f91b6de135c06dc",
+      "bytes": 182
+    },
+    {
+      "path": "default.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "default.stdout.txt",
+      "sha256": "c77161595ab6cd20038d11bbb46ade4d3230847b7c6b8e68ad3f1c33de639228",
+      "bytes": 305
+    },
+    {
+      "path": "diagnostic/baseline/bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "diagnostic/baseline/frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "diagnostic/baseline/mattress_physics.mjs",
+      "sha256": "fc786d3e7f4dda8b991e62ee401e2cd21823b0c9b095010678184e7e1abf0cd0",
+      "bytes": 13776
+    },
+    {
+      "path": "diagnostic/baseline/surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    },
+    {
+      "path": "diagnostic/candidate/bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "diagnostic/candidate/frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "diagnostic/candidate/mattress_physics.mjs",
+      "sha256": "0b4b3f917386e7adb08c8071cfde3a20a68f9ba289bcf37f970fc5d89b64ce0e",
+      "bytes": 13550
+    },
+    {
+      "path": "diagnostic/candidate/surface_contacts.mjs",
+      "sha256": "3941cef030e4293b02de0d8d491d3947c6361c3032832f82fdc60712bdede915",
+      "bytes": 9244
+    },
+    {
+      "path": "DIAGNOSTIC-PATCH.txt",
+      "sha256": "f4cd1b01fe1dfb9a01aecfa8a2f3b6cbeae83f1805800da997139c1eba4030af",
+      "bytes": 1037
+    },
+    {
+      "path": "DIAGNOSTIC-PINS.json",
+      "sha256": "25adb2ff2b4f05c185240653bf8287257b22fae81f0bf3ce7f1f22d6565d9c80",
+      "bytes": 3333
+    },
+    {
+      "path": "MIXED-CLARIFICATION.json",
+      "sha256": "c575900fc50399a589ff41050fc33e5de3958299cda9ef6d58a2509ebd52640e",
+      "bytes": 952
+    },
+    {
+      "path": "PLAN.json",
+      "sha256": "5b44f5dbdce6a6440ac2a4b77ca458eaee0fe01e2e2c997f907f0d4e9ee624fa",
+      "bytes": 1620
+    },
+    {
+      "path": "prepare.py",
+      "sha256": "2b09465dd57eaa848196104c57cb55439d85bee6421c32cf9fcfb402e2e0cf8f",
+      "bytes": 4594
+    },
+    {
+      "path": "prepare_diagnostic.py",
+      "sha256": "01ec180f53b011c641d61f96c6a0270574e0ab7cf57a38d1d1b3739d2936b3b2",
+      "bytes": 1994
+    },
+    {
+      "path": "wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    }
+  ]
+}

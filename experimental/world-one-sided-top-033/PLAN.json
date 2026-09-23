@@ -1,0 +1,42 @@
+{
+  "status": "ISOLATED_EXPERIMENT_NOT_INSTALLABLE_YET",
+  "sources": [
+    {
+      "path": "@user_home\\Kira\\tools\\world_builder_components\\bedding\\bedding_base.mjs",
+      "name": "bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "@user_home\\Kira\\tools\\world_builder_components\\bedding\\frame_contacts.mjs",
+      "name": "frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "@user_home\\Kira\\tools\\world_builder_components\\bedding\\mattress_physics.mjs",
+      "name": "mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "bytes": 13616
+    },
+    {
+      "path": "@user_home\\Kira\\tools\\world_builder_components\\bedding\\surface_contacts.mjs",
+      "name": "surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    }
+  ],
+  "installed": false,
+  "fixture_sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+  "budget": {
+    "one_node_process": true,
+    "heap_mib": 384,
+    "wall_seconds": 30,
+    "gpu": false
+  },
+  "limitations": [
+    "Only a current/physical-previous endpoint rule; no intermediate solver history certificate.",
+    "No underside or side collision response; known fixed-bottom mattress solver only.",
+    "No physics/visual/owner acceptance."
+  ]
+}

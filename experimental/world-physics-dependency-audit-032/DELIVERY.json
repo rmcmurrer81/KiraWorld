@@ -1,0 +1,144 @@
+{
+  "status": "PASS_DEPENDENCY_AUDIT_DO_NOT_INSTALL019_AS015_OPTIMIZATION",
+  "completed_utc": "2026-09-23T06:15:09.764101+00:00",
+  "installed": false,
+  "canonical_changed": false,
+  "applicable_performance_only_files_for015": [],
+  "public_backup_base": "29934c2b45cb574112f5103abb4fe73ba00a1313",
+  "source_pins_verified": 16,
+  "supported_frames_each": 12,
+  "underside_candidate_frames_each": 10,
+  "limits": "12 default frames and10 tiny patch frames; not a full saved trajectory replay, ownership proof, general collision safety, benchmark or visual/material approval.",
+  "files": [
+    {
+      "path": "ASSESSMENT.md",
+      "sha256": "d17311fe74c845cb4402abd0659116e47d64103fe01225f97400cdfcad2f0baa",
+      "bytes": 5337
+    },
+    {
+      "path": "check_relation.mjs",
+      "sha256": "ac86482374b6ff29e562c15cb14d41a766072c7b8e859c1881207aa694d23785",
+      "bytes": 7521
+    },
+    {
+      "path": "fixtures/wide.json",
+      "sha256": "dae260990a6ac4753a6a487e586d746d6afb29de56d80e3ca43dbc9b92429687",
+      "bytes": 231113
+    },
+    {
+      "path": "historical-pilot.json",
+      "sha256": "e1e157e6fba88a68e228c27bffb103941c940b3ebb0181c3093de6fb8eaa5780",
+      "bytes": 25649
+    },
+    {
+      "path": "installed015-to-candidate019.normalized.patch",
+      "sha256": "949d9a738cb5ba1bb8e93997391873281d9cd20a3e320fb77eff9f7a75cc65c0",
+      "bytes": 17179
+    },
+    {
+      "path": "PLAN.json",
+      "sha256": "4a866b75612440e1ffa3630b8d5124491d5803909eab4ff5ba1fb83d4f0918ed",
+      "bytes": 5884
+    },
+    {
+      "path": "predecessor017-to-candidate019.normalized.patch",
+      "sha256": "a08afc761893828931dfe2d8cf28860431c207b830d64a3a7304d38e866e3f71",
+      "bytes": 1211
+    },
+    {
+      "path": "prepare.py",
+      "sha256": "306e63fdaa28dd20168e46da2e67f333fb977067b8dd9e828d1ace3a1c141acd",
+      "bytes": 3315
+    },
+    {
+      "path": "RESULT.json",
+      "sha256": "e91c70aa600ac1efa356a84e908e0bc1c787a74aecd0e654a3a0eebee02f5a17",
+      "bytes": 38149
+    },
+    {
+      "path": "RUN.json",
+      "sha256": "e1dac8fed1ee7aa41f4abc28a470db80a713a944692bb5d0f83c85e3f4fa2e48",
+      "bytes": 179
+    },
+    {
+      "path": "run.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "run.stdout.txt",
+      "sha256": "8746951f99574bba1e05a7acf0a33594308de8deb0aebca57ea23a96aa0bd5f9",
+      "bytes": 309
+    },
+    {
+      "path": "sources/candidate019/bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "sources/candidate019/finite_top_domain.mjs",
+      "sha256": "41ee9ed1a7bbabef35f4b97e648bb214f9e9d7e5dfca17d920119d2027e10987",
+      "bytes": 5976
+    },
+    {
+      "path": "sources/candidate019/frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "sources/candidate019/mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "sources/candidate019/surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    },
+    {
+      "path": "sources/installed015/bedding_base.mjs",
+      "sha256": "40addb3255cdf46b6a41e4624e980bc6fbbd1b23140b120b547a2c05e145d4ba",
+      "bytes": 12036
+    },
+    {
+      "path": "sources/installed015/frame_contacts.mjs",
+      "sha256": "d80a6a477e5aa46eae5356c341992f490e2b69a88d467064a3be0e2c400bcc4d",
+      "bytes": 8604
+    },
+    {
+      "path": "sources/installed015/mattress_physics.mjs",
+      "sha256": "86f70729ecba6489609e3d787a0911f780efdeded2c0d416bef1988809999dc9",
+      "bytes": 13616
+    },
+    {
+      "path": "sources/installed015/surface_contacts.mjs",
+      "sha256": "ca689fbea010f75903a9b8e12852faab9b4f8044a2ff8571a5264044882c0933",
+      "bytes": 7780
+    },
+    {
+      "path": "sources/predecessor017/bedding_base.mjs",
+      "sha256": "3bd93d8ad1829d51aedc39ba28d6c0e43c2c837c4b811dc7268634ae8fa07204",
+      "bytes": 12219
+    },
+    {
+      "path": "sources/predecessor017/finite_top_domain.mjs",
+      "sha256": "13120533b0a066c2f86918f72efbebb26fa05c880f03811c5ecc9461ec75eac4",
+      "bytes": 5338
+    },
+    {
+      "path": "sources/predecessor017/frame_contacts.mjs",
+      "sha256": "a2605a2b87d2fd9b5d5423a1b8201d1e075a4ceacd216d3b2f81fc2c4ca0303d",
+      "bytes": 8550
+    },
+    {
+      "path": "sources/predecessor017/mattress_physics.mjs",
+      "sha256": "08deff384fac59290dede5ff0c56e390184555666214ec8b9ecc1212c46aaf25",
+      "bytes": 14060
+    },
+    {
+      "path": "sources/predecessor017/surface_contacts.mjs",
+      "sha256": "4b22937bb5c76df0f5f00204f699a4e556119573a8d92b31d1e065aea28ac592",
+      "bytes": 8084
+    }
+  ]
+}
