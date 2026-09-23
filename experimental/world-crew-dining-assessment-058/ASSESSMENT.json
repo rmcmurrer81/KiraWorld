@@ -1,0 +1,69 @@
+{
+  "status": "READ_ONLY058_CONCRETE_DINING_GAP_WITH_PROVISIONAL_CLEARANCE",
+  "source_scene_sha256": "0c7bbc148aac33d2c49846a9f8bf4ffa7975f838a53768c89271eb20278b052b",
+  "installed_source_files_unchanged": 42,
+  "owner_originals_unchanged": 116,
+  "existing_room_dimensions_m": [
+    4,
+    2.9,
+    5
+  ],
+  "existing_equipment_kinds": [
+    "bunk",
+    "galley",
+    "personal_storage"
+  ],
+  "gap": "No dining surface or crew eating seat in the actual saved habitat room; galley cabinet, bunk and storage are present.",
+  "proposed_assembly": "One original static two-seat meal station, with recognizable table, support and padded bench geometry.",
+  "provisional_bounds_m": {
+    "min": [
+      5.5,
+      0,
+      0.2
+    ],
+    "max": [
+      6.8,
+      1.04,
+      1.5
+    ]
+  },
+  "dimensions_m": [
+    1.3,
+    1.04,
+    1.3
+  ],
+  "checks": {
+    "existing_equipment_hits_padded_08m": [],
+    "solid_collider_hits": [],
+    "door_swing_hits_padded_08m": [],
+    "authored_route_hits_padded_49m": [],
+    "standing_approach_hits_radius_34m": [],
+    "standing_approach": [
+      [
+        5,
+        0,
+        2.5
+      ],
+      [
+        6.1,
+        0,
+        2.05
+      ]
+    ]
+  },
+  "preserve": [
+    "All existing equipment placements and stable IDs",
+    "All doors, airlock policy and immutable old previews",
+    "Original room/wall geometry",
+    "Shared preview/export assembly and matching new collider metadata"
+  ],
+  "implementation_recommendation": "Append optional habitat equipment after existing3 items; use existing general clearance placement and omit explicitly when no room is safe. Do not hardcode the saved fixture coordinates.",
+  "not_done": [
+    "No furniture code or metadata schema changed",
+    "No preview or export was regenerated",
+    "No native/renderer view or model run",
+    "No sitting interaction or comfort/ergonomic validation",
+    "No photorealism or owner approval"
+  ],
+  "evidence_limits": "Provisional conservative box and standing approach fit this actual saved layout numerically; final authored meshes, visibility and usable placement still need independent tests and visual inspection."
+}

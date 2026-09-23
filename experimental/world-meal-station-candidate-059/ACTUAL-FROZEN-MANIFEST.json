@@ -1,0 +1,92 @@
+{
+  "status": "059_ACTUAL_CPU_EXPORT_APPENDIX_FROZEN",
+  "files": {
+    "run_cpu_export.py": {
+      "sha256": "6570ca6a4dcdaf94af5db59d4ab44205c40d707558d5414e9fff8f7973e1135b",
+      "bytes": 10689
+    },
+    "check_actual_delta.py": {
+      "sha256": "50b596efd260c5351fc76b15fa6799f360e51f3792e219196e7dbad5deca63cc",
+      "bytes": 6235
+    },
+    "SUPERVISOR.json": {
+      "sha256": "34b7f4a666f6cecc9eedfd0ca2281d34f521c383c5da44be17c4347b2975977e",
+      "bytes": 1328
+    },
+    "ACTUAL-DELTA-RESULT.json": {
+      "sha256": "3941494890e3beb3bf7923f915224b110584e4498eb4d708bc847addaa4d784c",
+      "bytes": 5383
+    },
+    "ACTUAL-EXPORT.md": {
+      "sha256": "a019de1e2d38ba161360adc96c9a7fa9f9f0ebf72e6a6405db364a3b76032050",
+      "bytes": 2553
+    },
+    "ACTUAL-DEPENDENCIES.json": {
+      "sha256": "bb0972ef9a28328f8fae5dfbf46771218d69af83d6848a0311c46c1f46008589",
+      "bytes": 957
+    },
+    "freeze_actual.py": {
+      "sha256": "e9e22a89ff1b87c1e3ebb6cc23788d27336a62a54fffa62cbcbfe46d97977aeb",
+      "bytes": 3882
+    },
+    "actual-001/API-RESULT.json": {
+      "sha256": "bac3f52de5921b71113f12a090409ac49ea1badd383ee1827c4c7c135e3f4487",
+      "bytes": 1708
+    },
+    "actual-001/package/manifest.json": {
+      "sha256": "b1f252ed39ced9bf4f14cac38e0de67149aa66a793ecc6db5127a51e430d32f4",
+      "bytes": 7430
+    },
+    "actual-001/package/README.txt": {
+      "sha256": "cd4d71900456ab87d690603a658293c32156776fd3d7d59d534ef1c69e54bfb1",
+      "bytes": 377
+    },
+    "actual-001/package/ROUNDTRIP.json": {
+      "sha256": "07d9826741be26d8d75e565b0f66b4e8e46c85e17ca968eda48af12ee84d33b3",
+      "bytes": 6966
+    },
+    "actual-001/package/scene.glb": {
+      "sha256": "859eb81d88c7bef8817062e9a8ed4af85d44a1823b86c3017d1f4ace6cbc8b2d",
+      "bytes": 1433552
+    },
+    "actual-001/package/scene.json": {
+      "sha256": "907a3103146b8bd195a5c52eb7cef01f6252ed714c63775b0a665e280b8d037e",
+      "bytes": 84210
+    },
+    "actual-001/PREVIEW-RESULT.json": {
+      "sha256": "991004da0a6b8735f1923e2bb3c62327c92fa9814801912d3843133591728a86",
+      "bytes": 4411
+    },
+    "actual-001/PROTECTED-DERIVED-FILES.json": {
+      "sha256": "77f21f671dc365c382dd51b8867ea23095ff0abeca3c90b5cf3b722391ece173",
+      "bytes": 7364
+    },
+    "actual-001/RESOURCES.jsonl": {
+      "sha256": "b7e765067b307d257122eb510c06272585380362452577fb3ccd21467440fb33",
+      "bytes": 37152
+    },
+    "actual-001/SOURCE-CONSISTENCY.json": {
+      "sha256": "9a7f1799202d23599442f2277f333db72ff95a0e0848f0a80ba7082c0f1da187",
+      "bytes": 2181
+    },
+    "actual-001/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "actual-001/stdout.log": {
+      "sha256": "e7d057266de605e31b76a4c9ddde6693f65aae82cc505ff7bd03072249de8f43",
+      "bytes": 128
+    },
+    "actual-comparison-history/check_actual_delta.initial.py": {
+      "sha256": "d4eef05febe57080a7927501c3618e2c184df1dbb52dcd1b9ba9f13ffba6dd8c",
+      "bytes": 5842
+    },
+    "actual-comparison-history/FIRST-FAILURE.txt": {
+      "sha256": "10c0cf6c6bd45a8f9b826c8f6f407fc9bf0dc5fa47a86af3e84dd2346febf5a5",
+      "bytes": 342
+    }
+  },
+  "original_delivery_sha256": "a0a03777caa3c8424e81416686101cdc0131d2728b9483695a275dda441aae82",
+  "original_frozen69_preserved": true,
+  "excluded": "runtime_context holds local source bindings and an exact copy of source geometry; no public backup authorization for those raw source files."
+}

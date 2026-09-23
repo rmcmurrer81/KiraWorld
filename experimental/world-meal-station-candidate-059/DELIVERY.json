@@ -1,0 +1,49 @@
+{
+  "status": "ISOLATED059_READY_FOR_ROOT_SOURCE_REVIEW_VISUAL_PENDING",
+  "frozen": {
+    "path": "@workspace\\work\\world-meal-station-candidate-059\\FROZEN-MANIFEST.json",
+    "sha256": "639e22c573191ae7e226614be914e94d6addcec4cf5ef7eb4b3e9a5de9bb8c57",
+    "bytes": 12166
+  },
+  "source_diff": {
+    "path": "@workspace\\work\\world-meal-station-candidate-059\\SOURCE.diff",
+    "sha256": "168c9477c2a109ec3b6023d1fe8e9e2fef2c3e3635c069e82fee68d9beb82cfc",
+    "bytes": 10589
+  },
+  "plan": {
+    "path": "@workspace\\work\\world-meal-station-candidate-059\\INSTALL-PLAN.json",
+    "sha256": "cd3d00f6a41929ec18946cd36f149469be7a34cc920887629218d28b143e1f99",
+    "bytes": 27978
+  },
+  "candidate_source": {
+    "path": "@workspace\\work\\world-meal-station-candidate-059\\CANDIDATE-CLOSURE.json",
+    "sha256": "ac2434b8201e1d7780c02c2eb9c915e3cd65cef5d0b3d0fe14f486cc47b83d67",
+    "bytes": 7238
+  },
+  "synthetic_tests": {
+    "path": "@workspace\\work\\world-meal-station-candidate-059\\TEST-RESULT.json",
+    "sha256": "4eea7a7e65252a5c9b9498719da480588feeb5250fda0a7e11277ca99d0d0136",
+    "bytes": 5375
+  },
+  "actual_saved_geometry_tests": {
+    "path": "@workspace\\work\\world-meal-station-candidate-059\\TEST-RESULT-SAVED.json",
+    "sha256": "6fe4917bc05b9ff64dd3b6a785937b13e9e89d5f2290233168b4894dbce4f802",
+    "bytes": 1645
+  },
+  "preview_compatibility": {
+    "path": "@workspace\\work\\world-meal-station-candidate-059\\PREVIEW-CONTRACT-RESULT.json",
+    "sha256": "6aaa0d94253511df2cfc9d41f1a67af665e936d59719f68ecca7976eaf0f62f5",
+    "bytes": 875
+  },
+  "changed_files": 6,
+  "source_files": 42,
+  "owner_originals_unchanged": 116,
+  "models_GPU_UI_new_exports": 0,
+  "installed": false,
+  "visual_or_owner_approval": false,
+  "remaining": [
+    "Root source review",
+    "Actual isolated059 immutable preview and CPU GLB/importer check",
+    "Visual inspection before promotion"
+  ]
+}

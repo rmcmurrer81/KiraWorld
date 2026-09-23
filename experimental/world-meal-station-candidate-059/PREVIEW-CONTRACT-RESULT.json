@@ -1,0 +1,27 @@
+{
+  "status": "PASS_INSTALLED056_SAVED_PREVIEW_AND059_APPEARANCE_BOUNDARY",
+  "actual_saved056_preview_valid": true,
+  "actual_saved056_installed_export_eligibility": true,
+  "candidate059_requires_new_immutable_preview": true,
+  "appearance_tests": [
+    {
+      "case": "exact059",
+      "held": false
+    },
+    {
+      "case": "installed056",
+      "held": true
+    },
+    {
+      "case": "tampered",
+      "held": true
+    }
+  ],
+  "producer_source_pins_verified": 17,
+  "external_dependencies_unchanged_not_rehashed": true,
+  "owner_originals_unchanged": 116,
+  "installed_source_files_unchanged": 42,
+  "saved_pointer_unchanged": true,
+  "new_previews_exports_models_UI_GPU": 0,
+  "limits": "059 appearance admission uses a mocked manifest boundary; actual059 immutable preview/export has not been created.056 compatibility is actual read-only source verification."
+}

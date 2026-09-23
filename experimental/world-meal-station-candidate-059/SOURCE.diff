@@ -1,0 +1,170 @@
+--- installed056/viewer.mjs
++++ candidate059/viewer.mjs
+@@ -123,6 +123,25 @@
+         }
+       }
+     }
++  }
++  // Add a small eating place only after the original furnishings, architecture
++  // and signs are reserved. This preserves their existing IDs and placements.
++  for(const room of geometry.rooms){
++    if(room.access!=='walkable_layout'||program[room.id]!=='habitat')continue;
++    const kind='meal_station',id='equipment_'+room.id+'_meal_station',w=1.30,d=1.30,h=1.04;
++    if(plan.objects.length>=32||plan.colliders.length>=128){
++      plan.omitted.push({room_id:room.id,kind,reason:'No remaining authored equipment/collider budget.'});continue;
++    }
++    let chosen=null;
++    for(const wall of ['south','east','west','north']){
++      for(const along of [.18,.82,.5,0,1]){
++        const p=wallPlacement(room,w,d,h,wall,along);
++        if(p&&clear(room,p.box)){chosen=p;break;}
++      }
++      if(chosen)break;
++    }
++    if(chosen){plan.objects.push({id,room_id:room.id,kind,role:'habitat',localSize:[w,h,d],center:chosen.center,yaw:chosen.yaw,bounds:chosen.box});addCollider(id,chosen.box);}
++    else plan.omitted.push({room_id:room.id,kind,reason:'No meal-station placement preserving walking routes, entry, door sweep and existing furnishings.'});
+   }
+   // Bound renderer complexity as well as collision complexity.
+   DR_assert(plan.objects.length<=32&&plan.architecture.length<=96&&plan.lights.length<=12,'Dressing budget exceeded');
+@@ -468,6 +487,30 @@
+         prepSurface:{min:[sx1+.012,-d/2],max:[w/2,d/2]},
+         staticComponents:['recessed_sink','curved_faucet','utility_cupboard','drawers','cold_food_compartment','pantry','warming_appliance'],
+         collision:'unchanged_conservative_assembly_bounds',applianceSimulation:false,pressureOrLifeSupportClaim:false};
++    }else if(kind==='meal_station'){
++      // Original static two-seat meal station, not a seated-avatar/comfort model.
++      // The footprint includes the bench and table so collision is conservative.
++      for(const x of [-.53,.53])for(const z of [-.565,-.215]){
++        const foot=cylinder(group,x,.01,z,.035,.02,M.rubber);foot.name='meal_bench_foot';
++        const leg=box(group,x,.205,z,.038,.37,.038,M.frame);leg.name='meal_bench_leg';
++      }
++      const support=box(group,0,.385,-.39,1.17,.055,.44,M.frame);support.name='meal_bench_support';
++      for(const side of [-1,1]){
++        softBox(group,'meal_seat_'+side,side*.295,.455,-.39,.555,.085,.42,.025,M.seat);
++        softBox(group,'meal_back_'+side,side*.295,.765,-.585,.555,.47,.075,.025,M.seat);
++        const post=box(group,side*.565,.675,-.595,.035,.68,.035,M.frame);post.name='meal_back_post';
++      }
++      softBox(group,'meal_bench_top_rail',0,1.026,-.595,1.18,.028,.042,.012,M.frame);
++      // A broad floor plate and pedestal visibly support the table; the actual
++      // underside remains open instead of filling the furniture with a box.
++      softBox(group,'meal_table_floor_plate',0,.025,.30,.65,.05,.42,.022,M.frame);
++      const pedestal=cylinder(group,0,.3725,.30,.057,.645,M.metal);pedestal.name='meal_table_pedestal';
++      const crossbar=box(group,0,.7075,.25,.92,.038,.095,M.frame);crossbar.name='meal_table_crossbar';
++      softBox(group,'meal_tabletop',0,.7425,.25,1.20,.045,.62,.018,M.ivory);
++      group.userData.mealStationGeometry={contract:'authored_static_meal_station_v1',seatCount:2,
++        seatSurfaceY:.4975,tableSurfaceY:.765,frontApproachZ:.63,
++        collision:'conservative_whole_assembly_bounds',seatedAvatarInteraction:false,
++        ergonomicOrSafetyValidation:false,foodOrApplianceSimulation:false};
+     }else if(kind==='personal_storage'||kind==='sample_storage'){
+       cabinet(group,w,h-.025,d-.035);if(kind==='sample_storage')for(let y=.2;y<h-.1;y+=.32)box(group,-w*.28,y,d/2-.004,.12,.065,.008,M.amber);
+     }else if(kind==='glovebox'){
+--- installed056/layout_package_export.py
++++ candidate059/layout_package_export.py
+@@ -12,7 +12,7 @@
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+ CONTRACT='authored_saved_layout_package_v2'
+ RENDERER={
+- 'viewer.mjs':'0b6988db28bd16d1388c1cd54d004cc07ef0dfd86fc9b44c8c6f4cff833de07b',
++ 'viewer.mjs':'4b27c08100bbaa45dade4b6c2ca017e140548f3329cc10545dd22ee8f1dd4269',
+  'walk_controller.mjs':'05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f',
+  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
+--- installed056/layout_package_assets/source/room_dressing_plan.mjs
++++ candidate059/layout_package_assets/source/room_dressing_plan.mjs
+@@ -121,6 +121,25 @@
+       }
+     }
+   }
++  // Add a small eating place only after the original furnishings, architecture
++  // and signs are reserved. This preserves their existing IDs and placements.
++  for(const room of geometry.rooms){
++    if(room.access!=='walkable_layout'||program[room.id]!=='habitat')continue;
++    const kind='meal_station',id='equipment_'+room.id+'_meal_station',w=1.30,d=1.30,h=1.04;
++    if(plan.objects.length>=32||plan.colliders.length>=128){
++      plan.omitted.push({room_id:room.id,kind,reason:'No remaining authored equipment/collider budget.'});continue;
++    }
++    let chosen=null;
++    for(const wall of ['south','east','west','north']){
++      for(const along of [.18,.82,.5,0,1]){
++        const p=wallPlacement(room,w,d,h,wall,along);
++        if(p&&clear(room,p.box)){chosen=p;break;}
++      }
++      if(chosen)break;
++    }
++    if(chosen){plan.objects.push({id,room_id:room.id,kind,role:'habitat',localSize:[w,h,d],center:chosen.center,yaw:chosen.yaw,bounds:chosen.box});addCollider(id,chosen.box);}
++    else plan.omitted.push({room_id:room.id,kind,reason:'No meal-station placement preserving walking routes, entry, door sweep and existing furnishings.'});
++  }
+   // Bound renderer complexity as well as collision complexity.
+   DR_assert(plan.objects.length<=32&&plan.architecture.length<=96&&plan.lights.length<=12,'Dressing budget exceeded');
+   return DR_freeze(plan);
+--- installed056/layout_package_assets/source/room_dressing_render.mjs
++++ candidate059/layout_package_assets/source/room_dressing_render.mjs
+@@ -337,6 +337,30 @@
+         prepSurface:{min:[sx1+.012,-d/2],max:[w/2,d/2]},
+         staticComponents:['recessed_sink','curved_faucet','utility_cupboard','drawers','cold_food_compartment','pantry','warming_appliance'],
+         collision:'unchanged_conservative_assembly_bounds',applianceSimulation:false,pressureOrLifeSupportClaim:false};
++    }else if(kind==='meal_station'){
++      // Original static two-seat meal station, not a seated-avatar/comfort model.
++      // The footprint includes the bench and table so collision is conservative.
++      for(const x of [-.53,.53])for(const z of [-.565,-.215]){
++        const foot=cylinder(group,x,.01,z,.035,.02,M.rubber);foot.name='meal_bench_foot';
++        const leg=box(group,x,.205,z,.038,.37,.038,M.frame);leg.name='meal_bench_leg';
++      }
++      const support=box(group,0,.385,-.39,1.17,.055,.44,M.frame);support.name='meal_bench_support';
++      for(const side of [-1,1]){
++        softBox(group,'meal_seat_'+side,side*.295,.455,-.39,.555,.085,.42,.025,M.seat);
++        softBox(group,'meal_back_'+side,side*.295,.765,-.585,.555,.47,.075,.025,M.seat);
++        const post=box(group,side*.565,.675,-.595,.035,.68,.035,M.frame);post.name='meal_back_post';
++      }
++      softBox(group,'meal_bench_top_rail',0,1.026,-.595,1.18,.028,.042,.012,M.frame);
++      // A broad floor plate and pedestal visibly support the table; the actual
++      // underside remains open instead of filling the furniture with a box.
++      softBox(group,'meal_table_floor_plate',0,.025,.30,.65,.05,.42,.022,M.frame);
++      const pedestal=cylinder(group,0,.3725,.30,.057,.645,M.metal);pedestal.name='meal_table_pedestal';
++      const crossbar=box(group,0,.7075,.25,.92,.038,.095,M.frame);crossbar.name='meal_table_crossbar';
++      softBox(group,'meal_tabletop',0,.7425,.25,1.20,.045,.62,.018,M.ivory);
++      group.userData.mealStationGeometry={contract:'authored_static_meal_station_v1',seatCount:2,
++        seatSurfaceY:.4975,tableSurfaceY:.765,frontApproachZ:.63,
++        collision:'conservative_whole_assembly_bounds',seatedAvatarInteraction:false,
++        ergonomicOrSafetyValidation:false,foodOrApplianceSimulation:false};
+     }else if(kind==='personal_storage'||kind==='sample_storage'){
+       cabinet(group,w,h-.025,d-.035);if(kind==='sample_storage')for(let y=.2;y<h-.1;y+=.32)box(group,-w*.28,y,d/2-.004,.12,.065,.008,M.amber);
+     }else if(kind==='glovebox'){
+--- installed056/layout_package_assets/authored_scene.mjs
++++ candidate059/layout_package_assets/authored_scene.mjs
+@@ -1,5 +1,5 @@
+ // Structure and door mesh dimensions/materials transcribed from source-pinned
+-// installed viewer e6f101d0. Equipment builder includes static bunk and galley geometry details042/045.
++// installed viewer e6f101d0. Equipment builder includes static bunk, galley and meal-station geometry details042/045/059.
+ // Extra hierarchy/IDs are export bookkeeping; no geometry is approximated from
+ // equipment metadata boxes. Door pivots preserve the existing controller poses.
+ import * as THREE from './vendor/three/build/three.module.js';
+--- installed056/layout_package_assets/PRODUCER-PINS.json
++++ candidate059/layout_package_assets/PRODUCER-PINS.json
+@@ -2,8 +2,8 @@
+   "contract": "layout_package_producer_pins_v1",
+   "files": {
+     "authored_scene.mjs": {
+-      "sha256": "538e46e1468a5cba1855c018a463dbc1a342b7f84367e160fa8a0ff1def1e997",
+-      "bytes": 6574
++      "sha256": "f23cd7cb92fb41452aeeb16120fd66e98d363811c39ab0502f51a7e87b95daed",
++      "bytes": 6592
+     },
+     "build_glb.mjs": {
+       "sha256": "7ce5c81917ff9dc3cd51a038144e2fe33f5cf693720de1ad30bb220567c6a588",
+@@ -22,12 +22,12 @@
+       "bytes": 6406
+     },
+     "source/room_dressing_plan.mjs": {
+-      "sha256": "3508293926fd6e9c5e95bef8af0c12c2ec727c02c83fb570f3c88617a1cb42f3",
+-      "bytes": 9104
++      "sha256": "f5987f9c1e39b172f7f326e930bbb0b58ebdfc76939ee0cc26272aafc94cfcf3",
++      "bytes": 10254
+     },
+     "source/room_dressing_render.mjs": {
+-      "sha256": "5b88a9f32f5de5ca5efe95d5c6b125e9cd512bc27e416eb833934c2b97ca9a48",
+-      "bytes": 33596
++      "sha256": "e53c70f1d0cc88993ee969cd4f8ab4df121865662d9a24fe139d8bd20b6bea3e",
++      "bytes": 35401
+     },
+     "source/scene_metadata.mjs": {
+       "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",

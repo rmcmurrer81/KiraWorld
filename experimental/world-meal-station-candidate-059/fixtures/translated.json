@@ -1,0 +1,2228 @@
+{
+  "contract": "compiled_blueprint_geometry_v1",
+  "research_packet_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "blueprint_sha256": "421cae855e4fefea0b4b4132281409d6f81af49ff8514e01943419b203dfab25",
+  "title": "Synthetic authored habitat translated",
+  "units": "meters",
+  "visual_style_target": "photorealistic",
+  "quality_status": "layout_prototype_not_visual_acceptance",
+  "photorealism_verified": false,
+  "world_ready": false,
+  "source_facts_validated": false,
+  "rooms": [
+    {
+      "id": "equipment_vestibule",
+      "name": "Equipment Vestibule",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 10.5,
+      "z": -16,
+      "width": 4,
+      "depth": 5,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "airlock",
+      "name": "Airlock",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 11,
+      "z": -11,
+      "width": 3,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 2.8,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "operations",
+      "name": "Operations",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 6,
+      "z": -7,
+      "width": 5,
+      "depth": 6,
+      "floor_y": 0,
+      "height": 3.2,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "habitat",
+      "name": "Habitat",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 14,
+      "z": -7,
+      "width": 4,
+      "depth": 5,
+      "floor_y": 0,
+      "height": 2.9,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "laboratory",
+      "name": "Laboratory",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 7,
+      "z": 0,
+      "width": 4,
+      "depth": 5,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "observation",
+      "name": "Observation",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 14,
+      "z": 0,
+      "width": 3,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 2.7,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "circulation",
+      "name": "Circulation",
+      "purpose": "Authored synthetic functional room for equipment/collision tests",
+      "x": 11,
+      "z": -7,
+      "width": 3,
+      "depth": 12,
+      "floor_y": 0,
+      "height": 3.2,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    }
+  ],
+  "primitives": [
+    {
+      "id": "equipment_vestibule_floor_mesh",
+      "primitive": "box",
+      "position": [
+        12.5,
+        -0.05,
+        -13.5
+      ],
+      "size": [
+        4,
+        0.1,
+        5
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "equipment_vestibule_ceiling",
+      "primitive": "box",
+      "position": [
+        12.5,
+        3.05,
+        -13.5
+      ],
+      "size": [
+        4.0,
+        0.10000000000000009,
+        5
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "equipment_vestibule_west_0",
+      "primitive": "box",
+      "position": [
+        10.5,
+        1.5,
+        -13.5
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        5
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "equipment_vestibule_east_0",
+      "primitive": "box",
+      "position": [
+        14.5,
+        1.5,
+        -13.5
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        5
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "equipment_vestibule_south_0",
+      "primitive": "box",
+      "position": [
+        12.5,
+        1.5,
+        -16.0
+      ],
+      "size": [
+        4.0,
+        3,
+        0.14999999999999858
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "equipment_vestibule_north_0",
+      "primitive": "box",
+      "position": [
+        11.2,
+        1.5,
+        -11.0
+      ],
+      "size": [
+        1.4000000000000004,
+        3,
+        0.14999999999999858
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "equipment_vestibule_north_1",
+      "primitive": "box",
+      "position": [
+        12.5,
+        2.6,
+        -11.0
+      ],
+      "size": [
+        1.1999999999999993,
+        0.7999999999999998,
+        0.14999999999999858
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "equipment_vestibule_north_2",
+      "primitive": "box",
+      "position": [
+        13.8,
+        1.5,
+        -11.0
+      ],
+      "size": [
+        1.4000000000000004,
+        3,
+        0.14999999999999858
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_floor_mesh",
+      "primitive": "box",
+      "position": [
+        12.5,
+        -0.05,
+        -9.0
+      ],
+      "size": [
+        3,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "airlock_ceiling",
+      "primitive": "box",
+      "position": [
+        12.5,
+        2.8499999999999996,
+        -9.0
+      ],
+      "size": [
+        3,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "airlock_west_0",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.4,
+        -9.0
+      ],
+      "size": [
+        0.14999999999999858,
+        2.8,
+        4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_east_0",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.4,
+        -9.0
+      ],
+      "size": [
+        0.14999999999999858,
+        2.8,
+        4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_south_0",
+      "primitive": "box",
+      "position": [
+        11.45,
+        1.4,
+        -11.0
+      ],
+      "size": [
+        0.9000000000000004,
+        2.8,
+        0.14999999999999858
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_south_1",
+      "primitive": "box",
+      "position": [
+        12.5,
+        2.5,
+        -11.0
+      ],
+      "size": [
+        1.1999999999999993,
+        0.5999999999999996,
+        0.14999999999999858
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_south_2",
+      "primitive": "box",
+      "position": [
+        13.55,
+        1.4,
+        -11.0
+      ],
+      "size": [
+        0.9000000000000004,
+        2.8,
+        0.14999999999999858
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_north_0",
+      "primitive": "box",
+      "position": [
+        11.45,
+        1.4,
+        -7.0
+      ],
+      "size": [
+        0.9000000000000004,
+        2.8,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_north_1",
+      "primitive": "box",
+      "position": [
+        12.5,
+        2.5,
+        -7.0
+      ],
+      "size": [
+        1.1999999999999993,
+        0.5999999999999996,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_north_2",
+      "primitive": "box",
+      "position": [
+        13.55,
+        1.4,
+        -7.0
+      ],
+      "size": [
+        0.9000000000000004,
+        2.8,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "operations_floor_mesh",
+      "primitive": "box",
+      "position": [
+        8.5,
+        -0.05,
+        -4.0
+      ],
+      "size": [
+        5,
+        0.1,
+        6
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "operations_ceiling",
+      "primitive": "box",
+      "position": [
+        8.5,
+        3.25,
+        -4.0
+      ],
+      "size": [
+        5,
+        0.10000000000000009,
+        6
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "operations_west_0",
+      "primitive": "box",
+      "position": [
+        6.0,
+        1.6,
+        -4.0
+      ],
+      "size": [
+        0.15000000000000036,
+        3.2,
+        6
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "operations_east_0",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.6,
+        -5.8
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        2.4000000000000004
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "operations_east_1",
+      "primitive": "box",
+      "position": [
+        11.0,
+        2.7,
+        -4.0
+      ],
+      "size": [
+        0.14999999999999858,
+        1.0,
+        1.1999999999999997
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "operations_east_2",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.6,
+        -2.2
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        2.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "operations_south_0",
+      "primitive": "box",
+      "position": [
+        8.5,
+        1.6,
+        -7.0
+      ],
+      "size": [
+        5,
+        3.2,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "operations_north_0",
+      "primitive": "box",
+      "position": [
+        8.5,
+        1.6,
+        -1.0
+      ],
+      "size": [
+        5,
+        3.2,
+        0.1499999999999999
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_floor_mesh",
+      "primitive": "box",
+      "position": [
+        16.0,
+        -0.05,
+        -4.5
+      ],
+      "size": [
+        4,
+        0.1,
+        5
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "habitat_ceiling",
+      "primitive": "box",
+      "position": [
+        16.0,
+        2.95,
+        -4.5
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        5
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "habitat_west_0",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.45,
+        -6.05
+      ],
+      "size": [
+        0.14999999999999858,
+        2.9,
+        1.9000000000000004
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_west_1",
+      "primitive": "box",
+      "position": [
+        14.0,
+        2.55,
+        -4.5
+      ],
+      "size": [
+        0.14999999999999858,
+        0.6999999999999997,
+        1.1999999999999997
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_west_2",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.45,
+        -2.95
+      ],
+      "size": [
+        0.14999999999999858,
+        2.9,
+        1.9
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_east_0",
+      "primitive": "box",
+      "position": [
+        18.0,
+        1.45,
+        -4.5
+      ],
+      "size": [
+        0.14999999999999858,
+        2.9,
+        5
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_south_0",
+      "primitive": "box",
+      "position": [
+        16.0,
+        1.45,
+        -7.0
+      ],
+      "size": [
+        4,
+        2.9,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_north_0",
+      "primitive": "box",
+      "position": [
+        16.0,
+        1.45,
+        -2.0
+      ],
+      "size": [
+        4,
+        2.9,
+        0.15000000000000013
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "laboratory_floor_mesh",
+      "primitive": "box",
+      "position": [
+        9.0,
+        -0.05,
+        2.5
+      ],
+      "size": [
+        4,
+        0.1,
+        5
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "laboratory_ceiling",
+      "primitive": "box",
+      "position": [
+        9.0,
+        3.05,
+        2.5
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        5
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "laboratory_west_0",
+      "primitive": "box",
+      "position": [
+        7.0,
+        1.5,
+        2.5
+      ],
+      "size": [
+        0.15000000000000036,
+        3,
+        5
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "laboratory_east_0",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.5,
+        0.95
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        1.9
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "laboratory_east_1",
+      "primitive": "box",
+      "position": [
+        11.0,
+        2.6,
+        2.5
+      ],
+      "size": [
+        0.14999999999999858,
+        0.7999999999999998,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "laboratory_east_2",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.5,
+        4.05
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        1.9
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "laboratory_south_0",
+      "primitive": "box",
+      "position": [
+        9.0,
+        1.5,
+        0.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "laboratory_north_0",
+      "primitive": "box",
+      "position": [
+        9.0,
+        1.5,
+        5.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "observation_floor_mesh",
+      "primitive": "box",
+      "position": [
+        15.5,
+        -0.05,
+        2.0
+      ],
+      "size": [
+        3,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "observation_ceiling",
+      "primitive": "box",
+      "position": [
+        15.5,
+        2.75,
+        2.0
+      ],
+      "size": [
+        3,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "observation_west_0",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.35,
+        0.7
+      ],
+      "size": [
+        0.14999999999999858,
+        2.7,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "observation_west_1",
+      "primitive": "box",
+      "position": [
+        14.0,
+        2.45,
+        2.0
+      ],
+      "size": [
+        0.14999999999999858,
+        0.5,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "observation_west_2",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.35,
+        3.3
+      ],
+      "size": [
+        0.14999999999999858,
+        2.7,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "observation_east_0",
+      "primitive": "box",
+      "position": [
+        17.0,
+        1.35,
+        2.0
+      ],
+      "size": [
+        0.14999999999999858,
+        2.7,
+        4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "observation_south_0",
+      "primitive": "box",
+      "position": [
+        15.5,
+        1.35,
+        0.0
+      ],
+      "size": [
+        3,
+        2.7,
+        0.15
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "observation_north_0",
+      "primitive": "box",
+      "position": [
+        15.5,
+        1.35,
+        4.0
+      ],
+      "size": [
+        3,
+        2.7,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_floor_mesh",
+      "primitive": "box",
+      "position": [
+        12.5,
+        -0.05,
+        -1.0
+      ],
+      "size": [
+        3,
+        0.1,
+        12
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "circulation_ceiling",
+      "primitive": "box",
+      "position": [
+        12.5,
+        3.25,
+        -1.0
+      ],
+      "size": [
+        3,
+        0.10000000000000009,
+        12
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "circulation_west_0",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.6,
+        -5.8
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        2.4000000000000004
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_west_1",
+      "primitive": "box",
+      "position": [
+        11.0,
+        2.7,
+        -4.0
+      ],
+      "size": [
+        0.14999999999999858,
+        1.0,
+        1.1999999999999997
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_west_2",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.6,
+        -0.75
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        5.3
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_west_3",
+      "primitive": "box",
+      "position": [
+        11.0,
+        2.7,
+        2.5
+      ],
+      "size": [
+        0.14999999999999858,
+        1.0,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_west_4",
+      "primitive": "box",
+      "position": [
+        11.0,
+        1.6,
+        4.05
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        1.9
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_east_0",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.6,
+        -6.05
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        1.9000000000000004
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_east_1",
+      "primitive": "box",
+      "position": [
+        14.0,
+        2.7,
+        -4.5
+      ],
+      "size": [
+        0.14999999999999858,
+        1.0,
+        1.1999999999999997
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_east_2",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.6,
+        -1.25
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        5.3
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_east_3",
+      "primitive": "box",
+      "position": [
+        14.0,
+        2.7,
+        2.0
+      ],
+      "size": [
+        0.14999999999999858,
+        1.0,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_east_4",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.6,
+        3.8
+      ],
+      "size": [
+        0.14999999999999858,
+        3.2,
+        2.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_south_0",
+      "primitive": "box",
+      "position": [
+        11.45,
+        1.6,
+        -7.0
+      ],
+      "size": [
+        0.9000000000000004,
+        3.2,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_south_1",
+      "primitive": "box",
+      "position": [
+        12.5,
+        2.7,
+        -7.0
+      ],
+      "size": [
+        1.1999999999999993,
+        1.0,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_south_2",
+      "primitive": "box",
+      "position": [
+        13.55,
+        1.6,
+        -7.0
+      ],
+      "size": [
+        0.9000000000000004,
+        3.2,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "circulation_north_0",
+      "primitive": "box",
+      "position": [
+        12.5,
+        1.6,
+        5.0
+      ],
+      "size": [
+        3,
+        3.2,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    }
+  ],
+  "colliders": [
+    {
+      "id": "equipment_vestibule_ceiling",
+      "min": [
+        10.5,
+        3,
+        -16
+      ],
+      "max": [
+        14.5,
+        3.1,
+        -11
+      ]
+    },
+    {
+      "id": "equipment_vestibule_west_0",
+      "min": [
+        10.425,
+        0,
+        -16
+      ],
+      "max": [
+        10.575,
+        3,
+        -11
+      ]
+    },
+    {
+      "id": "equipment_vestibule_east_0",
+      "min": [
+        14.425,
+        0,
+        -16
+      ],
+      "max": [
+        14.575,
+        3,
+        -11
+      ]
+    },
+    {
+      "id": "equipment_vestibule_south_0",
+      "min": [
+        10.5,
+        0,
+        -16.075
+      ],
+      "max": [
+        14.5,
+        3,
+        -15.925
+      ]
+    },
+    {
+      "id": "equipment_vestibule_north_0",
+      "min": [
+        10.5,
+        0,
+        -11.075
+      ],
+      "max": [
+        11.9,
+        3,
+        -10.925
+      ]
+    },
+    {
+      "id": "equipment_vestibule_north_1",
+      "min": [
+        11.9,
+        2.2,
+        -11.075
+      ],
+      "max": [
+        13.1,
+        3,
+        -10.925
+      ]
+    },
+    {
+      "id": "equipment_vestibule_north_2",
+      "min": [
+        13.1,
+        0,
+        -11.075
+      ],
+      "max": [
+        14.5,
+        3,
+        -10.925
+      ]
+    },
+    {
+      "id": "airlock_ceiling",
+      "min": [
+        11,
+        2.8,
+        -11
+      ],
+      "max": [
+        14,
+        2.9,
+        -7
+      ]
+    },
+    {
+      "id": "airlock_west_0",
+      "min": [
+        10.925,
+        0,
+        -11
+      ],
+      "max": [
+        11.075,
+        2.8,
+        -7
+      ]
+    },
+    {
+      "id": "airlock_east_0",
+      "min": [
+        13.925,
+        0,
+        -11
+      ],
+      "max": [
+        14.075,
+        2.8,
+        -7
+      ]
+    },
+    {
+      "id": "airlock_south_0",
+      "min": [
+        11,
+        0,
+        -11.075
+      ],
+      "max": [
+        11.9,
+        2.8,
+        -10.925
+      ]
+    },
+    {
+      "id": "airlock_south_1",
+      "min": [
+        11.9,
+        2.2,
+        -11.075
+      ],
+      "max": [
+        13.1,
+        2.8,
+        -10.925
+      ]
+    },
+    {
+      "id": "airlock_south_2",
+      "min": [
+        13.1,
+        0,
+        -11.075
+      ],
+      "max": [
+        14,
+        2.8,
+        -10.925
+      ]
+    },
+    {
+      "id": "airlock_north_0",
+      "min": [
+        11,
+        0,
+        -7.075
+      ],
+      "max": [
+        11.9,
+        2.8,
+        -6.925
+      ]
+    },
+    {
+      "id": "airlock_north_1",
+      "min": [
+        11.9,
+        2.2,
+        -7.075
+      ],
+      "max": [
+        13.1,
+        2.8,
+        -6.925
+      ]
+    },
+    {
+      "id": "airlock_north_2",
+      "min": [
+        13.1,
+        0,
+        -7.075
+      ],
+      "max": [
+        14,
+        2.8,
+        -6.925
+      ]
+    },
+    {
+      "id": "operations_ceiling",
+      "min": [
+        6,
+        3.2,
+        -7
+      ],
+      "max": [
+        11,
+        3.3000000000000003,
+        -1
+      ]
+    },
+    {
+      "id": "operations_west_0",
+      "min": [
+        5.925,
+        0,
+        -7
+      ],
+      "max": [
+        6.075,
+        3.2,
+        -1
+      ]
+    },
+    {
+      "id": "operations_east_0",
+      "min": [
+        10.925,
+        0,
+        -7
+      ],
+      "max": [
+        11.075,
+        3.2,
+        -4.6
+      ]
+    },
+    {
+      "id": "operations_east_1",
+      "min": [
+        10.925,
+        2.2,
+        -4.6
+      ],
+      "max": [
+        11.075,
+        3.2,
+        -3.4
+      ]
+    },
+    {
+      "id": "operations_east_2",
+      "min": [
+        10.925,
+        0,
+        -3.4
+      ],
+      "max": [
+        11.075,
+        3.2,
+        -1
+      ]
+    },
+    {
+      "id": "operations_south_0",
+      "min": [
+        6,
+        0,
+        -7.075
+      ],
+      "max": [
+        11,
+        3.2,
+        -6.925
+      ]
+    },
+    {
+      "id": "operations_north_0",
+      "min": [
+        6,
+        0,
+        -1.075
+      ],
+      "max": [
+        11,
+        3.2,
+        -0.925
+      ]
+    },
+    {
+      "id": "habitat_ceiling",
+      "min": [
+        14,
+        2.9,
+        -7
+      ],
+      "max": [
+        18,
+        3.0,
+        -2
+      ]
+    },
+    {
+      "id": "habitat_west_0",
+      "min": [
+        13.925,
+        0,
+        -7
+      ],
+      "max": [
+        14.075,
+        2.9,
+        -5.1
+      ]
+    },
+    {
+      "id": "habitat_west_1",
+      "min": [
+        13.925,
+        2.2,
+        -5.1
+      ],
+      "max": [
+        14.075,
+        2.9,
+        -3.9
+      ]
+    },
+    {
+      "id": "habitat_west_2",
+      "min": [
+        13.925,
+        0,
+        -3.9
+      ],
+      "max": [
+        14.075,
+        2.9,
+        -2
+      ]
+    },
+    {
+      "id": "habitat_east_0",
+      "min": [
+        17.925,
+        0,
+        -7
+      ],
+      "max": [
+        18.075,
+        2.9,
+        -2
+      ]
+    },
+    {
+      "id": "habitat_south_0",
+      "min": [
+        14,
+        0,
+        -7.075
+      ],
+      "max": [
+        18,
+        2.9,
+        -6.925
+      ]
+    },
+    {
+      "id": "habitat_north_0",
+      "min": [
+        14,
+        0,
+        -2.075
+      ],
+      "max": [
+        18,
+        2.9,
+        -1.925
+      ]
+    },
+    {
+      "id": "laboratory_ceiling",
+      "min": [
+        7,
+        3,
+        0
+      ],
+      "max": [
+        11,
+        3.1,
+        5
+      ]
+    },
+    {
+      "id": "laboratory_west_0",
+      "min": [
+        6.925,
+        0,
+        0
+      ],
+      "max": [
+        7.075,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "laboratory_east_0",
+      "min": [
+        10.925,
+        0,
+        0
+      ],
+      "max": [
+        11.075,
+        3,
+        1.9
+      ]
+    },
+    {
+      "id": "laboratory_east_1",
+      "min": [
+        10.925,
+        2.2,
+        1.9
+      ],
+      "max": [
+        11.075,
+        3,
+        3.1
+      ]
+    },
+    {
+      "id": "laboratory_east_2",
+      "min": [
+        10.925,
+        0,
+        3.1
+      ],
+      "max": [
+        11.075,
+        3,
+        5
+      ]
+    },
+    {
+      "id": "laboratory_south_0",
+      "min": [
+        7,
+        0,
+        -0.075
+      ],
+      "max": [
+        11,
+        3,
+        0.075
+      ]
+    },
+    {
+      "id": "laboratory_north_0",
+      "min": [
+        7,
+        0,
+        4.925
+      ],
+      "max": [
+        11,
+        3,
+        5.075
+      ]
+    },
+    {
+      "id": "observation_ceiling",
+      "min": [
+        14,
+        2.7,
+        0
+      ],
+      "max": [
+        17,
+        2.8000000000000003,
+        4
+      ]
+    },
+    {
+      "id": "observation_west_0",
+      "min": [
+        13.925,
+        0,
+        0
+      ],
+      "max": [
+        14.075,
+        2.7,
+        1.4
+      ]
+    },
+    {
+      "id": "observation_west_1",
+      "min": [
+        13.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        14.075,
+        2.7,
+        2.6
+      ]
+    },
+    {
+      "id": "observation_west_2",
+      "min": [
+        13.925,
+        0,
+        2.6
+      ],
+      "max": [
+        14.075,
+        2.7,
+        4
+      ]
+    },
+    {
+      "id": "observation_east_0",
+      "min": [
+        16.925,
+        0,
+        0
+      ],
+      "max": [
+        17.075,
+        2.7,
+        4
+      ]
+    },
+    {
+      "id": "observation_south_0",
+      "min": [
+        14,
+        0,
+        -0.075
+      ],
+      "max": [
+        17,
+        2.7,
+        0.075
+      ]
+    },
+    {
+      "id": "observation_north_0",
+      "min": [
+        14,
+        0,
+        3.925
+      ],
+      "max": [
+        17,
+        2.7,
+        4.075
+      ]
+    },
+    {
+      "id": "circulation_ceiling",
+      "min": [
+        11,
+        3.2,
+        -7
+      ],
+      "max": [
+        14,
+        3.3000000000000003,
+        5
+      ]
+    },
+    {
+      "id": "circulation_west_0",
+      "min": [
+        10.925,
+        0,
+        -7
+      ],
+      "max": [
+        11.075,
+        3.2,
+        -4.6
+      ]
+    },
+    {
+      "id": "circulation_west_1",
+      "min": [
+        10.925,
+        2.2,
+        -4.6
+      ],
+      "max": [
+        11.075,
+        3.2,
+        -3.4
+      ]
+    },
+    {
+      "id": "circulation_west_2",
+      "min": [
+        10.925,
+        0,
+        -3.4
+      ],
+      "max": [
+        11.075,
+        3.2,
+        1.9
+      ]
+    },
+    {
+      "id": "circulation_west_3",
+      "min": [
+        10.925,
+        2.2,
+        1.9
+      ],
+      "max": [
+        11.075,
+        3.2,
+        3.1
+      ]
+    },
+    {
+      "id": "circulation_west_4",
+      "min": [
+        10.925,
+        0,
+        3.1
+      ],
+      "max": [
+        11.075,
+        3.2,
+        5
+      ]
+    },
+    {
+      "id": "circulation_east_0",
+      "min": [
+        13.925,
+        0,
+        -7
+      ],
+      "max": [
+        14.075,
+        3.2,
+        -5.1
+      ]
+    },
+    {
+      "id": "circulation_east_1",
+      "min": [
+        13.925,
+        2.2,
+        -5.1
+      ],
+      "max": [
+        14.075,
+        3.2,
+        -3.9
+      ]
+    },
+    {
+      "id": "circulation_east_2",
+      "min": [
+        13.925,
+        0,
+        -3.9
+      ],
+      "max": [
+        14.075,
+        3.2,
+        1.4
+      ]
+    },
+    {
+      "id": "circulation_east_3",
+      "min": [
+        13.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        14.075,
+        3.2,
+        2.6
+      ]
+    },
+    {
+      "id": "circulation_east_4",
+      "min": [
+        13.925,
+        0,
+        2.6
+      ],
+      "max": [
+        14.075,
+        3.2,
+        5
+      ]
+    },
+    {
+      "id": "circulation_south_0",
+      "min": [
+        11,
+        0,
+        -7.075
+      ],
+      "max": [
+        11.9,
+        3.2,
+        -6.925
+      ]
+    },
+    {
+      "id": "circulation_south_1",
+      "min": [
+        11.9,
+        2.2,
+        -7.075
+      ],
+      "max": [
+        13.1,
+        3.2,
+        -6.925
+      ]
+    },
+    {
+      "id": "circulation_south_2",
+      "min": [
+        13.1,
+        0,
+        -7.075
+      ],
+      "max": [
+        14,
+        3.2,
+        -6.925
+      ]
+    },
+    {
+      "id": "circulation_north_0",
+      "min": [
+        11,
+        0,
+        4.925
+      ],
+      "max": [
+        14,
+        3.2,
+        5.075
+      ]
+    }
+  ],
+  "support_surfaces": [
+    {
+      "id": "equipment_vestibule_floor",
+      "min_x": 10.5,
+      "max_x": 14.5,
+      "min_z": -16,
+      "max_z": -11,
+      "y": 0
+    },
+    {
+      "id": "airlock_floor",
+      "min_x": 11,
+      "max_x": 14,
+      "min_z": -11,
+      "max_z": -7,
+      "y": 0
+    },
+    {
+      "id": "operations_floor",
+      "min_x": 6,
+      "max_x": 11,
+      "min_z": -7,
+      "max_z": -1,
+      "y": 0
+    },
+    {
+      "id": "habitat_floor",
+      "min_x": 14,
+      "max_x": 18,
+      "min_z": -7,
+      "max_z": -2,
+      "y": 0
+    },
+    {
+      "id": "laboratory_floor",
+      "min_x": 7,
+      "max_x": 11,
+      "min_z": 0,
+      "max_z": 5,
+      "y": 0
+    },
+    {
+      "id": "observation_floor",
+      "min_x": 14,
+      "max_x": 17,
+      "min_z": 0,
+      "max_z": 4,
+      "y": 0
+    },
+    {
+      "id": "circulation_floor",
+      "min_x": 11,
+      "max_x": 14,
+      "min_z": -7,
+      "max_z": 5,
+      "y": 0
+    }
+  ],
+  "portals": [
+    {
+      "id": "opening_1",
+      "room_a": "equipment_vestibule",
+      "room_b": "airlock",
+      "axis": "z",
+      "coordinate": -11,
+      "center": 12.5,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    },
+    {
+      "id": "opening_2",
+      "room_a": "airlock",
+      "room_b": "circulation",
+      "axis": "z",
+      "coordinate": -7,
+      "center": 12.5,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    },
+    {
+      "id": "opening_3",
+      "room_a": "operations",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 11,
+      "center": -4,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    },
+    {
+      "id": "opening_4",
+      "room_a": "habitat",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 14,
+      "center": -4.5,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    },
+    {
+      "id": "opening_5",
+      "room_a": "laboratory",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 11,
+      "center": 2.5,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    },
+    {
+      "id": "opening_6",
+      "room_a": "observation",
+      "room_b": "circulation",
+      "axis": "x",
+      "coordinate": 14,
+      "center": 2,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    }
+  ],
+  "routes": [
+    {
+      "id": "opening_1",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          12.5,
+          0,
+          -13.5
+        ],
+        [
+          12.5,
+          0,
+          -11.6
+        ],
+        [
+          12.5,
+          0,
+          -11
+        ],
+        [
+          12.5,
+          0,
+          -10.4
+        ],
+        [
+          12.5,
+          0,
+          -9.0
+        ]
+      ]
+    },
+    {
+      "id": "opening_2",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          12.5,
+          0,
+          -9.0
+        ],
+        [
+          12.5,
+          0,
+          -7.6
+        ],
+        [
+          12.5,
+          0,
+          -7
+        ],
+        [
+          12.5,
+          0,
+          -6.4
+        ],
+        [
+          12.5,
+          0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "id": "opening_3",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          8.5,
+          0,
+          -4.0
+        ],
+        [
+          10.4,
+          0,
+          -4
+        ],
+        [
+          11,
+          0,
+          -4
+        ],
+        [
+          11.6,
+          0,
+          -4
+        ],
+        [
+          12.5,
+          0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "id": "opening_4",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          16.0,
+          0,
+          -4.5
+        ],
+        [
+          14.6,
+          0,
+          -4.5
+        ],
+        [
+          14,
+          0,
+          -4.5
+        ],
+        [
+          13.4,
+          0,
+          -4.5
+        ],
+        [
+          12.5,
+          0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "id": "opening_5",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          9.0,
+          0,
+          2.5
+        ],
+        [
+          10.4,
+          0,
+          2.5
+        ],
+        [
+          11,
+          0,
+          2.5
+        ],
+        [
+          11.6,
+          0,
+          2.5
+        ],
+        [
+          12.5,
+          0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "id": "opening_6",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          15.5,
+          0,
+          2.0
+        ],
+        [
+          14.6,
+          0,
+          2
+        ],
+        [
+          14,
+          0,
+          2
+        ],
+        [
+          13.4,
+          0,
+          2
+        ],
+        [
+          12.5,
+          0,
+          -1.0
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Rectangular room layout only; visual assets/materials/lighting remain unfinished.",
+    "Real-place visual coverage and vertical connectors are not implemented in this compiler.",
+    "Open passages are not a stateful airlock or door simulation."
+  ],
+  "connectivity": {
+    "entry_room_id": "equipment_vestibule",
+    "reachable_rooms": [
+      "airlock",
+      "circulation",
+      "equipment_vestibule",
+      "habitat",
+      "laboratory",
+      "observation",
+      "operations"
+    ],
+    "locked_rooms": [],
+    "bidirectional_graph": true
+  },
+  "functional_program": {
+    "equipment_vestibule": "equipment_vestibule",
+    "airlock": "airlock",
+    "operations": "operations",
+    "habitat": "habitat",
+    "laboratory": "laboratory",
+    "observation": "observation"
+  },
+  "layout_template": "single_level_entry_chain_and_corridor_branches_v2"
+}

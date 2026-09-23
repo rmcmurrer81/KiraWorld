@@ -1,0 +1,36 @@
+{
+  "result": {
+    "status": "created",
+    "output_dir": "@workspace\\work\\world-meal-station-candidate-059\\actual-001\\package",
+    "manifest_sha256": "b1f252ed39ced9bf4f14cac38e0de67149aa66a793ecc6db5127a51e430d32f4",
+    "job_id": "world_research_c391ffbffc7352612392",
+    "message": "Your 3D package is ready. It includes meshes, textures and door/collider metadata. Game and VR controls still require an adapter.",
+    "capabilities": {
+      "experimental": true,
+      "authored_meshes": true,
+      "embedded_textures": true,
+      "door_hinge_hierarchy": true,
+      "linked_collider_metadata": true,
+      "airlock_pair_policy_metadata": true,
+      "engine_native_interaction": false,
+      "engine_native_collision": false,
+      "pressure_simulation": false,
+      "vr_runtime": false,
+      "visual_or_owner_approval": false
+    }
+  },
+  "installed": false,
+  "candidate_api_sha256": "15862e20f8d73106a838beeb822b75349855b618d9ac562d7c55bdf0933f0472",
+  "preview_manifest_sha256": "6339588041a8d1ab39dc82d02d007fa9340c2cd18708faa6b509bacf3bc1486c",
+  "presentation": {
+    "contract": "bound_original_exterior_presentation_v1",
+    "setting": "mars_surface",
+    "reason": "explicit_original_mars_base_request",
+    "source": {
+      "job_id": "world_research_c391ffbffc7352612392",
+      "brief_sha256": "c391ffbffc7352612392f65bbf3a004429c1e6bcb2ec1aa125ad0a2da289527d",
+      "request_sha256": "599a0d554ce58e9d3ea02f2d3e99e927b7059fbf5e880a8db339032ba9b63d41",
+      "research_packet_sha256": "e0cc4cb1cda3c5937ecf28aac9bd9e17f5d9799f279c6a523e63fe08f146d71f"
+    }
+  }
+}

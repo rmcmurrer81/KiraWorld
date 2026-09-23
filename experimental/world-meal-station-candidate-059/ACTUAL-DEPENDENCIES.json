@@ -1,0 +1,21 @@
+{
+  "files_relative_to_work": {
+    "world-installed-observation-export-057-independent-review-001/check_package.py": {
+      "sha256": "4f39cfdc434a608ce2333c17a959676e2cbe03043bb60f1320e32eae34220fb9",
+      "bytes": 6679
+    },
+    "world-installed-observation-export-057/run_cpu_export.py": {
+      "sha256": "2381699cb24f26b5fa92adcdae778fdc8bdf09417e22cb03f00faa6ef623eccd",
+      "bytes": 7670
+    },
+    "world-galley-detail-045/run_cpu_export.py": {
+      "sha256": "acd25eb365d4ef3076b27fdd4d52ce9e32cf016b3a9e9756d433914c29b1b0b9",
+      "bytes": 6447
+    }
+  },
+  "baseline_package": {
+    "path": "world-installed-observation-export-057/actual-001/package",
+    "glb_sha256": "6c5bbd9910e0d82134a3700beb335f59a97db6338ee20a185be5d53ed0d401bf"
+  },
+  "local_only_inputs": "The saved-job, research and private immutable-preview source bindings are required for an operational rerun. Do not bundle them in a public backup."
+}
