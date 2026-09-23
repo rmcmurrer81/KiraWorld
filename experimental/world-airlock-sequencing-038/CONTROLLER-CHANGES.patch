@@ -1,0 +1,62 @@
+--- installed/walk_controller.mjs
++++ candidate/walk_controller.mjs
+@@ -5,7 +5,8 @@
+ // Preview-local moving doors. The immutable source geometry is never changed.
+ // Rendering and collision both use pose(); motion uses a conservative sweep
+ // volume so a door cannot close through the walker between animation frames.
+-export const DOOR_CONTRACT = 'preview_hinged_doors_v1';
++export const DOOR_CONTRACT = 'preview_hinged_doors_v2';
++export const AIRLOCK_SEQUENCE_CONTRACT = 'paired_airlock_door_sequence_v1';
+ const DOOR_THICKNESS=.065, FRAME_WIDTH=.07, FRAME_DEPTH=.21, REACH=2.25;
+ const freeze=value=>Object.freeze(value);
+ const vector=(v)=>Array.isArray(v)&&v.length===3&&v.every(n=>Number.isFinite(n)&&Math.abs(n)<1e6);
+@@ -63,6 +64,25 @@
+     if(sign>0)maximum[n]=hinge[n]+extent;else minimum[n]=hinge[n]-extent;
+     door.sweep={min:minimum,max:maximum};doors.set(door.id,door);
+   }
++  // Only an explicit authored role opts in. Names, decorations and room IDs do
++  // not imply an airlock. This is mutual exclusion, not pressure simulation.
++  const airlockPairs=[],interlockedPeers=new Map();
++  const program=geometry.functional_program;
++  if(program!==undefined&&program!==null)ensure(typeof program==='object'&&!Array.isArray(program),'Invalid authored room program');
++  for(const [roomId,role] of Object.entries(program||{})){
++    if(role!=='airlock')continue;
++    const room=rooms.get(roomId);ensure(room&&room.access==='walkable_layout','Authored airlock room is unavailable');
++    const members=[...doors.values()].filter(d=>d.portal.room_a===roomId||d.portal.room_b===roomId);
++    ensure(members.length===2,'Authored airlock must have exactly two supported doors: '+roomId);
++    airlockPairs.push(freeze({roomId,doorIds:freeze(members.map(d=>d.id)),contract:AIRLOCK_SEQUENCE_CONTRACT,
++      pressureSimulation:false,statePersistence:'session_local'}));
++    for(const door of members){
++      const peer=members.find(d=>d!==door),peerRoom=peer.portal.room_a===roomId?peer.roomB:peer.roomA;
++      if(!interlockedPeers.has(door.id))interlockedPeers.set(door.id,[]);
++      interlockedPeers.get(door.id).push({door:peer,roomId,destination:peerRoom.name});
++    }
++  }
++  function interlocks(){return freeze([...airlockPairs]);}
+   function poseOf(door){
+     const c=Math.cos(door.angle),s=Math.sin(door.angle),tx=door.axis==='x'?s:c,tz=door.axis==='x'?c:-s;
+     const nx=door.axis==='x'?c:s,nz=door.axis==='x'?-s:c;
+@@ -99,6 +119,14 @@
+     if(!door||!near(door,feet))return freeze({ok:false,reason:'Move closer to the door.'});
+     if(door.moving)return freeze({ok:false,reason:'Wait for the door to finish moving.'});
+     if(overlapAvatar(door.sweep,feet,radius,height))return freeze({ok:false,reason:'Step back from the door swing before moving it.'});
++    // Only opening is interlocked. Closing retains the original sweep/motion
++    // rules, allowing the user to restore a closed pair. Moving/target/held also
++    // reserve the peer at angle zero, so same-frame requests cannot open both.
++    if(door.angle===0){
++      const blocked=(interlockedPeers.get(id)||[]).find(p=>p.door.angle!==0||p.door.moving||p.door.target!==0||p.door.motionHeld);
++      if(blocked)return freeze({ok:false,reason:'The door to '+blocked.destination+' must be fully closed and stopped before opening this airlock door.',
++        interlock:freeze({contract:AIRLOCK_SEQUENCE_CONTRACT,roomId:blocked.roomId,peerDoorId:blocked.door.id})});
++    }
+     door.target=door.angle===0?door.targetAngle:0;door.moving=true;door.motionHeld=false;
+     return freeze({ok:true,id,state:door.target===0?'closing':'opening'});
+   }
+@@ -114,7 +142,7 @@
+     }
+     return all();
+   }
+-  return freeze({contract:DOOR_CONTRACT,all,assemblies,colliders,nearest,toggle,advance});
++  return freeze({contract:DOOR_CONTRACT,all,assemblies,colliders,nearest,toggle,advance,interlocks});
+ }
+ 
+ export function createWalkController(geometry,{extraColliders=[]}={}) {

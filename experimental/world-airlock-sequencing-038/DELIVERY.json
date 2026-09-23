@@ -1,0 +1,20 @@
+{
+  "status": "038_PAIRED_DOORS_CPU_VALIDATED_NOT_INSTALLED",
+  "created_utc": "2026-09-23T08:10:21.593547+00:00",
+  "candidate_sha256": "0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791",
+  "baseline_sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+  "changed_files": [
+    "walk_controller.mjs"
+  ],
+  "sequencing_checks": 16,
+  "generic_checks": 33,
+  "actual_saved_geometry_checks": 3,
+  "installed_frontend_unchanged": true,
+  "protected_original_files_unchanged": 116,
+  "gpu_model_browser_native_ui_jobs": 0,
+  "pressure_simulation": false,
+  "exterior_eva_portal": false,
+  "visual_approval": false,
+  "install_plan_sha256": "30233c75b17c1f737cfa13b9f45c1c1205f6c7160f12e207271daccd216655d2",
+  "frozen036_037_changed": false
+}

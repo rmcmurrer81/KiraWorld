@@ -1,0 +1,24 @@
+{
+  "status": "PORTABLE_MOCK_AND_NODE_TESTS_PASS",
+  "results": [
+    {
+      "check": "037 public mocked API/callback tests",
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"tests\": 22, \"failures\": 0, \"errors\": 0, \"worker_mocked\": true, \"real_glb_exports\": 0, \"gpu_models_browser_native_ui\": 0, \"canonical_unchanged\": true, \"owner_data_writes\": 0}",
+      "real_export_or_ui": false
+    },
+    {
+      "check": "038 public sequencing fixtures",
+      "returncode": 0,
+      "stdout": "{\"status\":\"PAIRED_AIRLOCK_SEQUENCING_CPU_PASS\",\"checks\":16,\"receipt\":\"AIRLOCK-RESULT-3.json\"}",
+      "real_export_or_ui": false
+    },
+    {
+      "check": "038 public generic door fixtures",
+      "returncode": 0,
+      "stdout": "{\"status\":\"PASS_DOOR_FUNCTIONAL_AND_COLLISION_CHECKS\",\"checks\":33}",
+      "real_export_or_ui": false
+    }
+  ],
+  "actual_export_run": false
+}

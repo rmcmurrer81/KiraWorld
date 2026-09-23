@@ -1,0 +1,26 @@
+{
+  "status": "PROPOSED_NOT_INSTALLED_ROOT_REVIEW_REQUIRED",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/walk_controller.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\walk_controller.mjs",
+      "before_sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+      "preimage": "@workspace\\work\\world-airlock-sequencing-candidate-038\\baseline\\walk_controller.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-airlock-sequencing-candidate-038\\candidate\\tools\\world_builder_engine\\walk_controller.mjs",
+        "sha256": "0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791",
+        "bytes": 15059
+      }
+    }
+  ],
+  "protected_originals": {
+    "count": 116,
+    "receipt": "../world-preview-refresh-candidate-028/INSTALL-PLAN.json",
+    "unchanged": true
+  },
+  "pending": [
+    "Root code review",
+    "Coordinated new immutable preview and UI check",
+    "Explicit successor to037 before exporting new sequencing behavior"
+  ]
+}

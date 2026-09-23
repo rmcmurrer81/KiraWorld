@@ -1,0 +1,32 @@
+{
+  "status": "PAIRED_AIRLOCK_SEQUENCING_CPU_PASS",
+  "checks": [
+    "opening_1: same-frame pending opening blocks its peer at angle zero",
+    "opening_1: opening and fully open peer block, then closing restores access",
+    "opening_1: held opening at angle zero remains reserved",
+    "opening_1: closing still respects the existing occupied swing",
+    "opening_2: same-frame pending opening blocks its peer at angle zero",
+    "opening_2: opening and fully open peer block, then closing restores access",
+    "opening_2: held opening at angle zero remains reserved",
+    "opening_2: closing still respects the existing occupied swing",
+    "Explicit role works after the airlock is renamed",
+    "Names and room IDs alone never imply an airlock interlock",
+    "Authored airlock with one or more than two supported doors is rejected",
+    "Malformed role map is rejected without guessing its meaning",
+    "Unrelated ordinary doors retain exact baseline poses and responses",
+    "Peer reason names the adjacent destination and reaches the existing UI",
+    "Contract and immutable pairing state are explicit, with no pressure model"
+  ],
+  "checks_count": 15,
+  "geometry_mutated": false,
+  "models_gpu_browser_ui": 0,
+  "source_hashes": {
+    "baseline": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+    "candidate": "0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791"
+  },
+  "limitations": [
+    "Mutual exclusion of two explicitly authored room doors only.",
+    "Not a pressure seal, leak test, pressure cycle or exterior EVA connection.",
+    "No installation or visual review."
+  ]
+}

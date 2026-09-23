@@ -1,0 +1,37 @@
+{
+  "status": "ACTUAL_SAVED_AIRLOCK_READ_ONLY_PASS",
+  "geometry_sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75",
+  "checks": [
+    "Installed baseline permits both actual airlock doors to open together",
+    "Candidate refuses peer while pending/open and allows it after first door closes",
+    "Source object and original geometry bytes unchanged"
+  ],
+  "checks_count": 3,
+  "room": {
+    "id": "airlock",
+    "name": "Primary Airlock",
+    "width": 3,
+    "depth": 4,
+    "height": 2.8
+  },
+  "pairs": [
+    {
+      "roomId": "airlock",
+      "doorIds": [
+        "opening_1",
+        "opening_2"
+      ],
+      "contract": "paired_airlock_door_sequence_v1",
+      "pressureSimulation": false,
+      "statePersistence": "session_local"
+    }
+  ],
+  "blocked_reason": "The door to Equipment Vestibule must be fully closed and stopped before opening this airlock door.",
+  "installed_both_open": true,
+  "candidate_sequencing_pass": true,
+  "model_gpu_ui_preview_jobs": 0,
+  "source_modified": false,
+  "limitations": [
+    "Only door sequencing was tested. No pressure or seal simulation, exterior EVA access, visual review, or installation."
+  ]
+}

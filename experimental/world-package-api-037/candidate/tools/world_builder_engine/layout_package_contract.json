@@ -1,0 +1,31 @@
+{
+  "contract": "authored_saved_layout_package_v1",
+  "status": "experimental",
+  "selection": "An explicit saved job and its own verified preview binding; no globally newest project lookup.",
+  "supported_recipe": "Pinned current authored_habitat_equipment_plan_v1 renderer, hinged-door controller and Three180 assets.",
+  "validation_scope": "Only source geometry hashes in the service VALIDATED_GEOMETRY set may export. Current evidence covers the saved Original Mars fixture. Recognized but unvalidated layouts return unsupported_layout.",
+  "input": {
+    "job_dir": "Existing immediate saved research job under this installation",
+    "destination": "New export directory outside protected saved world/research/preview directories",
+    "preview_binding": "Optional exact manifest_path and manifest_sha256 for the selected job's already-open current preview",
+    "dependencies": "Optional explicit local runtime paths; every dependency must match the tested digest and byte count"
+  },
+  "output_files": ["scene.glb", "scene.json", "ROUNDTRIP.json", "README.txt", "manifest.json"],
+  "ready_status": "created",
+  "held_statuses": ["invalid_selection", "unsupported_preview", "unsupported_recipe", "unsupported_layout", "dependency_missing", "dependency_changed", "producer_changed", "destination_exists", "invalid_destination", "source_changed", "export_failed", "source_or_export_held"],
+  "failure_after_output_creation": "No ready manifest; EXPORT-INCOMPLETE.json records held status. Partial output is retained. Existing files and source folders are never overwritten or removed.",
+  "capabilities": {
+    "actual_authored_meshes_and_textures": true,
+    "room_bounds_and_corrected_collider_ownership": true,
+    "static_door_frames_and_moving_leaf_hinge_hierarchy": true,
+    "engine_native_collision_runtime": false,
+    "engine_native_interaction_runtime": false,
+    "game_engine_adapter": false,
+    "vr_runtime": false,
+    "pressure_or_airlock_cycle_simulation": false,
+    "persistent_door_session_state": false,
+    "science_medical_or_life_support_equipment_behavior": false,
+    "photorealism_or_owner_approval": false
+  },
+  "resource_behavior": "CPU Canvas and Three exporter/importer only. No browser, WebGL, GPU/model job, research rerun, network fetch or dependency download. The native button runs the API in an owned background worker and reports the created folder."
+}
