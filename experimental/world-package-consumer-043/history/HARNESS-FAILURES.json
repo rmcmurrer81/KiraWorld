@@ -1,0 +1,22 @@
+{
+  "first_import": {
+    "receipt": "../CHECK-RESULT.json",
+    "failure": "New binder compared GLB extras and canonical sidecar using JSON property order; semantically identical room bounds were rejected.",
+    "correction": "Recursive sorted-key equality for objects, retaining array order.",
+    "source_or_package_modified": false
+  },
+  "reference_comparison_attempts": [
+    {
+      "source": "compare_reference-first.mjs",
+      "failure": "Test expected room:corridor, while actual bound room ID is room:circulation.",
+      "runtime_failed": false
+    },
+    {
+      "source": "compare_reference-second.mjs",
+      "failure": "Test guessed a circulation functional role; current metadata has null for that corridor role.",
+      "runtime_failed": false
+    }
+  ],
+  "final_reference_correction": "Take the expected destination from opening_2's already bound room membership.",
+  "model_gpu_ui_or_canonical_changes": 0
+}

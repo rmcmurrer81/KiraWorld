@@ -1,0 +1,20 @@
+{
+  "status": "PRE_READ_FILE_ADMISSION_PASS",
+  "tests": 12,
+  "cases": [
+    "too few files",
+    "too many files",
+    "unknown filename",
+    "duplicate filename",
+    "huge final file rejected before any earlier file read",
+    "one byte above file bound",
+    "zero-byte file",
+    "invalid numeric size",
+    "non-readable selection",
+    "combined size bound",
+    "valid files read only after complete admission",
+    "changed actual byte count held"
+  ],
+  "reads_on_rejected_admission": 0,
+  "ui_opened": false
+}

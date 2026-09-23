@@ -1,0 +1,115 @@
+{
+  "contract": "isolated_package_consumer_review_plan_v1",
+  "created_utc": "2026-09-23T10:09:52.025500+00:00",
+  "purpose": "Independent first-person Three consumer of an explicit exported package; code review only, no installation or UI launch.",
+  "canonical_changes": [],
+  "runtime_files": {
+    "index.html": {
+      "sha256": "c6a8bfe8d520838f2d163bb047e8ce4a8caa384bcbe5dfe18de6b3b50fc0e55d",
+      "bytes": 1406
+    },
+    "app.mjs": {
+      "sha256": "7f36f51e0946098553afad6bb2a51a99aa756c7f94404e4c6987075333dd29d3",
+      "bytes": 4490
+    },
+    "file_admission.mjs": {
+      "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+      "bytes": 1446
+    },
+    "package_loader.mjs": {
+      "sha256": "ca43285a6a9d193249e94be11d453c75a152593e54894ce367a5f8f7bb7cc097",
+      "bytes": 7419
+    },
+    "runtime.mjs": {
+      "sha256": "63c4c7872ba7d57536fc65eec7ffac2e93efde540ac9e88291adf2de52a3bb93",
+      "bytes": 12869
+    },
+    "horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "serve.py": {
+      "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+      "bytes": 655
+    },
+    "vendor/three/LICENSE": {
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    "vendor/three/build/three.core.js": {
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    "vendor/three/build/three.module.js": {
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    "vendor/three/examples/jsm/loaders/GLTFLoader.js": {
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "bytes": 114739
+    },
+    "vendor/three/examples/jsm/utils/BufferGeometryUtils.js": {
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "bytes": 35539
+    },
+    "vendor/three/package.json": {
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+      "bytes": 4635
+    }
+  },
+  "sample_package": {
+    "manifest.json": {
+      "sha256": "9ca7416c9e6b45d23b009cf070964ca56462b60392520370cd525a90df01c40e",
+      "bytes": 6963
+    },
+    "README.txt": {
+      "sha256": "cd4d71900456ab87d690603a658293c32156776fd3d7d59d534ef1c69e54bfb1",
+      "bytes": 377
+    },
+    "ROUNDTRIP.json": {
+      "sha256": "3e62d776d9b55e8cf930fe58d94dada947170325bc38cda6aa052e796e4420a7",
+      "bytes": 6432
+    },
+    "scene.glb": {
+      "sha256": "718af4ec699d506b5f02a4ad8d73330a8aca7e9ecfd965ed001473c3ccd70296",
+      "bytes": 1106920
+    },
+    "scene.json": {
+      "sha256": "5a989291a827cb99b169be07863b82880b9f8a0d398af65823e18e38a6cf8042",
+      "bytes": 83432
+    }
+  },
+  "actual_fixture": "Installed042 authored Mars derived package",
+  "source_geometry_required_at_runtime": false,
+  "native_game_engine_adapter": false,
+  "vr_runtime": false,
+  "pressure_simulation": false,
+  "visual_owner_approval": false,
+  "validation": {
+    "TEST-ADMISSION.json": {
+      "sha256": "d475624d2c08048bea00125b4cdbec8cf8b7395a894b6c2dda622e969115bd30",
+      "bytes": 523
+    },
+    "TEST-RUNTIME-FINAL.json": {
+      "sha256": "67ce7cfe549ea7d836bb6f9af57cee2d01e5ec4851f34941c398ecfbb151e102",
+      "bytes": 2497
+    },
+    "TEST-IMPORT-003.json": {
+      "sha256": "4b0130df8378150613e0fa65cbad0edab65ebb3dc140ba3832d1ff7b10c4d53d",
+      "bytes": 4363
+    },
+    "TEST-REFERENCE-3.json": {
+      "sha256": "d131e609e1d61c428a80c99df41f95748b7379675ebf1ed2e16c333aab0bf0a6",
+      "bytes": 28880
+    },
+    "CHECK-RESULT-003.json": {
+      "sha256": "bdd71268693ddeb9b4b7c86f0fe0545058a3f45746977eff503de17abe203699",
+      "bytes": 849
+    }
+  },
+  "pending": [
+    "Root review of final file admission patch and closure",
+    "Browser visual/input review when authorized",
+    "Additional supported export fixtures before wider compatibility claims"
+  ]
+}

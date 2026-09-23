@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {PACKAGE_FILES,MAX_FILE_BYTES,admitFiles,readSelectedPackage} from './file_admission.mjs';
+let reads=0;const cases=[];
+const sample=()=>PACKAGE_FILES.map(name=>({name,size:1,arrayBuffer:async()=>{reads++;return new ArrayBuffer(1);}}));
+async function reject(name,mutate,pattern){reads=0;const files=sample(),changed=mutate(files)||files;await assert.rejects(()=>readSelectedPackage(changed),pattern);assert.equal(reads,0,'Admission must fail before every read');cases.push(name);}
+await reject('too few files',f=>f.slice(1),/exactly/);
+await reject('too many files',f=>[...f,f[0]],/exactly/);
+await reject('unknown filename',f=>{f[4].name='home-video.mp4';},/filename/);
+await reject('duplicate filename',f=>{f[4].name=f[0].name;},/duplicate/);
+await reject('huge final file rejected before any earlier file read',f=>{f[4].size=50*1024**3;},/16 MiB/);
+await reject('one byte above file bound',f=>{f[0].size=MAX_FILE_BYTES+1;},/16 MiB/);
+await reject('zero-byte file',f=>{f[0].size=0;},/16 MiB/);
+await reject('invalid numeric size',f=>{f[0].size=NaN;},/16 MiB/);
+await reject('non-readable selection',f=>{delete f[4].arrayBuffer;},/readable/);
+await reject('combined size bound',f=>{for(const file of f)file.size=7*1024*1024;},/32 MiB/);
+reads=0;const loaded=await readSelectedPackage(sample());assert.equal(reads,5);assert.equal(loaded.size,5);cases.push('valid files read only after complete admission');
+const changed=sample();changed[0].arrayBuffer=async()=>new ArrayBuffer(2);await assert.rejects(()=>readSelectedPackage(changed),/size changed/);cases.push('changed actual byte count held');
+assert.equal(admitFiles(sample()).length,5);
+const result={status:'PRE_READ_FILE_ADMISSION_PASS',tests:cases.length,cases,reads_on_rejected_admission:0,ui_opened:false};
+if(process.argv[2])fs.writeFileSync(process.argv[2],JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({status:result.status,tests:cases.length}));

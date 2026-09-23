@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-23T10:04:08.127839+00:00",
+  "returncode": 0,
+  "failure": null,
+  "elapsed_seconds": 0.36224110005423427,
+  "sampled_family_peak_rss_bytes": 187404288,
+  "samples": 22,
+  "processes": {
+    "27652": {
+      "name": "node.exe",
+      "observed_rss": 179355648,
+      "os_peak_working_set": 184000512
+    },
+    "17204": {
+      "name": "conhost.exe",
+      "observed_rss": 8048640,
+      "os_peak_working_set": 8048640
+    }
+  },
+  "protected_original_files": 116,
+  "protected_originals_canonical_five_current_preview_and_sample_unchanged": true,
+  "native_ui_opened": false,
+  "servers_started": 0,
+  "models_gpu_calls": 0,
+  "visual_or_owner_approval": false,
+  "measurement_limit": "Sampled owned process-family RSS may miss brief peaks; Python supervisor excluded."
+}

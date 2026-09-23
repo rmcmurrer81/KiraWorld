@@ -1,0 +1,110 @@
+{
+  "status": "PORTABLE_CONSUMER_CPU_RUNTIME_PASS",
+  "tests": 20,
+  "cases": [
+    "all five package files verified before import",
+    "missing file held",
+    "tampered GLB held by digest",
+    "unsupported metadata contract held",
+    "unknown collider owner held",
+    "missing authored pair held",
+    "swapped pair leaf held",
+    "unlisted paired door held",
+    "changed leaf collision bounds held",
+    "unsupported spawn held",
+    "six doors closed half and fully open; all frames remain metadata-static",
+    "peer pending at zero angle denies simultaneous opening",
+    "occupied swing holds zero-angle motion and keeps peer reserved",
+    "closing allowed with peer fully closed; then peer opens",
+    "reach, moving and swing occupancy requests rejected",
+    "no direct teleport setter and long frame is bounded",
+    "closed door blocks continuous route; open door allows passage",
+    "room wall and unsupported world edge block walking",
+    "all 134 actual collider records accepted; second static chunk also checked",
+    "metadata remains byte-identical after session actions"
+  ],
+  "door_pose_samples": [
+    {
+      "door_id": "door:opening_1",
+      "half": [
+        1.3301219330881975,
+        1.1,
+        -4.410121933088197
+      ],
+      "open": [
+        0.92,
+        1.1,
+        -4.58
+      ]
+    },
+    {
+      "door_id": "door:opening_2",
+      "half": [
+        1.3301219330881975,
+        1.1,
+        -0.4101219330881975
+      ],
+      "open": [
+        0.92,
+        1.1,
+        -0.58
+      ]
+    },
+    {
+      "door_id": "door:opening_3",
+      "half": [
+        -0.4101219330881975,
+        1.1,
+        2.8301219330881975
+      ],
+      "open": [
+        -0.58,
+        1.1,
+        2.42
+      ]
+    },
+    {
+      "door_id": "door:opening_4",
+      "half": [
+        3.4101219330881976,
+        1.1,
+        2.3301219330881975
+      ],
+      "open": [
+        3.58,
+        1.1,
+        1.92
+      ]
+    },
+    {
+      "door_id": "door:opening_5",
+      "half": [
+        -0.4101219330881975,
+        1.1,
+        9.330121933088197
+      ],
+      "open": [
+        -0.58,
+        1.1,
+        8.92
+      ]
+    },
+    {
+      "door_id": "door:opening_6",
+      "half": [
+        3.4101219330881976,
+        1.1,
+        8.830121933088197
+      ],
+      "open": [
+        3.58,
+        1.1,
+        8.42
+      ]
+    }
+  ],
+  "source_geometry_used": false,
+  "webgl_browser_gpu_model_calls": 0,
+  "native_ui_review": false,
+  "owner_approval": false
+}

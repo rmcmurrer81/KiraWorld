@@ -1,0 +1,11 @@
+file:///@workspace/work/world-package-consumer-043/runtime.mjs:6
+export const require=(ok,message)=>{if(!ok)throw new TypeError(message);};
+                                                 ^
+
+TypeError: GLB room identity/bounds differ
+    at require (file:///@workspace/work/world-package-consumer-043/runtime.mjs:6:50)
+    at bindScene (file:///@workspace/work/world-package-consumer-043/package_loader.mjs:41:2)
+    at loadPackage (file:///@workspace/work/world-package-consumer-043/package_loader.mjs:68:16)
+    at async file:///@workspace/work/world-package-consumer-043/test_import.mjs:20:14
+
+Node.js v24.15.0
