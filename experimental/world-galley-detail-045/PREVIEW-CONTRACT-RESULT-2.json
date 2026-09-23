@@ -1,0 +1,20 @@
+{
+  "status": "NEW_APPEARANCE_PIN_ACCEPTED_OLD_OR_CHANGED_APPEARANCE_HELD",
+  "checks": [
+    {
+      "case": "new045",
+      "appearance_held": false
+    },
+    {
+      "case": "old042",
+      "appearance_held": true
+    },
+    {
+      "case": "changed_viewer",
+      "appearance_held": true
+    }
+  ],
+  "scope": "Mocks saved-job and immutable verification, tests appearance dispatch only; no created preview or real export.",
+  "owner_data_writes": 0,
+  "native_ui_models_gpu": 0
+}

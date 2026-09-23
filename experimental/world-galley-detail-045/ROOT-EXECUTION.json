@@ -1,0 +1,318 @@
+{
+  "status": "045_GALLEY_INSTALLED_ACTUAL_API_EXPORT_IMPORT_PASS",
+  "created_utc": "2026-09-23T11:35:07.170689+00:00",
+  "installed": true,
+  "installed_files": 5,
+  "authorization": "Root approved exact GALLEY plan and fresh installed API-only export/import; no UI or models.",
+  "install_plan_sha256": "8d5160f30205936e015cf5938cbaa69e0caa68552553e1735b5db2f339a3ae71",
+  "install_receipt_sha256": "90f8c47edbf0c97e29b27c3f74a4ab62db1470e7576d3c00f0e5e97c1415d991",
+  "real_package_manifest_sha256": "3b75ec9018b45fa88749c333c30af0b11e1279933025427508667cb84803ea13",
+  "real_glb_sha256": "0b6ee808519f83e73a3ff5b9df336d456e76f7fce91fe493e797702ba226531b",
+  "real_glb_bytes": 1194636,
+  "elapsed_seconds": 1.8963373000733554,
+  "sampled_family_peak_rss_bytes": 799670272,
+  "samples": 110,
+  "sample_interval_seconds": 0.01,
+  "processes": {
+    "11736": {
+      "name": "python.exe",
+      "observed_rss": 36446208,
+      "os_peak_working_set": 36450304
+    },
+    "1044": {
+      "name": "conhost.exe",
+      "observed_rss": 8036352,
+      "os_peak_working_set": 8036352
+    },
+    "16740": {
+      "name": "node.exe",
+      "observed_rss": 35078144,
+      "os_peak_working_set": 42131456
+    },
+    "5736": {
+      "name": "node.exe",
+      "observed_rss": 749494272,
+      "os_peak_working_set": 762564608
+    },
+    "24640": {
+      "name": "conhost.exe",
+      "observed_rss": 8028160,
+      "os_peak_working_set": 8028160
+    }
+  },
+  "measurement_scope": "Launched process family only, supervisor excluded; sampled RSS may miss brief peaks.",
+  "actual_importer_checks": {
+    "geometry_attributes_exact": 1869,
+    "index_arrays_exact": 623,
+    "material_parameter_pairs": 97,
+    "texture_effective_pixels_repeat_wrap_colorspace": 67,
+    "punctual_light_parameters_and_direction": 8,
+    "door_controller_samples": [
+      {
+        "door_id": "opening_1",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              1.5,
+              1.1,
+              -4
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              1.3301219330881975,
+              1.1,
+              -4.410121933088197
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              0.92,
+              1.1,
+              -4.58
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_2",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              1.5,
+              1.1,
+              0
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              1.3301219330881975,
+              1.1,
+              -0.4101219330881975
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              0.92,
+              1.1,
+              -0.58
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_3",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              0,
+              1.1,
+              3
+            ]
+          },
+          {
+            "angle": -0.7853981633974483,
+            "center": [
+              -0.4101219330881975,
+              1.1,
+              2.8301219330881975
+            ]
+          },
+          {
+            "angle": -1.5707963267948966,
+            "center": [
+              -0.58,
+              1.1,
+              2.42
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_4",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              3,
+              1.1,
+              2.5
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              3.4101219330881976,
+              1.1,
+              2.3301219330881975
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              3.58,
+              1.1,
+              1.92
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_5",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              0,
+              1.1,
+              9.5
+            ]
+          },
+          {
+            "angle": -0.7853981633974483,
+            "center": [
+              -0.4101219330881975,
+              1.1,
+              9.330121933088197
+            ]
+          },
+          {
+            "angle": -1.5707963267948966,
+            "center": [
+              -0.58,
+              1.1,
+              8.92
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      },
+      {
+        "door_id": "opening_6",
+        "samples": [
+          {
+            "angle": 0,
+            "center": [
+              3,
+              1.1,
+              9
+            ]
+          },
+          {
+            "angle": 0.7853981633974483,
+            "center": [
+              3.4101219330881976,
+              1.1,
+              8.830121933088197
+            ]
+          },
+          {
+            "angle": 1.5707963267948966,
+            "center": [
+              3.58,
+              1.1,
+              8.42
+            ]
+          }
+        ],
+        "frames_static": true,
+        "closed_after_sample": true
+      }
+    ],
+    "importer_door_poses": 18,
+    "all_collider_links": true,
+    "room_bounds_preserved": true,
+    "airlock_pair_metadata_preserved": true,
+    "airlock_pairs": [
+      {
+        "id": "airlock_pair:airlock",
+        "contract": "paired_airlock_door_sequence_v1",
+        "source_room_id": "airlock",
+        "room_id": "room:airlock",
+        "door_ids": [
+          "door:opening_1",
+          "door:opening_2"
+        ],
+        "portal_ids": [
+          "opening_1",
+          "opening_2"
+        ],
+        "leaf_node_ids": [
+          "node:door_opening_1_leaf",
+          "node:door_opening_2_leaf"
+        ],
+        "opening_policy": {
+          "requires_peer": "closed_and_stopped",
+          "blocked_peer_conditions": [
+            "nonzero_angle",
+            "moving",
+            "nonzero_target",
+            "motion_held"
+          ]
+        },
+        "closing_policy": "existing_reach_motion_and_occupancy_rules",
+        "runtime_implemented_in": "source_preview_controller_only",
+        "engine_runtime_included": false,
+        "pressure_simulation": false,
+        "state_persistence": "session_local"
+      }
+    ]
+  },
+  "counts": {
+    "objects": 704,
+    "meshes": 623,
+    "materials": 97,
+    "textures": 67,
+    "embedded_pngs": 67,
+    "rooms": 7,
+    "semantic_nodes": 141,
+    "colliders": 134,
+    "doors": 6
+  },
+  "protected_original_files_unchanged": 116,
+  "saved_job_pointer_unchanged": true,
+  "verified_unchanged_previews": [
+    {
+      "id": "layout-a37f864587b3ee075e21ccd1",
+      "manifest_sha256": "f99bbbe4fde564e1f48814c899b85ca6f78b0ffe9466a4a88ccabd139999313a"
+    },
+    {
+      "id": "layout-4b8661bcb27e70cc774276e5",
+      "manifest_sha256": "f6f6dd4545527be33eded699ca560ab184ca225b76a866dada975383cef1ceac"
+    },
+    {
+      "id": "layout-174d4bddd3f8efcf689c7e40",
+      "manifest_sha256": "ef58d7b81e37182f86dd22defea9294ccfa4b1696fb7bb3810ca80069b85fe0a"
+    },
+    {
+      "id": "layout-40b38c14f718490a13b88a87",
+      "manifest_sha256": "67a54c4362c46b64d27a5d362defef878796b357adfb092d1827b3d25832a301"
+    },
+    {
+      "id": "layout-0f3ed6429a3a1bb83f7a5957",
+      "manifest_sha256": "6817481e7125a0e9dd853d66721f96cc5fe5dc55e4e3b1b9efe08f0d37d8b52c"
+    }
+  ],
+  "new_immutable_preview_reused_on_repeat": true,
+  "root_static_artifact_review": "ROOT-ARTIFACT-REVIEW.json",
+  "native_ui_review": "PENDING_NO_UI_OPENED",
+  "visual_or_owner_approval": false,
+  "gpu_models_browser_ui": 0,
+  "no_pressure_engine_or_vr_runtime": true
+}

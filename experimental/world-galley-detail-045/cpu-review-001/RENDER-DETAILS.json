@@ -1,0 +1,28 @@
+{
+  "engine": "CYCLES",
+  "device": "CPU",
+  "samples": 16,
+  "denoiser": "CPU_OPENIMAGEDENOISE",
+  "threads": 4,
+  "resolution": [
+    640,
+    480
+  ],
+  "imported_glb": "scene.glb",
+  "room_id": "room:habitat",
+  "galley_id": "node:equipment_habitat_1",
+  "camera_location": [
+    3.852400064468384,
+    -2.7899999618530273,
+    2.049999952316284
+  ],
+  "camera_target": [
+    4.3024001121521,
+    -0.5400000214576721,
+    0.9800000190734863
+  ],
+  "review_area_fill_watts": 90,
+  "native_preview_lighting_equivalent": false,
+  "source_mesh_or_texture_modified": false,
+  "native_ui_opened": false
+}

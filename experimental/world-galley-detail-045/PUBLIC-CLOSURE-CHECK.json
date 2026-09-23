@@ -1,0 +1,217 @@
+{
+  "status": "RELOCATED_PUBLIC_CPU_TESTS_PASS",
+  "checks": [
+    {
+      "test": "test_galley.mjs",
+      "status": "pass",
+      "result": {
+        "status": "PASS_GALLEY_GEOMETRY_ROUTES_SUPPORT_AND_EXPORT_ASSEMBLY",
+        "shapes": [
+          {
+            "variant": "base",
+            "galley_meshes": 73,
+            "galley_vertices": 2315,
+            "galley_triangles": 1560,
+            "before_meshes": 15,
+            "basin_depth_m": 0.20100000000000007,
+            "basin_ray_samples": [
+              {
+                "x": -0.46399999999999997,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.46399999999999997,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              }
+            ],
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          },
+          {
+            "variant": "renamed",
+            "galley_meshes": 73,
+            "galley_vertices": 2315,
+            "galley_triangles": 1560,
+            "before_meshes": 15,
+            "basin_depth_m": 0.20100000000000007,
+            "basin_ray_samples": [
+              {
+                "x": -0.46399999999999997,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.46399999999999997,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              }
+            ],
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          },
+          {
+            "variant": "wider",
+            "galley_meshes": 73,
+            "galley_vertices": 2315,
+            "galley_triangles": 1560,
+            "before_meshes": 15,
+            "basin_depth_m": 0.20100000000000007,
+            "basin_ray_samples": [
+              {
+                "x": -0.46399999999999997,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.46399999999999997,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              }
+            ],
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          },
+          {
+            "variant": "translated",
+            "galley_meshes": 73,
+            "galley_vertices": 2315,
+            "galley_triangles": 1560,
+            "before_meshes": 15,
+            "basin_depth_m": 0.20100000000000007,
+            "basin_ray_samples": [
+              {
+                "x": -0.46399999999999997,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.46399999999999997,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": -0.05899999999999998,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              },
+              {
+                "x": -0.246,
+                "z": 0.139,
+                "before_top_y": 0.8664999998062849,
+                "after_top_y": 0.6890000000521541
+              }
+            ],
+            "unchanged_other_equipment": 15,
+            "route_count": 6,
+            "door_count": 6,
+            "exporter_geometry_identical": true,
+            "real_glb_export": false
+          }
+        ],
+        "native_exporter_source_consistent": true,
+        "unchanged_plan_colliders": true,
+        "models_gpu_ui": 0,
+        "limits": [
+          "Static authored geometry; visual review pending.",
+          "Appliances do not operate. No water/heat/cold-food or life-support simulation.",
+          "Inert Canvas exporter assembly is not a GLB or texture roundtrip.",
+          "No new dining furniture or room-layout correction."
+        ]
+      }
+    },
+    {
+      "test": "test_preview_contract.py",
+      "status": "pass",
+      "result": {
+        "status": "NEW_APPEARANCE_PIN_ACCEPTED_OLD_OR_CHANGED_APPEARANCE_HELD",
+        "checks": [
+          {
+            "case": "new045",
+            "appearance_held": false
+          },
+          {
+            "case": "old042",
+            "appearance_held": true
+          },
+          {
+            "case": "changed_viewer",
+            "appearance_held": true
+          }
+        ],
+        "scope": "Mocks saved-job and immutable verification, tests appearance dispatch only; no created preview or real export.",
+        "owner_data_writes": 0,
+        "native_ui_models_gpu": 0
+      }
+    },
+    {
+      "test": "test_installer.py",
+      "status": "pass",
+      "result": {
+        "status": "PASS",
+        "tests_run": 8,
+        "failures": 0,
+        "errors": 0,
+        "canonical_and_owner_writes": 0,
+        "temporary_fixture_only": true
+      }
+    }
+  ],
+  "new_real_exports_or_renders": 0,
+  "canonical_owner_writes_ui_models_gpu": 0
+}

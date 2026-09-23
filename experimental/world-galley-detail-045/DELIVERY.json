@@ -1,0 +1,34 @@
+{
+  "status": "045_ISOLATED_REAL_GALLEY_GEOMETRY_READY_FOR_ROOT_REVIEW",
+  "created_utc": "2026-09-23T11:26:13.407573+00:00",
+  "files": {
+    "INSTALL-PLAN.json": "8d5160f30205936e015cf5938cbaa69e0caa68552553e1735b5db2f339a3ae71",
+    "CANDIDATE-CLOSURE.json": "379f76f0731240090e08b2aa2764bfcd52221df29c41af2a700fc89dbb3adac6",
+    "COMBINED-CHANGES.patch": "19c8e0bf2e5a2636e45932cfa3bfae18cf88e22f94e7574f1786026ff29b15cc",
+    "TEST-RESULT.json": "3adf8153b9a7e0a15d14713411dea9c655670e8a89ff24ed4482eb5ba7a6c5b6",
+    "TEST-RESULT-SAVED.json": "cd075fc3980a1d76b3d7870149d3cbc02f04c6c306e13e33db569be0df9af59d",
+    "ACTUAL-EXPORT-RESULT.json": "36f3d4bb6163ba3464feb60ac4d7d64adc51e8813ac6df4a17db51eec4bf70ff",
+    "CPU-RENDER-RESULT.json": "b0aac097168deb7eb0a584040d76758afcd54031364136dda27571b473223c63",
+    "BEFORE-AFTER.json": "92e63497a5e249a9e6c78d2bfc2c78edd7276ff2486541161044a3c75264376f",
+    "AGENT-ARTIFACT-REVIEW.json": "bf32eb5086a406c1b12388c6c4ee8d6ab78bb0050dafdf7f6ec5390c59aa3b37",
+    "README.md": "def76a2d33bf176eebba5311850013924fd118cdf740a72f7145b791d0823605"
+  },
+  "install_plan_sha256": "8d5160f30205936e015cf5938cbaa69e0caa68552553e1735b5db2f339a3ae71",
+  "candidate_files_changed": 5,
+  "geometry_cases": 5,
+  "actual_cpu_exports": 1,
+  "cpu_renders": 1,
+  "glb_sha256": "0b6ee808519f83e73a3ff5b9df336d456e76f7fce91fe493e797702ba226531b",
+  "png_sha256": "ad28f6b17a70f5c5e3d7ae17a38f61ebb5ce52b64d55d6d3dee6b2078c001b7e",
+  "protected_originals_unchanged": 116,
+  "installed_source_files_unchanged": 42,
+  "canonical_install": false,
+  "native_ui_models_gpu": 0,
+  "appliances_operational": false,
+  "owner_approval": false,
+  "pending": [
+    "Root artifact review",
+    "Exact root install authorization if appropriate",
+    "Native preview/owner review"
+  ]
+}

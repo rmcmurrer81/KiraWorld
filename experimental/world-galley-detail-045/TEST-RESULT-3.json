@@ -1,0 +1,170 @@
+{
+  "status": "PASS_GALLEY_GEOMETRY_ROUTES_SUPPORT_AND_EXPORT_ASSEMBLY",
+  "shapes": [
+    {
+      "variant": "base",
+      "galley_meshes": 73,
+      "galley_vertices": 2315,
+      "galley_triangles": 1560,
+      "before_meshes": 15,
+      "basin_depth_m": 0.20100000000000007,
+      "basin_ray_samples": [
+        {
+          "x": -0.46399999999999997,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.46399999999999997,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        }
+      ],
+      "unchanged_other_equipment": 15,
+      "route_count": 6,
+      "door_count": 6,
+      "exporter_geometry_identical": true,
+      "real_glb_export": false
+    },
+    {
+      "variant": "renamed",
+      "galley_meshes": 73,
+      "galley_vertices": 2315,
+      "galley_triangles": 1560,
+      "before_meshes": 15,
+      "basin_depth_m": 0.20100000000000007,
+      "basin_ray_samples": [
+        {
+          "x": -0.46399999999999997,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.46399999999999997,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        }
+      ],
+      "unchanged_other_equipment": 15,
+      "route_count": 6,
+      "door_count": 6,
+      "exporter_geometry_identical": true,
+      "real_glb_export": false
+    },
+    {
+      "variant": "wider",
+      "galley_meshes": 73,
+      "galley_vertices": 2315,
+      "galley_triangles": 1560,
+      "before_meshes": 15,
+      "basin_depth_m": 0.20100000000000007,
+      "basin_ray_samples": [
+        {
+          "x": -0.46399999999999997,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.46399999999999997,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        }
+      ],
+      "unchanged_other_equipment": 15,
+      "route_count": 6,
+      "door_count": 6,
+      "exporter_geometry_identical": true,
+      "real_glb_export": false
+    },
+    {
+      "variant": "translated",
+      "galley_meshes": 73,
+      "galley_vertices": 2315,
+      "galley_triangles": 1560,
+      "before_meshes": 15,
+      "basin_depth_m": 0.20100000000000007,
+      "basin_ray_samples": [
+        {
+          "x": -0.46399999999999997,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.46399999999999997,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": -0.05899999999999998,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        },
+        {
+          "x": -0.246,
+          "z": 0.139,
+          "before_top_y": 0.8664999998062849,
+          "after_top_y": 0.6890000000521541
+        }
+      ],
+      "unchanged_other_equipment": 15,
+      "route_count": 6,
+      "door_count": 6,
+      "exporter_geometry_identical": true,
+      "real_glb_export": false
+    }
+  ],
+  "native_exporter_source_consistent": true,
+  "unchanged_plan_colliders": true,
+  "models_gpu_ui": 0,
+  "limits": [
+    "Static authored geometry; visual review pending.",
+    "Appliances do not operate. No water/heat/cold-food or life-support simulation.",
+    "Inert Canvas exporter assembly is not a GLB or texture roundtrip.",
+    "No new dining furniture or room-layout correction."
+  ]
+}

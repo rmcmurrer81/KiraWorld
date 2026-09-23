@@ -1,0 +1,8 @@
+{
+  "status": "HELD_GEOMETRY_BOUNDS_TEST_FAILURE",
+  "initial_install_plan_sha256": "f03d809ab30520c9a9111726c8cea8657e93bc33a39ebcc45a345cad9663e36b",
+  "failure": "Above bounds axis2 in the first synthetic fixture",
+  "cause": "Cold-food compartment pull projected 0.346 m from the assembly center, 6 mm beyond the existing 0.340 m half-depth.",
+  "correction": "Move the lower front plane inward 10 mm; preserve all existing collider dimensions.",
+  "canonical_changes": 0
+}

@@ -303,7 +303,7 @@ function addRoomDressing(THREE,scene,geometry,plan,materials){
       const part=(name,x,y,z,bw,bh,bd,material=M.metal)=>{
         const mesh=box(group,x,y,z,bw,bh,bd,material);mesh.name='galley_'+name;return mesh;
       };
-      const front=d/2-.055,back=-d/2+.025,counterTop=.89;
+      const front=d/2-.045,back=-d/2+.025,counterTop=.89;
       part('plinth',0,.055,-.015,w-.07,.11,d-.09,M.dark);
       part('base_floor',0,.125,-.015,w-.055,.04,d-.07,M.frame);
       part('base_back',0,.49,back,w-.035,.69,.025,M.frame);

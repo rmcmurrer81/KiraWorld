@@ -1,5 +1,5 @@
 // Structure and door mesh dimensions/materials transcribed from source-pinned
-// installed viewer e6f101d0. Equipment builder includes static bunk and galley geometry details042/045.
+// installed viewer e6f101d0. Equipment builder includes isolated042 static bunk geometry detail.
 // Extra hierarchy/IDs are export bookkeeping; no geometry is approximated from
 // equipment metadata boxes. Door pivots preserve the existing controller poses.
 import * as THREE from './vendor/three/build/three.module.js';

@@ -1,0 +1,70 @@
+{
+  "status": "045_EXACT_FIVE_FILE_INSTALL_PASS",
+  "installed_files": 5,
+  "atomic_per_file": true,
+  "rollback_needed": false,
+  "protected_original_files_unchanged": 116,
+  "created_utc": "2026-09-23T11:34:26.793980+00:00",
+  "install_plan_sha256": "8d5160f30205936e015cf5938cbaa69e0caa68552553e1735b5db2f339a3ae71",
+  "explicit_operation": "apply",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/viewer.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\viewer.mjs",
+      "before_sha256": "95828c64947cb97c540ebdeabdc40dea62294f279ecd74d48985883afb269a92",
+      "preimage": "@workspace\\work\\world-galley-detail-045\\preimages\\tools\\world_builder_engine\\viewer.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-galley-detail-045\\candidate\\tools\\world_builder_engine\\viewer.mjs",
+        "sha256": "4012cfc0f23857ae6edb8723012a098b68801096fd0ec81bead6d0747980fd96",
+        "bytes": 43797
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_export.py",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_export.py",
+      "before_sha256": "46733148bb577256e7f6517073efb19aebcc71e7ea81cfd9166db310fc8b5c02",
+      "preimage": "@workspace\\work\\world-galley-detail-045\\preimages\\tools\\world_builder_engine\\layout_package_export.py",
+      "after": {
+        "path": "@workspace\\work\\world-galley-detail-045\\candidate\\tools\\world_builder_engine\\layout_package_export.py",
+        "sha256": "0d94694b90302d194dbcc1f5b303d5bcc95d023c70fdbea9ed1357d879506614",
+        "bytes": 11024
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+      "before_sha256": "a11ae7c68b7ff3fb1e7228b2be827047682a08d879cec9776eb44165a783850e",
+      "preimage": "@workspace\\work\\world-galley-detail-045\\preimages\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-galley-detail-045\\candidate\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs",
+        "sha256": "9ef627b8e4e99bbe09f1a49dcc5470742c4012f1efe1fb280e4001de7b5f37d2",
+        "bytes": 25549
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "before_sha256": "6af13f090e76e9caf1040bf5c46535b35360d67ea4271cee314517cd5540a6f5",
+      "preimage": "@workspace\\work\\world-galley-detail-045\\preimages\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+      "after": {
+        "path": "@workspace\\work\\world-galley-detail-045\\candidate\\tools\\world_builder_engine\\layout_package_assets\\authored_scene.mjs",
+        "sha256": "7aa1758187ece336d064da444cd553281a99573bc7067d5ffd87cd66c1c11c5d",
+        "bytes": 6329
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "target": "@kira_root\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "before_sha256": "8c80d35a6618d8b58ec52a324796b94988321b54f4a5c453e2612a856f4c5c55",
+      "preimage": "@workspace\\work\\world-galley-detail-045\\preimages\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+      "after": {
+        "path": "@workspace\\work\\world-galley-detail-045\\candidate\\tools\\world_builder_engine\\layout_package_assets\\PRODUCER-PINS.json",
+        "sha256": "dfb5c2c9b4cab66c2c12cb655d0be4255e6bb10c41eb6b0c44c8149fbfc88a95",
+        "bytes": 4035
+      }
+    }
+  ],
+  "saved_previews_modified": false,
+  "native_ui_models_gpu": 0,
+  "authorization": "Explicit root authorization must precede invoking the exact-hash apply or rollback command; a hash argument is a guard, not independent authorization."
+}

@@ -1,0 +1,53 @@
+{
+  "contract": "original_galley_static_geometry_045",
+  "same_assembly_size_m": [
+    1.42,
+    1.74,
+    0.68
+  ],
+  "before": {
+    "galley_meshes": 15,
+    "sink": "flat_dark_rectangle_over_solid_counter",
+    "package_counts": {
+      "objects": 646,
+      "meshes": 565,
+      "materials": 97,
+      "textures": 67,
+      "embedded_pngs": 67,
+      "rooms": 7,
+      "semantic_nodes": 141,
+      "colliders": 134,
+      "doors": 6
+    }
+  },
+  "after": {
+    "galley_meshes": 73,
+    "galley_triangles": 1560,
+    "sink_clear_opening_m": [
+      0.436,
+      0.396
+    ],
+    "basin_floor_y_m": 0.689,
+    "counter_y_m": 0.89,
+    "basin_depth_m": 0.201,
+    "package_counts": {
+      "objects": 704,
+      "meshes": 623,
+      "materials": 97,
+      "textures": 67,
+      "embedded_pngs": 67,
+      "rooms": 7,
+      "semantic_nodes": 141,
+      "colliders": 134,
+      "doors": 6
+    }
+  },
+  "all_other_equipment_signatures_equal": 15,
+  "unchanged_collider_and_footprint": true,
+  "unchanged_routes": 6,
+  "unchanged_doors": 6,
+  "source_role": "habitat",
+  "added_dining_furniture": false,
+  "appliance_simulation": false,
+  "dimensions_are_model_scale_not_real_spacecraft_measurements": true
+}

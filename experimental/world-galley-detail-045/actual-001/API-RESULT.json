@@ -1,0 +1,24 @@
+{
+  "result": {
+    "status": "created",
+    "output_dir": "@workspace\\work\\world-galley-detail-045\\actual-001\\package",
+    "manifest_sha256": "ec5219666740c91eba4ecba9e46e5994a559f2cc808964f3532f2ed554acb782",
+    "job_id": "world_research_c391ffbffc7352612392",
+    "message": "Your 3D package is ready. It includes meshes, textures and door/collider metadata. Game and VR controls still require an adapter.",
+    "capabilities": {
+      "experimental": true,
+      "authored_meshes": true,
+      "embedded_textures": true,
+      "door_hinge_hierarchy": true,
+      "linked_collider_metadata": true,
+      "airlock_pair_policy_metadata": true,
+      "engine_native_interaction": false,
+      "engine_native_collision": false,
+      "pressure_simulation": false,
+      "vr_runtime": false,
+      "visual_or_owner_approval": false
+    }
+  },
+  "installed": false,
+  "candidate_api_sha256": "0d94694b90302d194dbcc1f5b303d5bcc95d023c70fdbea9ed1357d879506614"
+}
