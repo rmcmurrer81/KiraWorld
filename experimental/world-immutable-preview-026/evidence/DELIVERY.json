@@ -1,0 +1,56 @@
+{
+  "status": "ISOLATED_CANDIDATE_READY_FOR_ROOT_REVIEW",
+  "files": [
+    {
+      "path": "tools/world_builder_engine/world_layout_preview.py",
+      "file": "@workspace\\work\\world-immutable-preview-candidate-026\\candidate\\tools\\world_builder_engine\\world_layout_preview.py",
+      "sha256": "fe8cfb9ca9754f71dd223b16ec941753b368b48ded9a5fa0cbe82c83503bec28",
+      "bytes": 24195,
+      "before_sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9"
+    }
+  ],
+  "baseline": {
+    "path": "@workspace\\work\\world-immutable-preview-candidate-026\\baseline\\world_layout_preview.py",
+    "sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+    "bytes": 22133
+  },
+  "delta": {
+    "path": "@workspace\\work\\world-immutable-preview-candidate-026\\CHANGES.patch",
+    "sha256": "98c05ece5accf703857dfc20e756bd7e71f8373a182cf412f7569350d74fb634",
+    "bytes": 4177
+  },
+  "tests": {
+    "path": "@workspace\\work\\world-immutable-preview-candidate-026\\TEST-RESULT-1.json",
+    "sha256": "1b99dde49f4161de92d48acb547e955d9f168402ed406ae47662e8e1f8288ac2",
+    "bytes": 4229
+  },
+  "test_source": {
+    "path": "@workspace\\work\\world-immutable-preview-candidate-026\\test_compatibility.py",
+    "sha256": "befda605d81cf4122f77b753823970536029ea959ea3a13e69320e1eaaf7b9fb",
+    "bytes": 15814
+  },
+  "readonly_saved_preview": {
+    "path": "@workspace\\work\\world-immutable-preview-candidate-026\\READONLY-SAVED-PREVIEW-CHECK.json",
+    "sha256": "7ef8e141e0aa7949910ea94ffacb7500e223ee4e4cd8638fd6cea765f4ef91eb",
+    "bytes": 900
+  },
+  "readonly_check_source": {
+    "path": "@workspace\\work\\world-immutable-preview-candidate-026\\check_saved_preview_readonly.py",
+    "sha256": "1cf93144fe770bfef2fdfc7a7fea9856100cdb915609882cd277596236269e5d",
+    "bytes": 2529
+  },
+  "readme": {
+    "path": "@workspace\\work\\world-immutable-preview-candidate-026\\README.md",
+    "sha256": "63de74e87bf62d2d63eb9bcd5431ea6fcd0a91f87d1b99744306c795b5c9d40c",
+    "bytes": 3317
+  },
+  "cpu_tests": 23,
+  "real_node_preflights": 1,
+  "source_contract": "isolated_world_layout_preview_v1",
+  "legacy_creator_sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+  "canonical_installed": false,
+  "owner_files_modified": false,
+  "network_model_gpu_browser_calls": 0,
+  "owner_quality_approved": false,
+  "frontend_files_changed": []
+}

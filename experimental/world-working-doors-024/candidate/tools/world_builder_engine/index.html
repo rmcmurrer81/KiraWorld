@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World layout preview</title><link rel="stylesheet" href="/style.css"></head>
+<body><main id="viewport" aria-label="Walkable world layout"></main>
+<header class="panel"><div class="eyebrow">KIRA · WORLD LAYOUT</div><h1 id="title">Loading layout…</h1>
+<p class="badge">Layout prototype · unfinished appearance</p><p id="description">Explore room scale and working doors. Room appearance remains unfinished; this is not a verified reconstruction.</p></header>
+<section id="help" class="panel"><h2>Explore the layout</h2><p><strong>W A S D</strong> move · <strong>← →</strong> turn<br><strong>Q E</strong> also turn · <strong>Esc</strong> releases the mouse</p>
+<button id="look" type="button">Enable mouse look</button>
+<div class="door-controls"><button id="door-toggle" type="button" disabled>Approach a door · F</button><p id="door-message" class="small" aria-live="polite">Framed doors open and close. Press F when nearby.</p></div>
+<div class="step-controls" aria-label="Click to walk">
+<button type="button" data-walk="turnLeft">Turn left</button><button type="button" data-walk="forward">Step forward</button><button type="button" data-walk="turnRight">Turn right</button>
+<button type="button" data-walk="left">Step left</button><button type="button" data-walk="backward">Step back</button><button type="button" data-walk="right">Step right</button>
+</div><p class="small">Click to walk in short steps, or hold the keyboard controls. All movement stays on supported floors. Door states last only for this preview session; pressure cycling is not simulated.</p><p id="distance" class="small">Distance walked: 0.0 m</p></section>
+<section id="status" class="panel" aria-live="polite"><span id="room">Finding the entry room</span><span id="movement">Preparing supported walking…</span></section>
+<div id="reticle" aria-hidden="true">+</div><div id="error" role="alert" hidden></div>
+<script type="module" src="/viewer.mjs"></script></body></html>

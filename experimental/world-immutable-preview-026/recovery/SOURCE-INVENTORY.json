@@ -1,0 +1,465 @@
+{
+  "base_commit": "c085f491a5329111f1f33ae1b5b45cb681e04422",
+  "files": [
+    {
+      "path": "experimental/world-working-doors-024/baseline/walk_controller.mjs",
+      "sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+      "bytes": 2903,
+      "source": "work/world-working-doors-candidate-024/baseline/walk_controller.mjs",
+      "original_sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/candidate/tools/world_builder_engine/walk_controller.mjs",
+      "sha256": "32ffa1baaaf64dd6438158caea238b32ab2447e8c34c0d40e366d32346b7f8af",
+      "bytes": 12958,
+      "source": "work/world-working-doors-candidate-024/candidate/tools/world_builder_engine/walk_controller.mjs",
+      "original_sha256": "32ffa1baaaf64dd6438158caea238b32ab2447e8c34c0d40e366d32346b7f8af",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/baseline/viewer.mjs",
+      "sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+      "bytes": 6004,
+      "source": "work/world-working-doors-candidate-024/baseline/viewer.mjs",
+      "original_sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/candidate/tools/world_builder_engine/viewer.mjs",
+      "sha256": "0354c782a12f9c3962e6aba8045046f4f2e1fb81e806f23484f4a1d4840f8bb4",
+      "bytes": 10198,
+      "source": "work/world-working-doors-candidate-024/candidate/tools/world_builder_engine/viewer.mjs",
+      "original_sha256": "0354c782a12f9c3962e6aba8045046f4f2e1fb81e806f23484f4a1d4840f8bb4",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/baseline/index.html",
+      "sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+      "bytes": 1772,
+      "source": "work/world-working-doors-candidate-024/baseline/index.html",
+      "original_sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/candidate/tools/world_builder_engine/index.html",
+      "sha256": "6b1f24c1a97d1309e913bd079b74c8ff81a3683652d8331960813ccae2e8fa1f",
+      "bytes": 2098,
+      "source": "work/world-working-doors-candidate-024/candidate/tools/world_builder_engine/index.html",
+      "original_sha256": "6b1f24c1a97d1309e913bd079b74c8ff81a3683652d8331960813ccae2e8fa1f",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/baseline/style.css",
+      "sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+      "bytes": 2156,
+      "source": "work/world-working-doors-candidate-024/baseline/style.css",
+      "original_sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/candidate/tools/world_builder_engine/style.css",
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "bytes": 2451,
+      "source": "work/world-working-doors-candidate-024/candidate/tools/world_builder_engine/style.css",
+      "original_sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/candidate/tools/world_builder_engine/horizontal_navigation.mjs",
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406,
+      "source": "work/world-working-doors-candidate-024/candidate/tools/world_builder_engine/horizontal_navigation.mjs",
+      "original_sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/fixtures/x_negative.json",
+      "sha256": "58d448290ada61ac161109c20d0af91ce883ac7a98ac2f068123e9441d5eac00",
+      "bytes": 9256,
+      "source": "work/world-working-doors-candidate-024/fixtures/x_negative.json",
+      "original_sha256": "58d448290ada61ac161109c20d0af91ce883ac7a98ac2f068123e9441d5eac00",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/fixtures/x_positive.json",
+      "sha256": "8b8a1d1e0c7ad77a4e9e6cf23bef1bcb42ce314320df6ca498b7bec12121010d",
+      "bytes": 9256,
+      "source": "work/world-working-doors-candidate-024/fixtures/x_positive.json",
+      "original_sha256": "8b8a1d1e0c7ad77a4e9e6cf23bef1bcb42ce314320df6ca498b7bec12121010d",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/fixtures/z_negative.json",
+      "sha256": "1c08c78acc5f26dff6592e964358386417fd6b90c07390d1114224d4926e518d",
+      "bytes": 9264,
+      "source": "work/world-working-doors-candidate-024/fixtures/z_negative.json",
+      "original_sha256": "1c08c78acc5f26dff6592e964358386417fd6b90c07390d1114224d4926e518d",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/fixtures/z_positive.json",
+      "sha256": "f1e22b7a9f9e31a6f76f7740083981b45aa2454f475291b35332748ac557f51f",
+      "bytes": 9264,
+      "source": "work/world-working-doors-candidate-024/fixtures/z_positive.json",
+      "original_sha256": "f1e22b7a9f9e31a6f76f7740083981b45aa2454f475291b35332748ac557f51f",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/DELIVERY.json",
+      "sha256": "7a55b8dab3b5e87b841277bb54ef914d63fe7d8103f36431139cd8680f171e01",
+      "bytes": 3919,
+      "source": "work/world-working-doors-candidate-024/DELIVERY.json",
+      "original_sha256": "051700b59284973e57d4039862f17cd38ccc6f1967d92691d60d3030d6f8466d",
+      "identity_paths_redacted": true,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/README.md",
+      "sha256": "fe09a4638c995f2ad5a064da586d37b5277ef98902c3abeaf81296075f86f907",
+      "bytes": 3454,
+      "source": "work/world-working-doors-candidate-024/README.md",
+      "original_sha256": "fe09a4638c995f2ad5a064da586d37b5277ef98902c3abeaf81296075f86f907",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/CHANGES.patch",
+      "sha256": "aea1e3207b6274c8208498498125f10502abd68d80c3cea39f0e56ebb8c56c11",
+      "bytes": 24232,
+      "source": "work/world-working-doors-candidate-024/CHANGES.patch",
+      "original_sha256": "aea1e3207b6274c8208498498125f10502abd68d80c3cea39f0e56ebb8c56c11",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/TEST-RESULT.json",
+      "sha256": "cbc8204e974ba44f60ce2ebb3301a70f5eb556b739bd0a2a3c3a8873a4d9fa12",
+      "bytes": 3294,
+      "source": "work/world-working-doors-candidate-024/TEST-RESULT.json",
+      "original_sha256": "cbc8204e974ba44f60ce2ebb3301a70f5eb556b739bd0a2a3c3a8873a4d9fa12",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/TEST-RESULT-002.json",
+      "sha256": "86cfa229cdf7e1b9e7e12c13c5c9ad6c6dfce7137af3290fe8dcaee1025e4dd1",
+      "bytes": 3444,
+      "source": "work/world-working-doors-candidate-024/TEST-RESULT-002.json",
+      "original_sha256": "86cfa229cdf7e1b9e7e12c13c5c9ad6c6dfce7137af3290fe8dcaee1025e4dd1",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/TEST-RESULT-003.json",
+      "sha256": "cff5741535588d11adc866d02dd7d3fdb739efda57e12ac789a65274c1a9bb4d",
+      "bytes": 3495,
+      "source": "work/world-working-doors-candidate-024/TEST-RESULT-003.json",
+      "original_sha256": "cff5741535588d11adc866d02dd7d3fdb739efda57e12ac789a65274c1a9bb4d",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/EXISTING-LAYOUT-DOOR-CHECK.json",
+      "sha256": "c5503646df880b0c09abddfef0658caf7cc883c5969162ff2cec72a88a505f84",
+      "bytes": 1373,
+      "source": "work/world-working-doors-candidate-024/EXISTING-LAYOUT-DOOR-CHECK.json",
+      "original_sha256": "c5503646df880b0c09abddfef0658caf7cc883c5969162ff2cec72a88a505f84",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/test_doors.mjs",
+      "sha256": "03d5169f55a486ef60e88e11680a3e55f4ef453592e0786dd1c9bc9aaa76be15",
+      "bytes": 8419,
+      "source": "work/world-working-doors-candidate-024/test_doors.mjs",
+      "original_sha256": "03d5169f55a486ef60e88e11680a3e55f4ef453592e0786dd1c9bc9aaa76be15",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/make_fixtures.py",
+      "sha256": "8848ff221065e2fe48fac575bde29ca7f79eedcfbc722b54d3b01ba579a8e97d",
+      "bytes": 1545,
+      "source": "work/world-working-doors-candidate-024/make_fixtures.py",
+      "original_sha256": "8848ff221065e2fe48fac575bde29ca7f79eedcfbc722b54d3b01ba579a8e97d",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/check_existing_layout.mjs",
+      "sha256": "5713d6f0f4ae11e861869523ca2cefb1703400930d773ffb1ac3fbb6236d3440",
+      "bytes": 2974,
+      "source": "work/world-working-doors-candidate-024/check_existing_layout.mjs",
+      "original_sha256": "5713d6f0f4ae11e861869523ca2cefb1703400930d773ffb1ac3fbb6236d3440",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/evidence/finalize_delivery.py",
+      "sha256": "da49532dedbd02e4ec0fe1a72375e2c18e5a8e371bb52dc991059f2e9b33cfa5",
+      "bytes": 2197,
+      "source": "work/world-working-doors-candidate-024/finalize_delivery.py",
+      "original_sha256": "da49532dedbd02e4ec0fe1a72375e2c18e5a8e371bb52dc991059f2e9b33cfa5",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-working-doors-024/test_doors.mjs",
+      "sha256": "c44332e7f8b18abfe42d59090ac0110e72aef22c388809a588fdb844437b5870",
+      "bytes": 8424,
+      "source": "work/world-working-doors-candidate-024/test_doors.mjs",
+      "original_sha256": "03d5169f55a486ef60e88e11680a3e55f4ef453592e0786dd1c9bc9aaa76be15",
+      "identity_paths_redacted": false,
+      "adaptation": "Only output path changed to a fresh portable receipt; tests and renderer inputs unchanged."
+    },
+    {
+      "path": "experimental/world-working-doors-024/README.md",
+      "sha256": "af9b72569ee72eaaa19361797bc21760eb7902f851750cd862927682a66db1e5",
+      "bytes": 1405,
+      "source": null,
+      "original_sha256": "af9b72569ee72eaaa19361797bc21760eb7902f851750cd862927682a66db1e5",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/candidate/tools/world_builder_engine/world_layout_preview.py",
+      "sha256": "fe8cfb9ca9754f71dd223b16ec941753b368b48ded9a5fa0cbe82c83503bec28",
+      "bytes": 24195,
+      "source": "work/world-immutable-preview-candidate-026/candidate/tools/world_builder_engine/world_layout_preview.py",
+      "original_sha256": "fe8cfb9ca9754f71dd223b16ec941753b368b48ded9a5fa0cbe82c83503bec28",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/baseline/world_layout_preview.py",
+      "sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+      "bytes": 22133,
+      "source": "work/world-immutable-preview-candidate-026/baseline/world_layout_preview.py",
+      "original_sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/BASELINE.json",
+      "sha256": "09b268ba8e952e6248843f8892c085d91975f368feea19872a511b5333b067a3",
+      "bytes": 256,
+      "source": "work/world-immutable-preview-candidate-026/BASELINE.json",
+      "original_sha256": "d237afb27699c74ab53e3ac063758f1a676171a089c4d4afe90df0ee85f5333e",
+      "identity_paths_redacted": true,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/CHANGES.patch",
+      "sha256": "98c05ece5accf703857dfc20e756bd7e71f8373a182cf412f7569350d74fb634",
+      "bytes": 4177,
+      "source": "work/world-immutable-preview-candidate-026/CHANGES.patch",
+      "original_sha256": "98c05ece5accf703857dfc20e756bd7e71f8373a182cf412f7569350d74fb634",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/DELIVERY.json",
+      "sha256": "4d74e6c98cb5768728010c677b781bfb7cd16171229dca1356555e53153ed8b6",
+      "bytes": 2458,
+      "source": "work/world-immutable-preview-candidate-026/DELIVERY.json",
+      "original_sha256": "81f10335f6a7510e748a31d44ac9456a0b3203cc3b6c586f44e781ea6484bd16",
+      "identity_paths_redacted": true,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/README.md",
+      "sha256": "63de74e87bf62d2d63eb9bcd5431ea6fcd0a91f87d1b99744306c795b5c9d40c",
+      "bytes": 3317,
+      "source": "work/world-immutable-preview-candidate-026/README.md",
+      "original_sha256": "63de74e87bf62d2d63eb9bcd5431ea6fcd0a91f87d1b99744306c795b5c9d40c",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/TEST-RESULT-1.json",
+      "sha256": "1b99dde49f4161de92d48acb547e955d9f168402ed406ae47662e8e1f8288ac2",
+      "bytes": 4229,
+      "source": "work/world-immutable-preview-candidate-026/TEST-RESULT-1.json",
+      "original_sha256": "1b99dde49f4161de92d48acb547e955d9f168402ed406ae47662e8e1f8288ac2",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/READONLY-SAVED-PREVIEW-CHECK.json",
+      "sha256": "7ef8e141e0aa7949910ea94ffacb7500e223ee4e4cd8638fd6cea765f4ef91eb",
+      "bytes": 900,
+      "source": "work/world-immutable-preview-candidate-026/READONLY-SAVED-PREVIEW-CHECK.json",
+      "original_sha256": "7ef8e141e0aa7949910ea94ffacb7500e223ee4e4cd8638fd6cea765f4ef91eb",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/prepare.py",
+      "sha256": "df97f7f96cba8b49772b47b9374acbe167ab533459e868ed7ddc6dd68bde8f84",
+      "bytes": 910,
+      "source": "work/world-immutable-preview-candidate-026/prepare.py",
+      "original_sha256": "fcab98a1f55ff83af9d3daad35d69026458cbd65668d12e7e617bdbf6696f636",
+      "identity_paths_redacted": true,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/finalize.py",
+      "sha256": "591afaaf6312fb3f1721bb98daa0f0acf75d772768149e7ef704fdc2249d2313",
+      "bytes": 2124,
+      "source": "work/world-immutable-preview-candidate-026/finalize.py",
+      "original_sha256": "591afaaf6312fb3f1721bb98daa0f0acf75d772768149e7ef704fdc2249d2313",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/test_compatibility.py",
+      "sha256": "381e2c5b0eaa727f873869a5a46d1e7b74cc4bcb7d77636246888414b1c9ad47",
+      "bytes": 15810,
+      "source": "work/world-immutable-preview-candidate-026/test_compatibility.py",
+      "original_sha256": "befda605d81cf4122f77b753823970536029ea959ea3a13e69320e1eaaf7b9fb",
+      "identity_paths_redacted": true,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/evidence/check_saved_preview_readonly.py",
+      "sha256": "4f12ccd7df234e972cd4ae2fdff1d7831d73b994c86d5fba7329b7451042764e",
+      "bytes": 2521,
+      "source": "work/world-immutable-preview-candidate-026/check_saved_preview_readonly.py",
+      "original_sha256": "1cf93144fe770bfef2fdfc7a7fea9856100cdb915609882cd277596236269e5d",
+      "identity_paths_redacted": true,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/engine/index.html",
+      "sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+      "bytes": 1772,
+      "source": null,
+      "original_sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/engine/style.css",
+      "sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+      "bytes": 2156,
+      "source": null,
+      "original_sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/engine/viewer.mjs",
+      "sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+      "bytes": 6004,
+      "source": null,
+      "original_sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/engine/walk_controller.mjs",
+      "sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+      "bytes": 2903,
+      "source": null,
+      "original_sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/engine/horizontal_navigation.mjs",
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406,
+      "source": null,
+      "original_sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/engine/preflight.mjs",
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "bytes": 1374,
+      "source": null,
+      "original_sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/engine/world_layout_preview.py",
+      "sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+      "bytes": 22133,
+      "source": null,
+      "original_sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/support/PUBLIC-BASE-DEPENDENCIES.json",
+      "sha256": "d26ff3a413eb3da4dede4d01074b7aa3e1ea38ce880e135897d33c2f46a5aff6",
+      "bytes": 1484,
+      "source": null,
+      "original_sha256": "d26ff3a413eb3da4dede4d01074b7aa3e1ea38ce880e135897d33c2f46a5aff6",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/fixtures/SYNTHETIC-GEOMETRY-FIXTURE.json",
+      "sha256": "c3e48998864aa5e7d14520b6193c334d3603947fc3dc28cbc8c39198c88ff380",
+      "bytes": 20016,
+      "source": "work/world-blueprint-candidate/SYNTHETIC-GEOMETRY-FIXTURE.json",
+      "original_sha256": "c3e48998864aa5e7d14520b6193c334d3603947fc3dc28cbc8c39198c88ff380",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/test_compatibility.py",
+      "sha256": "0a3ab0c8cf56c0e91af7b69e1096de2ff4af97b78c088225cd4af92176df43a3",
+      "bytes": 16159,
+      "source": "work/world-immutable-preview-candidate-026/test_compatibility.py",
+      "original_sha256": "befda605d81cf4122f77b753823970536029ea959ea3a13e69320e1eaaf7b9fb",
+      "identity_paths_redacted": false,
+      "adaptation": "Portable dependency/Node paths, bounded short OS test-temp root and separate fresh receipts; original behavioral assertions unchanged. Documented first path-limit setup failure."
+    },
+    {
+      "path": "experimental/world-immutable-preview-026/README.md",
+      "sha256": "39390dac80968d803cc38d6a5429bdf8b0815a126975c587179604ce739f0ebf",
+      "bytes": 2144,
+      "source": null,
+      "original_sha256": "c097bd8c27cf5dc0792cbb5a90bec581d7ce7648e4bf46770e87bd3337efb2c9",
+      "identity_paths_redacted": false,
+      "adaptation": "Portable dependency/Node paths, bounded short OS test-temp root and separate fresh receipts; original behavioral assertions unchanged. Documented first path-limit setup failure."
+    },
+    {
+      "path": "experimental/world-habitat-realism-025/RESEARCH.md",
+      "sha256": "3d8655af71822e9e00127deb059464a3cf43cd44910116e697a53cf689fcf26b",
+      "bytes": 5384,
+      "source": "work/world-habitat-realism-025/RESEARCH.md",
+      "original_sha256": "3d8655af71822e9e00127deb059464a3cf43cd44910116e697a53cf689fcf26b",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    },
+    {
+      "path": "experimental/world-habitat-realism-025/README.md",
+      "sha256": "6faed8d974c20ecfdfd60467c192cc93c303555a18ccce65c072d83e4fe10bce",
+      "bytes": 488,
+      "source": null,
+      "original_sha256": "6faed8d974c20ecfdfd60467c192cc93c303555a18ccce65c072d83e4fe10bce",
+      "identity_paths_redacted": false,
+      "adaptation": null
+    }
+  ],
+  "canonical_owner_or_git_mutations": false
+}

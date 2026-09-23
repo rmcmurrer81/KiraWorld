@@ -1,0 +1,9 @@
+--- historical/test_doors.mjs
++++ portable/test_doors.mjs
+@@ -100,5 +100,5 @@
+ const result={status:'PASS_DOOR_FUNCTIONAL_AND_COLLISION_CHECKS',at_utc:new Date().toISOString(),checks,source_pins:pins,fixtures:4,
+   models_called:false,gpu_started:false,native_or_browser_review:false,owner_files_written:false,
+   limits:['Door animation uses conservative axis-aligned leaf bounds and sweep rejection; not rigid-body dynamics.','Door states last for the current preview only.','No pressure seal, airlock interlock, emergency egress or furnished-world acceptance is established.']};
+-fs.writeFileSync(new URL('./TEST-RESULT-003.json',import.meta.url),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
++fs.writeFileSync(new URL('./PORTABLE-TEST-RESULT.json',import.meta.url),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+ console.log(JSON.stringify({status:result.status,checks:checks.length}));

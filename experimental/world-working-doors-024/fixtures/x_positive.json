@@ -1,0 +1,549 @@
+{
+  "contract": "compiled_blueprint_geometry_v1",
+  "research_packet_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "blueprint_sha256": "1246bf8a7df2cba399a3ce7b5f5768fc58141489d8cb39b9292cb2a4b0df5991",
+  "title": "Synthetic two-room door check",
+  "units": "meters",
+  "visual_style_target": "photorealistic",
+  "quality_status": "layout_prototype_not_visual_acceptance",
+  "photorealism_verified": false,
+  "world_ready": false,
+  "source_facts_validated": false,
+  "rooms": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "purpose": "Synthetic door passage fixture",
+      "x": 0,
+      "z": -2,
+      "width": 4,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "next_room",
+      "name": "next_room",
+      "purpose": "Synthetic door passage fixture",
+      "x": -4,
+      "z": -2,
+      "width": 4,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    }
+  ],
+  "primitives": [
+    {
+      "id": "entry_floor_mesh",
+      "primitive": "box",
+      "position": [
+        2.0,
+        -0.05,
+        0.0
+      ],
+      "size": [
+        4,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "entry_ceiling",
+      "primitive": "box",
+      "position": [
+        2.0,
+        3.05,
+        0.0
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "entry_west_0",
+      "primitive": "box",
+      "position": [
+        0.0,
+        1.5,
+        -1.3
+      ],
+      "size": [
+        0.15,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "entry_west_1",
+      "primitive": "box",
+      "position": [
+        0.0,
+        2.6,
+        0.0
+      ],
+      "size": [
+        0.15,
+        0.7999999999999998,
+        1.2
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "entry_west_2",
+      "primitive": "box",
+      "position": [
+        0.0,
+        1.5,
+        1.3
+      ],
+      "size": [
+        0.15,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "entry_east_0",
+      "primitive": "box",
+      "position": [
+        4.0,
+        1.5,
+        0.0
+      ],
+      "size": [
+        0.15000000000000036,
+        3,
+        4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "entry_south_0",
+      "primitive": "box",
+      "position": [
+        2.0,
+        1.5,
+        -2.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000013
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "entry_north_0",
+      "primitive": "box",
+      "position": [
+        2.0,
+        1.5,
+        2.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000013
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "next_room_floor_mesh",
+      "primitive": "box",
+      "position": [
+        -2.0,
+        -0.05,
+        0.0
+      ],
+      "size": [
+        4,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "next_room_ceiling",
+      "primitive": "box",
+      "position": [
+        -2.0,
+        3.05,
+        0.0
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "next_room_west_0",
+      "primitive": "box",
+      "position": [
+        -4.0,
+        1.5,
+        0.0
+      ],
+      "size": [
+        0.15000000000000036,
+        3,
+        4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "next_room_east_0",
+      "primitive": "box",
+      "position": [
+        0.0,
+        1.5,
+        -1.3
+      ],
+      "size": [
+        0.15,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "next_room_east_1",
+      "primitive": "box",
+      "position": [
+        0.0,
+        2.6,
+        0.0
+      ],
+      "size": [
+        0.15,
+        0.7999999999999998,
+        1.2
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "next_room_east_2",
+      "primitive": "box",
+      "position": [
+        0.0,
+        1.5,
+        1.3
+      ],
+      "size": [
+        0.15,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "next_room_south_0",
+      "primitive": "box",
+      "position": [
+        -2.0,
+        1.5,
+        -2.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000013
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "next_room_north_0",
+      "primitive": "box",
+      "position": [
+        -2.0,
+        1.5,
+        2.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000013
+      ],
+      "role": "wall"
+    }
+  ],
+  "colliders": [
+    {
+      "id": "entry_ceiling",
+      "min": [
+        0,
+        3,
+        -2
+      ],
+      "max": [
+        4,
+        3.1,
+        2
+      ]
+    },
+    {
+      "id": "entry_west_0",
+      "min": [
+        -0.075,
+        0,
+        -2
+      ],
+      "max": [
+        0.075,
+        3,
+        -0.6
+      ]
+    },
+    {
+      "id": "entry_west_1",
+      "min": [
+        -0.075,
+        2.2,
+        -0.6
+      ],
+      "max": [
+        0.075,
+        3,
+        0.6
+      ]
+    },
+    {
+      "id": "entry_west_2",
+      "min": [
+        -0.075,
+        0,
+        0.6
+      ],
+      "max": [
+        0.075,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "entry_east_0",
+      "min": [
+        3.925,
+        0,
+        -2
+      ],
+      "max": [
+        4.075,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "entry_south_0",
+      "min": [
+        0,
+        0,
+        -2.075
+      ],
+      "max": [
+        4,
+        3,
+        -1.925
+      ]
+    },
+    {
+      "id": "entry_north_0",
+      "min": [
+        0,
+        0,
+        1.925
+      ],
+      "max": [
+        4,
+        3,
+        2.075
+      ]
+    },
+    {
+      "id": "next_room_ceiling",
+      "min": [
+        -4,
+        3,
+        -2
+      ],
+      "max": [
+        0,
+        3.1,
+        2
+      ]
+    },
+    {
+      "id": "next_room_west_0",
+      "min": [
+        -4.075,
+        0,
+        -2
+      ],
+      "max": [
+        -3.925,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "next_room_east_0",
+      "min": [
+        -0.075,
+        0,
+        -2
+      ],
+      "max": [
+        0.075,
+        3,
+        -0.6
+      ]
+    },
+    {
+      "id": "next_room_east_1",
+      "min": [
+        -0.075,
+        2.2,
+        -0.6
+      ],
+      "max": [
+        0.075,
+        3,
+        0.6
+      ]
+    },
+    {
+      "id": "next_room_east_2",
+      "min": [
+        -0.075,
+        0,
+        0.6
+      ],
+      "max": [
+        0.075,
+        3,
+        2
+      ]
+    },
+    {
+      "id": "next_room_south_0",
+      "min": [
+        -4,
+        0,
+        -2.075
+      ],
+      "max": [
+        0,
+        3,
+        -1.925
+      ]
+    },
+    {
+      "id": "next_room_north_0",
+      "min": [
+        -4,
+        0,
+        1.925
+      ],
+      "max": [
+        0,
+        3,
+        2.075
+      ]
+    }
+  ],
+  "support_surfaces": [
+    {
+      "id": "entry_floor",
+      "min_x": 0,
+      "max_x": 4,
+      "min_z": -2,
+      "max_z": 2,
+      "y": 0
+    },
+    {
+      "id": "next_room_floor",
+      "min_x": -4,
+      "max_x": 0,
+      "min_z": -2,
+      "max_z": 2,
+      "y": 0
+    }
+  ],
+  "portals": [
+    {
+      "id": "opening_1",
+      "room_a": "entry",
+      "room_b": "next_room",
+      "axis": "x",
+      "coordinate": 0,
+      "center": 0,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    }
+  ],
+  "routes": [
+    {
+      "id": "opening_1",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          2.0,
+          0,
+          0.0
+        ],
+        [
+          0.6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          -0.6,
+          0,
+          0
+        ],
+        [
+          -2.0,
+          0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Rectangular room layout only; visual assets/materials/lighting remain unfinished.",
+    "Real-place visual coverage and vertical connectors are not implemented in this compiler.",
+    "Open passages are not a stateful airlock or door simulation."
+  ],
+  "connectivity": {
+    "entry_room_id": "entry",
+    "reachable_rooms": [
+      "entry",
+      "next_room"
+    ],
+    "locked_rooms": [],
+    "bidirectional_graph": true
+  }
+}

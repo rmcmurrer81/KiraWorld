@@ -1,0 +1,7 @@
+# World024 door experiment recovery
+
+This is an uninstalled four-asset candidate with33 recorded CPU checks and a separate read-only six-portal check against Robert's existing Mars layout. The old room appearance was rejected; neither door visual quality nor finished-world quality is approved. Door states are session-local and use conservative AABB/sweep collision, without pressure simulation.
+
+The five candidate files include four exact proposed frontend assets and their unchanged navigation dependency. Four synthetic fixtures and baseline source are included. From this directory, run `node test_doors.mjs` to create a fresh PORTABLE-TEST-RESULT.json; preserve it before a deliberate repeat. The output filename is the only test adaptation. Historical receipts and original test/setup sources are under evidence/. Local paths in those receipts use @workspace/@user_home and require deliberate relocation; they are not a fresh runnable review plan.
+
+Generated owner-layout copies, preview servers, server receipts and PREVIEW-PLAN owner-file inventory are excluded. Historical DELIVERY.json still references that excluded local visual plan; it is not required for CPU recovery. Do not try to replay a consumed server. World026 is the separate proposed compatibility change needed before current renderer updates can preserve old saved previews. None of this package replaces canonical tools files.

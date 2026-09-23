@@ -1,0 +1,53 @@
+{
+  "status": "PASS_DOOR_FUNCTIONAL_AND_COLLISION_CHECKS",
+  "at_utc": "2026-09-23T04:41:29.643Z",
+  "checks": [
+    "x_negative: closed leaf blocks passage in both directions",
+    "x_negative: visible pose and collision bounds agree throughout animation",
+    "x_negative: closing is refused across occupied sweep, then restores blocking",
+    "x_negative: motion pauses if the avatar enters the sweep",
+    "x_negative: actual walking callback blocks, opens, crosses and returns",
+    "x_negative: out of reach, wrong elevation and unknown doors cannot toggle",
+    "x_negative: source geometry and independent preview state stay unchanged",
+    "x_positive: closed leaf blocks passage in both directions",
+    "x_positive: visible pose and collision bounds agree throughout animation",
+    "x_positive: closing is refused across occupied sweep, then restores blocking",
+    "x_positive: motion pauses if the avatar enters the sweep",
+    "x_positive: actual walking callback blocks, opens, crosses and returns",
+    "x_positive: out of reach, wrong elevation and unknown doors cannot toggle",
+    "x_positive: source geometry and independent preview state stay unchanged",
+    "z_negative: closed leaf blocks passage in both directions",
+    "z_negative: visible pose and collision bounds agree throughout animation",
+    "z_negative: closing is refused across occupied sweep, then restores blocking",
+    "z_negative: motion pauses if the avatar enters the sweep",
+    "z_negative: actual walking callback blocks, opens, crosses and returns",
+    "z_negative: out of reach, wrong elevation and unknown doors cannot toggle",
+    "z_negative: source geometry and independent preview state stay unchanged",
+    "z_positive: closed leaf blocks passage in both directions",
+    "z_positive: visible pose and collision bounds agree throughout animation",
+    "z_positive: closing is refused across occupied sweep, then restores blocking",
+    "z_positive: motion pauses if the avatar enters the sweep",
+    "z_positive: actual walking callback blocks, opens, crosses and returns",
+    "z_positive: out of reach, wrong elevation and unknown doors cannot toggle",
+    "z_positive: source geometry and independent preview state stay unchanged",
+    "Malformed and locked portals cannot create an unguarded door",
+    "Invalid input time and positions rejected, long animation step clamped"
+  ],
+  "source_pins": {
+    "walk_controller.mjs": "a5af3bd7f33bfa9b3cc829e432f953938b57e0a63816cee42c5daea3d42c17ef",
+    "viewer.mjs": "7f6ad39a34d3cab145f6c56799e2b32a03baa70f8ef45cfa43dd9641cb88ce3f",
+    "index.html": "6b1f24c1a97d1309e913bd079b74c8ff81a3683652d8331960813ccae2e8fa1f",
+    "style.css": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+    "horizontal_navigation.mjs": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+  },
+  "fixtures": 4,
+  "models_called": false,
+  "gpu_started": false,
+  "native_or_browser_review": false,
+  "owner_files_written": false,
+  "limits": [
+    "Door animation uses conservative axis-aligned leaf bounds and sweep rejection; not rigid-body dynamics.",
+    "Door states last for the current preview only.",
+    "No pressure seal, airlock interlock, emergency egress or furnished-world acceptance is established."
+  ]
+}

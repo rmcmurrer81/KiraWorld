@@ -1,0 +1,1217 @@
+{
+  "contract": "compiled_blueprint_geometry_v1",
+  "research_packet_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "blueprint_sha256": "fc55e61e1585c0fc22e00b040648277b8411522be0e156ec5df2ce61d6fe8f54",
+  "title": "Synthetic Mars-like layout fixture",
+  "units": "meters",
+  "visual_style_target": "photorealistic",
+  "quality_status": "layout_prototype_not_visual_acceptance",
+  "photorealism_verified": false,
+  "world_ready": false,
+  "source_facts_validated": false,
+  "rooms": [
+    {
+      "id": "approach",
+      "name": "Approach",
+      "purpose": "Synthetic original room-layout fixture",
+      "x": 0,
+      "z": 0,
+      "width": 4,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "airlock",
+      "name": "Airlock",
+      "purpose": "Synthetic original room-layout fixture",
+      "x": 4,
+      "z": 0,
+      "width": 4,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "habitat",
+      "name": "Habitat",
+      "purpose": "Synthetic original room-layout fixture",
+      "x": 8,
+      "z": 0,
+      "width": 4,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    },
+    {
+      "id": "lab",
+      "name": "Laboratory",
+      "purpose": "Synthetic original room-layout fixture",
+      "x": 12,
+      "z": 0,
+      "width": 4,
+      "depth": 4,
+      "floor_y": 0,
+      "height": 3,
+      "dimension_basis": "original_design",
+      "source_ids": [],
+      "access": "walkable_layout",
+      "dimension_claim_status": "authored_design"
+    }
+  ],
+  "primitives": [
+    {
+      "id": "approach_floor_mesh",
+      "primitive": "box",
+      "position": [
+        2.0,
+        -0.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "approach_ceiling",
+      "primitive": "box",
+      "position": [
+        2.0,
+        3.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "approach_west_0",
+      "primitive": "box",
+      "position": [
+        0.0,
+        1.5,
+        2.0
+      ],
+      "size": [
+        0.15,
+        3,
+        4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "approach_east_0",
+      "primitive": "box",
+      "position": [
+        4.0,
+        1.5,
+        0.7
+      ],
+      "size": [
+        0.15000000000000036,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "approach_east_1",
+      "primitive": "box",
+      "position": [
+        4.0,
+        2.6,
+        2.0
+      ],
+      "size": [
+        0.15000000000000036,
+        0.7999999999999998,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "approach_east_2",
+      "primitive": "box",
+      "position": [
+        4.0,
+        1.5,
+        3.3
+      ],
+      "size": [
+        0.15000000000000036,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "approach_south_0",
+      "primitive": "box",
+      "position": [
+        2.0,
+        1.5,
+        0.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "approach_north_0",
+      "primitive": "box",
+      "position": [
+        2.0,
+        1.5,
+        4.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_floor_mesh",
+      "primitive": "box",
+      "position": [
+        6.0,
+        -0.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "airlock_ceiling",
+      "primitive": "box",
+      "position": [
+        6.0,
+        3.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "airlock_west_0",
+      "primitive": "box",
+      "position": [
+        4.0,
+        1.5,
+        0.7
+      ],
+      "size": [
+        0.15000000000000036,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_west_1",
+      "primitive": "box",
+      "position": [
+        4.0,
+        2.6,
+        2.0
+      ],
+      "size": [
+        0.15000000000000036,
+        0.7999999999999998,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_west_2",
+      "primitive": "box",
+      "position": [
+        4.0,
+        1.5,
+        3.3
+      ],
+      "size": [
+        0.15000000000000036,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_east_0",
+      "primitive": "box",
+      "position": [
+        8.0,
+        1.5,
+        0.7
+      ],
+      "size": [
+        0.14999999999999947,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_east_1",
+      "primitive": "box",
+      "position": [
+        8.0,
+        2.6,
+        2.0
+      ],
+      "size": [
+        0.14999999999999947,
+        0.7999999999999998,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_east_2",
+      "primitive": "box",
+      "position": [
+        8.0,
+        1.5,
+        3.3
+      ],
+      "size": [
+        0.14999999999999947,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_south_0",
+      "primitive": "box",
+      "position": [
+        6.0,
+        1.5,
+        0.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "airlock_north_0",
+      "primitive": "box",
+      "position": [
+        6.0,
+        1.5,
+        4.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_floor_mesh",
+      "primitive": "box",
+      "position": [
+        10.0,
+        -0.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "habitat_ceiling",
+      "primitive": "box",
+      "position": [
+        10.0,
+        3.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "habitat_west_0",
+      "primitive": "box",
+      "position": [
+        8.0,
+        1.5,
+        0.7
+      ],
+      "size": [
+        0.14999999999999947,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_west_1",
+      "primitive": "box",
+      "position": [
+        8.0,
+        2.6,
+        2.0
+      ],
+      "size": [
+        0.14999999999999947,
+        0.7999999999999998,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_west_2",
+      "primitive": "box",
+      "position": [
+        8.0,
+        1.5,
+        3.3
+      ],
+      "size": [
+        0.14999999999999947,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_east_0",
+      "primitive": "box",
+      "position": [
+        12.0,
+        1.5,
+        0.7
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_east_1",
+      "primitive": "box",
+      "position": [
+        12.0,
+        2.6,
+        2.0
+      ],
+      "size": [
+        0.14999999999999858,
+        0.7999999999999998,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_east_2",
+      "primitive": "box",
+      "position": [
+        12.0,
+        1.5,
+        3.3
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_south_0",
+      "primitive": "box",
+      "position": [
+        10.0,
+        1.5,
+        0.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "habitat_north_0",
+      "primitive": "box",
+      "position": [
+        10.0,
+        1.5,
+        4.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "lab_floor_mesh",
+      "primitive": "box",
+      "position": [
+        14.0,
+        -0.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.1,
+        4
+      ],
+      "role": "floor"
+    },
+    {
+      "id": "lab_ceiling",
+      "primitive": "box",
+      "position": [
+        14.0,
+        3.05,
+        2.0
+      ],
+      "size": [
+        4,
+        0.10000000000000009,
+        4
+      ],
+      "role": "ceiling"
+    },
+    {
+      "id": "lab_west_0",
+      "primitive": "box",
+      "position": [
+        12.0,
+        1.5,
+        0.7
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "lab_west_1",
+      "primitive": "box",
+      "position": [
+        12.0,
+        2.6,
+        2.0
+      ],
+      "size": [
+        0.14999999999999858,
+        0.7999999999999998,
+        1.2000000000000002
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "lab_west_2",
+      "primitive": "box",
+      "position": [
+        12.0,
+        1.5,
+        3.3
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        1.4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "lab_east_0",
+      "primitive": "box",
+      "position": [
+        16.0,
+        1.5,
+        2.0
+      ],
+      "size": [
+        0.14999999999999858,
+        3,
+        4
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "lab_south_0",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.5,
+        0.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15
+      ],
+      "role": "wall"
+    },
+    {
+      "id": "lab_north_0",
+      "primitive": "box",
+      "position": [
+        14.0,
+        1.5,
+        4.0
+      ],
+      "size": [
+        4,
+        3,
+        0.15000000000000036
+      ],
+      "role": "wall"
+    }
+  ],
+  "colliders": [
+    {
+      "id": "approach_ceiling",
+      "min": [
+        0,
+        3,
+        0
+      ],
+      "max": [
+        4,
+        3.1,
+        4
+      ]
+    },
+    {
+      "id": "approach_west_0",
+      "min": [
+        -0.075,
+        0,
+        0
+      ],
+      "max": [
+        0.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "approach_east_0",
+      "min": [
+        3.925,
+        0,
+        0
+      ],
+      "max": [
+        4.075,
+        3,
+        1.4
+      ]
+    },
+    {
+      "id": "approach_east_1",
+      "min": [
+        3.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        4.075,
+        3,
+        2.6
+      ]
+    },
+    {
+      "id": "approach_east_2",
+      "min": [
+        3.925,
+        0,
+        2.6
+      ],
+      "max": [
+        4.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "approach_south_0",
+      "min": [
+        0,
+        0,
+        -0.075
+      ],
+      "max": [
+        4,
+        3,
+        0.075
+      ]
+    },
+    {
+      "id": "approach_north_0",
+      "min": [
+        0,
+        0,
+        3.925
+      ],
+      "max": [
+        4,
+        3,
+        4.075
+      ]
+    },
+    {
+      "id": "airlock_ceiling",
+      "min": [
+        4,
+        3,
+        0
+      ],
+      "max": [
+        8,
+        3.1,
+        4
+      ]
+    },
+    {
+      "id": "airlock_west_0",
+      "min": [
+        3.925,
+        0,
+        0
+      ],
+      "max": [
+        4.075,
+        3,
+        1.4
+      ]
+    },
+    {
+      "id": "airlock_west_1",
+      "min": [
+        3.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        4.075,
+        3,
+        2.6
+      ]
+    },
+    {
+      "id": "airlock_west_2",
+      "min": [
+        3.925,
+        0,
+        2.6
+      ],
+      "max": [
+        4.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "airlock_east_0",
+      "min": [
+        7.925,
+        0,
+        0
+      ],
+      "max": [
+        8.075,
+        3,
+        1.4
+      ]
+    },
+    {
+      "id": "airlock_east_1",
+      "min": [
+        7.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        8.075,
+        3,
+        2.6
+      ]
+    },
+    {
+      "id": "airlock_east_2",
+      "min": [
+        7.925,
+        0,
+        2.6
+      ],
+      "max": [
+        8.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "airlock_south_0",
+      "min": [
+        4,
+        0,
+        -0.075
+      ],
+      "max": [
+        8,
+        3,
+        0.075
+      ]
+    },
+    {
+      "id": "airlock_north_0",
+      "min": [
+        4,
+        0,
+        3.925
+      ],
+      "max": [
+        8,
+        3,
+        4.075
+      ]
+    },
+    {
+      "id": "habitat_ceiling",
+      "min": [
+        8,
+        3,
+        0
+      ],
+      "max": [
+        12,
+        3.1,
+        4
+      ]
+    },
+    {
+      "id": "habitat_west_0",
+      "min": [
+        7.925,
+        0,
+        0
+      ],
+      "max": [
+        8.075,
+        3,
+        1.4
+      ]
+    },
+    {
+      "id": "habitat_west_1",
+      "min": [
+        7.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        8.075,
+        3,
+        2.6
+      ]
+    },
+    {
+      "id": "habitat_west_2",
+      "min": [
+        7.925,
+        0,
+        2.6
+      ],
+      "max": [
+        8.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "habitat_east_0",
+      "min": [
+        11.925,
+        0,
+        0
+      ],
+      "max": [
+        12.075,
+        3,
+        1.4
+      ]
+    },
+    {
+      "id": "habitat_east_1",
+      "min": [
+        11.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        12.075,
+        3,
+        2.6
+      ]
+    },
+    {
+      "id": "habitat_east_2",
+      "min": [
+        11.925,
+        0,
+        2.6
+      ],
+      "max": [
+        12.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "habitat_south_0",
+      "min": [
+        8,
+        0,
+        -0.075
+      ],
+      "max": [
+        12,
+        3,
+        0.075
+      ]
+    },
+    {
+      "id": "habitat_north_0",
+      "min": [
+        8,
+        0,
+        3.925
+      ],
+      "max": [
+        12,
+        3,
+        4.075
+      ]
+    },
+    {
+      "id": "lab_ceiling",
+      "min": [
+        12,
+        3,
+        0
+      ],
+      "max": [
+        16,
+        3.1,
+        4
+      ]
+    },
+    {
+      "id": "lab_west_0",
+      "min": [
+        11.925,
+        0,
+        0
+      ],
+      "max": [
+        12.075,
+        3,
+        1.4
+      ]
+    },
+    {
+      "id": "lab_west_1",
+      "min": [
+        11.925,
+        2.2,
+        1.4
+      ],
+      "max": [
+        12.075,
+        3,
+        2.6
+      ]
+    },
+    {
+      "id": "lab_west_2",
+      "min": [
+        11.925,
+        0,
+        2.6
+      ],
+      "max": [
+        12.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "lab_east_0",
+      "min": [
+        15.925,
+        0,
+        0
+      ],
+      "max": [
+        16.075,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "lab_south_0",
+      "min": [
+        12,
+        0,
+        -0.075
+      ],
+      "max": [
+        16,
+        3,
+        0.075
+      ]
+    },
+    {
+      "id": "lab_north_0",
+      "min": [
+        12,
+        0,
+        3.925
+      ],
+      "max": [
+        16,
+        3,
+        4.075
+      ]
+    }
+  ],
+  "support_surfaces": [
+    {
+      "id": "approach_floor",
+      "min_x": 0,
+      "max_x": 4,
+      "min_z": 0,
+      "max_z": 4,
+      "y": 0
+    },
+    {
+      "id": "airlock_floor",
+      "min_x": 4,
+      "max_x": 8,
+      "min_z": 0,
+      "max_z": 4,
+      "y": 0
+    },
+    {
+      "id": "habitat_floor",
+      "min_x": 8,
+      "max_x": 12,
+      "min_z": 0,
+      "max_z": 4,
+      "y": 0
+    },
+    {
+      "id": "lab_floor",
+      "min_x": 12,
+      "max_x": 16,
+      "min_z": 0,
+      "max_z": 4,
+      "y": 0
+    }
+  ],
+  "portals": [
+    {
+      "id": "door_0",
+      "room_a": "approach",
+      "room_b": "airlock",
+      "axis": "x",
+      "coordinate": 4,
+      "center": 2,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    },
+    {
+      "id": "door_1",
+      "room_a": "airlock",
+      "room_b": "habitat",
+      "axis": "x",
+      "coordinate": 8,
+      "center": 2,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    },
+    {
+      "id": "door_2",
+      "room_a": "habitat",
+      "room_b": "lab",
+      "axis": "x",
+      "coordinate": 12,
+      "center": 2,
+      "width": 1.2,
+      "height": 2.2,
+      "state": "open_passage"
+    }
+  ],
+  "routes": [
+    {
+      "id": "door_0",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          2.0,
+          0,
+          2.0
+        ],
+        [
+          3.4,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4.6,
+          0,
+          2
+        ],
+        [
+          6.0,
+          0,
+          2.0
+        ]
+      ]
+    },
+    {
+      "id": "door_1",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          6.0,
+          0,
+          2.0
+        ],
+        [
+          7.4,
+          0,
+          2
+        ],
+        [
+          8,
+          0,
+          2
+        ],
+        [
+          8.6,
+          0,
+          2
+        ],
+        [
+          10.0,
+          0,
+          2.0
+        ]
+      ]
+    },
+    {
+      "id": "door_2",
+      "avatar_radius": 0.34,
+      "avatar_height": 1.68,
+      "points": [
+        [
+          10.0,
+          0,
+          2.0
+        ],
+        [
+          11.4,
+          0,
+          2
+        ],
+        [
+          12,
+          0,
+          2
+        ],
+        [
+          12.6,
+          0,
+          2
+        ],
+        [
+          14.0,
+          0,
+          2.0
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Rectangular room layout only; visual assets/materials/lighting remain unfinished.",
+    "Real-place visual coverage and vertical connectors are not implemented in this compiler.",
+    "Open passages are not a stateful airlock or door simulation."
+  ],
+  "connectivity": {
+    "entry_room_id": "approach",
+    "reachable_rooms": [
+      "airlock",
+      "approach",
+      "habitat",
+      "lab"
+    ],
+    "locked_rooms": [],
+    "bidirectional_graph": true
+  }
+}

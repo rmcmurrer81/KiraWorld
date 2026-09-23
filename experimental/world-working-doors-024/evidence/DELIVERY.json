@@ -1,0 +1,84 @@
+{
+  "status": "WORKING_DOORS_STAGED_NOT_INSTALLED_OR_VISUALLY_REVIEWED",
+  "at_utc": "2026-09-23T04:48:08.805677+00:00",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/walk_controller.mjs",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\walk_controller.mjs",
+        "sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+        "bytes": 2903
+      },
+      "after": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\candidate\\tools\\world_builder_engine\\walk_controller.mjs",
+        "sha256": "32ffa1baaaf64dd6438158caea238b32ab2447e8c34c0d40e366d32346b7f8af",
+        "bytes": 12958
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/viewer.mjs",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\viewer.mjs",
+        "sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+        "bytes": 6004
+      },
+      "after": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\candidate\\tools\\world_builder_engine\\viewer.mjs",
+        "sha256": "0354c782a12f9c3962e6aba8045046f4f2e1fb81e806f23484f4a1d4840f8bb4",
+        "bytes": 10198
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/index.html",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\index.html",
+        "sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+        "bytes": 1772
+      },
+      "after": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\candidate\\tools\\world_builder_engine\\index.html",
+        "sha256": "6b1f24c1a97d1309e913bd079b74c8ff81a3683652d8331960813ccae2e8fa1f",
+        "bytes": 2098
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/style.css",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\style.css",
+        "sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+        "bytes": 2156
+      },
+      "after": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\candidate\\tools\\world_builder_engine\\style.css",
+        "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+        "bytes": 2451
+      }
+    }
+  ],
+  "test_result": {
+    "path": "@workspace\\work\\world-working-doors-candidate-024\\TEST-RESULT-003.json",
+    "sha256": "cff5741535588d11adc866d02dd7d3fdb739efda57e12ac789a65274c1a9bb4d",
+    "bytes": 3495
+  },
+  "existing_layout_test": {
+    "path": "@workspace\\work\\world-working-doors-candidate-024\\EXISTING-LAYOUT-DOOR-CHECK.json",
+    "sha256": "c5503646df880b0c09abddfef0658caf7cc883c5969162ff2cec72a88a505f84",
+    "bytes": 1373
+  },
+  "preview_plan": {
+    "path": "@workspace\\work\\world-working-doors-candidate-024\\PREVIEW-PLAN.json",
+    "sha256": "5ccae06013817f5addb0aff795093f11a9d72a513dd863a01fb91bb659161f07",
+    "bytes": 26793
+  },
+  "owner_files_preserved": 121,
+  "installed": false,
+  "models_or_gpu_started": false,
+  "compatibility_hold": "Root separately reviews026 immutable-preview compatibility before replacing current renderer assets.",
+  "owner_quality_status": "Existing Mars appearance rejected. Doors require visual review. No room realism, pressure simulation or finished-world acceptance.",
+  "furnishing_interface": "createWalkController(geometry, {extraColliders: plan.colliders}); createDoorSystem(geometry).assemblies() exposes swingBounds.",
+  "limitations": [
+    "Conservative AABB leaf collision and quarter-disc sweep; not rigid-body dynamics.",
+    "Door states are session-local.",
+    "No pressure seals, operational airlock, furniture realism or world completion."
+  ]
+}
