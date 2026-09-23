@@ -1,0 +1,178 @@
+[
+  {
+    "case": "review_wait",
+    "frozen047": {
+      "prompt": "Build a Mars base but wait before starting.",
+      "expected_action": "no_job",
+      "new_research_job": true,
+      "research_worker_queued": true,
+      "saved_bytes_unchanged": false,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_a13cff1653dfa3706fbe",
+      "previous_preview_closed": true,
+      "same_preview_retained": false,
+      "same_photos_retained": false,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build a Mars base but wait before starting.",
+      "messages": [
+        "Research job: world_research_a13cff1653dfa3706fbe | saved state: queued",
+        "Subject: Mars base but wait before starting | analog_to_original | Photorealistic by default"
+      ],
+      "ui_models_network_exports": 0
+    },
+    "candidate048": {
+      "prompt": "Build a Mars base but wait before starting.",
+      "expected_action": "no_job",
+      "new_research_job": false,
+      "research_worker_queued": false,
+      "saved_bytes_unchanged": true,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_17b04debd09ec0607507",
+      "previous_preview_closed": false,
+      "same_preview_retained": true,
+      "same_photos_retained": true,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build an original habitat.",
+      "messages": [
+        "No job was started. Send a direct build or research request when you want work to begin."
+      ],
+      "ui_models_network_exports": 0
+    }
+  },
+  {
+    "case": "review_negated_yet",
+    "frozen047": {
+      "prompt": "Build a Mars base, but do not build a new world yet.",
+      "expected_action": "no_job",
+      "new_research_job": true,
+      "research_worker_queued": true,
+      "saved_bytes_unchanged": false,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_6d9a7b86bc558c920304",
+      "previous_preview_closed": true,
+      "same_preview_retained": false,
+      "same_photos_retained": false,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build a Mars base, but do not build a new world yet.",
+      "messages": [
+        "Research job: world_research_6d9a7b86bc558c920304 | saved state: queued",
+        "Subject: Mars base, but do not build a new world yet | analog_to_original | Photorealistic by default"
+      ],
+      "ui_models_network_exports": 0
+    },
+    "candidate048": {
+      "prompt": "Build a Mars base, but do not build a new world yet.",
+      "expected_action": "no_job",
+      "new_research_job": false,
+      "research_worker_queued": false,
+      "saved_bytes_unchanged": true,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_17b04debd09ec0607507",
+      "previous_preview_closed": false,
+      "same_preview_retained": true,
+      "same_photos_retained": true,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build an original habitat.",
+      "messages": [
+        "No job was started. Send a direct build or research request when you want work to begin."
+      ],
+      "ui_models_network_exports": 0
+    }
+  },
+  {
+    "case": "review_home",
+    "frozen047": {
+      "prompt": "Build a Mars base after I get home.",
+      "expected_action": "no_job",
+      "new_research_job": true,
+      "research_worker_queued": true,
+      "saved_bytes_unchanged": false,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_e21f6642c6fe7e54d60a",
+      "previous_preview_closed": true,
+      "same_preview_retained": false,
+      "same_photos_retained": false,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build a Mars base after I get home.",
+      "messages": [
+        "Research job: world_research_e21f6642c6fe7e54d60a | saved state: queued",
+        "Subject: Mars base after I get home | analog_to_original | Photorealistic by default"
+      ],
+      "ui_models_network_exports": 0
+    },
+    "candidate048": {
+      "prompt": "Build a Mars base after I get home.",
+      "expected_action": "no_job",
+      "new_research_job": false,
+      "research_worker_queued": false,
+      "saved_bytes_unchanged": true,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_17b04debd09ec0607507",
+      "previous_preview_closed": false,
+      "same_preview_retained": true,
+      "same_photos_retained": true,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build an original habitat.",
+      "messages": [
+        "No job was started. Send a direct build or research request when you want work to begin."
+      ],
+      "ui_models_network_exports": 0
+    }
+  },
+  {
+    "case": "review_not_now",
+    "frozen047": {
+      "prompt": "Build a Mars base later, not now.",
+      "expected_action": "no_job",
+      "new_research_job": true,
+      "research_worker_queued": true,
+      "saved_bytes_unchanged": false,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_11884bce8a4f8ba81ee5",
+      "previous_preview_closed": true,
+      "same_preview_retained": false,
+      "same_photos_retained": false,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build a Mars base later, not now.",
+      "messages": [
+        "Research job: world_research_11884bce8a4f8ba81ee5 | saved state: queued",
+        "Subject: Mars base later, not now | analog_to_original | Photorealistic by default"
+      ],
+      "ui_models_network_exports": 0
+    },
+    "candidate048": {
+      "prompt": "Build a Mars base later, not now.",
+      "expected_action": "no_job",
+      "new_research_job": false,
+      "research_worker_queued": false,
+      "saved_bytes_unchanged": true,
+      "preview_actions": [],
+      "export_actions": [],
+      "selected_job_id": "world_research_17b04debd09ec0607507",
+      "previous_preview_closed": false,
+      "same_preview_retained": true,
+      "same_photos_retained": true,
+      "component_job_matches_selection": true,
+      "research_mode": "analog_to_original",
+      "brief_prompt": "Build an original habitat.",
+      "messages": [
+        "No job was started. Send a direct build or research request when you want work to begin."
+      ],
+      "ui_models_network_exports": 0
+    }
+  }
+]

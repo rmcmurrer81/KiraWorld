@@ -28,7 +28,6 @@ import create_world_notebook_request as generator  # noqa: E402
 from validate_notebook_world_request import validate_notebook_world_request  # noqa: E402
 from world_research import DEFAULT_JOB_ROOT, run_job  # noqa: E402
 from world_research_workspace_adapter import submit_research_prompt
-from world_chat_requests import classify_world_chat
 from world_saved_research import list_saved_research, read_saved_research
 from world_builder_engine.workspace_adapter import run_pipeline_after_research, open_preview, close_preview  # noqa: E402
 from world_builder_engine.layout_package_export import export_saved_layout_package
@@ -323,26 +322,8 @@ class WorldBuilderWorkspace(tk.Tk):
         if not message:
             return
         self.chat_var.set("")
-        request = classify_world_chat(message)
-        action = request["action"]
-        if action == "status":
-            self.show_world_chat_status()
-            return
-        if action == "open_latest":
-            self.open_latest_saved_research()
-            return
-        if action == "preview":
-            self.open_layout_preview()
-            return
-        if action == "export":
-            self.export_3d_package()
-            return
-        if action not in {"research", "resume"}:
-            if request.get("message"):
-                self.log(request["message"])
-            return
         try:
-            submitted = submit_research_prompt(request["submit_prompt"], job_root=DEFAULT_JOB_ROOT, latest_job=self._research_latest)
+            submitted = submit_research_prompt(message, job_root=DEFAULT_JOB_ROOT, latest_job=self._research_latest)
         except Exception as exc:
             self.log(f"Research request could not start: {exc}")
             return
@@ -358,28 +339,6 @@ class WorldBuilderWorkspace(tk.Tk):
         if submitted["job_dir"] not in self._research_pending:
             self._research_pending.append(submitted["job_dir"])
         self._start_next_research()
-
-    def show_world_chat_status(self) -> None:
-        if self._research_latest is None:
-            self.log("No saved world is selected. Choose one from Saved research / layouts, or ask to open the latest saved world.")
-            return
-        try:
-            selected = read_saved_research(self._research_latest, job_root=DEFAULT_JOB_ROOT)
-        except (OSError, ValueError) as exc:
-            self.log(f"Saved status is unavailable: {exc}. No new research was started.")
-            return
-        self.log(f"Selected project: {selected['subject']} | saved research state: {selected['stage']}.")
-        self.log("This reports saved research status, not completed world or visual approval. Use Open current preview to inspect any available layout.")
-
-    def open_latest_saved_research(self) -> None:
-        self.refresh_saved_research()
-        if not self._saved_research_items:
-            self.log("No saved research jobs or layouts were found. No new job was started.")
-            return
-        # The catalog is sorted newest first. Do not silently substitute an
-        # older valid world when the newest job is damaged or cannot be read.
-        self.saved_research_choice.current(0)
-        self.select_saved_research()
 
     def refresh_saved_research(self) -> None:
         try:

@@ -1,0 +1,45 @@
+{
+  "status": "047_ISOLATED_DISPATCHER_READY_FOR_ROOT_REVIEW",
+  "created_utc": "2026-09-23T12:06:00.267353+00:00",
+  "review_plan_sha256": "cb537d271cb647f5f4c73bee1460ae9186a3bb7ba075b1f1186af42b9ed927be",
+  "source_diff_sha256": "28c8d7ec05fb9f3c12c8fda4cb94ee0c3ef385bf924ddbca8a1b337a5841368d",
+  "source_closure_sha256": "a48ee0df8d60c54627b649fbe83e120c0883bffd056fe4e33efb4816325b58aa",
+  "candidate_files": {
+    "tools/world_builder_workspace.py": "86320278736c881b3ebecb6da568ac322d9c4cb31285e3c7eb5edd4925568bcc",
+    "tools/world_chat_requests.py": "b6a42a53c490f41c88e0d86476b7c146c316f9c5a9d169b74c74b4f4dcbb9efd"
+  },
+  "callback_fixture_count": 53,
+  "action_counts": {
+    "research": 11,
+    "no_job": 29,
+    "status": 3,
+    "open_latest": 2,
+    "preview": 2,
+    "export": 3,
+    "resume": 3
+  },
+  "baseline_unwanted_jobs": 39,
+  "candidate_unwanted_jobs": 0,
+  "baseline_resume_newjobs": 2,
+  "candidate_resume_newjobs": 0,
+  "test_groups_pass": 5,
+  "retained_context_tests_pass": 10,
+  "protected_inputs_unchanged": 116,
+  "canonical_changes": 0,
+  "git_mutations": 0,
+  "models_gpu_native_ui_browser": 0,
+  "owner_approval": false,
+  "inert_boundaries": [
+    "research/model worker",
+    "preview launch",
+    "destination chooser",
+    "export generation"
+  ],
+  "remaining_gaps": [
+    "General conversation and planning",
+    "Existing room/door/furniture edits",
+    "Named or type-filtered saved-world selection",
+    "Original crew-habitat parser modifier",
+    "Cancel already-running research worker"
+  ]
+}

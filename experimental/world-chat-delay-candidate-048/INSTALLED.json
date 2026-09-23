@@ -1,0 +1,36 @@
+{
+  "status": "048_EXACT_TWO_FILE_INSTALL_PASS",
+  "installed_files": 2,
+  "atomic_per_file": true,
+  "protected_inputs_unchanged": 116,
+  "created_utc": "2026-09-23T12:16:58.279886+00:00",
+  "install_plan_sha256": "3fedb5237a74155411c93453df700ecfeaca358bedd9b5dcdc2594409d713906",
+  "files": [
+    {
+      "relative_path": "tools/world_chat_requests.py",
+      "target": "@kira_root\\tools\\world_chat_requests.py",
+      "before_sha256": null,
+      "preimage": null,
+      "after": {
+        "path": "@workspace\\work\\world-chat-delay-candidate-048\\candidate\\tools\\world_chat_requests.py",
+        "sha256": "717ad961fd8ece464aec27a4a4775cdf9a4b090209873909fa0b05ad13aa53a3",
+        "bytes": 6976
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_workspace.py",
+      "target": "@kira_root\\tools\\world_builder_workspace.py",
+      "before_sha256": "6f6b8076bca6fe1c1e5c17978bc71c8891f44d025c62222de1f981a7ff80db54",
+      "preimage": "@workspace\\work\\world-chat-delay-candidate-048\\baseline\\world_builder_workspace.py",
+      "after": {
+        "path": "@workspace\\work\\world-chat-delay-candidate-048\\candidate\\tools\\world_builder_workspace.py",
+        "sha256": "86320278736c881b3ebecb6da568ac322d9c4cb31285e3c7eb5edd4925568bcc",
+        "bytes": 29865
+      }
+    }
+  ],
+  "operation": "apply",
+  "models_gpu_native_ui": 0,
+  "owner_approval": false,
+  "authorization": "Explicit root authorization must precede invoking the exact-hash operation. A hash argument is not independent authorization."
+}

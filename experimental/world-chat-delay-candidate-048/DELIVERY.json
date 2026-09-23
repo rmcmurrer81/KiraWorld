@@ -1,0 +1,34 @@
+{
+  "status": "048_EXACT_DELAY_CORRECTION_ROOT_INSTALLED_AND_VERIFIED",
+  "created_utc": "2026-09-23T12:18:21.133846+00:00",
+  "plan_sha256": "3fedb5237a74155411c93453df700ecfeaca358bedd9b5dcdc2594409d713906",
+  "installer_sha256": "985647a48bf2aa4f9cade048b205060ddebbb9fcdea9e53439fd20d24a5cb23f",
+  "source_diff_sha256": "0f9dd13433e5f77b7b78794ac33e2e03a165724370d2003a3c33f78363f47ffe",
+  "from047_diff_sha256": "3339ad04dc490931c3c1b30ced2fca82e6fb83681960f7ba7bb4c37750b020d6",
+  "source_closure_sha256": "2e8c8bc52cd9d88f7f8b21d6082d314d4fb722baa1a8920074e5134a3f90155c",
+  "candidate_files": {
+    "tools/world_chat_requests.py": "717ad961fd8ece464aec27a4a4775cdf9a4b090209873909fa0b05ad13aa53a3",
+    "tools/world_builder_workspace.py": "86320278736c881b3ebecb6da568ac322d9c4cb31285e3c7eb5edd4925568bcc"
+  },
+  "root047_failures_reproduced_and_fixed": 4,
+  "callback_cases": 69,
+  "action_counts": {
+    "no_job": 39,
+    "research": 17,
+    "status": 3,
+    "open_latest": 2,
+    "preview": 2,
+    "export": 3,
+    "resume": 3
+  },
+  "routing_test_groups_pass": 6,
+  "retained_context_tests_pass": 10,
+  "installer_fixture_tests_pass": 10,
+  "protected_inputs_unchanged": 116,
+  "frozen047_preserved": true,
+  "canonical_changes_by_root": 2,
+  "canonical_changes_by_this_subagent": 0,
+  "git_mutations": 0,
+  "model_gpu_ui": 0,
+  "owner_approval": false
+}

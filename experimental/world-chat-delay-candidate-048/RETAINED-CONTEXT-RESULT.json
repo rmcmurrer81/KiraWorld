@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "tests_run": 10,
+  "prior_source_sha256": "35cb0f3228054c6b86815d5077859484c83bb804b2fa91c164743ee1241b55d6",
+  "retained_tests": [
+    "test_export_without_selection_does_not_open_dialog_or_worker",
+    "test_new_chat_job_clears_previous_preview_and_views",
+    "test_new_chat_job_does_not_replace_running_research_worker",
+    "test_new_job_then_selected_preview_captured_by_export",
+    "test_preview_button_after_chat_uses_new_selection",
+    "test_preview_without_selection_reports_requirement",
+    "test_real_export_selection_gate_receives_correct_candidate_context",
+    "test_same_selected_job_resume_preserves_open_views",
+    "test_saved_selector_still_reopens_without_research"
+  ],
+  "excluded_historical_cases": {
+    "test_real_export_selection_gate_rejects_baseline_mismatch": "The048 baseline is already-installed046, where this historical mismatch is fixed.",
+    "test_failed_submission_preserves_existing_context": "Bare unrecognized text no longer submits research; explicit invalid creation is checked separately below."
+  },
+  "additional_test": "explicit invalid creation preserves selection and source",
+  "model_ui_gpu_owner_writes": 0
+}

@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "tests_run": 5,
+  "command_cases": 49,
+  "failures": [
+    "(<unittest.case._SubTest testMethod=runTest>, 'Traceback (most recent call last):\\n  File \"@workspace\\\\work\\\\world-chat-dispatch-candidate-047\\\\test_dispatch.py\", line 89, in test_owner_intents_through_actual_callback\\n    self.assertEqual(bool(row[\\'preview_actions\\']),expected==\\'preview\\');self.assertEqual(bool(row[\\'export_actions\\']),expected==\\'export\\')\\n                                                                       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nAssertionError: False != True\\n')"
+  ],
+  "errors": [],
+  "actual_workspace_callbacks": true,
+  "actual_disposable_saved_services": true,
+  "research_models_preview_export_boundaries": "inert",
+  "canonical_ui_gpu_model_changes": 0
+}

@@ -1,0 +1,8 @@
+{
+  "status": "EXPECTED_BEFORE_STATE_CHANGED_BY_ROOT_INSTALL",
+  "attempt": "The first finalize.py attempt used read-only before-state validation and raised Installed bytes changed.",
+  "observation": "The two canonical hashes exactly matched the approved 048 candidate and root supplied the successful installation receipt at 12:16:58 UTC.",
+  "resolution": "Finalization now validates the installed after-state and root receipt, rather than modifying source or reinstalling.",
+  "writes_by_failed_attempt": 0,
+  "models_ui_gpu": 0
+}

@@ -1,0 +1,131 @@
+--- installed046/tools/world_builder_workspace.py
++++ candidate047/tools/world_builder_workspace.py
+@@ -28,6 +28,7 @@
+ from validate_notebook_world_request import validate_notebook_world_request  # noqa: E402
+ from world_research import DEFAULT_JOB_ROOT, run_job  # noqa: E402
+ from world_research_workspace_adapter import submit_research_prompt
++from world_chat_requests import classify_world_chat
+ from world_saved_research import list_saved_research, read_saved_research
+ from world_builder_engine.workspace_adapter import run_pipeline_after_research, open_preview, close_preview  # noqa: E402
+ from world_builder_engine.layout_package_export import export_saved_layout_package
+@@ -322,8 +323,26 @@
+         if not message:
+             return
+         self.chat_var.set("")
++        request = classify_world_chat(message)
++        action = request["action"]
++        if action == "status":
++            self.show_world_chat_status()
++            return
++        if action == "open_latest":
++            self.open_latest_saved_research()
++            return
++        if action == "preview":
++            self.open_layout_preview()
++            return
++        if action == "export":
++            self.export_3d_package()
++            return
++        if action not in {"research", "resume"}:
++            if request.get("message"):
++                self.log(request["message"])
++            return
+         try:
+-            submitted = submit_research_prompt(message, job_root=DEFAULT_JOB_ROOT, latest_job=self._research_latest)
++            submitted = submit_research_prompt(request["submit_prompt"], job_root=DEFAULT_JOB_ROOT, latest_job=self._research_latest)
+         except Exception as exc:
+             self.log(f"Research request could not start: {exc}")
+             return
+@@ -339,6 +358,28 @@
+         if submitted["job_dir"] not in self._research_pending:
+             self._research_pending.append(submitted["job_dir"])
+         self._start_next_research()
++
++    def show_world_chat_status(self) -> None:
++        if self._research_latest is None:
++            self.log("No saved world is selected. Choose one from Saved research / layouts, or ask to open the latest saved world.")
++            return
++        try:
++            selected = read_saved_research(self._research_latest, job_root=DEFAULT_JOB_ROOT)
++        except (OSError, ValueError) as exc:
++            self.log(f"Saved status is unavailable: {exc}. No new research was started.")
++            return
++        self.log(f"Selected project: {selected['subject']} | saved research state: {selected['stage']}.")
++        self.log("This reports saved research status, not completed world or visual approval. Use Open current preview to inspect any available layout.")
++
++    def open_latest_saved_research(self) -> None:
++        self.refresh_saved_research()
++        if not self._saved_research_items:
++            self.log("No saved research jobs or layouts were found. No new job was started.")
++            return
++        # The catalog is sorted newest first. Do not silently substitute an
++        # older valid world when the newest job is damaged or cannot be read.
++        self.saved_research_choice.current(0)
++        self.select_saved_research()
+ 
+     def refresh_saved_research(self) -> None:
+         try:
+--- /dev/null
++++ candidate047/tools/world_chat_requests.py
+@@ -0,0 +1,61 @@
++"""Small explicit command grammar for the World Builder chat front door.
++
++Only direct new research/creation requests reach job submission. This is not a
++general conversation model or an editor: unsupported requests remain explicit.
++"""
++from __future__ import annotations
++import re
++
++MESSAGES={
++    'negative':'No new research or generation was started. Existing jobs and saved worlds were preserved. This message does not cancel a worker that is already running.',
++    'deferred':'No job was started. Send a direct build or research request when you want work to begin.',
++    'planning':'No job was started. Interactive planning is not implemented in this chat yet. A useful brief includes the setting, rooms, approximate size and purpose; send it with Build or Research when you are ready.',
++    'edit_unsupported':'Changing existing rooms, doors or furniture through chat is not implemented yet. Your selected world was preserved and no replacement research job was created.',
++    'help':'You can ask me to build an original world or research a place, resume research, show status, open the latest saved world, open the current preview, or export a 3D package. Existing-world edits and detailed conversational answers are not implemented yet.',
++    'unrecognized':'No job was started. Use a direct request such as Build a Mars base, Research the Louvre courtyard, Show status, Open latest saved world, Open current preview, or Export this world. Existing-world edits are not implemented yet.',
++}
++
++def _unquoted(text: str) -> str:
++    # A quote may contain a command as data. Preserve the surrounding unquoted
++    # request, including a direct Build command with a quoted premise/title.
++    return re.sub(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\'[^\'\n]*\'(?!\w)',lambda m:' '*len(m.group()),text)
++
++def classify_world_chat(message: str) -> dict:
++    if not isinstance(message,str) or not message.strip():return {'action':'empty'}
++    text=_unquoted(message.replace('’',"'")).strip().lower()
++    text=re.sub(r'\s+',' ',text).rstrip('.!?').strip()
++    # Polite requests are commands; questions about how to do something are not.
++    text=re.sub(r'^(?:please\s+)?(?:can you|could you|would you|i want you to|i would like you to|i\'d like you to)\s+','',text)
++    text=re.sub(r'^please\s+','',text)
++    if not text:return {'action':'help','message':MESSAGES['help']}
++    if re.match(r"^(?:do not|don't|never|not now|stop|cancel|hold off|wait)\b",text):
++        return {'action':'negative','message':MESSAGES['negative']}
++    if re.search(r'\b(?:if|until|after|once|when)\s+(?:i|we|you)\b.{0,60}\b(?:approve|confirm|say|agree|ask|ready)\b',text) or re.search(r'\b(?:if|until|after|once|when)\s+(?:(?:my|our|your)\s+)?(?:approved|approval|confirmed|confirmation|ready)\b',text) or re.search(r'\b(?:later|tomorrow|next week)\s*$',text) or re.search(r"\b(?:do not|don't)\s+(?:start|begin)\b|\b(?:do not|don't)\s+(?:build|create|research|generate)\s+(?:it|this|that|anything|yet|now|until)\b",text):
++        return {'action':'deferred','message':MESSAGES['deferred']}
++    if re.match(r'^(?:plan|discuss|brainstorm|consider|think about|describe|outline|sketch out|before\s+(?:building|creating|researching))\b',text):
++        return {'action':'planning','message':MESSAGES['planning']}
++    if re.fullmatch(r'(?:show\s+(?:me\s+)?(?:the\s+)?)?(?:status|progress)(?:\s+(?:of|for)\s+(?:my|the|this|current|selected)\s+(?:world|layout|project|research))?',text) or re.fullmatch(r"(?:what(?:'s| is)\s+(?:the\s+)?(?:status|progress)|how is (?:my |the |this |current |selected )?(?:world|layout|project|research)(?: coming| going)?)",text):
++        return {'action':'status'}
++    if re.fullmatch(r'(?:open|reopen|load)\s+(?:(?:my|the)\s+)?(?:latest|last|most recent)\s+(?:saved\s+)?(?:world|layout|project|research)',text):
++        return {'action':'open_latest'}
++    if re.fullmatch(r'(?:open|show|view)\s+(?:(?:me|my|the|this|current|selected)\s+){0,2}(?:(?:world|layout)\s+)?preview',text):
++        return {'action':'preview'}
++    if re.fullmatch(r'export\s+(?:(?:my|the|this|current|selected)\s+){0,2}(?:world|layout|project)(?:\s+(?:as|to)\s+(?:a\s+)?3d\s+package)?|export\s+(?:(?:a|the)\s+)?3d\s+package',text):
++        return {'action':'export'}
++    if re.fullmatch(r'(?:resume|retry|continue)(?:\s+(?:(?:my|the|this|current|selected)\s+)?(?:research|world|layout|project))?',text):
++        return {'action':'resume','submit_prompt':'resume'}
++    existing_target=re.match(r'^(?:build|create|make|design|invent)\b',text) and re.search(r'\b(?:in|inside|within|into|to|onto|for)\s+(?:(?:the|my|our|this|current|selected|existing|saved)\s+){1,3}(?:[a-z]+\s+){0,2}(?:world|habitat|base|layout|room|project)\b',text)
++    if existing_target:
++        return {'action':'edit_unsupported','message':MESSAGES['edit_unsupported']}
++    if re.match(r'^(?:change|edit|modify|widen|narrow|move|remove|delete|replace|add|resize|turn)\b',text) or (re.match(r'make\s+(?:the|my|this|current|selected|existing|our)\b',text) and re.search(r'\b(?:current|selected|existing|wider|narrower|bigger|smaller|larger|open|closed|into|taller|shorter|room|door|galley|laboratory|lab|airlock|bunk|corridor|sink|window)\b',text)):
++        return {'action':'edit_unsupported','message':MESSAGES['edit_unsupported']}
++    if re.match(r'^(?:how|what|why|where|when|which|who|is|are|does|do|can|could|would|tell me|help)\b',text):
++        return {'action':'help','message':MESSAGES['help']}
++    if re.search(r'(?:[;.!?]\s*|\b(?:and then|then|and|or)\s+)(?:open|export|load|reopen|resume|delete|change|modify)\b',text):
++        return {'action':'unrecognized','message':'No job was started. Send one action at a time so the selected world and requested action are clear.'}
++    quoted_target=re.fullmatch(r'(?:build|create|make|design|invent|research)',text) and re.search(r'["“][^"”\n]*\S[^"”\n]*["”]',message)
++    if re.match(r'^(?:build|create|make|design|invent|research)\s+\S',text) or quoted_target:
++        # The existing parser remains responsible for original vs real-place
++        # eligibility. Preserve the owner's full prompt and quoted data.
++        return {'action':'research','submit_prompt':message}
++    return {'action':'unrecognized','message':MESSAGES['unrecognized']}

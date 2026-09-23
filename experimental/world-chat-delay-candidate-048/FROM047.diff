@@ -1,0 +1,29 @@
+--- frozen047/tools/world_chat_requests.py
++++ candidate048/tools/world_chat_requests.py
+@@ -20,6 +20,17 @@
+     # request, including a direct Build command with a quoted premise/title.
+     return re.sub(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\'[^\'\n]*\'(?!\w)',lambda m:' '*len(m.group()),text)
+ 
++def _post_command_delay(text: str) -> bool:
++    # These are instructions about when work may begin, after quoted data has
++    # been removed. Ordinary design constraints ("with no weapons" or "do not
++    # build a laboratory") must not become execution delays by themselves.
++    return any(re.search(pattern, text) for pattern in (
++        r'(?:[,;.!?]\s*|\b(?:but|and|then)\s+)(?:please\s+)?(?:wait|hold off)\b',
++        r'\b(?:do not|don\'t)\s+(?:build|create|make|research|generate)\b[^,;.!?]{0,120}\b(?:yet|now|until)\b',
++        r'\b(?:after|once|when|until)\s+(?:i|we|you)\s+(?:(?:get|come|arrive)\s+(?:back\s+)?home|(?:get|come)\s+back|return)\b',
++        r'\bnot\s+(?:right\s+)?now\s*$',
++    ))
++
+ def classify_world_chat(message: str) -> dict:
+     if not isinstance(message,str) or not message.strip():return {'action':'empty'}
+     text=_unquoted(message.replace('’',"'")).strip().lower()
+@@ -30,7 +41,7 @@
+     if not text:return {'action':'help','message':MESSAGES['help']}
+     if re.match(r"^(?:do not|don't|never|not now|stop|cancel|hold off|wait)\b",text):
+         return {'action':'negative','message':MESSAGES['negative']}
+-    if re.search(r'\b(?:if|until|after|once|when)\s+(?:i|we|you)\b.{0,60}\b(?:approve|confirm|say|agree|ask|ready)\b',text) or re.search(r'\b(?:if|until|after|once|when)\s+(?:(?:my|our|your)\s+)?(?:approved|approval|confirmed|confirmation|ready)\b',text) or re.search(r'\b(?:later|tomorrow|next week)\s*$',text) or re.search(r"\b(?:do not|don't)\s+(?:start|begin)\b|\b(?:do not|don't)\s+(?:build|create|research|generate)\s+(?:it|this|that|anything|yet|now|until)\b",text):
++    if _post_command_delay(text) or re.search(r'\b(?:if|until|after|once|when)\s+(?:i|we|you)\b.{0,60}\b(?:approve|confirm|say|agree|ask|ready)\b',text) or re.search(r'\b(?:if|until|after|once|when)\s+(?:(?:my|our|your)\s+)?(?:approved|approval|confirmed|confirmation|ready)\b',text) or re.search(r'\b(?:later|tomorrow|next week)\s*$',text) or re.search(r"\b(?:do not|don't)\s+(?:start|begin)\b|\b(?:do not|don't)\s+(?:build|create|research|generate)\s+(?:it|this|that|anything|yet|now|until)\b",text):
+         return {'action':'deferred','message':MESSAGES['deferred']}
+     if re.match(r'^(?:plan|discuss|brainstorm|consider|think about|describe|outline|sketch out|before\s+(?:building|creating|researching))\b',text):
+         return {'action':'planning','message':MESSAGES['planning']}
