@@ -1,0 +1,125 @@
+{
+  "status": "RELOCATED_PUBLIC_FOCUSED_TESTS_PASS",
+  "checks": [
+    {
+      "command": [
+        "test_glb_admission.mjs",
+        "candidate",
+        "fixed",
+        "PUBLIC-URI-CHECK.json"
+      ],
+      "summary": {
+        "mode": "fixed",
+        "results": [
+          {
+            "name": "empty buffer URI",
+            "accepted": false,
+            "error": "Only one embedded GLB buffer is supported"
+          },
+          {
+            "name": "null buffer URI",
+            "accepted": false,
+            "error": "Only one embedded GLB buffer is supported"
+          },
+          {
+            "name": "empty image URI plus bufferView",
+            "accepted": false,
+            "error": "Only embedded PNG textures are supported"
+          },
+          {
+            "name": "external buffer URI",
+            "accepted": false,
+            "error": "Only one embedded GLB buffer is supported"
+          },
+          {
+            "name": "external image URI",
+            "accepted": false,
+            "error": "Only embedded PNG textures are supported"
+          }
+        ]
+      }
+    },
+    {
+      "command": [
+        "test_png_admission.mjs",
+        "candidate",
+        "fixed",
+        "PUBLIC-PNG-CHECK.json"
+      ],
+      "summary": {
+        "status": "PNG_PREDECODE_RESOURCE_ADMISSION_PASS",
+        "cases": 20
+      }
+    },
+    {
+      "command": [
+        "--experimental-vm-modules",
+        "test_ui_lifecycle.mjs",
+        "candidate",
+        "fixed",
+        "PUBLIC-UI-CHECK.json"
+      ],
+      "summary": {
+        "mode": "fixed",
+        "cases": [
+          {
+            "name": "picker disabled during pending import",
+            "actual": true
+          },
+          {
+            "name": "late completed import after pagehide does not create renderer",
+            "actual": true
+          },
+          {
+            "name": "start twice schedules once; Escape cancels loop",
+            "actual": true
+          },
+          {
+            "name": "package switch releases A and loads B paused",
+            "actual": true
+          },
+          {
+            "name": "failed load clears stale scene and allows a new selection",
+            "actual": true
+          },
+          {
+            "name": "load recovers after prior failure",
+            "actual": true
+          },
+          {
+            "name": "closed app ignores later load requests",
+            "actual": true
+          },
+          {
+            "name": "back-forward restored page resets; old import cannot replace or unlock fresh request",
+            "actual": true
+          }
+        ]
+      }
+    },
+    {
+      "command": [
+        "--experimental-vm-modules",
+        "test_disposal.mjs",
+        "candidate",
+        "PUBLIC-CLEANUP-CHECK.json"
+      ],
+      "summary": {
+        "status": "SHARED_RESOURCE_AND_REJECTED_IMPORT_CLEANUP_PASS",
+        "checks": 2
+      }
+    },
+    {
+      "command": [
+        "test_session_reset.mjs",
+        "candidate",
+        "PUBLIC-SESSION-CHECK.json"
+      ],
+      "summary": {
+        "status": "SESSION_STATE_ISOLATION_AND_RELOAD_PASS",
+        "checks": 3
+      }
+    }
+  ],
+  "ui_gpu_models_servers": 0
+}

@@ -1,0 +1,16 @@
+{
+  "status": "BASELINE043_PENDING_SELECTION_AND_LATE_RENDER_REPRODUCED",
+  "cases": [
+    {
+      "name": "picker disabled during pending import",
+      "actual": false
+    },
+    {
+      "name": "late completed import after pagehide does not create renderer",
+      "actual": false
+    }
+  ],
+  "real_app_event_handlers": true,
+  "dom_and_renderer_test_doubles": true,
+  "ui_browser_webgl_server_model_gpu_calls": 0
+}

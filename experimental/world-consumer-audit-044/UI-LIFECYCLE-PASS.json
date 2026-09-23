@@ -1,0 +1,36 @@
+{
+  "status": "CPU_ACTUAL_APP_LIFECYCLE_PASS",
+  "cases": [
+    {
+      "name": "picker disabled during pending import",
+      "actual": true
+    },
+    {
+      "name": "late completed import after pagehide does not create renderer",
+      "actual": true
+    },
+    {
+      "name": "start twice schedules once; Escape cancels loop",
+      "actual": true
+    },
+    {
+      "name": "package switch releases A and loads B paused",
+      "actual": true
+    },
+    {
+      "name": "failed load clears stale scene and allows a new selection",
+      "actual": true
+    },
+    {
+      "name": "load recovers after prior failure",
+      "actual": true
+    },
+    {
+      "name": "closed app ignores later load requests",
+      "actual": true
+    }
+  ],
+  "real_app_event_handlers": true,
+  "dom_and_renderer_test_doubles": true,
+  "ui_browser_webgl_server_model_gpu_calls": 0
+}

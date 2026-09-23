@@ -1,0 +1,10 @@
+{
+  "status": "SESSION_STATE_ISOLATION_AND_RELOAD_PASS",
+  "checks": [
+    "opening one session does not affect another",
+    "new session starts all leaves closed at declared spawn",
+    "portable metadata is unchanged"
+  ],
+  "physics_runtime_changed": false,
+  "ui_gpu_models": 0
+}

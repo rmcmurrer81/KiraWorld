@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-23T10:32:31.104560+00:00",
+  "returncode": 0,
+  "failure": null,
+  "elapsed_seconds": 0.38910179992672056,
+  "sampled_family_peak_rss_bytes": 186966016,
+  "samples": 22,
+  "processes": {
+    "19844": {
+      "name": "node.exe",
+      "observed_rss": 178925568,
+      "os_peak_working_set": 184500224
+    },
+    "39176": {
+      "name": "conhost.exe",
+      "observed_rss": 8040448,
+      "os_peak_working_set": 8040448
+    }
+  },
+  "protected_originals_unchanged": 116,
+  "canonical_five_unchanged": true,
+  "frozen043_closure_unchanged": true,
+  "physics_navigation_file_admission_index_server_unchanged": true,
+  "derived_sample_package_unchanged": true,
+  "gpu_models_servers_ui": 0,
+  "measurement_limit": "10ms sampled owned process-family RSS; supervisor excluded; brief peaks may be missed.",
+  "visual_or_owner_approval": false
+}

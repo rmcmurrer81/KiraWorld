@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World package — experimental first-person consumer</title>
+<style>body{margin:0;background:#111820;color:#e3edf1;font:16px system-ui}header{padding:14px;background:#1d2a34}h1{font-size:18px;margin:0 0 8px}p{margin:8px 0}button,label{padding:8px 12px;display:inline-block}button{cursor:pointer}#stage{width:100%;height:calc(100vh - 220px);min-height:300px}canvas{display:block;width:100%;height:100%}#status{white-space:pre-line}small{color:#aec3cc}</style>
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js"}}</script>
+<header><h1>World package — experimental first-person consumer</h1>
+<label>Select the five exported package files <input id="files" type="file" multiple accept=".json,.glb,.txt"></label>
+<button id="enter" disabled>Start walking</button><button id="pause" disabled>Pause</button>
+<p id="status">Choose manifest.json, scene.json, scene.glb, ROUNDTRIP.json and README.txt from one export.</p>
+<small>WASD: move · arrows: turn · drag: look · E: nearby door · Escape: pause. Doors have session-local collision and pairing. No pressure simulation or VR. Source files are never saved or changed.</small></header>
+<main id="stage" aria-label="First-person scene"></main><script type="module" src="./app.mjs"></script></html>

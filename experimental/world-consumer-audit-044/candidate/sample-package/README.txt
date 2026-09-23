@@ -1,0 +1,1 @@
+Original authored 3D layout package: scene.glb plus linked collider/door metadata in scene.json. Game-engine interaction/collision and VR runtime are not implemented. Static equipment has no operational science/life-support behavior. No pressure simulation or visual-realism approval. See ROUNDTRIP.json for renderer limitations. Original sources were not changed or bundled.

@@ -1,0 +1,33 @@
+{
+  "status": "EMBEDDED_ONLY_URI_ADMISSION_PASS",
+  "results": [
+    {
+      "name": "empty buffer URI",
+      "accepted": false,
+      "error": "Only one embedded GLB buffer is supported"
+    },
+    {
+      "name": "null buffer URI",
+      "accepted": false,
+      "error": "Only one embedded GLB buffer is supported"
+    },
+    {
+      "name": "empty image URI plus bufferView",
+      "accepted": false,
+      "error": "Only embedded PNG textures are supported"
+    },
+    {
+      "name": "external buffer URI",
+      "accepted": false,
+      "error": "Only one embedded GLB buffer is supported"
+    },
+    {
+      "name": "external image URI",
+      "accepted": false,
+      "error": "Only embedded PNG textures are supported"
+    }
+  ],
+  "original_package_accepted": true,
+  "network_fetches": 0,
+  "models_gpu_ui": 0
+}

@@ -1,0 +1,338 @@
+[
+  {
+    "path": "experimental/world-consumer-audit-044/ACTUAL-IMPORT-PASS.json",
+    "original_sha256": "4b0130df8378150613e0fa65cbad0edab65ebb3dc140ba3832d1ff7b10c4d53d",
+    "public_sha256": "4b0130df8378150613e0fa65cbad0edab65ebb3dc140ba3832d1ff7b10c4d53d",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/baseline/app.mjs",
+    "original_sha256": "7f36f51e0946098553afad6bb2a51a99aa756c7f94404e4c6987075333dd29d3",
+    "public_sha256": "7f36f51e0946098553afad6bb2a51a99aa756c7f94404e4c6987075333dd29d3",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/baseline/package_loader.mjs",
+    "original_sha256": "ca43285a6a9d193249e94be11d453c75a152593e54894ce367a5f8f7bb7cc097",
+    "public_sha256": "ca43285a6a9d193249e94be11d453c75a152593e54894ce367a5f8f7bb7cc097",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/BASELINE-GLB-REPRO.json",
+    "original_sha256": "3931ba8cfa63f030c16c7008710f68a58831693b0d48294025940c3005ccf0c8",
+    "public_sha256": "3931ba8cfa63f030c16c7008710f68a58831693b0d48294025940c3005ccf0c8",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/BASELINE-PNG-REPRO.json",
+    "original_sha256": "eb146082eb2a1b6056cdc0157d957c497ced14faa89c111404fffcee21d2da59",
+    "public_sha256": "eb146082eb2a1b6056cdc0157d957c497ced14faa89c111404fffcee21d2da59",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/BASELINE-UI-REPRO.json",
+    "original_sha256": "ebd8fc00c5b9dd683aa80976435efaafc38f129d25013d2bdab9773d5305b0b7",
+    "public_sha256": "ebd8fc00c5b9dd683aa80976435efaafc38f129d25013d2bdab9773d5305b0b7",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/app.mjs",
+    "original_sha256": "91027cdae3e0442dbf47ac6e4c07146eb6a506177b2caefc00c2e251beb30ee9",
+    "public_sha256": "91027cdae3e0442dbf47ac6e4c07146eb6a506177b2caefc00c2e251beb30ee9",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/file_admission.mjs",
+    "original_sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+    "public_sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/horizontal_navigation.mjs",
+    "original_sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+    "public_sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/index.html",
+    "original_sha256": "c6a8bfe8d520838f2d163bb047e8ce4a8caa384bcbe5dfe18de6b3b50fc0e55d",
+    "public_sha256": "c6a8bfe8d520838f2d163bb047e8ce4a8caa384bcbe5dfe18de6b3b50fc0e55d",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/package_loader.mjs",
+    "original_sha256": "10f3891b9185339d90bc87d089ec568995c9e77653d3f3350ccff8fb523b0c9a",
+    "public_sha256": "10f3891b9185339d90bc87d089ec568995c9e77653d3f3350ccff8fb523b0c9a",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/runtime.mjs",
+    "original_sha256": "63c4c7872ba7d57536fc65eec7ffac2e93efde540ac9e88291adf2de52a3bb93",
+    "public_sha256": "63c4c7872ba7d57536fc65eec7ffac2e93efde540ac9e88291adf2de52a3bb93",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/sample-package/manifest.json",
+    "original_sha256": "9ca7416c9e6b45d23b009cf070964ca56462b60392520370cd525a90df01c40e",
+    "public_sha256": "9ca7416c9e6b45d23b009cf070964ca56462b60392520370cd525a90df01c40e",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/sample-package/README.txt",
+    "original_sha256": "cd4d71900456ab87d690603a658293c32156776fd3d7d59d534ef1c69e54bfb1",
+    "public_sha256": "cd4d71900456ab87d690603a658293c32156776fd3d7d59d534ef1c69e54bfb1",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/sample-package/ROUNDTRIP.json",
+    "original_sha256": "3e62d776d9b55e8cf930fe58d94dada947170325bc38cda6aa052e796e4420a7",
+    "public_sha256": "3e62d776d9b55e8cf930fe58d94dada947170325bc38cda6aa052e796e4420a7",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/sample-package/scene.glb",
+    "original_sha256": "718af4ec699d506b5f02a4ad8d73330a8aca7e9ecfd965ed001473c3ccd70296",
+    "public_sha256": "718af4ec699d506b5f02a4ad8d73330a8aca7e9ecfd965ed001473c3ccd70296",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/sample-package/scene.json",
+    "original_sha256": "5a989291a827cb99b169be07863b82880b9f8a0d398af65823e18e38a6cf8042",
+    "public_sha256": "5a989291a827cb99b169be07863b82880b9f8a0d398af65823e18e38a6cf8042",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/scene_disposal.mjs",
+    "original_sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6",
+    "public_sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/serve.py",
+    "original_sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+    "public_sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/test_admission.mjs",
+    "original_sha256": "8897fee5b67d370c84873c0b600c266cbe3f6487e881d02cf32c6fc62587b9e8",
+    "public_sha256": "8897fee5b67d370c84873c0b600c266cbe3f6487e881d02cf32c6fc62587b9e8",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/test_import.mjs",
+    "original_sha256": "6da659c4e19803f2e5387f09b7e2655a79ed18868183bf0c351e1865ede50bba",
+    "public_sha256": "6da659c4e19803f2e5387f09b7e2655a79ed18868183bf0c351e1865ede50bba",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/test_runtime.mjs",
+    "original_sha256": "be0957f1d5ca5c0a37597402b11691ea913a81d78411077c006e65640901b3ed",
+    "public_sha256": "be0957f1d5ca5c0a37597402b11691ea913a81d78411077c006e65640901b3ed",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/vendor/three/build/three.core.js",
+    "original_sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "public_sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/vendor/three/build/three.module.js",
+    "original_sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "public_sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+    "original_sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+    "public_sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+    "original_sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+    "public_sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/vendor/three/LICENSE",
+    "original_sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "public_sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/candidate/vendor/three/package.json",
+    "original_sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+    "public_sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/CHANGES.patch",
+    "original_sha256": "f4f2c4cf8c3a96b555dc24c6412e090c608183582bfc5b3dbc3497e36d10ff55",
+    "public_sha256": "f4f2c4cf8c3a96b555dc24c6412e090c608183582bfc5b3dbc3497e36d10ff55",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/CHECK-RESULT.json",
+    "original_sha256": "a3da19d9d2a85614ef67d96d65d80488d23d13730114616fd2a4f41c1005c4a6",
+    "public_sha256": "a3da19d9d2a85614ef67d96d65d80488d23d13730114616fd2a4f41c1005c4a6",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/CURRENT-STATUS.json",
+    "original_sha256": "c8c50628ef984b5cd77747d0f0e1b7f4dd626d4ed9139afded82a8bfe0099848",
+    "public_sha256": "c8c50628ef984b5cd77747d0f0e1b7f4dd626d4ed9139afded82a8bfe0099848",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/DISPOSAL-FINAL.json",
+    "original_sha256": "be58646e1c3cca23267d7b945f67f57c6e67d76d8fd2786b89dd8f29f5c06454",
+    "public_sha256": "be58646e1c3cca23267d7b945f67f57c6e67d76d8fd2786b89dd8f29f5c06454",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/DISPOSAL-PASS.json",
+    "original_sha256": "146690ca6ee6d01ed5a1ca7dbbb3bbfdd10596df219a53969ea127e7f0e82833",
+    "public_sha256": "146690ca6ee6d01ed5a1ca7dbbb3bbfdd10596df219a53969ea127e7f0e82833",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/freeze.py",
+    "original_sha256": "169c474f8c69fe59642d422041bd17ec417ad7e75ee37cf55f65027996db3835",
+    "public_sha256": "be9b78b365a290f1bf4c444d1202e1bb4eebb0580cbccd9233bc402fa6f2d4ee",
+    "transformation": "local historical paths replaced"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/GLB-ADMISSION-FINAL.json",
+    "original_sha256": "b63864bade588d7159057364e4853acd8f04b658d36dfdcb30e17e0e032ba6f5",
+    "public_sha256": "b63864bade588d7159057364e4853acd8f04b658d36dfdcb30e17e0e032ba6f5",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/GLB-ADMISSION-PASS.json",
+    "original_sha256": "b63864bade588d7159057364e4853acd8f04b658d36dfdcb30e17e0e032ba6f5",
+    "public_sha256": "b63864bade588d7159057364e4853acd8f04b658d36dfdcb30e17e0e032ba6f5",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/import.stderr.log",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/import.stdout.log",
+    "original_sha256": "d664f67a4e048c40410ce81e611ccdeac797f731aa15507e0b1617227b22e2c0",
+    "public_sha256": "d664f67a4e048c40410ce81e611ccdeac797f731aa15507e0b1617227b22e2c0",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/PNG-ADMISSION-FINAL.json",
+    "original_sha256": "f06d31e1e86c18da81a406b1830352eefe10415904d8ae02fc7087df9d77169d",
+    "public_sha256": "f06d31e1e86c18da81a406b1830352eefe10415904d8ae02fc7087df9d77169d",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/PNG-ADMISSION-PASS.json",
+    "original_sha256": "e57a1cded29f146a8794c51a71b2fc5ff2e0f0ede8ef4a531122e5b4cf33f251",
+    "public_sha256": "e57a1cded29f146a8794c51a71b2fc5ff2e0f0ede8ef4a531122e5b4cf33f251",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/README.md",
+    "original_sha256": "33df12aa20b8c9b5a129c2c9069ae69c291f1e24dad045e18533bc696f33f606",
+    "public_sha256": "33df12aa20b8c9b5a129c2c9069ae69c291f1e24dad045e18533bc696f33f606",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/REVIEW-PLAN.json",
+    "original_sha256": "67e98e97ef774161c194ab70c1d3c9592c55830f7b055c699e1c27474be50248",
+    "public_sha256": "67e98e97ef774161c194ab70c1d3c9592c55830f7b055c699e1c27474be50248",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/RUNTIME-REGRESSION-PASS.json",
+    "original_sha256": "67ce7cfe549ea7d836bb6f9af57cee2d01e5ec4851f34941c398ecfbb151e102",
+    "public_sha256": "67ce7cfe549ea7d836bb6f9af57cee2d01e5ec4851f34941c398ecfbb151e102",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/SESSION-RESET-PASS.json",
+    "original_sha256": "4852e931dc9d2d9b0f1496f2bc1eae25b269ae0d98ffff8f2b3baf2c9c032cee",
+    "public_sha256": "4852e931dc9d2d9b0f1496f2bc1eae25b269ae0d98ffff8f2b3baf2c9c032cee",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/SOURCE-CLOSURE.json",
+    "original_sha256": "e465d678b926df71f4f83fcec1c5788e669f4b000d0bca2078b09f553d92b910",
+    "public_sha256": "e465d678b926df71f4f83fcec1c5788e669f4b000d0bca2078b09f553d92b910",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/SOURCE-PINS.json",
+    "original_sha256": "6b2dc243af9d526340fa298ad4e5ae5068c0f0ec9516308c42fdabd082e5fe4a",
+    "public_sha256": "6b2dc243af9d526340fa298ad4e5ae5068c0f0ec9516308c42fdabd082e5fe4a",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/stage.py",
+    "original_sha256": "c77ba96a7083a64b829f6a3306107afd4b5a87662e20e888a387e986cf901a85",
+    "public_sha256": "c77ba96a7083a64b829f6a3306107afd4b5a87662e20e888a387e986cf901a85",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/test_disposal.mjs",
+    "original_sha256": "7217084d4ad806c5b2d61ddfa72439a0a69dc7edcd8af52796c99bc977c4d250",
+    "public_sha256": "7217084d4ad806c5b2d61ddfa72439a0a69dc7edcd8af52796c99bc977c4d250",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/test_glb_admission.mjs",
+    "original_sha256": "e645d609c002e97318fb2b439af542d77b93ab73ddd86209f81cb49410640889",
+    "public_sha256": "e645d609c002e97318fb2b439af542d77b93ab73ddd86209f81cb49410640889",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/test_png_admission.mjs",
+    "original_sha256": "c4130af36de7023ec176fb934400cd10c67b1aca7d9883376a3248aa08f25586",
+    "public_sha256": "c4130af36de7023ec176fb934400cd10c67b1aca7d9883376a3248aa08f25586",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/test_session_reset.mjs",
+    "original_sha256": "ebbb74413bc496f842006f3ba791f9fec1889b2a636ecefee413c4681c99e418",
+    "public_sha256": "ebbb74413bc496f842006f3ba791f9fec1889b2a636ecefee413c4681c99e418",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/test_ui_lifecycle.mjs",
+    "original_sha256": "790267c495683b53fc71410bb8c30a7e1978c3888d2c008765d85d9143d6b9e8",
+    "public_sha256": "790267c495683b53fc71410bb8c30a7e1978c3888d2c008765d85d9143d6b9e8",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/UI-LIFECYCLE-PASS-2.json",
+    "original_sha256": "88ddbc7a8cd2157cd1175c95946c67bcea5d8307fe0eaa561e092bcf5035acff",
+    "public_sha256": "88ddbc7a8cd2157cd1175c95946c67bcea5d8307fe0eaa561e092bcf5035acff",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/UI-LIFECYCLE-PASS.json",
+    "original_sha256": "a3839595371561402a601d7ef83588dad7308b3fe31514c04bb15adb4ec6be47",
+    "public_sha256": "a3839595371561402a601d7ef83588dad7308b3fe31514c04bb15adb4ec6be47",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/ui_harness.mjs",
+    "original_sha256": "2e7164d05333f92ea3be261cf80ddc65e77a9b5816ebe253a50817120252c886",
+    "public_sha256": "2e7164d05333f92ea3be261cf80ddc65e77a9b5816ebe253a50817120252c886",
+    "transformation": "exact"
+  },
+  {
+    "path": "experimental/world-consumer-audit-044/verify.py",
+    "original_sha256": "f4a50419bcea4e9f560e4e93c2aa56a011fc6475e245993e998f0cf7bf500fb2",
+    "public_sha256": "f4a50419bcea4e9f560e4e93c2aa56a011fc6475e245993e998f0cf7bf500fb2",
+    "transformation": "exact"
+  }
+]

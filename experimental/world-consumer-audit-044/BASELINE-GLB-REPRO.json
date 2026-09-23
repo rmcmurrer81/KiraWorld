@@ -1,0 +1,33 @@
+{
+  "status": "BASELINE043_FALSY_URI_ADMISSION_REPRODUCED",
+  "results": [
+    {
+      "name": "empty buffer URI",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "null buffer URI",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "empty image URI plus bufferView",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "external buffer URI",
+      "accepted": false,
+      "error": "Only one embedded GLB buffer is supported"
+    },
+    {
+      "name": "external image URI",
+      "accepted": false,
+      "error": "Only embedded PNG textures are supported"
+    }
+  ],
+  "original_package_accepted": true,
+  "network_fetches": 0,
+  "models_gpu_ui": 0
+}

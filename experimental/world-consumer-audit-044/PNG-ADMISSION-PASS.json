@@ -1,0 +1,39 @@
+{
+  "status": "PNG_PREDECODE_RESOURCE_ADMISSION_PASS",
+  "results": [
+    {
+      "name": "huge PNG width",
+      "accepted": false,
+      "error": "Embedded PNG exceeds 2048px dimension budget"
+    },
+    {
+      "name": "zero PNG height",
+      "accepted": false,
+      "error": "Embedded PNG exceeds 2048px dimension budget"
+    },
+    {
+      "name": "aggregate decoded pixel budget",
+      "accepted": false,
+      "error": "Embedded PNGs exceed 32-megapixel decode budget"
+    },
+    {
+      "name": "image view outside BIN",
+      "accepted": false,
+      "error": "PNG bufferView exceeds embedded data"
+    },
+    {
+      "name": "PNG signature missing",
+      "accepted": false,
+      "error": "Missing PNG/IHDR header"
+    },
+    {
+      "name": "declared buffer exceeds BIN",
+      "accepted": false,
+      "error": "Embedded GLB buffer length differs"
+    }
+  ],
+  "valid_package_images": 67,
+  "valid_package_pixels": 17104896,
+  "image_decodes": 0,
+  "network_ui_gpu_models": 0
+}

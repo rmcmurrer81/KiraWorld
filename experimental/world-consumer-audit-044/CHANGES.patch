@@ -1,0 +1,106 @@
+--- baseline043/app.mjs
++++ candidate044/app.mjs
+@@ -2,22 +2,23 @@
+ import {loadPackage} from './package_loader.mjs';
+ import {readSelectedPackage} from './file_admission.mjs';
+ import {AVATAR} from './runtime.mjs';
++import {disposeScene} from './scene_disposal.mjs';
+ const stage=document.getElementById('stage'),status=document.getElementById('status'),picker=document.getElementById('files'),enter=document.getElementById('enter'),pause=document.getElementById('pause');
+-let renderer=null,camera=null,current=null,active=false,dragging=false,last=0,frame=0,note='',loading=false;
++let renderer=null,camera=null,current=null,active=false,dragging=false,last=0,frame=0,note='',loading=false,closed=false,generation=0;
+ const keys=new Set();
+ function stop(){active=false;dragging=false;keys.clear();cancelAnimationFrame(frame);enter.textContent='Resume walking';pause.disabled=true;draw();}
+-function dispose(root){const geometries=new Set(),materials=new Set(),textures=new Set();root.traverse(o=>{if(o.geometry)geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[]){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);}});geometries.forEach(g=>g.dispose());textures.forEach(t=>t.dispose());materials.forEach(m=>m.dispose());}
+-function draw(){if(!current||!renderer)return;const s=current.runtime.snapshot();current.applyDoorStates(current.runtime.doorStates());camera.position.set(s.feet[0],s.feet[1]+AVATAR.eye,s.feet[2]);camera.rotation.set(s.pitch,-s.yaw,0,'YXZ');renderer.render(current.scene,camera);status.textContent=`${s.roomName} · ${active?'walking':'paused'}${s.nearbyDoor?' · E: '+s.nearbyDoor.state+' door':''}\n${note||s.blocked||'Experimental package consumer — visual/input review pending.'}`;}
++function draw(){if(closed||!current||!renderer)return;const s=current.runtime.snapshot();current.applyDoorStates(current.runtime.doorStates());camera.position.set(s.feet[0],s.feet[1]+AVATAR.eye,s.feet[2]);camera.rotation.set(s.pitch,-s.yaw,0,'YXZ');renderer.render(current.scene,camera);status.textContent=`${s.roomName} · ${active?'walking':'paused'}${s.nearbyDoor?' · E: '+s.nearbyDoor.state+' door':''}\n${note||s.blocked||'Experimental package consumer — visual/input review pending.'}`;}
+ function tick(now){if(!active)return;const dt=Math.min((now-last)/1000,.05);last=now;current.runtime.step(dt,{forward:keys.has('KeyW'),backward:keys.has('KeyS'),left:keys.has('KeyA'),right:keys.has('KeyD'),turnLeft:keys.has('ArrowLeft'),turnRight:keys.has('ArrowRight')});draw();frame=requestAnimationFrame(tick);}
+-enter.addEventListener('click',()=>{if(!current||active)return;active=true;note='';enter.blur();last=performance.now();pause.disabled=false;frame=requestAnimationFrame(tick);});
++enter.addEventListener('click',()=>{if(closed||loading||!current||active)return;active=true;note='';enter.blur();last=performance.now();pause.disabled=false;frame=requestAnimationFrame(tick);});
+ pause.addEventListener('click',stop);
+-picker.addEventListener('change',async()=>{if(loading)return;loading=true;stop();enter.disabled=true;status.textContent='Verifying and importing the selected package…';
++picker.addEventListener('change',async()=>{if(loading||closed)return;const requested=generation;loading=true;picker.disabled=true;stop();enter.disabled=true;status.textContent='Verifying and importing the selected package…';
+  try{const files=await readSelectedPackage(picker.files);
+-  const next=await loadPackage(files);if(current)dispose(current.scene);current=next;
++  if(closed||requested!==generation)return;
++  const next=await loadPackage(files);if(closed||requested!==generation){disposeScene(next.scene);return;}if(current)disposeScene(current.scene);current=next;
+   if(!renderer){renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.35;stage.append(renderer.domElement);camera=new THREE.PerspectiveCamera(64,1,.06,100);}
+   current.scene.background=new THREE.Color(0x151c26);current.scene.add(new THREE.HemisphereLight(0xbcd3e5,0x2b211e,.35));
+   note='Loaded real exported meshes. Lighting adds a disclosed hemisphere fill; source previews are unchanged.';enter.disabled=false;enter.textContent='Start walking';resize();
+- }catch(e){if(current){dispose(current.scene);current=null;}if(renderer)renderer.clear();status.textContent='Package held: '+e.message;}finally{loading=false;}
++ }catch(e){if(closed||requested!==generation)return;if(current){disposeScene(current.scene);current=null;}if(renderer)renderer.clear();status.textContent='Package held: '+e.message;}finally{if(requested===generation){loading=false;if(!closed)picker.disabled=false;}}
+ });
+ function resize(){if(!renderer)return;const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();draw();}
+ window.addEventListener('resize',resize);
+@@ -29,4 +30,5 @@
+ stage.addEventListener('pointerdown',e=>{if(active){dragging=true;stage.setPointerCapture(e.pointerId);document.activeElement?.blur();}});
+ stage.addEventListener('pointerup',()=>dragging=false);stage.addEventListener('pointercancel',()=>dragging=false);
+ stage.addEventListener('pointermove',e=>{if(active&&dragging)current.runtime.look(e.movementX,e.movementY);});
+-window.addEventListener('pagehide',()=>{stop();if(current)dispose(current.scene);renderer?.dispose();});
++window.addEventListener('pagehide',()=>{generation++;closed=true;loading=false;stop();if(current){disposeScene(current.scene);current=null;}renderer?.dispose();renderer?.domElement.remove?.();renderer=null;camera=null;enter.disabled=true;picker.disabled=true;picker.value='';});
++window.addEventListener('pageshow',event=>{if(!event.persisted)return;closed=false;note='';picker.disabled=false;enter.disabled=true;enter.textContent='Start walking';status.textContent='Session reset after returning to this page. Select the exported package files again.';});
+--- baseline043/package_loader.mjs
++++ candidate044/package_loader.mjs
+@@ -2,6 +2,7 @@
+ import {GLTFLoader} from './vendor/three/examples/jsm/loaders/GLTFLoader.js';
+ import {validateMetadata,require,createRuntime} from './runtime.mjs';
+ import {PACKAGE_FILES,MAX_FILE_BYTES,MAX_PACKAGE_BYTES} from './file_admission.mjs';
++import {disposeScene} from './scene_disposal.mjs';
+ export {PACKAGE_FILES} from './file_admission.mjs';
+ const decoder=new TextDecoder('utf-8',{fatal:true}),close=(a,b)=>a.length===b.length&&a.every((v,i)=>Math.abs(v-b[i])<2e-6);
+ // JSON property order has no semantic meaning. GLB extras retain producer order
+@@ -25,12 +26,28 @@
+  require(bytes.byteLength>=28&&view.getUint32(0,true)===0x46546c67&&view.getUint32(4,true)===2&&view.getUint32(8,true)===bytes.byteLength,'Invalid GLB header');
+  const n=view.getUint32(12,true);require(view.getUint32(16,true)===0x4e4f534a&&n>0&&20+n<=bytes.byteLength,'Invalid GLB JSON chunk');
+  const json=JSON.parse(decoder.decode(bytes.subarray(20,20+n)));
+- require(json.asset?.version==='2.0'&&json.buffers?.length===1&&!json.buffers[0].uri,'Only one embedded GLB buffer is supported');
+- require(json.images?.length>0&&json.images.every(i=>!i.uri&&Number.isInteger(i.bufferView)&&i.mimeType==='image/png'),'Only embedded PNG textures are supported');
++ require(json.asset?.version==='2.0'&&json.buffers?.length===1&&!Object.hasOwn(json.buffers[0],'uri'),'Only one embedded GLB buffer is supported');
++ require(json.images?.length>0&&json.images.length<=128&&json.images.every(i=>!Object.hasOwn(i,'uri')&&Number.isInteger(i.bufferView)&&i.mimeType==='image/png'),'Only embedded PNG textures are supported');
++ // Compressed file size is not a decoded-image memory bound. Inspect each PNG
++ // header within the actual embedded BIN range before the image decoder runs.
++ const binHeader=20+n;require(binHeader+8<=bytes.byteLength&&view.getUint32(binHeader+4,true)===0x004e4942,'Missing embedded GLB BIN chunk');
++ const binLength=view.getUint32(binHeader,true),binStart=binHeader+8,declared=json.buffers[0].byteLength;
++ require(binStart+binLength===bytes.byteLength&&Number.isSafeInteger(declared)&&declared>0&&binLength>=declared&&binLength-declared<=3,'Embedded GLB buffer length differs');
++ let imagePixels=0;
++ for(const image of json.images){
++  const b=json.bufferViews?.[image.bufferView],offset=b?.byteOffset??0,length=b?.byteLength;
++  require(b?.buffer===0&&Number.isSafeInteger(offset)&&offset>=0&&Number.isSafeInteger(length)&&length>=33&&offset+length<=declared,'PNG bufferView exceeds embedded data');
++  const start=binStart+offset;
++  require([137,80,78,71,13,10,26,10].every((v,i)=>bytes[start+i]===v)&&view.getUint32(start+8,false)===13&&view.getUint32(start+12,false)===0x49484452,'Missing PNG/IHDR header');
++  require(bytes[start+24]===8&&bytes[start+25]===6&&bytes[start+26]===0&&bytes[start+27]===0&&bytes[start+28]===0,'Unsupported authored PNG format; expected noninterlaced 8-bit RGBA');
++  const width=view.getUint32(start+16,false),height=view.getUint32(start+20,false);
++  require(width>0&&height>0&&width<=2048&&height<=2048,'Embedded PNG exceeds 2048px dimension budget');
++  imagePixels+=width*height;require(imagePixels<=32*1024*1024,'Embedded PNGs exceed 32-megapixel decode budget');
++ }
+  const supported=new Set(['KHR_texture_transform','KHR_lights_punctual','KHR_materials_emissive_strength']);
+  require((json.extensionsUsed||[]).every(e=>supported.has(e)),'Unsupported GLB extension');
+  require((json.meshes?.length||0)<=4096&&(json.nodes?.length||0)<=8192,'Oversized GLB scene');
+- return {manifest,metadata,glb:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),glbJSON:json,manifestSha256:await sha(files.get('manifest.json'))};
++ return {manifest,metadata,glb:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),glbJSON:json,embeddedImageBudget:{images:json.images.length,pixels:imagePixels},manifestSha256:await sha(files.get('manifest.json'))};
+ }
+ export function bindScene(scene,metadata){
+  const {nodes,rooms}=validateMetadata(metadata),objects=new Map(),hinges=new Map(),roomObjects=new Map(),policy=[];
+@@ -69,7 +86,7 @@
+ }
+ export async function loadPackage(files){
+  const verified=await verifyPackage(files),loaded=await new GLTFLoader().parseAsync(verified.glb,'');
+- const binding=bindScene(loaded.scene,verified.metadata),runtime=createRuntime(verified.metadata);
+- binding.applyDoorStates(runtime.doorStates());
+- return {...verified,...binding,runtime};
++ try{const binding=bindScene(loaded.scene,verified.metadata),runtime=createRuntime(verified.metadata);
++  binding.applyDoorStates(runtime.doorStates());return {...verified,...binding,runtime};
++ }catch(error){disposeScene(loaded.scene);throw error;}
+ }
+--- baseline043/scene_disposal.mjs
++++ candidate044/scene_disposal.mjs
+@@ -0,0 +1,10 @@
++// Release each shared resource once, including CPU ImageBitmaps behind textures.
++export function disposeScene(root){
++ const geometries=new Set(),materials=new Set(),textures=new Set(),images=new Set();
++ root.traverse(o=>{
++  if(o.geometry)geometries.add(o.geometry);
++  for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[]){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);}
++ });
++ for(const texture of textures)if(texture.image?.close)images.add(texture.image);
++ geometries.forEach(g=>g.dispose());textures.forEach(t=>t.dispose());materials.forEach(m=>m.dispose());images.forEach(i=>i.close());
++}

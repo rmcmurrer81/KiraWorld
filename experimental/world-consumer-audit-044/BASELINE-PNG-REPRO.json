@@ -1,0 +1,39 @@
+{
+  "status": "BASELINE043_UNBOUNDED_PNG_HEADER_ADMISSION_REPRODUCED",
+  "results": [
+    {
+      "name": "huge PNG width",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "zero PNG height",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "aggregate decoded pixel budget",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "image view outside BIN",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "PNG signature missing",
+      "accepted": true,
+      "error": null
+    },
+    {
+      "name": "declared buffer exceeds BIN",
+      "accepted": true,
+      "error": null
+    }
+  ],
+  "valid_package_images": 67,
+  "valid_package_pixels": 17104896,
+  "image_decodes": 0,
+  "network_ui_gpu_models": 0
+}
