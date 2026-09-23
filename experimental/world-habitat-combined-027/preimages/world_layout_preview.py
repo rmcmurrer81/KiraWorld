@@ -16,17 +16,6 @@ NAVIGATION = ROOT / 'horizontal_navigation.mjs'
 THREE_BUILD = ROOT.parents[1] / 'Data/world_builds/notebook_worlds/home_world/builds/home_world_main_house_20260630_223000/preview/node_modules/three/build'
 NODE = Path('C:/Program Files/nodejs/node.exe')
 CONTRACT = 'isolated_world_layout_preview_v1'
-# These four files are served from immutable build copies. Their original engine
-# files may be upgraded without changing a saved preview's renderer revision.
-COPIED_RENDERER_ASSETS = frozenset(('index.html', 'style.css', 'viewer.mjs', 'walk_controller.mjs'))
-# Compatibility is explicit per manifest contract and creator revision. A future
-# backend must add a reviewed prior revision here; unknown creators fail closed.
-COMPATIBLE_CREATOR_BACKENDS = {
-    CONTRACT: {
-        '2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9': 22133,
-        'fe8cfb9ca9754f71dd223b16ec941753b368b48ded9a5fa0cbe82c83503bec28': 24195,
-    },
-}
 ASSETS = {'index.html':'text/html; charset=utf-8', 'style.css':'text/css; charset=utf-8',
           'viewer.mjs':'text/javascript; charset=utf-8', 'walk_controller.mjs':'text/javascript; charset=utf-8',
           'horizontal_navigation.mjs':'text/javascript; charset=utf-8', 'geometry.json':'application/json; charset=utf-8',
@@ -228,38 +217,9 @@ def source_bindings(geometry, research_packet_path, blueprint_path):
     return 'source_bound_original_layout',pins
 
 
-def validate_recorded_binding(row, expected_path):
-    require(isinstance(row, dict) and set(row) == {'path', 'bytes', 'sha256'} and
-            isinstance(row.get('path'), str) and Path(row['path']) == Path(expected_path) and
-            type(row.get('bytes')) is int and 0 < row['bytes'] <= 5_000_000 and
-            isinstance(row.get('sha256'), str) and re.fullmatch('[0-9a-f]{64}', row['sha256']),
-            'Invalid recorded preview source binding')
-
-
-def verify_creator(manifest):
-    row = manifest['inputs']['backend']
-    validate_recorded_binding(row, Path(__file__).absolute())
-    current = binding(__file__)
-    compatible = COMPATIBLE_CREATOR_BACKENDS.get(manifest.get('contract'), {})
-    require(row == current or compatible.get(row['sha256']) == row['bytes'],
-            'Unsupported preview creator revision')
-
-
 def verify_source(manifest):
-    verify_creator(manifest)
-    require(set(manifest['source_pins']) == set(ASSETS)-{'geometry.json'}, 'Preview source allowlist changed')
-    require(Path(manifest['inputs']['node']['path']) == NODE, 'Pinned Node runtime path changed')
-    require(Path(manifest['inputs']['preflight']['path']) == ROOT/'preflight.mjs', 'Preview preflight path changed')
-    require(manifest['inputs']['navigation_source'] == manifest['source_pins']['horizontal_navigation.mjs'],
-            'Preview navigation provenance changed')
-    for name, row in manifest['inputs'].items():
-        if name != 'backend':
-            verify_binding(row)
-    for name, row in manifest['source_pins'].items():
-        expected = THREE_BUILD/name if name.startswith('three.') else ROOT/name
-        validate_recorded_binding(row, expected)
-        if name not in COPIED_RENDERER_ASSETS:
-            verify_binding(row)
+    for row in [*manifest['inputs'].values(),*manifest['source_pins'].values()]:
+        verify_binding(row)
     geometry=load_json(verify_binding(manifest['inputs']['geometry_source']))
     research=manifest['inputs'].get('research_packet');blueprint=manifest['inputs'].get('blueprint')
     mode,pins=source_bindings(geometry,research['path'] if research else None,blueprint['path'] if blueprint else None)
@@ -314,9 +274,8 @@ def create_preview(geometry_path, research_packet_path=None, blueprint_path=None
                 'draft_preview_artifacts_created':True,'resident_worlds_modified':False,'owner_originals_modified':False,
                 'model_jobs':0,'network_fetches':0,
                 'limitations':['Horizontal supported walking only; no stairs, fly mode or teleport.',
-                               'Authored procedural equipment and materials; appearance is not realism approval.',
-                               'Moving doors have session-local state; no pressure or airlock-cycle simulation.',
-                               'Equipment is static; science and life-support behavior are not simulated.']}
+                               'Simple layout materials and lighting; appearance is unfinished.',
+                               'Open passages are not moving or pressure-controlled doors.']}
     manifest['receipt_sha256'] = sha(canonical(manifest))
     with manifest_path.open('xb') as output:
         output.write(json.dumps(manifest,ensure_ascii=False,indent=2).encode('utf-8'))
@@ -336,6 +295,7 @@ def verify_preview(manifest_path, expected_manifest_sha256=None):
     expected_id = 'layout-' + sha(canonical({'inputs':manifest['inputs'],'sources':manifest['source_pins']}))[:24]
     require(manifest['build_id'] == expected_id, 'Preview input binding changed')
     require(set(manifest.get('assets', {})) == {'/'+name for name in ASSETS}, 'Preview file allowlist changed')
+    require(manifest['inputs']['backend'] == binding(__file__), 'Preview backend identity changed')
     verify_source(manifest)
     for url,row in manifest['assets'].items():
         expected = THREE_BUILD/url[1:] if url.startswith('/three.') else path.parent/url[1:]

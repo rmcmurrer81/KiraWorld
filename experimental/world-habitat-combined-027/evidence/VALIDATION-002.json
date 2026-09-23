@@ -1,0 +1,44 @@
+{
+  "status": "PASS_COMBINED_NO_INSTALL",
+  "checks": [
+    {
+      "name": "owner_saved_legacy",
+      "status": "PASS",
+      "build_id": "layout-a37f864587b3ee075e21ccd1",
+      "actual_unchanged_files": 27,
+      "method": "Candidate026 code at original engine location, only future backend self-binding substituted; all provenance and saved assets read actual bytes."
+    },
+    {
+      "name": "furnished_revision002",
+      "status": "PASS",
+      "build_id": "layout-60bc2b092a8babf2d180ecfa",
+      "actual_unchanged_files": 27,
+      "method": "Candidate026 code at original engine location, only future backend self-binding substituted; all provenance and saved assets read actual bytes."
+    },
+    {
+      "name": "preceding026_creator_remains_compatible",
+      "status": "PASS",
+      "build_id": "layout-7a06d3d0624cb511e8ba879e"
+    },
+    {
+      "name": "new_synthetic_combined_preview",
+      "status": "PASS_REAL_NODE_PREFLIGHT",
+      "build_id": "layout-f84ed5dbe17366b29e9dd43a",
+      "assets": 8,
+      "five_candidate_bindings_match": true
+    },
+    {
+      "name": "new_saved_copies_remain_immutable",
+      "status": "PASS"
+    }
+  ],
+  "canonical_files_changed": false,
+  "protected_owner_source_files": 116,
+  "browser_gpu_model_network_calls": 0,
+  "visual_owner_approval": false,
+  "new_build_contains_only_synthetic_fixture": true,
+  "metadata_correction": "027 accurately declares session-local moving doors, no pressure simulation and static equipment. Old manifests retained unchanged.",
+  "review_gaps": [
+    "Native installed new-preview creation remains untested until root installation and UI review."
+  ]
+}

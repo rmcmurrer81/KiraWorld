@@ -1,0 +1,655 @@
+--- installed/walk_controller.mjs
++++ 025-revision002/walk_controller.mjs
+@@ -1,13 +1,144 @@
+ import {NAVIGATION_CONTRACT, checkWalkSpawn, checkHorizontalRoute} from './horizontal_navigation.mjs';
+ 
+ export const AVATAR = Object.freeze({radius: 0.34, height: 1.68, eye: 1.56});
+-export function createWalkController(geometry) {
++
++// Preview-local moving doors. The immutable source geometry is never changed.
++// Rendering and collision both use pose(); motion uses a conservative sweep
++// volume so a door cannot close through the walker between animation frames.
++export const DOOR_CONTRACT = 'preview_hinged_doors_v1';
++const DOOR_THICKNESS=.065, FRAME_WIDTH=.07, FRAME_DEPTH=.21, REACH=2.25;
++const freeze=value=>Object.freeze(value);
++const vector=(v)=>Array.isArray(v)&&v.length===3&&v.every(n=>Number.isFinite(n)&&Math.abs(n)<1e6);
++function ensure(ok,message){if(!ok)throw new TypeError(message);}
++function bounds(center,size){return {min:center.map((v,i)=>v-size[i]/2),max:center.map((v,i)=>v+size[i]/2)};}
++function overlapAvatar(box,feet,radius,height){
++  return feet[1]<box.max[1]&&feet[1]+height>box.min[1]&&
++    feet[0]+radius>=box.min[0]&&feet[0]-radius<=box.max[0]&&
++    feet[2]+radius>=box.min[2]&&feet[2]-radius<=box.max[2];
++}
++export function createDoorSystem(geometry){
++  ensure(Array.isArray(geometry.rooms)&&Array.isArray(geometry.portals)&&geometry.portals.length<=24,'Invalid door geometry');
++  const rooms=new Map(geometry.rooms.map(r=>[r.id,r])),doors=new Map(),seen=new Set();
++  for(const portal of geometry.portals){
++    ensure(typeof portal.id==='string'&&/^[a-z][a-z0-9_]{0,63}$/.test(portal.id)&&!seen.has(portal.id),'Invalid or duplicate door id');seen.add(portal.id);
++    const a=rooms.get(portal.room_a),b=rooms.get(portal.room_b);
++    ensure(a&&b&&a!==b,'Door rooms are unavailable');
++    if(a.access!=='walkable_layout'||b.access!=='walkable_layout'){
++      ensure(portal.state==='closed_locked_solid','Locked room cannot gain a door');continue;
++    }
++    ensure(portal.state==='open_passage'&&(portal.axis==='x'||portal.axis==='z'),'Unsupported door passage');
++    const {axis,coordinate,center,width,height}=portal;
++    ensure([coordinate,center,width,height,a.floor_y,b.floor_y].every(Number.isFinite)&&
++      a.floor_y===b.floor_y&&width>=.9&&width<=8&&height>=1.9&&height<=Math.min(a.height,b.height),'Invalid door dimensions');
++    const along=axis==='x'?'z':'x',length=axis==='x'?'depth':'width',normalSize=axis==='x'?'width':'depth';
++    ensure((Math.abs(a[axis]+a[normalSize]-coordinate)<1e-8&&Math.abs(b[axis]-coordinate)<1e-8)||
++      (Math.abs(b[axis]+b[normalSize]-coordinate)<1e-8&&Math.abs(a[axis]-coordinate)<1e-8),'Door is not on shared wall');
++    ensure(center-width/2>=Math.max(a[along],b[along])+.15-1e-8&&
++      center+width/2<=Math.min(a[along]+a[length],b[along]+b[length])-.15+1e-8,'Door exceeds shared wall');
++    // Keep door travel smaller than the room into which it swings.
++    const roomDepth=a[normalSize];
++    ensure(width+.1<roomDepth,'Door swing exceeds its room');
++    const sign=Math.sign(a[axis]+a[normalSize]/2-coordinate);
++    const hinge=axis==='x'?[coordinate,a.floor_y,center-width/2+.02]:[center-width/2+.02,a.floor_y,coordinate];
++    const frame=[];
++    for(const [part,span,y,h] of [['left',center-width/2-FRAME_WIDTH/2,a.floor_y,height],
++                                 ['right',center+width/2+FRAME_WIDTH/2,a.floor_y,height],
++                                 ['head',center,a.floor_y+height,FRAME_WIDTH]]){
++      const horizontal=part==='head'?width+2*FRAME_WIDTH:FRAME_WIDTH;
++      const p=axis==='x'?[coordinate,y+h/2,span]:[span,y+h/2,coordinate];
++      const size=axis==='x'?[FRAME_DEPTH,h,horizontal]:[horizontal,h,FRAME_DEPTH];
++      const box=bounds(p,size);
++      frame.push(freeze({id:'door_'+portal.id+'_'+part,center:freeze(p),size:freeze(size),min:freeze(box.min),max:freeze(box.max)}));
++    }
++    const door={id:portal.id,portal:{...portal},roomA:{...a},roomB:{...b},hinge,
++      width:width-.04,height:height-.025,floor:a.floor_y,axis,targetAngle:sign*(axis==='x'?1:-1)*Math.PI/2,
++      angle:0,target:0,moving:false,motionHeld:false,frames:frame};
++    // A quarter-disc bounds every intermediate point of the rotating leaf.
++    // Include thickness and the walker footprint; do not sample a few angles.
++    const extent=door.width+DOOR_THICKNESS/2;
++    const minimum=[hinge[0]-DOOR_THICKNESS/2,a.floor_y,hinge[2]-DOOR_THICKNESS/2];
++    const maximum=[hinge[0]+DOOR_THICKNESS/2,a.floor_y+height,hinge[2]+DOOR_THICKNESS/2];
++    const n=axis==='x'?0:2,t=axis==='x'?2:0;
++    maximum[t]=hinge[t]+extent;
++    if(sign>0)maximum[n]=hinge[n]+extent;else minimum[n]=hinge[n]-extent;
++    door.sweep={min:minimum,max:maximum};doors.set(door.id,door);
++  }
++  function poseOf(door){
++    const c=Math.cos(door.angle),s=Math.sin(door.angle),tx=door.axis==='x'?s:c,tz=door.axis==='x'?c:-s;
++    const nx=door.axis==='x'?c:s,nz=door.axis==='x'?-s:c;
++    const center=[door.hinge[0]+tx*door.width/2,door.floor+.0125+door.height/2,door.hinge[2]+tz*door.width/2];
++    const size=door.axis==='x'?[DOOR_THICKNESS,door.height,door.width]:[door.width,door.height,DOOR_THICKNESS];
++    const aabbSize=[Math.abs(tx)*door.width+Math.abs(nx)*DOOR_THICKNESS,door.height,Math.abs(tz)*door.width+Math.abs(nz)*DOOR_THICKNESS];
++    const state=door.moving?(door.target===0?'closing':'opening'):(door.angle===0?'closed':'open');
++    return freeze({id:door.id,axis:door.axis,angle:door.angle,center:freeze(center),size:freeze(size),state,motionHeld:door.motionHeld,
++      collider:freeze({id:'door_'+door.id+'_leaf',...bounds(center,aabbSize)})});
++  }
++  function all(){return freeze([...doors.values()].map(d=>poseOf(d)));}
++  function assemblies(){return freeze([...doors.values()].map(d=>freeze({id:d.id,axis:d.axis,frames:freeze(d.frames),
++    swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),roomA:d.roomA.name,roomB:d.roomB.name})));}
++  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider]);}
++  function near(door,feet){
++    if(Math.abs(feet[1]-door.floor)>1e-8)return false;
++    const inside=r=>feet[0]>=r.x-1e-8&&feet[0]<=r.x+r.width+1e-8&&feet[2]>=r.z-1e-8&&feet[2]<=r.z+r.depth+1e-8;
++    if(!inside(door.roomA)&&!inside(door.roomB))return false;
++    const p=door.portal;const x=p.axis==='x'?p.coordinate:p.center,z=p.axis==='x'?p.center:p.coordinate;
++    return Math.hypot(feet[0]-x,feet[2]-z)<=REACH;
++  }
++  function nearest(feet){
++    ensure(vector(feet),'Invalid door interaction position');
++    const candidates=[...doors.values()].filter(d=>near(d,feet));
++    candidates.sort((a,b)=>{
++      const dist=d=>Math.hypot(feet[0]-(d.axis==='x'?d.portal.coordinate:d.portal.center),feet[2]-(d.axis==='x'?d.portal.center:d.portal.coordinate));
++      return dist(a)-dist(b)||a.id.localeCompare(b.id);
++    });
++    return candidates.length?poseOf(candidates[0]):null;
++  }
++  function toggle(id,feet,radius=AVATAR.radius,height=AVATAR.height){
++    ensure(vector(feet)&&Number.isFinite(radius)&&radius>=.2&&radius<=.6&&Number.isFinite(height)&&height>.5&&height<=3,'Invalid door interaction');
++    const door=doors.get(id);
++    if(!door||!near(door,feet))return freeze({ok:false,reason:'Move closer to the door.'});
++    if(door.moving)return freeze({ok:false,reason:'Wait for the door to finish moving.'});
++    if(overlapAvatar(door.sweep,feet,radius,height))return freeze({ok:false,reason:'Step back from the door swing before moving it.'});
++    door.target=door.angle===0?door.targetAngle:0;door.moving=true;door.motionHeld=false;
++    return freeze({ok:true,id,state:door.target===0?'closing':'opening'});
++  }
++  function advance(seconds,feet,radius=AVATAR.radius,height=AVATAR.height){
++    ensure(Number.isFinite(seconds)&&seconds>=0&&vector(feet),'Invalid door time or position');
++    for(const door of doors.values()){
++      if(!door.moving)continue;
++      door.motionHeld=overlapAvatar(door.sweep,feet,radius,height);
++      if(door.motionHeld)continue;
++      const step=Math.min(seconds,.05)*Math.PI*1.25,remaining=door.target-door.angle;
++      if(Math.abs(remaining)<=step){door.angle=door.target;door.moving=false;door.motionHeld=false;}
++      else door.angle+=Math.sign(remaining)*step;
++    }
++    return all();
++  }
++  return freeze({contract:DOOR_CONTRACT,all,assemblies,colliders,nearest,toggle,advance});
++}
++
++export function createWalkController(geometry,{extraColliders=[]}={}) {
+   const nav = {contract:NAVIGATION_CONTRACT, support_surfaces:geometry.support_surfaces, colliders:geometry.colliders};
++  const doors=createDoorSystem(geometry);
++  const doorNav=()=>({contract:NAVIGATION_CONTRACT,support_surfaces:geometry.support_surfaces,colliders:doors.colliders()});
++  ensure(Array.isArray(extraColliders)&&extraColliders.length<=128,'Invalid extra collider collection');
++  const occupiedIds=new Set([...geometry.colliders,...doors.colliders()].map(c=>c.id));
++  const extra=extraColliders.map(c=>{
++    ensure(c&&typeof c.id==='string'&&c.id&&!occupiedIds.has(c.id)&&vector(c.min)&&vector(c.max)&&c.min.every((v,i)=>v<c.max[i]),'Invalid or duplicate extra collider');
++    occupiedIds.add(c.id);return freeze({id:c.id,min:freeze([...c.min]),max:freeze([...c.max])});
++  });
++  const furnitureNav={contract:NAVIGATION_CONTRACT,support_surfaces:geometry.support_surfaces,colliders:extra};
++  for(const assembly of doors.assemblies())for(const collider of extra){
++    const sweep=assembly.swingBounds;
++    ensure(!collider.min.every((v,i)=>v<sweep.max[i]&&collider.max[i]>sweep.min[i]),'Furniture blocks a door swing: '+collider.id);
++  }
+   const room = geometry.rooms.find(r => r.id === geometry.connectivity.entry_room_id);
+   if (!room || room.access !== 'walkable_layout') throw new Error('The entry room is unavailable for walking.');
+   let feet = [room.x + room.width / 2, room.floor_y, room.z + room.depth / 2];
+   const spawn = checkWalkSpawn(feet, nav, AVATAR.radius, AVATAR.height);
+   if (!spawn.ok) throw new Error('No supported entry position: ' + spawn.reason);
++  if(!checkWalkSpawn(feet,doorNav(),AVATAR.radius,AVATAR.height).ok)throw new Error('Entry position intersects a door assembly.');
++  if(extra.length&&!checkWalkSpawn(feet,furnitureNav,AVATAR.radius,AVATAR.height).ok)throw new Error('Entry position intersects furnished geometry.');
+   let yaw = 0, pitch = 0, blocked = null, distance = 0;
+   const first = geometry.routes.find(r => r.points.some(p => p.every((v,i) => v === feet[i])));
+   if (first) {
+@@ -19,7 +150,7 @@
+     const current = geometry.rooms.find(r => r.access === 'walkable_layout' && r.floor_y === feet[1] &&
+       feet[0] >= r.x && feet[0] <= r.x+r.width && feet[2] >= r.z && feet[2] <= r.z+r.depth);
+     return Object.freeze({feet:Object.freeze([...feet]), yaw, pitch, blocked, distance,
+-      roomId:current?.id || null, roomName:current?.name || 'Passage'});
++      roomId:current?.id || null, roomName:current?.name || 'Passage',nearbyDoor:doors.nearest(feet)});
+   }
+   function look(dx,dy) {
+     if (!Number.isFinite(dx) || !Number.isFinite(dy)) throw new TypeError('Invalid look input');
+@@ -30,6 +161,7 @@
+   function step(seconds,input={}) {
+     if (!Number.isFinite(seconds) || seconds < 0) throw new TypeError('Invalid elapsed time');
+     const dt=Math.min(seconds,0.05);
++    doors.advance(dt,feet);
+     yaw += ((input.turnRight ? 1:0)-(input.turnLeft ? 1:0))*1.65*dt;
+     const forward=(input.forward ? 1:0)-(input.backward ? 1:0);
+     const side=(input.right ? 1:0)-(input.left ? 1:0);
+@@ -38,11 +170,21 @@
+     const scale=2.2*dt/Math.max(1,Math.hypot(forward,side));
+     const end=[feet[0]+(Math.sin(yaw)*forward+Math.cos(yaw)*side)*scale,feet[1],
+       feet[2]+(-Math.cos(yaw)*forward+Math.sin(yaw)*side)*scale];
+-    const result=checkHorizontalRoute({id:'interactive_walk',avatar_radius:AVATAR.radius,avatar_height:AVATAR.height,points:[feet,end]},nav);
++    const route={id:'interactive_walk',avatar_radius:AVATAR.radius,avatar_height:AVATAR.height,points:[feet,end]};
++    let result=checkHorizontalRoute(route,nav);
++    if(result.status==='clear'){
++      result=checkHorizontalRoute(route,doorNav());
++      if(result.status!=='clear'&&result.reason==='solid_obstruction')result={...result,reason:'door_obstruction'};
++    }
++    if(result.status==='clear'&&extra.length){
++      result=checkHorizontalRoute(route,furnitureNav);
++      if(result.status!=='clear'&&result.reason==='solid_obstruction')result={...result,reason:'furniture_obstruction'};
++    }
+     if (result.status === 'clear') {distance+=Math.hypot(end[0]-feet[0],end[2]-feet[2]);feet=end;}
+     else blocked=result.reason;
+     return snapshot();
+   }
+   // No direct-position setter, fly mode, level snapping, or teleport route.
+-  return Object.freeze({snapshot,step,look});
++  function toggleDoor(id){return doors.toggle(id||doors.nearest(feet)?.id,feet);}
++  return Object.freeze({snapshot,step,look,toggleDoor,doorAssemblies:doors.assemblies,doorStates:doors.all});
+ }
+--- installed/viewer.mjs
++++ 025-revision002/viewer.mjs
+@@ -1,49 +1,389 @@
+ import * as THREE from './three.module.js';
+-import {AVATAR,createWalkController} from './walk_controller.mjs';
++import {AVATAR,createWalkController,createDoorSystem} from './walk_controller.mjs';
++
++// Authored equipment, not a reconstruction or a pressure/life-support model.
++const DRESSING_CONTRACT='authored_habitat_equipment_plan_v1';
++const DR_ROLES={
++  equipment_vestibule:{accent:'#c99158',floor:'#48535a',light:0xe3eff4,equipment:[['eva_lockers',1.45,.62,2.15],['gear_bench',1.3,.55,.62],['hose_station',.65,.4,1.6]]},
++  airlock:{accent:'#c9af69',floor:'#46545a',light:0xeaf5ff,equipment:[['airlock_control',.72,.36,1.82],['filter_cylinders',.66,.45,1.68]]},
++  operations:{accent:'#739aae',floor:'#414c59',light:0xdcecff,equipment:[['operations_console',1.9,1.38,1.52],['server_rack',.66,.65,2.12],['operations_console',1.55,1.38,1.52]]},
++  habitat:{accent:'#c5a985',floor:'#686354',light:0xffdfb5,equipment:[['bunk',2.08,.9,2.12],['galley',1.42,.68,1.74],['personal_storage',.72,.6,1.86]]},
++  laboratory:{accent:'#81b6b1',floor:'#536568',light:0xedfffa,equipment:[['glovebox',1.58,.8,1.9],['science_bench',1.52,.76,1.52],['sample_storage',.66,.52,1.88]]},
++  observation:{accent:'#a5b993',floor:'#555f54',light:0xffe8c7,equipment:[['observation_seat',1.26,.78,1.08],['growing_rack',1.18,.59,1.9]]},
++  circulation:{accent:'#acbac0',floor:'#4c565d',light:0xe5f0ff,equipment:[]}
++};
++function DR_assert(ok,message){if(!ok)throw new TypeError(message);}
++function DR_box(center,size){return {min:center.map((v,i)=>v-size[i]/2),max:center.map((v,i)=>v+size[i]/2)};}
++function DR_overlap(a,b,pad=0){return a.min.every((v,i)=>v<b.max[i]+pad&&a.max[i]>b.min[i]-pad);}
++function DR_routeHits(route,box,padding=.49){
++  for(let n=1;n<route.points.length;n++){
++    const a=route.points[n-1],b=route.points[n];
++    if(a[1]+1.68<=box.min[1]||a[1]>=box.max[1])continue;
++    let lo=0,hi=1;
++    for(const axis of [0,2]){
++      const d=b[axis]-a[axis],low=box.min[axis]-padding,high=box.max[axis]+padding;
++      if(Math.abs(d)<1e-12){if(a[axis]<low||a[axis]>high){lo=2;break;}}
++      else{let u=(low-a[axis])/d,v=(high-a[axis])/d;if(u>v)[u,v]=[v,u];lo=Math.max(lo,u);hi=Math.min(hi,v);}
++    }
++    if(lo<=hi)return true;
++  }
++  return false;
++}
++function DR_freeze(value){if(value&&typeof value==='object'){for(const v of Object.values(value))DR_freeze(v);Object.freeze(value);}return value;}
++function buildRoomDressing(geometry,doorAssemblies=[]){
++  DR_assert(Array.isArray(geometry.rooms)&&Array.isArray(geometry.routes),'Missing room layout');
++  const program=geometry.functional_program||{},known=Object.values(program).some(role=>role in DR_ROLES);
++  const plan={contract:DRESSING_CONTRACT,enabled:known,objects:[],architecture:[],lights:[],signs:[],colliders:[],roomStyles:{},omitted:[],
++    limitations:['Authored original habitat equipment inspired by room functions; not a measured reconstruction.','Equipment is visual/static; no working science, medical or life-support systems.','Appearance requires visual review; no photorealism claim.']};
++  if(!known)return DR_freeze(plan);
++  const sweeps=doorAssemblies.map(d=>d.swingBounds),occupied=[];
++  const entry=geometry.rooms.find(r=>r.id===geometry.connectivity.entry_room_id);
++  const spawn={min:[entry.x+entry.width/2-.6,entry.floor_y,entry.z+entry.depth/2-.6],max:[entry.x+entry.width/2+.6,entry.floor_y+1.8,entry.z+entry.depth/2+.6]};
++  function clear(room,box,{routes=true,objects=true}={}){
++    if(box.min[0]<room.x+.09||box.max[0]>room.x+room.width-.09||box.min[2]<room.z+.09||box.max[2]>room.z+room.depth-.09||box.min[1]<room.floor_y-1e-8||box.max[1]>room.floor_y+room.height+.01)return false;
++    if(DR_overlap(box,spawn)||sweeps.some(s=>DR_overlap(box,s,.08)))return false;
++    if(routes&&geometry.routes.some(r=>DR_routeHits(r,box)))return false;
++    if(objects&&occupied.some(b=>DR_overlap(box,b,.08)))return false;
++    return true;
++  }
++  function addCollider(id,box){DR_assert(plan.colliders.length<128,'Habitat collision budget exceeded');plan.colliders.push({id,min:[...box.min],max:[...box.max]});occupied.push(box);}
++  function wallPlacement(room,w,d,h,wall,along){
++    const inset=.2,half=w/2,span=wall==='north'||wall==='south'?room.width:room.depth;
++    if(span<w+2*inset)return null;
++    const coordinate=inset+half+along*(span-w-2*inset);
++    let center,yaw,size;
++    if(wall==='south'){center=[room.x+coordinate,room.floor_y+h/2,room.z+inset+d/2];yaw=0;size=[w,h,d];}
++    if(wall==='north'){center=[room.x+coordinate,room.floor_y+h/2,room.z+room.depth-inset-d/2];yaw=Math.PI;size=[w,h,d];}
++    if(wall==='west'){center=[room.x+inset+d/2,room.floor_y+h/2,room.z+coordinate];yaw=Math.PI/2;size=[d,h,w];}
++    if(wall==='east'){center=[room.x+room.width-inset-d/2,room.floor_y+h/2,room.z+coordinate];yaw=-Math.PI/2;size=[d,h,w];}
++    return {center,yaw,size,box:DR_box(center,size)};
++  }
++  for(const room of geometry.rooms){
++    if(room.access!=='walkable_layout')continue;
++    const role=program[room.id]||(room.id==='circulation'?'circulation':null),style=DR_ROLES[role];
++    if(!style)continue;
++    plan.roomStyles[room.id]={role,accent:style.accent,floor:style.floor};
++    let objectIndex=0;
++    for(const [kind,w,d,h] of style.equipment){
++      let chosen=null;
++      // Alternate preferred sides so each function acquires a usable workspace,
++      // not a row of identical boxes down the room's center.
++      const walls=objectIndex%2?['south','east','west','north']:['north','west','east','south'];
++      for(const wall of walls){
++        for(const along of [.18,.82,.5,0,1]){
++          const p=wallPlacement(room,w,d,h,wall,along);
++          if(p&&clear(room,p.box)){chosen=p;break;}
++        }
++        if(chosen)break;
++      }
++      const id='equipment_'+room.id+'_'+objectIndex++;
++      if(chosen){plan.objects.push({id,room_id:room.id,kind,role,localSize:[w,h,d],center:chosen.center,yaw:chosen.yaw,bounds:chosen.box});addCollider(id,chosen.box);}
++      else plan.omitted.push({room_id:room.id,kind,reason:'No placement preserving walking routes, entry, door sweep and equipment clearances.'});
++    }
++    // Wall ribs are real shallow solids; their bounds join the walker collision
++    // scene. Door cuts, reserved approaches and equipment remain unobstructed.
++    for(const wall of ['north','south','west','east']){
++      const span=wall==='north'||wall==='south'?room.width:room.depth;
++      const count=Math.max(1,Math.min(4,Math.floor(span/2.6)));
++      for(let i=0;i<count;i++){
++        const p=wallPlacement(room,.065,.15,room.height-.12,wall,(i+.5)/count);
++        if(!p)continue;
++        // Move ribs close to the inner wall face instead of furniture setback.
++        const axis=wall==='north'||wall==='south'?2:0;
++        p.center[axis]+=(wall==='north'||wall==='east'?.1:-.1);p.box=DR_box(p.center,p.size);
++        if(clear(room,p.box)){
++          const id='rib_'+room.id+'_'+wall+'_'+i;
++          plan.architecture.push({id,kind:'rib',room_id:room.id,center:p.center,size:p.size,yaw:p.yaw,bounds:p.box});addCollider(id,p.box);
++        }
++      }
++    }
++    // Ceiling luminaires remain well above the avatar; one local task light per
++    // room makes illumination legible without a bank of global shadow maps.
++    const alongZ=room.depth>=room.width;
++    const size=alongZ?[.19,.055,Math.min(room.depth-1,2.4)]:[Math.min(room.width-1,2.4),.055,.19];
++    const center=[room.x+room.width/2,room.floor_y+room.height-.065,room.z+room.depth/2];
++    const id='ceiling_light_'+room.id,box=DR_box(center,size);
++    plan.architecture.push({id,kind:'luminaire',room_id:room.id,center,size,bounds:box,color:style.light});addCollider(id,box);
++    plan.lights.push({id:'task_light_'+room.id,room_id:room.id,position:[center[0],center[1]-.22,center[2]],color:style.light,intensity:Math.min(45,room.width*room.depth*1.3),distance:Math.hypot(room.width,room.depth)+1});
++    // A small physical plaque by one doorway replaces a floating room banner.
++    const opening=geometry.portals.find(p=>(p.room_a===room.id||p.room_b===room.id)&&p.state==='open_passage');
++    if(opening){
++      const normal=opening.axis==='x'?0:2,tangent=normal===0?2:0;
++      const roomCenter=normal===0?room.x+room.width/2:room.z+room.depth/2;
++      const sign=Math.sign(roomCenter-opening.coordinate),lo=tangent===0?room.x:room.z,hi=lo+(tangent===0?room.width:room.depth);
++      const offset=opening.center+opening.width/2+.36;
++      const along=offset+.25<hi-.12?offset:opening.center-opening.width/2-.36;
++      if(along-.25>lo+.1&&along+.25<hi-.1){
++        const p=[0,room.floor_y+1.77,0];p[normal]=opening.coordinate+sign*.105;p[tangent]=along;
++        const size=normal===0?[.03,.18,.5]:[.5,.18,.03],b=DR_box(p,size);
++        // Plaques may be close to a doorway but never intrude on the actual leaf
++        // sweep or route footprint. Their small rigid volume is still collidable.
++        if(clear(room,b,{objects:false})){
++          const sid='plaque_'+room.id;plan.signs.push({id:sid,room_id:room.id,text:room.name,position:p,normal:normal===0?[sign,0,0]:[0,0,sign],size,bounds:b});addCollider(sid,b);
++        }
++      }
++    }
++  }
++  // Bound renderer complexity as well as collision complexity.
++  DR_assert(plan.objects.length<=32&&plan.architecture.length<=96&&plan.lights.length<=12,'Dressing budget exceeded');
++  return DR_freeze(plan);
++}
++
++// Original procedural meshes and textures. No external photographs/assets.
++function createDressingMaterials(THREE,plan,{canvasFactory=()=>typeof document==='undefined'?null:document.createElement('canvas')}={}){
++  const cache=new Map();
++  function texture(kind,accent='#8ba0a9'){
++    const canvas=canvasFactory();if(!canvas)return null;
++    canvas.width=canvas.height=512;const ctx=canvas.getContext('2d');
++    if(kind==='screen'){
++      ctx.fillStyle='#0d2029';ctx.fillRect(0,0,512,512);ctx.strokeStyle='#447984';ctx.lineWidth=2;
++      for(let y=75;y<480;y+=62){ctx.beginPath();ctx.moveTo(24,y);ctx.lineTo(488,y);ctx.stroke();}
++      ctx.fillStyle='#9ed0c3';ctx.font='22px monospace';ctx.fillText('SYSTEM OVERVIEW',25,40);
++      ctx.strokeStyle='#84cdb3';ctx.lineWidth=5;ctx.beginPath();
++      for(let x=20;x<495;x+=4){const y=220+Math.sin(x*.028)*35+Math.sin(x*.087)*13;if(x===20)ctx.moveTo(x,y);else ctx.lineTo(x,y);}ctx.stroke();
++      for(let i=0;i<5;i++){ctx.fillStyle=i%2?'#638891':'#8bbaad';ctx.fillRect(30+i*95,330,55,38+(i%3)*19);}
++    }else if(kind==='floor'||kind==='grate'){
++      ctx.fillStyle=kind==='grate'?'#445159':'#666d6e';ctx.fillRect(0,0,512,512);
++      ctx.strokeStyle=kind==='grate'?'#19272c':'#525a5c';ctx.lineWidth=kind==='grate'?12:3;
++      for(let i=0;i<512;i+=kind==='grate'?32:64){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,512);ctx.stroke();
++        if(kind==='grate'){ctx.beginPath();ctx.moveTo(0,i);ctx.lineTo(512,i);ctx.stroke();}}
++      if(kind==='floor'){ctx.fillStyle='#747b7b';for(let y=16;y<512;y+=32)for(let x=16;x<512;x+=32){ctx.beginPath();ctx.arc(x,y,2,0,Math.PI*2);ctx.fill();}}
++    }else{
++      ctx.fillStyle='#c0c3bb';ctx.fillRect(0,0,512,512);ctx.fillStyle='#aeb4ae';ctx.fillRect(8,8,496,496);
++      ctx.fillStyle='#ccd0c8';ctx.fillRect(13,13,486,486);ctx.strokeStyle='#747f7c';ctx.lineWidth=3;ctx.strokeRect(9,9,494,494);
++      ctx.fillStyle='#667371';for(const x of [26,486])for(const y of [26,486]){ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fill();}
++      ctx.fillStyle=accent;ctx.fillRect(18,469,476,9);
++    }
++    const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;map.wrapS=map.wrapT=THREE.RepeatWrapping;return map;
++  }
++  function mat(name,color,roughness=.55,metalness=.2,extra={}){
++    if(!cache.has(name))cache.set(name,new THREE.MeshStandardMaterial({color,roughness,metalness,...extra}));return cache.get(name);
++  }
++  const basic={
++    frame:mat('frame',0x42505a,.39,.73),metal:mat('metal',0xa9b1b2,.4,.7),ivory:mat('ivory',0xd4d7ce,.62,.15),
++    dark:mat('dark',0x263139,.64,.28),rubber:mat('rubber',0x17222a,.91,.01),wood:mat('wood',0xad8d68,.79,.01),
++    cloth:mat('cloth',0xc3c5b7,.96,0),seat:mat('seat',0x536875,.94,0),glass:mat('glass',0x8ec5c8,.2,.25,{transparent:true,opacity:.28,depthWrite:false}),
++    green:mat('green',0x538b55,.85,0),leaf:mat('leaf',0x80a760,.92,0),soil:mat('soil',0x453d31,.99,0),
++    amber:mat('amber',0xb79755,.6,.3),red:mat('red',0x986253,.68,.1),
++    indicator:mat('indicator',0x83c6ac,.38,.1,{emissive:0x276f53,emissiveIntensity:.7}),
++    screen:mat('screen',0xa4d6d8,.32,.2,{map:texture('screen'),emissive:0x2e646f,emissiveIntensity:.32}),
++    lamp:mat('lamp',0xfff1d2,.35,.06,{emissive:0xffe1a2,emissiveIntensity:1.8})
++  };
++  function surface(role,roomId){
++    const style=plan.roomStyles[roomId];
++    if(role==='wall')return mat('basewall',0xc6cdc8,.84,.1);
++    if(role==='ceiling')return mat('ceiling',0xc3c9c4,.88,.1);
++    if(role==='floor')return mat('floor_'+(roomId||''),style?.floor||0x5a666b,.85,.12,{map:texture(style?.role==='airlock'?'grate':'floor')});
++    return mat('locked',0x55636b,.9,.1);
++  }
++  function wallPanel(roomId,width,height){
++    const map=texture('panel',plan.roomStyles[roomId]?.accent);if(map)map.repeat.set(Math.max(1,width/.95),Math.max(1,height/1.05));
++    return new THREE.MeshStandardMaterial({color:0xffffff,map,roughness:.72,metalness:.17,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1});
++  }
++  return {basic,surface,wallPanel,canvasFactory};
++}
++
++function addRoomDressing(THREE,scene,geometry,plan,materials){
++  const M=materials.basic,equipmentGroups=new Map(),geometryCache=new Map();
++  function cached(key,make){if(!geometryCache.has(key))geometryCache.set(key,make());return geometryCache.get(key);}
++  function box(group,x,y,z,w,h,d,material=M.metal){
++    const geo=cached('b:'+w+','+h+','+d,()=>new THREE.BoxGeometry(w,h,d));const mesh=new THREE.Mesh(geo,material);mesh.position.set(x,y,z);mesh.castShadow=mesh.receiveShadow=true;group.add(mesh);return mesh;
++  }
++  function cylinder(group,x,y,z,r,h,material=M.metal,rx=0,rz=0){
++    const mesh=new THREE.Mesh(cached('c:'+r+','+h,()=>new THREE.CylinderGeometry(r,r,h,12)),material);mesh.position.set(x,y,z);mesh.rotation.set(rx,0,rz);mesh.castShadow=true;group.add(mesh);return mesh;
++  }
++  function sphere(group,x,y,z,r,material=M.ivory,scale=[1,1,1]){
++    const mesh=new THREE.Mesh(cached('s:'+r,()=>new THREE.SphereGeometry(r,12,8)),material);mesh.position.set(x,y,z);mesh.scale.set(...scale);mesh.castShadow=true;group.add(mesh);return mesh;
++  }
++  function torus(group,x,y,z,r,t,material=M.metal,rx=0,ry=0){
++    const mesh=new THREE.Mesh(cached('t:'+r+','+t,()=>new THREE.TorusGeometry(r,t,8,18)),material);mesh.position.set(x,y,z);mesh.rotation.set(rx,ry,0);group.add(mesh);return mesh;
++  }
++  function legs(group,w,d,h,material=M.frame){for(const x of [-w/2+.07,w/2-.07])for(const z of [-d/2+.07,d/2-.07])box(group,x,h/2,z,.055,h,.055,material);}
++  function cabinet(group,w,h,d){
++    const bodyDepth=d-.08;box(group,0,h/2,0,w,h,bodyDepth,M.frame);
++    for(let i=0;i<3;i++){const y=.12+(h-.12)*(i+.5)/3;box(group,0,y,bodyDepth/2+.008,w-.075,(h-.18)/3,.016,M.ivory);box(group,w*.3,y,bodyDepth/2+.025,.09,.018,.025,M.dark);}
++  }
++  function smallScreen(group,x,y,z,w,h){box(group,x,y,z,w+.045,h+.045,.06,M.rubber);box(group,x,y,z+.033,w,h,.007,M.screen);}
++  function chair(group,x,z){
++    cylinder(group,x,.26,z,.055,.45,M.frame);box(group,x,.49,z,.44,.085,.43,M.seat);box(group,x,.74,z+.2,.43,.45,.065,M.seat);
++    for(let i=0;i<4;i++){const a=i*Math.PI/2,c=Math.cos(a),s=Math.sin(a);const leg=box(group,x+c*.12,.065,z+s*.12,.24,.035,.035,M.frame);leg.rotation.y=-a;sphere(group,x+c*.22,.035,z+s*.22,.033,M.rubber);}
++  }
++  for(const object of plan.objects){
++    const [w,h,d]=object.localSize,group=new THREE.Group();group.name=object.id;group.position.set(object.center[0],object.center[1]-h/2,object.center[2]);group.rotation.y=object.yaw;
++    const kind=object.kind;
++    if(kind==='eva_lockers'){
++      box(group,0,h/2,-d/2+.035,w,h,.06,M.dark);for(const x of [-w/2+.025,0,w/2-.025])box(group,x,h/2,0,.045,h,d,M.frame);
++      box(group,0,.075,0,w,.12,d,M.frame);box(group,0,h-.04,0,w,.07,d,M.frame);
++      for(const x of [-w*.245,w*.245]){
++        sphere(group,x,1.78,.02,.155,M.ivory);sphere(group,x,1.8,.128,.12,M.rubber,[1,.68,.5]);torus(group,x,1.615,.02,.09,.019,M.metal,Math.PI/2);
++        sphere(group,x,1.31,0,.185,M.ivory,[1.04,1.48,.72]);box(group,x,1.32,.135,.22,.19,.07,M.frame);
++        for(const side of [-1,1]){cylinder(group,x+side*.205,1.25,0,.05,.4,M.ivory,0,side*.13);cylinder(group,x+side*.09,.79,0,.071,.56,M.ivory);box(group,x+side*.09,.455,.055,.15,.11,.26,M.rubber);}
++      }
++    }else if(kind==='gear_bench'){
++      legs(group,w-.1,d-.08,.43);box(group,0,.46,0,w,.085,d,M.wood);box(group,0,.14,-.04,w-.15,.04,d-.14,M.frame);
++      for(const x of [-.32,-.1,.12,.34])box(group,x,.23,.03,.13,.13,.25,M.rubber);
++    }else if(kind==='hose_station'){
++      box(group,0,.82,-d/2+.035,w,1.5,.065,M.frame);
++      for(let i=0;i<3;i++)torus(group,0,.4+i*.35,.01,.185,.022,M.rubber);
++      for(const x of [-.2,.2]){cylinder(group,x,1.42,.025,.036,.17,M.metal);box(group,x,1.5,.08,.11,.045,.045,M.amber);}
++    }else if(kind==='airlock_control'){
++      box(group,0,h/2,-.03,w,h,d*.7,M.frame);smallScreen(group,0,1.28,d*.29,w*.78,.38);
++      for(let i=0;i<4;i++){cylinder(group,-w*.29+i*w*.19,.86,d*.41,.027,.02,i===0?M.red:M.indicator,Math.PI/2);}
++      box(group,0,.31,d*.31,w*.7,.23,.035,M.metal);for(let y=.22;y<.4;y+=.05)box(group,0,y,d*.34,w*.6,.011,.008,M.dark);
++    }else if(kind==='filter_cylinders'){
++      box(group,0,.045,0,w,.07,d,M.frame);for(const x of [-w*.235,w*.235]){
++        cylinder(group,x,.79,0,.13,1.38,M.ivory);for(const y of [.26,1.25])torus(group,x,y,0,.133,.014,M.frame,Math.PI/2);
++        cylinder(group,x,1.53,0,.035,.12,M.metal);box(group,x,1.6,.025,.13,.04,.075,M.amber);
++      }
++    }else if(kind==='operations_console'){
++      const dd=d*.51,zz=-d*.22;for(const x of [-w/2+.1,w/2-.1])for(const z of [zz-dd/2+.07,zz+dd/2-.07])box(group,x,.375,z,.055,.75,.055,M.frame);box(group,0,.78,zz,w-.04,.075,dd,M.metal);
++      box(group,-w*.38,.37,zz,w*.2,.66,dd-.07,M.frame);
++      for(const x of [-w*.255,w*.255]){box(group,x,.98,-d*.39,.065,.35,.065,M.frame);smallScreen(group,x,1.23,-d*.35,w*.4,.38);}
++      box(group,0,.835,-d*.065,w*.58,.026,.2,M.rubber);chair(group,0,d*.24);
++    }else if(kind==='server_rack'){
++      box(group,0,h/2,-d*.4,w,h,.08,M.frame);for(const x of [-w/2+.03,w/2-.03])box(group,x,h/2,0,.06,h,d,M.frame);
++      for(let i=0;i<7;i++){const y=.16+i*.275;box(group,0,y,0,w-.1,.225,d-.06,M.dark);for(let v=0;v<4;v++)box(group,-w*.28+v*.035,y,d*.465,.012,.11,.008,M.frame);box(group,w*.27,y,d*.47,.047,.016,.01,i%2?M.indicator:M.amber);}
++      box(group,0,h-.025,0,w,.04,d,M.frame);
++    }else if(kind==='bunk'){
++      for(const x of [-w/2+.055,w/2-.055])for(const z of [-d/2+.05,d/2-.05])box(group,x,h/2,z,.06,h,.06,M.frame);
++      for(const y of [.34,1.27]){box(group,0,y,0,w-.05,.075,d-.04,M.frame);box(group,0,y+.095,0,w-.16,.11,d-.12,M.cloth);box(group,-w*.32,y+.183,0,.38,.065,d-.19,M.ivory);box(group,w*.11,y+.16,.02,w*.6,.022,d-.18,M.seat);}
++      for(const x of [w*.27,w*.43])box(group,x,.95,d/2-.025,.032,1.75,.04,M.metal);for(let i=0;i<5;i++)box(group,w*.35,.22+i*.34,d/2-.022,w*.18,.028,.035,M.metal);
++    }else if(kind==='galley'){
++      cabinet(group,w,.79,d-.035);box(group,0,.83,0,w,.055,d,M.metal);box(group,-w*.22,.862,.035,w*.32,.009,d*.52,M.dark);
++      cylinder(group,-w*.22,.95,-d*.15,.012,.2,M.metal);torus(group,-w*.22,1.025,-d*.08,.057,.009,M.metal,0,Math.PI/2);
++      box(group,0,1.48,-d*.15,w,.43,d*.65,M.ivory);box(group,0,1.48,d*.18,.012,.4,.014,M.frame);
++      for(const x of [-w*.06,w*.06])box(group,x,1.47,d*.19,.02,.15,.025,M.dark);
++    }else if(kind==='personal_storage'||kind==='sample_storage'){
++      cabinet(group,w,h-.025,d-.035);if(kind==='sample_storage')for(let y=.2;y<h-.1;y+=.32)box(group,-w*.28,y,d/2-.004,.12,.065,.008,M.amber);
++    }else if(kind==='glovebox'){
++      cabinet(group,w,.79,d-.02);box(group,0,.85,0,w,.075,d,M.metal);
++      const bottom=.92,top=1.76;
++      for(const x of [-w*.47,w*.47])for(const z of [-d*.43,d*.43])box(group,x,(bottom+top)/2,z,.04,top-bottom,.04,M.frame);
++      box(group,0,top,0,w,.045,d,M.frame);box(group,0,1.34,-d*.445,w-.075,.79,.025,M.ivory);box(group,0,1.34,d*.445,w-.075,.76,.012,M.glass);
++      for(const x of [-w*.23,w*.23]){torus(group,x,1.25,d*.465,.10,.018,M.rubber);cylinder(group,x,1.23,d*.32,.058,.2,M.rubber,Math.PI/2);sphere(group,x,1.18,d*.16,.076,M.rubber,[.82,1,.82]);}
++      box(group,w*.3,1.85,0,w*.3,.07,d*.52,M.frame);smallScreen(group,w*.3,1.845,d*.28,w*.22,.045);
++    }else if(kind==='science_bench'){
++      legs(group,w-.1,d-.1,.79);box(group,0,.82,0,w,.06,d,M.ivory);box(group,-w*.31,.45,0,w*.27,.66,d-.08,M.frame);
++      const x=w*.21;box(group,x,.88,.02,.27,.035,.26,M.frame);cylinder(group,x,1.055,-.065,.034,.33,M.metal);box(group,x,1.12,.02,.24,.04,.2,M.dark);
++      const tube=cylinder(group,x,1.28,.055,.03,.24,M.ivory);tube.rotation.x=-.3;cylinder(group,x,1.4,.019,.045,.055,M.rubber);
++      for(let i=0;i<3;i++){const bx=-w*.25+i*.16;box(group,bx,.89,.035,.12,.06,.17,M.amber);cylinder(group,bx,.98,.035,.023,.13,M.glass);}
++    }else if(kind==='observation_seat'){
++      legs(group,w-.12,d-.1,.28);box(group,0,.35,0,w,.17,d,M.frame);box(group,0,.83,-d*.41,w,.45,.11,M.seat);
++      for(const x of [-w*.25,w*.25])box(group,x,.5,.025,w*.44,.13,d*.75,M.seat);for(const x of [-w*.46,w*.46])box(group,x,.63,.01,.085,.31,d*.8,M.seat);
++    }else if(kind==='growing_rack'){
++      for(const x of [-w*.47,w*.47])for(const z of [-d*.45,d*.45])box(group,x,h/2,z,.035,h,.035,M.frame);
++      for(const y of [.21,.76,1.31]){
++        box(group,0,y,0,w,.04,d,M.metal);box(group,0,y+.065,0,w-.09,.085,d-.08,M.ivory);box(group,0,y+.113,0,w-.14,.012,d-.13,M.soil);
++        for(let i=0;i<4;i++){const x=-w*.33+i*w*.22;cylinder(group,x,y+.22,0,.008,.2,M.green);for(const side of [-1,1]){const leaf=sphere(group,x+side*.06,y+.27,.025,.08,M.leaf,[.75,.34,1.1]);leaf.rotation.z=side*.4;}}
++        box(group,0,y+.43,-d*.04,w-.12,.027,.07,M.lamp);
++      }
++    }
++    scene.add(group);equipmentGroups.set(object.id,group);
++  }
++  for(const item of plan.architecture){
++    const group=new THREE.Group();group.position.set(...item.center);group.name=item.id;
++    box(group,0,0,0,...item.size,item.kind==='luminaire'?M.lamp:M.frame);scene.add(group);
++  }
++  for(const light of plan.lights){const point=new THREE.PointLight(light.color,light.intensity,light.distance,2);point.position.set(...light.position);scene.add(point);}
++  // Apply panels to each room's inward wall face. Shared walls get separate
++  // inner faces, avoiding conflicting materials on duplicate boundary boxes.
++  for(const primitive of geometry.primitives){
++    if(primitive.role!=='wall')continue;
++    const room=geometry.rooms.find(r=>plan.roomStyles[r.id]&&primitive.id.startsWith(r.id+'_'));if(!room)continue;
++    const side=primitive.id.slice(room.id.length+1).split('_')[0];
++    const normal=side==='west'?[1,0,0]:side==='east'?[-1,0,0]:side==='south'?[0,0,1]:side==='north'?[0,0,-1]:null;if(!normal)continue;
++    const axis=normal[0]?0:2,w=primitive.size[axis===0?2:0],h=primitive.size[1];
++    const panel=new THREE.Mesh(new THREE.PlaneGeometry(w,h),materials.wallPanel(room.id,w,h));
++    panel.position.set(...primitive.position);panel.position.setComponent(axis,panel.position.getComponent(axis)+normal[axis]*(primitive.size[axis]/2+.0008));
++    panel.rotation.y=normal[0]===1?Math.PI/2:normal[0]===-1?-Math.PI/2:normal[2]===-1?Math.PI:0;panel.receiveShadow=true;scene.add(panel);
++  }
++  for(const sign of plan.signs){
++    const plaque=new THREE.Group();plaque.name=sign.id;plaque.position.set(...sign.position);box(plaque,0,0,0,...sign.size,M.frame);
++    const canvas=materials.canvasFactory();
++    if(canvas){canvas.width=768;canvas.height=256;const ctx=canvas.getContext('2d');ctx.fillStyle='#283b43';ctx.fillRect(0,0,768,256);ctx.fillStyle=plan.roomStyles[sign.room_id].accent;ctx.fillRect(0,0,22,256);ctx.fillStyle='#e2e8df';ctx.font='600 42px Segoe UI,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(sign.text.slice(0,38),395,135,690);
++      const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;const plane=new THREE.Mesh(new THREE.PlaneGeometry(.48,.165),new THREE.MeshStandardMaterial({map,roughness:.7,metalness:.1}));
++      plane.position.set(sign.normal[0]*.016,0,sign.normal[2]*.016);plane.rotation.y=sign.normal[0]===1?Math.PI/2:sign.normal[0]===-1?-Math.PI/2:sign.normal[2]===-1?Math.PI:0;plaque.add(plane);
++    }
++    scene.add(plaque);
++  }
++  return {equipmentGroups,meshCount:[...scene.children].reduce((sum,child)=>{child.traverse(node=>{if(node.isMesh)sum++;});return sum;},0)};
++}
++
+ 
+ async function start(){
+   const response=await fetch('/geometry.json',{cache:'no-store'});
+   if(!response.ok) throw new Error('The pinned layout could not be loaded.');
+-  const geometry=await response.json(), controller=createWalkController(geometry);
++  const geometry=await response.json();
++  const dressing=buildRoomDressing(geometry,createDoorSystem(geometry).assemblies());
++  const controller=createWalkController(geometry,{extraColliders:dressing.colliders});
+   document.querySelector('#title').textContent=geometry.title;
+-  const scene=new THREE.Scene();scene.background=new THREE.Color('#819698');
++  const scene=new THREE.Scene();scene.background=new THREE.Color('#303d44');
+   const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'low-power'});
+   renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.5));renderer.setSize(innerWidth,innerHeight);
+   renderer.outputColorSpace=THREE.SRGBColorSpace;
++  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
+   document.querySelector('#viewport').appendChild(renderer.domElement);
+   const camera=new THREE.PerspectiveCamera(68,innerWidth/innerHeight,.045,250);
+   camera.rotation.order='YXZ';
+-  scene.add(new THREE.HemisphereLight(0xedf5f2,0x8f8173,2.8));
+-  const fill=new THREE.DirectionalLight(0xfff0d0,1.2);fill.position.set(6,12,3);scene.add(fill);
+-  const colors={wall:0xe5ded1,ceiling:0xf0eee4,floor:0x7b9397,unknown_locked_boundary:0x5c6470};
+-  const materials=new Map();
++  scene.add(new THREE.HemisphereLight(0xe3edf2,0x60574b,.62));
++  const fill=new THREE.DirectionalLight(0xfff0d0,.25);fill.position.set(6,12,3);scene.add(fill);
++  const dressingMaterials=createDressingMaterials(THREE,dressing);
+   for(const primitive of geometry.primitives){
+-    const role=primitive.role;
+-    if(!materials.has(role)) materials.set(role,new THREE.MeshStandardMaterial({color:colors[role]||0xa3afb4,roughness:.93,metalness:0}));
+-    const mesh=new THREE.Mesh(new THREE.BoxGeometry(...primitive.size),materials.get(role));
+-    mesh.position.set(...primitive.position);scene.add(mesh);
+-    if(role==='floor'){
+-      const grid=new THREE.GridHelper(Math.max(primitive.size[0],primitive.size[2]),Math.max(1,Math.round(Math.max(primitive.size[0],primitive.size[2]))),0x516a71,0x6b8387);
+-      // A room-sized plane avoids drawing grid beyond rectangular floor boundaries.
+-      grid.scale.set(primitive.size[0]/Math.max(primitive.size[0],primitive.size[2]),1,primitive.size[2]/Math.max(primitive.size[0],primitive.size[2]));
+-      grid.position.set(primitive.position[0],primitive.position[1]+primitive.size[1]/2+.003,primitive.position[2]);scene.add(grid);
+-    }
+-  }
+-  for(const room of geometry.rooms){
+-    if(room.access!=='walkable_layout') continue;
+-    const canvas=document.createElement('canvas');canvas.width=768;canvas.height=128;
+-    const context=canvas.getContext('2d');context.fillStyle='#1b3540';context.fillRect(0,0,768,128);
+-    context.fillStyle='#edecdf';context.textAlign='center';context.textBaseline='middle';
+-    context.font='500 42px Segoe UI, sans-serif';context.fillText(room.name,384,64,710);
+-    const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;
+-    const sign=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,depthTest:true}));
+-    sign.position.set(room.x+room.width/2,room.floor_y+Math.min(room.height-.35,2.35),room.z+room.depth/2);
+-    sign.scale.set(Math.min(2.8,room.width*.7),.46,1);scene.add(sign);
++    const room=geometry.rooms.find(r=>primitive.id.startsWith(r.id+'_'));
++    const material=dressingMaterials.surface(primitive.role,room?.id);
++    if(primitive.role==='floor'&&material.map)material.map.repeat.set(Math.max(1,primitive.size[0]),Math.max(1,primitive.size[2]));
++    const mesh=new THREE.Mesh(new THREE.BoxGeometry(...primitive.size),material);
++    mesh.position.set(...primitive.position);mesh.receiveShadow=true;scene.add(mesh);
++  }
++  addRoomDressing(THREE,scene,geometry,dressing,dressingMaterials);
++  const doorMeshes=new Map();
++  const frameMaterial=new THREE.MeshStandardMaterial({color:0x344955,roughness:.48,metalness:.65});
++  const leafMaterial=new THREE.MeshStandardMaterial({color:0xa9babc,roughness:.45,metalness:.52});
++  const panelMaterial=new THREE.MeshStandardMaterial({color:0x4f7585,roughness:.51,metalness:.37});
++  const handleMaterial=new THREE.MeshStandardMaterial({color:0xe1d9ae,roughness:.3,metalness:.75});
++  const initialDoors=new Map(controller.doorStates().map(d=>[d.id,d]));
++  for(const assembly of controller.doorAssemblies()){
++    for(const frame of assembly.frames){
++      const mesh=new THREE.Mesh(new THREE.BoxGeometry(...frame.size),frameMaterial);
++      mesh.position.set(...frame.center);scene.add(mesh);
++    }
++    const initial=initialDoors.get(assembly.id),group=new THREE.Group();
++    const leaf=new THREE.Mesh(new THREE.BoxGeometry(...initial.size),leafMaterial);group.add(leaf);
++    const normal=assembly.axis==='x'?0:2,along=normal===0?2:0;
++    for(const side of [-1,1]){
++      const size=[...initial.size];size[normal]=.008;size[along]*=.77;size[1]*=.68;
++      const panel=new THREE.Mesh(new THREE.BoxGeometry(...size),panelMaterial);
++      panel.position.setComponent(normal,side*(initial.size[normal]/2+.005));group.add(panel);
++      const handle=new THREE.Mesh(new THREE.CylinderGeometry(.023,.023,.27,10),handleMaterial);
++      handle.position.setComponent(normal,side*(initial.size[normal]/2+.055));
++      handle.position.setComponent(along,initial.size[along]*.34);handle.position.y=-.12;group.add(handle);
++      // Mounts visibly connect the handles to both sides of the leaf.
++      for(const y of [-.23,-.01]){
++        const mountingSize=[.075,.025,.075];mountingSize[normal]=.065;
++        const mount=new THREE.Mesh(new THREE.BoxGeometry(...mountingSize),handleMaterial);
++        mount.position.copy(handle.position);mount.position.y=y;mount.position.setComponent(normal,side*(initial.size[normal]/2+.031));group.add(mount);
++      }
++    }
++    const head=assembly.frames.find(f=>f.id.endsWith('_head'));
++    const indicatorSize=assembly.axis==='x'?[.225,.033,.22]:[.22,.033,.225];
++    const indicatorMaterial=new THREE.MeshStandardMaterial({color:0xd28360,emissive:0x3f1205,roughness:.5});
++    const indicator=new THREE.Mesh(new THREE.BoxGeometry(...indicatorSize),indicatorMaterial);
++    indicator.position.set(...head.center);scene.add(indicator);scene.add(group);
++    doorMeshes.set(assembly.id,{group,indicatorMaterial});
+   }
+   const keys=new Set();
+   const supported=new Set(['KeyW','KeyA','KeyS','KeyD','ArrowLeft','ArrowRight','KeyQ','KeyE']);
+   addEventListener('keydown',e=>{if(supported.has(e.code)&&!['INPUT','TEXTAREA','BUTTON'].includes(document.activeElement.tagName)){keys.add(e.code);e.preventDefault();}});
+   addEventListener('keyup',e=>keys.delete(e.code));
++  const doorButton=document.querySelector('#door-toggle'),doorMessage=document.querySelector('#door-message');
++  let doorNotice='',doorNoticeUntil=0;
++  function interactDoor(){
++    const result=controller.toggleDoor();
++    doorNotice=result.ok?(result.state==='opening'?'Opening door…':'Closing door…'):result.reason;
++    doorNoticeUntil=performance.now()+3500;doorButton.blur();
++  }
++  doorButton.addEventListener('click',interactDoor);
++  addEventListener('keydown',e=>{if(e.code==='KeyF'&&!e.repeat&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){interactDoor();e.preventDefault();}});
+   addEventListener('blur',()=>keys.clear());
+   document.addEventListener('visibilitychange',()=>keys.clear());
+   let stepAction=null,stepRemaining=0;
+@@ -64,9 +404,19 @@
+     const elapsed=previous===null?0:Math.min(.05,Math.max(0,(now-previous)/1000));previous=now;
+     if(stepRemaining>0){input[stepAction]=true;stepRemaining-=elapsed;}
+     const state=controller.step(elapsed,input);
++    for(const door of controller.doorStates()){
++      const visual=doorMeshes.get(door.id);visual.group.position.set(...door.center);visual.group.rotation.y=door.angle;
++      visual.indicatorMaterial.color.setHex(door.state==='open'?0x72b494:door.state==='closed'?0xd28360:0xe9c66d);
++      visual.indicatorMaterial.emissive.setHex(door.state==='open'?0x123621:door.state==='closed'?0x3f1205:0x48330c);
++    }
++    const nearby=state.nearbyDoor,moving=nearby&&(nearby.state==='opening'||nearby.state==='closing');
++    doorButton.disabled=!nearby||moving;
++    doorButton.textContent=!nearby?'Approach a door · F':moving?'Door moving…':nearby.state==='closed'?'Open door · F':'Close door · F';
++    doorMessage.textContent=nearby?.motionHeld?'Door paused — step away from its swing.':
++      now<doorNoticeUntil?doorNotice:nearby?'Door '+nearby.state+'. Leave room for it to swing.':'Framed doors open and close. Press F when nearby.';
+     camera.position.set(state.feet[0],state.feet[1]+AVATAR.eye,state.feet[2]);camera.rotation.set(state.pitch,-state.yaw,0);
+     const status=state.roomName+'|'+state.blocked;
+-    if(status!==lastStatus){roomLabel.textContent=state.roomName;movement.textContent=state.blocked==='solid_obstruction'?'Wall or low ceiling — turn toward a passage':state.blocked?'No supported floor in that direction':'Walking inside the layout · unfinished materials';lastStatus=status;}
++    if(status!==lastStatus){roomLabel.textContent=state.roomName;movement.textContent=state.blocked==='door_obstruction'?'Door or frame blocks the way — open it with F':state.blocked==='furniture_obstruction'?'Furniture blocks the way — walk around it':state.blocked==='solid_obstruction'?'Wall or low ceiling — turn toward a passage':state.blocked?'No supported floor in that direction':'Walking inside the layout · unfinished materials';lastStatus=status;}
+     distance.textContent='Distance walked: '+state.distance.toFixed(1)+' m';
+     renderer.render(scene,camera);requestAnimationFrame(frame);
+   }
+--- installed/index.html
++++ 025-revision002/index.html
+@@ -3,13 +3,14 @@
+ <title>World layout preview</title><link rel="stylesheet" href="/style.css"></head>
+ <body><main id="viewport" aria-label="Walkable world layout"></main>
+ <header class="panel"><div class="eyebrow">KIRA · WORLD LAYOUT</div><h1 id="title">Loading layout…</h1>
+-<p class="badge">Layout prototype · unfinished appearance</p><p id="description">Room scale and walking only. This is not a finished world or a verified reconstruction.</p></header>
++<p class="badge">Original habitat · procedural preview</p><p id="description">Explore distinct equipment spaces and working doors. This authored habitat is still a procedural preview, not a verified reconstruction.</p></header>
+ <section id="help" class="panel"><h2>Explore the layout</h2><p><strong>W A S D</strong> move · <strong>← →</strong> turn<br><strong>Q E</strong> also turn · <strong>Esc</strong> releases the mouse</p>
+ <button id="look" type="button">Enable mouse look</button>
++<div class="door-controls"><button id="door-toggle" type="button" disabled>Approach a door · F</button><p id="door-message" class="small" aria-live="polite">Framed doors open and close. Press F when nearby.</p></div>
+ <div class="step-controls" aria-label="Click to walk">
+ <button type="button" data-walk="turnLeft">Turn left</button><button type="button" data-walk="forward">Step forward</button><button type="button" data-walk="turnRight">Turn right</button>
+ <button type="button" data-walk="left">Step left</button><button type="button" data-walk="backward">Step back</button><button type="button" data-walk="right">Step right</button>
+-</div><p class="small">Click to walk in short steps, or hold the keyboard controls. All movement stays on supported floors.</p><p id="distance" class="small">Distance walked: 0.0 m</p></section>
++</div><p class="small">Click to walk in short steps, or hold the keyboard controls. All movement stays on supported floors. Door states last only for this preview session; pressure cycling is not simulated.</p><p id="distance" class="small">Distance walked: 0.0 m</p></section>
+ <section id="status" class="panel" aria-live="polite"><span id="room">Finding the entry room</span><span id="movement">Preparing supported walking…</span></section>
+ <div id="reticle" aria-hidden="true">+</div><div id="error" role="alert" hidden></div>
+ <script type="module" src="/viewer.mjs"></script></body></html>
+--- installed/style.css
++++ 025-revision002/style.css
+@@ -1,2 +1,3 @@
+ :root{font-family:Segoe UI,system-ui,sans-serif;color:#f5f4ef;background:#14242d;color-scheme:dark}*{box-sizing:border-box}body{margin:0;overflow:hidden}#viewport,canvas{position:fixed;inset:0;width:100%;height:100%;display:block}.panel{position:fixed;background:rgba(19,34,43,.91);border:1px solid #ffffff28;border-radius:14px;box-shadow:0 8px 28px #0003;backdrop-filter:blur(10px)}header{left:24px;top:24px;padding:18px 22px;max-width:430px;pointer-events:none}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.2em;color:#aac6d2}h1{font-size:24px;font-weight:600;line-height:1.15;margin:8px 0 12px}p{line-height:1.5;font-size:13px;margin:9px 0}.badge{display:inline-block;color:#f5ce8b;background:#614b253b;border:1px solid #9d804254;border-radius:30px;padding:4px 10px;font-size:12px;margin:0}#description{color:#bdcdd3;max-width:350px}#help{right:24px;top:24px;padding:17px 20px;width:285px}h2{font-size:15px;font-weight:600;margin:0 0 10px}.small{font-size:11px;color:#aebfc7}button{font:inherit;font-size:12px;font-weight:600;background:#d6e8e9;color:#1a3037;border:0;border-radius:7px;padding:9px 12px;cursor:pointer}button:hover{background:#fff}button:focus-visible{outline:3px solid #ffd288;outline-offset:3px}#status{left:24px;bottom:24px;padding:13px 18px;display:flex;gap:22px;align-items:center;max-width:calc(100vw - 48px)}#room{font-size:15px;font-weight:600}#movement{font-size:12px;color:#bfced4}#reticle{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);color:#ffffffaa;font-size:19px;pointer-events:none}#error{position:fixed;inset:35% 15%;padding:30px;background:#482d30;border:1px solid #c88989;border-radius:14px;white-space:pre-wrap}#error[hidden]{display:none}@media(max-width:760px){header{left:12px;top:12px;max-width:55vw;padding:12px}h1{font-size:18px}#description{display:none}#help{top:12px;right:12px;width:37vw;padding:12px}#help p{font-size:11px}.small{display:none}#status{left:12px;bottom:12px;gap:10px;max-width:calc(100vw - 24px)}#movement{font-size:11px}}
+ .step-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:12px}.step-controls button{font-size:10px;padding:8px 3px}
++.door-controls{margin:12px 0;padding-top:12px;border-top:1px solid #ffffff28}.door-controls button{width:100%}button:disabled{opacity:.6;cursor:default}#door-message{min-height:2.5em}@media(max-width:760px){#door-message{display:block;font-size:10px}.door-controls{margin:8px 0;padding-top:8px}}

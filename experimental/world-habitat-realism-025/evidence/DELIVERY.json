@@ -1,0 +1,118 @@
+{
+  "status": "FURNISHED_HABITAT025_REVISION002_STAGED_NOT_INSTALLED_OR_VISUALLY_APPROVED",
+  "at_utc": "2026-09-23T05:07:18.011178+00:00",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/walk_controller.mjs",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\walk_controller.mjs",
+        "sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+        "bytes": 2903
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-realism-025\\revision-002\\candidate\\tools\\world_builder_engine\\walk_controller.mjs",
+        "sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+        "bytes": 12959
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/viewer.mjs",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\viewer.mjs",
+        "sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+        "bytes": 6004
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-realism-025\\revision-002\\candidate\\tools\\world_builder_engine\\viewer.mjs",
+        "sha256": "e6f101d016cd40b923c678f3db39b1ec7ec50b1c44684f255bcd1efb8b9fcfda",
+        "bytes": 33666
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/index.html",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\index.html",
+        "sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+        "bytes": 1772
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-realism-025\\revision-002\\candidate\\tools\\world_builder_engine\\index.html",
+        "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+        "bytes": 2119
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/style.css",
+      "before": {
+        "path": "@workspace\\work\\world-working-doors-candidate-024\\baseline\\style.css",
+        "sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+        "bytes": 2156
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-realism-025\\revision-002\\candidate\\tools\\world_builder_engine\\style.css",
+        "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+        "bytes": 2451
+      }
+    }
+  ],
+  "authored_modules": [
+    {
+      "path": "@workspace\\work\\world-habitat-realism-025\\room_dressing_plan.mjs",
+      "sha256": "3508293926fd6e9c5e95bef8af0c12c2ec727c02c83fb570f3c88617a1cb42f3",
+      "bytes": 9104
+    },
+    {
+      "path": "@workspace\\work\\world-habitat-realism-025\\room_dressing_render.mjs",
+      "sha256": "30eb927f3f3047a0c9929bf3fc09766396200d9cc158eeb54a173b8dc6e82456",
+      "bytes": 15418
+    }
+  ],
+  "composition_script": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\integrate_viewer.py",
+    "sha256": "91abbf9e458b677b8af7afbed8b48435a00737b7474d4f238812ac1517d57596",
+    "bytes": 3373
+  },
+  "reach_revision_script": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\prepare_revision002.py",
+    "sha256": "0200053835171ce5e3a4f7cfeb2a3c3cefddccdb14d15b10c6f7991058d7b3e4",
+    "bytes": 2142
+  },
+  "synthetic_fixture_test": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\TEST-RESULT-002.json",
+    "sha256": "8f0638c8603452485a08385a5a1b8fe6b5c1112c5929bb26876b2b6c3fb7499d",
+    "bytes": 2495
+  },
+  "existing_geometry_test": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\TEST-RESULT-003.json",
+    "sha256": "8f0638c8603452485a08385a5a1b8fe6b5c1112c5929bb26876b2b6c3fb7499d",
+    "bytes": 2495
+  },
+  "step_reach_test": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\revision-002\\STEP-REACH-TEST.json",
+    "sha256": "478d56a4645c1a098ddbdc96eca70560b389bc9e3e10bbecb44d786bac94bb2f",
+    "bytes": 463
+  },
+  "preview_plan": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\revision-002\\PREVIEW-PLAN.json",
+    "sha256": "63552ed1b39df619f7352e59e8ad387912e8123a2c352f7d7aa5cd8c35f19064",
+    "bytes": 27917
+  },
+  "equipment_assemblies": 16,
+  "distinct_equipment_types": 15,
+  "extra_colliders": 51,
+  "authored_meshes": 406,
+  "omitted_equipment": 0,
+  "canonical_files_changed": false,
+  "owner_files_changed": false,
+  "models_gpu_browser_started": false,
+  "protected_source_owner_files": 121,
+  "source_appearance_status": "Original authored procedural equipment; old Mars appearance remains owner-rejected; new visual inspection pending.",
+  "installation_hold": "Integrate and review026 compatibility first so existing saved previews remain readable.",
+  "limitations": [
+    "Static equipment has no simulated science, medical or life-support behavior.",
+    "No pressure airlock or door-state persistence.",
+    "Conservative AABB equipment bounds and door sweeps.",
+    "No photorealism or finished-world approval."
+  ],
+  "research_ownership": "Root maintains research/ and RESEARCH.md; this implementation did not edit them."
+}

@@ -1,0 +1,100 @@
+{
+  "status": "PASS_AUTHORED_DRESSING_AND_PHYSICAL_CLEARANCES",
+  "checks": [
+    "Pure deterministic plan preserves source and carries all six roles",
+    "Unknown unrelated functions do not become a habitat",
+    "Entry, walking routes and all opened door routes remain usable with furnishings",
+    "All equipment stays in its room and equipment footprints do not overlap",
+    "Actual multi-part rendered equipment fits collision bounds",
+    "Lighting, modest physical signs and authored materials replace floating banners"
+  ],
+  "objects": [
+    {
+      "id": "equipment_equipment_vestibule_0",
+      "role": "equipment_vestibule",
+      "kind": "eva_lockers"
+    },
+    {
+      "id": "equipment_equipment_vestibule_1",
+      "role": "equipment_vestibule",
+      "kind": "gear_bench"
+    },
+    {
+      "id": "equipment_equipment_vestibule_2",
+      "role": "equipment_vestibule",
+      "kind": "hose_station"
+    },
+    {
+      "id": "equipment_airlock_0",
+      "role": "airlock",
+      "kind": "airlock_control"
+    },
+    {
+      "id": "equipment_airlock_1",
+      "role": "airlock",
+      "kind": "filter_cylinders"
+    },
+    {
+      "id": "equipment_operations_0",
+      "role": "operations",
+      "kind": "operations_console"
+    },
+    {
+      "id": "equipment_operations_1",
+      "role": "operations",
+      "kind": "server_rack"
+    },
+    {
+      "id": "equipment_operations_2",
+      "role": "operations",
+      "kind": "operations_console"
+    },
+    {
+      "id": "equipment_habitat_0",
+      "role": "habitat",
+      "kind": "bunk"
+    },
+    {
+      "id": "equipment_habitat_1",
+      "role": "habitat",
+      "kind": "galley"
+    },
+    {
+      "id": "equipment_habitat_2",
+      "role": "habitat",
+      "kind": "personal_storage"
+    },
+    {
+      "id": "equipment_laboratory_0",
+      "role": "laboratory",
+      "kind": "glovebox"
+    },
+    {
+      "id": "equipment_laboratory_1",
+      "role": "laboratory",
+      "kind": "science_bench"
+    },
+    {
+      "id": "equipment_laboratory_2",
+      "role": "laboratory",
+      "kind": "sample_storage"
+    },
+    {
+      "id": "equipment_observation_0",
+      "role": "observation",
+      "kind": "observation_seat"
+    },
+    {
+      "id": "equipment_observation_1",
+      "role": "observation",
+      "kind": "growing_rack"
+    }
+  ],
+  "collider_count": 51,
+  "meshes": 406,
+  "omitted": [],
+  "architecture": 28,
+  "gpu_or_browser_started": false,
+  "owner_source_unchanged": true,
+  "visual_approval": false
+}

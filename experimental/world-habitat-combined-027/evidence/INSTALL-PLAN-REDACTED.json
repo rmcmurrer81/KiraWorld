@@ -1,0 +1,124 @@
+{
+  "status": "HISTORICAL_PROPOSAL_NOT_A_RUNNABLE_INSTALL_PLAN",
+  "package": "combined-habitat025-preview027",
+  "public_base_commit": "4044d66d9e95757cd4b54012c49ccd91b4abe235",
+  "canonical_root": "@user_home\\Kira",
+  "files": [
+    {
+      "relative_path": "tools/world_builder_engine/walk_controller.mjs",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\walk_controller.mjs",
+      "before": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\preimages\\walk_controller.mjs",
+        "sha256": "950c4131e2e4e11fdb9dedc908b24b2e35e550ea57b4c34b1fa464d2bc294335",
+        "bytes": 2903
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\candidate\\tools\\world_builder_engine\\walk_controller.mjs",
+        "sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+        "bytes": 12959
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/viewer.mjs",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\viewer.mjs",
+      "before": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\preimages\\viewer.mjs",
+        "sha256": "8c46e23c6c6543126845e7bac733a6cb9cca0b0d263a8a412c19c923869f4847",
+        "bytes": 6004
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\candidate\\tools\\world_builder_engine\\viewer.mjs",
+        "sha256": "e6f101d016cd40b923c678f3db39b1ec7ec50b1c44684f255bcd1efb8b9fcfda",
+        "bytes": 33666
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/index.html",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\index.html",
+      "before": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\preimages\\index.html",
+        "sha256": "898b21e49c8378737a621e69f9888a95d15e3b8adb7b88c9d37282c3fc4e7036",
+        "bytes": 1772
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\candidate\\tools\\world_builder_engine\\index.html",
+        "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be",
+        "bytes": 2119
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/style.css",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\style.css",
+      "before": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\preimages\\style.css",
+        "sha256": "ab5b459076804fe46eed1a0316f5484c7b6e2f86cc529cab4965e2497c6e8917",
+        "bytes": 2156
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\candidate\\tools\\world_builder_engine\\style.css",
+        "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505",
+        "bytes": 2451
+      }
+    },
+    {
+      "relative_path": "tools/world_builder_engine/world_layout_preview.py",
+      "target": "@user_home\\Kira\\tools\\world_builder_engine\\world_layout_preview.py",
+      "before": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\preimages\\world_layout_preview.py",
+        "sha256": "2d5a27e7137011872a0d9645cbfdd96646e592334b44d9d6e800389518604cb9",
+        "bytes": 22133
+      },
+      "after": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\candidate\\tools\\world_builder_engine\\world_layout_preview.py",
+        "sha256": "fc9ead65889ea7eb011dc8278047704fa212f4c5536811b9f6971c6078180c21",
+        "bytes": 24439
+      }
+    }
+  ],
+  "unchanged_dependencies": [
+    {
+      "source": {
+        "path": "@user_home\\Kira\\tools\\world_builder_engine\\horizontal_navigation.mjs",
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406
+      },
+      "staged": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\candidate\\tools\\world_builder_engine\\horizontal_navigation.mjs",
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406
+      }
+    },
+    {
+      "source": {
+        "path": "@user_home\\Kira\\tools\\world_builder_engine\\preflight.mjs",
+        "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+        "bytes": 1374
+      },
+      "staged": {
+        "path": "@workspace\\work\\world-habitat-combined-install-027\\candidate\\tools\\world_builder_engine\\preflight.mjs",
+        "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4",
+        "bytes": 1374
+      }
+    }
+  ],
+  "protected_inputs": {
+    "redacted_local_inventory_entries": 116
+  },
+  "source_delivery": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\DELIVERY.json",
+    "sha256": "e34cc4516c239a73f28aabdf9f3b511939ab05d772811b11b80b4f2e425c5fdf",
+    "bytes": 6449
+  },
+  "furnished_preview_plan": {
+    "path": "@workspace\\work\\world-habitat-realism-025\\revision-002\\PREVIEW-PLAN.json",
+    "sha256": "63552ed1b39df619f7352e59e8ad387912e8123a2c352f7d7aa5cd8c35f19064",
+    "bytes": 27917
+  },
+  "scope": "Five existing engine files only. Original world saves, preview assets and research inputs remain byte-exact.",
+  "limitations": [
+    "New appearance and session-local doors apply to newly created previews; saved immutable previews keep prior appearance.",
+    "Procedural prototype, static equipment, no physical pressure or door-state persistence.",
+    "Native installed flow and owner visual approval remain pending."
+  ],
+  "supersedes": "revision-001/INSTALL-PLAN.json"
+}

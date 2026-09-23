@@ -1,3 +1,11 @@
-# World025 reference notes only
+# Authored habitat025 recovery
 
-RESEARCH.md records primary/reference source inspection for an original Mars-habitat appearance experiment. This snapshot includes no025 implementation: room dressing was still changing and had no frozen delivery/tests when packaged. Referenced photographs, PDF pages and other artwork are not included or redistributed. Source reference links are not endorsements of final physical or visual correctness. No generated world or owner approval is claimed.
+The candidate is revision002, with16 multipart equipment assemblies for six functional room programs, physical clearances,51 extra colliders and working session-local doors. This is an original procedural prototype. It is not a measured reconstruction or photorealistic/final-world acceptance. Owner rejected the preceding repetitive Mars presentation. Root review/status is recorded separately; historical evidence retains its creation-time status.
+
+Source closure includes `room_dressing_plan.mjs`, `room_dressing_render.mjs`, the composed frontend, a synthetic geometry fixture and repeatable CPU tests. From this folder run `python -B build_candidate.py` to prove exact composition from public `../world-working-doors-024`; `node test_step_reach.mjs` exercises open/cross/close using the actual controller; `node test_dressing.mjs` checks semantics, route/swing/equipment clearances and real Three.js mesh bounds. Set `WORLD_THREE_MODULE` to the checkout's `third_party/three/build/three.module.js`. Tests write exclusive receipts in this folder; preserve old receipts before rerunning. No browser/GPU/model job is started.
+
+`evidence/` preserves original implementation/build scripts and technical receipts, with identity paths redacted. Those historical local scripts are not portable launchers. Owner geometry, generated owner preview builds, preview-server plans, local source inventories and downloaded research pictures are deliberately absent. `RESEARCH.md` provides source links and original design reasoning; no source images are redistributed.
+
+The separate `world-habitat-combined-027` backend keeps legacy immutable previews readable while new previews use these assets. Existing previews retain their frozen appearance. Equipment remains static, door state is not saved, and pressure/life-support/science behavior is not simulated.
+
+Root installed the exact five-file027 plan on September23. The retained installed receipt confirms116 protected owner/source files unchanged. Root visually checked the doorway/airlock only: doors opened and the user could cross. Other rooms remain visually unreviewed; the style remains procedural/office-like. No realism or owner approval is claimed.

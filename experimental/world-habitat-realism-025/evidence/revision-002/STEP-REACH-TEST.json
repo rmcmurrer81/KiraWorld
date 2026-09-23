@@ -1,0 +1,11 @@
+{
+  "status": "PASS_STEP_BUTTON_DOOR_REACH_REGRESSION",
+  "checks": [
+    "Old0.55m click step reproduced the interaction gap.",
+    "New2.25m reach opens from a safe point after one click step.",
+    "Player crosses into airlock and can close the door from the opposite side.",
+    "Initial spawn is still outside interaction range."
+  ],
+  "walker_sha256": "5c81e5926690a7fee3dbfcd4ff41d40b6da9bc3fef2ae7cbc77dcd91c74a51a4",
+  "gpu_or_browser_started": false
+}
