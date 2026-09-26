@@ -1,0 +1,159 @@
+--- installed056/walk_controller.mjs
++++ candidate060/walk_controller.mjs
+@@ -56,9 +56,9 @@
+       angle:0,target:0,moving:false,motionHeld:false,frames:frame};
+     // A quarter-disc bounds every intermediate point of the rotating leaf.
+     // Include thickness and the walker footprint; do not sample a few angles.
+-    const extent=door.width+DOOR_THICKNESS/2;
+-    const minimum=[hinge[0]-DOOR_THICKNESS/2,a.floor_y,hinge[2]-DOOR_THICKNESS/2];
+-    const maximum=[hinge[0]+DOOR_THICKNESS/2,a.floor_y+height,hinge[2]+DOOR_THICKNESS/2];
++    const hardwareHalfDepth=.1105,extent=door.width+hardwareHalfDepth;
++    const minimum=[hinge[0]-hardwareHalfDepth,a.floor_y,hinge[2]-hardwareHalfDepth];
++    const maximum=[hinge[0]+hardwareHalfDepth,a.floor_y+height,hinge[2]+hardwareHalfDepth];
+     const n=axis==='x'?0:2,t=axis==='x'?2:0;
+     maximum[t]=hinge[t]+extent;
+     if(sign>0)maximum[n]=hinge[n]+extent;else minimum[n]=hinge[n]-extent;
+@@ -93,10 +93,36 @@
+     return freeze({id:door.id,axis:door.axis,angle:door.angle,center:freeze(center),size:freeze(size),state,motionHeld:door.motionHeld,
+       collider:freeze({id:'door_'+door.id+'_leaf',...bounds(center,aabbSize)})});
+   }
++  // Local boxes enclose the rendered panels and each handle with its mounts.
++  // Keep these separate: a full-depth slab would block empty space elsewhere.
++  function hardwareBoxes(door){
++    const normal=door.axis==='x'?0:2,along=normal===0?2:0,parts=[];
++    for(const side of [-1,1]){
++      const panelCenter=[0,0,0],panelSize=[0,door.height*.68,0];
++      panelCenter[normal]=side*(DOOR_THICKNESS/2+.005);
++      panelSize[normal]=.008;panelSize[along]=door.width*.77;
++      parts.push({part:'panel_'+(side<0?'negative':'positive'),center:panelCenter,size:panelSize});
++      // Mount normal extent .031..096; handle extent .0645..1105.
++      const center=[0,-.12,0],size=[0,.27,0];
++      center[normal]=side*.07075;center[along]=door.width*.34;
++      size[normal]=.0795;size[along]=.075;
++      parts.push({part:'handle_'+(side<0?'negative':'positive'),center,size});
++    }
++    return parts;
++  }
++  function hardwareColliders(door){
++    const pose=poseOf(door),c=Math.cos(door.angle),s=Math.sin(door.angle);
++    return hardwareBoxes(door).map(part=>{
++      const p=part.center,z=part.size;
++      const center=[pose.center[0]+c*p[0]+s*p[2],pose.center[1]+p[1],pose.center[2]-s*p[0]+c*p[2]];
++      const size=[Math.abs(c)*z[0]+Math.abs(s)*z[2],z[1],Math.abs(s)*z[0]+Math.abs(c)*z[2]];
++      return {id:'door_'+door.id+'_'+part.part,...bounds(center,size)};
++    });
++  }
+   function all(){return freeze([...doors.values()].map(d=>poseOf(d)));}
+   function assemblies(){return freeze([...doors.values()].map(d=>freeze({id:d.id,axis:d.axis,frames:freeze(d.frames),
+     swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),roomA:d.roomA.name,roomB:d.roomB.name})));}
+-  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider]);}
++  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider,...hardwareColliders(d)]);}
+   function near(door,feet){
+     if(Math.abs(feet[1]-door.floor)>1e-8)return false;
+     const inside=r=>feet[0]>=r.x-1e-8&&feet[0]<=r.x+r.width+1e-8&&feet[2]>=r.z-1e-8&&feet[2]<=r.z+r.depth+1e-8;
+--- installed056/layout_package_assets/PRODUCER-PINS.json
++++ candidate060/layout_package_assets/PRODUCER-PINS.json
+@@ -30,12 +30,12 @@
+       "bytes": 33596
+     },
+     "source/scene_metadata.mjs": {
+-      "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",
+-      "bytes": 14706
++      "sha256": "e5359bb4dc24f8f6ad701c74903e5e7cc92ffe0745533069eda0c021db7463a8",
++      "bytes": 16038
+     },
+     "source/walk_controller.mjs": {
+-      "sha256": "e7cfe0c2ca7fe8d5de20f88bab07ef27f64c10b4e7d75d436d55e4f207cac612",
+-      "bytes": 16899
++      "sha256": "a33f87a3735f48e492867d9bbe8c2c293f81e95e31d7ab0c15024672f338f11e",
++      "bytes": 18452
+     },
+     "source_bindings.py": {
+       "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+--- installed056/layout_package_assets/source/scene_metadata.mjs
++++ candidate060/layout_package_assets/source/scene_metadata.mjs
+@@ -111,6 +111,23 @@
+   node({id:leafId,kind:'door_leaf',transform:{position:initial,rotation_y_radians:0,scale:[1,1,1]},
+     representation:{type:'existing_box_parameters',size:leafSize}});
+   colliders.push({id:addId('collider','door_'+d.id+'_leaf'),owner_node_id:leafId,shape:'axis_aligned_box',bounds:box(initial,leafSize),motion:'kinematic',proxy:d.collisionPolicy});
++  // Attached hardware shares the leaf hinge but has distinct local boxes;
++  // do not inflate the entire door into a slab or omit visible handle volume.
++  const hardware=list(d.hardwareLocalBoxes,4);require(hardware.length===4,'Missing door hardware collision boxes');
++  const expected=[];
++  for(const side of [-1,1]){
++    const pc=[0,0,0],ps=[0,leafSize[1]*.68,0];pc[axis]=side*(.065/2+.005);ps[axis]=.008;ps[tangent]=leafSize[tangent]*.77;
++    expected.push({part:'panel_'+(side<0?'negative':'positive'),center:pc,size:ps});
++    const hc=[0,-.12,0],hs=[0,.27,0];hc[axis]=side*.07075;hc[tangent]=leafSize[tangent]*.34;hs[axis]=.0795;hs[tangent]=.075;
++    expected.push({part:'handle_'+(side<0?'negative':'positive'),center:hc,size:hs});
++  }
++  hardware.forEach((part,index)=>{
++    const wanted=expected[index];require(part.part===wanted.part&&equal(vector(part.center),wanted.center)&&equal(size(part.size),wanted.size),'Door hardware differs from rendered assembly');
++    const offset=vector(part.center),dimensions=size(part.size);
++    colliders.push({id:addId('collider','door_'+d.id+'_'+part.part),owner_node_id:leafId,shape:'axis_aligned_box',
++      bounds:box(initial.map((v,i)=>v+offset[i]),dimensions),motion:'kinematic',proxy:'attached_hardware_rotated_aabb',
++      leaf_local_center:offset,local_size:dimensions});
++  });
+   const frames=list(d.frames,3).map(f=>{
+    const center=vector(f.center),dimensions=size(f.size),n=node({id:addId('node',f.id),kind:'door_frame',transform:{position:center,rotation_y_radians:0,scale:[1,1,1]},representation:{type:'existing_box_parameters',size:dimensions}});
+    colliders.push({id:addId('collider',f.id),owner_node_id:n.id,shape:'axis_aligned_box',bounds:box(center,dimensions),motion:'static',proxy:'frame_box'});return n.id;
+--- installed056/layout_package_assets/source/walk_controller.mjs
++++ candidate060/layout_package_assets/source/walk_controller.mjs
+@@ -56,9 +56,9 @@
+       angle:0,target:0,moving:false,motionHeld:false,frames:frame};
+     // A quarter-disc bounds every intermediate point of the rotating leaf.
+     // Include thickness and the walker footprint; do not sample a few angles.
+-    const extent=door.width+DOOR_THICKNESS/2;
+-    const minimum=[hinge[0]-DOOR_THICKNESS/2,a.floor_y,hinge[2]-DOOR_THICKNESS/2];
+-    const maximum=[hinge[0]+DOOR_THICKNESS/2,a.floor_y+height,hinge[2]+DOOR_THICKNESS/2];
++    const hardwareHalfDepth=.1105,extent=door.width+hardwareHalfDepth;
++    const minimum=[hinge[0]-hardwareHalfDepth,a.floor_y,hinge[2]-hardwareHalfDepth];
++    const maximum=[hinge[0]+hardwareHalfDepth,a.floor_y+height,hinge[2]+hardwareHalfDepth];
+     const n=axis==='x'?0:2,t=axis==='x'?2:0;
+     maximum[t]=hinge[t]+extent;
+     if(sign>0)maximum[n]=hinge[n]+extent;else minimum[n]=hinge[n]-extent;
+@@ -93,10 +93,36 @@
+     return freeze({id:door.id,axis:door.axis,angle:door.angle,center:freeze(center),size:freeze(size),state,motionHeld:door.motionHeld,
+       collider:freeze({id:'door_'+door.id+'_leaf',...bounds(center,aabbSize)})});
+   }
++  // Local boxes enclose the rendered panels and each handle with its mounts.
++  // Keep these separate: a full-depth slab would block empty space elsewhere.
++  function hardwareBoxes(door){
++    const normal=door.axis==='x'?0:2,along=normal===0?2:0,parts=[];
++    for(const side of [-1,1]){
++      const panelCenter=[0,0,0],panelSize=[0,door.height*.68,0];
++      panelCenter[normal]=side*(DOOR_THICKNESS/2+.005);
++      panelSize[normal]=.008;panelSize[along]=door.width*.77;
++      parts.push({part:'panel_'+(side<0?'negative':'positive'),center:panelCenter,size:panelSize});
++      // Mount normal extent .031..096; handle extent .0645..1105.
++      const center=[0,-.12,0],size=[0,.27,0];
++      center[normal]=side*.07075;center[along]=door.width*.34;
++      size[normal]=.0795;size[along]=.075;
++      parts.push({part:'handle_'+(side<0?'negative':'positive'),center,size});
++    }
++    return parts;
++  }
++  function hardwareColliders(door){
++    const pose=poseOf(door),c=Math.cos(door.angle),s=Math.sin(door.angle);
++    return hardwareBoxes(door).map(part=>{
++      const p=part.center,z=part.size;
++      const center=[pose.center[0]+c*p[0]+s*p[2],pose.center[1]+p[1],pose.center[2]-s*p[0]+c*p[2]];
++      const size=[Math.abs(c)*z[0]+Math.abs(s)*z[2],z[1],Math.abs(s)*z[0]+Math.abs(c)*z[2]];
++      return {id:'door_'+door.id+'_'+part.part,...bounds(center,size)};
++    });
++  }
+   function all(){return freeze([...doors.values()].map(d=>poseOf(d)));}
+   function assemblies(){return freeze([...doors.values()].map(d=>freeze({id:d.id,axis:d.axis,frames:freeze(d.frames),
+     swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),roomA:d.roomA.name,roomB:d.roomB.name})));}
+-  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider]);}
++  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider,...hardwareColliders(d)]);}
+   function near(door,feet){
+     if(Math.abs(feet[1]-door.floor)>1e-8)return false;
+     const inside=r=>feet[0]>=r.x-1e-8&&feet[0]<=r.x+r.width+1e-8&&feet[2]>=r.z-1e-8&&feet[2]<=r.z+r.depth+1e-8;
+@@ -162,6 +188,7 @@
+     angularSpeed:Math.PI*1.25,maxStepSeconds:.05,interactionReach:REACH,
+     frames:freeze(d.frames.map(f=>freeze({id:f.id,center:freeze([...f.center]),size:freeze([...f.size])}))),
+     swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),
++    hardwareLocalBoxes:freeze(hardwareBoxes(d).map(p=>freeze({part:p.part,center:freeze([...p.center]),size:freeze([...p.size])}))),
+     collisionPolicy:'conservative_rotated_leaf_aabb_and_quarter_disc_sweep',
+     initialState:'closed',statePersistence:'session_local',pressureSimulation:false
+   })));}

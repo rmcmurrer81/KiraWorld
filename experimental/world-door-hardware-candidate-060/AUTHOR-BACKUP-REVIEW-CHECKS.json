@@ -1,0 +1,36 @@
+{
+  "scope": "Author fresh review for public experimental backup only; not independent authorship or install approval",
+  "frozen_files_checked": 104,
+  "public_files_checked": 104,
+  "hash_binding_checks": {
+    "frozen_hash": true,
+    "public_hash": true,
+    "public_hash_in_frozen": true,
+    "local_hash_in_frozen": true
+  },
+  "hash_issues": [],
+  "changed_files": [
+    "tools/world_builder_engine/layout_package_export.py",
+    "tools/world_builder_engine/walk_controller.mjs",
+    "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+    "tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+    "tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs"
+  ],
+  "public_prefix": "experimental/world-door-hardware-candidate-060/",
+  "forbidden_public_payload_files": [],
+  "high_confidence_secret_pattern_hit_files": [],
+  "scan_limit": "Pattern scan and reviewed text; not proof no secret can exist",
+  "excluded_from_public_file_set": [
+    "DELIVERY.json",
+    "FROZEN-MANIFEST.json",
+    "OWNER-PRESERVATION.local.json",
+    "PUBLIC-BACKUP-MANIFEST.json"
+  ],
+  "delivery_sha256": "8af1c3cdd357b4989fa55db34b07d9bfa0d3da60af334c3f26253e23a26fcdfc",
+  "frozen_manifest_sha256": "cbbc4a547647dab32a6d0574cd080ff9d8e2f2c65f6af26c00d07acbd3c195d7",
+  "public_manifest_sha256": "639be7e162b492ba8d34fbcf4fd6bc286b8ff1f740c6fdcdaf16bb495bca5269",
+  "full_delta_recomputed_exact": true,
+  "producer_pin_entries_checked": 17,
+  "producer_pin_issues": [],
+  "threejs_license_in_public_payload": true
+}

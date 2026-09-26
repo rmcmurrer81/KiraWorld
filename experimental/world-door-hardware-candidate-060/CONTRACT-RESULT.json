@@ -1,0 +1,26 @@
+{
+  "status": "PASS_READ_ONLY_PREVIEW_AND_PRESERVATION",
+  "actual_saved056_export_eligible": true,
+  "candidate_requires_new_immutable_preview": true,
+  "admission_cases": [
+    {
+      "case": "exact060",
+      "held": false
+    },
+    {
+      "case": "installed056",
+      "held": true
+    },
+    {
+      "case": "tampered",
+      "held": true
+    }
+  ],
+  "producer_pins_verified": 17,
+  "owner_files_unchanged": 116,
+  "canonical_closure_unchanged": 42,
+  "saved_pointer_unchanged": true,
+  "external_dependencies_unchanged_not_rehashed": true,
+  "new_previews_exports_models_UI_GPU": 0,
+  "limits": "Exact new-controller admission uses a mocked boundary; no new immutable preview or GLB was created."
+}

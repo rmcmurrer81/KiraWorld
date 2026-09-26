@@ -1,0 +1,242 @@
+--- installed056/layout_package_export.py
++++ candidate060/layout_package_export.py
+@@ -13,7 +13,7 @@
+ CONTRACT='authored_saved_layout_package_v2'
+ RENDERER={
+  'viewer.mjs':'0b6988db28bd16d1388c1cd54d004cc07ef0dfd86fc9b44c8c6f4cff833de07b',
+- 'walk_controller.mjs':'05920717e879cf80ab72ed56051b771a37268504bee3680ddad9308c6b3f620f',
++ 'walk_controller.mjs':'a54e668e4c77cb1d40d145f7543257f07fb1f257fb108fcf0712727afba90d22',
+  'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+  'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
+  'three.core.js':'eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20'}
+--- installed056/walk_controller.mjs
++++ candidate060/walk_controller.mjs
+@@ -56,9 +56,12 @@
+       angle:0,target:0,moving:false,motionHeld:false,frames:frame};
+     // A quarter-disc bounds every intermediate point of the rotating leaf.
+     // Include thickness and the walker footprint; do not sample a few angles.
+-    const extent=door.width+DOOR_THICKNESS/2;
+-    const minimum=[hinge[0]-DOOR_THICKNESS/2,a.floor_y,hinge[2]-DOOR_THICKNESS/2];
+-    const maximum=[hinge[0]+DOOR_THICKNESS/2,a.floor_y+height,hinge[2]+DOOR_THICKNESS/2];
++    const hardwareHalfDepth=.1105;
++    // Hardware sits at .84 leaf-width from the hinge, so its outer radial
++    // reach is smaller than the leaf sweep. Do not pad the far jamb again.
++    const extent=Math.max(door.width+DOOR_THICKNESS/2,Math.hypot(door.width*.84+.0375,hardwareHalfDepth));
++    const minimum=[hinge[0]-hardwareHalfDepth,a.floor_y,hinge[2]-hardwareHalfDepth];
++    const maximum=[hinge[0]+hardwareHalfDepth,a.floor_y+height,hinge[2]+hardwareHalfDepth];
+     const n=axis==='x'?0:2,t=axis==='x'?2:0;
+     maximum[t]=hinge[t]+extent;
+     if(sign>0)maximum[n]=hinge[n]+extent;else minimum[n]=hinge[n]-extent;
+@@ -93,10 +96,36 @@
+     return freeze({id:door.id,axis:door.axis,angle:door.angle,center:freeze(center),size:freeze(size),state,motionHeld:door.motionHeld,
+       collider:freeze({id:'door_'+door.id+'_leaf',...bounds(center,aabbSize)})});
+   }
++  // Local boxes enclose the rendered panels and each handle with its mounts.
++  // Keep these separate: a full-depth slab would block empty space elsewhere.
++  function hardwareBoxes(door){
++    const normal=door.axis==='x'?0:2,along=normal===0?2:0,parts=[];
++    for(const side of [-1,1]){
++      const panelCenter=[0,0,0],panelSize=[0,door.height*.68,0];
++      panelCenter[normal]=side*(DOOR_THICKNESS/2+.005);
++      panelSize[normal]=.008;panelSize[along]=door.width*.77;
++      parts.push({part:'panel_'+(side<0?'negative':'positive'),center:panelCenter,size:panelSize});
++      // Mount normal extent .031..096; handle extent .0645..1105.
++      const center=[0,-.12,0],size=[0,.27,0];
++      center[normal]=side*.07075;center[along]=door.width*.34;
++      size[normal]=.0795;size[along]=.075;
++      parts.push({part:'handle_'+(side<0?'negative':'positive'),center,size});
++    }
++    return parts;
++  }
++  function hardwareColliders(door){
++    const pose=poseOf(door),c=Math.cos(door.angle),s=Math.sin(door.angle);
++    return hardwareBoxes(door).map(part=>{
++      const p=part.center,z=part.size;
++      const center=[pose.center[0]+c*p[0]+s*p[2],pose.center[1]+p[1],pose.center[2]-s*p[0]+c*p[2]];
++      const size=[Math.abs(c)*z[0]+Math.abs(s)*z[2],z[1],Math.abs(s)*z[0]+Math.abs(c)*z[2]];
++      return {id:'door_'+door.id+'_'+part.part,...bounds(center,size)};
++    });
++  }
+   function all(){return freeze([...doors.values()].map(d=>poseOf(d)));}
+   function assemblies(){return freeze([...doors.values()].map(d=>freeze({id:d.id,axis:d.axis,frames:freeze(d.frames),
+     swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),roomA:d.roomA.name,roomB:d.roomB.name})));}
+-  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider]);}
++  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider,...hardwareColliders(d)]);}
+   function near(door,feet){
+     if(Math.abs(feet[1]-door.floor)>1e-8)return false;
+     const inside=r=>feet[0]>=r.x-1e-8&&feet[0]<=r.x+r.width+1e-8&&feet[2]>=r.z-1e-8&&feet[2]<=r.z+r.depth+1e-8;
+@@ -158,7 +187,13 @@
+ export function createWalkController(geometry,{extraColliders=[]}={}) {
+   const nav = {contract:NAVIGATION_CONTRACT, support_surfaces:geometry.support_surfaces, colliders:geometry.colliders};
+   const doors=createDoorSystem(geometry);
+-  const doorNav=()=>({contract:NAVIGATION_CONTRACT,support_surfaces:geometry.support_surfaces,colliders:doors.colliders()});
++  // Navigation admits 128 colliders per check. Keep all 24 supported doors,
++  // including attached hardware, without dropping parts or raising that bound.
++  const doorScenes=()=>{
++    const colliders=doors.colliders(),scenes=[];
++    for(let i=0;i<colliders.length;i+=128)scenes.push({contract:NAVIGATION_CONTRACT,support_surfaces:geometry.support_surfaces,colliders:colliders.slice(i,i+128)});
++    return scenes;
++  };
+   ensure(Array.isArray(extraColliders)&&extraColliders.length<=128,'Invalid extra collider collection');
+   const occupiedIds=new Set([...geometry.colliders,...doors.colliders()].map(c=>c.id));
+   const extra=extraColliders.map(c=>{
+@@ -175,7 +210,7 @@
+   let feet = [room.x + room.width / 2, room.floor_y, room.z + room.depth / 2];
+   const spawn = checkWalkSpawn(feet, nav, AVATAR.radius, AVATAR.height);
+   if (!spawn.ok) throw new Error('No supported entry position: ' + spawn.reason);
+-  if(!checkWalkSpawn(feet,doorNav(),AVATAR.radius,AVATAR.height).ok)throw new Error('Entry position intersects a door assembly.');
++  if(doorScenes().some(nav=>!checkWalkSpawn(feet,nav,AVATAR.radius,AVATAR.height).ok))throw new Error('Entry position intersects a door assembly.');
+   if(extra.length&&!checkWalkSpawn(feet,furnitureNav,AVATAR.radius,AVATAR.height).ok)throw new Error('Entry position intersects furnished geometry.');
+   let yaw = 0, pitch = 0, blocked = null, distance = 0;
+   const first = geometry.routes.find(r => r.points.some(p => p.every((v,i) => v === feet[i])));
+@@ -211,7 +246,7 @@
+     const route={id:'interactive_walk',avatar_radius:AVATAR.radius,avatar_height:AVATAR.height,points:[feet,end]};
+     let result=checkHorizontalRoute(route,nav);
+     if(result.status==='clear'){
+-      result=checkHorizontalRoute(route,doorNav());
++      for(const scene of doorScenes()){result=checkHorizontalRoute(route,scene);if(result.status!=='clear')break;}
+       if(result.status!=='clear'&&result.reason==='solid_obstruction')result={...result,reason:'door_obstruction'};
+     }
+     if(result.status==='clear'&&extra.length){
+--- installed056/layout_package_assets/PRODUCER-PINS.json
++++ candidate060/layout_package_assets/PRODUCER-PINS.json
+@@ -30,12 +30,12 @@
+       "bytes": 33596
+     },
+     "source/scene_metadata.mjs": {
+-      "sha256": "8eea3db5d09b5f421843d999c00a7858c64afe9d7ede92204d0b8aba7f4d0181",
+-      "bytes": 14706
++      "sha256": "e5359bb4dc24f8f6ad701c74903e5e7cc92ffe0745533069eda0c021db7463a8",
++      "bytes": 16038
+     },
+     "source/walk_controller.mjs": {
+-      "sha256": "e7cfe0c2ca7fe8d5de20f88bab07ef27f64c10b4e7d75d436d55e4f207cac612",
+-      "bytes": 16899
++      "sha256": "97f651e7699715afb3fc02990beb82fbc39228b0fb668a5fd9e8c79cc078c338",
++      "bytes": 19050
+     },
+     "source_bindings.py": {
+       "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+--- installed056/layout_package_assets/source/scene_metadata.mjs
++++ candidate060/layout_package_assets/source/scene_metadata.mjs
+@@ -111,6 +111,23 @@
+   node({id:leafId,kind:'door_leaf',transform:{position:initial,rotation_y_radians:0,scale:[1,1,1]},
+     representation:{type:'existing_box_parameters',size:leafSize}});
+   colliders.push({id:addId('collider','door_'+d.id+'_leaf'),owner_node_id:leafId,shape:'axis_aligned_box',bounds:box(initial,leafSize),motion:'kinematic',proxy:d.collisionPolicy});
++  // Attached hardware shares the leaf hinge but has distinct local boxes;
++  // do not inflate the entire door into a slab or omit visible handle volume.
++  const hardware=list(d.hardwareLocalBoxes,4);require(hardware.length===4,'Missing door hardware collision boxes');
++  const expected=[];
++  for(const side of [-1,1]){
++    const pc=[0,0,0],ps=[0,leafSize[1]*.68,0];pc[axis]=side*(.065/2+.005);ps[axis]=.008;ps[tangent]=leafSize[tangent]*.77;
++    expected.push({part:'panel_'+(side<0?'negative':'positive'),center:pc,size:ps});
++    const hc=[0,-.12,0],hs=[0,.27,0];hc[axis]=side*.07075;hc[tangent]=leafSize[tangent]*.34;hs[axis]=.0795;hs[tangent]=.075;
++    expected.push({part:'handle_'+(side<0?'negative':'positive'),center:hc,size:hs});
++  }
++  hardware.forEach((part,index)=>{
++    const wanted=expected[index];require(part.part===wanted.part&&equal(vector(part.center),wanted.center)&&equal(size(part.size),wanted.size),'Door hardware differs from rendered assembly');
++    const offset=vector(part.center),dimensions=size(part.size);
++    colliders.push({id:addId('collider','door_'+d.id+'_'+part.part),owner_node_id:leafId,shape:'axis_aligned_box',
++      bounds:box(initial.map((v,i)=>v+offset[i]),dimensions),motion:'kinematic',proxy:'attached_hardware_rotated_aabb',
++      leaf_local_center:offset,local_size:dimensions});
++  });
+   const frames=list(d.frames,3).map(f=>{
+    const center=vector(f.center),dimensions=size(f.size),n=node({id:addId('node',f.id),kind:'door_frame',transform:{position:center,rotation_y_radians:0,scale:[1,1,1]},representation:{type:'existing_box_parameters',size:dimensions}});
+    colliders.push({id:addId('collider',f.id),owner_node_id:n.id,shape:'axis_aligned_box',bounds:box(center,dimensions),motion:'static',proxy:'frame_box'});return n.id;
+--- installed056/layout_package_assets/source/walk_controller.mjs
++++ candidate060/layout_package_assets/source/walk_controller.mjs
+@@ -56,9 +56,12 @@
+       angle:0,target:0,moving:false,motionHeld:false,frames:frame};
+     // A quarter-disc bounds every intermediate point of the rotating leaf.
+     // Include thickness and the walker footprint; do not sample a few angles.
+-    const extent=door.width+DOOR_THICKNESS/2;
+-    const minimum=[hinge[0]-DOOR_THICKNESS/2,a.floor_y,hinge[2]-DOOR_THICKNESS/2];
+-    const maximum=[hinge[0]+DOOR_THICKNESS/2,a.floor_y+height,hinge[2]+DOOR_THICKNESS/2];
++    const hardwareHalfDepth=.1105;
++    // Hardware sits at .84 leaf-width from the hinge, so its outer radial
++    // reach is smaller than the leaf sweep. Do not pad the far jamb again.
++    const extent=Math.max(door.width+DOOR_THICKNESS/2,Math.hypot(door.width*.84+.0375,hardwareHalfDepth));
++    const minimum=[hinge[0]-hardwareHalfDepth,a.floor_y,hinge[2]-hardwareHalfDepth];
++    const maximum=[hinge[0]+hardwareHalfDepth,a.floor_y+height,hinge[2]+hardwareHalfDepth];
+     const n=axis==='x'?0:2,t=axis==='x'?2:0;
+     maximum[t]=hinge[t]+extent;
+     if(sign>0)maximum[n]=hinge[n]+extent;else minimum[n]=hinge[n]-extent;
+@@ -93,10 +96,36 @@
+     return freeze({id:door.id,axis:door.axis,angle:door.angle,center:freeze(center),size:freeze(size),state,motionHeld:door.motionHeld,
+       collider:freeze({id:'door_'+door.id+'_leaf',...bounds(center,aabbSize)})});
+   }
++  // Local boxes enclose the rendered panels and each handle with its mounts.
++  // Keep these separate: a full-depth slab would block empty space elsewhere.
++  function hardwareBoxes(door){
++    const normal=door.axis==='x'?0:2,along=normal===0?2:0,parts=[];
++    for(const side of [-1,1]){
++      const panelCenter=[0,0,0],panelSize=[0,door.height*.68,0];
++      panelCenter[normal]=side*(DOOR_THICKNESS/2+.005);
++      panelSize[normal]=.008;panelSize[along]=door.width*.77;
++      parts.push({part:'panel_'+(side<0?'negative':'positive'),center:panelCenter,size:panelSize});
++      // Mount normal extent .031..096; handle extent .0645..1105.
++      const center=[0,-.12,0],size=[0,.27,0];
++      center[normal]=side*.07075;center[along]=door.width*.34;
++      size[normal]=.0795;size[along]=.075;
++      parts.push({part:'handle_'+(side<0?'negative':'positive'),center,size});
++    }
++    return parts;
++  }
++  function hardwareColliders(door){
++    const pose=poseOf(door),c=Math.cos(door.angle),s=Math.sin(door.angle);
++    return hardwareBoxes(door).map(part=>{
++      const p=part.center,z=part.size;
++      const center=[pose.center[0]+c*p[0]+s*p[2],pose.center[1]+p[1],pose.center[2]-s*p[0]+c*p[2]];
++      const size=[Math.abs(c)*z[0]+Math.abs(s)*z[2],z[1],Math.abs(s)*z[0]+Math.abs(c)*z[2]];
++      return {id:'door_'+door.id+'_'+part.part,...bounds(center,size)};
++    });
++  }
+   function all(){return freeze([...doors.values()].map(d=>poseOf(d)));}
+   function assemblies(){return freeze([...doors.values()].map(d=>freeze({id:d.id,axis:d.axis,frames:freeze(d.frames),
+     swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),roomA:d.roomA.name,roomB:d.roomB.name})));}
+-  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider]);}
++  function colliders(){return [...doors.values()].flatMap(d=>[...d.frames.map(f=>({id:f.id,min:[...f.min],max:[...f.max]})),poseOf(d).collider,...hardwareColliders(d)]);}
+   function near(door,feet){
+     if(Math.abs(feet[1]-door.floor)>1e-8)return false;
+     const inside=r=>feet[0]>=r.x-1e-8&&feet[0]<=r.x+r.width+1e-8&&feet[2]>=r.z-1e-8&&feet[2]<=r.z+r.depth+1e-8;
+@@ -162,6 +191,7 @@
+     angularSpeed:Math.PI*1.25,maxStepSeconds:.05,interactionReach:REACH,
+     frames:freeze(d.frames.map(f=>freeze({id:f.id,center:freeze([...f.center]),size:freeze([...f.size])}))),
+     swingBounds:freeze({min:freeze([...d.sweep.min]),max:freeze([...d.sweep.max])}),
++    hardwareLocalBoxes:freeze(hardwareBoxes(d).map(p=>freeze({part:p.part,center:freeze([...p.center]),size:freeze([...p.size])}))),
+     collisionPolicy:'conservative_rotated_leaf_aabb_and_quarter_disc_sweep',
+     initialState:'closed',statePersistence:'session_local',pressureSimulation:false
+   })));}
+@@ -171,7 +201,13 @@
+ export function createWalkController(geometry,{extraColliders=[]}={}) {
+   const nav = {contract:NAVIGATION_CONTRACT, support_surfaces:geometry.support_surfaces, colliders:geometry.colliders};
+   const doors=createDoorSystem(geometry);
+-  const doorNav=()=>({contract:NAVIGATION_CONTRACT,support_surfaces:geometry.support_surfaces,colliders:doors.colliders()});
++  // Navigation admits 128 colliders per check. Keep all 24 supported doors,
++  // including attached hardware, without dropping parts or raising that bound.
++  const doorScenes=()=>{
++    const colliders=doors.colliders(),scenes=[];
++    for(let i=0;i<colliders.length;i+=128)scenes.push({contract:NAVIGATION_CONTRACT,support_surfaces:geometry.support_surfaces,colliders:colliders.slice(i,i+128)});
++    return scenes;
++  };
+   ensure(Array.isArray(extraColliders)&&extraColliders.length<=128,'Invalid extra collider collection');
+   const occupiedIds=new Set([...geometry.colliders,...doors.colliders()].map(c=>c.id));
+   const extra=extraColliders.map(c=>{
+@@ -188,7 +224,7 @@
+   let feet = [room.x + room.width / 2, room.floor_y, room.z + room.depth / 2];
+   const spawn = checkWalkSpawn(feet, nav, AVATAR.radius, AVATAR.height);
+   if (!spawn.ok) throw new Error('No supported entry position: ' + spawn.reason);
+-  if(!checkWalkSpawn(feet,doorNav(),AVATAR.radius,AVATAR.height).ok)throw new Error('Entry position intersects a door assembly.');
++  if(doorScenes().some(nav=>!checkWalkSpawn(feet,nav,AVATAR.radius,AVATAR.height).ok))throw new Error('Entry position intersects a door assembly.');
+   if(extra.length&&!checkWalkSpawn(feet,furnitureNav,AVATAR.radius,AVATAR.height).ok)throw new Error('Entry position intersects furnished geometry.');
+   let yaw = 0, pitch = 0, blocked = null, distance = 0;
+   const first = geometry.routes.find(r => r.points.some(p => p.every((v,i) => v === feet[i])));
+@@ -224,7 +260,7 @@
+     const route={id:'interactive_walk',avatar_radius:AVATAR.radius,avatar_height:AVATAR.height,points:[feet,end]};
+     let result=checkHorizontalRoute(route,nav);
+     if(result.status==='clear'){
+-      result=checkHorizontalRoute(route,doorNav());
++      for(const scene of doorScenes()){result=checkHorizontalRoute(route,scene);if(result.status!=='clear')break;}
+       if(result.status!=='clear'&&result.reason==='solid_obstruction')result={...result,reason:'door_obstruction'};
+     }
+     if(result.status==='clear'&&extra.length){

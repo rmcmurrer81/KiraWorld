@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-26T20:05:17.675849+00:00",
+  "status": "CPU_REVIEW_READY_NOT_INSTALLED",
+  "changed_files": {
+    "tools/world_builder_engine/layout_package_export.py": {
+      "sha256": "e84140118daa972727fdaee22715017c39979a3d20cab4c42ae5844defddef67",
+      "bytes": 11334
+    },
+    "tools/world_builder_engine/walk_controller.mjs": {
+      "sha256": "a54e668e4c77cb1d40d145f7543257f07fb1f257fb108fcf0712727afba90d22",
+      "bytes": 17853
+    },
+    "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json": {
+      "sha256": "de51164185dee55ddab39a4cef58377e6b6d5e58789797d61e211f2084c2f8f1",
+      "bytes": 4150
+    },
+    "tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs": {
+      "sha256": "e5359bb4dc24f8f6ad701c74903e5e7cc92ffe0745533069eda0c021db7463a8",
+      "bytes": 16038
+    },
+    "tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs": {
+      "sha256": "97f651e7699715afb3fc02990beb82fbc39228b0fb668a5fd9e8c79cc078c338",
+      "bytes": 19050
+    }
+  },
+  "source_closure_files": 42,
+  "frozen_manifest_sha256": "cbbc4a547647dab32a6d0574cd080ff9d8e2f2c65f6af26c00d07acbd3c195d7",
+  "public_backup_manifest_sha256": "639be7e162b492ba8d34fbcf4fd6bc286b8ff1f740c6fdcdaf16bb495bca5269",
+  "source_diff_sha256": "837ba3de0a98ee7b41b41e715021430517d84025f560d67ab5147b15445d6afc",
+  "test_result_sha256": "d9a0b022c2b1e5214dc9545e06987574a78dba80f049e3da8b7520ed37cf84ae",
+  "contract_result_sha256": "9cb03b27c87f0fa02bc54a4b1e949c75fca4bb5a0dfcfb719cf15635a333012a",
+  "reproduction_sha256": "6310f79872ce3bc1c9bf47d9d2f84b0196de43490c2baa14a385a9c19d90222f",
+  "checks": 321108,
+  "layouts": 5,
+  "door_pose_samples": 540,
+  "original_overlap_positions": 12,
+  "fixed_in_both_consumers": true,
+  "installed": false,
+  "owner_files_unchanged": 116,
+  "canonical_closure_unchanged": 42,
+  "new_preview_or_GLB": false,
+  "native_visual_or_owner_approval": false,
+  "model_gpu_ui_calls": 0,
+  "next": "Independent source review, later merged source/export binding check and native inspection before installation."
+}
