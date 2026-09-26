@@ -1,0 +1,15 @@
+# World063: actual isolated combined export
+
+One supervised CPU export/import used frozen World062 source, combining the meal station and corrected door-hardware collision metadata. It created a new immutable preview under this evidence directory and a new GLB package. No installed source, owner world, selected-job pointer or old preview/export was replaced.
+
+The saved GLB is 1,434,548 bytes, SHA256 `1a5fe2010d9c52db4e95ad471acf6ffc58bddb6ad4661dcd3a0b5db2f34ddaa0`. The importer verified663 mesh instances,102 materials,70 embedded PNGs,142 semantic nodes,159 colliders and6 doors. The meal station's20 meshes remain present. Four hardware colliders per door add24 exact leaf-owned kinematic bounds. The paired-airlock policy is preserved.
+
+A separate read-only audit compared actual063 with actual059. All geometry and embedded-image buffer bytes are identical, as are materials, textures, lights and transforms. The only changed GLB nodes are the six leaf collider-link lists. Prior semantic nodes and colliders remain exact; door metadata changes only the intentionally enlarged swing bounds. Geometry and meal-recipe provenance remain unchanged while the controller digest binds to062. All18 export/import door-pose samples and overall scene bounds are unchanged.
+
+The supervised run completed in2.63 seconds with exit0 and no owned process left running. Peak sampled family RSS was700,743,680 bytes under the unchanged858,993,459-byte cap. Start free RAM exceeded5GiB and reserve stayed above3GiB; the deadline remained150 seconds. Sampling excludes the supervisor and can miss transient peaks. All116 protected originals,42 installed source files,110 frozen062 files and81 prior derived files were rechecked unchanged. All17 producer files and10 external dependency pins passed the preflight.
+
+The bundled Python initially failed to import psutil before any output directory or export child was created. The existing Python3.14 environment with psutil7.2.2 then ran the same monitored harness. No package was installed and only one actual export occurred. The independent delta audit initially used the wrong label `dynamic`; the schema defines scripted hardware as `kinematic`. The audit assertion was corrected without changing the exported result or source.
+
+This is technical transport and metadata evidence, **not visual approval or installation**. No image renderer, browser, native UI, GPU/model job, seating interaction, pressure simulation, or engine-native/VR collision adapter was run or added. Realistic appearance is still required. Human-scale meal access, handle traversal, paired airlock navigation and observation trim need native inspection before a guarded promotion can be considered.
+
+The full immutable preview, bound owner paths, preservation inventory and process/resource logs are local recovery evidence. The small public backup list deliberately excludes them and the GLB package; retain the complete directory in the private backup. Public technical summaries expose only aggregate counts, digests and limits. The separate candidate062 source remains unchanged.

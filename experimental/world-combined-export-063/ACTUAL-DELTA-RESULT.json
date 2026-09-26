@@ -1,0 +1,352 @@
+{
+  "status": "ACTUAL063_COMBINED_GLB_DELTA_PASS",
+  "baseline059_glb_sha256": "859eb81d88c7bef8817062e9a8ed4af85d44a1823b86c3017d1f4ace6cbc8b2d",
+  "combined063_glb_sha256": "1a5fe2010d9c52db4e95ad471acf6ffc58bddb6ad4661dcd3a0b5db2f34ddaa0",
+  "combined_glb_bytes": 1434548,
+  "baseline_counts": {
+    "objects": 746,
+    "meshes": 663,
+    "materials": 102,
+    "textures": 70,
+    "embedded_pngs": 70,
+    "rooms": 7,
+    "semantic_nodes": 142,
+    "colliders": 135,
+    "doors": 6
+  },
+  "combined_counts": {
+    "objects": 746,
+    "meshes": 663,
+    "materials": 102,
+    "textures": 70,
+    "embedded_pngs": 70,
+    "rooms": 7,
+    "semantic_nodes": 142,
+    "colliders": 159,
+    "doors": 6
+  },
+  "all_geometry_and_embedded_image_buffer_bytes_identical_to059": true,
+  "unchanged_materials_textures_lights_transforms_and_meshes": true,
+  "meal_station_meshes_preserved": 20,
+  "added_hardware_colliders": 24,
+  "hardware_colliders_per_door": 4,
+  "changed_GLB_nodes_only_six_leaf_collider_links": [
+    "door_opening_1_leaf",
+    "door_opening_2_leaf",
+    "door_opening_3_leaf",
+    "door_opening_4_leaf",
+    "door_opening_5_leaf",
+    "door_opening_6_leaf"
+  ],
+  "all_prior_semantic_nodes_and_colliders_preserved": true,
+  "only_door_metadata_change_is_enlarged_swing_bounds": true,
+  "all18_export_import_door_poses_unchanged": true,
+  "paired_airlock_policy_unchanged": true,
+  "overall_scene_bounds_unchanged": true,
+  "source_geometry_and_meal_recipe_digests_unchanged": true,
+  "door_controller_digest_bound_to062": true,
+  "independent_saved_package_audit": {
+    "status": "READ_ONLY_PACKAGE_AUDIT_PASS",
+    "glb_sha256": "1a5fe2010d9c52db4e95ad471acf6ffc58bddb6ad4661dcd3a0b5db2f34ddaa0",
+    "counts": {
+      "objects": 746,
+      "meshes": 663,
+      "materials": 102,
+      "textures": 70,
+      "embedded_pngs": 70,
+      "rooms": 7,
+      "semantic_nodes": 142,
+      "colliders": 159,
+      "doors": 6
+    },
+    "checked_accessors": 1596,
+    "embedded_png_dimensions": [
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        768,
+        256
+      ],
+      [
+        768,
+        256
+      ],
+      [
+        768,
+        256
+      ],
+      [
+        768,
+        256
+      ],
+      [
+        768,
+        256
+      ],
+      [
+        768,
+        256
+      ],
+      [
+        768,
+        256
+      ]
+    ],
+    "manifest_seal_and_files_verified": true,
+    "external_buffer_or_image_URIs": 0,
+    "all_collider_owner_nodes_present": true
+  },
+  "renderer_UI_GPU_models_install": 0,
+  "visual_or_owner_approval": false,
+  "limit": "Saved GLB transport and metadata fidelity only. No rendered appearance, human scale, seating, comfort or engine-native/VR interaction approval."
+}

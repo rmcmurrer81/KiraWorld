@@ -1,0 +1,57 @@
+{
+  "schema": "world063-public-technical-evidence.v1",
+  "destination_prefix": "experimental/world-combined-export-063/",
+  "files": {
+    "README.md": {
+      "sha256": "6eba118f1d5f0b56df3408ba4d3bb9362c0fb6694b6a2dafb50008bf4b25cf36",
+      "bytes": 3101
+    },
+    "TECHNICAL-SUMMARY.json": {
+      "sha256": "d66e7cc309311f4df9b9aa160dbde46f53d121845c54396550738fb7e2f4bd47",
+      "bytes": 1952
+    },
+    "ACTUAL-DELTA-RESULT.json": {
+      "sha256": "fb2f08c3d3938b3a5cb0ce6a55a198e65511d83e462a92c64ce58bb5b3f8b348",
+      "bytes": 5319
+    },
+    "DEPENDENCIES.json": {
+      "sha256": "fb99b7352f0e514aed39a16e9d4f72fc7e59f9cd6f9aa683ea796d207fb79715",
+      "bytes": 1101
+    },
+    "prepare_harness.py": {
+      "sha256": "755f48dccae93501ef01f0bdf0d46de7e5ddbe6579f71984982ac8adbc67d973",
+      "bytes": 5297
+    },
+    "run_cpu_export.py": {
+      "sha256": "c12effa8bf65349bf0883fad7d2be8df03a00a81ca64641221ca8c32118cba21",
+      "bytes": 12070
+    },
+    "check_actual_delta.py": {
+      "sha256": "ba5de6fbc5d5eaff219cd695282f4a9079ae0357799474d98f371d14fe2e48a0",
+      "bytes": 5375
+    },
+    "freeze_result.py": {
+      "sha256": "64618642a76316f0b1674a8cc724838abc6e033d6baee213848dbc82a684e5a6",
+      "bytes": 5376
+    },
+    "HARNESS-FROM059.diff": {
+      "sha256": "cb9d7320991ab0aed7bea0a7d43b14562f195ec9504cffe6c1ff889d4f3d237f",
+      "bytes": 9289
+    },
+    "HARNESS-PREPARATION.json": {
+      "sha256": "e7c3396a5c63ec1fb477d02ebe142318926816e1bb284245ea884fbdb28f154d",
+      "bytes": 690
+    }
+  },
+  "excluded_scopes": [
+    "actual-001/",
+    "runtime_context/",
+    "SUPERVISOR.json",
+    "FROZEN-MANIFEST.json"
+  ],
+  "private_frozen_manifest_sha256": "8a4a09f67c70784650cace7e3170b6fd70f5b20a6d45522c2bd03c1f1b71a092",
+  "raw_owner_state_or_absolute_path_inventory_included": false,
+  "resource_process_logs_included": false,
+  "glb_included": false,
+  "visual_or_owner_approval": false
+}

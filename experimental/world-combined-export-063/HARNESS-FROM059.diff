@@ -1,0 +1,113 @@
+--- reviewed059/run_cpu_export.py
++++ isolated063/run_cpu_export.py
+@@ -1,10 +1,10 @@
+-"""Root-authorized059 isolated CPU preview/export; no installation or saved pointer writes."""
++"""Root-authorized063 combined CPU preview/export; no installation or saved pointer writes."""
+ from pathlib import Path
+ import datetime,hashlib,importlib.util,json,os,shutil,subprocess,sys,time
+ import psutil
+ 
+ H=Path(__file__).resolve().parent;W=H.parent;K=Path('C:/Users/robmc/Kira')
+-E=K/'tools/world_builder_engine';C=H/'candidate/tools/world_builder_engine'
++E=K/'tools/world_builder_engine';F=W/'world-combined-followup-062';C=F/'candidate/tools/world_builder_engine'
+ P=W/'world-observation-trim-056/native-successor-001'
+ O=H/'actual-001';R=H/'runtime_context/tools/world_builder_engine'
+ sys.dont_write_bytecode=True;sys.path.insert(0,str(K/'tools'))
+@@ -16,14 +16,29 @@
+  spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec)
+  sys.modules[name]=m;spec.loader.exec_module(m);return m
+ def source_check(plan):
+- assert sha(H/'INSTALL-PLAN.json')=='cd3d00f6a41929ec18946cd36f149469be7a34cc920887629218d28b143e1f99'
+- assert all(sha(p)==s for p,s in plan['protected_inputs'].items())
+- assert len(plan['protected_inputs'])==116
+- for rel,row in json.loads((H/'SOURCE-PINS.json').read_bytes()).items():assert sha(K/rel)==row['sha256']
+- for rel,row in json.loads((H/'CANDIDATE-CLOSURE.json').read_bytes()).items():assert sha(H/'candidate'/rel)==row['sha256']
+- for rel,row in json.loads((H/'FROZEN-MANIFEST.json').read_bytes())['files'].items():
+-  assert sha(H/rel)==row['sha256'] and (H/rel).stat().st_size==row['bytes']
+- for row in plan['files']:assert sha(row['target'])==row['before_sha256'] and sha(row['after']['path'])==row['after']['sha256']
++ assert sha(F/'FROZEN-MANIFEST.json')=='c54ef25dab757ca2689a030749d81e21ddef14ecaca999c411759301ee345207'
++ assert len(plan['protected_inputs'])==116 and all(sha(p)==s for p,s in plan['protected_inputs'].items())
++ source=json.loads((F/'SOURCE-PINS.json').read_bytes());closure=json.loads((F/'CANDIDATE-CLOSURE.json').read_bytes())
++ assert len(source)==len(closure)==42
++ for rel,row in source.items():assert sha(K/rel)==row['sha256'] and (K/rel).stat().st_size==row['bytes']
++ for rel,row in closure.items():assert sha(F/'candidate'/rel)==row['sha256'] and (F/'candidate'/rel).stat().st_size==row['bytes']
++ for rel,row in json.loads((F/'FROZEN-MANIFEST.json').read_bytes())['files'].items():
++  assert sha(F/rel)==row['sha256'] and (F/rel).stat().st_size==row['bytes']
++
++def preflight():
++ from world_builder_engine import layout_package_export
++ api=load('world_builder_engine.layout_package_export063_preflight',C/'layout_package_export.py')
++ verified=api.verify_dependencies()
++ ancestors={p.pid for p in psutil.Process().parents()}|{os.getpid()}
++ conflicts=[]
++ for p in psutil.process_iter(['pid','name','cmdline']):
++  if p.pid in ancestors:continue
++  name=(p.info['name'] or '').lower();cmd=' '.join(p.info['cmdline'] or []).lower()
++  if name in ('python.exe','pythonw.exe','blender.exe','ffmpeg.exe') or (name=='node.exe' and 'build_glb.mjs' in cmd):
++   conflicts.append({'pid':p.pid,'name':name})
++ assert not conflicts, 'Another render/service process is present; hold without stopping it: '+str(conflicts)
++ return {'source_producer_files_verified':len(verified['pins']['files']),'external_dependencies_verified':len(verified['pins']['external']),'conflicting_processes':conflicts,'resource_limits_unchanged_from059':True}
++
+ def child():
+  import world_builder_engine.world_layout_preview as installed_preview
+  from world_builder_engine.pipeline import latest_preview
+@@ -44,10 +59,10 @@
+   if key in ('geometry_source','research_packet','blueprint') or key.startswith('research_cache_'):assert frozen['inputs'][key]==row
+  assert frozen['presentation_setting']==old['presentation_setting']
+  assert Path(prepared_preview['manifest_path']).is_relative_to(H/'runtime_context')
+- put(O/'PREVIEW-RESULT.json',{'status':'ISOLATED_IMMUTABLE059_PREVIEW_CREATED','current':prepared_preview,'context':context,
++ put(O/'PREVIEW-RESULT.json',{'status':'ISOLATED_IMMUTABLE063_PREVIEW_CREATED','current':prepared_preview,'context':context,
+   'backend_bytes_identical_to_installed':True,'renderer_sha256':sha(C/'viewer.mjs'),'preview_server_or_ui_started':False,
+   'previous_pointer':previous,'installed056_binding':binding,'presentation':frozen['presentation_setting']})
+- api=load('world_builder_engine.layout_package_export059',C/'layout_package_export.py');api.PROJECT=K
++ api=load('world_builder_engine.layout_package_export063',C/'layout_package_export.py');api.PROJECT=K
+  assert api.verify_preview is preview.verify_preview
+  new_binding={'manifest_path':prepared_preview['manifest_path'],'manifest_sha256':prepared_preview['manifest_sha256']}
+  prepared=api.inspect_selected_layout(job,preview_binding=new_binding)
+@@ -77,19 +92,21 @@
+   'source_chain_and_presentation_rechecked':True,'selected_pointer_unchanged':True,'exported_raw_brief':False,
+   'package_source_digests':package['verified_source_digests'],'counts':report['counts'],
+   'pressure_simulation':False,'engine_native_controls':False,'visual_or_owner_approval':False})
+- print(json.dumps({'status':'ISOLATED059_CPU_EXPORT_CREATED','glb_sha256':report['glb_sha256']}))
++ print(json.dumps({'status':'ISOLATED063_CPU_EXPORT_CREATED','glb_sha256':report['glb_sha256']}))
+ def main():
+  if '--child' in sys.argv:return child()
+- plan=json.loads((H/'INSTALL-PLAN.json').read_bytes());source_check(plan)
++ plan={'protected_inputs':json.loads((F/'OWNER-PRESERVATION.local.json').read_bytes())};source_check(plan);checked_preflight=preflight()
+  start_free=psutil.virtual_memory().available
+  assert start_free>=5*1024**3,'Need5GiB free RAM before export; Studio retains priority'
+- assert not O.exists() and not R.exists();O.mkdir()
++ assert not O.exists() and not R.exists();O.mkdir();put(O/'PREFLIGHT.json',checked_preflight)
+  refresh=json.loads((P/'installed-preview-001/REFRESH-RESULT.json').read_bytes());protected={}
+  for key in ('current','previous'):protected.update(inventory(Path(refresh[key]['manifest_path']).parent))
+- for name in ('world-installed-observation-export-057','world-observation-viewport-053','world-observation-setting-054','world-door-targeting-candidate-051'):
++ protected.update(inventory(K/'Data/world_layout_previews'))
++ protected.update(inventory(W/'world-meal-station-candidate-059/runtime_context/Data/world_layout_previews'))
++ for name in ('world-installed-observation-export-057','world-meal-station-candidate-059','world-observation-viewport-053','world-observation-setting-054','world-door-targeting-candidate-051'):
+   folder=W/name/'actual-001/package'
+   if folder.exists():protected.update(inventory(folder))
+- put(O/'PROTECTED-DERIVED-FILES.json',{'files':protected,'originals_inventory_sha256':sha(H/'INSTALL-PLAN.json')})
++ put(O/'PROTECTED-DERIVED-FILES.local.json',{'files':protected,'originals_inventory_sha256':sha(F/'OWNER-PRESERVATION.local.json')})
+  peak=0;samples=0;owned={};reason=None;started=time.monotonic();minimum_free=start_free
+  with (O/'stdout.log').open('xb') as stdout,(O/'stderr.log').open('xb') as stderr,(O/'RESOURCES.jsonl').open('x',encoding='utf-8') as trace:
+   proc=subprocess.Popen([sys.executable,'-B',str(Path(__file__)), '--child'],stdout=stdout,stderr=stderr,
+@@ -129,15 +146,15 @@
+    if psutil.Process(pid).create_time()==born:remaining.append(pid)
+   except psutil.NoSuchProcess:pass
+  source_check(plan);assert all(sha(p)==s for p,s in protected.items())
+- result={'status':'ISOLATED059_CPU_EXPORT_PASS' if not reason and proc.returncode==0 and not remaining else 'HELD_CPU_EXPORT',
+-  'root_authorization':'Root approved isolated059 CPU export/import,0.8GiB family cap,5GiB start and3GiB reserve; no rendering/UI/install.',
++ result={'status':'ISOLATED063_CPU_EXPORT_PASS' if not reason and proc.returncode==0 and not remaining else 'HELD_CPU_EXPORT',
++  'root_authorization':'Root approved isolated063 CPU export/import,0.8GiB family cap,5GiB start and3GiB reserve; no rendering/UI/install; exact frozen062 sources.',
+   'created_utc':datetime.datetime.now(datetime.UTC).isoformat(),'elapsed_seconds':time.monotonic()-started,'exit_code':proc.returncode,
+   'start_available_ram_bytes':start_free,'minimum_available_ram_bytes':minimum_free,
+   'sampled_family_peak_rss_bytes':peak,'samples':samples,'rss_cap_bytes':int(.8*1024**3),'ram_reserve_bytes':3*1024**3,'deadline_seconds':150,
+   'owned_identities':[{'pid':p,'create_time':t} for p,t in owned.items()],'remaining_owned_pids':remaining,'failure':reason,
+   'protected_originals_unchanged':116,'previous_derived_files_unchanged':len(protected),'canonical_unchanged':True,
+-  'frozen059_files_unchanged':69,'native_UI_GPU_models':0,'visual_or_owner_approval':False,
++  'frozen062_files_unchanged':110,'native_UI_GPU_models':0,'visual_or_owner_approval':False,
+   'sampling_limit':'Supervisor excluded;10ms sampling can miss transient peaks.'}
+  put(H/'SUPERVISOR.json',result);print(json.dumps(result))
+- if result['status']!='ISOLATED059_CPU_EXPORT_PASS':raise SystemExit(1)
++ if result['status']!='ISOLATED063_CPU_EXPORT_PASS':raise SystemExit(1)
+ if __name__=='__main__':main()
