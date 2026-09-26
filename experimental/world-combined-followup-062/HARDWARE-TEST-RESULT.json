@@ -1,0 +1,125 @@
+{
+  "status": "PASS_CPU_HARDWARE_COLLISION",
+  "checks": 321108,
+  "reports": [
+    {
+      "fixture": "base",
+      "consumers": [
+        {
+          "relative": "walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        },
+        {
+          "relative": "layout_package_assets/source/walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        }
+      ]
+    },
+    {
+      "fixture": "renamed",
+      "consumers": [
+        {
+          "relative": "walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        },
+        {
+          "relative": "layout_package_assets/source/walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        }
+      ]
+    },
+    {
+      "fixture": "wider",
+      "consumers": [
+        {
+          "relative": "walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        },
+        {
+          "relative": "layout_package_assets/source/walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        }
+      ]
+    },
+    {
+      "fixture": "translated",
+      "consumers": [
+        {
+          "relative": "walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        },
+        {
+          "relative": "layout_package_assets/source/walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        }
+      ]
+    },
+    {
+      "fixture": "actual_saved_mars",
+      "consumers": [
+        {
+          "relative": "walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        },
+        {
+          "relative": "layout_package_assets/source/walk_controller.mjs",
+          "door_poses": 54,
+          "mesh_vertices_checked": 15984,
+          "forward_reverse_passages": 12,
+          "uniform_slab_false_blocks_avoided": 12,
+          "placement_changes": [],
+          "metadata_hardware_colliders": 24
+        }
+      ]
+    }
+  ],
+  "original_penetrations_blocked": 24,
+  "canonical_or_owner_changes": false,
+  "model_gpu_ui_calls": 0,
+  "rendered_visual_approval": false
+}

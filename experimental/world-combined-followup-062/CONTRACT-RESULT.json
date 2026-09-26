@@ -1,0 +1,76 @@
+{
+  "status": "PASS_COMBINED_READ_ONLY_ADMISSION_AND_PRESERVATION",
+  "installed056_saved_preview_still_eligible": true,
+  "actual_old_previews_held": [
+    {
+      "case": "installed056",
+      "held": "unsupported_preview"
+    },
+    {
+      "case": "separate059",
+      "held": "foreign_preview_scope"
+    }
+  ],
+  "combined_admission_cases": [
+    {
+      "viewer": "combined",
+      "walker": "combined",
+      "held": false
+    },
+    {
+      "viewer": "combined",
+      "walker": "installed",
+      "held": true
+    },
+    {
+      "viewer": "combined",
+      "walker": "tampered",
+      "held": true
+    },
+    {
+      "viewer": "installed",
+      "walker": "combined",
+      "held": true
+    },
+    {
+      "viewer": "installed",
+      "walker": "installed",
+      "held": true
+    },
+    {
+      "viewer": "installed",
+      "walker": "tampered",
+      "held": true
+    },
+    {
+      "viewer": "tampered",
+      "walker": "combined",
+      "held": true
+    },
+    {
+      "viewer": "tampered",
+      "walker": "installed",
+      "held": true
+    },
+    {
+      "viewer": "tampered",
+      "walker": "tampered",
+      "held": true
+    }
+  ],
+  "producer_files_verified": 17,
+  "producer_changes": [
+    "authored_scene.mjs",
+    "source/room_dressing_plan.mjs",
+    "source/room_dressing_render.mjs",
+    "source/scene_metadata.mjs",
+    "source/walk_controller.mjs"
+  ],
+  "external_dependencies_unchanged_not_rehashed": true,
+  "owner_originals_unchanged": 116,
+  "canonical_closure_unchanged": 42,
+  "candidate_closure_verified": 42,
+  "selected_job_pointer_unchanged": true,
+  "new_previews_exports_models_UI_GPU_install": 0,
+  "limits": "Combined exact-manifest admission is an isolated mocked boundary. No new preview, GLB, renderer, installation or visual approval is implied."
+}

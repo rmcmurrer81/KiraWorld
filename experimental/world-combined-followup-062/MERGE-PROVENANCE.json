@@ -1,0 +1,50 @@
+{
+  "status": "ISOLATED_COMBINATION_STAGED_NOT_INSTALLED",
+  "parent_frozen_manifests": {
+    "world-meal-station-candidate-059\\FROZEN-MANIFEST.json": {
+      "sha256": "639e22c573191ae7e226614be914e94d6addcec4cf5ef7eb4b3e9a5de9bb8c57",
+      "bytes": 12166
+    },
+    "world-door-hardware-candidate-060\\FROZEN-MANIFEST.json": {
+      "sha256": "cbbc4a547647dab32a6d0574cd080ff9d8e2f2c65f6af26c00d07acbd3c195d7",
+      "bytes": 19465
+    }
+  },
+  "exact_meal_files": [
+    "viewer.mjs",
+    "layout_package_assets/authored_scene.mjs",
+    "layout_package_assets/source/room_dressing_plan.mjs",
+    "layout_package_assets/source/room_dressing_render.mjs"
+  ],
+  "exact_hardware_files": [
+    "walk_controller.mjs",
+    "layout_package_assets/source/walk_controller.mjs",
+    "layout_package_assets/source/scene_metadata.mjs"
+  ],
+  "deliberate_merges": [
+    "layout_package_export.py",
+    "layout_package_assets/PRODUCER-PINS.json"
+  ],
+  "changed_producer_pins": [
+    "authored_scene.mjs",
+    "source/room_dressing_plan.mjs",
+    "source/room_dressing_render.mjs",
+    "source/scene_metadata.mjs",
+    "source/walk_controller.mjs"
+  ],
+  "changed_files": [
+    "tools/world_builder_engine/layout_package_export.py",
+    "tools/world_builder_engine/viewer.mjs",
+    "tools/world_builder_engine/walk_controller.mjs",
+    "tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+    "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+    "tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+    "tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+    "tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+    "tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs"
+  ],
+  "source_closure_files": 42,
+  "owner_originals_verified": 116,
+  "test_adaptation": "059 meal suite copied unchanged;060 hardware suite imports the actual combined meal planner and writes a separate result filename. No assertions removed.",
+  "preview_export_renderer_model_ui_install_calls": 0
+}

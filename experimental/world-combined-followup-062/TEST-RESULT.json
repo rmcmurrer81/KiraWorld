@@ -1,0 +1,231 @@
+{
+  "status": "PASS_MEAL_GEOMETRY_PLACEMENT_OMISSION_AND_SHARED_EXPORT",
+  "shapes": [
+    {
+      "variant": "base",
+      "placement": {
+        "room_id": "habitat",
+        "center": [
+          6.15,
+          0.52,
+          0.8500000000000001
+        ],
+        "yaw": 0,
+        "bounds": {
+          "min": [
+            5.5,
+            0,
+            0.20000000000000007
+          ],
+          "max": [
+            6.800000000000001,
+            1.04,
+            1.5
+          ]
+        }
+      },
+      "meshes": 20,
+      "vertices": 4142,
+      "triangles": 5936,
+      "seat_rays": [
+        {
+          "name": "meal_seat_-1",
+          "distance": 0.3024999995529652,
+          "point": [
+            -0.29499999999999993,
+            0.49750000044703485,
+            -0.39
+          ]
+        },
+        {
+          "name": "meal_seat_1",
+          "distance": 0.3024999995529652,
+          "point": [
+            0.29499999999999993,
+            0.49750000044703485,
+            -0.39
+          ]
+        }
+      ],
+      "old_equipment_unchanged": 16,
+      "old_colliders_preserved": 51,
+      "route_count": 6,
+      "door_count": 6,
+      "crowded_omission": true,
+      "unknown_role_not_inferred": true,
+      "exporter_geometry_identical": true,
+      "real_GLB_or_visual_review": false
+    },
+    {
+      "variant": "renamed",
+      "placement": {
+        "room_id": "module_3",
+        "center": [
+          6.15,
+          0.52,
+          0.8500000000000001
+        ],
+        "yaw": 0,
+        "bounds": {
+          "min": [
+            5.5,
+            0,
+            0.20000000000000007
+          ],
+          "max": [
+            6.800000000000001,
+            1.04,
+            1.5
+          ]
+        }
+      },
+      "meshes": 20,
+      "vertices": 4142,
+      "triangles": 5936,
+      "seat_rays": [
+        {
+          "name": "meal_seat_-1",
+          "distance": 0.3024999995529652,
+          "point": [
+            -0.29499999999999993,
+            0.49750000044703485,
+            -0.39
+          ]
+        },
+        {
+          "name": "meal_seat_1",
+          "distance": 0.3024999995529652,
+          "point": [
+            0.29499999999999993,
+            0.49750000044703485,
+            -0.39
+          ]
+        }
+      ],
+      "old_equipment_unchanged": 16,
+      "old_colliders_preserved": 51,
+      "route_count": 6,
+      "door_count": 6,
+      "crowded_omission": true,
+      "unknown_role_not_inferred": true,
+      "exporter_geometry_identical": true,
+      "real_GLB_or_visual_review": false
+    },
+    {
+      "variant": "wider",
+      "placement": {
+        "room_id": "habitat",
+        "center": [
+          6.15,
+          0.52,
+          0.8500000000000001
+        ],
+        "yaw": 0,
+        "bounds": {
+          "min": [
+            5.5,
+            0,
+            0.20000000000000007
+          ],
+          "max": [
+            6.800000000000001,
+            1.04,
+            1.5
+          ]
+        }
+      },
+      "meshes": 20,
+      "vertices": 4142,
+      "triangles": 5936,
+      "seat_rays": [
+        {
+          "name": "meal_seat_-1",
+          "distance": 0.3024999995529652,
+          "point": [
+            -0.29499999999999993,
+            0.49750000044703485,
+            -0.39
+          ]
+        },
+        {
+          "name": "meal_seat_1",
+          "distance": 0.3024999995529652,
+          "point": [
+            0.29499999999999993,
+            0.49750000044703485,
+            -0.39
+          ]
+        }
+      ],
+      "old_equipment_unchanged": 16,
+      "old_colliders_preserved": 51,
+      "route_count": 6,
+      "door_count": 6,
+      "crowded_omission": true,
+      "unknown_role_not_inferred": true,
+      "exporter_geometry_identical": true,
+      "real_GLB_or_visual_review": false
+    },
+    {
+      "variant": "translated",
+      "placement": {
+        "room_id": "habitat",
+        "center": [
+          17.15,
+          0.52,
+          -6.1499999999999995
+        ],
+        "yaw": 0,
+        "bounds": {
+          "min": [
+            16.5,
+            0,
+            -6.8
+          ],
+          "max": [
+            17.799999999999997,
+            1.04,
+            -5.499999999999999
+          ]
+        }
+      },
+      "meshes": 20,
+      "vertices": 4142,
+      "triangles": 5936,
+      "seat_rays": [
+        {
+          "name": "meal_seat_-1",
+          "distance": 0.3024999995529652,
+          "point": [
+            -0.2950000000000017,
+            0.49750000044703485,
+            -0.3899999999999997
+          ]
+        },
+        {
+          "name": "meal_seat_1",
+          "distance": 0.3024999995529652,
+          "point": [
+            0.2950000000000017,
+            0.49750000044703485,
+            -0.3899999999999997
+          ]
+        }
+      ],
+      "old_equipment_unchanged": 16,
+      "old_colliders_preserved": 51,
+      "route_count": 6,
+      "door_count": 6,
+      "crowded_omission": true,
+      "unknown_role_not_inferred": true,
+      "exporter_geometry_identical": true,
+      "real_GLB_or_visual_review": false
+    }
+  ],
+  "models_GPU_UI": 0,
+  "limits": [
+    "Static original furniture; not seated-avatar, comfort or safety validation.",
+    "No actual GLB export or image/native visual review in this geometry-only suite.",
+    "Canvas is inert for exporter assembly geometry checks; texture transport is not checked."
+  ]
+}
