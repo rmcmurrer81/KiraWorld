@@ -1,0 +1,34 @@
+{
+  "schema": "public-world-authoring-status/v2",
+  "status": "ISOLATED_AUTHORING_CORE_CPU_CHECKED_FULL_INTEGRATION_PENDING",
+  "contract": "authored_pressure_hatch_latch_geometry_v2",
+  "source_sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+  "portable_cases_passed": 8,
+  "portable_cases_failed": 0,
+  "artificial_orientations": 4,
+  "latch_samples_per_orientation": 17,
+  "released_hinge_samples_per_orientation": 5,
+  "legacy_parts_replaced": 21,
+  "replacement_meshes": 28,
+  "tested": [
+    "Actual Three.js vertex containment in all-pose part bounds",
+    "Analytic hinge sweep of conservative visual-pose bounds",
+    "Real keeper channel and central standing passage",
+    "Explicit mesh/collider ownership and serialized-plan tamper rejection",
+    "Old authoring, architecture and consumer contracts reject the new variant",
+    "Pause, invalid/stale door observation, disposal and independent hatches"
+  ],
+  "native_fixture": "A separate original084 component fixture was reviewed in a browser; NATIVE-FIXTURE-085.json states the exact limited observations.",
+  "not_proven": [
+    "Native appearance of this086 assembly",
+    "Real-world placement and occupied-swing admission",
+    "Full controller/producer/metadata merge",
+    "New GLB export/import or strict consumer package admission",
+    "Pressure containment or material compression",
+    "Saved-world walkthrough, owner approval or headset support"
+  ],
+  "package_files_included": 0,
+  "new_vendor_files": 0,
+  "models_or_renderers_started": 0,
+  "installed": false
+}

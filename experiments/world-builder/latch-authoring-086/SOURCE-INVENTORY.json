@@ -1,0 +1,69 @@
+{
+  "schema": "public-world-authoring-source/v2",
+  "component": "latched_pressure_hatch_authoring086",
+  "source_files": [
+    {
+      "path": "src/latch_visual.mjs",
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "bytes": 12111
+    },
+    {
+      "path": "src/legacy/pressure_hatch.mjs",
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "bytes": 16212
+    },
+    {
+      "path": "src/legacy/pressure_hatch_architecture.mjs",
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c",
+      "bytes": 9874
+    },
+    {
+      "path": "src/pressure_hatch_latched.mjs",
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "bytes": 9685
+    }
+  ],
+  "artificial_tests": [
+    {
+      "path": "tests/test_authoring.mjs",
+      "sha256": "46efe78a1f87ec6d423dc3d70e5519398e22e95593cdb6ce21148384ef9b6c34",
+      "bytes": 8452
+    }
+  ],
+  "source_changes_for_publication": 0,
+  "test_changes": "Relative import relocation only; PORTABILITY.diff records the complete change.",
+  "existing_dependencies": {
+    "commit": "580182a9687c04fdaf85fd3ab2bf64274ab92ede",
+    "files": [
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/build/three.module.js",
+        "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+        "bytes": 603113
+      },
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/build/three.core.js",
+        "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+        "bytes": 1403455
+      },
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/package.json",
+        "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+        "bytes": 4635
+      },
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/LICENSE",
+        "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+        "bytes": 1081
+      },
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/door_metadata.mjs",
+        "sha256": "42edfc46bfbb1a887442e032a3fc1720d731369e01a1f871e77beca0eccd439c",
+        "bytes": 6425
+      }
+    ],
+    "republished_vendor_files": 0
+  },
+  "owner_scene_files": 0,
+  "old_contract_admission_changed": false,
+  "installed": false
+}

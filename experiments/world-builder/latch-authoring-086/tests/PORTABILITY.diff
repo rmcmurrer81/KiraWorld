@@ -1,0 +1,18 @@
+--- isolated-original-tests/test_authoring.mjs
++++ portable-tests/test_authoring.mjs
+@@ -1,10 +1,10 @@
+ import test from 'node:test';
+ import assert from 'node:assert/strict';
+-import * as THREE from '../world-package-consumer-083/candidate/vendor/three/build/three.module.js';
+-import {planPressureHatch,buildPressureHatch,hatchCollidersAt} from './src/legacy/pressure_hatch.mjs';
+-import {planHatchArchitecture} from './src/legacy/pressure_hatch_architecture.mjs';
+-import {validateDoorShape} from '../world-package-consumer-083/candidate/door_metadata.mjs';
+-import {LATCH_HATCH_CONTRACT,planLatchedPressureHatch,buildLatchedPressureHatch,latchHatchCollidersAt,describeLatchedHatchAuthoring,validateLatchedHatchPlan} from './src/pressure_hatch_latched.mjs';
++import * as THREE from '../../package-consumer-083/candidate/vendor/three/build/three.module.js';
++import {planPressureHatch,buildPressureHatch,hatchCollidersAt} from '../src/legacy/pressure_hatch.mjs';
++import {planHatchArchitecture} from '../src/legacy/pressure_hatch_architecture.mjs';
++import {validateDoorShape} from '../../package-consumer-083/candidate/door_metadata.mjs';
++import {LATCH_HATCH_CONTRACT,planLatchedPressureHatch,buildLatchedPressureHatch,latchHatchCollidersAt,describeLatchedHatchAuthoring,validateLatchedHatchPlan} from '../src/pressure_hatch_latched.mjs';
+ function fixture(axis='x',sign=1){
+  const n=axis==='x'?'x':'z',t=axis==='x'?'z':'x';
+  const room=(id,c)=>({id,[n]:c,[t]:0,width:4,depth:4,height:3,floor_y:0,access:'walkable_layout'});
