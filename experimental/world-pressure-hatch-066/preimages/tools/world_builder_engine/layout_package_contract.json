@@ -1,0 +1,65 @@
+{
+  "contract": "authored_saved_layout_package_v2",
+  "status": "experimental",
+  "selection": "An explicit saved job and its own verified preview binding; no globally newest project lookup.",
+  "supported_recipe": "Pinned authored_habitat_equipment_plan_v1 meshes/materials, preview_hinged_doors_v2 and explicit paired_airlock_door_sequence_v1 policy, with bounded authored geometry eligibility rather than a single Mars fixture digest.",
+  "validation_scope": "No exact geometry allowlist. A bounded authored habitat profile independently recompiles the bound blueprint, verifies supported roles/topology/dimensions and unambiguous structural room ownership. Eligibility is only permission to attempt the pinned builder/importer; readiness requires all actual checks.",
+  "input": {
+    "job_dir": "Existing immediate saved research job under this installation",
+    "destination": "New export directory outside protected saved world/research/preview directories",
+    "preview_binding": "Optional exact manifest_path and manifest_sha256 for the selected job's already-open current preview",
+    "dependencies": "Optional explicit local runtime paths; every dependency must match the tested digest and byte count"
+  },
+  "output_files": [
+    "scene.glb",
+    "scene.json",
+    "ROUNDTRIP.json",
+    "README.txt",
+    "manifest.json"
+  ],
+  "ready_status": "created",
+  "held_statuses": [
+    "invalid_selection",
+    "unsupported_preview",
+    "unsupported_recipe",
+    "unsupported_layout",
+    "dependency_missing",
+    "dependency_changed",
+    "producer_changed",
+    "destination_exists",
+    "invalid_destination",
+    "source_changed",
+    "export_failed",
+    "source_or_export_held",
+    "airlock_policy_invalid"
+  ],
+  "failure_after_output_creation": "No ready manifest; EXPORT-INCOMPLETE.json records held status. Partial output is retained. Existing files and source folders are never overwritten or removed.",
+  "capabilities": {
+    "actual_authored_meshes_and_textures": true,
+    "room_bounds_and_corrected_collider_ownership": true,
+    "static_door_frames_and_moving_leaf_hinge_hierarchy": true,
+    "engine_native_collision_runtime": false,
+    "engine_native_interaction_runtime": false,
+    "game_engine_adapter": false,
+    "vr_runtime": false,
+    "pressure_or_airlock_cycle_simulation": false,
+    "persistent_door_session_state": false,
+    "science_medical_or_life_support_equipment_behavior": false,
+    "photorealism_or_owner_approval": false,
+    "airlock_pair_policy_metadata": true
+  },
+  "resource_behavior": "CPU Canvas and Three exporter/importer only. No browser, WebGL, GPU/model job, research rerun, network fetch or dependency download. The native button runs the API in an owned background worker and reports the created folder.",
+  "scene_metadata_contract": "world_scene_metadata_v2",
+  "airlock_policy": {
+    "contract": "paired_airlock_door_sequence_v1",
+    "source_room_and_portal_ids": true,
+    "exactly_two_distinct_leaf_associations": true,
+    "glb_extras_and_independent_sidecar_verification": true,
+    "peer_must_be_closed_and_stopped": true,
+    "pending_and_held_motion_reserves_peer": true,
+    "closing_keeps_existing_occupancy_rules": true,
+    "engine_runtime_included": false,
+    "pressure_simulation": false
+  },
+  "eligibility_profile": "bounded_authored_habitat_export_v1"
+}

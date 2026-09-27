@@ -1,0 +1,40 @@
+{
+  "status": "EXPERIMENTAL_VISUAL_HOLD_NOT_INSTALLED",
+  "installed_world_revision": "056",
+  "hatch": {
+    "cpu_suites": 13,
+    "geometry_only": true,
+    "preview_export_controller_activated": false,
+    "seal_certification": false,
+    "latch_simulation": false,
+    "pressure_simulation": false,
+    "shared_recipe_sha256": "705390c434a1034669a4792eb3d1983c43e67f9107fd9340afd8fbff5bf21825",
+    "visual_review": {
+      "status": "FAILED",
+      "reviewer": "root",
+      "method": "Actual isolated browser inspection",
+      "finding": "Severe coplanar z-fighting on the seat, surround, reveal and sill.",
+      "appearance_approved": false,
+      "owner_approved": false,
+      "installed": false,
+      "cpu_result_remains": "13 CPU suites passed; they did not detect or approve rendered appearance.",
+      "next_step": "An isolated corrected successor is being prepared. It is not included or approved by this publication; fresh visual review is required."
+    }
+  },
+  "displays": {
+    "cpu_tests": 9,
+    "independent_review_sha256": "916dea1bc32304d2d6e4e9ec63a59ce2d962084ece3ddbaa9d99b594e2938945",
+    "telemetry": "authored fictional snapshot, not live",
+    "geometry_and_equipment_unchanged": true,
+    "initial_airlock_browser_screen_readable": true,
+    "final_export_and_install_pending": true
+  },
+  "artwork": "Original procedural work; no third-party film images or models included",
+  "limitations": [
+    "Existing observation window and original terrain remain; terrain/lighting need further realism work",
+    "No finished VR/headset, exterior pressure zone or working life-support claim",
+    "Hatch066 failed actual browser visual inspection due to severe coplanar z-fighting; no visual approval or promotion. Shared controller integration remains pending.",
+    "Mars067 is a reviewed four-module experimental overlay with recovery notes; no canonical source or owner world is changed."
+  ],
+  "revision": "033-v2 visual finding supersedes the original pending-review status; historical source and CPU receipts remain preserved"
+}
