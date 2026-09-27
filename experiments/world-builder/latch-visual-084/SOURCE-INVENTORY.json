@@ -1,0 +1,52 @@
+{
+  "schema": "public-world-component-source/v1",
+  "component": "fictional_latch_contact_visual084",
+  "source_files": [
+    {
+      "path": "latch_visual.mjs",
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "bytes": 12111
+    }
+  ],
+  "artificial_test_files": [
+    {
+      "path": "tests/artificial_plan.mjs",
+      "sha256": "4eb81d0b1e16d2088df2c9d22014db1c734a9b9cadf7898bab1be69c9f76d5e2",
+      "bytes": 1714
+    },
+    {
+      "path": "tests/test_latch_visual.mjs",
+      "sha256": "3c82a12e6775a2eb329ce9644094d450a253e0f5f5960c4be61ea83137c812b8",
+      "bytes": 9017
+    }
+  ],
+  "existing_vendor_dependency": {
+    "commit": "52e3f53fd7b570c74896e5042c4c0fab24af1f4d",
+    "files": [
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/build/three.module.js",
+        "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+        "bytes": 603113
+      },
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/build/three.core.js",
+        "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+        "bytes": 1403455
+      },
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/package.json",
+        "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+        "bytes": 4635
+      },
+      {
+        "path": "experiments/world-builder/package-consumer-083/candidate/vendor/three/LICENSE",
+        "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+        "bytes": 1081
+      }
+    ],
+    "republished_files": 0
+  },
+  "private_scene_files": 0,
+  "package_admission_changed": false,
+  "installed": false
+}
