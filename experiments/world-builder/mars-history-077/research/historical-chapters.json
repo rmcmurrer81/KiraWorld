@@ -1,0 +1,52 @@
+{
+  "chapters": [
+    {
+      "id": "01-the-light-in-the-sky",
+      "title": "The light in the sky",
+      "period": "Antiquity to the telescope era",
+      "status": "historical",
+      "transcript": "Before there were spacecraft, Mars was a light people could follow across the night sky. It was known in ancient times, long before a telescope was needed to study it. There is no single modern discovery date to put at the beginning of its story. In 1610, Galileo observed Mars through a telescope. Later observers tried to understand the markings they could see through Earth's atmosphere. Some interpreted lines as canals, but spacecraft would not find those imagined constructions. The history of Mars exploration is also a history of learning how to separate what we can measure from what we hope, or expect, to see.",
+      "sourceIds": ["nasa-ancient-mars", "nasa-mariner-retrospective", "nasa-mariner-program"],
+      "audio": null
+    },
+    {
+      "id": "02-robots-reach-mars",
+      "title": "Robots reach Mars",
+      "period": "1965–1976",
+      "status": "historical",
+      "transcript": "In July 1965, NASA's Mariner 4 flew past Mars and sent back close-up pictures. The encounter showed a cratered landscape, but those pictures covered only part of a whole planet. Mariner 9 reached Mars orbit in November 1971. After a major dust storm cleared, its cameras revealed a much more varied world, including enormous volcanoes and canyons. In 1976, the Viking missions brought laboratories to the surface. Viking 1 landed on July twentieth, with Viking 2 following that September. The landers photographed their surroundings and examined the environment and soil. Mars was becoming a place that instruments could investigate, instead of a distant disk interpreted through a telescope.",
+      "sourceIds": ["jpl-mariner4", "nasa-mariner9", "nasa-viking-history"],
+      "audio": null
+    },
+    {
+      "id": "03-pathfinder-and-sojourner",
+      "title": "Pathfinder and Sojourner",
+      "period": "1997",
+      "status": "historical",
+      "transcript": "On July fourth, 1997, Mars Pathfinder landed in Ares Vallis, an ancient floodplain. Airbags helped cushion its arrival. The mission carried Sojourner, the first rover to operate successfully on Mars. Instead of observing from just one fixed position, this small wheeled explorer could approach nearby rocks and examine them. Pathfinder was a demonstration of a different way to land and explore, and it also returned scientific observations of the landing site and its atmosphere. Its final transmission came in September 1997. A modest rover had helped open a new chapter: sending mobile explorers that could choose a rock, move closer, and ask a more detailed question.",
+      "sourceIds": ["nasa-pathfinder", "nasa-robotic-quarter-century"],
+      "audio": null
+    },
+    {
+      "id": "04-reading-the-rocks",
+      "title": "Reading the rocks",
+      "period": "2004–2024",
+      "status": "historical",
+      "transcript": "Spirit and Opportunity arrived in 2004 and investigated different places on Mars. Their observations added evidence that water had shaped parts of the planet long ago. Curiosity landed in Gale Crater in 2012, carrying a larger laboratory to study rocks and past environmental conditions. Perseverance reached Jezero Crater in 2021, where it began examining an ancient lake-and-delta setting and collecting samples. That same mission carried Ingenuity, which demonstrated powered, controlled flight on another world. The helicopter's mission ended in early 2024 after seventy-two flights. Each machine asked different questions. Evidence that a place once could have supported life is a different finding from proof that life actually existed there.",
+      "sourceIds": ["nasa-spirit-opportunity", "nasa-robotic-quarter-century", "nasa-ancient-mars"],
+      "audio": null
+    }
+  ],
+  "sources": {
+    "nasa-ancient-mars": {"title": "NASA Space Place — All About Mars", "url": "https://spaceplace.nasa.gov/all-about-mars/en/", "checkedOn": "2026-09-26", "note": "Quick History supports antiquity and completed Ingenuity flights; not used to infer other missions' current operating status."},
+    "nasa-mariner-retrospective": {"title": "NASA — Triumph of Mariner 4", "url": "https://science.nasa.gov/mars/triumph-of-mariner-4/", "checkedOn": "2026-09-26", "note": "Historical telescope context; Galileo observed Mars in1610, not Cassini in1610."},
+    "nasa-mariner-program": {"title": "NASA — Mars Mariner Missions", "url": "https://science.nasa.gov/mission/mariner-program/mars-mariner-missions/", "checkedOn": "2026-09-26", "note": "Spacecraft observations did not show the supposed canals."},
+    "jpl-mariner4": {"title": "NASA/JPL — Mariner 4", "url": "https://www.jpl.nasa.gov/missions/mariner-4/", "checkedOn": "2026-09-26", "note": "July1965 encounter; month used in narration to avoid local-date versus UTC boundary ambiguity."},
+    "nasa-mariner9": {"title": "NASA — Mariner 9", "url": "https://science.nasa.gov/mission/mariner-9/", "checkedOn": "2026-09-26", "note": "November1971 orbit and dust storm; month used because NASA historical pages use differing local/UTC dates."},
+    "nasa-viking-history": {"title": "NASA History — Viking 1 Touches Down on Mars", "url": "https://www.nasa.gov/history/45-years-ago-viking-1-touches-down-on-mars/", "checkedOn": "2026-09-26", "publishedOn": "2021-07-20", "note": "Used for completed1976events, not current fleet status."},
+    "nasa-pathfinder": {"title": "NASA — Mars Pathfinder", "url": "https://science.nasa.gov/mission/mars-pathfinder/", "checkedOn": "2026-09-26"},
+    "nasa-robotic-quarter-century": {"title": "NASA History — From Pathfinder to Perseverance", "url": "https://www.nasa.gov/history/25-years-of-continuous-robotic-mars-exploration-from-pathfinder-to-perseverance/", "checkedOn": "2026-09-26", "note": "Historical chronology only; statements about ongoing missions on this older page are not treated as current status."},
+    "nasa-spirit-opportunity": {"title": "NASA — Mars Exploration Rovers: Spirit and Opportunity", "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/", "checkedOn": "2026-09-26"}
+  },
+  "production": {"narration_generated": false, "scope": "Original transcripts for a future Studio-generated library. No audio files, voice continuity or owner listening approval yet."}
+}

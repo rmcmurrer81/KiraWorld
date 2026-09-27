@@ -1,0 +1,46 @@
+{
+  "schema": "public-source-review-summary/v1",
+  "status": "INDEPENDENT_SOURCE_AND_INERT_CPU_REVIEW_PASS",
+  "candidate": "consumer077",
+  "candidate_delivery_sha256": "53f49d45cad1fef3ec13621e3ffc8e3b2f3257a6d737f6244b18bb5601d9ca1a",
+  "candidate_frozen_manifest_sha256": "d562b4064c02e10e30f272a244b05ef4f257aea80071552bef4e02bd1f3f66dd",
+  "independent_review_sha256": "a9e038c7ac6c3abddc9f292d5f1cfdfbf4eec54cc1f1cb8abfe917c313520698",
+  "content_review_sha256": "d04cbe0966e47a5749f282e9104974082ab77f447caadc0b05966aeb160d15f3",
+  "history_manifest_sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285",
+  "integrity": {
+    "frozen_candidate_files_verified": 70,
+    "parent_library_files_preserved": 9,
+    "source_changed_by_independent_review": false
+  },
+  "checks": {
+    "author_run_passed": 71,
+    "portable_public_subset": 57,
+    "private_package_cases_excluded": 14,
+    "separate_independent_cases_passed": 7,
+    "independent_failures": 0,
+    "counts_note": "These scopes overlap; the counts are not a total of unique tests. The independent review inspected the author evidence and ran its own seven focused cases."
+  },
+  "verified_with_inert_adapters": [
+    "A queued old pause event does not cancel a newer explicit Play while the audio element is currently unpaused; genuine pause still cancels, and stale playing while paused is ignored.",
+    "Closing during a pending manifest load invalidates that request, so its late result cannot reopen the library or interrupt resumed walking. A later explicit Open remains possible.",
+    "Focused Escape closes the library. Panel focus clears held movement keys and pointer input; walking resumes only through an explicit action.",
+    "Room exit and reentry invalidate a pending open. Package changes and page disposal clean up the old panel and controller.",
+    "All six chapters preserve their exact transcripts and source links, retain audio:null, disable Play and make no real audio playback call.",
+    "Official source URL admission and textContent rendering remain intact. Historical, current and planned material remains dated."
+  ],
+  "source_blockers_found": [],
+  "status_at_source_freeze": {
+    "installed": false,
+    "real_narration_assets": false,
+    "listening_approval": false,
+    "browser_visual_acceptance": false,
+    "headset_validation": false
+  },
+  "limits": [
+    "DOM, renderer and media behavior was exercised with inert test adapters, not a real browser or audio decoder.",
+    "Private exported world packages are absent; the exact package admission hashes are preserved, not broadened.",
+    "Future narration needs verified audio files, pronunciation, duration and listening review before it can be offered as playable.",
+    "The current library is a desktop integration. Independent page and XR visibility composition and headset interaction remain future work.",
+    "This summary is a sanitized derivation of the pinned independent review, not a publication or installation approval."
+  ]
+}
