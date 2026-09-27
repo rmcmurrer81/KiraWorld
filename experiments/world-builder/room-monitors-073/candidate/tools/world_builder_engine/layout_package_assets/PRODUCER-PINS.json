@@ -1,0 +1,143 @@
+{
+  "contract": "layout_package_producer_pins_v1",
+  "files": {
+    "authored_scene.mjs": {
+      "bytes": 8411,
+      "sha256": "d787a356f8a1411c9a0ad52db301fcc93fad413e359329c72e12bffc8ea43e12"
+    },
+    "build_glb.mjs": {
+      "bytes": 14040,
+      "sha256": "81f7f31475d98fe74a6749b904d12e46c2356207d6b55551132762d4f9dfb4b7"
+    },
+    "cpu_canvas.mjs": {
+      "bytes": 2912,
+      "sha256": "ecdcfacb33f881d7f46dbdbeab31cf2529f31e1f8eaa275fe041ac6184b3f15c"
+    },
+    "source/airlock_policy.mjs": {
+      "bytes": 2523,
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15"
+    },
+    "source/horizontal_navigation.mjs": {
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    "source/room_dressing_plan.mjs": {
+      "bytes": 13367,
+      "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d"
+    },
+    "source/room_dressing_render.mjs": {
+      "bytes": 52065,
+      "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb"
+    },
+    "source/scene_metadata.mjs": {
+      "bytes": 17442,
+      "sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110"
+    },
+    "source/walk_controller.mjs": {
+      "bytes": 21634,
+      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+    },
+    "source_bindings.py": {
+      "bytes": 12098,
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2"
+    },
+    "vendor/three/build/three.core.js": {
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    "vendor/three/build/three.module.js": {
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    "vendor/three/examples/jsm/exporters/GLTFExporter.js": {
+      "bytes": 86392,
+      "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f"
+    },
+    "vendor/three/examples/jsm/loaders/GLTFLoader.js": {
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+    },
+    "vendor/three/examples/jsm/utils/BufferGeometryUtils.js": {
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    "vendor/three/LICENSE": {
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    "vendor/three/package.json": {
+      "bytes": 4635,
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93"
+    },
+    "source/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    "source/pressure_hatch_architecture.mjs": {
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+    },
+    "source/pressure_hatch_metadata.mjs": {
+      "bytes": 4165,
+      "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344"
+    },
+    "source/greenhouse.mjs": {
+      "bytes": 14885,
+      "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88"
+    },
+    "canvas_lifetime.mjs": {
+      "bytes": 2094,
+      "sha256": "62b775b5b204ea4b8b4203717acd7d9bcd5736506a11ffb9aaf020722ab06733"
+    },
+    "source/mars_reference.mjs": {
+      "bytes": 2487,
+      "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16"
+    },
+    "source/room_monitors.mjs": {
+      "bytes": 6209,
+      "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
+    }
+  },
+  "external": {
+    "canvas-package": {
+      "sha256": "8379e15beeaecdedc863f8ff0e2548935eed4fb7505b93a207600a212d7bc2c5",
+      "bytes": 4651
+    },
+    "canvas-native": {
+      "sha256": "15ef069adcadd217e8fcc7512c1a3ffe98ddc8c9a4ea83ed92bd6810fa215151",
+      "bytes": 27310384
+    },
+    "font-segoe-regular": {
+      "sha256": "8134dbcd09e7b123c9a7f229d49cffbcb01352cc72ea5e1076b65d0dca9f73cd",
+      "bytes": 959752
+    },
+    "font-segoe-semibold": {
+      "sha256": "2d9b22d71f72de2823fee5d9c8bc1b0fc32b2577c4c27b9ec6abdbb8df0e1731",
+      "bytes": 974500
+    },
+    "font-monospace": {
+      "sha256": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179",
+      "bytes": 453088
+    },
+    "canvas/index.js": {
+      "sha256": "bbdad32cab670261983ea56d4625fc7d07b1382f8bb7d6d31232bb2834861597",
+      "bytes": 5808
+    },
+    "canvas/js-binding.js": {
+      "sha256": "be59c8d4888630cf88656f65b63dd150e60bdb1d5eab0ba5b47c0a6cb389533e",
+      "bytes": 12799
+    },
+    "canvas/geometry.js": {
+      "sha256": "2e0ae365059fdb0424ddd2da8401e240a250c52b7efca68680996a99e804c1a1",
+      "bytes": 19312
+    },
+    "canvas/load-image.js": {
+      "sha256": "b4527335ec1d0505daf51be5ef919a8f951fc8296d88f4c5016e6ce772971570",
+      "bytes": 5736
+    },
+    "node": {
+      "sha256": "3331e1ffe19874215472217c5e94f5a0c6d8e18c4ac7111d3937aa0ad5e9b4a5",
+      "bytes": 91694408
+    }
+  }
+}

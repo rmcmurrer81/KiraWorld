@@ -1,0 +1,299 @@
+{
+  "contract": "public_room_monitor_source_inventory_v1",
+  "candidate": "room-monitors-073",
+  "parent_source": "room-monitors-072",
+  "source_files": 58,
+  "candidate_manifest_sha256": "c3666ef0eb0a02a82bff96b98640549788ccd05a76ca924a237085ba2722347c",
+  "files": [
+    {
+      "path": "candidate/tools/adaptive_source_selection.py",
+      "bytes": 12858,
+      "sha256": "2737bc3838eb6be75693d677d34ef596a377d6ae7a2d16011d3772b101d31363"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/__init__.py",
+      "bytes": 82,
+      "sha256": "f2f1d72149af8fa9ac5baada8f653657e214420a6ae978cdc227156e99d999f7"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/analog_case_index.py",
+      "bytes": 10858,
+      "sha256": "2a00f1d4551c70351b966a10deefd7e336204ea173ef14e1c0762ff64dfc4459"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/greenhouse.mjs",
+      "bytes": 14885,
+      "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/hatch_preflight.mjs",
+      "bytes": 1104,
+      "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/horizontal_navigation.mjs",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/index.html",
+      "bytes": 2920,
+      "sha256": "bf488c22441ec7966c92f64333058e927d96f36bc9ee127dcde3ce4772c156ae"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_airlock_policy.py",
+      "bytes": 3351,
+      "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "bytes": 8411,
+      "sha256": "d787a356f8a1411c9a0ad52db301fcc93fad413e359329c72e12bffc8ea43e12"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/build_glb.mjs",
+      "bytes": 14040,
+      "sha256": "81f7f31475d98fe74a6749b904d12e46c2356207d6b55551132762d4f9dfb4b7"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/canvas_lifetime.mjs",
+      "bytes": 2094,
+      "sha256": "62b775b5b204ea4b8b4203717acd7d9bcd5736506a11ffb9aaf020722ab06733"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/cpu_canvas.mjs",
+      "bytes": 2912,
+      "sha256": "ecdcfacb33f881d7f46dbdbeab31cf2529f31e1f8eaa275fe041ac6184b3f15c"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "bytes": 5214,
+      "sha256": "2259c565973f5346fce65e506dcce6ca14cb27a5fb1cdb842b925530bc093bab"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/airlock_policy.mjs",
+      "bytes": 2523,
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/greenhouse.mjs",
+      "bytes": 14885,
+      "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/mars_reference.mjs",
+      "bytes": 2487,
+      "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs",
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch_architecture.mjs",
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch_metadata.mjs",
+      "bytes": 4165,
+      "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "bytes": 13367,
+      "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "bytes": 52065,
+      "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/room_monitors.mjs",
+      "bytes": 6209,
+      "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "bytes": 17442,
+      "sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs",
+      "bytes": 21634,
+      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/source_bindings.py",
+      "bytes": 12098,
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/exporters/GLTFExporter.js",
+      "bytes": 86392,
+      "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_assets/vendor/three/package.json",
+      "bytes": 4635,
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_contract.json",
+      "bytes": 5651,
+      "sha256": "f3c14a1f6866fca23dc1cd6ee140c397421f385ed3600fdc39492935091cfebd"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_package_export.py",
+      "bytes": 11792,
+      "sha256": "e251591300fb65230852f80459901c4c1186f9e524b3a1ca85c4b728d7398c42"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/layout_recipe_profile.py",
+      "bytes": 5578,
+      "sha256": "e87af188e315a243e49191a07c4414278b39e5c338f7dd78d200436fbed08268"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/mars_reference.mjs",
+      "bytes": 2487,
+      "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/model_client.py",
+      "bytes": 6660,
+      "sha256": "511c3b6e6460429dc74f37e7fcefc00fbb03e7be722bd3df6d9d06937767a769"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/pipeline.py",
+      "bytes": 23955,
+      "sha256": "d3ce47f3f4c48df746ec8bf9c5efd218fc2453675fc1d81dd7790e287c115a8d"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/preflight.mjs",
+      "bytes": 1374,
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/prepare_repair.py",
+      "bytes": 659,
+      "sha256": "11b7ce237e1bd724c0e9e650096f059430bb7d0ff7a8bc0b4aa6d0f6ee9a47e5"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/pressure_hatch.mjs",
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/pressure_hatch_architecture.mjs",
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/preview_refresh.py",
+      "bytes": 2315,
+      "sha256": "a8023bc13ecebd41223bc0a5692eb553713aa1491a819e37ec3b9d1d607159d5"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/preview_server.py",
+      "bytes": 869,
+      "sha256": "b076e1219caa3b5c273a57f61079cd4630028cb042515f8bd117d514d21113f8"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/reviewed_analog_cases.json",
+      "bytes": 2233,
+      "sha256": "60ea520164cd0bd9e1e308de1c76c1531c95ed154da6edcb1b13476c3b48910d"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/room_monitors.mjs",
+      "bytes": 6209,
+      "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/style.css",
+      "bytes": 4033,
+      "sha256": "e20f56ad9a93804c182bddbc891d8ea20c921f4ee352cdb7a5899f2cf90ec588"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/viewer.mjs",
+      "bytes": 78294,
+      "sha256": "cfd9ed6aabb2b9d4fdd31713c6a7cabe900fa1984757c91efe8442e63da451c8"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/walk_controller.mjs",
+      "bytes": 21634,
+      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/worker.py",
+      "bytes": 865,
+      "sha256": "4943bf9f7899159b7dc24c354e9f64952184bf8548c0daf879661e8e7342340f"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/workspace_adapter.py",
+      "bytes": 6296,
+      "sha256": "9a00a1ea296d6b7728f9a24bb0e74b365c8ca22ee19263f6bacfd7be0f9c0859"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/world_blueprint.py",
+      "bytes": 13649,
+      "sha256": "94b175bc95214e3a784ef871a3de46388a3356c5924e0871b7b031834eb6b5bc"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/world_layout_job.py",
+      "bytes": 16572,
+      "sha256": "a2125076c06068fc7d91919537cdf5bdaa8b8266303b594165a731812fd36283"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/world_layout_preview.py",
+      "bytes": 33330,
+      "sha256": "87e3ad211e47a6a08fbb0caf5cb4a0f1fc450c22e17dcb202c2b09c260fa09db"
+    },
+    {
+      "path": "candidate/tools/world_builder_engine/world_layout_v2.py",
+      "bytes": 22617,
+      "sha256": "f33ffeb4776012b169ad57afb283ad4c6cdcd3e6043bb2db7c1419a9ad384a88"
+    },
+    {
+      "path": "candidate/tools/world_research.py",
+      "bytes": 45890,
+      "sha256": "3d543aec1b4e973e33dfbad5dbe59651ad0c16f5a44e09785a42f3fe041566f1"
+    },
+    {
+      "path": "candidate/tools/world_saved_research.py",
+      "bytes": 3636,
+      "sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d"
+    }
+  ]
+}
