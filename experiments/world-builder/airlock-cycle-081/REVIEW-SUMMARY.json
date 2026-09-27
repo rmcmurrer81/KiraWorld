@@ -1,0 +1,26 @@
+{
+  "schema": "public-airlock-component-review/v1",
+  "status": "SOURCE_AND_ARTIFICIAL_CPU_CHECKS_PASS_WITH_DISPLAY_ADVISORY",
+  "module_sha256": "9c7b50e026225c98a6df96509ad7b1b2891c2a12790236ef94b0730e14054cce",
+  "source_changed_for_publication": false,
+  "portable_checks": {
+    "passed": 16,
+    "failed": 0,
+    "fixture": "Invented metadata and synchronous runtime double; no real world package",
+    "dependencies": "Node.js built-ins only"
+  },
+  "source_review": {
+    "blockers": [],
+    "advisory": "After observation failure, the doors field can retain old poses. A host must display them as unavailable or last observed, not current."
+  },
+  "claims": {
+    "installed": false,
+    "actual_app_integrated": false,
+    "actual_package_or_glb_validated_by_portable_suite": false,
+    "native_ui_tested_by_portable_suite": false,
+    "collision_or_navigation_proven_by_double": false,
+    "physics_or_live_telemetry": false,
+    "audio_or_headset_approved": false
+  },
+  "scope": "Exact fictional state component plus portable tests and sanitized explanatory documents. Existing installation, consumer and saved worlds unchanged."
+}
