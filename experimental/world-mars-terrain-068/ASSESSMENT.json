@@ -1,0 +1,33 @@
+{
+  "status": "EXPERIMENTAL_CPU_PASS_VISUAL_REVIEW_PENDING",
+  "parent": "World067 final source; installed056 remains unchanged",
+  "source_manifest_sha256": "ebfad8267db84ec74b8d46ac133c9e10aac3b8b6e9d6d68eb680d071a2086fac",
+  "cpu_result_sha256": "fc13bc184414032e21c36861a6be2aa60d3d02e8694b0b401700dc270dcd2f07",
+  "tests_passed": 10,
+  "actual_exterior_glb_roundtrip": {
+    "status": "CPU_EXTERIOR_GLB_ROUNDTRIP_PASS",
+    "glb_sha256": "0dbff5d71b8556442a38924bac24c786bd3bb203acbec6c4042c80b94a8af6fb",
+    "bytes": 461984,
+    "counts": {
+      "meshes": 20,
+      "vertices": 8601,
+      "triangles": 15264
+    },
+    "textures": 0,
+    "external_uris": 0,
+    "synthetic_fixture": true,
+    "whole_owner_package_export": false,
+    "visual_approval": false
+  },
+  "canonical_changed": false,
+  "saved_worlds_changed": false,
+  "owner_or_visual_approval": false,
+  "research": "world-airlock-mars-research-065/RESEARCH-AND-DESIGN.md",
+  "limits": [
+    "No browser or rendering approval",
+    "No claim of measured terrain or simulated atmosphere",
+    "No selected-project package API test",
+    "No producer pin refresh or installation",
+    "Existing glTF appearance differences remain disclosed"
+  ]
+}

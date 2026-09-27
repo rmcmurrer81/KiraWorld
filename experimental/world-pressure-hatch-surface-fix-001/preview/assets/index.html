@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pressure-hatch inspection · isolated candidate</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<main id="viewport" aria-label="Pressure-hatch geometry inspection"></main>
+<button id="show-controls" type="button" hidden>Show controls</button>
+<aside id="controls" aria-label="Hatch inspection controls">
+<header><span class="eyebrow">ISOLATED WORLD066 CANDIDATE</span><h1>Pressure-hatch inspection</h1><p>Original geometry for review. No pressure or latch simulation.</p></header>
+<fieldset disabled id="pose-controls"><legend>Static leaf pose</legend><div class="row"><button type="button" data-pose="0" aria-pressed="true">Closed</button><button type="button" data-pose="35" aria-pressed="false">35° open</button><button type="button" data-pose="90" aria-pressed="false">Fully open</button></div></fieldset>
+<fieldset disabled id="view-controls"><legend>Inspection view</legend><div class="grid"><button type="button" data-view="front">Control side</button><button type="button" data-view="back">Opposite side</button><button type="button" data-view="hinge">Hinge detail</button><button type="button" data-view="seal">Seat and dogs</button><button type="button" data-view="wide">Whole assembly</button><button type="button" id="reset-view">Reset view</button></div></fieldset>
+<fieldset disabled id="camera-controls"><legend>Adjust camera</legend><div class="grid"><button type="button" data-camera="left">Look around left</button><button type="button" data-camera="right">Look around right</button><button type="button" data-camera="closer">Move closer</button><button type="button" data-camera="farther">Move back</button><button type="button" data-camera="up">Higher view</button><button type="button" data-camera="down">Lower view</button></div></fieldset>
+<fieldset disabled id="guide-controls"><legend>Review guides</legend><label><input type="checkbox" id="scale"> Show 1.68 m scale guide</label><label><input type="checkbox" id="colliders"> Show collision bounds</label></fieldset>
+<p id="details" class="details">Loading pinned recipe…</p>
+<button id="hide-controls" type="button">Hide controls</button>
+</aside>
+<footer id="status" aria-live="polite">Loading the isolated hatch…</footer><div id="error" role="alert" hidden></div>
+<script type="module" src="/inspection.mjs"></script>
+</body></html>

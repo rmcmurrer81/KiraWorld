@@ -1,0 +1,20 @@
+{
+  "status": "ISOLATED_UNINSTALLED",
+  "parent": "final067",
+  "overlays": [
+    {
+      "path": "viewer.mjs",
+      "before_sha256": "bff84bd648604d9edef1c50186dbda68fc3566d13ea82fe841f363394ea5655d",
+      "sha256": "63e32efe6d0c4b63d2b76abf4a5b61ffa9bcf39925f2dfc176f2a394742e7c98",
+      "bytes": 67646
+    },
+    {
+      "path": "layout_package_assets/source/room_dressing_render.mjs",
+      "before_sha256": "28518d0b26fd7ae84a79e01510bcd9b8f1307e4a6c95335f09821c7556599817",
+      "sha256": "877b9c639e98e2bed11740c00702c93397406225795567aba3191d19077a6054",
+      "bytes": 47510
+    }
+  ],
+  "helper_sha256": "b4c679bce38a37c21732d7620cd2c2ea20744d696d886565095019579292bb73",
+  "unchanged_authored_scene_sha256": "b43b40d0aee304be64725581a6491eaa7ca1dfb59d157f7c8312d850e119cfad"
+}

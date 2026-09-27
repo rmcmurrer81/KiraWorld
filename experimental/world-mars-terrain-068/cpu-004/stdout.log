@@ -1,0 +1,18 @@
+✔ source gate remains exact and invalid/unrequested scenery adds nothing (0.741ms)
+✔ window, displays, rooms, lights, camera and source data retain their original code and values (16.1951ms)
+✔ deterministic shared viewer/export geometry and materials are identical (69.9763ms)
+✔ explicit mesh/vertex/triangle budget and real near-rock scale (10.9245ms)
+✔ all four outward orientations and translated floor stay outside wall within camera far plane (31.3814ms)
+✔ new rock bounds never overlap the authored rooms and no colliders are created (4.9385ms)
+✔ actual unobstructed aperture rays reach near ground, rocks and curved sky at eye height (17.4382ms)
+✔ terrain has distinct near-ground centimeter relief and irregular middle/distant crests (6.1194ms)
+✔ entire authored habitat outside exterior stays geometrically unchanged with all collider/door links (85.985ms)
+✔ real texture-free GLB export/import preserves every exterior attribute, transform and standard material (32.4787ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 381.2303

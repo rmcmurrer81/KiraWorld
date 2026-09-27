@@ -1,0 +1,41 @@
+{
+  "schema": "world_exterior_hatch_public_backup_034_v1",
+  "status": "EXPERIMENTAL_SOURCE_BACKUP_NOT_INSTALLED",
+  "parent_commit": "5d058272f5b673bee97e8e74bf423a817d3bd39a",
+  "previous_publication": "World033 v2",
+  "installed_world": "056 remains unchanged",
+  "corrected_isolated_hatch": {
+    "status": "BOUNDED_SOURCE_CPU_AND_ACTUAL_ISOLATED_BROWSER_REVIEW",
+    "visual_limit": "Prior severe zebra stripes absent in inspected static views; prototype materials and static retracted latch hardware. No owner approval or pressure simulation."
+  },
+  "display067": {
+    "status": "FINAL_SOURCE_CPU_PASS_PARTIAL_ACTUAL_BROWSER_REVIEW",
+    "visual_limit": "Primary Airlock scenario screen readable; operations screen and final plaque inspection incomplete. Fictional authored telemetry only."
+  },
+  "terrain068": {
+    "status": "SOURCE_CPU_AND_ACTUAL_WINDOW_REVIEW_PROTOTYPE_QUALITY",
+    "visual_limit": "Actual rocks, ground, sky and parallax observed; still procedural, low contrast and insufficiently realistic. Not appearance-approved."
+  },
+  "hatch_integration001": {
+    "status": "SOURCE_REVIEW_FAILED",
+    "published_in_this_increment": false,
+    "reason": "Independent review confirmed cut-mesh UV regression. The new extrusion uses world-coordinate UVs with old repeats; a separate002 successor is being prepared. Its preflight dependency closure is also under review.001 is not eligible for installation or integrated visual/export approval."
+  },
+  "hatch_integration002": {
+    "status": "PENDING_INDEPENDENT_CORRECTION",
+    "included": false
+  },
+  "all_owner_projects_preserved": true,
+  "model_jobs_started_for_staging": 0,
+  "servers_started_for_staging": 0,
+  "publication_performed": false,
+  "reviewed": false,
+  "excluded": [
+    "Active server receipts",
+    "Private raw saved-world geometry and preview state",
+    "Local PID logs and owner inventories",
+    "Images/audio/video/GLB binaries",
+    "Credentials and model weights",
+    "Installed/canonical source replacement"
+  ]
+}

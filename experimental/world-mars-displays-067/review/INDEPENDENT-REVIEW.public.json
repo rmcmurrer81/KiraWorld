@@ -1,0 +1,118 @@
+{
+  "schema": "world_mars_displays_independent_cpu_review_v1",
+  "reviewed_at_utc": "2026-09-26T23:43:38.7820686Z",
+  "reviewer": "/root/owner_error_state",
+  "status": "PASS_CPU_REVIEW_AFTER_CORRECTIONS",
+  "source_files": [
+    {
+      "path": "work/world-mars-displays-067/mars_displays.mjs",
+      "bytes": 5157,
+      "sha256": "9a709a554d44c183fe4b8ce811bd1becc74339c4c199a6c684995d47c79dade3"
+    },
+    {
+      "path": "work/world-mars-displays-067/candidate/tools/world_builder_engine/viewer.mjs",
+      "bytes": 61719,
+      "sha256": "bff84bd648604d9edef1c50186dbda68fc3566d13ea82fe841f363394ea5655d"
+    },
+    {
+      "path": "work/world-mars-displays-067/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "bytes": 41576,
+      "sha256": "28518d0b26fd7ae84a79e01510bcd9b8f1307e4a6c95335f09821c7556599817"
+    },
+    {
+      "path": "work/world-mars-displays-067/candidate/tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "bytes": 6662,
+      "sha256": "b43b40d0aee304be64725581a6491eaa7ca1dfb59d157f7c8312d850e119cfad"
+    },
+    {
+      "path": "work/world-mars-displays-067/PREPARATION-v2.json",
+      "bytes": 1197,
+      "sha256": "fea7feb2f7b7bb2d50c2deb68a4b5ead2c50cf69b66d43e937741f464e6ab16d"
+    },
+    {
+      "path": "work/world-mars-displays-067/PREPARATION-v3.json",
+      "bytes": 547,
+      "sha256": "a1bbdf5e8e9d7e36ca665607a5b6b8f61d5dfaebd8569d4817fe42d927f8f788"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "work/world-combined-export-063/runtime_context/Data/world_layout_previews/layout-5ef8d005af97a6f4c64c6f2b/geometry.json",
+      "bytes": 22513,
+      "sha256": "1af9ae1254356f0523f722d284b140b8e34eb6af3bf236ceef91ad5f145a9d75"
+    },
+    {
+      "path": "work/world-combined-export-063/runtime_context/Data/world_layout_previews/layout-5ef8d005af97a6f4c64c6f2b/manifest.json",
+      "bytes": 15235,
+      "sha256": "dc0b711e3e1cd6d3c1e20d4e4aef0a2e7fb44e39802ca569754088d9caa61f78"
+    },
+    {
+      "path": "work/world-combined-export-063/actual-001/package/scene.json",
+      "bytes": 93242,
+      "sha256": "acb017cf73539cb1a1f0926ac6dc013c620390138ef417bf40e2b6aec9bb7814"
+    },
+    {
+      "path": "work/world-combined-followup-062/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "bytes": 35401,
+      "sha256": "e53c70f1d0cc88993ee969cd4f8ab4df121865662d9a24fe139d8bd20b6bea3e"
+    },
+    {
+      "path": "work/world-combined-followup-062/candidate/tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "bytes": 6592,
+      "sha256": "f23cd7cb92fb41452aeeb16120fd66e98d363811c39ab0502f51a7e87b95daed"
+    }
+  ],
+  "tests": {
+    "count": 9,
+    "passed": 9,
+    "failed": 0,
+    "source": {
+      "path": "work/world-mars-displays-review-067/displays.test.mjs",
+      "bytes": 11917,
+      "sha256": "1db90414d53187fb38025a7af4d508e9da8b9120f8126780b94400818e5e0f03"
+    },
+    "output": {
+      "path": "work/world-mars-displays-review-067/TEST-OUTPUT-003.txt",
+      "bytes": 995,
+      "sha256": "a331e5bf5b1547ca5e262499a06d91efcd01d3c2143650a0f66b655b52c7c489"
+    },
+    "command": "C:/Program Files/nodejs/node.exe --test work/world-mars-displays-review-067/displays.test.mjs",
+    "canvas": "inert recording canvas; not pixels or visual approval",
+    "three": "existing local Three CPU scene assembly only"
+  },
+  "demonstrated": [
+    "Actual063 geometry hash matches preview manifest and exported scene provenance; bound Mars data contains exact seven rooms",
+    "Malformed, mismatched or non-Mars presentation values return no Mars display data",
+    "Actual circulation role matches existing dressing fallback",
+    "All three display types disclose fictional scenario and no live sensors; drawing arguments are finite for actual layout",
+    "Absent observation role and nonviable viewport do not promise a window destination; mounted sign retains actual room name when no viewport exists",
+    "Preview and export display/data/material/dressing functions and drawing commands match",
+    "Equipment geometry vertices, indices and full world transforms are unchanged for Mars and non-Mars contexts",
+    "Entire authored scene CPU assembly preserves geometry signature, equipment plan, door definitions and semantic count"
+  ],
+  "corrections": [
+    {
+      "finding": "Circulation fallback differed from dressing",
+      "status": "fixed in v2 and covered"
+    },
+    {
+      "finding": "Observation role alone promised a surface window",
+      "status": "fixed in v2 with actual viewport binding and covered"
+    },
+    {
+      "finding": "Mounted observation plaque still promised Mars view without a viable viewport",
+      "status": "fixed in v3 and covered by 2.3m room case"
+    }
+  ],
+  "limitations": [
+    "No browser/WebGL/UI, rendered image inspection, GLB serialization/export, canonical installation, model job or owner approval performed",
+    "Source/request hashes are format and cross-field checked by this helper; their source evidence remains the upstream bound actual063 presentation manifest",
+    "Authored scenario readings are static fictional values, not live telemetry or a pressure/weather simulation",
+    "Review is limited to this exact seven-room Mars context and invalid-binding controls; it does not certify every arbitrary layout",
+    "TEST-OUTPUT-001 records an evolving test harness mismatch during signature changes, not a final product defect; TEST-OUTPUT-002 passed eight tests before the ninth plaque regression was added"
+  ],
+  "installed_by_reviewer": false,
+  "canonical_mutation": false,
+  "owner_worlds_mutated": false,
+  "publication_performed": false
+}

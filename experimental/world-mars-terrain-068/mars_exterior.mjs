@@ -1,0 +1,92 @@
+// Original fictional scenery, in meters. No surveyed terrain, live weather,
+// pressure simulation, external artwork, texture downloads or traversal.
+// This exact recipe is inlined into the existing viewer and shared export module.
+export function buildOriginalMarsExterior(THREE,viewport,geometry){
+  const {axis,along,sign,coordinate,center}=viewport;
+  const room=geometry.rooms.find(r=>r.id===viewport.room_id);
+  if(!room||!Number.isFinite(room.floor_y))return null;
+  const floor=room.floor_y;
+  const root=new THREE.Group();root.name='original_procedural_exterior_'+viewport.room_id;
+  root.userData={kind:'procedural_exterior_scenery',recipe:'original_mars_landscape_v2',room_id:viewport.room_id,
+    nontraversable:true,measured_terrain:false,live_weather:false,units:'meters'};
+  function hash(x,z,seed=0){let n=Math.imul(x,374761393)^Math.imul(z,668265263)^Math.imul(seed+17,1442695041);n=Math.imul(n^(n>>>13),1274126177);return ((n^(n>>>16))>>>0)/4294967295;}
+  const mix=(a,b,t)=>a+(b-a)*t;
+  function noise(x,z,seed=0){const ix=Math.floor(x),iz=Math.floor(z),tx=x-ix,tz=z-iz,u=tx*tx*(3-2*tx),v=tz*tz*(3-2*tz);return mix(mix(hash(ix,iz,seed),hash(ix+1,iz,seed),u),mix(hash(ix,iz+1,seed),hash(ix+1,iz+1,seed),u),v);}
+  function fbm(x,z,seed=0){return .57*noise(x,z,seed)+.28*noise(x*2.13+9,z*2.13-4,seed+1)+.15*noise(x*4.37-7,z*4.37+3,seed+2);}
+  function world(d,a,y){const p=[0,y,0];p[axis]=coordinate+sign*d;p[along]=center+a;return p;}
+  function occupied(d,a,margin=0){const p=world(d,a,0);return geometry.rooms.some(r=>p[0]>=r.x-margin&&p[0]<=r.x+r.width+margin&&p[2]>=r.z-margin&&p[2]<=r.z+r.depth+margin);}
+  function height(d,a){
+    // Near-ground centimeter relief grades into irregular eroded ridge bands.
+    // The bands' centers, widths and crest heights use different noise scales.
+    const n=fbm(d*.095,a*.095,3),near=Math.min(1,Math.max(0,(d-1)/7));
+    const ridge=(at,width,amplitude,seed)=>{
+      const shift=(fbm(a*.034,seed,seed)-.5)*16;
+      const shoulder=Math.abs((d-at-shift)/width);
+      return Math.exp(-shoulder*shoulder*1.7)*amplitude*(.42+.85*fbm(a*.06,seed+5,seed+4));
+    };
+    const y=floor-.18+near*((n-.5)*.46+(noise(d*.9,a*.9,19)-.5)*.045)
+      +ridge(35,8.5,3.7,11)+ridge(79,15,7.1,31);
+    // Scenery never rises through another authored room in a different layout.
+    return occupied(d,a,.2)?Math.min(y,floor-.18):y;
+  }
+  function mesh(name,positions,colors,indices,material,kind){
+    const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.setIndex(indices);g.computeVertexNormals();
+    const m=new THREE.Mesh(g,material);m.name=root.name+'_'+name;m.userData={exterior_part:kind,nontraversable:true,measured_terrain:false};root.add(m);return m;
+  }
+  const positions=[],colors=[],indices=[],nx=64,nz=72;
+  for(let i=0;i<=nx;i++)for(let j=0;j<=nz;j++){
+    const d=.18+.18*i+.025*i*i,t=j-nz/2,a=Math.sign(t)*(.25*Math.abs(t)+.055*t*t);
+    positions.push(...world(d,a,height(d,a)));
+    const tone=.78+.4*fbm(d*.7,a*.7,67),patch=fbm(d*.21,a*.21,83),haze=Math.min(.45,d/240);
+    const soil=[.34+.10*patch,.17+.06*patch,.085+.035*patch],dust=[.53,.32,.19];
+    colors.push(...soil.map((v,k)=>mix(v*tone,dust[k],haze)));
+    if(i<nx&&j<nz){const k=i*(nz+1)+j;indices.push(k,k+nz+1,k+1,k+1,k+nz+1,k+nz+2);}
+  }
+  if((axis===0?sign:-sign)>0)for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
+  mesh('regolith',positions,colors,indices,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,side:THREE.DoubleSide}),'regolith_and_ridges');
+  // Each rock has its own anisotropic shape, scale and weathered color. No
+  // identical repeated primitive or painted flat billboard is used.
+  for(let k=0;k<18;k++){
+    const d=2.8+hash(k,3,7)*20,a=(hash(k,8,9)-.5)*Math.min(27,d*1.5),radius=.12+.42*hash(k,5,27);
+    if(occupied(d,a,radius*1.5+.25))continue;
+    const g=new THREE.SphereGeometry(1,16,10),p=g.getAttribute('position'),c=[];
+    const sx=radius*(.9+.6*hash(k,1,21)),sy=radius*(.36+.42*hash(k,2,22)),sz=radius*(.75+.7*hash(k,3,23));
+    for(let i=0;i<p.count;i++){
+      const x=p.getX(i),y=p.getY(i),z=p.getZ(i);
+      const irregular=.76+.37*fbm(x*2.9+k*7,z*2.9+y*1.8,103+k);
+      // Angular shoulders with softened normals; upper and lower halves differ.
+      p.setXYZ(i,(x*irregular+.085*y*z)*sx,y*(.83+.2*noise(x*3+k,z*3,121))*sy,(z*irregular+.12*x*y)*sz);
+      const weather=.73+.35*noise(x*4+k,y*4+z,142),top=.025*Math.max(0,y);
+      c.push(.235*weather+top,.16*weather+top*.65,.115*weather+top*.35);
+    }
+    g.setAttribute('color',new THREE.Float32BufferAttribute(c,3));g.computeVertexNormals();
+    // SphereGeometry's unused pole seam vertices have no incident triangles.
+    // Give those explicit valid normals, so GLTF does not silently repair them.
+    const normals=g.getAttribute('normal');for(let i=0;i<normals.count;i++){
+      const n=new THREE.Vector3().fromBufferAttribute(normals,i);
+      if(n.lengthSq()<.5)n.fromBufferAttribute(p,i).normalize();
+      normals.setXYZ(i,n.x,n.y,n.z);
+    }
+    const rock=new THREE.Mesh(g,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0}));
+    rock.name=root.name+'_rock_'+String(k).padStart(2,'0');rock.position.set(...world(d,a,height(d,a)+sy*.25));rock.rotation.y=hash(k,9,53)*Math.PI*2;
+    rock.userData={exterior_part:'weathered_rock',nontraversable:true,measured_terrain:false};root.add(rock);
+  }
+  // A curved, original dust-color sky volume behind the terrain, not a source
+  // photograph or global background. It exports as the same geometry/material.
+  // Radius180m lies inside the unchanged250m camera far plane; every vertex is
+  // strictly in the exterior half-space. No interior light or fog is changed.
+  const sp=[],sc=[],si=[],azimuthSteps=48,altitudes=[-.38,-.18,-.04,.015,.055,.14,.35,.7,1.1,1.48],radius=180;
+  for(let v=0;v<altitudes.length;v++)for(let u=0;u<=azimuthSteps;u++){
+    const altitude=altitudes[v],azimuth=-1.53+u/azimuthSteps*3.06,d=radius*Math.cos(altitude)*Math.cos(azimuth),a=radius*Math.cos(altitude)*Math.sin(azimuth);
+    sp.push(...world(d,a,floor+1+radius*Math.sin(altitude)));
+    const horizon=[.63,.395,.22],zenith=[.24,.215,.195],low=[.34,.19,.105];
+    const col=altitude<0?horizon.map((x,k)=>mix(x,low[k],Math.min(1,-altitude/.38))):horizon.map((x,k)=>mix(x,zenith[k],Math.min(1,altitude/.85)));
+    sc.push(...col);
+    if(v<altitudes.length-1&&u<azimuthSteps){const n=v*(azimuthSteps+1)+u;si.push(n,n+1,n+azimuthSteps+1,n+1,n+azimuthSteps+2,n+azimuthSteps+1);}
+  }
+  // StandardMaterial keeps the existing importer contract.
+  // Three's vertex color multiplies diffuse, not emissive: use neutral diffuse
+  // with a modest common emission so the color gradient remains visible.
+  mesh('dusty_sky',sp,sc,si,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,emissive:0x51331e,emissiveIntensity:.42,side:THREE.DoubleSide}),'dusty_sky_shell');
+  root.updateMatrixWorld(true);return root;
+}

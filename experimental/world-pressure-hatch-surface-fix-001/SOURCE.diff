@@ -1,0 +1,91 @@
+diff --git a/preimages/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json b/candidate/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json
+index b4d9a3f..354054f 100644
+--- a/preimages/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json
++++ b/candidate/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json
+@@ -70,8 +70,8 @@
+       "bytes": 4635
+     },
+     "source/pressure_hatch.mjs": {
+-      "bytes": 15669,
+-      "sha256": "705390c434a1034669a4792eb3d1983c43e67f9107fd9340afd8fbff5bf21825"
++      "bytes": 16212,
++      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+     }
+   },
+   "external": {
+diff --git a/preimages/tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs b/candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs
+index 96f5d3f..1014814 100644
+--- a/preimages/tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs
++++ b/candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs
+@@ -41,13 +41,17 @@ export function planPressureHatch(geometry,portalId){
+   const part=(list,name,shape,center,size,material,extra={})=>{const value={id:'hatch_'+portalId+'_'+name,shape,center,size,material,...extra};list.push(value);return value;};
+   const fixedRing=(name,outer,inner,depth,z,material)=>part(fixed,name,'ring',[0,0,z],[outer.width,outer.top-outer.bottom,depth],material,{outer,inner});
+   const aperture={width:W,bottom:0,top:H,radius:.18};
+-  fixedRing('structural_surround',{width:W+.36,bottom:-.035,top:H+.18,radius:.36},aperture,.175,-.0075,'structure');
+-  fixedRing('rear_beveled_trim',{width:W+.29,bottom:-.025,top:H+.145,radius:.325},{width:W+.025,bottom:-.003,top:H+.0125,radius:.1925},.018,-.095,'trim');
+-  fixedRing('seat_flange',{width:W+.13,bottom:-.018,top:H+.065,radius:.245},aperture,.020,.070,'seat');
++  // Partition the frame at the deep seat insert: never stack two front faces
++  // or two aperture reveals in the same space. Shared boundaries are internal.
++  const seatOuter={width:W+.13,bottom:-.018,top:H+.065,radius:.245};
++  fixedRing('structural_surround',{width:W+.36,bottom:-.035,top:H+.18,radius:.36},seatOuter,.175,-.0075,'structure');
++  // Rear trim meets the frame at z=-.095 instead of penetrating its last 9 mm.
++  fixedRing('rear_beveled_trim',{width:W+.29,bottom:-.025,top:H+.145,radius:.325},{width:W+.025,bottom:-.003,top:H+.0125,radius:.1925},.018,-.104,'trim');
++  fixedRing('seat_flange',seatOuter,aperture,.175,-.0075,'seat');
+   // A continuous strip across the flush floor line and up both sides/top.
+   // Its front face meets the closed leaf back face; this is geometry only.
+   fixedRing('continuous_gasket',{width:W+.046,bottom:-.016,top:H+.023,radius:.203},
+-    {width:W+.018,bottom:0,top:H+.009,radius:.189},.014,.0805,'gasket');
++    {width:W+.018,bottom:0,top:H+.009,radius:.189},.0075,.08375,'gasket');
+   const localLeafCenter=[leafCenterX,leafHeight/2,0];
+   part(moving,'reinforced_leaf','solid',localLeafCenter,[leafWidth,leafHeight,.065],'leaf',
+     {profile:{width:leafWidth,bottom:-leafHeight/2,top:leafHeight/2,radius:.22},bevel:.008});
+@@ -131,7 +135,10 @@ export function planPressureHatch(geometry,portalId){
+     aperture,leafWidth,leafHeight,localLeafCenter,fixed,moving,colliders,
+     provenance:{originalAuthoredGeometry:true,externalTextures:false},
+     capabilities:{pressureSimulation:false,sealCertification:false,latchSimulation:false,latchState:'static_retracted',enabledInViewer:false},
+-    limits:{clearWidth:W,centralStandingClearHeight:H-.18,thresholdAboveFloor:0,requiresRevisedSwingAdmission:true}};
++    limits:{clearWidth:W,centralStandingClearHeight:H-.18,thresholdAboveFloor:0,requiresRevisedSwingAdmission:true,
++      // Cut this small region out of the decorative floor mesh, not the walking
++      // support surface. Otherwise y=0 floor and flush sill top z-fight.
++      requiresFlushSillFloorCutout:true,flushSillFloorCutoutLocal:{min:[-(W+.018)/2,-.095],max:[(W+.018)/2,.0875]}}};
+   return freeze(result);
+ }
+ 
+diff --git a/preimages/tools/world_builder_engine/pressure_hatch.mjs b/candidate/tools/world_builder_engine/pressure_hatch.mjs
+index 96f5d3f..1014814 100644
+--- a/preimages/tools/world_builder_engine/pressure_hatch.mjs
++++ b/candidate/tools/world_builder_engine/pressure_hatch.mjs
+@@ -41,13 +41,17 @@ export function planPressureHatch(geometry,portalId){
+   const part=(list,name,shape,center,size,material,extra={})=>{const value={id:'hatch_'+portalId+'_'+name,shape,center,size,material,...extra};list.push(value);return value;};
+   const fixedRing=(name,outer,inner,depth,z,material)=>part(fixed,name,'ring',[0,0,z],[outer.width,outer.top-outer.bottom,depth],material,{outer,inner});
+   const aperture={width:W,bottom:0,top:H,radius:.18};
+-  fixedRing('structural_surround',{width:W+.36,bottom:-.035,top:H+.18,radius:.36},aperture,.175,-.0075,'structure');
+-  fixedRing('rear_beveled_trim',{width:W+.29,bottom:-.025,top:H+.145,radius:.325},{width:W+.025,bottom:-.003,top:H+.0125,radius:.1925},.018,-.095,'trim');
+-  fixedRing('seat_flange',{width:W+.13,bottom:-.018,top:H+.065,radius:.245},aperture,.020,.070,'seat');
++  // Partition the frame at the deep seat insert: never stack two front faces
++  // or two aperture reveals in the same space. Shared boundaries are internal.
++  const seatOuter={width:W+.13,bottom:-.018,top:H+.065,radius:.245};
++  fixedRing('structural_surround',{width:W+.36,bottom:-.035,top:H+.18,radius:.36},seatOuter,.175,-.0075,'structure');
++  // Rear trim meets the frame at z=-.095 instead of penetrating its last 9 mm.
++  fixedRing('rear_beveled_trim',{width:W+.29,bottom:-.025,top:H+.145,radius:.325},{width:W+.025,bottom:-.003,top:H+.0125,radius:.1925},.018,-.104,'trim');
++  fixedRing('seat_flange',seatOuter,aperture,.175,-.0075,'seat');
+   // A continuous strip across the flush floor line and up both sides/top.
+   // Its front face meets the closed leaf back face; this is geometry only.
+   fixedRing('continuous_gasket',{width:W+.046,bottom:-.016,top:H+.023,radius:.203},
+-    {width:W+.018,bottom:0,top:H+.009,radius:.189},.014,.0805,'gasket');
++    {width:W+.018,bottom:0,top:H+.009,radius:.189},.0075,.08375,'gasket');
+   const localLeafCenter=[leafCenterX,leafHeight/2,0];
+   part(moving,'reinforced_leaf','solid',localLeafCenter,[leafWidth,leafHeight,.065],'leaf',
+     {profile:{width:leafWidth,bottom:-leafHeight/2,top:leafHeight/2,radius:.22},bevel:.008});
+@@ -131,7 +135,10 @@ export function planPressureHatch(geometry,portalId){
+     aperture,leafWidth,leafHeight,localLeafCenter,fixed,moving,colliders,
+     provenance:{originalAuthoredGeometry:true,externalTextures:false},
+     capabilities:{pressureSimulation:false,sealCertification:false,latchSimulation:false,latchState:'static_retracted',enabledInViewer:false},
+-    limits:{clearWidth:W,centralStandingClearHeight:H-.18,thresholdAboveFloor:0,requiresRevisedSwingAdmission:true}};
++    limits:{clearWidth:W,centralStandingClearHeight:H-.18,thresholdAboveFloor:0,requiresRevisedSwingAdmission:true,
++      // Cut this small region out of the decorative floor mesh, not the walking
++      // support surface. Otherwise y=0 floor and flush sill top z-fight.
++      requiresFlushSillFloorCutout:true,flushSillFloorCutoutLocal:{min:[-(W+.018)/2,-.095],max:[(W+.018)/2,.0875]}}};
+   return freeze(result);
+ }
+ 

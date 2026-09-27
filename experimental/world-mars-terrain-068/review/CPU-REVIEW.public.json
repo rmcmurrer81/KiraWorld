@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ACTUAL_LAYOUT_BOUNDED_CPU_REVIEW",
+  "source_gate_controls": 4,
+  "preserved_functions": 7,
+  "preserved_viewer_start": true,
+  "geometry_unchanged": true,
+  "room_styles_unchanged": true,
+  "sky_ray_hit": true,
+  "source_changed": false,
+  "models": 0,
+  "servers": 0,
+  "renderers": 0,
+  "exports": 0,
+  "limits": [
+    "Appearance is not assessed by CPU checks.",
+    "This proves the current single-level project, not arbitrary multilevel terrain-room clearance.",
+    "Source gate and viewport caller are preserved; buildOriginalMarsExterior is an internal construction helper, not an admission API."
+  ],
+  "public_exclusions": "Exact saved-layout room/viewport coordinates and per-rock positions omitted; original evidence hash retained in PUBLIC-SOURCE-BINDINGS.json."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "exit_code": 0,
+  "reason": null,
+  "elapsed_seconds": 0.460642599966377,
+  "sampled_peak_rss_bytes": 220127232,
+  "minimum_available_bytes": 12846297088,
+  "rss_cap_bytes": 1073741824,
+  "ram_reserve_bytes": 3221225472,
+  "deadline_seconds": 90,
+  "remaining_owned_pids": [],
+  "protected_source_files_unchanged": 103,
+  "canonical_or_owner_writes": false,
+  "render_or_UI_or_model_calls": 0,
+  "visual_approval": false,
+  "sample_limit": "20ms sampling can miss transient peaks",
+  "tested_sources": {
+    "test_terrain.mjs": "fcebb8e8fe2b6afa92e1d35035a875464cdc20aafc784c80a21160d0768e6139",
+    "run_tests.py": "da3645dc53b654f85b36d02a97687956555d5972f33f8b418edd72323097117c",
+    "mars_exterior.mjs": "b4c679bce38a37c21732d7620cd2c2ea20744d696d886565095019579292bb73",
+    "synthetic-layout.json": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3",
+    "candidate\\tools\\world_builder_engine\\layout_package_assets\\source\\room_dressing_render.mjs": "877b9c639e98e2bed11740c00702c93397406225795567aba3191d19077a6054",
+    "candidate\\tools\\world_builder_engine\\viewer.mjs": "63e32efe6d0c4b63d2b76abf4a5b61ffa9bcf39925f2dfc176f2a394742e7c98"
+  }
+}

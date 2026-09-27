@@ -1,0 +1,75 @@
+{
+  "contract": "isolated_hatch_visual_review_v1",
+  "parentFrozenSha256": "9463e27150a797716bb7aa63fca4f290854bb114c34c7090a3cc0420f41b73fd",
+  "assets": {
+    "index.html": {
+      "path": "index.html",
+      "mime": "text/html; charset=utf-8",
+      "bytes": 2465,
+      "sha256": "7ea4106d6fe6b593cff3a43313d1706077e5a4d0f563e7897b89fbe1f045c1dc"
+    },
+    "style.css": {
+      "path": "style.css",
+      "mime": "text/css; charset=utf-8",
+      "bytes": 2111,
+      "sha256": "371066612f648cf2fe6b5f2fe05bebe4cec5e6408f69b82b2c32ae8c0d4839f3"
+    },
+    "inspection.mjs": {
+      "path": "inspection.mjs",
+      "mime": "text/javascript; charset=utf-8",
+      "bytes": 8402,
+      "sha256": "8f664feb998dce42b939cda34c804b79d966e9ca507c84b4ebb1bec5a8d5673d"
+    },
+    "pressure_hatch.mjs": {
+      "path": "pressure_hatch.mjs",
+      "mime": "text/javascript; charset=utf-8",
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    "geometry.json": {
+      "path": "geometry.json",
+      "mime": "application/json; charset=utf-8",
+      "bytes": 37544,
+      "sha256": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3"
+    },
+    "three.module.js": {
+      "path": "three.module.js",
+      "mime": "text/javascript; charset=utf-8",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    "three.core.js": {
+      "path": "three.core.js",
+      "mime": "text/javascript; charset=utf-8",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    "inspection_context.mjs": {
+      "path": "inspection_context.mjs",
+      "mime": "text/javascript; charset=utf-8",
+      "bytes": 2473,
+      "sha256": "7bf97adccfe5d97064cad4efa38b17231d961b53f843213144054b44aecbd6d3"
+    }
+  },
+  "sourceBindings": {
+    "recipe": {
+      "candidate": "tools/world_builder_engine/pressure_hatch.mjs",
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    "vendor": "exact reviewed visual001 / frozen066 Three.js bytes",
+    "fixture": "exact frozen066 synthetic base"
+  },
+  "ownerWorldLoaded": false,
+  "pressureSimulation": false,
+  "latchSimulation": false,
+  "staticPosesDegrees": [
+    0,
+    35,
+    90
+  ],
+  "originalSourceRecipeChanged": false,
+  "successorRecipeChanged": true,
+  "serviceStarted": false,
+  "visualReviewPerformed": false,
+  "modelOrOfflineRenderStarted": false
+}

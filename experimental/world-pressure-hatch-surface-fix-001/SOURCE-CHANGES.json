@@ -1,0 +1,48 @@
+{
+  "parent": "world-pressure-hatch-066",
+  "sourceChanges": [
+    {
+      "path": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "before": {
+        "bytes": 4183,
+        "sha256": "682fec6aa1b0f3e16ae78996ff1cbf8eccd9fd46a41c1a0fbe6c7c6847a8c8c7"
+      },
+      "after": {
+        "bytes": 4183,
+        "sha256": "f0b63ddb59a4cdfe15f9476607621802d4ab48438e04174894cbd1b14f500c29"
+      }
+    },
+    {
+      "path": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs",
+      "before": {
+        "bytes": 15669,
+        "sha256": "705390c434a1034669a4792eb3d1983c43e67f9107fd9340afd8fbff5bf21825"
+      },
+      "after": {
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      }
+    },
+    {
+      "path": "tools/world_builder_engine/pressure_hatch.mjs",
+      "before": {
+        "bytes": 15669,
+        "sha256": "705390c434a1034669a4792eb3d1983c43e67f9107fd9340afd8fbff5bf21825"
+      },
+      "after": {
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      }
+    }
+  ],
+  "otherCandidateFilesUnchanged": true,
+  "producerPinOnly": "source/pressure_hatch.mjs",
+  "activation": false,
+  "previewChanges": [
+    "inspection.mjs",
+    "inspection_context.mjs",
+    "pressure_hatch.mjs",
+    "preview_server.py one extra asset allowlist entry",
+    "BUNDLE-MANIFEST.json"
+  ]
+}

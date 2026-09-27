@@ -1,0 +1,89 @@
+{
+  "status": "PASS_BOUNDED_SOURCE_AND_ACTUAL_LAYOUT_CPU_REVIEW_NOT_VISUAL_APPROVAL",
+  "reviewer": "/root/owner_error_state",
+  "candidate_delivery": {
+    "path": "work/world-mars-terrain-068/DELIVERY.json",
+    "bytes": 552,
+    "sha256": "b25deb836b6ad636a0b54b4b11ee38dba9669145c2e0a4dec0b19dd2b124432d"
+  },
+  "candidate_frozen_manifest": {
+    "path": "work/world-mars-terrain-068/FROZEN-MANIFEST.json",
+    "bytes": 5222,
+    "sha256": "7c2e7e4722db270849504849c5dd924258c6d475723b71f643ce667707774686"
+  },
+  "source_manifest": {
+    "path": "work/world-mars-terrain-068/SOURCE-MANIFEST.json",
+    "bytes": 812,
+    "sha256": "ebfad8267db84ec74b8d46ac133c9e10aac3b8b6e9d6d68eb680d071a2086fac"
+  },
+  "sources": [
+    {
+      "path": "work/world-mars-terrain-068/mars_exterior.mjs",
+      "bytes": 7105,
+      "sha256": "b4c679bce38a37c21732d7620cd2c2ea20744d696d886565095019579292bb73"
+    },
+    {
+      "path": "work/world-mars-terrain-068/candidate/tools/world_builder_engine/viewer.mjs",
+      "bytes": 67646,
+      "sha256": "63e32efe6d0c4b63d2b76abf4a5b61ffa9bcf39925f2dfc176f2a394742e7c98"
+    },
+    {
+      "path": "work/world-mars-terrain-068/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "bytes": 47510,
+      "sha256": "877b9c639e98e2bed11740c00702c93397406225795567aba3191d19077a6054"
+    }
+  ],
+  "read_evidence": [
+    {
+      "path": "work/world-mars-terrain-068/SOURCE.diff",
+      "bytes": 19557,
+      "sha256": "40625d6e7c70fdaa15bd322135b9a80e4c291bf5fd534aa874ce06e662d4304e"
+    },
+    {
+      "path": "work/world-mars-terrain-068/test_terrain.mjs",
+      "bytes": 15027,
+      "sha256": "fcebb8e8fe2b6afa92e1d35035a875464cdc20aafc784c80a21160d0768e6139"
+    },
+    {
+      "path": "work/world-mars-terrain-068/ASSESSMENT.json",
+      "bytes": 1249,
+      "sha256": "018294c8e1f4e87bd6c1b2876aac79feddbad88911006d670776a7ba571d7434"
+    },
+    {
+      "path": "work/world-mars-terrain-068/cpu-003/RESULT.json",
+      "bytes": 658,
+      "sha256": "e8fe2d77447b55ac9f62e9d59cdee7c99a45d3927d9a98f67083a387bb303040"
+    }
+  ],
+  "independent_cpu": {
+    "path": "work/world-mars-terrain-review-068/CPU-REVIEW.json",
+    "bytes": 4319,
+    "sha256": "8f7202a090b07f6bde5a068b9196833192fcf4e7cdbf642c6b57c1118687cbb5"
+  },
+  "blockers": [],
+  "findings": [
+    "Exact source-bound Mars gate remains in addObservationExterior; unsupported or mismatched presentation returns no exterior.",
+    "Both overlays inline the same authored helper. Existing planObservationViewport, structural opening, display functions, room materials and dressing functions are unchanged.",
+    "Viewer async start section is byte-identical; caller role selection, rooms, lights, camera and interior style are unchanged.",
+    "New terrain is floor-relative. Current actual layout has matching floor elevations; all18 rocks are supported by the triangulated terrain and remain outside authored rooms.",
+    "All current exterior vertices remain in the outward half-space: nearest0.1799998283m; furthest180.8728657m from the window eye is inside250m far plane.",
+    "Actual current layout has20 meshes,8601vertices,15264triangles, within the frozen candidate budgets.",
+    "Read the existing ten-check evidence including four orientations, translated floors, exact viewer/export recipe parity, unchanged authored habitat and actual synthetic exterior-only GLB roundtrip. No export was rerun for this review."
+  ],
+  "limits": [
+    "Appearance, scale perception, horizon color, sky-shell edge visibility and smoothness require actual browser inspection.",
+    "The clearance evidence is for this supported single-level layout. Generic multilevel rooms require separate terrain floor-clearance analysis before claiming support.",
+    "Exterior meshes use standard materials; rendering depends on lighting. Existing glTF importer differences in lighting, exposure and background remain.",
+    "Root must approve source composition, visual result and source/producer bindings before installation. No installed improvement or owner approval is claimed."
+  ],
+  "test_harness_note": "The initial support-ray probe used FrontSide and therefore saw only rock tops; corrected the independent probe to temporarily query both triangle sides. Final probe restores original materials; candidate source was not modified.",
+  "models_started": 0,
+  "servers_started": 0,
+  "renderers_started": 0,
+  "exports_started": 0,
+  "canonical_mutations": 0,
+  "public_exclusions": [
+    "Local preview paths/build identifiers and raw saved-layout geometry are omitted.",
+    "Independent source receipt remains bound by its original source hash in PUBLIC-SOURCE-BINDINGS.json."
+  ]
+}

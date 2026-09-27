@@ -1,0 +1,39 @@
+{
+  "status": "PASS_BOUNDED_CPU_SURFACE_REVIEW",
+  "reviewer": "/root/owner_error_state",
+  "candidate_manifest_sha256": "b150ce5af6e5da7355443ab1bf55124ca44c20a94085d90f1b523cb69763f408",
+  "recipe_sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+  "context_sha256": "7bf97adccfe5d97064cad4efa38b17231d961b53f843213144054b44aecbd6d3",
+  "bundle_sha256": "8cd8dfda0d47596999d69489a742b3a474219f03235aed4420a2b5ceeba85f6e",
+  "source_delta_checked": 3,
+  "preview_assets_checked": 8,
+  "independent_raycast_witnesses": 112,
+  "independent_failures": 0,
+  "orientations": [
+    "z/-1",
+    "x/-1",
+    "z/+1",
+    "x/+1"
+  ],
+  "source_test_evidence": "Existing20 CPU geometry checks and four socket-free admission checks read; not redundantly rerun",
+  "findings": [],
+  "verified": [
+    "Frame and deep seat meet at matching contours; no overlapping ring area",
+    "Gasket begins at the seat front and retains the original closed-leaf contact plane",
+    "Rear trim meets rather than penetrates the frame rear",
+    "Decorative floor cutout assigns flush y=0 sill surface to hatch material and leaves walking-support integration separate",
+    "Independent floor/reveal/wall witnesses have one nearest visible surface owner in all four portal orientations",
+    "Moving leaf/hardware/hinge/kinematic collider/swing data are untouched by the diff and preserved in focused source tests",
+    "Preview allowlist paths are eight local relative files; synthetic geometry and original recipe only; Three license retained"
+  ],
+  "limitations": [
+    "Actual browser appearance remains parent review",
+    "Whole-world floor/wall cutout and controller integration are explicitly not installed or activated",
+    "Bounds are conservative proxies, not full rigid-body self-collision proof",
+    "No pressure, sealing or working latch simulation",
+    "Public publication still needs the root-reviewed recovery allowlist; this review does not upload files"
+  ],
+  "canonical_mutations": false,
+  "source_edits": false,
+  "render_or_server_started": false
+}

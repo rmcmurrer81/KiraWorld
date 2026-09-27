@@ -1,0 +1,70 @@
+{
+  "contract": "pressure_hatch_surface_correction_cpu_v1",
+  "geometryTests": 20,
+  "serverAdmissionTests": 4,
+  "runs": [
+    {
+      "command": [
+        "--test",
+        "test_hatch.mjs",
+        "test_surfaces.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "✔ only explicit valid airlock pairs opt in; room names do not select a hatch (7.3111ms)\n✔ the candidate and export copy are byte-exact shared recipes with detached frozen plans (5.1824ms)\n✔ substantial frame, flush sill, continuous gasket and distinct bilateral controls are modeled (0.6157ms)\n✔ every rendered vertex is enclosed by its declared owned collider at closed, partial and full poses (258.8732ms)\n✔ full continuous sweep mathematically encloses all rotated collider corners across 181 poses (167.3256ms)\n✔ fixed frame/glazing-free aperture has genuine through-space and a flush traversable floor (60.6487ms)\n✔ closed leaf is in front of existing wall face and overlaps the gasket line from both sides (1.6577ms)\n✔ ordinary source controllers remain unchanged; new motion is explicitly not admitted to them (1.3427ms)\n✔ open hatches preserve forward/reverse standing passage and closed leaves block it (7.5438ms)\n✔ free-jamb keepers do not occupy moving hardware bounds through the complete swing (166.8151ms)\n✔ larger reserved swing leaves existing furniture placements intact (6.6173ms)\n✔ opposite swing direction, invalid units and invalid program are rejected (5.6633ms)\n✔ both portal axes and both swing directions have bounded mirrored assemblies (117.152ms)\n✔ real ray intersections reproduce the old front/reveal/sill duplicate faces and resolve them in the successor (36.5899ms)\n✔ surround and deep seat partition one ring; gasket and rear trim meet without depth penetration (34.988ms)\n✔ dense front band samples have exactly one nearest visible owner, including the rounded crown (29.6323ms)\n✔ the old context floor duplicates the sill; the explicit cutout preserves a flush surface without a hole (9.2091ms)\n✔ actual inspection wall follows the outer frame profile and cannot duplicate the inner reveal (8.7405ms)\n✔ leaf, hardware, aperture and exact moving swing remain byte-equivalent in plan data (12.364ms)\n✔ correction applies in both axes and room-A directions without changing materials or shadow bias (31.7666ms)\nℹ tests 20\nℹ suites 0\nℹ pass 20\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 899.8033\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "--check",
+        "preview/assets/inspection.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "--check",
+        "preview/assets/inspection_context.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-B",
+        "test_server.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_bound_assets_reject_changed_bytes_and_unsafe_manifest_paths (__main__.AdmissionTests.test_bound_assets_reject_changed_bytes_and_unsafe_manifest_paths) ... ok\r\ntest_get_and_head_only_exact_known_assets (__main__.AdmissionTests.test_get_and_head_only_exact_known_assets) ... ok\r\ntest_host_origin_and_cross_site_guard (__main__.AdmissionTests.test_host_origin_and_cross_site_guard) ... ok\r\ntest_no_traversal_queries_remote_urls_or_unlisted_files (__main__.AdmissionTests.test_no_traversal_queries_remote_urls_or_unlisted_files) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.007s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": [
+        "-B",
+        "preview_server.py",
+        "verify",
+        "--manifest-sha256",
+        "8cd8dfda0d47596999d69489a742b3a474219f03235aed4420a2b5ceeba85f6e"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"status\": \"verified\", \"assets\": 8, \"serviceStarted\": false}\r\n",
+      "stderr": ""
+    }
+  ],
+  "previewManifestSha256": "8cd8dfda0d47596999d69489a742b3a474219f03235aed4420a2b5ceeba85f6e",
+  "sourceRecipe": {
+    "bytes": 16212,
+    "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+  },
+  "exposedDuplicateFacesReproducedOnOldGeometry": true,
+  "correctedWitnessesPass": true,
+  "movingSwingUnchanged": true,
+  "pressureSimulation": false,
+  "serviceStarted": false,
+  "socketBound": false,
+  "browserOpened": false,
+  "offlineRenderOrExport": false,
+  "visualApproval": false
+}

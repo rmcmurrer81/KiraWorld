@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import {pathToFileURL} from 'node:url';
+const [geometryPath,navigationPath] = process.argv.slice(2);
+if (!geometryPath || !navigationPath || process.argv.length !== 4) throw new Error('Expected geometry and navigation paths');
+const geometry = JSON.parse(fs.readFileSync(geometryPath,'utf8').replace(/^\uFEFF/,''));
+const {NAVIGATION_CONTRACT,checkWalkSpawn,checkHorizontalRoute}=await import(pathToFileURL(navigationPath).href);
+const nav={contract:NAVIGATION_CONTRACT,support_surfaces:geometry.support_surfaces,colliders:geometry.colliders};
+const room=geometry.rooms.find(r=>r.id===geometry.connectivity.entry_room_id);
+if (!room || room.access!=='walkable_layout') throw new Error('Entry room is locked; no walk preview can start');
+const feet=[room.x+room.width/2,room.floor_y,room.z+room.depth/2];
+const spawn=checkWalkSpawn(feet,nav,.34,1.68);
+if (!spawn.ok) throw new Error('Unsupported entry spawn: '+JSON.stringify(spawn));
+const routes=geometry.routes.map(r=>({forward:checkHorizontalRoute(r,nav),reverse:checkHorizontalRoute({...r,points:[...r.points].reverse()},nav)}));
+if (routes.some(r=>r.forward.status!=='clear'||r.reverse.status!=='clear')) throw new Error('Blocked compiled route: '+JSON.stringify(routes));
+process.stdout.write(JSON.stringify({status:'PASS',contract:NAVIGATION_CONTRACT,spawn_feet:feet,routes,model_jobs:0}));
