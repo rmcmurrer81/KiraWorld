@@ -1,0 +1,25 @@
+.mars-history-library{box-sizing:border-box;background:#10222c;color:#edf4ef;border:1px solid #658a92;border-radius:12px;padding:20px;max-width:1000px;max-height:85vh;overflow:auto;font:16px/1.55 system-ui,sans-serif;color-scheme:dark}
+.mars-history-library[hidden]{display:none}
+.mars-history-library *{box-sizing:border-box}
+.mars-history-library header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:1px solid #496773;padding-bottom:12px;margin-bottom:18px}
+.mars-history-library h2,.mars-history-library h3,.mars-history-library h4{line-height:1.25;margin:0 0 12px}
+.mars-history-library header p{margin:0;flex:1;color:#b6d2d7}
+.mars-history-library button,.mars-history-library summary{min-height:44px;padding:9px 13px;cursor:pointer}
+.mars-history-library button{font:inherit;background:#244551;color:#f5f8eb;border:1px solid #8cb0b3;border-radius:7px;text-align:left}
+.mars-history-library button[aria-current=true]{background:#3d645b;border:2px solid #e7c683}
+.mars-history-library button:disabled{opacity:.58;cursor:default}
+.mars-history-library :focus-visible{outline:3px solid #ffd38b;outline-offset:3px}
+.mars-history-layout{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,3fr);gap:24px}
+.mars-history-library nav ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.mars-history-library nav button{width:100%}
+.mars-history-body{min-width:0}
+.mars-history-badge{font-weight:600;color:#e9cd8e}
+.mars-history-library a{color:#bce1ff;text-decoration:underline;overflow-wrap:anywhere}
+.mars-history-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 0;border-block:1px solid #496773;margin:16px 0}
+.mars-history-controls label{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0}
+.mars-history-controls input[type=range]{min-height:44px;max-width:100%;accent-color:#d8ba7a}
+.mars-history-controls output{font-variant-numeric:tabular-nums}
+.mars-history-transcript{white-space:pre-wrap;overflow-wrap:anywhere;padding:12px 2px 20px}
+.mars-history-library details{margin-bottom:18px}
+@media(max-width:640px){.mars-history-library{padding:14px}.mars-history-layout{grid-template-columns:1fr}.mars-history-library nav ul{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}}
+@media(prefers-reduced-motion:reduce){.mars-history-library *{scroll-behavior:auto}}

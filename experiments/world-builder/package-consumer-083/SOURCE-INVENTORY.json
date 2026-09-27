@@ -1,0 +1,142 @@
+{
+  "schema": "public-world-consumer-source-inventory/v1",
+  "candidate": "consumer083",
+  "candidate_delivery_sha256": "5586dae42fc84ad2122b5cdee97318b59a37adbe51587ddf149d6e6c9104c7cf",
+  "candidate_frozen_manifest_sha256": "76f67465b61c1e88042908ae8d3af2e481cdc83d92ac940a7779b83c462fe9d4",
+  "exact_runtime_source_files": 23,
+  "portable_artificial_test_files": 3,
+  "private_package_files": 0,
+  "installed": false,
+  "files": [
+    {
+      "path": "candidate/airlock_cycle.mjs",
+      "sha256": "9c7b50e026225c98a6df96509ad7b1b2891c2a12790236ef94b0730e14054cce",
+      "bytes": 12545
+    },
+    {
+      "path": "candidate/airlock_host.mjs",
+      "sha256": "90bb11d960f1348957fdeb22cad93aa67b057325275e3e0e6fc79a2ee56e7ca0",
+      "bytes": 5975
+    },
+    {
+      "path": "candidate/app.mjs",
+      "sha256": "be77727d41d3f0bb6ef9cc58ff80803d69beb2551020dfdc4e0b228d391b7f94",
+      "bytes": 13892
+    },
+    {
+      "path": "candidate/discrete_controls.mjs",
+      "sha256": "c40c4db23b1752e7e88bfed22ecaf003df490284cb92f90f6cf8da892d4fb214",
+      "bytes": 4023
+    },
+    {
+      "path": "candidate/door_metadata.mjs",
+      "sha256": "42edfc46bfbb1a887442e032a3fc1720d731369e01a1f871e77beca0eccd439c",
+      "bytes": 6425
+    },
+    {
+      "path": "candidate/file_admission.mjs",
+      "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+      "bytes": 1446
+    },
+    {
+      "path": "candidate/greenhouse_control.mjs",
+      "sha256": "f6115a0a8edc44b47290692dfaae13e75bce9652cd8163abb16cea4492a20519",
+      "bytes": 2148
+    },
+    {
+      "path": "candidate/history-library.json",
+      "sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285",
+      "bytes": 11064
+    },
+    {
+      "path": "candidate/history_host.mjs",
+      "sha256": "b93f24a5af523cf071da6dce0418ed511c0b223d7f556002e94ce89af4c46dbc",
+      "bytes": 2403
+    },
+    {
+      "path": "candidate/horizontal_navigation.mjs",
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    {
+      "path": "candidate/index.html",
+      "sha256": "2428dab0c25f75f356c3cbd63cfac261f96a85fdf63e5ba59d1b9246fb40fe36",
+      "bytes": 6116
+    },
+    {
+      "path": "candidate/mars-history-library.css",
+      "sha256": "c95810fe028349848900a7f3229ce1fe9aebbf960f0997a08f019f41d6be8756",
+      "bytes": 2359
+    },
+    {
+      "path": "candidate/mars-history-library.mjs",
+      "sha256": "2d378dd5ff63f84c08d63cd96c86ecbdb944828e5b5a492779542d08e5c0a89b",
+      "bytes": 17276
+    },
+    {
+      "path": "candidate/package_loader.mjs",
+      "sha256": "912b134c129c896ac30c5bbcb003d016c06d309b8723a07c3fa47ec549351c3c",
+      "bytes": 11870
+    },
+    {
+      "path": "candidate/runtime.mjs",
+      "sha256": "80c9700e84c0c01fbe0f9c45b2b0efd7c3f308190731a8cf13b59ea3d179499d",
+      "bytes": 12170
+    },
+    {
+      "path": "candidate/scene_disposal.mjs",
+      "sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6",
+      "bytes": 654
+    },
+    {
+      "path": "candidate/serve.py",
+      "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+      "bytes": 655
+    },
+    {
+      "path": "candidate/vendor/three/build/three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    {
+      "path": "candidate/vendor/three/build/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    {
+      "path": "candidate/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "bytes": 114739
+    },
+    {
+      "path": "candidate/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "bytes": 35539
+    },
+    {
+      "path": "candidate/vendor/three/LICENSE",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    {
+      "path": "candidate/vendor/three/package.json",
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+      "bytes": 4635
+    },
+    {
+      "path": "tests/airlock.test.mjs",
+      "sha256": "6c1d2b10e2a4a17da0d54267adae5cdcc07efa41fe7ec0270e74e1e4c4cc2089",
+      "bytes": 8529
+    },
+    {
+      "path": "tests/artificial_fixture.mjs",
+      "sha256": "2d9aea4f916706371311bf0733139d5e2d5cd41a1d19e9ab2a298c3b45e7e169",
+      "bytes": 3296
+    },
+    {
+      "path": "tests/host.test.mjs",
+      "sha256": "a71434b356ad8a5f1bac91de4fc23ae0e37924d16d725c243555dd2c9b28d4df",
+      "bytes": 6647
+    }
+  ]
+}
