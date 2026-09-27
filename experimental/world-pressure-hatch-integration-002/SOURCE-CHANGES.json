@@ -1,0 +1,69 @@
+{
+  "parentManifest": {
+    "bytes": 22499,
+    "sha256": "611dce03defc8459e08dabf336ebf937fe9163d667b131fe961ff5eb5ef6b038"
+  },
+  "changes": [
+    {
+      "path": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "before": {
+        "bytes": 4497,
+        "sha256": "7399c5c6d4d87b8bc6e7e5c0c2277eed6af8f51eb4602e8a9695e315feaf9b1d"
+      },
+      "after": {
+        "bytes": 4497,
+        "sha256": "cfe8e3b37b28dfee980f00d907ce1744ec18aca3eafd6295126439570c3349db"
+      }
+    },
+    {
+      "path": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch_architecture.mjs",
+      "before": {
+        "bytes": 9023,
+        "sha256": "a8cf9aeba9b9867ca07aad5ecce0ea23fcf9da4541ee1b2c58409a8133e4d8e5"
+      },
+      "after": {
+        "bytes": 9874,
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+      }
+    },
+    {
+      "path": "tools/world_builder_engine/layout_package_export.py",
+      "before": {
+        "bytes": 11527,
+        "sha256": "0db13ef76a82d76ba1efd2869d1b1568dd84168de0e78514356c7bf03945f617"
+      },
+      "after": {
+        "bytes": 11527,
+        "sha256": "8f95b184e1d717383fc11e89b4854e7bf6bf5d919b10b3e0efffeb1bcce5f860"
+      }
+    },
+    {
+      "path": "tools/world_builder_engine/pressure_hatch_architecture.mjs",
+      "before": {
+        "bytes": 9023,
+        "sha256": "a8cf9aeba9b9867ca07aad5ecce0ea23fcf9da4541ee1b2c58409a8133e4d8e5"
+      },
+      "after": {
+        "bytes": 9874,
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+      }
+    },
+    {
+      "path": "tools/world_builder_engine/world_layout_preview.py",
+      "before": {
+        "bytes": 31753,
+        "sha256": "f5a2659db78735676706b09b5a496e38c962d76e91734e72d3066d89be4914e8"
+      },
+      "after": {
+        "bytes": 32078,
+        "sha256": "dd8a9a9d1ca3ac04869e0417d7f5c0e767dd89eda3d18e44614c4120d453edf1"
+      }
+    }
+  ],
+  "unchangedFiles": 43,
+  "newRuntimeFiles": 0,
+  "uvOnlyGeometryChange": true,
+  "externalDependenciesUnchanged": true,
+  "display067Included": false,
+  "terrain068Included": false
+}

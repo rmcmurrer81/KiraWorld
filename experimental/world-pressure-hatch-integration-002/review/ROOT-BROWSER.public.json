@@ -1,0 +1,24 @@
+{
+  "status": "ACTUAL_BROWSER_TRAVERSAL_AND_VISUAL_CHECK_PASS_WITH_LIMITS",
+  "at_utc": "2026-09-27T01:03:16.369173+00:00",
+  "source_manifest_sha256": "28061c7afb93cdd261f6b380a7b45edd4b42e58c4e9ba14411b7e5fa99e5310b",
+  "browser": "Codex in-app browser",
+  "viewport": [
+    1280,
+    800
+  ],
+  "observations": [
+    "Outer pressure-style hatch opens into actual layout. Rounded frame, wheel, linkage rods, static latch shapes, reveal and seal seat are visible.",
+    "No previous severe diagonal z-fighting seen in inspected closed/open front and reverse surfaces; room wall/floor texture scale appears consistent after002 UV fix.",
+    "Traversed into Primary Airlock, attempted inner door while outer open. UI refused: The door to Equipment Vestibule must be fully closed and stopped before opening this airlock door.",
+    "Turned back and closed outer hatch from inside, turned toward inner and successfully opened inner hatch.",
+    "Traversed into the main circulation corridor. Ordinary blue slab doors remained visually distinct and unchanged."
+  ],
+  "limits": [
+    "Browser review is only sampled views, not all poses or final art approval.",
+    "Latch hardware is static/retracted; seal seat appearance is not working latch/pressure simulation or engineering certification.",
+    "Pressure cycling, live telemetry and headset testing are not implemented by this candidate.",
+    "No owner appearance approval inferred. Screenshots viewed in tool output, no separately saved screenshot file claimed.",
+    "The later technical export receipt is separate; installedWorld056 remains unchanged."
+  ]
+}

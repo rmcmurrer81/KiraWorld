@@ -1,0 +1,611 @@
+{
+  "contract": "public_hatch002_source_closure_v1",
+  "original_frozen_sha256": "28061c7afb93cdd261f6b380a7b45edd4b42e58c4e9ba14411b7e5fa99e5310b",
+  "files": [
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/__init__.py",
+      "bytes": 82,
+      "sha256": "f2f1d72149af8fa9ac5baada8f653657e214420a6ae978cdc227156e99d999f7"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/analog_case_index.py",
+      "bytes": 10858,
+      "sha256": "2a00f1d4551c70351b966a10deefd7e336204ea173ef14e1c0762ff64dfc4459"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/hatch_preflight.mjs",
+      "bytes": 1104,
+      "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/horizontal_navigation.mjs",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/index.html",
+      "bytes": 2119,
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_airlock_policy.py",
+      "bytes": 3351,
+      "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "bytes": 7952,
+      "sha256": "62fb3c82f56bdc3ba79a807917cea2c2cd2fd650d6b4cb50f5f8f0e671d0e707"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/build_glb.mjs",
+      "bytes": 13858,
+      "sha256": "afac5d6ac58b92a6a3449fcabd5e7f4712d9fa02dc3350adad18735c9e9d6c85"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/cpu_canvas.mjs",
+      "bytes": 2968,
+      "sha256": "71129c539e0b3bb6227aedda5e6434e94b95ba6cc811446c6ed9fb2feaba78bb"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "bytes": 4497,
+      "sha256": "cfe8e3b37b28dfee980f00d907ce1744ec18aca3eafd6295126439570c3349db"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/airlock_policy.mjs",
+      "bytes": 2523,
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs",
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch_architecture.mjs",
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/pressure_hatch_metadata.mjs",
+      "bytes": 4165,
+      "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "bytes": 10254,
+      "sha256": "f5987f9c1e39b172f7f326e930bbb0b58ebdfc76939ee0cc26272aafc94cfcf3"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "bytes": 35874,
+      "sha256": "daff1fb2c5cba18d355c1266dbf9153fa2e8666a270ad93c9326d5de5b77a5b4"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "bytes": 16766,
+      "sha256": "7cd838d51002818b4519a1616a4ad9ce2167c4c4c82d3f995ebc674772ecb6be"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs",
+      "bytes": 21634,
+      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/source_bindings.py",
+      "bytes": 12098,
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/exporters/GLTFExporter.js",
+      "bytes": 86392,
+      "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_assets/vendor/three/package.json",
+      "bytes": 4635,
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_contract.json",
+      "bytes": 3690,
+      "sha256": "7eacbfa6ef372da484817bd3990e6f9cfbe5c7357b233a8794510c315b656394"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_package_export.py",
+      "bytes": 11527,
+      "sha256": "8f95b184e1d717383fc11e89b4854e7bf6bf5d919b10b3e0efffeb1bcce5f860"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/layout_recipe_profile.py",
+      "bytes": 5276,
+      "sha256": "c7de67d95da9a8f0d1652a10ba1f56b644438f3c10df03b1a27c24177ec6ecc8"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/model_client.py",
+      "bytes": 6660,
+      "sha256": "511c3b6e6460429dc74f37e7fcefc00fbb03e7be722bd3df6d9d06937767a769"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/pipeline.py",
+      "bytes": 23955,
+      "sha256": "d3ce47f3f4c48df746ec8bf9c5efd218fc2453675fc1d81dd7790e287c115a8d"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/preflight.mjs",
+      "bytes": 1374,
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/prepare_repair.py",
+      "bytes": 659,
+      "sha256": "11b7ce237e1bd724c0e9e650096f059430bb7d0ff7a8bc0b4aa6d0f6ee9a47e5"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/pressure_hatch.mjs",
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/pressure_hatch_architecture.mjs",
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/preview_refresh.py",
+      "bytes": 2315,
+      "sha256": "a8023bc13ecebd41223bc0a5692eb553713aa1491a819e37ec3b9d1d607159d5"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/preview_server.py",
+      "bytes": 869,
+      "sha256": "b076e1219caa3b5c273a57f61079cd4630028cb042515f8bd117d514d21113f8"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/reviewed_analog_cases.json",
+      "bytes": 2233,
+      "sha256": "60ea520164cd0bd9e1e308de1c76c1531c95ed154da6edcb1b13476c3b48910d"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/style.css",
+      "bytes": 2451,
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/viewer.mjs",
+      "bytes": 56056,
+      "sha256": "2aee228d8ef2ae7085e322af7add74f6414f37ff05d3b97ac35dfe4742c21c33"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/walk_controller.mjs",
+      "bytes": 21634,
+      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/worker.py",
+      "bytes": 865,
+      "sha256": "4943bf9f7899159b7dc24c354e9f64952184bf8548c0daf879661e8e7342340f"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/workspace_adapter.py",
+      "bytes": 6296,
+      "sha256": "9a00a1ea296d6b7728f9a24bb0e74b365c8ca22ee19263f6bacfd7be0f9c0859"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/world_blueprint.py",
+      "bytes": 13649,
+      "sha256": "94b175bc95214e3a784ef871a3de46388a3356c5924e0871b7b031834eb6b5bc"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/world_layout_job.py",
+      "bytes": 16572,
+      "sha256": "a2125076c06068fc7d91919537cdf5bdaa8b8266303b594165a731812fd36283"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/world_layout_preview.py",
+      "bytes": 32078,
+      "sha256": "dd8a9a9d1ca3ac04869e0417d7f5c0e767dd89eda3d18e44614c4120d453edf1"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_builder_engine/world_layout_v2.py",
+      "bytes": 20753,
+      "sha256": "dc5d8de4fee7be746012b88928677bf062e2c4c5109d6b516aaa3eab094ca4f8"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/__init__.py",
+      "bytes": 82,
+      "sha256": "f2f1d72149af8fa9ac5baada8f653657e214420a6ae978cdc227156e99d999f7"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/analog_case_index.py",
+      "bytes": 10858,
+      "sha256": "2a00f1d4551c70351b966a10deefd7e336204ea173ef14e1c0762ff64dfc4459"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/hatch_preflight.mjs",
+      "bytes": 1104,
+      "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/horizontal_navigation.mjs",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/index.html",
+      "bytes": 2119,
+      "sha256": "2db5868fafea176a30892ec14e29f08ee4ff63fb19a297c8aebf10401677a3be"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_airlock_policy.py",
+      "bytes": 3351,
+      "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "bytes": 7952,
+      "sha256": "62fb3c82f56bdc3ba79a807917cea2c2cd2fd650d6b4cb50f5f8f0e671d0e707"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/build_glb.mjs",
+      "bytes": 13858,
+      "sha256": "afac5d6ac58b92a6a3449fcabd5e7f4712d9fa02dc3350adad18735c9e9d6c85"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/cpu_canvas.mjs",
+      "bytes": 2968,
+      "sha256": "71129c539e0b3bb6227aedda5e6434e94b95ba6cc811446c6ed9fb2feaba78bb"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "bytes": 4497,
+      "sha256": "7399c5c6d4d87b8bc6e7e5c0c2277eed6af8f51eb4602e8a9695e315feaf9b1d"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/airlock_policy.mjs",
+      "bytes": 2523,
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs",
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/pressure_hatch_architecture.mjs",
+      "bytes": 9023,
+      "sha256": "a8cf9aeba9b9867ca07aad5ecce0ea23fcf9da4541ee1b2c58409a8133e4d8e5"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/pressure_hatch_metadata.mjs",
+      "bytes": 4165,
+      "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "bytes": 10254,
+      "sha256": "f5987f9c1e39b172f7f326e930bbb0b58ebdfc76939ee0cc26272aafc94cfcf3"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "bytes": 35874,
+      "sha256": "daff1fb2c5cba18d355c1266dbf9153fa2e8666a270ad93c9326d5de5b77a5b4"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "bytes": 16766,
+      "sha256": "7cd838d51002818b4519a1616a4ad9ce2167c4c4c82d3f995ebc674772ecb6be"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs",
+      "bytes": 21634,
+      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/source_bindings.py",
+      "bytes": 12098,
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/exporters/GLTFExporter.js",
+      "bytes": 86392,
+      "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_assets/vendor/three/package.json",
+      "bytes": 4635,
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_contract.json",
+      "bytes": 3690,
+      "sha256": "7eacbfa6ef372da484817bd3990e6f9cfbe5c7357b233a8794510c315b656394"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_package_export.py",
+      "bytes": 11527,
+      "sha256": "0db13ef76a82d76ba1efd2869d1b1568dd84168de0e78514356c7bf03945f617"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/layout_recipe_profile.py",
+      "bytes": 5276,
+      "sha256": "c7de67d95da9a8f0d1652a10ba1f56b644438f3c10df03b1a27c24177ec6ecc8"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/model_client.py",
+      "bytes": 6660,
+      "sha256": "511c3b6e6460429dc74f37e7fcefc00fbb03e7be722bd3df6d9d06937767a769"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/pipeline.py",
+      "bytes": 23955,
+      "sha256": "d3ce47f3f4c48df746ec8bf9c5efd218fc2453675fc1d81dd7790e287c115a8d"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/preflight.mjs",
+      "bytes": 1374,
+      "sha256": "40b4031b11d48831e320785d98c7ed68ca14868ef90824f3f42b7de74e4ba0e4"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/prepare_repair.py",
+      "bytes": 659,
+      "sha256": "11b7ce237e1bd724c0e9e650096f059430bb7d0ff7a8bc0b4aa6d0f6ee9a47e5"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/pressure_hatch.mjs",
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/pressure_hatch_architecture.mjs",
+      "bytes": 9023,
+      "sha256": "a8cf9aeba9b9867ca07aad5ecce0ea23fcf9da4541ee1b2c58409a8133e4d8e5"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/preview_refresh.py",
+      "bytes": 2315,
+      "sha256": "a8023bc13ecebd41223bc0a5692eb553713aa1491a819e37ec3b9d1d607159d5"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/preview_server.py",
+      "bytes": 869,
+      "sha256": "b076e1219caa3b5c273a57f61079cd4630028cb042515f8bd117d514d21113f8"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/reviewed_analog_cases.json",
+      "bytes": 2233,
+      "sha256": "60ea520164cd0bd9e1e308de1c76c1531c95ed154da6edcb1b13476c3b48910d"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/style.css",
+      "bytes": 2451,
+      "sha256": "8cc5bc21ebd487bb6b36114eb37d1926d04a5b4e5f0ab60c702dd21a00579505"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/viewer.mjs",
+      "bytes": 56056,
+      "sha256": "2aee228d8ef2ae7085e322af7add74f6414f37ff05d3b97ac35dfe4742c21c33"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/walk_controller.mjs",
+      "bytes": 21634,
+      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/worker.py",
+      "bytes": 865,
+      "sha256": "4943bf9f7899159b7dc24c354e9f64952184bf8548c0daf879661e8e7342340f"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/workspace_adapter.py",
+      "bytes": 6296,
+      "sha256": "9a00a1ea296d6b7728f9a24bb0e74b365c8ca22ee19263f6bacfd7be0f9c0859"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/world_blueprint.py",
+      "bytes": 13649,
+      "sha256": "94b175bc95214e3a784ef871a3de46388a3356c5924e0871b7b031834eb6b5bc"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/world_layout_job.py",
+      "bytes": 16572,
+      "sha256": "a2125076c06068fc7d91919537cdf5bdaa8b8266303b594165a731812fd36283"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/world_layout_preview.py",
+      "bytes": 31753,
+      "sha256": "f5a2659db78735676706b09b5a496e38c962d76e91734e72d3066d89be4914e8"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/preimages/tools/world_builder_engine/world_layout_v2.py",
+      "bytes": 20753,
+      "sha256": "dc5d8de4fee7be746012b88928677bf062e2c4c5109d6b516aaa3eab094ca4f8"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/fixtures/base.json",
+      "bytes": 37544,
+      "sha256": "15d3d970ed6b01adbad1a97d25cc359b5e912287d8aaf5fa377f1b732a93b5d3"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/fixtures/renamed.json",
+      "bytes": 37221,
+      "sha256": "60df6a360aefb7d9e7a22aec18970380ac2dac15858140cdaf7c13283572ff64"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/fixtures/translated.json",
+      "bytes": 38123,
+      "sha256": "031f96e57269d8b75d7ee8d799ca2993f5b6cfc3f184fb11a15d8f932987ee8a"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/fixtures/wider.json",
+      "bytes": 37545,
+      "sha256": "546a505f757993f89963f81caa0c4f5d6e9cf30500dfdbe3d8ff68889a0eb9fe"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/SOURCE-CHANGES.json",
+      "bytes": 2145,
+      "sha256": "4ae09cd4479be3a20ab85522e0372a4bf5dfa4c0d2bfe5724c415bc68d724e7c"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/SOURCE.diff",
+      "bytes": 8975,
+      "sha256": "11e6da212941e493d4446a407459d7bb4132406483371b45e33948d777d7ba81"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/PARENT-CLOSURE.json",
+      "bytes": 8806,
+      "sha256": "8cfc3125ac7153186a899f15bd7313c52c8b2113de799d2f233219b8c8a7627e"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/PRESERVATION-RESULT.json",
+      "bytes": 262,
+      "sha256": "9f764bcbabfe24aae2aadd1c58bd89a38f26e346227a9b791962f7730cbd6848"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_saved_research.py",
+      "bytes": 3636,
+      "sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/adaptive_source_selection.py",
+      "bytes": 12858,
+      "sha256": "2737bc3838eb6be75693d677d34ef596a377d6ae7a2d16011d3772b101d31363"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/candidate/tools/world_research.py",
+      "bytes": 45890,
+      "sha256": "3d543aec1b4e973e33dfbad5dbe59651ad0c16f5a44e09785a42f3fe041566f1"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/baseline062/walk_controller.mjs",
+      "bytes": 19050,
+      "sha256": "97f651e7699715afb3fc02990beb82fbc39228b0fb668a5fd9e8c79cc078c338"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/baseline062/horizontal_navigation.mjs",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/test_integration.mjs",
+      "bytes": 11848,
+      "sha256": "b1e707100fee5739d5a9ccdb7758431cfb1368aeb2d62e1ea01b953cedca5fdf"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/test_uv.mjs",
+      "bytes": 9010,
+      "sha256": "b7dd80f2d051404037fb473e1784b80037af3804dbaeac5dc59a69e67ca5e561"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/test_scene_parity.mjs",
+      "bytes": 7693,
+      "sha256": "00cb9267cd0d6a57e7fd4b009dc7a72120ff9c18483a5519f89f3d3cbf0cacaa"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/test_preview_bindings.py",
+      "bytes": 4298,
+      "sha256": "3f65fe25ffcd87a7c91be011a19993b87d86d2c82dc5b16d588f5403a059be9f"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/TEST-ADAPTATIONS.diff",
+      "bytes": 4615,
+      "sha256": "5c6206c237823c00790505f67f47c1a8172ae4d3eb4d0311c4adebc182b5a768"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/PUBLIC-CPU-RESULT.json",
+      "bytes": 4129,
+      "sha256": "8f55e516c385e6ec79c5592cde50a2422b3e9419abc150f7b1817b3a3536ed05"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/review/ORIGINAL-CPU.public.json",
+      "bytes": 592,
+      "sha256": "8f938288a8d8334566af508802663dfa8a808b1784dfdc0626e80e9c5bf9bd3b"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/review/FAILED001-SOURCE-REVIEW.public.json",
+      "bytes": 773,
+      "sha256": "ba49e31929eeafb14b27e198acb7e2da9d013037700eb2cb636c208b4af79b36"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/review/ROOT-BROWSER.public.json",
+      "bytes": 1615,
+      "sha256": "77fcd2f872d1aa377a8e1c278a97a2225925380771e546323a6d8267d9344b96"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/review/GLB-ROUNDTRIP.public.json",
+      "bytes": 1587,
+      "sha256": "22b0c56480e9c36486ece62279fda8940d826e7165776c367836b4637e772251"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/review/EXPORT-SUPERVISION.public.json",
+      "bytes": 923,
+      "sha256": "37d4eddc193f2535c5a3fecdd43628da296bfa7c6c9ebd2d6d5ba75797fa9c2f"
+    },
+    {
+      "path": "experimental/world-pressure-hatch-integration-002/README.md",
+      "bytes": 3534,
+      "sha256": "20816558793acc1dbc1464a0d98181ec32affc40591f3d6ca05f8eda4902832f"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "HOLD_SOURCE_CORRECTION_REQUIRED",
+  "candidate": "integration001",
+  "findings": [
+    {
+      "id": "UV-001",
+      "detail": "Cut surfaces incorrectly used world-coordinate UVs with old repeats.002 maps to the original face-local UV scale/orientation."
+    },
+    {
+      "id": "PIN-001",
+      "detail": "The hatch preflight omitted its dressing-plan dependency from immutable preview pins.002 binds and verifies it."
+    }
+  ],
+  "current_correction_source_manifest_sha256": "28061c7afb93cdd261f6b380a7b45edd4b42e58c4e9ba14411b7e5fa99e5310b",
+  "reviewer_authored_002_correction": true,
+  "limits": [
+    "Historical failed001 review is not independent approval of002.",
+    "Raw measured owner coordinates and private preview state are excluded."
+  ]
+}

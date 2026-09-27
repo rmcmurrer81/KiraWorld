@@ -1,0 +1,25 @@
+{
+  "status": "HATCH002_CPU_EXPORT_PASS",
+  "exit_code": 0,
+  "elapsed_seconds": 3.4385684999870136,
+  "sampled_family_peak_rss_bytes": 829607936,
+  "family_rss_cap_bytes": 858993459,
+  "reserve_free_bytes": 3221225472,
+  "deadline_seconds": 150,
+  "samples": 84,
+  "protected_originals": 116,
+  "protected_derived_files": 197,
+  "canonical_changed": false,
+  "models": 0,
+  "GPU_WebGL_UI": 0,
+  "visual_or_owner_approval": false,
+  "sampling_limit": "Supervisor excluded;10ms sampling can miss transient peaks. PID identity checked for cleanup; this is the existing sampled063 resource policy, not an OS-enforced hard memory quota.",
+  "owned_process_count": 4,
+  "remaining_owned_process_count": 0,
+  "cleanup_verified": true,
+  "narrow_memory_headroom_bytes": 29385523,
+  "limits": [
+    "Near the existing sampled memory cap; no cap was increased.",
+    "No promise that larger scenes fit this resource profile."
+  ]
+}

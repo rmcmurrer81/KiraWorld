@@ -1,0 +1,35 @@
+{
+  "status": "PUBLIC_SYNTHETIC_CPU_TESTS_PASS",
+  "javascript_tests": 17,
+  "python_tests": 8,
+  "runs": [
+    {
+      "runtime": "node.exe",
+      "arguments": [
+        "--test",
+        "test_integration.mjs",
+        "test_uv.mjs",
+        "test_scene_parity.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "✔ paired hatches use corrected motion while every ordinary definition/pose/collider stays identical (18.5253ms)\n✔ synthetic two hatch placements enforce interlock, held motion, closing and fresh-session recovery (48.0152ms)\n✔ controller exposes every actual part collider, with vertices contained throughout the complete opening cycle (174.5307ms)\n✔ walking and reserved furnishing checks admit the complete hatch collider batches without altering source (17.3217ms)\n✔ cutout planner preserves source/support and does not touch ordinary-door-only architecture (14.8265ms)\n✔ outer contour matches the actual Three extrusion samples rather than approximating a rectangle (1.3305ms)\n✔ convex subtraction conserves area with disjoint rectangles and no phantom passage (0.1923ms)\n✔ synthetic wall/floor meshes and decorative panels share the corrected frame cut without duplicate reveals (43.6749ms)\n✔ architectural and motion seams remain valid for both axes and both room-A normal directions (136.6535ms)\n✔ strict metadata binds both hatch leaves, every part collider, structural cuts and original pair identities (28.2096ms)\n✔ hatch tampering fails closed and ordinary slab assertions are retained (31.0223ms)\n✔ actual CPU scene meshes match strict metadata and actual controller at every closed/partial/open pose (102.3834ms)\n✔ actual preview helper functions produce identical cut structural geometry to the export helper (29.1773ms)\n✔ cut floors/walls preserve every retained BoxGeometry face UV with unchanged material repeats (172.3736ms)\n✔ both decorative cardinal wall panels match the actual old rotated PlaneGeometry UVs (77.3974ms)\n✔ UV correction changes no geometry, normal, index, hatch transform, material or source plan (181.0996ms)\n✔ translation changes world positions while leaving normalized UV phase and texel scale invariant (42.817ms)\nℹ tests 17\nℹ suites 0\nℹ pass 17\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 562.4149\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "python.exe",
+      "arguments": [
+        "-B",
+        "test_preview_bindings.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_changed_planner_size_hash_or_path_is_rejected (__main__.ExactRevisionTests.test_changed_planner_size_hash_or_path_is_rejected) ... ok\ntest_current_complete_set_admits_only_current_creator (__main__.ExactRevisionTests.test_current_complete_set_admits_only_current_creator) ... ok\ntest_exact_planner_binding_proceeds_to_existing_runtime_validation (__main__.ExactRevisionTests.test_exact_planner_binding_proceeds_to_existing_runtime_validation) ... ok\ntest_existing_navigation_preflight_is_unchanged (__main__.ExactRevisionTests.test_existing_navigation_preflight_is_unchanged) ... ok\ntest_missing_planner_pin_is_rejected_before_other_input_processing (__main__.ExactRevisionTests.test_missing_planner_pin_is_rejected_before_other_input_processing) ... ok\ntest_partial_new_set_and_current_creator_with_old_set_fail_closed (__main__.ExactRevisionTests.test_partial_new_set_and_current_creator_with_old_set_fail_closed) ... ok\ntest_preflight_planner_has_no_omitted_transitive_imports (__main__.ExactRevisionTests.test_preflight_planner_has_no_omitted_transitive_imports) ... ok\ntest_reviewed_old_set_retains_exact_historical_size_and_hash (__main__.ExactRevisionTests.test_reviewed_old_set_retains_exact_historical_size_and_hash) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.014s\n\nOK\n"
+    }
+  ],
+  "private_actual_layout_used": false,
+  "models": 0,
+  "servers": 0,
+  "GPU_rendering": 0,
+  "exports": 0,
+  "limits": "Synthetic source/geometry/UV/metadata tests only; not a second actual saved-layout GLB test."
+}

@@ -1,0 +1,55 @@
+--- original/test_integration.mjs
++++ public/test_integration.mjs
+@@ -3,12 +3,12 @@
+ import {readFileSync} from 'node:fs';
+ import * as THREE from './candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.module.js';
+ import {createDoorSystem,createWalkController} from './candidate/tools/world_builder_engine/walk_controller.mjs';
+-import {createDoorSystem as originalDoors} from '../world-pressure-hatch-integration-001/preimages/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs';
++import {createDoorSystem as originalDoors} from './baseline062/walk_controller.mjs';
+ import {buildRoomDressing} from './candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs';
+ import {buildPressureHatch,hatchCollidersAt} from './candidate/tools/world_builder_engine/pressure_hatch.mjs';
+ import {planHatchArchitecture,buildHatchStructuralMesh,hatchOuterProfilePoints,polygonArea,subtractConvex} from './candidate/tools/world_builder_engine/pressure_hatch_architecture.mjs';
+ const read=name=>JSON.parse(readFileSync(new URL('fixtures/'+name+'.json',import.meta.url),'utf8'));
+-const saved=()=>JSON.parse(readFileSync(new URL('../world-combined-export-063/runtime_context/Data/world_layout_previews/layout-5ef8d005af97a6f4c64c6f2b/geometry.json',import.meta.url),'utf8'));
++const saved=()=>read('base'); // Public synthetic fixture; owner geometry is intentionally excluded.
+ const geometryCases=()=>['base','renamed','wider','translated'].map(read).concat([saved()]);
+ const overlap=(a,b)=>a.min.every((v,i)=>v<b.max[i]&&a.max[i]>b.min[i]);
+ function safeFeet(g,plan){const p=g.portals.find(p=>p.id===plan.portalId),n=p.axis==='x'?0:2;const feet=[...plan.origin];feet[n]-=plan.normalSign*1.1;return feet;}
+@@ -30,7 +30,7 @@
+  }
+ });
+ 
+-test('actual two hatch placements enforce interlock, held motion, closing and fresh-session recovery',()=>{
++test('synthetic two hatch placements enforce interlock, held motion, closing and fresh-session recovery',()=>{
+  for(const g of geometryCases()){
+   const system=createDoorSystem(g),[a,b]=system.hatchPlans(),feetA=safeFeet(g,a),feetB=safeFeet(g,b);
+   assert.equal(system.toggle(a.portalId,feetA).ok,true);
+@@ -100,7 +100,7 @@
+  assert.equal(subtractConvex(base,[[5,5],[6,5],[6,6],[5,6]]).reduce((n,p)=>n+polygonArea(p),0),16);
+ });
+ 
+-test('actual wall/floor meshes and decorative panels share the corrected frame cut without duplicate reveals',()=>{
++test('synthetic wall/floor meshes and decorative panels share the corrected frame cut without duplicate reveals',()=>{
+  const g=saved(),plans=createDoorSystem(g).hatchPlans(),architecture=planHatchArchitecture(g,plans);
+  const material=new THREE.MeshBasicMaterial(),structures=[];
+  for(const p of g.primitives){const mesh=buildHatchStructuralMesh(THREE,p,material,architecture);if(mesh){structures.push(mesh);
+--- original/test_uv.mjs
++++ public/test_uv.mjs
+@@ -4,7 +4,7 @@
+ import * as THREE from './candidate/tools/world_builder_engine/layout_package_assets/vendor/three/build/three.module.js';
+ import {createDoorSystem} from './candidate/tools/world_builder_engine/walk_controller.mjs';
+ import {planHatchArchitecture,buildHatchStructuralMesh as repaired} from './candidate/tools/world_builder_engine/pressure_hatch_architecture.mjs';
+-import {buildHatchStructuralMesh as parent} from '../world-pressure-hatch-integration-001/candidate/tools/world_builder_engine/pressure_hatch_architecture.mjs';
++import {buildHatchStructuralMesh as parent} from './preimages/tools/world_builder_engine/pressure_hatch_architecture.mjs';
+ const read=name=>JSON.parse(readFileSync(new URL(name,import.meta.url),'utf8'));
+ const cases=()=>{
+  const all=['base','renamed','wider','translated'].map(n=>read('fixtures/'+n+'.json')),rotated=structuredClone(all[0]);
+@@ -15,7 +15,7 @@
+  for(const s of rotated.support_surfaces){[s.min_x,s.min_z]=[s.min_z,s.min_x];[s.max_x,s.max_z]=[s.max_z,s.max_x];}
+  for(const route of rotated.routes)for(const point of route.points)[point[0],point[2]]=[point[2],point[0]];
+  const reverse=structuredClone(rotated);reverse.portals.forEach(p=>[p.room_a,p.room_b]=[p.room_b,p.room_a]);
+- return all.concat([rotated,reverse,read('../world-combined-export-063/runtime_context/Data/world_layout_previews/layout-5ef8d005af97a6f4c64c6f2b/geometry.json')]);
++ return all.concat([rotated,reverse,read('fixtures/base.json')]);
+ };
+ const close=(a,b,label)=>assert.ok(Math.abs(a-b)<3e-5,`${label}: ${a} vs ${b}`);
+ const dispose=root=>root.traverse(o=>o.geometry?.dispose());

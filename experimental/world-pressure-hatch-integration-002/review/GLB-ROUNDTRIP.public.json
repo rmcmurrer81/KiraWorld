@@ -1,0 +1,48 @@
+{
+  "status": "CPU_AUTHORED_GLB_EXPORT_IMPORT_PASS",
+  "three_revision": "180",
+  "glb_sha256": "3f7b0bc7b37d79efe17554b3c04b75921781fed406ef71bfa6aef902fbe03e51",
+  "glb_bytes": 3492220,
+  "counts": {
+    "objects": 855,
+    "meshes": 745,
+    "materials": 118,
+    "textures": 70,
+    "embedded_pngs": 70,
+    "rooms": 7,
+    "semantic_nodes": 242,
+    "colliders": 275,
+    "doors": 6
+  },
+  "extensions": [
+    "KHR_texture_transform",
+    "KHR_materials_emissive_strength",
+    "KHR_lights_punctual"
+  ],
+  "limits": [
+    "No engine-native interaction/collision implementation or VR adapter.",
+    "CPU font rasterization is not browser-pixel-identical.",
+    "Hemisphere fill, background, ACES tone mapping/exposure, polygon offset, depthWrite and dynamic indicator colors are not glTF appearance guarantees.",
+    "Static equipment remains procedural. No pressure, science or medical simulation."
+  ],
+  "checks": {
+    "geometry_attributes_exact": 2235,
+    "index_arrays_exact": 745,
+    "material_parameter_pairs": 118,
+    "texture_effective_pixels_repeat_wrap_colorspace": 70,
+    "punctual_light_parameters_and_direction": 8,
+    "importer_door_poses": 18,
+    "all_collider_links": true,
+    "room_bounds_preserved": true,
+    "airlock_pair_metadata_preserved": true
+  },
+  "controller_sampled_doors": 6,
+  "poses_per_door": 3,
+  "pressure_hatch_doors": 2,
+  "airlock_pair_count": 1,
+  "source_chain_and_pointers_preserved": true,
+  "raw_owner_brief_exported": false,
+  "owner_geometry_bundled_publicly": false,
+  "installed": false,
+  "visual_or_owner_approval": false
+}

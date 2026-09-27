@@ -1,0 +1,44 @@
+{
+  "parent_commit": "ce5cccff8a84eea82559192865a42db5a560a6fd",
+  "verified_parent_dependencies": [
+    {
+      "public_path": "tools/world_saved_research.py",
+      "parent_commit": "ce5cccff8a84eea82559192865a42db5a560a6fd",
+      "bytes": 3636,
+      "sha256": "03de2ea8faff5e685cbdb2eb65d752f311e4f2462546cd7e9aca79f1b40a759d",
+      "copied_to": "candidate/tools/world_saved_research.py"
+    },
+    {
+      "public_path": "tools/adaptive_source_selection.py",
+      "parent_commit": "ce5cccff8a84eea82559192865a42db5a560a6fd",
+      "bytes": 12858,
+      "sha256": "2737bc3838eb6be75693d677d34ef596a377d6ae7a2d16011d3772b101d31363",
+      "copied_to": "candidate/tools/adaptive_source_selection.py"
+    },
+    {
+      "public_path": "tools/world_research.py",
+      "parent_commit": "ce5cccff8a84eea82559192865a42db5a560a6fd",
+      "bytes": 45890,
+      "sha256": "3d543aec1b4e973e33dfbad5dbe59651ad0c16f5a44e09785a42f3fe041566f1",
+      "copied_to": "candidate/tools/world_research.py"
+    },
+    {
+      "public_path": "experimental/world-pressure-hatch-surface-fix-001/candidate/tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs",
+      "parent_commit": "ce5cccff8a84eea82559192865a42db5a560a6fd",
+      "bytes": 19050,
+      "sha256": "97f651e7699715afb3fc02990beb82fbc39228b0fb668a5fd9e8c79cc078c338",
+      "copied_to": "baseline062/walk_controller.mjs"
+    },
+    {
+      "public_path": "experimental/world-pressure-hatch-surface-fix-001/candidate/tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs",
+      "parent_commit": "ce5cccff8a84eea82559192865a42db5a560a6fd",
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "copied_to": "baseline062/horizontal_navigation.mjs"
+    }
+  ],
+  "source_runtime_closure": 48,
+  "support_files_copied": 3,
+  "ordinary_baseline_files_copied": 2,
+  "external_native_dependencies": "Exact digests are in candidate producer pins. Native canvas/Node/font binaries are not bundled or licensed by this backup."
+}
