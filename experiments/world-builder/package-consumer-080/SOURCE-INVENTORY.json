@@ -1,0 +1,158 @@
+{
+  "schema": "public-world-consumer-source-inventory/v1",
+  "candidate": "consumer080",
+  "candidate_delivery_sha256": "5b09feaaa461011e7979c08525826bd3a8a6166e3ea72f6b3462f3deb8b312f6",
+  "candidate_frozen_manifest_sha256": "69bffbbc6e160b49be68bd0063df4a3bb4938ad67b8d18896e80635757e25a57",
+  "installed": false,
+  "runtime_source_files": 21,
+  "exact_portable_test_files": 7,
+  "additional_public_test_files": 1,
+  "private_package_or_audio_files": 0,
+  "files": [
+    {
+      "path": "candidate/app.mjs",
+      "sha256": "d9600125b9c91ef81549c81360eeded42b4abf82f58fc8729f951d6304118231",
+      "bytes": 10849
+    },
+    {
+      "path": "candidate/discrete_controls.mjs",
+      "sha256": "c40c4db23b1752e7e88bfed22ecaf003df490284cb92f90f6cf8da892d4fb214",
+      "bytes": 4023
+    },
+    {
+      "path": "candidate/door_metadata.mjs",
+      "sha256": "42edfc46bfbb1a887442e032a3fc1720d731369e01a1f871e77beca0eccd439c",
+      "bytes": 6425
+    },
+    {
+      "path": "candidate/file_admission.mjs",
+      "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+      "bytes": 1446
+    },
+    {
+      "path": "candidate/greenhouse_control.mjs",
+      "sha256": "f6115a0a8edc44b47290692dfaae13e75bce9652cd8163abb16cea4492a20519",
+      "bytes": 2148
+    },
+    {
+      "path": "candidate/history-library.json",
+      "sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285",
+      "bytes": 11064
+    },
+    {
+      "path": "candidate/history_host.mjs",
+      "sha256": "b93f24a5af523cf071da6dce0418ed511c0b223d7f556002e94ce89af4c46dbc",
+      "bytes": 2403
+    },
+    {
+      "path": "candidate/horizontal_navigation.mjs",
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    {
+      "path": "candidate/index.html",
+      "sha256": "79a533c14f9a5c6fc9b3293919af8c82888697cadaef112a3365a9e6bf97e424",
+      "bytes": 4730
+    },
+    {
+      "path": "candidate/mars-history-library.css",
+      "sha256": "c95810fe028349848900a7f3229ce1fe9aebbf960f0997a08f019f41d6be8756",
+      "bytes": 2359
+    },
+    {
+      "path": "candidate/mars-history-library.mjs",
+      "sha256": "2d378dd5ff63f84c08d63cd96c86ecbdb944828e5b5a492779542d08e5c0a89b",
+      "bytes": 17276
+    },
+    {
+      "path": "candidate/package_loader.mjs",
+      "sha256": "912b134c129c896ac30c5bbcb003d016c06d309b8723a07c3fa47ec549351c3c",
+      "bytes": 11870
+    },
+    {
+      "path": "candidate/runtime.mjs",
+      "sha256": "80c9700e84c0c01fbe0f9c45b2b0efd7c3f308190731a8cf13b59ea3d179499d",
+      "bytes": 12170
+    },
+    {
+      "path": "candidate/scene_disposal.mjs",
+      "sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6",
+      "bytes": 654
+    },
+    {
+      "path": "candidate/serve.py",
+      "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+      "bytes": 655
+    },
+    {
+      "path": "candidate/vendor/three/build/three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "bytes": 1403455
+    },
+    {
+      "path": "candidate/vendor/three/build/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "bytes": 603113
+    },
+    {
+      "path": "candidate/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "bytes": 114739
+    },
+    {
+      "path": "candidate/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "bytes": 35539
+    },
+    {
+      "path": "candidate/vendor/three/LICENSE",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    {
+      "path": "candidate/vendor/three/package.json",
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+      "bytes": 4635
+    },
+    {
+      "path": "tests/demo.mjs",
+      "sha256": "af0b5fbe4a5775d9c8df2acb48e5d4d6a173855cb0b460f8ef31509a542beab5",
+      "bytes": 356
+    },
+    {
+      "path": "tests/library.test.mjs",
+      "sha256": "c6487663a0f49c072f57674e477af9215c32416e44b0142dc76115ac9875ec3e",
+      "bytes": 17205
+    },
+    {
+      "path": "tests/test_crop_ui.mjs",
+      "sha256": "d4b5a04da3f040318aa3b4f5492a9de96041a5b64b95e20e13bf00e3f78a392e",
+      "bytes": 2207
+    },
+    {
+      "path": "tests/test_history_integration.mjs",
+      "sha256": "59d89c0076932d9f5feee3623b0aafc85dd9d7ca79527929d801f91ee8432185",
+      "bytes": 8902
+    },
+    {
+      "path": "tests/test_queued_audio.mjs",
+      "sha256": "ea79f847e7af3d21599cb1f90611b98e3502b3770cd9eb1b7be0f40391c53a14",
+      "bytes": 2815
+    },
+    {
+      "path": "tests/test_ui_lifecycle.mjs",
+      "sha256": "790267c495683b53fc71410bb8c30a7e1978c3888d2c008765d85d9143d6b9e8",
+      "bytes": 4789
+    },
+    {
+      "path": "tests/ui_harness.mjs",
+      "sha256": "60d5396ff429276e8bf804ad73579a5c40db9ca3aff97179ac264aa5f1b46d78",
+      "bytes": 7651
+    },
+    {
+      "path": "tests/test_public_controls.mjs",
+      "sha256": "a9d67d45a56a52737518311b4e8faaa15b256a23ca548f9d45743e0f0658dc21",
+      "bytes": 5120
+    }
+  ]
+}

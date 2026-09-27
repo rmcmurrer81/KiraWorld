@@ -1,0 +1,102 @@
+{
+  "status": "INDEPENDENT_SOURCE_AND_INERT_CPU_REVIEW_PASS",
+  "candidate": "consumer080",
+  "candidate_delivery_sha256": "5b09feaaa461011e7979c08525826bd3a8a6166e3ea72f6b3462f3deb8b312f6",
+  "candidate_frozen_manifest_sha256": "69bffbbc6e160b49be68bd0063df4a3bb4938ad67b8d18896e80635757e25a57",
+  "candidate_source_manifest_sha256": "535d404d979887ff83a00684e7e01b0b35f255b5e9ad93fb8cd029e971f3a352",
+  "independent_review_sha256": "d710cf821000ecba369fe4cc7d0c4a9acdc838ed269d6ec573edab62f1e9af4a",
+  "content_review_sha256": "d04cbe0966e47a5749f282e9104974082ab77f447caadc0b05966aeb160d15f3",
+  "content_review_date": "2026-09-26",
+  "native_receipt_sha256": {
+    "078": "f430557ff44d1c467a02043f5bc3ae03de1c29b6ae4e91501a6397fa0292cb6d",
+    "079": "5c9b40408c658e627b352f4626176851006f139173ef6466b80ee7b756feec81",
+    "080": "fa5a33ee048f0955c47d389e37eb16326bd8c001824627f906ed865b1e3e2273"
+  },
+  "source_assessment": [
+    "The first finite nonnegative RAF timestamp establishes its own baseline and feeds zero elapsed time; it no longer subtracts click-time performance.now.",
+    "Later equal timestamps feed zero; large positive gaps retain the inherited0.05-second runtime step cap. Nonfinite, wrong-type, negative or reversed current timestamps pause cleanly before runtime.step.",
+    "Stopping resets the baseline and increments a walking revision. A stale invalid callback is rejected before clock validation, so it cannot clear a new session's key input or stop its current loop.",
+    "Resuming establishes a fresh baseline even when that new timestamp is numerically smaller than the previous session. Old held keys stay cleared.",
+    "Focus obtained during draw cancels rescheduling. The end-of-tick revision/active check prevents the interrupted loop from restarting.",
+    "Only app.mjs differs from frozen079. Runtime collision, navigation, door controls, exact package/source admission, history lifecycle, six transcripts and vendor files remain byte-identical."
+  ],
+  "independent_checks": {
+    "passed": 4,
+    "failed": 0,
+    "blockers": [],
+    "scope": "Actual application and runtime with inert DOM and animation-frame adapters; focused timing and lifecycle checks."
+  },
+  "author_checks": {
+    "executed_in080": 52,
+    "new_walking_cases_in_that_run": 7,
+    "unchanged_parent_package_and_library_cases": 45,
+    "combined_provenance_total_is_not_a_fresh_run": true
+  },
+  "portable_checks": {
+    "passed": 65,
+    "failed": 0,
+    "inherited_portable_cases": 57,
+    "new_synthetic_timing_control_cases": 8,
+    "private_package_files": 0,
+    "actual_glb_import": false,
+    "renderer_browser_or_model": false
+  },
+  "native_observations": {
+    "078": {
+      "scope": "Visible click traversal and crew-quarters library",
+      "passed": [
+        "Both hatches and the ordinary quarters door traversed using visible controls.",
+        "Occupied hatch swing prevented motion until the viewer stepped clear.",
+        "History entry appeared only in quarters and disappeared upon returning to corridor.",
+        "Four of six chapters opened and read; source links and date/status labels visible.",
+        "Close and Escape paused; reopening retained chapter selection; narration stayed pending with Play disabled."
+      ],
+      "findings_at_that_revision": [
+        "Two immediate door-animation pauses needed Continue; native frame timestamps were not measured.",
+        "Unnamed nearest-door target was ambiguous."
+      ],
+      "followup": "Door timing and destination labels corrected in079; focused native test followed."
+    },
+    "079": {
+      "scope": "Focused destination labels and hatch animation",
+      "passed": [
+        "Exact package meshes and PNG textures rendered.",
+        "Named outer hatch opened and closed after one request each, without Continue.",
+        "Pause enabled during animation and disabled at completion."
+      ],
+      "separate_finding": "Independent actual-module tests reproduced inherited walking first-frame timing error;080 corrected it."
+    },
+    "080": {
+      "scope": "Focused import, walking state controls, step clicks and hatch animation",
+      "passed": [
+        "Exact package meshes and PNG textures rendered.",
+        "Start, Escape, Resume and Pause changed the expected walking states.",
+        "Two short step clicks reached the named outer hatch while walking remained paused.",
+        "One Open and one Close request completed their animations; no Continue retry.",
+        "No warning or error captured in the focused browser check."
+      ],
+      "not_established": [
+        "Forced or instrumented native timing edge cases.",
+        "Sustained physical-key walking.",
+        "Repeated quarters/library walkthrough in080."
+      ]
+    }
+  },
+  "limitations": [
+    "Source backup only; private sample packages, fixtures and exported scene data excluded.",
+    "Two exact package admission digests and all source/geometry/navigation checks retained.",
+    "No installed promotion or owner visual approval.",
+    "All six narration entries are null; no audio or listening approval.",
+    "No headset, finished XR interaction or assistive-technology certification.",
+    "Doors are local geometric state and paired-door sequencing, not pressure or seal physics.",
+    "Greenhouse controls are illustrative; mounted exported textures remain snapshots.",
+    "Official source facts are dated; planned mission dates require renewed review before future recording/release."
+  ],
+  "excluded_from_public": [
+    "Raw local test and process receipts",
+    "Owner and visitor data",
+    "Private sample or legacy packages",
+    "Credentials, authorization grants and model weights",
+    "Binary audio, imagery and scene files"
+  ]
+}
