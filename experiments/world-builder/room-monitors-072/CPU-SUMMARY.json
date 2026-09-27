@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_AND_CPU_CHECKS_PASS_ONLY",
+  "node_monitor_geometry_tests": 11,
+  "python_binding_tests": 7,
+  "hatch_dressing_preflights": 1,
+  "total": 19,
+  "source_files_verified": 58,
+  "parent_source_preimages_verified": 54,
+  "source_changed_or_added": 15,
+  "largest_sampled_test_family_rss_bytes": 309227520,
+  "test_family_limit_bytes": 858993459,
+  "child_deadline_seconds": 45,
+  "owned_children_remaining": 0,
+  "installed_world_version_unchanged": "056",
+  "desktop_visual_approval": false,
+  "actual_072_export_approval": false,
+  "headset_approval": false,
+  "owner_appearance_approval": false,
+  "scope": [
+    "sourced Mars labels and separate observation dates",
+    "room-specific roles and live local door labels",
+    "no fabricated current weather or operational pressure",
+    "old geometry preserved except declared monitors and two reservoir panel meshes",
+    "nine reservoir face sightlines and existing crop-label visibility",
+    "crop drawer width containment source rules",
+    "historical hatch dependencies and strict creator/asset sets",
+    "viewer/export function identity and exact dependency pins"
+  ],
+  "limitations": [
+    "No private saved geometry or source fixtures are included, so this summary is evidence of the reviewed local run, not a standalone reproducible fixture.",
+    "Tests cannot establish actual visual quality, hardware instrument behavior, life-support simulation, export appearance or headset behavior.",
+    "Historical previews keep their own immutable backend; changed same-path planner dependencies are held until a new preview is built."
+  ]
+}
