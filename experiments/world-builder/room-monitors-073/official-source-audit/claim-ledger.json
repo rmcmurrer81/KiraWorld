@@ -1,0 +1,584 @@
+{
+  "status": "OFFICIAL_FACT_AUDIT_COMPLETE_NO_REQUIRED_NUMERIC_CORRECTION",
+  "checked_local_date": "2026-09-26",
+  "recorded_at_utc": "2026-09-27T02:56:11.675966+00:00",
+  "scope": "Frozen073 source plus already-created073 package; not a certification of installed056, simulations, native rendering or future consumers",
+  "official_sources": {
+    "nasa_sheet": {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "title": "NASA Mars Fact Sheet",
+      "page_updated": "2025-05-19",
+      "sections": [
+        "Bulk parameters",
+        "Orbital parameters",
+        "Martian Atmosphere"
+      ],
+      "accessed_local_date": "2026-09-26",
+      "access_method": "Direct web open/read of official primary website; no image download"
+    },
+    "nasa_notes": {
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html",
+      "title": "NASA Notes on the Fact Sheets",
+      "page_updated": "2024-05-06",
+      "sections": [
+        "Bulk Parameters",
+        "Orbital parameters",
+        "Atmospheres",
+        "Related Definitions"
+      ],
+      "accessed_local_date": "2026-09-26",
+      "access_method": "Direct web open/read of official primary website; no image download"
+    },
+    "nasa_facts": {
+      "url": "https://science.nasa.gov/mars/facts/",
+      "title": "NASA Mars Facts",
+      "sections": [
+        "Orbit and Rotation",
+        "Surface",
+        "Size and Distance"
+      ],
+      "accessed_local_date": "2026-09-26",
+      "access_method": "Direct web open/read of official primary website; no image download"
+    },
+    "jpl_meda": {
+      "url": "https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/",
+      "title": "NASA/JPL First Weather Report From Jezero Crater on Mars",
+      "published_date": "2021-04-06",
+      "sections": [
+        "First instrument activation and pressure",
+        "Sols43–44 report"
+      ],
+      "accessed_local_date": "2026-09-26",
+      "access_method": "Direct web open/read of official primary website; no image download"
+    },
+    "esa_facts": {
+      "url": "https://www.esa.int/content/view/full/200994",
+      "title": "ESA Facts about Mars",
+      "page_updated": null,
+      "sections": [
+        "Quick-look facts"
+      ],
+      "accessed_local_date": "2026-09-26",
+      "access_method": "Direct web open/read of official primary website; no image download"
+    },
+    "nasa_sky": {
+      "url": "https://science.nasa.gov/resource/mastcam-zs-first-martian-sunset/",
+      "title": "NASA Mastcam-Z First Martian Sunset",
+      "published_date": "2021-11-17",
+      "observation_date": "2021-11-09",
+      "page_updated": "2024-11-09",
+      "accessed_local_date": "2026-09-26",
+      "access_method": "Direct web open/read of official primary website; no image download"
+    }
+  },
+  "claims": [
+    {
+      "id": "gravity",
+      "claim": "Mean surface gravity3.73m/s²",
+      "assessment": "SUPPORTED_AS_LABELLED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "nasa_sheet",
+        "nasa_notes"
+      ],
+      "official_urls": [
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html"
+      ],
+      "notes": "Keep mean surface gravity label; not a location-specific effective acceleration.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 11,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.mars_reference.facts[0]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "solar_day",
+      "claim": "Solar day24.6597Earthhours",
+      "assessment": "SUPPORTED_AS_LABELLED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "nasa_sheet",
+        "nasa_notes"
+      ],
+      "official_urls": [
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html"
+      ],
+      "notes": "Mean solar day, about24h39m35s; do not confuse with24.6229h sidereal rotation.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 12,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.mars_reference.facts[1]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "year",
+      "claim": "Approximately687Earthdays",
+      "assessment": "SUPPORTED_AS_LABELLED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "nasa_facts"
+      ],
+      "official_urls": [
+        "https://science.nasa.gov/mars/facts/"
+      ],
+      "notes": "Rounded orbit duration, not687Martian sols.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 13,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.mars_reference.facts[2]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "co2",
+      "claim": "Approximately95.1%CO₂ byvolume",
+      "assessment": "SUPPORTED_AS_LABELLED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "nasa_sheet"
+      ],
+      "official_urls": [
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+      ],
+      "notes": "Source-specific approximate composition; not a breathable mixture or base interior value.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 14,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.mars_reference.facts[3]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "pressure_reference",
+      "claim": "636Pa at mean radius",
+      "assessment": "SUPPORTED_AS_LABELLED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "nasa_sheet",
+        "nasa_notes"
+      ],
+      "official_urls": [
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html"
+      ],
+      "notes": "6.36mbar×100=636Pa. Planet reference; season/elevation dependent. Dataset only, not one of the four displayed planet rows.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 15,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.mars_reference.facts[4]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "meda_first_pressure",
+      "claim": "718Pa first MEDA pressure report at Jezero",
+      "assessment": "SUPPORTED_SEPARATE_ARCHIVE",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "jpl_meda"
+      ],
+      "official_urls": [
+        "https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/"
+      ],
+      "notes": "Report connects the measurement to first30-minute activation onFeb19. No finer UTC timestamp inferred; do not attach it to the laterApr3–4 temperature report.",
+      "observation_dates": [
+        "2021-02-19"
+      ],
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 18,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.mars_reference.historical_observations[0]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "meda_high_low",
+      "claim": "Jezero high−22°C,low−83°C duringSols43–44",
+      "assessment": "SUPPORTED_SEPARATE_ARCHIVE",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "jpl_meda"
+      ],
+      "official_urls": [
+        "https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/"
+      ],
+      "notes": "PublicationApr6,2021; observationsApr3–4. Not current habitat weather, not a global range, and no precise sensor-height claim added.",
+      "observation_dates": [
+        "2021-04-03",
+        "2021-04-04"
+      ],
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 19,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.room_monitors[5].observation",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "meda_gust",
+      "claim": "Approximately10m/s gusts in the cited report",
+      "assessment": "SUPPORTED_AS_APPROXIMATE",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "jpl_meda"
+      ],
+      "official_urls": [
+        "https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/"
+      ],
+      "notes": "Keep gust and approximate qualifier; not sustained wind or a habitat forecast.",
+      "observation_dates": [
+        "2021-04-03",
+        "2021-04-04"
+      ],
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 19,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.room_monitors[5].rows[2]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "meda_context",
+      "claim": "Perseverance/MEDA,Jezero,MEASURED03–04APR2021,NOTLIVE",
+      "assessment": "SUPPORTED_AND_PRESERVED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "jpl_meda"
+      ],
+      "official_urls": [
+        "https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars/"
+      ],
+      "notes": "Real scene and material extras agree with current source; dates/location/instrument remain attached.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 26,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.room_monitors[5]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "reference_variants",
+      "claim": "ESA quickfacts have gravity3.711,CO₂95.32%,pressure6.35mbar andday24h37m",
+      "assessment": "REFERENCE_DIFFERENCES_DISCLOSED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "esa_facts",
+        "nasa_sheet",
+        "nasa_notes"
+      ],
+      "official_urls": [
+        "https://www.esa.int/content/view/full/200994",
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+        "https://nssdc.gsfc.nasa.gov/planetary/factsheet/fact_notes.html"
+      ],
+      "notes": "Do not silently substitute or average. NASA definition distinguishes mean gravity and solar day from other quantities. ESA does not establish equivalence of its rounded day to the exact NASA solar-day quantity; audited display retains its explicitly cited NASA values.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 11,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/mars_reference.mjs"
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "claim": "Operations map is the generated habitat room plan, not surveyed Mars",
+      "assessment": "CORRECTLY_AUTHORED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [],
+      "official_urls": [],
+      "notes": "Room bounds are drawn from geometry; footer labels not a survey/no live sensors. No georeferenced terrain dataset or scientific globe is authored by this operations-console branch. No scientific map accuracy claim to verify.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 205,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs"
+        },
+        {
+          "line": 221,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs"
+        },
+        {
+          "line": 409,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs"
+        }
+      ]
+    },
+    {
+      "id": "exterior",
+      "claim": "Original rocky regolith/ridge scenery with dusty sky",
+      "assessment": "CORRECTLY_AUTHORED_NOT_MEASURED",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [
+        "nasa_facts",
+        "nasa_sky"
+      ],
+      "official_urls": [
+        "https://science.nasa.gov/mars/facts/",
+        "https://science.nasa.gov/resource/mastcam-zs-first-martian-sunset/"
+      ],
+      "notes": "NASA supports broadly rocky/dusty varied-color surfaces and dust-dependent sky appearance, not this layout or chosen colors. Metadata says measured_terrain:false/live_weather:false; greenhouse shell physical_sky:false. No real landing coordinates, radiation model, calibrated color or physical time-of-day promised.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 73,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs"
+        },
+        {
+          "line": 83,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs"
+        },
+        {
+          "line": 190,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs"
+        },
+        {
+          "json_pointer": "$.nodes[946].extras",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        },
+        {
+          "json_pointer": "$.nodes[967].extras",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        },
+        {
+          "json_pointer": "$.nodes[987].extras",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "equipment_vestibule_scenario",
+      "claim": "Room workboard is a static fictional scenario",
+      "assessment": "CORRECTLY_SEPARATED_FROM_SCIENCE",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [],
+      "official_urls": [],
+      "notes": "Original authored IDs/tasks/readings/comfort targets, not NASA data or certified guidance. Visible badge and metadata mark static/measured:false/NASA_measurement:false; no official source invented for these values.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 17,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/room_monitors.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.room_monitors[2]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "habitat_scenario",
+      "claim": "Room workboard is a static fictional scenario",
+      "assessment": "CORRECTLY_SEPARATED_FROM_SCIENCE",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [],
+      "official_urls": [],
+      "notes": "Original authored IDs/tasks/readings/comfort targets, not NASA data or certified guidance. Visible badge and metadata mark static/measured:false/NASA_measurement:false; no official source invented for these values.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 19,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/room_monitors.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.room_monitors[3]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "laboratory_scenario",
+      "claim": "Room workboard is a static fictional scenario",
+      "assessment": "CORRECTLY_SEPARATED_FROM_SCIENCE",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [],
+      "official_urls": [],
+      "notes": "Original authored IDs/tasks/readings/comfort targets, not NASA data or certified guidance. Visible badge and metadata mark static/measured:false/NASA_measurement:false; no official source invented for these values.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 18,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/room_monitors.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.room_monitors[4]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "door_snapshot",
+      "claim": "Airlock rows are local closed geometry, pressure test unavailable",
+      "assessment": "TRUTHFUL_SNAPSHOT_WITH_CONSUMER_LIMIT",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [],
+      "official_urls": [],
+      "notes": "Export is initial closed-door snapshot. A later interactive consumer must update from its own door state or label it frozen; never treat the texture as current pressure or safety. Root separately audits airlock concepts.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "line": 10,
+          "repository_path": "experiments/world-builder/room-monitors-073/candidate/tools/world_builder_engine/room_monitors.mjs"
+        },
+        {
+          "json_pointer": "$.scenes[0].extras.room_monitors[0]",
+          "artifact": "World073 scene.glb (not included)",
+          "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f"
+        }
+      ]
+    },
+    {
+      "id": "legacy_weather",
+      "claim": "No obsolete fictional weather record found in exact073 checked source/current exported metadata",
+      "assessment": "NO_CONFLICT_FOUND_IN_SCOPED_SCAN",
+      "confidence": "high for source support and exact inspected metadata; no simulated or visual validation",
+      "official_source_ids": [],
+      "official_urls": [],
+      "notes": "Read current reference/helper/render branches, scene and material extras and scanned source/preview/package metadata. Historical artifacts were not relabelled. The legacy fictional_mars_display_snapshot_v1 identifier remains but actual object is REFERENCE/ARCHIVE, not fabricated weather; retain schema unless separately versioned.",
+      "observation_dates": null,
+      "correction_required": false,
+      "source_evidence": [
+        {
+          "evidence": "Read-only local source/preview/package inspection retained privately; no private fixture included"
+        },
+        {
+          "evidence": "Read-only local source/preview/package inspection retained privately; no private fixture included"
+        },
+        {
+          "artifact": "World073 ROUNDTRIP.json (not included)",
+          "sha256": "bbf9e6ec32b616b720c443c1a9d242daf0578e7a1333d157a613b74b27d7c134"
+        }
+      ]
+    }
+  ],
+  "source_glb_reference_equal": true,
+  "source_glb_monitor_records_equal": 5,
+  "glb_material_scene_monitor_records_equal": 6,
+  "legacy_scan_hits": [],
+  "required_corrections": [],
+  "followups": [
+    "Keep the NASA quantity definitions, dates and approximate qualifiers when exposing fields in consumer075.",
+    "Consumer door labels must follow actual local runtime state, not reuse a static exported CLOSED label as live telemetry.",
+    "Any new surveyed map, local weather feed, gravity physics or sky simulation needs its own source/runtime verification."
+  ],
+  "no_frozen_source_or_package_mutation": true,
+  "no_render_export_model_server_Git": true,
+  "binary_texture_visual_readability_checked": false,
+  "artifact_identity_only": [
+    {
+      "artifact": "manifest.json",
+      "bytes": 8277,
+      "sha256": "bf7f0934f473b5ad7b0a50f2577c50995f94d3880db30835b4bf0194bdd074cc",
+      "included": false
+    },
+    {
+      "artifact": "README.txt",
+      "bytes": 377,
+      "sha256": "cd4d71900456ab87d690603a658293c32156776fd3d7d59d534ef1c69e54bfb1",
+      "included": false
+    },
+    {
+      "artifact": "ROUNDTRIP.json",
+      "bytes": 7686,
+      "sha256": "bbf9e6ec32b616b720c443c1a9d242daf0578e7a1333d157a613b74b27d7c134",
+      "included": false
+    },
+    {
+      "artifact": "scene.glb",
+      "bytes": 6163056,
+      "sha256": "06244f334b253010833631993c3009620d957a9caed5b6dc6e2c794d4f12b59f",
+      "included": false
+    },
+    {
+      "artifact": "scene.json",
+      "bytes": 311504,
+      "sha256": "614fce29e325336e49750f2739f0a04f76a9e614d5fde61f68d6f6d9823f1cb4",
+      "included": false
+    }
+  ],
+  "sanitization": {
+    "raw_local_receipts": false,
+    "private_source_fixtures": false,
+    "owner_absolute_paths": false,
+    "artifact_hashes_preserved": true,
+    "verification_reproducible_from_public_bundle_alone": false,
+    "line_anchor_correction": "Nine Mars fact/observation/comparison anchors increased by one after direct line-content validation; claim values, original local ledger and frozen source unchanged."
+  }
+}
