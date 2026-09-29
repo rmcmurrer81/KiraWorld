@@ -1,0 +1,25 @@
+{
+  "status": "CPU_PASS_NOT_NATIVE_REVIEWED",
+  "tests": 13,
+  "resource": {
+    "path": "cpu-003/RESOURCE.json",
+    "sha256": "9ca3711254e64c37a0814ee9d1efd168ed6c555c67f912e534839784b7933cad",
+    "bytes": 464
+  },
+  "source_manifest": {
+    "path": "SOURCE-MANIFEST.json",
+    "sha256": "4560bfc56e8bdc19673fc663508898c18beca668c3af00981e125fb83210d416",
+    "bytes": 2769
+  },
+  "input_preservation_count": 578,
+  "actual_073_placements": "read-only CPU collision/metadata checked, not a new exported or installed world",
+  "legacy_fixtures": [
+    "bf7f0934f473b5ad7b0a50f2577c50995f94d3880db30835b4bf0194bdd074cc",
+    "9ca7416c9e6b45d23b009cf070964ca56462b60392520370cd525a90df01c40e"
+  ],
+  "model_jobs": 0,
+  "UI": false,
+  "new_export": false,
+  "new_package_admission": false,
+  "mesh_binding_implemented": false
+}

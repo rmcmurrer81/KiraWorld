@@ -1,0 +1,130 @@
+{
+  "base": "48567c398fee7a93339e47798a690e8f49367571",
+  "bindings": [
+    {
+      "upstream_relative": "world-room-monitors-073/candidate/tools/world_builder_engine/walk_controller.mjs",
+      "context": "producer/walk_controller.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/producer/walk_controller.mjs",
+        "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398",
+        "bytes": 21634,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-room-monitors-073/candidate/tools/world_builder_engine/pressure_hatch.mjs",
+      "context": "producer/pressure_hatch.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/producer/pressure_hatch.mjs",
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+        "bytes": 16212,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-room-monitors-073/candidate/tools/world_builder_engine/horizontal_navigation.mjs",
+      "context": "producer/horizontal_navigation.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/consumer/horizontal_navigation.mjs",
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-package-consumer-083/candidate/runtime.mjs",
+      "context": "consumer/runtime.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/consumer/runtime.mjs",
+        "sha256": "80c9700e84c0c01fbe0f9c45b2b0efd7c3f308190731a8cf13b59ea3d179499d",
+        "bytes": 12170,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-package-consumer-083/candidate/door_metadata.mjs",
+      "context": "consumer/door_metadata.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/consumer/door_metadata.mjs",
+        "sha256": "42edfc46bfbb1a887442e032a3fc1720d731369e01a1f871e77beca0eccd439c",
+        "bytes": 6425,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-package-consumer-083/candidate/horizontal_navigation.mjs",
+      "context": "consumer/horizontal_navigation.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/consumer/horizontal_navigation.mjs",
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-latch-authoring-086/src/pressure_hatch_latched.mjs",
+      "context": "shared/pressure_hatch_latched.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/shared/pressure_hatch_latched.mjs",
+        "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+        "bytes": 9685,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-latch-authoring-086/src/latch_visual.mjs",
+      "context": "shared/latch_visual.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/shared/latch_visual.mjs",
+        "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+        "bytes": 12111,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-latch-authoring-086/src/legacy/pressure_hatch.mjs",
+      "context": "shared/legacy/pressure_hatch.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/latch-controller-088/before/producer/pressure_hatch.mjs",
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+        "bytes": 16212,
+        "commit": "THIS_MANIFEST"
+      }
+    },
+    {
+      "upstream_relative": "world-room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "context": "Unchanged source-only test helper: world-room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/room-monitors-072/candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+        "sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110",
+        "bytes": 17442,
+        "commit": "48567c398fee7a93339e47798a690e8f49367571"
+      }
+    },
+    {
+      "upstream_relative": "world-room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "context": "Unchanged source-only test helper: world-room-monitors-073/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "recovery": {
+        "path": "experiments/world-builder/room-monitors-072/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+        "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d",
+        "bytes": 13367,
+        "commit": "48567c398fee7a93339e47798a690e8f49367571"
+      }
+    }
+  ],
+  "verified_prior_blobs": [
+    {
+      "path": "experiments/world-builder/room-monitors-072/candidate/tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110",
+      "bytes": 17442,
+      "commit": "48567c398fee7a93339e47798a690e8f49367571"
+    },
+    {
+      "path": "experiments/world-builder/room-monitors-072/candidate/tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d",
+      "bytes": 13367,
+      "commit": "48567c398fee7a93339e47798a690e8f49367571"
+    }
+  ],
+  "excluded_or_local_requirements": []
+}

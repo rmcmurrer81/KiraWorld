@@ -1,0 +1,33 @@
+{
+  "status": "CPU_PASS_ROOT_AND_INDEPENDENT_REVIEW_PENDING",
+  "frozen": {
+    "path": "FROZEN-MANIFEST.json",
+    "sha256": "6fead4c78ac526aa8211b6bfe8ea2c2421f0011e09004fea9e77dfc86d9a98b6",
+    "bytes": 6517
+  },
+  "source": {
+    "path": "SOURCE-MANIFEST.json",
+    "sha256": "4560bfc56e8bdc19673fc663508898c18beca668c3af00981e125fb83210d416",
+    "bytes": 2769
+  },
+  "test_result": {
+    "path": "TEST-RESULT.json",
+    "sha256": "7d560a82fbe95426b95a9d3a9a620a1ac303eac706a07ee98df993fe937d2a3a",
+    "bytes": 1072
+  },
+  "files": 40,
+  "effective_source_files": 11,
+  "changed_or_new_source_files": 5,
+  "tests": 13,
+  "installed": false,
+  "actual_export": false,
+  "models": 0,
+  "UI": false,
+  "remaining_owned_pids": [],
+  "deferred": [
+    "Normalized mesh binding and reflection/winding checks",
+    "Full preview/export closure",
+    "New exact package/importer admission",
+    "Application controls/native review"
+  ]
+}

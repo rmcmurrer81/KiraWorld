@@ -1,0 +1,21 @@
+✔ producer: actual low-level toggle cannot bypass engaged or releasing hardware (22.3499ms)
+✔ producer: release-before-open commits once and rechecks peer/swing/position (61.5318ms)
+✔ producer: pause, stale session and dispose revoke pending opening (24.8554ms)
+✔ producer: four orientations preserve conservative ownership and peer reservations (96.465ms)
+✔ consumer: actual low-level toggle cannot bypass engaged or releasing hardware (35.4296ms)
+✔ consumer: release-before-open commits once and rechecks peer/swing/position (103.1611ms)
+✔ consumer: pause, stale session and dispose revoke pending opening (30.8604ms)
+✔ consumer: four orientations preserve conservative ownership and peer reservations (117.604ms)
+✔ strict descriptor rejects bounds/recipe/owner/room/part tampering and old validator rejects new variant (33.2683ms)
+✔ actual073 paired placements retain source bytes and admit both conservative v2 swings (33.755ms)
+✔ ordinary and v1 default source controllers remain byte-equivalent in state and definitions (51.7705ms)
+✔ both existing exact package metadata inputs still validate with no v2 behavior (13.4354ms)
+✔ pure authority enforces exact stopped pose, finite time and lifecycle reentry (0.3037ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 698.9081
