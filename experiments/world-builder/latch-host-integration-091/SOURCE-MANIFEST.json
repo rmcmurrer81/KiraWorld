@@ -1,0 +1,1242 @@
+{
+  "status": "PROSPECTIVE_SOURCE_ONLY",
+  "files": {
+    "candidate/consumer/airlock_cycle.mjs": {
+      "bytes": 12545,
+      "sha256": "9c7b50e026225c98a6df96509ad7b1b2891c2a12790236ef94b0730e14054cce",
+      "prospective_target": "isolated-consumer-successor/airlock_cycle.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "9c7b50e026225c98a6df96509ad7b1b2891c2a12790236ef94b0730e14054cce",
+        "bytes": 12545
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/airlock_cycle.mjs",
+        "bytes": 12545,
+        "sha256": "9c7b50e026225c98a6df96509ad7b1b2891c2a12790236ef94b0730e14054cce"
+      }
+    },
+    "candidate/consumer/airlock_host.mjs": {
+      "bytes": 6246,
+      "sha256": "e4d481926ab1dae2fe62ad37c98b2beb16361deb99f2e9263e4e29c2e6c0c518",
+      "prospective_target": "isolated-consumer-successor/airlock_host.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "90bb11d960f1348957fdeb22cad93aa67b057325275e3e0e6fc79a2ee56e7ca0",
+        "bytes": 5975
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/consumer/airlock_host.mjs",
+        "bytes": 5975,
+        "sha256": "90bb11d960f1348957fdeb22cad93aa67b057325275e3e0e6fc79a2ee56e7ca0"
+      }
+    },
+    "candidate/consumer/app.mjs": {
+      "bytes": 15637,
+      "sha256": "732a098c56f1d7fe0eb1a0f0051024fc48a5f4dd26ea1d34476bd431ca0963c9",
+      "prospective_target": "isolated-consumer-successor/app.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "be77727d41d3f0bb6ef9cc58ff80803d69beb2551020dfdc4e0b228d391b7f94",
+        "bytes": 13892
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/consumer/app.mjs",
+        "bytes": 13892,
+        "sha256": "be77727d41d3f0bb6ef9cc58ff80803d69beb2551020dfdc4e0b228d391b7f94"
+      }
+    },
+    "candidate/consumer/discrete_controls.mjs": {
+      "bytes": 4237,
+      "sha256": "147caa119306eccf8125a86cbf4393f0938b9eba59f0bba421ac3a07a25f1d93",
+      "prospective_target": "isolated-consumer-successor/discrete_controls.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "c40c4db23b1752e7e88bfed22ecaf003df490284cb92f90f6cf8da892d4fb214",
+        "bytes": 4023
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/consumer/discrete_controls.mjs",
+        "bytes": 4023,
+        "sha256": "c40c4db23b1752e7e88bfed22ecaf003df490284cb92f90f6cf8da892d4fb214"
+      }
+    },
+    "candidate/consumer/door_metadata.mjs": {
+      "bytes": 6578,
+      "sha256": "fe6c0e5ff5da9e19e08d704519bd086b9781d40a851daaf96ebf0e39b75e26cc",
+      "prospective_target": "isolated-consumer-successor/door_metadata.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "0d040f8b836feac304e8f759eea946a1d05f95518c64912dcb2d2c387d4a9439",
+        "bytes": 6579
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/consumer/door_metadata.mjs",
+        "bytes": 6425,
+        "sha256": "42edfc46bfbb1a887442e032a3fc1720d731369e01a1f871e77beca0eccd439c"
+      }
+    },
+    "candidate/consumer/file_admission.mjs": {
+      "bytes": 1446,
+      "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+      "prospective_target": "isolated-consumer-successor/file_admission.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+        "bytes": 1446
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/file_admission.mjs",
+        "bytes": 1446,
+        "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122"
+      }
+    },
+    "candidate/consumer/greenhouse_control.mjs": {
+      "bytes": 2148,
+      "sha256": "f6115a0a8edc44b47290692dfaae13e75bce9652cd8163abb16cea4492a20519",
+      "prospective_target": "isolated-consumer-successor/greenhouse_control.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "f6115a0a8edc44b47290692dfaae13e75bce9652cd8163abb16cea4492a20519",
+        "bytes": 2148
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/greenhouse_control.mjs",
+        "bytes": 2148,
+        "sha256": "f6115a0a8edc44b47290692dfaae13e75bce9652cd8163abb16cea4492a20519"
+      }
+    },
+    "candidate/consumer/history-library.json": {
+      "bytes": 11064,
+      "sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285",
+      "prospective_target": "isolated-consumer-successor/history-library.json",
+      "installed": false,
+      "baseline": {
+        "sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285",
+        "bytes": 11064
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/history-library.json",
+        "bytes": 11064,
+        "sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285"
+      }
+    },
+    "candidate/consumer/history_host.mjs": {
+      "bytes": 2403,
+      "sha256": "b93f24a5af523cf071da6dce0418ed511c0b223d7f556002e94ce89af4c46dbc",
+      "prospective_target": "isolated-consumer-successor/history_host.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "b93f24a5af523cf071da6dce0418ed511c0b223d7f556002e94ce89af4c46dbc",
+        "bytes": 2403
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/history_host.mjs",
+        "bytes": 2403,
+        "sha256": "b93f24a5af523cf071da6dce0418ed511c0b223d7f556002e94ce89af4c46dbc"
+      }
+    },
+    "candidate/consumer/horizontal_navigation.mjs": {
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "prospective_target": "isolated-consumer-successor/horizontal_navigation.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/horizontal_navigation.mjs",
+        "bytes": 6406,
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+      }
+    },
+    "candidate/consumer/index.html": {
+      "bytes": 6901,
+      "sha256": "cdf96024e806e15d68ce0572a569a0bfbc3bdcf14caa761d877f7e38e47ab30a",
+      "prospective_target": "isolated-consumer-successor/index.html",
+      "installed": false,
+      "baseline": {
+        "sha256": "2428dab0c25f75f356c3cbd63cfac261f96a85fdf63e5ba59d1b9246fb40fe36",
+        "bytes": 6116
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/consumer/index.html",
+        "bytes": 6116,
+        "sha256": "2428dab0c25f75f356c3cbd63cfac261f96a85fdf63e5ba59d1b9246fb40fe36"
+      }
+    },
+    "candidate/consumer/latch_host.mjs": {
+      "bytes": 2513,
+      "sha256": "a0a791f64ce63ef209a205f0db1f69d87031cd06e1965d3ea630bb1087c425e5",
+      "prospective_target": "isolated-consumer-successor/latch_host.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/consumer/mars-history-library.css": {
+      "bytes": 2359,
+      "sha256": "c95810fe028349848900a7f3229ce1fe9aebbf960f0997a08f019f41d6be8756",
+      "prospective_target": "isolated-consumer-successor/mars-history-library.css",
+      "installed": false,
+      "baseline": {
+        "sha256": "c95810fe028349848900a7f3229ce1fe9aebbf960f0997a08f019f41d6be8756",
+        "bytes": 2359
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/mars-history-library.css",
+        "bytes": 2359,
+        "sha256": "c95810fe028349848900a7f3229ce1fe9aebbf960f0997a08f019f41d6be8756"
+      }
+    },
+    "candidate/consumer/mars-history-library.mjs": {
+      "bytes": 17276,
+      "sha256": "2d378dd5ff63f84c08d63cd96c86ecbdb944828e5b5a492779542d08e5c0a89b",
+      "prospective_target": "isolated-consumer-successor/mars-history-library.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "2d378dd5ff63f84c08d63cd96c86ecbdb944828e5b5a492779542d08e5c0a89b",
+        "bytes": 17276
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/mars-history-library.mjs",
+        "bytes": 17276,
+        "sha256": "2d378dd5ff63f84c08d63cd96c86ecbdb944828e5b5a492779542d08e5c0a89b"
+      }
+    },
+    "candidate/consumer/package_loader.mjs": {
+      "bytes": 13774,
+      "sha256": "cdc517afe278e7f1fecb865301c738b70e8c94cbd41bc99a0768cb9309ea4c4f",
+      "prospective_target": "isolated-consumer-successor/package_loader.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "912b134c129c896ac30c5bbcb003d016c06d309b8723a07c3fa47ec549351c3c",
+        "bytes": 11870
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/consumer/package_loader.mjs",
+        "bytes": 11870,
+        "sha256": "912b134c129c896ac30c5bbcb003d016c06d309b8723a07c3fa47ec549351c3c"
+      }
+    },
+    "candidate/consumer/reviewed_latched_packages.mjs": {
+      "bytes": 369,
+      "sha256": "e1873e4e099c87c2ae675a8da033dd36ef0d8bbb9aaa8464c549da9dc2003b8d",
+      "prospective_target": "isolated-consumer-successor/reviewed_latched_packages.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/consumer/runtime.mjs": {
+      "bytes": 14803,
+      "sha256": "8d5e6b8bae7178362ab0e41e4876e43990bd50dda33da02daf87c21fc3bc4094",
+      "prospective_target": "isolated-consumer-successor/runtime.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "8bdf65c058535c78571a6b5fc1df57b5ffc59f33bbe1fa008184a76fb4cb272c",
+        "bytes": 14805
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/consumer/runtime.mjs",
+        "bytes": 12170,
+        "sha256": "80c9700e84c0c01fbe0f9c45b2b0efd7c3f308190731a8cf13b59ea3d179499d"
+      }
+    },
+    "candidate/consumer/scene_disposal.mjs": {
+      "bytes": 654,
+      "sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6",
+      "prospective_target": "isolated-consumer-successor/scene_disposal.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6",
+        "bytes": 654
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/scene_disposal.mjs",
+        "bytes": 654,
+        "sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6"
+      }
+    },
+    "candidate/consumer/serve.py": {
+      "bytes": 655,
+      "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+      "prospective_target": "isolated-consumer-successor/serve.py",
+      "installed": false,
+      "baseline": {
+        "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+        "bytes": 655
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/consumer/serve.py",
+        "bytes": 655,
+        "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb"
+      }
+    },
+    "candidate/consumer/shared/latch_state.mjs": {
+      "bytes": 4208,
+      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+      "prospective_target": "isolated-consumer-successor/shared/latch_state.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+        "bytes": 4208
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/consumer/shared/latch_visual.mjs": {
+      "bytes": 12111,
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "prospective_target": "isolated-consumer-successor/shared/latch_visual.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+        "bytes": 12111
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/consumer/shared/latched_hatch_mesh_binding.mjs": {
+      "bytes": 15111,
+      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+      "prospective_target": "isolated-consumer-successor/shared/latched_hatch_mesh_binding.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+        "bytes": 15111
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/consumer/shared/latched_metadata.mjs": {
+      "bytes": 8870,
+      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+      "prospective_target": "isolated-consumer-successor/shared/latched_metadata.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+        "bytes": 8870
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/consumer/shared/latched_scene_binding.mjs": {
+      "bytes": 3641,
+      "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4",
+      "prospective_target": "isolated-consumer-successor/shared/latched_scene_binding.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/consumer/shared/legacy/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "prospective_target": "isolated-consumer-successor/shared/legacy/pressure_hatch.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+        "bytes": 16212
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/consumer/shared/pressure_hatch_latched.mjs": {
+      "bytes": 9685,
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "prospective_target": "isolated-consumer-successor/shared/pressure_hatch_latched.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+        "bytes": 9685
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/greenhouse.mjs": {
+      "bytes": 14885,
+      "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88",
+      "prospective_target": "tools/world_builder_engine/greenhouse.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88",
+        "bytes": 14885
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/greenhouse.mjs",
+        "bytes": 14885,
+        "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88"
+      }
+    },
+    "candidate/producer/hatch_preflight.mjs": {
+      "bytes": 1104,
+      "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee",
+      "prospective_target": "tools/world_builder_engine/hatch_preflight.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee",
+        "bytes": 1104
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/hatch_preflight.mjs",
+        "bytes": 1104,
+        "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee"
+      }
+    },
+    "candidate/producer/horizontal_navigation.mjs": {
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "prospective_target": "tools/world_builder_engine/horizontal_navigation.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/horizontal_navigation.mjs",
+        "bytes": 6406,
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+      }
+    },
+    "candidate/producer/index.html": {
+      "bytes": 3373,
+      "sha256": "6d5265d4f6b82f2836595d8b14ee2b1afd7346851e3707d9c32530410f4ab87c",
+      "prospective_target": "tools/world_builder_engine/index.html",
+      "installed": false,
+      "baseline": {
+        "sha256": "bf488c22441ec7966c92f64333058e927d96f36bc9ee127dcde3ce4772c156ae",
+        "bytes": 2920
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/index.html",
+        "bytes": 2920,
+        "sha256": "bf488c22441ec7966c92f64333058e927d96f36bc9ee127dcde3ce4772c156ae"
+      }
+    },
+    "candidate/producer/latched_hatch_preflight.mjs": {
+      "bytes": 1208,
+      "sha256": "53d513ada4d72caf5cd7d84e429a1843edc2b463e0a8a71763d944e4717e1252",
+      "prospective_target": "tools/world_builder_engine/latched_hatch_preflight.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/producer/layout_airlock_policy.py": {
+      "bytes": 3351,
+      "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19",
+      "prospective_target": "tools/world_builder_engine/layout_airlock_policy.py",
+      "installed": false,
+      "baseline": {
+        "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19",
+        "bytes": 3351
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_airlock_policy.py",
+        "bytes": 3351,
+        "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19"
+      }
+    },
+    "candidate/producer/layout_package_assets/authored_scene.mjs": {
+      "bytes": 9651,
+      "sha256": "29cb20c4ec4ba1ea5fa40db7c5a67ae966a3a478c3562654976cbefb93c3ed1c",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "d787a356f8a1411c9a0ad52db301fcc93fad413e359329c72e12bffc8ea43e12",
+        "bytes": 8411
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/authored_scene.mjs",
+        "bytes": 8411,
+        "sha256": "d787a356f8a1411c9a0ad52db301fcc93fad413e359329c72e12bffc8ea43e12"
+      }
+    },
+    "candidate/producer/layout_package_assets/build_glb.mjs": {
+      "bytes": 16598,
+      "sha256": "274f6c0dffedd0a300fd6afc9fa205bef89993dbea050364a4a5d323c21d55e9",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/build_glb.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "81f7f31475d98fe74a6749b904d12e46c2356207d6b55551132762d4f9dfb4b7",
+        "bytes": 14040
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/build_glb.mjs",
+        "bytes": 14040,
+        "sha256": "81f7f31475d98fe74a6749b904d12e46c2356207d6b55551132762d4f9dfb4b7"
+      }
+    },
+    "candidate/producer/layout_package_assets/canvas_lifetime.mjs": {
+      "bytes": 2094,
+      "sha256": "62b775b5b204ea4b8b4203717acd7d9bcd5736506a11ffb9aaf020722ab06733",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/canvas_lifetime.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "62b775b5b204ea4b8b4203717acd7d9bcd5736506a11ffb9aaf020722ab06733",
+        "bytes": 2094
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/canvas_lifetime.mjs",
+        "bytes": 2094,
+        "sha256": "62b775b5b204ea4b8b4203717acd7d9bcd5736506a11ffb9aaf020722ab06733"
+      }
+    },
+    "candidate/producer/layout_package_assets/cpu_canvas.mjs": {
+      "bytes": 2912,
+      "sha256": "ecdcfacb33f881d7f46dbdbeab31cf2529f31e1f8eaa275fe041ac6184b3f15c",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/cpu_canvas.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "ecdcfacb33f881d7f46dbdbeab31cf2529f31e1f8eaa275fe041ac6184b3f15c",
+        "bytes": 2912
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/cpu_canvas.mjs",
+        "bytes": 2912,
+        "sha256": "ecdcfacb33f881d7f46dbdbeab31cf2529f31e1f8eaa275fe041ac6184b3f15c"
+      }
+    },
+    "candidate/producer/layout_package_assets/PRODUCER-PINS.json": {
+      "bytes": 6518,
+      "sha256": "328772dd4d83ff05dbbb20ac75f2a6d8af34ef0215ce3ffff17086d04543d60f",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "installed": false,
+      "baseline": {
+        "sha256": "2259c565973f5346fce65e506dcce6ca14cb27a5fb1cdb842b925530bc093bab",
+        "bytes": 5214
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/PRODUCER-PINS.json",
+        "bytes": 5214,
+        "sha256": "2259c565973f5346fce65e506dcce6ca14cb27a5fb1cdb842b925530bc093bab"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/airlock_policy.mjs": {
+      "bytes": 2523,
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/airlock_policy.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15",
+        "bytes": 2523
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/airlock_policy.mjs",
+        "bytes": 2523,
+        "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/greenhouse.mjs": {
+      "bytes": 14885,
+      "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/greenhouse.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88",
+        "bytes": 14885
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/greenhouse.mjs",
+        "bytes": 14885,
+        "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/horizontal_navigation.mjs": {
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+        "bytes": 6406
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/horizontal_navigation.mjs",
+        "bytes": 6406,
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/mars_reference.mjs": {
+      "bytes": 2487,
+      "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/mars_reference.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16",
+        "bytes": 2487
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/mars_reference.mjs",
+        "bytes": 2487,
+        "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+        "bytes": 16212
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/pressure_hatch.mjs",
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/pressure_hatch_architecture.mjs": {
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch_architecture.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c",
+        "bytes": 9874
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/pressure_hatch_architecture.mjs",
+        "bytes": 9874,
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/pressure_hatch_metadata.mjs": {
+      "bytes": 4165,
+      "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch_metadata.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344",
+        "bytes": 4165
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/pressure_hatch_metadata.mjs",
+        "bytes": 4165,
+        "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/room_dressing_plan.mjs": {
+      "bytes": 13367,
+      "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d",
+        "bytes": 13367
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/room_dressing_plan.mjs",
+        "bytes": 13367,
+        "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/room_dressing_render.mjs": {
+      "bytes": 52065,
+      "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb",
+        "bytes": 52065
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/room_dressing_render.mjs",
+        "bytes": 52065,
+        "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/room_monitors.mjs": {
+      "bytes": 6209,
+      "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/room_monitors.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca",
+        "bytes": 6209
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/room_monitors.mjs",
+        "bytes": 6209,
+        "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/scene_metadata.mjs": {
+      "bytes": 18880,
+      "sha256": "5763a325a7572f172eaa88e612cee954f609f3fda28652f97d8c0ec8535c4bf2",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110",
+        "bytes": 17442
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/scene_metadata.mjs",
+        "bytes": 17442,
+        "sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110"
+      }
+    },
+    "candidate/producer/layout_package_assets/source/shared/latch_state.mjs": {
+      "bytes": 4208,
+      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latch_state.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+        "bytes": 4208
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latch_visual.mjs": {
+      "bytes": 12111,
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latch_visual.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+        "bytes": 12111
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latched_hatch_mesh_binding.mjs": {
+      "bytes": 15111,
+      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latched_hatch_mesh_binding.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+        "bytes": 15111
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latched_metadata.mjs": {
+      "bytes": 8870,
+      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latched_metadata.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+        "bytes": 8870
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latched_scene_binding.mjs": {
+      "bytes": 3641,
+      "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latched_scene_binding.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/producer/layout_package_assets/source/shared/legacy/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/legacy/pressure_hatch.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+        "bytes": 16212
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/pressure_hatch_latched.mjs": {
+      "bytes": 9685,
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/pressure_hatch_latched.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+        "bytes": 9685
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/versioned_hatch_architecture.mjs": {
+      "bytes": 1487,
+      "sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/versioned_hatch_architecture.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/producer/layout_package_assets/source/walk_controller.mjs": {
+      "bytes": 24910,
+      "sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "fde1af2a477b84ae9f465a451efe62641cd286c3fcf97edd669d82d1789951ee",
+        "bytes": 24913
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source/walk_controller.mjs",
+        "bytes": 21634,
+        "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
+      }
+    },
+    "candidate/producer/layout_package_assets/source_bindings.py": {
+      "bytes": 12098,
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source_bindings.py",
+      "installed": false,
+      "baseline": {
+        "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+        "bytes": 12098
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_assets/source_bindings.py",
+        "bytes": 12098,
+        "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2"
+      }
+    },
+    "candidate/producer/layout_package_export.py": {
+      "bytes": 12901,
+      "sha256": "b867ed5580cff875759cc5e4767628cfcd6da7c9b18e8010e7d5281f3e864fae",
+      "prospective_target": "tools/world_builder_engine/layout_package_export.py",
+      "installed": false,
+      "baseline": {
+        "sha256": "e251591300fb65230852f80459901c4c1186f9e524b3a1ca85c4b728d7398c42",
+        "bytes": 11792
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/layout_package_export.py",
+        "bytes": 11792,
+        "sha256": "e251591300fb65230852f80459901c4c1186f9e524b3a1ca85c4b728d7398c42"
+      }
+    },
+    "candidate/producer/layout_recipe_profile.py": {
+      "bytes": 5578,
+      "sha256": "e87af188e315a243e49191a07c4414278b39e5c338f7dd78d200436fbed08268",
+      "prospective_target": "tools/world_builder_engine/layout_recipe_profile.py",
+      "installed": false,
+      "baseline": {
+        "sha256": "e87af188e315a243e49191a07c4414278b39e5c338f7dd78d200436fbed08268",
+        "bytes": 5578
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/layout_recipe_profile.py",
+        "bytes": 5578,
+        "sha256": "e87af188e315a243e49191a07c4414278b39e5c338f7dd78d200436fbed08268"
+      }
+    },
+    "candidate/producer/mars_reference.mjs": {
+      "bytes": 2487,
+      "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16",
+      "prospective_target": "tools/world_builder_engine/mars_reference.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16",
+        "bytes": 2487
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/mars_reference.mjs",
+        "bytes": 2487,
+        "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16"
+      }
+    },
+    "candidate/producer/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "prospective_target": "tools/world_builder_engine/pressure_hatch.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+        "bytes": 16212
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/pressure_hatch.mjs",
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      }
+    },
+    "candidate/producer/pressure_hatch_architecture.mjs": {
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c",
+      "prospective_target": "tools/world_builder_engine/pressure_hatch_architecture.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c",
+        "bytes": 9874
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/pressure_hatch_architecture.mjs",
+        "bytes": 9874,
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+      }
+    },
+    "candidate/producer/room_monitors.mjs": {
+      "bytes": 6209,
+      "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca",
+      "prospective_target": "tools/world_builder_engine/room_monitors.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca",
+        "bytes": 6209
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/room_monitors.mjs",
+        "bytes": 6209,
+        "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
+      }
+    },
+    "candidate/producer/shared/latch_state.mjs": {
+      "bytes": 4208,
+      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+      "prospective_target": "tools/world_builder_engine/shared/latch_state.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+        "bytes": 4208
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/shared/latch_visual.mjs": {
+      "bytes": 12111,
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "prospective_target": "tools/world_builder_engine/shared/latch_visual.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+        "bytes": 12111
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/shared/latched_hatch_mesh_binding.mjs": {
+      "bytes": 15111,
+      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+      "prospective_target": "tools/world_builder_engine/shared/latched_hatch_mesh_binding.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+        "bytes": 15111
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/shared/latched_metadata.mjs": {
+      "bytes": 8870,
+      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+      "prospective_target": "tools/world_builder_engine/shared/latched_metadata.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+        "bytes": 8870
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/shared/latched_scene_binding.mjs": {
+      "bytes": 3641,
+      "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4",
+      "prospective_target": "tools/world_builder_engine/shared/latched_scene_binding.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/producer/shared/legacy/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "prospective_target": "tools/world_builder_engine/shared/legacy/pressure_hatch.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+        "bytes": 16212
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/shared/pressure_hatch_latched.mjs": {
+      "bytes": 9685,
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "prospective_target": "tools/world_builder_engine/shared/pressure_hatch_latched.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+        "bytes": 9685
+      },
+      "changed_from_bound_baseline": false
+    },
+    "candidate/producer/shared/versioned_hatch_architecture.mjs": {
+      "bytes": 1487,
+      "sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754",
+      "prospective_target": "tools/world_builder_engine/shared/versioned_hatch_architecture.mjs",
+      "installed": false,
+      "baseline": null,
+      "new_source_file": true
+    },
+    "candidate/producer/style.css": {
+      "bytes": 4033,
+      "sha256": "e20f56ad9a93804c182bddbc891d8ea20c921f4ee352cdb7a5899f2cf90ec588",
+      "prospective_target": "tools/world_builder_engine/style.css",
+      "installed": false,
+      "baseline": {
+        "sha256": "e20f56ad9a93804c182bddbc891d8ea20c921f4ee352cdb7a5899f2cf90ec588",
+        "bytes": 4033
+      },
+      "changed_from_bound_baseline": false,
+      "preserved_preimage": {
+        "path": "before/producer/style.css",
+        "bytes": 4033,
+        "sha256": "e20f56ad9a93804c182bddbc891d8ea20c921f4ee352cdb7a5899f2cf90ec588"
+      }
+    },
+    "candidate/producer/viewer.mjs": {
+      "bytes": 81577,
+      "sha256": "d708033ec523fe0fb745b63f141938f905cec881a5ff02eb8d918b247bc1ba33",
+      "prospective_target": "tools/world_builder_engine/viewer.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "cfd9ed6aabb2b9d4fdd31713c6a7cabe900fa1984757c91efe8442e63da451c8",
+        "bytes": 78294
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/viewer.mjs",
+        "bytes": 78294,
+        "sha256": "cfd9ed6aabb2b9d4fdd31713c6a7cabe900fa1984757c91efe8442e63da451c8"
+      }
+    },
+    "candidate/producer/walk_controller.mjs": {
+      "bytes": 24910,
+      "sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e",
+      "prospective_target": "tools/world_builder_engine/walk_controller.mjs",
+      "installed": false,
+      "baseline": {
+        "sha256": "fde1af2a477b84ae9f465a451efe62641cd286c3fcf97edd669d82d1789951ee",
+        "bytes": 24913
+      },
+      "changed_from_bound_baseline": true
+    },
+    "candidate/producer/world_layout_preview.py": {
+      "bytes": 36084,
+      "sha256": "af3e00797d140bd600f03aa011d329eedaf2f2ab9fb4931e2e8c79ac6983beac",
+      "prospective_target": "tools/world_builder_engine/world_layout_preview.py",
+      "installed": false,
+      "baseline": {
+        "sha256": "87e3ad211e47a6a08fbb0caf5cb4a0f1fc450c22e17dcb202c2b09c260fa09db",
+        "bytes": 33330
+      },
+      "changed_from_bound_baseline": true,
+      "preserved_preimage": {
+        "path": "before/producer/world_layout_preview.py",
+        "bytes": 33330,
+        "sha256": "87e3ad211e47a6a08fbb0caf5cb4a0f1fc450c22e17dcb202c2b09c260fa09db"
+      }
+    }
+  },
+  "changed_or_new": [
+    {
+      "source": "candidate/consumer/airlock_host.mjs",
+      "diff": "diffs/consumer__airlock_host.mjs.diff",
+      "new": false,
+      "baseline_sha256": "90bb11d960f1348957fdeb22cad93aa67b057325275e3e0e6fc79a2ee56e7ca0",
+      "after_sha256": "e4d481926ab1dae2fe62ad37c98b2beb16361deb99f2e9263e4e29c2e6c0c518"
+    },
+    {
+      "source": "candidate/consumer/app.mjs",
+      "diff": "diffs/consumer__app.mjs.diff",
+      "new": false,
+      "baseline_sha256": "be77727d41d3f0bb6ef9cc58ff80803d69beb2551020dfdc4e0b228d391b7f94",
+      "after_sha256": "732a098c56f1d7fe0eb1a0f0051024fc48a5f4dd26ea1d34476bd431ca0963c9"
+    },
+    {
+      "source": "candidate/consumer/discrete_controls.mjs",
+      "diff": "diffs/consumer__discrete_controls.mjs.diff",
+      "new": false,
+      "baseline_sha256": "c40c4db23b1752e7e88bfed22ecaf003df490284cb92f90f6cf8da892d4fb214",
+      "after_sha256": "147caa119306eccf8125a86cbf4393f0938b9eba59f0bba421ac3a07a25f1d93"
+    },
+    {
+      "source": "candidate/consumer/door_metadata.mjs",
+      "diff": "diffs/consumer__door_metadata.mjs.diff",
+      "new": false,
+      "baseline_sha256": "0d040f8b836feac304e8f759eea946a1d05f95518c64912dcb2d2c387d4a9439",
+      "after_sha256": "fe6c0e5ff5da9e19e08d704519bd086b9781d40a851daaf96ebf0e39b75e26cc"
+    },
+    {
+      "source": "candidate/consumer/index.html",
+      "diff": "diffs/consumer__index.html.diff",
+      "new": false,
+      "baseline_sha256": "2428dab0c25f75f356c3cbd63cfac261f96a85fdf63e5ba59d1b9246fb40fe36",
+      "after_sha256": "cdf96024e806e15d68ce0572a569a0bfbc3bdcf14caa761d877f7e38e47ab30a"
+    },
+    {
+      "source": "candidate/consumer/latch_host.mjs",
+      "diff": "diffs/consumer__latch_host.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "a0a791f64ce63ef209a205f0db1f69d87031cd06e1965d3ea630bb1087c425e5"
+    },
+    {
+      "source": "candidate/consumer/package_loader.mjs",
+      "diff": "diffs/consumer__package_loader.mjs.diff",
+      "new": false,
+      "baseline_sha256": "912b134c129c896ac30c5bbcb003d016c06d309b8723a07c3fa47ec549351c3c",
+      "after_sha256": "cdc517afe278e7f1fecb865301c738b70e8c94cbd41bc99a0768cb9309ea4c4f"
+    },
+    {
+      "source": "candidate/consumer/reviewed_latched_packages.mjs",
+      "diff": "diffs/consumer__reviewed_latched_packages.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "e1873e4e099c87c2ae675a8da033dd36ef0d8bbb9aaa8464c549da9dc2003b8d"
+    },
+    {
+      "source": "candidate/consumer/runtime.mjs",
+      "diff": "diffs/consumer__runtime.mjs.diff",
+      "new": false,
+      "baseline_sha256": "8bdf65c058535c78571a6b5fc1df57b5ffc59f33bbe1fa008184a76fb4cb272c",
+      "after_sha256": "8d5e6b8bae7178362ab0e41e4876e43990bd50dda33da02daf87c21fc3bc4094"
+    },
+    {
+      "source": "candidate/consumer/shared/latched_scene_binding.mjs",
+      "diff": "diffs/consumer__shared__latched_scene_binding.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4"
+    },
+    {
+      "source": "candidate/producer/index.html",
+      "diff": "diffs/producer__index.html.diff",
+      "new": false,
+      "baseline_sha256": "bf488c22441ec7966c92f64333058e927d96f36bc9ee127dcde3ce4772c156ae",
+      "after_sha256": "6d5265d4f6b82f2836595d8b14ee2b1afd7346851e3707d9c32530410f4ab87c"
+    },
+    {
+      "source": "candidate/producer/latched_hatch_preflight.mjs",
+      "diff": "diffs/producer__latched_hatch_preflight.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "53d513ada4d72caf5cd7d84e429a1843edc2b463e0a8a71763d944e4717e1252"
+    },
+    {
+      "source": "candidate/producer/layout_package_assets/authored_scene.mjs",
+      "diff": "diffs/producer__layout_package_assets__authored_scene.mjs.diff",
+      "new": false,
+      "baseline_sha256": "d787a356f8a1411c9a0ad52db301fcc93fad413e359329c72e12bffc8ea43e12",
+      "after_sha256": "29cb20c4ec4ba1ea5fa40db7c5a67ae966a3a478c3562654976cbefb93c3ed1c"
+    },
+    {
+      "source": "candidate/producer/layout_package_assets/build_glb.mjs",
+      "diff": "diffs/producer__layout_package_assets__build_glb.mjs.diff",
+      "new": false,
+      "baseline_sha256": "81f7f31475d98fe74a6749b904d12e46c2356207d6b55551132762d4f9dfb4b7",
+      "after_sha256": "274f6c0dffedd0a300fd6afc9fa205bef89993dbea050364a4a5d323c21d55e9"
+    },
+    {
+      "source": "candidate/producer/layout_package_assets/PRODUCER-PINS.json",
+      "diff": "diffs/producer__layout_package_assets__PRODUCER-PINS.json.diff",
+      "new": false,
+      "baseline_sha256": "2259c565973f5346fce65e506dcce6ca14cb27a5fb1cdb842b925530bc093bab",
+      "after_sha256": "328772dd4d83ff05dbbb20ac75f2a6d8af34ef0215ce3ffff17086d04543d60f"
+    },
+    {
+      "source": "candidate/producer/layout_package_assets/source/scene_metadata.mjs",
+      "diff": "diffs/producer__layout_package_assets__source__scene_metadata.mjs.diff",
+      "new": false,
+      "baseline_sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110",
+      "after_sha256": "5763a325a7572f172eaa88e612cee954f609f3fda28652f97d8c0ec8535c4bf2"
+    },
+    {
+      "source": "candidate/producer/layout_package_assets/source/shared/latched_scene_binding.mjs",
+      "diff": "diffs/producer__layout_package_assets__source__shared__latched_scene_binding.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4"
+    },
+    {
+      "source": "candidate/producer/layout_package_assets/source/shared/versioned_hatch_architecture.mjs",
+      "diff": "diffs/producer__layout_package_assets__source__shared__versioned_hatch_architecture.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754"
+    },
+    {
+      "source": "candidate/producer/layout_package_assets/source/walk_controller.mjs",
+      "diff": "diffs/producer__layout_package_assets__source__walk_controller.mjs.diff",
+      "new": false,
+      "baseline_sha256": "fde1af2a477b84ae9f465a451efe62641cd286c3fcf97edd669d82d1789951ee",
+      "after_sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e"
+    },
+    {
+      "source": "candidate/producer/layout_package_export.py",
+      "diff": "diffs/producer__layout_package_export.py.diff",
+      "new": false,
+      "baseline_sha256": "e251591300fb65230852f80459901c4c1186f9e524b3a1ca85c4b728d7398c42",
+      "after_sha256": "b867ed5580cff875759cc5e4767628cfcd6da7c9b18e8010e7d5281f3e864fae"
+    },
+    {
+      "source": "candidate/producer/shared/latched_scene_binding.mjs",
+      "diff": "diffs/producer__shared__latched_scene_binding.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4"
+    },
+    {
+      "source": "candidate/producer/shared/versioned_hatch_architecture.mjs",
+      "diff": "diffs/producer__shared__versioned_hatch_architecture.mjs.diff",
+      "new": true,
+      "baseline_sha256": null,
+      "after_sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754"
+    },
+    {
+      "source": "candidate/producer/viewer.mjs",
+      "diff": "diffs/producer__viewer.mjs.diff",
+      "new": false,
+      "baseline_sha256": "cfd9ed6aabb2b9d4fdd31713c6a7cabe900fa1984757c91efe8442e63da451c8",
+      "after_sha256": "d708033ec523fe0fb745b63f141938f905cec881a5ff02eb8d918b247bc1ba33"
+    },
+    {
+      "source": "candidate/producer/walk_controller.mjs",
+      "diff": "diffs/producer__walk_controller.mjs.diff",
+      "new": false,
+      "baseline_sha256": "fde1af2a477b84ae9f465a451efe62641cd286c3fcf97edd669d82d1789951ee",
+      "after_sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e"
+    },
+    {
+      "source": "candidate/producer/world_layout_preview.py",
+      "diff": "diffs/producer__world_layout_preview.py.diff",
+      "new": false,
+      "baseline_sha256": "87e3ad211e47a6a08fbb0caf5cb4a0f1fc450c22e17dcb202c2b09c260fa09db",
+      "after_sha256": "af3e00797d140bd600f03aa011d329eedaf2f2ab9fb4931e2e8c79ac6983beac"
+    }
+  ],
+  "current_source_matches_cpu007_inputs": true,
+  "new_v2_admission_rows": 0,
+  "installed": false
+}

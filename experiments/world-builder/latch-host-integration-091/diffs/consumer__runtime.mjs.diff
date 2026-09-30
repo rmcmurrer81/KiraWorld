@@ -1,0 +1,11 @@
+--- bound-before/consumer/runtime.mjs
++++ candidate/consumer/runtime.mjs
+@@ -1,6 +1,6 @@
+ import {HATCH,validateDoorShape,movingForDoor,rotateBounds,unionBounds} from './door_metadata.mjs';
+-import {createLatchAuthority} from '../shared/latch_state.mjs';
+-import {LATCH_HATCH_CONTRACT} from '../shared/latched_metadata.mjs';
++import {createLatchAuthority} from './shared/latch_state.mjs';
++import {LATCH_HATCH_CONTRACT} from './shared/latched_metadata.mjs';
+ // Runtime over portable metadata; v2 includes bounded numeric recipe inputs.
+ // No source-file lookup, model loading, package admission or rendering.
+ import {NAVIGATION_CONTRACT,checkWalkSpawn,checkHorizontalRoute} from './horizontal_navigation.mjs';

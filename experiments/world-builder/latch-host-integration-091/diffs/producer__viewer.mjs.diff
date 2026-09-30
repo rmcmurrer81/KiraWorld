@@ -1,0 +1,87 @@
+--- bound-before/producer/viewer.mjs
++++ candidate/producer/viewer.mjs
+@@ -1,5 +1,8 @@
+ import {buildPressureHatch} from './pressure_hatch.mjs';
+-import {buildHatchStructuralMesh,planHatchArchitecture} from './pressure_hatch_architecture.mjs';
++import {buildHatchStructuralMesh} from './pressure_hatch_architecture.mjs';
++import {planVersionedHatchArchitecture as planHatchArchitecture} from './shared/versioned_hatch_architecture.mjs';
++import {buildNormalizedHatch} from './shared/latched_hatch_mesh_binding.mjs';
++import {LATCH_HATCH_CONTRACT} from './shared/latched_metadata.mjs';
+ import * as THREE from './three.module.js';
+ import {AVATAR,createWalkController,createDoorSystem} from './walk_controller.mjs';
+ 
+@@ -817,7 +820,11 @@
+   if(!settingResponse.ok)throw new Error('The bound presentation setting could not be loaded.');
+   const presentation=await settingResponse.json();
+   const dressing=buildRoomDressing(geometry,createDoorSystem(geometry,{hatchGeometry:false}).assemblies());
+-  const controller=createWalkController(geometry,{extraColliders:dressing.colliders});
++  const recipeResponse=await fetch('/hatch-variant.json',{cache:'no-store'});if(!recipeResponse.ok)throw new Error('The exact hatch recipe could not load');const hatchVariant=(await recipeResponse.json()).hatch_variant;if(!['legacy_v1','latched_v2'].includes(hatchVariant))throw new Error('Unknown hatch recipe');
++  let currentSession=true;const holds=new Set();
++  const controller=createWalkController(geometry,{extraColliders:dressing.colliders,hatchVariant,isCurrent:()=>currentSession});
++  function hold(reason){holds.add(reason);controller.pauseLatches(reason);}
++  function clearHold(reason){holds.delete(reason);controller.resumeLatches(reason);}
+   const hatchArchitecture=planHatchArchitecture(geometry,controller.doorHatchPlans());
+   document.querySelector('#title').textContent=geometry.title;
+   const scene=new THREE.Scene();scene.background=new THREE.Color('#303d44');
+@@ -853,6 +860,7 @@
+   const handleMaterial=new THREE.MeshStandardMaterial({color:0xe1d9ae,roughness:.3,metalness:.75});
+   const initialDoors=new Map(controller.doorStates().map(d=>[d.id,d]));
+   for(const assembly of controller.doorAssemblies()){
++    if(assembly.kind==='pressure_hatch'&&assembly.hatchPlan.contract===LATCH_HATCH_CONTRACT){const hatch=buildNormalizedHatch({THREE,plan:assembly.hatchPlan,doorId:assembly.id,isCurrent:()=>currentSession});scene.add(hatch.root);doorMeshes.set(assembly.id,{latched:hatch});continue;}
+     if(assembly.kind==='pressure_hatch'){
+       const hatch=buildPressureHatch(THREE,assembly.hatchPlan);hatch.setAngle(0);scene.add(hatch.fixed,hatch.pivot);
+       doorMeshes.set(assembly.id,{hatch});continue;
+@@ -907,15 +915,20 @@
+   const doorButton=document.querySelector('#door-toggle'),doorMessage=document.querySelector('#door-message');
+   let doorNotice='',doorNoticeUntil=0;
+   function interactDoor(){
+-    const result=controller.toggleDoor();
++    const near=controller.snapshot().nearbyDoor;clearHold('focus');clearHold('manual');
++    const latched=near&&controller.latchStates().some(s=>s.id===near.id),result=holds.size?{ok:false,reason:'Interaction paused: '+[...holds].join(', ')}:latched&&near.angle===0?controller.releaseAndOpen(near.id):controller.toggleDoor();
+     doorNotice=result.ok?(result.state==='opening'?'Opening door…':'Closing door…'):result.reason;
+     doorNoticeUntil=performance.now()+3500;doorButton.blur();
+   }
+   doorButton.addEventListener('click',interactDoor);
+-  addEventListener('keydown',e=>{if(e.code==='KeyF'&&!e.repeat&&!['INPUT','TEXTAREA','SELECT','SUMMARY'].includes(document.activeElement.tagName)){interactDoor();e.preventDefault();}});
+-  addEventListener('blur',()=>keys.clear());
+-  document.addEventListener('focusin',e=>{if(['INPUT','TEXTAREA','BUTTON','SELECT','SUMMARY'].includes(e.target.tagName)){keys.clear();stepRemaining=0;}});
+-  document.addEventListener('visibilitychange',()=>keys.clear());
++  const latchPanel=document.querySelector('#hatch-hardware'),latchMessage=document.querySelector('#hatch-hardware-message');
++  for(const [name,value]of [['engage',true],['release',false]])document.querySelector('#hatch-'+name).addEventListener('click',()=>{clearHold('focus');clearHold('manual');const id=controller.snapshot().nearbyDoor?.id,r=holds.size?{ok:false,reason:'Interaction paused'}:controller.requestLatch(id,value);doorNotice=r.ok?'Visual latch '+(value?'engaging':'releasing')+'.':r.reason;doorNoticeUntil=performance.now()+3500;document.activeElement?.blur();});
++  document.querySelector('#hatch-pause').addEventListener('click',()=>{hold('manual');keys.clear();stepRemaining=0;document.activeElement?.blur();});
++  addEventListener('keydown',e=>{if(e.code==='KeyF'&&!e.repeat&&!['INPUT','TEXTAREA','BUTTON','SELECT','SUMMARY'].includes(document.activeElement.tagName)){interactDoor();e.preventDefault();}});
++  addEventListener('blur',()=>{keys.clear();hold('blur');});addEventListener('focus',()=>clearHold('blur'));
++  document.addEventListener('focusin',e=>{if(['INPUT','TEXTAREA','BUTTON','SELECT','SUMMARY'].includes(e.target.tagName)){keys.clear();stepRemaining=0;hold('focus');}});
++  document.addEventListener('focusout',()=>{queueMicrotask(()=>{if(!['INPUT','TEXTAREA','BUTTON','SELECT','SUMMARY'].includes(document.activeElement?.tagName))clearHold('focus');});});
++  document.addEventListener('visibilitychange',()=>{keys.clear();if(document.hidden)hold('hidden');else clearHold('hidden');});
+   let stepAction=null,stepRemaining=0;
+   for(const button of document.querySelectorAll('[data-walk]')){
+     button.addEventListener('click',()=>{stepAction=button.dataset.walk;stepRemaining=.25;button.blur();});
+@@ -930,12 +943,17 @@
+   // Start at zero elapsed time so the first rendered frame cannot reject it.
+   let previous=null,lastStatus='';
+   function frame(now){
++    if(!currentSession)return;if(typeof now!=='number'||!Number.isFinite(now)||now<0||(previous!==null&&now<previous)){hold('clock');previous=null;}
+     const input={forward:keys.has('KeyW'),backward:keys.has('KeyS'),left:keys.has('KeyA'),right:keys.has('KeyD'),turnLeft:keys.has('ArrowLeft')||keys.has('KeyQ'),turnRight:keys.has('ArrowRight')||keys.has('KeyE')};
+     const elapsed=previous===null?0:Math.min(.05,Math.max(0,(now-previous)/1000));previous=now;
+     if(stepRemaining>0){input[stepAction]=true;stepRemaining-=elapsed;}
+-    const state=controller.step(elapsed,input);
++    const clockHeld=[...holds].some(reason=>reason!=='room');
++    const state=controller.step(clockHeld?0:elapsed,clockHeld?{}:input);
++    const latchStates=controller.latchStates(),nearLatch=latchStates.find(s=>s.id===state.nearbyDoor?.id);if(latchStates.length){if(!nearLatch)hold('room');else clearHold('room');}
++    latchPanel.hidden=!nearLatch;if(nearLatch)latchMessage.textContent='Visual hardware: '+nearLatch.state+' · '+Math.round(nearLatch.fraction*100)+'%'+(nearLatch.paused?' · paused':'');
+     for(const door of controller.doorStates()){
+       const visual=doorMeshes.get(door.id);
++      if(visual.latched){if(!visual.latched.apply(latchStates.find(s=>s.id===door.id),door).ok)hold('mesh-fault');continue;}
+       if(visual.hatch){visual.hatch.setAngle(door.angle);continue;}
+       visual.group.position.set(...door.center);visual.group.rotation.y=door.angle;
+       visual.indicatorMaterial.color.setHex(door.state==='open'?0x72b494:door.state==='closed'?0xd28360:0xe9c66d);
+@@ -958,7 +976,7 @@
+     distance.textContent='Distance walked: '+state.distance.toFixed(1)+' m';
+     renderer.render(scene,camera);requestAnimationFrame(frame);
+   }
+-  addEventListener('pagehide',event=>{if(!event.persisted)cropControl?.dispose();});
++  addEventListener('pagehide',()=>{currentSession=false;keys.clear();controller.dispose();for(const visual of doorMeshes.values())visual.latched?.dispose();cropControl?.dispose();renderer.dispose();});
+   requestAnimationFrame(frame);
+ }
+ start().catch(error=>{document.querySelector('#error').hidden=false;document.querySelector('#error').textContent='Preview could not start.\n'+error.message;document.querySelector('#movement').textContent='Preview unavailable';});

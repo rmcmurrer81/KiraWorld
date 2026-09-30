@@ -1,0 +1,8 @@
+--- bound-before/consumer/door_metadata.mjs
++++ candidate/consumer/door_metadata.mjs
+@@ -1,4 +1,4 @@
+-import {LATCH_HATCH_CONTRACT,validateLatchedDoor} from '../shared/latched_metadata.mjs';
++import {LATCH_HATCH_CONTRACT,validateLatchedDoor} from './shared/latched_metadata.mjs';
+ // Consumer-side interpretation of exported collision boxes. No authoring code.
+ export const HATCH='authored_pressure_hatch_geometry_v1';
+ const EPS=1e-7;

@@ -1,0 +1,56 @@
+{
+  "schema": "world.public-independent-review/v1",
+  "status": "PASS_NARROW_SOURCE_AND_DISTINCT_CPU_FIXTURES_NOT_NATIVE",
+  "original_review_sha256": "12895d6b538d6edc0580655b86c784ea68117d720a92091f28ce1546c485950f",
+  "candidate_delivery": {
+    "sha256": "ab8bc49950f40867c20f76b58ef31b8e83ad161d04cacdd269f1ce00c3b5330d",
+    "bytes": 1533
+  },
+  "findings": [],
+  "independent_probes": 8,
+  "author_tests_replayed": false,
+  "actual_app_predicate_connected_to_real_CPU_runtime_and_strict_mesh": true,
+  "resource": {
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 2.5843507000245154,
+    "peak_family_rss_including_monitor_bytes": 352755712,
+    "minimum_available_ram_bytes": 14651981824,
+    "remaining_owned_PIDs": [],
+    "failure": null,
+    "protected_files": 1016,
+    "inputs": 6,
+    "changed_protected_or_inputs": [],
+    "caps": {
+      "initial_free_ram_bytes": 5368709120,
+      "family_rss_bytes": 858993459,
+      "minimum_free_ram_bytes": 3221225472,
+      "deadline_seconds": 45,
+      "Node_old_space_MiB": 128
+    },
+    "models": 0,
+    "native_UI": 0,
+    "servers": 0,
+    "GLB_export_or_parse": 0,
+    "image_decode": 0
+  },
+  "cleanup_exceptions_remain_held_not_complete_release": true,
+  "owner_or_canonical_changed": false,
+  "new_v2_admission_rows": 0,
+  "GLB_export_or_parse": 0,
+  "image_decode": 0,
+  "native_UI_or_models": 0,
+  "limits": [
+    "Source-only original deltas and synthetic CPU observations; not a complete standalone runnable test/package delivery",
+    "World091 remains held for reproduced replacement failure; World092 is a narrow source/CPU successor only",
+    "New v2 package admission table remains empty; old073/083 identities remain immutable",
+    "No new authoring job, source-bound preview, actual GLB export, parser/readback, image decoding or native saved-world integration proved",
+    "Throwing destructors remain cleanup held; successful retry or reference removal does not prove resource release",
+    "World056 remains installed; no canonical installation or owner world changed",
+    "Hardware engagement, geometric closure and fictional pressure/seal/cycle labels remain separate; outside leads Equipment Vestibule",
+    "No physical pressure/containment, final hatch art, headset comfort, narration, likeness or model retraining claim",
+    "No execution grant, install/promotion/admission/publication authorization is created by this backup",
+    "One owner-path-bearing source row, its retained preimage and exact diff are withheld with hash provenance; no complete public source closure or portable replacement is claimed"
+  ],
+  "sanitization": "Selected review fields only; dynamic Studio audit detail and private protection setup excluded"
+}

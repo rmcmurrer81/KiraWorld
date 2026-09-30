@@ -1,0 +1,33 @@
+--- bound-before/consumer/latch_host.mjs
++++ candidate/consumer/latch_host.mjs
+@@ -0,0 +1,30 @@
++// Explicit visual controls over the admitted captured runtime. No second clock,
++// automatic seal acknowledgement, pressure action or mutable package nomination.
++import {LATCH_HATCH_CONTRACT} from './shared/latched_metadata.mjs';
++export function createLatchHost(loaded,{getCurrent=()=>loaded,getCycle=()=>null}={}){
++ const definitions=loaded?.metadata?.doors?.filter(d=>d.variant===LATCH_HATCH_CONTRACT)??[];
++ if(!definitions.length)return null;
++ if(!(loaded.latchedBindings instanceof Map)||definitions.some(d=>!loaded.latchedBindings.has(d.id)))throw new TypeError('Admitted v2 scene binding required');
++ const runtime=loaded.runtime,ids=new Set(definitions.map(d=>d.id)),holds=new Set(['manual']);let disposed=false;runtime.pauseLatches('manual');
++ const deny=reason=>({ok:false,reason});
++ function current(){let ok=false;try{ok=!disposed&&getCurrent()===loaded;}catch{}if(!ok){disposed=true;runtime.pauseLatches('stale');}return ok;}
++ function pause(reason='manual'){if(disposed)return;holds.add(reason);runtime.pauseLatches(reason);}
++ function clear(reason){if(!current())return false;holds.delete(reason);runtime.resumeLatches(reason);return true;}
++ function update(){if(!current())return null;const near=runtime.snapshot().nearbyDoor;
++  if(!near||!ids.has(near.id))pause('room');else clear('room');
++  const states=runtime.latchStates();if(!current())return null;
++  return {doorId:near&&ids.has(near.id)?near.id:null,states,pauseReasons:[...holds]};
++ }
++ function ready(){const s=update();if(!s)return deny('Latch session is no longer current');
++  for(const reason of ['manual','focus','interaction','clock'])clear(reason);
++  return holds.size?deny('Latch interaction is paused: '+[...holds].join(', ')):{ok:true};
++ }
++ function command(id,engage){
++  if(typeof id!=='string'||!ids.has(id)||typeof engage!=='boolean')return deny('Exact nominated latch and boolean command required');
++  const r=ready();if(!r.ok)return r;const s=update();if(s?.doorId!==id)return deny('Move closer to the nominated latch');
++  const cycle=getCycle();if(cycle&&(!cycle.observationValid||['cycling','paused','fault','disposed'].includes(cycle.phase)))return deny('Latch controls are held by the fictional cycle');
++  if(!current())return deny('Latch session changed before command');
++  return runtime.requestLatch(id,engage); // Real reach/closed/stopped checks remain.
++ }
++ return Object.freeze({update,ready,command,pause,clear,hasDoor:id=>ids.has(id),dispose(){if(!disposed){runtime.pauseLatches('dispose');disposed=true;}}});
++}

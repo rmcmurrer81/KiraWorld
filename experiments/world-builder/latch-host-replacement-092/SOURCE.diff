@@ -1,0 +1,61 @@
+--- held091/consumer/app.mjs
++++ isolated092/consumer/app.mjs
+@@ -11,7 +11,20 @@
+ let renderer=null,camera=null,current=null,active=false,dragging=false,pointerId=null,last=null,walkingRevision=0,frame=0,note='',loading=false,closed=false,generation=0;
+ let airlock=null,latches=null;
+ const latchPanel=document.getElementById('latch-panel'),latchReadout=document.getElementById('latch-readout'),latchEngage=document.getElementById('latch-engage'),latchRelease=document.getElementById('latch-release');
+-function disposeLoaded(value){value?.dispose?.();if(value)disposeScene(value.scene);}
++function cleanup(actions){const errors=[];for(const action of actions)try{action();}catch(error){errors.push(error);}return errors;}
++function disposeLoaded(value){return value?cleanup([()=>value.dispose?.(),()=>disposeScene(value.scene)]):[];}
++function retireLoaded(reason){
++ const previous=current,previousAirlock=airlock,previousLatches=latches;
++ // Revoke every host reference before cleanup can throw or synchronously draw.
++ current=null;airlock=null;latches=null;
++ return [...cleanup([()=>previous?.runtime.pauseLatches?.(reason),()=>previousAirlock?.dispose(),()=>previousLatches?.dispose()]),...disposeLoaded(previous)];
++}
++function errorText(error){return error?.message??String(error);}
++function holdPackage(error){
++ const errors=retireLoaded('error');errors.push(...cleanup([()=>stop(),()=>history.reset(),()=>renderer?.clear(),()=>renderer?.dispose(),()=>renderer?.domElement.remove?.()]));renderer=null;camera=null;
++ enter.disabled=true;pause.disabled=true;if(cropPanel)cropPanel.hidden=true;if(latchPanel)latchPanel.hidden=true;if(airlockPanel)airlockPanel.hidden=true;if(stepPanel)stepPanel.hidden=true;
++ status.textContent='Package held: '+errorText(error)+(errors.length?' · cleanup held: '+errors.map(errorText).join('; '):'');
++}
+ const airlockPanel=document.getElementById('airlock-panel'),airlockReadout=document.getElementById('airlock-readout');
+ const cycleButtons=new Map(['seal-inside','seal-outside','begin-inside','begin-outside','resume','cancel'].map(a=>[a,document.getElementById('airlock-'+a)]));
+ const keys=new Set();
+@@ -59,7 +72,7 @@
+  pause.disabled=!active&&!doorMotion.isRunning()&&!airlock?.isRunning();
+ }
+ function stop(reason='manual'){active=false;walkingRevision++;last=null;dragging=false;keys.clear();doorMotion.cancel();airlock?.pause(typeof reason==='string'?reason:'manual');latches?.pause(typeof reason==='string'?reason:'manual');if(pointerId!==null){try{stage.releasePointerCapture(pointerId);}catch{}pointerId=null;}cancelAnimationFrame(frame);enter.textContent='Resume walking';pause.disabled=true;draw();}
+-function draw(){history.update();updateAirlock();updateLatch();updateStepControls();if(closed||!current||!renderer)return;const s=current.runtime.snapshot(),doorLabel=describeNearbyDoor(current.metadata,s);current.applyDoorStates(current.runtime.doorStates(),current.runtime.latchStates?.()??[]);updateCrop(s.roomId);camera.position.set(s.feet[0],s.feet[1]+AVATAR.eye,s.feet[2]);camera.rotation.set(s.pitch,-s.yaw,0,'YXZ');renderer.render(current.scene,camera);status.textContent=`${s.roomName} · ${active?'walking':'paused'}${doorLabel?' · '+doorLabel.target+': '+doorLabel.state:''}\n${note||s.blocked||'Experimental package consumer — visual/input review pending.'}`;}
++function draw(){if(closed||loading)return;history.update();updateAirlock();updateLatch();updateStepControls();if(!current||!renderer)return;const s=current.runtime.snapshot(),doorLabel=describeNearbyDoor(current.metadata,s);current.applyDoorStates(current.runtime.doorStates(),current.runtime.latchStates?.()??[]);updateCrop(s.roomId);camera.position.set(s.feet[0],s.feet[1]+AVATAR.eye,s.feet[2]);camera.rotation.set(s.pitch,-s.yaw,0,'YXZ');renderer.render(current.scene,camera);status.textContent=`${s.roomName} · ${active?'walking':'paused'}${doorLabel?' · '+doorLabel.target+': '+doorLabel.state:''}\n${note||s.blocked||'Experimental package consumer — visual/input review pending.'}`;}
+ for(const [action,button]of actionButtons)button?.addEventListener('click',()=>{
+  if(closed||loading||!current)return;stop();history.close();
+  try{const result=discreteAction(current.runtime,action);note=result.after.blocked&&['forward','backward','left','right'].includes(action)?'Step blocked: '+result.after.blocked:'One '+button.textContent.toLowerCase()+'. Walking is paused.';}catch(e){note=e.message;}draw();
+@@ -86,14 +99,16 @@
+ }
+ enter.addEventListener('click',()=>{if(closed||loading||!current||active)return;latches?.clear('manual');latches?.clear('interaction');latches?.clear('focus');airlock?.pause('interaction');doorMotion.cancel();history.close();active=true;note='';document.activeElement?.blur();last=null;const revision=++walkingRevision;pause.disabled=false;frame=requestAnimationFrame(time=>tick(time,revision));});
+ pause.addEventListener('click',stop);
+-picker.addEventListener('change',async()=>{if(loading||closed)return;const requested=++generation;loading=true;airlock?.dispose();airlock=null;latches?.dispose();latches=null;current?.runtime.pauseLatches?.('replacement');history.reset();picker.disabled=true;if(cropPanel)cropPanel.hidden=true;stop();enter.disabled=true;status.textContent='Verifying and importing the selected package…';
+- try{const files=await readSelectedPackage(picker.files);
++picker.addEventListener('change',async()=>{if(loading||closed)return;const requested=++generation;loading=true;picker.disabled=true;enter.disabled=true;status.textContent='Verifying and importing the selected package…';
++ try{const errors=retireLoaded('replacement');stop();history.reset();if(cropPanel)cropPanel.hidden=true;if(latchPanel)latchPanel.hidden=true;if(airlockPanel)airlockPanel.hidden=true;if(stepPanel)stepPanel.hidden=true;
++  if(errors.length)throw new AggregateError(errors,'Previous package cleanup held: '+errors.map(errorText).join('; '));
++  const files=await readSelectedPackage(picker.files);
+   if(closed||requested!==generation)return;
+-  const next=await loadPackage(files,{isCurrent:()=>!closed&&requested===generation});if(closed||requested!==generation){disposeLoaded(next);return;}disposeLoaded(current);current=next;airlock=createAirlockHost(next,{requestFrame:requestAnimationFrame,cancelFrame:cancelAnimationFrame,onChange:draw,getCurrent:()=>current});latches=createLatchHost(next,{getCurrent:()=>current,getCycle:()=>airlock?.snapshot()??null});
++  const next=await loadPackage(files,{isCurrent:()=>!closed&&requested===generation});if(closed||requested!==generation){const errors=disposeLoaded(next);if(errors.length)console.warn('Stale package cleanup held: '+errors.map(errorText).join('; '));return;}current=next;airlock=createAirlockHost(next,{requestFrame:requestAnimationFrame,cancelFrame:cancelAnimationFrame,onChange:draw,getCurrent:()=>current});latches=createLatchHost(next,{getCurrent:()=>current,getCycle:()=>airlock?.snapshot()??null});
+   if(!renderer){renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.35;stage.append(renderer.domElement);camera=new THREE.PerspectiveCamera(64,1,.06,250);}
+   current.scene.background=new THREE.Color(0x151c26);current.scene.add(new THREE.HemisphereLight(0xbcd3e5,0x2b211e,.35));
+   note='Loaded real exported meshes. Lighting adds a disclosed hemisphere fill; source previews are unchanged.';enter.disabled=false;enter.textContent='Start walking';resize();
+- }catch(e){if(closed||requested!==generation)return;airlock?.dispose();airlock=null;latches?.dispose();latches=null;if(current){disposeLoaded(current);current=null;}if(renderer)renderer.clear();if(cropPanel)cropPanel.hidden=true;status.textContent='Package held: '+e.message;}finally{if(requested===generation){loading=false;if(!closed)picker.disabled=false;draw();}}
++ }catch(e){if(closed||requested!==generation)return;holdPackage(e);}finally{if(requested===generation){loading=false;if(!closed){picker.disabled=false;try{draw();}catch(e){holdPackage(e);}}}}
+ });
+ function resize(){if(!renderer)return;const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();draw();}
+ window.addEventListener('resize',resize);
+@@ -107,5 +122,5 @@
+ function releaseDrag(){dragging=false;if(pointerId!==null){try{stage.releasePointerCapture(pointerId);}catch{}pointerId=null;}}
+ stage.addEventListener('pointerup',releaseDrag);stage.addEventListener('pointercancel',releaseDrag);stage.addEventListener('lostpointercapture',()=>{dragging=false;pointerId=null;});
+ stage.addEventListener('pointermove',e=>{if(active&&dragging)current.runtime.look(e.movementX,e.movementY);});
+-window.addEventListener('pagehide',()=>{generation++;closed=true;loading=false;airlock?.dispose();airlock=null;history.reset();if(cropPanel)cropPanel.hidden=true;stop();latches?.dispose();latches=null;if(current){disposeLoaded(current);current=null;}renderer?.dispose();renderer?.domElement.remove?.();renderer=null;camera=null;enter.disabled=true;picker.disabled=true;picker.value='';});
++window.addEventListener('pagehide',()=>{generation++;closed=true;loading=false;const errors=retireLoaded('close');errors.push(...cleanup([()=>history.reset(),()=>stop(),()=>renderer?.dispose(),()=>renderer?.domElement.remove?.()]));if(cropPanel)cropPanel.hidden=true;if(latchPanel)latchPanel.hidden=true;if(airlockPanel)airlockPanel.hidden=true;if(stepPanel)stepPanel.hidden=true;renderer=null;camera=null;enter.disabled=true;picker.disabled=true;picker.value='';if(errors.length)status.textContent='Session closed · cleanup held: '+errors.map(errorText).join('; ');});
+ window.addEventListener('pageshow',event=>{if(!event.persisted)return;closed=false;note='';picker.disabled=false;enter.disabled=true;enter.textContent='Start walking';status.textContent='Session reset after returning to this page. Select the exported package files again.';});

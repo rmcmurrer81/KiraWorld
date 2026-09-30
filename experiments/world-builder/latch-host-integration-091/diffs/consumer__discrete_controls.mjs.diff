@@ -1,0 +1,40 @@
+--- bound-before/consumer/discrete_controls.mjs
++++ candidate/consumer/discrete_controls.mjs
+@@ -1,12 +1,13 @@
+ // Small user-requested commands over the unchanged portable runtime.
+ import {HATCH} from './door_metadata.mjs';
++import {LATCH_HATCH_CONTRACT} from './shared/latched_metadata.mjs';
+ export const STEP_METERS=.33;
+ export const TURN_RADIANS=Math.PI/12;
+ const finite=n=>typeof n==='number'&&Number.isFinite(n);
+ const inputs=Object.freeze({forward:'forward',backward:'backward',left:'left',right:'right',turnLeft:'turnLeft',turnRight:'turnRight'});
+ export function describeNearbyDoor(metadata,snapshot){
+  const near=snapshot?.nearbyDoor;if(!near)return null;
+- const door=metadata?.doors?.find(d=>d.id===near.id),kind=door?.variant===HATCH?'hatch':'door';
++ const door=metadata?.doors?.find(d=>d.id===near.id),kind=[HATCH,LATCH_HATCH_CONTRACT].includes(door?.variant)?'hatch':'door';
+  const label=id=>metadata?.rooms?.find(r=>r.id===id)?.label||id;
+  let target='nearby '+kind;
+  if(door?.room_ids?.includes(snapshot.roomId))target=kind+' to '+label(door.room_ids.find(id=>id!==snapshot.roomId));
+@@ -37,11 +38,12 @@
+ // or request is scheduled on import, construction, cancellation or completion.
+ export function createDoorMotionSequence({requestFrame,cancelFrame,now,onFrame=()=>{},onDone=()=>{}}){
+  if([requestFrame,cancelFrame,now,onFrame,onDone].some(f=>typeof f!=='function'))throw new TypeError('Frame callbacks are required.');
++ const moving=runtime=>runtime.doorStates().some(d=>d.moving)||(runtime.latchStates?.()??[]).some(s=>!s.fault&&!s.paused&&s.fraction!==s.target);
+  let revision=0,handle=null,running=false;
+  function cancel(){revision++;running=false;if(handle!==null)cancelFrame(handle);handle=null;}
+  function start(runtime){
+   cancel();if(!runtime||typeof runtime.step!=='function'||typeof runtime.doorStates!=='function')throw new TypeError('A door runtime is required.');
+-  if(!runtime.doorStates().some(d=>d.moving))return false;
++  if(!moving(runtime))return false;
+   const started=now();if(!finite(started))throw new TypeError('A finite monotonic clock is required.');
+   const token=revision;let last=null,frames=0;running=true;
+   function finish(reason){if(token!==revision)return;running=false;handle=null;onDone({runtime,reason});}
+@@ -56,7 +58,7 @@
+    if(token!==revision||!running)return;
+    const doors=runtime.doorStates();
+    if(doors.some(d=>d.moving&&d.motionHeld)){finish('occupied');return;}
+-   if(!doors.some(d=>d.moving)){finish('settled');return;}
++   if(!moving(runtime)){finish('settled');return;}
+    handle=requestFrame(tick);
+   }
+   handle=requestFrame(tick);return true;

@@ -1,0 +1,13 @@
+--- bound-before/producer/walk_controller.mjs
++++ candidate/producer/walk_controller.mjs
+@@ -1,7 +1,7 @@
+ import {pressureHatchIds,planPressureHatch,hatchCollidersAt,hatchSwingBounds} from './pressure_hatch.mjs';
+-import {planLatchedPressureHatch,latchHatchCollidersAt,LATCH_HATCH_CONTRACT,LATCH_COLLISION_POLICY} from '../shared/pressure_hatch_latched.mjs';
+-import {createLatchAuthority} from '../shared/latch_state.mjs';
+-import {describeLatchedDoor} from '../shared/latched_metadata.mjs';
++import {planLatchedPressureHatch,latchHatchCollidersAt,LATCH_HATCH_CONTRACT,LATCH_COLLISION_POLICY} from './shared/pressure_hatch_latched.mjs';
++import {createLatchAuthority} from './shared/latch_state.mjs';
++import {describeLatchedDoor} from './shared/latched_metadata.mjs';
+ import {NAVIGATION_CONTRACT, checkWalkSpawn, checkHorizontalRoute} from './horizontal_navigation.mjs';
+ 
+ export const AVATAR = Object.freeze({radius: 0.34, height: 1.68, eye: 1.56});

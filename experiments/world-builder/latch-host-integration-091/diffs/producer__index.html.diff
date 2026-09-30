@@ -1,0 +1,10 @@
+--- bound-before/producer/index.html
++++ candidate/producer/index.html
+@@ -11,6 +11,7 @@
+ <button type="button" data-walk="turnLeft">Turn left</button><button type="button" data-walk="forward">Step forward</button><button type="button" data-walk="turnRight">Turn right</button>
+ <button type="button" data-walk="left">Step left</button><button type="button" data-walk="backward">Step back</button><button type="button" data-walk="right">Step right</button>
+ </div><p class="small">Click to walk in short steps, or hold the keyboard controls. All movement stays on supported floors. Door states last only for this preview session; pressure cycling is not simulated.</p><p id="distance" class="small">Distance walked: 0.0 m</p></details><div class="door-controls"><button id="door-toggle" type="button" disabled>Approach a door · F</button><p id="door-message" class="small" aria-live="polite">Framed doors open and close. Press F when nearby.</p></div></section>
++<section id="hatch-hardware" class="panel" hidden><p id="hatch-hardware-message" aria-live="polite"></p><button id="hatch-engage" type="button">Engage visual latches</button><button id="hatch-release" type="button">Release visual latches</button><button id="hatch-pause" type="button">Pause motion</button><p class="small">Hardware is symbolic. Release before hinge motion. Engagement does not acknowledge a seal or prove pressure safety.</p></section>
+ <section id="status" class="panel" aria-live="polite"><span id="room">Finding the entry room</span><span id="movement">Preparing supported walking…</span></section>
+ <section id="greenhouse-control" class="panel" hidden><details id="crop-details"><summary>Crop module · shade &amp; readings</summary>
+ <p class="small">Illustrative scenario · no live sensors</p><label for="crop-bed">Plant bed</label><select id="crop-bed"></select><p id="crop-description"></p>

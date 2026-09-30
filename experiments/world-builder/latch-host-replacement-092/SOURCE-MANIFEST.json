@@ -1,0 +1,999 @@
+{
+  "status": "ONE_MODULE_SUCCESSOR_OF_HELD091_SOURCE_ONLY",
+  "files": {
+    "candidate/consumer/airlock_cycle.mjs": {
+      "bytes": 12545,
+      "sha256": "9c7b50e026225c98a6df96509ad7b1b2891c2a12790236ef94b0730e14054cce",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/airlock_cycle.mjs",
+        "bytes": 12545,
+        "sha256": "9c7b50e026225c98a6df96509ad7b1b2891c2a12790236ef94b0730e14054cce"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/airlock_cycle.mjs",
+      "installed": false
+    },
+    "candidate/consumer/airlock_host.mjs": {
+      "bytes": 6246,
+      "sha256": "e4d481926ab1dae2fe62ad37c98b2beb16361deb99f2e9263e4e29c2e6c0c518",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/airlock_host.mjs",
+        "bytes": 6246,
+        "sha256": "e4d481926ab1dae2fe62ad37c98b2beb16361deb99f2e9263e4e29c2e6c0c518"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/airlock_host.mjs",
+      "installed": false
+    },
+    "candidate/consumer/app.mjs": {
+      "bytes": 17073,
+      "sha256": "5bab0c241982a7ec3c075f61743238fe76229255178228d8d85df846766bb22c",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/app.mjs",
+        "bytes": 15637,
+        "sha256": "732a098c56f1d7fe0eb1a0f0051024fc48a5f4dd26ea1d34476bd431ca0963c9"
+      },
+      "inherited_unchanged": false,
+      "prospective_target": "isolated-consumer-successor/app.mjs",
+      "installed": false
+    },
+    "candidate/consumer/discrete_controls.mjs": {
+      "bytes": 4237,
+      "sha256": "147caa119306eccf8125a86cbf4393f0938b9eba59f0bba421ac3a07a25f1d93",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/discrete_controls.mjs",
+        "bytes": 4237,
+        "sha256": "147caa119306eccf8125a86cbf4393f0938b9eba59f0bba421ac3a07a25f1d93"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/discrete_controls.mjs",
+      "installed": false
+    },
+    "candidate/consumer/door_metadata.mjs": {
+      "bytes": 6578,
+      "sha256": "fe6c0e5ff5da9e19e08d704519bd086b9781d40a851daaf96ebf0e39b75e26cc",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/door_metadata.mjs",
+        "bytes": 6578,
+        "sha256": "fe6c0e5ff5da9e19e08d704519bd086b9781d40a851daaf96ebf0e39b75e26cc"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/door_metadata.mjs",
+      "installed": false
+    },
+    "candidate/consumer/file_admission.mjs": {
+      "bytes": 1446,
+      "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/file_admission.mjs",
+        "bytes": 1446,
+        "sha256": "9670ca1925fd880cdd49c46410380cd55c09d9e231612e734cc613d1d992d122"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/file_admission.mjs",
+      "installed": false
+    },
+    "candidate/consumer/greenhouse_control.mjs": {
+      "bytes": 2148,
+      "sha256": "f6115a0a8edc44b47290692dfaae13e75bce9652cd8163abb16cea4492a20519",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/greenhouse_control.mjs",
+        "bytes": 2148,
+        "sha256": "f6115a0a8edc44b47290692dfaae13e75bce9652cd8163abb16cea4492a20519"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/greenhouse_control.mjs",
+      "installed": false
+    },
+    "candidate/consumer/history-library.json": {
+      "bytes": 11064,
+      "sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/history-library.json",
+        "bytes": 11064,
+        "sha256": "6bc929885640080694b49518f63721075fa95d3457903827009c8425328c5285"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/history-library.json",
+      "installed": false
+    },
+    "candidate/consumer/history_host.mjs": {
+      "bytes": 2403,
+      "sha256": "b93f24a5af523cf071da6dce0418ed511c0b223d7f556002e94ce89af4c46dbc",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/history_host.mjs",
+        "bytes": 2403,
+        "sha256": "b93f24a5af523cf071da6dce0418ed511c0b223d7f556002e94ce89af4c46dbc"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/history_host.mjs",
+      "installed": false
+    },
+    "candidate/consumer/horizontal_navigation.mjs": {
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/horizontal_navigation.mjs",
+        "bytes": 6406,
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/horizontal_navigation.mjs",
+      "installed": false
+    },
+    "candidate/consumer/index.html": {
+      "bytes": 6901,
+      "sha256": "cdf96024e806e15d68ce0572a569a0bfbc3bdcf14caa761d877f7e38e47ab30a",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/index.html",
+        "bytes": 6901,
+        "sha256": "cdf96024e806e15d68ce0572a569a0bfbc3bdcf14caa761d877f7e38e47ab30a"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/index.html",
+      "installed": false
+    },
+    "candidate/consumer/latch_host.mjs": {
+      "bytes": 2513,
+      "sha256": "a0a791f64ce63ef209a205f0db1f69d87031cd06e1965d3ea630bb1087c425e5",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/latch_host.mjs",
+        "bytes": 2513,
+        "sha256": "a0a791f64ce63ef209a205f0db1f69d87031cd06e1965d3ea630bb1087c425e5"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/latch_host.mjs",
+      "installed": false
+    },
+    "candidate/consumer/mars-history-library.css": {
+      "bytes": 2359,
+      "sha256": "c95810fe028349848900a7f3229ce1fe9aebbf960f0997a08f019f41d6be8756",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/mars-history-library.css",
+        "bytes": 2359,
+        "sha256": "c95810fe028349848900a7f3229ce1fe9aebbf960f0997a08f019f41d6be8756"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/mars-history-library.css",
+      "installed": false
+    },
+    "candidate/consumer/mars-history-library.mjs": {
+      "bytes": 17276,
+      "sha256": "2d378dd5ff63f84c08d63cd96c86ecbdb944828e5b5a492779542d08e5c0a89b",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/mars-history-library.mjs",
+        "bytes": 17276,
+        "sha256": "2d378dd5ff63f84c08d63cd96c86ecbdb944828e5b5a492779542d08e5c0a89b"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/mars-history-library.mjs",
+      "installed": false
+    },
+    "candidate/consumer/package_loader.mjs": {
+      "bytes": 13774,
+      "sha256": "cdc517afe278e7f1fecb865301c738b70e8c94cbd41bc99a0768cb9309ea4c4f",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/package_loader.mjs",
+        "bytes": 13774,
+        "sha256": "cdc517afe278e7f1fecb865301c738b70e8c94cbd41bc99a0768cb9309ea4c4f"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/package_loader.mjs",
+      "installed": false
+    },
+    "candidate/consumer/reviewed_latched_packages.mjs": {
+      "bytes": 369,
+      "sha256": "e1873e4e099c87c2ae675a8da033dd36ef0d8bbb9aaa8464c549da9dc2003b8d",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/reviewed_latched_packages.mjs",
+        "bytes": 369,
+        "sha256": "e1873e4e099c87c2ae675a8da033dd36ef0d8bbb9aaa8464c549da9dc2003b8d"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/reviewed_latched_packages.mjs",
+      "installed": false
+    },
+    "candidate/consumer/runtime.mjs": {
+      "bytes": 14803,
+      "sha256": "8d5e6b8bae7178362ab0e41e4876e43990bd50dda33da02daf87c21fc3bc4094",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/runtime.mjs",
+        "bytes": 14803,
+        "sha256": "8d5e6b8bae7178362ab0e41e4876e43990bd50dda33da02daf87c21fc3bc4094"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/runtime.mjs",
+      "installed": false
+    },
+    "candidate/consumer/scene_disposal.mjs": {
+      "bytes": 654,
+      "sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/scene_disposal.mjs",
+        "bytes": 654,
+        "sha256": "e7aebe8f11c596eb3f3e4f504e9dcc7dbe179d745a93265f5e7eadc14056c7c6"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/scene_disposal.mjs",
+      "installed": false
+    },
+    "candidate/consumer/serve.py": {
+      "bytes": 655,
+      "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/serve.py",
+        "bytes": 655,
+        "sha256": "1bfc58f4d39f66d76da59f225cecfcd0fb2f3da1cc1fcb98471e76dd0194fddb"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/serve.py",
+      "installed": false
+    },
+    "candidate/consumer/shared/latch_state.mjs": {
+      "bytes": 4208,
+      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/shared/latch_state.mjs",
+        "bytes": 4208,
+        "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/shared/latch_state.mjs",
+      "installed": false
+    },
+    "candidate/consumer/shared/latch_visual.mjs": {
+      "bytes": 12111,
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/shared/latch_visual.mjs",
+        "bytes": 12111,
+        "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/shared/latch_visual.mjs",
+      "installed": false
+    },
+    "candidate/consumer/shared/latched_hatch_mesh_binding.mjs": {
+      "bytes": 15111,
+      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/shared/latched_hatch_mesh_binding.mjs",
+        "bytes": 15111,
+        "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/shared/latched_hatch_mesh_binding.mjs",
+      "installed": false
+    },
+    "candidate/consumer/shared/latched_metadata.mjs": {
+      "bytes": 8870,
+      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/shared/latched_metadata.mjs",
+        "bytes": 8870,
+        "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/shared/latched_metadata.mjs",
+      "installed": false
+    },
+    "candidate/consumer/shared/latched_scene_binding.mjs": {
+      "bytes": 3641,
+      "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/shared/latched_scene_binding.mjs",
+        "bytes": 3641,
+        "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/shared/latched_scene_binding.mjs",
+      "installed": false
+    },
+    "candidate/consumer/shared/legacy/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/shared/legacy/pressure_hatch.mjs",
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/shared/legacy/pressure_hatch.mjs",
+      "installed": false
+    },
+    "candidate/consumer/shared/pressure_hatch_latched.mjs": {
+      "bytes": 9685,
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/consumer/shared/pressure_hatch_latched.mjs",
+        "bytes": 9685,
+        "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "isolated-consumer-successor/shared/pressure_hatch_latched.mjs",
+      "installed": false
+    },
+    "candidate/producer/greenhouse.mjs": {
+      "bytes": 14885,
+      "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/greenhouse.mjs",
+        "bytes": 14885,
+        "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/greenhouse.mjs",
+      "installed": false
+    },
+    "candidate/producer/hatch_preflight.mjs": {
+      "bytes": 1104,
+      "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/hatch_preflight.mjs",
+        "bytes": 1104,
+        "sha256": "a7332e411c9daa5a6276634889592d7dd7d7ac7356787611bd8957399b124eee"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/hatch_preflight.mjs",
+      "installed": false
+    },
+    "candidate/producer/horizontal_navigation.mjs": {
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/horizontal_navigation.mjs",
+        "bytes": 6406,
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/horizontal_navigation.mjs",
+      "installed": false
+    },
+    "candidate/producer/index.html": {
+      "bytes": 3373,
+      "sha256": "6d5265d4f6b82f2836595d8b14ee2b1afd7346851e3707d9c32530410f4ab87c",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/index.html",
+        "bytes": 3373,
+        "sha256": "6d5265d4f6b82f2836595d8b14ee2b1afd7346851e3707d9c32530410f4ab87c"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/index.html",
+      "installed": false
+    },
+    "candidate/producer/latched_hatch_preflight.mjs": {
+      "bytes": 1208,
+      "sha256": "53d513ada4d72caf5cd7d84e429a1843edc2b463e0a8a71763d944e4717e1252",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/latched_hatch_preflight.mjs",
+        "bytes": 1208,
+        "sha256": "53d513ada4d72caf5cd7d84e429a1843edc2b463e0a8a71763d944e4717e1252"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/latched_hatch_preflight.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_airlock_policy.py": {
+      "bytes": 3351,
+      "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_airlock_policy.py",
+        "bytes": 3351,
+        "sha256": "2db450cf7751ea4479fdb57f8dd216073460583cf636333ae64cd45c73f30c19"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_airlock_policy.py",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/authored_scene.mjs": {
+      "bytes": 9651,
+      "sha256": "29cb20c4ec4ba1ea5fa40db7c5a67ae966a3a478c3562654976cbefb93c3ed1c",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/authored_scene.mjs",
+        "bytes": 9651,
+        "sha256": "29cb20c4ec4ba1ea5fa40db7c5a67ae966a3a478c3562654976cbefb93c3ed1c"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/authored_scene.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/build_glb.mjs": {
+      "bytes": 16598,
+      "sha256": "274f6c0dffedd0a300fd6afc9fa205bef89993dbea050364a4a5d323c21d55e9",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/build_glb.mjs",
+        "bytes": 16598,
+        "sha256": "274f6c0dffedd0a300fd6afc9fa205bef89993dbea050364a4a5d323c21d55e9"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/build_glb.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/canvas_lifetime.mjs": {
+      "bytes": 2094,
+      "sha256": "62b775b5b204ea4b8b4203717acd7d9bcd5736506a11ffb9aaf020722ab06733",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/canvas_lifetime.mjs",
+        "bytes": 2094,
+        "sha256": "62b775b5b204ea4b8b4203717acd7d9bcd5736506a11ffb9aaf020722ab06733"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/canvas_lifetime.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/cpu_canvas.mjs": {
+      "bytes": 2912,
+      "sha256": "ecdcfacb33f881d7f46dbdbeab31cf2529f31e1f8eaa275fe041ac6184b3f15c",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/cpu_canvas.mjs",
+        "bytes": 2912,
+        "sha256": "ecdcfacb33f881d7f46dbdbeab31cf2529f31e1f8eaa275fe041ac6184b3f15c"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/cpu_canvas.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/PRODUCER-PINS.json": {
+      "bytes": 6518,
+      "sha256": "328772dd4d83ff05dbbb20ac75f2a6d8af34ef0215ce3ffff17086d04543d60f",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/PRODUCER-PINS.json",
+        "bytes": 6518,
+        "sha256": "328772dd4d83ff05dbbb20ac75f2a6d8af34ef0215ce3ffff17086d04543d60f"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/PRODUCER-PINS.json",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/airlock_policy.mjs": {
+      "bytes": 2523,
+      "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/airlock_policy.mjs",
+        "bytes": 2523,
+        "sha256": "b941f826e64676ba9417253b46adabf3ad267e3b189b4c8f7de8f878948b2f15"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/airlock_policy.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/greenhouse.mjs": {
+      "bytes": 14885,
+      "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/greenhouse.mjs",
+        "bytes": 14885,
+        "sha256": "de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/greenhouse.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/horizontal_navigation.mjs": {
+      "bytes": 6406,
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/horizontal_navigation.mjs",
+        "bytes": 6406,
+        "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/horizontal_navigation.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/mars_reference.mjs": {
+      "bytes": 2487,
+      "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/mars_reference.mjs",
+        "bytes": 2487,
+        "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/mars_reference.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/pressure_hatch.mjs",
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/pressure_hatch_architecture.mjs": {
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/pressure_hatch_architecture.mjs",
+        "bytes": 9874,
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch_architecture.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/pressure_hatch_metadata.mjs": {
+      "bytes": 4165,
+      "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/pressure_hatch_metadata.mjs",
+        "bytes": 4165,
+        "sha256": "98977de2fd82cd4585d13dde06ca27e7d7e3874658a0f5995bd7eecb8ddb9344"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/pressure_hatch_metadata.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/room_dressing_plan.mjs": {
+      "bytes": 13367,
+      "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/room_dressing_plan.mjs",
+        "bytes": 13367,
+        "sha256": "75571175d4075cf35161c6a3c9d0e3b65ded90efc6ff7abf4cbadf47e858ca4d"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/room_dressing_plan.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/room_dressing_render.mjs": {
+      "bytes": 52065,
+      "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/room_dressing_render.mjs",
+        "bytes": 52065,
+        "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/room_dressing_render.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/room_monitors.mjs": {
+      "bytes": 6209,
+      "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/room_monitors.mjs",
+        "bytes": 6209,
+        "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/room_monitors.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/scene_metadata.mjs": {
+      "bytes": 18880,
+      "sha256": "5763a325a7572f172eaa88e612cee954f609f3fda28652f97d8c0ec8535c4bf2",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/scene_metadata.mjs",
+        "bytes": 18880,
+        "sha256": "5763a325a7572f172eaa88e612cee954f609f3fda28652f97d8c0ec8535c4bf2"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/scene_metadata.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latch_state.mjs": {
+      "bytes": 4208,
+      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/latch_state.mjs",
+        "bytes": 4208,
+        "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latch_state.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latch_visual.mjs": {
+      "bytes": 12111,
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/latch_visual.mjs",
+        "bytes": 12111,
+        "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latch_visual.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latched_hatch_mesh_binding.mjs": {
+      "bytes": 15111,
+      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/latched_hatch_mesh_binding.mjs",
+        "bytes": 15111,
+        "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latched_hatch_mesh_binding.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latched_metadata.mjs": {
+      "bytes": 8870,
+      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/latched_metadata.mjs",
+        "bytes": 8870,
+        "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latched_metadata.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/latched_scene_binding.mjs": {
+      "bytes": 3641,
+      "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/latched_scene_binding.mjs",
+        "bytes": 3641,
+        "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/latched_scene_binding.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/legacy/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/legacy/pressure_hatch.mjs",
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/legacy/pressure_hatch.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/pressure_hatch_latched.mjs": {
+      "bytes": 9685,
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/pressure_hatch_latched.mjs",
+        "bytes": 9685,
+        "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/pressure_hatch_latched.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/shared/versioned_hatch_architecture.mjs": {
+      "bytes": 1487,
+      "sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/shared/versioned_hatch_architecture.mjs",
+        "bytes": 1487,
+        "sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/shared/versioned_hatch_architecture.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source/walk_controller.mjs": {
+      "bytes": 24910,
+      "sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source/walk_controller.mjs",
+        "bytes": 24910,
+        "sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source/walk_controller.mjs",
+      "installed": false
+    },
+    "candidate/producer/layout_package_assets/source_bindings.py": {
+      "bytes": 12098,
+      "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_assets/source_bindings.py",
+        "bytes": 12098,
+        "sha256": "74132fedfd9455ba84e55948fe9a6c1080f81bc56530d5af4f2a5bfbc91f27c2"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_assets/source_bindings.py",
+      "installed": false
+    },
+    "candidate/producer/layout_package_export.py": {
+      "bytes": 12901,
+      "sha256": "b867ed5580cff875759cc5e4767628cfcd6da7c9b18e8010e7d5281f3e864fae",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_package_export.py",
+        "bytes": 12901,
+        "sha256": "b867ed5580cff875759cc5e4767628cfcd6da7c9b18e8010e7d5281f3e864fae"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_package_export.py",
+      "installed": false
+    },
+    "candidate/producer/layout_recipe_profile.py": {
+      "bytes": 5578,
+      "sha256": "e87af188e315a243e49191a07c4414278b39e5c338f7dd78d200436fbed08268",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/layout_recipe_profile.py",
+        "bytes": 5578,
+        "sha256": "e87af188e315a243e49191a07c4414278b39e5c338f7dd78d200436fbed08268"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/layout_recipe_profile.py",
+      "installed": false
+    },
+    "candidate/producer/mars_reference.mjs": {
+      "bytes": 2487,
+      "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/mars_reference.mjs",
+        "bytes": 2487,
+        "sha256": "a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/mars_reference.mjs",
+      "installed": false
+    },
+    "candidate/producer/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/pressure_hatch.mjs",
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/pressure_hatch.mjs",
+      "installed": false
+    },
+    "candidate/producer/pressure_hatch_architecture.mjs": {
+      "bytes": 9874,
+      "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/pressure_hatch_architecture.mjs",
+        "bytes": 9874,
+        "sha256": "63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/pressure_hatch_architecture.mjs",
+      "installed": false
+    },
+    "candidate/producer/room_monitors.mjs": {
+      "bytes": 6209,
+      "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/room_monitors.mjs",
+        "bytes": 6209,
+        "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/room_monitors.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/latch_state.mjs": {
+      "bytes": 4208,
+      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/latch_state.mjs",
+        "bytes": 4208,
+        "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/latch_state.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/latch_visual.mjs": {
+      "bytes": 12111,
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/latch_visual.mjs",
+        "bytes": 12111,
+        "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/latch_visual.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/latched_hatch_mesh_binding.mjs": {
+      "bytes": 15111,
+      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/latched_hatch_mesh_binding.mjs",
+        "bytes": 15111,
+        "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/latched_hatch_mesh_binding.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/latched_metadata.mjs": {
+      "bytes": 8870,
+      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/latched_metadata.mjs",
+        "bytes": 8870,
+        "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/latched_metadata.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/latched_scene_binding.mjs": {
+      "bytes": 3641,
+      "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/latched_scene_binding.mjs",
+        "bytes": 3641,
+        "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/latched_scene_binding.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/legacy/pressure_hatch.mjs": {
+      "bytes": 16212,
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/legacy/pressure_hatch.mjs",
+        "bytes": 16212,
+        "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/legacy/pressure_hatch.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/pressure_hatch_latched.mjs": {
+      "bytes": 9685,
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/pressure_hatch_latched.mjs",
+        "bytes": 9685,
+        "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/pressure_hatch_latched.mjs",
+      "installed": false
+    },
+    "candidate/producer/shared/versioned_hatch_architecture.mjs": {
+      "bytes": 1487,
+      "sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/shared/versioned_hatch_architecture.mjs",
+        "bytes": 1487,
+        "sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/shared/versioned_hatch_architecture.mjs",
+      "installed": false
+    },
+    "candidate/producer/style.css": {
+      "bytes": 4033,
+      "sha256": "e20f56ad9a93804c182bddbc891d8ea20c921f4ee352cdb7a5899f2cf90ec588",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/style.css",
+        "bytes": 4033,
+        "sha256": "e20f56ad9a93804c182bddbc891d8ea20c921f4ee352cdb7a5899f2cf90ec588"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/style.css",
+      "installed": false
+    },
+    "candidate/producer/viewer.mjs": {
+      "bytes": 81577,
+      "sha256": "d708033ec523fe0fb745b63f141938f905cec881a5ff02eb8d918b247bc1ba33",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/viewer.mjs",
+        "bytes": 81577,
+        "sha256": "d708033ec523fe0fb745b63f141938f905cec881a5ff02eb8d918b247bc1ba33"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/viewer.mjs",
+      "installed": false
+    },
+    "candidate/producer/walk_controller.mjs": {
+      "bytes": 24910,
+      "sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/walk_controller.mjs",
+        "bytes": 24910,
+        "sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/walk_controller.mjs",
+      "installed": false
+    },
+    "candidate/producer/world_layout_preview.py": {
+      "bytes": 36084,
+      "sha256": "af3e00797d140bd600f03aa011d329eedaf2f2ab9fb4931e2e8c79ac6983beac",
+      "origin": {
+        "delivery": "world-latch-host-integration-091",
+        "path": "candidate/producer/world_layout_preview.py",
+        "bytes": 36084,
+        "sha256": "af3e00797d140bd600f03aa011d329eedaf2f2ab9fb4931e2e8c79ac6983beac"
+      },
+      "inherited_unchanged": true,
+      "prospective_target": "tools/world_builder_engine/world_layout_preview.py",
+      "installed": false
+    }
+  },
+  "changed": [
+    "candidate/consumer/app.mjs"
+  ],
+  "source_rows": 76,
+  "new_v2_admission_rows": 0,
+  "installed": false
+}

@@ -1,0 +1,82 @@
+{
+  "tests": 12,
+  "failed_probes": 0,
+  "observations": [
+    {
+      "name": "exact prospective profile includes every new source and only unchanged vendor/external rows",
+      "status": "PASS",
+      "local_profile_rows": 25,
+      "preserved_vendor_rows": 7,
+      "shared_mirrors": 8
+    },
+    {
+      "name": "all changed modules parse without invoking an application, exporter or server",
+      "status": "PASS",
+      "modules": 64
+    },
+    {
+      "name": "v2 table rejects null, empty, malformed and purported exact identities",
+      "status": "PASS",
+      "rows": 0
+    },
+    {
+      "name": "unreviewed package fails before payload or GLB parsing",
+      "status": "PASS",
+      "GLB_parses": 0,
+      "images_decoded": 0
+    },
+    {
+      "name": "projection maintains strict whole-scene ownership for metadata and structural tamper",
+      "status": "PASS",
+      "tamper_cases": 6
+    },
+    {
+      "name": "semantic decoration restoration survives rejection and rejects undeclared extras",
+      "status": "PASS",
+      "undeclared_extra_rejected": true,
+      "original_data_objects_restored": true
+    },
+    {
+      "name": "host denies stale identity even if its current observer throws once then recovers",
+      "status": "PASS",
+      "terminal_retirement": true
+    },
+    {
+      "name": "stationary sequence clock fault does not schedule a callback and cannot replay a retired generation",
+      "status": "PASS",
+      "invalid_clock_held": true,
+      "stale_callback_inert": true
+    },
+    {
+      "name": "actual app resumes file selection after an initial import error with no renderer or media",
+      "status": "PASS",
+      "initial_error_recoverable": true
+    },
+    {
+      "name": "actual app replacement reproduces the revoked-loader-identity lock before second import",
+      "status": "PASS",
+      "finding": "F1",
+      "second_import_not_reached": true,
+      "file_picker_locked": true,
+      "error_before_try": true,
+      "real_loader_predicate_connected": true
+    },
+    {
+      "name": "actual app replaces legacy synthetic session without a v2 mesh identity guard",
+      "status": "PASS",
+      "scope_is_new_v2_binding": true
+    },
+    {
+      "name": "actual app main close retires connected loader identity and stale walking frames",
+      "status": "PASS",
+      "pagehide_terminal": true,
+      "return_requires_new_selection": true
+    }
+  ],
+  "failures": [],
+  "limits": [
+    "Artificial metadata and mesh fixtures only",
+    "Actual app source uses inherited inert DOM/renderer/RAF infrastructure",
+    "No serialized or native output validated"
+  ]
+}

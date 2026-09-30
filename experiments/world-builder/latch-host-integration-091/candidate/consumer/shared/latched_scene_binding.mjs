@@ -1,0 +1,43 @@
+// Semantic extras are validated and separated from exact090 authored part data.
+// This binds an already admitted scene. It grants no package/hash admission.
+import {buildNormalizedHatch,bindNormalizedHatch} from './latched_hatch_mesh_binding.mjs';
+import {planLatchedPressureHatch} from './pressure_hatch_latched.mjs';
+import {describeLatchedDoor,validateLatchedDoor} from './latched_metadata.mjs';
+const need=(ok,message)=>{if(!ok)throw new TypeError(message);};
+const canon=v=>Array.isArray(v)?v.map(canon):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canon(v[k])])):v;
+const same=(a,b)=>JSON.stringify(canon(a))===JSON.stringify(canon(b));
+function decorate(binding,projection){
+ for(const n of projection.nodes){const mesh=binding.meshes.get(n.hatch_part_id);need(mesh,'Missing exact authored part');
+  mesh.userData.metadata_node_id=n.id;mesh.userData.collider_ids=projection.colliders.filter(c=>c.owner_node_id===n.id).map(c=>c.id);
+ }
+ const hinge=binding.root.children.find(o=>o.name.endsWith('_hinge_normalized'));need(hinge,'Missing normalized hinge');
+ hinge.userData={door_id:projection.door.id,closed_angle:0,open_angle:projection.door.hinge.open_angle,airlock_pair_ids:[...projection.door.interlock_pair_ids],variant:projection.door.variant};
+ return binding;
+}
+export function buildSemanticLatchedHatch({THREE,geometry,portalId,doorId,isCurrent}){
+ const plan=planLatchedPressureHatch(geometry,portalId),projection=describeLatchedDoor(geometry,portalId);
+ need(plan,'Expected paired hatch');const binding=buildNormalizedHatch({THREE,plan,doorId,isCurrent});
+ try{return decorate(binding,projection);}catch(error){binding.dispose();throw error;}
+}
+export function bindSemanticLatchedHatch({THREE,root,door,metadata,isCurrent}){
+ const nodes=new Map(metadata.nodes.map(n=>[n.id,n])),colliders=new Map(metadata.colliders.map(c=>[c.id,c]));
+ validateLatchedDoor(door,nodes,colliders,metadata);
+ const plan=planLatchedPressureHatch(door.authoring.input,door.portal_id),projection=describeLatchedDoor(door.authoring.input,door.portal_id);
+ const saved=[];let binding;
+ try{
+  // GLTFLoader contributes `name`; authored_scene contributes stable export IDs.
+  // Only those exact decorations are stripped for090's immutable recipe check.
+  const all=[];root.traverse(o=>{if(o.isMesh)all.push(o);});need(all.length===projection.nodes.length,'Unexpected semantic mesh closure');
+  for(const mesh of all){const data=mesh.userData,n=projection.nodes.find(n=>n.hatch_part_id===mesh.name);need(n,'Unclaimed v2 mesh');
+   const links=projection.colliders.filter(c=>c.owner_node_id===n.id).map(c=>c.id);
+   need(data.metadata_node_id===n.id&&same(data.collider_ids,links),'V2 semantic ownership differs');
+   if(Object.hasOwn(data,'export_id'))need(typeof data.export_id==='string'&&/^object_[0-9]{4,6}$/.test(data.export_id),'Invalid export identity');
+   if(Object.hasOwn(data,'name'))need(data.name===mesh.name,'Imported part name differs');
+   const cleaned={...data};for(const key of ['metadata_node_id','collider_ids','export_id','name'])delete cleaned[key];
+   saved.push([mesh,data]);mesh.userData=cleaned;
+  }
+  const hinge=root.children.find(o=>o.name.endsWith('_hinge_normalized'));
+  need(hinge?.userData.door_id===door.id&&hinge.userData.variant===door.variant&&hinge.userData.closed_angle===0&&hinge.userData.open_angle===door.hinge.open_angle&&same(hinge.userData.airlock_pair_ids,door.interlock_pair_ids),'V2 hinge semantic policy differs');
+  binding=bindNormalizedHatch({THREE,root,plan,doorId:door.id,isCurrent});return binding;
+ }finally{for(const [mesh,data]of saved)mesh.userData=data;}
+}

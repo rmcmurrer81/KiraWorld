@@ -1,0 +1,9 @@
+--- bound-before/consumer/reviewed_latched_packages.mjs
++++ candidate/consumer/reviewed_latched_packages.mjs
+@@ -0,0 +1,6 @@
++// Deliberately EMPTY. Add an immutable exact row only after real export/readback
++// and independent source/package review. A source-only CPU fixture is not a row.
++export const REVIEWED_LATCHED_PACKAGES=Object.freeze([]);
++export function reviewedLatchedPackage(manifestSha256){
++ return REVIEWED_LATCHED_PACKAGES.find(row=>row.manifest_sha256===manifestSha256)??null;
++}

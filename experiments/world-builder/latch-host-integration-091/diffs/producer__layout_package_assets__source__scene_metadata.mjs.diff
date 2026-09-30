@@ -1,0 +1,35 @@
+--- bound-before/producer/layout_package_assets/source/scene_metadata.mjs
++++ candidate/producer/layout_package_assets/source/scene_metadata.mjs
+@@ -1,6 +1,8 @@
+ import {greenhouseEnvelopeFor,createGreenhouseScenario} from './greenhouse.mjs';
+ import {describePressureHatch} from './pressure_hatch_metadata.mjs';
+-import {planHatchArchitecture} from './pressure_hatch_architecture.mjs';
++import {planVersionedHatchArchitecture as planHatchArchitecture} from './shared/versioned_hatch_architecture.mjs';
++import {describeLatchedDoor,LATCH_HATCH_CONTRACT} from './shared/latched_metadata.mjs';
++import {validateLatchedHatchPlan} from './shared/pressure_hatch_latched.mjs';
+ // Pure metadata projection: no files, network, renderer, geometry synthesis or models.
+ import {buildAirlockPolicy} from './airlock_policy.mjs';
+ export const SCENE_METADATA_CONTRACT='world_scene_metadata_v2';
+@@ -103,6 +105,13 @@
+   id(p.id);require(!portalMap.has(p.id),'Duplicate portal');member(p.room_a);member(p.room_b);portalMap.set(p.id,p);
+  }
+  const doors=list(doorDefinitions,24).map(d=>{
++  if(d.kind==='pressure_hatch'&&d.variant===LATCH_HATCH_CONTRACT){
++   const plan=validateLatchedHatchPlan(d.hatchPlan,geometry,d.portalId),projected=describeLatchedDoor(geometry,d.portalId),portal=portalMap.get(d.portalId);
++   require(d.id===d.portalId&&d.roomAId===portal.room_a&&d.roomBId===portal.room_b&&equal(d.hinge,plan.hinge)&&d.openAngle===plan.openAngle&&d.closedAngle===0&&equal(d.rotationAxis,[0,1,0])&&equal(d.swingBounds,plan.swingBounds)&&d.collisionPolicy===plan.collisionPolicy&&d.angularSpeed===Math.PI*1.25&&d.maxStepSeconds===.05&&d.interactionReach===2.25&&d.initialState==='closed'&&d.statePersistence==='session_local'&&d.pressureSimulation===false&&d.latchState==='released','V2 definition differs from source controller');
++   for(const n of projected.nodes){require(addId('node',n.id.slice(5))===n.id,'V2 node identity differs');node(structuredClone(n));}
++   for(const c of projected.colliders){require(addId('collider',c.id.slice(9))===c.id,'V2 collider identity differs');colliders.push(structuredClone(c));}
++   require(addId('door',d.id)===projected.door.id,'V2 door identity differs');return structuredClone(projected.door);
++  }
+   if(d.kind==='pressure_hatch'){
+    const projected=describePressureHatch(geometry,d,{node,addId,member});colliders.push(...projected.colliders);return projected.door;
+   }
+@@ -154,7 +163,7 @@
+  const requiredDoors=[...portalMap.values()].filter(p=>p.state==='open_passage'&&roomMap.get(p.room_a).access==='walkable_layout'&&roomMap.get(p.room_b).access==='walkable_layout');
+  require(requiredDoors.length===doors.length&&requiredDoors.every(p=>doors.some(d=>d.portal_id===p.id)),'Door definitions do not cover the source portals');
+  const airlockPairs=buildAirlockPolicy(geometry,doors,nodes,doorInterlocks);
+- for(const door of doors){door.interlock_pair_ids=airlockPairs.filter(p=>p.door_ids.includes(door.id)).map(p=>p.id);if(door.interlock_pair_ids.length)door.interaction.rules.push('paired_airlock_peer_closed_stopped');}
++ for(const door of doors){door.interlock_pair_ids=airlockPairs.filter(p=>p.door_ids.includes(door.id)).map(p=>p.id);if(door.interlock_pair_ids.length&&!door.interaction.rules.includes('paired_airlock_peer_closed_stopped'))door.interaction.rules.push('paired_airlock_peer_closed_stopped');}
+  const entry=member(geometry.connectivity?.entry_room_id),entryRoom=roomMap.get(geometry.connectivity.entry_room_id);require(entryRoom.access==='walkable_layout','Entry room is locked');
+  const result={contract:SCENE_METADATA_CONTRACT,scene_id:sceneId,coordinate_system:{units:'meters',handedness:'right',up:'+Y',forward:'-Z',rotation_angles:'radians'},
+   rooms,nodes,colliders,doors,airlock_pairs:airlockPairs,

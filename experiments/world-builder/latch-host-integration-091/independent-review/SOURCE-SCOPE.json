@@ -1,0 +1,69 @@
+{
+  "frozen_payloads": 221,
+  "source_rows": 76,
+  "reviewed_delta_rows": 25,
+  "public_source_delta_rows": 24,
+  "public_retained_preimages": 15,
+  "public_exact_diffs": 24,
+  "changed_source_paths": [
+    "candidate/consumer/airlock_host.mjs",
+    "candidate/consumer/app.mjs",
+    "candidate/consumer/discrete_controls.mjs",
+    "candidate/consumer/door_metadata.mjs",
+    "candidate/consumer/index.html",
+    "candidate/consumer/package_loader.mjs",
+    "candidate/consumer/runtime.mjs",
+    "candidate/producer/index.html",
+    "candidate/producer/layout_package_assets/authored_scene.mjs",
+    "candidate/producer/layout_package_assets/build_glb.mjs",
+    "candidate/producer/layout_package_assets/PRODUCER-PINS.json",
+    "candidate/producer/layout_package_assets/source/scene_metadata.mjs",
+    "candidate/producer/layout_package_assets/source/walk_controller.mjs",
+    "candidate/producer/layout_package_export.py",
+    "candidate/producer/viewer.mjs",
+    "candidate/producer/walk_controller.mjs",
+    "candidate/producer/world_layout_preview.py"
+  ],
+  "added_source_paths": [
+    "candidate/consumer/latch_host.mjs",
+    "candidate/consumer/reviewed_latched_packages.mjs",
+    "candidate/consumer/shared/latched_scene_binding.mjs",
+    "candidate/producer/latched_hatch_preflight.mjs",
+    "candidate/producer/layout_package_assets/source/shared/latched_scene_binding.mjs",
+    "candidate/producer/layout_package_assets/source/shared/versioned_hatch_architecture.mjs",
+    "candidate/producer/shared/latched_scene_binding.mjs",
+    "candidate/producer/shared/versioned_hatch_architecture.mjs"
+  ],
+  "excluded_hash_provenance": [
+    {
+      "source_relative": "candidate/producer/world_layout_preview.py",
+      "sha256": "af3e00797d140bd600f03aa011d329eedaf2f2ab9fb4931e2e8c79ac6983beac",
+      "bytes": 36084,
+      "reason": "Owner-specific relative asset locator; frozen original preserved privately, no public replacement or redaction authored"
+    },
+    {
+      "source_relative": "before/producer/world_layout_preview.py",
+      "sha256": "87e3ad211e47a6a08fbb0caf5cb4a0f1fc450c22e17dcb202c2b09c260fa09db",
+      "bytes": 33330,
+      "reason": "Owner-specific relative asset locator; frozen original preserved privately, no public replacement or redaction authored"
+    },
+    {
+      "source_relative": "diffs/producer__world_layout_preview.py.diff",
+      "sha256": "938c5474049c4afe69cce2865e1afa1f594ef286efef60f3bdc15ded44a9ebac",
+      "bytes": 11103,
+      "reason": "Owner-specific relative asset locator; frozen original preserved privately, no public replacement or redaction authored"
+    }
+  ],
+  "missing_retained_preimage": {
+    "source_relative": "candidate/producer/walk_controller.mjs",
+    "bound_baseline": {
+      "sha256": "fde1af2a477b84ae9f465a451efe62641cd286c3fcf97edd669d82d1789951ee",
+      "bytes": 24913
+    },
+    "diff_header": "bound-before/producer/walk_controller.mjs",
+    "retained_preimage_present": false,
+    "no_reconstruction_or_guess": true
+  },
+  "independent_status": "HOLD_FOR_NARROW_V2_REPLACEMENT_ERROR_RECOVERY_CORRECTION",
+  "new_v2_admission_rows": 0
+}

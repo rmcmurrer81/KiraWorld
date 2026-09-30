@@ -1,0 +1,77 @@
+{
+  "tests": 8,
+  "failed_probes": 0,
+  "observations": [
+    {
+      "name": "v2 replacement while walking and latch callbacks survive focus/visibility changes and duplicate selection",
+      "status": "PASS",
+      "connected_real_loader_predicate": true,
+      "retained_callbacks": 2,
+      "old_world_never_redrawn": true,
+      "duplicate_pending_selection_inert": true
+    },
+    {
+      "name": "import rejection followed by camera initialization error followed by fresh successful selection",
+      "status": "PASS",
+      "errors_contained_in_order": 2,
+      "fresh_renderer_and_camera": true,
+      "selection_unlocked_after_each_error": true
+    },
+    {
+      "name": "simultaneous replacement pause loaded destructor and scene destructor faults remain visibly held",
+      "status": "PASS",
+      "cleanup_faults": 3,
+      "next_import_not_started": true,
+      "complete_resource_release_claim": false,
+      "only_reviewer_artificial_cleanup_after_observation": true
+    },
+    {
+      "name": "BFCache reset and new pending selection do not revive an old returned package with throwing destructors",
+      "status": "PASS",
+      "old_generation_stays_revoked_after_closed_false": true,
+      "new_pending_selection_preserved": true,
+      "stale_cleanup_faults_explicitly_held": true,
+      "complete_stale_release_claim": false
+    },
+    {
+      "name": "renderer resize failure plus clear and disposal faults attempts DOM removal then retries with a fresh renderer",
+      "status": "PASS",
+      "failed_renderer_retired_from_host": true,
+      "destructor_faults": 2,
+      "DOM_removal_attempted": true,
+      "fresh_renderer_created": true,
+      "first_renderer_freed_not_proven": true
+    },
+    {
+      "name": "late rejected import cannot overwrite a healthy session selected after main close and persisted return",
+      "status": "PASS",
+      "old_rejection_inert_after_new_session": true,
+      "no_stale_error_UI": true
+    },
+    {
+      "name": "final mesh draw failure revokes controls despite synchronous disposal focus callbacks and fresh selection succeeds",
+      "status": "PASS",
+      "synchronous_cleanup_callbacks_contained": true,
+      "failed_mesh_never_left_walkable": true,
+      "fresh_selection_after_final_draw_error": true
+    },
+    {
+      "name": "strict v2 to legacy fixture to v2 replacement keeps old walking callbacks inert and v2 admissions empty",
+      "status": "PASS",
+      "mixed_fixture_transitions": 2,
+      "old_walking_callbacks_inert": true,
+      "new_v2_admission_rows": 0,
+      "actual_package_imports": 0
+    }
+  ],
+  "failures": [],
+  "author_tests_replayed": false,
+  "actual_app_source": true,
+  "actual_loader_predicate_connected_to_real_runtime_and_strict_mesh": true,
+  "fixture_utilities": "Frozen092 inert harness and artificial real-mesh fixture; no author test entry executed",
+  "limits": [
+    "Synthetic schedules and real CPU mesh bindings only",
+    "No package verifier, file admission, GLTFLoader parser, export, image decode, browser or server",
+    "Faulting resource destructors remain held, not proven complete"
+  ]
+}

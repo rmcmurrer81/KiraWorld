@@ -1,0 +1,21 @@
+// Explicit v2 -> unchanged v1 aperture projection. No old allowlist is widened.
+import {planPressureHatch} from './legacy/pressure_hatch.mjs';
+import {LATCH_HATCH_CONTRACT,describeLatchedHatchAuthoring,validateLatchedHatchPlan} from './pressure_hatch_latched.mjs';
+import {planHatchArchitecture} from '../pressure_hatch_architecture.mjs';
+const need=(ok,message)=>{if(!ok)throw new TypeError(message);};
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+export function planVersionedHatchArchitecture(geometry,plans){
+ need(Array.isArray(plans)&&plans.length<=24,'Bounded hatch plans required');
+ const legacy=plans.map(plan=>{
+  if(plan?.contract==='authored_pressure_hatch_geometry_v1')return plan;
+  need(plan?.contract===LATCH_HATCH_CONTRACT,'Unknown versioned hatch plan');
+  // A producer/export mirror has a different module WeakMap. Recompute and
+  // compare the complete recipe before creating this mirror's owned plan.
+  plan=validateLatchedHatchPlan(plan,geometry,plan.portalId);
+  describeLatchedHatchAuthoring(plan); // Only locally recomputed, owned v2 plans.
+  const old=planPressureHatch(geometry,plan.portalId);need(old,'V2 hatch lacks its original aperture');
+  for(const key of ['id','portalId','axis','normalSign','origin','hinge','hingeLocal','openAngle','aperture','leafWidth','leafHeight','localLeafCenter','limits'])need(same(plan[key],old[key]),'V2 structural recipe differs: '+key);
+  return old;
+ });
+ return planHatchArchitecture(geometry,legacy);
+}

@@ -1,0 +1,56 @@
+--- bound-before/producer/layout_package_export.py
++++ candidate/producer/layout_package_export.py
+@@ -11,17 +11,7 @@
+ PROJECT=Path(__file__).resolve().parents[2]
+ ASSETS=Path(__file__).resolve().with_name('layout_package_assets')
+ CONTRACT='authored_saved_layout_package_v2'
+-RENDERER={
+- 'viewer.mjs':'cfd9ed6aabb2b9d4fdd31713c6a7cabe900fa1984757c91efe8442e63da451c8',
+- 'walk_controller.mjs':'b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398',
+- 'horizontal_navigation.mjs':'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7',
+- 'three.module.js':'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a',
+- 'three.core.js':'eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20',
+- 'pressure_hatch.mjs':'b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b',
+- 'pressure_hatch_architecture.mjs':'63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c',
+- 'greenhouse.mjs':'de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88',
+- 'mars_reference.mjs':'a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16',
+- 'room_monitors.mjs':'c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca'}
++RENDERER={'viewer.mjs': 'd708033ec523fe0fb745b63f141938f905cec881a5ff02eb8d918b247bc1ba33', 'walk_controller.mjs': '478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e', 'horizontal_navigation.mjs': 'bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7', 'pressure_hatch.mjs': 'b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b', 'pressure_hatch_architecture.mjs': '63d0d3fbf8632dbf09a6d4c71619b92f38a82bd54d7b80837213f65d3c3da98c', 'greenhouse.mjs': 'de95069bafefe216d332dcc395fc711cce9e66b7cdeb9f78bac77fe45d2ebe88', 'mars_reference.mjs': 'a75377227aacd56fb65122e4a980199527078691c55a5350876ff5f0e3e7bb16', 'room_monitors.mjs': 'c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca', 'shared/latch_state.mjs': '0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a', 'shared/latch_visual.mjs': '2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e', 'shared/latched_hatch_mesh_binding.mjs': 'cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23', 'shared/latched_metadata.mjs': 'a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966', 'shared/latched_scene_binding.mjs': 'ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4', 'shared/legacy/pressure_hatch.mjs': 'b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b', 'shared/pressure_hatch_latched.mjs': '9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf', 'shared/versioned_hatch_architecture.mjs': 'fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754', 'three.module.js': 'c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a', 'three.core.js': 'eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20'}
+ CAPABILITIES={'experimental':True,'authored_meshes':True,'embedded_textures':True,'door_hinge_hierarchy':True,'linked_collider_metadata':True,'airlock_pair_policy_metadata':True,
+  'engine_native_interaction':False,'engine_native_collision':False,'pressure_simulation':False,'vr_runtime':False,'visual_or_owner_approval':False}
+ 
+@@ -54,7 +44,7 @@
+  try:
+   eligibility=validate_recipe_profile(geometry,bindings.parse(bindings.exact(sources['blueprint'])),sources['research_packet']['sha256'])
+  except RecipeUnsupported as exc:raise ExportHeld(exc.status,str(exc)) from exc
+- return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin,'eligibility':eligibility,'presentation':manifest.get('presentation_setting')}
++ return {'job':job,'selection':selected,'geometry':geometry,'sources':sources,'input_pin':input_pin,'eligibility':eligibility,'presentation':manifest.get('presentation_setting'),'hatch_variant':manifest.get('hatch_variant','legacy_v1')}
+ 
+ def default_dependencies():
+  canvas=Path(os.environ.get('KIRA_CPU_CANVAS_MODULE') or Path.home()/'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas')
+@@ -97,7 +87,7 @@
+     'dressing_recipe':pins['files']['source/room_dressing_plan.mjs']['sha256'],
+     'door_controller':pins['files']['source/walk_controller.mjs']['sha256']}}
+   request={'geometry':prepared['geometry'],'presentation':prepared['presentation'],'options':opts,'output':str(target),
+-   'canvasModule':str(Path(loc['canvas-package']).parent),
++   'hatchVariant':prepared['hatch_variant'],'canvasModule':str(Path(loc['canvas-package']).parent),
+    'fontPaths':[[str(loc['font-segoe-regular']),'Segoe UI'],[str(loc['font-segoe-semibold']),'Segoe UI'],[str(loc['font-monospace']),'Consolas']]}
+   target.mkdir(exist_ok=False);output=target
+   run=subprocess.run([str(loc['node']),str(ASSETS/'build_glb.mjs')],input=bindings.canonical(request),
+@@ -114,6 +104,7 @@
+   report=bindings.parse(bindings.read(target/'ROUNDTRIP.json'))
+   require(report.get('status')=='CPU_AUTHORED_GLB_EXPORT_IMPORT_PASS' and report.get('glb_sha256')==sha(target/'scene.glb'),
+    'export_failed','The exported asset did not pass its importer checks.')
++  require(report.get('hatch_variant')==prepared['hatch_variant'],'hatch_recipe_changed','Exported hatch recipe differs from the selected preview.')
+   require(report.get('presentation_setting')==prepared['presentation'],'presentation_changed','The exported presentation does not match the selected immutable preview.')
+   scene=bindings.parse(bindings.read(target/'scene.json'))
+   try:
+@@ -127,7 +118,7 @@
+   result={'contract':CONTRACT,'status':'created','scene_id':opts['sceneId'],'source_bindings_manifest_sha256':prepared['input_pin']['sha256'],
+    'verified_source_digests':bindings.portable_pins(prepared['sources']),'producer_digests':pins,
+    'airlock_pair_policy':pairs,'preview_controller_sha256':RENDERER['walk_controller.mjs'],
+-   'recipe_eligibility':prepared['eligibility'],'presentation_setting':prepared['presentation'],
++   'recipe_eligibility':prepared['eligibility'],'presentation_setting':prepared['presentation'],'hatch_variant':prepared['hatch_variant'],
+    'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in target.iterdir()},'capabilities':CAPABILITIES,
+    'research_regenerated':False,'model_jobs':0,'sources_modified':False}
+   result['receipt_sha256']=seal(result);write_json(target/'manifest.json',result)

@@ -1,0 +1,72 @@
+--- bound-before/producer/layout_package_assets/build_glb.mjs
++++ candidate/producer/layout_package_assets/build_glb.mjs
+@@ -10,10 +10,13 @@
+ import {buildRoomDressing} from './source/room_dressing_plan.mjs';
+ import {createDoorSystem} from './source/walk_controller.mjs';
+ import {exportSceneMetadata,canonicalSceneMetadata} from './source/scene_metadata.mjs';
++import {LATCH_HATCH_CONTRACT} from './source/shared/latched_metadata.mjs';
++import {bindSemanticLatchedHatch} from './source/shared/latched_scene_binding.mjs';
+ 
+ const req=JSON.parse(fs.readFileSync(0,'utf8'));
+ assert.ok(req.options&&!req.metadata,'Only source-bound metadata generation is accepted');
+-const definedDoors=createDoorSystem(req.geometry),definedPlan=buildRoomDressing(req.geometry,createDoorSystem(req.geometry,{hatchGeometry:false}).assemblies());
++assert.ok(['legacy_v1','latched_v2'].includes(req.hatchVariant??'legacy_v1'),'Unsupported explicit hatch recipe');
++const definedDoors=createDoorSystem(req.geometry,{hatchVariant:req.hatchVariant??'legacy_v1'}),definedPlan=buildRoomDressing(req.geometry,createDoorSystem(req.geometry,{hatchGeometry:false}).assemblies());
+ const described=exportSceneMetadata(req.geometry,definedPlan,definedDoors.definitions(),{...req.options,doorInterlocks:definedDoors.interlocks()});
+ req.metadata={...described,provenance:{...described.provenance,binding_verification:'actual_bound_bytes_verified_by_package_writer',
+  source_chain_verification:'geometry_to_blueprint_to_research_packet_and_cache_digests',factual_or_visual_approval:false}};
+@@ -45,7 +48,9 @@
+   for(const step of [0,4,8]){
+     if(step===4){assert.ok(doors.toggle(def.id,feet).ok);for(let i=0;i<4;i++)doors.advance(.05,feet);}
+     if(step===8)for(let i=0;i<4;i++)doors.advance(.05,feet);
+-    const actual=doors.all().find(d=>d.id===def.id);built.hinges.get(def.id).rotation.y=actual.angle;scene.updateMatrixWorld(true);
++    const actual=doors.all().find(d=>d.id===def.id);
++    if(def.variant===LATCH_HATCH_CONTRACT)assert.ok(built.latchedBindings.get(def.id).apply(doors.latchStates().find(s=>s.id===def.id),actual).ok,'V2 pose application failed');
++    else built.hinges.get(def.id).rotation.y=actual.angle;scene.updateMatrixWorld(true);
+     const leaf=built.leafMeshes.get(def.id);
+     if(def.kind==='pressure_hatch')close(new THREE.Box3().setFromObject(leaf,true).getCenter(new THREE.Vector3()).toArray(),actual.center);
+     else close(leaf.getWorldPosition(new THREE.Vector3()).toArray(),actual.center);
+@@ -64,7 +69,8 @@
+   // leaf open would correctly prevent its airlock peer from opening.
+   assert.ok(doors.toggle(def.id,feet).ok);for(let i=0;i<8;i++)doors.advance(.05,feet);
+   assert.equal(doors.all().find(d=>d.id===def.id).state,'closed');
+-  built.hinges.get(def.id).rotation.y=0;doorEvidence.push({door_id:def.id,samples,frames_static:true,closed_after_sample:true});
++  if(def.variant===LATCH_HATCH_CONTRACT)assert.ok(built.latchedBindings.get(def.id).apply(doors.latchStates().find(s=>s.id===def.id),doors.all().find(s=>s.id===def.id)).ok);
++  else built.hinges.get(def.id).rotation.y=0;doorEvidence.push({door_id:def.id,samples,frames_static:true,closed_after_sample:true});
+ }
+ scene.updateMatrixWorld(true);
+ const before=inventory(scene),beforeBounds=bounds(scene);
+@@ -112,13 +118,22 @@
+   assert.equal(pair.leaf_node_ids.length,2);assert.equal(new Set(pair.leaf_node_ids).size,2);
+   for(let i=0;i<2;i++){
+     const leaf=roundtripSemantic.get(pair.leaf_node_ids[i]),description=req.metadata.doors.find(d=>d.id===pair.door_ids[i]);
+-    const pivot=description?.variant==='authored_pressure_hatch_geometry_v1'?leaf?.parent:leaf?.parent?.parent;
++    const pivot=[LATCH_HATCH_CONTRACT,'authored_pressure_hatch_geometry_v1'].includes(description?.variant)?leaf?.parent:leaf?.parent?.parent;
+     assert.ok(leaf&&pivot);assert.equal(pivot.userData.door_id,pair.door_ids[i]);assert.ok(pivot.userData.airlock_pair_ids.includes(pair.id));
+   }
+ }
+ for(const c of req.metadata.colliders){assert.ok(roundtripSemantic.get(c.owner_node_id)?.userData.collider_ids.includes(c.id),'Collider link lost');}
+ for(const room of req.metadata.rooms){const restored=[...after.values()].find(o=>o.userData.room_id===room.id);assert.ok(restored);assert.deepEqual(restored.userData.bounds,room.bounds);}
+-for(const d of req.metadata.doors){const pivot=[...after.values()].find(o=>o.userData.door_id===d.id),leaf=roundtripSemantic.get(d.leaf_node_id);assert.ok(pivot&&leaf);if(d.variant==='authored_pressure_hatch_geometry_v1'){
++const latchRoundtripEvidence=[];
++for(const d of req.metadata.doors){const pivot=[...after.values()].find(o=>o.userData.door_id===d.id),leaf=roundtripSemantic.get(d.leaf_node_id);assert.ok(pivot&&leaf);if(d.variant===LATCH_HATCH_CONTRACT){
++    const restored=bindSemanticLatchedHatch({THREE,root:pivot.parent,door:d,metadata:req.metadata,isCurrent:()=>true}),original=built.latchedBindings.get(d.portal_id),state=()=>doors.latchStates().find(s=>s.id===d.portal_id),pose=()=>doors.all().find(s=>s.id===d.portal_id);
++    const port=req.geometry.portals.find(p=>p.id===d.portal_id),normal=port.axis==='x'?0:2,middle=[...pose().center];let feet=null;
++    for(const sign of [-1,1]){const trial=[...middle];trial[1]=0;trial[normal]=port.coordinate+sign*1.05;if(!(trial[normal]+.34>=d.swing_bounds.min[normal]&&trial[normal]-.34<=d.swing_bounds.max[normal])){feet=trial;break;}}assert.ok(feet);
++    const latchPoses=[];for(const engage of [true,false]){assert.ok(doors.requestLatch(d.portal_id,engage,feet).ok);for(let i=0;i<=16;i++){if(i)doors.advance(.05,feet);const snap=state(),p={...pose(),id:d.id};assert.ok(original.apply(snap,pose()).ok);assert.ok(restored.apply({...snap,id:d.id},p).ok);for(const [id,m]of original.meshes)close(bounds(m),bounds(restored.meshes.get(id)));latchPoses.push(snap.fraction);}}
++    latchRoundtripEvidence.push({door_id:d.id,latch_samples:latchPoses,geometry_and_articulation_admission:true});
++    for(const angle of [0,d.hinge.open_angle/2,d.hinge.open_angle]){const p={...pose(),angle,target:angle===0?0:d.hinge.open_angle,moving:angle!==0&&angle!==d.hinge.open_angle,motionHeld:false};assert.ok(original.apply(state(),p).ok);assert.ok(restored.apply({...state(),id:d.id},{...p,id:d.id}).ok);close(bounds(leaf),bounds(built.leafMeshes.get(d.portal_id)));}
++    assert.ok(original.apply(state(),pose()).ok);assert.ok(restored.apply({...state(),id:d.id},{...pose(),id:d.id}).ok);continue;
++  }if(d.variant==='authored_pressure_hatch_geometry_v1'){
+     assert.equal(leaf.parent,pivot);assert.equal(d.hinge.leaf_geometry_origin,'hinge_local');close(leaf.position.toArray(),[0,0,0]);
+     for(const id of [...d.frame_node_ids,...d.kinematic_node_ids])assert.ok(roundtripSemantic.has(id),'Hatch part lost');
+     for(const id of d.kinematic_node_ids)assert.equal(roundtripSemantic.get(id).parent,pivot,'Hatch moving part lost hinge');
+@@ -130,7 +145,7 @@
+ const report={status:'CPU_AUTHORED_GLB_EXPORT_IMPORT_PASS',three_revision:THREE.REVISION,glb_sha256:digest(binary),glb_bytes:binary.length,
+   counts:{objects:before.size,meshes:meshCount,materials:uniqueMaterials.size,textures:uniqueTextures.size,embedded_pngs:gltf.images.length,rooms:req.metadata.rooms.length,semantic_nodes:roundtripSemantic.size,colliders:req.metadata.colliders.length,doors:doorEvidence.length},
+   scene_bounds:beforeBounds,checks:{geometry_attributes_exact:attributeComparisons,index_arrays_exact:meshCount,material_parameter_pairs:materialComparisons,texture_effective_pixels_repeat_wrap_colorspace:textureComparisons,punctual_light_parameters_and_direction:lightComparisons,door_controller_samples:doorEvidence,importer_door_poses:18,all_collider_links:true,room_bounds_preserved:true,airlock_pair_metadata_preserved:true,airlock_pairs:req.metadata.airlock_pairs},
+-  presentation_setting:req.presentation??null,
++  hatch_variant:req.hatchVariant??'legacy_v1',latched_roundtrip_checks:latchRoundtripEvidence,presentation_setting:req.presentation??null,
+   extensions:gltf.extensionsUsed,webgl_gpu_browser_calls:0,installed:false,visual_or_owner_approval:false,
+   limits:['No engine-native interaction/collision implementation or VR adapter.','CPU font rasterization is not browser-pixel-identical.','Hemisphere fill, background, ACES tone mapping/exposure, polygon offset, depthWrite and dynamic indicator colors are not glTF appearance guarantees.','Static equipment remains procedural. No pressure, science or medical simulation.']};
+ fs.writeFileSync(path.join(req.output,'scene.json'),canonicalSceneMetadata(req.metadata)+'\n',{flag:'wx'});

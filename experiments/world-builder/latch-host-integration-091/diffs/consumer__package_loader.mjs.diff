@@ -1,0 +1,81 @@
+--- bound-before/consumer/package_loader.mjs
++++ candidate/consumer/package_loader.mjs
+@@ -1,5 +1,8 @@
+ import {bindGreenhouse} from './greenhouse_control.mjs';
+ import {HATCH} from './door_metadata.mjs';
++import {LATCH_HATCH_CONTRACT} from './shared/latched_metadata.mjs';
++import {bindSemanticLatchedHatch} from './shared/latched_scene_binding.mjs';
++import {reviewedLatchedPackage} from './reviewed_latched_packages.mjs';
+ import * as THREE from './vendor/three/build/three.module.js';
+ import {GLTFLoader} from './vendor/three/examples/jsm/loaders/GLTFLoader.js';
+ import {validateMetadata,require,createRuntime} from './runtime.mjs';
+@@ -25,10 +28,12 @@
+   ['9ca7416c9e6b45d23b009cf070964ca56462b60392520370cd525a90df01c40e','0884cce50d33a66e4a974a76fc7a0a15947bcb776f130b1b0a81b43adef76791'],
+   ['bf7f0934f473b5ad7b0a50f2577c50995f94d3880db30835b4bf0194bdd074cc','b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398']]);
+  const manifestSha256=await sha(files.get('manifest.json'));
+- require(admitted.has(manifestSha256)&&admitted.get(manifestSha256)===manifest.preview_controller_sha256,'Package is outside the two reviewed source closures');
++ const latchedAdmission=reviewedLatchedPackage(manifestSha256),legacyAdmission=admitted.has(manifestSha256)&&admitted.get(manifestSha256)===manifest.preview_controller_sha256;
++ require(legacyAdmission||Boolean(latchedAdmission&&latchedAdmission.preview_controller_sha256===manifest.preview_controller_sha256&&same(latchedAdmission.producer_digests,manifest.producer_digests)&&latchedAdmission.scene_sha256===manifest.files?.['scene.json']?.sha256&&latchedAdmission.glb_sha256===manifest.files?.['scene.glb']?.sha256),'Package is outside the exact reviewed source closures');
+  require(same(Object.keys(manifest.files||{}).sort(),PACKAGE_FILES.filter(n=>n!=='manifest.json').sort()),'Unexpected file binding');
+  for(const [name,pin] of Object.entries(manifest.files)){const b=files.get(name);require(b.byteLength===pin.bytes&&await sha(b)===pin.sha256,'Package hash mismatch: '+name);}
+  const metadata=JSON.parse(decoder.decode(files.get('scene.json')));validateMetadata(metadata);
++ require(Boolean(latchedAdmission)===metadata.doors.some(d=>d.variant===LATCH_HATCH_CONTRACT),'Package admission and hatch contract differ');
+  require(manifest.scene_id===metadata.scene_id&&same(manifest.airlock_pair_policy,metadata.airlock_pairs),'Package and metadata identity/policy differ');
+  const bytes=files.get('scene.glb'),view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);
+  require(bytes.byteLength>=28&&view.getUint32(0,true)===0x46546c67&&view.getUint32(4,true)===2&&view.getUint32(8,true)===bytes.byteLength,'Invalid GLB header');
+@@ -57,7 +62,7 @@
+  require((json.meshes?.length||0)<=4096&&(json.nodes?.length||0)<=8192,'Oversized GLB scene');
+  return {manifest,metadata,glb:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),glbJSON:json,embeddedImageBudget:{images:json.images.length,pixels:imagePixels},manifestSha256:await sha(files.get('manifest.json'))};
+ }
+-export function bindScene(scene,metadata){
++export function bindScene(scene,metadata,{isCurrent=()=>true}={}){
+  const {nodes,rooms}=validateMetadata(metadata),objects=new Map(),hinges=new Map(),roomObjects=new Map(),policy=[];
+  scene.updateMatrixWorld(true);
+  scene.traverse(o=>{
+@@ -72,12 +77,16 @@
+  const expectedLinks=new Map();for(const c of metadata.colliders){const list=expectedLinks.get(c.owner_node_id)||[];list.push(c.id);expectedLinks.set(c.owner_node_id,list);}
+  for(const [id,o] of objects)require(same([...(o.userData.collider_ids||[])].sort(),(expectedLinks.get(id)||[]).sort()),'GLB collider owner differs: '+id);
+  require(hinges.size===metadata.doors.length,'GLB hinge count differs');
+- const fixedFrames=new Map(),leafObjects=new Map();
++ const fixedFrames=new Map(),leafObjects=new Map(),latchedBindings=new Map();
+  for(const d of metadata.doors){
+   const pivot=hinges.get(d.id),leaf=objects.get(d.leaf_node_id),h=d.hinge;
+   require(pivot&&leaf?.isMesh,'Missing declared hinge or leaf');
+   require(close(pivot.position.toArray(),h.position)&&close(pivot.quaternion.toArray(),[0,0,0,1])&&close(pivot.scale.toArray(),[1,1,1]),'GLB hinge/local transforms differ');
+   require(pivot.userData.closed_angle===0&&pivot.userData.open_angle===h.open_angle&&same(pivot.userData.airlock_pair_ids,d.interlock_pair_ids),'GLB hinge policy differs');
++  if(d.variant===LATCH_HATCH_CONTRACT){
++   const root=pivot.parent;require(root&&root.userData.normalizedHatch?.portalId===d.portal_id,'Missing exact v2 hatch root');
++   const binding=bindSemanticLatchedHatch({THREE,root,door:d,metadata,isCurrent});latchedBindings.set(d.id,binding);leafObjects.set(d.id,leaf);continue;
++  }
+   if(d.variant===HATCH){
+    require(pivot.userData.variant===HATCH,'GLB hatch variant differs');
+    for(const id of d.kinematic_node_ids){const part=objects.get(id),n=nodes.get(id);
+@@ -99,18 +108,22 @@
+    fixedFrames.set(id,[...frame.matrixWorld.elements]);}
+   leafObjects.set(d.id,leaf);
+  }
+- function applyDoorStates(states){
++ function applyDoorStates(states,latchStates=[]){
++  try{
++  require(Array.isArray(states),'Door observations must be an array');
+   require(states.length===hinges.size,'Door state count mismatch');const seen=new Set();
+   for(const s of states){const d=metadata.doors.find(d=>d.id===s.id);require(d&&!seen.has(s.id)&&Number.isFinite(s.angle)&&s.angle>=Math.min(0,d.hinge.open_angle)-1e-8&&s.angle<=Math.max(0,d.hinge.open_angle)+1e-8,'Invalid door state');seen.add(s.id);}
+-  for(const s of states)hinges.get(s.id).rotation.y=s.angle;
++  require(Array.isArray(latchStates)&&latchStates.length===latchedBindings.size&&new Set(latchStates.map(s=>s.id)).size===latchedBindings.size,'Exact v2 latch observation closure required');
++  for(const s of states){if(latchedBindings.has(s.id)){const snap=latchStates.find(l=>l.id===s.id);require(snap&&latchedBindings.get(s.id).apply(snap,s).ok,'V2 mesh observation or lifecycle held');}else hinges.get(s.id).rotation.y=s.angle;}
+   scene.updateMatrixWorld(true);
+   for(const [id,matrix] of fixedFrames)require(close(objects.get(id).matrixWorld.elements,matrix),'A fixed frame moved with the door');
++  }catch(error){for(const b of latchedBindings.values())b.dispose();throw error;}
+  }
+- return {scene,hinges,leafObjects,objects,applyDoorStates,greenhouse:bindGreenhouse(scene,metadata)};
++ return {scene,hinges,leafObjects,objects,applyDoorStates,latchedBindings,disposeBindings(){for(const b of latchedBindings.values())b.dispose();},greenhouse:bindGreenhouse(scene,metadata)};
+ }
+-export async function loadPackage(files){
++export async function loadPackage(files,{isCurrent=()=>true}={}){
+  const verified=await verifyPackage(files),loaded=await new GLTFLoader().parseAsync(verified.glb,'');
+- try{const binding=bindScene(loaded.scene,verified.metadata),runtime=createRuntime(verified.metadata);
+-  binding.applyDoorStates(runtime.doorStates());return {...verified,...binding,runtime};
++ try{let disposed=false;const current=()=>!disposed&&isCurrent()===true,binding=bindScene(loaded.scene,verified.metadata,{isCurrent:current}),runtime=createRuntime(verified.metadata,{isCurrent:current});
++  binding.applyDoorStates(runtime.doorStates(),runtime.latchStates());return {...verified,...binding,runtime,dispose(){if(!disposed){disposed=true;runtime.dispose();binding.disposeBindings();}}};
+  }catch(error){disposeScene(loaded.scene);throw error;}
+ }

@@ -1,0 +1,19 @@
+--- bound-before/consumer/airlock_host.mjs
++++ candidate/consumer/airlock_host.mjs
+@@ -1,4 +1,5 @@
+ import {bindAirlockCycle,createAirlockCycle} from './airlock_cycle.mjs';
++import {reviewedLatchedPackage} from './reviewed_latched_packages.mjs';
+ // These explicit nominations describe the two already admitted packages, not a
+ // generic guess from room order/name. "mars" is an internal081 symbolic enum;
+ // this UI ALWAYS calls that side Equipment Vestibule, never Mars exterior.
+@@ -8,7 +9,9 @@
+ // Legacy package has no UI nomination; its underlying paired-door interlock is
+ // preserved. This sidecar does not widen loader/source admission.
+ export function createAirlockHost(loaded,{requestFrame,cancelFrame,onChange=()=>{},getCurrent=()=>loaded}={}){
+- const nomination=nominations.get(loaded?.manifestSha256);
++ const reviewed=reviewedLatchedPackage(loaded?.manifestSha256);
++ const nomination=nominations.get(loaded?.manifestSha256)??reviewed?.airlock_nomination;
++ if(reviewed&&!nomination)throw new TypeError('New v2 package requires exact reviewed side nomination');
+  if(!nomination)return null;
+  const runtime=loaded.runtime,metadata=loaded.metadata;
+  const binding=bindAirlockCycle(metadata,{...nomination,manifestSha256:loaded.manifestSha256,sceneSha256:loaded.manifest.files['scene.json'].sha256,roleAssignment:'explicit_fictional_habitat_mars'});

@@ -1,0 +1,86 @@
+{
+  "schema": "world.public-independent-review/v1",
+  "status": "HOLD_FOR_NARROW_V2_REPLACEMENT_ERROR_RECOVERY_CORRECTION",
+  "original_review_sha256": "d02ff7d2cddf4562ffea4a470ae6f1a99a5ec794801b0d42040850eee66bb008",
+  "candidate_delivery": {
+    "bytes": 1391,
+    "sha256": "761db61f85a0cdcc59b8a7b00cfdad59e86c6e6fea88df48f6796d2b25df0af1"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P2",
+      "file": "candidate/consumer/app.mjs",
+      "line": 89,
+      "summary": "Replacing a loaded v2 world revokes its loader identity before stop() draws it; mesh retirement throws outside the import try/finally and permanently locks file selection until page reset.",
+      "chain": [
+        "++generation invalidates previous loadPackage isCurrent",
+        "stop() invokes draw()",
+        "draw() calls old applyDoorStates while loading=true",
+        "strict old mesh binding retires and throws",
+        "throw precedes line90 try/finally",
+        "loading stays true; picker stays disabled; later selection returns without import"
+      ],
+      "reproduced": true,
+      "second_import_not_reached": true,
+      "legacy_comparison_not_affected": true,
+      "required_successor_evidence": [
+        "Keep generation revocation and stale callback retirement exact",
+        "Avoid rendering a revoked package during replacement and contain cleanup/import initialization errors",
+        "Connect the real loader isCurrent predicate to both runtime and mesh bindings in app regression fixtures",
+        "Check actual v2-to-v2 success, second-import failure/retry and close-during-replacement without widening the empty admission table"
+      ]
+    }
+  ],
+  "tests": {
+    "distinct_synthetic_probes": 12,
+    "failed_review_probes": 0,
+    "adverse_behavior_reproduced": 1,
+    "author15_batch_replayed": false,
+    "inherited_inert_DOM_renderer_RAF_harness": true,
+    "actual_app_source": true,
+    "real_load_predicate_connected": true
+  },
+  "resource": {
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 1.082622000016272,
+    "peak_family_rss_including_monitor": 268804096,
+    "minimum_available_ram": 15095402496,
+    "remaining_owned_pids": [],
+    "failure": null,
+    "changed_protected_or_review_inputs": [],
+    "protected_files_unchanged": 949,
+    "review_inputs_unchanged": 6,
+    "caps": {
+      "start_ram": 5368709120,
+      "family_rss": 858993459,
+      "reserve": 3221225472,
+      "deadline_seconds": 45,
+      "node_old_space_mib": 128
+    },
+    "models": 0,
+    "weights_opened": false,
+    "native_UI_servers": 0,
+    "GLB_export_or_parse_calls": 0,
+    "image_decode_calls": 0
+  },
+  "owner_or_canonical_changed": false,
+  "new_package_or_admission": false,
+  "GLB_export_or_parse": 0,
+  "image_decode": 0,
+  "native_UI_or_models": 0,
+  "limits": [
+    "Source-only original deltas and synthetic CPU observations; not a complete standalone runnable test/package delivery",
+    "World091 remains held for reproduced replacement failure; World092 is a narrow source/CPU successor only",
+    "New v2 package admission table remains empty; old073/083 identities remain immutable",
+    "No new authoring job, source-bound preview, actual GLB export, parser/readback, image decoding or native saved-world integration proved",
+    "Throwing destructors remain cleanup held; successful retry or reference removal does not prove resource release",
+    "World056 remains installed; no canonical installation or owner world changed",
+    "Hardware engagement, geometric closure and fictional pressure/seal/cycle labels remain separate; outside leads Equipment Vestibule",
+    "No physical pressure/containment, final hatch art, headset comfort, narration, likeness or model retraining claim",
+    "No execution grant, install/promotion/admission/publication authorization is created by this backup",
+    "One owner-path-bearing source row, its retained preimage and exact diff are withheld with hash provenance; no complete public source closure or portable replacement is claimed"
+  ],
+  "sanitization": "Selected original review fields; no protected receipt/map, local paths, raw stderr or runtime identity copied"
+}

@@ -1,0 +1,75 @@
+--- bound-before/producer/layout_package_assets/PRODUCER-PINS.json
++++ candidate/producer/layout_package_assets/PRODUCER-PINS.json
+@@ -2,12 +2,12 @@
+   "contract": "layout_package_producer_pins_v1",
+   "files": {
+     "authored_scene.mjs": {
+-      "bytes": 8411,
+-      "sha256": "d787a356f8a1411c9a0ad52db301fcc93fad413e359329c72e12bffc8ea43e12"
++      "bytes": 9651,
++      "sha256": "29cb20c4ec4ba1ea5fa40db7c5a67ae966a3a478c3562654976cbefb93c3ed1c"
+     },
+     "build_glb.mjs": {
+-      "bytes": 14040,
+-      "sha256": "81f7f31475d98fe74a6749b904d12e46c2356207d6b55551132762d4f9dfb4b7"
++      "bytes": 16598,
++      "sha256": "274f6c0dffedd0a300fd6afc9fa205bef89993dbea050364a4a5d323c21d55e9"
+     },
+     "cpu_canvas.mjs": {
+       "bytes": 2912,
+@@ -30,12 +30,12 @@
+       "sha256": "c1be135cd7fd9091cdc7b22bd002ce93008c84dea40874e77f21fe8f5fdf59bb"
+     },
+     "source/scene_metadata.mjs": {
+-      "bytes": 17442,
+-      "sha256": "72888b0a1024059fbcfe18946fb2e9a4f18dc2dbbac32bd7c2bbea74af14a110"
++      "bytes": 18880,
++      "sha256": "5763a325a7572f172eaa88e612cee954f609f3fda28652f97d8c0ec8535c4bf2"
+     },
+     "source/walk_controller.mjs": {
+-      "bytes": 21634,
+-      "sha256": "b5bf6021f87e2cf20a09a6ccde84e2e380b38fc41759f4b958bbb44af4272398"
++      "bytes": 24910,
++      "sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e"
+     },
+     "source_bindings.py": {
+       "bytes": 12098,
+@@ -96,6 +96,38 @@
+     "source/room_monitors.mjs": {
+       "bytes": 6209,
+       "sha256": "c0cd62a8c0d74ecf22320762586e448d643cf7eb95dfec91644516789149afca"
++    },
++    "source/shared/latched_hatch_mesh_binding.mjs": {
++      "bytes": 15111,
++      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23"
++    },
++    "source/shared/latched_metadata.mjs": {
++      "bytes": 8870,
++      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966"
++    },
++    "source/shared/latched_scene_binding.mjs": {
++      "bytes": 3641,
++      "sha256": "ac8079feb97d4e662b24399c29874b60e793c3bc87b5b646c76f53db5d3ae8d4"
++    },
++    "source/shared/latch_state.mjs": {
++      "bytes": 4208,
++      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a"
++    },
++    "source/shared/latch_visual.mjs": {
++      "bytes": 12111,
++      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e"
++    },
++    "source/shared/pressure_hatch_latched.mjs": {
++      "bytes": 9685,
++      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf"
++    },
++    "source/shared/versioned_hatch_architecture.mjs": {
++      "bytes": 1487,
++      "sha256": "fd04d43d1d3e9d4e5d9ae8bc64eea0c31a514ef5c19b39bd437cd068c4575754"
++    },
++    "source/shared/legacy/pressure_hatch.mjs": {
++      "bytes": 16212,
++      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b"
+     }
+   },
+   "external": {
