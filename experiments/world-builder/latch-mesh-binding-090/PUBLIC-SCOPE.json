@@ -1,0 +1,63 @@
+{
+  "status": "REVIEWED_ISOLATED_SOURCE_NOT_INSTALLED_OR_FULLY_INTEGRATED",
+  "source_files": {
+    "candidate/consumer/door_metadata.mjs": {
+      "sha256": "0d040f8b836feac304e8f759eea946a1d05f95518c64912dcb2d2c387d4a9439",
+      "bytes": 6579
+    },
+    "candidate/consumer/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "candidate/consumer/runtime.mjs": {
+      "sha256": "8bdf65c058535c78571a6b5fc1df57b5ffc59f33bbe1fa008184a76fb4cb272c",
+      "bytes": 14805
+    },
+    "candidate/producer/horizontal_navigation.mjs": {
+      "sha256": "bae0be9fa5c170aab83d5a63833dfa5b2534ff1e3745df1df71cc94f5652b5f7",
+      "bytes": 6406
+    },
+    "candidate/producer/pressure_hatch.mjs": {
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "bytes": 16212
+    },
+    "candidate/producer/walk_controller.mjs": {
+      "sha256": "fde1af2a477b84ae9f465a451efe62641cd286c3fcf97edd669d82d1789951ee",
+      "bytes": 24913
+    },
+    "candidate/shared/latch_state.mjs": {
+      "sha256": "0e472289de598527ae38456e2bbc15e5f5b0bc21e5b12f2abf0b33b29f92a63a",
+      "bytes": 4208
+    },
+    "candidate/shared/latch_visual.mjs": {
+      "sha256": "2c8cd562701704c5a12055414d47143f7744ae51eaccac42506dab455aefd63e",
+      "bytes": 12111
+    },
+    "candidate/shared/latched_hatch_mesh_binding.mjs": {
+      "sha256": "cf9c99d07285838c124949e3d22164d8ecc6ec680e698e1884ac5715128b7e23",
+      "bytes": 15111
+    },
+    "candidate/shared/latched_metadata.mjs": {
+      "sha256": "a58f14dd8c2c46c2fd4e87f5a91391abeac574b8d085df24120ef11e45e6f966",
+      "bytes": 8870
+    },
+    "candidate/shared/legacy/pressure_hatch.mjs": {
+      "sha256": "b7a6099cf61f726c160d31e8eb88e4a917b202af933778034e135e59f7d0a94b",
+      "bytes": 16212
+    },
+    "candidate/shared/pressure_hatch_latched.mjs": {
+      "sha256": "9ecf0e585705ae9a4536df6d1e4456e09690f4d9d0d6ebb552687416b7642acf",
+      "bytes": 9685
+    }
+  },
+  "delivery_sha256": "2f3bb5f53966f85d60a343dcd51af419e9d70683295dd5d76f4003d374b258f6",
+  "independent_review_sha256": "7e0e234fb63efd3a2566ae3740a8695633de038da43fe62d611dd5f3c4432efc",
+  "original_frozen_sha256": "e5b3b3edc08527daf71d13faca5b388d846178ba9771ca0f83b84645209884e8",
+  "author_cases": 18,
+  "independent_cases": 12,
+  "full_package_GLBl_native_or_pressure_proof": false,
+  "excluded": "Private local preservation/dependency paths, owner fixture/packages, vendor libraries and CPU harnesses requiring excluded geometry. This public source backup is not a standalone replayable full test package.",
+  "installed_world": "056 unchanged",
+  "old_package_and_consumer": "073/083 identities remain immutable",
+  "next": "Separate host projection, exact source/package admission, GLB/export/readback and saved-world/native review."
+}

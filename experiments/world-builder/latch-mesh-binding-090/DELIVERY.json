@@ -1,0 +1,34 @@
+{
+  "status": "CPU_PASS_INDEPENDENT_REVIEW_PENDING",
+  "frozen": {
+    "sha256": "e5b3b3edc08527daf71d13faca5b388d846178ba9771ca0f83b84645209884e8",
+    "bytes": 5974
+  },
+  "source": {
+    "sha256": "7d5d9b18c87f9bc83e90a5f9991fe8ad16febf90cf4462defa2cb1c5eb9fed41",
+    "bytes": 4176
+  },
+  "test_result": {
+    "sha256": "b1c512315574b7d33ce0d6d94201d2234cf6d8fa68858067e3bfa838ed05fa84",
+    "bytes": 1100
+  },
+  "adverse_resolution": {
+    "sha256": "9c9676802049da19e16f15940d625fb95745105a29c920c8cfff298804821b21",
+    "bytes": 1387
+  },
+  "files": 38,
+  "effective_source_files": 12,
+  "changed_source_files": 2,
+  "tests": 18,
+  "installed": false,
+  "actual_glb_export": false,
+  "UI": false,
+  "models": 0,
+  "remaining_owned_pids": [],
+  "deferred": [
+    "Independent exact090 source review",
+    "Full scene/exporter/source-profile integration",
+    "Strict v2 importer and actual GLB round-trip/admission",
+    "Host controls/native saved-world/art/headset review"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "world.independent-mesh-source-review/v1",
+  "status": "PASS_NARROW090_SOURCE_CORRECTION_FULL_INTEGRATION_NATIVE_PENDING",
+  "candidate": "world-latch-mesh-binding-090",
+  "candidate_delivery": {
+    "sha256": "2f3bb5f53966f85d60a343dcd51af419e9d70683295dd5d76f4003d374b258f6",
+    "bytes": 1021
+  },
+  "candidate_frozen": {
+    "sha256": "e5b3b3edc08527daf71d13faca5b388d846178ba9771ca0f83b84645209884e8",
+    "bytes": 5974
+  },
+  "candidate_source": {
+    "sha256": "7d5d9b18c87f9bc83e90a5f9991fe8ad16febf90cf4462defa2cb1c5eb9fed41",
+    "bytes": 4176
+  },
+  "adverse089_review": {
+    "sha256": "1045f08d9941197aa5edbaea20d643ba8fd47dd8a4fbda1c6d9b871ba14e3c79",
+    "bytes": 3455
+  },
+  "resolved_findings": [
+    {
+      "id": "parent-world-matrix-closure",
+      "original_review_sha256": "1045f08d9941197aa5edbaea20d643ba8fd47dd8a4fbda1c6d9b871ba14e3c79",
+      "independently_retested": true
+    },
+    {
+      "id": "late-observation-lifecycle",
+      "original_review_sha256": "1045f08d9941197aa5edbaea20d643ba8fd47dd8a4fbda1c6d9b871ba14e3c79",
+      "independently_retested": true
+    },
+    {
+      "id": "producer-pose-port-gap",
+      "original_review_sha256": "1045f08d9941197aa5edbaea20d643ba8fd47dd8a4fbda1c6d9b871ba14e3c79",
+      "independently_retested": true
+    }
+  ],
+  "findings": [],
+  "drawRange_boundary_retested": true,
+  "observations": {
+    "sha256": "826ed90c61e0e612f8b4706966459db3ca3a66affdcdbea5e1dd4f1f22d0cd8f",
+    "bytes": 1584
+  },
+  "source_scope": {
+    "sha256": "48a6e212100f4d39cf83bd0a7e80e807bab8e70979a7624da69edf350bc62b70",
+    "bytes": 592
+  },
+  "report": {
+    "sha256": "ed3b58379a9f3b1db84930a5f2c668fa43ff4aa1b86b972811965f735bfae651",
+    "bytes": 5658
+  },
+  "tests": 12,
+  "resource": {
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 1.7235695999115705,
+    "peak_family_rss": 285564928,
+    "minimum_available_ram": 15677890560,
+    "remaining_owned_pids": [],
+    "failure": null,
+    "caps": {
+      "start_ram": 5368709120,
+      "family_rss": 858993459,
+      "reserve": 3221225472,
+      "deadline_seconds": 45,
+      "node_old_space_mib": 128
+    },
+    "models": 0,
+    "weights_opened": false,
+    "protected_files_unchanged": 723,
+    "review_inputs_unchanged": 2
+  },
+  "protected_files_unchanged": 723,
+  "protected_local_receipt": {
+    "sha256": "2f4bcc91a97e474375d1a8575d1981afdb87fb91a372d4fa5463ffdf0ea2dc63",
+    "bytes": 170725
+  },
+  "raw_producer_consumer_pose_fields_synthesized": false,
+  "scene_exporter_used": false,
+  "author_batch_repeated": false,
+  "candidate_mutated": false,
+  "canonical_mutated": false,
+  "owner_world_mutated": false,
+  "installed": false,
+  "published": false,
+  "GLB_export": false,
+  "native_renderer_UI": false,
+  "models": 0,
+  "remaining_owned_pids": [],
+  "limits": [
+    "Geometry/material regeneration is initial admission, not continuous render-resource hashing",
+    "Arbitrary exposed Three-resource mutation is outside this narrow contract",
+    "Artificial low-level descriptor and JSON tests are not connected saved-world or GLB/package integration",
+    "Full producer/exporter/importer/package/host/source-profile and native walking integration unfinished",
+    "No physical pressure/seal proof, final art quality, owner or headset approval"
+  ]
+}

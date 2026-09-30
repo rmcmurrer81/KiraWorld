@@ -1,0 +1,78 @@
+{
+  "status": "INDEPENDENT090_PROBES_COMPLETE",
+  "tests": 12,
+  "observations": [
+    {
+      "id": "reflection_json",
+      "passed": true,
+      "GLB": false
+    },
+    {
+      "id": "old_frame_adverse_resolved",
+      "rejections": 6
+    },
+    {
+      "id": "ancestor_policy",
+      "depth64_pass": true,
+      "depth65_and_cycle_rejected": true,
+      "late_tamper_terminal": true
+    },
+    {
+      "id": "old_accessor_adverse_resolved",
+      "getters_invoked": 0,
+      "cases": 4
+    },
+    {
+      "id": "hostile_reflection_terminal",
+      "cases": 6
+    },
+    {
+      "id": "current_callback_terminal",
+      "cases": 4
+    },
+    {
+      "id": "captured_value_boundary",
+      "passed": true
+    },
+    {
+      "id": "draw_range_and_render_faults",
+      "initial_rejections": 3,
+      "late_rejection": true,
+      "render_faults": 2
+    },
+    {
+      "id": "raw_producer_consumer_phases",
+      "phases": [
+        "closed",
+        "closing",
+        "engaged",
+        "engaging",
+        "motion_held",
+        "open",
+        "opening",
+        "paused",
+        "released",
+        "releasing"
+      ],
+      "applications": 62,
+      "pose_fields_synthesized": false,
+      "scene_exporter": false,
+      "GLB": false
+    },
+    {
+      "id": "walking_and_ordinary_observation_ports",
+      "passed": true
+    },
+    {
+      "id": "metadata_tamper_contract",
+      "rejections": 4
+    },
+    {
+      "id": "four_basis_json_original_bounds",
+      "orientations": 4,
+      "latch_fraction": 0.3125,
+      "hinge_fraction": 0.375,
+      "GLB": false
+    }
+  ]
+}
