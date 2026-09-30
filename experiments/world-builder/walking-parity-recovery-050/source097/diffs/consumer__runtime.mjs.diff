@@ -1,0 +1,80 @@
+--- before/consumer/runtime.mjs
++++ candidate/consumer/runtime.mjs
+@@ -82,7 +82,15 @@
+  function distance(d,feet){const p=middle(d);return Math.hypot(feet[0]-p[0],feet[2]-p[2]);}
+  function near(d,feet){return adjacent(d,feet)&&distance(d,feet)<=d.interaction.maximum_reach_m;}
+  function all(){return freeze([...states.values()].map(pose));}
+- function nearest(feet){require(vec(feet),'Invalid interaction position');const found=[...states.values()].filter(s=>near(s.d,feet)).sort((a,b)=>distance(a.d,feet)-distance(b.d,feet)||a.d.id.localeCompare(b.d.id));return found.length?pose(found[0]):null;}
++ function nearest(feet,yaw=null){
++  require(vec(feet),'Invalid interaction position');require(yaw===null||Number.isFinite(yaw),'Invalid interaction direction');
++  const found=[...states.values()].filter(s=>{
++   if(!near(s.d,feet))return false;if(yaw===null)return true;
++   const p=middle(s.d),dx=p[0]-feet[0],dz=p[2]-feet[2],length=Math.hypot(dx,dz);
++   return length<1e-8||(dx*Math.sin(yaw)-dz*Math.cos(yaw))/length>=.5;
++  }).sort((a,b)=>distance(a.d,feet)-distance(b.d,feet)||a.d.id.localeCompare(b.d.id));
++  return found.length?pose(found[0]):null;
++ }
+  function toggle(id,feet){
+   require(vec(feet),'Invalid interaction position');if(!current())return {ok:false,reason:'Door runtime is no longer current.'};const s=states.get(id);
+   if(s?.latch){const gate=s.latch.canMove();if(!gate.ok)return gate;}
+@@ -115,22 +123,39 @@
+   dispose(){if(!disposed){disposed=true;for(const s of states.values())s.latch?.dispose();}}});
+ }
+ export function createRuntime(metadata,{isCurrent=()=>true}={}){
+- const m=structuredClone(metadata);validateMetadata(m);const doors=createDoorRuntime(m,{isCurrent});
+- const fixed=m.colliders.filter(c=>c.motion==='static').map(c=>({id:c.id,...c.bounds}));
+- // Existing support algorithm caps each scene at 128 colliders. Every chunk is
+- // checked; chunking does not omit equipment or merge bounding boxes.
+- const chunks=[];for(let i=0;i<fixed.length;i+=128)chunks.push(fixed.slice(i,i+128));
+- const movingChunks=()=>{const all=doors.colliders(),out=[];for(let i=0;i<all.length;i+=128)out.push(all.slice(i,i+128));return out;};
++ const m=structuredClone(metadata),maps=validateMetadata(m),doors=createDoorRuntime(m,{isCurrent});
++ const fixedDoorOwners=new Set(m.doors.flatMap(d=>d.frame_node_ids));
++ // Every existing static row enters exactly one actual check collection.
++ // Unclassified static rows retain the base solid-obstruction cause.
++ const base=[],fixedDoors=[],furniture=[];
++ for(const c of m.colliders)if(c.motion==='static'){
++  const row={id:c.id,...c.bounds},owner=maps.nodes.get(c.owner_node_id);
++  if(fixedDoorOwners.has(c.owner_node_id))fixedDoors.push(row);
++  else if(owner.kind!=='structural_primitive'&&c.proxy==='conservative_assembly_bounds')furniture.push(row);
++  else base.push(row);
++ }
++ // Existing support algorithm caps each scene at128 colliders. Every real
++ // chunk is checked; categorization never removes or merges collision boxes.
++ const chunk=rows=>{const out=[];for(let i=0;i<rows.length;i+=128)out.push(rows.slice(i,i+128));return out;};
++ const baseChunks=chunk(base),fixedDoorChunks=chunk(fixedDoors),furnitureChunks=chunk(furniture);
++ const doorChunks=()=>[...fixedDoorChunks,...chunk(doors.colliders())];
+  const nav=colliders=>({contract:NAVIGATION_CONTRACT,support_surfaces:m.navigation.support_surfaces,colliders});
+  let feet=[...m.navigation.spawn_feet],yaw=0,pitch=0,blocked=null,distance=0;
+- for(const colliders of [...chunks,...movingChunks()])require(checkWalkSpawn(feet,nav(colliders)).ok,'Spawn intersects a collider or unsupported floor');
++ // Keep a support-only base check even when there are no static base boxes.
++ for(const colliders of [[],...baseChunks,...doorChunks(),...furnitureChunks])require(checkWalkSpawn(feet,nav(colliders)).ok,'Spawn intersects a collider or unsupported floor');
+  const first=m.navigation.authored_routes.find(r=>r.points.some(p=>nearArray(p,feet)));
+  if(first){const i=first.points.findIndex(p=>nearArray(p,feet)),next=first.points[i+1]||first.points[i-1];if(next)yaw=Math.atan2(next[0]-feet[0],-(next[2]-feet[2]));}
+- function snapshot(){const room=m.rooms.find(r=>r.access==='walkable_layout'&&feet[0]>=r.bounds.min[0]&&feet[0]<=r.bounds.max[0]&&feet[2]>=r.bounds.min[2]&&feet[2]<=r.bounds.max[2]);return freeze({feet:[...feet],yaw,pitch,blocked,distance,roomId:room?.id||null,roomName:room?.label||'Passage',nearbyDoor:doors.nearest(feet)});}
++ function snapshot(){const room=m.rooms.find(r=>r.access==='walkable_layout'&&feet[0]>=r.bounds.min[0]&&feet[0]<=r.bounds.max[0]&&feet[2]>=r.bounds.min[2]&&feet[2]<=r.bounds.max[2]);return freeze({feet:[...feet],yaw,pitch,blocked,distance,roomId:room?.id||null,roomName:room?.label||'Passage',nearbyDoor:doors.nearest(feet,yaw)});}
+  function look(dx,dy){require(num(dx)&&num(dy),'Invalid look input');yaw+=Math.max(-500,Math.min(500,dx))*.002;pitch=Math.max(-1.2,Math.min(1.2,pitch-Math.max(-500,Math.min(500,dy))*.002));return snapshot();}
+  function checkRoute(start,end){
+   const route={id:'consumer_walk',avatar_radius:AVATAR.radius,avatar_height:AVATAR.height,points:[start,end]};
+-  for(const colliders of [...chunks,...movingChunks()]){const r=checkHorizontalRoute(route,nav(colliders));if(r.status!=='clear')return r;}return {status:'clear'};
++  // Match the producer's real cause precedence: base, doors, furnishings.
++  const groups=[{category:'base',chunks:baseChunks.length?baseChunks:[[]]},
++   {category:'door',chunks:doorChunks()},{category:'furniture',chunks:furnitureChunks}];
++  for(const group of groups)for(const colliders of group.chunks){const r=checkHorizontalRoute(route,nav(colliders));if(r.status!=='clear'){
++   if(r.reason==='solid_obstruction'&&group.category!=='base')return {...r,reason:group.category==='door'?'door_obstruction':'furniture_obstruction'};
++   return r;
++  }}return {status:'clear'};
+  }
+  function step(seconds,input={}){
+   require(num(seconds)&&seconds>=0,'Invalid elapsed time');const dt=Math.min(seconds,.05);doors.advance(dt,feet);
+@@ -140,5 +165,10 @@
+   const r=checkRoute(feet,end);blocked=r.status==='clear'?null:r.reason;
+   if(!blocked){distance+=Math.hypot(end[0]-feet[0],end[2]-feet[2]);feet=end;}return snapshot();
+  }
+- return Object.freeze({contract:CONTRACT,snapshot,look,step,checkRoute,doorStates:doors.all,toggleDoor:id=>doors.toggle(id||doors.nearest(feet)?.id,feet),requestLatch:(id,value)=>doors.requestLatch(id,value,feet),releaseAndOpen:id=>doors.releaseAndOpen(id,feet),latchStates:doors.latchStates,pauseLatches:doors.pauseLatches,resumeLatches:doors.resumeLatches,dispose:doors.dispose});
++ function collisionCollections(){return freeze(structuredClone({contract:'ordinary_walking_collision_collections_v1',collections:[
++  {category:'base',chunks:baseChunks.length?baseChunks:[[]]},
++  {category:'door',chunks:doorChunks()},{category:'furniture',chunks:furnitureChunks}
++ ]}));}
++ function toggleDoor(id){const selected=id||doors.nearest(feet,yaw)?.id;if(!selected)return freeze({ok:false,reason:'Face a nearby door to open or close it.'});return doors.toggle(selected,feet);}
++ return Object.freeze({contract:CONTRACT,snapshot,look,step,checkRoute,collisionCollections,doorStates:doors.all,toggleDoor,requestLatch:(id,value)=>doors.requestLatch(id,value,feet),releaseAndOpen:id=>doors.releaseAndOpen(id,feet),latchStates:doors.latchStates,pauseLatches:doors.pauseLatches,resumeLatches:doors.resumeLatches,dispose:doors.dispose});
+ }

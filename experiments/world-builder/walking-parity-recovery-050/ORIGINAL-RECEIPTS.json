@@ -1,0 +1,37 @@
+{
+  "scope": "COMPACT_SOURCE_LINEAGE_ONLY_NOT_RUNTIME_OR_PUBLICATION_AUTHORITY",
+  "097": {
+    "delivery_sha256": "aad1ae025107c3056a4011d61b6d5d3c998866754017f729f761c39c3eb413db",
+    "frozen_sha256": "2b303af264f5b109682ea383f74983eeb89d90ab7288187c5d483b13d2714819",
+    "report_sha256": "93776e9fa0672677ee13721cf17fa3bcd82cf2d7c104bbf1088cd587d56515c8",
+    "independent_review_sha256": "6a72e153c9bcca26aa32889b404b92d7ec56e0de5cbba59be2ccbd2c87f60f4c",
+    "independent_delivery_sha256": "9517ca7441392e1dda53e3790772dda542bd061c1cafd177d4e499e7929c3e2b",
+    "decision": "HOLD",
+    "three_walking_sources": "Narrow source consistency only; whole proposal held for two unrun harness defects",
+    "producer_current_preimage_sha256": "478474e088aee747dd0d26b9044d45de6a9552a30158a7977b1c8e4c3f499e7e",
+    "producer_current_preimage_bytes": 24910,
+    "consumer_current_preimage_sha256": "8d5e6b8bae7178362ab0e41e4876e43990bd50dda33da02daf87c21fc3bc4094",
+    "consumer_current_preimage_bytes": 14803,
+    "missing_historical091_producer_preimage_repaired": false
+  },
+  "098": {
+    "delivery_sha256": "1110c8a7d5c45f92707716680e027e37848e21ceb615844a8cb111f942d7d72d",
+    "frozen_sha256": "bbf04a4e31e21e03fed64f11bf722ae27ac1c4d47e364238a4b5f7afd4f9af08",
+    "report_sha256": "d257b0db2dabebebadb54095c534b1c67b9cb0394987ae80f26b789a7042e023",
+    "harness_sha256": "17b008733b8c0810c2d8d5889d5fd273342d61d469b8a6636db331715a25d28e",
+    "independent_review_sha256": "c9d2347c29f0137918500dfed6466b5abe4a1071fb5f2b39261109e27b68c17b",
+    "decision": "PASS_SOURCE_ONLY",
+    "three097_walking_candidates_changed": false,
+    "behavioral_parity_or_actual_cleanup_proved": false
+  },
+  "recorded_public_parent": {
+    "publication": "World049",
+    "status": "PUBLISHED_AND_REMOTE_VERIFIED_AS_RECORDED",
+    "commit": "0fc893db9a4707b4abf36370f2ea049694cdea6a",
+    "tree": "5d4288e4e3fe96ba9628b0e51f5ba4289dc0f4ea",
+    "fresh_remote_check": false
+  },
+  "installedWorld": "056 remains installed; source proposal not promoted",
+  "new_v2_package_admission_table": "unchanged empty",
+  "execution_authority": false
+}

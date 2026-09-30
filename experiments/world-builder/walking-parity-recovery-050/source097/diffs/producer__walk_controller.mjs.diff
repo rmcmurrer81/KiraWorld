@@ -1,0 +1,31 @@
+--- before/producer/walk_controller.mjs
++++ candidate/producer/walk_controller.mjs
+@@ -13,6 +13,8 @@
+ export const AIRLOCK_SEQUENCE_CONTRACT = 'paired_airlock_door_sequence_v1';
+ const DOOR_THICKNESS=.065, FRAME_WIDTH=.07, FRAME_DEPTH=.21, REACH=2.25;
+ const freeze=value=>Object.freeze(value);
++// Diagnostics freeze only a fresh structured clone, never owner geometry.
++const freezeDiagnostic=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freezeDiagnostic);Object.freeze(value);}return value;};
+ const vector=(v)=>Array.isArray(v)&&v.length===3&&v.every(n=>Number.isFinite(n)&&Math.abs(n)<1e6);
+ function ensure(ok,message){if(!ok)throw new TypeError(message);}
+ function bounds(center,size){return {min:center.map((v,i)=>v-size[i]/2),max:center.map((v,i)=>v+size[i]/2)};}
+@@ -326,11 +328,18 @@
+     else blocked=result.reason;
+     return snapshot();
+   }
++  function collisionCollections(){
++    return freezeDiagnostic(structuredClone({contract:'ordinary_walking_collision_collections_v1',collections:[
++      {category:'base',chunks:[nav.colliders]},
++      {category:'door',chunks:doorScenes().map(scene=>scene.colliders)},
++      {category:'furniture',chunks:extra.length?[furnitureNav.colliders]:[]}
++    ]}));
++  }
+   // No direct-position setter, fly mode, level snapping, or teleport route.
+   function toggleDoor(id){
+     const selected=id||doors.nearest(feet,yaw)?.id;
+     if(!selected)return freeze({ok:false,reason:'Face a nearby door to open or close it.'});
+     return doors.toggle(selected,feet);
+   }
+-  return Object.freeze({snapshot,step,look,toggleDoor,doorAssemblies:doors.assemblies,doorStates:doors.all,doorHatchPlans:doors.hatchPlans,requestLatch:(id,value)=>doors.requestLatch(id,value,feet),releaseAndOpen:id=>doors.releaseAndOpen(id,feet),latchStates:doors.latchStates,pauseLatches:doors.pauseLatches,resumeLatches:doors.resumeLatches,dispose:doors.dispose});
++  return Object.freeze({snapshot,step,look,toggleDoor,collisionCollections,doorAssemblies:doors.assemblies,doorStates:doors.all,doorHatchPlans:doors.hatchPlans,requestLatch:(id,value)=>doors.requestLatch(id,value,feet),releaseAndOpen:id=>doors.releaseAndOpen(id,feet),latchStates:doors.latchStates,pauseLatches:doors.pauseLatches,resumeLatches:doors.resumeLatches,dispose:doors.dispose});
+ }

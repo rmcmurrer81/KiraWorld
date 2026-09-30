@@ -1,0 +1,36 @@
+--- preserved097/synthetic_behavior_tests.mjs
++++ source098/synthetic_behavior_tests.mjs
+@@ -37,11 +37,12 @@
+ 
+ export function runSyntheticWalkingCases({createWalkController,createDoorSystem,createRuntime,createDoorRuntime,exportSceneMetadata}){
+  for(const fn of [createWalkController,createDoorSystem,createRuntime,createDoorRuntime,exportSceneMetadata])need(typeof fn==='function','Exact real factory required');
+- const observations=[],owned=[];
++ const observations=[],owned=[];let primaryFailed=false,primaryFailure;
+  function pair(kind='clear'){
+   const f=fixture(kind),authorDoors=createDoorSystem(f.geometry);owned.push(authorDoors);
+   const definitions=authorDoors.definitions(),metadata=exportSceneMetadata(f.geometry,f.dressing,definitions,{sceneId:'synthetic097',sourceDigests:{geometry:'0'.repeat(64),dressing_recipe:'1'.repeat(64),door_controller:'2'.repeat(64)},doorInterlocks:authorDoors.interlocks()});
+-  const a=createWalkController(f.geometry,{extraColliders:f.dressing.colliders}),b=createRuntime(metadata);owned.push(a,b);
++  const a=createWalkController(f.geometry,{extraColliders:f.dressing.colliders});owned.push(a);
++  const b=createRuntime(metadata);owned.push(b);
+   return {a,b,metadata,geometry:f.geometry};
+  }
+  try{
+@@ -60,7 +61,8 @@
+    observations.push({case:'cone_and_real_toggle',producer:a.doorStates(),consumer:b.doorStates()});
+   }
+   {
+-   const p=pair(),a=createDoorSystem(p.geometry),b=createDoorRuntime(p.metadata);owned.push(a,b);
++   const p=pair(),a=createDoorSystem(p.geometry);owned.push(a);
++   const b=createDoorRuntime(p.metadata);owned.push(b);
+    for(const d of [a,b]){need(d.nearest([1.75,0,3],Math.PI/2),'Exact2.25m reach must select');need(d.nearest([1.749,0,3],Math.PI/2)===null,'Beyond reach must refuse');need(d.nearest([2,0,3],-Math.PI/2)===null,'Low-level yaw filter must reject behind');need(d.nearest([2,0,3]),'Omitted yaw retains low-level proximity query');need(d.nearest([2,1,3],Math.PI/2)===null,'Wrong floor must refuse');let threw=false;try{d.nearest([2,0,3],NaN);}catch{threw=true;}need(threw,'Non-finite yaw must reject');}
+    observations.push({case:'actual_low_level_reach_floor_direction'});
+   }
+@@ -77,5 +79,7 @@
+    observations.push({case:'real_raw_'+expected,producer:a.snapshot(),consumer:b.snapshot(),producer_collections:a.collisionCollections(),consumer_collections:b.collisionCollections()});
+   }
+   return {contract:'world097_synthetic_observations_v1',synthetic_only:true,normal_success:false,observations,limits:['No saved world, GLB, all-pose export, native host, physical pressure or headset proof.','Factory binding, source/import closure and execution authority must be reviewed separately.']};
+- }finally{const errors=[];for(const value of owned.reverse())try{value.dispose();}catch(e){errors.push(e);}if(errors.length)throw new AggregateError(errors,'Synthetic owned cleanup held');}
++ }catch(error){primaryFailed=true;primaryFailure=error;throw error;}
++ finally{const cleanupFailures=[];for(const value of owned.reverse())try{value.dispose();}catch(error){cleanupFailures.push(error);}
++  if(cleanupFailures.length)throw new AggregateError(primaryFailed?[primaryFailure,...cleanupFailures]:cleanupFailures,primaryFailed?'Synthetic primary failure and owned cleanup held':'Synthetic owned cleanup held');}
+ }

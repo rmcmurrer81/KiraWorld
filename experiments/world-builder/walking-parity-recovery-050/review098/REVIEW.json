@@ -1,0 +1,76 @@
+{
+  "behavioral_parity_or_actual_cleanup_proved": false,
+  "conservation": {
+    "bytes": 220209,
+    "sha256": "b739944377e39e72228b6270375a7e5871ce8bcdae24a9040b32d8fe9658186f"
+  },
+  "contract": "world098_independent_source_review_v1",
+  "decision": "PASS",
+  "evidence": {
+    "bytes": 221994,
+    "sha256": "3b98cf294efbe3282e17178c4eb34eff382083b8ccfc8d0ddca3b502866afc0e"
+  },
+  "execution_authority": false,
+  "findings": [],
+  "limits": [
+    "synchronous cooperating source and standard builtins only; no process/OOM/async/hostile runtime closure proof",
+    "factory before return and inherited nested disposal uncertainty remain",
+    "raw collider order/ID, hatch center/cone/reach, room/floor/route tolerance and currentness limits remain",
+    "no095/096 runtime/native/Job/Canvas/IO execution boundary approval",
+    "no source/profile/package/canonical reseal or state/runtime authority",
+    "no JS parse/import/calls/tests/fixtures; Python preparer AST only, never imported or called"
+  ],
+  "literal_replacements": 4,
+  "mechanical_unified_diff_hunks": 3,
+  "model_caps_unchanged": {
+    "free_gpu_gib": 14,
+    "initial_ram_gib": 18,
+    "reserve_gib": 3
+  },
+  "no_new_own_failures": true,
+  "original097_own_failures_preserved": true,
+  "payloads_verified": 13,
+  "prior097_decision": "HOLD immutable",
+  "producer_mirrors_equal": true,
+  "protected_finite_source_rows_verified": 169,
+  "resolved_source_findings": [
+    {
+      "disposition": "Each successful return retained before next constructor in source; no construction probe.",
+      "id": "097-H1",
+      "lines": [
+        42,
+        44,
+        45,
+        64,
+        65
+      ]
+    },
+    {
+      "disposition": "Separate primary boolean/raw value and every independently caught cleanup value preserved; no thrown-value probe.",
+      "id": "097-H2",
+      "lines": [
+        40,
+        82,
+        83,
+        84
+      ]
+    }
+  ],
+  "review_md": {
+    "bytes": 6380,
+    "sha256": "c270b441cbea65b8a3c341ba9c492e5b9c4737cd8715dec6e9056f93c6bf3c8d"
+  },
+  "reviewed_delivery": "1110c8a7d5c45f92707716680e027e37848e21ceb615844a8cb111f942d7d72d",
+  "reviewed_frozen": "bbf04a4e31e21e03fed64f11bf722ae27ac1c4d47e364238a4b5f7afd4f9af08",
+  "reviewed_harness": "17b008733b8c0810c2d8d5889d5fd273342d61d469b8a6636db331715a25d28e",
+  "reviewed_report": "d257b0db2dabebebadb54095c534b1c67b9cb0394987ae80f26b789a7042e023",
+  "scope": "Exact narrow source-only harness ownership/error-preservation correction",
+  "terminal_matrix_source_reasoning_only": {
+    "return_clean": "original synthetic return",
+    "return_cleanup_failure": "aggregate cleanup values",
+    "throw_clean": "original exact primary value",
+    "throw_cleanup_failure": "aggregate primary value first plus all caught cleanup values"
+  },
+  "three_walking_candidates_unchanged": true,
+  "unique_inputs_conserved": 184
+}

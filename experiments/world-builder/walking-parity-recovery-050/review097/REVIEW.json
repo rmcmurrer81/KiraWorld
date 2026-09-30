@@ -1,0 +1,56 @@
+{
+  "candidate_narrow_source_consistency": "PASS with explicit numeric/order/currentness limits; no behavioral execution result",
+  "conservation": {
+    "bytes": 204530,
+    "sha256": "e7b69cbde6ac807f22b5a4d4944757650e6ab21decd90171c78ec73ee154af88"
+  },
+  "contract": "world097_independent_source_review_v1",
+  "decision": "HOLD",
+  "evidence": {
+    "bytes": 224950,
+    "sha256": "7a3947cd6caa6ac69bedb7b26fc984687a3fd88cd3f60a37d7b8c4135c8e9782"
+  },
+  "execution_authority": false,
+  "findings": [
+    {
+      "finding": "First returned construction retained only after second construction succeeds",
+      "id": "H1",
+      "lines": [
+        44,
+        63
+      ],
+      "path": "synthetic_behavior_tests.mjs",
+      "required_source_correction": "Immediately retain each returned object before the next construction."
+    },
+    {
+      "finding": "Cleanup AggregateError replaces and omits the primary body/factory failure",
+      "id": "H2",
+      "lines": [
+        80
+      ],
+      "path": "synthetic_behavior_tests.mjs",
+      "required_source_correction": "Retain primary failure and aggregate it with any cleanup failures."
+    }
+  ],
+  "frozen_payloads_verified": 18,
+  "missing_historical_091_preimage_preserved": true,
+  "model_caps_unchanged": {
+    "free_gpu_gib": 14,
+    "initial_ram_gib": 18,
+    "reserve_gib": 3
+  },
+  "no_node_parse_import_functions_or_fixtures": true,
+  "no_state_or_runtime_authority": true,
+  "old_095_096_boundary_holds_preserved": true,
+  "protected_source_rows_verified": 136,
+  "review_md": {
+    "bytes": 6857,
+    "sha256": "c952083f1924f097364189976b1d6df15e19fa8c4486f823d7808cd48d17b9b2"
+  },
+  "reviewed_delivery": "aad1ae025107c3056a4011d61b6d5d3c998866754017f729f761c39c3eb413db",
+  "reviewed_frozen": "2b303af264f5b109682ea383f74983eeb89d90ab7288187c5d483b13d2714819",
+  "reviewed_report": "93776e9fa0672677ee13721cf17fa3bcd82cf2d7c104bbf1088cd587d56515c8",
+  "scope": "Frozen source proposal only; no execution authority",
+  "source_origin_rows_verified": 107,
+  "unique_source_inputs_conserved": 157
+}

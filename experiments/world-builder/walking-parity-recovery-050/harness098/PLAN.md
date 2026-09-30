@@ -1,0 +1,7 @@
+#098 source review and prospective qualification
+
+1. Read the full exact097 HOLD and frozen preimage. Verify the four narrow harness hunks and the unchanged three097 candidate hashes. No execution is authorized by098.
+2. Check each successful constructor return is retained before the next constructor; ensure the outer catch retains every primary thrown value and finally attempts all owned cleanups, preserving both primary and cleanup failures without a successful cleanup claim.
+3. Any later meaningful qualification must separately pin the actual Node/ESM/CJS/native/import/Job/IO closure and use one fresh bounded source/fixture namespace,5GiB initial RAM/.8GiB total family/3GiB reserve/45s with Node128MiB. It should explicitly inject second-constructor failure, primary plus multiple cleanup failures, primary-only and cleanup-only outcomes before behavioral assertions.098 supplies no runner or fixture and runs none.
+4. Preserve all raw behavioral failures and097/091/092/095/096 evidence. Do not normalize wording, reconstruct expected collider arrays, infer universal factory cleanup, replay consumed fixtures or change profiles/canonical/packages/admission. Model18RAM/14freeGPU/3reserve remains unchanged.
+5. Numeric ordering/currentness/hatch offset/tolerance, saved-world and all-pose behavior and construction-before-return allocation remain separate from the source ownership correction. Only actually retained objects can be disposed by this harness. Source PASS cannot reopen095/096 export execution or prove native/headset/physical seal results.
