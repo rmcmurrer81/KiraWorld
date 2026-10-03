@@ -1,0 +1,9 @@
+# Candidate reusable method: build, persist, measure the same carrier
+
+The builder's next lesson is an executable stage sequence, not a new body approval. Call the optional pre-surface producer only in a separately admitted generic empty scene: selected body recipe → captured rest coordinates → normalized original weights →163named bones in the same transform → actual attachment readback. Do not resume incompatible downstream surface edits or substitute a saved unrigged carrier.
+
+Save the exact neutral carrier once to a fresh trial output, bind its bytes and full native static observation, wait for the actual process exit, then open that exact file in a different admitted process. Compare all static points/topology/weights/parents/bones/rest-matrix hashes before action. Persistence and native deformation are different stages; passing one cannot stand in for the other.
+
+Command bounded arm and knee diagnostics, record evaluated mesh displacement and selected region movement, then verify neutral restoration. Preserve wrong, missing, partial and adverse results. A changed angle label or a spoken intention is insufficient evidence. Analytic ground-distance sensor rows remain geometric observations until an independently qualified sensory interface delivers them to a separate brain lesson.
+
+This entrypoint records source pins, body/rig static fingerprints and actual saved blob relations, refusing private/male input and old-carrier substitution. It does not learn builder weights, promote a method or claim that Avatar Builder can already build bodies independently. The source needs different review, exposed fixture qualification, actual generic Blender construction/save/reload/action evidence and complete resource/IO/error/normal-return acceptance before the method can be registered. Full anatomy and organ physiology require their own reusable subsystem methods and body-specific validation.
